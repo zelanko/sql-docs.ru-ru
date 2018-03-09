@@ -2,26 +2,27 @@
 title: "Устранение неполадок и вопросы и ответы для машинного обучения в SQL Server | Документы Microsoft"
 ms.custom: 
 ms.date: 06/16/2017
-ms.prod: sql-server-2016
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: d334aefbd43bf17e776a8b75a09a2cef8448542d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 6e45e8dc4df1404833fddd9000eb40cad6e5299f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
-
 # <a name="troubleshoot-machine-learning"></a>Устранение неполадок машинного обучения
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье содержатся сведения об устранении неполадок, связанных с установкой и настройкой машины обучения функции в SQL Server. Эти сведения включают ссылки на руководства, известные проблемы и заметки о выпуске. Другие статьи, связанные с из этой статьи, предоставляют советы по оптимизации производительности по обучению машины в SQL Server.
 
@@ -61,7 +62,7 @@ ms.lasthandoff: 09/08/2017
 
 Если необходимо установить машинного обучения на компьютере без подключения к Интернету, используйте ссылки в этой статье, загрузить компоненты R и Python до начала установки:
 
-+ [Установка компонентов обучения компьютер без доступа к Интернету](../advanced-analytics/r/installing-ml-components-without-internet-access.md)
++ [Установка компонентов машинного обучения без доступа к Интернету](../advanced-analytics/r/installing-ml-components-without-internet-access.md)
 
 ### <a name="configuration"></a>Конфигурация
 
@@ -78,4 +79,3 @@ ms.lasthandoff: 09/08/2017
 + [Настройка сервера R на Виртуальной машине Azure](../advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 + [Установка R Server для Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
 + [Получить средства R для Visual Studio](https://www.visualstudio.com/vs/rtvs/)
-

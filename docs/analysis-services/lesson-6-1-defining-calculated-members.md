@@ -2,29 +2,32 @@
 title: "Определение вычисляемых элементов | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
-caps.latest.revision: 14
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 38cc23d0b24748cf47fac78419d545eea98dea4e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 52b7fc07496a7b3890b323bc63ce488194b3538b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>Урок 6-1-Определение вычисляемых элементов
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Вычисляемые элементы — это элементы измерения или группы мер, которые определяются на основе сочетания данных куба, арифметических операторов, чисел и функций. Например, можно создать вычисляемый элемент для расчета суммы двух физических мер в кубе. Определения вычисляемых элементов хранятся в кубах, а их значения рассчитываются при выполнении запроса.  
   
 Для создания вычисляемого элемента следует использовать команду **Создать вычисляемый элемент** на вкладке **Вычисления** конструктора кубов. Вычисляемые элементы можно создавать в любом измерении, в том числе в измерении мер. Их также можно разместить в папке отображения из диалогового окна **Calculation Properties** . Дополнительные сведения см. в разделах [Вычисления](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [Вычисления в многомерных моделях](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)и [Создание вычисляемых элементов](../analysis-services/multidimensional-models/create-calculated-members.md).  
@@ -296,11 +299,10 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Определение именованных наборов](../analysis-services/lesson-6-2-defining-named-sets.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Вычисления](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
 [Вычисления в многомерных моделях](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
 [Создание вычисляемых элементов](../analysis-services/multidimensional-models/create-calculated-members.md)  
   
   
   
-

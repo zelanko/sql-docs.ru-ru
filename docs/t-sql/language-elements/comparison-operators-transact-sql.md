@@ -3,8 +3,11 @@ title: "Операторы сравнения (Transact-SQL) | Документ�
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,26 +23,25 @@ helpviewer_keywords:
 - comparing expressions
 - comparison operators [SQL Server]
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
-caps.latest.revision: 35
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 08cdeecc9dc7da123ae94623a30913ed358de93b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: cd8dcf23064d6caae62d10065c9aa3731823e99b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comparison-operators-transact-sql"></a>Операторы сравнения (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Операторы сравнения позволяют проверить, одинаковы ли два выражения. Операторы сравнения можно использовать для всех выражений, за исключением выражений типов **текст**, **ntext**, или **изображение** типов данных. Операторы сравнения [!INCLUDE[tsql](../../includes/tsql-md.md)] приведены в следующей таблице:  
   
 |Оператор|Значение|  
 |--------------|-------------|  
-|[= (Равно)](../../t-sql/language-elements/equals-transact-sql.md)|Равно|  
+|[= (равно)](../../t-sql/language-elements/equals-transact-sql.md)|Равно|  
 |[> (больше)](../../t-sql/language-elements/greater-than-transact-sql.md)|Больше чем|  
 |[< (меньше)](../../t-sql/language-elements/less-than-transact-sql.md)|Меньше чем|  
 |[>= (больше или равно)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|Больше или равно|  
@@ -69,8 +71,8 @@ IF (@MyProduct <> 0)
    WHERE ProductID = @MyProduct;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
-

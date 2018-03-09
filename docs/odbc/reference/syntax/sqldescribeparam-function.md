@@ -3,33 +3,30 @@ title: "Функция SQLDescribeParam | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLDescribeParam
-apilocation:
-- sqlsrv32.dll
+apiname: SQLDescribeParam
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLDescribeParam
-helpviewer_keywords:
-- SQLDescribeParam function [ODBC]
+f1_keywords: SQLDescribeParam
+helpviewer_keywords: SQLDescribeParam function [ODBC]
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: df8d1653e158f19abf92eb1a650425213cbe393d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3fe2d46f0a8e27b6e20673fc04615598469bc9aa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldescribeparam-function"></a>Функция SQLDescribeParam
 **Соответствия**  
@@ -185,4 +182,3 @@ free(LenOrIndArray);
 ## <a name="see-also"></a>См. также:  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

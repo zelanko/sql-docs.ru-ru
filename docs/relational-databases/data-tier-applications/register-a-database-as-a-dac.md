@@ -2,9 +2,12 @@
 title: "Регистрация базы данных в качестве приложения уровня данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: 
@@ -20,29 +23,29 @@ helpviewer_keywords:
 - register DAC
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
-caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: af264d24411b3d384abea2723df465dd926232c6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 036bb0f6375461e5764fb92534d4d8b07e016f52
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="register-a-database-as-a-dac"></a>Регистрация базы данных в качестве приложения уровня данных
-  С помощью **Мастера регистрации приложения уровня данных** или скрипта Windows PowerShell создайте определение приложения уровня данных (DAC), описывающее объекты из существующей базы данных, а затем зарегистрируйте это определение в системной базе данных **msdb** (**master** в [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+С помощью **Мастера регистрации приложения уровня данных** или скрипта Windows PowerShell создайте определение приложения уровня данных (DAC), описывающее объекты из существующей базы данных, а затем зарегистрируйте это определение в системной базе данных **msdb** (**master** в [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **Обновление приложения уровня данных с использованием следующих средств:**  [мастер регистрации приложения уровня данных](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Перед началом  
- Процесс регистрации создает определение DAC, которое определяет объекты в базе данных. Сочетание определения DAC и базы данных образует экземпляр DAC. Если база данных регистрируется как DAC на управляемом экземпляре компонента Database Engine, зарегистрированный компонент DAC будет включен в служебную программу SQL Server при следующей передаче набора элементов сбора программы с экземпляра в точку управления служебной программой. После этого приложение уровня данных появится в узле **Развернутые приложения уровня данных** в окне [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Развернутые приложения уровня данных** details page.  
+ Процесс регистрации создает определение DAC, которое определяет объекты в базе данных. Сочетание определения DAC и базы данных образует экземпляр DAC. Если база данных регистрируется как DAC на управляемом экземпляре компонента Database Engine, зарегистрированный компонент DAC будет включен в служебную программу SQL Server при следующей передаче набора элементов сбора программы с экземпляра в точку управления служебной программой. После этого приложение уровня данных появится в узле **Развернутые приложения уровня данных** в окне [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Обозреватель программ** , а соответствующие сведения будут отображаться на странице сведений **Развернутые приложения уровня данных** .  
   
-###  <a name="LimitationsRestrictions"></a> Ограничения  
+###  <a name="LimitationsRestrictions"></a> ограничения  
  Регистрация приложения уровня данных может быть выполнена только для базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)]или [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 4 (SP4) или более поздней версии. Регистрация DAC не может быть выполнена, если приложение DAC уже зарегистрировано для базы данных. Например, если база данных создана при помощи развертывания DAC, нельзя запустить **Мастер регистрации приложения уровня данных**.  
   
  Приложение DAC нельзя зарегистрировать, если база данных содержит объекты, которые не поддерживаются в DAC, или содержат пользователей. Дополнительные сведения о типах объектов, поддерживаемых в DAC, см. в разделе [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
@@ -114,7 +117,7 @@ ms.lasthandoff: 06/22/2017
  [Использование мастера регистрации приложений уровня данных](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>Проверка объектов  
- **Checking**  *SchemaName* **.** *ObjectName* **.** — отображает индикатор выполнения по мере того, как мастер проверяет зависимости полученных объектов и допустимость этих объектов для DAC. *SchemaName***.***ObjectName* указывает, для какого объекта в данный момент выполняется проверка.  
+ **Проверка**  *SchemaName* **.** *ObjectName* **.** — отображает индикатор выполнения по мере того, как мастер проверяет зависимости полученных объектов и допустимость этих объектов для DAC. *SchemaName***.***ObjectName* указывает, для какого объекта в данный момент выполняется проверка.  
   
  **< Назад** — возврат на страницу **Задание свойств** для изменения записей.  
   
@@ -127,7 +130,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="summary"></a>Сводка  
  **Следующий параметр будет использоваться для регистрации DAC.** — отображает отчет о свойствах и объектах, которые будут включены в DAC.  
   
- **Сохранить отчет** — сохранить копию отчета о проверке в HTML-файл. Папка по умолчанию является папкой **SQL Server Management Studio\DAC Packages**, вложенной в папки Documents рабочего каталога учетной записи пользователя Windows.  
+ **Сохранить отчет** — сохранить копию отчета о проверке в HTML-файл. Папка по умолчанию является папкой **SQL Server Management Studio\DAC Packages** , вложенной в папки Documents рабочего каталога учетной записи пользователя Windows.  
   
  **< Назад** — возврат на страницу **Задание свойств** для изменения записей.  
   
@@ -185,4 +188,3 @@ $registerunit.Register()
  [Приложения уровня данных](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   
-

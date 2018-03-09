@@ -2,34 +2,35 @@
 title: "Транзакции XTP (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 443d67e4-1c7f-41d7-b18d-2d657f58c22a
-caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "7"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40baae3d8967f5e4f193c1264e30749d291b0b2a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a618d481201cdc0bbb764e5551a035ab609ccb24
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-xtp-transactions"></a>XTP-транзакции SQL Server
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Объект производительности транзакций XTP SQL Server содержит счетчики, относящиеся к транзакциям выполняющейся в памяти OLTP в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  В этой таблице перечислены счетчики **транзакций XTP SQL Server** .  
   
-|Счетчик|Описание|  
+|Счетчик|Description|  
 |-------------|-----------------|  
 |**Каскадных прерываний/с**|Количество транзакций, для которых был сделан откат из-за отката зависимостей фиксации (в среднем), в секунду.|  
 |**Зависимостей фиксации принято/с**|Общее число зависимостей фиксации, принятых транзакциями (в среднем) в секунду.|  
@@ -46,4 +47,3 @@ ms.lasthandoff: 06/22/2017
  [Счетчики производительности XTP (In-Memory OLTP) для SQL Server](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   
-

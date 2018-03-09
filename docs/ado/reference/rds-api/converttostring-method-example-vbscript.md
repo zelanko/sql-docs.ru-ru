@@ -3,7 +3,7 @@ title: "Пример метода ConvertToString (VBScript) | Документ�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - ConvertToString method [ADO], VBScript example
 ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e3db3a18f54dcac823e557fb83e978d58f6ebfe8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4cf005c26d97b484d7cf5473419166410fb34427
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="converttostring-method-example-vbscript"></a>Пример метода ConvertToString (VBScript)
 > [!IMPORTANT]
@@ -101,10 +100,9 @@ MIME Encoded RS: <BR>
 <!-- EndConvertToStringVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
 
 
 

@@ -3,24 +3,25 @@ title: "С помощью шифрования SSL | Документы Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 2ca2c1c7b566b70b82a70b939c5495e76ce4612a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7923995b392dff8c80f1ee6ae3946e421dc46331
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-ssl-encryption"></a>Использование SSL-шифрования
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,11 +44,10 @@ ms.lasthandoff: 09/09/2017
 |Раздел|Description|  
 |-----------|-----------------|  
 |[Основные сведения о поддержке SSL](../../connect/jdbc/understanding-ssl-support.md)|Описывает способ [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает SSL-шифрование.|  
-|[Подключение с шифрованием SSL](../../connect/jdbc/connecting-with-ssl-encryption.md)|Описывает, как подключиться к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных с помощью новых свойств подключения SSL.|  
-|[Настройка клиента для SSL-шифрования](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md)|Описывает настройку доверенного хранилища по умолчанию на стороне клиента и импорт личного сертификата в доверенное хранилище клиентского компьютера.|  
+|[Соединение с помощью SSL-шифрования](../../connect/jdbc/connecting-with-ssl-encryption.md)|Описывает, как подключиться к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных с помощью новых свойств подключения SSL.|  
+|[Настройка SSL-шифрования на клиенте](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md)|Описывает настройку доверенного хранилища по умолчанию на стороне клиента и импорт личного сертификата в доверенное хранилище клиентского компьютера.|  
   
 ## <a name="see-also"></a>См. также:  
  [Защита приложений драйвера JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   
-

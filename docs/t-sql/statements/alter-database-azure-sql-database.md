@@ -1,32 +1,31 @@
 ---
 title: "ALTER DATABASE (база данных Azure SQL) | Документы Microsoft"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
-ms.date: 09/25/2017
+ms.custom: 
+ms.date: 02/13/2018
 ms.prod: 
+ms.prod_service: sql-database
 ms.reviewer: 
 ms.service: sql-database
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6fc5fd95-2045-4f20-a914-3598091bc7cc
-caps.latest.revision: 37
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 80aa017e3876a7a41077f770d5328e4c6c49b5be
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: f525c0ca01f49be05c1920897951059b126c83e9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/30/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (база данных Azure SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Изменяет [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Изменяет имя базы данных, выпуск и службы цель базы данных, соединения в пуле эластичных БД и наборы параметров базы данных.  
   
@@ -53,7 +52,7 @@ ALTER DATABASE { database_name }
 {  
 
       MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }    
-    | EDITION = { 'basic' | 'standard' | 'premium' | 'premiumrs' }   
+    | EDITION = { 'basic' | 'standard' | 'premium' }   
     | SERVICE_OBJECTIVE = 
                  {  <service-objective>
                  | { ELASTIC_POOL (name = <elastic_pool_name>) }   
@@ -70,8 +69,7 @@ ALTER DATABASE { database_name }
    }  
 
 <service-objective> ::=  { 'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
-                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' | 
-                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | }
+                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' }
 
 ```  
   
@@ -80,10 +78,10 @@ ALTER DATABASE { database_name }
 -- Full descriptions of the set options are available in the topic   
 -- ALTER DATABASE SET Options. The supported syntax is listed here.  
 
-<optionspec> ::=   
+<option_spec> ::=   
 {  
     <auto_option>   
-  | <compatibility_level_option>  
+  | <change_tracking_option> 
   | <cursor_option>   
   | <db_encryption_option>  
   | <db_update_option>   
@@ -105,10 +103,23 @@ ALTER DATABASE { database_name }
   | AUTO_UPDATE_STATISTICS { ON | OFF }   
   | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
 }  
-  
-<compatibility_level_option>::=  
-COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }  
-  
+
+<change_tracking_option> ::=  
+{  
+  CHANGE_TRACKING   
+   {   
+       = OFF  
+     | = ON [ ( <change_tracking_option_list > [,...n] ) ]   
+     | ( <change_tracking_option_list> [,...n] )  
+   }  
+}  
+
+   <change_tracking_option_list> ::=  
+   {  
+       AUTO_CLEANUP = { ON | OFF }   
+     | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
+   }  
+
 <cursor_option> ::=   
 {  
     CURSOR_CLOSE_ON_COMMIT { ON | OFF }   
@@ -164,7 +175,7 @@ COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }
   | ANSI_PADDING { ON | OFF }   
   | ANSI_WARNINGS { ON | OFF }   
   | ARITHABORT { ON | OFF }   
-  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120}  
+  | COMPATIBILITY_LEVEL = { 100 | 110 | 120 | 130 | 140 }  
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }   
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
@@ -190,7 +201,7 @@ COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }
  CURRENT  
  Определяет, что должна быть изменена текущая используемая база данных.  
   
- ИЗМЕНИТЬ имя  **=**  *новое_имя_базы_данных*  
+ Параметр MODIFY NAME **= *** новое_имя_базы_данных*  
  Переименование базы данных с именем, указанным в качестве *новое_имя_базы_данных*. В следующем примере изменяется имя базы данных `db1` для `db2`:   
 
 ```  
@@ -198,8 +209,10 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;  
 ```    
 
- ИЗМЕНИТЬ (выпуск  **=**  [«basic» | «стандартный» | «premium» | «premiumrs»])    
- Изменяет уровень обслуживания базы данных. В следующем примере изменяется выпуск `premium`:
+ ИЗМЕНИТЬ (выпуск  **=**  [«basic» | «стандартный» | 'premium'])    
+ Изменяет уровень обслуживания базы данных. Поддержка «premiumrs» был удален. По вопросам, использовать этот псевдоним электронной почты: premium-rs@microsoft.com.
+
+В следующем примере изменяется выпуск `premium`:
   
 ```  
 ALTER DATABASE current 
@@ -211,7 +224,7 @@ ALTER DATABASE current
  ИЗМЕНИТЬ (MAXSIZE  **=**  [100 МБ | 500 МБ | 1 | 1024... 4096] ГБ)  
  Указывает максимальный размер базы данных. Максимальный размер должен соответствовать допустимому набору значений для свойства EDITION базы данных. Смена максимального размера базы данных может потребовать также смены значения EDITION базы данных. В следующей таблице приведены поддерживаемые значения MAXSIZE и значения, заданные по умолчанию (D) для уровней служб [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-|**ПАРАМЕТР MAXSIZE**|**Basic**|**S0 S2**|**S3 S12**|**P1 P6 и PRS1 PRS6**|**P11 P15**|  
+|**ПАРАМЕТР MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**|**P11-P15**|  
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 МБ|√|√|√|√|√|  
 |250 МБ|√|√|√|√|√|  
@@ -235,7 +248,7 @@ ALTER DATABASE current
 |1024 ГБ|Недоступно|√|√|√|√ (D)|  
 |От 1024 ГБ до 4096 ГБ с приращением 256 ГБ *|Недоступно|Недоступно|Недоступно|Недоступно|√|√|  
   
- \*P11 и P15 позволяют MAXSIZE до 4 ТБ 1024 ГБ, размер по умолчанию.  P11 и P15 могут использовать до 4 ТБ хранилища включены без дополнительной платы. На уровне Premium MAXSIZE больше 1 ТБ, доступен в следующих областях: нам East2, Запад США, Вирджиния государственных организаций США, Западной Европе, Германия центра, Южная Восточная Азия, восток Японии, Восточная Австралия, Канады центра и Восточная Канада. Текущие ограничения в разделе [одной базы данных](https://docs.microsoft.com/azure/sql-database-single-database-resources).  
+ \* P11 и P15 позволяют MAXSIZE до 4 ТБ 1024 ГБ, размер по умолчанию.  P11 и P15 могут использовать до 4 ТБ хранилища включены без дополнительной платы. На уровне Premium MAXSIZE больше 1 ТБ, доступен в следующих областях: нам East2, Запад США, Вирджиния государственных организаций США, Западной Европе, Германия центра, Южная Восточная Азия, восток Японии, Восточная Австралия, Канады центра и Восточная Канада. Текущие ограничения в разделе [одной базы данных](https://docs.microsoft.com/azure/sql-database-single-database-resources).  
 
   
  Следующие правила применяются к аргументам MAXSIZE и EDITION:  
@@ -254,7 +267,7 @@ ALTER DATABASE current
 ALTER DATABASE current 
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
- Доступные значения для обслуживания:: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `PRS1`, `PRS2`, `PRS4`, и `PRS6`. Для описания цели службы и Дополнительные сведения о размере, выпусках и комбинациях служб см. в разделе [уровни служб базы данных SQL Azure и уровни производительности](http://msdn.microsoft.com/library/azure/dn741336.aspx). Если указанное значение SERVICE_OBJECTIVE не поддерживается выпуском, возникает ошибка. Чтобы изменить значение SERVICE_OBJECTIVE с одного уровня на другой (например, с S1 на P1), необходимо также изменить значение EDITION.  
+ Доступные значения для обслуживания:: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, или`P15`. Для описания цели службы и Дополнительные сведения о размере, выпусках и комбинациях служб см. в разделе [уровни служб базы данных SQL Azure и уровни производительности](http://msdn.microsoft.com/library/azure/dn741336.aspx). Если указанное значение SERVICE_OBJECTIVE не поддерживается выпуском, возникает ошибка. Чтобы изменить значение SERVICE_OBJECTIVE с одного уровня на другой (например, с S1 на P1), необходимо также изменить значение EDITION. Поддержка цели обслуживания PRS были удалены. По вопросам, использовать этот псевдоним электронной почты: premium-rs@microsoft.com. 
   
  ИЗМЕНИТЬ (SERVICE_OBJECTIVE = ГИБКОМУ\_ПУЛА (имя = \<elastic_pool_name >)  
  Чтобы добавить существующую базу данных в пуле эластичных БД, ELASTIC_POOL значение SERVICE_OBJECTIVE базы данных и укажите имя эластичного пула. Этот параметр служит для изменения различных эластичный пул с таким же сервером базы данных. Дополнительные сведения см. в разделе [Создание и управление ими эластичного пула баз данных SQL](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/). Чтобы удалить базу данных из эластичного пула, значение SERVICE_OBJECTIVE одного уровня производительности базы данных с помощью инструкции ALTER DATABASE.  
@@ -265,7 +278,7 @@ ALTER DATABASE current
  С ALLOW_CONNECTIONS {ВСЕ | **НЕТ** }  
  Если ALLOW_CONNECTIONS не указан, ему присваивается нет по умолчанию. Если все равно, это база данных только для чтения, позволяющий все имена входа с соответствующими разрешениями для подключения.  
   
- С SERVICE_OBJECTIVE {'S0» | «S1» | «S2» | «S3» | 'S4» | «S6» | «S7» | «S9» | «S12» | «P1» | «P2» | «P4» | «P6» | «P11» | «P15» | «PRS1» | «PRS2» | «PRS4» | «PRS6»}  
+ С SERVICE_OBJECTIVE {'S0» | «S1» | «S2» | «S3» | 'S4» | «S6» | «S7» | «S9» | «S12» | «P1» | «P2» | «P4» | «P6» | «P11» | «P15»}  
  При SERVICE_OBJECTIVE не указан, база данных-получатель создается на том же уровне службы базы данных-источника. Если указано значение SERVICE_OBJECTIVE, база данных-получатель создается на заданном уровне. Этот параметр поддерживает создание получатели с менее дорогих уровней обслуживания. Значение SERVICE_OBJECTIVE указан должно быть в один и тот же выпуск как источник. Например если выпуск premium нельзя указать S0.  
   
  ELASTIC_POOL (имя = \<elastic_pool_name)  
@@ -310,7 +323,7 @@ ALTER DATABASE current
 > [!IMPORTANT]  
 >  Пользователь, выполняющий команду FORCE_FAILOVER_ALLOW_DATA_LOSS должен быть DBManager на сервере-источнике и сервере-получателе.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Чтобы удалить базу данных, используйте [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).  
   
  Чтобы уменьшить размер базы данных, используйте [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
@@ -334,7 +347,7 @@ ALTER DATABASE current
 ## <a name="viewing-database-information"></a>Просмотр сведений о базе данных  
  Для возврата сведений о базах данных, файлах и файловых группах можно использовать представления каталогов, системные функции и системные хранимые процедуры.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Изменять базу данных могут только имя входа субъект серверного уровня (созданное в процессе провизионирования) или члены роли базы данных `dbmanager`.  
   
 > [!IMPORTANT]  
@@ -390,7 +403,7 @@ ALTER DATABASE db1 FAILOVER
  [DROP DATABASE (Transact-SQL)](../../t-sql/statements/drop-database-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
+ [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
@@ -401,4 +414,3 @@ ALTER DATABASE db1 FAILOVER
  [Системные базы данных](../../relational-databases/databases/system-databases.md)  
   
   
-

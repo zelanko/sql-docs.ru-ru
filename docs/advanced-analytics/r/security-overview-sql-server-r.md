@@ -1,39 +1,41 @@
 ---
-title: "Общие сведения о безопасности для служб R SQL Server | Документация Майкрософт"
+title: "Безопасность SQL Server машинного обучения и R | Документы Microsoft"
 ms.custom: 
-ms.date: 03/10/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
-caps.latest.revision: 9
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 9ee0460e1e6a14e1d40c4e4f4bb3cf084c7d5b85
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8388d7c9d22a49a49a1a45a6fa6b479107f9ccae
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="security-overview-sql-server-r-services"></a>Общие сведения о безопасности для служб R SQL Server
+# <a name="security-for-sql-server-machine-learning-and-r"></a>Безопасность SQL Server машинного обучения и R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Здесь описывается общая архитектура безопасности, которая используется для подключения ядра СУБД [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] и связанных компонентов к среде выполнения R. Примеры процесса обеспечения безопасности приведены для двух распространенных сценариев использования R в корпоративной среде:
+В этой статье описывается общая архитектура безопасности, используемый для подключения [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ядра и связанных компонентов среды выполнения R базы данных. Примеры процесс обеспечения безопасности, предоставляемые для этих общих сценариев для использования R в среде предприятия:
 
 + выполнение функций RevoScaleR в [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] из клиента обработки и анализа данных;
 + выполнение R прямо из [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] с помощью хранимых процедур.
 
 ## <a name="security-overview"></a>Общие сведения о безопасности
 
-Объект [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] для запуска сценариев R, которые используют данные SQL Server или выполняющихся с SQL Server в контексте требуется имя входа или учетная запись пользователя Windows. Это требование применяется к обоим [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] и службы SQL Server 2017 г машины обучения. 
+Объект [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] для запуска сценариев R, которые используют данные SQL Server или выполняющихся с SQL Server в контексте требуется имя входа или учетная запись пользователя Windows. Это требование применяется к обоим [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] и 2017 г. SQL Server [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)].
 
 Определяет имя входа или учетной записи пользователя *субъекта безопасности*, кто может потребоваться несколько уровней доступа, в зависимости от требований сценария R:
+
 + Разрешение на доступ к базе данных, где включена R
 + Разрешения на чтение данных из защищенных объектов, таких как таблицы
 + Разрешение на запись новых данных в таблице, например модели или оценки результатов
@@ -56,7 +58,7 @@ ms.lasthandoff: 09/01/2017
 
 Таким образом все задания R, инициированные с удаленного клиента необходимо указать сведения о имени входа или пользователя в строке подключения.
 
-## <a name="interaction-of-includessnoversionmdincludesssnoversion-mdmd-security-and-launchpad-security"></a>Взаимодействие безопасности [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] и панели запуска
+## <a name="interaction-of-includessnoversionmdincludesssnoversion-mdmd-security-and-launchpad-security"></a>Взаимодействие [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] и безопасности на панели запуска
 
 Когда скрипт R выполняется в контексте компьютера [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], служба [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] получает доступную рабочую учетную запись (учетную запись локального пользователя) из пула рабочих учетных записей, установленных для внешних процессов, и использует ее для выполнения связанных задач. 
 
@@ -66,21 +68,25 @@ ms.lasthandoff: 09/01/2017
 
 Когда все операции [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] будут завершены, рабочая учетная запись пользователя будет помечена как свободная и вернется в пул.
 
-Дополнительные сведения о [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] см. в статье [Новые компоненты SQL Server для поддержки служб R](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r.md).
+Дополнительные сведения о [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], в разделе [компоненты SQL Server для поддержки интеграции R](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md).
 
-> [!NOTE]
-Чтобы с помощью панели запуска можно было управлять рабочими учетными записями и выполнять задания R, группе, в которой содержатся рабочие учетные записи (SQLRUserGroup), должны быть предоставлены разрешения локального входа в систему. В противном случае службы R работать не будут. По умолчанию это право предоставляется всем новым локальным пользователям, но в некоторых организациях могут действовать более строгие групповые политики, которые предотвращают подключение рабочих учетных записей к SQL Server для выполнения заданий R.  
+### <a name="implied-authentication"></a>Неявная проверка подлинности
+
+**Неявной проверки подлинности** является термин, используемый для процесса, в которой SQL Server возвращает пользователя, учетные данные, а затем выполняет все задачи внешний скрипт от имени пользователей, при условии, что пользователь имеет необходимые разрешения в базе данных. Неявной проверки подлинности особенно важно в тех случаях, если необходимо произвести вызов ODBC вне базы данных SQL Server R-скрипта. Например код может получить более короткому списку факторов из электронной таблицы или другого источника.
+
+Такие вызовы замыкания на себя для успешного выполнения группу, содержащую рабочих учетных записей, SQLRUserGroup, необходимо иметь разрешения «Локальный вход в систему». По умолчанию это право предоставляется для всех новых локальных пользователей, но в некоторых организациях могут применяться более строгие политики группы.
+
+![Неявной проверки подлинности для R](media/implied-auth-rsql.png)
 
 ## <a name="security-of-worker-accounts"></a>Безопасность рабочих учетных записей
 
-Сопоставление внешнего пользователя Windows или рабочей учетной записи входа SQL является допустимым только в течение времени существования SQL-запроса, который запускает сценарий R. 
+Сопоставление внешнего пользователя Windows или рабочей учетной записи входа SQL является допустимым только в течение времени существования SQL-запроса, который запускает сценарий R.
 
 Параллельные запросы, выполняемые с тем же именем входа, сопоставляются с той же рабочей учетной записью пользователя.
 
 Каталогами, используемыми для этих процессов, управляет [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] с помощью RLauncher, и доступ к ним ограничен. У рабочей учетной записи нет доступа к каким-либо файлам в папках (за исключением своих), но есть возможность чтения, записи или удаления дочерних элементов в сеансе рабочей папки, созданной для SQL-запроса с помощью скрипта R.
 
-Дополнительные сведения о том, как изменить количество рабочих учетных записей, имена учетных записей или их пароли, см. в статье [Изменение пула учетных записей пользователей для служб R SQL Server](../../advanced-analytics/r-services/modify-the-user-account-pool-for-sql-server-r-services.md).
-
+Дополнительные сведения о том, как изменить количество рабочих учетных записей, имена учетных записей или паролей учетных записей см. в разделе [изменение пула учетных записей пользователей для SQL Server машинного обучения](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
 ## <a name="security-isolation-for-multiple-external-scripts"></a>Изоляция безопасности для нескольких внешних скриптов
 
@@ -91,5 +97,5 @@ ms.lasthandoff: 09/01/2017
 Если вы являетесь администратором компьютера, вы можете просмотреть каталоги, созданные для каждого процесса. Каждый каталог определяется собственным идентификатором GUID сеанса.
 
 ## <a name="see-also"></a>См. также:
-[Обзор архитектуры](../../advanced-analytics/r-services/architecture-overview-sql-server-r.md)
 
+[Обзор архитектуры для SQL Server машинного обучения](../../advanced-analytics/r/architecture-overview-sql-server-r.md)

@@ -2,13 +2,13 @@
 title: "Определение именованных вычислений в представлении источника данных (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - data source views [Analysis Services], named calculations
 - named calculations [Analysis Services]
 ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 62d9d96f3d0fc373ba83149789487706fe8354c7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d74a249e280b0c6b31c970638e3c47b3e6327c5f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>Определение именованных вычислений в представлении источника данных (службы Analysis Services)
-  Именованное вычисление является выражением SQL, представленным в виде вычисляемого столбца. Данное выражение выглядит и работает как столбец таблицы. Именованное вычисление позволяет расширить реляционную схему таблиц или представлений, существующих в представлении источника данных, не изменяя таблицы или представления в базовом источнике данных. Рассмотрим следующие примеры:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Именованное вычисление является выражением SQL, представленным в виде вычисляемого столбца. Данное выражение выглядит и работает как столбец таблицы. Именованное вычисление позволяет расширить реляционную схему таблиц или представлений, существующих в представлении источника данных, не изменяя таблицы или представления в базовом источнике данных. Рассмотрим следующие примеры:  
   
 -   Создайте одно именованное вычисление, получаемое из нескольких столбцов таблицы фактов (например, вычисление суммы налога путем умножения налоговой ставки на стоимость продажи).  
   
@@ -91,7 +91,6 @@ FROM
  При попытке удалить именованное вычисление приложение выдаст список объектов, определенных в проекте или базе данных, которые при удалении станут недействительными. Внимательно просмотрите список перед удалением вычисления.  
   
 ## <a name="see-also"></a>См. также  
- [Определение именованных запросов в представлении источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [Определение именованных запросов в представлении источника данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   
-

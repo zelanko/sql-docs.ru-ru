@@ -2,9 +2,12 @@
 title: "Реализация уведомлений о событиях | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: service-broker
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,19 +17,20 @@ helpviewer_keywords:
 - target service [SQL Server]
 - event notifications [SQL Server], creating
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
-caps.latest.revision: 34
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eac9804c15bfcafbb5581875258d4499df130db9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 259065dc0de5207598a785e21815cfaddf37d4b1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="implement-event-notifications"></a>Реализация уведомлений о событиях
-  Для реализации уведомлений о событиях необходимо сперва создать целевую службу, которая будет получать уведомления о событиях, а затем создать уведомление о событиях.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Для реализации уведомлений о событиях необходимо сперва создать целевую службу, которая будет получать уведомления о событиях, а затем создать уведомление о событиях.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSB](../../includes/sssb-md.md)] на удаленном сервере, необходимо настроить безопасность диалога. Безопасность диалога должна быть настроена вручную согласно модели полной безопасности.  

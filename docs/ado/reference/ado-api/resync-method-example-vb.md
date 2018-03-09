@@ -3,7 +3,7 @@ title: "Повторная синхронизация пример метода 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Resync method [ADO], Visual Basic example
 ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 86e65db9410f501224f9a745ada5e6128d91c7b4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2851d54c865d0f57ad250ba0c5016ac98a455de6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="resync-method-example-vb"></a>Повторная синхронизация пример метода (Visual Basic)
 В этом примере показано использование [Resync](../../../ado/reference/ado-api/resync-method.md) метод для обновления данных в статических записей.  
@@ -111,7 +110,6 @@ End Sub
 'EndResyncVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Метод повторной синхронизации](../../../ado/reference/ado-api/resync-method.md)
-
+ [Метод Resync](../../../ado/reference/ado-api/resync-method.md)

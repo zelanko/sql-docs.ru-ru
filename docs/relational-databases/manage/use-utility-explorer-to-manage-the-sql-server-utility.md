@@ -2,28 +2,29 @@
 title: "Использование проводника служебной программы для управления служебной программой SQL Server | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
-caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "10"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 663d8b3a7f8dbb27813ecbdd3f2aafdb64ed94d5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd65300d9d3c79ea0604d6ea83c1c9377b7982cc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Использование проводника служебных программ для управления служебной программой SQL Server
-  Проводник служебной программы, компонент среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключается к экземплярам компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для отображения всех объектов в служебной программе представления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в виде дерева. Панель содержимого обозревателя программ предоставляет несколько способов просмотра сводных и подробных данных о состоянии исправности ресурсов управляемых экземпляров SQL Server. Обозреватель программ также реализует пользовательский интерфейс для просмотра определений политик и управления ими. Возможности обозревателя программ немного различаются в зависимости от объектов, представленных в служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , однако в целом они охватывают объекты, данные и политики, управляемые служебной программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Функции и задачи служебной программы SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Проводник служебной программы, компонент среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключается к экземплярам компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для отображения всех объектов с представлением в виде дерева в служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Панель содержимого обозревателя программ предоставляет несколько способов просмотра сводных и подробных данных о состоянии исправности ресурсов управляемых экземпляров SQL Server. Обозреватель программ также реализует пользовательский интерфейс для просмотра определений политик и управления ими. Возможности обозревателя программ немного различаются в зависимости от объектов, представленных в служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , однако в целом они охватывают объекты, данные и политики, управляемые служебной программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Функции и задачи служебной программы SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 ## <a name="create-utility-control-point"></a>Создание пункта управления программой  
  Перед использованием программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо создать пункт управления программой. Дополнительные сведения см. в статье [Функции и задачи служебной программы SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md) или [Создание точки управления служебной программой SQL Server (служебная программа SQL Server Utility)](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md).  
@@ -75,4 +76,3 @@ ms.lasthandoff: 08/03/2017
  [Обозреватель объектов](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2)  
   
   
-

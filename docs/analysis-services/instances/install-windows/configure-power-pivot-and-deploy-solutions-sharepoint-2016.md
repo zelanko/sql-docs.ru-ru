@@ -2,28 +2,30 @@
 title: "Настройка Power Pivot и развертывание решений (SharePoint 2016) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 92dc344de6a88459a2ec718a30f893cff50b16af
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 01d737c9c1ac225ca00f4b824567d013673a8f57
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Настройка Power Pivot и развертывание решений (SharePoint 2016)
-  В этом разделе описаны развертывание и настройка расширений среднего уровня компонентов [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] , в том числе коллекции [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , расписания обновления данных, панели управления и поставщиков данных. Запустите инструмент **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint 2016** , чтобы выполнить следующее.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+В этом разделе описаны развертывание и настройка расширений среднего уровня компонентов [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] , в том числе коллекции [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , расписания обновления данных, панели управления и поставщиков данных. Запустите инструмент **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint 2016** , чтобы выполнить следующее.  
   
 -   Развертывание файлов решения SharePoint.  
   
@@ -32,18 +34,6 @@ ms.lasthandoff: 09/01/2017
 -   Дополнительные сведения о серверных службах и установке сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] см. в разделе [Установка служб Analysis Services в режиме Power Pivot](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
  Дополнительные сведения об установке [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] средства настройки SharePoint 2016, в разделе [Установка или удаление надстройки Power Pivot для надстройки SharePoint (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
-  
- Этот раздел состоит из следующих подразделов.  
-  
- [Запуск настройки Power Pivot для SharePoint 2016](#bkmk_run_configuration_tool)  
-  
- [Проверка конфигурации Power Pivot](#bkmk_verify_powerpivot)  
-  
- [Устранение неполадок](#bkmk_troubleshoot_issues)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Запуск настройки Power Pivot для SharePoint 2016  
  **Примечание.** Для выполнения следующих шагов нужно быть администратором фермы. Если вы появится примерно следующее сообщение об ошибке:  
@@ -139,4 +129,3 @@ ms.lasthandoff: 09/01/2017
  Дополнительные сведения о средстве настройки см. в разделе [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
   
-

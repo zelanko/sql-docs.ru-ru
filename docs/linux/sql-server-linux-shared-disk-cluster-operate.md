@@ -3,23 +3,27 @@ title: "Экземпляр отказоустойчивого кластера �
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: 5e557c2ef6005a9e2822b973748928bae991875c
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: a8595b61afd374d6127f6cc7b9b363f325a257b5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Работать экземпляр отказоустойчивого кластера — SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 В этой статье объясняется, как для работы SQL Server экземпляра отказоустойчивого кластера (FCI) в Linux. Если вы не создали отказоустойчивого Кластера SQL Server в Linux, см. раздел [настроить отказоустойчивый кластер — SQL Server в Linux](sql-server-linux-shared-disk-cluster-configure.md). 
 
@@ -34,7 +38,7 @@ ms.lasthandoff: 10/02/2017
 - [RHEL или Ubuntu](#rhelFailover)
 - [SLES](#slesFailover)
 
-## <a name = "#rhelFailover"></a>Отработка отказа вручную (RHEL или Ubuntu)
+## <a name = "#rhelFailover"></a> Отработка отказа вручную (RHEL или Ubuntu)
 
 Чтобы выполнить отработку отказа вручную, onn Red Hat Enterprise Linux (RHEL) или Ubuntu серверов выполните следующие действия.
 1.  Выполните следующую команду: 
@@ -55,7 +59,7 @@ ms.lasthandoff: 10/02/2017
 
 \<FCIResourceName > — имя ресурса Pacemaker для FCI. 
 
-## <a name = "#slesFailover"></a>Отработка отказа вручную (SLES)
+## <a name = "#slesFailover"></a> Отработка отказа вручную (SLES)
 
 
 В Suse Linux Enterprise Server (SLES), используйте `migrate` команда отказоустойчивого Кластера SQL Server, переход на другой ресурс вручную. Например:
@@ -81,4 +85,3 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 - [Настроить экземпляр отказоустойчивого кластера — SQL Server в Linux](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->
-

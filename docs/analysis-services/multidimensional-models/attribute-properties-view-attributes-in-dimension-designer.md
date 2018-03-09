@@ -2,13 +2,13 @@
 title: "Просмотр атрибутов в конструкторе измерений | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - attributes [Analysis Services], viewing
 - viewing attributes
 ms.assetid: 855bef07-b72d-4ce3-bf02-de77abeee71a
-caps.latest.revision: 33
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 123d00510932a19a033c82995f14de5b87467c5a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e73cba395d806e834dc03e7f7cd79d030eb5c36e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---view-attributes-in-dimension-designer"></a>Свойства атрибута — Просмотр атрибутов в конструкторе измерений
-  Атрибуты создаются на объектах измерений. Просматривать и настраивать атрибуты можно с помощью конструктора измерений в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Панель **Атрибуты** на вкладке **Структура измерения** конструктора измерений содержит список атрибутов в измерении. Эта панель используется для добавления, удаления или настройки атрибутов. Можно также выбрать атрибуты и использовать их как уровень в новой иерархии или добавить как уровень в существующую иерархию.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Атрибуты создаются на объектах измерений. Просматривать и настраивать атрибуты можно с помощью конструктора измерений в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Панель **Атрибуты** на вкладке **Структура измерения** конструктора измерений содержит список атрибутов в измерении. Эта панель используется для добавления, удаления или настройки атрибутов. Можно также выбрать атрибуты и использовать их как уровень в новой иерархии или добавить как уровень в существующую иерархию.  
   
  Чтобы просмотреть атрибуты в измерении, откройте измерение в конструкторе измерений. На панели **Атрибуты** вкладки **Структура измерения**  конструктора показаны атрибуты измерения. Можно выбрать представление списка, дерева или сетки, выбрав пункт **Показать атрибуты в** в меню **Измерение** среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , а затем выбрав одну из следующих команд:  
   
@@ -71,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [Справочник по свойствам атрибута измерения](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
-

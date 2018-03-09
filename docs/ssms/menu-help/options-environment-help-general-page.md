@@ -3,29 +3,29 @@ title: "Параметры (\"Среда\" — \"Справка\" — \"Общ
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptionsPages.Environment.Help.General
+f1_keywords: VS.ToolsOptionsPages.Environment.Help.General
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c81d9fefe5e4e7b8bc41f1a3df26d43a79f8226b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d5b9be182f2af8ab60469591d63fb847da20f244
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="options-environment---help---general-page"></a>Параметры ("Среда" — "Справка" — "Общие")
-В диалоговом окне **Параметры** можно выбрать наборы документации, а также выбрать отображение разделов внутри среды [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] либо в отдельном внешнем окне. Чтобы открыть это диалоговое окно, в меню **Сервис** выберите команду **Параметры** , в узле **Среда** разверните элемент **Справка** , а затем щелкните элемент **Общие**.  
+# <a name="options-environment---help---general-page"></a>Параметры ("Среда" — "Справка" — страница "Общие")
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В диалоговом окне **Параметры** можно выбрать наборы документации, а также отображение разделов внутри среды [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] либо в отдельном внешнем окне. Чтобы открыть это диалоговое окно, в меню **Сервис** выберите команду **Параметры** , в узле **Среда** разверните элемент **Справка** , а затем щелкните элемент **Общие**.  
   
 > [!NOTE]  
 > Изменения параметров на этой странице вступят в силу только после перезапуска среды.  
@@ -52,4 +52,3 @@ ms.lasthandoff: 06/22/2017
 **Отображать также разделы на английском**  
 Помимо разделов на языке, выбранном в поле **Язык разделов справки в сети** , в списке результатов будут выводиться разделы справки на английском языке.  
   
-

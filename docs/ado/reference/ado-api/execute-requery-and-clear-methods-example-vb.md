@@ -3,7 +3,7 @@ title: "Выполнение и Requery снимите примере метод
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Clear method [ADO], Visual Basic example
 - Execute method [ADO], Visual Basic example
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 1549486e1dc4efc0325f935ce80d25627aeb72df
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 97b0aebaa5450cf2dce7622c7771550dd7f77f2f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>Выполнение и Requery снимите примере методы (Visual Basic)
 В этом примере демонстрируется **Execute** при запуске с оба метода [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта и [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Она также использует [Requery](../../../ado/reference/ado-api/requery-method.md) метод для извлечения текущих данных в [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md)и [снимите](../../../ado/reference/ado-api/clear-method-ado.md) метод, чтобы удалить содержимое [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md)коллекции. ( **Ошибки** коллекции осуществляется через **подключения** объект [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) свойство [записей](../../../ado/reference/ado-api/recordset-object-ado.md).) ExecuteCommand и PrintOutput процедуры необходимы для выполнения этой процедуры.  
@@ -175,7 +174,7 @@ End Sub
 'EndExecuteVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [Объект команды (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
@@ -183,5 +182,4 @@ End Sub
  [Выполнить метод (команда ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
  [Выполнить метод (соединение ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Requery-метод](../../../ado/reference/ado-api/requery-method.md)
-
+ [Метод Requery](../../../ado/reference/ado-api/requery-method.md)

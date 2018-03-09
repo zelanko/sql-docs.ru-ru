@@ -2,31 +2,32 @@
 title: "Диалоговое окно \"Создание нового условия\" или \"Открытие условия\", страница \"Описание\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.dmf.condition.description.f1
 - sql13.swb.dmf.policy.description.f1
 ms.assetid: 2ef0a556-9566-4af8-849e-ab038b9279cc
-caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "37"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e053294a414ae2baefc90f20ff3fc80adf78a0e7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ef0fb11f268c5e6997f169e46d63851ba53df091
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>Диалоговое окно «Создание нового условия» или «Открытие условия», страница «Описание»
-  С помощью данного диалогового окна добавляется описание к условию управления на основе политик.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью этого диалогового окна добавляется описание к условию управления на основе политик.  
   
 ## <a name="options"></a>Параметры  
  **Описание**  
@@ -48,4 +49,3 @@ ms.lasthandoff: 06/22/2017
  [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
-

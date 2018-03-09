@@ -3,7 +3,7 @@ title: "Свойство CharSet (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Charset property [ADO]
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 43d23eda107933ab659324de412db0e101f8da00
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8c3f9568a04572718bb6b1a968a3bacae4520898
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="charset-property-ado"></a>Свойство CharSet (ADO)
 Указывает кодировку, в которой содержимое текстового [поток](../../../ado/reference/ado-api/stream-object-ado.md) преобразования для хранения в внутренний буфер **поток** объекта.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **строка** которого присвоено значение, указывающее знак содержимое **поток** будут преобразованы. Значение по умолчанию — **Юникода**. Допустимые значения: типичные строк, передаваемых через интерфейс как Интернет имена наборов символов (например, «iso-8859-1», «Windows-1252"и т. д). Список имен набор символов, которые заведомо системой см. подраздел HKEY_CLASSES_ROOT\MIME\Database\Charset в реестре Windows.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В текстовом **поток** объект текстовые данные хранятся в набор знаков, указанных в **Charset** свойство. Значение по умолчанию — Unicode. **Charset** свойство используется для преобразования данных, поступающих на **поток** или ближайшие из **поток**. Например если **поток** содержит данные ISO-8859-1, и что данные копируются в тип BSTR, **поток** объекта будет преобразовать данные в Юникоде. То же самое будет наблюдаться и в обратной ситуации.  
   
  Для открытого **поток**, текущий [позиции](../../../ado/reference/ado-api/position-property-ado.md) должно быть в начале **поток** (0), чтобы можно было задать **Charset**.  
@@ -46,5 +45,4 @@ ms.lasthandoff: 09/09/2017
  Пример кода см. в разделе [шаг 4: заполнить текстовое поле сведений](../../../ado/guide/data/step-4-populate-the-details-text-box.md).  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект потока (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
-
+ [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

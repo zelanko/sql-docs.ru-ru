@@ -3,7 +3,7 @@ title: "Метод CopyRecord (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - CopyRecord method [ADO]
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f4c31ec2491486c6c2332e32395246db4651f4e8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5acc04720b17df0c39203417633332a0f01c2890
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="copyrecord-method-ado"></a>Метод CopyRecord (ADO)
 Копирует сущности, представленной [записи](../../../ado/reference/ado-api/record-object-ado.md) в другое место.  
@@ -57,13 +56,13 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *Параметры*  
  Необязательно. Объект [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) значение, которое имеет значение по умолчанию **adCopyUnspecified**. Задает поведение данного метода.  
   
- *Асинхронный*  
+ *Async*  
  Необязательно. Объект **логическое** значением, которое при **True**, указывает, что эта операция должна быть асинхронной.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект **строка** значение, которое обычно возвращает значение *назначения*. Тем не менее возвращаемое точное значение зависит от поставщика.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Значения *источника* и *назначения* не должна одинаковы; в противном случае возникает ошибка времени выполнения. По крайней мере одно имя сервера, путь или ресурсов должны отличаться.  
   
  Все дочерние элементы (например, подкаталогов) *источника* , скопированный рекурсивно, если не **adCopyNonRecursive** указано. В операцию рекурсивного *назначения* не должно быть подкаталог *источника*; в противном случае операция не будет завершена.  
@@ -77,5 +76,4 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
 >  URL-адреса, с помощью схемы http автоматически вызывает [поставщик Microsoft OLE DB для публикаций в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [абсолютные и относительные URL-адреса](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект записи (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
-
+ [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

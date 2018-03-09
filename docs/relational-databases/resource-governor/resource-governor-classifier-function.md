@@ -2,11 +2,13 @@
 title: "Функция-классификатор регулятора ресурсов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +17,19 @@ helpviewer_keywords:
 - classifier function [SQL Server]
 - classifier function [SQL Server], overview
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
-caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 284ee7a05af7ab73e78dd827269db49c7d3f1e00
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "7"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: dd888ee38d5afb60fc6a071af2f6e072d31ff290
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="resource-governor-classifier-function"></a>Функция-классификатор регулятора ресурсов
-  Процесс классификации регулятора ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначает входящие сеансы группе рабочей нагрузки с учетом характеристик сеанса. Логику классификации можно адаптировать путем написания определяемой пользователем функции, называемой функцией-классификатором.  
+# <a name="resource-governor-classifier-function"></a>Resource Governor Classifier Function
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Процесс классификации регулятора ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначает входящие сеансы группе рабочей нагрузки с учетом характеристик сеанса. Логику классификации можно адаптировать путем написания определяемой пользователем функции, называемой функцией-классификатором.  
   
 ## <a name="classification"></a>Классификация  
  Регулятор ресурсов поддерживает классификацию входящих сеансов. Классификация основывается на наборе пользовательских критериев, содержащихся в функции. Результаты логики функции позволяют регулятору ресурсов классифицировать сеансы по существующим группам рабочей нагрузки.  

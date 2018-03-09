@@ -2,35 +2,34 @@
 title: "Свойства (XMLA) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - properties [XML for Analysis]
 - XML for Analysis, properties
 - XMLA, properties
 ms.assetid: 7aa5815f-d614-497b-a9eb-f6284772bda8
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 38f0983ae4f840ac0addf4e30439ff57a679e30e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cc403451163e860c9f7ecdf00149768569423714
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xml-elements---properties"></a>Элементы XML - свойства
-  Протокол XMLA использует элементы XML для представления сведений о свойствах, а также для представления значений для относящихся к протоколу XMLA заголовков, методов, объектов, команд и типов данных.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Протокол XML для аналитики (XMLA) использует XML-элементы для представления сведений о свойствах и значения для заголовков, методов, объектов, команд и типов данных XML для Аналитики.  
   
 ## <a name="topic-list"></a>Список разделов  
  В следующих подразделах описываются элементы XMLA, реализованные в службах [!INCLUDE[ssAS](../../../includes/ssas-md.md)].  
@@ -167,4 +166,3 @@ ms.lasthandoff: 09/01/2017
  [XML-элементы &#40; XML для Аналитики &#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)  
   
   
-

@@ -3,33 +3,30 @@ title: "Функция SQLGetDiagField | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetDiagField
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetDiagField
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetDiagField
-helpviewer_keywords:
-- SQLGetDiagField function [ODBC]
+f1_keywords: SQLGetDiagField
+helpviewer_keywords: SQLGetDiagField function [ODBC]
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c202841d54e01758312c4e8388a78e583de9058c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0cd8f64eb18fc6e1fb456b03ef65ef2dc33cc140
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetdiagfield-function"></a>Функция SQLGetDiagField
 **Соответствия**  
@@ -263,4 +260,3 @@ n-определение *|«СОЗДАНИЕ ДОМЕНА»|SQL_DIAG_CREATE_DOM
 ## <a name="see-also"></a>См. также:  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

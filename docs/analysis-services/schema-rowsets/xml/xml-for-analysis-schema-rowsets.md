@@ -2,12 +2,13 @@
 title: "Наборы строк схемы анализа XML для | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -18,20 +19,20 @@ helpviewer_keywords:
 - schema rowsets [Analysis Services], XML for Analysis
 - schema rowsets [XML for Analysis]
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 44c9f6740001c80fd01eaaf53f735bc539f39036
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f0c44abd2ba4be59a86b46a9b0ff74196c570e5e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis Schema Rowsets
-  Поставщик [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) содержит наборы строк схемы, которые возвращают метаданные о состоянии, активности и объектах сервера. Получение метаданных необходимо, когда идет разработка клиентского приложения, подключающегося к модели служб Analysis Services, обладающей переменной структурой и характеристиками.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Поставщик [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) содержит наборы строк схемы, которые возвращают метаданные о состоянии, активности и объектах сервера. Получение метаданных необходимо, когда идет разработка клиентского приложения, подключающегося к модели служб Analysis Services, обладающей переменной структурой и характеристиками.  
   
  Наборы строк схемы также дают представление о внутренних процессах и операциях, что помогает в наблюдении за сервером и устранении неполадок. Для поддержки нерегламентированных административных задач можно выполнить запрос динамического административного представления к большинству наборов строк схемы. Запросы динамического административного представления возвращают результаты в удобном для чтения табличном формате. Их можно просматривать в среде [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Набор строк<sup>1</sup>|Description|  
+|Rowset<sup>1</sup>|Описание|  
 |------------------------|-----------------|  
 |[Набор строк DISCOVER_CALC_DEPENDENCY](../../../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md)|Возвращает сведения о зависимостях между таблицами, столбцами, мерами и формулами для вычисляемых столбцов.<br /><br /> Применяется к табличным моделям, развернутая на экземпляре служб Analysis Services и [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] моделей в книгах Excel, которые выполняются в среде SharePoint.|  
 |[Набор строк DISCOVER_CONNECTIONS](../../../analysis-services/schema-rowsets/xml/discover-connections-rowset.md)|Предоставляет сведения об использовании ресурсов и действиях, касающиеся соединений, открытых в настоящее время на сервере.|  
@@ -77,10 +78,9 @@ ms.lasthandoff: 09/01/2017
   
  <sup>1</sup> все наборы строк схемы, приведенные здесь поддерживаются поставщиком источника данных MSOLAP для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] поставщика XML для Аналитики.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разработка с использованием XML для Аналитики в службах Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
  [Используйте динамические административные представления &#40; динамических административных представлений &#41; для мониторинга служб Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
  [Получение метаданных из источника аналитических данных](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   
-

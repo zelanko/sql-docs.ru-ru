@@ -3,8 +3,11 @@ title: "STNumCurves (тип данных geography) | Документы Microso
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - STNumCurves method (geography)
 ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
-caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c92c6dec90faf08d69ed49de506ba8c4371141ba
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: b7baccab2b0087fdb2ae90f5b212b4d820919d25
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves (тип данных geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Возвращает число кривых в одномерном массиве **geography** экземпляра.  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
  Возвращаемый тип CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  К типам одномерных пространственных данных относятся **LineString**, **CircularString**, и **CompoundCurve**. Пустой одномерный **geography** экземпляр возвращает 0.  
   
  `STNumCurves`() поддерживает только простые типы; не работает с **geography** коллекций, например **MultiLineString**. **Значение NULL** возвращается, когда **geography** экземпляр не является одномерным типом данных.  
@@ -73,9 +75,8 @@ ms.lasthandoff: 09/01/2017
  SELECT @g.STNumCurves();
  ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные сведения о типах пространственных данных](../../relational-databases/spatial/spatial-data-types-overview.md)   
- [Методы OGC в экземплярах географических объектов](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   
-

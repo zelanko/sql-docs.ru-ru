@@ -2,31 +2,31 @@
 title: "WSFC служба кластеров работает в режиме вне сети | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.agdashboard.agp1WSFCquorum.issues.f1
-helpviewer_keywords:
-- Availability Groups [SQL Server], policies
+f1_keywords: sql13.swb.agdashboard.agp1WSFCquorum.issues.f1
+helpviewer_keywords: Availability Groups [SQL Server], policies
 ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 15dc1fe41f7df1cf1d394415b20b832ba94afae3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 773e71121d6710da318ab0f8c5ccb1d179c11eee
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>WSFC служба кластеров работает в режиме вне сети
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>Введение  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/02/2017
 |**Категория**|**Критическая**|  
 |**Аспект**|Экземпляр SQL Server|  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  Эта политика проверяет состояние отказоустойчивого кластера Windows Server (WSFC). Политика находится в неисправном состоянии и выдает предупреждение, если кластер WSFC находится вне сети или в состоянии «принудительный кворум». Все группы доступности, размещенные на этом кластере, находятся в режиме «вне сети», либо требуется процедура аварийного восстановления.  
   
  Эта политика находится в исправном состоянии, если состояние кластера — «нормальный кворум».  
@@ -56,4 +56,3 @@ ms.lasthandoff: 08/02/2017
  [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   
-

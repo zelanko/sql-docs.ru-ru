@@ -2,11 +2,13 @@
 title: "SQL Server 2016 Express LocalDB | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: d559c1f713a51a51a3b8279f585b0fa48d81ecba
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 64d008b25aacd5ad76b711662f9b6ffd3e5e5926
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Материалы по предыдущим версиям SQL Server см. в статье [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/en-US/library/hh510202(SQL.120).aspx).
 
 **LocalDB** в Microsoft SQL Server 2016 Express — это компонент [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) , ориентированный на разработчиков. Он доступен в SQL Server 2016 Express с дополнительными службами.  
@@ -46,11 +47,11 @@ ms.lasthandoff: 08/02/2017
 ## <a name="install-localdb"></a>Установка LocalDB  
  Установите **LocalDB** с помощью мастера установки или программы SqlLocalDB.msi. Параметр**LocalDB** применяется для установки [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. 
  
-Выберите **LocalDB** на странице **Выбор компонентов/общие компоненты** во время установки. Двоичные файлы **LocalDB** можно устанавливать лишь по одному разу для каждой основной версии [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Можно запускать несколько процессов [!INCLUDE[ssDE](../../includes/ssde-md.md)] , которые будут использовать одни и те же двоичные файлы. Экземпляр [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , запущенный как **LocalDB** , имеет те же ограничения, что и [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
+Выберите **LocalDB** на странице **Выбор компонентов/общие компоненты** во время установки. Двоичные файлы **LocalDB** можно устанавливать лишь по одному разу для каждой основной версии [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Можно запускать несколько процессов [!INCLUDE[ssDE](../../includes/ssde-md.md)] , которые будут использовать одни и те же двоичные файлы. Экземпляр [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], запущенный как **LocalDB**, имеет те же ограничения, что и [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
 
  Управление экземпляром [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** осуществляется с помощью служебной программы **SqlLocalDB.exe** . [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** следует использовать вместо устаревшей функции пользовательского экземпляра [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] . 
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  Программа установки **LocalDB** использует программу SqlLocalDB.msi для установки необходимых файлов на компьютере. После установки **LocalDB** становится экземпляром [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , который способен создавать и открывать базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Файлы системной базы данных, как правило, хранятся в каталоге AppData пользователя, который обычно скрыт. Например, **C:\Users\\<пользователь\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**. Файлы пользовательской базы данных хранятся в месте, указанном пользователем, как правило, в папке **C:\Users\\<пользователь\>\Documents\\**.  
   
  Дополнительные сведения о включении **LocalDB** в приложение см. в документации [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [Общие сведения о локальных данных](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [Пошаговое руководство. Создание базы данных LocalDB SQL Server](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx) и [Пошаговое руководство. Подключение к данным в базе данных LocalDB SQL Server (формы Windows)](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  
@@ -108,11 +109,11 @@ REM Gather information about the instance of LocalDB
   
 |||  
 |-|-|  
-|Название|«LocalDBApp1»|  
+|Имя|«LocalDBApp1»|  
 |Version|\<текущая версия>|  
 |Общее имя|""|  
 |Владелец|"\<пользователь Windows>"|  
-|Автоматическое создание|Нет|  
+|Автоматическое создание|нет|  
 |Состояние|запуск|  
 |Время последнего запуска|\<дата и время>|  
 |Имя канала экземпляра|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|  
@@ -136,4 +137,3 @@ REM Gather information about the instance of LocalDB
  [Программа SqlLocalDB](../../tools/sqllocaldb-utility.md)  
   
   
-

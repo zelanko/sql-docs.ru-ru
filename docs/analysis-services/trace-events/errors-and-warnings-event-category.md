@@ -2,11 +2,13 @@
 title: "Ошибки и предупреждения категории событий | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -16,20 +18,20 @@ helpviewer_keywords:
 - errors events [Analysis Services]
 - warnings events [Analysis Services]
 ms.assetid: cf7fd5a7-b189-47c3-8e5c-3195897c7eab
-caps.latest.revision: 20
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 06a1d7ef68cd2b996165b5940139221897634669
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9066bff56d515a5e1c3380a85509f0eb48779710
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="errors-and-warnings-event-category"></a>Категория событий «Ошибки и предупреждения»
-  Категория событий «Ошибки и предупреждения» содержит классы событий, описанные в следующей таблице.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Категория событий «Ошибки и предупреждения» содержит классы событий, описанные в следующей таблице.  
   
 |Класс событий|Идентификатор события|Description|  
 |-----------------|--------------|-----------------|  
@@ -41,4 +43,3 @@ ms.lasthandoff: 09/01/2017
  [События трассировки служб Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   
-

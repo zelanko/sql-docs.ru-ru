@@ -3,7 +3,7 @@ title: "Сценарий сохраняемости XML записей | Док�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - XML persistence [ADO], persistence scenario
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
-caps.latest.revision: 4
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cf4899425669d8c65b6b3661fb75e8bf37091ce9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fd47944f218c6cb4d3bea571b27be990c5f7f530
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Сценарий сохраняемости XML набора записей
 В этом сценарии вы создадите приложение Active Server Pages (ASP), сохраняет содержимое объекта набора записей непосредственно в объекте отклика ASP.  
@@ -120,7 +119,6 @@ ms.lasthandoff: 09/09/2017
   
  Закройте файл default.htm и сохраните его в ту же папку, где был сохранен XMLResponse.asp. С помощью Internet Explorer 4.0 или более поздней версии, откройте URL-адрес http://*sqlserver*/XMLPersist/default.htm и просмотрите результаты. Данные отображаются в связанной таблицы DHTML. Теперь откройте URL-адрес http:// *sqlserver* /XMLPersist/XMLResponse.asp и просмотрите результаты. Отображается XML-код.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Save-метод](../../../ado/reference/ado-api/save-method.md)   
  [Сохранение записей в формате XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
-

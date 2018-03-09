@@ -2,7 +2,8 @@
 
 # Обзор
 ## [Новые возможности служб Reporting Services](what-s-new-in-sql-server-reporting-services-ssrs.md) 
-## [Новые и недавно обновленные статьи](new-updated-reporting-services.md)
+## [Новые и обновленные Статьи](new-updated-reporting-services.md)
+## [Журнал изменений](change-log-sql-server-reporting-services.md)
 ## [Основные понятия служб Reporting Services (SSRS)](reporting-services-concepts-ssrs.md)
 ## [Функции и задачи служб Reporting Services](reporting-services-features-and-tasks-ssrs.md)   
 ## [Обратная совместимость](reporting-services-backward-compatibility.md)  
@@ -87,7 +88,8 @@
 ### [Настройки сведений об устройстве CSV](csv-device-information-settings.md)  
 ### [Настройки сведений об устройстве Excel](excel-device-information-settings.md)  
 ### [Настройки сведений об устройстве HTML](html-device-information-settings.md)  
-### [Настройки сведений об устройстве для формата изображений](image-device-information-settings.md)  ### [Настройки сведений об устройстве MHTML](mhtml-device-information-settings.md)  
+### [Настройки сведений об устройстве вывода изображений](image-device-information-settings.md)  
+### [Настройки сведений об устройстве MHTML](mhtml-device-information-settings.md)  
 ### [Настройки сведений об устройстве PDF](pdf-device-information-settings.md)  
 ### [Настройки сведений об устройстве PPTX](pptx-device-information-settings.md)  
 ### [Настройки сведений об устройстве XML](xml-device-information-settings.md)  

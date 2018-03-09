@@ -1,12 +1,14 @@
 ---
 title: "Работа с файлами скриптов образца консоли (OracleToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - Sample Console Script Files, SqlStatementConversionSample.xml
 - Sample Console Script Files,VariableValueFileSample.xml
 ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: ed17f63dedb91eb41eea2cc991771daf35af48fc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: aa5a59b9638c83fd99f6d330561e4b0a7b5f4cc6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>Работа с файлами скриптов образца консоли (OracleToSQL)
 Несколько файлов образец предоставляется вместе с продуктом использования и справочник по пользовательскому. Этот раздел описывает способ легко настроить эти сценарии, в соответствии с потребностями пользователя.  
@@ -85,7 +86,7 @@ ms.lasthandoff: 08/02/2017
   
     Сопоставление схемы базы данных-источника в целевую схему.  
   
-    **Атрибут**  
+    **Attribute**  
   
     -   `source-schema:`Указывает, требуется для преобразования базы данных-источника.  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 08/02/2017
   
     -   Если пользователь имеет для оценки нескольких объектов и баз данных, он можно указать несколько `metabase-object` узлов, как показано в `convert-schema` 4 пример команды консоли образца файла скрипта.  
   
-    **Атрибут**  
+    **Attribute**  
   
     `object-name`Для указания базы данных-источника или имя, которое требуется для преобразования объекта. Убедитесь, что соответствующие `object-type` изменяется в зависимости от типа объекта, указанного в`object-name`  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 08/02/2017
   
     -   Если пользователь имеет для оценки нескольких объектов и баз данных, он можно указать несколько `metabase-object` узлов, как показано в `synchronize-target` 3 пример команды консоли образца файла скрипта.  
   
-    **Атрибут**  
+    **Attribute**  
   
     `object-name:`Укажите базы данных sql server / объекта имя, которое требуется создать. Убедитесь, что соответствующие `object-type` изменяется в зависимости от типа объекта, указанного в`object-name`  
   
@@ -123,7 +124,7 @@ ms.lasthandoff: 08/02/2017
   
     -   Если пользователь имеет для оценки нескольких объектов и баз данных, он может указать несколько `metabase-object` узлов, как показано в `migrate-data` команды пример 2 файла скрипта образец консоли.  
   
-    **Атрибут**  
+    **Attribute**  
   
     `object-name:`Указывает базы данных-источника или имя, которое требуется для переноса таблиц. Убедитесь, что соответствующие `object-type` изменяется в зависимости от типа объекта, указанного в`object-name`  
   
@@ -132,4 +133,3 @@ ms.lasthandoff: 08/02/2017
 [Создание файлов подключения сервера &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
 [Создание отчетов &#40; OracleToSQL &#41;](../../ssma/oracle/generating-reports-oracletosql.md)  
   
-

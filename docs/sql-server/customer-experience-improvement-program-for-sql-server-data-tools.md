@@ -2,28 +2,29 @@
 title: "Программа улучшения качества для SQL Server Data Tools | Документация Майкрософт"
 ms.custom: 
 ms.date: 10/21/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssdt
+ms.suite: sql
+ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 45707ee7bbed4fe4060bcf3134fe98783cb59690
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
-ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
-ms.openlocfilehash: 399dd15292b67f89829576234e0b2c600e5b4e44
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>Программа улучшения качества SQL Server Data Tools
-  Узнайте, как программа улучшения качества программного обеспечения (CEIP) позволяет корпорации Майкрософт определять способы улучшения своей продукции.  Вы можете в любой момент согласиться на участие в программе или отказаться от него.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Узнайте, как программа улучшения качества программного обеспечения (CEIP) позволяет корпорации Майкрософт определять способы улучшения своей продукции.  Вы можете в любой момент согласиться на участие в программе или отказаться от него.  
   
 > [!NOTE]  
 >  Описание методик сбора и использования данных в выпусках Microsoft SQL Server 2016, а также в других продуктах и службах см. в [заявлении о конфиденциальности компании Майкрософт](https://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx).  
@@ -147,4 +148,3 @@ ms.lasthandoff: 07/31/2017
 -   1 — участвовать  
   
   
-

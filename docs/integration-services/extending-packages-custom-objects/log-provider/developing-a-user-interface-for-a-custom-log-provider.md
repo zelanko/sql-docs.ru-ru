@@ -1,12 +1,14 @@
 ---
-title: "Разработка пользовательского интерфейса для пользовательского регистратора | Документы Microsoft"
+title: "Разработка пользовательского интерфейса для пользовательского регистратора | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -15,24 +17,22 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom log providers
 - custom log providers [Integration Services], developing custom user interface
 ms.assetid: 6fd2d269-d87a-4134-82a1-40a09b3b5453
-caps.latest.revision: 18
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 014e4387d80236898d7d6b7a10c992de933da2c4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 79eb2cb9fef0f8d957709e77c0a35fb8f4de0789
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-user-interface-for-a-custom-log-provider"></a>Разработка пользовательского интерфейса для пользовательского регистратора
-  Многие [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] регистраторов иметь пользовательский интерфейс, который реализует <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI> и заменяет **конфигурации** текстовое поле в **Настройка журналов служб SSIS** диалоговое окно с фильтруемый раскрывающийся список доступных диспетчеров соединений. Однако настраиваемые пользовательские интерфейсы для пользовательских регистраторов не реализованы в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
+  Многие регистраторы служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] имеют собственный пользовательский интерфейс, в котором реализован интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI>, а вместо содержимого текстового поля **Конфигурация** в диалоговом окне **Настройка журналов служб SSIS** используется фильтруемый раскрывающийся список доступных диспетчеров соединений. Однако пользовательские интерфейсы для пользовательских регистраторов не реализуются в службах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также:  
  [Создание пользовательского регистратора](../../../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)   
- [Кодирование пользовательского регистратора](../../../integration-services/extending-packages-custom-objects/log-provider/coding-a-custom-log-provider.md)  
+ [Создание кода пользовательского регистратора](../../../integration-services/extending-packages-custom-objects/log-provider/coding-a-custom-log-provider.md)  
   
   
-

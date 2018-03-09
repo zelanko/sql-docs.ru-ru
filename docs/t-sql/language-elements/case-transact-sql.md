@@ -3,8 +3,11 @@ title: "РЕГИСТР (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 06/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - comparing expressions
 - searched CASE expression
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
-caps.latest.revision: 59
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b366f7b6d57adbed5f028171617abb7516f3260b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 0036e0ddf54eeef950bf81da2bf4a8997b4bef3c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="case-transact-sql"></a>Выражение CASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Оценка списка условий и возвращение одного из нескольких возможных выражений результатов.  
   
@@ -85,7 +87,7 @@ END
  ЗАТЕМ *результирующее_выражение*  
  Это выражение, возвращаемое при *input_expression* равняется *when_expression* имеет значение TRUE, или *Boolean_expression* имеет значение TRUE. *результирующих выражений* может быть любым допустимым [выражение](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- ELSE *результирующее_выражение_для_противоположного_случая*  
+ ELSE *else_result_expression*  
  Это выражение, возвращаемое, если ни одна из операций сравнения не дает в результате TRUE. Если этот аргумент опущен и ни одна из операций сравнения не дает в результате TRUE, функция CASE возвращает NULL. *результирующее_выражение_для_противоположного_случая* — любое допустимое выражение. Типы данных *результирующее_выражение_для_противоположного_случая* , а также *результирующее_выражение* должны быть одинаковыми или должны быть неявное преобразование.  
   
  КОГДА *Boolean_expression*  
@@ -115,14 +117,14 @@ END
   
 -   Если не *Boolean_expression* имеет значение TRUE, [!INCLUDE[ssDE](../../includes/ssde-md.md)] возвращает *результирующее_выражение_для_противоположного_случая* Если указано предложение ELSE, или значение NULL, если предложение ELSE не указано.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] допускает применение в выражениях CASE не более 10 уровней вложенности.  
   
  Выражение CASE нельзя использовать для управления потоком выполнения инструкций Transact-SQL, блоков инструкций, определяемых пользователем функций и хранимых процедур. Список методов управления потоком, в разделе [языка управления потоком &#40; Transact-SQL &#41; ](~/t-sql/language-elements/control-of-flow.md).  
   
  Инструкция CASE последовательно оценивает свои условия и останавливается, когда находит первое условие, удовлетворяющее ей. В некоторых ситуациях выражение оценивается то того, как инструкция CASE получает результаты выражения в качестве входных данных. При оценке этих выражений возможны ошибки. Агрегатные выражения в аргументах WHEN инструкции CASE вначале оцениваются, после чего передаются инструкции CASE. Например в следующем запросе создается ошибка деления на ноль при вычислении значения агрегата MAX. Это происходит до оценки выражения CASE.  
   
-```tsql  
+```sql  
 WITH Data (value) AS   
 (   
 SELECT 0   
@@ -354,7 +356,7 @@ WHERE SalariedFlag = 0;
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [ОБЪЕДИНЕННЫЙ &#40; Transact-SQL &#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
@@ -362,7 +364,6 @@ WHERE SalariedFlag = 0;
  [ВЫБЕРИТЕ &#40; Transact-SQL &#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   
-
 
 
 

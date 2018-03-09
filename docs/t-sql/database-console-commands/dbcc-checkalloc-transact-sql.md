@@ -1,10 +1,13 @@
 ---
 title: "Инструкция DBCC CHECKALLOC (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 09/07/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,20 +29,19 @@ helpviewer_keywords:
 - disk space [SQL Server], allocation consistency checks
 - space allocation [SQL Server], checking
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
-caps.latest.revision: 76
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 4cecbb77add5a9afbde3f69bf17ac2bd11bd592b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/08/2017
-
+ms.openlocfilehash: 69a22a7e7b3859ba2232fe7c60f5b0b885af8b17
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Проверяет согласованность структур выделения места на диске для указанной базы данных.
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 09/08/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```sql
+```
 DBCC CHECKALLOC   
 [  
     ( database_name | database_id | 0   
@@ -102,12 +104,12 @@ DBCC CHECKALLOC
  ESTIMATE ONLY  
  Отображает предполагаемый размер пространства tempdb, которое требуется для запуска инструкции DBCC CHECKALLOC, когда указаны все другие параметры.
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Инструкция DBCC CHECKALLOC проверяет выделение всех страниц в базе данных, независимо от типа страницы и типа объекта, к которому они принадлежат. Также проверяются различные внутренние структуры, используемые для отслеживания этих страниц и связей между ними.
 Если не указан аргумент NO_INFOMSGS, то инструкция DBCC CHECKALLOC собирает сведения об использовании пространства всеми объектами в базе данных. Эта информация выводится на печать вместе с любые обнаруженные ошибки.
   
 > [!NOTE]  
->Инструкция DBCC CHECKALLOC функциональные возможности включены в [инструкции DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) и [инструкции DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md). Это означает, что не нужно запускать DBCC CHECKALLOC отдельно от этих инструкций.   Инструкция DBCC CHECKALLOC не проверяет данные FILESTREAM. FILESTREAM сохраняет в файловой системе большие двоичные объекты.  
+> Инструкция DBCC CHECKALLOC функциональные возможности включены в [инструкции DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) и [инструкции DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md). Это означает, что не нужно запускать DBCC CHECKALLOC отдельно от этих инструкций.   Инструкция DBCC CHECKALLOC не проверяет данные FILESTREAM. FILESTREAM сохраняет в файловой системе большие двоичные объекты.  
   
 ## <a name="internal-database-snapshot"></a>Моментальный снимок внутренней базы данных  
 Инструкция DBCC CHECKALLOC использует внутренний моментальный снимок базы данных, чтобы обеспечить согласованность транзакций, необходимую для проведения этих проверок. Если нельзя создать моментальный снимок или указан аргумент TABLOCK, то инструкция DBCC CHECKALLOC пытается получить монопольную блокировку (X) базы данных, чтобы обеспечить необходимую согласованность.
@@ -118,7 +120,7 @@ DBCC CHECKALLOC
 ## <a name="understanding-dbcc-error-messages"></a>Основные сведения о сообщениях об ошибках DBCC  
 После завершения команды DBCC CHECKALLOC в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет записано сообщение. При успешном выполнении команды DBCC сообщается об успешном завершении и количестве времени, затраченном на выполнение команды. Если выполнение команды DBCC прерывается до завершения проверки по причине ошибки, сообщение указывает на прерывание команды и приводит значение состояния и количество времени, затраченного на выполнение команды. В следующей таблице перечислены и описаны значения состояний, которые могут быть включены в сообщение.
   
-|Состояние|Description|  
+|Состояние|Описание|  
 |---|---|  
 |0|Возникла ошибка с номером 8930. Это указывает на повреждение метаданных, вызвавшее прекращение выполнения команды DBCC.|  
 |1|Возникла ошибка с номером 8967. Внутренняя ошибка DBCC.|  
@@ -138,7 +140,7 @@ DBCC CHECKALLOC
 ## <a name="result-sets"></a>Результирующие наборы  
 В следующей таблице описаны данные, возвращаемые инструкцией DBCC CHECKALLOC.
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |---|---|  
 |FirstIAM|Только для внутреннего применения.|  
 |Root|Только для внутреннего применения.|  
@@ -148,7 +150,7 @@ DBCC CHECKALLOC
   
 Инструкция DBCC CHECKALLOC также формирует сводный отчет о размещении для каждого индекса и секции в каждом файле. В этой сводке описано распределение данных.
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |---|---|  
 |Reserved pages|Страницы, выделенные для индекса и неиспользованные страницы в выделенных экстентах.|  
 |Used pages|Страницы, выделенные и используемые индексом.|  
@@ -160,7 +162,7 @@ DBCC CHECKALLOC
   
 Инструкция DBCC CHECKALLOC возвращает следующий результирующий набор (значения могут различаться), за исключением случаев, когда указаны аргументы ESTIMATEONLY или NO_INFOMSGS.
   
-```sql
+```
 DBCC results for 'master'.  
 ***************************************************************  
 Table sysobjects                Object ID 1.  
@@ -222,7 +224,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 Если указан параметр ESTIMATEONLY, то инструкция DBCC CHECKALLOC возвращает следующий результирующий набор.
   
-```sql
+```
 Estimated TEMPDB space needed for CHECKALLOC (KB)   
 -------------------------------------------------   
 34  
@@ -232,7 +234,7 @@ Estimated TEMPDB space needed for CHECKALLOC (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Необходимо членство в фиксированной серверной роли sysadmin или предопределенной роли базы данных db_owner.
   
 ## <a name="examples"></a>Примеры  
@@ -247,9 +249,8 @@ DBCC CHECKALLOC (AdventureWorks2012);
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   
-
 

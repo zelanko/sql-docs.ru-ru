@@ -3,10 +3,12 @@ title: "Длина в октетах передачи | Документы Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], column characteristics
 - data types [ODBC], transfer octet length
 ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 87347932efb54c93c2439170ebf350e4fe411564
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 763f6fdd2790de695e1e2307cbcac4e0ed3018ae
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transfer-octet-length"></a>Длина в октетах передачи
 Длина столбца в октетах передачи — максимальное число байтов, возвращенных в приложение при передаче данных в тип данных C по умолчанию. Для символьных данных длина октет передачи не учитывает пространство для знака завершения null. Длина столбца в октетах передачи может отличаться от количество байтов, необходимое для хранения данных в источнике данных.  
@@ -51,4 +52,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_GUID|16 (размер структуры GUID).|  
   
  [] Если драйвер не может определить длину столбца или параметра для типов переменных, возвращается значение SQL_NO_TOTAL.
-

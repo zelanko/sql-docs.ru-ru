@@ -2,29 +2,29 @@
 title: "Power Pivot Management Dashboard and Usage Data | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
-caps.latest.revision: 14
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 17b70799d09fd1f9a62100c85fde71046250d12e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5833c1dae2cc6b5cf8f85a52bec088d96e609537
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Информационная панель управления PowerPivot и данные об использовании
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] — это набор стандартных отчетов и веб-частей в центре администрирования SharePoint, предназначенных для администрирования развертывания SQL Server [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] для SharePoint. Панель мониторинга управления предоставляет сведения о работоспособности серверов, действиях с книгой и обновлении данных. Панель мониторинга управления использует данные, полученные в процессе сбора данных об использовании SharePoint.  
   
   
@@ -34,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="items"></a> Общие сведения о разделах панели мониторинга  
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] содержит веб-части и встроенные отчеты, которые детализируют отдельные категории данных. В следующем списке приводится описание для каждой части панели мониторинга управления.  
   
-|Панель мониторинга|Description|  
+|Панель мониторинга|Описание|  
 |---------------|-----------------|  
 |Инфраструктура — исправность сервера|Показывает тенденцию использования ресурсов ЦП и потребления памяти, а также времени ответов на запросы с течением времени, что позволяет оценить интенсивность использования системных ресурсов.|  
 |Действия|Содержит ссылки на другие страницы центра администрирования, включая текущее приложение службы, список приложений служб и ведение журнала использования.|  
@@ -149,4 +149,3 @@ ms.lasthandoff: 09/01/2017
  [Настройка сбора данных об использовании с PowerPivot для SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   
-

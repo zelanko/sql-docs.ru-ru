@@ -3,8 +3,11 @@ title: "Курсоры (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,44 +19,43 @@ helpviewer_keywords:
 - functions [SQL Server], cursors
 - cursors [SQL Server], statements
 ms.assetid: 63000023-54fc-4efc-a30f-fb4d4db73aae
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 990b1bc3c44605e2b7debed67b88e5cd65770ed5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 0ab48b40d79bff67e90bfd52fe0cc482c47677ab
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cursors-transact-sql"></a>Курсоры (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] операторы создают полный результирующий набор, но есть время, когда результаты удобнее обрабатывать построчно одновременно. Открытие курсора на результирующем наборе делает возможной его построчную обработку. Можно назначить курсору переменную или параметр с **курсор** тип данных.  
   
  Операции с курсором поддерживаются в таких инструкциях:  
   
- [ЗАКРЫТЬ](../../t-sql/language-elements/close-transact-sql.md)  
+ [CLOSE](../../t-sql/language-elements/close-transact-sql.md)  
   
  [CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)  
   
  [DEALLOCATE](../../t-sql/language-elements/deallocate-transact-sql.md)  
   
- [ОБЪЯВЛЕНИЕ КУРСОРА](../../t-sql/language-elements/declare-cursor-transact-sql.md)  
+ [DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md)  
   
  [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
   
  [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
- [ВЫБОРКИ](../../t-sql/language-elements/fetch-transact-sql.md)  
+ [FETCH](../../t-sql/language-elements/fetch-transact-sql.md)  
   
- [ОТКРЫТЬ](../../t-sql/language-elements/open-transact-sql.md)  
+ [OPEN](../../t-sql/language-elements/open-transact-sql.md)  
   
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- [НАБОР](../../t-sql/statements/set-statements-transact-sql.md)  
+ [SET](../../t-sql/statements/set-statements-transact-sql.md)  
   
  Следующие системные функции и системные хранимые процедуры также поддерживают курсоры:  
   
@@ -63,16 +65,15 @@ ms.lasthandoff: 09/01/2017
   
  [@@FETCH_STATUS](../../t-sql/functions/fetch-status-transact-sql.md)  
   
- [Хранимая процедура sp_cursor_list](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)  
+ [sp_cursor_list](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)  
   
- [процедура sp_describe_cursor](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)  
+ [sp_describe_cursor](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)  
   
  [sp_describe_cursor_columns](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)  
   
- [процедура sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
+ [sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Курсоры](../../relational-databases/cursors.md)  
   
   
-

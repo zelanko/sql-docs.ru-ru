@@ -3,7 +3,7 @@ title: "Пример свойства MaxRecords (VB) | Документы Micro
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - MaxRecords property [ADO], Visual Basic example
 ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 89a1d7e9ecc360bb5a92cb4a9584c93cbc2ca8ce
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6bc345e6b09ba099c8b34c74cdd0e57248ac3756
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="maxrecords-property-example-vb"></a>Пример свойства MaxRecords (Visual Basic)
 В этом примере используется [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) свойства, чтобы открыть [записей](../../../ado/reference/ado-api/recordset-object-ado.md) содержащего 10 самых дорогих заголовки в ***заголовки*** таблицы.  
@@ -95,7 +94,6 @@ End Sub
 'EndMaxRecordsVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство MaxRecords (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

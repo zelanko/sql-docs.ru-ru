@@ -1,10 +1,13 @@
 ---
-title: "Изменение свойств базы данных Oracle | Документы Microsoft"
+title: "Изменение свойств базы данных Oracle | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - oraProp
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c310a25fe5098cd5edc845c3a29d024182f6361c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9a83a04c01a48b85395949c9277f77b3d1ede632
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="edit-the-oracle-database-properties"></a>Изменение свойств базы данных Oracle
   На вкладке Oracle в редакторе свойств можно изменить описание, которое было введено на странице создания базы данных CDC мастера создания экземпляра, а также изменить данные для подключения к базе данных интеллектуального анализа журналов Oracle.  
@@ -32,7 +34,7 @@ ms.lasthandoff: 08/03/2017
  **Название**  
  Имя экземпляра CDC, введенное на странице создания базы данных CDC в мастере создания экземпляра. Это поле доступно только для чтения, отображаемые в нем данные нельзя изменить.  
   
- **Description**  
+ **Описание**  
  Можно изменить описание нового экземпляра или добавить его, если оно не было введено при создании экземпляра CDC.  
   
  **Строка подключения Oracle**  
@@ -41,16 +43,15 @@ ms.lasthandoff: 08/03/2017
  **Проверка подлинности интеллектуального анализа журналов Oracle**  
  Чтобы ввести учетные данные проверки подлинности для базы данных Oracle, в которой находится средство интеллектуального анализа журналов, выберите в разделе **Проверка подлинности**один из следующих вариантов.  
   
--   **Проверка подлинности Windows**. Выберите этот параметр, чтобы использовать текущие учетные данные домена Windows. Этот параметр можно использовать только в том случае, если в базе данных Oracle настроено использование проверки подлинности Windows.  
+-   **Проверка подлинности Windows**. Выберите этот параметр, чтобы использовать учетные данные текущего пользователя Windows. Этот параметр можно использовать только в том случае, если в базе данных Oracle настроено использование проверки подлинности Windows.  
   
 -   **Проверка подлинности Oracle**. При выборе этого варианта необходимо ввести **Имя пользователя** и **Пароль** пользователя в базе данных Oracle, с которой устанавливается соединение.  
   
  Свойства базы данных Oracle можно просмотреть в средстве просмотра. При использовании средства просмотра отображаемые в нем данные доступны только для чтения. В средстве просмотра отображается также список отслеживаемых столбцов из таблицы. Дополнительные сведения о доступе к средству просмотра см. в разделе [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Как управлять службой CDC из консоли конструктора CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
- [Соединиться с базой данных-источником Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)   
- [Подключение к базе данных Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
+ [Соединение с базой данных-источником Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)   
+ [Соединение с Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
   
   
-

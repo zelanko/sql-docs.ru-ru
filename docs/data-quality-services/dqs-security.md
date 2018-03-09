@@ -2,25 +2,26 @@
 title: "Безопасность DQS | Microsoft Docs"
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
-caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "11"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0cc0bda4d4985082fee6c2da0625d0dbecda8509
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ec0b75c2d32bb45c74082a0235ce51decaf09c02
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dqs-security"></a>Безопасность DQS
   Инфраструктура обеспечения безопасности [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) основана на инфраструктуре обеспечения безопасности SQL Server. Администратор базы данных предоставляет пользователю набор разрешений, объединяя пользователя с ролью DQS. Это определяет ресурсы служб DQS, к которым пользователь имеет доступ, а также функциональные операции, которые позволено выполнять пользователю.  
@@ -39,11 +40,10 @@ ms.lasthandoff: 09/09/2017
 ## <a name="user-management"></a>Управление пользователями  
  Администратор базы данных (DBA) создает пользователей DQS и связывает их с ролями DQS в среде SQL Server Management Studio. Администратор базы данных управляет их разрешениями, добавляя имена входа SQL в качестве пользователей базы данных DQS_MAIN и связывая каждого пользователям с одной из ролей DQS. Каждой роли предоставляются разрешения для набора хранимых процедур в базе данных DQS_MAIN. Эти три роли DQS недоступны для баз данных DQS_PROJECTS и DQS_STAGING_DATA.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
 |Описывает, как создать пользователя и предоставить роли DQS с помощью среды SQL Server Management Studio.|[Управление пользователями DQS в среде SSMS](http://msdn.microsoft.com/library/955af01d-00da-4c51-9311-f3848749df54)|  
   
   
-

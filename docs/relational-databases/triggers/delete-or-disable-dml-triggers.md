@@ -2,9 +2,12 @@
 title: "Удаление или отключение триггеров DML | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-dml
 ms.tgt_pltfrm: 
@@ -17,27 +20,28 @@ helpviewer_keywords:
 - deleting DML triggers
 - DML triggers, removing
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
-caps.latest.revision: 27
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0fe807c194c057f2109bb40b13a8f8918c0cc75f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 29d5bb89d7d5ffc59bbe62051a92066829172842
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="delete-or-disable-dml-triggers"></a>Удаление или отключение триггеров DML
-  В этом разделе описывается удаление или отключение триггера DML в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+В этом разделе описывается удаление или отключение триггера DML в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Рекомендации](#Recommendations)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Для удаления или отключения триггера DML используется:**  
   
@@ -55,9 +59,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Отключение триггера не сбрасывает его. Триггер все еще существует как объект в текущей базе данных. Впрочем, триггер в инструкциях INSERT, UPDATE или DELETE не сработает при выполнении любой из них. Отключенные триггеры можно повторно включать. При включении триггера он не создается повторно. Он срабатывает так же, как после создания.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Чтобы удалить триггер DML, необходимо разрешение ALTER для таблицы или представления, в которых определен данный триггер.  
   
  Для отключения или включения триггера DML пользователь должен обладать как минимум разрешением ALTER для таблицы или представления, где создан триггер.  
@@ -94,7 +98,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Скопируйте и вставьте следующие примеры в окно запроса. Выполните инструкцию [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) , чтобы создать триггер `Sales.bonus_reminder` . Чтобы удалить триггер, выполните инструкцию [DROP TRIGGER](../../t-sql/statements/drop-trigger-transact-sql.md) .  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -110,7 +114,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Delete the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -128,7 +132,7 @@ GO
   
 3.  Скопируйте и вставьте следующие примеры в окно запроса. Выполните инструкцию [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) , чтобы создать триггер `Sales.bonus_reminder` . Чтобы отключить или включить триггер, выполните соответственно инструкцию [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) или [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md) .  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -144,7 +148,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Disable the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -153,7 +157,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Enable the trigger.  
 USE AdventureWorks2012;  
 GO  

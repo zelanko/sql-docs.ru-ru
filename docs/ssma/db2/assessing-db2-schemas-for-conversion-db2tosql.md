@@ -1,29 +1,30 @@
 ---
 title: "Оценка схемы DB2 для преобразования (DB2ToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4ee5825c7a7df208baeccd27a463defb2c6e250c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a3aee9d8a612357fc8023f03d4dca20d309b899c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>Оценка схемы DB2 для преобразования (DB2ToSQL)
 Прежде чем загружать объекты и переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], следует определить быть сложность миграции и о том, сколько времени займет миграции. SSMA можно создать отчет об оценки, который показывает процент объекты, которые будут преобразованы. SSMA также позволяет просматривать конкретные проблемы, вызывающие ошибки преобразования.  
@@ -91,4 +92,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>См. также:  
 [Миграция баз данных DB2 в SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
-

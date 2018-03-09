@@ -3,7 +3,7 @@ title: "Имя свойства (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADO]
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: eac3504e262f52700351c9d4313ed39d9723c844
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8c2bf66589dc841e7f543b166b432f39a0869b3f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="name-property-ado"></a>Свойство Name (ADO)
 Указывает имя объекта.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **строка** значение, указывающее имя объекта.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **имя** назначить имя, или получить имя свойства **команда**, **свойство**, **поле**, или **параметра**  объекта.  
   
  Значение — чтение и запись на **команда** объекта и только для чтения на **свойство** объекта.  
@@ -52,10 +51,9 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[Объект команды (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Объект field](../../../ado/reference/ado-api/field-object.md)|  
-|[Объект параметра](../../../ado/reference/ado-api/parameter-object.md)|[Свойства объекта (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
+|[Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Объект Field](../../../ado/reference/ado-api/field-object.md)|  
+|[Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Атрибуты и примере имя свойства (Visual Basic)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
  [Атрибуты и свойства пример имени (VC ++)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
-

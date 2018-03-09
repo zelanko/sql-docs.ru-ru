@@ -2,40 +2,35 @@
 title: "Целевой элемент (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Target Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Target Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Target
-helpviewer_keywords:
-- Target element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Target
+helpviewer_keywords: Target element
 ms.assetid: 08ce0441-94b6-4f1d-acba-f31c8212cb79
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 948f6a2b21ced3ecbdca2e039464f25a03980de4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 09e5337cbdc4cd909b2251f42544bb930b9461f6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="target-element-assl"></a>Элемент Target (ASSL)
-  Определяет цель элемента [действия](../../../analysis-services/scripting/objects/action-element-assl.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет цель элемента [действия](../../../analysis-services/scripting/objects/action-element-assl.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,11 +45,11 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
-|Тип данных и длина|Строковые значения|  
+|Тип данных и длина|String|  
 |Значение по умолчанию|None|  
-|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
+|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -63,7 +58,7 @@ ms.lasthandoff: 09/01/2017
 |Родительский элемент|[Действие](../../../analysis-services/scripting/objects/action-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Ожидаемое значение этого элемента зависит от значения [TargetType](../../../analysis-services/scripting/properties/targettype-element-assl.md) для родителя **действия**. В следующей таблице описаны ожидаемые значения **Target** , основанные на значении **TargetType**.  
   
 |Значение TargetType|Ожидаемое значение|  
@@ -82,4 +77,3 @@ ms.lasthandoff: 09/01/2017
  [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

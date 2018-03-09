@@ -3,7 +3,7 @@ title: "Метод UpdateBatch | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - UpdateBatch method [ADO]
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5da32525c4ff0d04c19704efd2aa04050d3db93d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 57c85b6ed83792e2e489eb91dab59bd0da598939
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="updatebatch-method"></a>Метод UpdateBatch
 Записывает все ожидающие пакетных обновлений на диск.  
@@ -48,7 +47,7 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
  *PreserveStatus*  
  Необязательно. Объект **логическое** значение, указывающее ли изменения, как указано в [состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md) свойство, должна быть зафиксирована. Если это значение равно **True**, **состояние** свойства каждой записи остается неизменным после завершения обновления.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **UpdateBatch** метод при изменении **записей** объекта в пакетный режим обновления для передачи все изменения, внесенные в **записей** объекта в основной базе данных.  
   
  Если **записей** объект поддерживает обновление пакета, можно кэшировать внесение нескольких изменений в одну или несколько записей локально до вызова **UpdateBatch** метод. При изменении текущей записи или добавления новой записи, при вызове **UpdateBatch** метода ADO будет автоматически вызывать [обновление](../../../ado/reference/ado-api/update-method.md) метод, чтобы сохранить все ожидающие изменения для текущей записи, прежде чем передает пакет изменений к поставщику. Следует использовать пакетного обновления с набором ключей или статическом курсоре только.  
@@ -65,13 +64,12 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
  Порядок выполнения отдельных обновлений пакета в источнике данных не обязательно является таким же, как порядок, в котором они были выполнены на локальном **записей**. Порядок обновления зависит от поставщика. Это учитывать при программировании обновлений, которые связаны друг с другом, например ограничения внешнего ключа для вставки или обновления.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [UpdateBatch и пример CancelBatch методы (Visual Basic)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
  [UpdateBatch и CancelBatch примере методы (VC ++)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
  [Метод CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [Метод Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [Свойство LockType (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
- [Метод обновления](../../../ado/reference/ado-api/update-method.md)
-
+ [Метод Update](../../../ado/reference/ado-api/update-method.md)

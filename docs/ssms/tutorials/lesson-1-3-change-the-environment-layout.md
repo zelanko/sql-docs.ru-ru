@@ -2,30 +2,30 @@
 title: "Изменение структуры среды | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: ce118ee5-70e2-472e-8e09-7ed3bfed59fa
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "29"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 4a256c1d0e37956f235754724c4b208d9c48b7d1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: b09f254256c4b9a01b99bfe77768a28185f5ffd9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-3---change-the-environment-layout"></a>Занятие 1–3. Изменение структуры среды
-Компонентам среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не хватает места на экране. Чтобы увеличить рабочее пространство, можно закрыть, скрыть или переместить компоненты среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . В практических заданиях на этой странице компоненты перемещаются в другое положение.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Компонентам среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не хватает места на экране. Чтобы увеличить рабочее пространство, можно закрыть, скрыть или переместить компоненты среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . В практических заданиях на этой странице компоненты перемещаются в другое положение.  
   
 ## <a name="closing-and-hiding-components"></a>Закрытие и скрытие компонентов  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 07/31/2017
   
 1.  Щелкните правой кнопкой мыши заголовок окна обозревателя объектов и обратите внимание на следующие пункты меню:  
   
-    -   Число с плавающей запятой  
+    -   float  
   
     -   Закрепить  
   
@@ -90,4 +90,3 @@ ms.lasthandoff: 07/31/2017
   
   
   
-

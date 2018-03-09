@@ -1,10 +1,13 @@
 ---
-title: "Назначение ODBC | Документы Microsoft"
+title: "Назначение ODBC | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 12
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b17bf59986633097e381e968222c5da670eefd7b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 34e524470a56b62657f231a22639fc3e2c20e2d1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="odbc-destination"></a>Назначение ODBC
   Назначение ODBC выполняет массовую загрузку данных в таблицы базы данных с поддержкой ODBC. Назначение ODBC использует диспетчер соединений ODBC для подключения к источнику данных.  
@@ -67,11 +69,11 @@ ms.lasthandoff: 08/17/2017
   
  Дополнительные сведения см. в одном из следующих разделов:  
   
--   [Редактор назначения ODBC &#40; Страницы диспетчера соединений &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [Редактор назначения ODBC (страница "Диспетчер соединений")](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
   
--   [Редактор назначения ODBC &#40; Страница «сопоставления» &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [Редактор назначения ODBC (страница "Сопоставления")](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
   
--   [Редактор назначения ODBC &#40; Страница «Вывод ошибок» &#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [Редактор назначения ODBC (страница "Вывод ошибок")](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые могут быть заданы программным путем.  
   
@@ -81,11 +83,11 @@ ms.lasthandoff: 08/17/2017
   
  Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне «Расширенный редактор», см. в разделе [ODBC Destination Custom Properties](../../integration-services/data-flow/odbc-destination-custom-properties.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
--   [Загрузка данных с использованием назначения ODBC](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
+-   [Загрузка данных с помощью назначения «ODBС»](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
   
--   [Пользовательские свойства назначений ODBC](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
+-   [Пользовательские свойства назначения «ODBC»](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
 ## <a name="odbc-destination-editor-connection-manager-page"></a>Редактор назначения «ODBC» (страница «Диспетчер соединений»)
   Страница **Диспетчер соединений** диалогового окна **Редактор назначения ODBC** используется для выбора диспетчера соединений ODBC для назначения. На этой странице также можно выбрать таблицу или представление базы данных  
@@ -133,7 +135,7 @@ ms.lasthandoff: 08/17/2017
  Список доступных целевых столбцов. Перетащите целевой столбец в доступный входной столбец, чтобы сопоставить эти столбцы.  
   
 #### <a name="input-column"></a>Входной столбец  
- Позволяет просматривать выбранные входные столбцы. Сопоставления можно удалить, выбрав  **\<пропустить >** исключить столбцы из выходных данных.  
+ Позволяет просматривать выбранные входные столбцы. Сопоставления можно удалить, выбрав вариант **\<игнорировать>**, чтобы исключить столбцы из выходных данных.  
   
 #### <a name="destination-column"></a>Целевой столбец  
  Просмотрите все доступные целевые столбцы, сопоставленные и несопоставленные.  
@@ -156,7 +158,7 @@ ms.lasthandoff: 08/17/2017
 #### <a name="inputoutput"></a>Ввод-вывод  
  Просмотр имени источника данных.  
   
-#### <a name="column"></a>Столбец  
+#### <a name="column"></a>столбцом  
  Не используется.  
   
 #### <a name="error"></a>Ошибка  
@@ -186,4 +188,3 @@ ms.lasthandoff: 08/17/2017
 #### <a name="redirect-flow"></a>Перенаправление потока  
  Строка, вызывающая ошибку или усечение, направляется на вывод ошибок назначения ODBC. Дополнительные сведения см. в разделе, посвященном назначению ODBC.  
   
-

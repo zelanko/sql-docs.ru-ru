@@ -2,40 +2,35 @@
 title: "Элемент TableID (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- TableID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: TableID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- TableID
-helpviewer_keywords:
-- TableID element
+applies_to: SQL Server 2016 Preview
+f1_keywords: TableID
+helpviewer_keywords: TableID element
 ms.assetid: 45fe7e23-b274-4bc2-be63-1a5bb6680f51
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e3b3e6f80c157dbb867aaf4362a39e6ed91cd974
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 89a10083cd42179ad72af682e337c67691dff491
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tableid-element-assl"></a>Элемент TableID (ASSL)
-  Содержит идентификатор (ID) таблицы (из [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md) элемент) связанный с родительским элементом.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит идентификатор (ID) таблицы (из [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md) элемент) связанный с родительским элементом.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,9 +45,9 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
-|Тип данных и длина|Строковые значения|  
+|Тип данных и длина|String|  
 |Значение по умолчанию|None|  
 |Количество элементов|1-1: обязательный элемент, который встречается ровно один раз.|  
   
@@ -63,7 +58,7 @@ ms.lasthandoff: 09/01/2017
 |Родительские элементы|[ColumnBinding](../../../analysis-services/scripting/data-type/columnbinding-data-type-assl.md), [DSVTableBinding](../../../analysis-services/scripting/data-type/dsvtablebinding-data-type-assl.md), [IncrementalProcessingNotification](../../../analysis-services/scripting/objects/incrementalprocessingnotification-element-assl.md), [RowBinding](../../../analysis-services/scripting/data-type/rowbinding-data-type-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Таблица, идентифицируемая **TableID** должно быть в пределах источника данных, к которому привязан объект-владелец (измерение или куб).  
   
  Элементы, соответствующие родителям элемента **TableID** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.ColumnBinding>, <xref:Microsoft.AnalysisServices.DSVTableBinding>, <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>, и <xref:Microsoft.AnalysisServices.RowBinding>.  
@@ -72,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

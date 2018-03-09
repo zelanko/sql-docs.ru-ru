@@ -1,32 +1,30 @@
 ---
-title: "Создание и управление секциями табличной модели (табличные службы SSAS) | Документы Microsoft"
+title: "Создание и управление секциями табличной модели | Документы Microsoft"
 ms.custom: 
-ms.date: 05/31/2017
-ms.prod: sql-server-2016
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dab72cf0-95bc-4b63-95dc-505b5cd881c1
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1dfe0ae7dd1ee92cd365a34cf6502d8358c474cb
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 09a6acec0d1ee91c553d748a334733faff36bc08
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="create-and-manage-tabular-model-partitions"></a>Создание секций табличной модели и управление ими
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+# <a name="create-and-manage-tabular-model-partitions"></a>Создание и управление секциями табличной модели
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
   Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Секции, определенные для модели во время разработки модели, дублируются в модели развертывания. После развертывания можно настроить управление секциями с помощью диалогового окна **Секции** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью скрипта. В задачах этого раздела описывается создание и управление секциями в развернутой модели.  
   
@@ -68,7 +66,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>См. также:  
  [Секции табличных моделей](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
- [Обработка секций табличной модели](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)  
+ [Секций процесса табличной модели](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)  
   
   
-

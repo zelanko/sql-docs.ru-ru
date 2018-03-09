@@ -2,28 +2,30 @@
 title: "Технология IntelliSense (SQL Server Management Studio) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
-caps.latest.revision: 7
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 145fd074c9c84ce704ba43c9ad3591a324fea507
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: dbf4112403363ce7c3d19e433b1bcf028983823f
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (среда SQL Server Management Studio)
-  Редакторы в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поддерживают параметры [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense, которые уменьшают объем набора, предоставляют быстрый доступ к сведениям о синтаксисе и облегчают просмотр разделителей сложных выражений.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Редакторы в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поддерживают параметры [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense, которые уменьшают объем набора, предоставляют быстрый доступ к сведениям о синтаксисе и облегчают просмотр разделителей сложных выражений.  
   
 ## <a name="benefits-of-intellisense"></a>Преимущества IntelliSense  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense обеспечивает набор возможностей, которые упрощают доступ к справочным сведениям по языку. Во время программирования нет необходимости покидать редактор кода для поиска элементов языка. Можно сохранить контекст, найти необходимые сведения, вставить элементы языка прямо в код и даже позволить функции IntelliSense завершать ввод.  
@@ -43,4 +45,3 @@ ms.lasthandoff: 06/22/2017
  [Редакторы запросов и текста (SQL Server Management Studio)](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Каталога объект свойства, методы и собы
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Catalog object [ADO MD], members
 ms.assetid: e9566718-9122-490d-8a8e-da8f605246f2
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9650ee49fdaf68a5655f87c6f2fe8fd49b72af61
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 44022fd4980afa8a6018a10c20c4e0db9bc46f35
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="catalog-object-properties-methods-and-events-ado-md"></a>Свойства объекта каталога, методов и событий (ADO MD)
 ## <a name="propertiescollections"></a>Свойства и коллекции  
@@ -41,6 +40,5 @@ ms.lasthandoff: 09/09/2017
 ## <a name="events"></a>События  
  Нет.  
   
-## <a name="see-also"></a>См. также:  
- [Объект каталога (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)
-
+## <a name="see-also"></a>См. также  
+ [Объект Catalog (многомерные объекты ADO)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)

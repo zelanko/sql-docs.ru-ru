@@ -3,7 +3,7 @@ title: "Переместить пример метода (VBScript) | Докум
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Move method, VBScript example
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e85b05939e905afb9ae91d3a4d230ac9a8f8b21f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ce6494fa4a1eea5f0f999cdcbeb3baa818304eb2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="move-method-example-vbscript"></a>Пример метода Move (VBScript)
 В этом примере используется [переместить](../../../ado/reference/ado-api/move-method-ado.md) метод для перемещения указателя записи на основе ввода пользователя.  
@@ -190,7 +189,6 @@ End Sub
 <!-- EndMoveVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Move-метод (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

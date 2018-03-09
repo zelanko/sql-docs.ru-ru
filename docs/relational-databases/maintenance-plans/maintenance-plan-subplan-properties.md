@@ -2,31 +2,32 @@
 title: "План обслуживания (свойства вложенного плана) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.maint.maintplanproperties.general.f1
 - sql13.swb.maint.subplanproperties.f1
 ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
-caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "7"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b8adb2a4c6f1ddbf04d11413284b500629b911d4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: cbc5a0312ae87ac372491b4f5b2e7d295642ef3c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-plan-subplan-properties"></a>План обслуживания (свойства вложенного плана)
-  Диалоговое окно **План обслуживания (свойства вложенного плана)** используется для указания имени, описания и расписания вложенного плана для плана обслуживания. Чтобы открыть это диалоговое окно, щелкните **Свойства вложенного плана** на вкладке **Создать** плана обслуживания или дважды щелкните вложенный план в сетке конструктора.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Диалоговое окно **План обслуживания (свойства вложенного плана)** используется для указания имени, описания и расписания вложенного плана для плана обслуживания. Чтобы открыть это диалоговое окно, щелкните **Свойства вложенного плана** на вкладке **Создать** плана обслуживания или дважды щелкните вложенный план в сетке конструктора.  
   
 ## <a name="options"></a>Параметры  
  **Название**  
@@ -42,4 +43,3 @@ ms.lasthandoff: 06/22/2017
  [Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   
-

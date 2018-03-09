@@ -2,11 +2,13 @@
 title: "Поэтапное восстановление (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +17,19 @@ helpviewer_keywords:
 - piecemeal restores [SQL Server]
 - restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
-caps.latest.revision: 74
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b1c653a1facffa0c6f6422645f3336120e8864f1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "74"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 82b43b985c462d5748079a8e9b6eea84a7fe2a53
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="piecemeal-restores-sql-server"></a>Поэтапное восстановление (SQL Server)
-  Этот раздел касается только баз данных в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, которые содержат несколько файлов или файловых групп, а для простой модели — только файловых групп, предназначенных только для чтения.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Этот раздел касается только баз данных в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, которые содержат несколько файлов или файловых групп, а для простой модели — только файловых групп, предназначенных только для чтения.  
   
  Дополнительные сведения о поэтапном восстановлении и оптимизированных для памяти таблицах см. в разделе [Поэтапное восстановление баз данных с таблицами, оптимизированными для памяти](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   

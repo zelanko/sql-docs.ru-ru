@@ -2,27 +2,28 @@
 title: "Динамические административные представления для служб SQL Server Machine Learning | Документы Microsoft"
 ms.custom: 
 ms.date: 07/31/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b3643ea0-d9f3-463f-8ece-572127f32a24
-caps.latest.revision: 13
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: d3c90457c7d55071520546e6362a451427503a52
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c6846ac36293ae2459c21bc8bd2b99ef144804c8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="dmvs-for-sql-server-machine-learning-services"></a>Динамические административные представления для служб SQL Server машины обучения
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом разделе перечислены представления системного каталога и динамические административные представления, связанные с машинного обучения в SQL Server.
 
@@ -140,5 +141,4 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Управление и мониторинг машины обучению](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)
-
+[Управление решениями машинного обучения и их мониторинг](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)

@@ -2,29 +2,32 @@
 title: "Определение источника данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
-caps.latest.revision: 28
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 81bdb79296ca864999d31c487cabf490ba0e0659
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3c8256f6029efcb956e68325b134b72fcce452c8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>Занятие 1-2-Определение источника данных
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 После создания проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] работа с проектом обычно начинается с определения одного или нескольких источников данных, которые будут использоваться в этом проекте. Для определения источника данных нужно задать строку соединения, которая будет использована для подключения к этому источнику данных. Дополнительные сведения см. в разделе [Создание источника данных (многомерные службы SSAS)](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
   
 В следующей задаче предстоит определить образец базы данных AdventureWorksDWSQLServer2012 в качестве источника данных для проекта учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Хотя эта база данных в данном случае расположена на локальном компьютере, часто исходные базы данных размещаются на одном или нескольких удаленных компьютерах.  
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
   
 3.  На странице **Выбор метода определения соединения** можно определить источник данных на основе нового соединения, существующего соединения или предварительно определенного объекта источника данных. В этом учебнике будет определен источник данных на основе нового соединения. Убедитесь в том, что выбран параметр **Создать источник данных, основанный на существующем или на новом соединении** , а затем нажмите кнопку **Создать**.  
   
-4.  В диалоговом окне **Диспетчер соединений** определяются свойства соединения для источника данных. Убедитесь в том, что в списке **Поставщик** выбран **Собственный поставщик данных OLE DB\Собственный клиент SQL Server 11.0** .  
+4.  В диалоговом окне **Диспетчер соединений** определяются свойства соединения для источника данных. Убедитесь в том, что в списке **Поставщик** выбран **Собственный поставщик данных OLE DB\Собственный клиент SQL Server 11.0**.  
   
     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] также поддерживают других поставщиков, которые доступны в списке **Поставщик** .  
   
@@ -61,7 +64,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Определение представления источников данных](../analysis-services/lesson-1-3-defining-a-data-source-view.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Создание источника данных (многомерные службы SSAS)](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
-

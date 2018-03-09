@@ -2,25 +2,26 @@
 title: "Основные понятия служб Data Quality Services | Microsoft Docs"
 ms.custom: 
 ms.date: 01/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "17"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 51b4813c67c7f7346bea533764b13fceef06db12
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 225ee23d618225d1424cd81e1acf5974153f0726
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-quality-services-concepts"></a>Основные понятия служб Data Quality Services
   В этом разделе содержится краткая сводка по основным понятиям служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) в управлении набором знаний, проектах служб DQS и их администрировании.  
@@ -76,13 +77,13 @@ ms.lasthandoff: 09/09/2017
   
  В ходе мониторинга активности отображаются статус и состояние каждого действия, выполненного в пределах диапазона данных, предоставляются данные по каждому действию. Администраторы DQS могут управлять этими действиями. Дополнительные сведения см. в статье [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md).  
   
- **Конфигурация**  
+ **Configuration**  
   
  Параметр «Конфигурация» позволяет выполнять следующие действия.  
   
 -   Настраивать параметры службы эталонных данных. Дополнительные сведения см. в статье [Configure DQS to Use Reference Data](../data-quality-services/configure-dqs-to-use-reference-data.md).  
   
--   Задавать пороговые значения для операций очистки и сопоставления. Дополнительные сведения см. в статье [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   Задавать пороговые значения для операций очистки и сопоставления. Дополнительные сведения см. в статье [Настройка пороговых значений для очистки и сопоставления](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
 -   Включать и отключать уведомления о профилировании. Дополнительные сведения см. в разделе [Включение или отключение уведомлений по профилированию в DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md).  
   
@@ -98,4 +99,3 @@ ms.lasthandoff: 09/09/2017
  [Службы Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   
-

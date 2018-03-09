@@ -2,29 +2,30 @@
 title: "MSSQLSERVER_21898 | Документация Майкрософт"
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 21898 (Database Engine error)
+helpviewer_keywords: 21898 (Database Engine error)
 ms.assetid: 02405b21-3d4e-4c2d-b4b3-d7b1ec05edb4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fbed13bbcedcc0bb39791663ba5d13525215d84b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9c84e18000e77d41bd0a9e66ebe76d4553a9a922
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver21898"></a>MSSQLSERVER_21898
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Сведения  
   
@@ -46,4 +47,3 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 > Запуск **sp_changedistpublisher** устранит проблему, если во время запуска **sp_adddistpublisher** на распространителе для издателя была введена неверная база данных распространителя. Однако если на удаленном издателе имеются существующие публикации из другой базы данных публикации, использующие указанную базу данных распространителя, то выполнять такое изменение не следует. Необходимо системно удалить репликацию, использующую именованную базу данных распространителя, а затем установить ее повторно с использованием базы данных распространителя первоначального издателя, чтобы стало возможным размещение на новом издателе.  
   
-

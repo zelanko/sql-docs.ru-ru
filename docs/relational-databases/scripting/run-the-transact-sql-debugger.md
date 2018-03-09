@@ -2,9 +2,12 @@
 title: "Запуск отладчика Transact-SQL | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,19 +25,19 @@ helpviewer_keywords:
 - Transact-SQL debugger, keyboard shortcuts
 - Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
-caps.latest.revision: 8
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2a9c2a6c57d74122ff0294bdf0bdccd2193447f8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 9f67818832da03faacf25adee23a1261ce44f430
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="run-the-transact-sql-debugger"></a>Запуск отладчика Transact-SQL
-  Запустить отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] можно после открытия окна редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . После этого можно начать выполнение кода [!INCLUDE[tsql](../../includes/tsql-md.md)] в режиме отладки до остановки отладчика. Можно задать параметры и настроить работу отладчика.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Запустить отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] можно после открытия окна редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. После этого можно начать выполнение кода [!INCLUDE[tsql](../../includes/tsql-md.md)] в режиме отладки до остановки отладчика. Можно задать параметры и настроить работу отладчика.  
   
 ## <a name="starting-and-stopping-the-debugger"></a>Запуск и остановка отладчика  
  Для запуска отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] необходимо соблюдение следующих требований.  

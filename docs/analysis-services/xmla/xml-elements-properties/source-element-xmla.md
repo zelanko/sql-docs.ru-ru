@@ -2,42 +2,38 @@
 title: "Исходный элемент (XMLA) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Source Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Source Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Source
 - http://schemas.microsoft.com/analysisservices/2003/engine#Source
 - microsoft.xml.analysis.source
-helpviewer_keywords:
-- Source element
+helpviewer_keywords: Source element
 ms.assetid: 4d4665ae-e20f-4baf-ab0f-848660caf500
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5e3c02c0702b343ca0271bdc61601631d07dd68f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 90f55afa8c2e7b76020449db044ac9687a9ca860
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="source-element-xmla"></a>Элемент Source (XML для аналитики)
-  Представляет исходную секцию слиянии при [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) команды.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Представляет исходную секцию слиянии при [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) команды.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -55,7 +51,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -68,7 +64,7 @@ ms.lasthandoff: 09/01/2017
 |Родительские элементы|[Источники](../../../analysis-services/xmla/xml-elements-properties/sources-element-xmla.md)|  
 |Дочерние элементы|[CubeID](../../../analysis-services/xmla/xml-elements-properties/cubeid-element-xmla.md), [DatabaseID](../../../analysis-services/xmla/xml-elements-properties/databaseid-element-xmla.md), [MeasureGroupID](../../../analysis-services/xmla/xml-elements-properties/measuregroupid-element-xmla.md), [PartitionID](../../../analysis-services/xmla/xml-elements-properties/partitionid-element-xmla.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **Источника** элемент является ссылкой на объект для одной секции для объединения в целевую секцию, указанную **целевой** родителя **MergePartitions** элемент.  
   
 ## <a name="example"></a>Пример  
@@ -89,8 +85,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Целевой элемент & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)   
- [Свойства & #40; XML для Аналитики & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Целевой элемент &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)   
+ [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

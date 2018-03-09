@@ -3,30 +3,31 @@ title: "Диалоговое окно \"Параметры сортировки\
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vdt.dlgbox.definecolumncollation
 - vdtsql.chm:65561
 ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b99f35322872e33f4bd727724dd9167465d6f1ea
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 19926b862a7ec50ca64a9b45718416ab92393cd1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>Диалоговое окно «Параметры сортировки» (визуальные инструменты для баз данных)
-Это диалоговое окно позволяет указать параметры сортировки для столбца. Параметры сортировки столбца используются во всех операциях, сравнивающих значение столбца с другим столбцом или значением константы. Он также воздействует на некоторые символьные функции, например SUBSTRING или CHARINDEX. Подробный список воздействий параметров сортировки для столбца см. в документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Это диалоговое окно позволяет указать параметры сортировки для столбца. Параметры сортировки столбца используются во всех операциях, сравнивающих значение столбца с другим столбцом или значением константы. Он также воздействует на некоторые символьные функции, например SUBSTRING или CHARINDEX. Подробный список воздействий параметров сортировки для столбца см. в документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
 Оно отображается:  
   
@@ -61,4 +62,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>См. также:  
 [Работа со столбцами в статистических запросах (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-columns-in-aggregate-queries-visual-database-tools.md)  
   
-

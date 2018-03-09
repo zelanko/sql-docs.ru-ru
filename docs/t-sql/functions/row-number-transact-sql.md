@@ -3,8 +3,11 @@ title: "ROW_NUMBER (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 09/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - row numbers [SQL Server]
 - sequential row numbers [SQL Server]
 ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
-caps.latest.revision: 50
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 820acddf7de1282501caf2fcaa43dbc757b98b7a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 6ddb3472f19ce2fda8bc368cd07f7ea602d74a02
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Номера выходного результирующего набора. В частности возвращает порядковый номер строки в секции результирующего набора, начиная с 1 для первой строки в каждой секции. 
   
@@ -79,7 +81,7 @@ ROW_NUMBER ( )
 
 Следующий запрос возвращает четыре системных таблиц в алфавитном порядке.
 
-```t-sql
+```sql
 SELECT 
   name, recovery_model_desc
 FROM sys.databases 
@@ -89,7 +91,7 @@ ORDER BY name ASC;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|имя    |recovery_model_desc |  
+|NAME    |recovery_model_desc |  
 |-----------  |------------ |  
 |master |SIMPLE |
 |model |ПОЛНОЕ |
@@ -98,7 +100,7 @@ ORDER BY name ASC;
 
 Чтобы добавить столбец с номерами строк перед каждой строки, добавьте столбец с `ROW_NUMBER` функции, при этом с именем `Row#`. Необходимо переместить `ORDER BY` предложение до `OVER` предложения.
 
-```t-sql
+```sql
 SELECT 
   ROW_NUMBER() OVER(ORDER BY name ASC) AS Row#,
   name, recovery_model_desc
@@ -108,7 +110,7 @@ WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Номер строки |имя    |recovery_model_desc |  
+|Номер строки |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |master |SIMPLE |
 |2 |model |ПОЛНОЕ |
@@ -117,7 +119,7 @@ WHERE database_id < 5;
 
 Добавление `PARTITION BY` предложение на `recovery_model_desc` столбец будет нумерацию при `recovery_model_desc` изменении значения. 
  
-```t-sql
+```sql
 SELECT 
   ROW_NUMBER() OVER(PARTITION BY recovery_model_desc ORDER BY name ASC) 
     AS Row#,
@@ -127,7 +129,7 @@ FROM sys.databases WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Номер строки |имя    |recovery_model_desc |  
+|Номер строки |NAME    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |model |ПОЛНОЕ |
 |1 |master |SIMPLE |
@@ -138,7 +140,7 @@ FROM sys.databases WHERE database_id < 5;
 ### <a name="b-returning-the-row-number-for-salespeople"></a>Б. Возврат номера строки для salespeople  
  В следующем примере показан расчет номера строки для salespeople в [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], выполняемый на основе ранжирования продаж за текущий год.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT ROW_NUMBER() OVER(ORDER BY SalesYTD DESC) AS Row,   
@@ -172,7 +174,7 @@ Row FirstName    LastName               SalesYTD
 ### <a name="c-returning-a-subset-of-rows"></a>В. Возврат подмножества строк  
  В следующем примере показан расчет номеров всех строк в таблице `SalesOrderHeader` в порядке `OrderDate` с последующим возвращением строк с номерами от `50` до `60` включительно.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH OrderedOrders AS  
@@ -189,7 +191,7 @@ WHERE RowNumber BETWEEN 50 AND 60;
 ### <a name="d-using-rownumber-with-partition"></a>Г. Использование ROW_NUMBER() с PARTITION  
  В следующем примере аргумент `PARTITION BY` используется для секционирования результирующего набора запроса по столбцу `TerritoryName`. Предложение `ORDER BY`, указанное в предложении `OVER`, упорядочивает строки каждой секции по столбцу `SalesYTD`. Предложение `ORDER BY` в инструкции `SELECT` упорядочивает полный результирующий набор запроса по `TerritoryName`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FirstName, LastName, TerritoryName, ROUND(SalesYTD,2,1) AS SalesYTD,  
@@ -227,7 +229,7 @@ Jae        Pak                  United Kingdom       4116871.22    1
 ### <a name="e-returning-the-row-number-for-salespeople"></a>Д. Возврат номера строки для salespeople  
  В следующем примере возвращается `ROW_NUMBER` для торговых представителей, в зависимости от их установленной квоты продаж.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) 
@@ -256,7 +258,7 @@ RowNumber  FirstName  LastName            SalesQuota
 ### <a name="f-using-rownumber-with-partition"></a>Е. Использование ROW_NUMBER() с PARTITION  
  Следующий пример демонстрирует использование функции `ROW_NUMBER` с аргументом `PARTITION BY`. В результате `ROW_NUMBER` функции для нумерации строк в каждой секции.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(PARTITION BY SalesTerritoryKey 
@@ -291,6 +293,5 @@ RowNumber  LastName            Territory  SalesQuota
  [NTILE &#40; Transact-SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)  
   
   
-
 
 

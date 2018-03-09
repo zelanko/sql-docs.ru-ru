@@ -1,29 +1,30 @@
 ---
 title: "Оценка отчетов (DB2ToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9e13eba0-e3cf-4205-974f-c00f982061de
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f33d360727df0ce9af5498ffaf26d049af8bf462
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2b984492a5c41bf971170076a2ab03f9c1af48ec
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assessment-report-db2tosql"></a>Оценка отчетов (DB2ToSQL)
 Окно отчета оценки показывает результаты преобразования объектов базы данных для [!INCLUDE[tsql](../../includes/tsql_md.md)] синтаксис, и поможет оценить сложность и стоимость проектов миграции.  
@@ -42,4 +43,3 @@ ms.lasthandoff: 08/02/2017
 |**Цель**|Показывает что преобразование [!INCLUDE[tsql](../../includes/tsql_md.md)] код для выбранного объекта и сообщения об ошибках для кода, который не был преобразован. В этой области отображается только при выборе отдельного объекта с кодом на панели слева.<br /><br />Щелкните номера строк, чтобы установить или снять закладки. Используйте кнопки в верхней части области перемещаться по коду.|  
 |**Панель сообщений**|Показывает ошибки, предупреждения и информационные сообщения, которые были созданы при создании отчета оценки. Сообщения группируются по номеру. Чтобы просмотреть код, который вызвал ошибку, нажмите кнопку **ошибки**, **предупреждения**, или **сведения**, разверните категорию сообщений и нажмите кнопку сообщения.|  
   
-

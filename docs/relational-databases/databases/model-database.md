@@ -2,11 +2,13 @@
 title: "База данных model | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,25 +16,24 @@ helpviewer_keywords:
 - model database [SQL Server], about model databases
 - model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
-caps.latest.revision: 52
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "52"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 6733a6d7440071e655004df7dc7926b33503ed1b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a05d89ba953bf683a992a087be8e3c87777ae9c4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="model-database"></a>База данных model
-  База данных **model** используется в качестве шаблона для всех баз данных, созданных для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Так как база данных **tempdb** создается при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , база данных **model** всегда должна существовать в системе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Содержимое базы данных **model** (включая параметры базы данных) полностью копируется в новую базу данных. Некоторые параметры базы данных **model** используются также при создании новой базы данных **tempdb** во время загрузки, поэтому наличие базы данных **model** в системе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обязательно.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] База данных **model** используется в качестве шаблона для всех баз данных, создаваемых в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Так как база данных **tempdb** создается при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , база данных **model** всегда должна существовать в системе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Содержимое базы данных **model** (включая параметры базы данных) полностью копируется в новую базу данных. Некоторые параметры базы данных **model** используются также при создании новой базы данных **tempdb** во время загрузки, поэтому наличие базы данных **model** в системе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обязательно.  
   
  Вновь созданные пользовательские базы данных используют ту же [модель восстановления](../../relational-databases/backup-restore/recovery-models-sql-server.md) , что и база данных model. Пользователь может настроить значение по умолчанию. Дополнительные сведения о текущей модели восстановления см. в разделе [Просмотр или изменение модели восстановления базы данных (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
 > [!IMPORTANT]  
->  В случае изменения базы данных **model** и внесения в нее пользовательских сведений шаблона рекомендуется сначала создать резервную копию базы данных **model**. Дополнительные сведения см. в разделе [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
+>  В случае изменения базы данных **model** и внесения в нее пользовательских сведений шаблона рекомендуется сначала создать резервную копию базы данных **model**. Дополнительные сведения см. в статье [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
 ## <a name="model-usage"></a>Использование базы данных model  
  При выполнении инструкции CREATE DATABASE первая часть базы данных создается путем копирования в нее содержимого базы данных **model** . Оставшаяся часть новой базы данных заполняется пустыми страницами.  
@@ -67,15 +68,15 @@ ms.lasthandoff: 08/03/2017
 |AUTO_SHRINK|OFF|Да|  
 |AUTO_UPDATE_STATISTICS|ON|Да|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Да|  
-|CHANGE_TRACKING|OFF|Нет|  
+|CHANGE_TRACKING|OFF|нет|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Да|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Да|  
 |CURSOR_DEFAULT|GLOBAL|Да|  
-|Параметры доступности базы данных|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Нет<br /><br /> Да<br /><br /> Да|  
+|Параметры доступности базы данных|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|нет<br /><br /> Да<br /><br /> Да|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Да|  
-|DB_CHAINING|OFF|Нет|  
-|ENCRYPTION|OFF|Нет|  
-|MIXED_PAGE_ALLOCATION|ON|Нет|  
+|DB_CHAINING|OFF|нет|  
+|ENCRYPTION|OFF|нет|  
+|MIXED_PAGE_ALLOCATION|ON|нет|  
 |NUMERIC_ROUNDABORT|OFF|Да|  
 |PAGE_VERIFY|CHECKSUM|Да|  
 |PARAMETERIZATION|SIMPLE|Да|  
@@ -83,8 +84,8 @@ ms.lasthandoff: 08/03/2017
 |READ_COMMITTED_SNAPSHOT|OFF|Да|  
 |RECOVERY|Зависит от выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *|Да|  
 |RECURSIVE_TRIGGERS|OFF|Да|  
-|Параметры компонента Service Broker|DISABLE_BROKER|Нет|  
-|TRUSTWORTHY|OFF|Нет|  
+|Параметры компонента Service Broker|DISABLE_BROKER|нет|  
+|TRUSTWORTHY|OFF|нет|  
   
  * Дополнительные сведения о текущей модели восстановления базы данных см. в разделе [Просмотр или изменение модели восстановления базы данных (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) или [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
@@ -127,4 +128,3 @@ ms.lasthandoff: 08/03/2017
  [Перемещение файлов базы данных](../../relational-databases/databases/move-database-files.md)  
   
   
-

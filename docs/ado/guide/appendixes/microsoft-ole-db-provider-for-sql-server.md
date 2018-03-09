@@ -3,7 +3,7 @@ title: "Поставщик Microsoft OLE DB для SQL Server | Документ
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - OLE DB provider for SQL Server [ADO]
 - SQLOLEDB [ADO]
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-caps.latest.revision: 19
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 3d7be2d6b7f9be8105723b8781106b50da678b11
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 11f9d1d69332e1d32b1d6bbabd804ed222b620e1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Поставщик Microsoft OLE DB для Обзор SQL Server
 Поставщик Microsoft OLE DB для SQL Server, SQLOLEDB, позволяет ADO для доступа к Microsoft SQL Server.
@@ -52,7 +51,7 @@ User ID=MyUserID;Password=MyPassword;"
 
  Строка состоит из следующих ключевых слов:
 
-|Ключевое слово|Description|
+|Ключевое слово|Описание|
 |-------------|-----------------|
 |**Поставщик**|Указывает поставщика OLE DB для SQL Server.|
 |**Источник данных** или **сервера**|Указывает имя сервера.|
@@ -66,7 +65,7 @@ User ID=MyUserID;Password=MyPassword;"
 ## <a name="provider-specific-connection-parameters"></a>Параметры подключения для конкретного поставщика
  Поставщик поддерживает несколько параметров подключения к конкретному поставщику помимо параметрами, определенными ADO. Как с помощью свойства соединения ADO, эти свойства от поставщика может быть задано посредством [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекцию [подключения](../../../ado/reference/ado-api/connection-object-ado.md) или могут быть заданы как часть **ConnectionString**.
 
-|Параметр|Description|
+|Параметр|Описание|
 |---------------|-----------------|
 |Trusted_Connection|Указывает режим проверки подлинности пользователя. Это может быть присвоено **Да** или **нет**. Значение по умолчанию — **нет**. Если это свойство имеет значение **Да**, SQLOLEDB использует режим проверки подлинности Microsoft Windows NT для авторизации доступа пользователя для базы данных SQL Server, указанной **расположение** и [источника данных ](../../../ado/reference/ado-api/datasource-property-ado.md) значения свойств. Если это свойство имеет значение **нет**, SQLOLEDB использует смешанный режим для авторизации доступа пользователей к базе данных SQL Server. Имя входа SQL Server и пароль указываются в **идентификатор пользователя** и **пароль** свойства.|
 |Текущий язык|Указывает имя записи языка SQL Server. Указывает язык, используемый для выбора и форматирования системных сообщений. Язык должен быть установлен на сервере SQL Server, в противном случае открытия, подключение завершится с ошибкой.|
@@ -362,6 +361,5 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
  Определенные сведения о реализации и функционального сведения о SQL Server поставщик OLE DB см. в разделе [поставщик SQL Server](http://msdn.microsoft.com/en-us/adf1d6c4-5930-444a-9248-ff1979729635).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Свойство ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [свойство поставщика (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [объекта набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

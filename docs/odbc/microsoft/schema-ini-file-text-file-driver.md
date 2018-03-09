@@ -3,27 +3,28 @@ title: "Файл Schema.ini (драйвера текстового файла) |
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - schema.ini file [ODBC]
 - text file driver [ODBC], schema.ini file
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0b71b742ff9c0833bd36deb256dda5169f2a51c7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 709df0de2e0191c0f03026afdad7b8e9b8480cae
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schemaini-file-text-file-driver"></a>Файл Schema.ini (драйвера текстового файла)
 При использовании драйвера текстового формата текстового файла определяется с помощью файла сведений схемы. Файл сведений схемы всегда с именем Schema.ini и всегда остается в том же каталоге, в качестве источника текстовых данных. Файл сведений схемы предоставляет IISAM сведениями об общий формат файла, имя столбца и сведения о типе данных и несколько других характеристик данных. Файл Schema.ini всегда является обязательным для доступа к данным фиксированной длины. Файл Schema.ini следует использовать, если текст таблица содержит даты и времени, денежных единиц или десятичные данные или в любое время, что требуется больший контроль над обработки данных в таблице.  
@@ -98,14 +99,14 @@ Col2=CustomerName Text Width 30
 n=ColumnNametype [#]  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В следующей таблице описаны каждой части **Col**  *n*  входа.  
   
 |Параметр|Description|  
 |---------------|-----------------|  
 |*ColumnName*|Имя текстового столбца. Если имя столбца содержит пробелы, его необходимо заключить в двойные кавычки.|  
-|*type*|Существуют следующие типы данных.<br /><br /> **Типы данных Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Измерение валют<br /><br /> Один<br /><br /> Double<br /><br /> DateTime<br /><br /> Текст<br /><br /> MEMO<br /><br /> **Типы данных ODBC** Char (то же, как текст)<br /><br /> Число с плавающей запятой (аналогично Double)<br /><br /> Целое число (то же, как Short)<br /><br /> LongChar (то же, как Memo)<br /><br /> Дата *формат даты*|  
-|**Ширина**|Значение символьной строки `Width`. Указывает, что следующее число обозначает ширину столбца (необязательно для файлов, разделенных символом, требуется для файлов с фиксированной длины).|  
+|*type*|Существуют следующие типы данных.<br /><br /> **Типы данных Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> CURRENCY<br /><br /> Один<br /><br /> Double<br /><br /> DateTime<br /><br /> Текст<br /><br /> MEMO<br /><br /> **Типы данных ODBC** Char (то же, как текст)<br /><br /> Число с плавающей запятой (аналогично Double)<br /><br /> Целое число (то же, как Short)<br /><br /> LongChar (то же, как Memo)<br /><br /> Дата *формат даты*|  
+|**Width**|Значение символьной строки `Width`. Указывает, что следующее число обозначает ширину столбца (необязательно для файлов, разделенных символом, требуется для файлов с фиксированной длины).|  
 |*#*|Целочисленное значение, которое определяет ширину столбца (обязательно, если **ширина** указан).|  
   
 ## <a name="selecting-a-character-set"></a>При выборе кодировки  
@@ -133,4 +134,3 @@ CharacterSet=ANSI
   
 > [!NOTE]  
 >  Если запись не указан, используется значение по умолчанию в панели управления Windows.
-

@@ -1,27 +1,28 @@
 ---
 title: "Надстройка Master Data Services для Microsoft Excel | Документы Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/25/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: microsoft-excel-add-in
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
-caps.latest.revision: 30
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 8f1e34eb5bb7992661f79e2c524b660442a6df35
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 07ec9e7ae52bb7adb85c2908c4b9b6da87e6ab19
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Надстройка Master Data Services для Microsoft Excel
   Благодаря [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]вы можете загружать отфильтрованные списки данных из Master Data Services (MDS) в Excel, где с ними можно работать так же, как и с любыми другими данными. Завершив работу, можно снова опубликовать данные в MDS, где они централизованно хранятся. Система безопасности определяет, какие именно данные вы можете просматривать и изменять.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 09/07/2017
   
 -   *attribute* — столбец данных. Каждый элемент имеет атрибуты. Например, атрибутом **Code** для элемента **Blue** будет **B**. Дополнительные сведения об атрибутах см. в разделе [Атрибуты (службы Master Data Services)](../../master-data-services/attributes-master-data-services.md).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
@@ -89,4 +90,3 @@ ms.lasthandoff: 09/07/2017
 -   [Безопасность (службы Master Data Services)](../../master-data-services/security-master-data-services.md)  
   
   
-

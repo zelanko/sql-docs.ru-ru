@@ -2,13 +2,13 @@
 title: "Мониторинг экземпляра служб Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - monitoring performance [SQL Server], SQL Server Profiler
 - performance [SQL Server], monitoring tools
 ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5c583616f8ba9a7ae1f4104e22cf5dd3a4ec5d87
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5974fc48206fdac56cd5d6145755a611e4f5a543
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Наблюдение за экземпляром служб Analysis Services
-  Производительность служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно отслеживать при помощи системного монитора [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , который иногда называют приложением **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] предоставляет возможность создания трассировок и управления ими, а также анализа и воспроизведения результатов трассировок. Системный монитор сообщает состояние сервера, индексированное посредством определенных счетчиков, которые описаны в следующем разделе.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Производительность служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно отслеживать при помощи системного монитора [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , который иногда называют приложением **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]позволяет создавать и управлять трассировки и анализа и воспроизведения результатов трассировок. Системный монитор сообщает состояние сервера, индексированное посредством определенных счетчиков, которые описаны в следующем разделе.  
   
 > [!NOTE]  
 >  Дополнительные сведения о мониторинге см. в [руководстве по использованию SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=225539).  
@@ -44,9 +44,8 @@ ms.lasthandoff: 09/01/2017
   
  [Мониторинг служб Analysis Services с помощью расширенных событий SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
- [Использование динамических административных представлений для мониторинга служб Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Используйте динамические административные представления &#40; динамических административных представлений &#41; для мониторинга служб Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
- [Счетчики производительности (службы SSAS)](../../analysis-services/instances/performance-counters-ssas.md)  
+ [Счетчики производительности ](../../analysis-services/instances/performance-counters-ssas.md)  
   
   
-

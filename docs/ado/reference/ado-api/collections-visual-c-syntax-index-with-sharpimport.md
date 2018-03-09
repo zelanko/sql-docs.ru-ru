@@ -3,7 +3,7 @@ title: "Коллекции (Visual C++ синтаксис индекс с #impor
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 488f5dcc74f6b5b1d1ea89c794511a96dc3dea81
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 093e3933796d490f2dc40d8af493dc639fdb19a3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>Коллекции (Visual C++ синтаксис индекс с #import)
 Полезно знать, что коллекции наследуют некоторые общие методы и свойства.  
@@ -104,9 +103,8 @@ long GetCount( ); __declspec(property(get=GetCount)) long Count;
 PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem)) PropertyPtr Item[];  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Коллекция ошибок (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Коллекция параметров (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Коллекция свойств (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

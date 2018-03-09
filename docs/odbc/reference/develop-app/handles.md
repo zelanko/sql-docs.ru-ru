@@ -3,10 +3,12 @@ title: "Обрабатывает | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - driver manager [ODBC], handles
 - handles [ODBC], about handles
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c1198607b5a664b14fe6da31c9ebdc4f82bdb8e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 05788f48f4a3fdb695fc3064023e52c2a3750c2e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handles"></a>Маркеры
 Дескрипторы являются непрозрачных, 32-разрядных значений, определяющих какой-либо элемент; в ODBC этот элемент может быть среды, соединения, оператор или дескриптора. Когда приложение вызывает **SQLAllocHandle**, диспетчер драйверов или драйвер создает новый элемент заданного типа и возвращает его дескриптор в приложение. Позднее приложение использует маркер для идентификации этого элемента при вызове функций ODBC. Диспетчер драйверов и драйвер найдите сведения об элементе с помощью маркера.  
@@ -90,11 +91,10 @@ SQLCloseCursor(hstmtOrder);
   
 -   [Дескрипторы среды](../../../odbc/reference/develop-app/environment-handles.md)  
   
--   [Дескрипторы соединений](../../../odbc/reference/develop-app/connection-handles.md)  
+-   [Дескрипторы подключений](../../../odbc/reference/develop-app/connection-handles.md)  
   
 -   [Дескрипторы инструкций](../../../odbc/reference/develop-app/statement-handles.md)  
   
--   [Дескриптора](../../../odbc/reference/develop-app/descriptor-handles.md)  
+-   [Указатели дескрипторов](../../../odbc/reference/develop-app/descriptor-handles.md)  
   
 -   [Переходы состояния](../../../odbc/reference/develop-app/state-transitions.md)
-

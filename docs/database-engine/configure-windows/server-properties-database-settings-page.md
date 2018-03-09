@@ -2,30 +2,30 @@
 title: "Свойства сервера (страница \"Параметры базы данных\") | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.serverproperties.databasesettings.f1
+f1_keywords: sql13.swb.serverproperties.databasesettings.f1
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
-caps.latest.revision: 32
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "32"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6219f83025b6e2fdaceaa36958582f6c7ba73544
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 17e75c3b87403fc9d27fccdc27464a1470d71743
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---database-settings-page"></a>Свойства сервера (страница "Параметры базы данных")
-  Эта страница позволяет просматривать и изменять параметры базы данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Эта страница позволяет просматривать и изменять параметры базы данных.  
   
 ## <a name="options"></a>Параметры  
  **Коэффициент заполнения индекса, используемый по умолчанию**  
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/02/2017
 -   Если флажок **Сжатие резервных копий** установлен, то новые резервные копии по умолчанию сжимаются.  
   
     > [!IMPORTANT]  
-    >  По умолчанию сжатие существенно повышает загрузку ЦП. Дополнительная нагрузка на ЦП может помешать выполнению других операций. Поэтому может потребоваться создать сжатые резервные копии с низким приоритетом в сеансе, для которого использование ЦП ограничивается [регулятором ресурсов](../../relational-databases/resource-governor/resource-governor.md). Дополнительные сведения см. в разделе [Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (Transact-SQL)](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
+    >  По умолчанию сжатие существенно повышает загрузку ЦП. Дополнительная нагрузка на ЦП может помешать выполнению других операций. Поэтому может потребоваться создать сжатые резервные копии с низким приоритетом в сеансе, для которого использование ЦП ограничивается [регулятором ресурсов](../../relational-databases/resource-governor/resource-governor.md). Дополнительные сведения см. ниже в подразделе [Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (Transact-SQL)](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
   
  Члены предопределенной роли сервера **sysadmin** или **serveradmin** могут изменять этот параметр, щелкая элемент **Сжимать резервные копии** .  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/02/2017
  **Интервал восстановления (в минутах)**  
  Задает максимальное число минут на базу данных для восстановления баз данных. Если значение по умолчанию равно 0, оно означает автоматическую настройку, которую выполняет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. На практике это означает время восстановления менее минуты и создание контрольных точек приблизительно раз в минуту для активно используемых баз данных. Дополнительные сведения см. в статье [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).  
   
- **Данные**  
+ **Data**  
  Указывает расположение файлов данных по умолчанию. Нажмите кнопку «Обзор», чтобы перейти к новому размещению по умолчанию. Вступит в действие только после перезапуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Журнал**  
@@ -81,4 +81,3 @@ ms.lasthandoff: 08/02/2017
  [Указание коэффициента заполнения для индекса](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
   
   
-

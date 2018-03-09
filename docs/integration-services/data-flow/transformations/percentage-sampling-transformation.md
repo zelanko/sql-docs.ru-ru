@@ -1,10 +1,13 @@
 ---
-title: "Преобразование «Процентная выборка» | Документы Microsoft"
+title: "Преобразование \"Процентная выборка\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -21,17 +24,16 @@ helpviewer_keywords:
 - datasets [Integration Services], sample
 - training mining models
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 0afd2ce4dc8fc999661455a1655d43d21b37f3f4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: be38451e2fc359949ad71d143c5eaea6a1eaf41b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="percentage-sampling-transformation"></a>преобразование «Процентная выборка»
   Преобразование «Процентная выборка» создает образец набора данных извлечением некоторого процента входных строк преобразования. Данные выборки извлекаются случайным образом из входа преобразования. За счет этого достигается репрезентативность выборки.  
@@ -81,4 +83,3 @@ ms.lasthandoff: 08/19/2017
  Задайте начальное значение выборки для генератора случайных чисел, который преобразование использует для создания выборки. Рекомендуется только для разработки и тестирования. Если начальное значение выборки не задано, преобразование использует счетчик тактов Microsoft Windows.  
   
   
-

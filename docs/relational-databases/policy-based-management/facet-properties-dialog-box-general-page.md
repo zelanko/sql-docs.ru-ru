@@ -2,30 +2,30 @@
 title: "Диалоговое окно \"Свойства аспекта\", вкладка \"Общие\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dmf.facet.f1
+f1_keywords: sql13.swb.dmf.facet.f1
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
-caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "21"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4f24b841c847197059229eebc521037f03c1e582
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 08c7a77bd90f67e325960cd6c6725220abf04596
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Диалоговое окно «Свойства аспекта», вкладка «Общие»
-  Это диалоговое окно предназначено для просмотра свойств аспекта управления на основе политик. Каждый аспект может быть применен к одному или нескольким типам целевого объекта, например к серверу, базе данных или таблице. Используйте эту страницу, чтобы просмотреть целевые типы, связанные с данным аспектом. Свойства аспекта определяются во время его создания и их нельзя изменить на этой странице.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Это диалоговое окно предназначено для просмотра свойств аспекта управления на основе политик. Каждый аспект может быть применен к одному или нескольким типам целевого объекта, например к серверу, базе данных или таблице. Используйте эту страницу, чтобы просмотреть целевые типы, связанные с данным аспектом. Свойства аспекта определяются во время его создания и их нельзя изменить на этой странице.  
   
 ## <a name="options"></a>Параметры  
  **Описание**  
@@ -41,4 +41,3 @@ ms.lasthandoff: 06/22/2017
  [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
-

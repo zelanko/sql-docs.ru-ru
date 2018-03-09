@@ -2,11 +2,13 @@
 title: "Сохранение плана выполнения в формате XML | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - execution plans [SQL Server], saving
 - saving execution plans
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
-caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "25"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: caa43dba8d4ce0abdd5dc14f113a5fbfcf58d3ec
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
-ms.openlocfilehash: 6fe7ad1d3aedc20aac792831c0d469816979ae7e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/22/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Сохранение плана выполнения в формате XML
-  Используйте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , чтобы сохранить планы выполнения в XML-файле и открыть их для просмотра.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Используйте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], чтобы сохранить планы выполнения в XML-файле и открыть их для просмотра.  
   
  Чтобы использовать функциональные возможности плана выполнения в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]или параметры XML Showplan SET, пользователи должны иметь соответствующие разрешения на выполнение запроса [!INCLUDE[tsql](../../includes/tsql-md.md)] , для которого формируется план выполнения, и им нужно предоставить разрешение SHOWPLAN для всех баз данных, на которые ссылается запрос.  
   
@@ -39,14 +40,14 @@ ms.lasthandoff: 08/22/2017
   
 2.  Включите [SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md) с помощью следующей инструкции:  
   
-    ```t-sql  
+    ```sql  
     SET SHOWPLAN_XML ON;  
     GO  
     ```  
   
      Чтобы включить [STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md), воспользуйтесь следующей инструкцией:  
   
-    ```t-sql  
+    ```sql  
     SET STATISTICS XML ON;  
     GO  
     ```  
@@ -56,7 +57,7 @@ ms.lasthandoff: 08/22/2017
   
 3.  Выполните запрос. Пример  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     SET SHOWPLAN_XML ON;  
@@ -102,4 +103,3 @@ ms.lasthandoff: 08/22/2017
  [SET STATISTICS XML (Transact-SQL)](../../t-sql/statements/set-statistics-xml-transact-sql.md)  
   
   
-

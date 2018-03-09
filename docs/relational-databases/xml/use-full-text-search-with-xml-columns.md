@@ -2,9 +2,12 @@
 title: "Полнотекстовый поиск в столбцах XML | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - xml columns [full-text search]
 - indexes [full-text search]
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 41e91aaf7977fe44a268bccf71dd386d7c0b993a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3ab09c2313d7a14e1d9068d065cc62a7c55eb1e4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>Полнотекстовый поиск в XML-столбцах
-  Для XML-столбцов можно создавать полнотекстовые индексы, индексирующие XML-значения, но игнорирующие XML-разметку. Теги элементов используются в качестве границ токенов. Индексируются следующие элементы:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Для XML-столбцов можно создавать полнотекстовые индексы, индексирующие XML-значения, но игнорирующие XML-разметку. Теги элементов используются в качестве границ токенов. Индексируются следующие элементы:  
   
 -   Содержимое XML-элементов.  
   
@@ -71,4 +74,3 @@ WHERE  CONTAINS(xCol,'run')
  [XML-индексы (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   
-

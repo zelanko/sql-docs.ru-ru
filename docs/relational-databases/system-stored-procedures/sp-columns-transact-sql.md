@@ -1,0 +1,131 @@
+---
+title: "sp_columns (Transact-SQL) | Документы Microsoft"
+ms.custom: 
+ms.date: 10/17/2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: system-stored-procedures
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sp_columns_TSQL
+- sp_columns
+dev_langs: TSQL
+helpviewer_keywords: sp_columns
+ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
+caps.latest.revision: "45"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 7ea208a7c7c5c1cb969bfa556a5be27b32e5a856
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
+---
+# <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  Возвращает сведения о столбце для указанных объектов, которые могут быть запрошены в текущей среде.  
+  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Синтаксис  
+  
+```  
+-- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+  
+sp_columns [ @table_name = ] object  
+     [ , [ @table_owner = ] owner ]   
+     [ , [ @table_qualifier = ] qualifier ]   
+     [ , [ @column_name = ] column ]   
+     [ , [ @ODBCVer = ] ODBCVer ]  
+```  
+  
+## <a name="arguments"></a>Аргументы  
+ [  **@table_name=**] *объекта*  
+ Имя владельца таблицы или представления, используемых для возврата сведений о каталоге. *Объект* может быть таблица, представление или другой объект, со столбцами, например функции, возвращающие табличные значения. *Объект* — **nvarchar(384)**, не имеет значения по умолчанию. Поиск совпадений по шаблону поддерживается.  
+  
+ [  **@table_owner*** =**] *владельца*  
+ Имя владельца таблицы или представления, используемых для возврата сведений о каталоге. *владелец* — **nvarchar(384)**, значение по умолчанию NULL. Поиск совпадений по шаблону поддерживается. Если *владельца* не указан, применяются правила видимости объекта по умолчанию базовой СУБД.  
+  
+ Если текущий пользователь является владельцем объекта с указанным именем, то возвращаются столбцы этого объекта. Если *владельца* не указан и текущий пользователь не является владельцем объекта с указанным *объекта*, **sp_columns** ищет объект с указанным  *Объект* принадлежат владельцу базы данных. Если таковой существует, возвращаются столбцы этого объекта.  
+  
+ [  **@table_qualifier*** =**] *квалификатор*  
+ Имя квалификатора объекта. *квалификатор* — **sysname**, значение по умолчанию NULL. Различные продукты СУБД поддерживают трехкомпонентные имена объектов (*квалификатор***.** *владельца***.** *имя*). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых продуктах он представляет имя сервера в среде базы данных объекта.  
+  
+ [  **@column_name=**] *столбца*  
+ Является отдельным столбцом и используется в том случае, когда нужен только один столбец информации каталога. *столбец* — **nvarchar(384)**, значение по умолчанию NULL. Если *столбца* — не указано, возвращаются все столбцы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *столбца* представляет имя столбца, как указано в **syscolumns** таблицы. Поиск совпадений по шаблону поддерживается. Для максимальной совместимости клиент шлюза должен использовать только стандартное согласование SQL-92 (символы-шаблоны % и _).  
+  
+ [  **@ODBCVer=**] *Аргумент ODBCVer*  
+ Версия используемого протокола ODBC. *Аргумент ODBCVer* — **int**, значение по умолчанию 2. Это значение соответствует ODBC версии 2. Допустимы значения 2 или 3. Различия в поведении между версиями 2 и 3, в разделе ODBC **SQLColumns** спецификации.  
+  
+## <a name="return-code-values"></a>Значения кода возврата  
+ Нет  
+  
+## <a name="result-sets"></a>Результирующие наборы  
+ **Sp_columns** хранимая процедура каталога эквивалентно **SQLColumns** в ODBC. Возвращенные результаты сортируются по **TABLE_QUALIFIER**, **TABLE_OWNER**, и **TABLE_NAME**.  
+  
+|Имя столбца|Тип данных|Description|  
+|-----------------|---------------|-----------------|  
+|**TABLE_QUALIFIER**|**sysname**|Имя квалификатора объекта. Это поле может иметь значение NULL.|  
+|**TABLE_OWNER**|**sysname**|Имя владельца объекта. Это поле всегда возвращает значение.|  
+|**ИМЯ_ТАБЛИЦЫ**|**sysname**|Имя объекта. Это поле всегда возвращает значение.|  
+|**COLUMN_NAME**|**sysname**|Имя столбца для каждого столбца **TABLE_NAME** возвращается. Это поле всегда возвращает значение.|  
+|**ТИП ДАННЫХ**|**smallint**|Целочисленный код типа данных ODBC. Если этот тип данных не может быть сопоставлен с типом данных ODBC, возвращается значение NULL. Собственное имя типа данных возвращается в **TYPE_NAME** столбца.|  
+|**TYPE_NAME**|**sysname**|Тип данных в символьном представлении. Название типа предоставляется базовой СУБД.|  
+|**ТОЧНОСТЬ**|**int**|Количество значащих цифр. Возвращаемое значение для **точности** столбец имеет десятичную форму.|  
+|**LENGTH**|**int**|Размер данных переноса. <sup>1</sup>|  
+|**МАСШТАБ**|**smallint**|Число цифр справа от десятичной запятой.|  
+|**ОСНОВАНИЕ СИСТЕМЫ СЧИСЛЕНИЯ**|**smallint**|Основание системы счисления числовых типов данных.|  
+|**ДОПУСКАЮЩИЕ ЗНАЧЕНИЯ NULL**|**smallint**|Указывает возможность содержать значение NULL.<br /><br /> 1 = значение NULL допустимо.<br /><br /> 0 = значение NULL недопустимо.|  
+|**ПРИМЕЧАНИЯ**|**varchar(254)**|Это поле всегда возвращает значение NULL.|  
+|**COLUMN_DEF**|**nvarchar(4000)**|Значение столбца по умолчанию.|  
+|**SQL_DATA_TYPE**|**smallint**|Значение типа данных SQL в том же виде, что и в поле TYPE дескриптора. Этот столбец содержит то же, как **DATA_TYPE** столбца, за исключением **datetime** и SQL-92 **интервал** типов данных. Этот столбец всегда возвращает значение.|  
+|**SQL_DATETIME_SUB**|**smallint**|Код подтипа для **datetime** и SQL-92 **интервал** типов данных. Для других типов данных этот столбец возвращает значение NULL.|  
+|**CHAR_OCTET_LENGTH**|**int**|Максимальная длина столбца символьного или целочисленного типа в байтах. Для всех других типов данных этот столбец возвращает значение NULL.|  
+|**ORDINAL_POSITION**|**int**|Порядковый номер столбца в объекте. Первый столбец в объекте имеет порядковый номер 1. Этот столбец всегда возвращает значение.|  
+|**IS_NULLABLE**|**varchar(254)**|Допустимость значений NULL для столбца объекта. Допустимость значений NULL определяется в соответствии с правилами ISO. СУБД, совместимая с ISO SQL, не может вернуть пустую строку.<br /><br /> YES = Столбец может содержать значение NULL.<br /><br /> NO = Столбец не может содержать значения NULL.<br /><br /> Если допустимость значения NULL неизвестна, то этот столбец возвращает строку нулевой длины.<br /><br /> Возвращаемое значение для этого столбца отличается от значения, возвращаемого в **NULLABLE** столбца.|  
+|**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных используется для расширенных хранимых процедур. Дополнительные сведения см. в разделе [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).|  
+  
+ <sup>1</sup> для получения дополнительной информации см. в документации Microsoft ODBC.  
+  
+## <a name="permissions"></a>Permissions  
+ Требует разрешения SELECT и VIEW DEFINITION на схему.  
+  
+## <a name="remarks"></a>Замечания  
+ **sp_columns** соответствует требованиям для идентификаторов с разделителями. Дополнительные сведения см. в разделе [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
+  
+## <a name="examples"></a>Примеры  
+ Следующий пример возвращает данные столбца для указанной таблицы.  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+EXEC sp_columns @table_name = N'Department',  
+   @table_owner = N'HumanResources';  
+```  
+  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Следующий пример возвращает данные столбца для указанной таблицы.  
+  
+```  
+-- Uses AdventureWorks  
+  
+EXEC sp_columns @table_name = N'DimEmployee',  
+   @table_owner = N'dbo';  
+```  
+  
+## <a name="see-also"></a>См. также:  
+ [sp_tables &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
+ [Каталога хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+  
+  
+
+

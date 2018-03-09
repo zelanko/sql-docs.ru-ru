@@ -2,36 +2,35 @@
 title: "Инструкции CALL (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- CALL
-dev_langs:
-- kbMDX
+f1_keywords: CALL
+dev_langs: kbMDX
 helpviewer_keywords:
 - voids [MDX]
 - stored procedures [MDX]
 - CALL statement
 ms.assetid: b534a20b-924c-43b8-832d-24e57d50425c
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 6b3e7d095a7957c8d5af8dc497bb7a9d884005b8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3d5bc0d9875d602135fd92722b73c07176a1df59
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-manipulation---call"></a>Управление данными MDX - ВЫЗОВ
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Выполняет хранимую процедуру, которая возвращает значение void в текущей области или (по желанию) в указанном кубе.  
   
@@ -56,7 +55,7 @@ CALL SP_Name
  *Cube_Expression*  
  Допустимое строковое выражение куба, представляющее имя куба.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **ВЫЗОВИТЕ** инструкция запускает указанный регистрируемой хранимой процедуры, включая при необходимости один или несколько аргументов для указанной хранимой процедуры. **ВЫЗОВИТЕ** инструкция предназначена для использования только с помощью хранимых процедур, возвращающих значение void. Ее нельзя сочетать с другими функциями и операторами в многомерном выражении. Зарегистрированные хранимые процедуры, возвращающие значения, можно явно вызывать в многомерных выражениях и использовать совместно с другими функциями и операторами многомерных выражений.  
   
  Если куб не указан, инструкция выполняет хранимую процедуру над текущим кубом.  
@@ -69,4 +68,3 @@ CALL SP_Name
  [С помощью хранимых процедур &#40; Многомерные Выражения &#41;](../mdx/using-stored-procedures-mdx.md)  
   
   
-

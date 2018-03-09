@@ -3,10 +3,12 @@ title: "Правила обновления результатов (визуал
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - Query Designer [SQL Server], Results pane
 - Results pane
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0ab1925f265eb27a6c0efd1b55b4770e4be7cf3d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f617973f041218de7b77b64350b8953dbaa0d149
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>Правила обновления результатов (визуальные инструменты для баз данных)
-В большинстве случаев результирующий набор, отображенный на [панели результатов](../../ssms/visual-db-tools/results-pane-visual-database-tools.md), можно обновить. Однако в некоторых случаях этого сделать нельзя.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В большинстве случаев результирующий набор, отображенный на [панели результатов](../../ssms/visual-db-tools/results-pane-visual-database-tools.md), можно обновить. Однако в некоторых случаях этого сделать нельзя.  
   
 Обычно для обновления результатов [конструктор запросов и представлений](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) должен иметь достаточно сведений, чтобы однозначно идентифицировать строку в таблице. Например, если запрос включает в выходном списке первичный ключ. К тому же необходимо иметь разрешение на обновление базы данных.  
   
@@ -72,4 +73,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>См. также:  
 [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
-

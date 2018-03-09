@@ -3,7 +3,7 @@ title: "Границы набора записей | Документы Microsof
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - Recordset object [ADO], boundaries of a Recordset
 - BOF property [ADO], boundaries of a Recordset
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 96473d512ed586ebdb155e3422f6559294c2616d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 66dec387cc91a2d0bd4d3aded73a6b4301aff593
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="boundaries-of-a-recordset"></a>Границы набора записей
 **Набор записей** поддерживает **BOF** и **EOF** свойства для разграничения начала и окончания, соответственно, набора данных. Можно представить **BOF** и **EOF** как «фантомных» записи, которые располагаются в начале и конце **записей**. Подсчет **BOF** и **EOF**, выборка **записей** теперь будет выглядеть следующим образом:  
@@ -78,4 +77,3 @@ else
  Эта схема работает для всех типов курсоров и не зависит от базовой поставщиков. При попытке определить, проверяемая из **записей** объекта путем проверки, если его **RecordCount** значение свойства равно нулю (0) или нет, необходимо принимать меры предосторожности, для использования соответствующего курсора и поставщика, поддерживает возврат числа записей в результат.  
   
  При удалении последней оставшиеся записи **записей** объекта положение курсора остается в неопределенном состоянии. **BOF** и **EOF** свойства могут остаться **False** до попытки изменить положение текущей записи, в зависимости от поставщика. Дополнительные сведения см. в разделе [удаление записей с помощью метода Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md).
-

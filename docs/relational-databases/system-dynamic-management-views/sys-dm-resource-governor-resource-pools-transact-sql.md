@@ -1,0 +1,104 @@
+---
+title: "sys.dm_resource_governor_resource_pools (Transact-SQL) | Документы Microsoft"
+ms.custom: 
+ms.date: 01/17/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-data-warehouse, pdw
+ms.service: 
+ms.component: dmv's
+ms.reviewer: 
+ms.suite: sql
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sys.dm_resource_governor_resource_pools_TSQL
+- dm_resource_governor_resource_pools_TSQL
+- sys.dm_resource_governor_resource_pools
+- dm_resource_governor_resource_pools
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_resource_governor_resource_pools dynamic management view
+ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: a66fe36785d2f54e265144df3b9fa1d454fd305c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
+---
+# <a name="sysdmresourcegovernorresourcepools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+
+  Возвращает информацию о текущем состоянии пула ресурсов, текущую конфигурацию пула ресурсов и статистику пула ресурсов.  
+  
+> [!NOTE]  
+>  Вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_resource_governor_resource_pools**.  
+  
+|Имя столбца|Тип данных|Описание|  
+|-----------------|---------------|-----------------|  
+|pool_id|**int**|Идентификатор пула ресурсов. Не допускает значение NULL.|  
+|имя|**sysname**|Имя пула ресурсов. Не допускает значение NULL.|  
+|statistics_start_time|**datetime**|Время, когда была очищена статистика для данного пула. Не допускает значение NULL.|  
+|total_cpu_usage_ms|**bigint**|Совокупное использование ЦП, в миллисекундах, с момента сброса статистики регулятора ресурсов. Не допускает значение NULL.|  
+|cache_memory_kb|**bigint**|Текущее общее использование памяти кэша, в килобайтах. Не допускает значение NULL.|  
+|compile_memory_kb|**bigint**|Текущее общее использование заимствованной памяти, в килобайтах (КБ). Основная доля этого использования приходится на компиляцию и оптимизацию, но может также включать и других пользователей памяти. Не допускает значение NULL.|  
+|used_memgrant_kb|**bigint**|Текущий общий объем используемой (заимствованной) памяти, полученной в результате операций предоставления памяти. Не допускает значение NULL.|  
+|total_memgrant_count|**bigint**|Совокупное количество операций предоставления в данном пуле ресурсов. Не допускает значение NULL.|  
+|total_memgrant_timeout_count|**bigint**|Совокупное количество операций предоставления памяти в данном пуле ресурсов, для которых было превышено время ожидания. Не допускает значение NULL.|  
+|active_memgrant_count|**int**|Текущее количество операций предоставления памяти. Не допускает значение NULL.|  
+|active_memgrant_kb|**bigint**|Сумма, в килобайтах (КБ), предоставленной в настоящее время памяти. Не допускает значение NULL.|  
+|memgrant_waiter_count|**int**|Количество запросов, в настоящий момент ожидающих предоставления памяти. Не допускает значение NULL.|  
+|max_memory_kb|**bigint**|Максимальный объем памяти, в килобайтах, который может быть получен пулом ресурсов. Это основано на текущих настройках и состоянии сервера. Не допускает значение NULL.|  
+|used_memory_kb|**bigint**|Объем используемой памяти, в килобайтах, для пула ресурсов. Не допускает значение NULL.|  
+|target_memory_kb|**bigint**|Целевой объем памяти, в килобайтах, который пытается заполучить пул ресурсов. Это основано на текущих настройках и состоянии сервера. Не допускает значение NULL.|  
+|out_of_memory_count|**bigint**|Количество неудачных операций выделения памяти в пуле после сброса статистики регулятора ресурсов. Не допускает значение NULL.|  
+|min_cpu_percent|**int**|Текущая конфигурация гарантированной средней пропускной способности ЦП для всех запросов в пуле ресурсов при возникновении состязания использования ЦП. Не допускает значение NULL.|  
+|max_cpu_percent|**int**|Текущая конфигурация максимальной средней пропускной способности ЦП, разрешенной для всех запросов в пуле ресурсов при возникновении состязания использования ЦП. Не допускает значение NULL.|  
+|min_memory_percent|**int**|Текущая конфигурация гарантированного объема памяти для всех запросов в пуле ресурсов при возникновении состязания использования памяти. Не используется совместно с другими пулами ресурсов. Не допускает значение NULL.|  
+|max_memory_percent|**int**|Текущая конфигурация процентной доли от общего объема памяти сервера, которая может использоваться для запросов в данном пуле ресурсов. Не допускает значение NULL.|  
+|cap_cpu_percent|**int**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Жесткое ограничение пропускной способности ЦП, которая предоставляется всем запросам в пуле ресурсов. Ограничивает максимальный уровень пропускной способности ЦП заданным значением. Диапазон допустимых значений — от 1 до 100. Не допускает значение NULL.|  
+|min_iops_per_volume|**int**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Параметр минимального числа операций ввода-вывода в секунду (IOPS) в расчете на том диска для этого пула. Допускает значение NULL. NULL, если пул ресурсов не управляется в аспекте операций ввода-вывода. Иными словами, параметры MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME пула ресурсов имеют значение 0.|  
+|max_iops_per_volume|**int**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Параметр максимального числа операций ввода-вывода в секунду (IOPS) в расчете на том диска для этого пула. Допускает значение NULL. NULL, если пул ресурсов не управляется в аспекте операций ввода-вывода. Иными словами, параметры MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME пула ресурсов имеют значение 0.|  
+|read_io_queued_total|**int**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Общее количество операций чтения, поставленных в очередь после сброса регулятора ресурсов. Допускает значение NULL. NULL, если пул ресурсов не управляется в аспекте операций ввода-вывода. Иными словами, параметры MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME пула ресурсов имеют значение 0.|  
+|read_io_issued_total|**int**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Общая сумма выполненных операций ввода-вывода с момента сброса регулятора ресурсов. Допускает значение NULL. NULL, если пул ресурсов не управляется в аспекте операций ввода-вывода. Иными словами, параметры MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME пула ресурсов имеют значение 0.|  
+|read_io_completed_total|**int**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Общая сумма завершенных операций ввода-вывода с момента сброса регулятора ресурсов. Не допускает значение NULL.|  
+|read_io_throttled_total|**int**|Общая сумма отрегулированных операций чтения с момента сброса регулятора ресурсов. Допускает значение NULL. NULL, если пул ресурсов не управляется в аспекте операций ввода-вывода. Иными словами, параметры MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME пула ресурсов имеют значение 0.|  
+|read_bytes_total|**bigint**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Общее число байтов, считанных с момента сброса статистики регулятора ресурсов. Не допускает значение NULL.|  
+|read_io_stall_total_ms|**bigint**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Общее время (в миллисекундах) между получением ввода-вывода и завершением. Не допускает значение NULL. |  
+|read_io_stall_queued_ms|**bigint**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Общее время (в миллисекундах) между получением ввода-вывода при чтении и проблемой. Допускает значение NULL. NULL, если пул ресурсов не управляется в аспекте операций ввода-вывода. Иными словами, параметры MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME пула ресурсов имеют значение 0.<br /><br /> Чтобы определить ли настройка ввода-ВЫВОДА для пула причиной задержки, вычтите **read_io_stall_queued_ms** из **read_io_stall_total_ms**.|  
+|write_io_queued_total|**int**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Общее количество записей операций ввода-вывода в очереди после сброса статистики регулятора ресурсов. Допускает значение NULL. NULL, если пул ресурсов не управляется в аспекте операций ввода-вывода. Иными словами, параметры MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME пула ресурсов имеют значение 0.|  
+|write_io_issued_total|**int**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Общая сумма выполненных операций ввода-вывода записи с момента сброса регулятора ресурсов. Допускает значение NULL. NULL, если пул ресурсов не управляется в аспекте операций ввода-вывода. Иными словами, параметры MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME пула ресурсов имеют значение 0.|  
+|write_io_completed_total|**int**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Общая сумма завершенных операций ввода-вывода записи с момента сброса регулятора ресурсов. Не допускает значение NULL.|  
+|write_io_throttled_total|**int**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Общая сумма отрегулированных операций записи с момента сброса регулятора ресурсов. Не допускает значение NULL.|  
+|write_bytes_total|**bigint**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Общее число байтов, записанных с момента сброса статистики регулятора ресурсов. Не допускает значение NULL.|  
+|write_io_stall_total_ms|**bigint**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Общее время (в миллисекундах) между получением ввода-вывода при записи и завершением. Не допускает значение NULL. |  
+|write_io_stall_queued_ms|**bigint**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Общее время (в миллисекундах) между получением ввода-вывода при записи и проблемой. Допускает значение NULL. NULL, если пул ресурсов не управляется в аспекте операций ввода-вывода. Иными словами, параметры MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME пула ресурсов имеют значение 0.<br /><br /> Это задержка, вызванная регулированием ресурсов ввода-вывода.|  
+|io_issue_violations_total|**int**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Общее количество проблем с вводом-выводом. Иными словами, количество раз, когда скорость ввода-вывода при проблеме была ниже, чем резервная. Допускает значение NULL. NULL, если пул ресурсов не управляется в аспекте операций ввода-вывода. Иными словами, параметры MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME пула ресурсов имеют значение 0.|  
+|io_issue_delay_total_ms|**bigint**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Общее время (в миллисекундах) между запланированной проблемой и фактической проблемой ввода-вывода. Допускает значение NULL. NULL, если пул ресурсов не управляется в аспекте операций ввода-вывода. Иными словами, параметры MIN_IOPS_PER_VOLUME и MAX_IOPS_PER_VOLUME пула ресурсов имеют значение 0.|  
+|pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
+  
+## <a name="remarks"></a>Remarks  
+ Между группами рабочей нагрузки регулятора ресурсов и пулами ресурсов регулятора ресурсов существует связь «многие к одному». В результате многие статистики пула ресурсов являются производными от статистик группы рабочей нагрузки.  
+  
+ Данное динамическое административное представление отображает конфигурацию, хранимую в памяти. Чтобы просмотреть сохраненные метаданные конфигурации, используйте представление каталога sys.resource_governor_resource_pools.  
+  
+## <a name="permissions"></a>Разрешения  
+ Необходимо разрешение VIEW SERVER STATE.  
+  
+## <a name="see-also"></a>См. также  
+ [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
+ [sys.resource_governor_resource_pools &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
+ [ALTER RESOURCE GOVERNOR &#40; Transact-SQL и &#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
+  
+  
+
+
+

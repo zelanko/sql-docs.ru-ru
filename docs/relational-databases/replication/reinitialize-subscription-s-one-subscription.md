@@ -2,32 +2,31 @@
 title: "Повторная инициализация подписок — одна подписка | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.reinit.single.f1
-helpviewer_keywords:
-- Reinitialize Subscription(s) dialog box
+f1_keywords: sql13.rep.reinit.single.f1
+helpviewer_keywords: Reinitialize Subscription(s) dialog box
 ms.assetid: 9b0cf0be-d1f1-4163-a0ca-d6f095aa707e
-caps.latest.revision: 11
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "11"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a8fbb60295103fad2edccc62b19c791407148b91
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f880d02edec3fdd62aba702781c290b985e5dafd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="reinitialize-subscriptions---one-subscription"></a>Повторная инициализация подписок — одна подписка
-  При помощи диалогового окна **Повторная инициализация подписок** можно выбрать подписки для повторной инициализации. Повторная инициализация подразумевает применение моментального снимка к подписчику; она выполняется агентом распространителя для подписок на публикации транзакций и агентом слияния для подписок на публикации слиянием.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью диалогового окна **Повторная инициализация подписок** можно выбрать подписки для повторной инициализации. Повторная инициализация подразумевает применение моментального снимка к подписчику; она выполняется агентом распространителя для подписок на публикации транзакций и агентом слияния для подписок на публикации слиянием.  
   
 ## <a name="options"></a>Параметры  
  **Использовать текущий моментальный снимок**  
@@ -50,4 +49,3 @@ ms.lasthandoff: 06/22/2017
  [Повторная инициализация подписок](../../relational-databases/replication/reinitialize-subscriptions.md)  
   
   
-

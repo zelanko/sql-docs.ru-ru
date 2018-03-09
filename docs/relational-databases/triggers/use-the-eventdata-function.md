@@ -2,9 +2,12 @@
 title: "Использование функции EVENTDATA | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-ddl
 ms.tgt_pltfrm: 
@@ -13,19 +16,20 @@ helpviewer_keywords:
 - EVENTDATA function
 - DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
-caps.latest.revision: 38
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5cb1a29cd7638f5ec9a4248f615381fe6da721b9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 049d6eb85ebd1fcbbfecb1d64ec507979a0026f1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="use-the-eventdata-function"></a>Использование функции EVENTDATA
-  Функция EVENTDATA позволяет получить сведения о событии, которое привело к срабатыванию триггера DDL. Эта функция возвращает значение типа **xml** . XML-схема содержит следующие сведения:  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Функция EVENTDATA позволяет получить сведения о событии, которое привело к срабатыванию триггера DDL. Эта функция возвращает значение типа **xml** . XML-схема содержит следующие сведения:  
   
 -   время формирования события;  
   

@@ -1,26 +1,27 @@
 ---
-title: "Добавить детализацию из мобильного отчета в других мобильных отчетов или URL-адреса | Документы Microsoft"
+title: "Добавление детализации из мобильного отчета в другие мобильные отчеты или URL-адреса | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/20/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c00b90770f259d9782c68eec52ccf860762f43f1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 27f8b92c77a5251e2d52e8af85e4aeb759a5ce8a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>Добавление детализации из мобильного отчета в другие мобильные отчеты или URL-адреса
 Детализацию по любому датчику, графику или сетке данных в мобильном отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] можно добавить в любой другой мобильный отчет или пользовательский URL-адрес. 
@@ -83,10 +84,9 @@ ms.lasthandoff: 08/09/2017
 
 Скрытые элементы отображаются более светлым цветом.
     
-### <a name="see-also"></a>См. также:  
+### <a name="see-also"></a>См. также раздел  
  
 * [Добавление параметров в мобильный отчет служб Reporting Services](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 
-* [Веб-портал (основной режим служб SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)
-
+* [Веб-портал (собственный режим служб SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)
 

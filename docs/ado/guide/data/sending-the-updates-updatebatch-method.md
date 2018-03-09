@@ -3,7 +3,7 @@ title: "Отправка обновлений: метод UpdateBatch | Доку
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -13,22 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
-caps.latest.revision: 3
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 061435976bb08c644705e80c0d1d605ee944f304
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6cad1bfd63ffafd32d0621f6142717cd7175ccd0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>Отправка обновлений: метод UpdateBatch
 Следующий код открывает набор записей в пакетном режиме, присвоив свойству LockType adLockBatchOptimistic и CursorLocation для adUseClient. Он добавляет две новые записи и изменяет значение поля в существующей записи, сохранение исходных значений, а затем вызывает UpdateBatch для отправки изменений обратно в источник данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ```  
 'BeginBatchUpdate  
@@ -62,6 +61,5 @@ ms.lasthandoff: 09/09/2017
   
  Если вы изменяете текущей записи или добавления новой записи, при вызове метода UpdateBatch, ADO автоматически вызывает метод обновления для сохранения всех изменений, ожидающих текущей записи перед передачей пакет изменений к поставщику.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пакетный режим](../../../ado/guide/data/batch-mode.md)
-

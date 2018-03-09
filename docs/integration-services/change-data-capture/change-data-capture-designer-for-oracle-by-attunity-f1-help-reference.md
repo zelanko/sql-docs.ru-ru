@@ -1,10 +1,13 @@
 ---
-title: "Измените конструктор системы отслеживания измененных данных для Oracle от Attunity F1 справка | Документы Microsoft"
+title: "Справка F1 по конструктору системы отслеживания информации об изменениях данных для Oracle компании Attunity | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: reference
 f1_keywords:
 - f1Help
 ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da92c9619f8bfbfbe732fd349cac195bc4c89926
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c9b325d98bfad926ae8832c2cc765ddfb05c8da5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Справка F1 конструктора системы отслеживания измененных данных для Oracle компании Attunity
   Конструктор системы отслеживания измененных данных для Oracle от Attunity используется для создания экземпляра Oracle CDC и управления им. В темах этого раздела описывается выполнение различных задач в консоли конструктора CDC.  
@@ -39,19 +41,19 @@ ms.lasthandoff: 08/03/2017
   
     -   [Создание базы данных изменения SQL Server](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  
   
-    -   [Соединиться с базой данных-источником Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)  
+    -   [Соединение с базой данных-источником Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)  
   
-    -   [Подключение к базе данных Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
+    -   [Соединение с Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
   
-    -   [Выберите столбцы и таблицы Oracle](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
+    -   [Выбор таблиц и столбцов Oracle](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   
     -   [Выбор таблиц Oracle для отслеживания изменений](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
   
-    -   [Внесение изменений таблицы, выбранные для отслеживания изменений](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
+    -   [Внесение изменений в выбранные для отслеживания изменений таблицы](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
     -   [Создание и запуск скрипта дополнительного журналирования](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)  
   
-    -   [Создание зеркальных таблиц и отслеживание CDC экземпляров](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md)  
+    -   [Создание экземпляров зеркальных таблиц и отслеживание CDC](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md)  
   
     -   [Готово](../../integration-services/change-data-capture/finish.md)  
   
@@ -70,4 +72,3 @@ ms.lasthandoff: 08/03/2017
     -   [Изменение дополнительных свойств](../../integration-services/change-data-capture/edit-the-advanced-properties.md)  
   
   
-

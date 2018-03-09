@@ -3,23 +3,27 @@ title: "Создание и запуск задания для SQL Server в Lin
 description: "Этот учебник показывает, как для запуска задания агента SQL Server в Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 10/02/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.workload: Inactive
+ms.openlocfilehash: 0788983d79392fbd39c87ce13aeb4c9439bffe33
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: bd57860078a1dec510e0c8547a97291975a4d330
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Создание и запуск задания агента SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Задания SQL Server используются для выполнения регулярных та же последовательность команд в базе данных SQL Server. Этот учебник пример того, как создать задание агента SQL Server в Linux с помощью Transact-SQL и SQL Server Management Studio (SSMS).
 
@@ -31,7 +35,7 @@ ms.lasthandoff: 10/02/2017
 
 Известные проблемы с агентом SQL Server в Linux см. в разделе [заметки о выпуске](sql-server-linux-release-notes.md).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 С этим учебником требуются следующие необходимые компоненты:
 
@@ -43,23 +47,22 @@ ms.lasthandoff: 10/02/2017
 * Компьютер Windows с помощью SSMS:
   * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) для дополнительных шагов SSMS.
 
-## <a name="install-sql-server-agent"></a>Установка агента SQL Server
+## <a name="enable-sql-server-agent"></a>Включить агент SQL Server
 
-Чтобы использовать агент SQL Server в Linux, необходимо сначала установить **mssql-server-agent** пакета на компьютере, на котором уже установлен 2017 г. SQL Server.
+Для использования агента SQL Server в Linux, необходимо сначала включить агент SQL Server на компьютере, на котором уже установлен 2017 г. SQL Server.
 
-1. Установка **mssql-server-agent** с команду, соответствующую операционной системе Linux.
-
-   | Платформа | Выполнение команд установки |
-   |-----|-----|
-   | RHEL | `sudo yum install mssql-server-agent` |
-   | SLES | `sudo zypper refresh`<br/>`sudo zypper update mssql-server-agent` |
-   | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server-agent` |
+1. Чтобы включить агент SQL Server, выполните следующие шаги.
+  ```bash
+  sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
+  ```
 
 1. Перезапустите SQL Server с помощью следующей команды:
+  ```bash
+  sudo systemctl restart mssql-server
+  ```
 
-   ```bash
-   sudo systemctl restart mssql-server
-   ```
+> [!NOTE]
+> Начиная с SQL Server CU4 2017 г., агент SQL Server входит в состав **mssql server** пакета и отключена по умолчанию. Для настройки агента до посещения CU4 [установки агента SQL Server в Linux](sql-server-linux-setup-sql-agent.md).
 
 ## <a name="create-a-sample-database"></a>Создание образца базы данных
 
@@ -204,4 +207,3 @@ ms.lasthandoff: 10/02/2017
 
 > [!div class="nextstepaction"]
 >[Документация по SQL Server, агент](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)
-

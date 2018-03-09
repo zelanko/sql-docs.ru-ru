@@ -1,11 +1,13 @@
 ---
 title: "FROM (Transact-SQL) | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,20 +36,19 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-caps.latest.revision: 97
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 6ae83ccf18cac45339d63e4ce1326c72a58c0339
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: c1abc4a060dd275ba2f8500e88d634a5ba9244ee
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="from-transact-sql"></a>Предложение FROM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Указывает таблицы, представления, производные таблицы и соединенные таблицы, которые используются в инструкциях DELETE, SELECT и UPDATE в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. В инструкции SELECT требуется предложение FROM, за исключением тех случаев, когда список выбора содержит только константы, переменные и арифметические выражения (без имен столбцов).  
   
@@ -162,7 +163,7 @@ FROM { <table_source> [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-\<table_source >  
+\<table_source>  
  Указывает таблицу, представление, табличную переменную или источник производной таблицы с указанием или без указания псевдонима для использования в инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. В инструкции можно использовать до 256 источников таблиц, хотя предел изменяется в зависимости от доступной памяти и сложности других выражений в запросе. Отдельные запросы могут не поддерживать 256 источников таблиц.  
   
 > [!NOTE]  
@@ -170,14 +171,14 @@ FROM { <table_source> [ ,...n ] }
   
  Порядок источников таблицы после ключевого слова FROM не влияет на возвращаемый результирующий набор. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает ошибки, если в предложении FROM появляются повторяющиеся имена.  
   
- *представления table_or_view_name*  
+ *table_or_view_name*  
  Имя таблицы или представления.  
   
  Если таблица или представление существует в другой базе данных на том же экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используйте полное доменное имя в форме *базы данных*. *схемы*. *object_name*.  
   
  Если таблица или представление существует вне экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l, используйте четырехчастное имя в форме *связанный_сервер*. *каталог*. *схемы*. *Объект*. Дополнительные сведения см. в статье [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Четырехсоставного имени, которое создается с использованием [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) работать так, как серверная часть имени может также использоваться для указания удаленного источника таблицы. Если указана функция OPENDATASOURCE, *имя_базы_данных* и *schema_name* могут применяться не ко всем источникам данных, зависит от возможностей поставщика OLE DB, который обращается к удаленному объекту.  
   
- [КАК] *table_alias*  
+ [AS] *table_alias*  
  Является псевдонимом для *table_source* , можно использовать либо для удобства и для различения таблицы или представления в самосоединении или во вложенном запросе. Псевдоним часто является сокращенным именем таблицы, использующимся для соотнесения с определенными столбцами таблиц в соединении. Если имя столбца существует более чем в одной таблице соединения, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] потребует, чтобы имя столбца было уточнено именем таблицы, представления или псевдонима. Если определен псевдоним, нельзя использовать имя таблицы.  
   
  При использовании производной таблицы, набора строк или табличной функции либо предложения оператора (как PIVOT или UNPIVOT), необходимая *table_alias* в конце предложения является соответствующим именем таблицы для всех столбцов, включая группирующие столбцы возвращается.  
@@ -219,7 +220,7 @@ FROM { <table_source> [ ,...n ] }
   
  *Производный* *_table* можно использовать [!INCLUDE[tsql](../../includes/tsql-md.md)] конструктором табличных значений для указания нескольких строк. Например, `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. Дополнительные сведения см. в разделе [конструктор табличных значений &#40; Transact-SQL &#41; ](../../t-sql/queries/table-value-constructor-transact-sql.md).  
   
- *псевдоним_столбца*  
+ *column_alias*  
  Дополнительный псевдоним для замены имени столбца в результирующем наборе производной таблицы. Для каждого столбца в списке выбора следует включить по одному псевдониму столбца и заключить весь список псевдонимов столбцов в скобки.  
   
  *представления table_or_view_name* FOR SYSTEM_TIME \<system_time >  
@@ -229,7 +230,7 @@ FROM { <table_source> [ ,...n ] }
   
  Указывает, что возвращаются конкретной версии данных из указанного темпоральной таблицей и соответствующей таблицей журнала связанных с системным управлением версиями  
   
-\<tablesample_clause >  
+\<tablesample_clause>  
  Указывает, что из таблицы возвращается выборка данных. Выборка может быть приблизительной. Это предложение может быть использовано в инструкциях SELECT, UPDATE или DELETE в отношении любой первичной или соединяемой таблицы. TABLESAMPLE не может быть указано для представлений.  
   
 > [!NOTE]  
@@ -253,10 +254,10 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  Константное целочисленное выражение, используемое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для формирования случайного числа. *repeat_seed* — **bigint**. Если *repeat_seed* не указан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присваивает значение случайным образом. Для конкретной *repeat_seed* значение, результат выборки всегда равно Если изменения не были применены к таблице. *Repeat_seed* выражение должно иметь целое число больше нуля.  
   
- \<joined_table >  
+ \<joined_table>  
  Результирующий набор, полученный из двух или более таблиц. Для нескольких соединений следует использовать скобки, чтобы изменить естественный порядок соединений.  
   
-\<join_type >  
+\<join_type>  
  Указание типа операции соединения.  
   
  **ВНУТРЕННЕЕ**  
@@ -271,7 +272,7 @@ FROM { <table_source> [ ,...n ] }
  RIGHT [ OUTER ]  
  Указывает, что все строки из правой таблицы, не соответствующие условиям соединения, включаются в результирующий набор, а выходные столбцы, соответствующие оставшейся таблице, устанавливаются в значение NULL в дополнение ко всем строкам, возвращаемым внутренним соединением.  
   
-\<join_hint >  
+\<join_hint>  
  Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)], указывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запроса, оптимизатор использовать Указание одного соединения, или алгоритм выполнения каждого соединения, указанного в предложении FROM запроса. Дополнительные сведения см. в разделе [указания соединения &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-join.md).  
   
  Для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], эти указания соединения применяются для внутренних соединений по двум столбцам несовместимые распространения. Они могут повысить производительность запросов, ограничивая объем перемещения данных, которая происходит во время обработки запросов. Указания допустимого соединения для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , как показано ниже:  
@@ -291,7 +292,7 @@ FROM { <table_source> [ ,...n ] }
  ON \<search_condition >  
  Задает условие, на котором основывается соединение. Условие может указывать любой предикат, хотя чаще используются столбцы и операторы сравнения, например:  
   
-```tsql
+```sql
 SELECT p.ProductID, v.BusinessEntityID  
 FROM Production.Product AS p   
 JOIN Purchasing.ProductVendor AS v  
@@ -384,7 +385,7 @@ ON (p.ProductID = v.ProductID);
  ALL  
  Возвращает таблицу, содержащую значения из всех строк из текущей таблицы и таблицы журнала.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Предложение FROM поддерживает синтаксис SQL-92-SQL для соединенных и производных таблиц. Синтаксис SQL-92 предусматривает операторы соединения INNER, LEFT OUTER, RIGHT OUTER, FULL OUTER и CROSS.  
   
  UNION и JOIN в предложении FROM поддерживаются в представлениях и в производных таблицах и вложенных запросах.  
@@ -428,7 +429,7 @@ ON (p.ProductID = v.ProductID);
   
  Дополнительные сведения о PIVOT и UNPIVOT, включая примеры см. в разделе [с помощью PIVOT и UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения для инструкции DELETE, SELECT или UPDATE.  
   
 ## <a name="examples"></a>Примеры  
@@ -436,7 +437,7 @@ ON (p.ProductID = v.ProductID);
 ### <a name="a-using-a-simple-from-clause"></a>A. Использование простого предложения FROM  
  В следующем примере извлекаются столбцы `TerritoryID` и `Name` из таблицы `SalesTerritory` в образце базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```tsql    
+```sql    
 SELECT TerritoryID, Name  
 FROM Sales.SalesTerritory  
 ORDER BY TerritoryID ;  
@@ -463,7 +464,7 @@ TerritoryID Name
 ### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>Б. Использование подсказок оптимизатора TABLOCK и HOLDLOCK  
  Следующая частичная транзакция показывает, как явно указать совмещаемую блокировку на таблицу `Employee` и как прочитать индекс. Блокировка удерживается на протяжении всей транзакции.  
   
-```tsql    
+```sql    
 BEGIN TRAN  
 SELECT COUNT(*)   
 FROM HumanResources.Employee WITH (TABLOCK, HOLDLOCK) ;  
@@ -482,7 +483,7 @@ ORDER BY e.BusinessEntityID, d.Name ;
 ### <a name="d-using-the-sql-92-full-outer-join-syntax"></a>Г. Использование синтаксиса SQL-92 для FULL OUTER JOIN  
  В следующем примере возвращается название продукта и любые соответствующие заказы на продажу в таблице `SalesOrderDetail` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. В примере также возвращаются все заказы на продажу, продукты для которых не представлены в таблице `Product`, и все продукты с заказом на продажу, отличные от тех, которые представлены в таблице `Product`.  
   
-```tsql  
+```sql  
 -- The OUTER keyword following the FULL keyword is optional.  
 SELECT p.Name, sod.SalesOrderID  
 FROM Production.Product AS p  
@@ -494,7 +495,7 @@ ORDER BY p.Name ;
 ### <a name="e-using-the-sql-92-left-outer-join-syntax"></a>Д. Использование синтаксиса SQL-92 для LEFT OUTER JOIN  
  Следующий пример соединяет две таблицы по столбцу `ProductID` и сохраняет несовпадающие строки из левой таблицы. Таблица `Product` сопоставляется с таблицей `SalesOrderDetail` по столбцам `ProductID` в каждой таблице. В результирующем наборе отражаются все продукты (как входящие в заказы, так и не входящие).  
   
-```tsql    
+```sql    
 SELECT p.Name, sod.SalesOrderID  
 FROM Production.Product AS p  
 LEFT OUTER JOIN Sales.SalesOrderDetail AS sod  
@@ -505,7 +506,7 @@ ORDER BY p.Name ;
 ### <a name="f-using-the-sql-92-inner-join-syntax"></a>Е. Использование синтаксиса SQL-92 для INNER JOIN  
  Следующий пример возвращает все названия продуктов и идентификаторы заказов.  
   
-```tsql    
+```sql    
 -- By default, SQL Server performs an INNER JOIN if only the JOIN   
 -- keyword is specified.  
 SELECT p.Name, sod.SalesOrderID  
@@ -518,7 +519,7 @@ ORDER BY p.Name ;
 ### <a name="g-using-the-sql-92-right-outer-join-syntax"></a>Ж. Использование синтаксиса SQL-92 для RIGHT OUTER JOIN  
  Следующий пример соединяет две таблицы по столбцу `TerritoryID` и сохраняет несовпадающие строки из правой таблицы. Таблица `SalesTerritory` сопоставляется с таблицей `SalesPerson` по столбцу `TerritoryID` каждой таблицы. В результирующем наборе отображаются все представители отдела продаж независимо от того, назначена им обслуживаемая территория или нет.  
   
-```tsql    
+```sql    
 SELECT st.Name AS Territory, sp.BusinessEntityID  
 FROM Sales.SalesTerritory AS st   
 RIGHT OUTER JOIN Sales.SalesPerson AS sp  
@@ -531,7 +532,7 @@ ON st.TerritoryID = sp.TerritoryID ;
 > [!IMPORTANT]  
 >  После того как задано указание соединения, ключевое слово INNER более не является необязательным и должно быть задано в явном виде для выполнения INNER JOIN.  
   
-```tsql    
+```sql    
 SELECT p.Name AS ProductName, v.Name AS VendorName  
 FROM Production.Product AS p   
 INNER MERGE JOIN Purchasing.ProductVendor AS pv   
@@ -544,7 +545,7 @@ ORDER BY p.Name, v.Name ;
 ### <a name="i-using-a-derived-table"></a>И. Использование производной таблицы  
  Следующий пример использует производную таблицу, инструкцию `SELECT` после предложения `FROM`, для возврата имен и фамилий сотрудников и городов, в которых они проживают.  
   
-```tsql    
+```sql    
 SELECT RTRIM(p.FirstName) + ' ' + LTRIM(p.LastName) AS Name, d.City  
 FROM Person.Person AS p  
 INNER JOIN HumanResources.Employee e ON p.BusinessEntityID = e.BusinessEntityID   
@@ -560,7 +561,7 @@ ORDER BY p.LastName, p.FirstName;
 ### <a name="j-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>К. Использование TABLESAMPLE для чтения данных из выборки строк в таблице  
  В следующем примере используется `TABLESAMPLE` в предложении `FROM` для возврата около `10` процентов всех строк из таблицы `Customer`.  
   
-```tsql    
+```sql    
 SELECT *  
 FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;  
 ```  
@@ -578,14 +579,14 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
   
  В этом примере используется `APPLY` для возврата всех отделов и всех сотрудников этих отделов. Если в каком-либо отделе нет сотрудников, для этого отдела не будет возвращено никаких строк.  
   
-```tsql
+```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
 FROM Departments d CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
  Если необходимо, чтобы запрос предоставил строки для тех отделов без сотрудников, в которых будут выданы значения NULL для столбцов `EmpID`, `EmpLastName` и `EmpSalary`, нужно вместо APPLY применить `OUTER APPLY`.  
   
-```tsql
+```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
 FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
@@ -593,7 +594,7 @@ FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;
 ### <a name="l-using-cross-apply"></a>М. Использование CROSS APPLY  
  В следующем примере показано получение моментального снимка всех планов запросов, находящихся в кэше планов, путем получения дескрипторов планов для всех планов запросов в кэше запросом динамического административного представления `sys.dm_exec_cached_plans`. Затем оператор `CROSS APPLY` передает дескрипторы планов в `sys.dm_exec_query_plan`. Вывод инструкции Showplan в формате XML для каждого плана, находящегося в кэше планов, находится в столбце `query_plan` возвращаемой таблицы.  
   
-```tsql
+```sql
 USE master;  
 GO  
 SELECT dbid, object_id, query_plan   
@@ -608,7 +609,7 @@ GO
   
  Следующий пример использует аргумент date_time_literal_or_variable SYSTEM_TIME AS OF для возврата строк таблицы, которые были фактическое (текущий) начиная с 1 января 2014 г.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -620,7 +621,7 @@ WHERE ManagerID = 5;
   
  В следующем примере используется date_time_literal_or_variable SYSTEM_TIME из date_time_literal_or_variable АРГУМЕНТУ должна вернуть все строки, которые были активны в течение периода, определенного как начиная с 1 января 2013 г. и 1 января 2014 г., эксклюзивное верхнюю границу.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -632,7 +633,7 @@ WHERE ManagerID = 5;
   
  В следующем примере используется date_time_literal_or_variable SYSTEM_TIME МЕЖДУ и date_time_literal_or_variable аргумент, чтобы вернуть все строки, которые были активны в течение периода, определенного как начиная с 1 января 2013 г. и 1 января 2014 г., включая верхнюю границу.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -644,7 +645,7 @@ WHERE ManagerID = 5;
   
  В следующем примере используется FOR SYSTEM_TIME CONTAINED IN (date_time_literal_or_variable, date_time_literal_or_variable) аргумент, чтобы вернуть все строки, которые были открыты и закрыты в течение периода, определенного как начиная с 1 января 2013 г. и заканчивая 1 января 2014 г.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -656,7 +657,7 @@ WHERE ManagerID = 5;
   
  В следующем примере переменной, а не литерал для предоставления граничных значений даты для запроса.  
   
-```tsql
+```sql
 DECLARE @AsOfFrom datetime2 = dateadd(month,-12, sysutcdatetime());
 DECLARE @AsOfTo datetime2 = dateadd(month,-6, sysutcdatetime());
   
@@ -674,7 +675,7 @@ WHERE ManagerID = 5;
 ### <a name="n-using-the-inner-join-syntax"></a>О. Использование синтаксиса INNER JOIN  
  В следующем примере возвращается `SalesOrderNumber`, `ProductKey`, и `EnglishProductName` столбцы из `FactInternetSales` и `DimProduct` таблиц, где ключ соединения `ProductKey`, соответствует в обеих таблицах. `SalesOrderNumber` И `EnglishProductName` столбцы каждого существует в одной из таблиц, поэтому нет необходимости указывать псевдоним таблицы с этими столбцами, как показано; эти псевдонимы приводятся исключительно для удобства чтения. Слово **AS** до псевдоним имя не является обязательным, но рекомендуется для удобства чтения и для соответствия стандарту ANSI.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -685,7 +686,7 @@ INNER JOIN DimProduct AS dp
   
  Поскольку `INNER` ключевое слово не требуется для внутренних соединений, этот же запрос можно записать так:  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -696,7 +697,7 @@ ON dp.ProductKey = fis.ProductKey;
   
  Объект `WHERE` предложение также может использоваться с этим запросом, чтобы ограничить результаты. В этом примере ограничивает результаты `SalesOrderNumber` значения больше, чем «SO5000»:  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -710,7 +711,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>П. С помощью синтаксиса LEFT OUTER JOIN и RIGHT OUTER JOIN  
  Следующий пример соединяет `FactInternetSales` и `DimProduct` таблицы на `ProductKey` столбцов. Синтаксис левого внешнего соединения сохраняет несовпадающие строки из левой (`FactInternetSales`) таблицы. Поскольку `FactInternetSales` таблица не содержит `ProductKey` значения, которые не соответствуют `DimProduct` таблицы, этот запрос возвращает те же строки в первом примере внутреннее соединение выше.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -723,7 +724,7 @@ LEFT OUTER JOIN DimProduct AS dp
   
  Несовпадающие строки из правой таблицы, сохраняются в правые внешние соединения. Следующий пример возвращает те же строки, как в приведенном выше примере левого внешнего соединения.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -734,7 +735,7 @@ RIGHT OUTER JOIN FactInternetSales AS fis
   
  В следующем запросе используется `DimSalesTerritory` таблицы в качестве левой таблицы в левое внешнее соединение. Он извлекает `SalesOrderNumber` значения из `FactInternetSales` таблицы. Если существует заказов для какого-либо `SalesTerritoryKey`, запрос будет возвращать значение NULL для `SalesOrderNumber` для этой строки. Этот запрос упорядочен по `SalesOrderNumber` столбца, чтобы все значения NULL в этом столбце будет отображаться в верхней части результатов.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -746,7 +747,7 @@ ORDER BY fis.SalesOrderNumber;
   
  Этот запрос можно переписать с правое внешнее соединение, чтобы получить те же результаты:  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -759,7 +760,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="p-using-the-full-outer-join-syntax"></a>Т. С помощью синтаксиса FULL OUTER JOIN  
  В следующем примере показано полное внешнее соединение, которое возвращает все строки из обоих соединяемых таблиц, но возвращает значение NULL для значения, которые не соответствуют из другой таблицы.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -771,7 +772,7 @@ ORDER BY fis.SalesOrderNumber;
   
  Этот запрос можно переписать без `OUTER` ключевое слово.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -784,7 +785,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="q-using-the-cross-join-syntax"></a>У. Использование синтаксиса CROSS JOIN  
  В следующем примере возвращается векторное произведение `FactInternetSales` и `DimSalesTerritory` таблицы. Список всех возможных комбинаций `SalesOrderNumber` и `SalesTerritoryKey` возвращаются. Обратите внимание на отсутствие `ON` предложение в запросе перекрестного соединения.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, fis.SalesOrderNumber  
@@ -796,7 +797,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="r-using-a-derived-table"></a>Ф. Использование производной таблицы  
  Следующий пример использует производную таблицу ( `SELECT` инструкции после `FROM` предложение) для возврата `CustomerKey` и `LastName` столбцы всех клиентов в `DimCustomer` в таблице `BirthDate` значения позже 1 января 1970 года и фамилию 'Smith'.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT CustomerKey, LastName  
@@ -810,7 +811,7 @@ ORDER BY LastName;
 ### <a name="s-reduce-join-hint-example"></a>Х. УМЕНЬШИТЬ пример указание соединения  
  В следующем примере используется `REDUCE` указание соединения для изменения обработки производной таблицы в запросе. При использовании `REDUCE` указание соединения в этом запросе `fis.ProductKey` запланировано, репликации и вноситься distinct и затем присоединить их к `DimProduct` при случайном порядке из `DimProduct` на `ProductKey`. Результирующая таблица производного распространяется на `fis.ProductKey`.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN SELECT SalesOrderNumber  
@@ -826,7 +827,7 @@ ORDER BY SalesOrderNumber;
 ### <a name="t-replicate-join-hint-example"></a>T. Пример указания REPLICATE соединения  
  В следующем примере показан один и тот же запрос аналогичен предыдущему примеру, за исключением того, что `REPLICATE` указание соединения используется вместо `REDUCE` указание соединения. Использование `REPLICATE` указание приводит значений в `ProductKey` (объединяющий) столбец из `FactInternetSales` таблицы реплицируются на все узлы. `DimProduct` Таблица соединяется с реплицированной версии этих значений.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN SELECT SalesOrderNumber  
@@ -844,7 +845,7 @@ ORDER BY SalesOrderNumber;
   
  В следующем примере указанием REDISTRIBUTE принудительно случайный порядок перемещения на таблицу FactInternetSales, поскольку ProductKey столбец распределения для DimProduct и не является столбцом распределения для FactInternetSales.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN  
@@ -854,7 +855,7 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
     ON dp.ProductKey = fis.ProductKey;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE (Transact-SQL)](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
@@ -864,4 +865,3 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
  [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
  [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
-

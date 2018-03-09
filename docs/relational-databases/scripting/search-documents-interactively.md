@@ -2,9 +2,12 @@
 title: "Поиск в документах в интерактивном режиме | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,19 +17,19 @@ helpviewer_keywords:
 - searches [SQL Server Management Studio], interactive
 - Query Editor [SQL Server Management Studio], interactive search
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a87a33ea63725ae2db48d61d557ff4bf91704490
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: b1b665a2ce68bf3c99c950d8a943052d123c2f6a
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="search-documents-interactively"></a>осуществлять поиск в документах в интерактивном режиме
-  С помощью диалогового окна **Найти и заменить** можно производить поиск в одном или нескольких открытых файлах или окнах и последовательно перемещаться по найденным совпадениям. Этот метод позволяет просматривать каждое отдельное найденное совпадение в контексте окружающего текста. Кроме того, с помощью диалогового окна **Найти и заменить** можно выполнять операции группового поиска и просматривать найденные совпадения в виде отчета.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] С помощью диалогового окна **Найти и заменить** можно производить поиск в одном или нескольких открытых файлах или окнах и последовательно перемещаться по найденным совпадениям. Этот метод позволяет просматривать каждое отдельное найденное совпадение в контексте окружающего текста. Кроме того, с помощью диалогового окна **Найти и заменить** можно выполнять операции группового поиска и просматривать найденные совпадения в виде отчета.  
   
 ### <a name="to-search-all-open-documents"></a>Поиск во всех открытых документах  
   

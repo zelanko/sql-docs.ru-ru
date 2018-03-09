@@ -3,27 +3,28 @@ title: "Глобальные параметры (протоколировани�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 4cb4da20-3b99-4aae-8c80-329ee23e796e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 97e9648a60828b42eb9cde0c14e5ab923a08eff9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c658fdaf92073e6a6e27d0aa097717aba81a7b0d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-logging-sybasetosql"></a>Глобальные параметры (протоколирование) (SybaseToSQL)
 Используйте **глобальные параметры** диалоговое окно «», чтобы указать параметры ведения журнала для SSMA. Как правило нужно изменить эти параметры только при работе с технической поддержки.  
@@ -67,4 +68,3 @@ ms.lasthandoff: 08/02/2017
 **Общее количество файлов журнала**  
 Когда один журнал заполняется, SSMA переименовать файл журнала и начать новый. Используя этот параметр, укажите максимальное количество сохраняемых файлов журнала. Минимальное значение — 2.  
   
-

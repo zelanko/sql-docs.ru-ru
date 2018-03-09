@@ -2,13 +2,13 @@
 title: "Представления в многомерных моделях источников данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - multiple data source views
 - SSAS, data source views
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
-caps.latest.revision: 36
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 9e443b461a01c7a8e2ba04e7d759984062f63d6c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 717cf118bae358e566c130ede70fb82572a1d38b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Представления источников данных в многомерных моделях
-  Представление источников данных представляет собой абстракцию реляционного источника данных, который становится основой кубов и измерений, создаваемых в многомерном проекте. Представление источника данных позволяет управлять структурами данных, используемыми в проекте, и независимо работать с базовыми источниками данных (например, можно переименовать или объединить столбцы без непосредственного изменения исходного источника данных).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Представление источников данных представляет собой абстракцию реляционного источника данных, который становится основой кубов и измерений, создаваемых в многомерном проекте. Представление источника данных позволяет управлять структурами данных, используемыми в проекте, и независимо работать с базовыми источниками данных (например, можно переименовать или объединить столбцы без непосредственного изменения исходного источника данных).  
   
  Вы можете построить несколько представлений источников данных в проекте или в базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для одного или нескольких источников данных и сконструировать каждый из них для удовлетворения требований другого решения.  
   
@@ -67,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Поддерживаемые источники данных (службы SSAS — многомерные базы данных)](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   
-

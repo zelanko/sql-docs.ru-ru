@@ -2,27 +2,28 @@
 title: "Настройка и управление | Документы Microsoft"
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0fd4554-60c6-4181-ac4c-2e366fb434f6
-caps.latest.revision: 7
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 63448281d0e1d135a52bc1c9d0c8afa097a87596
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c533a35c09842221468764ef2f59e7c9cd7714d5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="configuration-and-management"></a>Настройка и управление
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Эта статья содержит ссылки на более подробные сведения о настройке сервера для поддержки службы обучения компьютера с SQL Server в этих продуктов:
 
@@ -77,5 +78,4 @@ ms.lasthandoff: 09/01/2017
 + [Часто задаваемые вопросы по обновлению и установке](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 + [Вопросы безопасности](../r/security-considerations-for-the-r-runtime-in-sql-server.md)
 + [Известные проблемы для служб R](../../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
-
 

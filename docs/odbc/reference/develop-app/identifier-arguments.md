@@ -3,10 +3,12 @@ title: "Идентификатор аргументы | Документы Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], identifier
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a6800d7cb73790c61ec94acaffdeb291fa6b475
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: df3509e6b13d68858909d0739df1048b79fa8e45
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="identifier-arguments"></a>Идентификатор аргументов
 Если строка в аргументе идентификатор заключен в кавычки, драйвер удаляет начальные и конечные пробелы и обрабатывает буквально строка в кавычках. Если строка не заключен в кавычки, драйвер удаляет конечные пробелы и сверток строки в верхний регистр. Установка аргумента идентификатора на указатель null возвращает значение SQL_ERROR и SQLSTATE HY009 (недопустимое использование пустого указателя), если аргумент имеет имя каталога и каталоги не поддерживаются.  
@@ -41,4 +42,3 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "\"Accounts Payable\"", SQL_NTS, NULL, 0);
  Заключенные в кавычки идентификаторы используются для различения имени столбца true псевдо столбец с таким же именем, например ROWID в Oracle. Если «ROWID» передается в качестве аргумента для функции каталога, функция будет работать со столбцом псевдо ROWID, если он существует. Если псевдо столбец не существует, функция будет работать со столбцом «ROWID». Если ROWID передается в качестве аргумента для функции каталога, функция будет работать со столбцом ROWID.  
   
  Дополнительные сведения о нестандартных идентификаторов см. в разделе [идентификаторы в кавычках](../../../odbc/reference/develop-app/quoted-identifiers.md).
-

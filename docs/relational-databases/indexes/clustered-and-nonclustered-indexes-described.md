@@ -1,10 +1,13 @@
 ---
 title: "Описание кластеризованных и некластеризованных индексов | Документация Майкрософт"
 ms.custom: 
-ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.date: 11/28/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-indexes
 ms.tgt_pltfrm: 
@@ -13,23 +16,21 @@ helpviewer_keywords:
 - query optimizer [SQL Server], index usage
 - index concepts [SQL Server]
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
-caps.latest.revision: 36
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: fdf3562dbfbc4482d888f2e5e955b7941e2a6c76
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 3ddf0231bfbea2137834ffbf7113654af9d9af6a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/19/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Описания кластеризованных и некластеризованных индексов
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  > Материалы по предыдущим версиям SQL Server см. в разделе [Описание кластеризованных и некластеризованных индексов](https://msdn.microsoft.com/en-US/library/ms190457(SQL.120).aspx).
-
 
   Индекс является структурой на диске, которая связана с таблицей или представлением и ускоряет получение строк из таблицы или представления. Индекс содержит ключи, построенные из одного или нескольких столбцов в таблице или представлении. Эти ключи хранятся в виде структуры сбалансированного дерева, которая поддерживает быстрый поиск строк по их ключевым значениям в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -67,10 +68,12 @@ ms.lasthandoff: 08/19/2017
   
  Оптимизатор запросов обычно выбирает наиболее эффективный метод при выполнении запросов. Но если отсутствуют доступные индексы, оптимизатор запросов должен использовать просмотр таблицы. Ваша задача — спроектировать и создать индексы, которые лучше всего подходят для конкретной среды, чтобы оптимизатор запросов мог выбирать из нескольких эффективных индексов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включает [помощник по настройке ядра СУБД](../../relational-databases/performance/database-engine-tuning-advisor.md) , который может помочь при анализе среды базы данных и при выборе соответствующих индексов.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+> [!IMPORTANT] 
+> Дополнительные сведения о правилах и принципах проектирования индексов см. в статье [Руководство по проектированию индексов SQL Server](../../relational-databases/sql-server-index-design-guide.md).
+
+## <a name="related-content"></a>См. также  
+ [Руководство по проектированию индексов SQL Server](../../relational-databases/sql-server-index-design-guide.md)     
  [Создание кластеризованных индексов](../../relational-databases/indexes/create-clustered-indexes.md)  
-  
  [Создание некластеризованных индексов](../../relational-databases/indexes/create-nonclustered-indexes.md)  
   
   
-

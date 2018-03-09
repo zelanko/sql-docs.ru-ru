@@ -2,30 +2,30 @@
 title: "Настройка сбора данных об использовании (Power Pivot для SharePoint | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 60e8c6ab0537a8757d6a75b05e4788dc4a29768f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 98ec79c14a0ac082c75967a9c81fa7b2027f5511
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Настройка сбора данных об использовании с PowerPivot для SharePoint
-  Сбор данных об использовании — это функция SharePoint на уровне фермы. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint использует и дополняет эту систему для создания отчетов на информационной панели управления [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , которые показывают, как используются данные и службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . В зависимости от способа установки SharePoint сбор данных об использовании для фермы может быть отключен. Для создания данных об использовании, которые будут отображаться на информационной панели управления [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , администратор фермы должен включить ведение журнала использования.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Сбор данных об использовании — это функция SharePoint на уровне фермы. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint использует и дополняет эту систему для создания отчетов на информационной панели управления [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , которые показывают, как используются данные и службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . В зависимости от способа установки SharePoint сбор данных об использовании для фермы может быть отключен. Для создания данных об использовании, которые будут отображаться на информационной панели управления [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , администратор фермы должен включить ведение журнала использования.  
   
  Сведения о работе с данными об использовании на панели мониторинга управления [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] см. в разделе [Информационная панель управления PowerPivot и данные об использовании](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 09/01/2017
   
 4.  В разделе **События для записи** установите или снимите флажки, чтобы включить или выключить следующие события службы Analysis Services.  
   
-    |Событие|Description|  
+    |Событие|Описание|  
     |-----------|-----------------|  
     |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Соединения**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] используется для отслеживания соединений с сервером [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , которые выполняются от имени пользователя.|  
     |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Использование операций загрузки данных**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] позволяет отслеживать запросы на загрузку данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в память сервера. Событие загрузки создается для файлов данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , загружаемых из базы данных содержимого или из кэша.|  
@@ -188,7 +188,7 @@ ms.lasthandoff: 09/01/2017
   
 |Настройка|Значение по умолчанию|Тип|Допустимый диапазон|  
 |-------------|-------------------|----------|-----------------|  
-|**События использования служб Analysis Services** (соединение, загрузка, выгрузка, запросы)|\<включить >|Логическое значение|Эти значения либо включены, либо выключены.|  
+|**События использования служб Analysis Services** (соединение, загрузка, выгрузка, запросы)|\<включить >|Boolean|Эти значения либо включены, либо выключены.|  
 |**Query Reporting interval**|300 (в секундах)|Целочисленный|От 1 до любого целого положительного числа. Значение по умолчанию равно 5 минутам.|  
 |**Usage data history**|365 (дни)|Целочисленный|0 означает неограниченное время, однако можно также задать верхнюю границу, по достижении которой данные журнала будут удалены автоматически. Допустимые значения для ограниченного срока хранения — от 1 до 5000 (в днях).|  
 |Верхняя граница тривиального ответа|500 (в миллисекундах)|Целочисленный|Задает верхнюю границу, которая определяет время отклика на тривиальный запрос. Запрос, который завершается в течение от 0 до 500 миллисекунд, является тривиальным запросом и не включается в отчет.|  
@@ -201,4 +201,3 @@ ms.lasthandoff: 09/01/2017
  [Сбор данных об использовании Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   
   
-

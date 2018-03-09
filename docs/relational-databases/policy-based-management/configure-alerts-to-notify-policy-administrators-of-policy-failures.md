@@ -2,30 +2,30 @@
 title: "Настройка предупреждений для уведомления администраторов политик об ошибках политик | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Policy-Based Management, configure alerts
+helpviewer_keywords: Policy-Based Management, configure alerts
 ms.assetid: e8e60159-d5b0-49d5-91f3-af8e9cb994c1
-caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "6"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 44565d371ca75d4d707274b90d52794473f63a72
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 235dd81e7a742635c0e289d06fa951e3965844cb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>Настройка предупреждений для уведомления администраторов политик об ошибках политик
-  Если при управлении на основе политик в одном из трех автоматизированных режимов оценки возникает нарушение политики, то сообщение об этом записывается в журнал событий. Для уведомления о записи этого сообщения в журнал событий можно создать предупреждение, определяющее сообщение и выполняющее действие. Предупреждение должно определять сообщения, как показано в следующей таблице.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Если при управлении на основе политик в одном из трех автоматизированных режимов оценки возникает нарушение политики, то сообщение об этом записывается в журнал событий. Для уведомления о записи этого сообщения в журнал событий можно создать предупреждение, определяющее сообщение и выполняющее действие. Предупреждение должно определять сообщения, как показано в следующей таблице.  
   
 |Режим выполнения|Номер сообщения|  
 |--------------------|--------------------|  
@@ -55,4 +55,3 @@ ms.lasthandoff: 06/22/2017
 -   Если действие, которое необходимо предпринять, включает отправку сообщения по электронной почте, необходимо настроить учетную запись электронной почты. Рекомендуется использовать компонент Database Mail. Дополнительные сведения о настройке компонента Database Mail см. в разделе [Создание учетной записи компонента Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md).  
   
   
-

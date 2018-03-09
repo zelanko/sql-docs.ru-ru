@@ -3,10 +3,12 @@ title: "Использование конструктора запросов и 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,20 +24,19 @@ helpviewer_keywords:
 - SQL pane [Visual Database Tools]
 - multiple language support [SQL Server], Query and View Designer
 ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b0d83269e29d8b901aee6ad45e31207a2488b899
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 729e6f96755bc033ac151fdd24526eaeb9fafc15
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>Использование конструктора запросов и представлений с международными данными (визуальные инструменты для баз данных)
-[Конструктор запросов и представлений](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) можно использовать с данными на любом языке и с любой версией операционной системы Windows. Ниже описаны различия, с которыми можно столкнуться при работе, и предоставлены сведения об управлении данными в международных приложениях.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [Конструктор запросов и представлений](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) можно использовать с данными на любом языке и с любой версией операционной системы Windows. Ниже описаны различия, с которыми можно столкнуться при работе, и предоставлены сведения об управлении данными в международных приложениях.  
   
 ## <a name="localized-information-in-the-criteria-and-sql-panes"></a>Локализованные сведения на панелях критериев и «SQL»  
 Если для создания запроса использовать панель критериев, необходимо ввести данные в формате, соответствующем региональным настройкам Windows компьютера. Например, для поиска данных нужно ввести данные в столбец критериев с использованием любого привычного формата, за исключением следующих форматов.  
@@ -64,4 +65,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
 [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
-

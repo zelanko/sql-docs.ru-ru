@@ -2,11 +2,13 @@
 title: "Таблицы доставки журналов и хранимые процедуры | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,24 +18,23 @@ helpviewer_keywords:
 - log shipping [SQL Server], stored procedures
 - primary servers [SQL Server]
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 85f6f5c81e154bd4fcc6da3f28790ba6dedd6673
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 25b36ec7a049001e54726e37024c392f71cd07ab
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="log-shipping-tables-and-stored-procedures"></a>Таблицы доставки журналов и хранимые процедуры
-  В этом подразделе описываются все таблицы и хранимые процедуры, связанные с конфигурированием доставки журналов. Все таблицы доставки журналов хранятся в базе данных **msdb** на каждом сервере. В приведенной ниже таблице показано, на каких серверах используются какие таблицы и хранимые процедуры в конфигурациях доставки журналов.  
+# <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом подразделе описываются все таблицы и хранимые процедуры, связанные с конфигурированием доставки журналов. Все таблицы доставки журналов хранятся в базе данных **msdb** на каждом сервере. В приведенной ниже таблице показано, на каких серверах используются какие таблицы и хранимые процедуры в конфигурациях доставки журналов.  
   
 ## <a name="primary-server-tables"></a>Таблицы сервера-источника  
   
-|Таблица|Описание|  
+|Table|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Содержит идентификатор задания предупреждения. Данная таблица используется на сервере-источнике только в том случае, если удаленный сервер мониторинга не настроен.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Сохраняет описание ошибки заданий доставки журналов, связанных с сервером-источником.|  
@@ -44,7 +45,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="primary-server-stored-procedures"></a>Хранимые процедуры сервера-источника  
   
-|Хранимая процедура|Описание|  
+|Хранимая процедура|Description|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)|Настраивает базу данных-источник для конфигурации доставки журналов, включая задания резервного копирования, запись локального монитора и запись удаленного монитора.|  
 |[sp_add_log_shipping_primary_secondary, хранимая процедура](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)|Добавляет имя базы данных-получателя к существующей базе данных-источнику.|  
@@ -58,7 +59,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="secondary-server-tables"></a>Таблицы сервера-получателя  
   
-|Таблица|Описание|  
+|Table|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Содержит идентификатор задания предупреждения. Данная таблица используется на сервере-получателе только в том случае, если удаленный сервер мониторинга не настроен.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Сохраняет описание ошибки задач доставки журналов, связанных с сервером-получателем.|  
@@ -72,7 +73,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="secondary-server-stored-procedures"></a>Хранимые процедуры сервера-получателя  
   
-|Хранимая процедура|Описание|  
+|Хранимая процедура|Description|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)|Устанавливает базу данных-получателя для доставки журналов.|  
 |[sp_add_log_shipping_secondary_primary, хранимая процедура](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md)|Настраивает первичные данные, добавляет ссылки на локальные и удаленные мониторы, а также создает задания копирования и восстановления на сервере-получателе для указанной базы данных-источника.|  
@@ -87,7 +88,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="monitor-server-tables"></a>Таблицы сервера мониторинга  
   
-|Таблица|Описание|  
+|Table|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Содержит идентификатор задания предупреждения.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Сохраняет подробное описание ошибок для заданий доставки журналов.|  
@@ -97,7 +98,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="monitor-server-stored-procedures"></a>Хранимые процедуры сервера мониторинга  
   
-|Хранимая процедура|Описание|  
+|Хранимая процедура|Description|  
 |----------------------|-----------------|  
 |[sp_add_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md)|Создает задание предупреждения доставки журналов, если оно еще не создано.|  
 |[sp_delete_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)|Удаляет задание предупреждения доставки журналов, если отсутствуют соответствующие базы данных-получатели.|  
@@ -106,4 +107,3 @@ ms.lasthandoff: 08/02/2017
 |[sp_help_log_shipping_monitor_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)|Возвращает записи монитора для указанной базы данных-получателя из таблицы **log_shipping_monitor_secondary** .|  
   
   
-

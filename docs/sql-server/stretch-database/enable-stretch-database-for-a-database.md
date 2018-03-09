@@ -1,11 +1,13 @@
 ---
-title: "Настройка базы данных Stretch для базы данных | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+title: "Настройка Stretch Database для базы данных | Документация Майкрософт"
+ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: stretch-database
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-stretch
 ms.tgt_pltfrm: 
@@ -14,48 +16,49 @@ helpviewer_keywords:
 - Stretch Database, enabling database
 - enabling database for Stretch Database
 ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
-caps.latest.revision: 70
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 754e4cb8c56b3c118f7c3d0716b250b860fd73f6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 189aef1d316d4e8569a48a413ec72cfbc6a6673c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/29/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="enable-stretch-database-for-a-database"></a>Настройка базы данных Stretch для базы данных
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="enable-stretch-database-for-a-database"></a>Включение Stretch Database для базы данных
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Чтобы настроить существующую базу данных для базы данных Stretch, в SQL Server Management Studio выберите для базы данных команду **Задачи | Растяжение | Включить**, чтобы открыть мастер **разрешения операции растяжения для базы данных**. Кроме того, вы можете использовать Transact-SQL, чтобы включить базу данных Stretch для базы данных.  
+
+  Чтобы настроить существующую базу данных для Stretch Database, в SQL Server Management Studio выберите для базы данных команду **Задачи | Растяжение | Включить**, чтобы открыть мастер **разрешения операции растяжения для базы данных**. Кроме того, вы можете использовать Transact-SQL, чтобы включить Stretch Database для базы данных.  
   
- Если выбрать для таблицы команду **Задачи |Растяжение | Включить** , предварительно не включив базу данных для базы данных Stretch, мастер сначала настроит базу данных для базы данных Stretch и позволит вам выбрать таблицы в рамках этого процесса. Выполните шаги из этой статьи вместо статьи [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).  
+ Если выбрать для таблицы команду **Задачи |Растяжение | Включить** , предварительно не включив базу данных для Stretch Database, мастер сначала настроит базу данных для Stretch Database и позволит вам выбрать таблицы в рамках этого процесса. Выполните шаги из этой статьи вместо шагов из статьи [Включение Stretch Database для таблицы](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).  
   
- Чтобы настроить базу данных Stretch для таблицы или базы данных, требуются права db_owner. Кроме того, чтобы настроить базу данных Stretch для базы данных, требуются права CONTROL DATABASE.  
+ Чтобы настроить Stretch Database для таблицы или базы данных, требуются права db_owner. Кроме того, чтобы настроить Stretch Database для базы данных, требуются права CONTROL DATABASE.  
 
  >   [!NOTE]
- > Если позднее вы решите отключить Базу данных Stretch, помните, что ее отключение для таблицы или базы данных не ведет к удалению удаленного объекта. Если вы хотите удалить удаленную таблицу или базу данных, это нужно сделать с помощью портала управления Azure. Пока удаленные объекты не будут удалены вручную, их хранение будет сопровождаться затратами в Azure. 
+ > Если позднее вы решите отключить Stretch Database, помните, что ее отключение для таблицы или базы данных не ведет к удалению удаленного объекта. Если вы хотите удалить удаленную таблицу или базу данных, это нужно сделать с помощью портала управления Azure. Пока удаленные объекты не будут удалены вручную, их хранение будет сопровождаться затратами в Azure. 
  
 ## <a name="before-you-get-started"></a>Перед началом работы  
   
--   Перед настройкой базы данных для Stretch рекомендуется запустить помощник по настройке базы данных Stretch, чтобы определить базы данных и таблицы, подходящие для Stretch. Помощник по настройке базы данных Stretch, кроме того, обнаруживает блокирующие проблемы. Дополнительные сведения см. в разделе [Определение баз данных и таблиц для базы данных Stretch с использованием помощника базы данных Stretch](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md).  
+-   Перед настройкой базы данных для Stretch рекомендуется запустить помощник по настройке Stretch Database, чтобы определить базы данных и таблицы, подходящие для Stretch. Помощник по настройке Stretch Database, кроме того, обнаруживает блокирующие проблемы. Дополнительные сведения см. в статье [Определение баз данных и таблиц для Stretch Database с использованием помощника Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md).  
   
--   Изучите раздел [Ограничения для базы данных Stretch](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
+-   Изучите раздел [Ограничения для Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
   
--   База данных Stretch перемещает данные в Azure. Таким образом, необходимо иметь учетную запись Azure и подписку для выставления счетов. Для получения учетной записи Azure [нажмите здесь](http://azure.microsoft.com/en-us/pricing/free-trial/).  
+-   Stretch Database перемещает данные в Azure. Таким образом, необходимо иметь учетную запись Azure и подписку для выставления счетов. Для получения учетной записи Azure [нажмите здесь](http://azure.microsoft.com/en-us/pricing/free-trial/).  
   
 -   Убедитесь в наличии информации о подключении и данных входа, необходимых для создания нового сервера Azure или выбора существующего сервера Azure.  
   
-##  <a name="EnableTSQLServer"></a> Обязательное требование: включение базы данных Stretch на сервере  
- Перед включением базы данных Stretch в базе данных или таблице необходимо включить ее на локальном сервере. Для этой операции требуются права sysadmin или serveradmin.  
+##  <a name="EnableTSQLServer">
+            </a> Обязательное требование: включение Stretch Database на сервере  
+ Перед включением Stretch Database в базе данных или таблице необходимо включить ее на локальном сервере. Для этой операции требуются права sysadmin или serveradmin.  
   
 -   При наличии нужных административных разрешений мастер **включения базы данных для Stretch** настроит сервер для Stretch.  
   
 -   Если у вас нет необходимых разрешений, администратор должен вручную включить этот параметр, выполнив команду **sp_configure** перед запуском мастера, либо администратор должен запустить этот мастер.  
   
- Чтобы включить базу данных Stretch на сервере вручную, выполните команду **sp_configure** и включите параметр **remote data archive** . В следующем примере включается параметр **remote data archive** путем изменения его значения на 1.  
+ Чтобы включить Stretch Database на сервере вручную, выполните команду **sp_configure** и включите параметр **remote data archive** . В следующем примере включается параметр **remote data archive** путем изменения его значения на 1.  
   
 ```sql
 EXEC sp_configure 'remote data archive' , '1';  
@@ -67,15 +70,17 @@ GO
   
  Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера для удаленного архива данных](../../database-engine/configure-windows/configure-the-remote-data-archive-server-configuration-option.md) и [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
-##  <a name="Wizard"></a> Настройка базы данных Stretch в базе данных с помощью мастера  
+##  <a name="Wizard">
+            </a> Настройка Stretch Database в базе данных с помощью мастера  
  Сведения о мастере включения базы данных для Stretch, включая описание информации, которую необходимо указать, и вариантов, из которых необходимо выбрать, см. в разделе [Запуск мастера включения базы данных для Stretch](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md).  
   
-##  <a name="EnableTSQLDatabase"></a> Настройка базы данных Stretch в базы данных с помощью Transact-SQL  
- Перед включением базы данных Stretch в отдельных таблицах необходимо включить ее в базе данных.  
+##  <a name="EnableTSQLDatabase">
+            </a> Настройка Stretch Database в базы данных с помощью Transact-SQL  
+ Перед включением Stretch Database в отдельных таблицах необходимо включить ее в базе данных.  
   
- Чтобы настроить базу данных Stretch для таблицы или базы данных, требуются права db_owner. Кроме того, чтобы настроить базу данных Stretch для базы данных, требуются права CONTROL DATABASE.  
+ Чтобы настроить Stretch Database для таблицы или базы данных, требуются права db_owner. Кроме того, чтобы настроить Stretch Database для базы данных, требуются права CONTROL DATABASE.  
   
-1.  Прежде чем начать, выберите существующий сервер Azure для данных, миграцию которых выполняет база данных Stretch, или создайте новый сервер Azure.  
+1.  Прежде чем начать, выберите существующий сервер Azure для данных, миграцию которых выполняет Stretch Database, или создайте новый сервер Azure.  
   
 2.  На сервере Azure создайте правило брандмауэра с диапазоном IP-адресов SQL Server, позволяющим SQL Server обмениваться данными с удаленным сервером.  
 
@@ -83,7 +88,7 @@ GO
     
     ![Правило брандмауэра для Stretch](../../sql-server/stretch-database/media/firewall-rule-for-stretch.png)
   
-3.  Чтобы настроить в базе данных SQL Server базу данных Stretch, эта база данных должна иметь главный ключ базы данных. Главный ключ базы данных защищает учетные данные, которые база данных Stretch использует для подключения к удаленной базе данных. Ниже приведен пример, в котором создается новый главный ключ базы данных.  
+3.  Чтобы настроить в базе данных SQL Server базу данных Stretch Database, эта база данных должна иметь главный ключ базы данных. Главный ключ базы данных защищает учетные данные, которые Stretch Database использует для подключения к удаленной базе данных. Ниже приведен пример, в котором создается новый главный ключ базы данных.  
   
     ```sql  
     USE <database>; 
@@ -94,13 +99,13 @@ GO
     ```  
     Дополнительные сведения о главном ключе базы данных см. в разделах [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md) и [Создание главного ключа базы данных](../../relational-databases/security/encryption/create-a-database-master-key.md).
     
-4.  При настройке базы данных для базы данных Stretch вы должны предоставить учетные данные, которые база данных Stretch будет использовать для обмена данными между локальным SQL Server и удаленным сервером Azure. Имеются две возможности.  
+4.  При настройке базы данных для Stretch Database вы должны предоставить учетные данные, которые Stretch Database будет использовать для обмена данными между локальным SQL Server и удаленным сервером Azure. Имеются две возможности.  
   
     -   Можно предоставить учетные данные администратора.  
   
-        -   При включении базы данных Stretch с помощью мастера можно создать учетные данные в это время.  
+        -   При включении Stretch Database с помощью мастера можно создать учетные данные в это время.  
   
-        -   Если база данных Stretch включается путем выполнения команды **ALTER DATABASE**, необходимо вручную создать учетные данные, прежде чем выполнять команду **ALTER DATABASE** для включения базы данных Stretch. 
+        -   Если Stretch Database включается путем выполнения команды **ALTER DATABASE**, необходимо вручную создать учетные данные, прежде чем выполнять команду **ALTER DATABASE** для включения Stretch Database. 
         
         Ниже приведен пример, в котором создаются новые учетные данные.
   
@@ -122,7 +127,7 @@ GO
   
         -   Учетная запись службы, под которой выполняется экземпляр SQL Server, должна быть настроена как учетная запись dbmanager или sysadmin на удаленном сервере Azure.  
   
-5.  Чтобы настроить базу данных для базы данных Stretch, выполните команду ALTER DATABASE.  
+5.  Чтобы настроить базу данных для Stretch Database, выполните команду ALTER DATABASE.  
   
     1.  Для аргумента SERVER укажите имя существующего сервера Azure, включая часть `.database.windows.net` имени, например `MyStretchDatabaseServer.database.windows.net`.  
   
@@ -152,8 +157,7 @@ GO
 -   [Восстановление баз данных с поддержкой Stretch](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Определение баз данных и таблиц для базы данных Stretch с использованием помощника базы данных Stretch](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
- [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
+ [Определение баз данных и таблиц для Stretch Database с использованием помощника Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
+ [Параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
   
-

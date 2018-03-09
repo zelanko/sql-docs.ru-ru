@@ -2,40 +2,35 @@
 title: "Элемент aliases (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Aliases Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Aliases Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Aliases
-helpviewer_keywords:
-- Aliases element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Aliases
+helpviewer_keywords: Aliases element
 ms.assetid: 9de9e683-d30d-4d61-b32d-c5a946825742
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e0e3a5c5cabfdc4396257d72aac9ff08e3d0ba43
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a2c0b1eb29df31046b0cb8175be382af50a920a3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="aliases-element-assl"></a>Элемент Aliases (ASSL)
-  Содержит коллекцию элементов [псевдоним](../../../analysis-services/scripting/properties/alias-element-assl.md) элементы, связанные с [учетной записи](../../../analysis-services/scripting/objects/account-element-assl.md) элемент  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит коллекцию элементов [псевдоним](../../../analysis-services/scripting/properties/alias-element-assl.md) элементы, связанные с [учетной записи](../../../analysis-services/scripting/objects/account-element-assl.md) элемент  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,11 +47,11 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|нет (коллекция)|  
 |Значение по умолчанию|нет (коллекция)|  
-|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
+|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -65,7 +60,7 @@ ms.lasthandoff: 09/01/2017
 |Родительские элементы|[Учетная запись](../../../analysis-services/scripting/objects/account-element-assl.md)|  
 |Дочерние элементы|[Псевдоним](../../../analysis-services/scripting/properties/alias-element-assl.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Элемент, соответствующий родительский **псевдонимы** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Account>.  
   
 ## <a name="see-also"></a>См. также:  
@@ -74,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Коллекции &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

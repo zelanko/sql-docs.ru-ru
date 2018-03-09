@@ -3,8 +3,11 @@ title: "Функция NULLIF (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 09/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - NULLIF function
 - equivalent expressions [SQL Server]
 ms.assetid: 44c7b67e-74c7-4bb9-93a4-7a3016bd2feb
-caps.latest.revision: 48
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fe8e4663688ce510d9600ebeba9d3c30703ee3aa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: 91037a9e07ade78f3c37dcb11d315d6e88d330ef
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="nullif-transact-sql"></a>Функция NULLIF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает значение NULL, если два указанных выражения равны. Например `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` возвращает значение NULL для первого столбца (4 и 4), поскольку аналогичны двух входных значений. Во втором столбце возвращает первое значение (5), так как входные значения не совпадают. 
   
@@ -54,7 +56,7 @@ NULLIF ( expression , expression )
   
  Функция NULLIF возвращает первое *выражение* Если два выражения не равны. Если выражения равны, функция NULLIF возвращает значение null тип первого *выражение*.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция NULLIF аналогична поисковому выражению CASE, в котором два выражения равны, а результирующее выражение равно NULL.  
   
  В функции NULLIF не рекомендуется использовать такие зависимые от времени функции, как RAND(). Это может вызвать функцию вычисляемое дважды и возвращать разные результаты из вызовов.  
@@ -148,11 +150,10 @@ FROM budgets;
  5      null
  ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [РЕГИСТР &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Decimal и numeric &#40; Transact-SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
  [Системные функции &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
-
 

@@ -3,7 +3,7 @@ title: "Свойство UpdateRule (ADOX) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - UpdateRule property [ADOX]
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 90e7ae8092a82c778abe0e698bd2350af31c9fca
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6b4b037edbf6f5acc663e688c2a7cd3a0f7a9561
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="updaterule-property-adox"></a>Свойство UpdateRule (ADOX)
 Указывает действия, выполняемого при основной [ключ](../../../ado/reference/adox-api/key-object-adox.md) обновляется.  
@@ -40,12 +39,11 @@ ms.lasthandoff: 09/09/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает **длинные** значение, которое может быть одним из [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) константы. Значение по умолчанию — **adRINone**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Это свойство доступно только для чтения на [ключ](../../../ado/reference/adox-api/key-object-adox.md) объектов уже добавлен в коллекцию.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект ключа (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+ [Объект Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
-## <a name="see-also"></a>См. также:  
- [Ключи добавить метод, тип ключа, RelatedColumn, RelatedTable и UpdateRule-пример свойства (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)
-
+## <a name="see-also"></a>См. также  
+ [Примеры метода Append коллекции Keys, свойства Type объекта Key, а также примеры свойств RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)

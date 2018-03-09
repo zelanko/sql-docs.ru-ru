@@ -2,36 +2,33 @@
 title: "Набор строк DBSCHEMA_COLUMNS | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DBSCHEMA_COLUMNS
+apiname: DBSCHEMA_COLUMNS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DBSCHEMA_COLUMNS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DBSCHEMA_COLUMNS rowset
 ms.assetid: 653bdd07-a533-4a99-8b6a-6e5c7322e1f3
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 32df882f6f6b34c4cd5049713240460c62324ddb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 93cd52a3f37c9e14af6132708fd36591ac846f59
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dbschemacolumns-rowset"></a>Набор строк DBSCHEMA_COLUMNS
-  Предоставляет сведения обо всех столбцах, удовлетворяющих указанному критерию ограничения.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Предоставляет сведения обо всех столбцах, удовлетворяющих указанному критерию ограничения.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **DBSCHEMA_COLUMNS** набор строк содержит следующие столбцы.  
@@ -82,7 +79,6 @@ ms.lasthandoff: 09/01/2017
 |**COLUMN_OLAP_TYPE**|**DBTYPE_WSTR**|Необязательно|  
   
 ## <a name="see-also"></a>См. также:  
- [Наборы строк схемы OLE DB](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
+ [Наборы строк схемы OLE DB](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   
-

@@ -1,13 +1,14 @@
 ---
-title: "Датчики (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Датчики (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -159,17 +160,16 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e9aa0032e0610b73c28ff50c7c8f616cca6a2fd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fa277221c184a30af7680cb6371c9c5220ceae63
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Датчики (построитель отчетов и службы SSRS)
   В отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы в области данных датчика отображается отдельное значение из набора данных. Отдельный датчик всегда располагается внутри панели датчиков, где можно добавить дочерние или соседние датчики. Панель датчиков также можно применить для создания нескольких датчиков, использующих одинаковые функции, например фильтрацию, группирование или сортировку.  
@@ -184,7 +184,7 @@ ms.lasthandoff: 08/09/2017
   
  Существует два типа датчиков: линейный и радиальный. На следующей иллюстрации показаны основные элементы радиального датчика на панели датчиков.  
   
- ![Диаграмма элементов датчика](../../reporting-services/report-design/media/gauge-elements-diagram.gif "диаграмма элементов датчика")  
+ ![Диаграмма элементов датчика](../../reporting-services/report-design/media/gauge-elements-diagram.gif "Диаграмма элементов датчика")  
   
  Дополнительные сведения об использовании датчиков в качестве ключевых показателей эффективности см. в разделе [Учебник. Добавление в отчет ключевого показателя эффективности (построитель отчетов)](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
@@ -198,7 +198,7 @@ ms.lasthandoff: 08/09/2017
   
  Линейный датчик может быть прямоугольником, расположенным горизонтально или вертикально, и своей формой напоминает линейку. Чаще всего указатель датчика является термометром, но может быть также маркером или полосой. В силу своей формы линейные датчики полезны при внедрении в таблицу или матричные области данных для отображения данных по ходу выполнения.  
   
- Помимо вышеперечисленных отличий, эти два типа датчиков взаимозаменяемы. Однако если необходимо использовать в отчете простой датчик, то стоит подумать об использовании индикатора. Дополнительные сведения см. в разделе [индикаторы &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+ Помимо вышеперечисленных отличий, эти два типа датчиков взаимозаменяемы. Однако если необходимо использовать в отчете простой датчик, то стоит подумать об использовании индикатора. Дополнительные сведения см. в разделе [Индикаторы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
  На следующих иллюстрациях представлены радиальный и линейный датчики. Радиальный датчик имеет круглую форму и указатель-стрелку. Линейный датчик расположен горизонтально и имеет указатель термометра.  
   
@@ -294,7 +294,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [Задание изображения для указателя на датчике (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/en-us/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
   
-##  <a name="InThisSection"></a> В этом разделе  
+##  <a name="InThisSection"></a> в этом разделе  
  В следующих разделах представлены сведения о работе с датчиками.  
   
 |||  
@@ -304,12 +304,11 @@ ms.lasthandoff: 08/09/2017
 |[Форматирование указателей на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Содержит общие сведения о форматировании указателей датчиков и подробные сведения о параметрах форматирования для стилей указателей, доступных для радиальных и линейных датчиков.|  
 |[Форматирование диапазонов на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Содержит сведения о форматировании диапазонов на датчиках, которые позволяют выделить на датчике важные подгруппы значений или визуальную индикацию вхождения значения указателя в определенный диапазон.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Фильтр, группы и сортировка данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Параметры отчета &#40; Построитель отчетов и конструктор отчетов &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Настройка DataFactory | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - DataFactory customization in RDS [ADO]
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7f286af82af900116eb0cbc4e8154d046d45b342
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 044e738c69113740290843f14f0b2c14500307e1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="datafactory-customization"></a>Настройка DataFactory
 Служба удаленных данных (RDS) позволяет легко осуществлять доступ к данным в системе трехуровневой клиент сервер. Клиентский элемент управления данных указывает параметры строки подключения и команды для выполнения запроса на удаленный источник данных или строку подключения и [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта параметров для выполнения обновлений.  
@@ -56,6 +55,5 @@ ms.lasthandoff: 09/09/2017
 -   [Требуемые параметры клиента](../../../ado/guide/remote-data-service/required-client-settings.md)  
   
 -   [Запись собственного настраиваемого обработчика](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 

@@ -3,10 +3,12 @@ title: "Обновление строк по закладке с SQLBulkOperatio
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3c3525f78ece4e5831cc4e84e0d8041ceacc6a05
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4426465ea41b257a4805399b703f28ccc22d704b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>Обновление строк по закладке с SQLBulkOperations
 При обновлении строки с закладкой, **SQLBulkOperations** позволяет обновить одну или несколько строк из таблицы источника данных. Строки идентифицируются по закладки в столбце привязанного закладки. Строка обновляется с использованием данных в буферы приложения для каждого привязанного столбца (кроме случаев, когда значение в буфер длины/индикатора для столбца SQL_COLUMN_IGNORE). Несвязанные столбцы не будет обновляться.  
@@ -47,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 6.  Вызовы **SQLBulkOperations** с *операции* SQL_UPDATE_BY_BOOKMARK значение аргумента.  
   
  Для каждой строки, отправляемое в источник данных, как обновление буферы приложения должны иметь допустимую строку данных. Если буферы приложения заполняются выборкой, если была сохранена массив состояния строк, и состояние для строки имеет значение SQL_ROW_DELETED, SQL_ROW_ERROR или SQL_ROW_NOROW, недопустимые данные может непреднамеренно отправляться к источнику данных.
-

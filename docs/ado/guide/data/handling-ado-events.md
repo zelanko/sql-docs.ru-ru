@@ -3,7 +3,7 @@ title: "Обработка событий ADO | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - ADO, events
 - event handlers [ADO]
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8b1eb14b35aa2031dc405f3c1b7f5a9e1d932e9f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a451023d3e3501ac60cd2724349337f30c46b689
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="handling-ado-events"></a>Обработка событий ADO
 Модель события ADO поддерживает некоторые синхронные и асинхронные ADO-операции, которые выдавать *события*, или уведомлений, перед началом операции или после его завершения. Событие — вызов подпрограмму обработчика событий, который определяется в приложении.  
@@ -43,20 +42,19 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующие подразделы.  
   
--   [Сводка обработчик событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)  
+-   [Общие сведения об обработчике событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)  
   
 -   [Типы событий](../../../ado/guide/data/types-of-events.md)  
   
 -   [Параметры события](../../../ado/guide/data/event-parameters.md)  
   
--   [Как работают обработчики событий](../../../ado/guide/data/how-event-handlers-work-together.md)  
+-   [Совместная работа обработчиков событий](../../../ado/guide/data/how-event-handlers-work-together.md)  
   
--   [Создание экземпляра события ADO по языку](../../../ado/guide/data/ado-event-instantiation-by-language.md)  
+-   [Создание экземпляра события ADO на различных языках](../../../ado/guide/data/ado-event-instantiation-by-language.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сводка обработчик событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Создание экземпляра события ADO по языку](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [События ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Параметры события](../../../ado/guide/data/event-parameters.md)   
  [Типы событий](../../../ado/guide/data/types-of-events.md)
-

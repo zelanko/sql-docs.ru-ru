@@ -2,36 +2,33 @@
 title: "MDSCHEMA_SETS, набор строк | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_SETS
+apiname: MDSCHEMA_SETS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_SETS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_SETS rowset
 ms.assetid: abb00dc0-2b83-48d6-b2ba-6615c1488d06
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d861c23e40464535fbde4b666c2e1429f65c772c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4820c18992da2aab0ac8e0550a5cadd75ca193bc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemasets-rowset"></a>MDSCHEMA_SETS
-  Описывает любые наборы, определенные на текущий момент в базе данных, в том числе наборы с областью сеанса.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Описывает любые наборы, определенные в данный момент в базе данных, включая наборы с областью сеанса.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **MDSCHEMA_SETS** набор строк содержит следующие столбцы.  
@@ -57,16 +54,15 @@ ms.lasthandoff: 09/01/2017
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**SET_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**ОБЛАСТЬ ДЕЙСТВИЯ**|**DBTYPE_I4**|Необязательно.|  
-|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**CUBE_SOURCE**|**DBTYPE_UI2**|Необязательно.<br /><br /> Примечание: Только одна иерархия может быть включено, и возвращаются только тех именованных наборов, иерархии которых точно соответствуют ограничению.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**SET_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**ОБЛАСТЬ ДЕЙСТВИЯ**|**DBTYPE_I4**|Необязательный параметр.|  
+|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**CUBE_SOURCE**|**DBTYPE_UI2**|Необязательный параметр.<br /><br /> Примечание: Только одна иерархия может быть включено, и возвращаются только тех именованных наборов, иерархии которых точно соответствуют ограничению.|  
   
 ## <a name="see-also"></a>См. также:  
- [OLE DB для OLAP наборы строк схемы](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [Наборы строк схемы OLE DB для OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

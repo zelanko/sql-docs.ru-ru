@@ -2,27 +2,30 @@
 title: "Учебники по ядру СУБД | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 3765d87fd95fdc07513319d1c4f175ec66e9f813
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: db336415059b9bc6b6251d9e590ac852903b66f8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="database-engine-tutorials"></a>Учебники по компоненту ядра СУБД
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 В этом разделе приведены учебники по [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
   
 [Учебник. Приступая к работе с компонентом Database Engine](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
@@ -49,7 +52,7 @@ ms.lasthandoff: 09/27/2017
 [Учебник. Администрирование серверов с помощью управления на основе политик](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 Этот учебник учит создавать политики, которые обеспечивают принудительное выполнение стандартов по администрированию сайта.  
   
-[Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+[Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
 В этом учебнике показано, как выполнять резервное копирование и восстановление в SQL Server для службы хранения больших двоичных объектов в Windows Azure.  
   
 [Учебник. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016 (Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases) ](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
@@ -61,5 +64,4 @@ ms.lasthandoff: 09/27/2017
   
   
   
-
 

@@ -2,9 +2,12 @@
 title: "Сеансы расширенных событий SQL Server | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - sessions
 - extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
-caps.latest.revision: 20
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ff9ce12cc98171946715d16f18d15885d7098c4f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 09eae3690643f45896325c141bd79ac218f27c04
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="sql-server-extended-events-sessions"></a>Сеансы расширенных событий SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+# <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Сеанс расширенных событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается в процессе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в котором выполняется подсистема расширенных событий. Следующие аспекты сеанса расширенных событий предоставляют контекст, необходимый для понимания инфраструктуры и принципов работы расширенных событий.  
   
@@ -43,7 +45,7 @@ ms.lasthandoff: 06/22/2017
   
  Обратите внимание, что на предыдущем рисунке состояние сеанса меняется по мере того, как выполняются разные команды DDL. В следующей таблице описаны эти изменения состояния.  
   
-|Метка рисунка|Инструкция DDL|Описание|  
+|Метка рисунка|Инструкция DDL|Description|  
 |------------------------|-------------------|-----------------|  
 |Создание|CREATE EVENT SESSION|Процесс создает объект сеанса, содержащий метаданные, предоставленные инструкцией CREATE EVENT SESSION. Процесс проверяет определение сеанса, уровень разрешений пользователя и сохраняет метаданные в базе данных master. В этот момент сеанс неактивен.|  
 |Alter|ALTER EVENT SESSION, STATE=START|Процесс запускает сеанс. Процесс считывает сохраненные метаданные, проверяет определение сеанса, уровень разрешений пользователя и создает сеанс. Загружаются такие объекты сеанса, как события и цели, и сеанс становится активным.|  
@@ -86,4 +88,3 @@ ms.lasthandoff: 06/22/2017
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  
   
   
-

@@ -1,26 +1,27 @@
 ---
 title: "Тестирование перенесенные объекты базы данных (OracleToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f03ef5e1-66e6-4c84-ada2-252dd5ada82f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 0b20c1f5d47388a92e92402faa9017dc6b042a1c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e32dfd7db190884d20ae97c8b00d57a7b6683c30
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>Тестирование перенесенные объекты базы данных (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Помощник по миграции для тест-инженера Oracle (SSMA тестировщик) автоматически проверяет преобразования объекта базы данных и переноса данных, внесенных SSMA. После завершения всех шагов миграции SSMA используйте тест-инженер SSMA для проверки, преобразованные объекты работать так же, как и все данные были перемещены должным образом.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 > Внимание! Никогда не используйте тест-инженер SSMA в рабочих системах. Во время выполнения тест-инженер изменяются исходной схемы и данных. В то же время завершения восстановления исходного состояния может быть невозможно для некоторых типов протестированного кода.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
 Если вы хотите использовать SSMA тестировщик, установите пакет расширения SSMA Oracle с **установки базы данных тест-инженер** включения параметра.  
   
 Чтобы включить сравнение результирующих данных таблицы, задать **ROWID сформировать столбец** для параметра **Да** перед началом преобразования схемы. SSMA будет добавлен столбец ROWID ко всем таблицам во время выполнения **преобразование схемы** команды.  
@@ -70,4 +71,3 @@ ms.lasthandoff: 08/02/2017
 [Установка компонентов SSMA на SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
 [Параметры проекта &#40; Преобразование &#41; &#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
   
-

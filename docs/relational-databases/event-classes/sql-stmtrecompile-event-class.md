@@ -2,9 +2,12 @@
 title: "Класс событий SQL:StmtRecompile | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,29 +15,30 @@ ms.topic: article
 helpviewer_keywords:
 - SQL:StmtRecompile event class
 ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
-caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dfed0cde775d2274f6a9e09e6f9dc43a9e5def23
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: df67c9972328d7e418a5f68315bcd46d8d60e369
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile, класс событий
-  Класс событий SQL:StmtRecompile указывает на повторные компиляции уровня инструкций, инициированные всеми типами пакетов: хранимыми процедурами, триггерами, нерегламентированными пакетами и запросами. Запросы могут передаваться с помощью sp_executesql, динамического SQL, методов Prepare, методов Execute или аналогичных интерфейсов. Вместо класса событий SP:Recompile должен использоваться класс событий SQL:StmtRecompile.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Класс событий SQL:StmtRecompile указывает на повторные компиляции уровня инструкций, инициированные всеми типами пакетов: хранимыми процедурами, триггерами, нерегламентированными пакетами и запросами. Запросы могут передаваться с помощью sp_executesql, динамического SQL, методов Prepare, методов Execute или аналогичных интерфейсов. Вместо класса событий SP:Recompile должен использоваться класс событий SQL:StmtRecompile.  
   
 ## <a name="sqlstmtrecompile-event-class-data-columns"></a>Столбцы данных класса событий SQL:StmtRecompile  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |ClientProcessID|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Заполнение этого столбца данных производится в том случае, если клиент предоставляет идентификатор процесса.|9|Да|  
 |DatabaseID|**int**|Идентификатор базы данных, в которой выполняется хранимая процедура. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |DatabaseName|**nvarchar**|Имя базы данных, в которой выполняется хранимая процедура.|35|Да|  
-|EventSequence|**int**|Порядковый номер события в запросе.|51|Нет|  
+|EventSequence|**int**|Порядковый номер события в запросе.|51|нет|  
 |EventSubClass|**int**|Описывает причину повторной компиляции:<br /><br /> 1 = схема изменена;<br /><br /> 2 = статистика изменена;<br /><br /> 3 = компиляция отложена;<br /><br /> 4 = установленный параметр изменен;<br /><br /> 5 = временная таблица изменена;<br /><br /> 6 = удаленный набор строк изменен;<br /><br /> 7 = разрешения For Browse изменены;<br /><br /> 8 = среда уведомлений о запросах изменена;<br /><br /> 9 = секционированное представление изменено;<br /><br /> 10 = параметры курсора изменены;<br /><br /> 11 = запрошен параметр (recompile).|21|Да|  
 |GroupID|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется выдавшая эту инструкцию клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
@@ -51,10 +55,10 @@ ms.lasthandoff: 06/22/2017
 |ObjectType|**int**|Значение, представляющее тип объекта, связанного с событием. Дополнительные сведения см. в статье [ObjectType Trace Event Column](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Да|  
 |Offset|**int**|Начальное смещение инструкции внутри хранимой процедуры или пакета, вызвавшего повторную компиляцию.|61|Да|  
 |RequestID|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|ServerName|**nvarchar**|Имя отслеживаемой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|26|Нет|  
+|ServerName|**nvarchar**|Имя отслеживаемой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|26|нет|  
 |SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|**int**|Идентификатор серверного процесса соединения.|12|Да|  
-|SqlHandle|**varbinary**|64-разрядная версия хэша, основанная на тексте нерегламентированного запроса или базы данных и на идентификаторе объекта SQL. Это значение может быть передано в функцию sys.dm_exec_sql_text, чтобы получить связанный SQL-текст.|63|Нет|  
+|SqlHandle|**varbinary**|64-разрядная версия хэша, основанная на тексте нерегламентированного запроса или базы данных и на идентификаторе объекта SQL. Это значение может быть передано в функцию sys.dm_exec_sql_text, чтобы получить связанный SQL-текст.|63|нет|  
 |StartTime|**datetime**|Время начала события, если оно известно.|14|Да|  
 |TextData|**ntext**|Текст повторно скомпилированной инструкции Transact-SQL.|1|Да|  
 |TransactionID|**bigint**|Назначенный системой идентификатор транзакции.|4|Да|  

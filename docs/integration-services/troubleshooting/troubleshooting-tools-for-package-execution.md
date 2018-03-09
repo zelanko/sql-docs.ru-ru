@@ -1,11 +1,13 @@
 ---
-title: "Средства устранения неполадок при выполнении пакета | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Инструменты устранения неполадок с выполнением пакетов | Документы Майкрософт"
+ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: 59
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: b7a7ecd3e1a181dda15cb360e336a22af837aa92
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: c38f451a062f7280413950e89aa482cea2d23125
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Устранение неполадок инструментов с помощью отчетов
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают функции и инструменты, которые можно использовать для устранения неполадок пакетов после их завершения и развертывания.  
@@ -83,14 +84,14 @@ ms.lasthandoff: 09/27/2017
   
     1.  **Создайте родительскую таблицу, в которой регистрируется каждое выполнение пакета**. В этой родительской таблице предусматривается одна строка для каждого выполнения пакета, а идентификатор ExecutionID используется для связи с дочерними записями в таблице журналов службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Для создания новой строки и регистрации времени начала можно использовать задачу «Выполнение SQL». Затем при завершении пакета можно обновить строку временем окончания, продолжительностью и состоянием;  
   
-    2.  **Добавьте к потоку данных данные аудита**. Преобразование «Аудит» можно использовать для добавления к строкам в потоке данных сведений о выполнении пакета, который создал или изменил каждую строку. Преобразование «Аудит» предоставляет девять разделов сведений, в том числе PackageName и ExecutionInstanceGUID. Дополнительные сведения см. в разделе [Audit Transformation](../../integration-services/data-flow/transformations/audit-transformation.md). Если в каждую строку в целях аудита требуется включить пользовательские данные, их можно добавить с помощью преобразования «Производный столбец». Дополнительные сведения см. в статье [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
+    2.  **Добавьте к потоку данных данные аудита**. Преобразование «Аудит» можно использовать для добавления к строкам в потоке данных сведений о выполнении пакета, который создал или изменил каждую строку. Преобразование «Аудит» предоставляет девять разделов сведений, в том числе PackageName и ExecutionInstanceGUID. Дополнительные сведения см. в разделе [преобразование «Аудит»](../../integration-services/data-flow/transformations/audit-transformation.md). Если в каждую строку в целях аудита требуется включить пользовательские данные, их можно добавить с помощью преобразования «Производный столбец». Дополнительные сведения см. в статье [Преобразование «Производный столбец»](../../integration-services/data-flow/transformations/derived-column-transformation.md).  
   
     3.  **Рассмотрите возможность захвата данных счетчика строк**. Создайте отдельную таблицу для данных счетчика строк, в которой каждый экземпляр выполнения пакета определяется идентификатором ExecutionID. Используйте преобразование «Счетчик строк» для сохранения числа строк в последовательность переменных в критических точках потока данных. После окончания потока данных используйте задачу «Выполнение SQL» для вставки этой последовательности значений в строку таблицы для последующего анализа и отчета.  
   
      Дополнительные сведения об этом подходе см. в статье "ETL Auditing and Logging" (ETL: аудит и ведение журналов), входящей в технический документ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602)(Проект REAL: методы разработки бизнес-аналитики ETL).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Устранение неполадок выполнения пакетов с помощью отладочных файлов дампа  
- Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]позволяют создавать отладочные файлы дампа с информацией о выполнении пакета. Дополнительные сведения см. в статье [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
+ Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]позволяют создавать отладочные файлы дампа с информацией о выполнении пакета. Дополнительные сведения см. в статье [Создание файлов дампа для выполнения пакетов](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
   
 ## <a name="troubleshoot-run-time-validation-issues"></a>Устранение неполадок проверки во время выполнения  
  Иногда невозможно подключиться к источникам данных или проверить компоненты пакета, пока не будут выполнены предыдущие задачи пакета. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предусмотрены следующие возможности для предотвращения ошибок проверки, которые в противном случае возникли бы в этих условиях.  
@@ -111,9 +112,8 @@ ms.lasthandoff: 09/27/2017
 ## <a name="troubleshoot-errors-without-a-description"></a>Устранение неполадок, когда ошибка выдается без описания  
  Если ошибка служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] выдается без описания, это описание можно найти в [Справочнике по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md) , выполнив поиск по номеру ошибки. Этот список сейчас не включает сведения об устранении неполадок.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Отладка потока данных](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## <a name="related-content"></a>См. также  
  Запись в блоге [Adding the error column name to an error output](http://go.microsoft.com/fwlink/?LinkId=261546)(Добавление имени столбца с ошибкой к выводу ошибок) на сайте dougbert.com.  
-

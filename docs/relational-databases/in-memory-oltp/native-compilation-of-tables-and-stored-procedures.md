@@ -2,28 +2,30 @@
 title: "Компиляция таблиц и хранимых процедур в собственном коде | Документация Майкрософт"
 ms.custom: 
 ms.date: 04/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
-caps.latest.revision: 23
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: f9cbe1802a5a4a353ad4af72abcb092187aa8e0a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 5f74f31531f0b3c966235396d91ce12b00428d5c
-ms.openlocfilehash: 922e6a4a0df86f82012670874d49b65e1338b53c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Собственная компиляция таблиц и хранимых процедур
-
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 В In-Memory OLTP введено понятие компиляции в собственном коде. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет возможность компиляции в собственном коде хранимых процедур, которые обращаются к оптимизированным для памяти таблицам. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может также скомпилировать в собственном коде оптимизированные для памяти таблицы. Компиляция в собственном коде обеспечивает повышение скорости доступа к данным и более эффективное выполнение запросов по сравнению с интерпретируемыми (традиционными) командами [!INCLUDE[tsql](../../includes/tsql-md.md)]. Компиляция таблиц и хранимых процедур в собственном коде создает библиотеки DLL.
 
 Кроме того, поддерживается компиляция в собственном коде оптимизированных для памяти табличных типов. Дополнительные сведения см. в разделе [Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
@@ -39,7 +41,7 @@ In-Memory OLTP компилирует оптимизированные для п
 
 Следующий запрос отображает все библиотеки DLL таблиц и хранимых процедур, загруженных на данный момент в память сервера:
 
-```tsql
+```sql
 SELECT
         mod1.name,
         mod1.description
@@ -63,7 +65,7 @@ SELECT
 
 Рассмотрим следующий пример скрипта, который создает базу данных и оптимизированную для памяти таблицу:
 
-```tsql
+```sql
 USE master;
 GO
 
@@ -156,7 +158,7 @@ GO
 
 Рассмотрим следующий пример хранимой процедуры, которая вставляет строки в таблицу t1 из предыдущего примера:
 
-```tsql
+```sql
 CREATE PROCEDURE dbo.native_sp
     with native_compilation,
          schemabinding,
@@ -195,13 +197,13 @@ GO
 
 ### <a name="native-compiler"></a>Собственный компилятор
 
-Исполняемый файл компилятора, а также двоичные файлы и файлы заголовков, необходимые для компиляции в собственном коде, устанавливаются как часть экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в папке MSSQL\Binn\Xtp. Таким образом, если экземпляр по умолчанию устанавливается в C:\Program Files, то файлы компилятора устанавливаются в папку C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\Binn\Xtp.
+Исполняемый файл компилятора, а также двоичные файлы и файлы заголовков, необходимые для компиляции в собственном коде, устанавливаются как часть экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в папке MSSQL\Binn\Xtp. Таким образом, если экземпляр по умолчанию устанавливается в C:\Program Files, то файлы компилятора устанавливаются в папку C:\Program Files\\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\Binn\Xtp.
 
 Чтобы ограничить доступ к компилятору, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует списки управления доступом (ACL), ограничивающие доступ к двоичным файлам. Все двоичные файлы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] защищены от изменения и несанкционированного доступа через списки управления доступом. Списки управления доступом собственного компилятора также ограничивают использование компилятора; только учетная запись службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и администраторы имеют разрешения на чтение и выполнение для файлов собственного компилятора.
 
 ### <a name="files-generated-by-a-native-compilation"></a>Файлы, созданные компиляцией в собственном коде
 
-Файлы, создаваемые при компиляции таблицы хранимой процедуры, включают DLL и промежуточные файлы, в том числе файлы со следующими расширениями: C, OBJ, XML и PDB. Созданные файлы сохраняются во вложенной папке папки данных по умолчанию. Вложенная папка называется Xtp. При установке экземпляра по умолчанию с папкой данных по умолчанию созданные файлы помещаются в папку C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\DATA\Xtp.
+Файлы, создаваемые при компиляции таблицы хранимой процедуры, включают DLL и промежуточные файлы, в том числе файлы со следующими расширениями: C, OBJ, XML и PDB. Созданные файлы сохраняются во вложенной папке папки данных по умолчанию. Вложенная папка называется Xtp. При установке экземпляра по умолчанию с папкой данных по умолчанию созданные файлы помещаются в папку C:\Program Files\\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\DATA\Xtp.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предотвращает изменение создаваемых библиотек DLL тремя способами.
 
@@ -218,4 +220,3 @@ GO
 [Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 
 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
-

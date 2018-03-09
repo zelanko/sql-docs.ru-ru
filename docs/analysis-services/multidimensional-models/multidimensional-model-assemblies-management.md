@@ -2,13 +2,13 @@
 title: "Управление сборками многомерной модели | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,20 +23,20 @@ helpviewer_keywords:
 - assemblies [Analysis Services]
 - application domains [Analysis Services]
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: 35
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2ccd3083abd00b2f2ad4f343a35cb53d7f2e1c08
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38bbf72a7fd58be5db3d8672de1ad4269c763020
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Управление сборками многомерной модели
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляют значительное количество встроенных функций для использования с языками многомерных выражений и расширений интеллектуального анализа данных, предназначенных для выполнения любых задач, от стандартных статистических вычислений до обхода по элементам в иерархии. Однако, как и с любым другим сложным и надежным продуктом, существует необходимость в дальнейшем расширении функциональности такого продукта.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляют значительное количество внутренних функций для использования с языками многомерных выражений (MDX) и расширений интеллектуального анализа данных (DMX), предназначенный для выполнения любых от стандартных статистических вычислений до обхода элементов в иерархии задач. Однако, как и с любым другим сложным и надежным продуктом, существует необходимость в дальнейшем расширении функциональности такого продукта.  
   
  Поэтому [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] позволяет добавлять сборки в экземпляр [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или базу данных. Сборки позволяют создавать внешние пользовательские функции при помощи любого языка среды CLR, например Microsoft Visual Basic .NET или Microsoft Visual C#. Также можно использовать языки автоматизации COM, например Microsoft Visual Basic или Microsoft Visual C++.  
   
@@ -95,7 +95,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  Политика на уровне узла служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] является сочетанием фиксированной политики служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для системных сборок и пользовательской политики для пользовательских сборок. В основе пользовательской части политики сервера служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] лежит указание владельцем сборки одного из трех сегментов разрешений для каждой сборки:  
   
-|Установка разрешения|Description|  
+|Установка разрешения|Описание|  
 |------------------------|-----------------|  
 |**Безопасный**|Обеспечивает разрешение внутреннего вычисления. Данный сегмент разрешений не предоставляет разрешений для доступа к любым из защищаемых ресурсов платформы .NET Framework. Для сборки этот сегмент разрешений является сегментом по умолчанию, если в свойстве **PermissionSet** не указывается иное.|  
 |**ExternalAccess**|Предоставляет такой же доступ, как и параметр **Safe** , с дополнительной возможностью доступа к внутренним системным ресурсам. Данный сегмент разрешений не предлагает гарантий безопасности (хотя возможность обезопасить данный сценарий существует), однако он предоставляет гарантии надежности.|  
@@ -124,4 +124,3 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  [Определение хранимых процедур](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   
-

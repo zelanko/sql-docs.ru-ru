@@ -2,29 +2,29 @@
 title: "Добавление интерактивной сортировки в таблицу или матрицу (построитель отчетов и службы SSRS) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - "10121"
 - sql13.rtp.rptdesigner.textboxproperties.intrctvsort.f1
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ab2138bdee0abc064ae1fabb06ef04ed3c490170
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 07726f5c911579650bbd73a9973841ebfeb482e6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Добавление интерактивной сортировки в таблицу или матрицу (построитель отчетов и службы SSRS)
   Добавьте кнопки интерактивной сортировки, чтобы дать пользователям возможность менять порядок сортировки строк и столбцов в таблицах или матрицах. Эта возможность доступна только в форматах подготовки к просмотру, поддерживающих взаимодействие с пользователем, например HTML.  
@@ -118,9 +118,9 @@ ms.lasthandoff: 08/09/2017
  ![Значок стрелки, используемый для ссылки возврата в начало](../../analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый для ссылки возврата в начало") [В начало](#BackToTop)  
   
 ##  <a name="SortingMultipleRowGroups"></a> Сортировка строк по сложному выражению группы  
- Добавьте кнопку интерактивной сортировки в заголовок столбца, чтобы дать пользователю возможность щелкнуть заголовок столбца и совместно отсортировать родительские и дочерние группы. Для этого необходимо изменить выражение группы так, чтобы оно включало обе группы. Например, предположим, что матрица содержит итоги запасов склада для элементов, сгруппированных как по цвету, так и по размеру. Чтобы отсортировать строки одновременно по цвету и размеру, вместо отдельных групп можно определить общую группу на основе комбинации размера и цвета. Дополнительные сведения об определении выражений групп см. в разделе [Примеры выражений групп (построитель отчетов и службы SSRS)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
+ Добавьте кнопку интерактивной сортировки в заголовок столбца, чтобы дать пользователю возможность щелкнуть заголовок столбца и совместно отсортировать родительские и дочерние группы. Для этого необходимо изменить выражение группы так, чтобы оно включало обе группы. Например, предположим, что матрица содержит итоги запасов склада для элементов, сгруппированных как по цвету, так и по размеру. Чтобы отсортировать строки одновременно по цвету и размеру, вместо отдельных групп можно определить общую группу на основе комбинации размера и цвета. Дополнительные сведения об определении выражений групп см. в разделе [Примеры выражений групп &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
   
- В следующей процедуре выражения задают области данных табликса. Дополнительные сведения см. в разделе [Области данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ В следующей процедуре выражения задают области данных табликса. Дополнительные сведения см. в разделе [Области данных табликса &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  Как правило, при сортировке строк по нескольким группам требуется просматривать итоги для отсортированных строк независимо от групп столбцов. В этой процедуре группы столбцов не используются. Она начинается с добавления матрицы и удаления группы столбцов по умолчанию. Можно также начать с добавления таблицы и удаления группы подробностей.  
   
@@ -224,10 +224,9 @@ ms.lasthandoff: 08/09/2017
  ![Значок стрелки, используемый для ссылки возврата в начало](../../analysis-services/instances/media/uparrow16x16.gif "Значок стрелки, используемый для ссылки возврата в начало") [В начало](#BackToTop)  
   
 ## <a name="see-also"></a>См. также:  
- [Фильтр, группы и сортировка данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Интерактивная сортировка &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
- [Сортировка данных в области данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Изучение возможностей области данных Табликса &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
+ [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Интерактивная сортировка &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
+ [Сортировка данных в области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [Изучение возможностей области данных табликса &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
   
   
-

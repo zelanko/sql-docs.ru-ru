@@ -3,7 +3,7 @@ title: "Оптимизация примера свойства (Visual Basic) | 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Optimize property [ADO], Visual Basic example
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0cbc84bfbbd4f6f26bf82bc9fe373606c965451a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6137ef4be778a659107458ba9fe6f1a7f3000cfa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="optimize-property-example-vb"></a>Оптимизация примера свойства (Visual Basic)
 В этом примере демонстрируется [поле](../../../ado/reference/ado-api/field-object.md) этого динамического объекта **оптимизировать** свойство. ***Zip*** поле ***авторов*** в таблицу ***Pubs*** базы данных не проиндексированы. Установка [оптимизировать](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) свойства **True** на ***zip*** поле авторизует ADO при построении индекса, повышает производительность [найти](../../../ado/reference/ado-api/find-method-ado.md)метод.  
@@ -94,7 +93,6 @@ End Sub
 'EndOptimizeVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект field](../../../ado/reference/ado-api/field-object.md)   
- [Оптимизировать динамические свойства (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
-
+ [Свойство Optimize (динамическое) (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

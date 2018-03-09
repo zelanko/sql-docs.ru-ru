@@ -1,29 +1,30 @@
 ---
 title: "Глобальные параметры (протоколирование) (MySQLToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 0d033492-5ec3-473a-8de1-821894ec9518
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2f80a451a574aad466258d77e9408c839d5a4075
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1ccedf7874c9d4e8a3729e31dbea6f00a08426c9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-logging--mysqltosql"></a>Глобальные параметры (протоколирование) (MySQLToSQL)
 Используйте **глобальные параметры** диалоговое окно «», чтобы указать параметры ведения журнала для SSMA. Как правило нужно изменить эти параметры только при работе с технической поддержки.  
@@ -67,4 +68,3 @@ ms.lasthandoff: 08/02/2017
 **Общее количество файлов журнала**  
 Когда один журнал заполняется, SSMA переименовать файл журнала и начать новый. Используя этот параметр, укажите максимальное количество сохраняемых файлов журнала. Минимальное значение — 2.  
   
-

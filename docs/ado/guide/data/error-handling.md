@@ -1,9 +1,9 @@
 ---
-title: "Обработка ошибок | Документы Microsoft"
+title: "Обработка ошибок | Документы Майкрософт"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - errors [ADO]
 - ADO, error handling
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: eeb8b4abe5d199e3887b526c77163dcb8f1272fb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a1c85fb540f034c5a0a6870c38ea5797948d5fbd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="error-handling"></a>Обработка ошибок
 ADO использует несколько различных методов для оповещения приложения, возникающие ошибки. В этом разделе рассматриваются типы ошибок, которые могут возникнуть при использовании ADO, а также способ уведомления приложения. Заключительный шаг, делая предложения о том, как обрабатывать эти ошибки.  
@@ -49,15 +48,14 @@ ADO использует несколько различных методов д
   
  Этот раздел содержит следующие подразделы.  
   
--   [Ошибок ADO](../../../ado/guide/data/ado-errors.md)  
+-   [Ошибки ADO](../../../ado/guide/data/ado-errors.md)  
   
 -   [Ошибки поставщика](../../../ado/guide/data/provider-errors.md)  
   
--   [Сведения об ошибке, относящееся к полю](../../../ado/guide/data/field-related-error-information.md)  
+-   [Сведения о связанных с полями ошибках](../../../ado/guide/data/field-related-error-information.md)  
   
--   [Сведения об ошибке, относящееся к набору записей](../../../ado/guide/data/recordset-related-error-information.md)  
+-   [Сведения о связанных с наборами записей ошибках](../../../ado/guide/data/recordset-related-error-information.md)  
   
--   [Обработка ошибок в других языках](../../../ado/guide/data/handling-errors-in-other-languages.md)  
+-   [Обработка ошибок на других языках](../../../ado/guide/data/handling-errors-in-other-languages.md)  
   
--   [Планирование ошибок](../../../ado/guide/data/anticipating-errors.md)
-
+-   [Прогнозирование ошибок](../../../ado/guide/data/anticipating-errors.md)

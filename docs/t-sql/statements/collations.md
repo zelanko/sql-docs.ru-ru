@@ -3,8 +3,11 @@ title: "Параметры сортировки | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +21,19 @@ helpviewer_keywords:
 - collations [SQL Server], COLLATE clause
 - COLLATE clause
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
-caps.latest.revision: 25
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9154d293ca5b7737a9c80fef0754dcec6e461a46
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7a206f638b78a5e4311ab7889a7902aa39a17413
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="collations"></a>Параметры сортировки
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Предложение, которое может применяться к определению базы данных или столбца для определения параметров сортировки, а также к выражению символьной строки, чтобы применить приведение параметров сортировки.  
   
@@ -40,7 +42,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 COLLATE { <collation_name> | database_default }  
 <collation_name> :: =   
      { Windows_collation_name } | { SQL_collation_name }  
@@ -59,7 +60,7 @@ COLLATE { <collation_name> | database_default }
  **database_default**  
  Заставляет предложение COLLATE наследовать параметры сортировки текущей базы данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Предложение COLLATE можно указывать на нескольких уровнях. следующие основные параметры.  
   
 1.  Создание или изменение базы данных.  
@@ -87,11 +88,11 @@ COLLATE { <collation_name> | database_default }
   
  Предложение COLLATE использует *collate_name* для ссылки на имя параметров сортировки SQL Server или параметры сортировки Windows для применения к выражению, определению столбца или определению базы данных. *collation_name* может быть только указанным *Windows_collation_name* или *SQL_collation_name* и этот параметр должен содержать литеральное значение. *collation_name* не может быть представлен переменной или выражением.  
   
- Параметры сортировки обычно определяются по имени, за исключением программы установки. В программе установки вместо имени указывается обозначение базовых параметров сортировки (локали параметров сортировки) для параметров сортировки Windows, а затем определяются настройки сортировки с учетом или без учета регистра или диакритических знаков.  
+ Параметры сортировки обычно определяются по имени, за исключением программы установки. В программе установки вместо этого укажите обозначение базовых параметров сортировки (локали параметров сортировки) для параметров сортировки Windows и затем укажите настройки сортировки с учетом или без учета регистра или диакритических знаков.  
   
  Можно выполнить системную функцию [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) для получения списка всех допустимых имен параметров сортировки параметров сортировки Windows и параметры сортировки SQL Server:  
   
-```  
+```sql  
 SELECT name, description  
 FROM fn_helpcollations();  
 ```  
@@ -104,16 +105,18 @@ FROM fn_helpcollations();
   
 -   При восстановлении или присоединении базы данных, параметры сортировки базы данных по умолчанию и параметры сортировки любого **char**, **varchar**, и **текст** столбцов или параметров в базе данных должны поддерживаться операционной системой.  
   
-     Поддерживаемые преобразования кодовых страниц для **char** и **varchar** типы данных, но не для **текст** тип данных. Сообщения о потере данных во время преобразования кодовых страниц не выводятся.  
+> [!NOTE]
+> Поддерживаемые преобразования кодовых страниц для **char** и **varchar** типы данных, но не для **текст** тип данных. Сообщения о потере данных во время преобразования кодовых страниц не выводятся.  
   
- Если параметры сортировки, заданные или параметры сортировки, используемые объектом по ссылке, используют кодовую страницу, не поддерживаемую Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выводит сообщение об ошибке.  
+> [!NOTE]
+> Если параметры сортировки, заданные или параметры сортировки, используемые объектом по ссылке, используют кодовую страницу, не поддерживаемую Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выводит сообщение об ошибке.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-specifying-collation-during-a-select"></a>A. Указание параметров сортировки во время выбора  
  В следующем примере создается простая таблица, а затем вставляются четыре строки. Затем в примере применяются два параметра сортировки при выборе данных из таблицы, при этом демонстрируется, что `Chiapas` сортируется по-разному.  
   
-```tsql  
+```sql  
 CREATE TABLE Locations  
 (Place varchar(15) NOT NULL);  
 GO  
@@ -132,40 +135,39 @@ COLLATE Traditional_Spanish_ci_ai ASC;
 GO  
 ```  
 
- Ниже приведены результаты первого запроса.  
+Ниже приведены результаты первого запроса.  
   
- ```
- Place 
- ------------- 
- California 
- Chiapas 
- Cinco Rios 
- Colima
- ```  
+```
+Place 
+------------- 
+California 
+Chiapas 
+Cinco Rios 
+Colima
+```  
   
- Ниже приведены результаты второго запроса.  
-  
- ```
- Place 
- ------------- 
- California 
- Cinco Rios 
- Colima 
- Chiapas
- ```  
+Ниже приведены результаты второго запроса.  
+ 
+```
+Place 
+------------- 
+California 
+Cinco Rios 
+Colima 
+Chiapas
+```  
   
 ### <a name="b-additional-examples"></a>Б. Дополнительные примеры  
- Дополнительные примеры использования **COLLATE**, в разделе [CREATE DATABASE &#40; Transact SQL Server-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md) пример **ж. Создание базы данных и назначение имени и параметров сортировки**, и [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md) пример **ф. Изменение параметров сортировки столбца**.  
+ Дополнительные примеры использования **COLLATE**, в разделе [CREATE DATABASE &#40; Transact SQL Server-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples) пример **ж. Создание базы данных и назначение имени и параметров сортировки**, и [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md#alter_column) пример **ф. Изменение параметров сортировки столбца**.  
   
-## <a name="see-also"></a>См. также:  
- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
- [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md)   
- [Очередность параметров сортировки (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)   
- [Константы &#40; Transact-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)   
- [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [Таблица &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)    
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [Очередность параметров сортировки (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)     
+ [Константы &#40; Transact-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)     
+ [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)     
+ [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)     
+ [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     
+ [Таблица &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)     
   
   
-

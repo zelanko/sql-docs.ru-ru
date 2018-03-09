@@ -1,13 +1,14 @@
 ---
 title: "Наблюдение за трассировками (XMLA) | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -18,17 +19,16 @@ helpviewer_keywords:
 - monitoring traces [XMLA]
 - traces [Analysis Services]
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3895ae75a7e7e34456756ea9dfb5b2fe4198e32c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d63e2b7e07c01d0f937618cfc521921e9d16dc43
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="monitoring-traces-xmla"></a>Наблюдение за трассировками (XMLA)
   Можно использовать [Subscribe](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) в XML для аналитики (XMLA) для наблюдения за существующей трассировкой, определенной в экземпляре команда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. **Subscribe** команда возвращает результаты трассировки в виде набора строк.  
@@ -57,8 +57,8 @@ ms.lasthandoff: 09/01/2017
 |IntegerData|Long integer|Целочисленные данные, связанные с событием. Содержимое этого столбца зависит от класса событий и подкласса событий.|  
 |ObjectID|Строковые значения|Идентификатор объекта, к которому относится происшедшее событие.|  
 |ObjectType|Строковые значения|Тип объекта, указанного в ObjectName.|  
-|ObjectName|Строковые значения|Имя объекта, к которому относится происшедшее событие.|  
-|ObjectPath|Строковые значения|Иерархический путь объекта, к которому относится происшедшее событие. Путь представлен в виде строки идентификаторов объектов, разделенной запятыми, для родителей объекта, указанного в ObjectName.|  
+|ObjectName|String|Имя объекта, к которому относится происшедшее событие.|  
+|ObjectPath|String|Иерархический путь объекта, к которому относится происшедшее событие. Путь представлен в виде строки идентификаторов объектов, разделенной запятыми, для родителей объекта, указанного в ObjectName.|  
 |ObjectReference|Строковые значения|XML-представление ссылки объекта для объекта, указанного в ObjectName.|  
 |NestLevel|Целочисленный|Уровень транзакции, к которой относится происшедшее событие.|  
 |NumSegments|Long integer|Количество сегментов данных, затронутых или открытых командой, к которой относится происшедшее событие.|  
@@ -68,11 +68,11 @@ ms.lasthandoff: 09/01/2017
 |ConnectionID|Строковые значения|Идентификатор соединения, к которому относится происшедшее событие.|  
 |DatabaseName|Строковые значения|Имя базы данных, к которой относится происшедшее событие.|  
 |NTUserName|Строковые значения|Имя пользователя Windows, связанного с событием.|  
-|NTDomainName|Строковые значения|Домен пользователя Windows, связанного с событием.|  
+|NTDomainName|String|Домен пользователя Windows, связанного с событием.|  
 |ClientHostName|Строковые значения|Имя компьютера, на котором выполняется клиентская программа. Данный столбец заполняется значениями, переданными клиентским приложением.|  
 |ClientProcessID|Long integer|Идентификатор процесса клиентского приложения.|  
-|ApplicationName|Строковые значения|Имя клиентского приложения, установившего соединение с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми клиентским приложением, а не отображаемым именем программы.|  
-|NTCanonicalUserName|Строковые значения|Каноническое имя пользователя Windows пользователя, связанного с событием.|  
+|ApplicationName|String|Имя клиентского приложения, установившего соединение с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми клиентским приложением, а не отображаемым именем программы.|  
+|NTCanonicalUserName|String|Каноническое имя пользователя Windows пользователя, связанного с событием.|  
 |SPID|Строковые значения|Идентификатор процесса сервера (SPID) сеанса, к которому относится происшедшее событие. Значение этого столбца непосредственно соответствует идентификатору сеанса, указанному в заголовке SOAP сообщения XMLA, к которому относится происшедшее событие.|  
 |TextData|Строковые значения|Текстовые данные, связанные с событием. Содержимое этого столбца зависит от класса событий и подкласса событий.|  
 |ServerName|Строковые значения|Имя экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], к которому относится происшедшее событие.|  
@@ -83,4 +83,3 @@ ms.lasthandoff: 09/01/2017
  [Разработка с использованием XML для Аналитики в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

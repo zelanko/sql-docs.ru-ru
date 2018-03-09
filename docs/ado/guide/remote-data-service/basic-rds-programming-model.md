@@ -3,7 +3,7 @@ title: "Модель программирования для служб удал
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - RDS programming model [ADO]
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 08544cd52698b2c28eb8dd56ee59bbe1c2662acd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d99d092b91ed150a3ad9163f2c4f7e513554e9f4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="basic-rds-programming-model"></a>Модель программирования основных служб удаленных рабочих СТОЛОВ
 > [!IMPORTANT]
@@ -51,12 +50,11 @@ ms.lasthandoff: 09/09/2017
   
  Наконец Если вашим потребностям, где-то между ADO теперь поддерживает настройки поведения серверной программы по умолчанию.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Модель программирования служб удаленных рабочих СТОЛОВ, подробно](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
  [Сценарии служб удаленных рабочих СТОЛОВ](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Учебник служб удаленных рабочих СТОЛОВ](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Использование RDS и безопасность](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
 
 

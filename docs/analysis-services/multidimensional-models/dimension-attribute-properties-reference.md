@@ -2,35 +2,35 @@
 title: "Справочник по свойствам атрибута измерения | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - properties [Analysis Services], attributes
 - attributes [Analysis Services], properties
 ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 9b6cd10e1b2a9a76780b895ecb2325a14bd6386f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 589e282fbe84a37fd9b966a14441fe7885c71285
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="dimension-attribute-properties-reference"></a>Справочник по свойствам атрибута измерения
-  В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]имеется много свойств, определяющих функции измерений и их атрибутов. В следующей таблице представлены и описаны эти свойства атрибутов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]имеется много свойств, определяющих функции измерений и их атрибутов. В следующей таблице представлены и описаны эти свойства атрибутов.  
   
-|Свойство|Description|  
+|property|Описание|  
 |--------------|-----------------|  
 |**AttributeHierarchyDisplayFolder**|Определяет папку, в которой для пользователей отображается связанная иерархия атрибутов.|  
 |**AttributeHierarchyEnabled**|Определяет, формируется ли иерархия атрибутов службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для атрибута. Если иерархия атрибутов отключена, то атрибут нельзя использовать в пользовательской иерархии и нельзя ссылаться на иерархию в инструкциях многомерных выражений.|  
@@ -69,8 +69,7 @@ ms.lasthandoff: 09/01/2017
 > [!NOTE]  
 >  Элемент по умолчанию атрибута используется для оценки выражений, когда член иерархии явно не включен в запрос. Элемент по умолчанию для атрибута указывается свойством **DefaultMember** атрибута. Когда иерархия из измерения включается в запрос, все элементы по умолчанию из атрибутов, соответствующих уровням иерархии, пропускаются. Если в запрос не включена иерархия измерения, то элементы по умолчанию используются для всех атрибутов в измерении. Дополнительные сведения об элементах по умолчанию см. в разделе [Определение элемента по умолчанию](../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
  [Атрибуты и иерархии атрибутов](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   
-

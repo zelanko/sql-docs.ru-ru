@@ -3,24 +3,25 @@ title: "Диагностика проблем с драйвером JDBC | До�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 29345e44e8a99a5bbacf3260a739d27c579b096c
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: be682fd3dfd51814aac7be3d792c4d2350e9171c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="diagnosing-problems-with-the-jdbc-driver"></a>Диагностика проблем с драйвером JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,11 +37,10 @@ ms.lasthandoff: 09/09/2017
 |[Обработка ошибок](../../connect/jdbc/handling-errors.md)|Описывает способы обработки ошибок, возвращаемых из [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |[Получение версии драйвера](../../connect/jdbc/getting-the-driver-version.md)|Описывает определение версии установленного драйвера JDBC.|  
 |[Трассировка операций драйвера](../../connect/jdbc/tracing-driver-operation.md)|Описывает включение трассировки при использовании драйвера JDBC.|  
-|[Устранение неполадок с подключением](../../connect/jdbc/troubleshooting-connectivity.md)|Описывает устранение неполадок при подключении к базе данных.|  
+|[Устранение неполадок подключения](../../connect/jdbc/troubleshooting-connectivity.md)|Описывает устранение неполадок при подключении к базе данных.|  
 |[Доступ к диагностическим сведениям в журнале расширенных событий](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)|Описывает, как пользоваться сведениями в расширенном журнале событий сервера для определения причины ошибок при соединении.|  
   
 ## <a name="see-also"></a>См. также:  
  [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

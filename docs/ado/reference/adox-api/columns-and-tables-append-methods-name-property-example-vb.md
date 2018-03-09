@@ -3,7 +3,7 @@ title: "Столбцы и таблицы методы добавления, вв
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Name property [ADOX], Visual Basic example
 - Append method [ADOX], Visual Basic example
 ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8d8756e3e72b656206ed4e30bc54ba42f00f25ef
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a691ce811b2f4b11af69b3df285f2b02908b3dc4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Столбцы и таблицы добавьте методы примера имя свойства (Visual Basic)
 Следующий код демонстрирует создание новой таблицы.  
@@ -74,12 +73,11 @@ End Sub
 ' EndCreateTableVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Append-метод (ADOX столбцы)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append-метод (ADOX таблицы)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Объект столбца (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Коллекция столбцов (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Свойство Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
  [Объект таблицы (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Коллекция таблиц (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)
-
+ [Коллекция Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)

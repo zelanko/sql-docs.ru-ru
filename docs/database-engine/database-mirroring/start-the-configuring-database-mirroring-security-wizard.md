@@ -2,31 +2,32 @@
 title: "Запуск мастера настройки безопасности зеркального отображения базы данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], security
 - Configuring Database Mirroring Security Wizard
 ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c958466070df5f51e69e8aa0d665b65177794dff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 56cfb79fb6490032f9b12eca137ea7a22958f03b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard"></a>Запуск мастера настройки безопасности зеркального отображения базы данных
-  Мастер настройки безопасности зеркального отображения базы данных может быть использован для начальной настройки параметров безопасности на некоторых или на всех экземплярах сервера, участвующих в зеркальном отображении. Этот мастер работает совместно со страницей **Зеркальное отображение** диалогового окна **Свойства базы данных** .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Мастер настройки безопасности зеркального отображения базы данных можно использовать для начальной настройки параметров безопасности на некоторых или на всех экземплярах сервера, участвующих в зеркальном отображении. Этот мастер работает совместно со страницей **Зеркальное отображение** диалогового окна **Свойства базы данных** .  
   
 ### <a name="to-launch-the-configure-database-mirroring-security-wizard"></a>Запуск мастера настройки безопасности зеркального отображения баз данных  
   
@@ -44,4 +45,3 @@ ms.lasthandoff: 08/02/2017
  [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
   
-

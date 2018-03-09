@@ -3,27 +3,28 @@ title: "Использование 16-разрядных приложений с
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], 16-bit applications
 - 16-bit applications with 32-bit drivers [ODBC]
 ms.assetid: 68feb3b7-c01a-4f42-8df9-f9c182d89325
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 95ff3ce88daf4a508145c28ea194a97b9cbbbabe
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d35585ec95bdfed62c527dfe004132c7454e5243
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Использование 16-разрядных приложений с 32-разрядными драйверами
 > [!IMPORTANT]  
@@ -68,4 +69,3 @@ ms.lasthandoff: 09/09/2017
 |ODBC.dll|16-разрядный диспетчер драйверов|  
 |Odbcinst.dll|16-разрядный установщик DLL|  
 |Odbcadm.exe|16-разрядное приложение администратора ODBC|
-

@@ -2,31 +2,32 @@
 title: "Открытие администратора источников данных ODBC | Документы Майкрософт"
 ms.custom: 
 ms.date: 11/07/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC Data Source Administrator
 - opening ODBC Data Source Administrator
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
-caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "16"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 588a096147da057e2d8404693e73521f8c4fd04c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e1fd0e266e1b233d23f299aa5248fc015d98efb8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>Открытие администратора источника данных ODBC
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описывается открытие администратора источников данных ODBC. Администратор источника данных ODBC представляет собой компонент Windows. Используйте администратор источника данных ODBC для создания источников данных ODBC и управления ими.  
   
@@ -58,4 +59,3 @@ ms.lasthandoff: 08/02/2017
  [Проверка версии драйвера ODBC для SQL Server (Windows)](../../database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md)  
   
   
-

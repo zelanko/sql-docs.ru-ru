@@ -1,26 +1,27 @@
 ---
-title: "Задание интервала оси (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Задание интервала оси (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/02/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 2db644cc97d36a8d081bee0503cd88de50d8195b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3676c9e127d69540a634053e37bf21dd8d06024e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Задание интервала оси (построитель отчетов и службы SSRS)
 Узнайте, как изменить количество меток и делений на оси категорий (X) диаграммы, задав интервал оси в отчете с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .
@@ -29,7 +30,7 @@ ms.lasthandoff: 08/09/2017
 
 Однако автоматический интервал на оси категорий (обычно это ось X) иногда приводит к отображению категорий без меток на оси. Можно указать необходимое количество интервалов в свойстве оси Interval. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] вычисляют количество интервалов во время выполнения в зависимости от данных результирующего набора. Дополнительные сведения в вычислениях интервалов оси см. в разделе [Форматирование меток оси на диаграмме](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
 
-Чтобы повторить задание интервала оси с образцами данных, в разделе [учебника: Добавление гистограммы к отчету (построитель отчетов)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md).
+Чтобы попробовать установить интервал оси с помощью образца данных, см. раздел [Учебник. Добавление гистограммы к отчету (построитель отчетов)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md).
   
 > [!NOTE]  
 >  Ось категорий обычно является горизонтальной осью (осью X). Однако для линейчатых диаграмм ось категорий является вертикальной (осью Y).  
@@ -48,7 +49,7 @@ ms.lasthandoff: 08/09/2017
 
     ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  В **свойства горизонтальной оси** диалоговое > **параметры оси** установите **интервал** для **1** для отображения каждая метка группы категории. Чтобы отобразить каждую метку группы другой категории на оси X, введите значение **2**. 
+2.  В диалоговом окне **Свойства горизонтальной оси** откройте вкладку **Параметры оси** и задайте для параметра **Интервал** значение **1**, чтобы отобразить каждую метку группы категорий. Чтобы отобразить каждую метку группы другой категории на оси X, введите значение **2**. 
 
      ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
@@ -85,17 +86,16 @@ ms.lasthandoff: 08/09/2017
   
 1.  Щелкните правой кнопкой мыши по оси диаграммы, которую необходимо изменить, и выберите пункт **Свойства оси**. 
   
-2.  В **свойства горизонтальной оси** диалоговое > **параметры оси** установите **интервал** для **автоматически**. В диаграмме отобразится оптимальное количество меток категории, умещающееся на оси.  
+2.  В диалоговом окне **Свойства горизонтальной оси** откройте вкладку **Параметры оси** и задайте для параметра **Интервал** значение **Авто**. В диаграмме отобразится оптимальное количество меток категории, умещающееся на оси.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Форматирование диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Сортировка данных в области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Диалоговое окно «Свойства оси», параметры оси &#40; Построитель отчетов и службы SSRS &#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
- [Задать логарифмическую шкалу &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [Построение данных на вспомогательной оси &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
+ [Диалоговое окно "Свойства оси" — "Параметры оси" (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+ [Задание логарифмической шкалы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
+ [Построение данных на вспомогательной оси (построитель отчетов и службы SSRS)](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
   
   
-

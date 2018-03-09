@@ -3,7 +3,7 @@ title: "Запись (ADO для синтаксиса Visual C++) | Докуме
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - Record collection [ADO], ADO for Visual C++ syntax
 ms.assetid: c4ce8532-a4d8-4f74-9488-9389b6695958
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4bee5e26d3ab28aa556709d6171469e464178022
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 78d7fa73b57df0076458791a3205b6cd4a50a6ac
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="record-ado-for-visual-c-syntax"></a>Запись (ADO для синтаксиса Visual C++)
 ## <a name="methods"></a>Методы  
@@ -60,6 +59,5 @@ putref_Source(IDispatch *Source)
 get_State(ObjectStateEnum *pState)  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект записи (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
-
+## <a name="see-also"></a>См. также  
+ [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

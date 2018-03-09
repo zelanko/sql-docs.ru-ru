@@ -1,10 +1,13 @@
 ---
-title: "Шаг 2: Добавление и настройка диспетчера соединения с плоскими файлами | Документы Microsoft"
+title: "Шаг 2. Добавление и настройка диспетчера соединений с неструктурированными файлами | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
-caps.latest.revision: 42
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a0b3ebf32ebaa03f1dbb1aa1c52234b56fa8de16
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d721552ae0560733c8c544ce7576447c8a1c4fdf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>Занятие 1-2-Добавление и настройка диспетчера соединений с неструктурированными файлами
+# <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>Занятие 1–2. Добавление и настройка диспетчера соединений с неструктурированными файлами
 В этом задании к только что созданному пакету будет добавлен диспетчер соединений с неструктурированными файлами. Диспетчер соединений с неструктурированными файлами позволяет пакету извлекать данные из неструктурированных файлов. С помощью диспетчера соединений с неструктурированными файлами можно указать имя и расположение файла, локали и кодовую страницу, а также формат файла, включая разделители столбцов. Эти данные будут использованы при извлечении пакета из неструктурированного файла. Кроме того, можно вручную указать тип данных для каждого столбца или в диалоговом окне **Предлагаемые типы столбцов** указать автоматическое сопоставление столбцов извлекаемых данных с типами данных в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 Для каждого используемого формата файла необходимо создать отдельный диспетчер соединений с неструктурированными файлами. Так как в данном учебнике данные извлекаются из неструктурированных файлов одинакового формата, в пакет необходимо добавить только один диспетчер соединений с неструктурированными файлами.  
@@ -92,10 +94,10 @@ ms.lasthandoff: 09/26/2017
   
     |Столбец неструктурированных файлов|Предложенный тип|Целевой столбец|Тип назначения|  
     |--------------------|------------------|----------------------|--------------------|  
-    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|float|  
+    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
-    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
-    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|float|  
+    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Дата|  
+    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
     Тип данных, предложенный для столбца **CurrencyID** , несовместим с типом данных поля целевой таблицы. Необходимо изменить тип данных столбца `DimCurrency.CurrencyAlternateKey` CurrencyID **со строкового [DT_STR] на строковый [DT_WSTR], так как типом данных поля** является nchar (3). Кроме того, поле `DimDate.FullDateAlternateKey` определяется в качестве типа данных date, поэтому необходимо изменить тип параметра **CurrencyDate** с типа даты [DT_Date] на тип даты базы данных [DT_DBDATE].  
   
@@ -114,4 +116,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

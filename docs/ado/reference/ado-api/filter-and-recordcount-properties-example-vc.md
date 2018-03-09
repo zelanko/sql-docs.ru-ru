@@ -3,7 +3,7 @@ title: "Фильтр и пример использования свойств R
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - RecordCount property [ADO], VC++ example
 - Filter property [ADO], VC++ example
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2432adfdd2a4d4a66a3ccf0379a653ad4bb95f50
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c9b92232ff44db431bf7b6f05a7f61da100dc556
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Фильтр и пример использования свойств RecordCount (VC ++)
 В этом примере используется [фильтра](../../../ado/reference/ado-api/filter-property.md) свойства, чтобы открыть новый [записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе заданного условия применить к существующему **записей**. Она использует [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) свойство, которое отображает число записей в двух **наборы записей**. Функция FilterField является обязательным для выполнения этой процедуры.  
@@ -310,8 +309,7 @@ Ramona Publishers, USA
 Scootney Books, USA  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойства фильтра](../../../ado/reference/ado-api/filter-property.md)   
  [Свойство RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

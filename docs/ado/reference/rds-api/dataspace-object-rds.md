@@ -3,7 +3,7 @@ title: "Объект пространства данных (RDS) | Докуме�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - DataSpace object [RDS]
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3c4ee2e71334998cd0d2cba1c0c52c67e3314619
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1269e854e3ed0ea78b15af9596985fb49eb64f20
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dataspace-object-rds"></a>Объект пространства данных (RDS)
 > [!IMPORTANT]
@@ -53,10 +52,9 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующий раздел.  
   
--   [Свойства объекта пространства данных (RDS), методы и события](../../../ado/reference/rds-api/dataspace-object-rds-properties-methods-and-events.md)  
+-   [Свойства, методы и события объекта DataSpace (служба удаленных рабочих столов)](../../../ado/reference/rds-api/dataspace-object-rds-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
- [Пространство данных объект и метод CreateObject примере (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)
-
+## <a name="see-also"></a>См. также  
+ [Примеры объекта DataSpace и метода CreateObject (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)
 
 

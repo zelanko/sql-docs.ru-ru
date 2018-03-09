@@ -1,28 +1,31 @@
 ---
 title: "Использование среды SSMS для управления SQL Server для Linux | Документы Microsoft"
 description: 
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 08/23/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
 ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.custom: H1Hack27Feb2017
+ms.custom: sql-linux
 ms.workload: On Demand
+ms.openlocfilehash: 31bff0cb43048585fb03246b683ad71e673bb7f4
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: f8dd1654dc05a89147ecf9d658d492adeb3d0ceb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Использование среды SQL Server Management Studio в Windows для управления SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этом разделе описываются [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) и будет выполнено несколько типичных задач. SSMS — это приложение Windows, поэтому SSMS следует использовать при наличии компьютером Windows, можно подключиться к удаленному экземпляру SQL Server в Linux.
+В этой статье описаны [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) и будет выполнено несколько типичных задач. SSMS — это приложение Windows, поэтому SSMS следует использовать при наличии компьютером Windows, можно подключиться к удаленному экземпляру SQL Server в Linux.
 
 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) входит в набор средств SQL, которые корпорация Microsoft предлагает бесплатно для задач разработки и управления. Среда SSMS — это интегрированная среда для доступа, настройки, управления, администрирования и разработки всех компонентов SQL Server, работающий локально или в облаке, в Linux, Windows или Docker на macOS и базы данных SQL Azure и хранилище данных SQL Azure. Среда SSMS объединяет большое число графических средств с несколькими расширенными редакторами скриптов для предоставления доступа к SQL Server для разработчиков и администраторов с любым опытом.
 
@@ -94,5 +97,4 @@ ms.lasthandoff: 10/02/2017
 - [Экспорт и импорт базы данных с помощью SSMS](sql-server-linux-migrate-ssms.md)
 - [Руководство: SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/bb934498.aspx)
 - [Учебник. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
-- [Мониторинг производительности и действий сервера](../relational-databases/performance/server-performance-and-activity-monitoring.md)
-
+- [Производительность сервера и мониторинг активности](../relational-databases/performance/server-performance-and-activity-monitoring.md)

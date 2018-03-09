@@ -2,12 +2,13 @@
 title: "Структуры интеллектуального анализа данных (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,20 +23,20 @@ helpviewer_keywords:
 - mining models [Analysis Services]
 - mining models [Analysis Services], about data mining models
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
-caps.latest.revision: 77
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6b7467be225e2468be21603f3e40de04050dc6b4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0145d9d7cd222d24294d7aaab389aa5a4bdc28cb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
-  Структура интеллектуального анализа данных определяет данные, на основе которых строятся модели интеллектуального анализа данных: она задает представление источника данных, количество и тип столбцов, а также необязательное секционирование на обучающий и проверочный наборы. Одна структура интеллектуального анализа может поддерживать несколько моделей интеллектуального анализа данных, совместно использующих один домен. На следующей диаграмме показана связь структуры интеллектуального анализа данных с источником данных и моделями интеллектуального анализа данных, основанных на этой структуре.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Структура интеллектуального анализа данных определяет данные, на основе которых строятся модели интеллектуального анализа данных: она задает представление источника данных, количество и тип столбцов, а также необязательное секционирование на обучающий и проверочный наборы. Одна структура интеллектуального анализа может поддерживать несколько моделей интеллектуального анализа данных, совместно использующих один домен. На следующей диаграмме показана связь структуры интеллектуального анализа данных с источником данных и моделями интеллектуального анализа данных, основанных на этой структуре.  
   
  ![Обработка данных: источник моделируемой структуры](../../analysis-services/data-mining/media/dmcon-modelarch.gif "обработка данных: источник моделируемой структуры")  
   
@@ -108,7 +109,7 @@ ms.lasthandoff: 09/01/2017
   
  Если необходимо просмотреть данные из структуры интеллектуального анализа данных, то можно создать запросы с помощью расширений интеллектуального анализа данных. Например, инструкция `SELECT * FROM <structure>.CASES` возвращает все данные в структуре интеллектуального анализа данных. Чтобы получить эти данные, структура интеллектуального анализа данных должна быть обработана, а результаты обработки должны находиться в кэше.  
   
- Инструкция `SELECT * FROM <model>.CASES` возвращает те же столбцы, но только для вариантов в этой определенной модели. Дополнительные сведения см. в разделе [SELECT FROM &#60;структура&#62;.CASES](../../dmx/select-from-structure-cases.md) и [SELECT FROM &#60;модель&#62;.CASES (расширения интеллектуального анализа данных)](../../dmx/select-from-model-cases-dmx.md).  
+ Инструкция `SELECT * FROM <model>.CASES` возвращает те же столбцы, но только для вариантов в этой определенной модели. Дополнительные сведения см. в разделе [SELECT FROM &#60;структура&#62;.CASES](../../dmx/select-from-structure-cases.md) и [SELECT FROM &#60;модель&#62;.CASES &#40;расширения интеллектуального анализа данных&#41;](../../dmx/select-from-model-cases-dmx.md).  
   
 ## <a name="using-data-mining-models-with-mining-structures"></a>Совместное использование моделей интеллектуального анализа данных и структур интеллектуального анализа данных.  
  Модель интеллектуального анализа данных применяет алгоритм интеллектуального анализа к данным, представленным структурой интеллектуального анализа данных. Модель интеллектуального анализа данных является объектом, принадлежащим некоторой структуре интеллектуального анализа данных, и наследует все значения свойств, определенных этой структурой. Модель может использовать все столбцы, содержащиеся в структуре интеллектуального анализа данных, или подмножества этих столбцов. В структуру можно добавить несколько копий столбца структуры. Также можно добавить в модель несколько копий столбцов структуры, а затем присвоить им разные имена или *псевдонимы*. Дополнительные сведения о присвоении псевдонимов столбцам структуры см. в разделах [Создание псевдонима для столбца модели](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md) и [Свойства модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-properties.md).  
@@ -120,15 +121,14 @@ ms.lasthandoff: 09/01/2017
   
 |Задания|Ссылки|  
 |-----------|-----------|  
-|Работа с реляционными структурами интеллектуального анализа данных|[создать новую реляционную структуру интеллектуального анализа данных](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)<br /><br /> [добавить вложенную таблицу в структуру интеллектуального анализа данных](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)|  
+|Работа с реляционными структурами интеллектуального анализа данных|[создать новую реляционную структуру интеллектуального анализа данных](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)<br /><br /> [Добавить вложенную таблицу к структуре интеллектуального анализа данных](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)|  
 |Работа со структурами интеллектуального анализа данных, основанными на кубах OLAP|[создать новую структуру интеллектуального анализа OLAP](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)|  
-|Работа со столбцами в структуре интеллектуального анализа данных|[добавить столбцы к структуре интеллектуального анализа данных](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)<br /><br /> [удалить столбцы из структуры интеллектуального анализа данных](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)|  
+|Работа со столбцами в структуре интеллектуального анализа данных|[Добавить столбцы к структуре интеллектуального анализа данных](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)<br /><br /> [удалить столбцы из структуры интеллектуального анализа данных](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)|  
 |Изменение или запрос свойств и данных структуры интеллектуального анализа данных|[изменить свойства структуры интеллектуального анализа данных](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
-|Работа с базовыми источниками данных и обновление источника данных|[Изменение представления источников данных, используемого для структуры интеллектуального анализа данных](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [обработать структуру интеллектуального анализа данных](../../analysis-services/data-mining/process-a-mining-structure.md)|  
+|Работа с базовыми источниками данных и обновление источника данных|[Изменить представление источника данных, используемого для структуры интеллектуального анализа данных](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [обработать структуру интеллектуального анализа данных](../../analysis-services/data-mining/process-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>См. также  
  [Объекты баз данных (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Модели интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   
-

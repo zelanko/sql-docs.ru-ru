@@ -1,33 +1,34 @@
 ---
 title: "Урок 6: R-модели ввода в эксплуатацию | Документы Microsoft"
 ms.custom: 
-ms.date: 08/23/2016
-ms.prod: sql-server-2016
+ms.date: 11/10/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 - TSQL
 ms.assetid: 52b05828-11f5-4ce3-9010-59c213a674d1
-caps.latest.revision: 11
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: ec610a6276c51611dc470693d25b12b239baf333
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f0fbdebc582650b0bd524d583d936848ae42e5f6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="lesson-6-operationalize-the-r-model"></a>Урок 6: R-модели ввода в эксплуатацию
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье является частью учебника для разработчиков SQL по использованию R в SQL Server.
 
@@ -44,40 +45,36 @@ ms.lasthandoff: 09/01/2017
 Хранимая процедура _PredictTip_ иллюстрирует базовый синтаксис для заключения вызова прогноза в хранимую процедуру.
 
 ```SQL
-CREATE PROCEDURE [dbo].[PredictTip] @inquery nvarchar(max)  
-AS  
-BEGIN  
+CREATE PROCEDURE [dbo].[PredictTip] @inquery nvarchar(max) 
+AS 
+BEGIN 
   
-  DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model  
-  FROM nyc_taxi_models);  
-  EXEC sp_execute_external_script @language = N'R',  
-                                  @script = N'  
-mod <- unserialize(as.raw(model));  
-print(summary(mod))  
-OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL,   
-          predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);  
-str(OutputDataSet)  
-print(OutputDataSet)  
-',  
+DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);  
+EXEC sp_execute_external_script @language = N'R',
+  @script = N' 
+    mod <- unserialize(as.raw(model)); 
+    print(summary(mod)) 
+    OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE); 
+    str(OutputDataSet) 
+    print(OutputDataSet) 
+    ', 
   @input_data_1 = @inquery, 
   @params = N'@model varbinary(max)',
-  @model = @lmodel2  
-  WITH RESULT SETS ((Score float));  
-  
-END  
-  
+  @model = @lmodel2 
+  WITH RESULT SETS ((Score float));
+END
 GO
 ```
 
-- Инструкция SELECT получает сериализованную модель из базы данных и сохраняет ее в переменной R `mod` для дальнейшей обработки с помощью языка R.
++ Инструкция SELECT получает сериализованную модель из базы данных и хранится в переменной R модель `mod` для дальнейшей обработки с помощью языка R.
 
-- Для оценки новых случаев извлекаются из [!INCLUDE[tsql](../../includes/tsql-md.md)] запрос, указанный в `@inquery`, первый параметр хранимой процедуры. По мере считывания данных запроса строки сохраняются в кадре данных по умолчанию `InputDataSet`. Этот кадр данных передается в функцию `rxPredict` на языке R, которая формирует оценки.
++ Для оценки новых случаев извлекаются из [!INCLUDE[tsql](../../includes/tsql-md.md)] запрос, указанный в `@inquery`, первый параметр хранимой процедуры. По мере считывания данных запроса строки сохраняются в кадре данных по умолчанию `InputDataSet`. Этот кадр данных передается в функцию `rxPredict` на языке R, которая формирует оценки.
   
-    `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL,            predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
+    `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
     Так как кадр данных может содержать одну строку, один и тот же код можно использовать как для пакетной, так и для индивидуальной оценки.
   
--   Значение, возвращаемое `rxPredict` функция **float** , представляет вероятность того, что драйвер возвращает совет любой величине.
++ Значение, возвращаемое `rxPredict` функция **float** , представляет вероятность того, что драйвер возвращает совет любой величине.
 
 ## <a name="batch-scoring"></a>Массовая оценка
 
@@ -86,23 +83,16 @@ GO
 1.  Сначала получим набор входных данных меньшего размера, с которым будем далее работать. Этот запрос создает список первых 10 поездок с числом пассажиров и другими характеристиками, необходимыми для составления прогноза.
   
     ```SQL
-    SELECT TOP 10 a.passenger_count AS passenger_count,
-        a.trip_time_in_secs AS trip_time_in_secs, 
-        a.trip_distance AS trip_distance, 
-        a.dropoff_datetime AS dropoff_datetime, 
-        dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
-    FROM
-    (
-        SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance,
-         dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample)a
-    LEFT OUTERJOIN
-    (
-    SELECT medallion, hack_license, pickup_datetime
-    FROM nyctaxi_sample
-    TABLESAMPLE (70 percent) REPEATABLE (98052)
-    )b
+    SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
+    
+    FROM (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample)a
+
+    LEFT OUTER JOIN
+
+    (SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample TABLESAMPLE (70 percent) REPEATABLE (98052)    )b
+
     ON a.medallion=b.medallion AND a.hack_license=b.hack_license 
-    AND a.pickup_datetime=b.pickup_datetime  
+    AND a.pickup_datetime=b.pickup_datetime
     WHERE b.medallion IS NULL
     ```
 
@@ -124,16 +114,16 @@ GO
     CREATE PROCEDURE [dbo].[PredictTipBatchMode] @inquery nvarchar(max)
     AS
     BEGIN
-      DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model
-      FROM nyc_taxi_models);
-      EXEC sp_execute_external_script @language = N'R',
-        @script = N'
-          mod <- unserialize(as.raw(model));
-          print(summary(mod))
-          OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);
-          str(OutputDataSet)
-          print(OutputDataSet)
-        ',
+    DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
+    EXEC sp_execute_external_script 
+      @language = N'R',
+      @script = N'
+        mod <- unserialize(as.raw(model));
+        print(summary(mod))
+        OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);
+        str(OutputDataSet)
+        print(OutputDataSet)
+      ',
       @input_data_1 = @inquery,
       @params = N'@model varbinary(max)',
       @model = @lmodel2
@@ -146,93 +136,51 @@ GO
     ```SQL
     -- Define the input data
     DECLARE @query_string nvarchar(max)
-    SET @query_string='
-    select top 10 a.passenger_count as passenger_count,
-        a.trip_time_in_secs as trip_time_in_secs,
-        a.trip_distance as trip_distance,
-        a.dropoff_datetime as dropoff_datetime,
-        dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) as direct_distance
-    from
-        select medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance,
-            dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude
-        from nyctaxi_sample
-    )a  
-    LEFT OUTER JOIN
-    (
-    SELECT medallion, hack_license, pickup_datetime
-    FROM nyctaxi_sample  
-    TABLESAMPLE (70 percent) REPEATABLE (98052)
-    )b 
-    ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND a.pickup_datetime=b.pickup_datetime  
-    WHERE b.medallion is null'
+    SET @query_string='SELECT TOP 10 a.passenger_count as passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance FROM  (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample  )a   LEFT OUTER JOIN (SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample TABLESAMPLE (70 percent) REPEATABLE (98052))b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'
 
     -- Call the stored procedure for scoring and pass the input data
     EXEC [dbo].[PredictTip] @inquery = @query_string;
     ```
   
-4. Хранимая процедура возвращает последовательность значений, представляющий прогноз для каждого десять приема-передачи данных. Однако top приема-передачи также являются одним пассажира приема-передачи с расстоянием относительно короткий маршрут, для которого драйвер вряд ли получить совет.
+4. Хранимая процедура возвращает последовательность значений, представляющих прогноз для каждого из 10 самых затратных обращений. Однако top приема-передачи также являются одним пассажира приема-передачи с расстоянием относительно короткий маршрут, для которого драйвер вряд ли получить совет.
   
 
 > [!TIP]
 > 
-> Вместо получения результатов типа "Есть чаевые" или "Нет чаевых" можно также получить оценку вероятности, а затем применить предложение WHERE к значениям столбца _Score_ , чтобы классифицировать оценки как "высокая вероятность чаевых" или "низкая вероятность чаевых", используя пороговое значение, например 0,5 или 0,7. Это действие отсутствует в хранимой процедуре, но его можно легко реализовать.
+> Вместо того чтобы возвращать только «Да совет» и «нет подсказки» результаты, может также возвращать вероятность прогноза, а затем применить предложение WHERE для _Оценка_ значения столбцов для классификации оценки как «собирается совет» или» маловероятно, что совет», с помощью порогового значения, например 0,5 или 0,7. Это действие отсутствует в хранимой процедуре, но его можно легко реализовать.
 
 ## <a name="single-row-scoring"></a>Оценки одной строки
 
 Иногда требуется передать из приложения отдельные значения и получить один результат на их основе. Например, можно настроить лист Excel, веб-приложение или отчет служб Reporting Services так, чтобы они вызывали хранимую процедуру, передавая в нее входные значения, введенные или выбранные пользователями.
 
-В этом разделе вы узнаете, как создать единичные прогнозы с помощью хранимой процедуры.
+В этом разделе вы научитесь создавать единичные прогнозы с помощью хранимой процедуры.
 
 1. Изучите код хранимой процедуры _PredictTipSingleMode_, которая входит в состав скачанного пакета.
   
     ```SQL
-    CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0,
-    @trip_distance float = 0,
-    @trip_time_in_secs int = 0,
-    @pickup_latitude float = 0,
-    @pickup_longitude float = 0,
-    @dropoff_latitude float = 0,
-    @dropoff_longitude float = 0
-    AS  
-    BEGIN  
-      DECLARE @inquery nvarchar(max) = N'  
-      SELECT * FROM [dbo].[fnEngineerFeatures](@passenger_count,  
-    @trip_distance,  
-    @trip_time_in_secs,  
-    @pickup_latitude,  
-    @pickup_longitude,  
-    @dropoff_latitude,  
-    @dropoff_longitude)  
-        '  
-      DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model  
-      FROM nyc_taxi_models);  
-      EXEC sp_execute_external_script @language = N'R',  
-                                      @script = N'  
-    mod <- unserialize(as.raw(model));  
-    print(summary(mod))  
-    OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL,   
-              predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);  
-    str(OutputDataSet)  
-    print(OutputDataSet)  
-    ',  
-    @input_data_1 = @inquery,  
-    @params = N'@model varbinary(max),@passenger_count int,@trip_distance float,@trip_time_in_secs int ,  
-    @pickup_latitude float ,@pickup_longitude float ,@dropoff_latitude float ,@dropoff_longitude float',  
-    @model = @lmodel2,  
-    @passenger_count =@passenger_count ,  
-    @trip_distance=@trip_distance,  
-    @trip_time_in_secs=@trip_time_in_secs,    
-    @pickup_latitude=@pickup_latitude,  
-    @pickup_longitude=@pickup_longitude,  
-    @dropoff_latitude=@dropoff_latitude,  
-    @dropoff_longitude=@dropoff_longitude  
+    CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
+    AS
+    BEGIN
+    DECLARE @inquery nvarchar(max) = N'SELECT * FROM [dbo].[fnEngineerFeatures](@passenger_count, @trip_distance, @trip_time_in_secs,  @pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude)';
+    DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
+    EXEC sp_execute_external_script  
+      @language = N'R',
+      @script = N'  
+        mod <- unserialize(as.raw(model));  
+        print(summary(mod));  
+        OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);  
+        str(OutputDataSet);
+        print(OutputDataSet); 
+        ',  
+      @input_data_1 = @inquery,  
+      @params = N'@model varbinary(max),@passenger_count int,@trip_distance float,@trip_time_in_secs int ,  @pickup_latitude float ,@pickup_longitude float ,@dropoff_latitude float ,@dropoff_longitude float', @model = @lmodel2, @passenger_count =@passenger_count, @trip_distance=@trip_distance, @trip_time_in_secs=@trip_time_in_secs, @pickup_latitude=@pickup_latitude, @pickup_longitude=@pickup_longitude, @dropoff_latitude=@dropoff_latitude, @dropoff_longitude=@dropoff_longitude  
       WITH RESULT SETS ((Score float));  
     END
     ```
   
     - Эта хранимая процедура принимает в качестве входных данных несколько отдельных значений, таких как число пассажиров, расстояние поездки и т. д.
   
-        При вызове хранимой процедуры из внешнего приложения данные должны соответствовать требованиям модели R. К ним могут относиться возможность приведения или преобразования входных данных в тип данных R или проверка типа и длины данных. Дополнительные сведения см. в разделе [Работа с типами данных R](https://msdn.microsoft.com/library/mt590948.aspx).
+        Если вызвать хранимую процедуру из внешнего приложения, убедитесь, что данные соответствуют требованиям R-модели. К ним могут относиться возможность приведения или преобразования входных данных в тип данных R или проверка типа и длины данных. 
   
     -   Хранимая процедура создает оценку на основе сохраненной модели R.
   
@@ -242,12 +190,12 @@ GO
 
     ```
     EXEC [dbo].[PredictTipSingleMode] @passenger_count = 0,
-    @trip_distance float = 2.5,
-    @trip_time_in_secs int = 631,
-    @pickup_latitude float = 40.763958,
-    @pickup_longitude float = -73.973373,
-    @dropoff_latitude float =  40.782139,
-    @dropoff_longitude float = 73.977303
+    @trip_distance = 2.5,
+    @trip_time_in_secs = 631,
+    @pickup_latitude = 40.763958,
+    @pickup_longitude = -73.973373,
+    @dropoff_latitude =  40.782139,
+    @dropoff_longitude = 73.977303
     ```
 
     Также можно использовать этот короткий форме, которая поддерживается для [параметров для хранимой процедуры](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
@@ -265,4 +213,3 @@ GO
 ## <a name="previous-lesson"></a>Предыдущее занятие
 
 [Занятие 5: Обучения и сохранить модель R с помощью T-SQL](../r/sqldev-train-and-save-a-model-using-t-sql.md)
-

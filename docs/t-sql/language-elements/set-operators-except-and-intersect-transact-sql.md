@@ -3,8 +3,11 @@ title: "EXCEPT и INTERSECT (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,20 +25,19 @@ helpviewer_keywords:
 - comparing queries
 - INTERSECT operator
 ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1d8bff51308e9b8dbf02066d56b73829bc1658c2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 3b78bf6f0c70b3c522c18ada72cacdec8de8c099
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>Задать операторы — и INTERSECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Эти операторы возвращают различные строки, сравнивая результаты двух запросов.  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 09/01/2017
  INTERSECT  
  Возвращает все различные значения, входящие в результаты выполнения запросов, указанных как слева, так и справа от оператора INTERSECT.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если типы данных сравниваемых столбцов, возвращенных запросами, слева и справа от оператора EXCEPT или INTERSECT операторы являются символьными типами с разными параметрами сортировки, сравнение выполняется в соответствии с правилами [ Очередность параметров сортировки](../../t-sql/statements/collation-precedence-transact-sql.md). Если нужное преобразование выполнить не удается, компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] возвращает ошибку.  
   
  Если сравниваются значения столбцов с целью определения различных строк, два значения NULL считаются равными.  
@@ -194,5 +196,4 @@ ORDER BY CustomerKey;
 ```  
   
   
-
 

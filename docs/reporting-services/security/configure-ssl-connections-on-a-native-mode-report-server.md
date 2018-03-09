@@ -2,27 +2,26 @@
 title: "Настройка SSL-подключений для сервера отчетов в собственном режиме | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Secure Sockets Layer (SSL)
+helpviewer_keywords: Secure Sockets Layer (SSL)
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
-caps.latest.revision: 34
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4f973faa65ed34695804de0815331f562b7a24f4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+caps.latest.revision: "34"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 94e454e201b2e9130b115e527ee2433f04f2ab60
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Настройка соединений SSL для сервера отчетов, работающего в собственном режиме
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] В собственном режиме используется HTTP-служба протокола SSL для установления зашифрованного соединения с сервером отчетов. Если в локальном хранилище сертификатов на компьютере сервера отчетов установлен CER-файл сертификата, можно связать его с резервированием URL-адресов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для поддержки соединений сервера отчетов через зашифрованный канал.  
@@ -91,7 +90,7 @@ ms.lasthandoff: 08/09/2017
   
  Если удаление привязок SSL для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выполняется с помощью диспетчера конфигурации служб Reporting Services, то может перестать работать SSL для веб-сайтов на сервере, где работают службы IIS, или на другом сервере HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Диспетчер конфигурации удаляет следующий раздел реестра. Если этот раздел реестра удаляется, привязка SSL для IIS также удаляется. Без этой привязки SSL для протокола HTTPS не поддерживается. Выполнить диагностику этой проблемы можно с помощью диспетчера IIS или программы HTTPCFG.exe. Чтобы решить эту проблему, восстановите привязку SSL для своих веб-сайтов с помощью диспетчера IIS. Чтобы предотвратить возникновение этой проблемы в будущем, с помощью диспетчера IIS удалите привязки SSL, а затем с помощью диспетчера IIS восстановите привязку для нужных веб-сайтов. Дополнительные сведения см. в статье базы знаний [SSL перестает работать после удаления привязки SSL (http://support.microsoft.com/kb/956209/n)](http://support.microsoft.com/kb/956209/n).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Проверка подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

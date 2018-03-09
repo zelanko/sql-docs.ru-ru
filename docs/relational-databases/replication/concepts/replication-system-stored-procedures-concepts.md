@@ -2,17 +2,17 @@
 title: "Основные понятия системных хранимых процедур репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- TSQL
+applies_to: SQL Server 2016 Preview
+dev_langs: TSQL
 helpviewer_keywords:
 - stored procedures [SQL Server replication], programming
 - programming [SQL Server replication], system stored procedures
@@ -20,19 +20,19 @@ helpviewer_keywords:
 - system stored procedures [SQL Server replication]
 - replication [SQL Server], how-to topics
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
-caps.latest.revision: 41
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 352901fe01e191aa43e48c4d7978f271b189f4e1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "41"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 71825bdd1242d925f7b27fd7dbd18f2b0d019b8e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] программный доступ ко всем настраиваемым пользователями функциональным возможностям в топологии репликации предоставляется системными хранимыми процедурами. Безусловно, хранимые процедуры могут выполняться отдельно с использованием среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или программы командной строки sqlcmd, но может оказаться более удобным написание файлов скриптов [!INCLUDE[tsql](../../../includes/tsql-md.md)], предназначенных для выполнения задач репликации в логической последовательности.  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Использование средств создания скриптов, предусмотренных в мастерах репликации.  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в статье [Создание скриптов репликации](../../../relational-databases/replication/scripting-replication.md).  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
 -   использование объектов RMO для формирования программным путем скрипта создания объекта RMO.  
   

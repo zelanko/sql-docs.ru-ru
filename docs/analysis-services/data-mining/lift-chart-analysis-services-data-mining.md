@@ -2,12 +2,13 @@
 title: "Диаграмма точности прогнозов (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +19,20 @@ helpviewer_keywords:
 - profit charts [Analysis Services]
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
-caps.latest.revision: 55
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5effa132a9ccb440ccf3b8a7c004e6692a4aef57
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b939d468a964160cd84dbdb60fcae97d4f2ee6a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Диаграмма точности прогнозов (службы Analysis Services — интеллектуальный анализ данных)
-  A *оценки точности chart* графически представляет, какое улучшение даст модель интеллектуального анализа данных по сравнению со случайным предположением, а также измеряет изменение в терминах *оценки точности* . Сравнив показатели точности прогнозов для различных моделей, можно выбрать самый оптимальный вариант. Кроме того, такой анализ позволяет определить, в какой момент прогнозы модели становятся менее полезными. Например, просмотрев диаграмму точности прогнозов, можно понять, что соответствующая рекламная кампания окажет воздействие только на 30 % ваших клиентов, и сократить охват этой кампании, исходя из полученных данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+A *оценки точности chart* графически представляет, какое улучшение даст модель интеллектуального анализа данных по сравнению со случайным предположением, а также измеряет изменение в терминах *оценки точности* . Сравнив показатели точности прогнозов для различных моделей, можно выбрать самый оптимальный вариант. Кроме того, такой анализ позволяет определить, в какой момент прогнозы модели становятся менее полезными. Например, просмотрев диаграмму точности прогнозов, можно понять, что соответствующая рекламная кампания окажет воздействие только на 30 % ваших клиентов, и сократить охват этой кампании, исходя из полученных данных.  
   
  В интеллектуальном анализе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] диаграмма точности прогнозов позволяет сравнивать точность прогнозов для нескольких моделей, имеющих одинаковый прогнозируемый атрибут. Кроме того, можно получать точность прогнозирования как для единичного случая (единичное значение прогнозируемого атрибута), так и для всех случаев (все значения указанного атрибута).  
   
@@ -128,7 +129,6 @@ ms.lasthandoff: 09/01/2017
  [В начало](#bkmk_Top)  
   
 ## <a name="see-also"></a>См. также  
- [Тестирование и проверка (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Тестирование и проверка &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
-

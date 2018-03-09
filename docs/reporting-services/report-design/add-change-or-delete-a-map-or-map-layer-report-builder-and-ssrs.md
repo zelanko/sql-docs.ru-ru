@@ -1,13 +1,14 @@
 ---
-title: "Добавление, изменение или удаление карты или слоя карты (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Добавление, изменение или удаление карты или слоя карты (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -28,17 +29,16 @@ f1_keywords:
 - "10527"
 - sql13.rtp.rptdesigner.shared.layervisibility.f1
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8c45b97760006a9939f44b41c018d04321060df9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0bb98e926d7c06a216ef5230af9fd9a113d451dc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Добавление, изменение или удаление карты или слоя карты (построитель отчетов и службы SSRS)
   Карта представляет собой набор слоев. При добавлении карты в отчет [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы необходимо определить первый ее слой. Дополнительные слои можно создать с помощью мастера «Слой карты».  
@@ -75,7 +75,7 @@ ms.lasthandoff: 08/09/2017
   
 ##  <a name="ChangeLayer"></a> Изменение параметров слоя с помощью мастера «Слой карты»  
   
--   Запустите мастер «Слой карты». Этот мастер используется для изменения параметров слоя, созданного с помощью мастера «Слой карты». В панели «карта» щелкните правой кнопкой мыши слой и на панели инструментов нажмите кнопку мастера слоя (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
+-   Запустите мастер «Слой карты». Этот мастер используется для изменения параметров слоя, созданного с помощью мастера «Слой карты». На панели "Карта" щелкните правой кнопкой мыши слой и на панели инструментов нажмите кнопку мастера слоя (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
      Дополнительные сведения см. в разделе [Мастер карт и мастер слоев карт (построитель отчетов и службы SSRS)](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 08/09/2017
 2.  На панели инструментов нажмите кнопку **Добавить слой** и выберите в раскрывающемся списке тип добавляемого слоя: **Точка**, **Линия**или **Многоугольник**.  
   
     > [!NOTE]  
-    >  Хотя слой карты можно добавить и настроить вручную, для добавления новых слоев рекомендуется использовать мастер слоя. Чтобы запустить мастер с панели инструментов карты, нажмите кнопку мастера слоя (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
+    >  Хотя слой карты можно добавить и настроить вручную, для добавления новых слоев рекомендуется использовать мастер слоя. Чтобы запустить этот мастер с панели инструментов панели "Карта", нажмите кнопку мастера слоя (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
 3.  Щелкните правой кнопкой мыши слой и выберите пункт **Данные слоя**.  
   
@@ -204,7 +204,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  Щелкните **Видимость**.  
   
-4.  Введите на странице **Параметры прозрачности**значение, выражающее процент прозрачности (например: **40**). Нулевое (0) значение прозрачности означает, что слой непрозрачен. При прозрачности, равной 100 %, слой не будет отображаться в отчете.  
+4.  Введите на странице **Параметры прозрачности**значение, выражающее процент прозрачности (например: **40**). Нулевое (0) значение прозрачности означает, что слой непрозрачен. При прозрачности, равной 100 %, слой не будет отображаться в отчете.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -252,13 +252,12 @@ ms.lasthandoff: 08/09/2017
   
     -   Введите минимальное и максимальное значения масштаба, при которых отображается слой.  
   
-    -   Необязательно. Введите значение прозрачности.  
+    -   Необязательный параметр. Введите значение прозрачности.  
   
      Можно также скрывать слой по условию. Дополнительные сведения см. в разделе [Скрытие элемента (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Maps &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Устранение неполадок в отчетах: Сопоставление отчеты &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   
-

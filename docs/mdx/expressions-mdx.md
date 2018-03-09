@@ -2,15 +2,16 @@
 title: "Выражения (MDX) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - identifiers [MDX]
 - expressions [MDX]
@@ -18,20 +19,19 @@ helpviewer_keywords:
 - MDX [Analysis Services], expressions
 - Multidimensional Expressions [Analysis Services], expressions
 ms.assetid: e20c34bc-30fa-4ac5-b896-9d4c9925ef59
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 0fbb0f5d2b1b9699cd468cbcbd81a528c217bd3a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 608cba1c2819136f5bafa71be8ac5a347c5939cd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="expressions-mdx"></a>Выражения (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Выражение представляет собой сочетание идентификаторов, значений и операторов, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] можно вычислить для получения результата. Данные могут использоваться в разных местах для доступа и изменения данных. Например, выражение можно использовать как часть данных, извлекаемых в запросе, либо как условие поиска для отбора данных, отвечающих набору критериев.  
   
@@ -86,15 +86,15 @@ FROM [Adventure Works]
 WHERE [Product].[Category].[Bikes]  
 ```  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 |Раздел|Description|  
 |-----------|-----------------|  
-|[С помощью куба и выражения вложенного куба](../mdx/using-cube-and-subcube-expressions.md)|Выражения куба и вложенного куба.|  
+|[Использование выражений куба и вложенного куба](../mdx/using-cube-and-subcube-expressions.md)|Выражения куба и вложенного куба.|  
 |[Использование выражений измерений](../mdx/using-dimension-expressions.md)|Выражения измерений.|  
-|[Выражения элементов](../mdx/using-member-expressions.md)|Выражения элементов.|  
-|[Использование кортежных выражений](../mdx/using-tuple-expressions.md)|Выражения кортежей.|  
-|[Выражения наборов](../mdx/using-set-expressions.md)|Выражения наборов.|  
+|[Использование выражений элементов](../mdx/using-member-expressions.md)|Выражения элементов.|  
+|[Использование выражений кортежей](../mdx/using-tuple-expressions.md)|Выражения кортежей.|  
+|[Использование выражений наборов](../mdx/using-set-expressions.md)|Выражения наборов.|  
 |[Использование скалярных выражений](../mdx/using-scalar-expressions.md)|Скалярные выражения.|  
 |[Работа с пустыми значениями](../mdx/working-with-empty-values.md)|Пустые значения и способы их обработки.|  
   
@@ -103,4 +103,3 @@ WHERE [Product].[Category].[Bikes]
  [Основные принципы запросов многомерных Выражений &#40; Службы Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

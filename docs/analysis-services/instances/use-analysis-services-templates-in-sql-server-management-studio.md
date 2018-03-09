@@ -2,29 +2,30 @@
 title: "Использовать шаблоны служб Analysis Services в SQL Server Management Studio | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
-caps.latest.revision: 12
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2b13acc5ac8947e4e97509764f648f8c31da1fa6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ff4058fd2827698cee28b1a9d6b759719688a212
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Использование шаблонов служб Analysis Services в среде SQL Server Management Studio
+# <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Use Analysis Services Templates in SQL Server Management Studio
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предоставляет набор шаблонов, которые помогают быстро создавать скрипты XML для аналитики, многомерные или DMX-запросы, ключевые показатели эффективности в кубе или табличной модели, формировать скрипты для резервного копирования и восстановления, а также выполнять много других задач. Шаблоны расположены в **обозревателе шаблонов** в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  В этом разделе приводится список шаблонов для многомерных и табличных моделей, а также рассматриваются примеры построения MDX-запросов и инструкций XML для аналитики с помощью обозревателя метаданных и обозревателя шаблонов.  
@@ -150,7 +151,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  Откройте **обозреватель шаблонов**и перетащите шаблон **Выявление наборов строк схемы**в пустое окно запроса.  
   
-3.  В шаблоне замените [элемент RequestType &#40; XML для Аналитики &#41; ](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) элемент со следующим текстом:`<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  В шаблоне замените [элемент RequestType &#40; XML для Аналитики &#41; ](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) элемент со следующим текстом: `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  Нажмите кнопку **Выполнить**.  
   
@@ -172,7 +173,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ##  <a name="bkmk_Ref"></a> Технический справочник по службам Analysis Services  
  Следующие шаблоны предназначаются для работы с базами данных служб Analysis Services и объектами базы данных, включая структуры и модели интеллектуального анализа данных, кубы и табличные модели:  
   
-|Категория|Шаблон элемента|Description|  
+|Категория|Шаблон элемента|Описание|  
 |--------------|-------------------|-----------------|  
 |Расширения интеллектуального анализа данных\Содержимое модели|Запрос содержимого|Демонстрирует использование инструкции SELECT FROM  *\<модели >*. Инструкция СОДЕРЖИМОГО для получения содержимого набора строк схемы модели интеллектуального анализа данных для указанной модели.|  
 ||Значения непрерывного столбца|Демонстрирует использование инструкции SELECT DISTINCT FROM  *\<модели >* инструкции с DMX **RangeMin** и **RangeMax** функции для получения набора значения в указанном диапазоне из непрерывных столбцов в указанную модель интеллектуального анализа.|  
@@ -233,9 +234,8 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 ## <a name="see-also"></a>См. также  
  [Справочник по многомерным выражениям (многомерные выражения)](../../mdx/multidimensional-expressions-mdx-reference.md)   
- [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Ссылка](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Справочник по языку ASSL (ASSL для XMLA)](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [Службы Analysis Services Scripting Language &#40; ASSL для XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   
-

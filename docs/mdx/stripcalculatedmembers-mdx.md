@@ -2,34 +2,32 @@
 title: "StripCalculatedMembers (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- STRIPCALCULATEDMEMBERS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- StripCalculatedMembers function
+f1_keywords: STRIPCALCULATEDMEMBERS
+dev_langs: kbMDX
+helpviewer_keywords: StripCalculatedMembers function
 ms.assetid: c71725df-f435-4454-9122-6729ddad8cc7
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 643dca97d4d3e4675b07a7b8f9c06a5a78401dd8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ddecd9f78e9ae8862d7ec2c2788ba4d9abaaf5ce
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="stripcalculatedmembers-mdx"></a>StripCalculatedMembers (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает набор, созданный путем удаления вычисляемых элементов из указанного набора.  
   
@@ -44,7 +42,7 @@ StripCalculatedMembers(Set_Expression)
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **StripCalculatedMembers** функция удаляет вычисляемые элементы из набора. Вычисляемые элементы можно добавить в набор с помощью [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) функции, которая возвращает вычисляемые элементы, определенные на сервере или вычисляемые элементы, которые были добавлены в самом запросе с помощью конструкции WITH MEMBER.  
   
 ## <a name="example"></a>Пример  
@@ -94,4 +92,3 @@ FROM [Adventure Works]
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

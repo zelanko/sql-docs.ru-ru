@@ -8,22 +8,21 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: ed92b88736cdc579ddee67dff313f8aad3c69b71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e2be20e46a7ddbf25d0d694618f996a9be8919e0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-glossary"></a>Глоссарий ADO
 В этом разделе определены термины, относящиеся к ADO.  
@@ -188,7 +187,7 @@ ms.lasthandoff: 09/09/2017
  иерархия  
  В общем случае иерархии — это ранжированных структура верхнего уровня и вложенных уровней. В ADO, иерархические **наборы записей** используются для представления отношения родитель потомок между записи и главы. Также в ADO **запись** и **поток** объекты могут использоваться для доступа к структурам иерархическое дерево, такие как папки и документы. ADO MD также включает **иерархии** объектов для представления отношения между уровнями измерения в кубе OLAP. См. также иерархические наборы записей, иерархические связи, глава, дерево.  
   
-## <a name="i-l"></a>Я-L  
+## <a name="i-l"></a>I-L  
  ISAPI (Internet Server прикладной программный интерфейс)  
  Набор функций для серверов Интернета, таких как Windows NT® Server или Windows 2000 Server под управлением Microsoft® Internet Information Services (IIS).  
   
@@ -293,10 +292,9 @@ ms.lasthandoff: 09/09/2017
  Синхронная операция  
  Операция инициирована кодом, перед началом следующей операции может запуститься. См. также асинхронной операции.  
   
-## <a name="t-z"></a>T — Z  
+## <a name="t-z"></a>T-Z  
  Дерево  
  Структура, представляющая иерархические связи между элементами (узлы). На верхнем уровне дерева (корневой) имеется один узел. Ниже корня может быть несколько дочерних элементов. Каждый дочерний элемент в свою очередь может быть родительским для других дочерних объектов, таким образом ветвление подобно дереву. Папка, содержащая документы и другие папки — типичный пример структуры дерева. См. также иерархии, узел, корневой, дочерним, родительским.  
   
  Веб-сервер  
  Компьютер, который содержит веб-служб и страниц пользователям Интернета и интрасети.
-

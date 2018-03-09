@@ -3,7 +3,7 @@ title: "Свойства объекта DataFactory (RDSServer), методы и
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - DataFactory object [ADO], members
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7ee3dc0d82f2bc052c169c97bb7cf5ff8d608f8f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1375d8c681129f2be813257dbc805b2ed02517b3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>Свойства объекта DataFactory (RDSServer), методы и события
 > [!IMPORTANT]
@@ -38,20 +37,19 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[Метод ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|Преобразует строку MIME64 набор записей.|  
-|[Метод CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|Создает и возвращает пустой набор записей.|  
-|[Выполнить метод (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|Выполнить запрос и создать набор строк дополнительных данных (для использования с ADO 2.5 или более поздней версии).|  
-|[Метод Execute21 (RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|Выполнить запрос и создать набор строк дополнительных данных (для использования с ADO 2.1).|  
-|[Метод запроса (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|Выполнить запрос и создать набор строк дополнительных данных.|  
-|[Метод SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Имея набор записей с ожидающими изменениями, этот метод отправляет их в базу данных, указанных в строке подключения.|  
-|[Synchronize-метод (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Синхронизировать заданного набора записей с базой данных, указанной в строке подключения (для использования с ADO 2.5 или более поздней версии).|  
-|[Метод Synchronize21 (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Синхронизировать заданного набора записей с базой данных, указанной в строке подключения (для использования с ADO 2.1).|  
+|[Метод ConvertToString (служба удаленных рабочих столов)](../../../ado/reference/rds-api/converttostring-method-rds.md)|Преобразует строку MIME64 набор записей.|  
+|[Метод CreateRecordset (служба удаленных рабочих столов)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|Создает и возвращает пустой набор записей.|  
+|[Метод Execute (служба удаленных рабочих столов)](../../../ado/reference/rds-api/execute-method-rds.md)|Выполнить запрос и создать набор строк дополнительных данных (для использования с ADO 2.5 или более поздней версии).|  
+|[Метод Execute21 (служба удаленных рабочих столов)](../../../ado/reference/rds-api/execute21-method-rds.md)|Выполнить запрос и создать набор строк дополнительных данных (для использования с ADO 2.1).|  
+|[Метод Query (служба удаленных рабочих столов)](../../../ado/reference/rds-api/query-method-rds.md)|Выполнить запрос и создать набор строк дополнительных данных.|  
+|[Метод SubmitChanges (служба удаленных рабочих столов)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Имея набор записей с ожидающими изменениями, этот метод отправляет их в базу данных, указанных в строке подключения.|  
+|[Метод Synchronize (служба удаленных рабочих столов)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Синхронизировать заданного набора записей с базой данных, указанной в строке подключения (для использования с ADO 2.5 или более поздней версии).|  
+|[Метод Synchronize21 (служба удаленных рабочих столов)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Синхронизировать заданного набора записей с базой данных, указанной в строке подключения (для использования с ADO 2.1).|  
   
 ## <a name="events"></a>События  
  Нет.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

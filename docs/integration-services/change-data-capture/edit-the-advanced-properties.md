@@ -1,10 +1,13 @@
 ---
-title: "Изменение дополнительных свойств | Документы Microsoft"
+title: "Изменение дополнительных свойств | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - advanced
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 469785d1add7db3382852938d3a798f7a6666e3e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3c5aa4c97c3b90a290c93a82ab23b486d16106e8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="edit-the-advanced-properties"></a>Изменение дополнительных свойств
   На вкладке **Дополнительно** можно добавлять особые свойства к экземпляру CDC.  
@@ -38,9 +40,8 @@ ms.lasthandoff: 08/03/2017
   
  Описание свойств, которые можно ввести, приведены в таблице доступных свойств в разделе [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config).  
   
-## <a name="see-also"></a>См. также  
- [Управление экземпляром CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
- [Изменение свойств экземпляра CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)  
+## <a name="see-also"></a>См. также:  
+ [Как управлять экземпляром CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
+ [Как изменить свойства экземпляра CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)  
   
   
-

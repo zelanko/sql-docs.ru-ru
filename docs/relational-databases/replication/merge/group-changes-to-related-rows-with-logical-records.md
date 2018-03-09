@@ -2,11 +2,13 @@
 title: "Группирование изменений в связанных строках с помощью логических записей | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +16,19 @@ helpviewer_keywords:
 - articles [SQL Server replication], logical records
 - logical records [SQL Server replication]
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
-caps.latest.revision: 55
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "55"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3b52630036d499deb0c125a9c6d8512a2edc48a4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d2ae5beed7a724e7baa9783e411f8b2f656e3f8a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Группирование изменений в связанных строках с помощью логических записей
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
@@ -104,7 +106,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Если логические записи используются в публикации, содержащей параметризованные фильтры, следует инициализировать каждый подписчик с помощью моментального снимка для его секции. Если подписчик инициализируется с помощью другого метода, произойдет сбой агента слияния. Дополнительные сведения см. в статье [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
   
--   Конфликты, затрагивающие логические записи, не отображаются в средстве просмотра конфликтов. Для просмотра сведений о таких конфликтах используются хранимые процедуры репликации. Дополнительные сведения см. в статье [Просмотр сведений о конфликтах для публикаций слиянием (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+-   Конфликты, затрагивающие логические записи, не отображаются в средстве просмотра конфликтов. Для просмотра сведений о таких конфликтах используются хранимые процедуры репликации. Дополнительные сведения см. в статье [Просмотр сведений о конфликтах для публикаций слиянием &#40;программирование репликации на языке Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
   
 ### <a name="publication-settings"></a>Настройки публикации  
   
@@ -146,7 +148,6 @@ ms.lasthandoff: 06/22/2017
  Если используются логические записи, агент слияния должен обрабатывать все изменения для каждой логической записи совместно. Это влияет на время, которое требуется агенту слияния для репликации строк. Кроме того, так как агент открывает отдельную транзакцию для каждой логической записи, потребность в блокировках может увеличиться.  
   
 ## <a name="see-also"></a>См. также:  
- [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
+ [Параметры статьи для репликации слиянием](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
   
   
-

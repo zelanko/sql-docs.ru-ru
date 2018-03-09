@@ -2,9 +2,12 @@
 title: "Ошибки промежуточного процесса (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
@@ -12,22 +15,21 @@ ms.topic: article
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
-caps.latest.revision: 8
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d0560f760a619630bb0ccc9183b30674da89d5f8
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: a870a044e3687e4d75b3a48ea44ed11119b3b5e2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="staging-process-errors-master-data-services"></a>Ошибки промежуточного процесса (службы Master Data Services)
   После завершения промежуточного процесса все обработанные записи в промежуточных таблицах содержат значение в столбце ErrorCode. Эти значения перечислены в следующей таблице.  
   
-|код|Ошибка|Происходит при/сведения|Относится к таблице|  
+|Код|Ошибка|Происходит при/сведения|Относится к таблице|  
 |----------|-----------|--------------------------|----------------------|  
 |210001|Один и тот же код элемента встречается в промежуточной таблице несколько раз.|Один и тот же код элемента встречается в промежуточном пакете несколько раз. Ни один элемент не создан и не обновлен.|Конечный элемент<br /><br /> Объединены<br /><br /> Связь|  
 |210003|Значение атрибута ссылается на несуществующий или неактивный элемент.|При промежуточной обработке атрибутов на основе домена необходимо использовать код, а не имя. Применяется к значениям **ImportType0**, **1**и **2**.|Конечный элемент<br /><br /> Объединены|  
@@ -52,4 +54,3 @@ ms.lasthandoff: 09/07/2017
  [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
   
-

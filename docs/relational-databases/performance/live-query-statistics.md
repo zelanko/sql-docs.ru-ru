@@ -1,11 +1,13 @@
 ---
 title: "Динамическая статистика запросов | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 10/28/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,25 +18,25 @@ helpviewer_keywords:
 - debugging [SQL Server], live query stats
 - statistics [SQL Server], live query statistics
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
-caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 1351bb65779cd53bc87fbbe1f6e1ce2f29beddc0
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: HT
-ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
-ms.openlocfilehash: 32ce19a31e38ce457ae8b3ea37fa863a74a8902b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/21/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="live-query-statistics"></a>Динамическая статистика запросов
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] позволяет просматривать динамический план выполнения активного запроса. Этот динамический план запроса позволяет анализировать процесс выполнения запроса в режиме реального времени по мере передачи управления от одного оператора плана запроса другому. Динамический план запроса отображает общий ход выполнения запроса и текущую статистику выполнения на уровне оператора, например число полученных строк, затраченное время, ход выполнения оператора и т. д. Так как эти данные доступны в режиме реального времени и, чтобы их увидеть, не нужно дожидаться завершения запроса, такая статистика чрезвычайно полезна для отладки проблем с производительностью запросов. Эта функция доступна начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], но она может работать и с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] позволяет просматривать динамический план выполнения активного запроса. Этот динамический план запроса позволяет анализировать процесс выполнения запроса в режиме реального времени по мере передачи управления от одного [оператора плана запроса](../../relational-databases/showplan-logical-and-physical-operators-reference.md) другому. Динамический план запроса отображает общий ход выполнения запроса и текущую статистику выполнения на уровне оператора, например число полученных строк, затраченное время, ход выполнения оператора и т. д. Так как эти данные доступны в режиме реального времени и, чтобы их увидеть, не нужно дожидаться завершения запроса, такая статистика чрезвычайно полезна для отладки проблем с производительностью запросов. Эта функция доступна начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], но она может работать и с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 > [!WARNING]  
->  Эта функция предназначена в основном для диагностики. Ее использование может значительно снизить общую производительность запроса. Эта функция может использоваться с [отладчиком Transact-SQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
+> Эта функция предназначена в основном для диагностики. Ее использование может значительно снизить общую производительность запроса. Эта функция может использоваться с [отладчиком Transact-SQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
   
 #### <a name="to-view-live-query-statistics"></a>Просмотр динамической статистики запросов  
   
@@ -54,14 +56,14 @@ ms.lasthandoff: 10/21/2017
   
  ![Кнопка динамической статистики запросов в мониторе активности](../../relational-databases/performance/media/livequerystatsactmon.png "Кнопка динамической статистики запросов в мониторе активности")  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Чтобы функция динамической статистики запросов могла собирать данные о ходе выполнения, необходимо включить инфраструктуру профиля статистики. Выбор параметра **Включить динамическую статистику запроса** в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] включает инфраструктуру статистики для текущего сеанса запроса. 
  
-До версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]есть еще два способа включить инфраструктуру статистики, с помощью которой можно просматривать динамическую статистику запросов из других сеансов (например, из монитора активности).  
+До версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] есть еще два способа включить инфраструктуру статистики, с помощью которой можно просматривать динамическую статистику запросов из других сеансов (например, из монитора активности).  
   
 -   Выполните команды `SET STATISTICS XML ON;` или `SET STATISTICS PROFILE ON;` в нужном сеансе.  
   
- или  
+ или диспетчер конфигурации служб  
   
 -   Включите расширенное событие **query_post_execution_showplan** . Этот параметр применяется ко всему серверу и включает динамическую статистку запросов для всех сеансов. Сведения о включении расширенных событий см. в статье [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
 
@@ -69,7 +71,7 @@ ms.lasthandoff: 10/21/2017
 
 -   Используйте глобальный флаг трассировки 7412.  
   
- либо  
+ или диспетчер конфигурации служб  
   
 -   Включите расширенное событие **query_thread_profile** . Этот параметр применяется ко всему серверу и включает динамическую статистку запросов для всех сеансов. Сведения о включении расширенных событий см. в статье [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).
   
@@ -79,13 +81,13 @@ ms.lasthandoff: 10/21/2017
 ## <a name="permissions"></a>Разрешения  
  Для заполнения страницы результатов **Динамическая статистика запросов** требуется разрешение **SHOWPLAN** уровня базы данных. Для просмотра динамической статистики нужно разрешение **VIEW SERVER STATE** уровня сервера. А для выполнения запроса требуются все разрешения, необходимые для этого.  
   
-## <a name="see-also"></a>См. также  
- [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [Средства контроля и настройки производительности](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)   
- [Открытие монитора активности (среда SQL Server Management Studio)](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)   
- [Монитор активности](../../relational-databases/performance-monitor/activity-monitor.md)   
- [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)   
- [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)   
- [Флаги трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
-
+## <a name="see-also"></a>См. также:  
+ [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
+ [Средства контроля и настройки производительности](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
+ [Открытие монитора активности (среда SQL Server Management Studio)](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     
+ [Монитор активности](../../relational-databases/performance-monitor/activity-monitor.md)     
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)     
+ [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)     
+ [Флаги трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
+ [Справочник по логическим и физическим операторам Showplan](../../relational-databases/showplan-logical-and-physical-operators-reference.md)

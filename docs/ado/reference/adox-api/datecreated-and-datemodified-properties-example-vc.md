@@ -3,7 +3,7 @@ title: "DateCreated и DateModified примере свойства (VC ++) | Д
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - DateCreated property [ADOX], VC++ example
 - DateModified property [ADOX], VC++ example
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5dcbb96b9c3d640bd338e22671437b88787987e1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 480f6e170c0d2550ebd73925bddcfebf9a7d3126
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>DateCreated и DateModified примере свойства (VC ++)
 В этом примере демонстрируется [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) и [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) свойства путем добавления нового [столбца](../../../ado/reference/adox-api/column-object-adox.md) к существующему [таблицы](../../../ado/reference/adox-api/table-object-adox.md) и с помощью Создание нового **таблицы**. Процедура DateOutput является обязательным для выполнения этого примера.  
@@ -122,9 +121,8 @@ void DateOutPut(_bstr_t strTemp , _TablePtr tblTemp) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект столбца (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Свойство DateCreated (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
  [Свойство DateModified (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
- [Объект таблицы (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
-
+ [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

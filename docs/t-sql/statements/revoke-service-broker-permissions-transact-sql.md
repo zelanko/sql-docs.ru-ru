@@ -3,8 +3,11 @@ title: "ОТЗЫВ разрешений компонента Service Broker (Tra
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - services [Service Broker], permissions
 - REVOKE statement, Service Broker
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
-caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cc90d37072e2e081fc358f186e3dc85f0c8c092c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 897da4d05bcd9a2cfbb88ce5383ba7a71867edcc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE, отмена разрешений для компонента Service Broker (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Отменяет разрешения по контрактам, типам сообщений, привязкам удаленных служб, маршрутам или службе компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
@@ -67,19 +69,19 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *разрешение*  
  Указывает разрешение, которое может быть отменено для защищаемого объекта компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
   
- КОНТРАКТ **::***contract_name*  
+ CONTRACT **::***contract_name*  
  Указывает контракт, для которого отменяется разрешение. Квалификатор области **::** является обязательным.  
   
- Тип сообщения **::***message_type_name*  
+ MESSAGE TYPE **::***message_type_name*  
  Указывает тип сообщения, для которого отменяется разрешение. Квалификатор области **::** является обязательным.  
   
- REMOTE SERVICE BINDING **::***remote_binding_name*  
+ REMOTE SERVICE BINDING **:: *** remote_binding_name*  
  Указывает привязку удаленной службы, для которой отменяется разрешение. Квалификатор области **::** является обязательным.  
   
- МАРШРУТ **::***route_name*  
+ ROUTE **::***route_name*  
  Указывает маршрут, для которого отменяется разрешение. Квалификатор области **::** является обязательным.  
   
- Служба **::***message_type_name*  
+ SERVICE **::***message_type_name*  
  Указывает службу, для которой отменяется разрешение. Квалификатор области **::** является обязательным.  
   
  *database_principal*  
@@ -126,7 +128,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   Пользователь базы данных, не сопоставленный серверу-участнику  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="service-broker-contracts"></a>Контракты компонента Service Broker  
  Контракт компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] — это защищаемый объект уровня базы данных, содержащийся в базе данных, которая является для него родительской в иерархии разрешений. Наиболее специфичные и ограниченные разрешения, которые могут быть отменены для [!INCLUDE[ssSB](../../includes/sssb-md.md)] контракта, перечислены в следующей таблице вместе с более общими разрешениями, неявно их содержащими.  
@@ -181,15 +183,14 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения CONTROL на контракт, тип сообщений, привязки удаленной службы, маршрут или службу компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
-## <a name="see-also"></a>См. также:  
- [Разрешения GRANT службы Broker & #40; Transact-SQL & #41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)   
- [ЗАПРЕТ разрешений компонента Service Broker & #40; Transact-SQL & #41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Разрешения GRANT службы Broker &#40; Transact-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)   
+ [ЗАПРЕТ разрешений компонента Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
-

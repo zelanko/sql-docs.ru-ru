@@ -3,7 +3,7 @@ title: "AffectEnum | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,24 +18,23 @@ f1_keywords:
 helpviewer_keywords:
 - AffectEnum enumeration [ADO]
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b3192f84f0dd09bdb6d2479e090d1adb5c0b25fe
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 63bf19b58ddd79dc684011b56287f35107e568af
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="affectenum"></a>AffectEnum
 Указывает, какие записи подвержены операции.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
-|**adAffectAll**|3|Если не [фильтра](../../../ado/reference/ado-api/filter-property.md) применены к **записей**, влияет на все записи.<br /><br /> Если **фильтра** свойству условий строки (такие как «автор = 'Smith'»), то операция затрагивает видимые записи в текущем.<br /><br /> Если **фильтра** свойству членом [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) или массив закладки, то операция повлияет на все строки **записей**. **Примечание:****adAffectAll** скрыт в обозревателе объектов Visual Basic.  |  
+|**adAffectAll**|3|Если не [фильтра](../../../ado/reference/ado-api/filter-property.md) применены к **записей**, влияет на все записи.<br /><br /> Если **фильтра** свойству условий строки (такие как «автор = 'Smith'»), то операция затрагивает видимые записи в текущем.<br /><br /> Если **фильтра** свойству членом [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) или массив закладки, то операция повлияет на все строки **записей**. **Примечание:****adAffectAll** скрыт в обозревателе объектов Visual Basic.|  
 |**adAffectAllChapters**|4|Влияет на все записи из всех главах того же уровня **записей**, включая те, которые не видны через любой **фильтра** , применяется в данный момент.|  
 |**adAffectCurrent**|1|Затрагивает только текущую запись.|  
 |**adAffectGroup**|2|Затрагивает только те записи, которые удовлетворяют текущего [фильтра](../../../ado/reference/ado-api/filter-property.md) значение свойства. Необходимо задать **фильтра** свойства **FilterGroupEnum** значение или массив **закладки** для использования этого параметра.|  
@@ -54,6 +53,5 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[Метод CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|[Удаление метода (набора записей ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|  
-|[Метод повторной синхронизации](../../../ado/reference/ado-api/resync-method.md)|[Метод UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|
-
+|[Метод CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|[Метод Delete (объект Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|  
+|[Метод Resync](../../../ado/reference/ado-api/resync-method.md)|[Метод UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|

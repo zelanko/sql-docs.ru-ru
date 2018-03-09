@@ -2,12 +2,13 @@
 title: "Добавление моделей интеллектуального анализа данных в структуру (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +16,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], creating
 - mining models [Analysis Services], modifying
 ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
-caps.latest.revision: 16
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 42ae87b14d6ddff90b78bb3c23a7d536750d8317
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 30fab0ce534bc76456f6876c1432feeb3de2de03
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Добавление моделей интеллектуального анализа данных в структуру (службы Analysis Services — интеллектуальный анализ данных)
-  Структура интеллектуального анализа данных должна поддерживать несколько моделей интеллектуального анализа данных. Поэтому после выхода из мастера можно открыть структуру и добавить в нее новые модели интеллектуального анализа данных. Каждый раз при создании модели можно использовать другой алгоритм, изменять параметры или применять фильтры для использования другого подмножества данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Структура интеллектуального анализа данных должна поддерживать несколько моделей интеллектуального анализа данных. Поэтому после выхода из мастера можно открыть структуру и добавить в нее новые модели интеллектуального анализа данных. Каждый раз при создании модели можно использовать другой алгоритм, изменять параметры или применять фильтры для использования другого подмножества данных.  
   
 ## <a name="adding-new-mining-models"></a>Добавление моделей интеллектуального анализа данных  
  Если для создания новой модели интеллектуального анализа данных используется мастер интеллектуального анализа данных, по умолчанию сначала необходимо создать структуру интеллектуального анализа данных. Мастер интеллектуального анализа данных позволяет добавить в структуру начальную модель интеллектуального анализа данных. Однако не обязательно создавать модель сразу. Если создать только структуру, не нужно решать, какой столбец использовать в качестве прогнозируемого атрибута или как использовать данные в конкретной модели. Вместо этого можно просто настроить общую структуру данных, которую предполагается использовать в дальнейшем, а затем с помощью средства [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md) добавлять новые модели интеллектуального анализа данных, основанные на этой структуре.  
@@ -64,10 +65,9 @@ ms.lasthandoff: 09/01/2017
  Для некоторых столбцов нужно также задавать *содержимое столбца*. При интеллектуальном анализе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] алгоритм обрабатывает данные из столбца в соответствии со свойством «Тип содержимого» этого столбца. Например, если в данных есть столбец «Доход», нужно указать, что этот столбец содержит непрерывный числовой показатель, задав для него тип содержимого «Непрерывный». Можно также указать, что числа в столбце «Доход» следует сгруппировать в контейнеры, задав тип содержимого «Дискретизированный». По желанию можно задать точное число контейнеров. Можно создавать различные модели, которые будут по-разному обрабатывать столбцы. Например, одна модель может разбивать множество всех заказчиков на три возрастных группы, а другая — на десять.  
   
 ## <a name="see-also"></a>См. также  
- [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Создание реляционной структуры интеллектуального анализа данных](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
+ [Структуры интеллектуального анализа данных и &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Создание реляционной структуры](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
  [Свойства модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-properties.md)   
  [Столбцы модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-columns.md)  
   
   
-

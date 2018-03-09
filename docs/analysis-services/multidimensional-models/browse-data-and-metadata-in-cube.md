@@ -2,30 +2,30 @@
 title: "Просмотр данных и метаданных в кубе | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0159070eb0405e49f9813828aa82b1483008b61f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 564e6236a13c7def4201058c443dbb802e685715
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Просмотр данных и метаданных в кубе
-  Для просмотра данных куба откройте вкладку **Браузер** в конструкторе кубов. Это представление служит для просмотра структуры куба, а также для проверки данных, вычислений, форматирования и безопасности объектов базы данных. Можно быстро просмотреть куб, как его видят конечные пользователи в средствах отчетности и других клиентских приложениях. При просмотре данных куба можно видеть различные измерения, детализировать данные и получать срезы данных по измерениям.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Для просмотра данных куба откройте вкладку **Браузер** в конструкторе кубов. Это представление служит для просмотра структуры куба, а также для проверки данных, вычислений, форматирования и безопасности объектов базы данных. Можно быстро просмотреть куб, как его видят конечные пользователи в средствах отчетности и других клиентских приложениях. При просмотре данных куба можно видеть различные измерения, детализировать данные и получать срезы данных по измерениям.  
   
  Перед просмотром куба необходимо его обработать и повторно подключиться к нему. После обработки куба откройте вкладку **Браузер** конструктора кубов. Нажмите кнопку «Повторное соединение» на панели инструментов, чтобы обновить соединение.  
   
@@ -113,4 +113,3 @@ ms.lasthandoff: 09/01/2017
  Чтобы скрыть пустые ячейки в сетке данных, щелкните правой кнопкой мыши в любом месте на панели данных и выберите пункт **Показывать пустые ячейки**.  
   
   
-

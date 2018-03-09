@@ -1,30 +1,34 @@
 ---
 title: "Для Office надстройки интеллектуального анализа данных SQL Server | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 12/18/2017
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ea4c810eb5c3dfca0588efc02407cf5a5729f68e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d637a50ca56acfcc80da1a09542e88e476351634
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Надстройки интеллектуального анализа данных SQL Server для Office
+
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Надстройки для интеллектуального анализа данных — это упрощенный набор средств для прогнозирующего анализа, позволяющий использовать данные в Excel для построения аналитических моделей для прогнозирования, рекомендации и исследования.  
+  
+> [!IMPORTANT]
+> Данных интеллектуального анализа данных надстройку для Office не поддерживается в Office 2016 или более поздней версии.
   
  Мастера и средства управления данными в надстройках предоставляют пошаговые инструкции для выполнения следующих стандартных задач интеллектуального анализа данных.  
   
@@ -77,11 +81,10 @@ ms.lasthandoff: 09/01/2017
   
 -   Business Intelligence  
   
--   Standard Edition  
+-   Standard  
   
  В зависимости от выпуска служб SQL Server Analysis Services, с которым устанавливается соединение, некоторые дополнительные алгоритмы могут оказаться недоступными. Дополнительные сведения см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).  
   
  Дополнительные сведения об установке см. на этой странице Центра загрузки: [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   
   
-

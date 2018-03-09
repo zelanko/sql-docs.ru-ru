@@ -2,9 +2,12 @@
 title: "Определение метасвойств в инструкции OPENXML | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -16,19 +19,20 @@ helpviewer_keywords:
 - extracting information of XML nodes [SQL Server]
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6bc6d9b3e482869bd82daa13c167d0221639a95f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 968f1a5b32bbc6c2e6f2f955083e8fd247e3fc82
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Определение метасвойств в инструкции OPENXML
-  Атрибутами метасвойств в документе XML называются атрибуты, описывающие свойства сущностей XML, например элементов, атрибутов и других узлов DOM. Физически эти атрибуты отсутствуют в тексте документа XML. Тем не менее инструкция OPENXML предоставляет эти метасвойства для всех сущностей XML. Эти метасвойства позволяют извлекать сведения, например данные о локальном положении и пространстве имен, об узлах XML. Эти сведения предоставляют более подробные данные, чем текстовое представление.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Атрибутами метасвойств в документе XML называются атрибуты, описывающие свойства сущностей XML, например элементов, атрибутов и других узлов DOM. Физически эти атрибуты отсутствуют в тексте документа XML. Тем не менее инструкция OPENXML предоставляет эти метасвойства для всех сущностей XML. Эти метасвойства позволяют извлекать сведения, например данные о локальном положении и пространстве имен, об узлах XML. Эти сведения предоставляют более подробные данные, чем текстовое представление.  
   
  Метасвойства можно сопоставить со столбцами набора строк инструкции OPENXML при помощи параметра *ColPattern* . Столбцы будут содержать значения метасвойств, с которыми они связаны. Дополнительные сведения о синтаксисе инструкции OPENXML см. в разделе [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md).  
   
@@ -41,7 +45,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  На метасвойства нельзя ссылаться при перемещении по XML с помощью XPath.  
   
-|Атрибут метасвойства|Описание|  
+|Атрибут метасвойства|Description|  
 |----------------------------|-----------------|  
 |**@mp:id**|Формируемый системой идентификатор узла DOM, действующий в пределах документа. Если документ не подлежит повторному синтаксическому анализу, этот идентификатор ссылается на тот же узел XML.<br /><br /> Идентификатор XML, равный **0** , обозначает корневой элемент. У такого узла идентификатор XML родительского элемента равен значению NULL.|  
 |**@mp:localname**|Локальная часть имени узла. Применяется вместе с префиксом и URI пространства имен для обозначения элементов и узлов атрибутов.|  
@@ -52,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
  В следующей таблице перечислены дополнительные родительские свойства, которые позволяют получить сведения об иерархии.  
   
-|Родительский атрибут метасвойства|Описание|  
+|Родительский атрибут метасвойства|Description|  
 |-----------------------------------|-----------------|  
 |**@mp:parentid**|Соответствует **../@mp:id**|  
 |**@mp:parentlocalname**|Соответствует **../@mp:localname**|  

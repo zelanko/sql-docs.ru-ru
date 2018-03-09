@@ -3,10 +3,12 @@ title: "Типы данных C | Документы Microsoft"
 ms.custom: 
 ms.date: 07/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - C data types [ODBC]
 - C buffers [ODBC]
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 31de2fc95be1a7ead0b61b2dde493caf8d484fe4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0fe266052c52b46b7f206869bdf89ff5377daf3b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-data-types"></a>Типы данных C
 Типы данных ODBC C указывают тип данных C буферов, используемых для хранения данных в приложении.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 09/09/2017
 |SQL_C_USHORT [j]|SQLUSMALLINT|короткое целочисленное число без знака|  
 |SQL_C_SLONG [j]|SQLINTEGER|длинное целочисленное|  
 |SQL_C_ULONG [j]|SQLUINTEGER|длинное целочисленное число без знака|  
-|SQL_C_FLOAT|SQLREAL|float|  
+|SQL_C_FLOAT|SQLREAL|FLOAT|  
 |SQL_C_DOUBLE|SQLDOUBLE SQLFLOAT|double|  
 |SQL_C_BIT|SQLCHAR|char без знака|  
 |SQL_C_STINYINT [j]|SQLSCHAR|char со знаком|  
@@ -158,8 +159,7 @@ struct tagSQLGUID {
   
  Этот раздел содержит следующий раздел.  
   
--   [64-разрядное целое число структур](../../../odbc/reference/appendixes/64-bit-integer-structures.md)  
+-   [64-разрядные целочисленные структуры](../../../odbc/reference/appendixes/64-bit-integer-structures.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Типы данных C в ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)
-
+ [Типы данных C в ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)

@@ -2,31 +2,32 @@
 title: "Элемент PropertyRef (CSDLBI) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 8299efb9-e224-4a82-bdfc-a74ec92f8711
-caps.latest.revision: 7
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9df2f9bfd77a854c90f08ed8b4314bfa212bf469
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6e2b4e43294d4e5c48500560203e778a21b99724
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="propertyref-element-csdlbi"></a>Элемент PropertyRef (CSDLBI)
-  Элемент PropertyRef — простой тип, который обеспечивает ссылку на столбец, предоставляющий значение, необходимое другому свойству.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Элемент PropertyRef — простой тип, который обеспечивает ссылку на столбец, предоставляющий значение, необходимое другому свойству.  
   
 ## <a name="elements-and-attributes"></a>Элементы и атрибуты  
  В следующей таблице перечислены элементы и атрибуты, определяющие элемент PropertyRef.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 09/01/2017
 |PropertyRef|Да|Значение типа String, содержащее ссылку на свойство.|  
   
 ## <a name="example"></a>Пример  
- **Табличный**  
+ **Табличные**  
   
  В следующем примере для CSDLBI версии 1.1 элемент PropertyRef указывает источник формулы, используемой в мере, из примера табличной модели AdventureWorks.  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="example"></a>Пример  
- **Multidimensional**  
+ **Многомерные**  
   
  В следующем примере для CSDLBI версии 1.1 показан ключевой показатель эффективности из куба операций Contoso. Элементы PropertyRef указывают на столбцы, содержащие формулы или значения, используемые для определения цели ключевого показателя эффективности и состояния относительно этой цели.  
   
@@ -93,4 +94,3 @@ ms.lasthandoff: 09/01/2017
  [Технический справочник по заметки бизнес-Аналитики для языка CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   
-

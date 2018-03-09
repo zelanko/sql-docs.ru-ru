@@ -3,8 +3,11 @@ title: "Table (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - table data type [SQL Server]
 - table variables [SQL Server]
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
-caps.latest.revision: 48
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b22ecfa04f949af77df974abc3359b7bc5144a82
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 90f8db8df144113d47543ff50c321baed61fba37
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Специальный тип данных, который может быть использован для хранения результирующего набора для обработки в будущем. **Таблица** в основном используется для временного хранения набора строк, возвращаемых как результирующий набор функции, возвращающие табличные значения. Функции и переменные могут быть объявлены с типом **таблицы**. **Таблица** переменные могут использоваться в функциях, хранимых процедур и пакетов. При объявлении переменных типа **таблицы**, используйте [DECLARE @local_variable ](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
@@ -189,4 +191,3 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)
   
   
-

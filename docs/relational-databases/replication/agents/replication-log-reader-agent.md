@@ -2,9 +2,12 @@
 title: "Агент чтения журнала репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: 
@@ -15,19 +18,20 @@ helpviewer_keywords:
 - agents [SQL Server replication], Log Reader Agent
 - command prompt [SQL Server replication]
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
-caps.latest.revision: 51
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3107bcd2f7490c9583c0c8e9355ecc9ff9e20bd7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: bf4fda73309e49d009d156fa8c18063e495bac92
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="replication-log-reader-agent"></a>Агент чтения журнала репликации
-  Агент чтения журнала производит мониторинг журналов транзакций всех баз данных, включенных в репликацию транзакций, и копирует помеченные для репликации транзакции из журнала транзакций в базу данных распространителя.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Агент чтения журнала производит мониторинг журналов транзакций всех баз данных, включенных в репликацию транзакций, и копирует помеченные для репликации транзакции из журнала транзакций в базу данных распространителя.  
   
 > [!NOTE]  
 >  Параметры можно указывать в любом порядке. Если необязательные параметры не указаны, используются стандартные значения из профиля агента по умолчанию.  
@@ -72,10 +76,10 @@ logread [-?]
  **-?**  
  Отображает сведения об использовании.  
   
- **-Publisher** *server_name*[**\\***instance_name*]  
- Имя издателя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите *server_name***\\***instance_name* , чтобы обратиться к именованному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию.  
+ **-Publisher** *имя_сервера*[**\\***имя_экземпляра*]  
+ Имя издателя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите *имя_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере.  
   
- **-PublisherDB** *publisher_database*  
+ **-PublisherDB** *база_данных_издателя*  
  Имя базы данных издателя.  
   
  **-Continuous**  
@@ -84,10 +88,10 @@ logread [-?]
  **-DefinitionFile** *путь_и_имя_файла_определения*  
  Путь к файлу определения агента. Файл определения агента содержит параметры командной строки для агента. Содержимое файла анализируется как для исполняемого файла. Значения аргумента, содержащие произвольные символы, следует заключать в двойные кавычки (").  
   
- **-Distributor** *server_name*[**\\***instance_name*]  
- Имя распространителя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите *server_name***\\***instance_name* , чтобы обратиться к именованному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию.  
+ **-Distributor** *имя_сервера*[**\\***имя_экземпляра*]  
+ Имя распространителя. Укажите *имя_сервера* для экземпляра служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере. Укажите *имя_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере.  
   
- **-DistributorLogin** *distributor_login*  
+ **-DistributorLogin** *имя_входа_распространителя*  
  Имя входа распространителя.  
   
  **-DistributorPassword** *distributor_password*  
@@ -99,7 +103,7 @@ logread [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Уровень шифрования по протоколу SSL, который используется агентом чтения журнала при установлении соединений.  
   
-|Значение EncryptionLevel|Описание|  
+|Значение EncryptionLevel|Description|  
 |---------------------------|-----------------|  
 |**0**|Указывает, что SSL не используется.|  
 |**1**|Указывает, что SSL используется, но агент не проверяет, подписан ли сертификат сервера SSL надежным издателем.|  
@@ -113,7 +117,7 @@ logread [-?]
  **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
  Указывает объем данных, заносимых в журнал во время операции чтения журнала. Влияние на производительность, оказываемое ведением журнала, можно максимально уменьшить, выбрав значение **1**.  
   
-|Значение HistoryVerboseLevel|Описание|  
+|Значение HistoryVerboseLevel|Description|  
 |-------------------------------|-----------------|  
 |**0**||  
 |**1**|По умолчанию. Всегда обновлять предыдущее сообщение журнала с таким же состоянием (запуск, выполнение, успех и т. д.). Если предыдущих сообщений с таким состоянием нет, то вставить новую запись.|  
@@ -123,7 +127,7 @@ logread [-?]
  Количество секунд до того, как поток журнала проверяет наличие соединений, ожидающих ответа от сервера. Это значение можно уменьшить, чтобы агент проверки не помечал агент чтения журнала как подозрительный при выполнении долго выполняющегося пакета. Значение по умолчанию — 300 секунд.  
   
  **-LoginTimeOut** *login_time_out_seconds*  
- Время ожидания входа в секундах. Значение по умолчанию — 15 секунд.  
+ Время ожидания входа в секундах. Значение по умолчанию составляет 15 секунд.  
   
  **-LogScanThreshold** *scan_threshold*  
  Только для внутреннего применения.  
@@ -145,7 +149,7 @@ logread [-?]
  **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
  Указывает, должны ли выводимые данные быть подробными.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**0**|Выводятся только сообщения об ошибках.|  
 |**1**|Выводятся все сообщения о ходе выполнения агента.|  
@@ -158,14 +162,14 @@ logread [-?]
  **-PacketSize** *packet_size*  
  Размер пакета в байтах. Значение по умолчанию равно 4 096 байт.  
   
- **-PollingInterval** *polling_interval*  
+ **-PollingInterval** *интервал_опроса*  
  Определяет частоту (в секундах) опроса журнала о реплицируемых транзакциях. Значение по умолчанию — 5 секунд.  
   
  **-ProfileName** *profile_name*  
  Указывает профиль агента, из которого берутся параметры агента. Если **ProfileName** имеет значение NULL, профиль агента отключен. Если значение **ProfileName** не указано, используется профиль по умолчанию для агентов этого типа. Дополнительные сведения см. в статье [Профили агента репликации](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
- **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
- Указывает партнера по обеспечению отработки отказа служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участвующего в сеансе зеркального отображения базы данных с базой данных публикации. Дополнительные сведения см. в статье [Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
+ **-PublisherFailoverPartner** *имя_сервера*[**\\***имя_экземпляра*]  
+ Указывает партнера по обеспечению отработки отказа служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участвующего в сеансе зеркального отображения базы данных с базой данных публикации. Дополнительные сведения см. в статье [Зеркальное отображение и репликация баз данных (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
  Указывает режим безопасности издателя. Значение **0** означает проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (по умолчанию), а значение **1** — проверку подлинности Windows.  
@@ -188,7 +192,7 @@ logread [-?]
  **-RecoverFromDataErrors**  
  Указывает, что агент чтения журнала должен продолжить работу после возникновения ошибок данных в столбце, опубликованном издателем, отличным от SQL Server. По умолчанию такие ошибки приводят к завершению работы агента чтения журнала. Если указан параметр **-RecoverFromDataErrors**, то производится репликация ошибочных данных либо значениями NULL, либо другими соответствующими значениями, а предупреждающие сообщения записываются в таблицу [MSlogreader_history](../../../relational-databases/system-tables/mslogreader-history-transact-sql.md) . Этот параметр поддерживается только для издателей Oracle.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Если агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] настроен для запуска от учетной записи локальной системы, а не пользователя домена (по умолчанию), то служба имеет доступ только к локальному компьютеру. Если агент чтения журнала, запускаемый агентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , настроен для входа в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]с проверкой подлинности Windows, то работа агента слияния завершится ошибкой. Значением по умолчанию является проверка подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения об изменении учетных записей безопасности см. в разделе [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  

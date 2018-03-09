@@ -2,28 +2,30 @@
 title: "Модель приложения для секционирования таблиц, оптимизированных для памяти | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
-caps.latest.revision: 20
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 30bcdf16b27cf4f85fca86c8daeeeec210798c07
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c1ac27b53e011580bb185ba0f264c130d44560be
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Модель приложения для секционирования таблиц, оптимизированных для памяти
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] поддерживает шаблон, в соответствии с которым ограниченный объем активных данных сохраняется в таблице, оптимизированной для памяти, в то время как менее популярные данные обрабатываются на диске. Как правило, в этом случае данные сохраняются с ключом **datetime** .  
   
@@ -41,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Добавление активной секции.  
   
- ![Переключение секций.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Partition switch.")  
+ ![Переключение секций.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Переключение секций.")  
 Обслуживание активных данных  
   
  Действия, начиная с операции Deleting Active Orders, необходимо выполнять в течение окна обслуживания, чтобы не создавать запросы к отсутствующим данным в период между удалением данных и подключением с заменой промежуточной таблицы.  
@@ -53,7 +55,7 @@ ms.lasthandoff: 06/22/2017
   
  В первой части данного примера создается база данных и необходимые объекты. Во второй части примера показано перемещение данных из таблицы, оптимизированной для памяти, в секционированную таблицу.  
   
-```tsql  
+```sql  
 CREATE DATABASE partitionsample;  
 GO  
   
@@ -220,4 +222,3 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
  [Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
-

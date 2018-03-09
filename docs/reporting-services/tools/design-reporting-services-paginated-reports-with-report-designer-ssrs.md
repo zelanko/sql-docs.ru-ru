@@ -1,35 +1,34 @@
 ---
-title: "Создавать отчеты с помощью конструктора отчетов (SSRS) | Документы Microsoft"
+title: "Разработка отчетов с использованием конструктора отчетов (SSRS) | Документация Майкрософт"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Report Designer [Reporting Services], report creation
+helpviewer_keywords: Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
-caps.latest.revision: 77
+caps.latest.revision: "77"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 02e1eb6504ae66ba6e48cedc0c511c4cd9505fb2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 0fca00b134b3e17458933dfb6e3c14a61a1cc218
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-
-# <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Конструктор отчетов служб Reporting Services разбиением на страницы с помощью конструктора отчетов (SSRS)
+# <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Отчеты с разбивкой на страницы служб Reporting Services проектирования с конструктором отчетов (SSRS)
 
 Для создания полнофункциональных отчетов с разбивкой на страницы и систем отчетности служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используется конструктор отчетов. Конструктор отчетов — это графический интерфейс, с помощью которого можно задавать источники данных, наборы данных, запросы, позиции макета отчета для областей данных и полей, а также такие интерактивные возможности, как параметры и наборы отчетов, которые работают совместно.  
 
-Конструктор отчетов — это функция  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]среды Microsoft Visual Studio для создания решений бизнес-аналитики. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]не включена в SQL Server. Скачать [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
+Конструктор отчетов — это функция  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]среды Microsoft Visual Studio для создания решений бизнес-аналитики. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] не входит в SQL Server. Скачать [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
   
 ## <a name="benefits-of-report-projects"></a>Преимущества проектов отчетов  
 Проекты отчетов используются как контейнеры для определений отчетов и ресурсов. Используйте проекты для:  
@@ -45,14 +44,14 @@ ms.lasthandoff: 08/09/2017
  Эти сведения помогут вам при проектировании отчетов с разбивкой на страницы и связанных элементов для одного проекта отчета в решении [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Дополнительные сведения о решениях и нескольких проектах в SSDT см. в статье [Службы Reporting Services в SQL Server Data Tools (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
 
   
-##  <a name="bkmk_SharedDataSources"></a> Shared Data Sources  
+##  <a name="bkmk_SharedDataSources"></a> Общие источники данных  
  С помощью [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] можно определять и развертывать общие источники данных для системы отчетности. Общие источники данных могут развертываться независимо от других элементов проекта с помощью свойств **OverwriteDataSources** и **TargetDataSourceFolder** . Дополнительные сведения см. в разделе [Задание свойства развертывания (службы Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
  В конструкторе отчетов источники данных, используемые в отчете, можно задать в области данных отчета и в обозревателе решений. Дополнительные сведения см. в статье [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Среда [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] не поддерживает открытие источников данных, опубликованных на сервере отчетов или на сайте SharePoint, но не включенных в решение [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . Для этого используйте [среду разработки построителя отчетов (службы SSRS)](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md).  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] — это клиентское средство. Проверить решение отчетности можно локально на своем компьютере, развернуть его в тестовой среде для проверки серверного решения, а затем развернуть в производственной среде. После развертывания проверьте, что для среды сервера отчетов заданы модули обработки источников данных и учетные данные для обращения к источникам данных. Управлять свойствами для различных развертываний поможет диспетчер конфигурации. Дополнительные сведения см. в разделе [Службы Reporting Services в SQL Server Data Tools (службы SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
   
- Дополнительные сведения см. в разделе [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Дополнительные сведения см. в разделе [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
    
 ##  <a name="bkmk_SharedDatasets"></a> Общие наборы данных  
  Используйте [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] для определения и развертывания общих наборов данных для системы отчетности. Общие наборы данных могут развертываться независимо от других элементов проекта с помощью свойств **OverwriteDatasets** и **TargetDatasetFolder** . Дополнительные сведения см. в разделе [Задание свойства развертывания (службы Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
@@ -77,14 +76,14 @@ ms.lasthandoff: 08/09/2017
   
 -   **Добавить существующий элемент.** Существующее определение отчета (RDL-файл) открывается в конструкторе отчетов. При открытии отчета или проекта из более ранней версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] проект может автоматически обновиться до текущей версии, а отчет  — до текущей схемы. Дополнительные сведения см. в разделе [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md).  
   
--   **Импортировать отчет [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access.** Импорт всех отчетов из базы данных Access (MDB, ACCDB) или файла проекта (ADP). Конструктор отчетов преобразует каждый отчет из файла базы данных или файла проекта в формат языка определения отчетов (RDL) и сохраняет их в указанном проекте отчета. Не все функции отчета Access передаются в файл определения отчета (RDL). Дополнительные сведения см. в разделе [Импорт отчетов из Microsoft Access (службы Reporting Services)](http://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) и [Поддерживаемые функции отчетов Access (службы SSRS)](http://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44).  
+-   **Импортировать отчет Access [!INCLUDE[msCoName](../../includes/msconame-md.md)].** Импорт всех отчетов из базы данных Access (MDB, ACCDB) или файла проекта (ADP). Конструктор отчетов преобразует каждый отчет из файла базы данных или файла проекта в формат языка определения отчетов (RDL) и сохраняет их в указанном проекте отчета. Не все функции отчета Access передаются в файл определения отчета (RDL). Дополнительные сведения см. в разделе [Импорт отчетов из Microsoft Access &#40;Reporting Services&#41;](http://msdn.microsoft.com/library/4f29d5b8-b77d-4714-a84a-05523df55646) и [Поддерживаемые функции отчетов Access &#40;SSRS&#41;](http://msdn.microsoft.com/library/7ffec331-6365-4c13-8e58-b77a48cffb44).  
   
     > [!NOTE]  
     >  Чтобы использовать функцию импорта, необходимо, чтобы на компьютере, на котором установлен конструктор отчетов, был установлен Access 2002 или более поздняя версия. При импорте отчетов должен быть доступен источник данных для отчетов Access.  
   
 -   **Работа непосредственно в RDL.** Если отчет создается в конструкторе отчетов, он сохраняется в формате XML как RDL-файл. Этот файл можно изменять с помощью конструктора отчетов, текстового редактора или любого другого средства, позволяющего изменять XML-файлы.  
   
-     При изменении источника определения отчета в конструкторе отчетов работа ведется в текущей схеме RDL для версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , из которой устанавливались средства разработки. При построении проекта версия схемы может измениться в зависимости от свойств развертывания. Дополнительные сведения см. в разделе [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+     При изменении источника определения отчета в конструкторе отчетов работа ведется в текущей схеме RDL для версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , из которой устанавливались средства разработки. При построении проекта версия схемы может измениться в зависимости от свойств развертывания. Дополнительные сведения см. в разделе [Развертывание и поддержка версий в SQL Server Data Tools (службы SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
      Прямое изменение RDL-файла может привести к тому, что отчет нельзя будет ни запустить, ни опубликовать на сервере отчетов. Как и в любом другом XML-файле, убедитесь, что специальные символы, используемые внутри элементов, правильно закодированы. Сервер отчетов при публикации отчета использует эту схему для проверки содержащегося в RDL-файле XML-кода.  
   
@@ -100,14 +99,14 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_Resources"></a> Ресурсы  
  Можно добавить в проект файлы, которые связаны с отчетом, но не обрабатываются сервером отчетов. Например, можно добавить изображения или файлы фигур ESRI для пространственных данных. Дополнительные сведения см. в статье [Resources](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
  
-##  <a name="bkmk_ReportLayout"></a> Paginated Report Layout  
+##  <a name="bkmk_ReportLayout"></a> Макет отчета с разбивкой на страницы  
  Чтобы создать макет отчета, перетащите элементы отчета и данные отчета с панели элементов в область конструктора и расположите их в нужном порядке. Чтобы добавить данные в отчет, перетащите поля набора данных в элементы в области конструктора. Чтобы объединить данные в группы в области данных табликса, перетащите поля набора данных на панель группировки. Поскольку средства разработки отчетов — это, в основном, средства создания определений отчетов, подход к проектированию отчетов в построителе отчетов и в конструкторе отчетов примерно один и тот же.  
    
-##  <a name="bkmk_Preview"></a> Preview a Paginated Report  
+##  <a name="bkmk_Preview"></a> Предварительный просмотр отчета с разбивкой на страницы  
  Режим **Предварительный просмотр** позволит проверить данные отчета и макет отчета. Во время предварительного просмотра отчета процессор отчетов проверяет схему определения отчета и синтаксис выражений и отображает возможные проблемы в окне [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) .  
   
 > [!NOTE]  
->  При осуществлении предварительного просмотра отчета данные для отчета кэшируются в файл на локальном компьютере. При повторном просмотре того же отчета (с использованием того же запроса, параметров и учетных данных) конструктор отчетов получает кэшированную копию вместо того, чтобы заново выполнять запрос. Файл данных сохраняется как  *\<имя_отчета >*. rdl.data в том же каталоге, что и файл определения отчета. Этот файл не удаляется, когда конструктор отчетов закрывается.  
+>  При осуществлении предварительного просмотра отчета данные для отчета кэшируются в файл на локальном компьютере. При повторном просмотре того же отчета (с использованием того же запроса, параметров и учетных данных) конструктор отчетов получает кэшированную копию вместо того, чтобы заново выполнять запрос. Файл данных сохраняется под именем *\<имя_отчета>*.rdl.data в том же каталоге, что и файл определения отчета. Этот файл не удаляется, когда конструктор отчетов закрывается.  
   
  Просмотреть отчет можно следующими способами:  
   
@@ -146,7 +145,7 @@ ms.lasthandoff: 08/09/2017
   
     -   Необходимо изменить макет отчета, чтобы отчет лучше читался в напечатанном виде.  
    
-##  <a name="bkmk_SaveandDeploy"></a> Save and Deploy Paginated Reports  
+##  <a name="bkmk_SaveandDeploy"></a> Сохранение и развертывание отчетов с разбивкой на страницы  
  В конструкторе отчетов можно сохранить отчеты и другие файлы проекта локально, а также развернуть их на сервере отчетов или сайте SharePoint. Общие источники данных, общие наборы данных, отчеты, ресурсы отчетов и элементы отчетов могут разворачиваться независимо друг от друга или все вместе в зависимости от заданных свойств развертывания проекта. Дополнительные сведения см. в статье [Configuration and Deployment Properties](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties).  
   
  Важно понимать, что при проектировании отчета в конструкторе отчетов используется схема определения отчета, которая поддерживается текущей версией служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Когда задаются свойства развертывания проекта для конкретного сервера отчетов или SharePoint, а затем сохраняется отчет, конструктор отчетов сохраняет определение отчета в папку построения в схеме, которая соответствует версии на целевом сервере отчетов. Чтобы создать отчеты, которые можно будет публиковать на сервере отчетов более низкого уровня, конструктор отчетов удаляет элементы отчета, которых нет в целевой схеме. Это происходит автоматически и без запроса на подтверждение. Когда это происходит, исходное определение отчета сохраняется в папке проекта. Измененное определение отчета, которое развертывается, находится в папке построения.  
@@ -154,7 +153,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Для отладки выражений и выявления ошибок развертывания следует использовать определение отчета в папке построения. Не используйте **Просмотр исходного кода**. Окно**Просмотр исходного кода** показывает источник определения отчета из папки проекта.  
   
- Дополнительные сведения см. в разделе [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+ Дополнительные сведения см. в разделе [Развертывание и поддержка версий в SQL Server Data Tools (службы SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 ### <a name="save-a-report-locally"></a>Локальное сохранение отчета  
  При работе с отчетом или другими элементами проекта в конструкторе отчетов файлы сохраняются на локальном компьютере или в общей папке на другом компьютере, к которому имеется есть доступ.  
@@ -188,9 +187,9 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Скачать SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)  
-[Службы Reporting Services в SQL Server Data Tools](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   
+[Скачивание SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)  
+[Службы Reporting Services в SQL Server Data Tools (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   
 [Средства проектирования запросов](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [Развертывание и поддержка версий в SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

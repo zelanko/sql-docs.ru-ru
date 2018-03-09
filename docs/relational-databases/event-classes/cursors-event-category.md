@@ -2,9 +2,12 @@
 title: "Категория событий Cursors | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,24 +17,24 @@ helpviewer_keywords:
 - event classes [SQL Server], Cursors event category
 - SQL Server event classes, Cursors event category
 ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
-caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bb543d97fb6e5a879bde56591e19a558a1781759
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8f5a384535583fd7ae18329061a4f7d34d1f927e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="cursors-event-category"></a>Категория событий Cursors
-  Категория событий **Cursors** содержит классы событий, используемых для контроля действий курсоров.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Категория событий **Cursors** содержит классы событий, используемых для контроля действий курсоров.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Класс событий CursorClose](../../relational-databases/event-classes/cursorclose-event-class.md)|Описывает события закрытия курсора, возникающие в API-курсорах.|  
 |[Класс событий CursorExecute](../../relational-databases/event-classes/cursorexecute-event-class.md)|Описывает события выполнения курсоров, возникающие в API-курсорах.|  
@@ -45,4 +48,3 @@ ms.lasthandoff: 06/22/2017
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  
   
   
-

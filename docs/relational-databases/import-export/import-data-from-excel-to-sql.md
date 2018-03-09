@@ -2,25 +2,28 @@
 title: "Импорт данных из Excel в SQL | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 158a6c72c0c172b061d79bb52a276bacc22c0fcd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: ab792aed71ab2e7837da9cf0073d4ff191ce5184
-ms.openlocfilehash: ce462c238c81a4a9fc82869a856ac13e9f112aee
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/05/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Импорт данных из Excel в SQL Server или базу данных Azure
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Импортировать данные из файлов Excel в SQL Server или базу данных SQL Azure можно несколькими способами. В этой статье приводятся общие сведения о каждом из этих способов и ссылки на более подробные инструкции.
 -   Вы можете импортировать данные из Excel в SQL в один шаг, используя одно из следующих средств:
     -   мастер импорта и экспорта SQL Server;
@@ -209,4 +212,3 @@ bcp.exe ImportFromExcel..Data_bcp in "D:\Desktop\data.csv" -T -c -t ,
 ## <a name="next-steps"></a>Следующие шаги
 
 Дополнительные сведения об интересующем вас решении доступны по ссылкам ниже.
-

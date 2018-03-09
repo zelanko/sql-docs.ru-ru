@@ -1,28 +1,31 @@
 ---
 title: "Автоматизации миграции баз данных в SQL Server для Linux | Документы Microsoft"
 description: 
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
-ms.date: 08/23/2017
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.date: 01/30/2018
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
-ms.custom: H1Hack27Feb2017
+ms.custom: sql-linux
 ms.workload: Inactive
+ms.openlocfilehash: a59b3f20018c7dfff63cd716b6c838efef650437
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: eaf6ab8c21c6a0685886d2c031434a68ff2cb8b8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>Автоматизации миграции баз данных для Linux с SQL Server Migration Assistant
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этом разделе описываются [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) помогает легко перенести 2017 г. SQL Server в Linux базы данных из Microsoft Access, DB2, MySQL, Oracle и Sybase. SSMA — это приложение Windows, поэтому следует использовать SSMA при наличии компьютером Windows, можно подключиться к удаленному экземпляру SQL Server в Linux. 
+В этой статье описаны [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) помогает легко перенести 2017 г. SQL Server в Linux базы данных из Microsoft Access, DB2, MySQL, Oracle и Sybase. SSMA — это приложение Windows, поэтому следует использовать SSMA при наличии компьютером Windows, можно подключиться к удаленному экземпляру SQL Server в Linux. 
 
 SSMA поддерживает разнообразные исходных баз данных, включая Oracle, MySQL, Sybase, DB2 и Microsoft Access для 2017 г. SQL Server в Linux и позволяет автоматизировать задачи миграции, такие как:
 
@@ -32,7 +35,7 @@ SSMA поддерживает разнообразные исходных баз
 - Перенос данных
 - Тестирование миграции
 
-Чтобы приступить к работе, загрузка SQL Server Migration Assistant (SSMA) для вашей базы данных-источника в списке ниже.
+Чтобы приступить к работе, загрузка SQL Server Migration Assistant (SSMA) для вашей базы данных-источника из следующего списка:
 - [SSMA для Access](http://aka.ms/ssmaforaccess)
 - [SSMA для DB2](http://aka.ms/ssmafordb2)
 - [SSMA для MySql](http://aka.ms/ssmaformysql) 
@@ -44,5 +47,4 @@ SSMA поддерживает разнообразные исходных баз
 ## <a name="see-also"></a>См. также:
 - [Блог Microsoft переноса данных](http://blogs.msdn.microsoft.com/datamigration)
 - [Блог SQL Server Migration Assistant (SSMA)](http://blogs.msdn.microsoft.com/ssma/)
-
 

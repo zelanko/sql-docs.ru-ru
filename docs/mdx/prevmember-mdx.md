@@ -2,34 +2,32 @@
 title: "PrevMember (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- PREVMEMBER
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- PrevMember function
+f1_keywords: PREVMEMBER
+dev_langs: kbMDX
+helpviewer_keywords: PrevMember function
 ms.assetid: 4d8c9c6b-13b6-4baf-bd1b-8e8f89187080
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 43fdace8b02e51ccfc5efc987a34ddd22b66019a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: fbf6613bc3524bd2a460828acdd764cc60d6cbd5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="prevmember-mdx"></a>PrevMember (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает предыдущий элемент уровня, содержащего указанный элемент.  
   
@@ -44,7 +42,7 @@ Member_Expression.PrevMember
  *Member_Expression.*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **PrevMember** функция возвращает предыдущий элемент на том же уровне, что и указанный элемент.  
   
 ## <a name="example"></a>Пример  
@@ -92,4 +90,3 @@ WHERE ([Geography].[State-Province].x,
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

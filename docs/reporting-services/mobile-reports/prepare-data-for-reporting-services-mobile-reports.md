@@ -1,27 +1,27 @@
 ---
-title: "Подготовка данных для мобильных отчетов служб Reporting Services | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Подготовка данных для мобильных отчетов служб Reporting Services | Документы Майкрософт"
+ms.custom: 
 ms.date: 02/08/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bfde173f8848326fba857808e15448385f8c8322
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f995ee637ce4a05f3f4339abf363e02ff96f6f95
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Prepare data for Reporting Services mobile reports
   
@@ -89,12 +89,11 @@ ms.lasthandoff: 08/09/2017
 | Технологическое аппаратное обеспечение и оборудование   | Информационные технологии |  
 | Телекоммуникационные услуги |Информационные технологии |  
   
-### <a name="see-also"></a>См. также:  
+### <a name="see-also"></a>См. также раздел  
 - [Подготовка данных в Excel для мобильных отчетов службы отчетов](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)  
 - [Сохранение форматирования дат для служб Analysis Services в мобильных отчетах](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)
 - [Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
   
   
   
-
 

@@ -3,7 +3,7 @@ title: "Свойство NumericScale (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - NumericScale property [ADO]
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 21e85b7e9645761a6d25227113deb5d3eb564720
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 98f5c141f0cf9483ab7d527f46911a36257ced47
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="numericscale-property-ado"></a>Свойство NumericScale (ADO)
 Указывает шкалу числовых значений в [параметр](../../../ado/reference/ado-api/parameter-object.md) или [поле](../../../ado/reference/ado-api/field-object.md) объекта.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **байтов** значение, указывающее число десятичных разрядов для числового значения, которые будут разрешены.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **NumericScale** свойства, чтобы определить, сколько цифр справа от десятичной запятой будет использоваться для представления значений для числового **параметр** или **поле** объекта.  
   
  Для **параметр** объектов, **NumericScale** свойство доступно для чтения/записи.  
@@ -48,10 +47,9 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[Объект параметра](../../../ado/reference/ado-api/parameter-object.md)|[Объект field](../../../ado/reference/ado-api/field-object.md)|  
+|[Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Объект Field](../../../ado/reference/ado-api/field-object.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [NumericScale и пример точности свойства (Visual Basic)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
  [Пример свойства точности (VC ++) и NumericScale](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
- [Свойство точности (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
-
+ [Свойство Precision (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

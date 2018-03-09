@@ -2,26 +2,28 @@
 title: "Учебник. Общие сведения о выражениях | Документация Майкрософт"
 ms.custom: 
 ms.date: 09/16/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-caps.latest.revision: 14
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: a75e3eb0532359a4528af38270820126e14f4b36
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 97b19aaffd06a196d3cbd39e44b49c971a146edf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tutorial-introducing-expressions"></a>Учебник. Общие сведения о выражениях
 В этом учебнике по [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] вы научитесь использовать выражения со стандартными функциями и операторами для создания эффективных и гибких отчетов [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы. 
@@ -672,5 +674,4 @@ ms.lasthandoff: 08/09/2017
   
   
   
-
 

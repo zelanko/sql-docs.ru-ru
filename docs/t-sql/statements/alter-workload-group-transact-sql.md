@@ -1,10 +1,13 @@
 ---
 title: "ALTER WORKLOAD GROUP (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 01/19/2016
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
-caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e5a5d5650311115edc52866abdd167700438cc1f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: d48a892ef00610cc0d69ff8d2a36e0fce4be7704
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Изменяет существующую конфигурацию группы рабочей нагрузки регулятора ресурсов и при необходимости назначает ее для пула ресурсов регулятора ресурсов.  
   
@@ -39,7 +41,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 ALTER WORKLOAD GROUP { group_name | "default" }  
 [ WITH  
     ([ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -58,32 +59,30 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Имя существующей, определяемой пользователем или заданной по умолчанию группы рабочей нагрузки регулятора ресурсов.  
   
 > [!NOTE]  
->  При установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регулятор ресурсов создает внутренние группы и группы «по умолчанию».  
+> При установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регулятор ресурсов создает внутренние группы и группы «по умолчанию».  
   
  Параметр "default" должен заключаться в кавычки ("") или квадратные скобки ([]), если используется с инструкцией ALTER WORKLOAD GROUP (во избежание конфликта с системным зарезервированным словом DEFAULT). Дополнительные сведения см. в разделе [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
->  В стандартных группах рабочей нагрузки и пулах ресурсов используются имена со строчными буквами, такие как «default». Это необходимо учитывать при работе с серверами, где параметры сортировки учитывают регистр символов. Серверы, параметры сортировки которых не учитывают регистр (например, SQL_Latin1_General_CP1_CI_AS), будут рассматривать строки «default» и «Default» как одинаковые.  
+> В стандартных группах рабочей нагрузки и пулах ресурсов используются имена со строчными буквами, такие как «default». Это необходимо учитывать при работе с серверами, где параметры сортировки учитывают регистр символов. Серверы, параметры сортировки которых не учитывают регистр (например, SQL_Latin1_General_CP1_CI_AS), будут рассматривать строки «default» и «Default» как одинаковые.  
   
  IMPORTANCE = { LOW | MEDIUM | HIGH }  
  Указывает относительную важность запроса в группе рабочей нагрузки. Важность принимает одно из следующих значений:  
   
 -   LOW  
-  
 -   MEDIUM (по умолчанию);  
-  
 -   HIGH.  
   
 > [!NOTE]  
->  Внутри системы каждое значение важности хранится в виде числа, используемого для вычислений.  
+> Внутри системы каждое значение важности хранится в виде числа, используемого для вычислений.  
   
  Значение IMPORTANCE локально для пула ресурсов; группы рабочей нагрузки разной важности внутри одного пула ресурсов влияют друг на друга, но не влияют на рабочие группы в других пулов ресурсов.  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*значение*  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
  Указывает максимальное количество памяти, которое может понадобиться одному запросу из пула. Это процентное соотношение относительно к размеру пула ресурсов, указанного в MAX_MEMORY_PERCENT.  
   
 > [!NOTE]  
->  Указанное значение ссылается только на доступную для выполнения запроса память.  
+> Указанное значение ссылается только на доступную для выполнения запроса память.  
   
  *значение* должно быть 0 или положительным целым числом. Допустимые значения для *значение* — от 0 до 100. Значение по умолчанию для *значение* — 25.  
   
@@ -102,13 +101,16 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 >   
 >  Учтите, что в обоих случаях может возникнуть ошибка 8645 (истечение времени ожидания), если на сервере недостаточно физической памяти.  
   
- REQUEST_MAX_CPU_TIME_SEC =*значение*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  Указывает максимальное количество времени ЦП в секундах, которое может использоваться запросом. *значение* должно быть 0 или положительным целым числом. Значение по умолчанию для *значение* равно 0, что означает неограниченное время.  
   
 > [!NOTE]  
->  По истечении лимита времени регулятор ресурсов не прекращает выполнение запроса. Однако будет сформировано событие. Дополнительные сведения см. в разделе [класс событий превышает пороговое значение ЦП](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+> По умолчанию регулятора ресурсов не помешает запрос продолжать, если превышено максимально допустимое время. Однако будет сформировано событие. Дополнительные сведения см. в разделе [класс событий превышает пороговое значение ЦП](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
+
+> [!IMPORTANT]
+> Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 и с помощью [2422 флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), при превышении максимального времени регулятор ресурсов приведет к прерыванию запроса.
   
- REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*значение*  
+ REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Задает максимальное время (в секундах), которое запрос может ожидать предоставления памяти (памяти рабочего буфера).  
   
 > [!NOTE]  
@@ -116,7 +118,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  *значение* должно быть положительным целым числом. Значение по умолчанию для *значение*, 0, использует внутренние вычисления, основанные на затратах запроса для определения максимального времени.  
   
- MAX_DOP =*значение*  
+ MAX_DOP =*value*  
  Указывает максимальную степень параллелизма (DOP) для параллельных запросов. *значение* должно быть 0 или положительное целое число 1 до 255. Когда *значение* равно 0, то сервер выбирает максимальную степень параллелизма. Это значение по умолчанию, которое рекомендуется использовать.  
   
 > [!NOTE]  
@@ -137,7 +139,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  После того как DOP настроен, он может быть только снижен при нехватке доступной памяти. Перенастройка группы рабочей нагрузки невидима при ожидании в очереди на предоставление памяти.  
   
- GROUP_MAX_REQUESTS =*значение*  
+ GROUP_MAX_REQUESTS =*value*  
  Указывает максимальное число одновременных запросов, разрешенных для выполнения в группе рабочей нагрузки. *значение* должно быть 0 или положительным целым числом. Значение по умолчанию для *значение*(0) означает отсутствие ограничений. Если достигнуто максимальное количество параллельных запросов, пользователь из этой группы сможет войти в систему, но переводится в состоянии ожидания до тех пор, пока количество параллельных запросов не станет меньше указанного значения.  
   
  С помощью { *pool_name* | «**по умолчанию**"}  
@@ -148,7 +150,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 >  В параметре "default" учитывается регистр.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Использование инструкции ALTER WORKLOAD GROUP допустимо для группы по умолчанию.  
   
  Изменения конфигурации группы рабочей нагрузки не вступают в силу до тех пор, пока не будет выполнена инструкция ALTER RESOURCE GOVERNOR RECONFIGURE. При изменении плана влияет на параметр, новые параметры только вступят в силу в ранее кэшированных планов после выполнения инструкции DBCC FREEPROCCACHE (*pool_name*), где *pool_name* имя ресурса Пул ресурсов регулятора, на котором группа рабочей нагрузки связана с.  
@@ -168,7 +170,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  Объем памяти, затрачиваемой на создание индекса в невыровненной секционированной таблице, пропорционален количеству секций, охватываемых индексом.  Если общий объем необходимой памяти превышает предел на запрос (REQUEST_MAX_MEMORY_GRANT_PERCENT), устанавливаемый регулятором ресурсов для группы рабочей нагрузки, создание такого индекса может завершиться ошибкой. Настройки группы рабочей нагрузки по умолчанию позволяют запросу превосходить установленный для запросов лимит памяти, нужной при запуске (для совместимости с версией [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]). Поэтому пользователь может запустить тот же процесс создания индекса в группе рабочей нагрузки по умолчанию, если в пуле ресурсов по умолчанию достаточно памяти, настроенной для выполнения такого запроса.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CONTROL SERVER.  
   
 ## <a name="examples"></a>Примеры  
@@ -192,14 +194,13 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
- [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)   
+ [СОЗДАНИЕ ГРУППЫ рабочей НАГРУЗКИ и &#40; Transact-SQL и &#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/drop-workload-group-transact-sql.md)   
- [CREATE RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-resource-pool-transact-sql.md)   
+ [СОЗДАТЬ ПУЛ РЕСУРСОВ &#40; Transact-SQL и &#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [ALTER RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL (Transact-SQL)](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
- [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
+ [ALTER RESOURCE GOVERNOR &#40; Transact-SQL и &#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   
-

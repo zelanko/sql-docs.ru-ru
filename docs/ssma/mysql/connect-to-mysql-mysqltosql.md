@@ -1,29 +1,30 @@
 ---
 title: "Подключение к MySQL (MySQLToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 068fe6585eac87830511515a95373a938cbcdca2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eb5ded86bf30a942aaece3f7d1404df781c24112
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Подключение к MySQL (MySQLToSQL)
 Используйте **подключение к MySQL** диалоговое окно подключения к базе данных MySQL, которые требуется перенести.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 08/02/2017
   
 Введите порт сервера. Порт сервера по умолчанию — 3306. Это стандартный режим.  
   
-**Имя пользователя**  
+**User name**  
   
 Введите имя пользователя, который будет использоваться SSMA для подключения к базе данных MySQL.  
   
@@ -78,4 +79,3 @@ ms.lasthandoff: 08/02/2017
 > -   **ОК** кнопка включена, когда предоставила требуемую информацию. Если пути к файлам недопустимы, кнопку «ОК» будет отключен.  
 > -   **Отменить** кнопка закрывает диалоговое окно и **отключает** параметр из главной формы подключения SSL.  
   
-

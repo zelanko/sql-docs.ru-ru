@@ -3,8 +3,11 @@ title: "STGeometryN (тип данных geography) | Документы Microso
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,19 @@ dev_langs:
 helpviewer_keywords:
 - STGeometryN method
 ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d5d11dc77ce692543068cba6739ef982bc8264c8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: e92224c6ea0aae9ad389353a705f3c1c3c9aa21c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN (тип данных geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает заданное **geography** элемент в **GeometryCollection** или один из его подтипов. При использовании применительно к подтипу STGeometryN() **GeometryCollection**, такие как **MultiPoint** или **MultiLineString**, этот метод возвращает **geography**  экземпляра при вызове с N = 1.  
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 09/01/2017
   
  Возвращаемый тип CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод возвращает значение null, если параметр больше, чем результат [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md) и вызывает **ArgumentOutOfRangeException** Если *выражение* аргумент принимает значение меньше 1.  
   
 ## <a name="examples"></a>Примеры  
@@ -61,8 +63,7 @@ SET @g = geography::STGeomFromText('MULTIPOINT(-122.360 47.656, -122.343 47.656)
 SELECT @g.STGeometryN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Методы OGC в экземплярах географических объектов](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+## <a name="see-also"></a>См. также  
+ [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: "Соединение с компонентом Database Engine с использованием расширенной защиты | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +19,19 @@ helpviewer_keywords:
 - channel binding
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "22"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d5bf850e985baccb1d16d77697ea7cd2611af222
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 894f04fe8bf8df95bb288acab897f3274fbacb18
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Соединение с компонентом Database Engine с использованием расширенной защиты
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает **расширенную защиту** , начиная с версии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. **Расширенная защита для проверки подлинности** представляет собой функцию сетевых компонентов, реализуемую операционной системой. **Расширенная защита** поддерживается в Windows 7 и Windows Server 2008 R2. **Расширенная защита** входит в пакет обновления для более старых операционных систем [!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи **расширенную защиту**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает **расширенную защиту**, начиная с версии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. **Расширенная защита для проверки подлинности** представляет собой функцию сетевых компонентов, реализуемую операционной системой. **Расширенная защита** поддерживается в Windows 7 и Windows Server 2008 R2. **Расширенная защита** входит в пакет обновления для более старых операционных систем [!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи **расширенную защиту**.  
   
 > [!IMPORTANT]  
 >  В Windows **Расширенная защита** не включается по умолчанию. Дополнительные сведения о включении функции **Расширенная защита** в Windows см. в разделе [Расширенная защита для проверки подлинности](http://support.microsoft.com/kb/968389).  
@@ -112,4 +113,3 @@ ms.lasthandoff: 08/02/2017
  [Интегрированная проверка подлинности Windows с расширенной защитой](http://go.microsoft.com/fwlink/?LinkId=179922)  
   
   
-

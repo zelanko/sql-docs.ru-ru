@@ -3,27 +3,28 @@ title: "Параметры (сопоставление типов) проект�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 594ef6405a41b199d527eaae56a77c7f1d91c4e6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 49a4391c9542ab57ed815dc2670bed997a10a064
-ms.openlocfilehash: 87c5ee7f5c4ab77748b11677994eecc7e5575490
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Параметры (сопоставление типов) проекта (SybaseToSQL)
 На странице сопоставление типов **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA преобразует типы данных Sybase адаптивной Server Enterprise (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типов данных.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/04/2017
 **Добавить**  
 Щелкните, чтобы добавить в список сопоставления типа данных.  
   
-**Правка**  
+**Изменить**  
 Щелкните для изменения выбранного типа данных в списке сопоставления.  
   
 **Удалить**  
@@ -152,4 +153,3 @@ ms.lasthandoff: 10/04/2017
 |**varchar [\*... 8000]**|**varchar [\*]**|  
 |**varchar [8001..\*]**|**varchar(max)**|  
   
-

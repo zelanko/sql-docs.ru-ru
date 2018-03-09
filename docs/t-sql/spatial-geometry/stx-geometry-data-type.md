@@ -3,8 +3,11 @@ title: "STX (тип данных geometry) | Документы Microsoft"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - STX (geometry Data Type)
 ms.assetid: 2aef77e8-0460-43f9-bad6-2aae6d8c36f9
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3cfed425a18babe80de7522f9adec3718d6fdf19
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 2dacaadae631735c64a0882f4cc90c7dd16fd6e7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stx-geometry-data-type"></a>STX (тип данных geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Свойство координаты X **точки**экземпляра.
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
  Тип CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Значение этого свойства будет иметь значение null, если **geometry** экземпляр не является точкой.  
   
  Это свойство предназначено только для чтения.  
@@ -60,11 +62,10 @@ SET @g = geometry::STGeomFromText('POINT(3 8)', 0);
 SELECT @g.STX;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [STY (тип данных geometry)](../../t-sql/spatial-geometry/sty-geometry-data-type.md)   
  [STSrid &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
- [Методы OGC для геометрических объектов](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

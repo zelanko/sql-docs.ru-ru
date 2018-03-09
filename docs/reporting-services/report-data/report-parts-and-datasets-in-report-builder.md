@@ -1,27 +1,27 @@
 ---
-title: "Элементы отчета и наборы данных в построителе отчетов | Документы Microsoft"
+title: "Элементы отчета и наборы данных в построителе отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/16/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
-caps.latest.revision: 9
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "9"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5bd079fcfdd867bbcfb251c7e58fa485c9c56d17
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8333a60403a32321c8796bb2041d6e95e39160ce
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Элементы отчета и наборы данных в построителе отчетов
   В построителе отчетов самым простым способом включения данных в отчет является добавление элементов отчета из коллекции элементов отчета. Части отчетов содержат наборы данных, от которых они зависят, так называемые *зависимые наборы данных*. Зависимые наборы данных основываются на общих источниках данных и могут быть внедренными и общими. Узнайте больше об [элементах отчета](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -60,10 +60,9 @@ ms.lasthandoff: 08/09/2017
 >  Чтобы гарантировать успешную работу с данными из общего набора данных, необходимо владеть основными принципами обеспечения безопасности элементов отчетов. Дополнительные сведения см. в разделе [Защита элементов общего набора данных](../../reporting-services/security/secure-shared-dataset-items.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Представление конструктора отчетов &#40; Построитель отчетов &#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Безопасность &#40; Построитель отчетов &#41;](../../reporting-services/report-builder/security-report-builder.md)   
- [Элементы отчета &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
- [Отчет внедренные наборы данных и общие наборы данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Представление конструктора отчетов (построитель отчетов)](../../reporting-services/report-builder/report-design-view-report-builder.md)   
+ [Безопасность (построитель отчетов)](../../reporting-services/report-builder/security-report-builder.md)   
+ [Элементы отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
+ [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
-

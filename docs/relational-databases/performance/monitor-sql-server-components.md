@@ -2,28 +2,29 @@
 title: "Наблюдение за компонентами SQL Server | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
-caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "8"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e42a68231284071a38797fa76085123ab89e92fe
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-sql-server-components"></a>Наблюдение за компонентами SQL Server
-  Важность мониторинга обусловлена динамикой среды, в которой выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Данные приложений постоянно изменяются. Меняется тип доступа, который требуется пользователям. Меняется способ подключения пользователей. Может измениться даже тип приложений, обращающихся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , однако [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически управляет такими системными ресурсами, как память и место на диске, поэтому ручная настройка системы практически не требуется. Мониторинг позволяет администраторам следить за тенденциями изменения производительности и определять ситуации, когда требуются изменения.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Важность мониторинга обусловлена динамикой среды, в которой выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Данные приложений постоянно изменяются. Меняется тип доступа, который требуется пользователям. Меняется способ подключения пользователей. Может измениться даже тип приложений, обращающихся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , однако [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически управляет такими системными ресурсами, как память и место на диске, поэтому ручная настройка системы практически не требуется. Мониторинг позволяет администраторам следить за тенденциями изменения производительности и определять ситуации, когда требуются изменения.  
   
  Для организации эффективного мониторинга компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполните следующие действия.  
   
@@ -142,4 +143,3 @@ ms.lasthandoff: 08/03/2017
      Возможность воспроизведения позволяет создать копию базы данных, в которой были собраны данные, и повторить события, как будто они произошли в реальной системе. Это возможно только в программе распределенного воспроизведения или в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. События можно воспроизводить с первоначальной скоростью, с максимально возможной скоростью (чтобы загрузить систему) или пошагово (чтобы проанализировать состояние системы после каждого события). Анализ событий в тестовой среде позволяет избежать повреждений в производственной системе. Дополнительные сведения см. в статье [Воспроизведение трассировок](../../tools/sql-server-profiler/replay-traces.md).  
   
   
-

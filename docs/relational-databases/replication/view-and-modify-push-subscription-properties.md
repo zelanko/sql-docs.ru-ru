@@ -2,11 +2,13 @@
 title: "Просмотр и изменение свойств принудительной подписки | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +19,19 @@ helpviewer_keywords:
 - modifying replication properties, push subscriptions
 - modifying subscriptions, SQL Server Management Studio
 ms.assetid: 801d2995-7aa5-4626-906e-c8190758ec71
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3fc246be116d9468733d8b66f501717a4310bba2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "37"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: a33861140deef4dff36789af55d71a92f7cd3a68
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>Просмотр и изменение свойств принудительной подписки
-  В данном разделе описывается просмотр и изменение свойств принудительной подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] В данном разделе описывается просмотр и изменение свойств принудительной подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] или объектов Replication Management Objects (RMO).  
   
  **В этом разделе**  
   
@@ -106,42 +108,42 @@ ms.lasthandoff: 06/22/2017
   
 1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md). Укажите параметры **@publication**, **@subscriber**, **@subscriber_db**, изменяемое свойство подписки в параметре **@property**и новое значение в параметре **@value**.  
   
-###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
+###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
   
 ##  <a name="RMOProcedure"></a> При помощи объектов RMO  
  Какие именно классы объектов RMO для этого применяются, зависит от типа публикации этой подписки.  
   
 #### <a name="to-view-or-modify-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Просмотр и изменение свойств принудительной подписки на публикацию моментальных снимков или транзакций  
   
-1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransSubscription>.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransSubscription> .  
   
-3.  Установите свойства <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A> и <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>.  
+3.  Установите свойства <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>и <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> .  
   
-4.  Задайте значение <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, полученное на шаге 1, для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+4.  Задайте соединение <xref:Microsoft.SqlServer.Management.Common.ServerConnection> с шага 1 для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-5.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает значение **false**, то либо на шаге 3 были неверно определены свойства подписки, либо подписка не существует.  
+5.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение **false**, то либо на шаге 3 были неверно определены свойства подписки, либо подписка не существует.  
   
-6.  Чтобы изменить свойства, установите новое значение для одного из редактируемых свойств <xref:Microsoft.SqlServer.Replication.TransSubscription>, а затем вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно).  
+6.  Чтобы изменить свойства, установите новое значение для одного из свойств <xref:Microsoft.SqlServer.Replication.TransSubscription> , которое можно установить, и затем вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно).  
   
-7.  Чтобы просмотреть новое значение свойства, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> для повторной загрузки свойств подписки.  
+7.  Чтобы просмотреть новые значения, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> , который выполняет повторную загрузку свойств для подписки (необязательно).  
   
 #### <a name="to-view-or-modify-properties-of-a-push-subscription-to-a-merge-publication"></a>Просмотр и изменение свойств принудительной подписки на публикацию слиянием  
   
-1.  Создайте подключение к подписчику с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с подписчиком с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeSubscription>.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeSubscription> .  
   
-3.  Установите свойства <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A> и <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>.  
+3.  Установите свойства <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>и <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> .  
   
-4.  Задайте значение <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, полученное на шаге 1, для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+4.  Задайте соединение <xref:Microsoft.SqlServer.Management.Common.ServerConnection> с шага 1 для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-5.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает значение **false**, то либо на шаге 3 были неверно определены свойства подписки, либо подписка не существует.  
+5.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение **false**, то либо на шаге 3 были неверно определены свойства подписки, либо подписка не существует.  
   
-6.  Чтобы изменить свойства, установите новое значение для одного из редактируемых свойств <xref:Microsoft.SqlServer.Replication.MergeSubscription>, а затем вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно).  
+6.  Чтобы изменить свойства, установите новое значение для одного из свойств <xref:Microsoft.SqlServer.Replication.MergeSubscription> , которое можно установить, и затем вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно).  
   
-7.  Чтобы просмотреть новое значение свойства, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> для повторной загрузки свойств подписки.  
+7.  Чтобы просмотреть новые значения, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> , который выполняет повторную загрузку свойств для подписки (необязательно).  
   
 ## <a name="see-also"></a>См. также:  
  [Просмотр сведений и выполнение задач для подписки (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   

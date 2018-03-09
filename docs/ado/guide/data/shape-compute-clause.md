@@ -3,7 +3,7 @@ title: "Формирование предложение COMPUTE | Докумен
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 53ebeab9edfa1d9fc339f080d4a9de995053f77a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d2fad39eb54af49b9f25b7f5b62073df44afc814
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="shape-compute-clause"></a>Предложение COMPUTE фигуры
 Предложение COMPUTE фигуры приводит к возникновению ошибки родительского **набора записей**, столбцы которых состоят из ссылки на дочерние **набора записей**; является необязательным, содержимое которых главе, новые возможности, или вычисляемых столбцов, столбцов или результат выполнения статистические функции на дочернем **записей** или ранее фигурные **записей**; и любых столбцов с дочернего **набора записей** перечисленные в необязательное предложение.  
@@ -40,10 +39,10 @@ SHAPE child-command [AS] child-alias
    [BY grp-field-list]  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Существуют следующие части этого предложения.  
   
- *команда*  
+ *child-command*  
  Состоит из одной из следующих:  
   
 -   Команда запроса внутри фигурных скобок («{}»), возвращает дочерний элемент **записей** объекта. Команды для базового поставщика данных, и его синтаксис зависит от требований этого поставщика. Обычно это будет языка SQL, несмотря на то, что ADO не требует любой язык для конкретного запроса.  
@@ -54,13 +53,13 @@ SHAPE child-command [AS] child-alias
   
 -   Таблица ключевого слова, за которым следует имя таблицы в поставщике данных.  
   
- *дочерние псевдоним*  
+ *child-alias*  
  Псевдоним, использованные для обращения к **записей** возвращенных *дочерний command.* *Дочерних псевдоним* является обязательным в списке столбцов в предложении COMPUTE и определяет отношение между родительским и дочерним **записей** объектов.  
   
- *добавлен столбец список-*  
+ *appended-column-list*  
  Список, в котором каждый элемент определяет столбец в создан родительский элемент. Каждый элемент содержит столбец, новый столбец, вычисляемый столбец или значение, являющееся результатом агрегатной функции на дочернем **записей**.  
   
- *список группу поле*  
+ *grp-field-list*  
  Список столбцов в родительской и дочерней **записей** объекты, которые указывает группирования строк в дочерней.  
   
  Для каждого столбца в *группу поле list,* отсутствует соответствующий столбец в дочерней и родительской **записей** объектов. Для каждой строки в родительской **записей**, *группу список полей* столбцы имеют уникальные значения и дочерние **набора записей** ссылается родительского строка состоит только из дочернего строки, *списка для полей группу* столбцы имеют одинаковые значения в строке родитель.  
@@ -140,7 +139,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |или|Portland|400,000|  
 |или|Corvallis|300,000|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Доступ к строк в иерархических записей](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Общие сведения о формирования данных](../../../ado/guide/data/data-shaping-overview.md)   
  [Объект field](../../../ado/reference/ado-api/field-object.md)   
@@ -150,5 +149,4 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
  [Предложение APPEND фигуры](../../../ado/guide/data/shape-append-clause.md)   
  [Команды фигуры в целом](../../../ado/guide/data/shape-commands-in-general.md)   
  [Значение свойства (ADO)](../../../ado/reference/ado-api/value-property-ado.md)   
- [Visual Basic для приложений функций](../../../ado/guide/data/visual-basic-for-applications-functions.md)
-
+ [Функции Visual Basic для приложений](../../../ado/guide/data/visual-basic-for-applications-functions.md)

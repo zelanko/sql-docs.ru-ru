@@ -3,10 +3,12 @@ title: "Как конструктор запросов и представлен
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - joins [SQL Server], Query and View Designer
 - Diagram pane [Visual Database Tools]
 ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9392dee21a72846a2659c68d9804369127fe8235
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1556e7c6469ff2ece09e3249c8396e6a0e96eb6c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Как конструктор запросов и представлений представляет соединения (визуальные инструменты для баз данных)
-При соединении таблиц [конструктор запросов и представлений](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) представляет соединение графически на [панели диаграммы](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) и в виде синтаксиса языка SQL на [панели SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] При соединении таблиц [конструктор запросов и представлений](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) представляет соединение графически на [панели диаграммы](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) и в виде синтаксиса языка SQL на [панели SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
 ## <a name="diagram-pane"></a>панели диаграммы  
 На панели диаграмм конструктор запросов и представлений отображает строку соединения данных столбцов, включенных в соединение. Конструктор запросов и представлений отображает одну строку соединения для каждого условия соединения. Например, на следующей иллюстрации показана строка соединения для двух соединяемых таблиц.  
@@ -89,4 +90,3 @@ ms.lasthandoff: 08/18/2017
 [Запросы с соединениями (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
 [Диалоговое окно "Соединение" (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md)  
   
-

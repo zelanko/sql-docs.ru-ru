@@ -2,30 +2,30 @@
 title: "Диалоговое окно \"Создание нового условия\" или \"Открытие условия\", страница \"Общие\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dmf.condition.f1
+f1_keywords: sql13.swb.dmf.condition.f1
 ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
-caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "30"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b90436634729185cf2703cc012aae3a4f0338cdb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 69116441118315b2fa9bcf92ab5b20fcc725b73e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>Диалоговое окно «Создание нового условия» или «Открытие условия», страница «Общие»
-  С помощью этого диалогового окна можно создать или изменить условие управления на основе политик. Условие — это логическое выражение, задающее набор допустимых состояний для управляемой цели управления на основе политик по отношению к аспектам. Свойства, которые можно выбрать в поле **Выражение/поле** , зависят от используемого аспекта. Дополнительные сведения о связи условий с аспектами и политиками см. в статье [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью этого диалогового окна можно создать или изменить условие управления на основе политик. Условие — это логическое выражение, задающее набор допустимых состояний для управляемой цели управления на основе политик по отношению к аспектам. Свойства, которые можно выбрать в поле **Выражение/поле** , зависят от используемого аспекта. Дополнительные сведения о связи условий с аспектами и политиками см. в статье [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="options"></a>Параметры  
  **Название**  
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
  **Оператор**  
  Выберите оператор сравнения для этого выражения. Доступны следующие операторы: =, !=, >, >=, <, <=, [NOT]LIKE, [NOT]IN. Для некоторых свойств доступны не все операторы.  
   
- **Значение**  
+ **Value**  
  Установленное значение для данного выражения. Доступные значения зависят от аспекта. Значения могут быть истинными или ложными, строковыми или числовыми. Строковые значения необходимо заключать в одинарные кавычки, например **'AdventureWorks'**. Для некоторых свойств доступны не все операторы.  
   
 ## <a name="group-clauses"></a>Предложения группы  
@@ -57,4 +57,3 @@ ms.lasthandoff: 06/22/2017
  [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
-

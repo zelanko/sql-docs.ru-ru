@@ -1,10 +1,13 @@
 ---
-title: "Управление службой CDC | Документы Microsoft"
+title: "Управление службой CDC | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - manSer
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b212ccfd61c11a8c06a840260918cc581564a6fc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a2b3241a4152d81346da17d3f9eaddefaffa00b1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="manage-a-cdc-service"></a>Управление службой CDC
   В консоли конструктора CDC можно просматривать службы, созданные с помощью консоли конфигурации служб CDC, а также управлять всеми экземплярами в службе CDC Oracle.  
@@ -47,10 +49,9 @@ ms.lasthandoff: 08/03/2017
   
  Нажмите кнопку **Остановить все экземпляры** , чтобы отслеживать измененные данные для всех экземпляров в службе.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Как создать экземпляр изменения базы данных SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Как управлять службой CDC из консоли конструктора CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
  [Использование мастера создания экземпляра](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   
-

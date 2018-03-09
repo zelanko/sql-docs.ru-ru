@@ -2,9 +2,12 @@
 title: "Предварительная обработка схемы для слияния включаемых схем | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -19,20 +22,20 @@ helpviewer_keywords:
 - preprocessor tool [XML schemas]
 - XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
-caps.latest.revision: 27
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 73bb2043bf3e0cb0d8a076a07b4d9c33366c1cf7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: bb486493743bc51842c0531e1072aa1eac106d76
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Предпроцессор схемы для слияния включаемых схем
-  Элемент W3C XSD **include** обеспечивает поддержку модульного принципа, при котором схема XML может быть разделена на несколько физических файлов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает этот элемент. XML-схемы, содержащие данный элемент, будут отклонены сервером.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Элемент W3C XSD **include** обеспечивает поддержку модульного принципа, при котором схема XML может быть разделена на несколько физических файлов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает этот элемент. XML-схемы, содержащие данный элемент, будут отклонены сервером.  
   
  Чтобы решить эту проблему, XML-схемы, включающие директиву \<xsd:include>, могут быть предварительно обработаны для копирования и слияния содержимого всех включенных схем в единую схему для передачи на сервер. Для такой предварительной обработки можно использовать следующий код С#. Примечания в начале этого кода содержат сведения по его использованию.  
   
@@ -221,4 +224,3 @@ public class XmlSchemaIncludeNormalizer
  [Коллекции XML-схем (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   
-

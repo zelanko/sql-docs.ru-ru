@@ -2,9 +2,12 @@
 title: "(Вкладка «порядок») свойства клиентских протоколов | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - client protocols [SQL Server]
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b00026954339af65d3730c91a24ec4f16505c682
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e92bac20c6f709964dabf08710c2b18b5db0c1e4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
-# Свойства клиентских протоколов (вкладка «Порядок»)
-  Используйте страницу **Порядок**диалогового окна **Свойства клиентских протоколов** для просмотра и включения клиентских протоколов.  
+# <a name="client-protocols-properties-order-tab"></a>Свойства клиентских протоколов (вкладка «Порядок»)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Используйте **порядок** на странице **свойства клиентских протоколов** диалогового окна для просмотра и включения клиентских протоколов.  
   
  Щелкните протокол, а затем выберите команду **Включить** или **Выключить** для перемещения выбранного протокола в список **Отключенные протоколы** или **Включенные протоколы** .  
   
@@ -34,12 +37,12 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 >  Эти настройки не используются клиентом [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET SqlClient. В порядке протоколов для клиента .NET SqlClient первым идет протокол TCP, а затем именованные каналы. Этот порядок нельзя изменить.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Отключенные протоколы**  
- Содержит список установленных, но не используемых в данный момент протоколов.  
+ Список протоколов, которые установлены, но сейчас не используется.  
   
  **Включенные протоколы**  
- Содержит список протоколов, доступных для клиентов [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на этом компьютере.  
+ Список протоколов, доступных для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентов на этом компьютере.  
   
  **>**  
  Включает выделенный протокол в окне **Отключенные протоколы** и переносит его в окно **Включенные протоколы** .  
@@ -59,8 +62,7 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 >  Если протокол определен через префикс или как часть строки соединения, то попытка подключения будет происходить только через определенный протокол.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Выбор сетевого протокола](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   
-

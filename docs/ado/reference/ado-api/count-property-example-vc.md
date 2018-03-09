@@ -3,7 +3,7 @@ title: "Пример свойства Count (VC ++) | Документы Microso
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Count property [ADO], VC++ example
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 98d9f5223e5ed264ce2cc901f31d387211e10f4b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b24990112d2854ad8674b41972db7d2ceea85fc2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="count-property-example-vc"></a>Пример свойства Count (VC ++)
 В этом примере демонстрируется [число](../../../ado/reference/ado-api/count-property-ado.md) свойство с две коллекции в ***сотрудника*** базы данных. Это свойство получает количество объектов в каждой коллекции и определяет максимальное число циклов, которые перечисляют этих коллекций.  
@@ -138,6 +137,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)
-

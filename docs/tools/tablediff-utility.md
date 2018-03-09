@@ -2,11 +2,13 @@
 title: "Программа tablediff | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: tabledif
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +20,19 @@ helpviewer_keywords:
 - troubleshooting [SQL Server replication], non-convergence
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
-caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "30"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: b397ef06f491da3d7b74de11c21f0f64dc7f5814
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5ecdf895353c1ec75004b2268bbd055b255b53ab
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tablediff-utility"></a>tablediff, программа
-  Служебная программа **tablediff** используется для сравнения данных в двух таблицах на расхождение и особенно полезна для устранения несоответствия данных в топологии репликации. Эта программа может запускаться из командной строки или из пакетного файла и служит для выполнения следующих задач:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Tablediff** служебной программы используется для сравнения данных в двух таблицах на расхождение и особенно полезна для устранения неполадок в топологии репликации. Эта программа может запускаться из командной строки или из пакетного файла и служит для выполнения следующих задач:  
   
 -   Построчное сравнение исходной таблицы в экземпляре [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , выступающем в качестве издателя репликации, и целевой таблицы в одном или нескольких экземплярах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , выступающих в качестве подписчиков репликации.  
   
@@ -83,7 +84,7 @@ tablediff
  [ **-?** ]  
  Возвращает список поддерживаемых параметров.  
   
- **-sourceserver** *имя_исходного_сервера*[**\\***имя_экземпляра*]  
+ **-sourceserver** *source_server_name*[**\\***instance_name*]  
  Имя исходного сервера. Укажите *имя_исходного_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите *имя_исходного_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *база_данных_источник*  
@@ -107,7 +108,7 @@ tablediff
  **-sourcelocked**  
  Исходная таблица блокируется в ходе сравнения при помощи табличных подсказок TABLOCK и HOLDLOCK.  
   
- **-destinationserver** *имя_целевого_сервера*[**\\***имя_экземпляра*]  
+ **-destinationserver** *destination_server_name*[**\\***instance_name*]  
  Имя целевого сервера. Укажите *имя_целевого_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите *имя_целевого_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *база_данных_подписки*  
@@ -175,7 +176,7 @@ tablediff
 |**1**|Критическая ошибка|  
 |**2**|Различия таблиц|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Служебную программу **tablediff** нельзя использовать для обращения к серверам, отличным от[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Таблицы со столбцами с данными типа **sql_variant** не поддерживаются.  
@@ -203,7 +204,7 @@ tablediff
   
 -   **varchar(max)**  
   
--   **nvarchar(max)**  
+-   **nvarchar(max)**;  
   
 -   **varbinary(max)**  
   
@@ -226,8 +227,7 @@ tablediff
   
  Чтобы использовать параметр **-o** или **-f** , необходимо иметь разрешения на запись в указанный каталог файлов.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сравнение реплицируемых таблиц на предмет различий (программирование репликации)](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   
-

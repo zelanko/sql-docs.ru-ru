@@ -3,27 +3,28 @@ title: "Настройка драйвера ODBC для Oracle | Докумен�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - configuring ODBC driver for Oracle [ODBC]
 - ODBC driver for Oracle [ODBC], configuring
 ms.assetid: 0a5f827c-0b80-4627-85cb-f10292b9fb33
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 936664563f7ef6f717b17a2e5bb34be0df4aa6a9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 64e6dfe9f31eb983170f08e9fcd3e0705ba9ae62
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configuring-the-odbc-driver-for-oracle"></a>Настройка драйвера ODBC для Oracle
 > [!IMPORTANT]  
@@ -46,4 +47,3 @@ ms.lasthandoff: 09/09/2017
 -   **О вкладке** перечислены установленные файлы компонентов ODBC.  
   
  После добавления источника данных, можно использовать **администратор источников данных ODBC** диалоговое окно «», чтобы настроить доступ к источнику данных. Выберите источник данных и затем выберите одну из вкладок, чтобы изменить или просмотреть сведения.
-

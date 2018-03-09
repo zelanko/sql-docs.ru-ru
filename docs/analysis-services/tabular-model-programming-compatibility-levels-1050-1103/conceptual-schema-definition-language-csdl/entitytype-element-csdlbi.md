@@ -2,31 +2,32 @@
 title: "Элемент EntityType (CSDLBI) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 372e2c13-ec38-4bb1-981c-50758d59a1da
-caps.latest.revision: 16
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f8eb72bef98a90f45607c8933539a5ee322dea5c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bf36253ccc373fb260538fdbc3d78764ce5548f9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="entitytype-element-csdlbi"></a>Элемент EntityType (CSDLBI)
-  Элемент **EntityType** — это сложный тип, представляющий структуру сущности высокого уровня, например клиента или заказа, в модели данных. Элемент **bi:EntityType** расширяет определение [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) , которое используется в среде [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Элемент **EntityType** — это сложный тип, представляющий структуру сущности высокого уровня, например клиента или заказа, в модели данных. Элемент **bi:EntityType** расширяет определение [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) , которое используется в среде [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx).  
   
  Элемент EntityType должен быть указан для каждой из сущностей, включенных в модель данных. Вложенные элементы EntityType описывают столбцы и меры в таблице. Связи между таблицами включены в **EntityContainer**.  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 09/01/2017
 |Измерение продвижений|Атрибуты представляют сведения об акциях по продвижению.|  
   
 ## <a name="example"></a>Пример  
- **Табличный**  
+ **Табличные**  
   
  В следующем примере показана часть представления CSDLBI версии 1.1 таблицы Geography, используемой в табличной модели AdventureWorks. Столбец RowNumber — скрытый столбец, который создается автоматически в качестве идентификатора строки в табличных моделях и поэтому имеет атрибут Contents ( **RowNumber**).  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="example"></a>Пример  
- **Multidimensional**  
+ **Многомерные**  
   
  В следующем примере показаны элементы EntityType в CSDLBI версии 1.1, представляющие часть измерения времени из куба операций Contoso.  
   
@@ -132,4 +133,3 @@ ms.lasthandoff: 09/01/2017
  [Технический справочник по заметки бизнес-Аналитики для языка CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   
-

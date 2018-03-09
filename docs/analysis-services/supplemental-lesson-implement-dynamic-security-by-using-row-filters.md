@@ -2,11 +2,13 @@
 title: "Реализация динамической безопасности с помощью фильтров строк | Документы Microsoft"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: 
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: 
@@ -14,12 +16,11 @@ ms.assetid:
 author: Minewiskan
 ms.author: owend
 manager: kfile
+ms.openlocfilehash: 51ffec7f5fc4d5d6d44ff1dbab0e4a20827f6718
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 14bc3755dcbb92af2f75ed47a4df6843fe4782b4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="supplemental-lesson---implement-dynamic-security-by-using-row-filters"></a>Дополнительного занятия - реализация динамической безопасности с помощью фильтров строк
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 09/01/2017
   
 Предполагаемое время выполнения данного занятия: **30 минут**  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
 Это дополнительное занятие является частью учебника по табличному моделированию, который необходимо изучать по порядку. Прежде чем выполнять задания в этом дополнительном занятии, необходимо завершить все предыдущие занятия.  
   
 ## <a name="add-the-dimsalesterritory-table-to-the-aw-internet-sales-tabular-model-project"></a>Добавление таблицы dimSalesTerritory в проект табличной модели интернет-продаж AW  
@@ -132,7 +133,7 @@ ms.lasthandoff: 09/01/2017
   
 3.  Щелкните новую роль, а затем столбец **Имя** , после чего переименуйте роль в **Сотрудники отдела продаж по территории**.  
   
-4.  В столбце **Разрешения** щелкните раскрывающийся список и выберите разрешение **Чтение** .  
+4.  В столбце **Разрешения** щелкните раскрывающийся список и выберите разрешение **Чтение**.  
   
 5.  Перейдите на вкладку **Члены** и выберите команду **Добавить**.  
   

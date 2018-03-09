@@ -2,30 +2,30 @@
 title: "Политика отработки отказа для экземпляров отказоустойчивого кластера | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- flexible failover policy
+helpviewer_keywords: flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5f71e743730968231015410177f9bea2d6f00228
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 09a372b1e2b2f2b9026259918d3b11ed3ad2d3b6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Политика отработки отказа для экземпляров отказоустойчивого кластера
-  В экземпляре отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (FCI) в каждый момент времени только один узел может быть владельцем группы ресурсов кластера WSFC. Клиентские запросы в FCI обслуживаются через этот узел. В случае сбоя и неуспешного перезапуска владельцем группы становится другой узел WSFC в экземпляре FCI. Этот процесс называется отработкой отказа. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] повышает надежность обнаружения сбоев и обеспечивает гибкую политику отработки отказов.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В экземпляре отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (FCI) в каждый момент времени только один узел может быть владельцем группы ресурсов кластера WSFC. Клиентские запросы в FCI обслуживаются через этот узел. В случае сбоя и неуспешного перезапуска владельцем группы становится другой узел WSFC в экземпляре FCI. Этот процесс называется отработкой отказа. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] повышает надежность обнаружения сбоев и обеспечивает гибкую политику отработки отказов.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI зависит от возможностей базовой службы WSFC по обнаружению сбоев. Поэтому порядок отработки отказа для FCI определяется двумя механизмами: собственными функциями WSFC и функциями, добавленными в процессе установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -117,4 +117,3 @@ ms.lasthandoff: 06/22/2017
  [ALTER SERVER CONFIGURATION (Transact-SQL)](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
-

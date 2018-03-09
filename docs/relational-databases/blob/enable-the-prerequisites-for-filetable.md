@@ -2,9 +2,12 @@
 title: "Включение необходимых компонентов для таблицы FileTable | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - FileTables [SQL Server], prerequisites
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ed35c6e65d3c9670ddb59f352451adfde6c37e07
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ce0f4c7dfaf36fffd79bd6dc27e148fa2c6b29e7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Включение необходимых компонентов для таблицы FileTable
-  Описывает способ включения компонентов, обязательных для создания и использования таблиц FileTable.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Описывает способ включения компонентов, обязательных для создания и использования таблиц FileTable.  
   
 ##  <a name="EnablePrereq"></a> Включение необходимых компонентов для FileTable  
  Чтобы включить необходимые компоненты для создания и использования таблиц FileTable, включите следующие элементы:  
@@ -62,7 +65,7 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="HowToCheckAccess"></a> Инструкции. Проверка состояния нетранзакционного доступа (включен или выключен)  
  Выполнить запрос к представлению каталога [sys.database_filestream_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) и проверить столбцы **non_transacted_access** и **non_transacted_access_desc**.  
   
-```tsql  
+```sql  
 SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc  
     FROM sys.database_filestream_options;  
 GO  
@@ -74,14 +77,14 @@ GO
  **Указание уровня нетранзакционного доступа с помощью Transact-SQL**  
  -   При **create a new database** вызовите инструкцию [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md) с параметром **NON_TRANSACTED_ACCESS** FILESTREAM.  
   
-    ```tsql  
+    ```sql  
     CREATE DATABASE database_name  
         WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
     ```  
   
 -   При **изменении существующей базы данных** вызовите инструкцию [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md) с параметром **NON_TRANSACTED_ACCESS** FILESTREAM.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE database_name  
         SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
     ```  
@@ -100,7 +103,7 @@ GO
  **Указание каталога для таблиц FileTable с помощью языка Transact-SQL**  
  -   При **create a new database** вызовите инструкцию [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md) с параметром **DIRECTORY_NAME** FILESTREAM.  
   
-    ```tsql  
+    ```sql  
     CREATE DATABASE database_name  
         WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
     GO  
@@ -108,7 +111,7 @@ GO
   
 -   При **изменении существующей базы данных** вызовите инструкцию [ALTER DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md) с параметром **DIRECTORY_NAME** FILESTREAM. Если эти параметры используются для изменения имени каталога, то база данных должна быть заблокирована в монопольном режиме при отсутствии открытых дескрипторов файлов.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE database_name  
         SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
     GO  
@@ -116,7 +119,7 @@ GO
   
 -   При **подключении базы данных** вызовите инструкцию [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md) с параметром **FOR ATTACH** и **DIRECTORY_NAME** FILESTREAM.  
   
-    ```tsql  
+    ```sql  
     CREATE DATABASE database_name  
         FOR ATTACH WITH FILESTREAM ( DIRECTORY_NAME = N'directory_name' );  
     GO  
@@ -124,7 +127,7 @@ GO
   
 -   При **восстановлении базы данных** вызовите инструкцию [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md) с параметром **DIRECTORY_NAME** FILESTREAM.  
   
-    ```tsql  
+    ```sql  
     RESTORE DATABASE database_name  
         WITH FILESTREAM ( DIRECTORY_NAME = N'directory_name' );  
     GO  
@@ -136,7 +139,7 @@ GO
 ###  <a name="viewnames"></a> Инструкции. Просмотр существующих имен каталогов для экземпляра  
  Чтобы просмотреть список существующих имен каталогов для экземпляра, выполните запрос к представлению каталога [sys.database_filestream_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) и проверьте столбец **filestream_database_directory_name**.  
   
-```tsql  
+```sql  
 SELECT DB_NAME ( database_id ), directory_name  
     FROM sys.database_filestream_options;  
 GO  
@@ -159,4 +162,3 @@ GO
 -   При удалении базы данных, в которой включены таблицы FileTable, каталог на уровне базы данных и все структуры каталогов всех находящихся в ней таблиц FileTable удаляются.  
   
   
-

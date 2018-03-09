@@ -3,7 +3,7 @@ title: "Пример свойства ActiveConnection (Visual Basic) в кат�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - ActiveConnection property [ADOX], Visual Basic example
 ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: df20fb67ed3669c9c93dc99dce510b43ab0e1d92
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 382c25c68f911a48095593879a2657ac5409fc89
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Пример свойства ActiveConnection каталога (Visual Basic)
 Установка [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) свойства на допустимое, откройте подключение» открывает» каталог. Из открытых каталога доступ к схеме объектов, содержащихся в каталоге.  
@@ -73,10 +72,9 @@ End Sub
 Attribute VB_Name = "Catalog"  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Объект таблицы (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
  [Коллекция таблиц (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [Свойство Type (таблица) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
-
+ [Свойство Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

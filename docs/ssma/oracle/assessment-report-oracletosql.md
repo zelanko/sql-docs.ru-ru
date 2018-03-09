@@ -1,26 +1,27 @@
 ---
 title: "Оценка отчетов (OracleToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 168b7465-a6d6-4329-b46e-fc6c5a3f2d9d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 1265951a20285556f3b020767d5b5214d879bc30
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: fd52551fc88f31475e537fb094650b91900d40f0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assessment-report-oracletosql"></a>Оценка отчетов (OracleToSQL)
 Окно отчета оценки показывает результаты преобразования объектов базы данных для [!INCLUDE[tsql](../../includes/tsql_md.md)] синтаксис, и поможет оценить сложность и стоимость проектов миграции.  
@@ -39,4 +40,3 @@ ms.lasthandoff: 08/02/2017
 |**Цель**|Показывает что преобразование [!INCLUDE[tsql](../../includes/tsql_md.md)] код для выбранного объекта и сообщения об ошибках для кода, который не был преобразован. В этой области отображается только при выборе отдельного объекта с кодом на панели слева.<br /><br />Щелкните номера строк, чтобы установить или снять закладки. Используйте кнопки в верхней части области перемещаться по коду.|  
 |**Панель сообщений**|Показывает ошибки, предупреждения и информационные сообщения, которые были созданы при создании отчета оценки. Сообщения группируются по номеру. Чтобы просмотреть код, который вызвал ошибку, нажмите кнопку **ошибки**, **предупреждения**, или **сведения**, разверните категорию сообщений и нажмите кнопку сообщения.|  
   
-

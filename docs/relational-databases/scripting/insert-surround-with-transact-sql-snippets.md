@@ -2,9 +2,12 @@
 title: "Вставка фрагментов кода окружения Transact-SQL | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], surround with snippets
 - Transact-SQL snippets, surround with
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
-caps.latest.revision: 6
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 852836ea43accda6af057b014abbc987f4f14299
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9c1f1ec2e376c496e2b3dcdaf5ef032ba8c54745
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>Вставка фрагментов кода окружения Transact-SQL
-  Внутри фрагмента кода находится шаблон, который можно использовать в качестве начальной точки при включении инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] в блоки BEGIN, IF или WHILE.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Внутри фрагмента кода находится шаблон, который можно использовать в качестве отправной точки при включении набора инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] в блок BEGIN, IF или WHILE.  
   
 ## <a name="inserting-surround-with-snippets"></a>Вставка фрагментов кода окружения  
  Фрагменты кода окружения могут быть запущены одним из трех способов: с помощью сочетания клавиш, через меню **Правка** и через контекстное меню.  
@@ -52,4 +54,3 @@ ms.lasthandoff: 06/22/2017
  [вставлять фрагменты кода Transact-SQL](../../relational-databases/scripting/insert-transact-sql-snippets.md)  
   
   
-

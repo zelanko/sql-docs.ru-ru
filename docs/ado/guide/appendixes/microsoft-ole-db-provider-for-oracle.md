@@ -3,7 +3,7 @@ title: "Поставщик Microsoft OLE DB для Oracle | Документы M
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 35bd07e150d1d56a1ea94542b0bd5b3c1b46d3d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d92236375a3ac152dbe7f5a2f259ce2a5f2edb79
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Поставщик Microsoft OLE DB для Oracle Обзор
 > [!IMPORTANT]
@@ -55,7 +54,7 @@ MSDAORA
 
  Строка состоит из следующих ключевых слов:
 
-|Ключевое слово|Description|
+|Ключевое слово|Описание|
 |-------------|-----------------|
 |**Поставщик**|Указывает поставщика OLE DB для Oracle.|
 |**Источник данных**|Указывает имя сервера.|
@@ -70,14 +69,13 @@ MSDAORA
 
  Эти параметры являются полностью описаны в [Справочник программиста OLE DB](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). [Индекс динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) предоставляет перекрестной ссылки между эти имена параметров и соответствующие свойства OLE DB.
 
-|Параметр|Description|
+|Параметр|Описание|
 |---------------|-----------------|
 |**Дескриптор окна**|Указывает дескриптор окна для использования для запроса дополнительных сведений.|
 |**Идентификатор локали**|Указывает уникальный 32-разрядное число (например, 1033), указывающее параметры, связанные с языком пользователя. Эти параметры указывают способ форматирования даты и времени, элементы сортируются в алфавитном порядке, строки сравниваются и так далее.|
 |**Службы OLE DB**|Указывает битовую маску, которая указывает службы OLE DB, чтобы включить или отключить.|
-|**Запрос**|Указывает, следует ли запрашивать пользователя во время установления соединения.|
+|**Prompt**|Указывает, следует ли запрашивать пользователя во время установления соединения.|
 |**Расширенные свойства**|Строка, содержащая поставщика, расширенные сведения о соединении. Это свойство используется только для подключения к конкретному поставщику данных, которые не может быть описан через механизм свойства.|
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Свойство ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [свойство поставщика (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [объекта набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-

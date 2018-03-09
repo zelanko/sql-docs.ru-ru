@@ -2,30 +2,30 @@
 title: "Диалоговое окно \"Расширенное редактирование\" (условие) | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dmf.condition.advancededit.f1
+f1_keywords: sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
-caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "44"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6f7d494c40e02e96d53f827e9553c743d72660d0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 553e8aece3969407a818d98cf69c20bf922d3601
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>Диалоговое окно «Расширенное редактирование» (условие)
-  С помощью диалогового окна **Расширенное редактирование** создаются сложные выражения для условий управления на основе политик.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью диалогового окна **Расширенное редактирование** создаются сложные выражения для условий управления на основе политик.  
   
 ## <a name="options"></a>Параметры  
  **Значение ячейки**  
@@ -66,7 +66,7 @@ ms.lasthandoff: 08/03/2017
   
 > **ВАЖНО!** В функциях, которые можно использовать для создания условий управления на основе политик, не всегда используется синтаксис [!INCLUDE[tsql](../../includes/tsql-md.md)] . Необходимо следовать синтаксисту примера. Например, при использовании функций **DateAdd** или **DatePart** необходимо заключать аргумент *datepart* в одинарные кавычки.  
   
-|Функция|Сигнатура|Описание|Аргументы|Возвращаемое значение|Пример|  
+|Компонент|Сигнатура|Description|Аргументы|Возвращаемое значение|Пример|  
 |--------------|---------------|-----------------|---------------|------------------|-------------|  
 |**Add()**|Numeric Add (Numeric *expression1*, Numeric *expression2*)|складывает два числа.|*expression1* и *expression2* . Любое допустимое выражение любого из типов данных в категории числовых данных, кроме типа данных **bit** . Может быть константой, свойством или функцией, возвращающей числовой тип данных.|возвращает тип данных аргумента, у которого более высокий приоритет.|`Add(Property1, 5)`|  
 |**Array()**|Array Array (VarArgs *expression*)|создает массив из заданного списка значений. Может использоваться с агрегатными функциями, например Sum() или Count().|*expression* . Выражение, которое должно быть преобразовано в массив.|Массив|`Array(2,3,4,5,6)`|  
@@ -98,9 +98,8 @@ ms.lasthandoff: 08/03/2017
 |**True()**|Bool TRUE()|возвращает логическое значение TRUE.||возвращает логическое значение TRUE.|`IsDatabaseMailEnabled = True()`|  
 |**Upper()**|String Upper (String*_expression*)|возвращает строку после преобразования всех символов нижнего регистра в верхний регистр.|*expression* — выражение исходной строки.|возвращает строку, представляющую собой исходное строковое выражение после преобразования всех символов нижнего регистра в верхний регистр.|`Upper('HeLlO')` в этом примере возвращает значение `'HELLO'` .|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Диалоговое окно «Создание нового условия» или «Открытие условия», страница «Общие»](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)   
  [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
-

@@ -1,6 +1,6 @@
 # [Поставщик WMI для классов управления конфигурацией](wmi-provider-for-configuration-management-classes.md)
 
-# Определенные области
+# Конкретные аспекты
 ## [Класс ClientNetLibInfo +](../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md)
 ## [Класс ClientNetworkProtocol +](../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)
 ## [Класс ClientNetworkProtocolProperty +](../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)
@@ -10,17 +10,17 @@
 ## [Класс ServerNetworkProtocolIPAddress +](../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/enabled-property-servernetworkprotocolipaddress-class.md)
 ## [Класс ServerNetworkProtocolProperty +](../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/instancename-property-servernetworkprotocolproperty-class.md)
 ## [Класс ServerSettings +](../../relational-databases/wmi-provider-configuration-classes/serversettings-class/generalflags-property-serversettings-class.md)
-## [Класс serversettingsgeneralflag +](../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/flagname-property-serversettingsgeneralflag-class.md)
+## [Класс ServerSettingsGeneralFlag +](../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/flagname-property-serversettingsgeneralflag-class.md)
 ## [Класс SInstance +](../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)
 ## [Класс SqlServerAlias +](../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/aliasname-property-sqlserveralias-class.md)
 ## [Класс SqlService +](../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/acceptpause-property-sqlservice-class.md)
 ## [Класс SqlServiceAdvancedProperty +](../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/isreadonly-property-sqlserviceadvancedproperty-class.md)
 
-# [Класс Cinstance - InstanceName, свойство](cinstance-class-instancename-property.md)
-# [Класс Cinstance - SetDefaults, метод](cinstance-class-setdefaults-method.md)
-# [Класс Cinstance](cinstance-class.md)
-# [Класс ClientSettings - InstanceName, свойство](clientsettings-class-instancename-property.md)
-# [Класс ClientSettings - SetDefaults, метод](clientsettings-class-setdefaults-method.md)
+# [Класс CInstance — свойство InstanceName](cinstance-class-instancename-property.md)
+# [Класс CInstance — метод SetDefaults](cinstance-class-setdefaults-method.md)
+# [Класс CInstance](cinstance-class.md)
+# [Класс ClientSettings — свойство InstanceName](clientsettings-class-instancename-property.md)
+# [Класс ClientSettings — метод SetDefaults](clientsettings-class-setdefaults-method.md)
 # [Класс ClientSettings](clientsettings-class.md)
-# [SqlErrorLogEvent, класс](sqlerrorlogevent-class.md)
-# [SqlErrorLogFile, класс](sqlerrorlogfile-class.md)
+# [Класс SqlErrorLogEvent](sqlerrorlogevent-class.md)
+# [Класс SqlErrorLogFile](sqlerrorlogfile-class.md)

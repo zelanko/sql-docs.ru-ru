@@ -1,10 +1,13 @@
 ---
-title: "Назначение обработки секции | Документы Microsoft"
+title: "Назначение обработки секции | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -19,17 +22,16 @@ helpviewer_keywords:
 - Partition Processing destination [Integration Services]
 - destinations [Integration Services], Partition Processing
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
-caps.latest.revision: 44
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 124e43d651641eacbf98d82e1d9b1fffeec54b44
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 20277b2aee209f1632100615d94a1fc3caec27d9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="partition-processing-destination"></a>Назначение обработки секции
   Назначение обработки секций производит загрузку и обработку секции служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Дополнительные сведения о секциях см. в разделе [Секции (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
@@ -56,7 +58,7 @@ ms.lasthandoff: 08/17/2017
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства назначения «Обработка секций»](../../integration-services/data-flow/partition-processing-destination-custom-properties.md)  
   
@@ -84,7 +86,7 @@ ms.lasthandoff: 08/17/2017
 |Значение|Description|  
 |-----------|-----------------|  
 |Добавление (дополнительное)|Выполнить дополнительную обработку секции.|  
-|Полная|Выполнить полную обработку секции.|  
+|Полное|Выполнить полную обработку секции.|  
 |Только данные|Выполнить обработку обновления секции.|  
   
 ## <a name="partition-processing-destination-editor-mappings-page"></a>Редактор назначения «Обработка секций» (страница «Сопоставления»)
@@ -184,5 +186,4 @@ ms.lasthandoff: 08/17/2017
  Укажите путь к журналу ошибок.  
   
 ## <a name="see-also"></a>См. также:  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../integration-services/integration-services-error-and-message-reference.md)   
-
+ [Справочник по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   

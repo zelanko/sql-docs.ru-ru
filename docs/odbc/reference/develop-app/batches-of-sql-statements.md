@@ -3,10 +3,12 @@ title: "Пакеты инструкций SQL | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], batches
 - batches [ODBC], about batches
 ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d2ae8d60d6e41536bc67bd14f9252c372fdeaa5c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 70649ee51ec7b5c2ef3926706f802da8189fc3b2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="batches-of-sql-statements"></a>Пакеты инструкций SQL
 Пакет инструкций SQL является группой из двух или более инструкций SQL или отдельной инструкции SQL, который имеет тот же эффект, как группа из двух или более инструкций SQL. В некоторых реализациях инструкцию весь пакет выполняется перед доступны все результаты. Это часто более эффективен, чем отправка инструкций по одной, так как часто можно сократить сетевой трафик и источник данных иногда может оптимизировать выполнение пакетных инструкций SQL. В других реализациях вызов **SQLMoreResults** вызывает выполнение следующей инструкции в пакете. ODBC поддерживает следующие типы пакетов:  
@@ -68,9 +69,8 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующие подразделы.  
   
--   [Формирование результата и результат без инструкций](../../../odbc/reference/develop-app/result-generating-and-result-free-statements.md)  
+-   [Инструкции, возвращающие и не возвращающие результаты](../../../odbc/reference/develop-app/result-generating-and-result-free-statements.md)  
   
 -   [Выполнение пакетов](../../../odbc/reference/develop-app/executing-batches.md)  
   
--   [Ошибки и пакетов](../../../odbc/reference/develop-app/errors-and-batches.md)
-
+-   [Ошибки и пакеты](../../../odbc/reference/develop-app/errors-and-batches.md)

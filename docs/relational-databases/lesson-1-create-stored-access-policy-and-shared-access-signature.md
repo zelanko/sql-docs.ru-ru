@@ -1,11 +1,13 @@
 ---
 title: "Занятие 1. Создание хранимой политики доступа и подписанного URL-адреса | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-backup-restore
 ms.tgt_pltfrm: 
@@ -13,19 +15,19 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
-caps.latest.revision: 22
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f2c8af4701b9a01ee21613fe7e093a89f1d8f990
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: fe7163f6ff8d2f79a4eb3297c831e82d59b70c48
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>Занятие 1. Создание хранимой политики доступа и подписанного URL-адреса
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 На этом занятии вы используете скрипт [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) , чтобы создать подписанный URL-адрес для контейнера BLOB-объектов Azure с помощью хранимой политики доступа.  
   
 > [!NOTE]  
@@ -116,21 +118,12 @@ ms.lasthandoff: 06/22/2017
   
     # Creates a new container in blob storage  
     $container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
-    $cbc = $container.CloudBlobContainer  
   
     # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
-    $permissions = $cbc.GetPermissions();  
-    $policyName = $policyName  
-    $policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
-    $policy.SharedAccessStartTime = $(Get-Date).ToUniversalTime().AddMinutes(-5)  
-    $policy.SharedAccessExpiryTime = $(Get-Date).ToUniversalTime().AddYears(10)  
-    $policy.Permissions = "Read,Write,List,Delete"  
-    $permissions.SharedAccessPolicies.Add($policyName, $policy)  
-    $cbc.SetPermissions($permissions);  
-  
+    $policy = New-AzureStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -StartTime $(Get-Date).ToUniversalTime().AddMinutes(-5) -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission rwld
+
     # Gets the Shared Access Signature for the policy  
-    $policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
-    $sas = $cbc.GetSharedAccessSignature($policy, $policyName)  
+    $sas = New-AzureStorageContainerSASToken -name $containerName -Policy $policyName -Context $storageContext
     Write-Host 'Shared Access Signature= '$($sas.Substring(1))''  
   
     # Outputs the Transact SQL to the clipboard and to the screen to create the credential using the Shared Access Signature  
@@ -155,5 +148,4 @@ ms.lasthandoff: 06/22/2017
   
   
   
-
 

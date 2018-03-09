@@ -1,13 +1,14 @@
 ---
-title: "Установка сервера отчетов в собственном режиме службы Reporting Services | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 08/17/2017
-ms.prod: sql-server-2016
+title: "Установка сервера отчетов служб Reporting Services 2016 в собственном режиме | Документы Майкрософт"
+ms.custom: 
+ms.date: 12/20/2017
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -15,26 +16,25 @@ helpviewer_keywords:
 - report servers [Reporting Services], default configurations
 - installation options [Reporting Services]
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
-caps.latest.revision: 68
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "68"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: a8c8f93212e62b148671305354599b88e6f3d318
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 23104fa56aeb157b19d43b332c2d570613ed5a62
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="install-reporting-services-native-mode-report-server"></a>Установка сервера отчетов служб Reporting Services в основном режиме
+# <a name="install-reporting-services-2016-native-mode-report-server"></a>Установка сервера отчетов служб Reporting Services 2016 в собственном режиме
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 Сведения об установке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в основном режиме. Это обеспечит доступ к [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] , где можно управлять отчетами и другими элементами.
 
 > [!NOTE]
-> Ищете сервера Power BI отчетов? В разделе [Установка сервера отчетов бизнес-Аналитики Power](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/).
+> Ищете сервер отчетов Power BI? См. раздел [Установка сервера отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/).
 
 Работающий в основном режиме сервер отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] — это сервер [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме по умолчанию, который можно установить с помощью мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или из командной строки. В мастере установки можно выбрать либо установку файлов и настройку сервера с параметрами по умолчанию, либо только установку файлов. В этом разделе описывается *конфигурация по умолчанию для собственного режима* , при которой программа установки устанавливает и настраивает экземпляр сервера отчетов. Когда установка будет завершена, сервер отчетов будет запущен и готов для использования базовых функций просмотра отчетов и управления отчетами.  Чтобы использовать дополнительные возможности, включая функции интеграции с [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] и доставки электронной почты с обработкой подписки, нужна дополнительная настройка.  
   
@@ -79,28 +79,28 @@ ms.lasthandoff: 10/06/2017
   
 -   Учетная запись пользователя, использованная для выполнения программы установки, должна быть членом локальной группы администраторов. Кроме того, она должна обладать разрешениями для доступа и создания баз данных в экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , на котором размещены базы данных сервера отчетов.  
   
--   Программа установки должна иметь возможность использовать значения по умолчанию, чтобы резервировать URL-адреса, которые обеспечивают доступ к серверу и [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Эти значения являются порт 80, надежный шаблон и имена виртуальных каталогов в формате **ReportServer_\<***имя_экземпляра*  **>**  и **Reports_\<***имя_экземпляра***>**.  
+-   Программа установки должна иметь возможность использовать значения по умолчанию, чтобы резервировать URL-адреса, которые обеспечивают доступ к серверу и [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Этими значениями являются порт 80, строгий подстановочный знак и имена виртуальных каталогов в формате **ReportServer_\<***имя_экземпляра***>** и **Reports_\<***имя_экземпляра***>**.  
   
 -   Программа установки должна иметь возможность создания баз данных сервера отчетов с использованием значений по умолчанию. Это значения **ReportServer** и **ReportServerTempDB**. Если от предыдущей установки остались базы данных, то программа установки будет заблокирована, поскольку она не сможет настроить сервер отчетов в конфигурации по умолчанию для собственного режима. Чтобы снять блокировку программы установки, следует переименовать, переместить или удалить базы данных.  
   
  Если компьютер не отвечает всем требованиям для установки по умолчанию, нужно установить службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме «только файлы», а после установки настроить компьютер с помощью диспетчера настройки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
  
  > [!IMPORTANT]
- > Хотя службы Reporting Services могут быть установлены в среде, имеющей контроллера домена только для чтения (RODC), службы Reporting Services необходим доступ к чтения и записи контроллера домена для правильной работы функций. Если службы Reporting Services имеет доступ только к RODC, может обнаружить ошибки при попытке администрирования службы.
+ > Хотя службы Reporting Services можно установить в среде с контроллером домена только для чтения (RODC), для правильной работы служб Reporting Services им требуется доступ к контроллеру домена для чтения и записи. Если у служб Reporting Services есть доступ только к контроллеру домена только для чтения, при попытке управления ими могут возникать ошибки.
   
 ##  <a name="bkmk_defaultURLreservations"></a> Резервирование URL-адресов по умолчанию  
  Резервирование URL-адреса состоит из префикса, имени узла, номера порта и имени виртуального каталога.  
   
-|Часть|Описание|  
+|Часть|Description|  
 |----------|-----------------|  
-|Префикс|Префиксом по умолчанию является HTTP. Если сертификат SSL уже установлен, программа установки попытается создать резервирование URL-адресов с префиксом HTTPS.|  
-|Имя узла|Именем узла по умолчанию является строгий шаблон (+). Указывает, что сервер отчетов принимает все HTTP-запросы по заданному порту для любого имени узла, который соответствует компьютеру, включая `http://<computername>/reportserver`, `http://localhost/reportserver`, или `http://<IPAddress>/reportserver`.|  
+|Prefix|Префиксом по умолчанию является HTTP. Если сертификат SSL уже установлен, программа установки попытается создать резервирование URL-адресов с префиксом HTTPS.|  
+|Имя узла|Именем узла по умолчанию является строгий шаблон (+). Он указывает, что сервер отчетов принимает все HTTP-запросы в заданном порте для любого имени узла, который соответствует компьютеру, включая `http://<computername>/reportserver`, `http://localhost/reportserver` или `http://<IPAddress>/reportserver`|  
 |Порт|По умолчанию используется порт 80. Следует иметь в виду, что если используется порт, отличный от 80, то его необходимо явным образом указывать в URL-адресе при открытии веб-приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в окне браузера.|  
-|Виртуальный каталог|По умолчанию виртуальных каталогов формируются по модели reportserver_\<*имя_экземпляра*> для сервера веб-службы отчетов и Reports_\<*имя_экземпляра*> для [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Для веб-службы сервера отчетов по умолчанию используется виртуальный каталог **reportserver**. Для [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]используется виртуальный каталог по умолчанию **reports**.|  
+|Виртуальный каталог|По умолчанию имена виртуальных каталогов формируются по модели ReportServer_\<*имя_экземпляра*> для веб-службы сервера отчетов и по модели Reports_\<*имя_экземпляра*> — для [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Для веб-службы сервера отчетов по умолчанию используется виртуальный каталог **reportserver**. Для [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]используется виртуальный каталог по умолчанию **reports**.|  
   
  Ниже приведен пример полного URL-адреса.  
   
--   `http://+:80/reportserver`, предоставляющий доступ к серверу отчетов.  
+-   `http://+:80/reportserver`, предоставляет доступ к серверу отчетов.  
   
 -   `http://+:80/reports`, предоставляет доступ к [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)].
   
@@ -125,7 +125,7 @@ ms.lasthandoff: 10/06/2017
   
 2.  На странице **Роль установки** выберите **Установка компонентов SQL Server**.  
   
-     ![Установка компонентов SQL Server для установки роли](../../reporting-services/install-windows/media/rs-setuprole.png "Установка компонентов SQL Server для установки роли")  
+     ![Установка компонентов SQL Server для роли установки](../../reporting-services/install-windows/media/rs-setuprole.png "Установка компонентов SQL Server для роли установки")  
   
 3.  Выберите следующие компоненты на странице **Выбор компонентов** :  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 10/06/2017
   
     -   (2) **Reporting Services-собственный режим**.  
   
-     ![Выберите основной режим служб SSRS в выборе компонентов](../../reporting-services/install-windows/media/rs-setupfeatureselection-native-withcircles.png "в выбора компонентов выберите собственный режим служб SSRS")  
+     ![Выбор служб SSRS в собственном режиме в выборе компонентов](../../reporting-services/install-windows/media/rs-setupfeatureselection-native-withcircles.png "Выбор служб SSRS в собственном режиме в выборе компонентов")  
   
 4.  Просмотрите переданные **правила компонентов** .  
   
@@ -174,11 +174,11 @@ ms.lasthandoff: 10/06/2017
   
 ##  <a name="bkmk_additional_configuration"></a> Дополнительная настройка  
   
--   Настройка [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] интеграции, вы можете закрепить отчетов элементы, [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] панели мониторинга, в разделе [интеграции сервера отчетов Power BI](../../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
+-   Инструкции по настройке интеграции [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)], позволяющей закреплять элементы отчета на панели мониторинга [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)], см. в статье [Интеграция сервера отчетов с Power BI](../../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
--   Настройке электронной почты для обработки подписок см. в разделе [настройки электронной почты — Reporting Services, собственный режим](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) и [работы с электронной почтой в службах Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+-   Инструкции по настройке электронной почты для обработки подписок см. в статьях [Настройки электронной почты — основной режим служб Reporting Services](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) и [Доставка электронной почтой в службах Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
--   Для настройки веб-портал, поэтому доступ к нему на компьютере отчетов для просмотра и управления отчетами, в разделе [настроить брандмауэр для доступа к серверу отчетов](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) и [настроить сервер отчетов для удаленного администрирования](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
+-   Инструкции по настройке веб-портала для просмотра отчетов и управления ими с компьютера см. в статьях [Настройка брандмауэра для доступа к серверу отчетов](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) и [Настройка сервера отчетов для удаленного администрирования](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
   
 ## <a name="see-also"></a>См. также:
 
@@ -193,4 +193,3 @@ ms.lasthandoff: 10/06/2017
 [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
 
 Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

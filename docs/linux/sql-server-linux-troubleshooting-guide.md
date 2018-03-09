@@ -3,26 +3,34 @@ title: "Устранение неполадок SQL Server для Linux | Док
 description: "Содержит советы по устранению неполадок для использования 2017 г. SQL Server в Linux."
 author: annashres
 ms.author: anshrest
-manager: jhubbard
-ms.date: 05/08/2017
+manager: craigg
+ms.date: 02/22/2018
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
+ms.workload: On Demand
+ms.openlocfilehash: b3dc37601859ee4125f9f7885592e3a0653e8d0c
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: fdaa3435a26bc96a0dfbd3b1043e92f800ab9915
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Устранение неполадок SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 В этом документе описывается устранение неполадок Microsoft SQL Server, работающим на платформе Linux или в контейнер Docker. При устранении неполадок SQL Server в Linux, не забудьте просмотреть поддерживаемые функции и известные ограничения в [SQL Server в заметках о выпуске Linux](sql-server-linux-release-notes.md).
 
-## <a id="connection"></a>Устранение ошибок соединения
+> [!TIP]
+> Ответы на часто задаваемые вопросы см. в разделе [SQL Server в Linux часто задаваемые вопросы о](sql-server-linux-faq.md).
+
+## <a id="connection"></a> Устранение ошибок соединения
 Если возникли затруднения при подключении к экземпляру SQL Server в Linux, существует несколько необходимо проверить следующее. 
 
 - Убедитесь в том, что имя сервера или IP-адрес доступен с клиентского компьютера.
@@ -46,7 +54,7 @@ ms.lasthandoff: 10/02/2017
 
 - Убедитесь, что имя пользователя и пароль не должен содержать опечаток, лишних пробелов и неправильный регистр символов.
 
-- Попробуйте явно задать номер порта и протокола с указанием имени сервера следующим образом: **tcp:servername 1433**.
+- Попробуйте явно задать протокол и номер порта на имя сервера имеет следующий вид: **tcp:servername 1433**.
 
 - Также могут вызвать проблемы с сетевым соединением, значения времени ожидания и ошибок подключения. После проверки того, сведения о соединении и подключение к сети, повторите попытку подключения.
 
@@ -56,7 +64,7 @@ ms.lasthandoff: 10/02/2017
 
 ### <a name="manage-the-mssql-server-service-in-red-hat-enterprise-linux-rhel-and-ubuntu"></a>Управление службой mssql server в Red Hat Enterprise Linux (RHEL) и Ubuntu 
 
-Проверьте состояние состояние службы SQL Server, с помощью этой команды.
+Проверьте состояние службы SQL Server, с помощью этой команды.
 
    ```bash
    sudo systemctl status mssql-server
@@ -72,7 +80,7 @@ ms.lasthandoff: 10/02/2017
 
 ### <a name="manage-the-execution-of-the-mssql-docker-container"></a>Управление выполнение в контейнер Docker mssql
 
-Состояние и контейнер идентификатор последней созданной контейнера SQL Server Docker можно получить, выполнив следующую команду (идентификатор будет в столбце «Идентификатор КОНТЕЙНЕРА»):
+Состояние и контейнер идентификатор последней созданной контейнера SQL Server Docker можно получить, выполнив следующую команду (идентификатор находится в **идентификатор КОНТЕЙНЕРА** столбца):
 
    ```bash
    sudo docker ps -l
@@ -120,12 +128,43 @@ ms.lasthandoff: 10/02/2017
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
+   
+## <a name="start-sql-server-in-minimal-configuration-or-in-single-user-mode"></a>Запуск SQL Server в минимальной конфигурации или в однопользовательском режиме
+
+### <a name="start-sql-server-in-minimal-configuration-mode"></a>Запуск SQL Server в режиме минимальной конфигурации
+Эта функция полезна в случае, если установленные значения конфигурации (например, слишком большой объем выделяемой памяти) не позволяют выполнить запуск сервера.
+  
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -f
+   ```
+
+### <a name="start-sql-server-in-single-user-mode"></a>Запуск SQL Server в однопользовательском режиме
+В некоторых случаях может потребоваться запустить экземпляр SQL Server в однопользовательском режиме, используя параметр запуска -m. Например, может понадобиться изменить параметры конфигурации сервера, восстановить поврежденную базу данных master или другую системную базу данных. Например может потребоваться изменить параметры конфигурации сервера или восстановить поврежденную базу данных master или другую системную базу данных   
+
+Запуск SQL Server в однопользовательском режиме
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -m
+   ```
+
+Запуск SQL Server в однопользовательском режиме с помощью SQLCMD
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -m SQLCMD
+   ```
+  
+> [!WARNING]  
+>  Чтобы избежать проблем с запуском в дальнейшем, SQL Server в Linux следует запускать с указанием пользователя "mssql". Пример: "sudo -u mssql /opt/mssql/bin/sqlservr [параметры запуска]" 
+
+Случайно с другим пользователем после запуска SQL Server, необходимо изменить владельца файлов базы данных SQL Server для пользователя «mssql» перед запуском SQL Server с systemd. Например для изменения владельца всех файлов базы данных в группе /var/opt/mssql для пользователя «mssql», выполните следующую команду
+
+   ```bash
+   chown -R mssql:mssql /var/opt/mssql/
+   ```
 
 ## <a name="common-issues"></a>Распространенные проблемы
 
 1. Не удается подключиться к удаленному экземпляру SQL Server.
 
-   В разделе об устранении неполадок см. в разделе [подключение к SQL Server в Linux](#connection).
+   В разделе об устранении неполадок статьи, [подключение к SQL Server в Linux](#connection).
 
 2. Ошибка: Имя узла должно быть 15 символов или меньше.
 
@@ -136,7 +175,7 @@ ms.lasthandoff: 10/02/2017
    Если вы забыли пароль системного администратора (SA) или его потребуется сбросить по другой причине, выполните следующие действия.
 
    > [!NOTE]
-   > После выполнения этих действий останавливает службу SQL Server в временно.
+   > Следующие шаги временно остановите службу SQL Server.
 
    Войдите на узел терминалов, выполните следующие команды и следуйте инструкциям на экране, чтобы сбросить пароль учетной записи SA:
 
@@ -147,7 +186,7 @@ ms.lasthandoff: 10/02/2017
 
 4. Использование специальных символов в пароле.
 
-   При использовании некоторых символов в пароле имя входа SQL Server может потребоваться экранировать их при их использовании в терминале Linux. Необходимо экранировать $ в любое время с помощью обратной косой черты используется в терминалов команда или сценарий:
+   При использовании некоторых символов в пароле имя входа SQL Server может потребоваться экранировать их при их использовании в терминале Linux. $ Необходимо экранировать в любое время с помощью обратной косой черты используется в терминалов команда или сценарий:
 
    Не работает:
 
@@ -164,12 +203,4 @@ ms.lasthandoff: 10/02/2017
    Ресурсы: [специальные символы](http://tldp.org/LDP/abs/html/special-chars.html)
    [Escaping](http://tldp.org/LDP/abs/html/escapingsection.html)
 
-## <a name="support"></a>Поддержка
-
-Поддержка доступна в сообществе и наблюдать инженеров. Дополнительную информацию используйте следующие ресурсы:
-
-- [Администратор базы данных Exchange стека](https://dba.stackexchange.com/questions/tagged/sql-server): задать вопросы администрирования базы данных
-- [Переполнение стека](http://stackoverflow.com/questions/tagged/sql-server): вопросы разработки
-- [Форумы MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): задавайте технические вопросы
-- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): ошибки и запрос функции отчетов
-- [Reddit](https://www.reddit.com/r/SQLServer/): обсудить SQL Server
+[!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

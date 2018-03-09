@@ -2,39 +2,39 @@
 title: "Открытие, разблокировка, переименование и удаление проекта служб DQS | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dqproject.opendqproject.f1
+f1_keywords: sql13.dqs.dqproject.opendqproject.f1
 helpviewer_keywords:
 - data quality project,delete
 - data quality project,rename
 - data quality project,unlock
 - data quality project,open
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
-caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "9"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c46bc57e30a9d6b119e708ad3a93aabb4183b7fd
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eec04917faf24e5e6d9075fd165a45148c9f10b7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>Открытие, разблокировка, переименование и удаление проекта качества данных
   В этом разделе описывается управление проектом служб DQS с помощью [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] : такие действия, как открытие, разблокирование, переименование и удаление проекта.  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="LimitationsRestrictions"></a> Ограничения  
+###  <a name="LimitationsRestrictions"></a> ограничения  
   
 -   Нельзя открыть заблокированный проект, созданный другим пользователем.  
   
@@ -47,9 +47,9 @@ ms.lasthandoff: 09/09/2017
 ###  <a name="Prerequisites"></a> Предварительные требования  
  Для управления должен быть в наличии хотя бы один проект служб DQS.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Для управления проектом служб DQS необходимо иметь роль dqs_kb_editor или dqs_kb_operator в базе данных DQS_MAIN.  
   
 ##  <a name="Open"></a> Открытие проекта служб DQS  
@@ -98,4 +98,3 @@ ms.lasthandoff: 09/09/2017
 4.  Появится окно подтверждения. Нажмите кнопку **Да**.  
   
   
-

@@ -2,28 +2,28 @@
 title: "Учебник. Добавление спарклайна в отчет (построитель отчетов) | Документация Майкрософт"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: 2a9f819427b4abb5e9ee4032a990842a4137611f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c4cc42eaf9862f2154f598d6f91dafffa906c799
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Учебник. Добавление спарклайна в отчет (построитель отчетов)
 
 В этом учебнике по [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)]вы создадите простую таблицу со спарклайн-графиком в отчета [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы.   
@@ -323,7 +323,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  Нажмите кнопку **Сохранить**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 
 На этом заканчивается учебник по созданию табличного отчета со спарклайн графиками. Дополнительные сведения о спарклайнах см. в разделе [Спарклайны и гистограммы](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   

@@ -3,27 +3,29 @@ title: "Совмещение имен (хранилище данных Azure SQL
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7b3a5c74-05cf-4385-8ee6-6176d003cb8a
-caps.latest.revision: 11
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: edc81ce4377f490b482d920871ad361c98f961c5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 65d5799c33afabe8ebbdb212c13661699b9fea9e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>Совмещение имен (хранилище данных Azure SQL, параллельное хранилище данных)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   За счет присвоения псевдонима временные подстановки коротких и легко запомнить строки вместо имени таблицы или столбца в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] запросов. Псевдонимы таблиц часто используются в запросах с СОЕДИНЕНИЯМИ, так как синтаксис JOIN требуются полные имена объектов, при ссылке на столбцы.  
   
@@ -42,7 +44,7 @@ object_source [ AS ] alias
  AS  
  Необязательный псевдоним местоимением. При работе с псевдонимами переменной диапазона, ключевое слово AS запрещен.  
   
- *псевдоним*  
+ *alias*  
  Имя нужного временную ссылку для таблицы или столбца. Можно использовать любое допустимое имя объекта. Дополнительные сведения см. в разделе «Правила именования объектов» в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -79,10 +81,9 @@ WHERE SalesPersonFlag = 1 AND SalesTerritoryRegion != N'NA'
 GROUP BY LastName, SalesTerritoryRegion;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)  
   
   
-

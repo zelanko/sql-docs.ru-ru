@@ -3,30 +3,31 @@ title: "Свойства запроса (визуальные инструмен
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vdtsql.chm:69636
 - vdt.ppg.querydesigner.query
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 310d9c728820be6bc8f31b24cc979dea6ad1f7ec
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8fbfa283615298113db6fd52de97c27f73291d8d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="query-properties-visual-database-tools"></a>Свойства запроса (визуальные инструменты для баз данных)
-Эти свойства отображаются в окне «Свойства» при открытии запроса в конструкторе запросов и представлений. Если не оговорено обратное, эти свойства можно изменять в окне «Свойства».  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Эти свойства отображаются в окне "Свойства" при открытии запроса в конструкторе запросов и представлений. Если не оговорено обратное, эти свойства можно изменять в окне «Свойства».  
   
 > [!NOTE]  
 > Свойства в данном разделе группируются по категориям, а не по алфавиту.  
@@ -35,10 +36,10 @@ ms.lasthandoff: 08/18/2017
 **Категория «Идентификатор»**  
 Разверните для отображения свойства **Имя** .  
   
-**Имя**  
+**Название**  
 Показывает имя текущего запроса. Нельзя изменить в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
   
-**Имя базы данных**  
+**Database Name**  
 Отображает имя источника данных для выбранной таблицы.  
   
 **Имя сервера**  
@@ -91,4 +92,3 @@ ms.lasthandoff: 08/18/2017
 [Запрос с параметрами (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
 [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
-

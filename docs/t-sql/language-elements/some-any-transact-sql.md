@@ -3,8 +3,11 @@ title: "НЕКОТОРЫЕ | ВСЕ (Transact-SQL) | Документы Microsof
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - SOME | ANY keyword
 - single-column set of values [SQL Server]
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-caps.latest.revision: 41
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a67801d62cb05cdb0b589548e8bd3f9676d5840a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: d81a0d9fb87a11aa7bc109c003d7b723c20c8e77
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Сравнивает скалярное значение с набором значений, состоящим из одного столбца. Ключевые слова SOME и ANY эквивалентны.  
   
@@ -61,16 +63,16 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  SOME | ANY  
  Указывает на необходимость сравнения.  
   
- *вложенный запрос*  
+ *subquery*  
  Вложенный запрос, содержащий результирующий набор, состоящий из одного столбца. Тип данных возвращаемого столбца должен быть тот же тип данных, как *scalar_expression*.  
   
 ## <a name="result-types"></a>Типы результата  
  **Логическое значение**  
   
 ## <a name="result-value"></a>Значение результата  
- SOME или ANY возвращает **TRUE** Если указанное сравнение имеет значение TRUE для любой пары (*scalar_expression***,***x*) где *x* это значение в наборе один столбец; в противном случае возвращает **FALSE**.  
+ SOME или ANY возвращает **TRUE** Если указанное сравнение имеет значение TRUE для любой пары (*scalar_expression***,***x*) где *x* в значении набор одного столбца; в противном случае возвращает **FALSE**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  SOME необходим *scalar_expression* для сравнения по крайней мере одного значения, возвращаемого вложенным запросом. Для инструкций, которые требуют *scalar_expression* сравнения каждого значения, возвращаемого вложенным запросом, перечислены в разделе [все &#40; Transact-SQL &#41; ](../../t-sql/language-elements/all-transact-sql.md). Например, если вложенный запрос возвращает значения 2 и 3, *scalar_expression* = SOME (вложенными запросами) будет возвращаться TRUE для *scalar_express* 2. Если вложенный запрос возвращает значения 2 и 3, *scalar_expression* = ALL (вложенными запросами) будет возвращаться FALSE, так как некоторые значения вложенного запроса (значение 3) не отвечают критериям этого выражения.  
   
 ## <a name="examples"></a>Примеры  
@@ -147,7 +149,7 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
   
  `At least one item for this order cannot be manufactured in specified number of days.`  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ВСЕ &#40; Transact-SQL &#41;](../../t-sql/language-elements/all-transact-sql.md)   
  [РЕГИСТР &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
@@ -157,4 +159,3 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
  [ИН &#40; Transact-SQL &#41;](../../t-sql/language-elements/in-transact-sql.md)  
   
   
-

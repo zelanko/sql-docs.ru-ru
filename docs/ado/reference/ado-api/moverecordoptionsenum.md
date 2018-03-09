@@ -3,7 +3,7 @@ title: "MoveRecordOptionsEnum | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - MoveRecordOptionsEnum enumeration [ADO]
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d42dbc66f84a3b087401063ee3a53a00f2f37105
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dc684d2c38347251c1f7af843a105f13989e5f8a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 Задает поведение [запись](../../../ado/reference/ado-api/record-object-ado.md) объекта [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) метод.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adMoveUnspecified**|-1|По умолчанию. Выполняет операцию перемещения по умолчанию: завершится ошибкой, если целевой файл или каталог уже существует, и операция обновляет гипертекстовых ссылок.|  
 |**adMoveOverWrite**|1|Перезаписывает конечный файл или каталог, даже если он уже существует.|  
@@ -45,4 +44,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="applies-to"></a>Объект применения  
  [Метод MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
-

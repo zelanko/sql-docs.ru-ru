@@ -3,31 +3,30 @@ title: "Диалоговое окно \"Имя не найдено\" | Доку�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.common.namenotfound.f1
-helpviewer_keywords:
-- Name Not Found dialog box
+f1_keywords: sql13.swb.common.namenotfound.f1
+helpviewer_keywords: Name Not Found dialog box
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e9dfa22d44a1aae2a3d87c85b6520ad52ab22b7f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 912601c36425e6d351d99621db029f086d8856b5
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="name-not-found-dialog-box"></a>Диалоговое окно «Имя не найдено»
-Одно или несколько имен объектов в диалоговом окне не были найдены. Выберите параметр для продолжения.  
+# <a name="name-not-found-dialog-box"></a>диалоговое окно «Имя не найдено»
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Одно или несколько имен объектов в диалоговом окне не были найдены. Выберите параметр для продолжения.  
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
 **Исправить сведения и повторить поиск**  
@@ -45,4 +44,3 @@ ms.lasthandoff: 06/22/2017
 **Удалить** *<object name>* **из выбранного**  
 Выберите, чтобы закрыть диалоговое окно **Имя не найдено** и удалить элемент из диалогового окна **Выбор объектов** .  
   
-

@@ -2,34 +2,32 @@
 title: "Функция VarP (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- VARP
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- VarP function [MDX]
+f1_keywords: VARP
+dev_langs: kbMDX
+helpviewer_keywords: VarP function [MDX]
 ms.assetid: feca648d-bbc8-44c8-9a0e-38f66d914c72
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: b149d346c3caba0c573f5e3f85ad6647b2e178b0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4f0d30afa0147f62bea4b58661ee735deb61a429
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="varp-mdx"></a>VarP (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает дисперсию генеральной совокупности для числового выражения, вычисляемого на наборе по формуле смещенной совокупности (делением  *n* -1).  
   
@@ -47,7 +45,7 @@ VarP(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  Допустимое числовое выражение (обычно многомерное выражение координат ячейки), возвращающее число.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **VarP** функция возвращает смещенную дисперсию указанного числового выражения, рассчитанного для указанного набора.  
   
  **VarP** функция использует смещенной совокупности формул при [Var](../mdx/var-mdx.md) функции используется формула несмещенной совокупности.  
@@ -56,4 +54,3 @@ VarP(Set_Expression [ ,Numeric_Expression ] )
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

@@ -2,33 +2,34 @@
 title: "Распознавание и разрешение конфликтов в логических записях | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - logical records [SQL Server replication]
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
-caps.latest.revision: 32
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "32"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6e8b64c8196394624e142d04609e014afcc17dd9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c2dd94b458882e47529c2919852a665059ae4a4e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>Подробнее о конфликтах при репликации слиянием — разрешение в логической записи
-  В разделе рассматриваются различные комбинации подходов к распознаванию конфликтов и устранению конфликтов, возможные при использовании логических записей. В репликации слиянием возникает конфликт, когда изменение одних и тех же данных производится более чем одним узлом, или же в репликации слиянием возникают определенные типы ошибок, такие как нарушение ограничений, когда изменяется репликация. Дополнительные сведения о распознавании и разрешении конфликтов см. в разделе [Расширенное обнаружение и разрешение конфликтов репликации слиянием](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В разделе рассматриваются различные комбинации подходов к распознаванию и устранению конфликтов, возможные при использовании логических записей. В репликации слиянием возникает конфликт, когда изменение одних и тех же данных производится более чем одним узлом, или же в репликации слиянием возникают определенные типы ошибок, такие как нарушение ограничений, когда изменяется репликация. Дополнительные сведения о распознавании и разрешении конфликтов см. в разделе [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
- Чтобы указать уровень отслеживания конфликтов и разрешений, см. раздел [Указание уровня отслеживания и разрешения конфликтов для статей публикации слиянием](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
+ Чтобы указать уровень отслеживания конфликтов и разрешений, см. раздел [Specify the Conflict Tracking and Resolution Level for Merge Articles](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md).  
   
 ## <a name="conflict-detection"></a>Обнаружение конфликтов  
  Способ обнаружения конфликтов в логических записях определяется двумя свойствами статьи: **column_tracking** и **logical_record_level_conflict_detection**. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздние версии также поддерживают обнаружение на уровне логической записи.  
@@ -113,4 +114,3 @@ ms.lasthandoff: 06/22/2017
  [Группирование изменений в связанных строках с помощью логических записей](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)  
   
   
-

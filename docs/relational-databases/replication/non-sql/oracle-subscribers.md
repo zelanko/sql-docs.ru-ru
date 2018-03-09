@@ -2,11 +2,13 @@
 title: "Подписчики Oracle | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,26 +18,26 @@ helpviewer_keywords:
 - heterogeneous Subscribers, Oracle
 - mapping data types [SQL Server replication]
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
-caps.latest.revision: 55
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 473ac265f469403a52c96349a484b9fc85a572c4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "55"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: eeef79d24cf2409dd44544a9668cfd926adedfb0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="oracle-subscribers"></a>Подписчики Oracle
-  Начиная с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает принудительные подписки Oracle через поставщик Oracle OLE DB, предоставляемый Oracle.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Начиная с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает принудительные подписки Oracle через поставщик Oracle OLE DB, предоставляемый Oracle.  
   
 ## <a name="configuring-an-oracle-subscriber"></a>Настройка подписчика Oracle  
  Для настройки подписчика Oracle выполните следующие шаги:  
   
 1.  Установите и настройте клиентское сетевое программное обеспечение Oracle и поставщика OLE DB Oracle на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , чтобы распространитель мог подключаться к подписчику Oracle. Клиентское сетевое программное обеспечение Oracle должно быть самой последней доступной версии. Oracle рекомендует пользователям установить самую новую версию клиентского программного обеспечения. Клиентское программное обеспечение часто бывает новее, чем программное обеспечение баз данных. Наиболее простым способом установки программного обеспечения является использование универсального установщика Oracle с диска Oracle Client. В универсальном установщике Oracle необходимо ввести следующие сведения:  
   
-    |Сведения|Описание|  
+    |Сведения|Description|  
     |-----------------|-----------------|  
     |Oracle Home|Это путь к каталогу, в который устанавливается программное обеспечение Oracle. Примите значение по умолчанию (C:\oracle\ora90 или похожее) или задайте другой путь. Дополнительные сведения о каталоге Oracle Home см. в подразделе «Рассмотрение Oracle Home» далее в этом разделе.|  
     |Имя каталога Oracle Home|Псевдоним для пути к каталогу Oracle Home.|  
@@ -45,14 +47,14 @@ ms.lasthandoff: 06/22/2017
   
      После того как установка Oracle завершена, для настройки сетевых подключений используйте компонент Net Configuration Assistant. Для настройки сетевых подключений необходимо ввести сведения в четырех разделах. Администратор базы данных Oracle настраивает сеть, когда устанавливает базу данных и прослушиватель, поэтому он должен быть способен предоставить эти сведения, если они отсутствуют. Необходимо выполнить следующие действия:  
   
-    |Действие|Описание|  
+    |Действие|Description|  
     |------------|-----------------|  
     |Идентификация базы данных|Существует два способа идентификации базы данных. Первый способ использует компонент Oracle System Identifier (SID), который доступен во всех версиях Oracle. Второй метод использует компонент Service Name, доступный в версиях Oracle, начиная с 8.0. Оба метода используют значение, которое конфигурируется при создании базы данных, и важно, чтобы конфигурация сетевого клиента использовала тот же метод именования, что и администратор при конфигурации прослушивателя базы данных.|  
     |Идентификация сетевого псевдонима базы данных|Необходимо указать сетевой псевдоним, который будет использоваться для доступа к базе данных Oracle. Сетевой псевдоним — это, по существу, указатель на удаленный SID или имя службы, сконфигурированное при создании базы данных. Это относится к нескольким названиям в различных версиях и продуктах Oracle, включая Net Service Name и TNS Alias. SQL*Plus запрашивает этот псевдоним как параметр «Host String» при входе.|  
     |Выберите сетевой протокол.|Выберите соответствующие поддерживаемые протоколы. Большинство приложений использует протокол TCP.|  
     |Задайте сведения об узле для идентификации прослушивателя базы данных|Узел — это имя или DNS-псевдоним компьютера, на котором запущен прослушиватель Oracle. Обычно это тот же компьютер, на котором расположена база данных. Для некоторых протоколов, возможно, нужно будет указать дополнительные сведения. Например если выбрать протокол ТСР, нужно будет указать порт, который слушается прослушивателем для запросов на подключение к целевой базе данных. По умолчанию для протокола TCP используется порт 1521.|  
   
-3.  Создайте публикацию моментальных снимков или публикацию транзакций, активируйте ее для подписчиков, отличных от[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , а затем создайте принудительную подписку для подписчика. Дополнительные сведения см. в статье [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+3.  Создайте публикацию моментальных снимков или публикацию транзакций, активируйте ее для подписчиков, отличных от[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , а затем создайте принудительную подписку для подписчика. Дополнительные сведения см. в статье [Создание подписки для подписчика, отличного от подписчика SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 ### <a name="setting-directory-permissions"></a>Настройте разрешения для каталога  
  Учетной записи, под которой запускается служба [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на распространителе, должны быть предоставлены права на чтение и выполнение для каталога (и всех вложенных каталогов), где установлено клиентское сетевое программное обеспечение Oracle.  
@@ -103,7 +105,7 @@ ms.lasthandoff: 06/22/2017
 |**bigint**|NUMBER(19,0)|  
 |**binary(1-2000)**|RAW(1-2000)|  
 |**binary(2001-8000)**|BLOB|  
-|**бит**|NUMBER(1)|  
+|**bit**|NUMBER(1)|  
 |**char(1-2000)**|CHAR(1-2000)|  
 |**char(2001-4000)**|VARCHAR2(2001-4000)|  
 |**char(4001-8000)**|CLOB|  
@@ -127,7 +129,7 @@ ms.lasthandoff: 06/22/2017
 |**nvarchar(1-1000)**|VARCHAR2(1-2000)|  
 |**nvarchar(1001-4000)**|NCLOB|  
 |**nvarchar(max)**|NCLOB|  
-|**real**|REAL|  
+|**real**|real|  
 |**smalldatetime**|DATE|  
 |**smallint**|NUMBER(5,0)|  
 |**smallmoney**|NUMBER(10,4)|  

@@ -2,9 +2,12 @@
 title: "Хранилище данных управления | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,19 +17,20 @@ helpviewer_keywords:
 - data warehouse
 - management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
-caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0430b88308cb3ebc07b1addfb2e34575150fa41e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: f61ec563867912a713504af1a291bc26507888ae
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="management-data-warehouse"></a>хранилище данных управления
-  Хранилище данных управления — это реляционная база данных, собираемых с сервера, который при сборе данных является целевым. Эти данные используются при подготовке отчетов для наборов сбора системных данных и могут быть использованы для создания настраиваемых отчетов.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Хранилище данных управления — это реляционная база данных, собираемых с сервера, который при сборе данных является целевым. Эти данные используются при подготовке отчетов для наборов сбора системных данных и могут быть использованы для создания настраиваемых отчетов.  
   
  Инфраструктура сборщика данных определяет планы выполнения заданий и планы обслуживания, необходимые для реализации политик хранения, определенных администратором базы данных.  
   
@@ -43,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
  В следующей таблице описаны таблицы базы данных в схеме core. Эти таблицы базы данных позволяют сборщику данных отслеживать источники данных, пользователей, вставивших данные, и время передачи в хранилище данных.  
   
-|Имя таблицы|Описание|  
+|Имя таблицы|Description|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|Хранит сведения о группировке отчетов из хранилища данных управления, а также статистику счетчиков производительности.|  
 |core.snapshots_internal|Определяет каждый новый моментальный снимок. Новая строка вставляется в эту таблицу каждый раз, когда пакет передачи начинает передачу нового пакета данных.|  

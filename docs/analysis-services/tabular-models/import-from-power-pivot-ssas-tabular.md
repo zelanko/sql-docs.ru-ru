@@ -1,33 +1,33 @@
 ---
-title: "Импорт из Power Pivot (табличные службы SSAS) | Документы Microsoft"
+title: "Импорт из Power Pivot | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.asvs.bidtoolset.importfromppt.f1
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
-caps.latest.revision: 25
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cf23e21dfa0a87af7702bf07961d71184e6a59c2
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b85ae04b00034decd7390f86db1ee7e00c496434
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="import-from-power-pivot-ssas-tabular"></a>Импорт из Power Pivot (табличные службы SSAS)
-  В данном разделе описано создание нового проекта табличной модели при помощи импорта метаданных и данных из книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] с использованием шаблона проекта "Импорт из [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] " в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+# <a name="import-from-power-pivot"></a>Импорт из Power Pivot 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+В этой статье описывается создание нового проекта табличной модели путем импорта метаданных и данных из [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книги с помощью функции импорта из [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] шаблона проекта в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="create-a-new-tabular-model-from-a-power-pivot-for-excel-file"></a>Создание новой табличной модели из файла Power Pivot для Excel  
  Метаданные, импортируемые из книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] при создании нового проекта табличной модели и определяющие структуру книги, используются для создания и определения структуры проекта табличной модели в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Такие объекты, как таблицы, столбцы, меры и связи, сохраняются, а затем появляются в проекте табличной модели, как в книге [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Изменения в файл книги XLSX не вносятся.  
@@ -54,8 +54,7 @@ ms.lasthandoff: 09/01/2017
 4.  В диалоговом окне **Открыть** выберите файл [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] , содержащий необходимые для импорта метаданные модели и данные, и нажмите кнопку **Открыть**.  
   
 ## <a name="see-also"></a>См. также  
- [База данных рабочей области (табличные службы SSAS)](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)   
- [Копирование и вставка данных &#40; Табличные службы SSAS &#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)  
+ [База данных рабочей области](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)   
+ [Копирование и вставка данных](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)  
   
   
-

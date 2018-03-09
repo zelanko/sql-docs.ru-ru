@@ -2,30 +2,30 @@
 title: "Свойства сервера (страница \"Память\") | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.serverproperties.memory.f1
+f1_keywords: sql13.swb.serverproperties.memory.f1
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
-caps.latest.revision: 45
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "45"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 57a2f7e2b4f0a75cf212d79284b85c00eda92d81
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 81b299739f8986e819062756d9fbd8fffcbaca41
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---memory-page"></a>Свойства сервера (страница "Память")
-  Используйте данную страницу для просмотра или изменения параметров памяти сервера. Если параметр **Минимальный размер памяти сервера** равен 0, а параметр **Максимальный размер памяти сервера** равен 2 147 483 647 МБ, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда может использовать оптимальный объем памяти, в зависимости от того, сколько памяти в текущий момент использует операционная система и другие приложения. При изменении загрузки компьютера и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] меняется объем выделенной памяти. Ограничить объем динамически выделяемой памяти можно с помощью задания минимального и максимального значений.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Используйте эту страницу для просмотра или изменения параметров памяти сервера. Если параметр **Минимальный размер памяти сервера** равен 0, а параметр **Максимальный размер памяти сервера** равен 2 147 483 647 МБ, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда может использовать оптимальный объем памяти, в зависимости от того, сколько памяти в текущий момент использует операционная система и другие приложения. При изменении загрузки компьютера и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] меняется объем выделенной памяти. Ограничить объем динамически выделяемой памяти можно с помощью задания минимального и максимального значений.  
   
 ## <a name="options"></a>Параметры  
  **Минимальный размер памяти сервера (в МБ)**  
@@ -54,4 +54,3 @@ ms.lasthandoff: 08/02/2017
  [Параметры конфигурации сервера «Server Memory»](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   
   
-

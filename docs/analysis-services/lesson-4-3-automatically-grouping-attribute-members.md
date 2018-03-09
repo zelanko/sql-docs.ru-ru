@@ -2,29 +2,32 @@
 title: "Автоматическое группирование элементов атрибута | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
-caps.latest.revision: 14
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 86d4c1dcc16cc97b04a3c228087a9e9793cc5651
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a20c511000cf9489e817ab5f4da4531205a691f3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Занятие 4-3 - автоматическое группирование элементов атрибута
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 При просмотре куба обычно выполняется распределение по измерениям элементов одной иерархии атрибута на основе элементов другой иерархии атрибута. Например, можно сгруппировать продажи по таким признакам, как город, приобретенный товар или пол. Однако при работе с некоторыми типами атрибутов лучше группировать их элементы автоматически с использованием служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , основываясь на распределении элементов в рамках иерархии атрибута. Например, с помощью служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] можно объединить заказчиков в группы на основе их годового дохода. При этом пользователь, просматривающий иерархию атрибута, будет видеть названия и значения групп вместо самих элементов групп. Данный подход ограничивает количество отображаемых уровней, что упрощает анализ данных.  
   
 Свойство **DiscretizationMethod** определяет, создают ли службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] группирования, а также определяет тип выполняемого группирования. По умолчанию в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] группирование не выполняется. При включении автоматического группирования можно настроить параметры служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] таким образом, чтобы выполнялся автоматический выбор оптимального метода группирования, основанного на структуре данного атрибута, либо выбрать один из алгоритмов группирования в следующем списке:  
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 **Clusters**  
 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] группы создаются путем проведения одномерной кластеризации входных значений с помощью метода кластеризации К-средних с нормальным распределением. Эта функция применима только в отношении числовых столбцов.  
   
-После выбора метода группирования необходимо указать количество групп, используя свойство **DiscretizationBucketCount** . Дополнительные сведения см. в разделе [Группирование элементов атрибутов (дискретизация)](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
+После выбора метода группирования необходимо указать количество групп, используя свойство **DiscretizationBucketCount** . Дополнительные сведения см. в разделе [Группирование элементов атрибутов (дискретизация)](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   
 В ходе выполнения задач данного раздела будут опробованы следующие критерии группирования: значение годового дохода в измерении **Заказчик** , количество часов отсутствия по болезни в измерении **Сотрудники** , данные о количестве часов отпуска сотрудников в измерении **Сотрудники** . Затем предстоит выполнить обработку куба учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и просмотреть результаты группирования элементов. На конечной стадии будут изменены свойства групп элементов, чтобы выявить эффект от изменения типа группирования.  
   
@@ -133,8 +136,7 @@ ms.lasthandoff: 09/01/2017
 [Скрытие и отключение иерархий атрибутов](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>См. также:  
-[Группирование элементов атрибутов (дискретизация)](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
+[Группирование элементов атрибутов &#40; дискретизации &#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   
   
-

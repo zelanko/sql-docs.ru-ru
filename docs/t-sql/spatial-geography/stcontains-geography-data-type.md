@@ -3,8 +3,11 @@ title: "STContains (тип данных geography) | Документы Microsof
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ dev_langs:
 helpviewer_keywords:
 - STContains method (geography)
 ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
-caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 83927a3612c66d4c3bd84f67f4a2ca6940e9c9ef
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a787a75bbf4e9ab54ebc6aab90b64cd74fb50d03
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stcontains--geography-data-type"></a>STContains (тип данных geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Указывает ли вызывающий **geography** пространственно содержит экземпляр **geography** экземпляр передается в метод.  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 09/01/2017
   
  Возвращаемый тип CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Возвращает 1, если вызывающий **geography** пространственно содержит экземпляр **geography** экземпляр передается в метод и возвращает 0, если это не так. Возвращает **null** Если SRID двух **geography** экземпляров не совпадают.  
   
 ## <a name="examples"></a>Примеры  
@@ -63,4 +65,3 @@ SET @h = geography::Parse('POINT(-121.703796 46.893985)');
  `SELECT @g.STContains(@h);`  
   
   
-

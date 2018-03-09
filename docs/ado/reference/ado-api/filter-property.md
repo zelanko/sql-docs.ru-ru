@@ -3,7 +3,7 @@ title: "Отфильтровать свойства | Документы Microso
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Filter property
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8e0a74efdc9eeef18eac76e582355653d6677139
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6aa8e2349bfd564d0cc72d8d17169c6a5ada5f07
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filter-property"></a>Свойства фильтра
 Указывает фильтр для данных в [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -42,7 +41,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Объект [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **фильтра** свойство, чтобы выборочно отсеять записей в **записей** объекта. Отфильтрованные **записей** становится текущий курсор. Другие свойства, которые возвращают значения на основе текущего **курсор** повреждены, таких как [AbsolutePosition свойство (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage свойство (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), [ Свойство RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md), и [PageCount свойство (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). Это, поскольку параметр **фильтра** свойство конкретное значение переходит к первой записи, которая удовлетворяет новое значение текущей записи.  
   
  Строка условий состоит из предложений в форме *FieldName оператор значений* (например, `"LastName = 'Smith'"`). Составные предложения можно создать путем объединения отдельных предложений с **AND** (например, `"LastName = 'Smith' AND FirstName = 'John'"`) или **или** (например, `"LastName = 'Smith' OR LastName = 'Jones'"`). Используйте следующие рекомендации для строк критериям:  
@@ -96,11 +95,10 @@ ms.lasthandoff: 09/09/2017
 |**Несколько ключей**|+|Недоступно|+|  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Фильтр и пример RecordCount свойства (Visual Basic)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
  [Фильтр и пример использования свойств RecordCount (VC ++)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
  [Метод Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
- [Оптимизировать динамические свойства (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
-
+ [Свойство Optimize (динамическое) (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

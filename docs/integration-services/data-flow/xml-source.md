@@ -1,10 +1,13 @@
 ---
-title: "XML-источник | Документы Microsoft"
+title: "XML-источник | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -19,17 +22,16 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-caps.latest.revision: 47
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 53aaa24f90570856354e1f7ebc46fea9eac0730f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: abc73a10f3538df038d9b4488199666288a3ca57
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xml-source"></a>XML-источник
   XML-источник считывает файл XML-данных и заполняет данными столбцы в выходе источника.  
@@ -47,7 +49,7 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  XML-источник не сверяет данные в XML-файле с XSD.  
   
-## <a name="xml-source-editor"></a>Редактор источника «XML»  
+## <a name="xml-source-editor"></a>редактор источника «XML»  
  Данные в XML-файлах часто содержат иерархические отношения. Диалоговое окно **Редактор источника «XML»** использует указанную схему для создания выходов XML-источника. Можно указать XSD-файл, использовать встроенную схему или создать XSD-файл из предоставленного файла XML-данных. Схема должна быть доступна во время редактирования.  
   
  XML-источник создает табличные структуры из XML-данных путем создания выхода для каждого элемента, который содержит вложенные элементы в XML-файлах. Например, если XML-данные представляют собой каталоги и их элементы, XML-источник создает выход для каталогов и выход для каждого типа элемента, содержащегося в этих каталогах. Выход каждого элемента будет содержать выходные столбцы с атрибутами этого элемента.  
@@ -83,7 +85,7 @@ ms.lasthandoff: 08/17/2017
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства источника "XML"](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -164,7 +166,7 @@ ms.lasthandoff: 08/17/2017
  **Усечение**  
  Укажите, что нужно сделать при усечении: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
- **Description**  
+ **Описание**  
  Просмотреть описание ошибки.  
   
  **Присвоить указанное значение выбранным ячейкам**  
@@ -173,6 +175,5 @@ ms.lasthandoff: 08/17/2017
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Извлечение данных с помощью XML-источника](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
-

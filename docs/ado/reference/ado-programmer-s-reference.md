@@ -1,5 +1,5 @@
 ---
-title: "Программист ADO &#39; s ссылку | Документы Microsoft"
+title: "Программист ADO & #39; s ссылку | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -8,25 +8,24 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords:
 - ADO, reference
 ms.assetid: 6dc27c85-84e1-472a-b057-d1854b8c98a3
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7632d4bed6a963e1015c4ae07adf4fbf7b034a37
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5b7ee95538ebc16084f6d3209469f0fa33b50fda
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="ado-programmer39s-reference"></a>Программист ADO &#39; s ссылки
+# <a name="ado-programmer39s-reference"></a>Программист ADO & #39; s ссылки
 Этот раздел содержит следующие подразделы.  
   
 -   [Справочник по API ADO](../../ado/reference/ado-api/ado-api-reference.md)  
@@ -36,4 +35,3 @@ ms.lasthandoff: 09/09/2017
 -   [Справочник по API ADO MD](../../ado/reference/ado-md-api/ado-md-api-reference.md)  
   
 -   [Справочник по API ADOX](../../ado/reference/adox-api/adox-api-reference.md)
-

@@ -1,10 +1,13 @@
 ---
-title: "Компонент скрипта | Документы Microsoft"
+title: "Компонент скрипта | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -22,17 +25,16 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-caps.latest.revision: 70
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: e7b0923968137a76b68d0324223ffbb61e7443b9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 82aad5cf36717e374cdb3e45d231504efac16549
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="script-component"></a>Компонент скрипта
   Компонент скрипта размещает скрипт и позволяет пакету включать и выполнять пользовательский код скрипта. Можно использовать компонент скрипта в пакетах для следующих целей.  
@@ -105,7 +107,7 @@ ms.lasthandoff: 08/19/2017
 ### <a name="configuring-the-script-component-programmatically"></a>Программная настройка компонента скрипта  
  Дополнительные сведения о свойствах, которые можно установить в окне **Свойства** или программно, см. в следующих разделах:  
   
--   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -116,7 +118,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="select-script-component-type"></a>Выбор типа компонента скрипта
   Используйте диалоговое окно **Выбор типа компонента скрипта** , чтобы указать, следует ли создавать преобразование «Скрипт», которое заранее настроено как источник, преобразование или назначение.  
   
- Дополнительные сведения о компоненте скрипта см. в разделе [Настройка компонента скрипта в редакторе компонентов скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта см. в разделе [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Дополнительные сведения о компоненте скрипта см. в разделе [Настройка компонента скрипта в редакторе компонента скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта см. в разделе [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Параметры  
  Выбор пункта **Источник**, **Назначение**или **Преобразование** влияет на конфигурацию преобразования «Скрипт» и страницы редактора преобразования «Скрипт».  
@@ -124,7 +126,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="script-transformation-editor-connection-managers-page"></a>Редактор преобразования «Скрипт» (страница «Диспетчеры соединений»)
   Используйте страницу **Диспетчеры соединений** в **Редакторе преобразования «Скрипт»** , чтобы указать любые соединения, которые будут использоваться скриптом.  
   
- Дополнительные сведения о компоненте скрипта см. в разделе [Настройка компонента скрипта в редакторе компонентов скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта см. в разделе [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Дополнительные сведения о компоненте скрипта см. в разделе [Настройка компонента скрипта в редакторе компонента скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта см. в разделе [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Параметры  
  **Connection managers**  
@@ -134,9 +136,9 @@ ms.lasthandoff: 08/19/2017
  Введите уникальное и описательное имя для соединения.  
   
  **Диспетчер соединений**  
- Выберите из списка доступных диспетчеров соединений или  **\<создать соединение >** Открытие **Добавление диспетчера соединений служб SSIS** диалоговое окно.  
+ Выберите в списке доступных диспетчеров подключений либо выберите **\<Создать соединение>**, чтобы открыть диалоговое окно **Добавление диспетчера соединений со службами SSIS**.  
   
- **Description**  
+ **Описание**  
  Введите описание для соединения.  
   
  **Добавить**  
@@ -151,7 +153,7 @@ ms.lasthandoff: 08/19/2017
 > [!NOTE]  
 >  Страница **Входные столбцы** не отображается для компонентов источника, которые имеют выводы, но не имеют входов.  
   
- Дополнительные сведения о компоненте скрипта см. в разделе [Настройка компонента скрипта в редакторе компонентов скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта см. в разделе [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Дополнительные сведения о компоненте скрипта см. в разделе [Настройка компонента скрипта в редакторе компонента скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта см. в разделе [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Параметры  
  **Имя входа**  
@@ -175,13 +177,13 @@ ms.lasthandoff: 08/19/2017
 > [!NOTE]  
 >  У исходных компонентов есть выводы, но нет входов, тогда как у компонентов назначения есть входы, но нет выводов. У преобразований есть как входы, так и выводы.  
   
- Дополнительные сведения о компоненте скрипта см. в разделе [Настройка компонента скрипта в редакторе компонентов скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта см. в разделе [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Дополнительные сведения о компоненте скрипта см. в разделе [Настройка компонента скрипта в редакторе компонента скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта см. в разделе [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Параметры  
  **Inputs and outputs**  
  Выберите вход или вывод слева, чтобы посмотреть его свойства в таблице справа. Свойства, доступные для редактирования, варьируются в зависимости от выбора. Многие отображаемые параметры доступны только для чтения. Дополнительные сведения об индивидуальных свойствах см. в следующих разделах:  
   
- [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
  [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -200,7 +202,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="script-transformation-editor-script-page"></a>Редактор преобразования «Скрипт» (страница «Скрипт»)
   Используйте вкладку **Скрипт** в диалоговом окне **Редактор преобразования «Скрипт»** для указания скрипта и связанных с ним свойств.  
   
- Дополнительные сведения о компоненте скрипта см. в разделе [Настройка компонента скрипта в редакторе компонентов скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта см. в разделе [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Дополнительные сведения о компоненте скрипта см. в разделе [Настройка компонента скрипта в редакторе компонента скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта см. в разделе [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Параметры  
  **Свойства**  
@@ -208,7 +210,7 @@ ms.lasthandoff: 08/19/2017
   
 |Значение|Description|  
 |-----------|-----------------|  
-|**Description**|Опишите преобразование «Скрипт», его назначение.|  
+|**Описание**|Опишите преобразование «Скрипт», его назначение.|  
 |**LocaleID**|Укажите локаль, предоставляющую сведения о регионе, используемые для сортировки и преобразования даты и времени.|  
 |**Название**|Введите описательное имя компонента.|  
 |**ValidateExternalMetadata**|Укажите, будет ли преобразование «Скрипт» во время разработки проверять метаданные столбца относительно источников внешних данных. Значение **false** откладывает проверку до времени выполнения.|  
@@ -226,4 +228,3 @@ ms.lasthandoff: 08/19/2017
  [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
   
   
-

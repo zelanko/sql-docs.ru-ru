@@ -3,26 +3,26 @@ title: "SQLFetchScroll (библиотека курсоров) | Докумен�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLFetchScroll function [ODBC], Cursor Library
+helpviewer_keywords: SQLFetchScroll function [ODBC], Cursor Library
 ms.assetid: 4417e57c-31dd-475e-8fe9-eab00a459c80
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b07be3c354a67a6d27a355383e5550a203a6fe27
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 85647e81245e8e5e76e79cd285bc73b8ff6fb364
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlfetchscroll-cursor-library"></a>SQLFetchScroll (библиотека курсоров)
 > [!IMPORTANT]  
@@ -88,4 +88,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="interaction-with-other-functions"></a>Взаимодействие с другими функциями  
  Приложение должно вызвать **SQLFetch** или **SQLFetchScroll** до подготавливает или выполняет любой располагается инструкции update или delete.
-

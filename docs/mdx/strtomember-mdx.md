@@ -2,34 +2,32 @@
 title: "StrToMember (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- STRTOMEMBER
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- StrToMember function
+f1_keywords: STRTOMEMBER
+dev_langs: kbMDX
+helpviewer_keywords: StrToMember function
 ms.assetid: eb8a3dc0-5ae4-434e-b321-680a81a59e67
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: b26a0a5922f138bc13bbb13099809629ee336b02
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1b87517d73298dbc837d5659ac18b967c45aeaf7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="strtomember-mdx"></a>StrToMember (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает элемент, заданный строкой в формате многомерных выражений.  
   
@@ -44,7 +42,7 @@ StrToMember(Member_Name [,CONSTRAINED] )
  *Member_Name*  
  Допустимое строковое выражение, явно или неявно задающее элемент.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **StrToMember** функция возвращает элемент, заданный строковым выражением. **StrToMember** функция обычно используется с пользовательскими функциями для возвращения спецификации элемента из внешней функции обратно в инструкцию многомерных Выражений или параметризованный запрос многомерных Выражений.  
   
 -   Когда используется флаг CONSTRAINED, имя элемента должно напрямую разрешаться в полное или неполное имя элемента. Этот флаг используется для уменьшения риска атак, использующих вставку инструкций SQL в указанную строку. Если строка, которое не разрешается напрямую в полное или неполное имя элемента, возникает следующая ошибка: «ограничения, установленные флагом CONSTRAINED функции STRTOMEMBER нарушены.»  
@@ -96,4 +94,3 @@ FROM [Adventure Works]
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

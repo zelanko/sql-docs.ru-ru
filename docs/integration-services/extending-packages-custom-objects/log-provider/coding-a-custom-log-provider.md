@@ -1,12 +1,14 @@
 ---
-title: "Кодирование пользовательского регистратора | Документы Microsoft"
+title: "Создание кода пользовательского регистратора | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -14,22 +16,21 @@ applies_to:
 helpviewer_keywords:
 - custom log providers [Integration Services], coding
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4ae46112c19473b117a9a11eb83fc4510427365c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f1b3d9c3713bd9413d7dab486b598ef6ae8c0dff
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="coding-a-custom-log-provider"></a>Создание кода пользовательского регистратора
   После создания класса, наследующего от базового класса <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>, и применения к нему атрибута <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>, необходимо переопределить реализацию свойств и методов базового класса, чтобы обеспечить пользовательские функциональные возможности.  
   
- Рабочие образцы пользовательских регистраторов см. в разделе [Разработка пользовательского интерфейса для пользовательского регистратора](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md).  
+ Примеры пользовательских регистраторов см. в разделе [Разработка пользовательского интерфейса для пользовательского регистратора](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md).  
   
 ## <a name="configuring-the-log-provider"></a>Настройка регистратора  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 08/03/2017
  Необходимо переопределить метод <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.InitializeLogProvider%2A> для кэширования ссылок на коллекцию соединений и интерфейс событий. В дальнейшем можно использовать эти кэшированные ссылки в других методах регистратора.  
   
 ### <a name="using-the-configstring-property"></a>Использование свойства ConfigString  
- Во время разработки регистратор получает сведения о конфигурации из **конфигурации** столбца. Эти данные конфигурации соответствуют свойству <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> регистратора. По умолчанию этот столбец содержит текстовое поле, из которого можно получить любые строковые данные. Большинство регистраторов, включенных в службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], используют это свойство для хранения имени диспетчера соединений, которое регистратор применяет для соединения с внешним источником данных. Если выбранный регистратор использует <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> свойства, используйте <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> способ проверить это свойство и убедитесь, что свойство имеет правильное значение.  
+ Во время разработки регистратор получает данные конфигурации из столбца **Конфигурация**. Эти данные конфигурации соответствуют свойству <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> регистратора. По умолчанию этот столбец содержит текстовое поле, из которого можно получить любые строковые данные. Большинство регистраторов, включенных в службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], используют это свойство для хранения имени диспетчера соединений, которое регистратор применяет для соединения с внешним источником данных. Если выбранный регистратор использует свойство <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A>, используйте метод <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A>, чтобы проверить это свойство и убедиться, что оно имеет правильное значение.  
   
 ### <a name="validating-the-log-provider"></a>Проверка регистратора  
  Необходимо переопределить метод <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A>, чтобы убедиться в правильности настройки регистратора и его готовности к выполнению. Обычно, чтобы убедиться в правильности настройки <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A>, требуется минимальный уровень проверки. Выполнение не может продолжиться, пока регистратор не возвратит значение <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success> из метода <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A>.  
@@ -87,7 +88,7 @@ End Function
  Как правило, нет необходимости реализовывать пользовательский механизм сохраняемости для диспетчера соединений. Нестандартный механизм сохраняемости необходим только в случае, когда свойства объекта используют сложные типы данных. Дополнительные сведения см. в разделе [Разработка пользовательских объектов для служб Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md).  
   
 ## <a name="logging-with-the-log-provider"></a>Ведение журнала с помощью регистратора  
- Существуют три способа выполнения, которые должны быть переопределены все регистраторы: <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>, и <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>.  
+ Существуют три метода времени выполнения, которые должны быть переопределены всеми регистраторами: <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>  
   
 > [!IMPORTANT]  
 >  Во время проверки и выполнения одного пакета методы <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A> вызываются более одного раза. Убедитесь, что пользовательский код не приведет к перезаписи более ранних записей журнала при следующем открытии и закрытии журнала. Если была выбрана регистрация событий проверки в тестовом пакете, первым зарегистрированным событием должно быть событие OnPreValidate. Если вместо него первым событием в журнале отображается PackageStart, начальные события проверки были перезаписаны.  
@@ -139,7 +140,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>Создание записей журнала  
- <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> Метод вызывается каждый раз, что объекта в пакете инициирует событие путем вызова пожар\<событий > метод для одного из интерфейсов события. Каждое событие инициируется со сведениями о его контексте и обычно дополняется поясняющим сообщением. Однако не каждый вызов метода <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> включает сведения о каждом параметре метода. Например, некоторые стандартные события, имена которых очевидны без пояснений, не предоставляют параметров MessageText, а параметры DataCode и DataBytes предназначены для необязательных вспомогательных сведений.  
+ Метод <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> вызывается каждый раз, когда объект в пакете инициирует событие путем вызова метода Fire\<событие> для одного из интерфейсов события. Каждое событие инициируется со сведениями о его контексте и обычно дополняется поясняющим сообщением. Однако не каждый вызов метода <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> включает сведения о каждом параметре метода. Например, некоторые стандартные события, имена которых очевидны без пояснений, не предоставляют параметров MessageText, а параметры DataCode и DataBytes предназначены для необязательных вспомогательных сведений.  
   
  В следующем примере кода реализуется метод <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> и события записываются в поток, открытый в предыдущем разделе.  
   
@@ -200,4 +201,3 @@ End Sub
  [Разработка пользовательского интерфейса для пользовательского регистратора](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Подготовка к установке отказоустойчивого кластера | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
@@ -14,20 +17,20 @@ helpviewer_keywords:
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
-caps.latest.revision: 141
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ad89b5180e55bbbcdde55e2856588ca46695baa1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 880d10a367cc625bcc313b19c06ee4504e955a19
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="before-installing-failover-clustering"></a>Подготовка к установке отказоустойчивого кластера
-  Перед тем как установить отказоустойчивый кластер SQL Server, необходимо выбрать оборудование и операционную систему, на которых SQL Server будет работать. Кроме того, необходимо настроить отказоустойчивую кластеризацию Windows Server (WSFC) и проверить настройки сети, безопасности и другого программного обеспечения, которое будет запускаться на отказоустойчивом кластере.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Перед тем как установить отказоустойчивый кластер SQL Server, необходимо выбрать оборудование и операционную систему, на которых SQL Server будет работать. Кроме того, необходимо настроить отказоустойчивую кластеризацию Windows Server (WSFC) и проверить настройки сети, безопасности и другого программного обеспечения, которое будет запускаться на отказоустойчивом кластере.  
   
  Если в кластере Windows есть локальный диск и при этом диск с такой же буквой используется на одном или нескольких узлах кластера в качестве общего диска, то установить [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этот диск невозможно.  
   
@@ -36,7 +39,7 @@ ms.lasthandoff: 08/03/2017
 |Описание раздела|Раздел|  
 |-----------------------|-----------|  
 |Содержит описание основных понятий отказоустойчивых кластеров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , а также ссылки на связанное содержимое и задачи.|[Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)|  
-|Содержит описание основных понятий политик отработки отказов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , а также ссылки на сведения о настройке политики отработки отказов для обеспечения потребностей организации.|[Политика отработки отказа для экземпляров отказоустойчивого кластера](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
+|Содержит описание основных понятий политик отработки отказов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , а также ссылки на сведения о настройке политики отработки отказов для обеспечения потребностей организации.|[Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
 |Содержит описание обеспечения работоспособности существующего отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Администрирование и обслуживание экземпляров отказоустойчивого кластера](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
 |Описание установки служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в отказоустойчивый кластер Windows Server (WSFC).|[Кластеризация служб SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548)|  
   
@@ -261,5 +264,4 @@ ms.lasthandoff: 08/03/2017
  [Администрирование и обслуживание экземпляров отказоустойчивого кластера](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)  
   
   
-
 

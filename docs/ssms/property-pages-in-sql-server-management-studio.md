@@ -3,29 +3,29 @@ title: "Страницы свойств в среде SQL Server Management Stud
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- property pages [SQL Server Management Studio]
+helpviewer_keywords: property pages [SQL Server Management Studio]
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 32da2911fb4daf39e6086beb6e10c7ff5922bace
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3a74c0a9090936fc172642e06d3608c407718712
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Страницы свойств в среде SQL Server Management Studio
-Во всех диалоговых окнах страниц свойств в среде [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] используется общий формат представления данных с развертыванием и свертыванием категорий. Состав показываемых полей зависит от конкретного свойства. Свойства, выделенные серым цветом, доступны только для чтения. В верхней части каждой страницы свойств находятся кнопки «По категориям» и «По алфавиту».  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Во всех диалоговых окнах страниц свойств в среде [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] используется общий формат представления данных с развертыванием и свертыванием категорий. Состав показываемых полей зависит от конкретного свойства. Свойства, выделенные серым цветом, доступны только для чтения. В верхней части каждой страницы свойств находятся кнопки «По категориям» и «По алфавиту».  
   
 В следующей таблице описаны общие элементы диалоговых окон страниц свойств среды [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] .  
   
@@ -37,4 +37,3 @@ ms.lasthandoff: 06/22/2017
 |Свойства|Во втором столбце сетки перечислены значения свойств.|  
 |Панель описания|Панель описания расположена в нижней части страницы и содержит тип и краткое описание текущего свойства. Для включения и отключения описания свойства можно использовать команду **Описание** в контекстном меню.|  
   
-

@@ -2,9 +2,12 @@
 title: "Детерминированные и недетерминированные функции | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: udf
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-udf
 ms.tgt_pltfrm: 
@@ -16,20 +19,20 @@ helpviewer_keywords:
 - deterministic functions
 - user-defined functions [SQL Server], deterministic
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
-caps.latest.revision: 43
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0ed8857c6a48193a31aacf948efbcf3cedbf4db7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
-ms.openlocfilehash: 2a25a75485ecfb5bae812b01f142a9650ce2933c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Детерминированные и недетерминированные функции
-  Детерминированные функции каждый раз возвращают один и тот же результат, если предоставлять им один и тот же набор входных значений и использовать одно и то же состояние базы данных. Недетерминированные функции могут возвращать каждый раз разные результаты, даже если предоставлять им один и тот же набор входных значений и использовать одно и то же состояние базы данных. Например, функция AVG всегда возвращает один результат при указанных выше условиях, а функция GETDATE, возвращающая текущие дату и время, всегда возвращает разный результат.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Детерминированные функции каждый раз возвращают один и тот же результат, если предоставлять им один и тот же набор входных значений и использовать одно и то же состояние базы данных. Недетерминированные функции могут возвращать каждый раз разные результаты, даже если предоставлять им один и тот же набор входных значений и использовать одно и то же состояние базы данных. Например, функция AVG всегда возвращает один результат при указанных выше условиях, а функция GETDATE, возвращающая текущие дату и время, всегда возвращает разный результат.  
   
  Определяемые пользователями функции имеют несколько свойств, определяющих способность ядра [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] индексировать результаты функции как с помощью индексов вычисляемых столбцов, вызывающих функцию, так и с помощью индексированных представлений, которые на нее ссылаются. Детерминизм функции — одно из таких свойств. Например, в представлении нельзя создать кластеризованный индекс, если оно ссылается на какие-либо недетерминированные функции. Дополнительные сведения о свойствах функций, включая детерминизм, см. в разделе [Определяемые пользователем функции](../../relational-databases/user-defined-functions/user-defined-functions.md).  
   
@@ -58,7 +61,7 @@ ms.lasthandoff: 10/17/2017
   
  Следующие функции не всегда детерминированы, их можно использовать в индексированных представлениях или индексах вычисляемых столбцов, если они заданы детерминированным образом.  
   
-|Функция|Комментарии|  
+|Компонент|Комментарии|  
 |--------------|--------------|  
 |все агрегатные функции|Все агрегатные функции являются детерминированными, если они не указаны с помощью предложения OVER или ORDER BY. Список этих функций см. в разделе [Агрегатные функции (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md).|  
 |CAST|Детерминированные, за исключением использования их с данными типа **datetime**, **smalldatetime**и **sql_variant**.|  
@@ -73,19 +76,19 @@ ms.lasthandoff: 10/17/2017
   
 |||  
 |-|-|  
-|@@CONNECTIONS |GETDATE|  
-|@@CPU_BUSY |GETUTCDATE|  
-|@@DBTS |GET_TRANSMISSION_STATUS|  
-|@@IDLE |LAG|  
-|@@IO_BUSY |LAST_VALUE|  
-|@@MAX_CONNECTIONS |LEAD|  
-|@@PACK_RECEIVED |MIN_ACTIVE_ROWVERSION|  
-|@@PACK_SENT |NEWID|  
-|@@PACKET_ERRORS |NEWSEQUENTIALID|  
-|@@TIMETICKS |NEXT VALUE FOR|  
-|@@TOTAL_ERRORS |NTILE|  
-|@@TOTAL_READ |PARSENAME|  
-|@@TOTAL_WRITE |PERCENTILE_CONT|  
+|@@CONNECTIONS|GETDATE|  
+|@@CPU_BUSY|GETUTCDATE|  
+|@@DBTS|GET_TRANSMISSION_STATUS|  
+|@@IDLE|LAG|  
+|@@IO_BUSY|LAST_VALUE|  
+|@@MAX_CONNECTIONS|LEAD|  
+|@@PACK_RECEIVED|MIN_ACTIVE_ROWVERSION|  
+|@@PACK_SENT|NEWID|  
+|@@PACKET_ERRORS|NEWSEQUENTIALID|  
+|@@TIMETICKS|NEXT VALUE FOR|  
+|@@TOTAL_ERRORS|NTILE|  
+|@@TOTAL_READ|PARSENAME|  
+|@@TOTAL_WRITE|PERCENTILE_CONT|  
 |AT TIME ZONE|PERCENTILE_DISC|
 |CUME_DIST|PERCENT_RANK|  
 |CURRENT_TIMESTAMP|RAND|  
@@ -103,4 +106,3 @@ ms.lasthandoff: 10/17/2017
  Как и при вызове из пакета или хранимой процедуры, расширенная хранимая процедура выполняется в контексте той учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, под которой запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Владелец расширенной хранимой процедуры должен учитывать разрешения в контексте безопасности при предоставлении разрешения на выполнение этой процедуры другим пользователям.  
   
   
-

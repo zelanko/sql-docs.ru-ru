@@ -2,31 +2,30 @@
 title: "Создать диаграмму точности прогнозов, диаграммы роста прибыли или матрицу классификации | Документы Microsoft"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Mining Accuracy Chart [Analysis Services], mining structures
+helpviewer_keywords: Mining Accuracy Chart [Analysis Services], mining structures
 ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b16770ad1bf8ca0052f7b8b6af22df02d4e4392f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4a4ebb3633becee7df676650ce88d2e00ff96f8a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Создать диаграмму точности прогнозов, диаграмму роста прибыли или матрицу классификации
-  Диаграмма точности для модели интеллектуального анализа данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создается в пять простых шагов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно создать диаграмму точности прогнозов для [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] модели интеллектуального анализа данных в пять простых шагов:  
   
 -   Выберите структуру интеллектуального анализа данных, содержащую модели интеллектуального анализа данных, которые нужно сравнить.  
   
@@ -116,9 +115,8 @@ ms.lasthandoff: 09/01/2017
      **Доход на единицу**  
      Сумма прибыли, связанная с каждой успешной продажей.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диаграмма точности прогнозов (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [Матрица классификации (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   
-

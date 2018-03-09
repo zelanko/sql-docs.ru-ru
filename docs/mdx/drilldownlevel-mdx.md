@@ -2,11 +2,13 @@
 title: "DrilldownLevel (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,20 +18,19 @@ dev_langs:
 helpviewer_keywords:
 - DrilldownLevel function
 ms.assetid: 47531ce5-1ac0-4aa9-a85c-824fb5d21e7c
-caps.latest.revision: 43
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: da071ef3ba43af94caf81e1016cb84a2bffc082f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d6f90b918cbb817154e699ac8e25bdcaf4119875
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Детализирует углублением элементы набора на одном уровне под самым низким уровнем, представленным в наборе.  
   
@@ -48,13 +49,13 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  *Level_Expression*  
  (Необязательно.) Выражение MDX, которое явно определяет уровень, на котором следует выполнять детализацию углублением. Если выражение уровня указано, пропустите аргумент индекса ниже.  
   
- *Индекс*  
+ *Index*  
  (Необязательно.) Допустимое числовое выражение, указывающее количество иерархий, которые необходимо детализировать углублением в наборе. Вместо Level_Expression для явного определения уровня, на котором следует выполнять детализацию углублением, можно использовать уровень индекса.  
   
  *Include_Calc_Members*  
  (Необязательно.) Флажок, указывающий, следует ли включать вычисленные элементы и должны ли они существовать на уровне детализации углублением.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **DrilldownLevel** функция возвращает набор дочерних элементов в иерархическом порядке, в зависимости от членов, включенных в указанном наборе. Порядок следования исходных элементов указанного набора сохраняется, однако все дочерние элементы, входящие в результирующий набор функции, следуют непосредственно за своим родительским элементом.  
   
  При наличии многоуровневой иерархической структуры данных можно явно выбрать уровень детализации углублением. Существует два взаимоисключающих способа указать уровень. Первый способ заключается в задании **level_expression** аргумента, используя Многомерное выражение, которое возвращает уровень, альтернативный подход заключается в указании **индекс** аргумента, используя числовое выражение, задающее уровень по номеру.  
@@ -95,7 +96,7 @@ FROM [Adventure Works]
   
  В следующем примере показывается, как использовать выражение уровня. При условии, что набор представляет иерархическую структуру, использование выражения уровня позволяет выбрать уровень иерархии, чтобы начать детализацию углублением.  
   
- В этом примере уровень детализации углублением начинается в [City], в качестве второго аргумента **DrilldownLevel** функции. Когда вы запустите этот запрос, детализация углублением начнется на уровне [City] (для штатов Вашингтон и Орегон). На **DrilldownLevel** функции, набор результатов также включает элементы следующего уровня вниз [Postal codes].  
+ В этом примере уровень детализации углублением начинается в [City], в качестве второго аргумента **DrilldownLevel** функции. Когда вы запустите этот запрос, детализация углублением начнется на уровне [City] для штатов Вашингтон и Орегон. На **DrilldownLevel** функции, набор результатов также включает элементы следующего уровня вниз [Postal codes].  
   
 ```  
 SELECT [Measures].[Internet Sales Amount] ON COLUMNS,  
@@ -133,4 +134,3 @@ FROM [Adventure Works]
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

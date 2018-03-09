@@ -1,29 +1,30 @@
 ---
 title: "Synchronize-метод (RDS) | Документы Microsoft"
-ms.prod: sql-non-specified
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
 helpviewer_keywords:
 - Synchronize method [ADO]
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d223df00d0b32c3f608bcd61207de23da77e15cf
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4f6b559b8ad716be403a00d9cf171094286c222f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="synchronize-method-rds"></a>Synchronize-метод (RDS)
 Синхронизировать заданного набора записей с базой данных, указанной в строке подключения для использования в ADO 2.5 и более поздней версии.  
@@ -68,11 +69,10 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  *pInformation*  
  Указатель на сведения ошибки, возвращенной **Execute**. Если значение равно NULL, возвращается информация об ошибках.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  *HandlerString* параметр может иметь значение null. Что происходит в этом случае зависит от того, как настроен сервер служб удаленных рабочих СТОЛОВ. Обработчик строку «MSDFMAP.handler» указывает, что обработчик предоставленный корпорацией Майкрософт (Msdfmap.dll) следует использовать. Обработчик строку «MASDFMAP.handler,sample.ini» указывает, должны использоваться обработчик Msdfmap.dll и, аргумент «sample.ini» должен передаваться обработчику. Затем Msdfmap.dll интерпретирует аргумент как направление использования sample.ini для проверки строк соединения и запроса.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

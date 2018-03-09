@@ -3,7 +3,7 @@ title: "BeginTrans CommitTrans и методы RollbackTrans (ADO) | Докум�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -25,17 +25,16 @@ helpviewer_keywords:
 - CommitTrans method [ADO]
 - RollbackTrans method [ADO]
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 09f6bab43fc648f76670b84b5c434232255e0cf3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3e973503fcdd7a524bab21364428be6b955017af
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans CommitTrans и методы RollbackTrans (ADO)
 Эти методы транзакции управление обработки в пределах транзакций [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта следующим образом:  
@@ -81,10 +80,9 @@ object.RollbackTrans
  **BeginTrans**, **CommitTrans**, и **RollbackTrans** методы доступны не на стороне клиента **подключения** объекта.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BeginTrans CommitTrans и пример RollbackTrans методы (Visual Basic)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
  [BeginTrans CommitTrans и примере методы RollbackTrans (VC ++)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
- [Свойства атрибутов (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
-
+ [Свойство Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

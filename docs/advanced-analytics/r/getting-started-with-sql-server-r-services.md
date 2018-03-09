@@ -3,27 +3,28 @@ title: "Приступая к работе с SQL Server машинное обу
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 12/07/2016
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 5b28a663-effe-41f6-9bda-eda95f0c6943
-caps.latest.revision: 34
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: d643bbdf32b946c5342484fa531303b5b74f4bcb
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ea25548e0dfb3aa8a433c0fb014ad44a0f031f07
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="getting-started-with-sql-server-machine-learning"></a>Приступая к работе с SQL Server машинное обучение
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Machine обучения Services в SQL Server предназначен для поддержки задач обработки и анализа данных без предоставления данных угрозы безопасности или unnecesarily перемещения данных.
 
@@ -45,7 +46,7 @@ Machine обучения Services в SQL Server предназначен для 
 3. В SQL Server 2016 R добавляется по умолчанию. В SQL Server 2017 г необходимо выбрать нужный язык. Выберите Python или R или включить обе эти функции.
 4. По завершении установки выполнить некоторые дополнительные действия, чтобы включить выполнение внешних скриптов и перезагрузите сервер.
 
-**Ресурсы**
+**Resources**
 
 + [Установка SQL Server с помощью машинного обучения](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
@@ -67,7 +68,7 @@ Machine обучения Services в SQL Server предназначен для 
 + **Внедрение скриптов R или Python в [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимых процедур**. При полной оптимизации кода, заключите их в оболочку в хранимой процедуре, чтобы избежать ненужного перемещения данных и оптимизации задач обработки данных.
 
 
-**Ресурсы**
+**Resources**
 
 + Установка [средства R для Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation) или RStudio.  
 
@@ -87,7 +88,7 @@ Machine обучения Services в SQL Server предназначен для 
 
 + Выберите лучший язык для задачи.  R лучше всего подходит для статистических вычислений, которые трудно реализовать с помощью SQL. Для операций на основе набора данных, использовать возможности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для достижения максимальной производительности. Используете ядро базы данных в памяти для быстрого вычислений над столбцами.
 
-**Ресурсы**
+**Resources**
 
 + [Пример производительности](../../advanced-analytics/r/performance-case-study-r-services.md)
 + [R и оптимизация данных](../../advanced-analytics/r/r-and-data-optimization-r-services.md)
@@ -109,7 +110,7 @@ Machine обучения Services в SQL Server предназначен для 
 + Настройка параметров безопасности и блокировка пакетов, используемые конкретной задачи
 + Включение управление ресурсами
 
-**Ресурсы**
+**Resources**
 
 + [Управление ресурсами для R](../../advanced-analytics/r/resource-governance-for-r-services.md)
 + [Управление пакетами R для SQL Server](../../advanced-analytics/r/r-package-management-for-sql-server-r-services.md)
@@ -135,4 +136,3 @@ Machine обучения Services в SQL Server предназначен для 
 ## <a name="solutions"></a>Решения
 
 Дополнительные примеры, включая отрасли = шаблоны конкретное решение в разделе [учебники обучения машины SQL Server](../tutorials/machine-learning-services-tutorials.md).
-

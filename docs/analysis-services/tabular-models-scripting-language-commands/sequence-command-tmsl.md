@@ -2,32 +2,29 @@
 title: "Последовательность команд (TMSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 898d6ec2-9b40-441b-be2b-5728d1d2882e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d628482a5d7c2efb9c7611af1d024ad6b644512a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e7fc7f1541131ac6a8e7249940a31104e50f0b09
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sequence-command-tmsl"></a>Команда sequence (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Используйте **последовательности** команду для запуска набор последовательных операций в пакетном режиме в экземпляре служб Analysis Services.  Вся команда и всех его компонентов необходимо выполнить в порядке, для успешного выполнения транзакции.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Используйте **последовательности** команду для запуска набор последовательных операций в пакетном режиме в экземпляре служб Analysis Services.  Вся команда и всех его компонентов необходимо выполнить в порядке, для успешного выполнения транзакции.  
   
  Следующие команды могут выполняться последовательно, за исключением для **обновление** команду, которая выполняется в параллельном режиме для одновременной обработки нескольких объектов.  
   
@@ -122,4 +119,3 @@ ms.lasthandoff: 09/01/2017
  [Справочник по языку TMSL (Tabular Model Scripting Language)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

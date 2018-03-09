@@ -3,29 +3,29 @@ title: "Диалоговое окно \"Выражение проверочно�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vdt.dlgbox.checkconstraintexpression
+f1_keywords: vdt.dlgbox.checkconstraintexpression
 ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2d768a6db424008daaffdcb5b14491adfa48962f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d7cf57c1f37b4a18cb43935e1f2108933a861233
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>Диалоговое окно «Выражение проверочного ограничения» (визуальные инструменты для баз данных)
-При присоединении проверочных ограничений к таблице или столбцу нужно задать выражение SQL. Введите в предоставляемое окно выражение проверочного ограничения.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] При присоединении проверочных ограничений к таблице или столбцу нужно задать выражение SQL. Введите в предоставляемое окно выражение проверочного ограничения.  
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
 Выражение  
@@ -73,4 +73,3 @@ NOT (payment_method = 'credit card') OR
 [Ограничения уникальности и проверочные ограничения](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
 [Создание ограничений уникальности](http://msdn.microsoft.com/en-us/a86f9d6f-f242-43be-b65d-b3435b71b62a)  
   
-

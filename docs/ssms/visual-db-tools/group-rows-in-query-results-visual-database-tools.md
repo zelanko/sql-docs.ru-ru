@@ -3,10 +3,12 @@ title: "Группировка строк в результатах запрос
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - grouping rows
 - grouping query results
 ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b615606f07f283037fdd3c41055ee2a6a2a77694
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f5de6f1138be5413cfc7112d697ea662b04b9d44
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Группирование строк в результатах запроса (визуальные инструменты для баз данных)
-Если нужно создать подытог или отобразить другие сводные сведения о подмножествах таблицы, создайте группы, используя статистический запрос. Каждая такая группа обобщает данные всех строк таблицы, имеющих одно и то же значение.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Если нужно создать подытог или отобразить другие сводные сведения о подмножествах таблицы, создайте группы, используя статистический запрос. Каждая такая группа обобщает данные всех строк таблицы, имеющих одно и то же значение.  
   
 Например, нужно узнать среднюю стоимость книг, данные о которых хранятся в таблице `titles` , и разделить результаты в соответствии с идентификаторами издателей. Для этого следует сгруппировать запрос на основе идентификатора издателя (например `pub_id`). Сведения, выведенные таким запросом, могли бы выглядеть следующим образом:  
   
@@ -90,4 +91,3 @@ GROUP BY pub_id, type
 ## <a name="see-also"></a>См. также:  
 [Результаты запросов сортировки и группирования (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   
-

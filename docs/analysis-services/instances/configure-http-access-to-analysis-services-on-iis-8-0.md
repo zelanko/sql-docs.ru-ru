@@ -2,30 +2,30 @@
 title: "Настройка HTTP-доступа к службам Analysis Services в службах IIS 8.0 | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: 27
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5d2ac4e4346e51614787cabdf9eb6956a7c8012f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1bfb3bdd7224a72849e35bd1433e59267b559f0f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Настройка HTTP-доступа к службам Analysis Services в службах IIS 8.0
-  В этой статье объясняется, как настроить конечную точку HTTP для доступа к экземпляру служб Analysis Services. Доступ по протоколу HTTP к службам Analysis Services можно включить путем настройки MSMDPUMP.dll — расширения ISAPI, которое работает на сервере IIS и переносит данные между клиентским приложением и сервером служб Analysis Services. Такой подход предоставляет альтернативные способы подключения к службам Analysis Services, если применяемое решение бизнес-аналитики требует получения следующих возможностей.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В этой статье объясняется, как настроить конечную точку HTTP для доступа к экземпляру служб Analysis Services. Доступ по протоколу HTTP к службам Analysis Services можно включить путем настройки MSMDPUMP.dll — расширения ISAPI, которое работает на сервере IIS и переносит данные между клиентским приложением и сервером служб Analysis Services. Такой подход предоставляет альтернативные способы подключения к службам Analysis Services, если применяемое решение бизнес-аналитики требует получения следующих возможностей.  
   
 -   Доступ клиентов осуществляется по Интернету или экстрасети, с учетом ограничений на то, какие порты могут быть включены.  
   
@@ -112,7 +112,7 @@ ms.lasthandoff: 09/01/2017
 4.  Выполните инструкции мастера, чтобы завершить установку.  
   
 > [!NOTE]  
->  Не забудьте разблокировать порты в брандмауэре Windows, чтобы он разрешал клиентские подключения к удаленному серверу служб Analysis Services. Дополнительные сведения см. в статье [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+>  Не забудьте разблокировать порты в брандмауэре Windows, чтобы он разрешал клиентские подключения к удаленному серверу служб Analysis Services. Дополнительные сведения см. в статье [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 ##  <a name="bkmk_copy"></a> Шаг 1. Копирование файлов MSMDPUMP в папку на веб-сервере  
  Каждая создаваемая конечная точка HTTP должна иметь собственный набор файлов MSMDPUMP. На этом этапе необходимо скопировать исполняемый файл MSMDPUMP, файл конфигурации и папку ресурсов из папок программ служб Analysis Services в новую папку виртуального каталога. Эта папка будет создана в файловой системе компьютера, на котором выполняется служба IIS.  
@@ -129,11 +129,11 @@ ms.lasthandoff: 09/01/2017
   
 4.  Проверьте, чтобы в папке \inetpub\wwwroot\OLAP на веб-сервере содержалось следующее: файлы MSMDPUMP.DLL, MSMDPUMP.INI и папка Resources. Структура папки должна выглядеть следующим образом:  
   
-    -   \<диск >: \inetpub\wwwroot\OLAP\MSMDPUMP.dll  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
-    -   \<диск >: \inetpub\wwwroot\OLAP\MSMDPUMP.ini  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
-    -   \<диск >: \inetpub\wwwroot\OLAP\Resources  
+    -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="bkmk_appPool"></a> Шаг 2. Создание пула приложений и виртуального каталога на сервере IIS  
  Затем создайте пул приложений и конечную точку для средства переноса.  
@@ -246,7 +246,7 @@ ms.lasthandoff: 09/01/2017
   
  Если экземпляр служб Analysis Services, для которого настраивается доступ через HTTP, расположен на локальном компьютере и является экземпляром по умолчанию, нет причин для изменения этого параметра. В противном случае необходимо указать имя сервера (например, \<ServerName > ADWRKS-SRV01\</ServerName >). Для сервера, на который установлен как именованный экземпляр, убедитесь, что имя экземпляра (например, \<ServerName > ADWRKS-SRV01\Tabular\</ServerName >).  
   
- По умолчанию экземпляр служб Analysis Services прослушивает TCP/IP-порт 2383. Если службы Analysis Services установлены как экземпляр по умолчанию, необязательно указывать порт в \<ServerName >, так как службы Analysis Services знает, как автоматически прослушивают порт 2383. Тем не менее необходимо разрешить входящие соединения с этим портом в брандмауэре Windows. Дополнительные сведения см. в статье [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ По умолчанию экземпляр служб Analysis Services прослушивает TCP/IP-порт 2383. Если службы Analysis Services установлены как экземпляр по умолчанию, необязательно указывать порт в \<ServerName >, так как службы Analysis Services знает, как автоматически прослушивают порт 2383. Тем не менее необходимо разрешить входящие соединения с этим портом в брандмауэре Windows. Дополнительные сведения см. в статье [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
  Если настроить именованный или экземпляр служб Analysis Services для прослушивания фиксированного порта по умолчанию, необходимо добавить номер порта к имени сервера (например, \<ServerName > AW-Srv01: 55555\</ServerName >) и необходимо разрешить входящие соединения в брандмауэре Windows с этим портом.  
   
@@ -316,7 +316,7 @@ ms.lasthandoff: 09/01/2017
   
  В качестве конечного шага следует обязательно провести более строгое тестирование с использованием клиентского компьютера, эксплуатируемого в сетевой среде, из которого исходят запросы на подключение.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сообщение на форуме (HTTP-доступ с использованием msmdpump и обычной проверки подлинности)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/79d2f225-df35-46da-aa22-d06e98f7d658)   
  [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [Предоставление доступа к объектам и операциям (службы Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
@@ -324,4 +324,3 @@ ms.lasthandoff: 09/01/2017
  [Настройка SSL в IIS 7](http://go.microsoft.com/fwlink/?LinkId=207562)  
   
   
-

@@ -2,11 +2,13 @@
 title: "Функции и задачи репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/11/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -14,21 +16,21 @@ helpviewer_keywords:
 - replication [SQL Server], development
 - replication [SQL Server], interoperability
 ms.assetid: 47c613e4-7fe9-462a-89b4-659b14825b70
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7bf60a2e249063cee1669fd4f87a41818847372a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "21"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 5a1b9183f8a9cf1c60bd399baf43825c4a3949f6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-features-and-tasks"></a>Функции и задачи репликации
-  Найдите сведения, необходимые проектировщику, разработчику, аналитику и администратору для проектирования и внедрения решений репликации.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Найдите сведения, необходимые проектировщику, разработчику, аналитику и администратору для проектирования и внедрения решений репликации.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Типы репликации](../../relational-databases/replication/types-of-replication.md)  
   
@@ -67,4 +69,3 @@ ms.lasthandoff: 06/22/2017
  [Техническая справка (репликация)](../../relational-databases/replication/technical-reference-replication.md)  
   
   
-

@@ -2,40 +2,35 @@
 title: "Тип данных ClrAssemblyFile (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ClrAssemblyFile Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ClrAssemblyFile Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ClrAssemblyFile
-helpviewer_keywords:
-- ClrAssemblyFile data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: ClrAssemblyFile
+helpviewer_keywords: ClrAssemblyFile data type
 ms.assetid: 91074677-c149-483b-a56d-0e35d959d9eb
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 66941082bd01fba162191f8ee83fb69ce1e54a12
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eb98021442148a35bc157b2651ce281237c46213
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clrassemblyfile-data-type-assl"></a>Тип данных ClrAssemblyFile (ASSL)
-  Определяет тип-примитив, представляющий один из файлов, составляющих [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] **сборки** ([ClrAssembly](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md) элемент).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет тип-примитив, представляющий один из файлов, составляющих [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] **сборки** ([ClrAssembly](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md) элемент).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,7 +45,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="data-type-characteristics"></a>Характеристики типа данных  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Базовые типы данных|None|  
 |Производные типы данных|None|  
@@ -63,7 +58,7 @@ ms.lasthandoff: 09/01/2017
 |Дочерние элементы|[Данные](../../../analysis-services/scripting/objects/data-element-assl.md), [имя](../../../analysis-services/scripting/properties/name-element-assl.md), [типа](../../../analysis-services/scripting/properties/type-element-clrassemblyfile-assl.md)|  
 |Производные элементы|[Файл](../../../analysis-services/scripting/objects/file-element-assl.md) ([файлы](../../../analysis-services/scripting/collections/files-element-assl.md) коллекцию [ClrAssembly](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md))|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
   
 ## <a name="see-also"></a>См. также:  
@@ -78,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [Службы Analysis Services сценариев типы данных XML в &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

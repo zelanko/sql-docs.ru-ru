@@ -2,11 +2,13 @@
 title: "Инструкция CREATE KPI (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,20 +20,19 @@ helpviewer_keywords:
 - CREATE KPI statement
 - key performance indicators [MDX]
 ms.assetid: 87618fef-95e5-4dd0-a650-aeb60ccbddcb
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 6a97fbc894a0b88511ab551aa231fcfb3746d52c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8796fefabf3dc44ef03f7084e164a559e6c17d18
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---create-kpi"></a>Определения данных многомерных Выражений — создать ключевой показатель Эффективности
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Создает ключевой показатель эффективности (KPI). KPI представляет собой коллекцию вычислений, связанных с группой мер куба и используемых для оценки успешности бизнеса или сценария.  
   
@@ -56,7 +57,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
  *Property_Value*  
  Допустимое скалярное выражение, представляющее значение свойства ключевого показателя эффективности.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При указании куба, отличного от текущего подключенного куба, возникает ошибка. Поэтому для обращения к текущему кубу вместо указания имени куба рекомендуется использовать переменную CURRENTCUBE.  
   
 ## <a name="kpi-properties"></a>Свойства ключевого показателя эффективности  
@@ -114,4 +115,3 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
  [Инструкции определения данных &#40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
-

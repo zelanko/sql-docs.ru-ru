@@ -2,9 +2,12 @@
 title: "Включение семантического поиска по таблицам и столбцам | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - semantic search [SQL Server], enabling
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0de385730d9999a2943f9599202d717fa7049152
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 40724f35684d4da590d02163028a14ef711e392d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Включение семантического поиска на таблицы и столбцы
-  Описывает способ включения или отключения статистического семантического индексирования в выбранных столбцах, содержащих документы или текст.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Описывает способ включения или отключения статистического семантического индексирования в выбранных столбцах, содержащих документы или текст.  
   
  При выполнении статистического семантического поиска используются индексы, полученные при полнотекстовом поиске, а также создаются дополнительные индексы. Из-за этой зависимости от полнотекстового поиска приходится создавать при определении нового или изменении существующего полнотекстового индекса новый семантический индекс. Вы можете создать новый семантический индекс с помощью инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или с помощью мастера полнотекстового индексирования и других диалоговых окон среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], как описано в данном разделе.  
   
@@ -66,7 +69,7 @@ ms.lasthandoff: 07/31/2017
   
  В следующем примере создается полнотекстовый каталог по умолчанию **ft**. Затем в примере создается уникальный индекс на столбце **JobCandidateID** таблицы **HumanResources.JobCandidate** образца базы данных AdventureWorks2012. Данный уникальный индекс используется в качестве ключевого столбца полнотекстового индекса. Затем в примере создается полнотекстовый и семантический индексы на столбце **Resume** .  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
 GO  
   
@@ -90,7 +93,7 @@ GO
   
  В примере также указано, что отслеживание изменений отключено (без заполнения). Позже, в часы с наименьшей загрузкой, будет запущено полное заполнение нового индекса и включено автоматическое отслеживание изменений с помощью инструкции **ALTER FULLTEXT INDEX** .  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG documents_catalog  
 GO  
   
@@ -113,7 +116,7 @@ GO
   
  Позже, в часы с наименьшей загрузкой, выполняется заполнение индекса:  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO  
 GO  
 ```  
@@ -139,7 +142,7 @@ GO
   
  В следующем примере выполняется изменение существующего полнотекстового индекса в таблице **Production.Document** из образца базы данных AdventureWorks2012. Пример добавляет семантический индекс для столбца **Document** таблицы **Production.Document** , для которого уже существует полнотекстовый индекс. В примере указывается, что повторное заполнение индекса не будет выполняться автоматически.  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document  
     ALTER COLUMN Document  
         ADD Statistical_Semantics  
@@ -162,9 +165,9 @@ GO
 Для удаления семантического индексирования при изменении существующего полнотекстового индекса используется инструкция **ALTER FULLTEXT INDEX** . Также можно удалить семантическое индексирование с помощью различных диалоговых окон в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Удалите семантический индекс с помощью Transact-SQL  
-Для удаления семантического индексирования только из столбца или столбцов вызовите инструкцию **ALTER FULLTEXT INDEX** с параметром **ALTER COLUMN***column_name***DROP STATISTICAL_SEMANTICS** . С помощью одной инструкции **ALTER** можно удалить индексирование из нескольких столбцов.  
+Для удаления семантического индексирования только из столбца или столбцов вызовите инструкцию **ALTER FULLTEXT INDEX** с параметром **ALTER COLUMN***имя_столбца***DROP STATISTICAL_SEMANTICS**. С помощью одной инструкции **ALTER** можно удалить индексирование из нескольких столбцов.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
 
@@ -174,9 +177,9 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-Для удаления семантического и полнотекстового индексирования из столбца вызовите инструкцию **ALTER FULLTEXT INDEX** с параметром **ALTER COLUMN***column_name***DROP** .  
+Для удаления семантического и полнотекстового индексирования из столбца вызовите инструкцию **ALTER FULLTEXT INDEX** с параметром **ALTER COLUMN***имя_столбца***DROP**.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -202,7 +205,7 @@ GO
   
  Возвращаемое значение 1 указывает, что полнотекстовый поиск и семантический поиск для базы данных включены; возвращаемое значение 0 указывает, что они не включены.  
   
-```tsql  
+```sql  
 SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')  
 GO  
 ```  
@@ -226,7 +229,7 @@ GO
   
      Возвращаемое значение 1 указывает, что семантический поиск для столбца включен; возвращаемое значение 0 указывает, что он не включен.  
   
-    ```tsql  
+    ```sql  
     SELECT COLUMNPROPERTY(OBJECT_ID('table_name'), 'column_name', 'StatisticalSemantics')  
     GO  
     ```  
@@ -235,7 +238,7 @@ GO
   
      Значение 1 в столбце **statistical_semantics** указывает, что для данного столбца, кроме полнотекстового индексирования, включено и семантическое индексирование.  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM sys.fulltext_index_columns WHERE object_id = OBJECT_ID('table_name')  
     GO  
     ```  
@@ -253,7 +256,7 @@ GO
   
  Отправьте запрос в представление каталога [sys.fulltext_semantic_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fulltext_semantic_languages  
 GO  
 ```  
@@ -262,7 +265,7 @@ GO
   
 |Язык|LCID|  
 |--------------|----------|  
-|Немецкий|1031|  
+|German|1031|  
 |Английский (США)|1033|  
 |Французский|1036|  
 |Итальянский|1040|  
@@ -286,4 +289,3 @@ GO
  Имеется возможность включить семантическое индексирование на столбцах не в Юникоде с помощью кода языка, содержащего только слова в Юникоде, например кода 1049, обозначающего русский язык. В этом случае семантические индексы на этом столбце никогда не возвратят каких-либо результатов.  
   
   
-

@@ -2,35 +2,32 @@
 title: "Прогноз (DMX) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- PREDICT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Predict function
+f1_keywords: PREDICT
+dev_langs: DMX
+helpviewer_keywords: Predict function
 ms.assetid: f02ff4b3-9bd7-409d-ad14-ead67b3206c4
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 448507936bab886a8d081ee487ab323a3a4a2ef4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a976011c3b892d826d29038fb0501e57db4c5008
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predict-dmx"></a>Predict (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   **Predict** функция возвращает спрогнозированное значение или набор значений для указанного столбца.  
   
@@ -48,7 +45,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 ## <a name="return-type"></a>Тип возвращаемых данных  
  \<ссылка на скалярный столбец >  
   
- либо  
+ или диспетчер конфигурации служб  
   
  \<ссылка на столбец таблицы >  
   
@@ -57,7 +54,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 > [!NOTE]  
 >  Параметры INCLUSIVE, EXCLUSIVE, INPUT_ONLY и INCLUDE_STATISTICS применяются только к ссылкам на столбцы таблицы, а EXCLUDE_NULL и INCLUDE_NULL — только к ссылкам на скалярные столбцы.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Имеются следующие параметры: EXCLUDE_NULL (по умолчанию), INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (по умолчанию), INPUT_ONLY и INCLUDE_STATISTICS.  
   
 > [!NOTE]  
@@ -65,7 +62,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  Параметр INCLUDE_NODE_ID в качестве результата возвращает столбец $NODEID. NODE_ID является узлом содержимого, на котором прогнозирование осуществляется для определенного объекта. Этот параметр является необязательным при использовании прогноза на основе столбцов таблицы.  
   
- *n*  Параметр применяется к столбцам таблицы. В зависимости от типа прогноза данный параметр задает количество возвращаемых строк. Если базовые столбцы являются последовательностью, то вызывается **PredictSequence** функции. Если базовые столбцы являются временных рядов, он вызывает метод **PredictTimeSeries** функции. Для ассоциативных типов прогнозирования вызывается **PredictAssociation** функции.  
+  *n*  Параметр применяется к столбцам таблицы. В зависимости от типа прогноза данный параметр задает количество возвращаемых строк. Если базовые столбцы являются последовательностью, то вызывается **PredictSequence** функции. Если базовые столбцы являются временных рядов, он вызывает метод **PredictTimeSeries** функции. Для ассоциативных типов прогнозирования вызывается **PredictAssociation** функции.  
   
  **Predict** функция поддерживает полиморфизм.  
   
@@ -106,4 +103,3 @@ FROM     [Association]
  [Общие функции прогнозирования &#40; расширений интеллектуального анализа данных &#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

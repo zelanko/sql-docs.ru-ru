@@ -1,10 +1,13 @@
 ---
-title: "Задача «Передача заданий» | Документы Microsoft"
+title: "Задача \"Передача заданий\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -16,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Jobs task [Integration Services]
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
-caps.latest.revision: 28
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: a4264d737901fbb7c023e216d3d8faf5309469f9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 8b14cdb7e26c103104e0e98725f00905f75630af
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transfer-jobs-task"></a>Задача «Передача заданий»
   Задача «Передача заданий» служит для передачи одного или нескольких заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -69,13 +71,13 @@ ms.lasthandoff: 08/11/2017
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Страница "Выражения"](../../integration-services/expressions/expressions-page.md)  
+-   [Страница «Выражения»](../../integration-services/expressions/expressions-page.md)  
   
  Дополнительные сведения об установке этих свойств программным путем см. в следующих разделах:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferJobsTask.TransferJobsTask>  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
 -   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
@@ -93,7 +95,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Description**  
+ **Описание**  
  Введите описание задачи «Передача заданий».  
   
 ## <a name="transfer-jobs-task-editor-jobs-page"></a>Редактор задачи «Передача заданий» (страница «Задания»)
@@ -104,10 +106,10 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Параметры  
  **SourceConnection**  
- Выберите из списка диспетчер соединений SMO или нажмите кнопку  **\<создать соединение... >** для создания нового соединения с исходным сервером.  
+ Выберите в списке диспетчер подключений SMO или нажмите кнопку **\<Создать подключение...>**, чтобы создать подключение к исходному серверу.  
   
  **DestinationConnection**  
- Выберите из списка диспетчер соединений SMO или нажмите кнопку  **\<создать соединение... >** для создания нового соединения на сервере назначения.  
+ Выберите в списке диспетчер подключений SMO или нажмите кнопку **\<Создать подключение...>**, чтобы создать подключение к целевому серверу.  
   
  **TransferAllJobs**  
  Укажите, должна задача копировать с исходного сервера на целевой все задания или только те, которые указаны агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -153,4 +155,3 @@ ms.lasthandoff: 08/11/2017
  [Поток управления](../../integration-services/control-flow/control-flow.md)  
   
   
-

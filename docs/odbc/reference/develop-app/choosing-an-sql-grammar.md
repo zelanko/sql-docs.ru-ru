@@ -3,10 +3,12 @@ title: "Выбор SQL-грамматику | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], SQL grammar
 - SQL grammar [ODBC], selecting
 ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6eedc2466842d922e1b10445500f05ad904d1a0b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cc1da3dfbe7f06e7d98430c5cec8fbaab3176971
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choosing-an-sql-grammar"></a>Выбор грамматику SQL
 В первую очередь необходимо сделать при создании инструкции SQL имеет какие грамматику для использования. Помимо грамматик, доступных из различных стандартов тел, такие как Open Group, ANSI и ISO практически все поставщика СУБД определяет собственный грамматики, каждый из которых может меняться от стандартного.  
@@ -38,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  Таким образом, существует два варианта грамматики для использования: грамматику SQL-92 (и escape-последовательности ODBC) и СУБД синтаксису. Из них только грамматику SQL-92 с возможностью взаимодействия, поэтому все взаимодействующие приложения должны использовать его. Приложения, которые не являются функционально совместимыми можно использовать грамматику SQL-92 или СУБД синтаксису. Грамматик СУБД имеет два преимущества: они могут использовать все возможности, не связанная с SQL-92, и они являются ненамного быстрее, поскольку драйвер не нужно изменять их. Последнее может применяться частично установив атрибут инструкции SQL_ATTR_NOSCAN останавливает драйвер из поиск и замена escape-последовательности.  
   
  Если используется грамматику SQL-92, приложение можно выяснить, как он изменяется с помощью драйвера, вызвав **SQLNativeSql**. Это часто полезно при отладке приложений. **SQLNativeSql** принимает инструкции SQL и возвращает его после драйвер он был изменен. Так как эта функция в уровень соответствия основной интерфейс поддерживается все драйверы.
-

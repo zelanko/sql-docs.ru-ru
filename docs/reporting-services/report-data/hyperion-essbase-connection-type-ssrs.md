@@ -1,27 +1,27 @@
 ---
-title: "Тип соединения Hyperion Essbase (службы SSRS) | Документы Microsoft"
+title: "Тип подключения к Hyperion Essbase (службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
-caps.latest.revision: 10
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "10"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1002bb2ff985a9ee5c2eeaade2377789c136f248
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b70d9cbcbca9a8898d6b838f667f786cecf64805
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Тип соединения Hyperion Essbase (службы SSRS)
   Чтобы включить данные из внешнего источника данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] в отчет, пользователь должен иметь набор данных, основанный на источнике данных отчета типа [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных для [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], позволяющего извлекать многомерные данные из внешнего источника данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -81,7 +81,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>Стандартные свойства полей  
- Стандартные свойства поля поддерживаются большинством поставщиков данных и указываются в запросах многомерных выражений к набору данных для отчета. Например, свойство измерения MEMBER_UNIQUE_NAME многомерного выражения сопоставлено со стандартным свойством **UniqueName**поля набора данных для отчета. Чтобы включить значение уникальное имя в текстовое поле, используйте выражение `=Fields!`  *\<FieldName >*`.UniqueName`.  
+ Стандартные свойства поля поддерживаются большинством поставщиков данных и указываются в запросах многомерных выражений к набору данных для отчета. Например, свойство измерения MEMBER_UNIQUE_NAME многомерного выражения сопоставлено со стандартным свойством **UniqueName**поля набора данных для отчета. Для включения в текстовое поле уникального имени используется следующее выражение: `=Fields!`*\<имя_поля>*`.UniqueName`.  
   
  В следующей таблице представлен список стандартных свойств поля, которые можно использовать для источника данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
   
@@ -89,16 +89,16 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
 |------------------|--------------|---------------------------------------|  
 |**Value**|**Объект**|Указывает значение данных поля.<br /><br /> Для свойства измерения оно сопоставлено с параметром MEMBER_CAPTION. Для меры оно сопоставлено со значением данных.|  
 |**IsMissing**|**Логическое значение**|Указывает, найдено ли поле в результирующем наборе данных.|  
-|**FormattedValue**|**Строковые значения**|Возвращает форматированное значение для ключевой цифры.<br /><br /> В многомерном выражении сопоставляется с FORMATTED_VALUE.|  
-|**BackgroundColor**|**Строковые значения**|Возвращает цвет фона, заданный в базе данных для этого поля.<br /><br /> В многомерном выражении сопоставляется с BACK_COLOR.|  
-|**Color**|**Строковые значения**|Возвращает цвет переднего плана, заданный в базе данных для этого элемента.<br /><br /> В многомерном выражении сопоставляется с FORE_COLOR.|  
-|**UniqueName**|**Строковые значения**|Возвращает полное имя уровня.<br /><br /> В многомерном выражении сопоставляется с MEMBER_UNIQUE_NAME.|  
+|**FormattedValue**|**String**|Возвращает форматированное значение для ключевой цифры.<br /><br /> В многомерном выражении сопоставляется с FORMATTED_VALUE.|  
+|**BackgroundColor**|**String**|Возвращает цвет фона, заданный в базе данных для этого поля.<br /><br /> В многомерном выражении сопоставляется с BACK_COLOR.|  
+|**Color**|**String**|Возвращает цвет переднего плана, заданный в базе данных для этого элемента.<br /><br /> В многомерном выражении сопоставляется с FORE_COLOR.|  
+|**UniqueName**|**String**|Возвращает полное имя уровня.<br /><br /> В многомерном выражении сопоставляется с MEMBER_UNIQUE_NAME.|  
   
  Дополнительные сведения об использовании полей и свойств полей в выражении см. в разделе [Встроенные коллекции в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
   
 ### <a name="custom-properties"></a>Пользовательские свойства  
- Пользовательские свойства полей поддерживаются поставщиками данных и могут быть указаны в базовом запросе многомерных выражений для набора данных отчета, однако не отражаются на панели наборов данных отчета в виде полей. Например, **Long Names** — это свойство элемента, определенное для уровня измерения. Чтобы включить значение в текстовое поле, используйте выражение `=Fields!`  *\<FieldName >*`("Long Names")`. Имена полей в выражении учитывают регистр символов.  
+ Пользовательские свойства полей поддерживаются поставщиками данных и могут быть указаны в базовом запросе многомерных выражений для набора данных отчета, однако не отражаются на панели наборов данных отчета в виде полей. Например, **Long Names** — это свойство элемента, определенное для уровня измерения. Для включения в текстовое поле этого значения используйте выражение `=Fields!`*\<имя_поля>*`("Long Names")`. Имена полей в выражении учитывают регистр символов.  
   
  Для обращения к пользовательским расширенным свойствам в выражении применяется следующий синтаксис:  
   
@@ -108,7 +108,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
 |**Свойство**|**Тип**|**Описание или ожидаемое значение**|  
 |------------------|--------------|---------------------------------------|  
-|**FORMAT_STRING**|**Строковые значения**|Определяется для меры, это **FormattedValue** , доступное в виде типа String.|  
+|**FORMAT_STRING**|**String**|Определяется для меры, это **FormattedValue** , доступное в виде типа String.|  
   
   
 ##  <a name="Remarks"></a> Замечания  
@@ -124,7 +124,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [Добавление фильтра для набора данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [Добавление фильтра к набору данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
 ##  <a name="Related"></a> См. также  
@@ -136,23 +136,22 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Предоставляет сведения о подключениях к данным и источникам данных.  
   
- [Отчет внедренные наборы данных и общие наборы данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Предоставляет сведения об общих и внедренных наборах данных.  
   
- [Коллекция полей набора данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Коллекция полей набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Предоставляет сведения о коллекции полей, создаваемой запросом набора данных.  
   
- [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md), см. в документации к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](http://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md), см. в документации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](http://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Предоставляет подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.  
   
- [С помощью SQL Server 2005 Reporting Services совместно с Hyperion Essbase](http://go.microsoft.com/fwlink/?LinkId=81970)  
+ [Использование служб SQL Server 2005 Reporting Services совместно с Hyperion Essbase Intelligence](http://go.microsoft.com/fwlink/?LinkId=81970)  
  Предоставляет подробные сведения о работе с этим модулем обработки данных.  
   
   
-## <a name="see-also"></a>См. также  
- [Параметры отчета &#40; Построитель отчетов и конструктор отчетов &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Фильтр, группы и сортировка данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Выражения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>См. также:  
+ [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

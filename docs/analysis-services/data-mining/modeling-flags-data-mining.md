@@ -2,12 +2,13 @@
 title: "Флаги моделирования (интеллектуальный анализ данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,20 +24,20 @@ helpviewer_keywords:
 - MODEL_EXISTENCE_ONLY column
 - coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
-caps.latest.revision: 48
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0b7139d1120e9b244ae4bc20e32951c52cc7f37d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ec1ae22619f8988c6d334dfd501faa221e34d1f7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="modeling-flags-data-mining"></a>Флаги моделирования (интеллектуальный анализ данных)
-  Флаги моделирования можно использовать в службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , чтобы включить в алгоритм интеллектуального анализа данных дополнительные сведения о данных, которые определены в таблице вариантов. Алгоритм может использовать эти сведения для создания более точной модели интеллектуального анализа данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Флаги моделирования можно использовать в службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , чтобы включить в алгоритм интеллектуального анализа данных дополнительные сведения о данных, которые определены в таблице вариантов. Алгоритм может использовать эти сведения для создания более точной модели интеллектуального анализа данных.  
   
  Некоторые флаги модели определены на уровне структуры интеллектуального анализа данных, а другие определены на уровне столбца модели интеллектуального анализа данных. Например, флаг моделирования **NOT NULL** используется со столбцами структуры интеллектуального анализа данных. В столбцах модели интеллектуального анализа данных можно определить дополнительные флаги модели в зависимости от алгоритма, используемого при создании модели.  
   
@@ -110,14 +111,13 @@ WHERE MODEL_NAME = '<model name>'
   
 |Задача|Раздел|  
 |----------|-----------|  
-|Редактирование флагов моделирования с помощью конструктора интеллектуального анализа данных|[Просмотр или изменение флагов моделирования (интеллектуальный анализ данных)](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
-|Определение указания для алгоритма с рекомендацией вероятных регрессоров|[Указание столбца, который будет использоваться в модели в качестве регрессора](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|Просмотр флагов модели, поддерживаемых конкретными алгоритмами (в подразделе «Флаги моделирования») каждого раздела справки по алгоритму)|[Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
+|Редактирование флагов моделирования с помощью конструктора интеллектуального анализа данных|[Просмотр или изменение модели флаги &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|Определение указания для алгоритма с рекомендацией вероятных регрессоров|[Укажите столбец для использования в качестве Регрессора в модели](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|Просмотр флагов модели, поддерживаемых конкретными алгоритмами (в подразделе «Флаги моделирования») каждого раздела справки по алгоритму)|[Алгоритмы интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
 |Дополнительные сведения о столбцах структуры интеллектуального анализа и свойствах, которые для них можно задать|[Столбцы структуры интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-columns.md)|  
 |Дополнительные сведения о столбцах модели интеллектуального анализа данных и флагах моделирования, которые можно применить на уровне модели|[Столбцы модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-columns.md)|  
 |Просмотр синтаксиса для работы с флагами модели в инструкциях расширений интеллектуального анализа данных|[Флаги моделирования (расширения интеллектуального анализа данных)](../../dmx/modeling-flags-dmx.md)|  
-|Понятие отсутствующих значений и работа с ними|[Отсутствующие значения (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
+|Понятие отсутствующих значений и работа с ними|[Отсутствующие значения &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
 |Сведения об управлении моделями и структурами, а также о задании свойств использования|[Перемещение объектов интеллектуального анализа данных](../../analysis-services/data-mining/moving-data-mining-objects.md)|  
   
   
-

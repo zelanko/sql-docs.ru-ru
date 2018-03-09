@@ -3,7 +3,7 @@ title: "CursorLocationEnum | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - CursorLocationEnum enumeration [ADO]
 ms.assetid: acb255ff-1734-4b70-89bb-aef862b4c63b
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 52bd88c7d2f5916e33094c085296f5fec8f99d28
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c0937fcab4319e24a2bd213971bea2761b94df75
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursorlocationenum"></a>CursorLocationEnum
 Указывает расположение службы курсора.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adUseClient**|3|Использует клиентские курсоры, предоставленный библиотекой локальный курсор. Службы локального курсора часто разрешает множество функций, не разрешается-драйвер курсоры и использование этого параметра может привести к дополнительным преимуществом по отношению к функции, которые будут включены. Для обеспечения обратной совместимости, синоним **adUseClientBatch** также поддерживается.|  
 |**adUseNone**|1|Не использует службы курсора. (Эта константа является устаревшим и отображается только для обратной совместимости).|  
@@ -50,4 +49,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="applies-to"></a>Объект применения  
  [Свойство CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)
-

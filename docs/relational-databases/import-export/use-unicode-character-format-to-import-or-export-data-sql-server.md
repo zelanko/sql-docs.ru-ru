@@ -2,9 +2,12 @@
 title: "Использование символьного формата Юникода для импорта или экспорта данных (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 09/30/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -13,19 +16,19 @@ helpviewer_keywords:
 - data formats [SQL Server], Unicode character
 - Unicode [SQL Server], bulk importing and exporting
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
-caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: c6a9afc3b92d4de54b166e56c745e28898937c59
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: b38f5585ffa79fbfa5ba702d4fdc8acee9924c7c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Использование символьного формата Юникода для импорта и экспорта данных (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Символьный формат Юникода рекомендуется для массового переноса данных между несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через файл данных, содержащий символы расширенной или двухбайтовой кодировки (DBCS). Формат символьных данных Юникода позволяет экспортировать данные из сервера в кодовой странице, отличающейся от кодовой страницы, используемой выполняющим операцию клиентом. В этих случаях использование символьного формата Юникода имеет следующие преимущества.  
   
 * Если данные источника и назначения имеют тип данных Юникода, при использовании символьного формата Юникода все символьные данные сохраняются.  
@@ -46,7 +49,7 @@ ms.lasthandoff: 10/13/2017
 
 * По умолчанию [программа bcp](../../tools/bcp-utility.md) разделяет символьные поля данных символом табуляции, а записи — символом перевода строки.  Сведения о том, как указать другой признак конца поля, см. в статье [Определение признаков конца поля и строки (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
 
-* Данные типа [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md), хранящиеся в файле данных символьного формата Юникод, обрабатываются таким же образом, что и данные файла данных символьного формата, за исключением того, что они хранятся как данные типа данных [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), а не как данные типа [char](../../t-sql/data-types/char-and-varchar-transact-sql.md). Дополнительные сведения о формате символов см. в разделе [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  
+* Данные типа [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) , хранящиеся в файле данных символьного формата Юникод, обрабатываются таким же образом, что и данные файла данных символьного формата, за исключением того, что они хранятся как данные типа данных [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) , а не как данные типа [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) . Дополнительные сведения о формате символов см. в разделе [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  
 
 ## Особые рекомендации по использованию символьного формата Юникода, bcp и файла форматирования<a name="special_considerations"></a>
 Файлы данных символьного формата Юникода следуют соглашениям для файлов Юникода.  Первые два байта файла являются шестнадцатеричными числами 0xFFFE.  Эти байты служат в качестве меток порядка байтов, определяющих, хранится ли старший байт в файле первым или последним.  [Программа bcp](../../tools/bcp-utility.md) может неправильно интерпретировать метки порядка байтов и вызвать сбой части импорта. Вы можете получить сообщение об ошибке, аналогичное следующему:
@@ -85,7 +88,7 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
   
 Символьный формат Юникода поддерживается следующими параметрами командной строки:  
   
-|Command|Параметр|Описание|  
+|Command|Параметр|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-w**|Использует символьный формат Юникода.|  
 |BULK INSERT|DATAFILETYPE **="widechar"**|Использует символьный формат Юникода при массовом импорте данных.|  
@@ -248,4 +251,3 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
  [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
-

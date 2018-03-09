@@ -2,9 +2,12 @@
 title: "Создание пользовательских шаблонов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,19 +19,19 @@ helpviewer_keywords:
 - templates [Transact-SQL], creating
 - templates [Transact-SQL]
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 770b33f7fb7fa22d1a2e86d4b5c7a9d3f8c84b35
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 7472e4f1f5284dcae032b057fc6d9d0caf3660b8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-3-2---create-custom-templates"></a>Занятие 3–2. Создание пользовательских шаблонов
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поставляется с шаблонами, с помощью которых можно решить многие стандартные задачи, однако реальная эффективность шаблонов заключается в возможности создания пользовательского шаблона для часто используемых сложных скриптов. В этом практическом задании будет создан простой скрипт с несколькими параметрами, однако шаблоны применимы и для длинных скриптов с повторениями.  
   
 ## <a name="using-custom-templates"></a>Использование пользовательских шаблонов  
@@ -50,7 +53,7 @@ ms.lasthandoff: 07/31/2017
 7.  В редакторе запросов введите следующий скрипт, чтобы создать хранимую процедуру, выполняющую поиск заказов для нужной детали, в данном случае роликовых коньков. Код сценария можно скопировать из учебника.  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   
@@ -70,11 +73,11 @@ ms.lasthandoff: 07/31/2017
   
 8.  Нажмите клавишу F5, чтобы выполнить скрипт и создать процедуру **WorkOrdersForBlade** .  
   
-9. В обозревателе объектов щелкните правой кнопкой мыши свой сервер и выберите команду **Создать запрос**. Будет открыто новое окно редактора запросов.  
+9. В обозревателе объектов щелкните правой кнопкой мыши на базе данных **AdventureWorks2012** и нажмите **Новый запрос**. Будет открыто новое окно редактора запросов.  
   
 10. В редакторе запросов введите **EXECUTE dbo.WorkOrdersForBlade**и нажмите клавишу F5, чтобы выполнить запрос. Убедитесь в том, что на панели **Результаты** отображается список заказов на производство роликовых коньков.  
   
-11. Измените скрипт шаблона (из шага 7), заменив в четырех местах имя товара Blade параметром ***\<*product_name**, **nvarchar(50)**, **name*>***.  
+11. Измените скрипт шаблона (из шага 7), заменив в четырех местах имя товара Blade параметром **\<product_name, nvarchar(50), name>**.  
   
     > [!NOTE]  
     > Для параметра необходимо указать три элемента: имя замещаемого параметра, тип данных параметра, значение параметра по умолчанию.  
@@ -82,7 +85,7 @@ ms.lasthandoff: 07/31/2017
 12. Скрипт должен иметь следующий вид:  
   
     ```  
-    USE AdventureWorks20012;  
+    USE AdventureWorks2012;  
     GO  
     IF EXISTS (  
     SELECT *   
@@ -119,4 +122,3 @@ ms.lasthandoff: 07/31/2017
   
   
   
-

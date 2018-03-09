@@ -3,8 +3,11 @@ title: "DEALLOCATE (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - deleting cursor references
 - removing cursor references
 ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
-caps.latest.revision: 26
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cedd8bd32c076a5732586653d11276bcfb880bd9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: fb05fdd9da2f4f724976092bf027f5dde5edd412
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Удаляет ссылку курсора. Когда освобождается последняя ссылка курсора, структуры данных, составляющие курсор снимаются по [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -54,7 +56,7 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
  @*cursor_variable_name*  
  Имя **курсор** переменной. @*cursor_variable_name* должен иметь тип **курсор**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Инструкции, обрабатывающие курсоры, используют для ссылки имя курсора или имя переменной курсора. Инструкция DEALLOCATE удаляет связь между курсором и его именем или переменной. Если это последнее имя или переменная, ссылающаяся на курсор, сам курсор удаляется и освобождаются все используемые им ресурсы. DEALLOCATE освобождает все блокировки прокрутки, которые используются для защиты изоляции выборки. Блокировки транзакций, которые используются для защиты обновлений, включая позиционные обновления в курсоре, удерживаются до завершения транзакции.  
   
  Инструкция DECLARE CURSOR присваивает курсору имя и связывает его с этим именем.  
@@ -102,7 +104,7 @@ GO
   
  Переменная курсора не обязательно освобождается явно. Эта переменная освобождается неявно, если выходит за область действия.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  По умолчанию разрешения DEALLOCATE предоставляются всем допустимым пользователям.  
   
 ## <a name="examples"></a>Примеры  
@@ -145,7 +147,7 @@ DEALLOCATE @MyCursor;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ЗАКРЫТЬ &#40; Transact-SQL &#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [Курсоры](../../relational-databases/cursors.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
@@ -153,4 +155,3 @@ GO
  [ОТКРЫТЬ &#40; Transact-SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)  
   
   
-

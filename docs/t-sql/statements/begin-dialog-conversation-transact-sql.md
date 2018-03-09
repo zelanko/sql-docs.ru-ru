@@ -3,8 +3,11 @@ title: "BEGIN DIALOG CONVERSATION (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,20 +33,19 @@ helpviewer_keywords:
 - encryption [SQL Server], conversations
 - starting conversations
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
-caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6e1f746ea0607759329b32499aed5887ee44b650
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a2ece31010207b6044504f099c11443a2fec0fa2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Создает диалог между двумя службами. Диалог — это сеанс связи, который обеспечивает доставку сообщений строго по порядку между двумя службами.  
   
@@ -67,7 +69,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **@***dialog_handle*  
+ **@** *dialog_handle*  
  Переменная, используемая для хранения дескриптора диалога, сформированного системой для нового диалога, который был возвращен инструкцией BEGIN DIALOG CONVERSATION. Переменная должна иметь тип **uniqueidentifier**.  
   
  ИЗ службы *initiator_service_name*  
@@ -96,13 +98,13 @@ WHERE database_id = DB_ID() ;
  Предложение ON CONTRACT *contract_name*  
  Указывает контракт, которого придерживается данный диалог. Контракт должен существовать в текущей базе данных. Если целевая служба не принимает новые диалоги по указанному контракту, компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] возвращает сообщение об ошибке диалога. Если это предложение опущено, диалог придерживается контракта с именем **по умолчанию**.  
   
- RELATED_CONVERSATION  **=**  *related_conversation_handle*  
+ RELATED_CONVERSATION **= *** related_conversation_handle*  
  Указывает существующую группу сообщений, к которой добавляется новый диалог. Если присутствует данное предложение, новый диалог принадлежит к той же группе сообщений, что диалог, определяемый дескриптором *related_conversation_handle*. *Related_conversation_handle*должен быть типа могут быть неявно преобразованы в тип **uniqueidentifier**. Выполнение инструкции завершается неудачно, если *related_conversation_handle* не ссылается на существующий диалог.  
   
- RELATED_CONVERSATION_GROUP  **=**  *related_conversation_group_id*  
+ RELATED_CONVERSATION_GROUP **= *** related_conversation_group_id*  
  Указывает существующую группу сообщений, к которой добавляется новый диалог. Если присутствует данное предложение, новый диалог будет добавлен к группе сообщений, указанной в *related_conversation_group_id*. *Related_conversation_group_id*должен быть типа могут быть неявно преобразованы в тип **uniqueidentifier**. Если *related_conversation_group_id*ссылка существующей группой сообщений, компонент service broker создает новую группу сообщений с указанным *related_conversation_group_id* и связывает новый диалог с полученной группой сообщений.  
   
- Время СУЩЕСТВОВАНИЯ  **=**  *dialog_lifetime*  
+ LIFETIME **=***dialog_lifetime*  
  Указывает максимальный период времени, в течение которого диалог будет оставаться открытым. Для успешного завершения диалога обе конечные точки должны явно завершить диалог до истечения его времени жизни. *Dialog_lifetime* значение должно быть выражено в секундах. Аргумент имеет тип **int**. Если указано предложение LIFETIME время жизни диалога принимает максимальное значение **int** тип данных.  
   
  ENCRYPTION  
@@ -111,7 +113,7 @@ WHERE database_id = DB_ID() ;
 > [!NOTE]  
 >  Сообщения, которыми обмениваются службы в одном и том же экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], никогда не шифруются. Однако главный ключ базы данных и сертификаты на шифрование все еще требуются для диалогов, использующих шифрование, если службы, для которых создается диалог, находятся в разных базах данных. Благодаря чему диалоги могут быть продолжены, когда в процессе диалога одна из баз данных перемещается в другой экземпляр.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Все сообщения являются частью диалога. Следовательно, перед отправкой сообщения целевой службе служба вызывающей стороны должна начать с ней диалог. Данные, указанные в инструкции BEGIN DIALOG CONVERSATION, аналогичны адресу письма. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] использует эти данные для отправки сообщений правильной службе. Указанная в предложении TO SERVICE служба — это адрес, по которому отправляются сообщения. Служба, указанная в предложении FROM SERVICE, является обратным адресом, используемым для ответных сообщений.  
   
  Целевой службе диалога не обязательно вызывать BEGIN DIALOG CONVERSATION. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] создает диалог в целевой базе данных, когда от инициатора диалога поступает первое сообщение.  
@@ -126,7 +128,7 @@ WHERE database_id = DB_ID() ;
   
  Инструкция BEGIN DIALOG CONVERSATION не используется в функции, определяемой пользователем.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Чтобы создать диалог, текущий пользователь должен иметь разрешение RECEIVE на очередь для службы, указанной в предложении FROM команды, и разрешение REFERENCES на указанный контракт.  
   
 ## <a name="examples"></a>Примеры  
@@ -215,11 +217,10 @@ BEGIN DIALOG CONVERSATION @dialog_handle
    WITH ENCRYPTION = OFF ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BEGIN CONVERSATION TIMER &#40; Transact-SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [END CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
  [ПЕРЕМЕСТИТЬ ДИАЛОГА &#40; Transact-SQL &#41;](../../t-sql/statements/move-conversation-transact-sql.md)   
- [sys.conversation_endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   
-

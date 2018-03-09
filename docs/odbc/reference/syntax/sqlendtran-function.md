@@ -3,33 +3,30 @@ title: "Функция SQLEndTran | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLEndTran
-apilocation:
-- sqlsrv32.dll
+apiname: SQLEndTran
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLEndTran
-helpviewer_keywords:
-- SQLEndTran function [ODBC]
+f1_keywords: SQLEndTran
+helpviewer_keywords: SQLEndTran function [ODBC]
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 15ba9ff7d28101201842071929b34dfa7ec1d455
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fcae4699f6effbc0e6605701560dad11acff5281
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlendtran-function"></a>Функция SQLEndTran
 **Соответствия**  
@@ -161,4 +158,3 @@ SQLRETURN SQLEndTran(
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовка ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Асинхронное выполнение (метод опроса)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
-

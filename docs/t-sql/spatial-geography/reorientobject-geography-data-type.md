@@ -3,8 +3,11 @@ title: "ReorientObject (тип данных geography) | Документы Micr
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - ReorientObject method (geography)
 ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
-caps.latest.revision: 12
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3a32dc43776511881697b972c9279d143af917c2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 5f132cc69c1e4acdf20fbcf88280c212fc1a13ca
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="reorientobject-geography-data-type"></a>ReorientObject (тип данных geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Возвращает **geography** экземпляр со взаимозаменяемыми внутренними и внешними областями.  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 09/01/2017
   
  Возвращаемый тип CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод изменяет ориентацию кольца для всех **многоугольников** в **GeometryCollection** , но не удалить или изменить какие-либо **точки** или **Linestrings** в заданной коллекции.  
   
  Если **GeometryCollection** передается этому методу, каждый экземпляр в коллекции будет изменена ориентация, но коллекции целиком ориентация не меняется.  
@@ -65,8 +67,7 @@ SELECT @R.ReorientObject().STAsText();
 --Result: POLYGON ((10 10, -10 10, -10 -10, 10 -10, 10 10))  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Расширенные методы в экземплярах географических объектов](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
+## <a name="see-also"></a>См. также  
+ [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   
-

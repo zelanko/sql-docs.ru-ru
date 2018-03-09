@@ -2,28 +2,30 @@
 title: "Реляционные базы данных Microsoft SQL: руководство | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04518abb-8581-47c8-a601-ee9136c3c0eb
-caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: a02da95146315df2b8c9026376337b8e05658798
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: c527b6a7feafc3647535dc498fa9eab213876594
-ms.openlocfilehash: f5113541de0deb1ba42519da8e0ec5fff33dfe4d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="guidance-for-using-microsoft-sql-relational-databases"></a>Руководство по использованию реляционных баз данных Microsoft SQL
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Этот раздел содержит функции и задачи, связанные с реляционными базами данных Microsoft SQL, объектами баз данных, типами данных, а также механизмами для работы с данными и управления ими. Эти сведения являются общими для большинства версий [!INCLUDE[ssdenoversion_md](../includes/ssdenoversion_md.md)]. В некоторых разделах может быть указано, что некоторые функции поддерживаются не всеми платформами. Сведения о конкретных платформах см. в следующих разделах. 
   
@@ -35,4 +37,3 @@ ms.lasthandoff: 09/01/2017
 
   
   
-

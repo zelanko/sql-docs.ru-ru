@@ -3,7 +3,7 @@ title: "Набор записей (Visual C++ синтаксис индекс с
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - 'Recordset collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0f396510de52ce581f91690b9839627870cba1c3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f2c2065fadee016f644c8bb473366b65645c4d08
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordset-visual-c-syntax-index-with-import"></a>Набор записей (Visual C++ синтаксис индекс с #import)
 ## <a name="methods"></a>Методы  
@@ -211,6 +210,5 @@ __declspec(property(get=GetStayInSync,put=PutStayInSync)) VARIANT_BOOL
     StayInSync;  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+## <a name="see-also"></a>См. также  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

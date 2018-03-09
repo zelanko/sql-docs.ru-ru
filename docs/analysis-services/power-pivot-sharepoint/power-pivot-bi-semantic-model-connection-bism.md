@@ -2,30 +2,30 @@
 title: "Питание соединение семантической модели бизнес-Аналитики Pivot (bism) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
-caps.latest.revision: 37
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 78b908cfe8e5601ecd5d8fcea6c6816459d6e73a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 41cfa6b2ca110803ca4b63abf683edf7d508c027
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="power-pivot-bi-semantic-model-connection-bism"></a>Соединение семантической модели бизнес-аналитики Power Pivot (BISM-файлы)
-  Соединение семантической модели бизнес-аналитики (BISM-файл) — это переносимое соединение, связывающее отчеты Excel или Power View с базой данных табличной модели Analysis Services или экземпляром служб Analysis Services в многомерном режиме. Определение и использование BISM-файлов в определенной степени аналогично файлам подключения к данным Оffice (ODC).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Соединение семантической модели бизнес-аналитики (BISM-файл) — это переносимое соединение, связывающее отчеты Excel или Power View с базой данных табличной модели Analysis Services или экземпляром служб Analysis Services в многомерном режиме. Определение и использование BISM-файлов в определенной степени аналогично файлам подключения к данным Оffice (ODC).  
   
  Создание семантической модели бизнес-аналитики и доступ к ней через SharePoint. Создание соединения семантической модели бизнес-аналитики позволяет использовать команды быстрого запуска соединения семантической модели с библиотекой. Команды быстрого запуска открывают новую книгу Excel или параметры файла соединения. При установке служб Reporting Services также появится команда для создания отчета [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   
@@ -34,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_prereq"></a> Поддерживаемые базы данных  
  Соединение семантической модели бизнес-аналитики указывает на данные табличной модели. Существует три источника этих данных.  
   
--   Табличный шаблон базы данных, запущенный на отдельном экземпляре служб Analysis Services в режиме табличного сервера. Развертывание отдельного экземпляра служб Analysis Services выполняется вне пределов фермы. Для доступа к источникам данных, находящимся за пределами фермы, требуются дополнительные разрешения, о которых можно прочитать в следующем разделе: [Создание подключения между семантической моделью бизнес-аналитики и книгой PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+-   Табличный шаблон базы данных, запущенный на отдельном экземпляре служб Analysis Services в режиме табличного сервера. Развертывание отдельного экземпляра служб Analysis Services выполняется вне пределов фермы. Для доступа к источникам данных, находящимся за пределами фермы, требуются дополнительные разрешения, о которых можно прочитать в следующем разделе: [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , сохраненные в SharePoint. Базы данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , внедренные в книги Excel, эквивалентны табличным шаблонам баз данных, запущенным на отдельном сервере Analysis Services в табличном режиме. Если [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel и [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint уже используются, то можно определить соединение семантической модели бизнес-аналитики, указывающее на книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] из библиотеки SharePoint, и создавать отчеты [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] с использованием существующих данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  Можно использовать книги, созданные в версиях SQL Server 2008 R2 или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel.  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="understanding-the-connection-sequence-for-bi-semantic-connections"></a>Основные сведения о последовательности соединения для семантической модели бизнес-аналитики  
  В этом разделе описывается работа соединений между различными клиентскими приложениями, в том числе Excel или клиентом отчетов Power View в SharePoint, и базой данных табличной модели, находящейся в пределах или вне пределов фермы SharePoint.  
   
- Все соединения с базой данных табличной модели устанавливаются с учетными данными пользователя, запрашивающего данные. Однако механизм соединения различается в зависимости от того, устанавливается ли оно в пределах фермы, состоит ли из одного или двух этапов и включен ли протокол Kerberos. Дополнительные сведения об аутентификации соединений между SharePoint и серверными источниками данных см. в разделе [Double-hop authentication: Why NTLM fails and Kerberos works](http://go.microsoft.com/fwlink/?LinkId=237137)(Двухэтапная аутентификация: почему Kerberos работает, а NTLM — нет).  
+ Все соединения с базой данных табличной модели устанавливаются с учетными данными пользователя, запрашивающего данные. Однако механизм соединения различается в зависимости от того, устанавливается ли оно в пределах фермы, состоит ли из одного или двух этапов и включен ли протокол Kerberos. Дополнительные сведения об аутентификации соединений между SharePoint и серверными источниками данных см. в разделе [двойного прыжка проверка подлинности: сбоя почему NTLM и Kerberos работает](http://go.microsoft.com/fwlink/?LinkId=237137)(Двухэтапная аутентификация: почему Kerberos работает, а NTLM — нет).  
   
  **Соединение с табличными данными из Excel по сети**  
   
@@ -89,4 +89,3 @@ ms.lasthandoff: 09/01/2017
  [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   
-

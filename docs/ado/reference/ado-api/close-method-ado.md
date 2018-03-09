@@ -3,7 +3,7 @@ title: "Close-метод (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Close method [ADO]
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 693f6adc51682fec4f9890d7d7618aa53e43593d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f8780b5ab445364d5cb99bbde6407052fcfa7db3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="close-method-ado"></a>Close-метод (ADO)
 Закрывает открытый объект и все зависимые объекты.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 09/09/2017
 object.Close  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **закрыть** метод закрытия [подключения](../../../ado/reference/ado-api/connection-object-ado.md), [записи](../../../ado/reference/ado-api/record-object-ado.md), [записей](../../../ado/reference/ado-api/recordset-object-ado.md), или [поток](../../../ado/reference/ado-api/stream-object-ado.md) объекта Чтобы освободить все связанные системные ресурсы. Закрывает объект не удаляется из памяти; можно изменить настройки его свойств и открыть его позже. Для полного устранения объекта из памяти, закройте объект и затем присвойте переменной объекта *ничего* (в Visual Basic).  
   
 ## <a name="connection"></a>Соединение  
@@ -65,14 +64,13 @@ object.Close
   
 |||  
 |-|-|  
-|[Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Объект записи (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
-|[Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Объект потока (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
+|[Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
+|[Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Открытие и закрытие примере методы (Visual Basic)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Пример методов открытия и закрытия (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [Пример методов открытия и закрытия (VC ++)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
  [Метод Open (соединение ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Метод Open (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Save-метод](../../../ado/reference/ado-api/save-method.md)
-
+ [Метод Save](../../../ado/reference/ado-api/save-method.md)

@@ -3,7 +3,7 @@ title: "Пример свойства DefinedSize (VC ++) | Документы M
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - DefinedSize property [ADOX], VC++ example
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f7a9366879aa23b1ceefa6bfe688f168fff2dfee
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3601e69350096d3fae0104e5d43c6d7e4abb5237
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="definedsize-property-example-vc"></a>Пример свойства DefinedSize (VC ++)
 В этом примере демонстрируется [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) свойство [столбца](../../../ado/reference/adox-api/column-object-adox.md). Код будет переопределить размер столбца FirstName **сотрудников** таблицу *Northwind* базы данных. После этого изменения в значениях FirstName [поле](../../../ado/reference/ado-api/field-object.md) из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе **сотрудников** таблица будет отображена. Обратите внимание, что по умолчанию, поле «имя» становится дополняются пробелами после его переопределить **DefinedSize** свойство.  
@@ -170,7 +169,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект столбца (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Свойство DefinedSize (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)
-

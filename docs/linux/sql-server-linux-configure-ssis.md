@@ -7,21 +7,29 @@ ms.reviewer: douglasl
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: d71490df718bfcb6f8ce35c7d087bac4d5961aff
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 2e738f1d8088a974e698a0787370f34216c254a4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Настройка служб интеграции SQL Server в Linux с conf служб ssis
 
-Запуском `ssis-conf` сценарий настройки при установке SQL Server Integration Services (SSIS) для Red Hat Enterprise Linux и Ubuntu. Эту программу можно использовать для настройки следующих свойств:
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-| Command | Description |
+Запуском `ssis-conf` сценарий настройки при установке SQL Server Integration Services (SSIS) для Red Hat Enterprise Linux и Ubuntu. Дополнительные сведения об установке служб SSIS см. в разделе [установить SQL Server Integration Services (SSIS) в Linux](sql-server-linux-setup-ssis.md).
+
+Можно также использовать `ssis-conf` программу, чтобы настроить следующие свойства:
+
+| Command | Описание |
 |-------------|---------------------------------------------------------------------|
 | SET-edition | Выберите выпуск SQL Server                                       |
 | Данные телеметрии   | Включение или отключение службы телеметрии SQL Server Integration Services |
@@ -138,3 +146,8 @@ enabled = Y
 lcid = 2052
 ```
 
+## <a name="related-content-about-ssis-on-linux"></a>См. также о служб SSIS в Linux
+-   [Извлечения, преобразования и загрузки данных в Linux с помощью служб SSIS](sql-server-linux-migrate-ssis.md)
+-   [Установка SQL Server Integration Services (SSIS) для Linux](sql-server-linux-setup-ssis.md)
+-   [Ограничения и известные проблемы для служб SSIS в Linux](sql-server-linux-ssis-known-issues.md)
+-   [Выполнение в Linux с cron пакетов служб интеграции SQL Server расписание](sql-server-linux-schedule-ssis-packages.md)

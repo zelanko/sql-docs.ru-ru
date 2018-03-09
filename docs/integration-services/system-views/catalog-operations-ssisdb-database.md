@@ -1,10 +1,13 @@
 ---
-title: "Catalog.Operations (база данных SSISDB) | Документы Microsoft"
+title: "catalog.operations (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-views
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,20 +16,19 @@ helpviewer_keywords:
 - operations view [Integration Services]
 - catalog.operations view [Integration Services]
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
-caps.latest.revision: 29
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f9d1969e9fe7bcb2104003cfab057effcd35da5d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a738859dc30fc1a845b15903a8b3691b431f3d1b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations (база данных SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Отображает подробные сведения обо всех операциях в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -49,12 +51,12 @@ ms.lasthandoff: 09/26/2017
 |server_name|**nvarchar(128)**|Сведения об экземпляре и сервере Windows для указанного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |machine_name|**nvarchar(128)**|Имя компьютера, на котором запущен экземпляр сервера.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В этом представлении отображается одна строка для каждой операции в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Это позволяет администратору перечислить все логические операции, выполняемые на сервере, например развертывание проекта или выполнение пакета.  
   
- В этом представлении отображаются следующие типы операций, как указано в **operation_type** столбца:  
+ Это представление содержит следующие типы операций, перечисленные в столбце **operation_type**:  
   
-|**operation_type** значение|**operation_type** описание|**object_id** описание|**object_name** описание|  
+|Значение **operation_type**|Описание **operation_type**|Описание **object_id**|Описание **object_name**|  
 |-------------------------------|-------------------------------------|--------------------------------|----------------------------------|  
 |`1`|Инициализация служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|**NULL**|**NULL**|  
 |`2`|Окно сохранения<br /><br /> (Задание агента SQL Server)|**NULL**|**NULL**|  
@@ -67,17 +69,16 @@ ms.lasthandoff: 09/26/2017
 |`301`|**validate_package**<br /><br /> (Хранимая процедура)|Идентификатор проекта|Имя пакета|  
 |`1000`|**configure_catalog**<br /><br /> (Хранимая процедура)|**NULL**|**NULL**||  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Это представление требует применения одного из следующих разрешений:  
   
 -   Разрешение READ по отношению к операции  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 > [!NOTE]  
 >  Наличие разрешения на выполнение операции на сервере подразумевает наличие разрешения на просмотр сведений об этой операции. Действует защита на уровне строки. Отображаются только строки, на которые у вас имеется разрешение.  
   
   
-

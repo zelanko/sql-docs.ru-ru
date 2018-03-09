@@ -2,42 +2,42 @@
 title: "Мониторинг действий DQS | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.administration.activitymonitoring.f1
+f1_keywords: sql13.dqs.administration.activitymonitoring.f1
 helpviewer_keywords:
 - monitoring activity
 - activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
-caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "16"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7edd36b5b50eabac2cfa609a06aef2638d5b6dfd
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 46c5abb9edd4e854609a1854ab6d6d8d6622b4fe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="monitor-dqs-activities"></a>Мониторинг операций DQS
   В этом разделе описывается централизованный мониторинг следующих действий в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): обнаружение знаний, управление доменами, политика сопоставления, очистка данных, сопоставление данных и очистка на базе служб SSIS.  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="LimitationsRestrictions"></a> Ограничения  
+###  <a name="LimitationsRestrictions"></a> ограничения  
  Только пользователи с ролью dqs_administrator в базе данных DQS_Main могут прерывать действие или останавливать процесс в составе действия.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
   
 -   Для просмотра действий DQS необходимо иметь роль dqs_kb_editor или dqs_kb_operator в базе данных DQS_MAIN.  
   
@@ -138,7 +138,7 @@ ms.lasthandoff: 09/09/2017
   
 3.  Будет предложено указать имя и расположение сохраняемого файла Excel. Экспортированный файл Excel содержит следующие листы:  
   
-    |Имя листа|Описание|  
+    |Имя листа|Description|  
     |----------------|-----------------|  
     |Действие|Содержит сведения (столбцы) о действии, как в сетке действий.|  
     |Процессы|Содержит сведения (столбцы) о процессах в действии, как на вкладке **Этапы действия** .|  
@@ -164,4 +164,3 @@ ms.lasthandoff: 09/09/2017
 3.  Появится сообщение с запросом на подтверждение. Нажмите кнопку **Да**.  
   
   
-

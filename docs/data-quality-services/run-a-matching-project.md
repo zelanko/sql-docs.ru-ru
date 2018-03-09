@@ -2,11 +2,13 @@
 title: "Запуск проекта сопоставления | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,17 +16,16 @@ f1_keywords:
 - sql13.dqs.matchingproject.matching.f1
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "36"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9874323ad1bef8199d2ebc969bb3673826b946fb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6dd319ab3fabac9cecd2aa7ed8091b51fd190573
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="run-a-matching-project"></a>Запуск проекта сопоставления
   В этом разделе описано, как выполнить сопоставление данных в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). В процессе сопоставления выявляются кластеры соответствующих друг другу записей согласно правилам сопоставления в политике сопоставления, одна запись из каждого кластера обозначается как «выжившая» согласно правилу выживания, и результаты экспортируются. Процесс сопоставления в службах DQS, называемый также удалением дубликатов, является автоматизированным, однако правила сопоставления можно создавать интерактивно, также можно выбирать правило выживания из нескольких вариантов, таким образом можно управлять процессом сопоставления.  
@@ -41,9 +42,9 @@ ms.lasthandoff: 09/09/2017
   
 -   На компьютере [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] должна быть установлена программа Microsoft Excel, если исходные данные, подлежащие сопоставлению, находятся в файле Excel. В противном случае на стадии сопоставления невозможно будет выбрать файл Excel. Файлы, созданные Microsoft Excel, могут иметь расширение XLSX, XLS или CSV. При использовании 64-разрядной версии Excel поддерживаются только файлы Excel 2003 (.xls), файлы Excel 2007 и 2010 (.xlsx) не поддерживаются. При использовании 64-разрядной версии Excel 2007 или 2010 сохраните файл как XLS- или CSV-файл либо вместо этого установите 32-разрядную версию Excel.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Для запуска проекта сопоставления необходимо иметь роль dqs_administrator или dqs_kb_editor в базе данных DQS_MAIN.  
   
 ##  <a name="StartingaMatchingProject"></a> Первый шаг. Запуск проекта сопоставления  
@@ -242,4 +243,3 @@ ms.lasthandoff: 09/09/2017
 -   Наибольшее число дубликатов в кластере  
   
   
-

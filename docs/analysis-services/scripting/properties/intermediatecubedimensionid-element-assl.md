@@ -2,40 +2,35 @@
 title: "Элемент IntermediateCubeDimensionID (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- IntermediateCubeDimensionID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: IntermediateCubeDimensionID Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- IntermediateCubeDimensionID
-helpviewer_keywords:
-- IntermediateCubeDimensionID element
+applies_to: SQL Server 2016 Preview
+f1_keywords: IntermediateCubeDimensionID
+helpviewer_keywords: IntermediateCubeDimensionID element
 ms.assetid: 305c0a91-7bc2-4268-ba94-8f19d8c22ca3
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 33f8979715efa0bd9b5e2df5d1632c3874a0b7a2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0bf3cb1e59c76f5ab99e7e8d5a3404e5ee867948
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="intermediatecubedimensionid-element-assl"></a>Элемент IntermediateCubeDimensionID (ASSL)
-  Содержит идентификатор измерения, которое связывает ссылочное измерение с группой мер.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит идентификатор (ID) измерения, который связывает ссылочное измерение с группой мер.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,9 +45,9 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
-|Тип данных и длина|Строковые значения|  
+|Тип данных и длина|String|  
 |Значение по умолчанию|None|  
 |Количество элементов|1-1: обязательный элемент, который встречается ровно один раз.|  
   
@@ -63,11 +58,10 @@ ms.lasthandoff: 09/01/2017
 |Родительский элемент|[ReferenceMeasureGroupDimension](../../../analysis-services/scripting/data-type/referencemeasuregroupdimension-data-type-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Элемент, соответствующий родителю параметра **IntermediateCubeDimensionID** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>См. также:  
  [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

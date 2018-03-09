@@ -1,26 +1,28 @@
 ---
-title: "TOKEN (выражение служб SSIS) | Документы Microsoft"
+title: "TOKEN (выражение служб SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ff578d1f2ba584c64e471fa9514c6fa76e581d8e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 192a91539b35a718556e50707a6f74cb15cfc5b0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="token--ssis-expression"></a>TOKEN (выражение служб SSIS)
   Возвращает токен (подстроку) из строки с учетом заданных разделителей токенов строки и номера токена, определяющего, какой токен следует возвратить.  
@@ -44,14 +46,14 @@ TOKEN(character_expression, delimiter_string, occurrence)
 ## <a name="result-types"></a>Типы результата  
  DT_WSTR  
   
-## <a name="remarks"></a>Замечания  
- Эта функция разделяет строку < character_expression > на набор токенов, разделенных разделителей, указанных в < delimiter_string >, а затем возвращает токен n, где N — число токена, заданные \<вхождения > параметра. Примеры использования этой функции см. в разделе «Примеры».  
+## <a name="remarks"></a>Remarks  
+ Эта функция разделяет строку <character_expression> на набор токенов, разделенных символами, которые заданы в строке <delimiter_string>, а затем возвращает токен N, где N — это порядковый номер токена, заданный параметром \<occurrence>. Примеры использования этой функции см. в разделе «Примеры».  
   
  Следующие примечания относятся к функции TOKEN.  
   
 -   Строка разделения может содержать один или несколько символов разделения.  
   
--   Если значение \<вхождения > параметр больше, чем общее число токенов в строке, функция возвращает значение NULL.  
+-   Если значение параметра \<occurrence> больше общего числа токенов в строке, функция возвратит значение NULL.  
   
 -   Первые разделители пропускаются.  
   
@@ -104,8 +106,7 @@ TOKEN("2009/01/01", "/"), 1
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Функции &#40;Выражение служб SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>См. также:  
+ [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

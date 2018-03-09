@@ -1,32 +1,31 @@
 ---
-title: "Построитель отчетов в SQL Server 2016 | Документы Microsoft"
+title: "Построитель отчетов в SQL Server 2016 | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-f1_keywords:
-- "10428"
+f1_keywords: "10428"
 helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c2a8702fcee392936451e4a55a4b97327de2b97d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5009b0c7ebe8fae67fe51a885dd9f5bf92dc69f9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-in-sql-server-2016"></a>Построитель отчетов в SQL Server 2016
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] — это инструмент создания отчетов с разбиением на страницы, предназначенный для корпоративных пользователей, которые предпочитают работать в автономной среде вместо использования конструктора отчетов в Visual Studio.  Во время проектирования отчета с разбиением на страницы вы создаете определение отчета, в котором указано, откуда и какие брать данные, а также как их отображать. При запуске отчета обработчик получает заданное определение отчета, извлекает данные и объединяет их с макетом отчета, чтобы создать отчет. Отчеты можно предварительно просмотреть из [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] , опубликовать в собственном режиме или в режиме интеграции с SharePoint на сервере отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , откуда его смогут запустить другие пользователи.  
@@ -74,7 +73,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Опубликованные отчеты управляются на сервере отчетов или сервере отчетов в режиме интеграции с SharePoint администратором сервера отчетов. Администраторы сервера отчетов могут определить безопасность, задать свойства и задать расписание операций, таких как журнал отчета и доставка отчета по электронной почте. Они могут создать общие расписания и источники данных, и сделать их доступными для общего использования. Администраторы также управляют всеми каталогами сервера отчетов. Возможности управления зависят от назначенных пользователю разрешений.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
   [Запуск построителя отчетов](../../reporting-services/report-builder/start-report-builder.md)  
   
   [Установка построителя отчетов](../../reporting-services/install-windows/install-report-builder.md)
@@ -99,5 +98,4 @@ ms.lasthandoff: 08/09/2017
  [Сочетания клавиш (построитель отчетов)](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
  Описываются клавиши, которые можно использовать для навигации и проектирования отчетов в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
   
-
 

@@ -2,9 +2,12 @@
 title: "Удаление индекса | Документация Майкрософт"
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-indexes
 ms.tgt_pltfrm: 
@@ -16,17 +19,16 @@ helpviewer_keywords:
 - indexes [SQL Server], dropping
 - index deletions [SQL Server]
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 77d88bfd9ae9cb742bc9dc18f8baffdd32e5ac3e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9c41e725747527a7637785583a18245c12a8d0c5
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="delete-an-index"></a>Удаление индекса
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -35,11 +37,11 @@ ms.lasthandoff: 06/22/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Удаление индекса с помощью**  
   
@@ -52,9 +54,9 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="Restrictions"></a> Ограничения  
  Индексы, созданные с помощью ограничений уникальности и первичных ключей, нельзя удалить этим способом. Вместо этого следует удалять сами ограничения. Для удаления ограничения и соответствующего индекса используется инструкция [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) с предложением DROP CONSTRAINT на языке [!INCLUDE[tsql](../../includes/tsql-md.md)]. Дополнительные сведения см. в статье [Delete Primary Keys](../../relational-databases/tables/delete-primary-keys.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER для таблицы или представления. По умолчанию это разрешение предоставляется предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_ddladmin** и **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -63,11 +65,11 @@ ms.lasthandoff: 06/22/2017
   
 1.  В обозревателе объектов разверните базу данных, содержащую таблицу, в которой необходимо удалить индекс.  
   
-2.  Разверните папку **Таблицы** .  
+2.  Разверните папку **Таблицы**.  
   
 3.  Разверните таблицу, содержащую индекс, который нужно удалить.  
   
-4.  Разверните папку **Индексы** .  
+4.  Разверните папку **Индексы**.  
   
 5.  Щелкните правой кнопкой мыши индекс, который необходимо удалить, и выберите пункт **Удалить**.  
   
@@ -77,7 +79,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  В обозревателе объектов разверните базу данных, содержащую таблицу, в которой необходимо удалить индекс.  
   
-2.  Разверните папку **Таблицы** .  
+2.  Разверните папку **Таблицы**.  
   
 3.  Правой кнопкой мыши щелкните таблицу, содержащую индекс, который необходимо удалить, и выберите «Конструктор».  
   
@@ -95,7 +97,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-delete-an-index"></a>Удаление индекса  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -114,4 +116,3 @@ ms.lasthandoff: 06/22/2017
  Дополнительные сведения см. в статье [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md).  
   
   
-

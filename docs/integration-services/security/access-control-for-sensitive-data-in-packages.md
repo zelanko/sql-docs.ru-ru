@@ -1,10 +1,13 @@
 ---
-title: "Контроль доступа для конфиденциальных данных в пакетах | Документы Microsoft"
+title: "Контроль доступа для конфиденциальных данных в пакетах | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -23,17 +26,16 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-caps.latest.revision: 44
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 51150293cd37e0d9f641bd7ee2ee30f8cce8ed95
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fd094efc965679119e0a15d9fc0fc97be27db4f4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Контроль доступа для конфиденциальных данных в пакетах
   Для защиты данных в пакете служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно задать уровень защиты, способствующий защите или только конфиденциальных данных, или всех данных в пакете. Более того, эти данные можно зашифровать с паролем или ключом пользователя или возложить задачу шифрования данных на базу данных. Кроме того, используемый уровень защиты пакета не обязательно является статическим и изменяется в течение жизненного цикла пакета. Часто один уровень защиты устанавливается во время развертывания, а другой — сразу после развертывания пакета.  
@@ -115,7 +117,7 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>Установка или изменение уровня защиты пакетов в командной строке  
   
-1.  Просмотрите доступные значения для **ProtectionLevel** свойства в разделе [Установка уровня защиты пакетов](#set_protection)и выберите подходящее значение для пакета.  
+1.  Просмотрите доступные значения свойства **ProtectionLevel** в разделе [Установка уровня защиты пакетов](#set_protection) и выберите подходящее значение для своего пакета.  
   
 2.  Просмотрите сопоставления для параметра **Encrypt** в разделе [dtutil Utility](../../integration-services/dtutil-utility.md)и выберите подходящее целое число, которое будет значением выбранного свойства **ProtectionLevel** .  
   
@@ -137,10 +139,10 @@ ms.lasthandoff: 08/03/2017
   
          Если подобную команду использовать в пакетном файле, то в него необходимо включить заполнитель «%f» в виде «%%f».  
 
-## <a name="protection_dialog"></a>Пакет защиты уровня диалогового окна
+## <a name="protection_dialog"></a> Диалоговое окно уровня защиты пакета и проекта
   Диалоговое окно **Уровень защиты пакета** позволяет изменять уровень защиты пакета. Уровень защиты определяет метод защиты (пароль или ключ пользователя) и область защиты пакетов. Защита может охватывать все данные или только конфиденциальные данные.  
   
- Чтобы разобраться в требованиях и параметрах безопасности пакетов, могут оказаться полезными для просмотра [Общие сведения о безопасности &#40; службы Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md).  
+ Сведения о требованиях и параметрах защиты пакетов см. в разделе [Общие сведения о безопасности (службы Integration Services)](../../integration-services/security/security-overview-integration-services.md).  
   
 ### <a name="options"></a>Параметры  
  **Package protection level**  
@@ -152,7 +154,7 @@ ms.lasthandoff: 08/03/2017
  **Введите пароль еще раз**  
  Введите пароль еще раз.  
 
-## <a name="password_dialog"></a>Диалоговое окно пароля пакета
+## <a name="password_dialog"></a> Диалоговое окно "Пароль пакета"
   Диалоговое окно **Пароль пакета** позволяет вводить пароль для пакета, который был зашифрован с паролем. Пароль необходим, если в пакете используется уровень защиты **Шифровать конфиденциальные данные паролем**или **Шифровать все данные паролем** .  
   
 ### <a name="options"></a>Параметры  
@@ -161,7 +163,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>См. также:  
  [Пакеты служб Integration Services (SSIS)](../../integration-services/integration-services-ssis-packages.md)   
- [Общие сведения о безопасности &#40; службы Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [Общие сведения о безопасности (службы Integration Services)](../../integration-services/security/security-overview-integration-services.md)  
  [Программа dtutil](../../integration-services/dtutil-utility.md)  
   
-

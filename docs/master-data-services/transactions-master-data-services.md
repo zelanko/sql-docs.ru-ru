@@ -2,9 +2,12 @@
 title: "Транзакции (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 01/10/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - transactions [Master Data Services], about transactions
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
-caps.latest.revision: 15
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 554ba7e734e15ca6a0b2babcfcf95796762ad7c4
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 98cb408b0ec3d5449f0f81dc363e2278ac107f3d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="transactions-master-data-services"></a>Транзакции (службы Master Data Services)
 
@@ -52,7 +54,7 @@ ms.lasthandoff: 09/07/2017
   
  Вы можете настроить длительность хранения данных журнала транзакций. Для этого необходимо определить свойство **Срок хранения журнала, дн.** в системных параметрах базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , а также задать значение **Хранение журнала в днях** при создании или изменении модели. Дополнительные сведения см. в разделах [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md) и [Создание модели (службы Master Data Services)](../master-data-services/create-a-model-master-data-services.md).  
   
- MDS_MDM_Sample_Log_Maintenace, задание агента SQL Server, запускает очистку журналов транзакций и выполняется каждую ночь. Для изменения расписания для этого задания можно использовать агент SQL Server.  
+ MDS_MDM_Sample_Log_Maintenace, задание агента SQL Server, инициирует очистку журналов транзакций и запускается каждую ночь. Для изменения расписания для этого задания можно использовать агент SQL Server.  
   
  Кроме того, для очистки журналов транзакций можно вызвать следующие хранимые процедуры.  
   
@@ -79,7 +81,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
 ```  
   
 ## <a name="system-settings"></a>Системные настройки  
- В программе [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] имеется параметр, который определяет, записываются ли транзакции для промежуточных записей. Этот параметр можно настроить в программе [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] или непосредственно в таблице системных параметров в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
+ В программе [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] имеется параметр, который определяет, записываются ли транзакции для промежуточных записей. Этот параметр можно настроить в программе [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] или непосредственно в таблице системных параметров в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
   
  При импорте данных из этой версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] можно указать, следует ли вести журнал транзакций при инициировании хранимых процедур. Дополнительные сведения см. в разделе [Промежуточная хранимая процедура (службы Master Data Services)](../master-data-services/staging-stored-procedure-master-data-services.md).  
   
@@ -88,7 +90,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
  Несколько пользователей могут обновлять одно значение сущности без ошибок несмотря на то, что транзакции включены. Обычно приоритет получает изменение, которое по времени было внесено последним. Администратор может просмотреть конфликты, возникающие при одновременном внесении нескольких одинаковых изменений, в журнале транзакций и вручную разрешить их. В журнале транзакций отображаются отдельные транзакции для **предыдущего значения** и **нового значения** для рассматриваемого атрибута из каждого сеанса, однако конфликты, возникающие, если для одного старого значения существуют несколько **новых значений** , автоматически не разрешаются.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
@@ -104,4 +106,3 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
 -   [Заметки (службы Master Data Services)](../master-data-services/annotations-master-data-services.md)  
   
   
-

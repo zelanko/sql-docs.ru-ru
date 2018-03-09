@@ -1,28 +1,29 @@
 ---
-title: "Расширение пакетов с помощью пользовательских объектов | Документы Microsoft"
+title: "Расширение пакетов с помощью пользовательских объектов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 26616eb8-9e80-434d-b22a-ece1b00f449d
-caps.latest.revision: 36
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e10fbab75eca8556e36734c1c0ad3828b8b09404
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7e466f9fe672021bd504188efb402026abd5241a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extending-packages-with-custom-objects"></a>Расширение пакетов с помощью пользовательских объектов
   Если встроенные компоненты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не отвечают требованиям, их можно расширить, создав собственные программные расширения служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Существует два варианта расширения пакетов: можно написать код с использованием возможностей многофункциональных оболочек, предоставляемых задачей «Скрипт» и компонентом скрипта или самостоятельно создать пользовательские расширения служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], используя классы, производные от базовых классов, предоставляемых объектной моделью служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -31,7 +32,7 @@ ms.lasthandoff: 08/03/2017
   
  Если пользовательское решение служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] требует большей гибкости, чем обеспечивает задача или компонент «Скрипт», или если есть необходимость использования компонента, применение которого возможно в нескольких пакетах, модель объектов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] позволяет создавать с нуля пользовательские задачи, компоненты потока данных и другие объекты пакета в управляемом коде.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Разработка пользовательских объектов для служб Integration Services](../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)  
  Описывает пользовательские объекты, которые можно создать для работы со службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], включая необходимые шаги и настройки.  
   
@@ -50,14 +51,14 @@ ms.lasthandoff: 08/03/2017
  [Разработка пользовательского регистратора](../../integration-services/extending-packages-custom-objects/log-provider/developing-a-custom-log-provider.md)  
  Описывает процесс программирования пользовательского регистратора.  
   
- [Разработка пользовательских перечислитель](../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
+ [Разработка пользовательского перечислителя по каждому элементу](../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
  Описывает процесс программирования пользовательского перечислителя.  
   
  [Разработка пользовательского компонента потока данных](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  Описывает вопросы программирования пользовательских источников, преобразований и назначений потока данных.  
   
 ## <a name="reference"></a>Справочник  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../integration-services/integration-services-error-and-message-reference.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
  Содержится список стандартных кодов ошибок служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с символическими именами и описаниями.  
   
 ## <a name="related-sections"></a>См. также  
@@ -68,8 +69,7 @@ ms.lasthandoff: 08/03/2017
  Описывает создание, настройку, запуск, загрузку и сохранение пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] программным образом, а также программное выполнение других задач управления.  
   
 ## <a name="see-also"></a>См. также:  
- [Сравнение решений со сценариями и пользовательских объектов](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)   
+ [Сравнение решений со скриптами и пользовательских объектов](../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)   
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

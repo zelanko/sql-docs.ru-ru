@@ -3,8 +3,11 @@ title: "Разрешения GRANT Full-Text (Transact-SQL) | Документы
 ms.custom: 
 ms.date: 06/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +21,19 @@ helpviewer_keywords:
 - full-text stoplist [SQL Server], permissions
 - GRANT statement, full-text permissions
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 624b779b088008076360e12ed96c450fc3e91b50
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 673092fc5f3523d0448e477ceda10ea491224982
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT, предоставление разрешений на полнотекстовые объекты (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Предоставляет разрешения на полнотекстовый каталог или список полнотекстовых стоп-слов.  
   
@@ -58,10 +60,10 @@ GRANT permission [ ,...n ] ON
  *разрешение*  
  Имя разрешения. Допустимые сопоставления разрешений на защищаемые объекты описаны далее в подразделе «Примечания».  
   
- НА ПОЛНОТЕКСТОВЫЙ КАТАЛОГ **::***full text_catalog_name*  
+ ON FULLTEXT CATALOG **::***full-text_catalog_name*  
  Указывает полнотекстовый каталог, на который предоставляется разрешение. Квалификатор области **::** является обязательным.  
   
- НА ПОЛНОТЕКСТОВЫЙ список стоп-СЛОВ **::***full text_stoplist_name*  
+ ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
  Указывает список полнотекстовых стоп-слов, на который предоставляется разрешение. Квалификатор области **::** является обязательным.  
   
  *database_principal*  
@@ -91,7 +93,7 @@ AS *granting_principal*
 -   пользователь базы данных, сопоставленный асимметричному ключу;  
 -   пользователь базы данных, не сопоставленный участнику [системы безопасности] на уровне сервера.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="fulltext-catalog-permissions"></a>Разрешения FULLTEXT CATALOG  
  Полнотекстовый каталог представляет собой защищаемый объект уровня базы данных, содержащийся в той базе данных, которая является его родителем в иерархии разрешений. Наиболее специфичные и ограниченные разрешения, которые можно предоставлять на полнотекстовый каталог, перечислены в следующей таблице вместе с более общими разрешениями, неявно их содержащими.  
@@ -115,7 +117,7 @@ AS *granting_principal*
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Объект, предоставляющий разрешение (или участник, указанный параметром AS), должен иметь либо само разрешение, выданное с помощью параметра GRANT OPTION, либо разрешение более высокого уровня, которое неявно включает предоставляемое.  
   
  Если используется параметр AS, налагаются следующие дополнительные требования.  
@@ -155,14 +157,14 @@ GRANT VIEW DEFINITION
     TO Mary ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [СОЗДАТЬ РОЛЬ приложения &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE FULLTEXT CATALOG #40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [СОЗДАТЬ ПОЛНОТЕКСТОВЫЙ список стоп-СЛОВ &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [sys.fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
@@ -172,4 +174,3 @@ GRANT VIEW DEFINITION
  [sys.fulltext_stoplists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)  
   
   
-

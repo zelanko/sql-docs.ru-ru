@@ -2,25 +2,26 @@
 title: "Проекты служб Data Quality Services (DQS) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "16"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6ee5c4c70581b275ce19b597f505a8d577ea88a0
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 97f98fe5190f03e1d9ac8e78d5832d3b55c5835f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-quality-projects-dqs"></a>Проекты служб Data Quality Services (DQS)
   Проект служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) предназначен для использования базы знаний для повышения качества источника данных путем выполнения операций *очистки данных* и *сопоставления данных* с последующим экспортом результирующих данных в базу данных SQL Server или файл .csv. Вы можете создать проект служб DQS как проект очистки или проект сопоставления для выполнения соответствующих операций. Проекты очистки и сопоставления вы можете выполнять с использованием одной базы знаний, так как знания для очистки и сопоставления данных могут быть встроены в ту же базу знаний.  
@@ -56,7 +57,7 @@ ms.lasthandoff: 09/27/2017
 ##  <a name="ProfilingNotification"></a> Профилирование данных и уведомления  
  Во время операций очистки и сопоставления данных в проекте качества данных вы можете получать статистику и информацию о данных, обрабатываемых службами DQS, в реальном времени. Профилирование данных поможет оценить эффективность процессов очистки и сопоставления и определить, насколько очистка и сопоставление помогли улучшить качество данных. Профилирование служб DQS предоставляет два измерения качества данных: *полнота* (степень, в которой представлены данные) и *точность* (степень, в которой данные могут использоваться по намеченному назначению). Кроме того, на основе профилирования данных пользователю выдаются уведомления о действиях, которые можно предпринять для улучшения операций очистки и сопоставления данных. Дополнительные сведения о профилировании данных и уведомлениях см. в разделе [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
@@ -68,4 +69,3 @@ ms.lasthandoff: 09/27/2017
  [Базы знаний и домены DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   
-

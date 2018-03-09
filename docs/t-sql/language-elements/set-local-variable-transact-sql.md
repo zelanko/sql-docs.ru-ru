@@ -3,8 +3,11 @@ title: "ЗАДАТЬ @local_variable (Transact-SQL) | Документы Microso
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ helpviewer_keywords:
 - SET statement, @local_variable
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-caps.latest.revision: 52
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5a92fa424de70d1ba9cccf437a2de49ab8432ba1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 56f38e166249f13bb50d1bf0188a5066da52ea78
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-localvariable-transact-sql"></a>ЗАДАТЬ @local_variable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Задает указанный локальную переменную, предварительно созданную при помощи инструкции DECLARE @*local_variable* инструкции с указанным значением.  
   
@@ -80,7 +82,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  *property_name*  
  Свойство определяемого пользователем типа.  
   
- *имя_поля*  
+ *field_name*  
  Общее поле определяемого пользователем типа.  
   
  *udt_name*  
@@ -92,7 +94,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  *имя_метода* **(** *аргумент* [ **,**... *n* ] **)**  
  Метод определяемого пользователем типа, который принимает один или несколько аргументов для изменения состояния экземпляра типа. Статические методы должны быть общими.  
   
- **@***SQLCLR_local_variable*  
+ **@** *SQLCLR_local_variable*  
  Переменная, тип которой находится в сборке. Дополнительные сведения см. в статье [Основные понятия о программировании интеграции со средой CLR](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
  *mutator_method*  
@@ -176,12 +178,12 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  Обновление [OF *column_name*[ **,**... *n* ] ]  
  Определяет обновляемые столбцы в курсоре. Если OF *column_name* [**,**...  *n* ] определено, только перечисленные столбцы будут позволяют вносить изменения. Если список не предоставляется, все столбцы могут быть обновлены, если только курсор не был определен как READ_ONLY.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  После объявления переменной она получает значение NULL. Используйте инструкцию SET, чтобы назначить значение, отличное от NULL, объявленной переменной. Инструкция SET, которая назначает значение переменной, возвращает одно значение. Если инициализируется несколько переменных, следует использовать отдельные инструкции SET для каждой локальной переменной.  
   
  Переменные могут быть использованы только в выражениях, но не вместо имен объектов или ключевых слов. Для создания динамических инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] используйте инструкцию EXECUTE.  
   
- Синтаксические правила для SET  **@**  *cursor_variable* не включают ключевые слова LOCAL и GLOBAL. При НАБОРЕ  **@**  *cursor_variable* = CURSOR... используется синтаксис, курсор создается как GLOBAL или LOCAL, в зависимости от настройки по умолчанию параметра локального курсора базы данных.  
+ Синтаксические правила для НАБОРА **@*** cursor_variable* не включают ключевые слова LOCAL и GLOBAL. При НАБОРЕ **@*** cursor_variable* = CURSOR... используется синтаксис, курсор создается как GLOBAL или LOCAL, в зависимости от настройки по умолчанию параметра локального курсора базы данных.  
   
  Переменные курсора всегда локальные, даже если ссылаются на глобальный курсор. Если переменная курсора ссылается на глобальный курсор, курсор имеет ссылки как на глобальный, так и на локальный курсоры. Дополнительные сведения см. в примере В.  
   
@@ -191,8 +193,8 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  Не используйте переменную в инструкции SELECT для сцепления значений (то есть для вычисления статистических значений). Запрос может вернуть непредвиденные результаты. Это связано с тем, что все выражения в списке SELECT (включая назначения) могут быть выполнены не ровно один раз для каждой строки вывода. Дополнительные сведения см. в разделе [данной статьи БАЗЫ знаний](http://support.microsoft.com/kb/287515).  
   
-## <a name="permissions"></a>Permissions  
- Требуется членство в роли public. Все пользователи могут использовать НАБОР  **@**  *local_variable*.  
+## <a name="permissions"></a>Разрешения  
+ Требуется членство в роли public. Все пользователи могут использовать НАБОР **@*** local_variable*.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -366,12 +368,12 @@ SET @rows = (SELECT COUNT(*) FROM dbo.DimCustomer);
 SELECT TOP 1 @rows FROM sys.tables;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
+ [Составные операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)  
   
   
-
 

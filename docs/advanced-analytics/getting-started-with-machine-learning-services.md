@@ -1,26 +1,28 @@
 ---
 title: "Приступая к работе с машинного обучения в SQL Server | Документы Microsoft"
 ms.custom: 
-ms.date: 08/20/2017
-ms.prod: sql-server-2016
+ms.date: 12/20/2017
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 0abc11160704871799ec7cfcec19e86bb0f45a1b
+ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 09d6e887a8c64c98a1c3f68c78b07c26da6ffb76
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/28/2018
 ---
-# <a name="getting-started-with-machine-learning-in-sql-server"></a>Приступая к работе с машинного обучения в SQL Server
+# <a name="getting-started-with-machine-learning-in-sql-server"></a>Начало работы с машинным обучением в SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Корпорация Майкрософт обеспечивает масштабируемую, интегрированный набор решений машинного обучения в локальной среде и облаке:
 
@@ -33,9 +35,9 @@ ms.lasthandoff: 09/01/2017
 
 + SQL Server 2017
 
-  Начиная с SQL Server 2017 г CTP 2.0 поддержки для добавил Python, а имя было изменено на машине обучения службы (в базе данных) для отражения поддержки для более широкого круга обучению машины. Теперь можно автоматизировать задач машинного обучения с помощью средств SQL для выполнения кода R или Python. Также можно использовать имя компьютера SQL Server как _контекста вычислений_ для заданий, запущенных из удаленной разработки среды.
+  Начиная с SQL Server 2017 г., теперь можно использовать код Python в SQL Server. В соответствии с более широкой поддержки для решения в нескольких языках (с Продолжение следует) и имя было изменено на [!INCLUDE[rsql-productnamenew-md](../includes/rsql-productnamenew-md.md)]. Теперь можно автоматизировать задач машинного обучения с помощью средств SQL для выполнения кода R или Python. Также можно использовать имя компьютера SQL Server как _контекста вычислений_ для заданий, запущенных из удаленной разработки среды.
 
-    + [Общие сведения об архитектуре для Python в SQL Server](python/architecture-overview-sql-server-python.md)
+    + [Общие сведения об архитектуре для Python в SQL Server](../advanced-analytics/python/architecture-overview-sql-server-python.md)
     + [Настройка SQL Server R Services или службы обучения машины](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
 + SQL Server 2016
@@ -49,20 +51,20 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="microsoft-machine-learning-server-microsoft-r-server"></a>Microsoft машинного обучения Microsoft R (сервер)
 
-В SQL Server 2017 г. для поддержки корпоративных клиентов, который хотите выполнить распределенные и масштабируемые машинного самообучения, задания, но которым не требуется интеграцию с компонентом database engine SQL Server, такие как использование обеспечивается возможность установки сервера обучения Майкрософт машины контекстов вычислений SQL.
+Возможность установки [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)] предоставляется в 2017 г. SQL Server для поддержки корпоративных клиентов, который требуется выполнить распределенные и масштабируемые машинного самообучения, задания, но которым не требуется интеграция с SQL Server database engine, такие как использование вычислений SQL контексты.
 
-В SQL Server 2016 используйте параметр для установки Microsoft R Server.
+В SQL Server 2016, используйте параметр для установки [!INCLUDE[rsql-platform-md](../includes/rsql-platformnew-md.md)].
   
-  + [Introducing Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver) (Знакомство с Microsoft R Server)
+  + [Добро пожаловать машинного обучения сервера](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)
   
-Также можно установить R Server через конкретную платформу установщики, доступный в сети MSDN:
+Вы также можете установить [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)] или [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)] через установщики платформ:
 
-  + [R Server for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows) (R Server для Windows)
-  + [R Server для Linux](https://msdn.microsoft.com/microsoft-r/rserver-install-linux-server)
-  + [R Server для Hadoop](https://msdn.microsoft.com/microsoft-r/rserver-install-hadoop)
+  + [Установка в Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
+  + [Установить в Linux](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-linux-install)
+  + [Установить в Hadoop](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-hadoop-install)
 
 > [!IMPORTANT]
-> Если вы хотите запустить Python с помощью R Server, убедитесь, что установлена последняя версия **машины обучения Server**, которая доступна только через программу установки SQL Server 2017 г.:
+> Если вы хотите запустить Python с помощью R Server, убедитесь, что установлена последняя версия [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)], которая доступна только через [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] установки:
 > 
 >    + [Настройка Microsoft R Server или машины обучения](../advanced-analytics/r/create-a-standalone-r-server.md)
 
@@ -82,7 +84,7 @@ ms.lasthandoff: 09/01/2017
 
 + [Учебники машины обучения](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
 
-  Начните здесь найти справочные материалы по обучению машины с помощью 2017 г. SQL Server и SQL Server 2017 г. список всех ресурсов.
+  Начните здесь получить список всех ресурсов для изучения обучению машины с помощью SQL Server 2016 и 2017 г. SQL Server.
 
 ### <a name="r-tutorials"></a>Учебники R
 
@@ -94,13 +96,13 @@ ms.lasthandoff: 09/01/2017
 
 + [Изучить R и ScaleR в 25 малых функций](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
 
-   Не знакомы с R? Вас интересует сравнение Microsoft R (или RevoScaleR) на стандартный R? R Server см. Эти быстрого запуска.
+   Не знакомы с R? Вас интересует сравнение Microsoft R (или RevoScaleR) на стандартный R? См. Эти быстрого запуска R и компьютере сервера обучения.
 
 ### <a name="python-tutorials"></a>Учебники Python
 
 + [Учебники по SQL Server Python](../advanced-analytics/tutorials/sql-server-r-tutorials.md)
 
-  Узнайте, как выполнять Python в SQL Server. Создать модель, Python и использовать его для оценки данных SQL Server.
+  Узнайте, как запустить Python в [!INCLUDE[ssnoversion](../includes/ssnoversion.md)]. Создать модель, Python и использовать его для оценки данных SQL Server.
 
    Это решение для начала до конца для разработчиков SQL предоставляет весь код, необходимо запустить Python из SQL Server Management Studio.
 
@@ -127,4 +129,3 @@ ms.lasthandoff: 09/01/2017
 [Начало работы со службами SQL Server машины обучения](../advanced-analytics/r/getting-started-with-sql-server-r-services.md)
 
 [Начало работы с Microsoft машинного обучения сервера](../advanced-analytics/r/getting-started-with-microsoft-r-server-standalone.md)
-

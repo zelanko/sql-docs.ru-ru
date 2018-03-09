@@ -2,9 +2,12 @@
 title: "Организация безопасности подписчика | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: 
@@ -14,19 +17,20 @@ helpviewer_keywords:
 - Subscribers [SQL Server replication], security
 - security [SQL Server replication], Subscribers
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bb68bca5ffa78120a8435049e9333335e9adf87c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 1c12d1c2ed7f777d147c6cb94c93bb5c7e8b4e1e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="secure-the-subscriber"></a>Организация безопасности подписчика
-  Агенты слияния и распространителей подключаются к подписчику. Эти подключения могут выполняться в контексте имени входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или имени входа Windows. Важно предоставить для этих агентов соответствующее имя входа, придерживаясь принципа предоставления минимально необходимых прав и обеспечивая защиту хранилища всех паролей. Сведения о разрешениях, необходимых для каждого агента, см. в разделе [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Агенты слияния и распространителей подключаются к подписчику. Эти подключения могут выполняться в контексте имени входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или имени входа Windows. Важно предоставить для этих агентов соответствующее имя входа, придерживаясь принципа предоставления минимально необходимых прав и обеспечивая защиту хранилища всех паролей. Сведения о разрешениях, необходимых для каждого агента, см. в разделе [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="distribution-agent"></a>Агент распространителя  
  Может использоваться либо один агент распространителя на подписку (независимый агент, установленный по умолчанию для публикаций, созданных в мастере создания публикаций), либо один агент распространителя на пару баз данных публикации и подписки (общий агент). T  
@@ -57,7 +61,7 @@ ms.lasthandoff: 06/22/2017
  Дополнительные сведения см. в статьях [Создание обновляемых подписок для публикаций транзакций](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md) и [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 > [!IMPORTANT]  
->  Учетная запись, заданная для соединения, должна предоставлять только разрешения для вставки, обновления и удаления данных в представлениях, которые репликация создает в базе данных публикации. Она не должна иметь никаких дополнительных разрешений. Предоставьте разрешения на представления, которые имеют имена в виде **syncobj_***\<<шестнадцатеричный_номер>*, для учетной записи, настроенной на каждом подписчике.  
+>  Учетная запись, заданная для соединения, должна предоставлять только разрешения для вставки, обновления и удаления данных в представлениях, которые репликация создает в базе данных публикации. Она не должна иметь никаких дополнительных разрешений. Предоставьте разрешения на представления, которые имеют имена в виде **syncobj_***\<шестнадцатеричный_номер>*, для учетной записи, настроенной на каждом подписчике.  
   
 ## <a name="queued-updating-subscriptions"></a>Подписки, обновляемые посредством очередей  
  При настройке обновляемых посредством очередей подписок необходимо учитывать два аспекта, касающихся безопасности:  

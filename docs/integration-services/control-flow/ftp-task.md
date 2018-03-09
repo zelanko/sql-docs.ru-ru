@@ -1,10 +1,13 @@
 ---
-title: "Задача «FTP» | Документы Microsoft"
+title: "Задача \"FTP\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -16,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-caps.latest.revision: 52
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 212e304b2c94004135923a345b592b3c3eef1bcc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 3613462b45121d9d9042724a3dbf693060cc0c10
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="ftp-task"></a>Задача «FTP»
   Задача «FTP» производит загрузку и передачу файлов данных, а также управляет каталогами на серверах. Например, пакет может загрузить файлы данных с удаленного сервера или из Интернета в качестве части рабочего процесса пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Можно использовать задачу «FTP» для следующих целей:  
@@ -74,7 +76,7 @@ ms.lasthandoff: 08/11/2017
 |**FTPConnectingToServer**|Указывает, что задача инициализировала соединение с FTP-сервером.|  
 |**FTPOperation**|Сообщает о начале FTP-операции, выполняемой задачей, и о типе этой операции.|  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
  Дополнительные сведения о настройке этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
@@ -86,7 +88,7 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Параметры  
  **FtpConnection**  
- Выберите существующий диспетчер подключений FTP или щелкните \< **новое подключение...** > для создания диспетчера соединений.  
+ Выберите существующий диспетчер подключений FTP или щелкните \<**Создать соединение...**>, чтобы создать его.  
   
 > [!IMPORTANT]  
 >  Диспетчер FTP-соединений поддерживает только анонимную проверку подлинности и обычную проверку подлинности. Проверка подлинности Windows не поддерживается.  
@@ -102,7 +104,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Description**  
+ **Описание**  
  Введите описание задачи «FTP».  
   
 ## <a name="ftp-task-editor-file-transfer-page"></a>Редактор задачи «FTP» (страница «Передача файлов»)
@@ -149,13 +151,13 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **RemoteVariable**  
- Выберите существующую переменную определяемых пользователем, или нажмите кнопку \< **создать переменную...** > для создания пользовательской переменной.  
+ Выберите существующую пользовательскую переменную или щелкните \<**Создать переменную...**>, чтобы создать ее.  
   
  **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), Добавление переменной  
   
 #### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
- Выберите существующий диспетчер подключений FTP или щелкните \< **новое подключение...** > для создания диспетчера соединений.  
+ Выберите существующий диспетчер подключений FTP или щелкните \<**Создать соединение...**>, чтобы создать его.  
   
  **См. также:** [Диспетчер FTP-соединений](../../integration-services/connection-manager/ftp-connection-manager.md), [Редактор диспетчера FTP-сеансов](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
@@ -163,19 +165,18 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **LocalVariable**  
- Выберите существующую переменную определяемых пользователем, или нажмите кнопку \< **создать переменную...** > для создания переменной.  
+ Выберите существующую пользовательскую переменную или щелкните \<**Создать переменную...**>, чтобы создать ее.  
   
  **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), Добавление переменной  
   
 #### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
- Выберите существующий диспетчер подключения файлов или нажмите кнопку \< **новое подключение...** > для создания диспетчера соединений.  
+ Выберите существующий диспетчер подключений файлов или щелкните \<**Создать соединение...**>, чтобы создать его.  
   
- **Связанные разделы**: [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)  
+ **См. также:** [Диспетчер соединений с неструктурированными файлами](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Поток управления](../../integration-services/control-flow/control-flow.md)  
   
   
-

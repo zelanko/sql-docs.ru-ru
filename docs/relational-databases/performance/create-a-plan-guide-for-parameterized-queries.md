@@ -2,31 +2,32 @@
 title: "Создание структуры плана для параметризованных запросов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-plan-guides
+ms.suite: sql
+ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - parameterized queries, plan guides for
 - plan guides [SQL Server], parameterized queries
 ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
-caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "6"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d3d5c980047d9c84a1eea6e48d6070ca704377a9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d2b85915f55bdc946541e964cdd4f27c5be62846
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-plan-guide-for-parameterized-queries"></a>Создание руководства плана для параметризованных запросов
-  Структура плана TEMPLATE соответствует изолированным инструкциям с параметрами.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Структура плана TEMPLATE соответствует изолированным запросам, параметризованным в определенную форму.  
   
  В приведенном ниже примере создается структура плана, которой сопоставляется запрос заданной параметризованной формы и которое вынуждает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметризовать поступающие запросы. Два приведенных ниже запроса являются синтаксическими эквивалентами, однако различаются своими значениями постоянных литералов.  
   
@@ -83,4 +84,3 @@ EXEC sp_create_plan_guide N'TemplateGuide1',
  Структуры планов TEMPLATE также можно использовать совместно со структурами планов SQL. Например, можно создать структуру плана TEMPLATE, чтобы убедиться, что класс запросов будет параметризован. Затем можно создать руководство плана SQL для параметризованной формы запроса.  
   
   
-

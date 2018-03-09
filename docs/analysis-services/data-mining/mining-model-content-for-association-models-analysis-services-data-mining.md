@@ -2,12 +2,13 @@
 title: "Модель интеллектуального анализа данных для моделей взаимосвязей (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +18,20 @@ helpviewer_keywords:
 - rules [Data Mining]
 - associations [Analysis Services]
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
-caps.latest.revision: 17
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fbe96dfa6e17bda952dc2858c274df6dee231f02
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 259335815674dfd8c9d59b1fe6bde7c170d096b6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей взаимосвязей (службы Analysis Services — интеллектуальный анализ данных)
-  В этой статье описано содержимое модели интеллектуального анализа данных, характерное для моделей, в которых используется алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Описание общей и статистической терминологии, связанной с содержимым модели интеллектуального анализа данных, областью применения которого являются модели всех типов, см. в статье [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В этой статье описано содержимое модели интеллектуального анализа данных, характерное для моделей, в которых используется алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Описание общей и статистической терминологии, связанной с содержимым модели интеллектуального анализа данных, областью применения которого являются модели всех типов, см. в статье [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-an-association-model"></a>Основные сведения о структуре модели взаимосвязей  
  Модель взаимосвязей имеет простую структуру. Каждая модель имеет единственный родительский узел, который представляет модель и ее метаданные, а каждый родительский узел включает плоский список наборов элементов и правил. Наборы элементов и правила не организованы в виде деревьев, а упорядочены так, что вначале представлены наборы элементов, а за ними следуют правила, как показано в следующей диаграмме.  
@@ -58,7 +59,7 @@ ms.lasthandoff: 09/01/2017
  Имена атрибутов, соответствующих этому узлу.  
   
  NODE_NAME  
- Тип узла. Применительно к модели взаимосвязей этот столбец совпадает с NODE_UNIQUE_NAME.  
+ Имя узла. Применительно к модели взаимосвязей этот столбец совпадает с NODE_UNIQUE_NAME.  
   
  NODE_UNIQUE_NAME  
  Уникальное имя узла.  
@@ -101,7 +102,7 @@ ms.lasthandoff: 09/01/2017
   
  **Родительский узел** . Включает список с разделителями-запятыми, содержащий следующую информацию о модели:  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |----------|-----------------|  
 |ITEMSET_COUNT|Количество всех наборов элементов в модели.|  
 |RULE_COUNT|Количество всех правил в модели.|  
@@ -199,9 +200,8 @@ ms.lasthandoff: 09/01/2017
  Пусто.  
   
 ## <a name="see-also"></a>См. также  
- [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Содержимое модели интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Алгоритм взаимосвязей (Майкрософт)](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Примеры запросов моделей взаимосвязей](../../analysis-services/data-mining/association-model-query-examples.md)  
+ [Примеры запросов к модели взаимосвязей](../../analysis-services/data-mining/association-model-query-examples.md)  
   
   
-

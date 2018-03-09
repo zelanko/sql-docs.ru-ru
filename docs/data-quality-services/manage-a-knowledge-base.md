@@ -2,25 +2,26 @@
 title: "Управление базой знаний | Microsoft Docs"
 ms.custom: 
 ms.date: 06/04/2013
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
-caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "9"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1ec5d8a43b723e1ac68974147851a54ff1c2a986
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e725235e961b2f40765525d4812ddb7160657361
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="manage-a-knowledge-base"></a>Управление базой знаний
   В этом разделе описано, как выполнять функции управления в базе знаний служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Вы можете удалить базу знаний, разблокировать ее, отменить работу в ней, переименовать ее и отобразить ее свойства.  
@@ -30,9 +31,9 @@ ms.lasthandoff: 09/09/2017
 ###  <a name="Prerequisites"></a> Предварительные требования  
  Чтобы управлять базой знаний, база знаний уже должна быть создана и либо опубликована (если ее создал другой пользователь), либо закрыта (если ее создали вы).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Для открытия базы знаний необходима роль dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
 ##  <a name="Manage"></a> Управление базой знаний  
@@ -87,4 +88,3 @@ ms.lasthandoff: 09/09/2017
 -   Если вы удалили ее, вам придется выбрать другую базу знаний для работы или создать новую базу знаний.  
   
   
-

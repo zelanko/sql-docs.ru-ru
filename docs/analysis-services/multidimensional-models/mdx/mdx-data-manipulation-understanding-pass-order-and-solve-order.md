@@ -2,13 +2,13 @@
 title: "Общие сведения о порядке этапов и порядке вычисления (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - pass orders [MDX]
 - expressions [MDX], solve orders
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e081b07e8512e49d2fb09a8b119373f53fa4075a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8f690c0226a15794d36b70a72d679972a5f34918
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>Манипулирование данными MDX - основные сведения о проходе порядок вычисления и порядке разрешения
-  В ходе вычисления куба в скрипте многомерных выражений вычисление происходит за несколько шагов, в зависимости от того, для какой цели используются те или иные вычислительные функции. Каждый из этих шагов называется этапом вычисления.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+В ходе вычисления куба в скрипте многомерных выражений вычисление происходит за несколько шагов, в зависимости от того, для какой цели используются те или иные вычислительные функции. Каждый из этих шагов называется этапом вычисления.  
   
  Этап вычисления можно идентифицировать по его порядковому номеру — номеру этапа вычислений. Количество этапов, необходимых для полного вычисления всех ячеек куба, называется глубиной вычисления куба.  
   
@@ -156,7 +156,7 @@ ON ROWS
 FROM [Adventure Works]  
 ```  
   
- В этом совмещенном запросе многомерных выражений формула `Profit Margin` имеет наивысший порядок вычисления, поэтому она будет приоритетной при пересечении двух выражений. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] вычисляют значение рассматриваемой ячейки по формуле `Profit Margin` . Результат этих вложенных вычислений приведен в следующей таблице.  
+ В этом совмещенном запросе многомерных выражений формула `Profit Margin` имеет наивысший порядок вычисления, поэтому она будет приоритетной при пересечении двух выражений. Службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] вычисляют значение рассматриваемой ячейки по формуле `Profit Margin`. Результат этих вложенных вычислений приведен в следующей таблице.  
   
 ||Internet Sales Amount|Общая себестоимость продукции для заказов в Интернете|Коэффициент прибыли|  
 |-|---------------------------|---------------------------------|-------------------|  
@@ -220,10 +220,9 @@ FROM [Adventure Works]
  Работать с порядками вычисления весьма сложно, особенно в кубах с большим количеством измерений, содержащих вычисляемые элементы, пользовательские формулы сверток и вычисляемые ячейки. При выполнении службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] запроса многомерных выражений [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] принимает во внимание порядок вычисления всех элементов, рассчитываемых на данном этапе, включая измерения куба, указанные в запросе.  
   
 ## <a name="see-also"></a>См. также  
- [CalculationCurrentPass (многомерные выражения)](../../../mdx/calculationcurrentpass-mdx.md)   
+ [CalculationCurrentPass &#40; Многомерные Выражения &#41;](../../../mdx/calculationcurrentpass-mdx.md)   
  [CalculationPassValue &#40; Многомерные Выражения &#41;](../../../mdx/calculationpassvalue-mdx.md)   
- [Инструкция CREATE MEMBER (многомерные выражения)](../../../mdx/mdx-data-definition-create-member.md)   
- [Манипулирование данными (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [CREATE MEMBER, инструкция #40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [Обработка данных &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   
-

@@ -3,33 +3,33 @@ title: "Добавление существующего проекта к реш
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.addexistingproject
+f1_keywords: vs.addexistingproject
 helpviewer_keywords:
 - adding projects
 - solutions [SQL Server Management Studio], project additions
 - projects [SQL Server Management Studio], adding
 ms.assetid: 7b0c8ac0-5941-4ac6-b960-87d9830d00de
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: ad071db3d2a369abe5dc9161e91b837369a475f9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c420cccafdda162f8acee678536b4419270c5777
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>Добавление к решению существующий проект
-К существующему решению можно добавить один или несколько проектов. Проект может быть связан более чем с одним решением.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Можно добавить в существующее решение один или несколько проектов. Проект может быть связан более чем с одним решением.  
   
 ### <a name="to-add-an-existing-project-to-a-solution"></a>Добавление к решению существующего проекта  
   
@@ -48,4 +48,3 @@ ms.lasthandoff: 08/18/2017
 [Проекты (SQL Server Management Studio)](../../ssms/solution/projects-sql-server-management-studio.md)  
 [Решения (среда SQL Server Management Studio)](../../ssms/solution/solutions-sql-server-management-studio.md)  
   
-

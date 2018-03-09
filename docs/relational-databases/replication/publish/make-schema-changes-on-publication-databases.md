@@ -2,11 +2,13 @@
 title: "Внесение изменений в схемы баз данных публикации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,23 +19,25 @@ helpviewer_keywords:
 - schemas [SQL Server replication], replicating changes
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
-caps.latest.revision: 73
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aa8ea65ab7ef276791e721f6f1bb5e9da6c6a4ec
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "73"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: b37e7cc96300a3bba0e83f2458820afd20d1b004
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="make-schema-changes-on-publication-databases"></a>Внесение изменений в схемы баз данных публикации
-  Репликация поддерживает широкий диапазон изменений схем для опубликованных объектов. Когда вы вносите любое из следующих изменений схемы в соответствующий опубликованный объект в издателе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], это изменение распространяется по умолчанию на всех подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+# <a name="make-schema-changes-on-publication-databases"></a>Внесение изменений схем в базы данных публикации
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Репликация поддерживает широкий диапазон изменений схем для опубликованных объектов. Когда вы вносите любое из следующих изменений схемы в соответствующий опубликованный объект в издателе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], это изменение распространяется по умолчанию на всех подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   ALTER TABLE  
   
--   Не следует использовать параметр ALTER TABLE SET LOCK ESCALATION, если включена репликация изменения схемы и топология включает [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] или [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)] Subscribers.ALTER VIEW  
+-   Не следует использовать параметр ALTER TABLE SET LOCK ESCALATION, если включена репликация изменения схемы и топология включает подписчики [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] или [!INCLUDE[ssEWnoversion](../../../includes/ssewnoversion-md.md)].
+
+-   ALTER VIEW  
   
 -   ALTER PROCEDURE  
   
@@ -95,7 +99,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Чтобы включить имеющийся столбец в существующую публикацию, используйте [sp_articlecolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) или диалоговое окно **Свойства публикации — \<публикация>**.  
   
-     Дополнительные сведения см. в статье [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Это потребует повторной инициализации подписок.  
+     Дополнительные сведения см. в разделе [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Это потребует повторной инициализации подписок.  
   
 -   Добавление столбца идентификаторов в опубликованную таблицу не поддерживается, поскольку это может привести к расхождению данных при репликации столбца на подписчик. Значения в столбце идентификаторов на издателе зависят от порядка, в котором строки изменяемой таблицы хранятся физически. Строки могут храниться по-разному на подписчике. Поэтому значение для столбца идентификаторов может быть разным для одинаковых строк.  
   
@@ -105,11 +109,11 @@ ms.lasthandoff: 06/22/2017
   
 -   Чтобы удалить столбец из имеющейся публикации, но сохранить его в таблице на издателе, используйте [sp_articlecolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) или диалоговое окно **Свойства публикации — \<публикация>**.  
   
-     Дополнительные сведения см. в статье [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Это потребует создания нового моментального снимка.  
+     Дополнительные сведения см. в разделе [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Это потребует создания нового моментального снимка.  
   
 -   Удаляемый столбец не может использоваться в предложениях фильтра любой статьи любой публикации в базе данных.  
   
--   При удалении столбца из опубликованной статьи имейте в виду возможное влияние на базу данных ограничений, индексов и свойств столбца. Например:  
+-   При удалении столбца из опубликованной статьи имейте в виду возможное влияние на базу данных ограничений, индексов и свойств столбца. Пример:  
   
     -   Нельзя удалить столбцы, используемые первичным ключом, из статей в публикациях транзакций, потому что они используются репликацией.  
   
@@ -119,7 +123,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Ограничения следует именовать явным образом для удаления. Дополнительные сведения см. в подразделе «Общие вопросы» этого раздела.  
   
-### <a name="transactional-replication"></a>Репликация транзакций  
+### <a name="transactional-replication"></a>репликация транзакций  
   
 -   Изменения схемы распространяются на подписчики, использующие предыдущие версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], однако инструкция DDL должна содержать только тот синтаксис, который поддерживается версией подписчика.  
   

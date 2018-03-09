@@ -3,29 +3,31 @@ title: "Окна инструментов в среде SQL Server Management St
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tool windows
 - tool windows [SQL Server Management Studio]
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 106bcdf98b6b7979d0fd24921fd506459748fc46
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f7532ce73258e22fee8587b93ea836af98234f1b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Окна инструментов в среде SQL Server Management Studio
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] содержит множество эффективных окон инструментов для всех этапов разработки и администрирования. Некоторые средства можно использовать для любого компонента [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] , другие — только для определенных компонентов. В следующей таблице описаны средства, которые могут быть использованы для всех компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].  
   
 |||  
@@ -45,4 +47,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
 [Использование среды SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
   
-

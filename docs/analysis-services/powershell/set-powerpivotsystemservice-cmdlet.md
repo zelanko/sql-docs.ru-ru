@@ -2,31 +2,30 @@
 title: "Командлет Set-PowerPivotSystemService | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: f6ef197b-3d74-4339-ae73-8a7c1eaf0e91
-caps.latest.revision: 11
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fc15f310355b3ecaab626600c14ee27905d250a5
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6157a4fc3b43c1a7dad7805c3efa5677d85b4d66
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-powerpivotsystemservice-cmdlet"></a>Командлет «Set-PowerPivotSystemService»
-  
-  [!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-  
-  Задает глобальные свойства объекта PowerPivotSystemService на уровне фермы.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Задает глобальные свойства объекта PowerPivotSystemService на уровне фермы.  
 
 >[!NOTE] 
 >В этой статье может содержать устаревшие сведения и примеры. С помощью командлета Get-Help для последней версии.
@@ -39,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-UpdateAssemblyInformation <switch>] [-WorkbookUpgradeOnDataRefresh <boolean>] [-DirectTCPConnections <boolean>] [-Confirm <switch>] [<CommonParameters>]  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Командлет Set-PowerPivotSystemService обновляет свойства родительского объекта системной службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме.  
   
 ## <a name="parameters"></a>Параметры  
@@ -123,4 +122,3 @@ C:\PS>Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefresh:$true
  Включает автоматическое обновление книг предыдущих версий, чтобы можно было продолжить обновление данных по расписанию.  
   
   
-

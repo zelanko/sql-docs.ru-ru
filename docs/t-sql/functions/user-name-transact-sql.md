@@ -3,8 +3,11 @@ title: "Имя_пользователя (Transact-SQL) | Документы Micr
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - identification numbers [SQL Server], databases
 - database usernames [SQL Server]
 ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: f51938b0f918a1a85955df4038ded45480bd1a45
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 74040ef26d016301cb861c1f1b8e395fe897196d
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="username-transact-sql"></a>USER_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает имя пользователя базы данных по указанному идентификационному номеру.  
   
@@ -50,13 +52,13 @@ USER_NAME ( [ id ] )
   
 ## <a name="arguments"></a>Аргументы  
  *идентификатор*  
- Номер идентификатора, сопоставленный с пользователем базы данных. *Идентификатор*— **int**. Необходимо поставить скобки.  
+ Номер идентификатора, сопоставленный с пользователем базы данных. *Идентификатор* — **int**. Необходимо поставить скобки.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **nvarchar(256)**  
   
 ## <a name="remarks"></a>Замечания  
- Когда *идентификатор* — этот параметр опущен, подразумевается текущий пользователь в текущем контексте. Если параметр содержит слово NULL, то возвращается значение NULL. При вызове USER_NAME без указания *идентификатор* после EXECUTE как инструкции, функция USER_NAME возвращает имя олицетворенного пользователя. Если пользователь Windows попытается получить доступ к базе данных в качестве члена группы, функция USER_NAME вернет имя этого пользователя, а не имя группы.  
+ Когда *идентификатор* — этот параметр опущен, подразумевается текущий пользователь в текущем контексте. Если параметр содержит слово NULL, то возвращается NULL. При вызове USER_NAME без указания *идентификатор* после EXECUTE как инструкции, функция USER_NAME возвращает имя олицетворенного пользователя. Если пользователь Windows попытается получить доступ к базе данных в качестве члена группы, функция USER_NAME вернет имя этого пользователя, а не имя группы.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -168,5 +170,4 @@ User7
  [Функция SYSTEM_USER &#40; Transact-SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)  
   
   
-
 

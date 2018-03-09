@@ -2,9 +2,12 @@
 title: "Ограничение количества результатов поиска с помощью RANK | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -18,20 +21,20 @@ helpviewer_keywords:
 - rankings [full-text search]
 - per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
-caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3a33b63a182fe1c7f72e2251c3a835867ae8dcf4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f9d4cf346f769133ffecdf20d7a5541876652ea1
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="limit-search-results-with-rank"></a>Ограничение количества результатов поиска с использованием функции RANK
-  Функции [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) и [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) возвращают столбец с именем RANK, содержащий порядковые номера от 0 до 1000 (ранжирующие значения). Эти значения используются для ранжирования возвращенных строк согласно их соответствию критерию выбора. Ранжирующие значения указывают только относительный порядок релевантности строк в результирующем наборе, при этом чем меньше значение, тем меньше релевантность. Фактические значения несущественны и, как правило, различны для каждого выполнения запроса.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Функции [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) и [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) возвращают столбец с именем RANK, содержащий порядковые номера от 0 до 1000 (ранжирующие значения). Эти значения используются для ранжирования возвращенных строк согласно их соответствию критерию выбора. Ранжирующие значения указывают только относительный порядок релевантности строк в результирующем наборе, при этом чем меньше значение, тем меньше релевантность. Фактические значения несущественны и, как правило, различны для каждого выполнения запроса.  
   
 > [!NOTE]  
 >  Запросы, использующие предикаты CONTAINS и FREETEXT, не возвращают ранжирующие значения.  
@@ -212,4 +215,3 @@ qtf is the frequency of the term in the query.
  [Запрос с полнотекстовым поиском](../../relational-databases/search/query-with-full-text-search.md)  
   
   
-

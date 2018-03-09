@@ -3,7 +3,7 @@ title: "Find-метод (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: be29e1bc1126673f59dbd66f5f3c432b3ed2cc85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9ee7c7feb630040fce10311335f414213bba4ada
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="find-method-ado"></a>Find-метод (ADO)
 Поиск [записей](../../../ado/reference/ado-api/recordset-object-ado.md) для строки, который удовлетворяет указанным критериям. При необходимости можно указать направление поиска, начальную строку и смещение от начала строки. При соблюдении заданных условий текущей позиции строки имеет значение на найдено записи; в противном случае — значение позиции (начала или конца) из **записей**.  
@@ -54,7 +53,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *Запуск*  
  Необязательно. Объект **Variant** закладка, которая действует как начальная позиция для поиска.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Только один столбец имени могут быть указаны в *критерии*. Этот метод не поддерживает поиск нескольких столбцов.  
   
  Оператор сравнения в *критерии* может быть "**>**«(больше),»**\<**» (меньше), «=» (равно), «> =» (больше или равно) «< =» (меньше или равно) (не равно), «<>» или «мне нравится» (соответствие шаблону).  
@@ -72,11 +71,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 >  При вызове метода **найти** метод набора записей и текущей позиции в наборе записей находится в последней записи или конца файла (EOF), не позволяет найти ничего. Необходимо вызвать **MoveFirst** метод, чтобы задать текущее положение/курсора в начало набора записей.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода (Visual Basic)](../../../ado/reference/ado-api/find-method-example-vb.md)   
  [Свойство Index](../../../ado/reference/ado-api/index-property.md)   
  [Оптимизировать динамические свойства (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
- [Метод поиска](../../../ado/reference/ado-api/seek-method.md)
-
+ [Метод Seek](../../../ado/reference/ado-api/seek-method.md)

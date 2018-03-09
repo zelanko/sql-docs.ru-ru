@@ -3,26 +3,28 @@ title: "Расширенный просмотр целевых данных из
 ms.custom: 
 ms.date: 10/04/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
-caps.latest.revision: 4
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d7fcf086b0eb18db72c2d710c061ccee9c01aaf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
-
+manager: craigg
+ms.openlocfilehash: 7415e768584c9256eaa600cb2302c7cc9aa0d529
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Расширенный просмотр целевых данных из расширенных событий в SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 В этой статье содержатся сведения об использовании дополнительных возможностей среды SQL Server Management Studio (SSMS.exe) для подробного просмотра целевых данных из расширенных событий. Здесь описывается выполнение следующих задач:
@@ -34,7 +36,7 @@ ms.lasthandoff: 04/11/2017
 
 
 
-### <a name="prerequisites"></a>Предварительные требования
+### <a name="prerequisites"></a>предварительные требования
 
 В данной статье предполагается, что вы уже знаете, как создать и запустить сеанс событий. Инструкции по созданию сеанса событий приводятся в следующей статье:
 
@@ -43,7 +45,7 @@ ms.lasthandoff: 04/11/2017
 
 В этой статье также предполагается, что вы установили последний ежемесячный выпуск SSMS. Справочные сведения приведены в следующих статьях:
 
-- [Скачивание SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)
+- [Скачать SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)
 
 
 
@@ -144,7 +146,7 @@ XEL-файл также можно перетащить на панель вкл
 
 
 > [!NOTE] 
-> Параметр **Просмотреть целевые данные** используется для отображения *накопленных данных из нескольких XEL-файлов* из заданного сеанса событий. В ходе каждого цикла **Запуск**-**остановка** создается файл с внедренным в его имя целочисленным значением времени (для каждого последующего файла указывается более позднее время). Все файлы имеют одинаковое корневое имя.
+> Параметр**Просмотреть целевые данные** используется для отображения *накопленных данных из нескольких XEL-файлов* из заданного сеанса событий. В ходе каждого цикла **Запуск**-**остановка** создается файл с внедренным в его имя целочисленным значением времени (для каждого последующего файла указывается более позднее время). Все файлы имеют одинаковое корневое имя.
 
 
 
@@ -318,6 +320,5 @@ XEL-файл также можно перетащить на панель вкл
 
 
 ![План запроса со списком свойств для одного узла](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
-
 
 

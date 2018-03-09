@@ -3,26 +3,26 @@ title: "SQLBindCol (библиотека курсоров) | Документы 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLAllocStmt function [ODBC], Cursor Library
+helpviewer_keywords: SQLAllocStmt function [ODBC], Cursor Library
 ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5c9742952c8539dd736bd4b2c79c1b42d63a9b63
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cf5a445725a72a517b0ea779ea1fc547e55cb803
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (библиотека курсоров)
 > [!IMPORTANT]  
@@ -39,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  Библиотека курсоров поддерживает вызов метода **SQLBindCol** для привязки столбца закладки.  
   
  При работе с ODBC 2. *x* драйвер, библиотеку курсоров возвращает SQLSTATE HY090 (Недопустимая длина строки или буфера) при **SQLBindCol** вызывается для настройки размера буфера для столбца закладки значение не равно 4. При работе с ODBC 3*.x* драйверов, библиотеку курсоров обеспечивает буфера быть любого размера.
-

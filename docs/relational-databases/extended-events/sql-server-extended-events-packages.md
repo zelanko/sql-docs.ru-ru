@@ -2,9 +2,12 @@
 title: "Пакеты обработки расширенных событий SQL Server | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
@@ -14,19 +17,19 @@ helpviewer_keywords:
 - extended events [SQL Server], packages
 - xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
-caps.latest.revision: 21
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: afb2140445252ca5b3a27f5ec9bf33219e3eef0c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: ab1e592975fce7d5439d33df265bb8ce5bf05c45
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-extended-events-packages"></a>Пакеты обработки расширенных событий SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Пакет представляет собой контейнер для объектов средства обработки расширенных событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Существуют три типа пакетов расширенных событий.  
   
@@ -154,7 +157,7 @@ where name = 'keyword_map'
   
 -   pred_compare;  
   
--   type  
+-   Тип  
   
  Дополнительные сведения см. в разделе [sys.dm_xe_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md).  
   

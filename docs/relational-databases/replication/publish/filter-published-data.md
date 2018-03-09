@@ -2,11 +2,13 @@
 title: "Фильтрация опубликованных данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +22,19 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], filtering published data
 - column filters [SQL Server replication]
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
-caps.latest.revision: 50
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "50"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b789fc6033b70608ca30cfa3895442be44ce1e40
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c33c6903f664437076c06f12fb2be3b231f7e0f1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filter-published-data"></a>Фильтрация опубликованных данных
-  Фильтрация статей таблиц позволяет создавать секции публикуемых данных. С помощью фильтрации опубликованных данных можно достичь следующих целей:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Фильтрация статей таблиц позволяет создавать секции публикуемых данных. С помощью фильтрации опубликованных данных можно достичь следующих целей:  
   
 -   Минимизировать объем данных, передаваемых по сети.  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Параметризованные фильтры строк, доступные только с репликацией слиянием.  
   
-     Используя параметризованные фильтры строк, можно выбрать для публикации подмножество строк. В отличие от статических фильтров, которые отправляют одно и то же подмножество строк всем подписчикам, параметризованные фильтры строк используют получаемые от подписчиков значения данных для отправки подписчикам разных подмножеств строк. Дополнительные сведения см. в статье [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     Используя параметризованные фильтры строк, можно выбрать для публикации подмножество строк. В отличие от статических фильтров, которые отправляют одно и то же подмножество строк всем подписчикам, параметризованные фильтры строк используют получаемые от подписчиков значения данных для отправки подписчикам разных подмножеств строк. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Фильтры соединения, доступные только с репликацией слиянием.  
   
@@ -140,4 +141,3 @@ ms.lasthandoff: 06/22/2017
  [Публикация данных и объектов базы данных](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   
-

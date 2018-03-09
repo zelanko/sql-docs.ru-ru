@@ -1,10 +1,13 @@
 ---
-title: "Сортировать преобразования | Документы Microsoft"
+title: "Преобразование \"Сортировка\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -20,17 +23,16 @@ helpviewer_keywords:
 - multiple sorts
 - duplicate data [Integration Services]
 ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
-caps.latest.revision: 50
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: bcffbef3e370183c6e37726e23d058d342d252e2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: f061b1963e826d6ded0066bd6d67d48b8eda5c8b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sort-transformation"></a>преобразование «Сортировка»
   Это преобразование сортирует входные данные по возрастанию или убыванию и копирует отсортированные данные на выход преобразования. К входным данным можно применять несколько сортировок, при этом каждая сортировка будет иметь свой номер, определяющий ее последовательность. Данные будут сначала упорядочены по столбцу с наименьшим номером, затем по столбцу со следующим наименьшим номером и т. д. Например, если у столбца **Страна** номер сортировки 1, а у столбца **Город** номер сортировки 2, выходные данные будут отсортированы сначала по названиям стран, а затем по названиям городов. Положительный номер сортировки означает, что данные будут упорядочены по возрастанию, а отрицательный — по убыванию. У столбцов, по которым сортировка производиться не будет, номер сортировки равен 0. Такие столбцы автоматически копируются на выход преобразования вместе с отсортированными столбцами.  
@@ -55,7 +57,7 @@ ms.lasthandoff: 08/19/2017
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Дополнительные сведения о настройке свойств компонента см. в разделе [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="related-content"></a>См. также  
@@ -97,4 +99,3 @@ ms.lasthandoff: 08/19/2017
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

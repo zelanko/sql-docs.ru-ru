@@ -3,30 +3,31 @@ title: "Параметры (\"Среда\" — \"Шрифты и цвета\") 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Fonts_And_Colors
 - VS.TOOLSOPTIONSPAGES.ENVIRONMENT.FONTS_AND_COLORS
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 864b7b243eba260b8f381bc62fc1d915e07c2db1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: dce7af8a58cd0cfc486f21846df7a7bcb887b034
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Параметры ("Среда" — страница "Шрифты и цвета")
-В диалоговом окне **Параметры** можно определить шрифт и цветовую схему для различных элементов пользовательского интерфейса среды [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. В меню **Сервис** выберите **Параметры** , разверните узел **Среда** и выберите **Шрифты и цвета**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В диалоговом окне **Параметры** можно определить шрифт и цветовую схему для различных элементов пользовательского интерфейса среды [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. В меню **Сервис** выберите **Параметры** , разверните узел **Среда** и выберите **Шрифты и цвета**.  
   
 Изменения цветовой схемы не затрагивают сеанс, в котором эти изменения были сделаны. Чтобы оценить изменения цвета, можно открыть другой экземпляр среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] и создать условия, в которых изменения проявятся.  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 06/22/2017
 **Основной цвет элемента**  
 Содержит цвета, которые можно использовать в качестве основного цвета для элемента, выбранного в списке **Отображаемые элементы**. Так как некоторые элементы связаны с другими, необходимо поддерживать согласованную схему отображения. Например, изменения цвета переднего плана текста также приведут к изменению цвета переднего плана таких элементов, как «Строка».  
   
-**Другой**  
+**Custom**  
 Открывает диалоговое окно **Цвет** , в котором можно произвольно задать цвет для объекта, выбранного в списке **Отображаемые элементы** .  
   
 > [!NOTE]  
@@ -92,4 +93,3 @@ ms.lasthandoff: 06/22/2017
 [Выделение цветом в редакторах кода](http://msdn.microsoft.com/en-us/802882dc-c997-4e3f-8a01-994bb43169ae)  
 [Параметры (вкладка редактора и строка состояния на странице текстового редактора)](http://msdn.microsoft.com/en-us/e4815678-7885-4631-878f-c6a2b857ee05)  
   
-

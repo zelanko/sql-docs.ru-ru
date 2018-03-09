@@ -3,7 +3,7 @@ title: "Интерфейс ADOStreamConstruction | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - ADOStreamConstruction interface [ADO]
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 87d609abefd972ec6fe3c9443f658ffbcc069511
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9090cd99a7a43645165b9b1095f9cd9e789788f3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adostreamconstruction-interface"></a>Интерфейс ADOStreamConstruction
 **ADOStreamConstruction** интерфейса используется для создания объекта ADO **поток** объектов из поставщика OLE DB **IStream** объекта в приложении C/C++.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[Свойства потока](../../../ado/reference/ado-api/stream-property.md)|Чтение и запись. Получает или задает поставщика OLE DB **поток** объекта.|  
+|[Свойство Stream](../../../ado/reference/ado-api/stream-property.md)|Чтение и запись. Получает или задает поставщика OLE DB **поток** объекта.|  
   
 ## <a name="methods"></a>Методы  
  Нет.  
@@ -45,7 +44,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="events"></a>События  
  Нет.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Получает OLE DB **IStream** объекта (`pStream`), построении ADO **поток** объекта (`adoStr`) суммы следующие три основные операции:  
   
 1.  Создание объекта ADO **поток** объекта:  
@@ -80,6 +79,5 @@ adoStrConstruct->put_Stream(pUnk);
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)
-

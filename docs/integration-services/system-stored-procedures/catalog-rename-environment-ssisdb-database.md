@@ -1,29 +1,31 @@
 ---
-title: "Catalog.rename_environment (база данных SSISDB) | Документы Microsoft"
+title: "catalog.rename_environment (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
-caps.latest.revision: 13
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 504d3ca0f18c9ea11105ebb575d2f5db449f91e4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 07839e0dbe6e15d096cb56c655b71d7bc56086be
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogrenameenvironment-ssisdb-database"></a>catalog.rename_environment (база данных SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Переименовывает среду в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -36,29 +38,29 @@ catalog.rename_environment [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @folder_name =] *имя_папки*  
- Имя папки, которая содержит среду. *Имя_папки* — **nvarchar(128)**.  
+ [ @folder_name = ] *folder_name*  
+ Имя папки, которая содержит среду. Параметр *folder_name* имеет тип **nvarchar(128)**.  
   
- [ @environment_name =] *environment_name*  
- Исходное имя среды. *Environment_name* — **nvarchar(128)**.  
+ [ @environment_name = ] *environment_name*  
+ Исходное имя среды. Параметр *environment_name* имеет тип **nvarchar(128)**.  
   
- [ @new_environment_name =] *new_environment_name*  
- Новое имя среды. *New_environment_name* — **nvarchar(128)**.  
+ [ @new_environment_name = ] *new_environment_name*  
+ Новое имя среды. Параметр *new_environment_name* имеет тип **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   Разрешения MODIFY для среды  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
  Следующий список содержит описания некоторых условий, которые могут вызвать ошибку или предупреждение.  
@@ -67,11 +69,10 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 -   Новое имя уже использовано в существующей среде  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Ссылки из проектов на среду не обновляются автоматически при переименовании среды. Ссылки на среду должны обновляться соответствующим образом. Хранимая процедура будет выполнена успешно, даже если вследствие изменения имени среды ссылки на нее оказались недействительными. Ссылки на среду должны обновляться после завершения этой хранимой процедуры.  
   
 > [!NOTE]  
 >  Проверка и исполнение пакетов, использующих недействительные ссылки на среду, завершится с ошибкой.  
   
   
-

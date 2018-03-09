@@ -2,38 +2,35 @@
 title: "Набор строк DMSCHEMA_MINING_MODELS | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_MODELS
+apiname: DMSCHEMA_MINING_MODELS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_MODELS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DMSCHEMA_MINING_MODELS rowset
 ms.assetid: 1636f4cf-b342-4e2e-93b4-04136e2d41ef
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 838f17f1e9725738686635b3000f28929084c122
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f857cf206932ad8048768c2c65f047670ec9d1e4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingmodels-rowset"></a>Набор строк DMSCHEMA_MINING_MODELS
-  Перечисляет модели интеллектуального анализа данных в текущем каталоге. **DMSCHEMA_MINING_MODELS** набор строк содержит сведения, такие как имена модели, дату обработки и алгоритм интеллектуального анализа данных, связанный с каждой моделью интеллектуального анализа данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Перечисляет модели интеллектуального анализа данных в текущем каталоге. **DMSCHEMA_MINING_MODELS** набор строк содержит сведения, такие как имена модели, дату обработки и алгоритм интеллектуального анализа данных, связанный с каждой моделью интеллектуального анализа данных.  
   
- . **DMSCHEMA_MINING_MODELS** набора строк схемы очень похож на [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) набора строк схемы и может использоваться так же.  
+ , и делает это по-другому. **DMSCHEMA_MINING_MODELS** набора строк схемы очень похож на [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) набора строк схемы и может использоваться так же.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **DMSCHEMA_MINING_MODELS** набор строк содержит следующие столбцы.  
@@ -66,13 +63,13 @@ ms.lasthandoff: 09/01/2017
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**MODEL_CATALOG**|**DBTYPE_WSTR**|Необязательно.|  
-|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Необязательно.|  
-|**MODEL_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**MODEL_TYPE**|**DBTYPE_WSTR**|Необязательно.|  
-|**ПАРАМЕТРЫ SERVICE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Необязательно.|  
-|**MINING_STRUCTURE**|**DBTYPE_WSTR**|Необязательно.|  
+|**MODEL_CATALOG**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**MODEL_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**MODEL_TYPE**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**ПАРАМЕТРЫ SERVICE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Необязательный параметр.|  
+|**MINING_STRUCTURE**|**DBTYPE_WSTR**|Необязательный параметр.|  
   
  Примеры запросов этот набор строк. в разделе [запрос, параметры, используемые для создания модели интеллектуального анализа данных](../../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
@@ -80,4 +77,3 @@ ms.lasthandoff: 09/01/2017
  [Наборы строк схемы интеллектуального анализа данных](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   
-

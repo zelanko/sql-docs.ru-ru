@@ -2,11 +2,13 @@
 title: "Состояния файла | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,20 +30,19 @@ helpviewer_keywords:
 - displaying filegroup states
 - defunct file state
 ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
-caps.latest.revision: 26
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "26"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 732487dba37c2ee7eae56b920ce245f77489ff66
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8d7bc331185c97dc72f11de6441570a267af0157
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="file-states"></a>Состояния файла
-  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]состояние файла базы данных поддерживается независимо от состояния базы данных. Файл всегда находится в одном определенном состоянии, таком как ONLINE или OFFLINE. Чтобы просмотреть текущее состояние файла, используйте представление каталога [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) или [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) . Если база данных находится в состоянии вне сети, то состояние файлов можно просмотреть в представлении каталога [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] состояние файла базы данных поддерживается независимо от состояния базы данных. Файл всегда находится в одном определенном состоянии, таком как ONLINE или OFFLINE. Чтобы просмотреть текущее состояние файла, используйте представление каталога [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) или [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) . Если база данных находится в состоянии вне сети, то состояние файлов можно просмотреть в представлении каталога [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) .  
   
  Состояние файлов в файловой группе определяет доступность всей файловой группы. Чтобы файловая группа была доступна, необходимо, чтобы все файлы в файловой группе находились в режиме в сети. Чтобы просмотреть текущее состояние файловой группы, используйте представление каталога [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) . Попытка получить доступ к файловой группе, которая находится в режиме вне  сети, с помощью инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] приводит к ошибке. При построении планов запросов для инструкций SELECT оптимизатор запросов избегает некластеризованных индексов и индексированных представлений, принадлежащих файловым группам вне сети, чтобы разрешить успешное выполнение инструкций. Однако если файловая группа, находящаяся в режиме вне  сети, содержит кучу или кластеризованный индекс целевой таблицы, инструкция SELECT не будет выполнена. Кроме того, любая инструкция INSERT, UPDATE или DELETE, изменяющая таблицу с любым индексом в файловой группе, находящихся в режиме вне  сети, также не будет выполнена.  
   
@@ -69,4 +70,3 @@ ms.lasthandoff: 06/22/2017
  [Файлы и файловые группы базы данных](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   
-

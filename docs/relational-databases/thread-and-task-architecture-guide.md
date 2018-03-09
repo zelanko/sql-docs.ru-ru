@@ -3,8 +3,11 @@ title: "Руководство по архитектуре потоков и з�
 ms.custom: 
 ms.date: 10/26/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -13,20 +16,19 @@ helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
-caps.latest.revision: 3
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1684760951c661e50111028594c576661028da6e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
-ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="thread-and-task-architecture-guide"></a>руководство по архитектуре потоков и задач
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Потоки — это возможность операционной системы, позволяющая разделить логику приложений на несколько одновременных путей выполнения. Эта особенность полезна, когда сложные приложения имеют много задач, которые могут выполняться одновременно. 
 
@@ -122,14 +124,14 @@ SQL Server не начинает автоматически использова
 |Имя процесса   |Исполняемая программа |Использование более 64 процессоров |  
 |----------|----------|----------|  
 |Компонент SQL Server Database Engine |Sqlserver.exe  |Да |  
-|Службы Reporting Services |Rs.exe |Нет |  
-|Службы Analysis Services  |As.exe |Нет |  
-|Службы Integration Services   |Is.exe |Нет |  
-|Компонент Service Broker |Sb.exe |Нет |  
-|Компонент Full-text Search   |Fts.exe    |Нет |  
-|SQL Server, агент   |Sqlagent.exe   |Нет |  
-|Среда SQL Server Management Studio   |Ssms.exe   |Нет |  
-|программа установки SQL Server   |Setup.exe  |Нет |  
-
+|Службы Reporting Services |Rs.exe |нет |  
+|Службы Analysis Services  |As.exe |нет |  
+|Службы Integration Services   |Is.exe |нет |  
+|Компонент Service Broker |Sb.exe |нет |  
+|Компонент Full-text Search   |Fts.exe    |нет |  
+|Агент SQL Server
+   |Sqlagent.exe   |нет |  
+|Среда SQL Server Management Studio   |Ssms.exe   |нет |  
+|программа установки SQL Server   |Setup.exe  |нет |  
 
 

@@ -1,30 +1,31 @@
 ---
 title: "Темпоральные таблицы | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/11/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
-caps.latest.revision: 47
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: ba3bc1642b2b266c030f8ec326d001a8fb56b4ab
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 20a301e257244b66e1c149c7cf8cf1f2489eb489
-ms.openlocfilehash: 7115b3aa6dcad15fa26603dfe8555287af015bdf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/29/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="temporal-tables"></a>Темпоральные таблицы
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   В SQL Server 2016 добавлена поддержка темпоральных таблиц с системным управлением версиями. Являясь встроенным компонентом базы данных, эти таблицы предоставляют сведения о хранящихся в них данных на любой, а не только на текущий момент времени. Темпоральные функции базы данных впервые появились в ANSI SQL 2011.  
   
@@ -123,7 +124,7 @@ CREATE TABLE dbo.Employee
 >  Время, записанное в системных столбцах datetime2, основано на времени начала выполнения самой транзакции. Например, все строки, которые вставлены в рамках одной транзакции, будут иметь одно и то же время UTC, записанное в столбец, соответствующий началу периода **SYSTEM_TIME** .  
   
 ## <a name="how-do-i-query-temporal-data"></a>Как выполнить запрос для темпоральных данных?  
- Инструкция **SELECT** с предложением **FROM***\<таблица>* имеет новое предложение **FOR SYSTEM_TIME** с пятью вложенными предложениями для темпоральных таблиц, которое позволяет запрашивать данные из текущих таблиц и из таблиц журнала. Этот новый синтаксис инструкции **SELECT** поддерживается непосредственно для одной таблицы, распространяется через несколько соединений и представлений на основе нескольких темпоральных таблиц.  
+ Инструкция **SELECT** для предложения **FROM***\<таблица>* имеет новое предложение **FOR SYSTEM_TIME** с пятью вложенными предложениями для темпоральных таблиц, которое позволяет запрашивать данные в текущей таблице и в таблице журнала. Этот новый синтаксис инструкции **SELECT** поддерживается непосредственно для одной таблицы, распространяется через несколько соединений и представлений на основе нескольких темпоральных таблиц.  
   
  ![Запросы к темпоральным таблицам](../../relational-databases/tables/media/temporal-querying.PNG "Запросы к темпоральным таблицам")  
   
@@ -153,7 +154,7 @@ SELECT * FROM Employee
 |**ALL**|Все строки|Возвращает объединение строк, принадлежащих текущей таблице и таблице журнала.|  
   
 > [!NOTE]  
->  При желании вы можете скрыть эти столбцы периодов, чтобы они не возвращались в тех запросах, в которых они не указаны явно (в сценарии **SELECT \* FROM***\<таблица>*). Чтобы вернуть скрытый столбец, просто явно укажите его в запросе. Аналогичным образом продолжат работать инструкции **INSERT** и **BULK INSERT** , как если бы эти новые столбцы периодов отсутствовали (значения столбцов будут заполнены автоматически). Дополнительные сведения об использовании предложения **HIDDEN** см. в разделах [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) и [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md).  
+>  При желании можно скрыть эти столбцы периодов, чтобы запросы, в которых они не указаны явно, не возвращали их (сценарий **SELECT \* FROM***\<таблица>*). Чтобы вернуть скрытый столбец, просто явно укажите его в запросе. Аналогичным образом продолжат работать инструкции **INSERT** и **BULK INSERT** , как если бы эти новые столбцы периодов отсутствовали (значения столбцов будут заполнены автоматически). Дополнительные сведения об использовании предложения **HIDDEN** см. в разделах [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) и [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## <a name="did-this-article-help-you-were-listening"></a>Эта статья помогла вам? Мы слушаем  
  Какие сведения вы искали и удалось ли вам их найти? Мы прислушиваемся к вашим отзывам для совершенствования материалов. Отправляйте свои комментарии по адресу [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
@@ -170,4 +171,3 @@ SELECT * FROM Employee
  [Представления и функции метаданных для временной таблицы](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Перестроение системных баз данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 06/06/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,24 +18,24 @@ helpviewer_keywords:
 - rebuilding databases, master
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 116b8352b27400cf9d57d01e4d1c0a0f8a3a89d0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3a1d3cd6a2cb8183acf9d4f787e9d434dcc5577d
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="rebuild-system-databases"></a>Перестроение системных баз данных
-  Системные базы данных необходимо перестроить, чтобы устранить повреждения данных в системных базах данных [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md)и [resource](../../relational-databases/databases/resource-database.md) или изменить параметры сортировки по умолчанию на уровне сервера. В этом разделе приводятся пошаговые инструкции по перестроению системных баз данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Системные базы данных необходимо перестроить, чтобы устранить повреждения данных в системных базах данных [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md)и [resource](../../relational-databases/databases/resource-database.md) или изменить параметры сортировки по умолчанию на уровне сервера. В этом разделе приводятся пошаговые инструкции по перестроению системных баз данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
@@ -104,7 +107,7 @@ ms.lasthandoff: 06/22/2017
   
      **Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=ИмяЭкземпляра /SQLSYSADMINACCOUNTS=учетные записи [ /SAPWD= НадежныйПароль ] [ /SQLCOLLATION=ИмяПараметровСортировки]**  
   
-    |Имя параметра|Описание|  
+    |Имя параметра|Description|  
     |--------------------|-----------------|  
     |/QUIET или /Q|Указывает, что программа установки будет работать без пользовательского интерфейса.|  
     |/ACTION=REBUILDDATABASE|Указывает, что программа установки создает системные базы данных заново.|  
@@ -127,7 +130,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="post-rebuild-tasks"></a>Задачи, выполняемые после перестроения  
  После перестроения базы данных, возможно, придется выполнить следующие дополнительные задачи.  
   
--   Восстановить наиболее поздние полные резервные копии баз данных master, model и msdb. Дополнительные сведения см. в разделе [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
+-   Восстановить наиболее поздние полные резервные копии баз данных master, model и msdb. Дополнительные сведения см. в статье [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
     > [!IMPORTANT]  
     >  Если изменены параметры сортировки сервера, не следует восстанавливать системные базы данных. В противном случае новые параметры сортировки будут заменены старыми.  
@@ -137,7 +140,7 @@ ms.lasthandoff: 06/22/2017
 > [!IMPORTANT]  
 >  Рекомендуется защитить применяемые скрипты, чтобы предотвратить их изменение неавторизированными пользователями.  
   
--   Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен как распространитель репликации, необходимо восстановить базу данных distribution. Дополнительные сведения см. в разделе [Создание резервных копий реплицируемых баз данных и восстановление из них](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
+-   Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен как распространитель репликации, необходимо восстановить базу данных distribution. Дополнительные сведения см. в разделе [Резервное копирование и восстановление реплицируемых баз данных](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
 -   Переместить системные базы данных в зарегистрированное ранее расположение. Дополнительные сведения см. в статье [Перемещение системных баз данных](../../relational-databases/databases/move-system-databases.md).  
   
@@ -178,7 +181,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  С помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] остановите и перезапустите службу компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , как обычно.  
   
-6.  В окне командной строки подключитесь к серверу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выполните следующую команду: `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o" C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
+6.  В окне командной строки подключитесь к серверу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выполните следующую команду: `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
      Замените *\<имя_сервера>* экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Укажите путь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в файловой системе.  
   
@@ -207,4 +210,3 @@ ms.lasthandoff: 06/22/2017
  [Системные базы данных](../../relational-databases/databases/system-databases.md)  
   
   
-

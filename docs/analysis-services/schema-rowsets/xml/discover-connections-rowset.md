@@ -2,33 +2,31 @@
 title: "Набор строк DISCOVER_CONNECTIONS | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_CONNECTIONS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_CONNECTIONS rowset
 ms.assetid: e4703970-c31d-448c-ab68-503303c91aa4
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d9d56f64f0b4cb1912e9eaaa7e644c6cbc29ad44
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3b02c9f5d9a9e22e626143a6ca5701ac5b1db50e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverconnections-rowset"></a>Набор строк DISCOVER_CONNECTIONS
-  Предоставляет сведения об использовании ресурсов и действиях, касающиеся соединений, открытых в настоящее время на сервере.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Предоставляет сведения об использовании и действия ресурсов о соединениях, открытым в данный момент на сервере.  
   
  **Область применения:** табличные модели, многомерные модели  
   
@@ -66,7 +64,6 @@ ms.lasthandoff: 09/01/2017
 |ADOMDNAME|Соединения|  
   
 ## <a name="see-also"></a>См. также:  
- [XML для аналитики наборы строк схемы](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [Наборы строк схемы XML для аналитики](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

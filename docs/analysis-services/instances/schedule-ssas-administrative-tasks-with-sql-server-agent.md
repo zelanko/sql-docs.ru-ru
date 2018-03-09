@@ -2,30 +2,30 @@
 title: "Планирование задач администрирования служб SSAS с агентом SQL Server | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
-caps.latest.revision: 12
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: d8872cadbcbd7da67212fa26417ac66debc5f79c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 857540f661aa8eaecd42d98a648c03c043d06e2a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Планирование задач администрирования служб SSAS с помощью агента SQL Server
-  Используя службу агента SQL Server, вы можете запланировать административные задачи [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в нужном порядке и в нужное время. Планирование задач позволяет автоматизировать процессы, выполняющиеся регулярно или с предсказуемой цикличностью. Задачи типа обработки кубов могут быть запланированы на периоды низкой деловой активности. Кроме того, при создании шагов задания агента SQL Server пользователь имеет возможность определить порядок, в котором будут выполняться задачи. Например, можно выполнить обработку куба, а затем создать его резервную копию.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Используя службу агента SQL Server, вы можете запланировать административные задачи [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в нужном порядке и в нужное время. Планирование задач позволяет автоматизировать процессы, выполняющиеся регулярно или с предсказуемой цикличностью. Задачи типа обработки кубов могут быть запланированы на периоды низкой деловой активности. Кроме того, при создании шагов задания агента SQL Server пользователь имеет возможность определить порядок, в котором будут выполняться задачи. Например, можно выполнить обработку куба, а затем создать его резервную копию.  
   
  Шаги задания позволяют управлять потоком выполнения. Агент SQL Server может быть настроен таким образом, чтобы в случае сбоя одного из заданий выполнение оставшихся задач было продолжено или прекращено. Вы можете также настроить агент SQL Server на отправку уведомлений о выполнении или сбое выполнения задания.  
   
@@ -34,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="prerequisites"></a>Предварительные требования  
  Должна быть установлена служба агента SQL Server.  
   
- По умолчанию задания запускаются под учетной записью службы. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], учетной записи по умолчанию для агента SQL Server является NT Service\SQLAgent$\<имя_экземпляра >. Для выполнения задачи резервного копирования или обработки эта учетная запись должна принадлежать системному администратору в экземпляре служб Analysis Services. Дополнительные сведения см. в разделе [Предоставление прав администратора сервера для экземпляра служб Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
+ По умолчанию задания запускаются под учетной записью службы. Учетная запись по умолчанию для агента SQL Server является NT Service\SQLAgent$\<имя_экземпляра >. Для выполнения задачи резервного копирования или обработки эта учетная запись должна принадлежать системному администратору в экземпляре служб Analysis Services. Дополнительные сведения см. в разделе [Предоставление прав администратора сервера для экземпляра служб Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
  Также необходимо наличие тестовой базы данных, с которой будет производиться работа. Для использования в данном пошаговом руководстве вы можете развернуть образец многомерной базы данных AdventureWorks или проект из учебника по многомерному моделированию в службах Analysis Services. Дополнительные сведения см. в статье [Установка образцов данных и проектов для учебника по многомерному моделированию в службах Analysis Services](../../analysis-services/install-sample-data-and-projects.md).  
   
@@ -228,8 +228,7 @@ ms.lasthandoff: 09/01/2017
   
 16. По завершении задания нажмите кнопку **Закрыть**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Параметры обработки и параметры &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
   
   
-

@@ -3,28 +3,29 @@ title: "Создание данных | Документы Microsoft"
 ms.custom: 
 ms.date: 01/30/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.prod: sql-non-specified
-ms.technology:
-- " database-engine "
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: samples
+ms.technology: " database-engine "
 ms.topic: article
 ms.assetid: f387273b-8b5f-4687-b033-09499ea2d68f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: 49674a1edbec00a650af036297adacec3bdc150d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c17ad40220d46ab6e19054818ce2abfdce7251f4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wideworldimporters-data-generation"></a>Создание данных WideWorldImporters
-Выпущенные версии базы данных WideWorldImporters и WideWorldImportersDW содержит данные, начиная с 1-го января 2013, вплоть до в день создания этих баз данных.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Выпущенные версии базы данных WideWorldImporters и WideWorldImportersDW содержит данные, начиная с 1-го января 2013, вплоть до в день создания этих баз данных.
 
 Если впоследствии в целях демонстрации или рисунке используются образцы баз данных может быть полезно включить более новые образцы данных в базе данных.
 
@@ -85,4 +86,3 @@ WideWorldImportersDW имеет возможность произвольным 
 Приблизительно необходимое количество строк вставляются в `Fact.Sale` таблицу в 2012 году. Процедура искусственно ограничивает количество строк в день 50000. Это может быть изменен, но позволяет избежать accidential overinflations таблицы.
 
 Кроме того, процедура применяется кластеризованном индексирования, если он уже не применены.
-

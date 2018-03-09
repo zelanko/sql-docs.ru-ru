@@ -3,7 +3,7 @@ title: "Поля (ADO - синтаксис WFC) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - Field collection [ADO], ADO/WFC syntax
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0ca92f0ab46f11fad94d4dacd6399bc2c97dd8b4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0ea83e9a9d928ebfbab416a6cf85b4adbc887f05
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="field-ado---wfc-syntax"></a>Поля (ADO - WFC синтаксис)
 ## <a name="package-commswfcdata"></a>пакет com.ms.wfc.data  
@@ -76,7 +75,7 @@ public AdoProperties getProperties()
   
  Реализует ADO/WFC **значение** свойство с **getValue** метод, возвращающий объект VARIANT; и **setValue** метод, который принимает в качестве аргумента типа VARIANT. Варианты высокоэффективные на некоторых языках, таких как Microsoft Visual Basic.  
   
- В дополнение к **значение** предоставляет свойство, ADO и WFC *доступа* методы, использующие типы данных Java для получения и установки содержимого **поле** объектов. Большинство из этих методов имеют имена вида **получить***DataType* или **задать***DataType*.  
+ В дополнение к **значение** предоставляет свойство, ADO и WFC *доступа* методы, использующие типы данных Java для получения и установки содержимого **поле** объектов. Большинство из этих методов имеют имена вида **получить *** DataType* или **задать *** DataType*.  
   
  Существует два исключения внимания: один из **getObject** методов возвращает объект, который преобразуется в указанном классе. Имеется не **getNull** свойства; вместо этого используется **isNull** свойство, которое возвращает значение типа Boolean, указывающее, является ли поле значение null.  
   
@@ -106,6 +105,5 @@ public Object getObject(Class c)
 public void setObject(Object value)  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект field](../../../ado/reference/ado-api/field-object.md)
-
+## <a name="see-also"></a>См. также  
+ [Объект Field](../../../ado/reference/ado-api/field-object.md)

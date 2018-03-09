@@ -3,7 +3,7 @@ title: "Пример кода JScript для возврата набора за�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Recordset [ADO]
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7c9c767413fefb4f35e2f3ac60ebcf52323efd2b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: edecd6bcaf8cb7547cf026f68edaf72767c57659
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>Пример кода JScript для возврата набора записей
 ## <a name="jscript-code-rsjs"></a>Код JScript (rs.js)  
@@ -94,4 +93,3 @@ function alert(str)
 2.  Откройте командную строку и компакт-диска в каталог, в котором сохранен файл JScript (rs.js).  
   
 3.  Тип `CScript rs.js` из командной строки.
-

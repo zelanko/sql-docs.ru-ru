@@ -2,11 +2,13 @@
 title: "Служба \"Модуль записи SQL\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,20 +23,19 @@ helpviewer_keywords:
 - MSDE Writer
 - VSS
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "29"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: ee2c7079b0ef44294585c8b8aaa4548fdf12892f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 27c61a50efdfd11316b7d31e7f8f3cfd13ca7a7c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-writer-service"></a>cлужба «Модуль записи SQL»
-  Служба «Модуль записи SQL» предоставляет дополнительные возможности резервного копирования и восстановления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью механизма службы теневого копирования тома.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Служба "Модуль записи SQL" предоставляет дополнительные возможности резервного копирования и восстановления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью механизма службы теневого копирования томов.  
   
  Служба «Модуль записи SQL» устанавливается автоматически. Она должна запускаться при запросе службы теневого копирования томов (VSS) резервного копирования или восстановления. Служба настраивается с помощью оснастки «Службы» [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Служба модуля записи SQL устанавливается на всех операционных системах.  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="permissions"></a>Разрешения  
  Служба «Модуль записи SQL» должна запускаться под учетной записью **Local System** . Модуль записи SQL использует имя входа **NT Service\SQLWriter** при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. С помощью имени входа **NT Service\SQLWriter** процесс записи SQL может запускаться на более низком уровне прав доступа в учетной записи, помеченной как **без имени входа**, что снижает потенциальную уязвимость. Если модуль записи SQL отключен, то каждая служебная программа, которая полагается на моментальные снимки VSS, например System Center Data Protection Manager, а также некоторые другие продукты сторонних поставщиков, перестанет работать и будет сбоить с риском принятия нецелостных резервных копий баз данных. Если ни службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ни система, где они выполняются, ни система их размещения (в случае виртуальной машины) не нуждаются в чем-либо помимо резервного копирования [!INCLUDE[tsql](../../includes/tsql-md.md)] , то модуль записи SQL можно спокойно отключить и удалить имя входа.  Обратите внимание, что модуль записи SQL может вызываться системой или резервной копией тома независимо от того, использует ли копия моментальные снимки напрямую или нет. Некоторые продукты для резервного копирования системы используют службу VSS во избежание блокировки по открытым или заблокированным файлам. Модулю записи SQL требуются повышенные разрешения в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поскольку во время его работы на короткий момент времени замораживаются все операции ввода и вывода для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="features"></a>Функции  
+## <a name="features"></a>Компоненты  
  Служба «Модуль записи SQL» поддерживает:  
   
 -   полное резервное копирование и восстановление баз данных, включая полнотекстовые каталоги;  
@@ -78,4 +79,3 @@ ms.lasthandoff: 08/02/2017
 -   Восстановление страницы  
   
   
-

@@ -2,34 +2,34 @@
 title: "Функции (синтаксис многомерных Выражений) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - MDX [Analysis Services], functions
 - Multidimensional Expressions [Analysis Services], functions
 - functions [MDX]
 ms.assetid: 74ca5e79-1f33-4795-9d68-98eff9c190c1
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 00259604fe891a21f6f52835b1844762a751f09a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 414a3048ec4fead73ed406914d2ee042778ee2cd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="functions-mdx-syntax"></a>Функции (синтаксис многомерных выражений)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   В многомерных выражениях есть несколько категорий внутренних функций для выполнения определенных действий. В следующей таблице перечислены имеющиеся в многомерных выражениях категории функций.  
   
@@ -56,4 +56,3 @@ ms.lasthandoff: 08/02/2017
  [Элементы синтаксиса многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   
-

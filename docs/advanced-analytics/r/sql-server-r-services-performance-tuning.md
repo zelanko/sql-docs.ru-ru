@@ -2,27 +2,28 @@
 title: "Настройка производительности служб R SQL Server | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/12/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf6f3b7d-f9f9-4e45-b0d1-07850b53e0c5
-caps.latest.revision: 20
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: c4e77abfb68c30a1eac32b514c3987774bd5759d
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 161f42e2559725b41df605c1e1c2ca12acae9c97
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>Настройка производительности для R в SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье является первым в ряд из четырех статей, посвященных оптимизации производительности для служб R, основанная на две конкретные случаи:
 
@@ -92,7 +93,7 @@ ms.lasthandoff: 09/01/2017
 
 + [Настройка производительности для R в SQL Server — оборудование](..\r\sql-server-configuration-r-services.md)
 
-    Содержит рекомендации по настройке оборудования, [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] устанавливается на, а также для настройки экземпляра SQL Server для лучшей поддержки внешних скриптов. Это особенно полезно для **администраторам баз данных**.
+    Содержит рекомендации по настройке оборудования, [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] устанавливается на, а также для настройки экземпляра SQL Server для лучшей поддержки внешних скриптов. Это особенно полезно для **администраторам баз данных**.
 
 + [Настройка производительности для R в SQL Server — код и данные оптимизации](..\r\r-and-data-optimization-r-services.md)
 
@@ -104,4 +105,3 @@ ms.lasthandoff: 09/01/2017
 + [Настройка производительности для R в SQL Server — методы и результаты](..\r\performance-case-study-r-services.md)
 
     Обобщает данные использовался две конкретные случаи, как была протестирована производительности и влияние на результаты оптимизации.
-

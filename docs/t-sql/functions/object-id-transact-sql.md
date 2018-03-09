@@ -3,8 +3,11 @@ title: "Object_id (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,20 +28,19 @@ helpviewer_keywords:
 - viewing object IDs
 - verifying object exists
 ms.assetid: f89286db-440f-4218-a828-30881ce3077a
-caps.latest.revision: 63
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a612928c3a30b48d3dc8e1dedd4375ca564555d8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4978a07401fa33e0244a61181e29cfd6146b695e
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="objectid-transact-sql"></a>OBJECT_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает идентификационный номер объекта базы данных для объекта области схемы.  
   
@@ -71,10 +73,10 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
   
  Пользователь может просматривать только метаданные защищаемых объектов, которыми он владеет или на которые пользователю были предоставлены разрешения. Это означает, что встроенные функции, создающие метаданные, такие как OBJECT_ID, могут вернуть значение NULL в случае, если пользователь не имеет разрешений на объект. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если параметр системной функции является необязательным, то предполагаются текущие база данных, главный компьютер, пользователь сервера или пользователь базы данных. За встроенными функциями всегда должны следовать круглые скобки.  
   
- Если указано имя временной таблицы, имя базы данных должно идти перед именем временной таблицы, если текущая база данных **tempdb**. Например: `SELECT OBJECT_ID('tempdb..#mytemptable')`.  
+ Если указано имя временной таблицы, имя базы данных должно идти перед именем временной таблицы, если текущая база данных **tempdb**. Например, `SELECT OBJECT_ID('tempdb..#mytemptable')`.  
   
  Системные функции можно использовать в списке выбора, в предложении WHERE и в любом месте, где разрешается использование выражений. Дополнительные сведения см. в разделе [выражения &#40; Transact-SQL &#41; ](../../t-sql/language-elements/expressions-transact-sql.md) и [ГДЕ &#40; Transact-SQL &#41; ](../../t-sql/queries/where-transact-sql.md).  
   
@@ -133,7 +135,7 @@ GO
  Следующий пример возвращает идентификатор объекта для таблицы `FactFinance` в базе данных [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].  
   
 ```  
-SELECT OBJECT_ID(AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';  
+SELECT OBJECT_ID('AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';  
 ```  
   
 ## <a name="see-also"></a>См. также:  
@@ -144,5 +146,4 @@ SELECT OBJECT_ID(AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';
  [Object_name &#40; Transact-SQL &#41;](../../t-sql/functions/object-name-transact-sql.md)  
   
   
-
 

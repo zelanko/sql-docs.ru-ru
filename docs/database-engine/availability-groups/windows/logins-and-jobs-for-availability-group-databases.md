@@ -2,11 +2,13 @@
 title: "Имена входа и задания для баз данных групп доступности | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0b89518482de615615229457a7195311ece7ab6b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f431b401f2bc3e14dfea116d9c5be0c2d3fd18cc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="logins-and-jobs-for-availability-group-databases"></a>Имена входа и задания для баз данных групп доступности
-  Необходимо постоянно поддерживать одинаковый набор имен входа пользователей и заданий агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в каждой базе данных-источнике группы доступности AlwaysOn и соответствующих баз данных-получателей. Имена входа и задания необходимо воспроизвести на каждом экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещается реплика доступности для группы доступности.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Следует постоянно поддерживать одинаковый набор имен входа пользователей и заданий агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в каждой базе данных-источнике группы доступности AlwaysOn и соответствующих баз данных-получателей. Имена входа и задания необходимо воспроизвести на каждом экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещается реплика доступности для группы доступности.  
   
 -   **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Задания агентов**  
   
@@ -35,7 +36,7 @@ ms.lasthandoff: 08/02/2017
   
      Экземпляры серверов, на которых размещены реплики доступности для группы доступности, могут быть настроены по-разному, например с использованием других букв дисков ленточных накопителей и т. д. Задания для каждой группы доступности должны допускать подобные различия.  
   
-     Обратите внимание, что задания резервного копирования могут использовать функцию [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) , чтобы определить, является ли локальная реплика предпочтительной для выполнения резервного копирования согласно настройкам резервного копирования группы доступности. Задания резервного копирования, созданные с помощью [мастера планов обслуживания](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) , изначально используют эту функцию. Для других заданий резервного копирования рекомендуется использовать эту функцию в качестве условия в заданиях резервного копирования, чтобы они выполнялись только для предпочитаемой реплики. Дополнительные сведения см. в разделе [Активные вторичные реплики: резервное копирование во вторичных репликах (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Обратите внимание, что задания резервного копирования могут использовать функцию [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) , чтобы определить, является ли локальная реплика предпочтительной для выполнения резервного копирования согласно настройкам резервного копирования группы доступности. Задания резервного копирования, созданные с помощью [мастера планов обслуживания](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) , изначально используют эту функцию. Для других заданий резервного копирования рекомендуется использовать эту функцию в качестве условия в заданиях резервного копирования, чтобы они выполнялись только для предпочитаемой реплики. Дополнительные сведения см. в статье [Активные вторичные реплики, резервное копирование во вторичных репликах (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Имена входа**  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 08/02/2017
      Если какое-либо из ваших приложений использует проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или локальное имя входа Windows, см. раздел [Имена входа для приложений, использующих проверку подлинности SQL Server или локальное имя входа Windows](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md#SSauthentication).  
   
     > [!NOTE]  
-    >  Пользователь базы данных, для которого соответствующее имя входа SQL Server не определено или задано неправильно на экземпляре сервера, не сможет подключиться к этому экземпляру. Такой пользователь называется *утратившим связь с учетной записью* базы данных на этом экземпляре сервера. Если пользователь утратил связь с данным экземпляром базы данных, то в любое время можно настроить имена входа для этого пользователя. Дополнительные сведения см. в статье [Диагностика пользователей, утративших связь с учетной записью (SQL Server)](../../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  
+    >  Пользователь базы данных, для которого соответствующее имя входа SQL Server не определено или задано неправильно на экземпляре сервера, не сможет подключиться к этому экземпляру. Такой пользователь называется *утратившим связь с учетной записью* базы данных на этом экземпляре сервера. Если пользователь утратил связь с данным экземпляром базы данных, то в любое время можно настроить имена входа для этого пользователя. Дополнительные сведения см. в статье [Troubleshoot Orphaned Users &#40;SQL Server&#41;](../../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  
   
 -   **Дополнительные метаданные**  
   
@@ -76,4 +77,3 @@ ms.lasthandoff: 08/02/2017
  [Создание заданий](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)  
   
   
-

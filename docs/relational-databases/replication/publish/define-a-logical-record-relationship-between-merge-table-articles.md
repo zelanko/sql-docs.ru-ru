@@ -2,11 +2,13 @@
 title: "Определение связи логических записей между статьями таблиц слияния | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +16,19 @@ helpviewer_keywords:
 - articles [SQL Server replication], logical records
 - logical records [SQL Server replication]
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
-caps.latest.revision: 44
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3630c769c33d4888f384d00ec341503fc47c89cd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "44"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: baebe314605badced365be3c30212e2f20262737
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Определение связи логических записей между статьями таблиц слияния
-  В данном разделе описывается процесс определения связи логических записей между статьями таблиц слияния в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается, как определить связь логических записей между статьями таблиц слияния в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или объектов Replication Management Objects (RMO).  
   
  Репликация слиянием позволяет определить связь между связанными строками в различных таблицах. Эти строки затем могут быть обработаны во время синхронизации как элементы транзакции. Логическая запись может быть определена между двумя статьями независимо от наличия связи фильтров соединения между ними. Дополнительные сведения см. в статье [Группирование изменений в связанных строках с помощью логических записей](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
@@ -35,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
@@ -148,7 +150,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_dropmergefilter](../../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md). Укажите **@publication**, имя одной из статей в связи в качестве значения параметра **@article**, а также имя связи из шага 1 в качестве значения параметра **@filtername**.  
   
-###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
+###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере разрешается использование предварительно вычисляемых секций в существующей публикации и создается логическая запись, в которую входят две новые статьи для таблиц `SalesOrderHeader` и `SalesOrderDetail` .  
   
  [!code-sql[HowTo#sp_AddMergeLogicalRecord](../../../relational-databases/replication/codesnippet/tsql/define-a-logical-record-_2.sql)]  
@@ -160,41 +162,41 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-define-a-logical-record-relationship-without-an-associated-join-filter"></a>Определение связи логических записей без сопутствующего фильтра соединения  
   
-1.  Установите соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication>, установите для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>, а также установите созданное на шаге 1 соединение в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication> , установите для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> , а также установите созданное на шаге 1 соединение в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает **false**, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
+3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает **false**, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
   
 4.  Если свойство <xref:Microsoft.SqlServer.Replication.MergePublication.PartitionGroupsOption%2A> имеет значение <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.False>, укажите значение <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.True>.  
   
-5.  Если статьи, которые должны составить логическую запись, не существуют, создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeArticle> и задайте следующие свойства:  
+5.  Если статьи, которые должны составить логическую запись, не существуют, создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeArticle> и задайте следующие свойства.  
   
     -   Имя статьи для <xref:Microsoft.SqlServer.Replication.Article.Name%2A>.  
   
     -   Имя публикации в свойстве <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>.  
   
-    -   Если статья отфильтрована горизонтально, задайте условие фильтра строк для свойства <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> (необязательно). Используйте это свойство для определения статического или параметризованного фильтра строк. Дополнительные сведения см. в статье [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+    -   Если статья отфильтрована горизонтально, задайте условие фильтра строк для свойства <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> (необязательно). Используйте это свойство для определения статического или параметризованного фильтра строк. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
      Дополнительные сведения см. в статье [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Article.Create%2A>.  
+6.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Article.Create%2A> .  
   
 7.  Повторите шаги 5 и 6 для каждой статьи, составляющей логическую запись.  
   
-8.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeJoinFilter>, чтобы определить связь логических записей между статьями. Затем установите следующие свойства.  
+8.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> , чтобы определить связь логических записей между статьями. Затем установите следующие свойства.  
   
-    -   Имя дочерней статьи в связи логических записей для свойства <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.ArticleName%2A>.  
+    -   Имя дочерней статьи в связи логических записей для свойства <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.ArticleName%2A> .  
   
-    -   Имя существующей родительской статьи в связи логических записей для свойства <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinArticleName%2A>.  
+    -   Имя существующей, родительской статьи в связи логических записей для свойства <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinArticleName%2A> .  
   
-    -   Имя связи логических записей для свойства <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterName%2A>.  
+    -   Имя связи логических записей для свойства <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterName%2A> .  
   
-    -   Выражение, определяющее связь для свойства <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinFilterClause%2A>.  
+    -   Выражение, определяющее связь для свойства <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.JoinFilterClause%2A> .  
   
-    -   Значение <xref:Microsoft.SqlServer.Replication.FilterTypes.LogicalRecordLink> для свойства <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterTypes%2A>. Если связь логических записей является также фильтром соединения, укажите значение <xref:Microsoft.SqlServer.Replication.FilterTypes.JoinFilterAndLogicalRecordLink> для этого свойства. Дополнительные сведения см. в статье [Группирование изменений в связанных строках с помощью логических записей](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
+    -   Значение <xref:Microsoft.SqlServer.Replication.FilterTypes.LogicalRecordLink> для свойства <xref:Microsoft.SqlServer.Replication.MergeJoinFilter.FilterTypes%2A> . Если связь логических записей является также фильтром соединения, укажите значение <xref:Microsoft.SqlServer.Replication.FilterTypes.JoinFilterAndLogicalRecordLink> для этого свойства. Дополнительные сведения см. в статье [Группирование изменений в связанных строках с помощью логических записей](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
-9. Вызовите метод <xref:Microsoft.SqlServer.Replication.MergeArticle.AddMergeJoinFilter%2A> для объекта, представляющего дочернюю статью в этой связи. Передайте объект <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> из шага 8, чтобы определить связь.  
+9. Вызовите метод <xref:Microsoft.SqlServer.Replication.MergeArticle.AddMergeJoinFilter%2A> для объекта, представляющего дочернюю статью в этой связи. Передайте объект <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> из шага 8, чтобы определить связь.  
   
 10. Повторите шаги 8 и 9 для каждой оставшейся связи логических записей в публикации.  
   
@@ -207,7 +209,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также:  
  [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Определение и изменение статического строкового фильтра](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [Группирование изменений в связанных строках с помощью логических записей](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)   
  [Оптимизация производительности параметризованного фильтра с помощью предварительно вычисляемых секций](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)   

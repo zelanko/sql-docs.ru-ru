@@ -1,34 +1,34 @@
 ---
-title: "Диаграммы с областями (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Диаграммы с областями (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cbb5e600306a5d107f7cbd542fb2c66abe96b35a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0b0f552b12a0410b0587f433a5f6181cbfea7030
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>Диаграммы с областями (построитель отчетов и службы SSRS)
   В диаграммах с областями данные выводятся в виде точек, соединенных линией, с закрашенными ниже этой линии областями. Дополнительные сведения о добавлении данных в диаграммы с областями см. в разделе [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
  На следующей иллюстрации показан пример диаграммы с областями с накоплением. Рассматриваемые данные хорошо подходят для отображения на диаграмме с областями с накоплением, поскольку эта диаграмма позволяет отображать итоги для всех рядов, а также пропорциональную долю каждого ряда в общем итоге.  
   
- ![Диаграмма с областями](../../reporting-services/report-design/media/areachart.gif "диаграмма с областями")  
+ ![Диаграмма с областями](../../reporting-services/report-design/media/areachart.gif "Диаграмма с областями")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -51,16 +51,15 @@ ms.lasthandoff: 08/09/2017
   
 -   Если простая диаграмма с областями используется для представления нескольких рядов с похожими значениями, области могут перекрываться, скрывая значения важных точек данных. Эту проблему можно решить, изменив тип диаграммы на диаграмму с областями с накоплением, которая предназначена для отображения в области диаграммы нескольких рядов.  
   
--   Если диаграмма с областями с накоплением содержит пропуски, это может означать, что набор данных включает пустые значения, которые отображаются как свободные разделы на диаграмме с областями с накоплением. Если набор данных включает пустые значения, рассмотрите возможность вставки пустых точек на диаграмме. При добавление пустых точек пустые области диаграммы будут заполнены отличающимся цветом, чтобы указать нулевые значения или значения NULL. Дополнительные сведения см. в разделе [Добавление пустых точек на диаграмму &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   Если диаграмма с областями с накоплением содержит пропуски, это может означать, что набор данных включает пустые значения, которые отображаются как свободные разделы на диаграмме с областями с накоплением. Если набор данных включает пустые значения, рассмотрите возможность вставки пустых точек на диаграмме. При добавление пустых точек пустые области диаграммы будут заполнены отличающимся цветом, чтобы указать нулевые значения или значения NULL. Дополнительные сведения см. в разделе [Добавление пустых точек на диаграмму (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
 -   По своему назначению типы диаграммы с областями очень похожи на гистограммы и графики. Если сравнивается несколько рядов, рассмотрите возможность использования гистограммы вместо диаграммы с областями. Если проводится анализ трендов за какой-то промежуток времени, рассмотрите возможность использования графика.  
   
-## <a name="see-also"></a>См. также раздел  
- [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Типы диаграмм &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [Графики &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)   
- [Изменить тип диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Типы диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [Графики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)   
+ [Изменение типа диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md)   
  [Точки данных со значением NULL и пустые точки в диаграммах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   
-

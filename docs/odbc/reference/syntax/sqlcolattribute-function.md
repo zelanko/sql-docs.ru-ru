@@ -3,33 +3,30 @@ title: "Функция SQLColAttribute | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLColAttribute
-apilocation:
-- sqlsrv32.dll
+apiname: SQLColAttribute
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLColAttribute
-helpviewer_keywords:
-- SQLColAttribute function [ODBC]
+f1_keywords: SQLColAttribute
+helpviewer_keywords: SQLColAttribute function [ODBC]
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7470412149bf336be8d07495eab4aa9bdf449a86
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4248444c3b8908266a587ce3cb208a1d492fe1d9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcolattribute-function"></a>Функция SQLColAttribute
 **Соответствия**  
@@ -134,7 +131,7 @@ SQLRETURN SQLColAttribute (
   
  ODBC 3. *x* драйвер должен возвращать значение для каждого поля дескриптора. Если поле дескриптора не применяется к источнику драйвера или данных, и если не указано иное, драйвер возвращает 0 в \* *StringLengthPtr* или пустая строка в **CharacterAttributePtr*.  
   
-## <a name="backward-compatibility"></a>Обратная совместимость  
+## <a name="backward-compatibility"></a>Backward Compatibility  
  ODBC 3. *x* функция **SQLColAttribute** заменяет устаревшие ODBC 2. *x* функция **SQLColAttributes**. При сопоставлении **SQLColAttributes** для **SQLColAttribute** (когда ODBC 2. *x* при работе с ODBC 3. *x* драйверов), сопоставление и **SQLColAttribute** для **SQLColAttributes** (когда ODBC 3. *x* при работе с ODBC 2. *x* драйверов), диспетчер драйверов либо передается значение *FieldIdentifier* , сопоставляет его с новым значением или возвращает ошибку, как показано ниже:  
   
 > [!NOTE]  
@@ -312,5 +309,4 @@ int main() {
 ## <a name="see-also"></a>См. также:  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовка ODBC](../../../odbc/reference/install/odbc-header-files.md)   
- [Образец программы на ODBC](../../../odbc/reference/sample-odbc-program.md)
-
+ [Образец программы ODBC](../../../odbc/reference/sample-odbc-program.md)

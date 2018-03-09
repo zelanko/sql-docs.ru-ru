@@ -2,28 +2,27 @@
 title: "Свойства заданий (Management Studio) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.jobproperties.f1
+f1_keywords: sql13.swb.reportserver.jobproperties.f1
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
-caps.latest.revision: 13
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "13"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 54fd700c21148803ce21ae83ee473753de139bd6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="job-properties-management-studio"></a>Свойства задания (среда Management Studio)
   На странице **Свойства задания** можно просматривать сведения о выполняющихся отчетах и подписках перед их отменой.  
@@ -73,10 +72,9 @@ ms.lasthandoff: 08/09/2017
  **Имя пользователя**  
  Для процессов, инициируемых пользователем, в этом столбце отображается имя пользователя. Для системных заданий отображается имя сервера отчетов.  
   
-## <a name="see-also"></a>См. также раздел  
- [Сервер отчетов в Справка F1 среды Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+## <a name="see-also"></a>См. также:  
+ [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Управление запущенным процессом](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   
-

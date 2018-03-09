@@ -3,29 +3,29 @@ title: "Настройка параметров проекта (SybaseToSQL) | �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Project Options Setting
+helpviewer_keywords: Project Options Setting
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 750be041907417b0683633fbe59f88fdb5b53ead
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 40c2bffdb58fadfa3a9c7da58cf68b8c4390cd16
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-project-options-sybasetosql"></a>Настройка параметров проекта (SybaseToSQL)
 Для каждого проекта SSMA можно задать параметры проекта. Эти параметры задают преобразование объекта, объект загрузки, SQL azure, пользовательский интерфейс и параметры миграции данных. Перед началом преобразования объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure или переноса данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, убедитесь, что параметры конфигурации подходят для проекта.  
@@ -47,11 +47,11 @@ SSMA имеет пять наборов параметров проекта.
   
 Он также имеет четыре режима для настройки этих параметров:  
   
-1.  По умолчанию  
+1.  Default  
   
 2.  Optimistic  
   
-3.  Полная  
+3.  Полное  
   
 4.  Другой  
   
@@ -102,7 +102,7 @@ SSMA имеет пять наборов параметров проекта.
   
 3.  Нажмите кнопку **ОК** для сохранения настроек.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 Следующий шаг в процессе переноса, зависит от требований проекта:  
   
 -   Если требуется пользовательское сопоставление исходных и целевых типов данных, см. раздел [сопоставления Sybase ASE и типов данных SQL Server &#40; SybaseToSQL &#41; ](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  
@@ -112,4 +112,3 @@ SSMA имеет пять наборов параметров проекта.
 ## <a name="see-also"></a>См. также:  
 [Миграция баз данных Sybase ASE в SQL Server — база данных Azure SQL &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
-

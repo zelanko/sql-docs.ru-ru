@@ -3,7 +3,7 @@ title: "ADO MD свойства | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - ADO MD, properties
 - properties [ADO MD]
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ae381b20c4073ff5da87b6e3d26a964ed6a6ca60
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 83aeba7f67a49fb6ef149ad6f5723dd7cf3d74ef
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-md-properties"></a>Свойства ADO MD
 |||  
@@ -35,9 +34,9 @@ ms.lasthandoff: 09/09/2017
 |[Заголовок](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Указывает заголовок текста, используемый для отображения **уровень** или **член** объекта.|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|Указывает количество элементов, для которого текущий **член** объект является родительской в иерархии.|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|Возвращает коллекцию **элементы** для которого текущий **члена** является родительской в иерархии.|  
-|[Счетчик](../../../ado/reference/ado-api/count-property-ado.md)|Указывает количество объектов в коллекции.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Указывает количество объектов в коллекции.|  
 |[Глубина](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Указывает число уровней между **уровень** и корневой уровень иерархии.|  
-|[Описание](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Возвращает текстовое описание текущего объекта.|  
+|[Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Возвращает текстовое описание текущего объекта.|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|Указывает число измерений на оси.|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|Указывает, следуют ли какие-либо потомки непосредственно за элементом на оси.|  
 |[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)|Указывает сведения о фильтре для текущего набора ячеек.|  
@@ -55,14 +54,13 @@ ms.lasthandoff: 09/09/2017
 |[Состояние](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Указывает текущее состояние набора ячеек.|  
 |[Тип](../../../ado/reference/ado-md-api/type-property-ado-md.md)|Указывает тип текущего элемента.|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|Указывает имя однозначным для текущего объекта.|  
-|[Значение](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Указывает значение текущей ячейки.|  
+|[Value](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Указывает значение текущей ячейки.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADO MD](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [Примеры кода ADO MD](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [ADO MD коллекций](../../../ado/reference/ado-md-api/ado-md-collections.md)   
  [ADO MD перечисляемые константы](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
  [Методы ADO MD](../../../ado/reference/ado-md-api/ado-md-methods.md)   
  [Объектная модель ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [Объекты ADO MD](../../../ado/reference/ado-md-api/ado-md-objects.md)
-
+ [Многомерные объекты ADO](../../../ado/reference/ado-md-api/ado-md-objects.md)

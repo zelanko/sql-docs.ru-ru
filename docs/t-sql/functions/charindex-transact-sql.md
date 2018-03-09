@@ -3,8 +3,11 @@ title: "Функция CHARINDEX (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - starting point of expression in character string
 ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
-caps.latest.revision: 52
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
-ms.openlocfilehash: 5467f9d98562fac8262e537887d03c1d68b25d88
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/12/2017
-
+ms.openlocfilehash: ed2f5334c0c76288ca31cf07857a87f2d1c72033
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Ищет в выражении другое выражение и возвращает его начальную позицию, если оно найдено.
   
@@ -49,7 +51,7 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
 *expressionToFind*  
 Символом [выражение](../../t-sql/language-elements/expressions-transact-sql.md) , содержащее последовательность искомых. *expressionToFind* не должна превышать 8000 символов.
   
-*выражения expressionToSearch*  
+*expressionToSearch*  
 Символьное выражение, в котором производится поиск.
   
 *start_location*  
@@ -58,7 +60,7 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
 ## <a name="return-types"></a>Возвращаемые типы
 **bigint** Если *выражения expressionToSearch* имеет **varchar(max)**, **nvarchar(max)**, или **varbinary(max)** данных типы; в противном случае **int**.
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Если параметр *expressionToFind* или *выражения expressionToSearch* имеет тип данных Юникода (**nvarchar** или **nchar**), а другой — нет, другие преобразуется в тип данных Юникода. Функция CHARINDEX не может использоваться с **текст**, **ntext**, и **изображение** типов данных.
   
 Если параметр *expressionToFind* или *выражения expressionToSearch* имеет значение NULL, функция CHARINDEX возвращает NULL.
@@ -238,11 +240,12 @@ SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;
 ```  
   
 ## <a name="see-also"></a>См. также:
-[Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-[+ &#40; Объединение строк &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
-[Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md)
+ [Функция LEN &#40; Transact-SQL &#41;](../../t-sql/functions/len-transact-sql.md)  
+ [Функция PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)  
+ [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [+ &#40; Объединение строк &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+ [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
-
 
 

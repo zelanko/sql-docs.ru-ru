@@ -3,29 +3,28 @@ title: "Метод setBytes (SQLServerBlob) | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerBlob.setBytes
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerBlob.setBytes
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: cd193265-3a65-4b1e-86ec-7818c3c0c1e2
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e04fdf6db3b58a00c724ddec17b0081343331692
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8078a33300252e22c4c0edab04d7442fd0ab1647
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="setbytes-method-sqlserverblob"></a>Метод setBytes (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,4 +44,3 @@ ms.lasthandoff: 09/09/2017
  [Класс SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)  
   
   
-

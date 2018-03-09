@@ -3,8 +3,11 @@ title: "Функция AVG (XQuery) | Документы Microsoft"
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - fn:avg function
 - avg function [XQuery]
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
-caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ee1d24bc4b28b7a041baa42ac829424e5daa6f8b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0fe9a444e11570af240d869f3983a3b1a6c78db1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="aggregate-functions---avg"></a>Агрегатные функции — среднее
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает среднее значение для последовательности чисел.  
   
@@ -43,7 +45,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  Последовательность атомарных значений, для которых вычисляется среднее значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Все типы атомарных значений, передаваемые **avg()** должны быть подтипами только одного из трех встроенных базовых числовых типов или типа xdt: untypedAtomic. Они не могут быть смешанными. Значения типа xdt:untypedAtomic приводятся к типу xs:double. Результат **avg()** Получает базовый тип переданных типов, например xs: double в случае использования xdt: untypedAtomic.  
   
  Если входное значение статически пусто, подразумевается пустое значение и возвращается статическая ошибка.  
@@ -73,8 +75,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
 -   не поддерживаются последовательности, в которых смешиваются типы на основе разных базовых типов;  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции XQuery для типа данных XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: "Использование мастера копирования базы данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,19 +27,19 @@ helpviewer_keywords:
 - Copy Database Wizard
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
-caps.latest.revision: 64
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 26b3c7967d7549f6f192afcac64888dcb68d6c7c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "64"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 534d9cd96831bfc79475f99111580e36f3603add
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-copy-database-wizard"></a>Использование мастера копирования базы данных
-Мастер копирования баз данных легко перемещает или копирует базы данных и определенные объекты серверов из одного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в другой, не вызывая сбои в работе сервера. С помощью этого мастера можно сделать следующее. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Мастер копирования баз данных легко перемещает или копирует базы данных и определенные объекты серверов из одного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в другой, не создавая простоев сервера. С помощью этого мастера можно сделать следующее. 
   
 -   Выбрать исходный и целевой серверы.  
   
@@ -96,11 +98,11 @@ ms.lasthandoff: 06/22/2017
   
 -   Для обеспечения оптимальной производительности обновленной базы данных выполните процедуру [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) (обновление статистики) для обновленной базы данных.  
   
--   Если база данных перемещается или копируется с одного экземпляра сервера на другой, для обеспечения однородности среды для пользователей и приложений может потребоваться повторное создание некоторых (или даже всех) метаданных базы данных: имен входа, заданий и т. д. Дополнительные сведения см. в статье [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+-   Если база данных перемещается или копируется с одного экземпляра сервера на другой, для обеспечения однородности среды для пользователей и приложений может потребоваться повторное создание некоторых (или даже всех) метаданных базы данных: имен входа, заданий и т. д. Дополнительные сведения см. в статье [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 
   
-###  <a name="Permissions"></a> Разрешения  
+###  <a name="Permissions"></a> Permissions  
  Вы должны быть членом предопределенной роли сервера **sysadmin** как на исходном, так и на целевом сервере.  
   
 ##  <a name="Overview"></a> Страницы мастера копирования баз данных 
@@ -119,7 +121,7 @@ ms.lasthandoff: 06/22/2017
 -    **Использовать проверку подлинности SQL Server**  
 Позволяет установить подключение, указав имя пользователя и пароль для проверки подлинности SQL Server.
 
-     -    **Имя пользователя**  
+     -    **User name**  
 Позволяет ввести имя пользователя для соединения. Этот параметр доступен только при выборе **проверки подлинности SQL Server**.
 
      -    **Пароль**  
@@ -139,7 +141,7 @@ ms.lasthandoff: 06/22/2017
 -    **Использовать проверку подлинности SQL Server**  
 Позволяет установить подключение, указав имя пользователя и пароль для проверки подлинности SQL Server.
 
-     -    **Имя пользователя**  
+     -    **User name**  
 Позволяет ввести имя пользователя для соединения. Этот параметр доступен только при выборе **проверки подлинности SQL Server**.
 
      -    **Пароль**  
@@ -313,7 +315,7 @@ ms.lasthandoff: 06/22/2017
 
      > **ПРИМЕЧАНИЕ.** Мастер копирования базы данных можно запустить из любой базы данных.  Мастер можно использовать как на исходном, так и на целевом сервере.
   
-### <a name="a--move-database-using-detach-and-attach-method-to-an-instance-on-a-different-physical-server--a-login-and-sql-server-agent-job-will-be-moved-as-well"></a>**A.  Перемещение базы данных в экземпляр на другом физическом сервере с использованием метода отсоединения и присоединения.  Также перемещаются имя входа и задание агента SQL Server.**  
+### <a name="a--move-database-using-detach-and-attach-method-to-an-instance-on-a-different-physical-server--a-login-and-sql-server-agent-job-will-be-moved-as-well"></a>**А.  Перемещение базы данных в экземпляр на другом физическом сервере с использованием метода отсоединения и присоединения.  Также перемещаются имя входа и задание агента SQL Server.**  
 В следующем примере база данных `Sales` , имя входа Windows `contoso\Jennie` и задание агента SQL Server `Jennie’s Report` переносятся из экземпляра SQL Server 2008 на сервера `Server1` в экземпляр SQL Server 2016 на сервере `Server2`.  `Jennie’s Report` использует базу данных `Sales` .  `Sales` еще не существует на целевом сервере `Server2`.  `Server1` после перемещения базы данных будет назначен другой команде.
   
 6.  Как было указано выше в разделе [Ограничения](#Restrictions), при переносе задания агента SQL Server, который ссылается на базу данных, не существующую на целевом сервере, необходимо создать на целевом сервере базу данных оболочки.  Создайте на целевом сервере базу данных оболочки с именем `Sales` . 
@@ -404,5 +406,4 @@ ms.lasthandoff: 06/22/2017
  [Создание учетной записи-посредника агента SQL Server](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988)  
   
   
-
 

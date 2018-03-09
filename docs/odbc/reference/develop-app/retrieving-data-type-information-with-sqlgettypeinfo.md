@@ -3,10 +3,12 @@ title: "Получение данных сведения о типе с SQLGetTy
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - identifiers [ODBC], SQL type
 - SQL type identifiers [ODBC]
 ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b3ae7606967ce0f77fea638a69a8b44f0e175a48
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8a1eb337e91595b5be013067847f73c3de117e97
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>Получение типа данных при помощи SQLGetTypeInfo
 Поскольку приблизительны сопоставления из базовых типов данных SQL для идентификаторов типа ODBC, ODBC представляет собой функцию (**SQLGetTypeInfo**), через который полностью можно драйвер описания каждого типа данных SQL в источнике данных. Эта функция возвращает результирующий набор, каждая строка описывает характеристики одного типа, такие как имя, идентификатор типа, точность, масштаб и допустимость значений NULL.  
@@ -39,4 +40,3 @@ ms.lasthandoff: 09/09/2017
 -   ODBC не определяет имена типов данных для использования в **CREATE TABLE** и **ALTER TABLE** инструкции. Вместо этого приложение должно использовать имя, возвращаемое в столбце TYPE_NAME результирующего набора, возвращаемого **SQLGetTypeInfo**. Это обусловлено тем, что несмотря на то, что большинство SQL не меняется большая между СУБД, имена типов данных очень различаются. Вместо того, драйверы для синтаксического анализа инструкций SQL и замените имена типов данных стандартные имена типов данных СУБД, ODBC требует, чтобы в первую очередь используются имена СУБД конкретного приложения.  
   
  Обратите внимание, что **SQLGetTypeInfo** не описываются все типы данных, приложение может возникнуть обязательно. В частности результирующие наборы могут содержать типы данных, не поддерживаемого непосредственно компонентом источника данных. Например типы данных столбцов в результирующие наборы, возвращаемые функциями каталога определяются ODBC и возможно, эти типы данных не поддерживается источником данных. Чтобы определить характеристики типов данных в результирующем наборе, приложение вызывает **SQLColAttribute**.
-

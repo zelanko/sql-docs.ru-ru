@@ -3,22 +3,26 @@ title: "Отзывы пользователей для SQL Server для Linux |
 description: "Описывает способы сбора и настроен на платформе Linux отзывы пользователей SQL Server."
 author: annashres
 ms.author: anshrest
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 25772bd0ad7b2994e732e97fd264bef0e951eea9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b2736223d2a333738ca17b3b3307034c6744512d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Отзывы пользователей для SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 По умолчанию Microsoft SQL Server собирает сведения о том, как пользователи используют приложение. В частности, SQL Server собирает сведения об установке, использовании и производительности. Эти сведения помогают корпорации Майкрософт улучшать продукты и удовлетворять ожидания клиентов. Например, корпорация Майкрософт собирает сведения о кодах ошибок, с которыми сталкиваются пользователи. Это помогает нам исправлять вызвавшие их проблемы, улучшать качество документации об использовании SQL Server и определять, нужно ли добавить в продукт новые возможности, которые будут полезны нашим клиентам.
 
@@ -140,4 +144,3 @@ SQL Server 2017 всегда собирает и отправляет свед�
 ## <a name="next-steps"></a>Следующие шаги
 
 Дополнительные сведения о SQL Server в Linux см. в разделе [Обзор SQL Server в Linux](sql-server-linux-overview.md).
-

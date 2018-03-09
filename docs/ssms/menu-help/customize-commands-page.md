@@ -3,30 +3,31 @@ title: "Настройка (страница \"Команды\") | Докуме�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.vs.customizecom.f1
 - vs.customize.commands
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e85facb982aa8d7bea852051bbe4e9b37811c4c5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: fca3838ebce7827c6f44fbffe21f3ed05d17d024
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="customize-commands-page"></a>Настройка (страница «Команды»)
-В этом диалоговом окне можно вводить и удалять команды панелей инструментов и меню, а также изменять изображения для кнопок на панели инструментов или команд меню. Чтобы открыть страницу **Команды** , в меню **Сервис** выберите команду **Настройка** , а затем выберите **Команды**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этом диалоговом окне можно вводить и удалять команды панелей инструментов и меню, а также изменять изображения для кнопок на панели инструментов или команд меню. Чтобы открыть страницу **Команды** , в меню **Сервис** выберите команду **Настройка** , а затем выберите **Команды**.  
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
 **Категории**  
@@ -47,4 +48,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
 [Настройка меню и сочетаний клавиш](../../ssms/customize-menus-and-shortcut-keys.md)  
   
-

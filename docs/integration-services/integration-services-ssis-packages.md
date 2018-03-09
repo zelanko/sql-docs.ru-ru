@@ -1,10 +1,13 @@
 ---
-title: "Службы Integration Services (SSIS) пакеты | Документы Microsoft"
+title: "Пакеты служб Integration Services (SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/31/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -20,17 +23,16 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-caps.latest.revision: 72
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2a80b0c5d00cac3ca874bb61d1acf55311892dec
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 54d83a301d72577eadd7e042977b572c7f8f1a57
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-packages"></a>Пакеты служб Integration Services (SSIS)
   Пакет — это организованная коллекция соединений, элементов потока управления, элементов потока данных, обработчиков событий, переменных, параметров и конфигураций, которая собирается либо с помощью графических средств проектирования, предоставляемых службами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , либо программно.  Затем собранный пакет сохраняется в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], хранилище пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] или в файловую систему. Также вы можете развернуть проект служб ssISnoversion на сервере [!INCLUDE[ssIS](../includes/ssis-md.md)] . Пакет — это рабочий блок, который можно получить, выполнить и сохранить.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 08/03/2017
   
  На приведенной ниже диаграмме показан простой пакет, содержащий поток управления с задачей потока данных, которая, в свою очередь, содержит поток данных.  
   
- ![Поток управления и поток данных пакета](../integration-services/media/ssis-package.gif "пакета потока управления и потока данных")  
+ ![Пакет с потоком управления и потоком данных](../integration-services/media/ssis-package.gif "Пакет с потоком управления и потоком данных")  
   
  После создания основного пакета в него добавляются дополнительные функции, такие как ведение журнала, и переменные, расширяющие функциональные возможности пакета. Дополнительные сведения приведены в разделе, посвященном объектам, расширяющим функциональность пакетов.  
   
@@ -109,14 +111,13 @@ ms.lasthandoff: 08/03/2017
   
  Чтобы изменить идентификатор пакета GUID, повторно сформируйте значение идентификатора GUID для свойства **ID** в окне свойств среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Чтобы изменить имя пакета, можно изменить значение свойства **Name** в окне свойств. Можно также использовать средство командной строки **dtutil** или изменить идентификатор GUID и имя программными средствами. Дополнительные сведения см. в разделах [Установка свойств пакета](../integration-services/set-package-properties.md) и [Программа dtutil](../integration-services/dtutil-utility.md).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для создания пакетов, в состав служб [!INCLUDE[ssIS](../includes/ssis-md.md)] входят два графических средства: конструктор служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и мастер импорта и экспорта служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Подробные сведения см. в следующих разделах.  
   
--   [Импорт и экспорт данных с помощью мастера экспорта и импорта SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
+-   [Импорт и экспорт данных с помощью мастера импорта и экспорта SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
   
 -   [Создание пакетов в SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
--   В разделе [программное построение пакетов](../integration-services/building-packages-programmatically/building-packages-programmatically.md) в руководстве для разработчиков. 
+-   См. раздел [Программное построение пакетов](../integration-services/building-packages-programmatically/building-packages-programmatically.md) руководства разработчика. 
   
   
-

@@ -1,52 +1,53 @@
 ---
-title: "Catalog.worker_agents (база данных SSISDB) | Документы Microsoft"
+title: "catalog.worker_agents (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-views
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0bd0d827-e2f1-44fe-aa90-6bf922d68d16
-caps.latest.revision: 3
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: d56af0ab150255c53746898a638a32112938755c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/08/2017
-
+ms.openlocfilehash: 5b3d7ae2666a6adc774093a8496863685457e7e6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogworkeragents-ssisdb-database"></a>Catalog.worker_agents (база данных SSISDB)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="catalogworkeragents-ssisdb-database"></a>catalog.worker_agents (база данных SSISDB)
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Отображает сведения по [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] шкалы Out работника.
+Отображает сведения для рабочей роли [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out.
 
 |Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|WorkerAgentId|**uniqueidentifier**|Агент рабочий идентификатор из шкалы Out работника.|
-|IsEnabled|**bit**|Указывает, включена ли работник Out шкалы.|
-|DisplayName|**nvarchar(256)**|Отображаемое имя шкалы ожидания рабочего процесса.|
-|Description|**nvarchar(256)**|Описание масштабирования ожидания рабочего процесса.|
-|MachineName|**nvarchar(256)**|Имя компьютера, для масштабирования ожидания рабочего процесса.|
-|Теги|**nvarchar(max)**|Теги шкалы ожидания рабочего процесса.|
-|Имя_учетной_записи|**nvarchar(256)**|Учетная запись пользователя, со службой шкалы Out работника.|
-|LastOnlineTime|**DateTimeOffset(7)**|Время последнего работника Out шкалы находится в оперативном режиме.|
+|WorkerAgentId|**uniqueidentifier**|Идентификатор агента рабочей роли для рабочей роли Scale Out.|
+|IsEnabled|**bit**|Указывает, включена ли рабочая роль Scale Out.|
+|DisplayName|**nvarchar(256)**|Отображаемое имя рабочей роли Scale Out.|
+|Description|**nvarchar(256)**|Описание рабочей роли Scale Out.|
+|MachineName|**nvarchar(256)**|Имя компьютера рабочей роли Scale Out.|
+|Теги|**nvarchar(max)**|Теги рабочей роли Scale Out.|
+|UserAccount|**nvarchar(256)**|Учетная запись, под которой выполняется служба рабочей роли Scale Out.|
+|LastOnlineTime|**datetimeoffset(7)**|Время последнего подключения рабочей роли Scale Out.|
 
-## <a name="remarks"></a>Замечания
-В этом представлении отображается строка для каждого работника шкалы ожидания, который соединиться шкалы Out главного работа с каталогом SSISDB.
+## <a name="remarks"></a>Remarks
+В этом представлении отображается строка для каждой рабочей роли Scale Out, которая подключается к мастеру Scale Out, работающему с каталогом SSISDB.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Разрешения
 Это представление требует применения одного из следующих разрешений:
 
-- Членство в **ssis_admin** роли базы данных
+- Членство в роли базы данных **ssis_admin**
 
-- Членство в **ssis_cluster_executor** роли базы данных
+- Членство в роли базы данных **ssis_cluster_executor**
 
-- Членство в **sysadmin** роли сервера
-
+- Членство в роли сервера **sysadmin**

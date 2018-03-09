@@ -2,40 +2,38 @@
 title: "Элемент FoldingParameters (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - FoldIndex
 - FoldCount
 - MaxCases
 - FoldingParameters
 - FoldTargetAttribute
-helpviewer_keywords:
-- FoldingParameters element
+helpviewer_keywords: FoldingParameters element
 ms.assetid: 5f5c5a3e-4aed-48fb-bca5-e67f421bef2f
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8f6fa2a178bc1d8f9722a101d7305cedfa248663
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ddfadd34b6d0b0ae7ba459f35ccb7c1fa7faa31a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="foldingparameters-element-assl"></a>Элемент FoldingParameters (ASSL)
-  Задает параметры, используемые сервером служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] при перекрестной проверке моделей интеллектуального анализа данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Указывает параметры, используемые [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] сервера при выполнении перекрестной проверки моделей интеллектуального анализа данных.  
   
 > [!NOTE]  
 >  Эти параметры предназначены только для внутреннего использования. Эти сведения предоставлены только в информационных целях.  
@@ -71,7 +69,7 @@ ms.lasthandoff: 09/01/2017
 |Родительский элемент|[MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md)|  
 |Дочерние элементы|*FoldIndex*<br /><br /> *FoldCount*<br /><br /> *MaxCases*<br /><br /> *FoldTargetAttribute*|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эти свойства предназначены только для внутреннего использования, и они не поддерживаются в инструкциях DDL.  
   
  Дополнительные сведения об использовании перекрестной проверки в [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], в разделе [меры в отчете перекрестной проверки](../../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).  
@@ -82,4 +80,3 @@ ms.lasthandoff: 09/01/2017
  [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

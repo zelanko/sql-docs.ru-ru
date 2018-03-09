@@ -2,34 +2,32 @@
 title: "Измерения (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- Dimensions
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Dimensions function
+f1_keywords: Dimensions
+dev_langs: kbMDX
+helpviewer_keywords: Dimensions function
 ms.assetid: 64f63aa0-ef74-4415-a0c9-8acc6cd81739
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e14d37c916240c0c7cc454df50d44d4de4ba319a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 462ea16745816af3c344af05f24437f370e7ce9e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dimensions-mdx"></a>Dimensions (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает иерархию, указанную числовым или строковым выражением.  
   
@@ -51,7 +49,7 @@ Dimensions(Hierarchy_Name)
  *Hierarchy_Name*  
  Допустимое строковое выражение, указывающее имя иерархии.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если указан номер иерархии, **измерения** функция возвращает иерархии, отсчитываемый от нуля позиция в пределах куба которого является указанным номером иерархии.  
   
  Если имя иерархии указано, **измерения** функция возвращает указанную иерархию. Как правило, используется это строковая версия **измерения** функцию с определяемой пользователем функции.  
@@ -95,4 +93,3 @@ FROM [Adventure Works]
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

@@ -1,12 +1,14 @@
 ---
 title: "Пример свойства сервера (VBScript) | Документы Microsoft"
-ms.prod: sql-non-specified
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -14,17 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - Server property [RDS], VBScript example
 ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 609afcec22d49c7391f48042720367dce1146681
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b8d6ce28412b0c4ca55cd9a8c126d36bd5db0296
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="server-property-example-vbscript"></a>Пример свойства сервера (VBScript)
 > [!IMPORTANT]
@@ -181,10 +182,9 @@ End Sub
 <!-- EndServerRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Свойства сервера (RDS)](../../../ado/reference/rds-api/server-property-rds.md)
-
+ [Свойство Server (служба удаленных рабочих столов)](../../../ado/reference/rds-api/server-property-rds.md)
 
 
 

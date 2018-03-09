@@ -1,10 +1,13 @@
 ---
-title: "Создание событий в задаче «скрипт» | Документы Microsoft"
+title: "Вызов событий в задаче \"Скрипт\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -22,22 +25,21 @@ helpviewer_keywords:
 - Events property
 - Script task [Integration Services], events
 ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
-caps.latest.revision: 55
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 80f16c8d4fa5d4eb27eefe76b2dcf811e21cfaab
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 505c7b6c5601ab78fa7004c715d52440242b4dd4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="raising-events-in-the-script-task"></a>Вызов событий в задаче «Скрипт»
-  События позволяют сообщать об ошибках и предупреждениях, а также передавать другие сведения, например о ходе выполнения задачи или ее состоянии, в пакет, содержащий задачу. Пакет предоставляет обработчики событий для управления уведомлениями о событиях. Задача «скрипт» может порождать события, вызывая методы <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> свойство **Dts** объекта. Дополнительные сведения о том, как [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] обработке событий в пакетах, в разделе [службы Integration Services &#40; Службы SSIS &#41; Обработчики событий](../../../integration-services/integration-services-ssis-event-handlers.md).  
+  События позволяют сообщать об ошибках и предупреждениях, а также передавать другие сведения, например о ходе выполнения задачи или ее состоянии, в пакет, содержащий задачу. Пакет предоставляет обработчики событий для управления уведомлениями о событиях. Задача "Скрипт" может создавать события, вызывая методы свойства <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> объекта **Dts**. Дополнительные сведения о том, как пакеты службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] обрабатывают события, см. в разделе [Обработчики событий в службах Integration Services (SSIS)](../../../integration-services/integration-services-ssis-event-handlers.md).  
   
- События могут регистрироваться любым регистратором, включенным в пакете. Регистраторы сохраняют сведения о событиях в хранилище данных. Задача «Скрипт» может также использовать метод <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> для занесения записей в регистратор без вызова событий. Дополнительные сведения об использовании <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> метода, в разделе [ведения журналов в задаче «скрипт»](../../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md).  
+ События могут регистрироваться любым регистратором, включенным в пакете. Регистраторы сохраняют сведения о событиях в хранилище данных. Задача «Скрипт» может также использовать метод <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> для занесения записей в регистратор без вызова событий. Дополнительные сведения об использовании метода <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> см. в разделе [Ведение журналов в задаче "Скрипт"](../../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md).  
   
  Для вызова события задача «Скрипт» вызывает один из методов, предоставляемых свойством <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>. В следующей таблице перечислены методы, предоставляемые свойством <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>.  
   
@@ -150,8 +152,7 @@ public class ScriptMain
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Службы Integration Services &#40; Службы SSIS &#41; Обработчики событий](../../../integration-services/integration-services-ssis-event-handlers.md)   
- [Добавить обработчик событий в пакет](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
+ [Обработчики событий в службах Integration Services (SSIS)](../../../integration-services/integration-services-ssis-event-handlers.md)   
+ [Добавление обработчика событий к пакету](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   
-

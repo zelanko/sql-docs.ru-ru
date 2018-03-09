@@ -2,25 +2,26 @@
 title: "Резервное копирование и восстановление баз данных DQS | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
-caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "12"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f91672b2c64c8e754ab055ab2701a91aa8613ad8
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6bab5e3ddb4473a949b12f0ce001a947262966c7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Резервное копирование и восстановление баз данных DQS
   В этом разделе описывается, как проводить резервное копирование и восстановление баз данных DQS.  
@@ -35,9 +36,9 @@ ms.lasthandoff: 09/09/2017
   
 -   Убедитесь, что на сервере DQS нет подключенных пользователей.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
   
 -   Для выполнения операций резервного копирования и восстановления учетная запись Windows должна быть членом предопределенной роли сервера sysadmin на этом экземпляре SQL Server.  
   
@@ -81,4 +82,3 @@ ms.lasthandoff: 09/09/2017
  [Управление базами данных DQS](../data-quality-services/manage-dqs-databases.md)  
   
   
-

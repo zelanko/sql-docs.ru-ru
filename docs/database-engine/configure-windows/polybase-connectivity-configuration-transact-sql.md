@@ -2,9 +2,12 @@
 title: "Конфигурация подключения к PolyBase (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, pdw
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: article
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
-caps.latest.revision: 14
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4a75f97300af0ddf7023fd95efa5e3a973ec332a
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
-ms.openlocfilehash: b57b1e802969995f87d5663e5e7dbdc92700a9b5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Конфигурация подключения к PolyBase (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
 
   Отображает или изменяет глобальные параметры конфигурации для подключения к PolyBase Hadoop и хранилищу BLOB-объектов Azure.  
   
@@ -49,10 +51,10 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@configname=** ] **"***имя_параметра***"**  
+ [ **@configname=** ] **'***option_name***'**  
  Имя параметра конфигурации. Аргумент*option_name* имеет тип **varchar(35)**, значение по умолчанию — NULL. Если этот параметр отсутствует, возвращается список всех параметров.  
   
- [ **@configvalue=** ] **"***значение***"**  
+ [ **@configvalue=** ] **'***value***'**  
  Новое значение параметра конфигурации. Аргумент*value* имеет тип **int**и значение по умолчанию NULL. Максимальное значение зависит от конкретного параметра.  
   
  **'hadoop connectivity'**  
@@ -110,7 +112,7 @@ RECONFIGURE
 ## <a name="limitations-and-restrictions"></a>Ограничения  
  Недопустимо использование RECONFIGURE в явной или неявной транзакции.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Все пользователи могут выполнять команду **sp_configure** без параметров или с параметром @configname .  
   
  Для изменения значения конфигурации или выполнения инструкции RECONFIGURE требуется разрешение **ALTER SETTINGS** на уровне сервера или членство в предопределенной роли сервера **sysadmin** .  
@@ -145,11 +147,10 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   
   
-

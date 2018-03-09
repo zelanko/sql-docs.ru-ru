@@ -3,24 +3,25 @@ title: "Проверка пользовательского ввода | Док�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8aa867b0-e6f0-49eb-93d3-817ae2ed8f77
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a00eafc9f72910f05c1850b25bba5e91a4e276a6
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f46806c35bffcc9cacd77483f6a4cfe01153d5a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="validating-user-input"></a>Проверка введенного пользователем
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -35,4 +36,3 @@ ms.lasthandoff: 09/09/2017
  [Защита приложений драйвера JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   
-

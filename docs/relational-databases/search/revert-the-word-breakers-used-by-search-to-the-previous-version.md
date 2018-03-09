@@ -2,32 +2,35 @@
 title: "Восстановление предыдущих версий средств разбиения текста на слова, используемых поиском | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a3ad97ccd909c55268cf2be050d913fdc931433a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2549481c3e09e4b052e0eea40c993ccf191f38ba
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Перевод средств разбиения по словам, используемых поиском, на предыдущую версию
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливает и включает версию средств разбиения по словам и парадигматических модулей для всех языков, поддерживающих полнотекстовый поиск, за исключением корейского. В этом разделе описывается способ переключения из данной версии этих компонентов в предыдущую версию или обратно, из предыдущей версии в новую версию.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливает и включает версию средств разбиения по словам и парадигматических модулей для всех языков, поддерживающих полнотекстовый поиск, за исключением корейского. В этой статье описывается способ переключения из данной версии этих компонентов в предыдущую версию или обратно из предыдущей версии в новую версию.  
   
- В этом разделе не обсуждаются следующие языки.  
+ В этой статье не обсуждаются следующие языки:  
   
--   **Английский**. Способ возврата к использованию или восстановления компонентов английского языка см. в разделе [Изменение средства разбиения по словам, используемого для английского (США) и английского (Британского)](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+-   **Английский**. Способ возврата к использованию или восстановления компонентов английского языка см. в разделе [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 -   **Датский, польский и турецкий**. Средства разбиения по словам сторонних поставщиков для датского, польского и турецкого языков, входившие в предыдущие выпуски [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , заменены компонентами [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -38,7 +41,7 @@ ms.lasthandoff: 09/01/2017
  Общие сведения о средствах разбиения по словам и парадигматических модулях см. в статье [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
 ##  <a name="overview"></a> Общие сведения о возврате к использованию и восстановлении средств разбиения по словам и парадигматических модулей  
- Инструкции по возврату к использованию и восстановлению средств разбиения по словам и парадигматических модулей зависят от языка. В следующей таблице обобщены три набора действий, выполнение которых может потребоваться для возврата к предыдущей версии компонентов.  
+ Инструкции по возврату к использованию и восстановлению средств разбиения по словам и парадигматических модулей зависят от языка. В приведенной ниже таблице обобщены три набора действий, выполнение которых может потребоваться для возврата к предыдущей версии компонентов.  
   
 |Текущий файл|Предыдущий файл|Число затронутых языков|Действия для файлов|Действия для разделов реестра|  
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
@@ -49,7 +52,7 @@ ms.lasthandoff: 09/01/2017
 > [!WARNING]  
 >  Если заменить текущую версию файла NaturalLanguage6.dll на другую, это затронет все языки, использующие этот файл.  
   
- Файлы, описанные в этой статье, представляют собой DLL-файлы, которые устанавливаются в папку `MSSQL\Binn` для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Полный путь обычно выглядит следующим образом:  
+ Файлы, описанные в этой статье, представляют собой DLL-файлы, которые устанавливаются в папку `MSSQL\Binn` для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Полный путь обычно выглядит следующим образом:  
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
@@ -135,7 +138,7 @@ ms.lasthandoff: 09/01/2017
 |Язык|Аббревиатура<br />применяется в<br />реестр|LCID|  
 |--------------|---------------------------------------|----------|  
 |Арабский|ara|1025|  
-|Немецкий|deu|1031|  
+|German|deu|1031|  
 |Японский|jpn|1041|  
 |Нидерландский|nld|1043|  
 |Русский|rus|1049|  
@@ -227,7 +230,7 @@ ms.lasthandoff: 09/01/2017
 |Предыдущий идентификатор CLSID|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |Предыдущее имя файла|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |Текущий идентификатор CLSID|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|Текущее имя файла|MSWB7.dll|MSWB7.dll|  
+|Текущее имя файла|MsWb7.dll|MSWB7.dll|  
   
  **Японский (jpn), LCID 1041**  
   
@@ -245,7 +248,7 @@ ms.lasthandoff: 09/01/2017
 |Предыдущий идентификатор CLSID|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |Предыдущее имя файла|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |Текущий идентификатор CLSID|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|Текущее имя файла|MSWB7.dll|MSWB7.dll|  
+|Текущее имя файла|MsWb7.dll|MSWB7.dll|  
   
  **Русский (rus), LCID 1049**  
   
@@ -254,7 +257,7 @@ ms.lasthandoff: 09/01/2017
 |Предыдущий идентификатор CLSID|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |Предыдущее имя файла|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |Текущий идентификатор CLSID|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|Текущее имя файла|MSWB7.dll|MSWB7.dll|  
+|Текущее имя файла|MsWb7.dll|MSWB7.dll|  
   
 ##  <a name="newnew"></a> Языки, у которых именем файла текущего и предыдущего средства разбиения по словам не является NaturalLanguage6.dll  
  Для языков в следующей таблице имена файлов предыдущей версии средств разбиения по словам и парадигматических модулей отличаются от имен файлов новой версии. NaturalLanguage6.dll не является ни текущим, ни предыдущим именем файла. Заменять файлы не требуется, поскольку программа установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] копирует и текущую и предыдущую версии компонентов в папку Binn. Однако необходимо изменить набор записей реестра, указав в них предыдущую или текущую версию компонентов.  
@@ -382,8 +385,7 @@ ms.lasthandoff: 09/01/2017
 |Текущее имя файла|MsWb70804.dll|  
   
 ## <a name="see-also"></a>См. также:  
- [Изменение средства разбиения по словам, используемого для английского (США) и английского (Британского)](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [Изменения в функциях полнотекстового поиска](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   
-

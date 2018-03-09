@@ -2,9 +2,12 @@
 title: "Включение и отключение отслеживания измененных данных (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,19 +18,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], disabling databases
 - change data capture [SQL Server], disabling tables
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cf419d411328bd5c437dfbd93d419b7fd944a495
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: c19f08347185ee6ea46977df74d0317041beb020
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Включение и отключение отслеживания измененных данных (SQL Server)
-  В этом разделе описано, как включить или отключить систему отслеживания измененных данных для базы данных и таблицы.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+В этом разделе описано, как включить или отключить систему отслеживания измененных данных для базы данных и таблицы.  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>Включение системы отслеживания измененных данных для базы данных  
  Прежде чем можно будет создавать экземпляры отслеживания для отдельных таблиц, член предопределенной роли сервера **sysadmin** должен включить отслеживание измененных данных для базы данных. Это выполняется запуском хранимой процедуры [sys.sp_cdc_enable_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) в контексте базы данных. Чтобы определить, включено ли отслеживание в базе данных, выполните запрос к столбцу **is_cdc_enabled** в представлении каталога **sys.databases**.  
@@ -41,7 +45,7 @@ ms.lasthandoff: 06/22/2017
 > [!IMPORTANT]  
 >  Найти шаблоны в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]можно, открыв меню **Вид**, щелкнув пункт **Обозреватель шаблонов**, а затем выбрав **Шаблоны SQL Server**. **Система отслеживания измененных данных** — это вложенная папка. В этой папке можно найти все шаблоны, упоминаемые в данном разделе. Значок **Обозреватель шаблонов** также присутствует на панели инструментов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
-```tsql  
+```sql  
 -- ====  
 -- Enable Database for CDC template   
 -- ====  
@@ -61,7 +65,7 @@ GO
 > [!IMPORTANT]  
 >  Чтобы найти шаблоны в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], перейдите к элементу **Просмотр**, нажмите кнопку **Обозреватель шаблонов**, а затем нажмите кнопку **Шаблоны SQL Server**. **Система отслеживания измененных данных** — это подпапка, в которой можно найти все шаблоны, упомянутые в этом разделе. Значок **Обозреватель шаблонов** также присутствует на панели инструментов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
-```tsql  
+```sql  
 -- =======  
 -- Disable Database for Change Data Capture template   
 -- =======  
@@ -84,7 +88,7 @@ GO
   
  По умолчанию таблица изменений расположена в файловой группе по умолчанию для базы данных. Если владельцы базы данных хотят управлять расположением отдельных таблиц изменений, то они могут использовать параметр *@filegroup_name* , чтобы указать файловую группу для таблицы изменений, с которой будет связан экземпляр системы отслеживания. Именованная файловая группа уже должна существовать. Обычно рекомендуется, чтобы таблицы изменений располагались не в той файловой группе, где содержатся исходные таблицы. Пример использования параметра **@filegroup_name** см. в шаблоне *@filegroup_name* .  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Specifying Filegroup Option Template  
 -- =========  
@@ -106,7 +110,7 @@ GO
   
  Если использовать шлюзовую роль нежелательно, необходимо явно присвоить параметру *@role_name* значение NULL. Пример включения таблицы без шлюзовой роли см. в шаблоне **Enable a Table Without Using a Gating Role** .  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Without Using a Gating Role template   
 -- =========  
@@ -131,7 +135,7 @@ GO
   
  Пример создания экземпляра системы отслеживания с обеими функциями см. в шаблоне **Enable a Table for All and Net Changes Queries** .  
   
-```tsql  
+```sql  
 -- =============  
 -- Enable a Table for All and Net Changes Queries template   
 -- =============  
@@ -155,7 +159,7 @@ GO
   
  Пример отключения таблицы см. в шаблоне отключения экземпляра системы отслеживания для таблицы.  
   
-```tsql  
+```sql  
 -- =====  
 -- Disable a Capture Instance for a Table template   
 -- =====  

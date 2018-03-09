@@ -3,7 +3,7 @@ title: "Свойство DefinedSize (ADOX) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - DefinedSize property [ADOX]
 ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c6a316c2cbd05fd4ec0df58d79f48b1f3922509f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3b2dffe4d0e6d8d3d1c9f0a13886bd3aff4def31
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="definedsize-property-adox"></a>Свойство DefinedSize (ADOX)
 Указывает, указанных выше максимальный размер столбца.  
@@ -40,14 +39,13 @@ ms.lasthandoff: 09/09/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает **длинные** значение, которое определяет его максимальную длину в символах значений данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Значение по умолчанию равно нулю (0).  
   
  Это свойство доступно только для чтения для [столбца](../../../ado/reference/adox-api/column-object-adox.md) объектов уже добавлен в коллекцию.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект столбца (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+ [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства DefinedSize (Visual Basic)](../../../ado/reference/adox-api/definedsize-property-example-vb.md)
-

@@ -3,8 +3,11 @@ title: "Выражения сравнения (XQuery) | Документы Micr
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - comparison operators [XQuery]
 - value comparison operators
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
-caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: dfaf22d056759c6dc9350bec0bd265d1909d46b5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f2c9db925f42cbe4775c942322d9a83797d17ae3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="comparison-expressions-xquery"></a>Выражения сравнения (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Язык XQuery предоставляет следующие типы операторов сравнения:  
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 09/01/2017
   
  Общие операторы определены в представленной ниже таблице.  
   
-|Оператор|Description|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |=|Равно|  
 |!=|Не равно|  
@@ -144,7 +146,7 @@ WHERE ContactID=1
   
  Операторы сравнения значений определены в следующей таблице.  
   
-|Оператор|Description|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |eq|Равно|  
 |ne|Не равно|  
@@ -251,9 +253,8 @@ where ProductModelID=19
   
 -   Запрос возвращает значение True.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Система типов &#40; XQuery &#41;](../xquery/type-system-xquery.md)   
  [Выражения XQuery](../xquery/xquery-expressions.md)  
   
   
-

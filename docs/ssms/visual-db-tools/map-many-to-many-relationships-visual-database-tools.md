@@ -3,10 +3,12 @@ title: "Построение связи \"многие ко многим\" (ви
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - mapping many-to-many relationships [SQL Server]
 - database diagrams [SQL Server], relationships
 ms.assetid: 2977cf92-98b5-48b2-b0fd-8fbc7040f2b4
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ed3cbddf952f2991c51a281187d398959fa52ad0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 393483c566c3e4b61833972ef2b33ba2dde8404a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>Построение связи «многие ко многим» (визуальные инструменты для баз данных)
-Отношения «многие ко многим» позволяют связать каждую строку одной таблицы с несколькими строками другой таблицы и наоборот. Например, отношение «многие ко многим» можно создать для таблиц `authors` и `titles` , чтобы связать каждого автора с его книгами и сопоставить каждой книге ее автора. Если создать связь «один ко многим» в любой таблице, получится, что каждая книга сможет иметь только одного автора или каждый автор — только одну книгу.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Отношения "многие ко многим" позволяют связать каждую строку одной таблицы с несколькими строками другой таблицы, и наоборот. Например, отношение «многие ко многим» можно создать для таблиц `authors` и `titles` , чтобы связать каждого автора с его книгами и сопоставить каждой книге ее автора. Если создать связь «один ко многим» в любой таблице, получится, что каждая книга сможет иметь только одного автора или каждый автор — только одну книгу.  
   
 Для осуществления связей «многие ко многим» между таблицами базы данных применяются связующие таблицы. Они содержат первичные ключевые столбцы двух таблиц, которые необходимо связать. После этого можно создать связи между первичными ключевыми столбцами каждой таблицы и соответствующими столбцами в связующей таблице. В базе данных pubs связующей является таблица `titleauthor` .  
   
@@ -53,4 +54,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>См. также:  
 [Работа с диаграммами баз данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-

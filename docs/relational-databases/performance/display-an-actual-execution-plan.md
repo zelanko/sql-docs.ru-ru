@@ -2,11 +2,13 @@
 title: "Отображение фактического плана выполнения | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - viewing execution plans
 - execution plans [SQL Server], displaying
 ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
-caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "24"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d34a82e9ceb357fde6059e3259cb2be64a3e50d7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
-ms.openlocfilehash: da2e499e231dc55691a9b39929e4ba6589b5e442
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/22/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="display-an-actual-execution-plan"></a>Отображение действительного плана выполнения
-  В этой теме описывается, как создать фактические графические планы выполнения с использованием среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Фактические планы выполнения создаются после выполнения запросов или пакетов [!INCLUDE[tsql](../../includes/tsql-md.md)]. Поэтому фактический план выполнения содержит сведения времени выполнения, такие как фактические метрики использования ресурса и предупреждения времени выполнения (если они есть). Создаваемый план выполнения отображает фактический план выполнения запроса, который используется в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] для выполнения запросов.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] В этом разделе описывается, как создать фактические графические планы выполнения с использованием среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Фактические планы выполнения создаются после выполнения запросов или пакетов [!INCLUDE[tsql](../../includes/tsql-md.md)]. Поэтому фактический план выполнения содержит сведения времени выполнения, такие как фактические метрики использования ресурса и предупреждения времени выполнения (если они есть). Создаваемый план выполнения отображает фактический план выполнения запроса, который используется в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] для выполнения запросов.  
   
  Для использования этой возможности необходимо иметь соответствующие разрешения на выполнение запросов [!INCLUDE[tsql](../../includes/tsql-md.md)] , для которых создается графический план выполнения, и разрешение SHOWPLAN для всех баз данных, на которые ссылается запрос.  
   
@@ -49,4 +50,3 @@ ms.lasthandoff: 08/22/2017
  
  > [!NOTE] 
  > Также можно использовать [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) для получения сведений о плане выполнения каждой инструкции после ее выполнения. При использовании в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] на вкладке *Результаты* будет отображаться ссылка на план выполнения в графическом формате.   
-

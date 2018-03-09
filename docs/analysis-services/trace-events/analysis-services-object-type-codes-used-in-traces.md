@@ -2,28 +2,30 @@
 title: "Коды типов, используемые для трассировки объектов служб Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
-caps.latest.revision: 5
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cd17ad086169a53673d7c9ba48f79058dd87769d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7bd50f15603440953dc2f9c52ae669e5fcbd3108
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>Коды типов объектов служб Analysis Services, используемые для трассировки
-  На этой странице перечислены типы всех объектов (шестизначное число) модели данных служб Analysis Services. Эти коды отображаются в журналах трассировки и используются для определения типа объекта, связанного с определенной блокировкой. Например, время ожидания блокировки в базе данных будет указывать на тип объекта 100002, который является типом объекта базы данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+На этой странице перечислены типы всех объектов (шестизначное число) модели данных служб Analysis Services. Эти коды отображаются в журналах трассировки и используются для определения типа объекта, связанного с определенной блокировкой. Например, время ожидания блокировки в базе данных будет указывать на тип объекта 100002, который является типом объекта базы данных.  
   
 > [!NOTE]  
 >  Ниже перечислено большее число кодов, чем в действительности будет отображаться в журнале трассировки. Ниже представлен полный список кодов типов для каждого объекта, но только те объекты, которые будут заблокированы, будут представлять код типа объекта в журнале трассировки.  
@@ -34,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 |-----------------|-----------------|  
 |100000|Server|  
 |100001|Command|  
-|100002|База данных|  
+|100002|база данных|  
 |100003|DataSource|  
 |100004|DatabasePermission|  
 |100005|Роль|  
@@ -127,4 +129,3 @@ ms.lasthandoff: 09/01/2017
 |100155|PerspectiveCollection|  
   
   
-

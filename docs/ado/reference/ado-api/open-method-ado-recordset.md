@@ -3,7 +3,7 @@ title: "Open-метод (набора записей ADO) | Документы M
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 74e6fc58d5b32313806301467ca48b9f033b083b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1977d0381311ac2d7f43bd161099d1f0eb0f6665
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-recordset"></a>Метод Open (набора записей ADO)
 Открывает курсор на [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -63,7 +62,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 > [!NOTE]
 >  **ExecuteOpenEnum** значения **adExecuteNoRecords** или **adExecuteStream** не должны использоваться с **откройте**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Курсор по умолчанию для ADO **записей** курсора однопроходный, только для чтения, расположенные на сервере.  
   
  С помощью **откройте** метод **записей** объект, он открывается курсор, который представляет записей из базовой таблицы, результаты запроса или ранее сохраненного **набора записей**.  
@@ -110,9 +109,9 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  Определенные сочетания [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) и [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значения недопустимы. Сведения о том, какие параметры нельзя использовать вместе, см. в разделах для [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md), и [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md).  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Открытие и закрытие примере методы (Visual Basic)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Пример методов открытия и закрытия (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [Пример методов открытия и закрытия (VC ++)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
@@ -121,5 +120,4 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  [Метод Open (ADO запись)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Метод Open (поток ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Метод OpenSchema](../../../ado/reference/ado-api/openschema-method.md)   
- [Save-метод](../../../ado/reference/ado-api/save-method.md)
-
+ [Метод Save](../../../ado/reference/ado-api/save-method.md)

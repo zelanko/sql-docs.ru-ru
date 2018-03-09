@@ -1,31 +1,31 @@
 ---
-title: "DAX в табличных моделях (табличные службы SSAS) | Документы Microsoft"
+title: "DAX в табличных моделях | Документы Microsoft"
 ms.custom: 
 ms.date: 10/21/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
-caps.latest.revision: 26
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8bf7c6895b62fb992094bb3850a90ee904b7a956
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
-ms.openlocfilehash: 2a72b3e1ec1dad514eb8394460267b44bca79d7d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/23/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="dax-in-tabular-models-ssas-tabular"></a>DAX в табличных моделях (табличные службы SSAS)
-  Выражения анализа данных (DAX) — это язык формул, используемый для создания пользовательских вычислений в Analysis Services, Power BI Desktop и Power Pivot в Excel. К формулам DAX относятся функции, операторы и значения, позволяющие проводить расширенные вычисления над данными в таблицах и столбцах.  
+# <a name="dax-in-tabular-models"></a>DAX в табличных моделях 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Выражения анализа данных (DAX) — это язык формул, используемый для создания пользовательских вычислений в Analysis Services, Power BI Desktop и Power Pivot в Excel. К формулам DAX относятся функции, операторы и значения, позволяющие проводить расширенные вычисления над данными в таблицах и столбцах.  
   
  DAX используется в Analysis Services, Power BI Desktop и Power Pivot в Excel, этот раздел относится больше на проектах табличной модели служб Analysis Services, разрабатываемых в SQL Server Data Tools (SSDT).  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 10/23/2017
   
  Табличные модели и DAX поддерживают следующие типы данных:  
   
-|Тип данных в модели|Тип данных в DAX|Description|  
+|Тип данных в модели|Тип данных в DAX|Описание|  
 |------------------------|----------------------|-----------------|  
 |Whole Number|64-разрядное (8-байтовое) целочисленное значение <sup>1, 2</sup>|Числа без десятичных разрядов. Целые числа могут быть положительными или отрицательными, но не могут содержать дробную часть в диапазоне -9,223,372,036,854,775,808 (-2^63) и 9,223,372,036,854,775,807 (2^63-1).|  
 |Десятичное число|64-разрядное (8 байтовое) вещественное число <sup>1, 2</sup>|Вещественные числа — это числа, которые могут иметь знаки после запятой. Вещественные числа включают широкий диапазон значений.<br /><br /> Отрицательные числа от -1.79E +308 до -2.23E -308<br /><br /> Zero<br /><br /> Положительные числа от 2.23E -308 до 1.79E + 308<br /><br /> Однако количество значащих цифр ограничено 17 знаками после запятой.|  
@@ -108,7 +108,7 @@ ms.lasthandoff: 10/23/2017
   
 |||  
 |-|-|  
-|Формула|Description|  
+|Формула|Описание|  
 |`=TODAY()`|Вставляет текущую дату в каждую строку столбца.|  
 |`=3`|Вставляет значение 3 в каждую строку столбца.|  
 |`=[Column1] + [Column2]`|Добавляет значения в столбцы [Column1] и [Column2] одной строки и вставляет результаты в вычисляемый столбец той же строки.|  
@@ -142,7 +142,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Эта формула содержит следующие элементы:  
   
-|Элемент формулы|Description|  
+|Элемент формулы|Описание|  
 |---------------------|-----------------|  
 |`Days in Current Quarter:=`|Имя меры.|  
 |`=`|Формула начинается со знака равенства (=).|  
@@ -367,7 +367,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  Обработка и повторное вычисление не влияют на формулы фильтров строк, кроме случая, когда в результате повторного вычисления возвращается другое значение, вследствие чего строка становится доступна или недоступна для запросов членов ролей.  
   
- Дополнительные сведения см. в разделе [Обработка данных (табличные службы SSAS)](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
+ Дополнительные сведения см. в разделе [обработки данных](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
 ##  <a name="bkmk_troubleshoot"></a> Устранение ошибок в формулах  
  Если во время определения формулы выводится ошибка, значит формула может содержать *синтаксическую ошибку*, *семантическую ошибку*или *ошибку вычисления*.  
@@ -400,8 +400,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [Меры](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Вычисляемые столбцы](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [Роли](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
- [Ключевые показатели эффективности](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [Поддерживаемые источники данных](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
-

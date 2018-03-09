@@ -1,10 +1,13 @@
 ---
-title: "Выберите пакет | Документы Microsoft"
+title: "Выбор пакета | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Select a Package dialog box
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
-caps.latest.revision: 16
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4ac230866e3abd79f711441928d09c11c05ba650
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fab572c14d87acd3776a94675063ffe372525a5a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-a-package"></a>Выбор пакета
   Используйте диалоговое окно **Выбор пакета** , чтобы указать пакет, из которого задача «Очередь сообщений» может получать сообщения.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 08/03/2017
  **Имя пакета**  
  Выберите пакет, хранимый на указанном сервере.  
   
- **Сервер**  
+ **Server**  
  Введите имя сервера или выберите его из списка.  
   
  **Использовать проверку подлинности Windows**  
@@ -53,7 +55,7 @@ ms.lasthandoff: 08/03/2017
  **Использовать проверку подлинности SQL Server**  
  Выберите для использования проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Имя пользователя**  
+ **User name**  
  При использовании проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] введите имя пользователя, которое необходимо использовать для входа на сервер.  
   
  **Пароль**  
@@ -63,8 +65,7 @@ ms.lasthandoff: 08/03/2017
  **Имя файла**  
  Укажите путь к пакету или нажмите кнопку обзора **(…)** и определите его расположение.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задача «Очередь сообщений»](../../integration-services/control-flow/message-queue-task.md)  
   
   
-

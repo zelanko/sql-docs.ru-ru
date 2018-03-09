@@ -1,29 +1,30 @@
 ---
 title: "Параметры (миграция) (MySQLToSQL) проекта | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 97ea6eb0162b544f3c0666042b0ae70a5783fe43
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4ab9b6365d527d2cbd804ab0095021c2f2d9dc2b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-migration-mysqltosql"></a>Параметры проекта (миграция) (MySQLToSQL)
 На странице миграции **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA выполняет миграцию данных из MySQL в SQL Server.  
@@ -91,4 +92,3 @@ ms.lasthandoff: 08/02/2017
 |**Обработка ошибок**|Указывает способ обработки ошибок в миграции значений пространственных типов данных. Если указан параметр «Replace со значением NULL», все Пространственные значения приводит к ошибкам будут заменены значением NULL. В противном случае выполняется замена для перечисления отсутствует.<br /><br />**Режим по умолчанию**: вызывают ошибку<br /><br />**Режим оптимистичного**: вызывают ошибку<br /><br />**Полный режим**: вызывают ошибку|  
 |**Значение проверки**|Указывает способ обработки недопустимые Пространственные значения. Если указан параметр «Попробуйте сделать допустимым», выполняется попытка изменить недопустимые значения, чтобы сделать их допустимые.<br /><br />**Режим по умолчанию**: преобразовать в допустимый<br /><br />**Режим оптимистичного**: не изменяйте<br /><br />**Полный режим**: преобразовать в допустимый|  
   
-

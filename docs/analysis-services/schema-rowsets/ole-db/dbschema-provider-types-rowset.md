@@ -2,43 +2,40 @@
 title: "Набор строк DBSCHEMA_PROVIDER_TYPES | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DBSCHEMA_PROVIDER_TYPES
+apiname: DBSCHEMA_PROVIDER_TYPES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DBSCHEMA_PROVIDER_TYPES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DBSCHEMA_PROVIDER_TYPES rowset
 ms.assetid: 255e01ba-53a9-478d-9b86-45faba76710e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bea7c78fddb8aa56f1ccae47b9a3964d81e1d115
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6906aec1d1c1dd53b8c833d59483aa0453cf284b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dbschemaprovidertypes-rowset"></a>Набор строк DBSCHEMA_PROVIDER_TYPES
-  Показывает (базовые) типы данных, поддерживаемые поставщиком данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет данные (базовые) типы, поддерживаемые поставщиком данных.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  Набор строк **DBSCHEMA_PROVIDER_TYPES** содержит следующие столбцы.  
   
 |Имя столбца|Индикатор типа|Description|  
 |-----------------|--------------------|-----------------|  
-|**ФУНКЦИЯ TYPE_NAME**|**DBTYPE_WSTR**|Имя типа данных, связанного с поставщиком.|  
+|**TYPE_NAME**|**DBTYPE_WSTR**|Имя типа данных, связанного с поставщиком.|  
 |**ТИП ДАННЫХ**|**DBTYPE_UI2**|Индикатор типа данных.|  
 |**COLUMN_SIZE**|**DBTYPE_UI4**|Длина нечислового столбца или параметра, которая определяется максимальной длиной или длиной столбца, определенной для этого типа поставщиком. Для символьных данных это максимальная или определенная длина в символах. Для типов данных DateTime это длина представления строки (с учетом максимально допустимой точности доли секунды).<br /><br /> Если это числовой тип данных, то это верхняя граница максимальной точности типа данных.|  
 |**LITERAL_PREFIX**|**DBTYPE_WSTR**|Символ или символы, используемые в качестве префикса для этого типа в тексте команды.|  
@@ -55,7 +52,7 @@ ms.lasthandoff: 09/01/2017
 |**MAXIMUM_SCALE**|**DBTYPE_I2**|Максимальное количество цифр, которые могут стоять справа от десятичного знака, если индикатор типа **DBTYPE_VARNUMERIC**, **DBTYPE_DECIMAL**или **DBTYPE_NUMERIC**; в противном случае — значение N**U**LL.|  
 |**GUID**|**DBTYPE_GUID**|(Предполагается использовать в будущем) Идентификатор **GUID** типа, если тип описан в библиотеке типов. В противном случае — значение **NULL**.|  
 |**БИБЛИОТЕКИ ТИПОВ**|**DBTYPE_WSTR**|(Предполагается использовать в будущем) Библиотека типа, содержащая описание типа, если тип описан в библиотеке типов. В противном случае — значение NULL.|  
-|**ВЕРСИЯ**|**DBTYPE_WSTR**|(Предполагается использовать в будущем) Версия определения типа. Поставщикам могут потребоваться различные версии определения типа. Различные поставщики могут использовать различные схемы управления версиями, такие как отметки времени или числа (целые или с плавающей точкой). Значение**NULL** , если не поддерживается.|  
+|**VERSION**|**DBTYPE_WSTR**|(Предполагается использовать в будущем) Версия определения типа. Поставщикам могут потребоваться различные версии определения типа. Различные поставщики могут использовать различные схемы управления версиями, такие как отметки времени или числа (целые или с плавающей точкой). Значение**NULL** , если не поддерживается.|  
 |**IS_LONG**|**DBTYPE_BOOL**|Значение типа Boolean, указывающее на то, относится тип данных к большим двоичным объектам (BLOB) или к типу «длинное целое».<br /><br /> **VARIANT_TRUE** указывает на тип данных **BLOB** , содержащий тип «длинное целое»; определение типа «длинное целое» зависит от поставщика.<br /><br /> **VARIANT_FALSE** указывает на тип данных **BLOB** , не содержащий тип «длинное целое», или на другой тип данных, отличный от **BLOB**.<br /><br /> Значение определяет настройку флага **DBCOLUMNFLAGS_ISLONG** , возвращаемого **GetColumnInfo** в **IColumnsInfo** и **GetParameterInfo** в **ICommandWithParameters**.|  
 |**BEST_MATCH**|**DBTYPE_BOOL**|Значение типа Boolean, указывающее, является ли тип данных наиболее точным соответствием.<br /><br /> **VARIANT_TRUE** указывает, что тип данных является наиболее точным соответствием всех типов данных в хранилище данных и тип данных OLE DB, указываемый значением в столбце **DATA_TYPE** .<br /><br /> **VARIANT_FALSE** указывает, что тип данных не является лучшим соответствием.<br /><br /> Для каждого набора строк, в которых значение столбца **DATA_TYPE** идентично, для столбца **BEST_MATCH** задается **VARIANT_TRUE** только в одной строке.|  
 |**IS_FIXEDLENGTH**|**DBTYPE_BOOL**|Логическое значение, которое указывает, имеет ли столбец фиксированную длину.<br /><br /> **VARIANT_TRUE** указывает, что столбцы этого типа, созданные с использованием языка описания данных (DDL) будут иметь фиксированную длину.<br /><br /> **VARIANT_FALSE** указывает, что столбцы этого типа, созданные с использованием языка описания данных (DDL) будут иметь переменную длину.<br /><br /> Если поле имеет значение **NULL**, то неизвестно, будет ли поставщик сопоставлять это поле со столбцом с фиксированной или переменной длиной.|  
@@ -71,7 +68,6 @@ ms.lasthandoff: 09/01/2017
 |**BEST_MATCH**|**DBTYPE_BOOL**|  
   
 ## <a name="see-also"></a>См. также:  
- [Наборы строк схемы OLE DB](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
+ [Наборы строк схемы OLE DB](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   
-

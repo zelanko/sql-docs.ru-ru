@@ -2,9 +2,12 @@
 title: "Включение или отключение сетевого протокола сервера | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,26 +23,26 @@ helpviewer_keywords:
 - surface area configuration [SQL Server], connection protocols
 - connections [SQL Server], enabling remote using Configuration Manager
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: cd18129e43db63cf01623e6b5706c34d79f4ba8e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: e6716392a65ce797e2f0bae543f50899b9fbeb2d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
-# Включение или отключение сетевого протокола сервера
-  Все сетевые протоколы устанавливаются программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но некоторые могут быть включены, а некоторые — нет. В этом разделе описано, как включить или отключить сетевой протокол сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или PowerShell. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] необходимо остановить и перезапустить, чтобы изменения вступили в силу.  
+# <a name="enable-or-disable-a-server-network-protocol"></a>Включение или отключение сетевого протокола сервера
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Все сетевые протоколы устанавливаются программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но некоторые могут быть включены, а некоторые — нет. В этом разделе описано, как включить или отключить сетевой протокол сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или PowerShell. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] необходимо остановить и перезапустить, чтобы изменения вступили в силу.  
   
 > [!IMPORTANT]  
 >  Во время установки [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] для группы BUILTIN\Users добавляется имя входа. Благодаря этому все прошедшие проверку подлинности пользователи компьютера получают доступ к экземпляру [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] как члены роли public. Имя входа группы BUILTIN\Users можно удалить, чтобы ограничить доступ к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] только пользователям компьютера, у которых есть отдельные имена входа, или членам других групп Windows с именами входа.  
   
 > [!WARNING]  
->  Поставщики данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[msCoName](../../includes/msconame-md.md)] для версий с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по [!INCLUDE[sssql14](../../includes/sssql14-md.md)] по умолчанию поддерживают только TLS 1.0 и SSL 3.0. Если применить другой протокол (например, TLS 1.1 или TLS 1.2), изменив протокол на уровне операционной системы SChannel, то подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может завершиться ошибкой, если не установлено соответствующее обновление для поддержки TLS 1.1 и 1.2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которое указано <a href="https://support.microsoft.com/en-us/help/3135244/tls-1-2-support-for-microsoft-sql-server">здесь</a>. Начиная с [!INCLUDE[sssql15](../../includes/sssql15-md.md)] все выпуски SQL Server поддерживают TLS 1.2 без установки дополнительных обновлений.
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[msCoName](../../includes/msconame-md.md)] для версий с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по [!INCLUDE[sssql14](../../includes/sssql14-md.md)] по умолчанию поддерживают только TLS 1.0 и SSL 3.0. Если применить другой протокол (например, TLS 1.1 или TLS 1.2), изменив протокол на уровне операционной системы SChannel, то подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может завершиться ошибкой, если не установлено соответствующее обновление для поддержки TLS 1.1 и 1.2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которое указано <a href="https://support.microsoft.com/en-us/help/3135244/tls-1-2-support-for-microsoft-sql-server">здесь</a>. Начиная с [!INCLUDE[sssql15](../../includes/sssql15-md.md)] все выпуски SQL Server поддерживают TLS 1.2 без установки дополнительных обновлений.
   
  **В этом разделе**  
   
@@ -51,7 +54,7 @@ ms.lasthandoff: 10/04/2017
   
 ##  <a name="SSMSProcedure"></a> Использование диспетчера конфигурации SQL Server  
   
-#### Включение протокола SNP  
+#### <a name="to-enable-a-server-network-protocol"></a>Включение протокола SNP  
   
 1.  В диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на панели консоли раскройте **Сетевая конфигурация SQL Server**.  
   
@@ -65,7 +68,7 @@ ms.lasthandoff: 10/04/2017
   
 ##  <a name="PowerShellProcedure"></a> Использование SQL Server PowerShell  
   
-#### Включение сетевого протокола сервера с использованием PowerShell  
+#### <a name="to-enable-a-server-network-protocol-using-powershell"></a>Включение сетевого протокола сервера с использованием PowerShell  
   
 1.  Откройте командную строку с использованием разрешений администратора.  
   
@@ -99,7 +102,7 @@ ms.lasthandoff: 10/04/2017
     $Np  
     ```  
   
-#### Настройка протоколов на локальном компьютере  
+#### <a name="to-configure-the-protocols-for-the-local-computer"></a>Настройка протоколов на локальном компьютере  
   
 -   Если скрипт запускается локально и настраивает локальный компьютер, с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell можно сделать скрипт более гибким, динамически определяя имя локального компьютера. Для получения имени локального компьютера замените строку, устанавливающую переменную `$uri` , следующей строкой.  
   
@@ -107,7 +110,7 @@ ms.lasthandoff: 10/04/2017
     $uri = "ManagedComputer[@Name='" + (get-item env:\computername).Value + "']/ServerInstance[@Name='MSSQLSERVER']/ServerProtocol[@Name='Tcp']"  
     ```  
   
-#### Перезапуск компонента Database Engine с использованием SQL Server PowerShell  
+#### <a name="to-restart-the-database-engine-by-using-sql-server-powershell"></a>Перезапуск компонента Database Engine с использованием SQL Server PowerShell  
   
 -   После включения или отключения протоколов необходимо остановить и перезапустить компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] , чтобы эти изменения вступили в действие. Выполните следующие инструкции, чтобы остановить и запустить экземпляр по умолчанию с использованием [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Чтобы остановить и запустить именованный экземпляр, замените `'MSSQLSERVER'` на `'MSSQL$<instance_name>'`.  
   
@@ -134,4 +137,3 @@ ms.lasthandoff: 10/04/2017
     ```  
   
   
-

@@ -3,27 +3,28 @@ title: "SQLConfigDataSource (драйвер Paradox) | Документы Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLConfigDataSource
 ms.assetid: 59e84c4e-debe-49d7-b97b-84c736b0c793
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d1c567bd1490c41822b3df89f04c0d907b0f1a92
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b9acd359d2d99531e3fe4092b3bd20f00e94622a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource (драйвер Paradox)
 > [!NOTE]  
@@ -49,4 +50,3 @@ ms.lasthandoff: 09/09/2017
 |PWD|Пароль.<br /><br /> Необязательное ключевое слово и никогда не должны записываться в файл драйвера. Он используется при обращении к **SQLDriverConnect** от защищенные паролем файлы Paradox. Пароль, используемый допустимы при каждом открытии таблицы. Если пароль не передается в строке подключения, пароль не было установлено для этой таблицы. Если таблицы содержат разные пароли, несколько не удается открыть в том же сеансе, а также можно объединить таблицы.|  
 |READONLY|Значение TRUE, чтобы сделать файл доступным только для чтения; Значение FALSE, чтобы сделать файл не только для чтения.<br /><br /> Таким образом задается один и тот же параметр как **только для чтения** в диалоговом окне программы установки.|  
 |ПОТОКИ|Число фоновых потоков, используемых механизмом. Это значение равно 3 и не может быть изменено.<br /><br /> Таким образом задается один и тот же параметр как **потоков** в диалоговом окне программы установки.|
-

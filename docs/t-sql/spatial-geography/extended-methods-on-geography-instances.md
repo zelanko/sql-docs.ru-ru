@@ -3,8 +3,11 @@ title: "Расширенные методы в экземплярах геогр
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d1822f1b-c1dd-4f2f-ab7c-6617c05a2b6c
-caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3f7af6e687461d9663ca59a6262cbd1ed5c5560f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7f17a6adc4449e0c3e9e1b9e944732a9aa13672b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extended-methods-on-geography-instances"></a>Расширенные методы в экземплярах географических объектов
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает несколько расширенных методов на географических объектах консорциума OGC.  
   
@@ -55,7 +57,7 @@ ms.lasthandoff: 09/01/2017
   
 -   [EnvelopeCenter](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
   
--   [Filter](../../t-sql/spatial-geography/filter-geography-data-type.md)  
+-   [Фильтр](../../t-sql/spatial-geography/filter-geography-data-type.md)  
   
 -   [HasM &#40; тип данных geography &#41;](../../t-sql/spatial-geography/hasm-geography-data-type.md)  
   
@@ -63,11 +65,11 @@ ms.lasthandoff: 09/01/2017
   
 -   [InstanceOf](../../t-sql/spatial-geography/instanceof-geography-data-type.md)  
   
--   [Функция IsNull](../../t-sql/spatial-geography/isnull-geography-data-type.md)  
+-   [IsNull](../../t-sql/spatial-geography/isnull-geography-data-type.md)  
   
 -   [IsValidDetailed &#40; тип данных geography &#41;](../../t-sql/spatial-geography/isvaliddetailed-geography-data-type.md)  
   
--   [LAT](../../t-sql/spatial-geography/lat-geography-data-type.md)  
+-   [Lat](../../t-sql/spatial-geography/lat-geography-data-type.md)  
   
 -   [Long](../../t-sql/spatial-geography/long-geography-data-type.md)  
   
@@ -79,7 +81,7 @@ ms.lasthandoff: 09/01/2017
   
 -   [NumRing](../../t-sql/spatial-geography/numrings-geography-data-type.md)  
   
--   [Уменьшить](../../t-sql/spatial-geography/reduce-geography-data-type.md)  
+-   [Reduce](../../t-sql/spatial-geography/reduce-geography-data-type.md)  
   
 -   [ReorientObject](../../t-sql/spatial-geography/reorientobject-geography-data-type.md)  
   
@@ -91,10 +93,9 @@ ms.lasthandoff: 09/01/2017
   
 -   [Z](../../t-sql/spatial-geography/z-geography-data-type.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы OGC в экземплярах географических объектов](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
  [Статические географические методы OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)   
  [Расширенные статические географические методы](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   
-

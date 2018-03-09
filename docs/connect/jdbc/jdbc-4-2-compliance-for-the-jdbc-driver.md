@@ -3,24 +3,25 @@ title: "JDBC 4.2 соответствия для драйвера JDBC | Док�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 01a193158158bcc4d86c090acc302984b015bc7d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3dbb9bbf584caeca1f6d8db034323e6695512f6a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="jdbc-42-compliance-for-the-jdbc-driver"></a>Соответствие JDBC 4.2 для JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -77,4 +78,3 @@ ms.lasthandoff: 09/09/2017
 |**Новые классы в Java 8:**<br /><br /> LocalDate/LocalTime/LocalDateTime<br /><br /> OffsetTime/OffsetDateTime<br /><br /> **Новые типы JDBC:**<br /><br /> TIME_WITH_TIMEZONE<br /><br /> TIMESTAMP_WITH_TIMEZONE<br /><br /> REF_CURSOR|REF_CURSOR не поддерживается в SQL Server. Драйвер вызывает исключение SQLFeatureNotSupportedException, если используется этот тип. Драйвер поддерживает все остальные новые сопоставления типов Java и JDBC в соответствии со спецификацией JDBC 4.2.|  
   
   
-

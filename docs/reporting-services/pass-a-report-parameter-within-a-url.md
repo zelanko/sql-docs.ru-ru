@@ -1,32 +1,32 @@
 ---
-title: "Передать параметр отчета в URL-адрес | Документы Microsoft"
+title: "Передача параметра отчета в URL-адресе | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - URL access [Reporting Services], passing parameters
 - passing parameters [Reporting Services]
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
-caps.latest.revision: 36
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "36"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3b076b74a6082e34dc9c489c0383fd6a5c3bd4f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9ed073313d11f6764bc845ff1f993994add14f60
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="pass-a-report-parameter-within-a-url"></a>Передать параметр отчета в URL-адресе
+# <a name="pass-a-report-parameter-within-a-url"></a>Pass a Report Parameter Within a URL
   Чтобы передать параметры в отчет, можно включить их в URL-адрес отчета. Такие параметры URL-адреса не снабжаются префиксами, поскольку они передаются непосредственно в подсистему обработки отчетов.  
   
 > [!IMPORTANT]  
@@ -75,7 +75,7 @@ parameter
   
 ```  
   
- Например:  
+ Например,  
   
 ```  
 SalesOrderNumber:isnull=true  
@@ -111,9 +111,8 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Доступ к URL-адрес &#40; Службы SSRS &#41;](../reporting-services/url-access-ssrs.md)   
- [Ссылка на параметр доступа URL-адрес](../reporting-services/url-access-parameter-reference.md)  
+## <a name="see-also"></a>См. также:  
+ [Доступ по URL-адресу (службы SSRS)](../reporting-services/url-access-ssrs.md)   
+ [Ссылка на параметр доступа по URL-адресу](../reporting-services/url-access-parameter-reference.md)  
   
   
-

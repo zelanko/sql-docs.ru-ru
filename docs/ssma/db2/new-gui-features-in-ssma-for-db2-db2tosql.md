@@ -1,29 +1,30 @@
 ---
 title: "Новые возможности графического пользовательского интерфейса в SSMA для DB2 (DB2ToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4735320bb802c86cf0e3eaa563e49fa0542b294b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8745b8f4711c245cfab83329f897b8fef0d8610b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>Новые возможности графического пользовательского интерфейса в SSMA для DB2 (DB2ToSQL)
 В этой главе Описание новых возможностей пользовательского интерфейса SSMA.  
@@ -132,4 +133,3 @@ ms.lasthandoff: 08/02/2017
 ### <a name="advanced-search"></a>Расширенный поиск  
 Чтобы открыть диалоговое окно расширенного поиска, для поиска точек редактирования меню, а затем нажмите кнопку расширенного поиска. В диалоговом окне можно будет найти любой объект, с помощью шаблона. В верхней части диалогового окна можно выбрать область и объект категории поиска.  
   
-

@@ -3,7 +3,7 @@ title: "Типы курсоров (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - cursors [ADO], types
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3ec8ccca017236a8f6aa784d92e8304a98452f02
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d7648e91432bd90c03398e5189e4101b9741841c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="types-of-cursors-ado"></a>Типы курсоров (ADO)
 Как правило приложение должно использовать простой курсор, который предоставляет доступ необходимых данных. Характеристик курсора дополнительные расширенные возможности (однопроходный, только для чтения, статическим, прокрутка, без буферизации) имеет цену — в клиентской памяти, сетевой нагрузки или производительности. Во многих случаях параметры курсора по умолчанию создать курсор сложнее, чем фактически приложению.  
@@ -44,17 +43,16 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующие подразделы.  
   
--   [Однопроходные курсоры](../../../ado/guide/data/forward-only-cursors.md)  
+-   [Курсоры последовательного доступа](../../../ado/guide/data/forward-only-cursors.md)  
   
 -   [Статические курсоры](../../../ado/guide/data/static-cursors.md)  
   
--   [Управляемые набором ключей курсоры](../../../ado/guide/data/keyset-cursors.md)  
+-   [Курсоры ключевого набора](../../../ado/guide/data/keyset-cursors.md)  
   
 -   [Динамические курсоры](../../../ado/guide/data/dynamic-cursors.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Однопроходные курсоры](../../../ado/guide/data/forward-only-cursors.md)   
  [Статические курсоры](../../../ado/guide/data/static-cursors.md)   
  [Управляемые набором ключей курсоры](../../../ado/guide/data/keyset-cursors.md)   
  [Динамические курсоры](../../../ado/guide/data/dynamic-cursors.md)
-

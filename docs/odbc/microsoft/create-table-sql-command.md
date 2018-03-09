@@ -3,26 +3,26 @@ title: "Создание таблицы - команда SQL | Документ�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- CREATE TABLE [ODBC]
+helpviewer_keywords: CREATE TABLE [ODBC]
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4e4ee29a84fc739cb0f66e1e81f668c8c9598832
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 35a22420b5ecaf21539fd16aecb3870e3f3049dc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-table---sql-command"></a>Создание таблицы - команда SQL
 Создает таблицу, имеющий указанные поля.  
@@ -138,7 +138,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  ИЗ МАССИВА *ArrayName*  
  Указывает имя существующего массива, содержимое которых имя, тип, точность и масштаб для каждого поля в таблице. Содержимое массива может быть определен с **AFIELDS**функция ().  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Новая таблица открывается в минимально доступной рабочей области и может осуществляться с помощью псевдонима. Новая таблица открыт в монопольном режиме, независимо от текущего значения параметра УСТАНОВИТЬ МОНОПОЛЬНУЮ.  
   
  Если база данных открыта и не включать бесплатные предложения, новая таблица добавлена в базу данных. Не удается создать новую таблицу с тем же именем, как таблицы в базе данных.  
@@ -174,5 +174,4 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  [ALTER TABLE - команда SQL](../../odbc/microsoft/alter-table-sql-command.md)   
  [Поддерживаемые типы данных (драйвер ODBC для Visual FoxPro)](../../odbc/microsoft/supported-data-types-visual-foxpro-odbc-driver.md)   
  [Вставка - команды SQL](../../odbc/microsoft/insert-sql-command.md)   
- [ВЫБЕРИТЕ - команда SQL](../../odbc/microsoft/select-sql-command.md)
-
+ [SELECT (команда SQL)](../../odbc/microsoft/select-sql-command.md)

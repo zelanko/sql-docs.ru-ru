@@ -2,11 +2,13 @@
 title: "Репликация столбцов идентификаторов | Документация Майкрософт"
 ms.custom: 
 ms.date: 10/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +19,19 @@ helpviewer_keywords:
 - transactional replication, identity range management
 - identity columns [SQL Server], replication
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
-caps.latest.revision: 51
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ca40d9329a35e4036ec6dd1d065daf86950b26fa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "51"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 9c69e39305a23fafee8c264db3fdb315b6595d01
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replicate-identity-columns"></a>Репликация столбцов идентификаторов
-  Когда столбцу назначается свойство IDENTITY, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] автоматически создает последовательные номера для новых строк, вставляемых в таблицу, которая содержит столбец идентификаторов. Дополнительные сведения см. в статье о [свойстве IDENTITY (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql-identity-property.md). Так как столбцы идентификаторов могут быть включены как часть первичного ключа, важно исключить появление повторяющихся значений в столбцах идентификаторов. Для использования столбцов идентификаторов в топологии репликации, имеющей обновления на нескольких узлах, все узлы топологии репликации должны использовать разные диапазоны значений идентификаторов, чтобы исключить появление повторяющихся идентификаторов.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Когда столбцу назначается свойство IDENTITY, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] автоматически создает последовательные номера для новых строк, вставляемых в таблицу, которая содержит столбец идентификаторов. Дополнительные сведения см. в статье о [свойстве IDENTITY (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql-identity-property.md). Так как столбцы идентификаторов могут быть включены как часть первичного ключа, важно исключить появление повторяющихся значений в столбцах идентификаторов. Для использования столбцов идентификаторов в топологии репликации, имеющей обновления на нескольких узлах, все узлы топологии репликации должны использовать разные диапазоны значений идентификаторов, чтобы исключить появление повторяющихся идентификаторов.  
   
  Например, для издателя может быть задано значение в диапазоне от 1 до 100, для подписчика А в диапазоне от 101 от 200, а для подписчика Б в диапазоне от 201 до 300. Если строка вставляется в издателе и идентификатор имеет значение, равное, например, 65, это значение реплицируется на все подписчики. Когда репликация вставляет данные на каждый подписчик, она не увеличивает значение столбца идентификаторов в таблице подписчика; вместо этого вставляется буквенное значение 65. Увеличение значения столбца идентификаторов вызывается только пользовательскими вставками, а не вставками агента репликации.  
   
@@ -134,4 +136,3 @@ ms.lasthandoff: 06/22/2017
  [sp_adjustpublisheridentityrange (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql.md)  
   
   
-

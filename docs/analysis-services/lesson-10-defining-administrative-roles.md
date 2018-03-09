@@ -2,29 +2,32 @@
 title: "Занятие 10: Определение ролей администрирования | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
-caps.latest.revision: 14
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ed03cf00101a8e36760571a89c9bfe25dff98bca
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85e262fcb51c0afad3b756ee2cff47fa2da4bf48
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>Занятие 10. Определение ролей администрирования
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 На данном занятии предстоит определить роли безопасности для задач администрирования.  
   
 > [!NOTE]  
@@ -35,10 +38,9 @@ ms.lasthandoff: 09/01/2017
 [Предоставление разрешений на обработку базы данных](../analysis-services/lesson-10-granting-process-database-permissions.md)  
 В этой задаче будет задана роль безопасности с разрешениями на обработку базы данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , после чего будет выполнена проверка созданной роли безопасности.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Сценарий учебника по службам Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Многомерное моделирование (учебник по Adventure Works)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Многомерное моделирование &#40; Учебник по Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   
-

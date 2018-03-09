@@ -2,31 +2,32 @@
 title: "Просмотр состояния зеркального отображения базы данных (среда SQL Server Management Studio) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - states [SQL Server], database mirroring
 - database mirroring [SQL Server], states
 ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 1db44478e3b6c8d51e6d66e9dd5a95b7c5059926
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d1b428ba4fd0196c3b279b905475bc4bad06cd85
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-the-state-of-a-mirrored-database-sql-server-management-studio"></a>Просмотр состояния зеркального отображения базы данных (среда SQL Server Management Studio)
-  Во время сеанса зеркального отображения базы данных можно просмотреть его состояние на странице **Зеркальное отображение** диалогового окна **Свойства базы данных** .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Во время сеанса зеркального отображения базы данных можно просмотреть его состояние на странице **Зеркальное отображение** диалогового окна **Свойства базы данных**.  
   
 ### <a name="to-view-the-status-of-a-database-mirroring-session"></a>Просмотр состояния сеанса зеркального отображения базы данных  
   
@@ -45,10 +46,9 @@ ms.lasthandoff: 08/02/2017
     |Нет соединения|Экземпляр основного сервера не может подключиться к другому участнику или следящему серверу (если он есть).|  
     |Синхронизация|Содержимое зеркальной базы данных отстает от содержимого основной базы данных. Экземпляр основного сервера отправляет записи журнала на экземпляр зеркального сервера, который применяет эти изменения к зеркальной базе данных для выполнения наката.<br /><br /> В начале сеанса зеркального отображения базы данных основная и зеркальная базы данных синхронизированы.|  
     |Отработка отказа|Процесс отработки отказа вручную (смена ролей) начался на экземпляре основного сервера, но еще не был принят зеркальным сервером.|  
-    |Синхронизировано|Зеркальная база данных содержит те же данные, что и основная база данных. Ручная и автоматическая отработка отказа возможна *только* в этом состоянии.|  
+    |синхронизировано;|Зеркальная база данных содержит те же данные, что и основная база данных. Ручная и автоматическая отработка отказа возможна *только* в этом состоянии.|  
   
 ## <a name="see-also"></a>См. также:  
  [Состояния зеркального отображения (SQL Server)](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
   
   
-

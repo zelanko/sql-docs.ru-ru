@@ -2,32 +2,30 @@
 title: "Неоднородные иерархии | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ragged hierarchies [Analysis Services]
+helpviewer_keywords: ragged hierarchies [Analysis Services]
 ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: c1a8c252af66d893a6fe540da71d05fcb09ad8e0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b8bbadff8fa6d3679ad96976a3fe021b5085988a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>Пользовательские иерархии - неоднородные иерархии
-  неоднородная иерархия — это пользовательская иерархия, которая имеет нечетное количество уровней. Распространенные примеры включают организационную диаграмму, на которой менеджеры высокого уровня координируют работу как менеджеров отделов, так и их подчиненных, или географические иерархии, состоящие из страны, региона и города, которые включают города без родительского элемента штата или провинции, например Вашингтон О. К., Ватикан или Новый Дели.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Неровная иерархия — определяемую пользователем иерархию, которая имеет нечетное количество уровней. Распространенные примеры включают организационную диаграмму, на которой менеджеры высокого уровня координируют работу как менеджеров отделов, так и их подчиненных, или географические иерархии, состоящие из страны, региона и города, которые включают города без родительского элемента штата или провинции, например Вашингтон О. К., Ватикан или Новый Дели.  
   
  В большинстве иерархий из измерения на каждом уровне иерархии имеется столько же родительских элементов, сколько у любого другого элемента на том же уровне. Неоднородная иерархия отличается тем, что иерархия, в которой по крайней мере у одного элемента логический родительский элемент не находится ровно на один уровень выше самого элемента. В этом случае различные ветви иерархии заканчиваются на разных уровнях. Из-за этого пути углубленной детализации в клиентском приложении могут быть необоснованно сложными.  
   
@@ -77,11 +75,10 @@ ms.lasthandoff: 09/01/2017
 |**1**|Показать значение заполнителя.|Это значение по умолчанию, которое используют Excel, SSDT и SSMS. Оно указывает серверу возвращать значения заполнителей при детализации углублением пустых уровней в неоднородной иерархии. Если щелкнуть значение заполнителя, то детализацию углублением можно будет продолжить вплоть до дочерних (конечных) узлов.<br /><br /> В Excel задается строка подключения к службам Analysis Services. В ней для каждого нового подключения свойство **MDX Compatibility** всегда устанавливается в значение 1. Это сделано для обеспечения обратной совместимости.|  
 |**2**|Скрыть значение заполнителя (значение NULL или копия значения с родительского уровня), но показывать другие уровни и узлы, имеющие соответствующие значения.|Для неоднородных иерархий обычно предпочтительнее указывать**MDX Compatibility**=2. Отчет служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и некоторые сторонние приложения могут сохранять это значение.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание пользовательских иерархий](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [Пользовательские иерархии](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Родитель потомок измерения](../../analysis-services/multidimensional-models/parent-child-dimension.md)   
  [Свойства строки подключения (службы Analysis Services)](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   
-

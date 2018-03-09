@@ -2,9 +2,12 @@
 title: "Отзыв разрешения на коллекцию схем XML | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -12,19 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - revoking permissions [SQL Server]
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a3f0db25e7283b594357638bd832c982de0569e0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: dc855ac7206e483b4a024d2fa31876a73ffa80b3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>Отмена разрешений на коллекцию схем XML
-  Разрешение на создание коллекции XML-схем можно отменить, выполнив одну из следующих операций:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Разрешение на создание коллекции XML-схем можно отменить, выполнив одну из следующих операций:  
   
 -   Отменить разрешение ALTER для реляционной схемы. Тогда участник не сможет создать коллекцию XML-схем в реляционной схеме. Однако участник сможет создавать коллекции XML-схем в других реляционных схемах той же базы данных.  
   

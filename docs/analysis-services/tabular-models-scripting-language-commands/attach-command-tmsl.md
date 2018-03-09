@@ -2,32 +2,29 @@
 title: "Attach, команда (TMSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7a12d148-eac9-4e6c-a222-1439e0817c64
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 24a0af4329f543c43087f902e959963384def662
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d19093c8030e9faf909168cd4707cf5b3e8759ef
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attach-command-tmsl"></a>Attach, команда (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Присоединяет файл служб Analysis Services на сервере.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Присоединяет файл служб Analysis Services на сервере.  
   
   
 ## <a name="request"></a>Запрос  
@@ -46,9 +43,9 @@ ms.lasthandoff: 09/01/2017
   
 ||||  
 |-|-|-|  
-|**Свойство**|**Default**|**Description**|  
-|базой данных|[Обязательно]|Имя объекта базы данных для присоединения.|  
-|Папка|[Обязательно]|Папка, содержащая присоединенной базе данных.|  
+|**Свойство**|**Default**|**Описание**|  
+|База данных|[Обязательно]|Имя объекта базы данных для присоединения.|  
+|folder|[Обязательно]|Папка, содержащая присоединенной базе данных.|  
 |password|Пустой|Пароль, используемый для шифрования секретных данных в присоединенной базе данных.|  
 |readWriteMode|ReadWrite|Значение перечисления, указывающее режимы доступа, может быть базы данных.<br /><br /> **Ниже приведены значения перечисления.**<br /><br /> readWrite – разрешен доступ для чтения и записи.<br /><br /> только для чтения — разрешен доступ только для чтения.<br /><br /> readOnlyExclusive — только для чтения монопольный доступ.|  
   
@@ -73,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [Подключение и отключение баз данных служб Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
   
-

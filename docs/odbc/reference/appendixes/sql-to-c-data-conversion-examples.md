@@ -3,27 +3,28 @@ title: "SQL, чтобы примеры преобразования данных
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data conversions from SQL to C types [ODBC], examples
 - converting data from SQL to C types [ODBC], examples
 ms.assetid: 0190c76c-7f9b-42f4-be9d-cef7284840fd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 52791dba31e61663a84d9c80041874c1869c2836
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c7dd7b514ce4788a035e6f230f3d0a87a94440f2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-to-c-data-conversion-examples"></a>SQL, чтобы примеры преобразования данных C
 Примеры, приведенные в следующей таблице показано, как драйвер преобразует данные SQL для данных C:  
@@ -51,4 +52,3 @@ SQL_TYPE_TIMESTAMP|1992-12-31 23:45:55.12|SQL_C_CHAR|22|1992-12-31 23:45:55.1\0 
  [] «\0» представляет байт конечное значение null. Драйвер всегда null завершает данные SQL_C_CHAR.  
   
  [b] чисел в этот список — это числа, хранящиеся в полях структуры TIMESTAMP_STRUCT.
-

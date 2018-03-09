@@ -1,11 +1,13 @@
 ---
 title: "Масштабируемые группы PolyBase | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-data-warehouse, pdw
+ms.service: 
+ms.component: polybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-polybase
 ms.tgt_pltfrm: 
@@ -15,21 +17,20 @@ helpviewer_keywords:
 - PolyBase, scale-out groups
 - scale-out PolyBase
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
-caps.latest.revision: 20
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d297ff12aedfdbdf4e5e50c6656c3d208ecb260d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 018d765aace9ef2f46a1dd8da4e0a6c503a0d35f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-scale-out-groups"></a>Масштабируемые группы PolyBase
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-
-  Обработка больших наборов данных в Hadoop или хранилище BLOB-объектов Azure автономным экземпляром SQL Server с PolyBase может сопровождаться снижением производительности. Группы PolyBase позволяют создавать кластеры экземпляров SQL Server для обработки больших наборов данных из внешних источников данных (например, Hadoop или хранилища BLOB-объектов Azure), используя возможности масштабирования. Это помогает повысить производительность запросов.  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Обработка больших наборов данных в Hadoop или хранилище BLOB-объектов Azure автономным экземпляром SQL Server с PolyBase может сопровождаться снижением производительности. Группы PolyBase позволяют создавать кластеры экземпляров SQL Server для обработки больших наборов данных из внешних источников данных (например, Hadoop или хранилища BLOB-объектов Azure), используя возможности масштабирования. Это помогает повысить производительность запросов.  
   
  См. разделы [Приступая к работе с PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) и [Руководство по PolyBase](../../relational-databases/polybase/polybase-guide.md).  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 06/22/2017
  Головной узел содержит экземпляр SQL Server, на который отправляются запросы PolyBase. Каждая группа PolyBase может иметь только один головной узел. Головной узел — это логическая группа на экземпляре SQL Server, в которую входят ядро СУБД SQL, а также ядро PolyBase и служба перемещения данных PolyBase.  
   
 ### <a name="compute-node"></a>Вычислительный узел  
- Вычислительный узел содержит экземпляр SQL Server, который помогает выполнять масштабируемую обработку запросов к внешним данным. Вычислительный узел — это логическая группа на экземпляре SQL Server, в которую входят SQL Server и служба перемещения данных PolyBase. Группа PolyBase может включать несколько вычислительных узлов.  
+ Вычислительный узел содержит экземпляр SQL Server, который помогает выполнять масштабируемую обработку запросов к внешним данным. Вычислительный узел — это логическая группа на экземпляре SQL Server, в которую входят SQL Server и служба перемещения данных PolyBase. Группа PolyBase может включать несколько вычислительных узлов.  В головном узле и вычислительных узлах должна использоваться одна и та же версия SQL Server.
   
 ### <a name="distributed-query-processing"></a>Распределенная обработка запросов  
  Запросы PolyBase отправляются на SQL Server на головном узле. Часть запроса, которая относится к внешним таблицам, передается в ядро PolyBase.  
@@ -55,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="to-configure-a-polybase-group"></a>Настройка группы PolyBase  
   
-### <a name="prerequisites"></a>Предварительные требования  
+### <a name="prerequisites"></a>предварительные требования  
   
 -   N компьютеров, размещенных в одном домене.  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="steps"></a>Шаги  
   
-1.  Установите SQL Server с PolyBase на все доступные компьютеры (N).  
+1.  Установите одну и ту же версию SQL Server с PolyBase на все доступные компьютеры (N).  
   
 2.  Выберите один экземпляр SQL Server в качестве головного узла. Головным узлом можно назначить только экземпляр с установленным SQL Server Enterprise.  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  Для мониторинга узлов группы используйте инструкцию [sys.dm_exec_compute_nodes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).  
   
-5.  Необязательно. Для удаления вычислительных узлов используйте инструкцию [sp_polybase_leave_group (Transact-SQL)](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
+5.  Необязательный параметр. Для удаления вычислительных узлов используйте инструкцию [sp_polybase_leave_group (Transact-SQL)](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
   
 ## <a name="example-walk-through"></a>Пошаговое руководство с примерами  
  В этом руководстве мы настроим группу PolyBase, используя следующие ресурсы.  
@@ -144,4 +145,3 @@ ms.lasthandoff: 06/22/2017
  [Конфигурация PolyBase (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)  
   
   
-

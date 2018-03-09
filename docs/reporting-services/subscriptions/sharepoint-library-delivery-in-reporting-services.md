@@ -1,13 +1,14 @@
 ---
-title: "Доставка библиотек SharePoint в службах Reporting Services | Документы Microsoft"
+title: "Доставка библиотек SharePoint в службах Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +16,16 @@ helpviewer_keywords:
 - delivering reports [Reporting Services]
 - subscriptions [Reporting Services], SharePoint library delivery
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
-caps.latest.revision: 15
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "15"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 18312b5d8222cc79b07eb3a33eaf3fb60454b861
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ea55ee6029eb4f8e75980baf4ee556fabe49c431
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Доставка библиотек SharePoint в службах Reporting Services
   Сервер отчетов, настроенный на работу в режиме интеграции с SharePoint, располагает модулем доставки, с помощью которого можно отправить отчет в библиотеку SharePoint.  
@@ -80,7 +80,7 @@ ms.lasthandoff: 08/09/2017
  Указывает необязательное свойство **Title** для отчета в целевой библиотеке. Это стандартное свойство для всех элементов, хранящихся в библиотеке. Пользователь определяет, отобразить или скрыть это свойство при просмотре содержимого библиотеки на сайте SharePoint.  
   
  Путь  
- Указывает полный URL-адрес библиотеки SharePoint, включая имя сайта и веб-приложения SharePoint. Например: `http://mySharePointWeb/MySite/MyDocLib`; где `http://mySharePointWeb` указывает веб-приложение, «Сайт» — сайт SharePoint, а «Библиотека» — библиотеку SharePoint, где доставить отчет.  
+ Указывает полный URL-адрес библиотеки SharePoint, включая имя сайта и веб-приложения SharePoint. Например, `http://mySharePointWeb/MySite/MyDocLib`, где `http://mySharePointWeb` — веб-приложение, "MySite" — сайт SharePoint, а "MyDocLib" — библиотека SharePoint, в которую должен быть доставлен отчет.  
   
  Нельзя указать страницу, сайт или список. Целевым контейнером должна быть библиотека, расположенная на том же сайте или в той же ферме.  
   
@@ -90,10 +90,9 @@ ms.lasthandoff: 08/09/2017
  Автокопирование  
  Эта функция позволяет автоматически копировать последнюю версию файла в несколько мест. Файл копируется в том случае, если включен режим **Заменить** . В режимах **Автоувеличение** и **Нет**доставка завершается ошибкой **rsDeliveryError** .  
   
-## <a name="see-also"></a>См. также  
- [Создание и управление подписками для серверов отчетов в режиме интеграции с SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [&#40; подписки и доставки Службы Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Укажите учетные данные и сведения о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Определение учетных данных и сведениях о подключении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
-

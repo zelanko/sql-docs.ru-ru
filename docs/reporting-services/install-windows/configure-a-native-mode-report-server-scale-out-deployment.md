@@ -1,12 +1,14 @@
 ---
-title: "Настройка масштабного развертывания сервера отчетов собственный режим | Документы Microsoft"
+title: "Настройка масштабного развертывания сервера отчетов, работающего в собственном режиме | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,18 +16,17 @@ helpviewer_keywords:
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-caps.latest.revision: 13
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 10c05be9afbf0f9e272e35f73957ddb3a19c65f2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6a90a566e3e100fff3bb17e838a368a82ac3f4f5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Настройка масштабного развертывания сервера отчетов, работающего в собственном режиме
 
   Службы Reporting Services в собственном режиме поддерживают модель масштабного развертывания, которая позволяет запускать несколько экземпляров сервера отчетов, совместно использующих одну базу данных сервера отчетов. Масштабное развертывание позволяет увеличить масштабируемость сервера отчетов, чтобы обслуживать одновременно больше пользователей и повысить нагрузочную способность сервера отчетов. Масштабное развертывание также может быть использовано для выделения отдельных серверов для обработки интерактивных или запланированных отчетов.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Инструкции по установке экземпляров сервера отчетов см. в статье [Установка SQL Server 2016 с помощью мастера установки (программа установки)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) в электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Если планируется выполнить масштабное развертывание на NLB-кластере, следует настроить NLB-кластер перед настройкой масштабного развертывания. Дополнительные сведения см. в статье [Configure a Report Server on a Network Load Balancing Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
+-   Если планируется выполнить масштабное развертывание на NLB-кластере, следует настроить NLB-кластер перед настройкой масштабного развертывания. Дополнительные сведения см. в статье [настроить сервер отчетов в кластере с балансированием сетевой нагрузки](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
 -   Просмотрите процедуры этого раздела с инструкциями по организации общего доступа к базе данных сервера отчетов и присоединению серверов отчетов к масштабному развертыванию.  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
     -   Программа установки позволяет установить все экземпляры сервера отчетов, которые будут объединены в масштабное развертывание.  
   
-         Чтобы избежать проблем совместимости баз данных при подключении экземпляров сервера к совместно используемой базе данных, следует убедиться, что все экземпляры имеют одну и ту же версию. Например при создании базы данных сервера отчетов, с помощью экземпляра сервера отчетов SQL Server 2016, все остальные экземпляры в одном развертывании должен также быть SQL Server 2016.  
+         Чтобы избежать проблем совместимости баз данных при подключении экземпляров сервера к совместно используемой базе данных, следует убедиться, что все экземпляры имеют одну и ту же версию. Например, если база данных сервера отчетов создается с помощью экземпляра сервера отчетов SQL Server 2016, все остальные экземпляры, входящие в это развертывание, также должны иметь версию SQL Server 2016.  
   
     -   Диспетчер конфигурации служб Reporting Services позволяет подключить каждый сервер отчетов к общей базе данных. Подключаться к серверам и выполнять настройку можно только единожды за один раз.  
   
@@ -70,23 +71,23 @@ ms.lasthandoff: 08/09/2017
   
 1.  Установите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютер, на котором будут расположены базы данных сервера отчетов. Как минимум, следует установить компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-2.  При необходимости активируйте сервер отчетов для удаленных соединений. В некоторых версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удаленные соединения TCP/IP и именованные каналы по умолчанию не разрешены. Чтобы проверить, разрешены ли удаленные соединения, запустите средство диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выясните значение параметров конфигурации сети для целевого экземпляра. Если удаленный экземпляр является именованным, убедитесь в том, что на целевом сервере включена и запущена служба браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщает номер порта, используемый для подключения к именованному экземпляру. 
+2.  При необходимости активируйте сервер отчетов для удаленных соединений. В некоторых версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удаленные соединения TCP/IP и именованные каналы по умолчанию не разрешены. Чтобы проверить, разрешены ли удаленные соединения, запустите средство диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выясните значение параметров конфигурации сети для целевого экземпляра. Если удаленный экземпляр является именованным, убедитесь в том, что на целевом сервере включена и запущена служба браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщает номер порта, используемый для подключения к именованному экземпляру. 
 
 ## <a name="service-accounts"></a>Учетные записи службы
 
-Учетные записи служб, используемые для экземпляра служб Reporting Services важны при работе с масштабным развертыванием. При развертывании своих экземпляров служб Reporting Services, необходимо выполнить одно из следующих.
+Учетные записи службы, используемые для экземпляра служб Reporting Services, важны при работе с масштабным развертыванием. При развертывании экземпляров служб Reporting Services необходимо выполнить одно из следующих действий.
 
-**Вариант 1:** все экземпляры служб отчетов следует настроить с той же учетной записью домена для учетной записи службы.
+**Вариант 1.** Все экземпляры служб Reporting Services следует настроить с одной и той же учетной записью домена для учетной записи службы.
 
-**Вариант 2:** каждого отдельного учетной записи службы, учетная запись домена или нет, должны быть предоставлены разрешения dbadmin в экземпляре базы данных SQL Server, на котором размещается база данных каталога ReportServer.
+**Вариант 2.** Каждой отдельной учетной записи службы, учетная это запись домена или нет, должны быть предоставлены разрешения dbadmin в экземпляре базы данных SQL Server, на котором размещается база данных каталога сервера отчетов.
 
-Если вы настроили другую конфигурацию, чем любой из перечисленных выше параметров, может появиться временные неполадки изменения задач с помощью агента SQL. Это будет отображаться как ошибки в обеих служб Reporting Services журналов и на веб-портале при редактировании подписки на отчет.
+Если вы настроили другую конфигурацию, отличную от перечисленных выше, при изменении задач с помощью агента SQL могут возникать временные сбои. Они будут отображаться как ошибки в журнале служб Reporting Services и на веб-портале при редактировании подписки на отчет.
 
 ```
 An error occurred within the report server database.  This may be due to a connection failure, timeout or low disk condition within the database.
 ``` 
 
-Проблемы будут периодически, только для сервера, создавшего задачу агента SQL Server будет иметь права на просмотр, удаление или изменение элемента. Если вы не выполните одно из перечисленных выше параметров, операции будет успешной только тогда, когда подсистема балансировки нагрузки отправляет все запросы для этой подписки сервер, который создал задачу агента SQL Server. 
+Проблема будет возникать периодически, поскольку только сервер, создавший задачу агента SQL, будет иметь права на просмотр, удаление или изменение элемента. Если не выполнить ни одно из перечисленных выше действий, операция будет выполняться успешно только тогда, когда подсистема балансировки нагрузки отправит все запросы для этой подписки на сервер, который создал задачу агента SQL Server. 
   
 ## <a name="to-install-the-first-report-server-instance"></a>Установка первого экземпляра сервера отчетов  
   
@@ -94,7 +95,7 @@ An error occurred within the report server database.  This may be due to a conne
   
 2.  Запустите программу настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-3.  Настройте URL-адрес службы отчетов, URL-адрес портала и базы данных сервера отчетов. Дополнительные сведения см. в статье [Настройка сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md) в электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Настройте URL-адрес веб-службы сервера отчетов, URL-адрес веб-портала и базу данных сервера отчетов. Дополнительные сведения см. в статье [Настройка сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md) в электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 4.  Убедитесь, что сервер отчетов находится в рабочем состоянии. Дополнительные сведения см. в статье [Проверка установки служб Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) в электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -132,7 +133,7 @@ An error occurred within the report server database.  This may be due to a conne
   
 2.  Выберите пункт **Масштабное развертывание** , чтобы открыть страницу "Масштабное развертывание". Здесь должны отображаться две записи: по одной для каждого экземпляра сервера отчетов, подключенного к базе данных сервера отчетов. Первый экземпляр сервера отчетов должен быть присоединен. Второй экземпляр сервера отчетов должен быть в состоянии «Ожидание соединения». Если в развертывании подобные записи не отображаются, проверьте соединение с первым сервером отчетов, который должен быть настроен и инициализирован для использования базы данных сервера отчетов.  
   
-     ![Частичный снимок экрана страницы масштабного развертывания](../../reporting-services/install-windows/media/scaloutscreen.gif "частичный снимок экрана страницы масштабного развертывания")  
+     ![Частичный снимок экрана страницы "Масштабное развертывание"](../../reporting-services/install-windows/media/scaloutscreen.gif "Частичный снимок экрана страницы "Масштабное развертывание"")  
   
 3.  На странице "Масштабное развертывание" выберите экземпляр сервера отчетов, ожидающий соединения с развертыванием, и выберите пункт **Добавить сервер**.  
   
@@ -143,16 +144,16 @@ An error occurred within the report server database.  This may be due to a conne
   
 4.  Теперь оба экземпляра сервера отчетов можно проверить, чтобы убедиться в их рабочем состоянии. Чтобы проверить второй экземпляр, можно при помощи программы настройки служб Reporting Services подключиться к серверу отчетов и щелкнуть **URL-адрес веб-службы** или **URL-адрес диспетчера отчетов**.  
   
- Если серверы отчетов планируется запускать в кластере со сбалансированной нагрузкой, необходима дополнительная настройка. Дополнительные сведения см. в статье [Configure a Report Server on a Network Load Balancing Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
+ Если серверы отчетов планируется запускать в кластере со сбалансированной нагрузкой, необходима дополнительная настройка. Дополнительные сведения см. в статье [настроить сервер отчетов в кластере с балансированием сетевой нагрузки](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
 
 ## <a name="next-steps"></a>Следующие шаги
 
 [Настройка учетной записи службы](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
 [Настройка URL-адреса](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
-[Создание базы данных сервера отчетов собственный режим](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+[Создание базы данных сервера отчетов, работающего в собственном режиме](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [Настройка URL-адресов сервера отчетов](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [Настройка подключения к базе данных сервера отчетов](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Добавление и удаление ключей шифрования для масштабного развертывания](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
-[Управление сервером отчетов служб Reporting собственный режим служб](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+[Управление сервером отчетов Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

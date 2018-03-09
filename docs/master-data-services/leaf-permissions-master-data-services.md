@@ -2,9 +2,12 @@
 title: "Разрешения конечного элемента (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
@@ -16,17 +19,16 @@ helpviewer_keywords:
 - leaf members [Master Data Services], attribute permissions
 - attributes [Master Data Services], leaf member attribute permissions
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
-caps.latest.revision: 9
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3a59acad5d9eb7e24aa8fa33a9c6633ddc52f0a1
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 4b7ff5003d1d54d6668719b527402591bed9d1e2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="leaf-permissions-master-data-services"></a>Разрешения конечного элемента (службы основных данных)
   Разрешения конечного элемента применяются к значениям атрибутов для всех конечных элементов сущности.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 09/07/2017
 |**Чтение**|Пользователь может просматривать конечные элементы и атрибуты.|  
 |**Создание**|Пользователь может создавать конечные элементы и назначать значения атрибутов во время создания.|  
 |**Update**|Пользователь может обновлять конечные элементы и атрибуты.|  
-|**Delete**|Пользователь может удалять конечные элементы.|  
+|**Удаление**|Пользователь может удалять конечные элементы.|  
 |**Запретить**|Запрет любого доступа к конечным элементам.|  
   
  Разрешения на чтение, создание, обновление и удаление можно использовать в различных сочетаниях. Когда назначается разрешение на создание, обновление или удаление, автоматически добавляется и разрешение на чтение.  
@@ -57,7 +59,7 @@ ms.lasthandoff: 09/07/2017
 |**Чтение**|Пользователь может просматривать атрибуты.|  
 |**Создание**|Пользователь может назначать значения при создании элементов.|  
 |**Update**|Пользователь может обновлять атрибуты.|  
-|**Delete**|Не влияет.|  
+|**Удаление**|Не влияет.|  
 |**Запретить**|Атрибут не отображается.<br /><br /> Примечание. Нельзя явно запретить доступ к атрибутам "Имя" и "Код".|  
   
 ### <a name="example"></a>Пример  
@@ -81,4 +83,3 @@ ms.lasthandoff: 09/07/2017
  [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)  
   
   
-

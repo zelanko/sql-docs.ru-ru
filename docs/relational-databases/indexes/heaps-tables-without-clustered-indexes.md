@@ -2,9 +2,12 @@
 title: "Кучи (таблицы без кластеризованных индексов) | Документация Майкрософт"
 ms.custom: 
 ms.date: 11/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-indexes
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: article
 helpviewer_keywords:
 - heaps
 ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
-caps.latest.revision: 8
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cae45be3e215c24dd437502f81a870f14d453f3d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7ce633bb25db174bc9484e92deef399b45483387
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>Кучи (таблицы без кластеризованных индексов)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Кучей является таблица без кластеризованного индекса. Для таблиц, сохраненных как куча, может быть создан один или несколько некластеризованных индексов. Данные хранятся в куче без указания порядка. Обычно данные первоначально сохраняются в порядке, в котором строки вставлены в таблицу, но компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] может перемещать данные в куче для более эффективного хранения строк. Поэтому порядок данных нельзя прогнозировать. Чтобы гарантировать порядок строк, возвращаемых из кучи, необходимо использовать предложение **ORDER BY** . Чтобы указать порядок хранения строк, подготовьте кластеризованный индекс для таблицы, чтобы таблица не была кучей.  
   
@@ -76,11 +78,10 @@ ms.lasthandoff: 06/22/2017
 
   
 ## <a name="related-content"></a>См. также  
- [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  
+ [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
  [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)  
   
  [Описания кластеризованных и некластеризованных индексов](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Интернет-ошибка сервера: Отказано в дос
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - access denied error in RDS [ADO]
 ms.assetid: e5b43cfa-da8d-430d-a2ab-5443dda47a16
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8d5dd778ab543b719f44334bc2d344a38964e05f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0338761d1fbd9991185959cfcac4d54746fb6ebb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="internet-server-error-access-denied"></a>Интернет-ошибка сервера: Отказано в доступе
 Если эта ошибка появляется, это обычно означает, что Microsoft Internet Information Services (IIS) возвращены следующие состояния:  
@@ -37,9 +36,8 @@ ms.lasthandoff: 09/09/2017
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные принципы RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
 
 
 

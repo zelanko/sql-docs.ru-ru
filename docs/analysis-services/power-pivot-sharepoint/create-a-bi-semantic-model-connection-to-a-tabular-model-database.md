@@ -2,30 +2,30 @@
 title: "Создание соединения семантической модели бизнес-Аналитики в базе данных табличной модели | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
-caps.latest.revision: 16
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0077f3a970f872329db9c30e16ae5653a4ccb13f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7c4e9b6b1814994caf778e0c3d50a69ffc70d4ee
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Создание соединения семантической модели бизнес-аналитики с табличным шаблоном базы данных
-  Сведения, приведенные в этом разделе, помогут настроить соединение семантической модели бизнес-аналитики, которое перенаправляется на базу данных табличной модели, запущенную в экземпляре служб Analysis Services за пределами фермы SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Сведения, приведенные в этом разделе, помогут настроить соединение семантической модели бизнес-аналитики, которое перенаправляется на базу данных табличной модели, запущенную в экземпляре служб Analysis Services за пределами фермы SharePoint.  
   
  После создания соединения семантической модели бизнес-аналитики и настройки разрешений SharePoint и служб Analysis Services это соединение можно использовать в качестве источника данных для отчетов Excel или [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_BISM"></a> Предоставление разрешений на чтение табличного шаблона базы данных  
  Поскольку база данных запущена на сервере за пределами фермы, частью настройки соединения является предоставление административных и пользовательских разрешений для внутреннего сервера служб Analysis Services. Службы Analysis Services используют модель разрешений на основе ролей. Пользователи, подключающиеся к шаблонам базы данных, должны иметь разрешения «Чтение» или выше, которые они получили от роли, предоставляющей своим членам разрешения на чтение.  
   
- Роли, а иногда членство в ролях, определяются при создании модели в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Для создания ролей нельзя использовать среду SQL Server Management Studio, однако ее можно использовать для добавления членов в уже определенную роль. Дополнительные сведения о создании ролей см. в разделе [Создание ролей и управление ими (табличные службы SSAS)](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
+ Роли, а иногда членство в ролях, определяются при создании модели в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Для создания ролей нельзя использовать среду SQL Server Management Studio, однако ее можно использовать для добавления членов в уже определенную роль. Дополнительные сведения о создании ролей см. в разделе [Создание и управление ролями](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
   
 #### <a name="assign-role-membership"></a>Назначение членства в ролях  
   
@@ -151,7 +151,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>См. также  
  [Соединение семантической модели бизнес-аналитики PowerPivot (BISM-файлы)](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
- [Создание подключения между семантической моделью бизнес-аналитики и книгой PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
+ [Создание подключения между семантической моделью бизнес-аналитики и книгой Power Pivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
   
-

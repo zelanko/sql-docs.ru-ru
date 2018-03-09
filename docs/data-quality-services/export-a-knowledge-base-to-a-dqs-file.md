@@ -2,25 +2,26 @@
 title: "Экспорт базы знаний в файл DQS | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
-caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "19"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1b7bca78f2d4538b1b4769efd3d34ba21ae019e6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3aa8fa674fc21b52bcf924218448641624673cb7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>Экспорт базы знаний в файл .dqs
   В этом разделе описывается экспорт всей базы знаний в файл данных DQS в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Экспортировать в файл данных можно домен или всю базу знаний. Сведения об экспорте домена см. в разделе [Экспорт домена в файл DQS](../data-quality-services/export-a-domain-to-a-dqs-file.md).  
@@ -34,9 +35,9 @@ ms.lasthandoff: 09/09/2017
 ###  <a name="Prerequisites"></a> Предварительные требования  
  Чтобы экспортировать базу знаний в файл данных DQS, необходимо создать и открыть базу знаний. Файл DQS не требуется, он будет создан в процессе экспорта.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Для экспорта базы знаний в файл данных DQS необходимо быть членом роли dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
 ##  <a name="Export"></a> Export a knowledge base to a .dqs file  
@@ -55,4 +56,3 @@ ms.lasthandoff: 09/09/2017
  После экспорта базы знаний в файл DQS можно импортировать базу знаний на тот же сервер [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] (с новым именем) или на другой сервер [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
   
-

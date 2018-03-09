@@ -1,42 +1,46 @@
 ---
-title: "Занятие 5. Создание простого моделирования (глубокое погружение в обработку и анализ данных) | Документация Майкрософт"
+title: "Создание простого моделирования (SQL и R глубокое погружение) | Документы Microsoft"
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-server-2016
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
+- SQL Server 2017
 dev_langs:
 - R
 ms.assetid: f420b816-ddab-4a1a-89b9-c8285a2d33a3
-caps.latest.revision: 16
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: cc613d303fa3200c3460face71399223e00272e6
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e5bbd69bba01da2aacd3b8912aebac6b4e1c28a1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="create-a-simple-simulation"></a>Создание простого моделирования
+# <a name="create-a-simple-simulation-sql-and-r-deep-dive"></a>Создание простого моделирования (SQL и R глубокое погружение)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Эта статья содержит последний шаг в учебнике глубокое погружение обработки и анализа данных об использовании [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
 
 До сих пор вы уже использовали функций R, разработанных специально для перемещения данных между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и локального контекста вычислений. Однако предположим, что вы написали пользовательскую функцию R и хотите выполнить ее в контексте сервера.
 
-Вы можете вызвать произвольную функцию в контексте компьютера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью функции **rxExec** . Также можно rxExec явно распределения работы между ядрами на одном серверном узле.
+Вы можете вызвать произвольную функцию в контексте компьютера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью функции [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) . Можно также использовать **rxExec** для явно распределения работы между ядрами на одном сервере.
 
-На этом занятии вы используете удаленный сервер для создания простого моделирования. Моделирование не требует какой-либо [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных; в примере показано только как проектировать пользовательскую функцию и затем вызвать ее с помощью функции rxExec.
+На этом занятии удаленного сервера используется для создания простого моделирования. Моделирование не требует данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В примере просто демонстрируется разработка пользовательской функции и ее вызов с помощью функции **rxExec** .
 
-Более сложный пример использования rxExec, см. в этой статье: [крупной гранулярности параллелизм с foreach и rxExec](http://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
+Более сложный пример использования **rxExec**, см. в статье: [крупной гранулярности параллелизм с foreach и rxExec](http://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
 
-## <a name="create-the-function"></a>Создание функции
+## <a name="create-the-custom-function"></a>Создание пользовательской функции
 
 Популярная азартная игра заключается в бросании двух кубиков, причем действуют указанные ниже правила.
 
@@ -74,7 +78,7 @@ ms.lasthandoff: 09/01/2017
     }
     ```
   
-2.  Чтобы смоделировать одну игру в кости, выполните эту функцию.
+2.  Для имитации в одном игру поперечные срезы данных, выполнения функции.
   
     ```R
     rollDice()
@@ -82,13 +86,13 @@ ms.lasthandoff: 09/01/2017
   
     Выиграли вы или проиграли?
   
-Теперь посмотрим, как можно выполнять функцию многократно, чтобы создать моделирование, позволяющее определить вероятность выигрыша.
+Теперь давайте посмотрим, как можно использовать **rxExec** для выполнения функции несколько раз, чтобы создать моделирования, которая помогает определить вероятность win.
 
-## <a name="create-the-simulation"></a>Создание моделирования
+## <a name="create-the-simulation"></a>Создать имитации
 
-Для запуска в контексте произвольная функция [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компьютера, можно вызвать функцию rxExec. Несмотря на то, что rxExec также поддерживает распределенные выполнение функции в параллельном режиме между узлами или ядер в контексте сервера, здесь будет используется только для запуска вашей пользовательской функции на сервере.
+Чтобы выполнить произвольную функцию в контексте компьютера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , следует вызвать функцию **rxExec** . Несмотря на то что **rxExec** также поддерживает распределенные выполнение функции в параллельном режиме между узлами или ядер в контексте сервера, здесь он выполняется пользовательскую функцию на сервере SQL Server.
 
-1. Вызывайте пользовательскую функцию как аргумент rxExec, а также другие параметры, изменяющие моделирование.
+1. Вызов пользовательской функции в качестве аргумента **rxExec**вместе с другими параметрами, изменяющие моделирование.
   
     ```R
     sqlServerExec <- rxExec(rollDice, timesToRun=20, RNGseed="auto")
@@ -99,7 +103,7 @@ ms.lasthandoff: 09/01/2017
   
     - Аргументы *RNGseed* и *RNGkind* позволяют управлять генерацией случайных чисел. Если параметр *RNGseed* имеет значение **auto**, в каждом рабочем процессе инициализируется параллельный поток случайных чисел.
   
-2. Функция rxExec создает список с одним элементом для каждого запуска; Тем не менее вы не увидите много происходит до завершения списка. Когда все итерации будут завершены, строка, начинающаяся с `length` , вернет значение.
+2. Функция **rxExec** создает список с одним элементом для каждого запуска, однако, пока список не заполнится, практически ничего происходить не будет. Когда все итерации будут завершены, строка, начинающаяся с `length` , вернет значение.
   
     После этого можно перейти к следующему шагу, чтобы получить сводку по выигрышам и проигрышам.
   
@@ -123,18 +127,20 @@ ms.lasthandoff: 09/01/2017
   
 -   передавать модели, данные и диаграммы между рабочей станцией и сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
->  [!TIP]
-> 
-> При желании поэкспериментировать с этих методов, с помощью набора данных большего размера 10 миллионов наблюдений, файлы данных будут доступны на веб-сайте Revolution analytics: [индекса наборов данных](http://packages.revolutionanalytics.com/datasets)
->   
-> Чтобы повторно использовать в данном пошаговом руководстве с большими файлами данных, загрузить данные, а затем измените каждый источник данных следующим образом:
->  - Задайте переменные *ccFraudCsv* и *ccScoreCsv* так, чтобы они указывали на новые файлы данных.
->  - Измените имя таблицы, указанное в *sqlFraudTable* , на *ccFraud10*
->  - Измените имя таблицы, указанное в *sqlScoreTable* , на *ccFraudScore10*
 
+При желании поэкспериментировать с этих методов, с помощью набора данных большего размера 10 миллионов наблюдений, файлы данных будут доступны на веб-сайте Revolution analytics: [индекса наборов данных](http://packages.revolutionanalytics.com/datasets)
+
+Чтобы повторно использовать в данном пошаговом руководстве с большими файлами данных, загрузить данные, а затем измените каждый источник данных следующим образом:
+
+1. Замените переменные `ccFraudCsv` и `ccScoreCsv` для указания новых файлов данных
+2. Изменить имя таблицы, на которые ссылается *sqlFraudTable* для`ccFraud10`
+3. Изменить имя таблицы, на которые ссылается *sqlScoreTable* для`ccFraudScore10`
+
+## <a name="additional-samples"></a>Дополнительные примеры
+
+Теперь, когда Вы овладели использование контекстов вычислений и функции RevoScaler для передачи и преобразования данных, см. в этих учебниках.
+
+[R учебники по службам машин обучения](machine-learning-services-tutorials.md)
 ## <a name="previous-step"></a>Предыдущий шаг
 
-[Перемещение данных между SQL Server и XDF-файла](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
-
-
-
+[Перенос данных между SQL Server и файлом XDF](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)

@@ -2,30 +2,30 @@
 title: "Обновление доставки журналов до SQL Server 2016 (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 02/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- log shipping [SQL Server], upgrading
+helpviewer_keywords: log shipping [SQL Server], upgrading
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e2aae5c92052e2a08c2b6ab5ef1d48fd8f3f83dd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 05c650a9f5929704a512b28033d6f06f54415a26
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Обновление доставки журналов до SQL Server 2016 (Transact-SQL)
-  Если вы обновляете [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в конфигурации доставки журналов до новой версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] либо устанавливаете новый пакет обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или накопительный пакет обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обновление серверов доставки журналов в правильном порядке позволит сохранить ваше решение для аварийного восстановления доставки журналов.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Если вы обновляете конфигурацию доставки журналов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до новой версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] либо устанавливаете новый пакет обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или накопительный пакет обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обновление серверов доставки журналов в правильном порядке позволит сохранить ваше решение для аварийного восстановления доставки журналов.  
   
 > [!NOTE]  
 >  [Сжатие резервной копии](../../relational-databases/backup-restore/backup-compression-sql-server.md) было введено в выпуске [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. В обновленной конфигурации доставки журналов используется параметр **стандартного сжатия резервных копий** уровня сервера, который управляет применением сжатия резервной копии к файлам резервной копии журнала транзакций. Режим сжатия резервной копии журналов можно указать отдельно для каждой конфигурации доставки журналов. Дополнительные сведения см. в статьях [Настройка доставки журналов (SQL Server)](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
@@ -99,4 +99,3 @@ ms.lasthandoff: 08/02/2017
  [Таблицы доставки журналов и хранимые процедуры](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   
-

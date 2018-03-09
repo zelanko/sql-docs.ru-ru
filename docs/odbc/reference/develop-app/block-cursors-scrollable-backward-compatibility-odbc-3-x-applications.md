@@ -3,10 +3,12 @@ title: "Блок и совместимости Прокручиваемые ку
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - cursors [ODBC], compatibility issues
 - SQLFetchScroll function [ODBC], block cursors
 ms.assetid: 82f6cf68-cfde-4417-9788-d6382ca14bf8
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ca3cbf2bc9aba7baccc4cfdda738a82949951fda
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 56543f0de0d95bad6fa85fc415dddd7da58f3667
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>Блочные курсоры, обратная совместимость для приложений ODBC 3.x и Прокручиваемые курсоры
 На наличие **SQLFetchScroll** и **SQLExtendedFetch** представляет первый clear разбиения в ODBC между приложения программный интерфейс (API), которая представляет собой набор функций приложение вызывает и служба поставщика интерфейса (SPI), которая представляет собой набор функций в драйвере реализованы. Это разделение необходимо учитывать, что в ODBC 3. *x*, которая использует **SQLFetchScroll**, чтобы выровнять стандартам и совместимость с ODBC 2. *x*, которая использует **SQLExtendedFetch**.  
@@ -49,4 +50,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  ODBC 3. *x* приложения не должны использовать **SQLExtendedFetch** или атрибут SQL_ROWSET_SIZE инструкции. Вместо этого используйте **SQLFetchScroll** и атрибут SQL_ATTR_ROW_ARRAY_SIZE инструкции. ODBC 3. *x* приложения не должны использовать **SQLSetPos** с *операции* из SQL_ADD, но следует использовать **SQLBulkOperations** с *Операции* из SQL_ADD.
-

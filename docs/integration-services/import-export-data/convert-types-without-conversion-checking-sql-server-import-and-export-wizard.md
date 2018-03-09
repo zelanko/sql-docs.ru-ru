@@ -1,10 +1,13 @@
 ---
-title: "Преобразование типов без преобразования, проверку (мастер импорта экспорта SQL Server) | Документы Microsoft"
+title: "Преобразование типов без проверки (мастер импорта и экспорта SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 01/11/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: import-export-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.nomappingfile.f1
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d4b3bfd3d61282ba7a4d7363ef02b05c5c23ac20
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 66271d8214a96453535a476e43564aa1b03d07d3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>Преобразование типов без проверки (мастер импорта и экспорта SQL Server)
   После выбора существующих таблиц и представлений, которые нужно скопировать, или после просмотра своего запроса в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может открыться страница **Преобразование типов без проверки**. Эта страница отображается, если мастеру не удается найти требуемые файлы преобразования и сопоставления типов данных между источником и назначением. На странице содержатся сведения, которые помогут понять, чего не хватает.
@@ -42,6 +44,5 @@ ms.lasthandoff: 09/26/2017
 ## <a name="whats-next"></a>Дальнейшие действия  
  Нажмите кнопку **Далее** , чтобы дать согласие на продолжение, не зная о результате преобразований типов данных. Откроется следующая страница — **Сохранение и запуск пакета**. На этой странице можно указать, нужно ли немедленно запустить операцию копирования. В зависимости от конфигурации, также можно сохранить пакет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , созданный с помощью мастера, чтобы настроить и использовать его позднее. Дополнительные сведения см. в разделе [Сохранение и запуск пакета](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Сопоставление типов данных в мастере импорта и экспорта SQL Server](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
-

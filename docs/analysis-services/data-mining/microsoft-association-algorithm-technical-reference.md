@@ -2,12 +2,13 @@
 title: "Технический справочник по алгоритму взаимосвязей (Майкрософт) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,20 +22,20 @@ helpviewer_keywords:
 - MAXIMUM_ITEMSET_SIZE parameter
 - MINIMUM_PROBABILITY parameter
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
-caps.latest.revision: 24
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c8f6fca5071577e70d334e1b6184ed0ac7bb74ad
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a029a6efad9ebdbc15e42d593db28f9530b1b8e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Технический справочник по алгоритму взаимосвязей (Майкрософт)
-  Алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой простую реализацию хорошо известного априорного алгоритма.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой простую реализацию хорошо известного априорного алгоритма.  
   
  Оба алгоритма (алгоритм деревьев принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] и алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) можно использовать для анализа взаимосвязей, но правила, обнаруженные каждым из алгоритмов, могут отличаться. В модели дерева принятия решений разбиение на узлы, ведущие к определенным правилам, проводится в соответствии с полученной информацией. В модели взаимосвязей правила основаны на достоверности. Поэтому в модели взаимосвязей сильное правило, или правило с высокой достоверностью, не обязательно будет интересным, поскольку оно может не предоставлять никакой новой информации.  
   
@@ -170,7 +171,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>См. также  
  [Алгоритм взаимосвязей (Майкрософт)](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Примеры запросов к модели взаимосвязей](../../analysis-services/data-mining/association-model-query-examples.md)   
- [Содержимое моделей интеллектуального анализа данных для моделей взаимосвязей (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Содержимое модели интеллектуального анализа данных для моделей взаимосвязей &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   
-

@@ -2,31 +2,30 @@
 title: "Детализация данных вариантов из модели интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- drillthrough [Analysis Services]
+helpviewer_keywords: drillthrough [Analysis Services]
 ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9f287437903c54c4eb66da3343bc2c80f18ac5fe
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 849c244bdfb40770d8038a78a430faa7ff26b6b8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>выполнить детализацию до данных вариантов из модели интеллектуального анализа данных
-  Если модель интеллектуального анализа данных была настроена для выполнения детализации до вариантов модели, при ее просмотре можно получить подробные сведения о вариантах, которые были использованы для постройки модели. Более того, если базовая структура интеллектуального анализа данных была настроена для детализации до вариантов структуры, при наличии необходимых разрешений можно возвращать информацию из структуры интеллектуального анализа данных. Сюда могут входить столбцы, не включенные в модель интеллектуального анализа данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Если модель интеллектуального анализа данных был настроен для выполнения детализации до вариантов модели, при просмотре модели, можно получить подробные сведения о вариантах, которые использовались для создания модели. Более того, если базовая структура интеллектуального анализа данных была настроена для детализации до вариантов структуры, при наличии необходимых разрешений можно возвращать информацию из структуры интеллектуального анализа данных. Сюда могут входить столбцы, не включенные в модель интеллектуального анализа данных.  
   
  Если структура интеллектуального анализа данных не позволяет выполнить детализацию до базовых данных, а модель интеллектуального анализа данных позволяет, можно просматривать данные из вариантов модели, но не из структуры интеллектуального анализа данных.  
   
@@ -62,8 +61,7 @@ ms.lasthandoff: 09/01/2017
   
 6.  Чтобы скопировать данные в буфер обмена, щелкните правой кнопкой мыши строку таблицы и выберите команду **Копировать все**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запросы детализации (интеллектуальный анализ данных)](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
   
-

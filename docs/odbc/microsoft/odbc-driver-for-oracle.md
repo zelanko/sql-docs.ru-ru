@@ -3,10 +3,12 @@ title: "Драйвер ODBC для Oracle | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], about ODBC driver for Oracle
 - Oracle data access [ODBC]
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 70ae9b447f0f3bcc6e70060b2f46f994ef3ea773
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e66dd7ed6406287c0fb4e6722d8b5915428f705b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-driver-for-oracle"></a>Драйвер ODBC для Oracle
 > [!IMPORTANT]  
@@ -61,7 +62,6 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующие подразделы.  
   
--   [Драйвер ODBC для Oracle в руководстве пользователя](../../odbc/microsoft/odbc-driver-for-oracle-user-s-guide.md)  
+-   [Руководство пользователя драйвера ODBC для Oracle](../../odbc/microsoft/odbc-driver-for-oracle-user-s-guide.md)  
   
--   [Драйвер ODBC для Oracle Справочник по программированию на](../../odbc/microsoft/odbc-driver-for-oracle-programmer-s-reference.md)
-
+-   [Справочник по программирования драйвера ODBC для Oracle](../../odbc/microsoft/odbc-driver-for-oracle-programmer-s-reference.md)

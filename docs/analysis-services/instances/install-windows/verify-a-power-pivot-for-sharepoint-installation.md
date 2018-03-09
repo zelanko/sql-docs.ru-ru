@@ -2,32 +2,31 @@
 title: "Проверка PowerPivot для SharePoint | Документы Microsoft"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
-caps.latest.revision: 15
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6d745e0de3f7d18571d904a31cf34a8e30217555
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: abc618942a95b28fd2b93f72e4b511e519c58191
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Проверка установки PowerPivot для SharePoint
-  Администрирование экземпляра [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint, устанавливаемого в ферме SharePoint, осуществляется с помощью центра администрирования SharePoint. Как минимум можно проверить страницы в центре администрирования и на сайтах SharePoint, чтобы убедиться в доступности компонентов и функций сервера [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Однако, чтобы полностью проверить установку, необходимо иметь книгу [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , которую можно опубликовать в SharePoint и открывать из библиотеки. В целях тестирования можно опубликовать образец книги, в котором уже есть данные [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , и с его помощью убедиться в правильности настройки интеграции с SharePoint.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Администрирование экземпляра [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint, устанавливаемого в ферме SharePoint, осуществляется с помощью центра администрирования SharePoint. Как минимум можно проверить страницы в центре администрирования и на сайтах SharePoint, чтобы убедиться в доступности компонентов и функций сервера [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Однако, чтобы полностью проверить установку, необходимо иметь книгу [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , которую можно опубликовать в SharePoint и открывать из библиотеки. В целях тестирования можно опубликовать образец книги, в котором уже есть данные [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , и с его помощью убедиться в правильности настройки интеграции с SharePoint.  
+
   
 ##  <a name="verifyinstall"></a> Проверка интеграции центра администрирования  
  Чтобы проверить интеграцию [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] с центром администрирования, сделайте следующее.  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
 11. В файловой системе компьютера откройте следующую папку, чтобы определить, были ли файлы кэшированы на диск. Наличие кэшированных файлов служит еще одним подтверждением работоспособности развертывания. Чтобы просмотреть кэш файлов, перейдите в папку приложения службы [!INCLUDE[ssInstallPathVar](../../../includes/ssinstallpathvar-md.md)] [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] MSAS13.POWERPIVOT\OLAP\Backup\Sandboxes\Default. Каждая кэшируемая база данных хранится в собственной папке, схема именования которых основана на идентификаторах GUID и гарантирует уникальность имен.  
   
   
-

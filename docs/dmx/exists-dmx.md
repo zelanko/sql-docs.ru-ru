@@ -2,35 +2,32 @@
 title: "Существует (DMX) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- Exists
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Exists function
+f1_keywords: Exists
+dev_langs: DMX
+helpviewer_keywords: Exists function
 ms.assetid: 3b54dd93-f0a8-4f9a-96ae-a38bf977dda1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 6f5fb5dccb91af6409c0ed91796ba5119475ccaf
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a42c5690b8c80ec752490605e3c3243ee78029de
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="exists-dmx"></a>Exists (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает **true** указанный вложенный запрос возвращает хотя бы одна строка.  
   
@@ -48,7 +45,7 @@ EXISTS(<subquery>)
 ## <a name="result-type"></a>Тип результата  
  Возвращает **true** Если результирующего набора, возвращаемого вложенным запросом содержит по крайней мере одну строку; в противном случае возвращает **false**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Перед ключевым словом EXISTS можно использовать ключевое слово NOT, например `WHERE NOT EXISTS (<subquery>)`.  
   
  Список столбцов, добавленный к аргументу подзапроса EXISTS, не имеет значения: функция проверяет только существование строки, отвечающей условиям.  
@@ -74,4 +71,3 @@ WHERE [[Model] = 'Patch kit'
  [Синтаксис фильтра модели и примеры &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
   
   
-

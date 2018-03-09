@@ -3,8 +3,11 @@ title: "SET STATISTICS XML (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - statements [SQL Server], statistical information
 - XML [SQL Server], statement execution information
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
-caps.latest.revision: 40
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 45191a544866451e5208325eb2cafcab60bc8fb5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 99ef0199258d6d4a87a041979dd0f75bbc6b835f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   При установке этого параметра Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] и формирует подробные сведения о выполнении инструкций в форме четко определенного XML-документа.  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 09/01/2017
 SET STATISTICS XML { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Настройка инструкции SET STATISTICS XML устанавливается во время выполнения или запуска, а не во время синтаксического анализа.  
   
  Если выполнена инструкция SET STATISTICS XML ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сведения о выполнении каждого оператора после его выполнения. После присвоения этому параметру значения ON сведения обо всех последующих инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] возвращаются до тех пор, пока параметру не будет присвоено значение OFF. Учтите, что SET STATISTICS XML может быть не единственной инструкцией в пакете.  
@@ -67,7 +69,7 @@ SET STATISTICS XML { ON | OFF }
 > [!NOTE]  
 >  Если **Включить действительный план выполнения** выбран в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], этот параметр SET не создает выходных данных инструкции Showplan XML. Очистить **Включить действительный план выполнения** перед с помощью этого ПАРАМЕТРА.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Чтобы пользоваться инструкцией SET STATISTICS XML и просматривать ее вывод, пользователи должны иметь следующие разрешения.  
   
 -   соответствующие разрешения на выполнение инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)];  
@@ -98,9 +100,8 @@ SET STATISTICS XML OFF;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SET SHOWPLAN_XML (Transact-SQL)](../../t-sql/statements/set-showplan-xml-transact-sql.md)   
  [Программа sqlcmd](../../tools/sqlcmd-utility.md)  
   
   
-

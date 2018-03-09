@@ -3,10 +3,12 @@ title: "Журнал драйверов для настольных баз да�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], history
 - desktop database drivers [ODBC], history
 ms.assetid: b4a2aff8-bde7-4bd5-8580-bc50f27311c8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6dfa1dc1b533c9e40175e9a3d29dc872344bd664
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f6876496d243cefd2f3d6b7eb0cd5480bf225189
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>Журнал драйверов для настольных баз данных
 В следующей таблице показаны журнал версий драйверов базы данных.  
@@ -39,4 +40,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Драйверы version3.5 были разработаны для работы с ODBC2. *x*. Несмотря на то, что они также работают с ODBC 3.0, они не поддерживают все функции ODBC 3.0. Дополнительные сведения о работе этих драйверов ODBC 3.0 см. в разделе [обратной совместимости и соответствия стандартам](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).
-

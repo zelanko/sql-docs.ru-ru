@@ -2,15 +2,16 @@
 title: "Справочник по функциям многомерных Выражений (MDX) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - member functions [MDX]
 - level functions [MDX]
@@ -26,20 +27,19 @@ helpviewer_keywords:
 - logical functions [MDX]
 - set functions [MDX]
 ms.assetid: e363722a-3e5b-40a9-a0b5-399dd2d93f6d
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: d6a0eecf1084cc17b1a2a08b7ef1c43c81d2e346
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 30cd14ab8d2725f559e317f92071a289ab047268
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-function-reference-mdx"></a>Справочник по функциям многомерных выражений (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] предоставляет для использования функций в синтаксисе многомерных выражений (MDX). Функции могут включаться во все допустимые инструкции многомерных выражений. Они часто применяются в запросах, пользовательских свертках и других вычислениях. В данном разделе содержатся сведения о функциях многомерных выражений в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
@@ -47,13 +47,13 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="array-functions"></a>Функции массивов  
   
-|Функция|Description|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[SetToArray &#40; Многомерные Выражения &#41;](../mdx/settoarray-mdx.md)|Преобразует один или несколько наборов в массив для использования в пользовательской функции.|  
   
 ## <a name="hierarchy-functions"></a>Функции иерархий  
   
-|Функция|Description|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[Иерархия &#40; Многомерные Выражения &#41;](../mdx/hierarchy-mdx.md)|Возвращает иерархию, содержащую заданный элемент или уровень.|  
 |[Измерения &#40; Многомерные Выражения &#41;](../mdx/dimension-mdx.md)|Возвращает измерение, содержащее указанный элемент, уровень или иерархию.|  
@@ -61,14 +61,14 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="level-functions"></a>Функции уровней  
   
-|Функция|Description|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[Уровень &#40; Многомерные Выражения &#41;](../mdx/level-mdx.md)|Возвращает уровень элемента.|  
 |[Уровни &#40; Многомерные Выражения &#41;](../mdx/levels-mdx.md)|Возвращает уровень, положение которого в измерении или иерархии указано числовым выражением или имя которого указано строковым выражением.|  
   
 ## <a name="logical-functions"></a>Логические функции  
   
-|Функция|Description|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[IsAncestor &#40; Многомерные Выражения &#41;](../mdx/isancestor-mdx.md)|Возвращает значение, сообщающее, является ли заданный элемент предком другого заданного элемента.|  
 |[IsEmpty &#40; Многомерные Выражения &#41;](../mdx/isempty-mdx.md)|Возвращает значение, сообщающее, является ли вычисленное выражение значением пустой ячейки.|  
@@ -78,7 +78,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="member-functions"></a>Функции элементов  
   
-|Функция|Description|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[Предок &#40; Многомерные Выражения &#41;](../mdx/ancestor-mdx.md)|Возвращает предка элемента на указанном уровне или расстоянии.|  
 |[ClosingPeriod &#40; Многомерные Выражения &#41;](../mdx/closingperiod-mdx.md)|Возвращает последний родственный элемент среди потомков элемента на указанном уровне.|  
@@ -106,7 +106,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="numeric-functions"></a>Числовые функции  
   
-|Функция|Description|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[Статистическая функция &#40; Многомерные Выражения &#41;](../mdx/aggregate-mdx.md)|Возвращает скалярное значение путем статистического вычисления по мерам или (дополнительно) по заданному числовому выражению для кортежей указанного набора.|  
 |[Ср &#40; Многомерные Выражения &#41;](../mdx/avg-mdx.md)|Возвращает среднее значение мер или среднее значение числового выражения (необязательный аргумент), вычисленного по заданному набору.|  
@@ -149,7 +149,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="set-functions"></a>Функции наборов  
   
-|Функция|Description|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[AddCalculatedMembers &#40; Многомерные Выражения &#41;](../mdx/addcalculatedmembers-mdx.md)|Возвращает набор, созданный путем добавления вычисляемых элементов в указанный набор.|  
 |[AllMembers &#40; Многомерные Выражения &#41;](../mdx/allmembers-mdx.md)|Возвращает набор, содержащий все элементы (включая вычисляемые) заданного измерения, иерархии или уровня.|  
@@ -205,7 +205,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="string-functions"></a>Строковые функции  
   
-|Функция|Description|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[CalculationPassValue (многомерные выражения)](../mdx/calculationpassvalue-mdx.md)|Возвращает значение многомерного выражения, вычисленное на указанном этапе вычисления куба.|  
 |[CoalesceEmpty &#40; Многомерные Выражения &#41;](../mdx/coalesceempty-mdx.md)|Объединяет значение пустой ячейки с числом или строкой и возвращает объединенное значение.|  
@@ -222,14 +222,14 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="subcube-functions"></a>Функции вложенных кубов  
   
-|Функция|Description|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[Это &#40; Многомерные Выражения &#41;](../mdx/this-mdx.md)|Возвращает текущий вложенный куб.|  
 |[Оставляет &#40; Многомерные Выражения &#41;](../mdx/leaves-mdx.md)|Возвращает набор конечных элементов в указанном измерении, элементе или кортеже.|  
   
 ## <a name="tuple-functions"></a>функции кортежей  
   
-|Функция|Description|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[Текущий &#40; Многомерные Выражения &#41;](../mdx/current-mdx.md)|Возвращает текущий кортеж из набора во время выполнения цикла.|  
 |[Элемент &#40; Кортеж &#41; &#40; Многомерные Выражения &#41;](../mdx/item-tuple-mdx.md)|Возвращает кортеж из набора.|  
@@ -238,7 +238,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="other-functions"></a>Прочие функции  
   
-|Функция|Description|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[Ошибка &#40; Многомерные Выражения &#41;](../mdx/error-mdx.md)|Вызывает ошибку, при необходимости выводя заданное сообщение об ошибке.|  
   
@@ -246,4 +246,3 @@ ms.lasthandoff: 08/02/2017
  [Справочник по языку многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-language-reference-mdx.md)  
   
   
-

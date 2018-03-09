@@ -1,10 +1,13 @@
 ---
-title: "Ссылки на другие сборки в сценарии решения | Документы Microsoft"
+title: "Ссылки на другие сборки в решениях со скриптами | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -26,26 +29,25 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - referencing Web services
 ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
-caps.latest.revision: 68
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3deb13c7e3aeb2e974ac6e6582555a617346a298
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4b5217b5a8fb0a1abdf4e17760a49497ccd3c280
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>Ссылки на другие сборки в решениях со сценариями
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Библиотека классов предоставляет разработчику скриптов набор мощных средств для реализации пользовательской функциональности в [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакеты. Задача «Скрипт» и компонент скрипта также могут использовать пользовательские управляемые сборки.  
+  Библиотека классов платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] предоставляет разработчику скриптов набор эффективных средств для реализации пользовательской функциональности в пакетах служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Задача «Скрипт» и компонент скрипта также могут использовать пользовательские управляемые сборки.  
   
 > [!NOTE]  
->  Чтобы разрешить пакетам использование объектов и методов из веб-службы, используйте **Add Web Reference** команд, доступных в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] средств для приложений (VSTA). В более ранних версиях служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], чтобы использовать веб-службу, приходилось формировать класс-посредник.  
+>  Чтобы разрешить пакетам использование объектов и методов из веб-службы, используйте команду **Добавить веб-ссылку**, доступную в средствах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] для приложений (VSTA). В более ранних версиях служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], чтобы использовать веб-службу, приходилось формировать класс-посредник.  
   
 ## <a name="using-a-managed-assembly"></a>Использование управляемой сборки  
- Для [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] могли найти управляемую сборку во время разработки, необходимо выполнить следующие действия:  
+ Чтобы во время разработки службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] могли найти управляемую сборку, нужно сделать следующее:  
   
 1.  Сохранить управляемую сборку в любой папке на компьютере.  
   
@@ -54,7 +56,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  Добавить ссылку на управляемую сборку.  
   
-     Для добавления ссылки в средствах VSTA в **добавить ссылку** диалогового **Обзор** найдите и добавьте управляемую сборку.  
+     Чтобы добавить ссылку, в средствах VSTA в диалоговом окне **Добавление ссылки** на вкладке **Обзор** найдите и добавьте управляемую сборку.  
   
  Чтобы службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] могли найти управляемую сборку во время выполнения, необходимо выполнить следующие шаги.  
   
@@ -62,30 +64,30 @@ ms.lasthandoff: 08/03/2017
   
 2.  Установить сборку в глобальный кэш сборок на компьютере, где выполняется пакет.  
   
-     Дополнительные сведения см. в разделе [построение, развертывание и отладка пользовательских объектов](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).  
+     Дополнительные сведения см. в разделе [Сборка, развертывание и отладка пользовательских объектов](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).  
   
 ## <a name="using-the-microsoft-net-framework-class-library"></a>Использование библиотеки классов платформы Microsoft .NET Framework  
  Задача «Скрипт» и компонент Script могут использовать преимущества всех остальных объектов и функциональность, которую обеспечивает библиотека классов платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Например, с помощью платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно извлекать сведения о среде и взаимодействовать с компьютером, на котором работает пакет.  
   
  В следующем списке описываются некоторые из наиболее часто используемых классов платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
--   **System.Data** содержит архитектуру ADO.NET.  
+-   **System.Data**: содержит архитектуру ADO.NET.  
   
--   **System.IO** предоставляет интерфейс для файловой системы и потоками.  
+-   **System.IO**: предоставляет интерфейс для файловой системы и файловых потоков.  
   
--   **System.Windows.Forms** обеспечивает создание форм.  
+-   **System.Windows.Forms**: обеспечивает создание форм.  
   
--   **System.Text.RegularExpressions** предоставляет классы для работы с регулярными выражениями.  
+-   **System.Text.RegularExpressions**: предоставляет классы для работы с регулярными выражениями.  
   
--   **System.Environment** возвращает сведения о локальном компьютере, текущем пользователе и настроек компьютера и пользователя.  
+-   **System.Environment**: возвращает сведения о локальном компьютере, текущем пользователе, а также настройках компьютера и пользователя.  
   
--   **System.Net** обеспечивает сетевые соединения.  
+-   **System.Net**: обеспечивает сетевые соединения.  
   
--   **Пространство имен System.DirectoryServices** обеспечивает доступ к Active Directory.  
+-   **System.DirectoryServices**: предоставляет Active Directory.  
   
--   **System.Drawing** предоставляет широкие изображения манипуляции библиотеки.  
+-   **System.Drawing**: предоставляет обширные библиотеки для операций с изображениями.  
   
--   **System.Threading** обеспечивает возможность многопоточного программирования.  
+-   **System.Threading**: обеспечивает возможность многопоточного программирования.  
   
  Дополнительные сведения о платформе [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в библиотеке MSDN.  
   
@@ -93,4 +95,3 @@ ms.lasthandoff: 08/03/2017
  [Расширение пакетов с помощью сценариев](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
   
   
-

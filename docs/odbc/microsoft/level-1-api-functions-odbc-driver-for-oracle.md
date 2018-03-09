@@ -3,10 +3,12 @@ title: "Функции уровня 1 API-Интерфейс (драйвер ODB
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - level 1 API functions [ODBC]
 - API functions [ODBC]
 ms.assetid: 98cced6f-41b8-43c1-a3cd-f4ea1615c0af
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 336100101a9cd94cbd3a39f30721721643f2912e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3cd7f827ecfc367536654b9ad825302f4dba9fcf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>Функции уровня 1 API-Интерфейс (драйвер ODBC для Oracle)
 > [!IMPORTANT]  
@@ -51,4 +52,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLSpecialColumns**|Возвращает оптимальный набор столбцов, который уникально идентифицирует строки в таблице.|  
 |**SQLStatistics**|Извлекает список сведений о одной таблицы и индексы или имена тегов, связанных с таблицей. Драйвер возвращает данные в виде результирующего набора.|  
 |**SQLTables**|Возвращает список имен таблиц, указанный в параметре **SQLTables** инструкции. Если параметр не указан, возвращает имена таблиц, хранящихся в текущем источнике данных. Драйвер возвращает данные в виде результирующего набора.<br /><br /> Перечисления типа вызывает метод не получит запись результирующего набора для представления удаленного или локального параметризованных представлений. Тем не менее вызов **SQLTables** с уникальной таблицы описатель имя будет найти совпадения для такого представления, при его наличии с таким именем, это обеспечивает API на наличие конфликтов имен до создания новой таблицы.<br /><br /> ОТКРЫТЫЕ синонимы возвращаются со значением TABLE_OWNER «».<br /><br /> ПРЕДСТАВЛЕНИЯ, принадлежащие SYS или системы, определяются как СИСТЕМНОЕ ПРЕДСТАВЛЕНИЕ.|
-

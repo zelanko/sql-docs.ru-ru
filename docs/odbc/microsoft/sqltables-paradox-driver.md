@@ -3,27 +3,28 @@ title: "SQLTables (драйвер Paradox) | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Paradox driver [ODBC], SQLTables
 - SQLTables function [ODBC], Paradox Driver
 ms.assetid: d68adad6-97bd-4b47-bcf9-0102aafb00d4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b11865bc59b2fbdbc81a771fadd099dde78f1f42
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 505bbc8fb606a44d9c3f4bf94115fd5ff41e7d06
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqltables-paradox-driver"></a>SQLTables (драйвер Paradox)
 > [!NOTE]  
@@ -37,4 +38,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>См. также:  
  [Функция SQLTables](../../odbc/reference/syntax/sqltables-function.md)
-

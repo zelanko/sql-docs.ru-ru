@@ -1,10 +1,13 @@
 ---
-title: "Диспетчер соединений с кэшем | Документы Microsoft"
+title: "Диспетчер подключения кэша | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Cache connection manager
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 481075f02dff2f4900eeca549835b990b50aee37
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f645f1e81965c0b39a63f7317fc660639df5d0e5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cache-connection-manager"></a>диспетчер соединений с кэшем
   Диспетчер соединений с кэшем считывает данные из преобразования кэша или из файла кэша (CAW) и может сохранить эти данные в файле кэша. Данные всегда будут храниться в памяти, вне зависимости от того, был ли настроен диспетчер соединений с кэшем для использования файла кэша.  
@@ -56,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] или программными средствами.  
   
- Сведения о настройке диспетчера соединений программными средствами см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
+ Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="cache-connection-manager-editor"></a>Редактор диспетчера соединений с кэшем
   Диспетчер соединений с кэшем читает эталонный набор данных из преобразования кэша или из файла кэша (CAW) и может сохранить эти данные в файле кэша. Данные всегда сохраняются в памяти.  
@@ -72,10 +74,10 @@ ms.lasthandoff: 08/09/2017
  Используйте вкладку **Общие** диалогового окна **Редактор диспетчера соединений с кэшем** , чтобы указать, должно ли содержимое кэша быть прочитано из файла или сохранено в файле.  
   
 #### <a name="options"></a>Параметры  
- **Имя диспетчера соединений**  
+ **Имя диспетчера подключений**  
  Предоставьте уникальное имя для соединения с кэшем в рабочем процессе. Выбранное имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Описание**  
  Опишите соединение. Рекомендуется описать цель соединения, чтобы пакеты самодокументировались и их проще было обслуживать.  
   
  **Использование файлового кэша**  
@@ -131,8 +133,7 @@ ms.lasthandoff: 08/09/2017
  **Кодовая страница**  
  Задает кодовую страницу для столбца этого типа. Параметр **Code Page**можно изменить, если он применим к типу данных.  
   
-## <a name="related-tasks"></a>Связанные задачи  
- [Реализовать преобразование «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений с кэшем](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+## <a name="related-tasks"></a>Related Tasks  
+ [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера подключений с кэшем](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   
-

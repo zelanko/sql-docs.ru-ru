@@ -1,29 +1,30 @@
 ---
 title: "Выполнение консоли SSMA (AccessToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 29f9c2bbce707aa08ce5cff918965e65f66d8370
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 76f31cffc8f947449d6825a6659b1bb22e0c0b1d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Выполнение консоли SSMA (AccessToSQL)
 Майкрософт предоставляет широкий набор команд файла скрипта и параметры командной строки для выполнения и контроля над SSMA действий. В последующих разделах подробно одинаковыми.  
@@ -166,7 +167,7 @@ ms.lasthandoff: 08/02/2017
 ```xml  
 <load-access-database  database-file="<Access-database>"/>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <load-access-database>  
@@ -200,7 +201,7 @@ Force нагрузки-/ target-базы данных источника
   
   metabase="<source/target>"/>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <force-load>  
@@ -313,7 +314,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <generate-assessment-report  
@@ -385,7 +386,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <convert-schema  
@@ -445,7 +446,7 @@ Force нагрузки-/ target-базы данных источника
   
 </migrate-data>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <migrate-data  
@@ -475,7 +476,7 @@ Force нагрузки-/ target-базы данных источника
   
 </link-tables>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <link-tables>  
@@ -501,7 +502,7 @@ Force нагрузки-/ target-базы данных источника
   
 </unlink-tables>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <unlink-tables>  
@@ -580,7 +581,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <synchronize-target  
@@ -589,7 +590,7 @@ Force нагрузки-/ target-базы данных источника
   
   object-type="category"/>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <synchronize-target>  
@@ -645,7 +646,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <refresh-from-database  
@@ -654,7 +655,7 @@ Force нагрузки-/ target-базы данных источника
   
   object-type="category"/>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <refresh-from-database>  
@@ -704,7 +705,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <save-as-script  
@@ -733,4 +734,3 @@ Force нагрузки-/ target-базы данных источника
   
 -   Для устранения неполадок в консоли, в разделе [Устранение неполадок &#40; AccessToSQL &#41; ](../../ssma/access/troubleshooting-accesstosql.md).  
   
-

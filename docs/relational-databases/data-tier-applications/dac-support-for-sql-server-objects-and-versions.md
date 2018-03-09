@@ -2,31 +2,32 @@
 title: "Поддержка приложений уровня данных для объектов и версий SQL Server | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.suite: sql
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data-tier application [SQL Server], supported objects
 - objects [SQL Server], data-tier applications
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
-caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "19"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6c6fa912592feefe48ce023f58fbf032d64004e6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 12b99446025274f0f3652a7552f53775283af7ac
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Поддержка приложений уровня данных для объектов и версий SQL Server
-  Приложение уровня данных (DAC) поддерживает самые распространенные объекты компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Приложение уровня данных (DAC) поддерживает самые распространенные объекты компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  **В этом разделе**  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 06/22/2017
 |INDEX: пространственный|INDEX: уникальный|  
 |LOGIN|Разрешения|  
 |Данные членства в роли|SCHEMA|  
-|Statistics|STORED PROCEDURE: Transact-SQL|  
+|Статистика|STORED PROCEDURE: Transact-SQL|  
 |Синонимы|TABLE: проверочное ограничение|  
 |TABLE: параметры сортировки|TABLE: столбец, включая вычисляемые столбцы|  
 |TABLE: ограничение, значение по умолчанию|TABLE: ограничение, внешний ключ|  
@@ -124,4 +125,3 @@ ms.lasthandoff: 06/22/2017
  [Приложения уровня данных](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   
-

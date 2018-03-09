@@ -2,12 +2,13 @@
 title: "Объекты (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -17,20 +18,20 @@ helpviewer_keywords:
 - objects [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, objects
 ms.assetid: 0f672b93-c317-47e5-b44d-ecea9b587c98
-caps.latest.revision: 21
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ea027aba8d0d49c752bd31569f84d0f0cec022bd
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 749c363a814590705b61d0821f1fee44ea93d488
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="objects-assl"></a>Объекты (ASSL)
-  В данном разделе приведены сведения о синтаксисте и использовании каждого элемента, выступающего в роли объекта в схеме ASSL.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+В данном разделе приведены сведения о синтаксисте и использовании каждого элемента, выступающего в роли объекта в схеме ASSL.  
   
  Несмотря на то, что в схеме языка ASSL содержатся только элементы XML, с точки зрения разработчика, элементы, описанные в этом разделе относятся к объекты, такие как **базы данных**, **куба**, и  **Измерение** объектов в иерархии объектов, содержащихся в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
@@ -40,10 +41,10 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[Элемент Account &#40; ASSL &#41;](../../../analysis-services/scripting/objects/account-element-assl.md)|Содержит сведения о типе счета в [базы данных](../../../analysis-services/scripting/objects/database-element-assl.md) элемента.|  
-|[Элемент Action &#40; ASSL &#41;](../../../analysis-services/scripting/objects/action-element-assl.md)|Содержит сведения о действии, доступном в [куба](../../../analysis-services/scripting/objects/cube-element-assl.md) элемент или [перспективы](../../../analysis-services/scripting/objects/perspective-element-assl.md) элемента.|  
+|[Элемент Action &#40; ASSL &#41;](../../../analysis-services/scripting/objects/action-element-assl.md)|Содержит сведения о действии, доступном в элементе [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) или элементе [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) .|  
 |[Элемент Aggregation &#40; ASSL &#41;](../../../analysis-services/scripting/objects/aggregation-element-assl.md)|Определяет один агрегат для [секции](../../../analysis-services/scripting/objects/partition-element-assl.md) элемента.|  
 |[Элемент AggregationDesign &#40; ASSL &#41;](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md)|Определяет набор определений агрегатов, которые можно совместно использовать в разных секциях в базе данных.|  
 |[Элемент AggregationInstance &#40; ASSL &#41;](../../../analysis-services/scripting/objects/aggregationinstance-element-assl.md)|Определяет экземпляр агрегата для секции.|  
@@ -82,7 +83,7 @@ ms.lasthandoff: 09/01/2017
 |[Элемент Hierarchy &#40; ASSL &#41;](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)|Определяет иерархию в измерении.|  
 |[Элемент IncrementalProcessingNotification &#40; ASSL &#41;](../../../analysis-services/scripting/objects/incrementalprocessingnotification-element-assl.md)|Содержит сведения о [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) о запросе, следует выполнить для определения хода выполнения добавочной обработки.|  
 |[Элемент KeyColumn &#40; ASSL &#41;](../../../analysis-services/scripting/objects/keycolumn-element-assl.md)|Содержит определение столбца, который является ключевым или входит в состав ключа для атрибута.|  
-|[Элемент KPI &#40; ASSL &#41;](../../../analysis-services/scripting/objects/kpi-element-assl.md)|Определяет ключевой показатель эффективности (KPI) в пределах [куба](../../../analysis-services/scripting/objects/cube-element-assl.md) элемент или [перспективы](../../../analysis-services/scripting/objects/perspective-element-assl.md) элемента.|  
+|[Элемент KPI &#40; ASSL &#41;](../../../analysis-services/scripting/objects/kpi-element-assl.md)|Определяет ключевой показатель эффективности в элементе [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) или [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) .|  
 |[Элемент Level &#40; ASSL &#41;](../../../analysis-services/scripting/objects/level-element-assl.md)|Определяет уровень в [иерархии](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) элемента.|  
 |[Элемент MdxScript &#40; ASSL &#41;](../../../analysis-services/scripting/objects/mdxscript-element-assl.md)|Содержит сведения о скрипте многомерных выражений (MDX), с которым связан [куба](../../../analysis-services/scripting/objects/cube-element-assl.md) элемента.|  
 |[Элемент measure &#40; ASSL &#41;](../../../analysis-services/scripting/objects/measure-element-assl.md)|Определяет меру.|  
@@ -113,8 +114,7 @@ ms.lasthandoff: 09/01/2017
 |[Элемент UnknownMemberTranslation &#40; ASSL &#41;](../../../analysis-services/scripting/objects/unknownmembertranslation-element-assl.md)|Содержит перевод заголовка элемента [UnknownMember](../../../analysis-services/scripting/properties/unknownmember-element-assl.md) элемент для [измерения](../../../analysis-services/scripting/objects/dimension-element-assl.md) элемента.|  
 |[Элемент ValueColumn &#40; ASSL &#41;](../../../analysis-services/scripting/objects/valuecolumn-element-assl.md)|Определяет столбец, предоставляющий значение родительского элемента.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Службы Analysis Services Scripting иерархия элементов XML языка &#40; ASSL &#41;](../../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)  
   
   
-

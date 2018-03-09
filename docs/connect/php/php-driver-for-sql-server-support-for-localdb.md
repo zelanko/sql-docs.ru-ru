@@ -1,27 +1,26 @@
-
 ---
 title: "В драйвере PHP для SQL Server Support for LocalDB | Документы Microsoft"
 ms.custom: 
 ms.date: 02/03/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.prod_service: drivers
+ms.component: php
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4dcf9e36eb3928bc606053bdfda441520155864a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a54071c75ca4437974be7b742ee3285972850e0a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="php-driver-for-sql-server-support-for-localdb"></a>PHP Driver for SQL Server Support for LocalDB (Поддержка драйвера PHP для SQL Server для LocalDB)
 
@@ -29,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 
 Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)], облегченная версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], именуемая LocalDB, будут доступны. В этом разделе обсуждается, как можно установить соединение с базой данных на экземпляре LocalDB.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 
 Дополнительные сведения о LocalDB, включая установку и настройку экземпляра LocalDB, разделе [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] раздел электронной документации на [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express LocalDB.
 
@@ -87,4 +86,3 @@ $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
 ## <a name="see-also"></a>См. также:
 
 [Подключение к серверу](../../connect/php/connecting-to-the-server.md)
-

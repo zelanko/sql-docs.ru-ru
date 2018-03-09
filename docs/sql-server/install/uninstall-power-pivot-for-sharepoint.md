@@ -2,32 +2,37 @@
 title: "Удаление Power Pivot для SharePoint | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 - setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
-caps.latest.revision: 27
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 861d60a66b9dc6d86b31aded956561fcdf1be6ff
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 1fb719e205eaf63498bb4c2ab5c25138123b82d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>Удаление Power Pivot для SharePoint
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Удаление установки [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] — это многоэтапная процедура, состоящая из подготовки к удалению, удаления компонентов и решений из фермы и удаления файлов программ и параметров реестра.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
   
- **В этом разделе:**  
+ **В этой статье:**  
   
 -   [Предварительные требования](#prereq)  
   
@@ -47,7 +52,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Для удаления функций и решений из фермы необходимо обладать правами администратора фермы SharePoint или администратора служебного приложения.  
   
--   Если также требуется удалить ядро СУБД, то необходимо быть системным администратором SQL Server и членом локальной группы администраторов.  
+-   Если также требуется удалить компонент Database Engine, то необходимо быть системным администратором SQL Server и членом локальной группы администраторов.  
   
 -   Для удаления служб Analysis Services и [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]необходимо быть администратором служб Analysis Services и членом локальной группы администраторов.  
   
@@ -197,4 +202,3 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
  [Средства настройки PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
   
-

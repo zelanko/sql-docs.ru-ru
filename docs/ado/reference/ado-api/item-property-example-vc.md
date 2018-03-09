@@ -3,7 +3,7 @@ title: "Элемент примера свойства (VC ++) | Докумен�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Item property [ADO], VC++ example
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6032bb7338a523ea125285070d99ba280f18a6a3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f154b79927d448b925dc8211d2373aca7b2731e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="item-property-example-vc"></a>Пример свойства элемента (VC ++)
 В этом примере показано, как [элемент](../../../ado/reference/ado-api/item-property-ado.md) свойство обращается к элементам коллекции. В примере открывается ***авторов*** таблицу ***Pubs*** базы данных с параметризованной команды.  
@@ -239,10 +238,9 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект команды (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Свойство Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
  [Коллекция параметров (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

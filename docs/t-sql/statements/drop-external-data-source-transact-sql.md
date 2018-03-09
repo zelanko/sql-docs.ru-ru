@@ -3,8 +3,11 @@ title: "Удалить внешний ИСТОЧНИК данных (Transact-SQ
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 3f65a2f5-a6c6-4be5-8ca4-6057078fe10e
-caps.latest.revision: 14
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 6657a09ca9f3e1e700e078d707c92c495e444d42
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: b479c5fd28b97eb6fae75d9490a52c9e56c3fa7f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-external-data-source-transact-sql"></a>Удалить внешний ИСТОЧНИК данных (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Удаляет PolyBase внешнего источника данных.  
   
@@ -50,7 +52,7 @@ DROP EXTERNAL DATA SOURCE external_data_source_name
 SELECT * FROM sys.external_data_sources;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо изменить любой внешний ИСТОЧНИК данных.  
   
 ## <a name="locking"></a>Блокировка  
@@ -67,9 +69,8 @@ SELECT * FROM sys.external_data_sources;
 DROP EXTERNAL DATA SOURCE mydatasource;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   
   
-
 

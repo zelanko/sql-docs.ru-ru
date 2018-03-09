@@ -3,8 +3,11 @@ title: "Создание ПРОСТРАНСТВЕННОГО ИНДЕКСА (Tran
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,20 +25,19 @@ helpviewer_keywords:
 - CREATE SPATIAL INDEX statement
 - CREATE INDEX statement
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
-caps.latest.revision: 89
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e8fc44c4e52900f6aea611575773e3c439f3dec7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 301896001cb79b9065436ecff044fdce92e7d576
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Создает пространственный индекс на указанной таблице и столбце в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Индекс может быть создан до появления данных в таблице. Можно создать индексы для таблиц или представлений в другой базе данных, если указать полное имя этой базы данных. Для создания пространственного индекса необходимо, чтобы у таблицы был кластеризованный первичный ключ. Сведения о пространственных индексах см. в разделе [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
@@ -251,7 +253,7 @@ BOUNDING_BOX = ( {
   
  Создает заданный индекс в файловой группе, используемой по умолчанию.  
   
- Слово «default» в этом контексте не является ключевым. Это идентификатор файловой группы, используемой по умолчанию, который должен быть ограничен, как например в выражении ON "default" или ON [default]. Если указано значение «default» (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в разделе [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ Слово «default» в этом контексте не является ключевым. Это идентификатор файловой группы, используемой по умолчанию, который должен быть ограничен, как например в выражении ON "default" или ON [default]. Если указано значение «default» (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  **\<Объект >:: =**  
   
@@ -286,8 +288,8 @@ BOUNDING_BOX = ( {
  Может быть указан только для столбца данных типа geography.  Это значение используется по умолчанию для этого типа данных, его не нужно указывать.  
   
 ### <a name="with-options"></a>Параметры инструкции WITH  
- BOUNDING_BOX  
- Указывает числовой четырехэлементный кортеж, который определяет четыре координаты ограничивающего прямоугольника: координаты x-min и y-min нижнего левого угла, и координаты x-max и y-max верхнего правого угла.  
+BOUNDING_BOX  
+Указывает числовой четырехэлементный кортеж, который определяет четыре координаты ограничивающего прямоугольника: координаты x-min и y-min нижнего левого угла, и координаты x-max и y-max верхнего правого угла.  
   
  *xMin*  
  Задает координату левого нижнего угла ограничивающего прямоугольника по оси X.  
@@ -313,13 +315,14 @@ BOUNDING_BOX = ( {
  YMAX =*ymax*  
  Указывает имя свойства и значение для координаты по оси Y правого верхнего угла ограничивающего прямоугольника.  
   
- Координаты ограничивающего прямоугольника применяются только в предложении USING GEOMETRY_GRID.  
-  
- *xMax* должно быть больше *xmin* и *ymax* должно быть больше *ymin*. Можно задать любое допустимое [float](../../t-sql/data-types/float-and-real-transact-sql.md) представление, при условии, что значения: *xmax* > *xmin* и *ymax*  >  *ymin*. В противном случае формируются соответствующие ошибки.  
-  
- Значения по умолчанию отсутствуют.  
-  
- В именах свойств ограничивающего прямоугольника учитывается регистр, независимо от параметров сортировки базы данных.  
+ > [!NOTE]
+ > Координаты ограничивающего прямоугольника применяются только в предложении USING GEOMETRY_GRID.  
+ >
+ > *xMax* должно быть больше *xmin* и *ymax* должно быть больше *ymin*. Можно задать любое допустимое [float](../../t-sql/data-types/float-and-real-transact-sql.md) представление, при условии, что значения: *xmax* > *xmin* и *ymax*  >  *ymin*. В противном случае формируются соответствующие ошибки.  
+ > 
+ > Значения по умолчанию отсутствуют.  
+ >
+ > В именах свойств ограничивающего прямоугольника учитывается регистр, независимо от параметров сортировки базы данных.  
   
  Каждое имя свойства необходимо указать только один раз. Их можно указывать в любом порядке. Например, следующие предложения эквивалентны:  
   
@@ -327,8 +330,8 @@ BOUNDING_BOX = ( {
   
 -   BOUNDING_BOX = (XMIN =*xmin*, XMAX =*xmax*, YMIN =*ymin*, YMAX =*ymax*)  
   
- GRIDS  
- Определяет плотность сетки на каждом уровне схемы тесселяции. Если выбраны GEOMETRY_AUTO_GRID и GEOGRAPHY_AUTO_GRID, этот параметр отключен.  
+GRIDS  
+Определяет плотность сетки на каждом уровне схемы тесселяции. Если выбраны GEOMETRY_AUTO_GRID и GEOGRAPHY_AUTO_GRID, этот параметр отключен.  
   
  Сведения о тесселяции см. в разделе [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
@@ -355,12 +358,14 @@ BOUNDING_BOX = ( {
  HIGH.  
  Указывает наибольшую возможную плотность сетки на данном уровне. HIGH соответствует 256 ячейкам (сетка 16x16).  
   
- С помощью имен уровней можно указывать уровни в любом порядке, а также пропускать уровни. Если используется имя для любого уровня, то необходимо использовать имя любого другого указанного уровня. Если уровень пропущен, то по умолчанию назначается плотность MEDIUM.  
+> [!NOTE] 
+> С помощью имен уровней можно указывать уровни в любом порядке, а также пропускать уровни. Если используется имя для любого уровня, то необходимо использовать имя любого другого указанного уровня. Если уровень пропущен, то по умолчанию назначается плотность MEDIUM.  
   
- Если указана недопустимая плотность, возвращается ошибка.  
+> [!WARNING] 
+> Если указана недопустимая плотность, возвращается ошибка.  
   
- CELLS_PER_OBJECT =*n*  
- Задает количество ячеек тесселяции на объект, которое может использоваться процессом тесселяции для одного пространственного объекта в индексе. *n*может быть любым целым числом от 1 до 8192 включительно. Если передано неверное число или число превышает максимальное число ячеек для указанной тесселяции, то возникает ошибка.  
+CELLS_PER_OBJECT =*n*  
+Задает количество ячеек тесселяции на объект, которое может использоваться процессом тесселяции для одного пространственного объекта в индексе. *n*может быть любым целым числом от 1 до 8192 включительно. Если передано неверное число или число превышает максимальное число ячеек для указанной тесселяции, то возникает ошибка.  
   
  Параметр CELLS_PER_OBJECT имеет следующие значения по умолчанию:  
   
@@ -375,8 +380,8 @@ BOUNDING_BOX = ( {
   
  Значение CELLS_PER_OBJECT используется правилом тесселяции для числа ячеек на объект. Сведения о правилах тесселяции см. в разделе [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
- PAD_INDEX = {ON | **OFF** }  
- **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+PAD_INDEX = {ON | **OFF** }  
+**Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Определяет разреженность индекса. Значение по умолчанию — OFF.  
   
@@ -388,7 +393,7 @@ BOUNDING_BOX = ( {
   
  Параметр PAD_INDEX имеет смысл только в случае, если указан параметр FILLFACTOR, так как использует процентное значение, указанное в нем. Если процент, заданный аргументом FILLFACTOR, недостаточно велик для размещения одной строки, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] внутренне переопределит это значение, чтобы обеспечить минимум. Количество строк на странице промежуточного уровня никогда не будет меньше двух независимо от того, каким образом нижнего значения *fillfactor*.  
   
- FILLFACTOR =*fillfactor*  
+FILLFACTOR =*fillfactor*  
  **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Определяет величину в процентах, показывающую, насколько компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен заполнять конечный уровень каждой страницы индекса во время его создания или перестроения. *значение коэффициента заполнения* должно быть целым числом от 1 до 100. Значение по умолчанию равно 0. Если *fillfactor* равен 100 или 0, [!INCLUDE[ssDE](../../includes/ssde-md.md)] создает индексы с заполненными страницами конечного.  
@@ -399,12 +404,12 @@ BOUNDING_BOX = ( {
  Аргумент FILLFACTOR действует только при создании или перестройке индекса. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не сохраняет динамически указанный процентный объем свободного места на страницах. Для просмотра коэффициента заполнения, используйте [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) представления каталога.  
   
 > [!IMPORTANT]  
->  Создание кластеризованного индекса с аргументом FILLFACTOR меньше 100 влияет на объем пространства хранения, занимаемого данными, т. к. компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] перераспределяет данные, когда создает кластеризованный индекс.  
+> Создание кластеризованного индекса с аргументом FILLFACTOR меньше 100 влияет на объем пространства хранения, занимаемого данными, т. к. компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] перераспределяет данные, когда создает кластеризованный индекс.  
   
  Дополнительные сведения см. в статье [Указание коэффициента заполнения для индекса](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
   
- ПАРАМЕТР SORT_IN_TEMPDB = {ON | **OFF** }  
- **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ПАРАМЕТР SORT_IN_TEMPDB = {ON | **OFF** }  
+**Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Указывает, сохранять ли временные результаты сортировки в базе данных tempdb. Значение по умолчанию — OFF.  
   
@@ -416,11 +421,11 @@ BOUNDING_BOX = ( {
   
  Кроме места в базе данных пользователя, необходимого для создания индекса, требуется примерно столько же дополнительного места в базе данных tempdb для хранения промежуточных результатов сортировки. Дополнительные сведения см. в разделе [параметр SORT_IN_TEMPDB для индексов](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
   
- IGNORE_DUP_KEY =**OFF**  
- Не влияет на пространственные индексы, поскольку для этого типа индекса ограничение уникальности неприменимо. Не устанавливайте этот параметр в значение ON, иначе произойдет ошибка.  
+IGNORE_DUP_KEY =**OFF**  
+Не влияет на пространственные индексы, поскольку для этого типа индекса ограничение уникальности неприменимо. Не устанавливайте этот параметр в значение ON, иначе произойдет ошибка.  
   
- STATISTICS_NORECOMPUTE = {ON | **OFF**}  
- Указывает, выполнялся ли перерасчет статистики распределения. Значение по умолчанию — OFF.  
+STATISTICS_NORECOMPUTE = {ON | **OFF**}  
+Указывает, выполнялся ли перерасчет статистики распределения. Значение по умолчанию — OFF.  
   
  ON  
  Устаревшие статистики не пересчитываются автоматически.  
@@ -431,10 +436,10 @@ BOUNDING_BOX = ( {
  Чтобы восстановить автоматическое обновление статистики, следует установить STATISTICS_NORECOMPUTE в значение OFF или выполнить UPDATE STATISTICS без предложения NORECOMPUTE.  
   
 > [!IMPORTANT]  
->  Отключение автоматического пересчета статистики распределения может помешать оптимизатору запросов выбрать оптимальные планы выполнения запросов, обращенных к таблице.  
+> Отключение автоматического пересчета статистики распределения может помешать оптимизатору запросов выбрать оптимальные планы выполнения запросов, обращенных к таблице.  
   
- DROP_EXISTING = {ON | **OFF** }  
- **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+DROP_EXISTING = {ON | **OFF** }  
+**Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Указывает, что именованный существующий пространственный индекс удален и перестраивается. Значение по умолчанию — OFF.  
   
@@ -446,16 +451,16 @@ BOUNDING_BOX = ( {
   
  Тип индекса не может быть изменен с помощью аргумента DROP_EXISTING.  
   
- ONLINE =**OFF**  
- Указывает, что базовые таблицы и связанные индексы будут недоступны для запросов и изменения данных во время операций с индексами. В этой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не разрешено применять построение индекса в сети для пространственных индексов. Если этому параметру присвоено значение ON для пространственного индекса, формируется ошибка. Не указывайте параметр ONLINE или установите его в значение OFF.  
+ONLINE =**OFF**  
+Указывает, что базовые таблицы и связанные индексы будут недоступны для запросов и изменения данных во время операций с индексами. В этой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не разрешено применять построение индекса в сети для пространственных индексов. Если этому параметру присвоено значение ON для пространственного индекса, формируется ошибка. Не указывайте параметр ONLINE или установите его в значение OFF.  
   
  Операция с индексами вне сети, в ходе которой создается, перестраивается или удаляется пространственный индекс, получает блокировку изменения схемы для таблицы. Это предотвращает доступ к базовой таблице всех пользователей во время операции.  
   
 > [!NOTE]  
->  Операции с индексами в сети доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> Операции с индексами в сети доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- ALLOW_ROW_LOCKS = { **ON** | {OFF}  
- **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ALLOW_ROW_LOCKS = { **ON** | {OFF}  
+**Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Указывает, разрешена ли блокировка строк. Значение по умолчанию — ON.  
   
@@ -465,8 +470,8 @@ BOUNDING_BOX = ( {
  OFF  
  Блокировки строк не используются.  
   
- ALLOW_PAGE_LOCKS = { **ON** | {OFF}  
- **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ALLOW_PAGE_LOCKS = { **ON** | {OFF}  
+**Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Указывает, разрешена ли блокировка страниц. Значение по умолчанию — ON.  
   
@@ -476,13 +481,13 @@ BOUNDING_BOX = ( {
  OFF  
  Блокировки страниц не используются.  
   
- MAXDOP =*max_degree_of_parallelism*  
- **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+MAXDOP =*max_degree_of_parallelism*  
+**Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Переопределяет параметр конфигурации `max degree of parallelism` только на время выполнения операции с индексами. MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.  
   
 > [!IMPORTANT]  
->  Несмотря на синтаксическую поддержку параметра MAXDOP, в настоящее время инструкция CREATE SPATIAL INDEX всегда использует только один процессор.  
+> Несмотря на синтаксическую поддержку параметра MAXDOP, в настоящее время инструкция CREATE SPATIAL INDEX всегда использует только один процессор.  
   
  *max_degree_of_parallelism* может быть:  
   
@@ -498,10 +503,10 @@ BOUNDING_BOX = ( {
  Дополнительные сведения см. в статье [Настройка параллельных операций с индексами](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]  
->  Параллельные операции с индексами доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> Параллельные операции с индексами доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- DATA_COMPRESSION = {NONE | ROW | PAGE}  
- **Применяется к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+DATA_COMPRESSION = {NONE | ROW | PAGE}  
+**Применяется к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Определяет уровень сжатия данных, используемого индексом.  
   
@@ -514,13 +519,13 @@ BOUNDING_BOX = ( {
  PAGE  
  Используется сжатие страниц.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Каждый параметр можно указывать только один раз для инструкции CREATE SPATIAL INDEX. При повторении любого параметра формируется ошибка.  
   
  Можно создать до 249 пространственных индексов для каждого пространственного столбца в таблице. Создание более чем одного пространственного индекса для определенного пространственного столбца может быть полезно, например, для индексации различных параметров тесселяции в одном столбце.  
   
 > [!IMPORTANT]  
->  Существует ряд других ограничений на создание пространственного индекса. Дополнительные сведения см. в разделе [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md).  
+> Существует ряд других ограничений на создание пространственного индекса. Дополнительные сведения см. в разделе [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
  Для построения индексов нельзя воспользоваться доступным параллелизмом процессов.  
   
@@ -548,10 +553,10 @@ BOUNDING_BOX = ( {
  [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)  
  Представляет сведения о схеме тесселяции и параметрах каждого пространственного индекса.  
   
-## <a name="additional-remarks-about-creating-indexes"></a>Дополнительные примечания о создании индексов  
+## <a name="additional-remarks-about-creating-indexes"></a>Дополнительные замечания о создании индексов  
  Дополнительные сведения о создании индексов см. в разделе «Примечания» раздела [CREATE INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/create-index-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Пользователь должен обладать разрешением ALTER для таблицы или представления, или быть членом фиксированной серверной роли sysadmin или db_ddladmin и db_owner предопределенных ролей базы данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -559,7 +564,7 @@ BOUNDING_BOX = ( {
 ### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>A. Создание пространственного индекса для столбца типа geometry  
  В следующем примере создается таблица с именем `SpatialTable` , содержащий **geometry** столбец типа `geometry_col`. Затем для столбца `SIndx_SpatialTable_geometry_col1` создается пространственный индекс `geometry_col`. В примере используется схема тесселяции по умолчанию и назначается ограничивающий прямоугольник.  
   
-```  
+```sql  
 CREATE TABLE SpatialTable(id int primary key, geometry_col geometry);  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1   
    ON SpatialTable(geometry_col)  
@@ -569,7 +574,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1
 ### <a name="b-creating-a-spatial-index-on-a-geometry-column"></a>Б. Создание пространственного индекса для столбца типа geometry  
  В следующем примере для столбца `SIndx_SpatialTable_geometry_col2` в таблице `geometry_col` создается второй пространственный индекс, `SpatialTable`. В качестве схемы тесселяции в примере задается `GEOMETRY_GRID`. В примере также назначается ограничивающий прямоугольник, различные плотности на разных уровнях сетки и 64 ячейки на объект. В примере также задается значение `ON` для разреженности индекса.  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2  
    ON SpatialTable(geometry_col)  
    USING GEOMETRY_GRID  
@@ -583,7 +588,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2
 ### <a name="c-creating-a-spatial-index-on-a-geometry-column"></a>В. Создание пространственного индекса для столбца типа geometry  
  Следующий пример создает третий пространственный индекс, `SIndx_SpatialTable_geometry_col3`, для столбца `geometry_col` в таблице `SpatialTable`. В примере используется схема тесселяции по умолчанию. В примере назначается ограничивающий прямоугольник и используются различные плотности ячеек на третьем и четвертом уровнях, при этом выбрано число ячеек на объект по умолчанию.  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3  
    ON SpatialTable(geometry_col)  
    WITH (  
@@ -594,7 +599,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3
 ### <a name="d-changing-an-option-that-is-specific-to-spatial-indexes"></a>Г. Изменение параметра для пространственных индексов  
  В следующем примере перестраивается пространственный индекс `SIndx_SpatialTable_geography_col3`, созданный в предшествующем примере, путем назначения новой плотности `LEVEL_3` с помощью инструкции DROP_EXISTING = ON.  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3  
    ON SpatialTable(geography_col)  
    WITH ( BOUNDING_BOX = ( 0, 0, 500, 200 ),  
@@ -605,7 +610,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
 ### <a name="e-creating-a-spatial-index-on-a-geography-column"></a>Д. Создание пространственного индекса для столбца типа geography  
  В следующем примере создается таблица с именем `SpatialTable2` , содержащий **geography** столбец типа `geography_col`. Затем для столбца `SIndx_SpatialTable_geography_col1` создается пространственный индекс `geography_col`. В примере используются значения параметров по умолчанию для схемы тесселяции GEOGRAPHY_AUTO_GRID.  
   
-```  
+```sql  
 CREATE TABLE SpatialTable2(id int primary key, object GEOGRAPHY);  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1   
    ON SpatialTable2(object);  
@@ -617,7 +622,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1
 ### <a name="f-creating-a-spatial-index-on-a-geography-column"></a>Е. Создание пространственного индекса для столбца типа geography  
  В следующем примере для столбца `SIndx_SpatialTable_geography_col2` в таблице `geography_col` создается второй пространственный индекс, `SpatialTable2`. В качестве схемы тесселяции в примере задается `GEOGRAPHY_GRID`. В примере также назначаются различные плотности сетки на разных уровнях и 64 ячейки на объект. В примере также задается значение `ON` для разреженности индекса.  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col2  
    ON SpatialTable2(object)  
    USING GEOGRAPHY_GRID  
@@ -630,7 +635,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col2
 ### <a name="g-creating-a-spatial-index-on-a-geography-column"></a>Ж. Создание пространственного индекса для столбца типа geography  
  В следующем примере создается третий пространственный индекс, `SIndx_SpatialTable_geography_col3`, для столбца `geography_col` в таблице `SpatialTable2`. В примере используется схема тесселяции по умолчанию, GEOGRAPHY_GRID, и значение CELLS_PER_OBJECT по умолчанию (16).  
   
-```  
+```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3  
    ON SpatialTable2(object)  
    WITH ( GRIDS = ( LEVEL_3 = HIGH, LEVEL_2 = HIGH ) );  
@@ -654,4 +659,3 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
  [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   
-

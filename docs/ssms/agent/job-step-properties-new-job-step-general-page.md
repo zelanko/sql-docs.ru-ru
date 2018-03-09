@@ -3,29 +3,29 @@ title: "Свойства шага задания — создание шага 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.job.stepgeneral.f1
+f1_keywords: sql13.ag.job.stepgeneral.f1
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fbe2a44b573d05bbf4b9b1eed79595e3a771bcf4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ccb7a7e5a01257dac0449d351d7a4a56a1f7f200
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Свойства шага задания — создание шага задания (страница "Общие")
-Эта страница используется для просмотра и изменения свойств шага задания агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или для определения нового шага задания.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Эта страница используется для просмотра и изменения свойств шага задания агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или для определения нового шага задания.  
   
 Для перехода к данной странице в обозревателе объектов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] разверните агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , щелкните правой кнопкой мыши **Задания**, выберите пункт **Создать задание**, страницу **Шаги** и нажмите кнопку **Создать**. Перейти к этой странице можно также, щелкнув правой кнопкой мыши задание в обозревателе объектов, наведя курсор мыши на пункт **Свойства**, затем выбрав страницу **Шаги** и нажав кнопку **Создать**, **Вставить**или **Изменить**.  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 Задайте команду, запускаемую шагом задания.  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Параметры для шагов задания языка Transact-SQL  
-**Открытие**  
+**Открыть**  
 Загрузить команду из файла.  
   
 **Выделить все**  
@@ -69,13 +69,13 @@ ms.lasthandoff: 06/22/2017
 **VBScript**  
 Указывает [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Basic Scripting Edition в качестве языка, используемого шагами задания.  
   
-**Язык Язык JScript**  
+**Язык JScript**  
 Указывает JScript в качестве языка, используемого шагами задания.  
   
 **Другое**  
 Введите имя языка для шагов задания, написанных на другом языке сценариев.  
   
-**Открытие**  
+**Открыть**  
 Загрузить команду из файла.  
   
 **Выделить все**  
@@ -91,7 +91,7 @@ ms.lasthandoff: 06/22/2017
 **Код завершения процесса успешной команды**  
 Введите код завершения, возвращаемый командой после успешного выполнения.  
   
-**Открытие**  
+**Открыть**  
 Загрузить команду из файла.  
   
 **Выделить все**  
@@ -104,7 +104,7 @@ ms.lasthandoff: 06/22/2017
 Вставить содержимое буфера обмена.  
   
 ## <a name="options-for-powershell-job-steps"></a>Параметры для шагов задания языка PowerShell  
-**Открытие**  
+**Открыть**  
 Загрузить скрипт из файла.  
   
 **Выделить все**  
@@ -192,7 +192,7 @@ ms.lasthandoff: 06/22/2017
 **База данных**  
 База данных, которая будет использоваться на шаге задания.  
   
-**Открытие**  
+**Открыть**  
 Загрузить команду из файла.  
   
 **Выделить все**  
@@ -266,10 +266,10 @@ ms.lasthandoff: 06/22/2017
 **Удалить**  
 Удалить выбранный командный файл.  
   
-**Вверх**  
+**вверх**  
 Переместить выбранный командный файл вверх.  
   
-**Переместить вниз**  
+**вниз**  
 Переместить выбранный командный файл вниз.  
   
 ### <a name="data-sources-tab"></a>Вкладка «Источники данных»  
@@ -278,7 +278,7 @@ ms.lasthandoff: 06/22/2017
 **Диспетчер соединений**  
 Просмотр имени источника данных.  
   
-**Description**  
+**Описание**  
 Позволяет просмотреть описание источника данных.  
   
 **Строка подключения**  
@@ -329,7 +329,7 @@ ms.lasthandoff: 06/22/2017
 **Путь к свойству**  
 Позволяет просмотреть или изменить путь к свойству.  
   
-**Значение**  
+**Value**  
 Позволяет просмотреть или изменить значение свойства.  
   
 **Удалить**  
@@ -376,4 +376,3 @@ ms.lasthandoff: 06/22/2017
 [Пакеты служб из заданий агента SQL Server](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31)  
 [Управление агентами репликации](http://msdn.microsoft.com/en-us/f27186b8-b1b2-4da0-8b2b-91f632c2ab7e)  
   
-

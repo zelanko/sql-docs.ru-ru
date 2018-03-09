@@ -1,10 +1,13 @@
 ---
-title: "Синтаксис (службы SSIS) | Документы Microsoft"
+title: "Синтаксис (службы SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-caps.latest.revision: 48
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 298c94c7a016e3df8bd89a11281d571f1c5b669d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 28dc10cc407a41e8ba2ec594fdacbe293dbe53a1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="syntax-ssis"></a>Синтаксис (службы SSIS)
   Синтаксис выражений служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] похож на синтаксис языков C и C#. Выражения содержат элементы, такие как идентификаторы (столбцы и переменные), литералы, операторы и функции. В этом разделе обобщаются особые требования синтаксиса средства оценки выражений с точки зрения различных элементов выражений.  
@@ -40,7 +42,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="identifiers"></a>Идентификаторы  
  Выражения могут содержать идентификаторы столбцов и переменных. Столбцы могут переноситься из источника данных или создаваться с помощью преобразований в потоке данных. Чтобы обращаться к столбцам, в выражениях могут быть использованы идентификаторы журнала обращений и преобразований. Идентификаторами журнала обращений и преобразований являются числа, уникальным образом идентифицирующие элементы пакета. Префиксы идентификаторов журнала обращений и преобразований, на которые ссылается выражение, должны содержать знак решетки (#). Например, на идентификатор журнала обращений и преобразований 138 ссылаются с помощью #138.  
   
- Выражения могут содержать системные переменные, которые предоставляют службы [!INCLUDE[ssIS](../../includes/ssis-md.md)] , а также пользовательские переменные. Префиксы переменных, на которые ссылается выражение, должны содержать знак @. Например `Counter` является ссылкой на переменную с помощью @Counter. Символ @ не является частью имени переменной; он только указывает средству оценки выражений на то, что идентификатор является переменной. Дополнительные сведения см. в статье [Идентификаторы (службы SSIS)](../../integration-services/expressions/identifiers-ssis.md).  
+ Выражения могут содержать системные переменные, которые предоставляют службы [!INCLUDE[ssIS](../../includes/ssis-md.md)] , а также пользовательские переменные. Префиксы переменных, на которые ссылается выражение, должны содержать знак @. Например, в качестве ссылки на переменную `Counter` используется выражение @Counter. Символ @ не является частью имени переменной; он только указывает средству оценки выражений на то, что идентификатор является переменной. Дополнительные сведения см. в разделе [Идентификаторы (службы SSIS)](../../integration-services/expressions/identifiers-ssis.md).  
   
 ## <a name="literals"></a>Литералы  
  Выражения могут содержать числовые, строковые и логические литералы. Строковые литералы, использующиеся в выражениях, должны быть заключены в кавычки. Числовые и логические литералы не заключаются в кавычки. В языке выражений содержатся управляющие последовательности для часто используемых символов. Дополнительные сведения см. в статье [Литералы (службы SSIS)](../../integration-services/expressions/numeric-string-and-boolean-literals.md).  
@@ -80,7 +82,7 @@ ms.lasthandoff: 08/03/2017
   
  Дополнительные сведения см. в статье [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Использование выражения в компоненте потока данных](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>См. также  
@@ -90,4 +92,3 @@ ms.lasthandoff: 08/03/2017
 -   Техническая статья [Примеры выражений служб SSIS](http://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
   
   
-

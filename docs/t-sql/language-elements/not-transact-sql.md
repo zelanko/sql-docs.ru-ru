@@ -3,8 +3,11 @@ title: "НЕ (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - expressions [SQL Server], negating
 - reversing Boolean expression values
 ms.assetid: dc07cc35-20f1-46e6-9995-2938390dc19a
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 85cdc60ebe0c6f66624b539e0f20d83f32c19500
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 420117f333b43b67c282d0c44c56c43ebbc375db
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="not-transact-sql"></a>NOT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Инвертирует входное логическое значение.  
   
@@ -55,7 +57,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="result-value"></a>Значение результата  
  Оператор NOT изменяет значение любого логического выражения на противоположное.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Использование оператора NOT инвертирует выражение.  
   
  В следующей таблице показаны результаты сравнения значений TRUE и FALSE при использовании оператора NOT.  
@@ -64,7 +66,7 @@ ms.lasthandoff: 09/01/2017
 |------|---------|  
 |**ЗНАЧЕНИЕ TRUE**|FALSE|  
 |**ЗНАЧЕНИЕ FALSE**|TRUE|  
-|**НЕИЗВЕСТНЫЙ**|UNKNOWN|  
+|**UNKNOWN**|UNKNOWN|  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере производится поиск всех велосипедов серебристого цвета по цене не выше 400 долларов США.  
@@ -102,7 +104,7 @@ FROM FactInternetSales
 WHERE SalesOrderNumber LIKE 'SO6%' AND NOT ProductKey < 400;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
  [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
@@ -110,6 +112,5 @@ WHERE SalesOrderNumber LIKE 'SO6%' AND NOT ProductKey < 400;
  [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-
 
 

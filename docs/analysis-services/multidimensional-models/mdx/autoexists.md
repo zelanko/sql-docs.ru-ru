@@ -1,32 +1,31 @@
 ---
 title: "Автоматическая проверка существования | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 655041c87d4cf9009692025f9396a94dd41a2cf1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 934307b7230a950bc41b5de117cc6f2326b90561
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="autoexists"></a>Автоматическая проверка существования
-  Концепция *автоматической проверки существования* ограничивает пространство куба теми ячейками, которые фактически существуют в кубе, в противоположность тем ячейкам, которые могут существовать в результате создания всех возможных комбинаций элементов иерархии атрибута, принадлежащих одной иерархии. Это происходит потому, что элементы одной иерархии атрибута не могут существовать в одном измерении с элементами другой иерархии атрибута. Если в инструкции SELECT используются две или более иерархии атрибута одного измерения, службы Analysis Services оценивают эти атрибуты, чтобы убедиться, что элементы этих атрибутов правильно ограничены и соответствуют критериям остальных атрибутов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Концепция *автоматической проверки существования* ограничивает пространство куба теми ячейками, которые фактически существуют в кубе, в противоположность тем ячейкам, которые могут существовать в результате создания всех возможных комбинаций элементов иерархии атрибута, принадлежащих одной иерархии. Это происходит потому, что элементы одной иерархии атрибута не могут существовать в одном измерении с элементами другой иерархии атрибута. Если в инструкции SELECT используются две или более иерархии атрибута одного измерения, службы Analysis Services оценивают эти атрибуты, чтобы убедиться, что элементы этих атрибутов правильно ограничены и соответствуют критериям остальных атрибутов.  
   
  Например, предположим, что идет работа с атрибутами измерения «Geography». Если существует выражение, возвращающее все элементы атрибута «City», и другое выражение, ограничивающее элементы атрибута «Country» всеми странами Европы, то элементы атрибута «City» будут ограничены только городами, расположенным в странах Европы. Такое поведение определяется характеристиками автоматической проверки существования службы Analysis Services. Автоматическая проверка существования применима только к атрибутам, находящимся в одном измерении, потому что пытается предотвратить включение записей измерения, не включенных в одно выражение с атрибутом, в другое выражение с атрибутом. Автоматическую проверку существования можно также воспринимать как результат пересечения различных выражений с атрибутом по строкам измерения.  
   
@@ -318,14 +317,13 @@ WHERE (Measures.[Internet Sales Amount],
   
  Поведение автоматической проверки существования может изменяться с помощью параметра AUTOEXISTS = [1 | 2 | 3] параметр в строке подключения; в разделе [поддерживаемые свойства XMLA &#40; XML для Аналитики &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) и <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> для использования параметра.  
   
-## <a name="see-also"></a>См. также:  
- [Основные понятия многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+## <a name="see-also"></a>См. также  
+ [Ключевые понятия многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Пространство куба](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Кортежи](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
- [Работа с элементами, кортежами и наборами (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [Работа с членами, кортежей и наборов &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [Визуальные и невизуальные итоги](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
- [Справочник по языку многомерных выражений (многомерные выражения)](../../../mdx/mdx-language-reference-mdx.md)   
- [Справочник по многомерным выражениям (многомерные выражения)](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [Справочник по языку многомерных Выражений &#40; Многомерные Выражения &#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [Многомерные выражения &#40; Многомерные Выражения &#41; Ссылка](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Пример свойства состояния (записей) (Visua
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Status property [ADO Recordset], Visual Basic example
 ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 04f599ee353033b0874a7e7f18ab572d19b225bd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 47093e6eca66a135034a63bc2f05041555a1481b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="status-property-example-recordset-vb"></a>Пример свойства состояния (записей) (Visual Basic)
 В этом примере используется [состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md) свойство для отображения записи, которые были изменены в пакетной операции перед пакетного обновления.  
@@ -105,6 +104,5 @@ End Sub
 'EndStatusRecordsetVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство Status (набора записей ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
-
+## <a name="see-also"></a>См. также  
+ [Свойство Status (объект Recordset ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)

@@ -2,11 +2,13 @@
 title: "Инструкция CREATE GLOBAL CUBE (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,26 +18,24 @@ f1_keywords:
 - CREATE
 - CREATE GLOBAL
 - CREATE GLOBAL CUBE
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - statements [MDX], CREATE GLOBAL CUBE
 - CREATE GLOBAL CUBE
 ms.assetid: b46f3c98-a4f1-4ebb-915f-a3333f4054dc
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 0e0dd4c6f3a5fe6fddf538389581f1554704691c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b9a80a053d9666ca2e8c63eb6037dddf3cf4a7a5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>Определение данных MDX - СОЗДАНИЯ глобального КУБА
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Создает и заполняет значениями локально материализованный куб на основе вложенного куба из куба на сервере. Чтобы соединиться с локально материализованным кубом, соединяться с сервером необязательно. Дополнительные сведения о локальных кубах см. в разделе [локальных кубов &#40; Analysis Services — многомерные данные &#41; ](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
   
@@ -132,7 +132,7 @@ FROM source_cube_name (<param list>)
  \<Тип уровня >  
  Спецификация, допустимая только для определения производного измерения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Локальный куб является definedin условия мер и измерений, которые его определяют. Существует два типа измерений.  
   
 -   Измерения источника — это измерения, которые были частью одного из исходных кубов.  
@@ -220,4 +220,3 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
  [СОЗДАТЬ инструкцию КУБА СЕАНСА &#40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   
-

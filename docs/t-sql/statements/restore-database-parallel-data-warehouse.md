@@ -3,27 +3,29 @@ title: "ВОССТАНОВЛЕНИЕ базы данных (Parallel Data Wareho
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d915bfc1-e392-4a3a-9d94-08682cf3c864
-caps.latest.revision: 8
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 001813cf0e7d00e089046d8580108eb10ef4cba0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 5ba8aa12f38fce6ac00f88f0015008da25a59b88
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>ВОССТАНОВЛЕНИЕ базы данных (параллельное хранилище данных)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Восстанавливает [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] пользовательской базы данных из резервной копии базы данных для [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] устройства. База данных восстанавливается из резервной копии, ранее созданным [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [резервной копии базы данных &#40; Параллельное хранилище данных &#41; ](../../t-sql/statements/backup-database-parallel-data-warehouse.md) команды. Для резервного копирования и восстановления для создания плана аварийного восстановления или переместить базы данных с одного устройства.  
   
@@ -89,7 +91,7 @@ RESTORE HEADERONLY
   
  Результаты инструкции RESTORE HEADERONLY созданный [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] результатов инструкции RESTORE HEADERONLY. Результат имеет более 50 столбцов, которые используют не все [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Описание столбцов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] результатов инструкции RESTORE HEADERONLY см. в разделе [RESTORE HEADERONLY &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется **CREATE ANY DATABASE** разрешение.  
   
  Требуется учетная запись Windows, имеющую разрешение на доступ и чтение из каталога резервного копирования. Необходимо также сохранить имя учетной записи Windows и пароль в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
@@ -181,8 +183,7 @@ RESTORE HEADERONLY
   
  Данные заголовка можно использовать для проверки содержимого резервной копии, или чтобы убедиться в том, что устройства цели восстановления совместима с исходного устройства резервного копирования, прежде чем пытаться восстановить резервную копию.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Резервное копирование базы данных &#40; Параллельное хранилище данных &#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)  
   
   
-

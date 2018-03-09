@@ -1,28 +1,28 @@
 ---
-title: "Для служб Reporting Services (SSRS), отчеты | Документы Microsoft"
+title: "Отчеты служб Reporting Services (SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/15/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords:
-- Reporting Services, report creation
+helpviewer_keywords: Reporting Services, report creation
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 11bf9da4b78262f75a411f847c721309abc2457b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fae0916939061f7e0206d749c9232691bca31f9d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services (SSRS), отчеты служб
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] — отчеты с разбивкой на страницы — это основанные на XML определения отчетов, включающие данные отчетов и элементы макета отчетов. В клиентской файловой системе определения отчетов имеют расширение RDL. После публикации отчета с разбивкой на страницы он становится элементом отчета, хранящимся на сервере отчетов или на сайте SharePoint. Отчеты с разбивкой на страницы — это лишь одна из частей серверной платформы создания отчетов, предоставляемой службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Вам также доступно [Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
@@ -63,7 +63,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Экспорт (необязательный этап).** Экспорт отчета в другом формате файла.  
   
- Дополнительные сведения см. в разделе [этапы отчетов](../../reporting-services/reporting-services-concepts-ssrs.md#bkmk_StagesofReports) в [основные понятия служб Reporting &#40; Службы SSRS &#41; ](../../reporting-services/reporting-services-concepts-ssrs.md).  
+ Дополнительные сведения см. в разделе [Этапы отчетов](../../reporting-services/reporting-services-concepts-ssrs.md#bkmk_StagesofReports) статьи [Основные понятия служб Reporting Services (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md).  
   
 ## <a name="create-paginated-reports"></a>Отчеты с разбивкой на страницы  
  Вот как можно создать отчет с разбивкой на страницы:  
@@ -86,31 +86,31 @@ ms.lasthandoff: 08/09/2017
   
     -   **Выбрать визуализацию данных.** Для каждого набора данных необходимо выбрать область данных, которая будет использована для отображения данных. В списке можно выбрать таблицы, диаграммы, датчики и карты. Дополнительные сведения см. в следующих разделах:  
   
-        -   [Таблицы, матрицы, списки и &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+        -   [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
-        -   [Графики и &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+        -   [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
-        -   [Спарклайны и гистограммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
+        -   [Спарклайны и гистограммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
-        -   [Индикаторы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+        -   [Индикаторы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
-        -   [Maps &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
+        -   [Карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
-        -   [Датчики &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+        -   [Датчики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
     -   **Настроить данные и макет.** Разработка макета отчета. В определение отчета входят текст отчета, источники данных, наборы данных, области данных, текстовые поля, линии и изображения. Прямоугольники используются в макете как контейнеры, а также как визуальные элементы. Необходимо настроить каждую область данных, написав выражения для управления фильтрацией, группированием, сортировкой, форматированием и отображением данных. Добавить имена отчетов, расположения и другие сведения для идентификации, помогающие управлять десятками и сотнями отчетов. Добавить визуальные элементы и контейнеры для организации элементов макета на странице. Дополнительные сведения см. в следующих разделах:  
   
-        -   [Фильтр, группы и сортировка данных и &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+        -   [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
-        -   [Параметры отчета &#40; Построитель отчетов и конструктор отчетов &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+        -   [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
-        -   [Выражения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+        -   [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
-        -   [Форматирование элементов отчета и &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+        -   [Форматирование элементов отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
   
-        -   [Изображения, текстовые поля, прямоугольники, строки и &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)  
+        -   [Изображения, текстовые поля, прямоугольники и линии (построитель отчетов и службы SSRS)](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)  
   
-        -   [Макет страницы и подготовки к просмотру и &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+        -   [Макет страницы и подготовка к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
     -   **Настроить интерактивные функции.** Добавить интерактивные функции для читателей отчетов. Например кнопки сортировки или элементы переключения для просмотра запросов. Дополнительные сведения см. в разделе [Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
@@ -121,10 +121,10 @@ ms.lasthandoff: 08/09/2017
 -   **Определить, какие из компонентов могут быть использованы повторно.**  Определить, можно ли открыть для повторного использования источники данных или запросы к наборам данных. Если это возможно, следует создать общие источники данных и наборы данных на сервере отчетов или сайте SharePoint. Определить, можно ли повторно использовать области данных в качестве частей отчетов. Дополнительные сведения см. в разделе [Элементы отчетов в конструкторе отчетов (службы SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
 ## <a name="preview-reports"></a>Предварительный просмотр отчетов  
- Каждое из средств создания отчетов поддерживает функцию предварительного просмотра отчетов. Дополнительные сведения см. в разделе [предварительного просмотра](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview) раздел [разработка отчетов с использованием конструктора отчетов &#40; Службы SSRS &#41; ](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md), и [Предварительный просмотр отчетов в построителе отчетов](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
+ Каждое из средств создания отчетов поддерживает функцию предварительного просмотра отчетов. Дополнительные сведения см. в разделе [Предварительный просмотр](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_Preview) статьи [Разработка отчетов с использованием конструктора отчетов (SSRS)](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) и в статье [Предварительный просмотр отчетов в построителе отчетов](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="save-or-publish-reports"></a>Сохранить или опубликовать отчеты  
- Каждое средство создания отчетов поддерживает локальное сохранение отчетов и их публикацию на сервере отчетов или сайте SharePoint. Дополнительные сведения см. в разделе [сохранение и развертывание](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy) раздел [разработка отчетов с использованием конструктора отчетов &#40; Службы SSRS &#41; ](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md), и [сохранение отчеты &#40; Построитель отчетов &#41; ](../../reporting-services/report-builder/saving-reports-report-builder.md).  
+ Каждое средство создания отчетов поддерживает локальное сохранение отчетов и их публикацию на сервере отчетов или сайте SharePoint. Дополнительные сведения см. в разделе [Сохранение и развертывание](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy) статьи [Разработка отчетов с использованием конструктора отчетов (SSRS)](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md) и в статье [Сохранение отчетов (построитель отчетов)](../../reporting-services/report-builder/saving-reports-report-builder.md).  
   
 ## <a name="view-reports"></a>Просмотр отчетов  
  В дополнение к предварительному просмотру отчета, сохраненного локально или опубликованного на сервере отчетов, можно предоставить несколько различных способов просмотра отчета для читателей. Отчеты можно просматривать следующими способами.  
@@ -166,12 +166,12 @@ ms.lasthandoff: 08/09/2017
 ## <a name="create-notifications-based-on-report-data"></a>Создание уведомлений на основе данных отчета  
  Можно создать предупреждения об изменении данных для опубликованных отчетов на сайте SharePoint. Предупреждения об изменении данных основываются на потоках данных из областей данных в отчете. По умолчанию имена для областей данных присваиваются автоматически. Авторы отчетов могут облегчить создание предупреждений об изменении данных в своих отчетах, присваивая областям данных имена с учетом их делового назначения. После создания предупреждения об изменении данных на электронную почту создавшего пользователя будут приходить письма в случае, если данные удовлетворяют указанным условиям. Дополнительные сведения см. в разделах [Формирование веб-каналов данных из отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [Создание предупреждения данных в конструкторе предупреждений данных](../../reporting-services/create-a-data-alert-in-data-alert-designer.md) и [Предупреждения об изменении данных в службах Reporting Services](../../reporting-services/reporting-services-data-alerts.md).  
   
-## <a name="upgrade-reports"></a>Обновление отчетов  
- Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживают различные версии определений отчетов, серверов отчетов и сайтов SharePoint. Обновить отчет можно следующим образом.  
+## <a name="upgrade-reports"></a>Upgrade Reports  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживают различные версии определений отчетов, серверов отчетов и сайтов SharePoint. Обновить отчет можно следующим образом.  
   
 -   Обновление установки сервера отчетов. Скомпилированные отчеты, хранящиеся на сервере отчетов, будут автоматически обновлены при первом использовании. Определение отчета (RDL-файл) не будет изменено. Дополнительные сведения см. в разделе [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
--   Откройте отчет в среде создания отчетов. В большинстве случаев определение отчета будет обновлено. Дополнительные сведения см. в разделах [Обновление отчетов](../../reporting-services/install-windows/upgrade-reports.md) и [Развертывание и поддержка версий в SQL Server Data Tools (SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+-   Откройте отчет в среде создания отчетов. В большинстве случаев определение отчета будет обновлено. Дополнительные сведения см. в разделах [Обновление отчетов](../../reporting-services/install-windows/upgrade-reports.md) и [Развертывание и поддержка версий в SQL Server Data Tools (SSRS)](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 ## <a name="troubleshoot-reports"></a>Устранение неполадок в отчетах  
  Устранение неполадок в отчетах выполняется следующим образом.  
@@ -180,10 +180,9 @@ ms.lasthandoff: 08/09/2017
   
 -   **Узнайте, где можно найти дополнительные сведения.** Например, если в отчет включены выражения, то в средстве «Конструктор отчетов» можно будет найти больше сведений о проблемах вычисления выражений, чем в средстве «Построитель отчетов». Подробные сведения об ошибках обработки отчетов содержатся в файлах журналов.  
   
-## <a name="see-also"></a>См. также  
- [Средства служб отчетов](../../reporting-services/tools/reporting-services-tools.md)   
- [Расширения &#40; Службы SSRS &#41;](../../reporting-services/extensions-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
+ [Расширения (SSRS)](../../reporting-services/extensions-ssrs.md)   
  [Сервер отчетов служб Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
   
-

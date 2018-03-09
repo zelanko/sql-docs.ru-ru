@@ -3,7 +3,7 @@ title: "Процедуры обновления пример метода (Visua
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Refresh method [ADOX], Visual Basic example
 ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cf65ae1cc8e18e20d23d521fd4f7fc01f6c08b01
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d0a9122b1adaa6d5a070bb568605b20a04199d95
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="procedures-refresh-method-example-vb"></a>Процедуры обновления пример метода (Visual Basic)
 В следующем коде показано, как обновить [процедуры](../../../ado/reference/adox-api/procedures-collection-adox.md) коллекцию [каталога](../../../ado/reference/adox-api/catalog-object-adox.md). Это необходимо, прежде чем [процедура](../../../ado/reference/adox-api/procedure-object-adox.md) объектов из **каталога** доступны.  
@@ -62,8 +61,7 @@ End Sub
 ' EndProceduresRefreshVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Коллекция процедур (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
- [Обновить метод (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
-
+ [Метод Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

@@ -2,31 +2,31 @@
 title: "Параметры проверки подписки (подписки слиянием) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.validate.mergeoptions.f1
-helpviewer_keywords:
-- Subscription Validation Options dialog box
+f1_keywords: sql13.rep.validate.mergeoptions.f1
+helpviewer_keywords: Subscription Validation Options dialog box
 ms.assetid: 4958c4ab-2025-42ce-b836-6fb4e9e6f24d
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f946728b0512ac4db66a3b6abb1182a0ac8706fa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "15"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 90c5d99900c05986e049546b376789db5963dab6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-validation-options-merge-subscriptions"></a>Параметры проверки подписки (подписка на публикацию слиянием)
-  Используйте диалоговое окно **Параметры проверки подписки** для указания, нужно ли при проверке использовать только количество строк или количество строк и двоичную контрольную сумму.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Используйте диалоговое окно **Параметры проверки подписки** для определения того, должна ли проверка использовать только количество строк или количество строк и двоичную контрольную сумму.  
   
 ## <a name="options"></a>Параметры  
  **Проверить только количество строк**  

@@ -2,11 +2,13 @@
 title: "Репликация через Интернет | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - Internet [SQL Server replication]
 - Internet [SQL Server replication], publishing
 ms.assetid: 04e7f4ed-e244-4bbe-ba12-09c33abea09e
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "31"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d4f815e360977aca4a5257a7535d7d5f9c57df05
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 72e3ba0e441fc62d1f2e43adbc43ba73b4e6ddd8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-over-the-internet"></a>Репликация через Интернет
-  Репликация данных через Интернет обеспечивает доступ удаленных автономных пользователей к нужным для них данным с использованием соединения через Интернет. Репликация данных через Интернет:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Репликация данных через Интернет обеспечивает доступ удаленных автономных пользователей к нужным для них данным с использованием соединения через Интернет. Репликация данных через Интернет:  
   
 -   Виртуальная частная сеть. Дополнительные сведения см. в статье [Публикация данных через Интернет с помощью виртуальных частных сетей](../../relational-databases/replication/publish-data-over-the-internet-using-vpn.md).  
   
@@ -37,4 +38,3 @@ ms.lasthandoff: 06/22/2017
  Репликации [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всех типов могут реплицировать данные через виртуальную частную сеть, но для репликации слиянием необходимо предусмотреть веб-синхронизацию.  
   
   
-

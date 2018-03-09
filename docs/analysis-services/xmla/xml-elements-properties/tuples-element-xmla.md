@@ -2,42 +2,38 @@
 title: "Элемент Tuples (XML для Аналитики) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Tuples Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Tuples Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Tuples
 - microsoft.xml.analysis.tuples
 - urn:schemas-microsoft-com:xml-analysis#Tuples
-helpviewer_keywords:
-- Tuples element
+helpviewer_keywords: Tuples element
 ms.assetid: 5494bbaa-c1aa-43fa-b3e0-83befb2bccdd
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 05b1a2e375b7a563699243c586b866ab77fe47ca
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a3542b734b03a31de03cac5269bf98ac70663b0c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tuples-element-xmla"></a>Элемент Tuples (XML для аналитики)
-  Содержит набор [кортежа](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) объектов для [оси](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) элемент, который использует [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) тип данных, возвращенных [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) метод.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит набор [кортежа](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) объектов для [оси](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) элемент, который использует [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) тип данных, возвращенных [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) метод.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,11 +50,11 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
+|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -67,7 +63,7 @@ ms.lasthandoff: 09/01/2017
 |Родительские элементы|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
 |Дочерние элементы|[Кортеж](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Когда клиентское приложение устанавливает для свойства **AxisFormat** значение *TupleFormat*, ось представляется в виде набора кортежей. Каждый элемент **Axis** содержит элемент **Tuples**, представляющий набор кортежей на этой оси. Каждый кортеж представлен с помощью элемента **Tuple**, содержащего элементы [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) из каждой иерархии оси.  
   
 ## <a name="example"></a>Пример  
@@ -122,4 +118,3 @@ ms.lasthandoff: 09/01/2017
  [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

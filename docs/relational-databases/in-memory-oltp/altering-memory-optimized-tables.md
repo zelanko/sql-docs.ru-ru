@@ -1,30 +1,31 @@
 ---
 title: "Изменение оптимизированных для памяти таблиц | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/19/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
-caps.latest.revision: 20
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 89709d63c40233091fe01688e655ff5b53145711
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7
-ms.openlocfilehash: bd27f9755945abf7c09118a5997bb3745e66ab57
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="altering-memory-optimized-tables"></a>Изменение таблиц с оптимизацией для памяти
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Изменения схемы и индекса в таблицах, оптимизированных для памяти, можно выполнить с помощью инструкции ALTER TABLE. В SQL Server 2016 и базе данных SQL Azure операции ALTER TABLE с таблицами, оптимизированными для памяти, являются автономными, то есть во время выполнения такой операции таблица недоступна для запросов. Приложение базы данных может продолжать работу, и любая операция, которая обращается к таблице, будет блокироваться до завершения процесса изменения. В одной инструкции ALTER TABLE можно сочетать несколько операций ADD, DROP или ALTER.
   
@@ -108,7 +109,7 @@ ms.lasthandoff: 07/31/2017
 ## <a name="examples"></a>Примеры  
  В следующем примере изменяется число контейнеров существующего хэш-индекса. Это приводит к перестроению хэш-индекса с помощью нового числа контейнеров, при этом другие свойства хэш-индекса остаются неизменными.  
   
-```tsql
+```sql
 ALTER TABLE Sales.SalesOrderDetail_inmem   
        ALTER INDEX imPK_SalesOrderDetail_SalesOrderID_SalesOrderDetailID  
               REBUILD WITH (BUCKET_COUNT=67108864);  
@@ -117,7 +118,7 @@ GO
   
  В следующем примере добавляется столбец с ограничением NOT NULL и с определением DEFAULT и использует аргумент WITH VALUES для предоставления значений каждой существующей строке таблицы. Если аргумент WITH VALUES не используется, то каждая строка в новом столбце имеет значение NULL.  
   
-```tsql  
+```sql  
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        ADD Comment NVARCHAR(100) NOT NULL DEFAULT N'' WITH VALUES;  
 GO
@@ -125,7 +126,7 @@ GO
   
  В следующем примере к существующему столбцу добавляется ограничение первичного ключа.  
   
-```tsql
+```sql
 CREATE TABLE dbo.UserSession (   
    SessionId int not null,   
    UserId int not null,   
@@ -143,7 +144,7 @@ GO
   
  В следующем примере удаляется индекс.  
   
-```tsql
+```sql
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        DROP INDEX ix_ModifiedDate;  
 GO
@@ -151,7 +152,7 @@ GO
   
  В следующем примере добавляется индекс.  
   
-```tsql  
+```sql  
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        ADD INDEX ix_ModifiedDate (ModifiedDate);  
 GO  
@@ -159,7 +160,7 @@ GO
   
  В следующем примере добавляется несколько столбцов с индексом и ограничениями.  
   
-```tsql
+```sql
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        ADD    CustomerID int NOT NULL DEFAULT -1 WITH VALUES,  
               ShipMethodID int NOT NULL DEFAULT -1 WITH VALUES,  
@@ -175,5 +176,4 @@ GO
 
 [Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
-
 

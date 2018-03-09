@@ -1,10 +1,13 @@
 ---
-title: "Счетчики производительности | Документы Microsoft"
+title: "Счетчики производительности | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/27/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -16,17 +19,16 @@ helpviewer_keywords:
 - counters [Integration Services]
 - data flow engine [Integration Services]
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
-caps.latest.revision: 63
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: a079ca03c21823aa8a3308bccc92cc71e92930c5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: a94529428cccaa61e3e36b028770ac53113a4f98
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="performance-counters"></a>Счетчики производительности
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливают набор счетчиков производительности, предназначенных для наблюдения за производительностью подсистемы обработки потока данных. Например, наблюдая за счетчиком «Выгружено буферов», можно определить, записываются ли временно на диск буфера данных при выполнении пакета. Такая выгрузка снижает производительность и указывает на недостаточный объем памяти компьютера.  
@@ -122,5 +124,4 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
     >  Необходимо запустить службу «Журналы и оповещения производительности» с помощью локальной учетной записи или учетной записи домена, входящей в группу «Администраторы».  
 
 ## <a name="see-also"></a>См. также:  
- [Запуск проектов и пакетов](../packages/run-integration-services-ssis-packages.md) [событий, регистрируемых в пакете служб Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
-
+ [Запуск проектов и пакетов](../packages/run-integration-services-ssis-packages.md) [Регистрация событий в пакете служб Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  

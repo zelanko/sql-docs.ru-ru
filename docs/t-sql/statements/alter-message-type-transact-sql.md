@@ -3,8 +3,11 @@ title: "ИЗМЕНИТЬ тип сообщения (Transact-SQL) | Докуме
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - modifying message types
 - message types [Service Broker], modifying
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
-caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1ed67afafb33faa22ececbea51c1ed502b1e5725
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 0aff23be0cf324678cbe565c0f0c7a3c92d13a3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-message-type-transact-sql"></a>ALTER MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Изменяет свойства типа сообщений.  
   
@@ -67,15 +69,15 @@ ALTER MESSAGE TYPE message_type_name
  WELL_FORMED_XML  
  Тело сообщения должно содержать корректные XML-данные.  
   
- VALID_XML_WITH_SCHEMA = *данные*  
+ VALID_XML_WITH_SCHEMA = *schema_collection_name*  
  Текст сообщения должен содержать XML, который соответствует схеме в указанной коллекции схем. *Данные* должно быть именем существующей коллекции схем XML.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Изменение проверки типов сообщений не влияет на сообщения, которые уже поставлены в очередь.  
   
  Чтобы изменить параметр AUTHORIZATION для типа сообщений, следует воспользоваться инструкцией ALTER AUTHORIZATION.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  По умолчанию разрешением на изменения типа сообщений обладает владелец типа сообщений, члены **db_ddladmin** или **db_owner** фиксированной роли базы данных и члены **sysadmin**предопределенной роли сервера.  
   
  Если инструкция ALTER MESSAGE TYPE задает коллекцию схемы, пользователь, выполняющий инструкцию, должен иметь разрешение на REFERENCES указанной коллекции схем.  
@@ -89,11 +91,10 @@ ALTER MESSAGE TYPE
     VALIDATION = WELL_FORMED_XML ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [Создание ТИПА сообщений &#40; Transact-SQL &#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
  [DROP MESSAGE TYPE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

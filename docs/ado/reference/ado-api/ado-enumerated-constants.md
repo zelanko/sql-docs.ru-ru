@@ -3,7 +3,7 @@ title: "ADO перечисляемые константы | Документы M
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - enumerated constants [ADO]
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a350235fd7afd0c9423c164f08bc076191aa97cd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 93011b8b30d552e5bf3852c9e4d483161d90fc55
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-enumerated-constants"></a>ADO перечисляемые константы
 Чтобы упростить отладку, перечислений ADO списка значение для каждой константы. Тем не менее это значение исключительно рекомендации и может меняться от одного выпуска ADO в другой. Код только должны зависеть от имени, а не фактического значения, каждый перечислимой константы.  
@@ -85,7 +84,7 @@ ms.lasthandoff: 09/09/2017
 |[StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md)|Указывает формат при извлечении **записей** как строка. Задает атрибуты транзакции **подключения** объекта.|  
 |[XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md)|Задает атрибуты транзакции **подключения** объекта.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO коллекций](../../../ado/reference/ado-api/ado-collections.md)   
  [Динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
@@ -95,4 +94,3 @@ ms.lasthandoff: 09/09/2017
  [Объектная модель ADO](../../../ado/reference/ado-api/ado-object-model.md)   
  [Объекты ADO и интерфейсы](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [Свойства ADO](../../../ado/reference/ado-api/ado-properties.md)
-

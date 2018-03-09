@@ -1,13 +1,14 @@
 ---
 title: "Обработка объектов (XMLA) | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -24,17 +25,16 @@ helpviewer_keywords:
 - processing objects [XML for Analysis]
 - XMLA, objects
 ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
-caps.latest.revision: 16
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dffffec4424ed00921d2c9150330c6293c6f77da
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6dfc2fafb76d19ea986b697ec065abec738f4c05
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-objects-xmla"></a>Обработка объектов (XMLA)
   В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], обработка — это шаг или последовательность шагов, которые преобразуют данные в сведения для бизнес-анализа. Характеристики обработки меняются в зависимости от типа объекта, но обработка всегда является составной частью процесса преобразования данных в сведения.  
@@ -120,7 +120,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Описание  
  В следующем примере производится полная обработка образца базы данных [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ### <a name="code"></a>код  
@@ -135,7 +135,7 @@ ms.lasthandoff: 09/01/2017
 </Process>  
 ```  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Описание  
  Следующий пример осуществляет добавочную обработку **Internet_Sales_2004** секции в **продажи через Интернет** группе мер, **Adventure Works DW** куба в [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] пример [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных. **Процесс** команда состоит в добавлении агрегаты для заказа даты позже 31 декабря 2006 г. в секции с помощью привязки запроса вне строки в **привязки** свойство **процесса**  команду для извлечения строк таблицы фактов, из которого должны быть сформированы агрегаты для добавления в секцию.  
   
 ### <a name="code"></a>код  
@@ -193,4 +193,3 @@ ms.lasthandoff: 09/01/2017
 ```  
   
   
-

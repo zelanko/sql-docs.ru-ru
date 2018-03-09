@@ -2,11 +2,13 @@
 title: "Обнаружение набора знаний | Microsoft Docs"
 ms.custom: 
 ms.date: 06/04/2013
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,17 +17,16 @@ f1_keywords:
 - sql13.dqs.kb.kbanalyze.f1
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "38"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9c9cb4fb01f38cf1a65069dbd41ccc4d5d0aa91b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4b98bfc1ffb87a23817ce01380de2f62113e4748
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="perform-knowledge-discovery"></a>Обнаружение набора знаний
   В этом разделе описывается создание базы знаний посредством обнаружения набора знаний. В процессе обнаружения службы [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) анализируют данные из образца данных источника данных посредством автоматизированного процесса и добавляют обнаруженные знания в базу знаний. Эти наборы знаний можно изменять и расширять на шаге **Управление значениями домена** действия обнаружения набора знаний или в действии управления доменами.  
@@ -37,9 +38,9 @@ ms.lasthandoff: 09/09/2017
 ###  <a name="Prerequisites"></a> Предварительные требования  
  На компьютере с [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] должна быть установлена программа Microsoft Excel, если исходные данные, для которых производится обнаружение, содержатся в файле Excel. В противном случае на стадии сопоставления невозможно будет выбрать файл Excel. Файлы, созданные Microsoft Excel, могут иметь расширение XLSX, XLS или CSV. При использовании 64-разрядной версии Excel поддерживаются только файлы Excel 2003 (.xls), файлы Excel 2007 и 2010 (.xlsx) не поддерживаются. При использовании 64-разрядной версии Excel 2007 или 2010 сохраните файл как XLS- или CSV-файл либо вместо этого установите 32-разрядную версию Excel.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Для создания базы знаний необходима роль dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
 ##  <a name="FirstStep"></a> Первый шаг. Запуск обнаружения знаний  
@@ -71,12 +72,12 @@ ms.lasthandoff: 09/09/2017
   
 4.  В таблице **Сопоставления** сопоставьте каждый из исходных столбцов, в которых необходимо провести обнаружение наборов знаний, с доменами в базе знаний, как описано ниже.  
   
-    1.  Создайте сопоставление, выбрав исходный столбец из раскрывающегося списка для столбца **Исходный столбец** пустой строки, а затем выбрав домен из раскрывающегося списка в столбце **Домен** той же строки, если домен существует. Если домен не существует, нажмите кнопку **Создать домен** или **Создать составной домен** , чтобы создать домен. Дополнительные сведения см. в разделе [Создание правила домена](../data-quality-services/create-a-domain-rule.md) или [Создание составного домена](../data-quality-services/create-a-composite-domain.md).  
+    1.  Создайте сопоставление, выбрав исходный столбец из раскрывающегося списка для столбца **Исходный столбец** пустой строки, а затем выбрав домен из раскрывающегося списка в столбце **Домен** той же строки, если домен существует. Если домен не существует, нажмите кнопку **Создать домен** или **Создать составной домен** , чтобы создать домен. Дополнительные сведения см. в разделе [Create a Domain Rule](../data-quality-services/create-a-domain-rule.md) или [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md).  
   
     2.  Повторите предыдущий шаг для каждого сопоставления. Чтобы изменить число строк в таблице, нажмите кнопку **Добавить сопоставление столбцов**или выберите строку и нажмите кнопку **Удалить выбранное сопоставление столбцов**. Если нажать кнопку **Удалить выбранное сопоставление столбцов** при выбранной заполненной строке, эта заполненная строка будет удалена даже при наличии другой незаполненной строки.  
   
         > [!NOTE]  
-        >  Вы можете сопоставить исходные данные с доменом служб DQS для проведения обнаружения набора знаний, только если исходный тип данных поддерживается службами DQS и совпадает с типом данных домена служб DQS. Дополнительные сведения о поддерживаемых типах данных см. в разделе [Типы данных SQL Server и службы SSIS, поддерживаемые для доменов DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+        >  Вы можете сопоставить исходные данные с доменом служб DQS для проведения обнаружения набора знаний, только если исходный тип данных поддерживается службами DQS и совпадает с типом данных домена служб DQS. Дополнительные сведения о поддерживаемых типах данных см. в разделе [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
     3.  Нажмите кнопку **Просмотр/выбор составных доменов** для отображения определенных составных доменов. Если составные домены не определены, элемент управления будет недоступен.  
   
@@ -291,7 +292,6 @@ ms.lasthandoff: 09/09/2017
   
 -   В этом поле низкий уровень допустимых значений. Следует проверить сопоставление и релевантность правил домена относительно содержания поля.  
   
- Дополнительные сведения о профилировании см. в разделе [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
+ Дополнительные сведения о профилировании см. в разделе [Профилирование данных и уведомления в DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
   
-

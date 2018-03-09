@@ -2,13 +2,13 @@
 title: "Логика операций со временем с использованием мастера бизнес-аналитики определить | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,20 +25,20 @@ helpviewer_keywords:
 - time hierarchies [Analysis Services]
 - time intelligence [Analysis Services]
 ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
-caps.latest.revision: 28
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f2767b84432f137bd8f43c4352f99277abb845df
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ac568a96c856f9334b30597dfd9c9555fc54ded2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Определение вычислений логики операций со временем с использованием мастера бизнес-аналитики
-  Расширение логики операций со временем представляет собой расширение куба, которое добавляет вычисления куба (или представления времени) к выбранной иерархии. Данное расширение поддерживает следующие категории вычислений:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Расширение логики операций со временем представляет собой расширение куба, которое добавляет вычисления куба (или представления времени) к выбранной иерархии. Данное расширение поддерживает следующие категории вычислений:  
   
 -   Период к дате.  
   
@@ -83,4 +83,3 @@ ms.lasthandoff: 09/01/2017
  [Создание вычисляемых элементов](../../analysis-services/multidimensional-models/create-calculated-members.md)  
   
   
-

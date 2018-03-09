@@ -1,11 +1,13 @@
 ---
-title: "Удаление атрибута (Master Data Services) | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Удаление атрибута (службы Master Data Services) | Документы Майкрософт"
+ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
@@ -14,22 +16,22 @@ helpviewer_keywords:
 - attributes [Master Data Services], deleting
 - deleting attributes [Master Data Services]
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
-caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1d36564680430b7d35c415e23586c7fd0c47e084
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 698b641fdfed99e4d1fcad0609e140977e63cf33
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="delete-an-attribute-master-data-services"></a>Удаление атрибута (службы Master Data Services)
   Операция удаления атрибута в службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]без возможности восстановления удаляет атрибут и все связанные с ним значения.  
   
-## <a name="prerequisites"></a>Предварительные требования  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -63,9 +65,9 @@ ms.lasthandoff: 09/01/2017
 8.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
 ## <a name="see-also"></a>См. также:  
- [Атрибуты &#40; Службы Master Data Services &#41;](../master-data-services/attributes-master-data-services.md)   
- [Атрибуты на основе домена &#40; Службы Master Data Services &#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
- [Создание текстового атрибута &#40; Службы Master Data Services &#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [Создать атрибут на основе домена &#40; Службы Master Data Services &#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+ [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)   
+ [Атрибуты на основе домена (службы Master Data Services)](../master-data-services/domain-based-attributes-master-data-services.md)   
+ [Создание текстового атрибута (службы Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)   
+ [Создание атрибута на основе домена (службы Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   

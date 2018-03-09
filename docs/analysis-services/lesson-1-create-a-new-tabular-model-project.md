@@ -2,27 +2,28 @@
 title: "Урок 1: Создание нового проекта табличной модели | Документы Microsoft"
 ms.custom: 
 ms.date: 03/27/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
-caps.latest.revision: 33
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: fe1c808d84bac0c14e1cf46c4613464e04bbea0c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fe2cd5dff362f5db219f5e61071bde8093b45ce5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Занятие 1. Создание нового проекта табличной модели
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 09/01/2017
   
 Предполагаемое время выполнения данного занятия: **10 минут.**  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
 Этот раздел — первое занятие учебника по созданию табличных моделей. Для выполнения этого занятия необходимо иметь установленный на экземпляре SQL Server образца базы данных AdventureWorksDW. Дополнительные сведения см. в разделе [табличных моделей &#40; Учебник по Adventure Works &#41; ](../analysis-services/tabular-modeling-adventure-works-tutorial.md).  
   
 ## <a name="create-a-new-tabular-model-project"></a>Создание нового проекта табличной модели  
@@ -91,7 +92,7 @@ ms.lasthandoff: 09/01/2017
 
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
-Дополнительные сведения о различных типах проектов табличных моделей см. в разделе [Проекты табличной модели (табличные службы SSAS)](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Дополнительные сведения о среде создания табличных моделей см. в разделе [Конструктор табличных моделей (службы SSAS)](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
+Дополнительные сведения о различных типах проектов табличных моделей см. в разделе [проектов табличной модели](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Дополнительные сведения о среде создания табличных моделей см. в разделе [конструктор табличных моделей ](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
   
 
 ## <a name="whats-next"></a>Дальнейшие действия
@@ -100,4 +101,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

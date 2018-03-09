@@ -2,9 +2,12 @@
 title: "Синонимы (ядро СУБД) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: synonyms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - synonyms [SQL Server], about synonyms
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
-caps.latest.revision: 31
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09336539a812ddf6c28e81344299750ba3177361
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 15c8ca0028ae722823198087b06d4f435aba40e4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="synonyms-database-engine"></a>Синонимы (компонент Database Engine)
-  Синонимом является объект базы данных, который выполняет следующие функции:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Синонимом является объект базы данных, который выполняет следующие функции:  
   
 -   предоставляет альтернативное имя для другого объекта базы данных, существующего на локальном или удаленном сервере, на которое затем ссылаются как на базовый объект;  
   
@@ -69,7 +72,7 @@ ms.lasthandoff: 06/22/2017
   
 |||  
 |-|-|  
-|CONTROL|DELETE|  
+|CONTROL|Delete|  
 |EXECUTE|INSERT|  
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
@@ -80,7 +83,7 @@ ms.lasthandoff: 06/22/2017
 |||  
 |-|-|  
 |SELECT|INSERT|  
-|UPDATE|DELETE|  
+|UPDATE|Delete|  
 |EXECUTE|Подзапросы выборки|  
   
  При работе с синонимами в сформулированных ранее контекстах будет затронут базовый объект. Например, если синоним ссылается на базовый объект, который является таблицей, и строка вставляется в синоним, то фактически строка вставляется в таблицу, на которую ссылается синоним.  
@@ -155,4 +158,3 @@ GO
  [DROP SYNONYM (Transact-SQL)](../../t-sql/statements/drop-synonym-transact-sql.md)  
   
   
-

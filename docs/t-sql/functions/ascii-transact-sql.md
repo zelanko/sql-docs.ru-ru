@@ -3,8 +3,11 @@ title: "ASCII (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - code [SQL Server], ASCII
 - leftmost character of expression
 ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
-caps.latest.revision: 37
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d2c65df1f005b3d624f6a56f689f4125ec8175a7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: b933f33b8eb6b3909eaf7cb0afcd8bfe19862dee
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="ascii-transact-sql"></a>ASCII (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Возвращает код ASCII первого символа указанного символьного выражения.
   
@@ -52,7 +54,7 @@ ASCII ( character_expression )
 ## <a name="return-types"></a>Возвращаемые типы
  **int**  
   
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 ASCII-это сокращение для американский стандартный код для обмена сведения. Это кодировка — это стандарт, используемый компьютерами. Список символов ASCII, в разделе **печатаемые символы** раздел [ASCII](https://www.wikipedia.org/wiki/ASCII).
 
 ## <a name="examples"></a>Примеры  
@@ -73,9 +75,11 @@ A           B           a           b           1           2
 ```  
   
 ## <a name="see-also"></a>См. также:
-[Строковые функции & #40; Transact-SQL & #41;](../../t-sql/functions/string-functions-transact-sql.md)
+ [ДИА &#40; Transact-SQL &#41;](../../t-sql/functions/char-transact-sql.md)  
+ [NCHAR &#40; Transact-SQL &#41;](../../t-sql/functions/nchar-transact-sql.md)  
+ [Юникод &#40; Transact-SQL &#41;](../../t-sql/functions/unicode-transact-sql.md)  
+ [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)
   
   
-
 
 

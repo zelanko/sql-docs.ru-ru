@@ -3,7 +3,7 @@ title: "ParameterAttributesEnum | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - ParameterAttributesEnum enumeration [ADO]
 ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 628e359b698b94031df33ef85b27be7731480bde
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 72cc0ffff588b1bbf4ab3efd943b47a068dfa6e4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
 Задает атрибуты [параметр](../../../ado/reference/ado-api/parameter-object.md) объекта.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adParamSigned**|16|Указывает, что параметр принимает значения со знаком.|  
 |**adParamNullable**|64|Указывает, что параметры могут принимать значения null.|  
@@ -49,5 +48,4 @@ ms.lasthandoff: 09/09/2017
 |AdoEnums.ParameterAttributes.LONG|  
   
 ## <a name="applies-to"></a>Объект применения  
- [Свойства атрибутов (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
-
+ [Свойство Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

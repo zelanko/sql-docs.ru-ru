@@ -3,29 +3,29 @@ title: "Параметры (\"Конструкторы\" — \"Конструк
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptionsPages.Designers.Table_Designer
+f1_keywords: VS.ToolsOptionsPages.Designers.Table_Designer
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 79e728f7cf2c300338e202b3e9cae27226f70a50
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 391a1d60a36b479ae8ead0e6ba2679a8c8a339ff
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="options-designers---table-and-database-designers-page"></a>Параметры ("Конструкторы" — "Конструкторы таблиц и баз данных")
-Эта страница используется для определения поведения конструктора по умолчанию. Для доступа к параметрам в меню **Сервис** выберите **Параметры**, откройте папку **Конструкторы** и щелкните **Конструктор таблиц**.  
+# <a name="options-designers---table-and-database-designers-page"></a>Параметры ("Конструкторы" — страница "Конструкторы таблиц и баз данных")
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] На этой странице можно определить поведение конструктора по умолчанию. Для доступа к параметрам в меню **Сервис** выберите **Параметры**, откройте папку **Конструкторы** и щелкните **Конструктор таблиц**.  
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
 **Переопределить интервал ожидания в строке подключения для обновлений конструктора таблиц**  
@@ -85,4 +85,3 @@ ms.lasthandoff: 06/22/2017
 **Открывать диалоговое окно «Добавления таблицы» при создании диаграммы**  
 При открытии конструкторов автоматически открывается диалоговое окно **Добавление таблицы** .  
   
-

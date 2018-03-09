@@ -2,39 +2,40 @@
 title: "Изменение функции секционирования | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: partitions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-partition
+ms.suite: sql
+ms.technology: dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
-caps.latest.revision: 11
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "11"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b55aa8c92aaf469aa2ef7945a84068301124641
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b2466c376c36403ec9f529e6dfb6b9242c10a7a3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="modify-a-partition-function"></a>Изменение функции секционирования
-  Вы можете изменить способ секционирования таблицы или индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] путем увеличения или уменьшения указанного числа секций с шагом 1 в функции секционирования секционированной таблицы или индекса при помощи [!INCLUDE[tsql](../../includes/tsql-md.md)]. Добавление секции осуществляется путем разбиения существующей секции на две и переопределением границ новых секций. Удаление секции происходит путем слияния двух секций в одну на границе. Это действие повторно заполняет одну секцию и оставляет другую незаполненной.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Вы можете изменить способ секционирования таблицы или индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] путем увеличения или уменьшения указанного числа секций с шагом 1 в функции секционирования секционированной таблицы или индекса с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]. Добавление секции осуществляется путем разбиения существующей секции на две и переопределением границ новых секций. Удаление секции происходит путем слияния двух секций в одну на границе. Это действие повторно заполняет одну секцию и оставляет другую незаполненной.  
   
 > [!CAUTION]  
 >  Несколько таблиц или индексов могут использовать одинаковую функцию секционирования. При изменении функции секционирования затрагиваются все таблицы и индексы в одной транзакции. Проверьте зависимости функции секционирования перед внесением изменений.  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Изменение функции секционирования при помощи:**  
   
@@ -63,9 +64,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Все файловые группы, обрабатываемые ALTER PARITITION FUNCTION, должны находиться в режиме в сети.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Для выполнения инструкции ALTER PARTITION FUNCTION может использоваться одно из перечисленных ниже разрешений.  
   
 -   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin** .  
@@ -144,4 +145,3 @@ ms.lasthandoff: 06/22/2017
  Дополнительные сведения см. в статье [ALTER PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/alter-partition-function-transact-sql.md).  
   
   
-

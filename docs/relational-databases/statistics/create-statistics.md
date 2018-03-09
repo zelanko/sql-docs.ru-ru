@@ -2,9 +2,12 @@
 title: "Создание статистики | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: statistics
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-statistics
 ms.tgt_pltfrm: 
@@ -18,28 +21,28 @@ helpviewer_keywords:
 - creating statistics
 - statistics [SQL Server], creating
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
-caps.latest.revision: 9
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7e08b4318e4faa13aba2e242f0458db3572d7884
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9cf772ad4cffd6d992233d4324ce270c884cb06d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-statistics"></a>Создание статистики
-  Создать статистику по оптимизации запроса для одного или нескольких столбцов таблицы или индексированного представления в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Для большинства запросов оптимизатор уже создает необходимую статистику для формирования высококачественного плана запроса, но в некоторых случаях нужно создавать дополнительные статистические данные.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Создать статистику по оптимизации запроса для одного или нескольких столбцов таблицы или индексированного представления в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Для большинства запросов оптимизатор уже создает необходимую статистику для формирования высококачественного плана запроса, но в некоторых случаях нужно создавать дополнительные статистические данные.  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Для создания статистики используются:**  
   
@@ -57,9 +60,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Удалить, переименовать или изменить определение столбца таблицы, определенного в предикате отфильтрованной статистики, нельзя.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Пользователь должен быть владельцем таблицы или индексированного представления либо членом одной из следующих ролей: предопределенная роль сервера **sysadmin** , предопределенная роль базы данных **db_owner** или предопределенная роль базы данных **db_ddladmin** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -74,7 +77,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  Щелкните правой кнопкой мыши папку **Статистика** и выберите пункт **Создать статистику...**  
   
-     На странице **Общие** в диалоговом окне **Создание статистики по таблице***имя_таблицы* отображаются указанные ниже свойства.  
+     На странице **Общее** в диалоговом окне **Создание статистики по таблице***имя_таблицы* отображаются указанные ниже свойства.  
   
      **Имя таблицы**  
      Отображает имя таблицы, которую описывает данная статистика.  
@@ -106,10 +109,10 @@ ms.lasthandoff: 06/22/2017
      **Удалить**  
      Удалите выбранный столбец из сетки статистики.  
   
-     **Вверх**  
+     **вверх**  
      Переместите выбранный столбец ближе к началу сетки статистики. Расположение в сетке может существенно влиять на ценность статистики.  
   
-     **Переместить вниз**  
+     **вниз**  
      Переместить выбранный столбец ближе к концу сетки статистики.  
   
      **Последнее обновление статистики по этим столбцам:**  
@@ -121,9 +124,9 @@ ms.lasthandoff: 06/22/2017
      На странице **Фильтр** в диалоговом окне **Создание статистики по таблице***имя_таблицы* отображается указанное ниже свойство.  
   
      **Критерий фильтра**  
-     Определяет столбцы данных, которые будут включены в статистику фильтрации. Например: `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     Определяет столбцы данных, которые будут включены в статистику фильтрации. Например `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  В диалоговом окне **Создание статистики по таблице***имя_таблицы* на странице **Общие** нажмите кнопку **Добавить**.  
+5.  В диалоговом окне **Создание статистики по таблице***имя_таблицы* на странице **Общее** нажмите кнопку **Добавить**.  
   
      В диалоговом окне **Выбор столбцов** будут показаны следующие свойства. Эти данные доступны только для чтения.  
   
@@ -179,7 +182,6 @@ ms.lasthandoff: 06/22/2017
     GO  
     ```  
   
- Дополнительные сведения см. в разделе [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).  
+ Дополнительные сведения см. в статье [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).  
   
   
-

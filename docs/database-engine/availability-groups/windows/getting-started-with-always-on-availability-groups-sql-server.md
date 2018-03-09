@@ -1,33 +1,33 @@
 ---
 title: "Начало работы с группами доступности AlwaysOn (SQL Server) | Документы Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
 - Availability Groups [SQL Server], deploying
 - Availability Groups [SQL Server], about
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: ad3286b87c3b0db9804a64291a4d30b8ab216e6a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2e2d2f37e68cae57416daa3710a2aa0bbaf89be4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="getting-started-with-always-on-availability-groups-sql-server"></a>Начало работы с группами доступности AlwaysOn (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этом разделе описаны шаги настройки экземпляров [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] для поддержки [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , а также для создания, управления и наблюдения за группой доступности.  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/02/2017
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|**Подготовка баз данных-получателей.** На всех экземплярах сервера, где размещена вторичная реплика, восстановите резервные копии базы данных-источника с помощью инструкции RESTORE WITH NORECOVERY.|[Подготовка базы данных-получателя вручную](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)<br /><br /> Совет. Мастер создания группы доступности может автоматически подготовить базы данных-получатели. Дополнительные сведения см. в подразделе "Предварительные условия для использования полной начальной синхронизации данных" раздела [Выбор страницы начальной синхронизации данных (мастера группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md).|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|**Присоедините базы данных-получатели к группе доступности.** На каждом экземпляре сервера, размещающем вторичную реплику, присоедините все локальные базы данных-получатели к группе доступности. При присоединении группы доступности эта база данных-получатель инициирует синхронизацию данных с соответствующей базой данных-источником.|[Присоединение базы данных-получателя к группе доступности](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)<br /><br /> Совет. Мастер создания группы доступности может выполнить этот шаг, если на каждой вторичной реплике существует каждая база данных-получатель.|  
 ||**Создание прослушивателя группы доступности.**  Этот шаг обязателен, если прослушиватель группы доступности еще не был создан при создании группы доступности.|[Создание или настройка прослушивателя группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
-|![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|**Передайте имя узла DNS для прослушивателя разработчикам приложений.**  Им необходимо указать это имя в строке подключения, которая будет использоваться для запроса прямого подключения к прослушивателю группы доступности. Дополнительные сведения см. в статье [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).|См. подраздел "Дальнейшие действия. Действия после создания прослушивателя группы доступности" раздела [Создание или настройка прослушивателя группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
+|![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|**Передайте имя узла DNS для прослушивателя разработчикам приложений.**  Им необходимо указать это имя в строке подключения, которая будет использоваться для запроса прямого подключения к прослушивателю группы доступности. Дополнительные сведения см. в разделе [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).|См. подраздел "Дальнейшие действия. Действия после создания прослушивателя группы доступности" раздела [Создание или настройка прослушивателя группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|**Настройка места выполнения заданий резервного копирования.**  Если нужно выполнить резервное копирование баз данных-получателей, то необходимо создать скрипт задания резервного копирования, который учитывает автоматический выбор при создании резервной копии. Создайте скрипт для каждой базы данных в группе доступности на каждом экземпляре сервера, на котором размещена реплика доступности для этой группы доступности.|См. подраздел "Дальнейшие действия. После настройки резервного копирования во вторичных репликах" раздела [Настройка резервного копирования в репликах доступности (SQL Server)](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).|  
   
 ##  <a name="ManageAGsEtc"></a> Managing Availability Groups, Replicas, and Databases  
@@ -111,4 +111,3 @@ ms.lasthandoff: 08/02/2017
  [Обзор командлетов PowerShell для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   
-

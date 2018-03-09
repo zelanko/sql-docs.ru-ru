@@ -1,29 +1,31 @@
 ---
-title: "dm_execution_performance_counters (база данных SSISDB) | Документы Microsoft"
+title: "dm_execution_performance_counters (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 67d5ece89f5b964acb2bb55a8cc69ff2fb77b93b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 666192f42269b1cc9b5c9503eccc849059f00652
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="functions---dmexecutionperformancecounters"></a>Функции - dm_execution_performance_counters
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+# <a name="functions---dmexecutionperformancecounters"></a>Функции — dm_execution_performance_counters
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Возвращает статистику производительности для выполнения на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
@@ -35,12 +37,12 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @execution_id =] *execution_id*  
+ [ @execution_id = ] *execution_id*  
  Уникальный идентификатор выполнения, содержащего один или более пакетов. Пакеты, которые выполняются с помощью задачи «Выполнение пакета», запускаются в том же выполнении, что и родительский пакет.  
   
- Если идентификатор выполнения не указан, возвращается статистика производительности для нескольких выполнений. Для члена роли базы данных **ssis_admin** возвращается статистика производительности всех активных выполнений.  Если пользователь не является членом роли базы данных **ssis_admin** , возвращается статистика производительности активных выполнений, для которых имеются разрешения на чтение. *Execution_id* — **BigInt**.  
+ Если идентификатор выполнения не указан, возвращается статистика производительности для нескольких выполнений. Для члена роли базы данных **ssis_admin** возвращается статистика производительности всех активных выполнений.  Если пользователь не является членом роли базы данных **ssis_admin** , возвращается статистика производительности активных выполнений, для которых имеются разрешения на чтение. Параметр *execution_id* имеет тип **BigInt**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В следующей таблице перечислены значения имени счетчика, возвращаемые функцией dm_execution_performance_counter.  
   
 |Имя счетчика|Description|  
@@ -61,10 +63,10 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="return"></a>Возвращает  
  Функция dm_execution_performance_counters возвращает таблицу со следующими столбцами для запущенного выполнения. Возвращаемые данные относятся ко всем пакетам, содержащимся в выполнении. Если отсутствуют активные выполнения, то возвращается пустая таблица.  
   
-|Имя столбца|Тип столбца|Description|Замечания|  
+|Имя столбца|Тип столбца|Description|Remarks|  
 |-----------------|-----------------|-----------------|-------------|  
-|execution_id|**BigInt**<br /><br /> **Значение NULL** не является допустимым значением.|Уникальный идентификатор выполнения, содержащего пакет.||  
-|counter_name|**nvarchar(128)**|Имя счетчика.|В разделе **примечания** части значения.|  
+|execution_id|**BigInt**<br /><br /> **NULL** не является допустимым значением.|Уникальный идентификатор выполнения, содержащего пакет.||  
+|counter_name|**nvarchar(128)**|Имя счетчика.|См. раздел **Примечания** в описании значений.|  
 |counter_value|**BigInt**|Значение, возвращаемое счетчиком.||  
   
 ## <a name="example"></a>Пример  
@@ -82,14 +84,14 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Этой функции требуется одно из следующих разрешений:  
   
 -   разрешения READ и MODIFY на экземпляр выполнения  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
  В следующем списке описываются условия, приводящие к сбою функции.  
@@ -99,4 +101,3 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
 -   Заданный идентификатор выполнения недопустим.  
   
   
-

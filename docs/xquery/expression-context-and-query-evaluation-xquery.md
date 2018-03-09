@@ -3,8 +3,11 @@ title: "Контекст выражения и вычисление запрос
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - static context
 - dynamic context [XQuery]
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
-caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b387ebe6649cca113e4974b3275498bb9b3b970e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0aaa0fb28aa648018a4d9f562e5ac2452e0d2309
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Контекст выражения и вычисление запросов (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Контекст выражения представляет собой данные, используемые для анализа и оценки. Ниже приводятся две фазы оценки XQuery:  
   
@@ -44,7 +46,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="static-context"></a>Статический контекст  
  Инициализация статического контекста относится к процессу объединения данных для статического анализа выражения. В рамках инициализации статического контекста выполняются следующие операции:  
   
--   **Пробела границы** политики устанавливается на чередование. Таким образом, пробел границы не сохраняется **любой элемент** и **атрибута** конструкторы в запросе. Например:  
+-   **Пробел границы** Политика устанавливается на чередование. Таким образом, пробел границы не сохраняется **любой элемент** и **атрибута** конструкторы в запросе. Например:  
   
     ```  
     declare @x xml  
@@ -197,10 +199,9 @@ ms.lasthandoff: 09/01/2017
   
 -   **Fn:collection()** функция не поддерживается.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основы языка XQuery](../xquery/xquery-basics.md)   
  [Сравнение типизированного и нетипизированного XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Коллекции XML-схем (SQL Server)](../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   
-

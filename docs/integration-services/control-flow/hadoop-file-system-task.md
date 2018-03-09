@@ -1,11 +1,13 @@
 ---
-title: "Задача файловой системы Hadoop | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Задача файловой системы Hadoop | Документы Майкрософт"
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.hadoopfiletask.f1
 ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e86c35bf891b0e83a74c6e9b7cd30295b5e52d5f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 540e8e939321a81dfcf044516ce81fd0e6b4d6f4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hadoop-file-system-task"></a>Задача файловой системы Hadoop
   С помощью задачи файловой системы Hadoop можно копировать файлы из кластера Hadoop, в него и в нем в пакете служб SSIS.  
@@ -45,9 +46,8 @@ ms.lasthandoff: 08/03/2017
 |**Local File Connection (Локальное подключение файлов)**|Укажите существующий диспетчер подключения файлов или создайте его. Этот диспетчер подключений указывает, где размещены исходные файлы.|  
 |**С рекурсией**|Укажите, следует ли копировать вложенные папки рекурсивно.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диспетчер подключений Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)   
- [Диспетчер подключения файлов](../../integration-services/connection-manager/file-connection-manager.md)  
+ [Диспетчер подключений файлов](../../integration-services/connection-manager/file-connection-manager.md)  
   
   
-

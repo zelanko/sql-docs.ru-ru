@@ -1,10 +1,13 @@
 ---
 title: "Инструкция DBCC OPENTRAN (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,20 +28,19 @@ helpviewer_keywords:
 - checking open transactions
 - oldest transactions [SQL Server]
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
-caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f3d3b47d9bc553edd49f6f401d1a1c7a857d0a7d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 3c4166a34b06531389b4f8ad57f6c826bfbb664d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Инструкция DBCC OPENTRAN помогает определить активные транзакции, которые могут препятствовать усечению журнала. Инструкция DBCC OPENTRAN отображает сведения о самой старой активной транзакции и о самых старых реплицированных транзакциях, распределенных и нераспределенных, если таковые имеются в журнале транзакций указанной базы данных. Результаты отображаются только при наличии активной транзакции, которая приведена в журнале, или в случае, если в базе данных имеются сведения о репликации. Если в журнале нет активных транзакций, отображается информационное сообщение.
   
@@ -69,7 +71,7 @@ DBCC OPENTRAN
  NO_INFOMSGS  
  Подавляет вывод всех информационных сообщений.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Используйте инструкцию DBCC OPENTRAN, чтобы определить, существует ли открытая транзакция в журнале транзакций. При выполнении инструкции BACKUP LOG только неактивная часть журнала может быть усечена; открытая транзакция может помешать полному усечению журнала транзакций. Для определения открытой транзакции получите идентификатор системного процесса, выполнив инструкцию sp_who.
   
 ## <a name="result-sets"></a>Результирующие наборы  
@@ -80,7 +82,7 @@ No active open transactions.
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Необходимо быть членом предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** .
   
 ## <a name="examples"></a>Примеры  
@@ -135,12 +137,11 @@ SELECT * FROM #OpenTranStatus;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)  
 [ФИКСАЦИИ ТРАНЗАКЦИИ &#40; Transact-SQL &#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[DB_ID &#40; Transact-SQL &#41;](../../t-sql/functions/db-id-transact-sql.md)  
+[DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)  
 [Инструкция ROLLBACK TRANSACTION &#40; Transact-SQL &#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
   
   
-

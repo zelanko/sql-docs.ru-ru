@@ -3,24 +3,25 @@ title: "Организация пулов соединений с учетом �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 53e7e3f7-edab-4d0b-8943-45442ba3ebc9
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 337ce5bca53a3b9099cbe9cd91774b748930d7ea
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bf5c6405d4492a4cf559c3a62f53f69eb8a3fdeb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-aware-connection-pooling"></a>Организация пулов соединений с учетом драйвера
 Пул соединений с учетом драйвера — это новая функция из диспетчера драйверов в Windows 8. Пул соединений с учетом драйвера позволяет записи драйвер для настройки поведения в их драйвер ODBC пула подключений.  
@@ -44,4 +45,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>См. также:  
  [Разработка драйвера ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)
-

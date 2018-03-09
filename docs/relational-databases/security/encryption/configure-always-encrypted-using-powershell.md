@@ -2,38 +2,40 @@
 title: "Настройка постоянного шифрования с помощью PowerShell | Документация Майкрософт"
 ms.custom: 
 ms.date: 05/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
-caps.latest.revision: 15
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5116e95d422b182ddc8f9c102cae7cc286d5a4b1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
-ms.openlocfilehash: dcd6c2dc9c489a888c647a77c27ce9694d154699
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="configure-always-encrypted-using-powershell"></a>Настройка постоянного шифрования с помощью PowerShell
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+# <a name="configure-always-encrypted-using-powershell"></a>Configure Always Encrypted using PowerShell
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Модуль SqlServer в PowerShell предоставляет командлеты для настройки параметра [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) как в базе данных SQL Azure, так и в SQL Server 2016.
 
-Командлеты для функции Always Encrypted в модуле SqlServer работают с ключами или конфиденциальными данными, поэтому очень важно выполнять командлеты на защищенном компьютере. При управлении Always Encrypted командлеты нужно запускать на компьютере, отличном от компьютера с экземпляром SQL Server.
+Командлеты для постоянного шифрования в модуле SqlServer работают с ключами или конфиденциальными данными, поэтому очень важно выполнять командлеты на защищенном компьютере. При управлении Always Encrypted командлеты нужно запускать на компьютере, отличном от компьютера с экземпляром SQL Server.
 
-Так как основная задача функции Always Encrypted — обеспечивать целостность зашифрованных конфиденциальных данных, даже если нарушается безопасность системы базы данных, выполнение скрипта PowerShell, обрабатывающего ключи или конфиденциальные данные на сервере SQL Server, может снизить эффективность или вообще отменить действие функции. Дополнительные рекомендации по безопасности см. в разделе [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)(Вопросы безопасности для управления ключами).
+Так как основной задачей функции постоянного шифрования является обеспечение целостности зашифрованных конфиденциальных данных даже в случае нарушения безопасности системы базы данных, выполнение скрипта PowerShell, обрабатывающего ключи или конфиденциальные данные на сервере SQL Server, может снизить или вообще отменить эффект действия функции. Дополнительные рекомендации по безопасности см. в разделе [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)(Вопросы безопасности для управления ключами).
 
 Ссылки на статьи, посвященные отдельным командлетам, указаны [внизу страницы](#aecmdletreference).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Установите [модуль SqlServer](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) на защищенном компьютере, который НЕ является компьютером с экземпляром SQL Server. Модуль можно установить непосредственно из коллекции PowerShell.  Дополнительные сведения см. в [инструкциях по скачиванию](../../../ssms/download-sql-server-ps-module.md).
 
@@ -127,7 +129,7 @@ $database | Get-SqlColumnMasterKey
 
 Для постоянного шифрования доступны приведенные ниже командлеты PowerShell
 
-|Командлет |Описание
+|Командлет |Description
 |:---|:---
 |**[Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)**   |Выполняет проверку подлинности в Azure и получает маркер проверки подлинности.
 |**[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)**   |Добавляет новое зашифрованное значение для существующего объекта ключа шифрования столбца в базе данных.
@@ -155,7 +157,6 @@ $database | Get-SqlColumnMasterKey
 - [Always Encrypted (ядро СУБД)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Общие сведения об управлении ключами для постоянного шифрования](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Using Always Encrypted with .NET Framework Data Provider for SQL Server (Использование постоянного шифрования с поставщиком данных .NET Framework для SQL Server)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
-- [Configure Always Encrypted using SQL Server Management Studio (Настройка постоянного шифрования с помощью среды SQL Server Management Studio)](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
+- [Настройка функции Always Encrypted с помощью SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 
 

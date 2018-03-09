@@ -2,9 +2,12 @@
 title: "Использование результатов FOR XML в коде приложений | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -18,20 +21,20 @@ helpviewer_keywords:
 - XML data islands [SQL Server]
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f687e8b100ea8810bf92b21b0467932c72d21237
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 418a5f0faf5e9b1e25efab3824aa4a7aec70a6b1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Использование результатов FOR XML в коде приложений
-  При помощи предложения FOR XML в SQL-запросах можно получать и даже преобразовывать результаты запросов в формат XML. Если приложение способно обрабатывать XML-данные, эта возможность позволяет выполнять следующие задачи:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+При помощи предложения FOR XML в SQL-запросах можно получать и даже преобразовывать результаты запросов в формат XML. Если приложение способно обрабатывать XML-данные, эта возможность позволяет выполнять следующие задачи:  
   
 -   Запрашивать из таблиц SQL экземпляры значений [данных XML (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)  
   
@@ -301,4 +304,3 @@ SqlConnection closed.
  [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md)  
   
   
-

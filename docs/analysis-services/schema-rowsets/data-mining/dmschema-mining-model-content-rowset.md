@@ -2,36 +2,33 @@
 title: "Набор строк DMSCHEMA_MINING_MODEL_CONTENT | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_MODEL_CONTENT
+apiname: DMSCHEMA_MINING_MODEL_CONTENT
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_MODEL_CONTENT rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DMSCHEMA_MINING_MODEL_CONTENT rowset
 ms.assetid: 1e85d9e7-3b74-42ac-b94e-f52f76d8a25d
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 23410bac137e67e81e6e7b302f81c5cfd5db8b71
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7d48b47cc0ded0541380a4a9997b1cab13bd21a0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>Набор строк DMSCHEMA_MINING_MODEL_CONTENT
-  Разрешает клиентскому приложению просматривать содержимое модели интеллектуального анализа данных. Клиентские приложения для перемещений по содержимому модели интеллектуального анализа данных могут применять специальные ограничения операций дерева, описанные в конце этого раздела.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Позволяет клиентскому приложению просматривать содержимое модели интеллектуального анализа данных. Клиентские приложения для перемещений по содержимому модели интеллектуального анализа данных могут применять специальные ограничения операций дерева, описанные в конце этого раздела.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **DMSCHEMA_MINING_MODEL_CONTENT** набор строк содержит следующие столбцы.  
@@ -42,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 |**MODEL_SCHEMA**|**DBTYPE_WSTR**||Неполное имя схемы. Этот столбец не поддерживается [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; он всегда содержит **VT_NULL**.|  
 |**MODEL_NAME**|**DBTYPE_WSTR**||Имя модели, с которой связано содержимое, описанное в этой строке.|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||Имена атрибутов, соответствующих этому узлу.|  
-|**NODE_NAME**|**DBTYPE_WSTR**||Тип узла. В настоящее время этот столбец содержит то же значение, что **NODE_UNIQUE_NAME**, хотя это может измениться в будущих выпусках.|  
+|**NODE_NAME**|**DBTYPE_WSTR**||Имя узла. В настоящее время этот столбец содержит то же значение, что **NODE_UNIQUE_NAME**, хотя это может измениться в будущих выпусках.|  
 |**NODE_UNIQUE_NAME**|**DBTYPE_WSTR**||Уникальное имя узла.|  
 |**NODE_TYPE**|**DBTYPE_I4**||Тип узла. Выдает одно из следующих значений (этот список могут продолжить алгоритмами интеллектуального анализа данных сторонней разработки).<br /><br /> **DM_NODE_TYPE_CLASSIFICATION_TREE_ROOT** (**2**)<br /><br /> **DM_NODE_TYPE_TREE_INTERIOR** (**3**)<br /><br /> **DM_NODE_TYPE_TREE_DISTRIBUTION** (**4**)<br /><br /> **DM_NODE_TYPE_CLUSTER** (**5**)<br /><br /> **DM_NODE_TYPE_UNKNOWN** (**6**)<br /><br /> **DM_NODE_TYPE_ITEMSET** (**7**)<br /><br /> **DM_NODE_TYPE_ASSOCIATION_RULE** (**8**)<br /><br /> **DM_NODE_TYPE_NB_PREDICTABLE_ATTRIBUTE** (**9**)<br /><br /> **DM_NODE_TYPE_NB_INPUT_ATTRIBUTE** (**10**)<br /><br /> **DM_NODE_TYPE_NB_INPUT_ATTRIBUTE_STATE** (**11**)<br /><br /> **DM_NODE_TYPE_SEQUENCE** (**13**)<br /><br /> **DM_NODE_TYPE_TRANSITION** (**14**)<br /><br /> **DM_NODE_TYPE_TIME_SERIES** (**15**)<br /><br /> **DM_NODE_TYPE_TS_TREE** (**16**)<br /><br /> **DM_NODE_TYPE_NN_SUBNETWORK** (**17**) Нейронная сеть, подсеть<br /><br /> **DM_NODE_TYPE_NN_INPUT_LAYER** (**18**) Нейронная сеть, входной уровень (родитель входных узлов)<br /><br /> **DM_NODE_TYPE_NN_HIDDEN_LAYER** (**19**) Нейронная сеть, скрытый уровень (родитель скрытых узлов)<br /><br /> **DM_NODE_TYPE_NN_OUTPUT_LAYER** (**20**) Нейронная сеть, выходной уровень (родитель выходных узлов)<br /><br /> **DM_NODE_TYPE_NN_INPUT_NODE** (**21**) Нейронная сеть, входной узел<br /><br /> **DM_NODE_TYPE_NN_HIDDEN_NODE** (**22**) Нейронная сеть, скрытый узел<br /><br /> **DM_NODE_TYPE_NN_OUTPUT_NODE** (**23**) Нейронная сеть, выходной узел<br /><br /> **DM_NODE_TYPE_NN_MARGINAL_STAT_NODE** (**24**) Нейронная сеть, узел граничной статистики<br /><br /> **DM_NODE_TYPE_REGRESSION_TREE_ROOT** (**25**)<br /><br /> **DM_NODE_TYPE_NB_MARGINAL_STAT_NODE** (**26**) Нейронная сеть, узел граничной статистики|  
 |**NODE_GUID**|**DBTYPE_GUID**||Идентификатор GUID узла. Этот столбец не поддерживается [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; он всегда содержит **NULL**.|  
@@ -65,16 +62,16 @@ ms.lasthandoff: 09/01/2017
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**MODEL_CATALOG**|**DBTYPE_WSTR**|Необязательно.|  
-|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Необязательно.|  
-|**MODEL_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**ATTRIBUTE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**NODE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**NODE_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**NODE_TYPE**|**DBTYPE_I4**|Необязательно.|  
-|**NODE_GUID**|**DBTYPE_WSTR**|Необязательно.|  
-|**NODE_CAPTION**|**DBTYPE_WSTR**|Необязательно.|  
-|**TREE_OPERATION**|**DBTYPE_UI4**|Необязательно. Ниже приведены дополнительные примечания.|  
+|**MODEL_CATALOG**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**MODEL_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**ATTRIBUTE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**NODE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**NODE_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**NODE_TYPE**|**DBTYPE_I4**|Необязательный параметр.|  
+|**NODE_GUID**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**NODE_CAPTION**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**TREE_OPERATION**|**DBTYPE_UI4**|Необязательный параметр. Ниже приведены дополнительные примечания.|  
   
  Ограничения, **TREE_OPERATION**, не находится на любого столбца из **DMSCHEMA_MINING_MODEL_CONTENT** строк; оно указывает оператор дерева. Потребитель может указать **NODE_UNIQUE_NAME** ограниченного использования программ и оператор дерева (**ПРЕДКОВ**, **ДОЧЕРНИХ**, **одноуровневых ЭЛЕМЕНТОВ**,  **Родительский**, **потомков**, **SELF**) для получения требуемого набора элементов. **SELF** оператор включает строку для самого узла в списке возвращенных строк. В следующей таблице описаны константы, составляющие определение битовой карты для **TREE_OPERATION** ограниченного использования программ. Они могут быть объединены с помощью логического **или** оператор.  
   
@@ -91,4 +88,3 @@ ms.lasthandoff: 09/01/2017
  [Наборы строк схемы интеллектуального анализа данных](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   
-

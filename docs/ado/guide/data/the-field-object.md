@@ -3,7 +3,7 @@ title: "Объект поля | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Field object [ADO]
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7d537c963fa1e93c07289380f8eed682768961b2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f3d141fc218101902ae094ff2a4db385d204fa3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="the-field-object"></a>Объект поля
 Каждый **поле** объекта обычно соответствует столбцу в таблице базы данных. Тем не менее **поле** может также представлять указатель на другой **записей**, вызывается главы. Исключения, такие как столбцах, будет рассматриваться далее в этом руководстве.  
@@ -126,4 +125,3 @@ ms.lasthandoff: 09/09/2017
  Если отсутствует текущая запись. При использовании **GetChunk** или **AppendChunk** метод **поле** объекта, возникает ошибка 3021 (текущая запись).  
   
  Пример использования этих методов для обработки двоичных данных см. в разделе [AppendChunk метод](../../../ado/reference/ado-api/appendchunk-method-ado.md) и [GetChunk метод](../../../ado/reference/ado-api/getchunk-method-ado.md) примерах *Справочник программиста ADO*.
-

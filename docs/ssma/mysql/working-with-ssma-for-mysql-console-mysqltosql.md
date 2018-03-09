@@ -1,29 +1,30 @@
 ---
 title: "Работа с SSMA для MySQL консоли (MySQLToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 08/15/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3bd319d0cff1a3f7d7681591a59b640a2afd9d24
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6212ff417a112687332129597b2a442f87d46da1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>Работа с SSMA для MySQL консоли (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) для MySQL теперь доступен с помощью консольного приложения командной строки. Файлы скриптов образуют входных данных для приложения, для выполнения команд. В консольном приложении SSMA включает взаимодействия на уровне сценария, уменьшает цикл миграции и масштабирует усилий миграции.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 08/02/2017
   
 |||  
 |-|-|  
-|**Разделы**|**Description**|  
+|**Разделы**|**Описание**|  
 |[Начало работы с SSMA для консоли MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md)|Описание процедуры для выполнения консольного приложения.|  
 |[Параметры командной строки в консоли SSMA &#40; MySQLToSQL &#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)|Описывает параметры командной строки и параметры для работы приложения консоли SSMA.|  
 |[Создание файлов скриптов &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-script-files-mysqltosql.md)|Объясняется, как создать файл скрипта.|  
@@ -49,4 +50,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>См. также:  
 [Начало работы с SSMA для консоли MySQL](http://msdn.microsoft.com/en-us/218d502c-059f-4d48-9aea-61e553d74303)  
   
-

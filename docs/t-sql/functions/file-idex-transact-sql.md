@@ -3,8 +3,11 @@ title: "FILE_IDEX (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,20 +25,19 @@ helpviewer_keywords:
 - identification numbers [SQL Server], files
 - file names [SQL Server], FILE_IDEX
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
-caps.latest.revision: 35
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 9a65a49a1e6d8c23a28b117fc90b0276ce185556
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 75882e2c74b6a432f49b9b7e14b83af05e961af7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Возвращает номер идентификатора файла (ID) для указанного логического имени файла данных, файла журнала, или полнотекстового файла в текущей базе данных.  
   
@@ -56,7 +58,7 @@ FILE_IDEX ( file_name )
   
  **Значение NULL,** при возникновении ошибки  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  *имя_файла* соответствующее логическое имя файла в **имя** столбца в [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) или [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) представления каталога.  
   
  Функция FILE_IDEX может быть использована в списке выбора, в предложении WHERE или в любом другом месте, где допускаются выражения. Дополнительные сведения см. в разделе [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).  
@@ -66,7 +68,7 @@ FILE_IDEX ( file_name )
 ### <a name="a-retrieving-the-file-id-of-a-specified-file"></a>A. Получение идентификатора для указанного файла  
 Следующий пример возвращает идентификатор файла `AdventureWorks_Data`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FILE_IDEX('AdventureWorks2012_Data') AS 'File ID';  
@@ -85,7 +87,7 @@ File ID
 ### <a name="b-retrieving-the-file-id-when-the-file-name-is-not-known"></a>Б. Получение идентификатора файла, имя которого неизвестно  
 В следующем примере возвращается идентификатор `AdventureWorks` файла журнала, выбрав логическое имя файла из `sys.database_files` представление, где тип файла равен каталога `1` (журнал).  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT FILE_IDEX((SELECT TOP (1) name FROM sys.database_files WHERE type = 1)) AS 'File ID';  
@@ -103,7 +105,7 @@ File ID
 ### <a name="c-retrieving-the-file-id-of-a-full-text-catalog-file"></a>В. Получение идентификатора файла полнотекстового файла каталога  
 В следующем примере возвращается идентификатор файла полнотекстового файла, выбрав логическое имя файла из `sys.database_files` представление, где тип файла равен каталога `4` (полнотекстовой). Этот пример возвращает значение NULL, если полнотекстовый каталог не существует.  
   
-```tsql  
+```sql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  
 AS 'File_ID';  
 ```  
@@ -114,4 +116,3 @@ AS 'File_ID';
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   
-

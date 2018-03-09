@@ -2,9 +2,12 @@
 title: "Оценка количества элементов (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 09/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ helpviewer_keywords:
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-caps.latest.revision: 11
-author: MightyPen
-ms.author: genemi
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: c87819c3d2802e6ded39885e540b0a3fd050aae8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
-ms.openlocfilehash: 2d334f4397fdbf4097adbbc75d284202fd0fd8df
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cardinality-estimation-sql-server"></a>Оценка количества элементов (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 В этой статье показано, как оценить и выбрать оптимальную конфигурацию оценки количества элементов (CE) для вашей системы SQL. В большинстве систем используется последняя версия CE, поскольку она наиболее точна. CE прогнозирует количество строк, которое скорее всего будет возвращено запросом. Прогноз кратности используется оптимизатором запросов для создания оптимального плана запроса. Чем точнее оценки, тем, как правило, оптимальнее план запроса.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 10/05/2017
   
  **Уровень совместимости:** чтобы убедиться, что база данных находится на определенном уровне, используйте следующий код на языке Transact-SQL для [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
-```tsql  
+```sql  
 SELECT ServerProperty('ProductVersion');  
 go  
   
@@ -64,7 +66,7 @@ go
   
  **Устаревшая CE**: для базы данных SQL Server с уровнем совместимости 120 или выше CE версии 70 может быть активирована на уровне базы данных с помощью инструкции [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
-```tsql  
+```sql  
 ALTER DATABASE
     SCOPED CONFIGURATION  
         SET LEGACY_CARDINALITY_ESTIMATION = ON;  
@@ -77,7 +79,7 @@ SELECT name, value
  
  Или, начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1), используется [указание запроса](../../t-sql/queries/hints-transact-sql-query.md) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
- ```tsql  
+ ```sql  
 SELECT CustomerId, OrderAddedDate  
     FROM OrderTable  
     WHERE OrderAddedDate >= '2016-05-01'; 
@@ -86,7 +88,7 @@ SELECT CustomerId, OrderAddedDate
  
  **Хранилище запросов**: появившееся в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] хранилище запросов является удобным инструментом для анализа производительности запросов. В среде [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] откройте **обозреватель объектов**. Затем откройте узел вашей базы данных; если хранилище запросов включено, вы увидите узел **Хранилище запросов**.  
   
-```tsql  
+```sql  
 ALTER DATABASE <yourDatabase>  
     SET QUERY_STORE = ON;  
 go  
@@ -108,7 +110,7 @@ ALTER DATABASE <yourDatabase>
   
  Другой способ отслеживания процесса оценки кратности (CE) подразумевает использование расширенного события с именем **query_optimizer_estimate_cardinality**. Следующий пример кода T-SQL выполняется в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Он записывает XEL-файл в папку C:\Temp\ (хотя этот путь можно изменить). При открытии XEL-файла в [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] отображаются подробные сведения об этом файле.  
   
-```tsql  
+```sql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
 go  
   
@@ -142,11 +144,11 @@ go
   
  Далее приводятся пошаговые инструкции, позволяющие оценить, не выполняется ли какой-нибудь из важных запросов медленнее с учетом последних данных CE. Для выполнения некоторых шагов нужно выполнить пример кода из предыдущего раздела.  
   
-1.  Откройте среду [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]. Убедитесь, что для базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задан наивысший доступный уровень совместимости.  
+1.  Откройте [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]. Убедитесь, что для базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задан наивысший доступный уровень совместимости.  
   
 2.  Выполните следующие подготовительные действия:  
   
-    1.  Откройте среду [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)].  
+    1.  Откройте [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)].  
   
     2.  Запустите T-SQL, чтобы убедиться, что для базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задан наивысший доступный уровень совместимости.  
   
@@ -233,10 +235,10 @@ go
   
 Допустим, сбор статистики по параметру OrderTable последний раз выполнялся 30 апреля 2016 года, когда максимальное значение параметра OrderAddedDate было 2016-04-30. Расчет CE для уровня совместимости 120 (и выше) выполняется с допущением, что столбцы в таблице OrderTable с данными *по возрастанию* содержали значения, превышающие записанный в статистике максимум. Исходя из этого план обработки запросов для объектов SQL SELECT оптимизируется следующим образом.  
   
-```tsql  
+```sql  
 SELECT CustomerId, OrderAddedDate  
-    FROM OrderTable  
-    WHERE OrderAddedDate >= '2016-05-01';  
+FROM OrderTable  
+WHERE OrderAddedDate >= '2016-05-01';  
 ```  
   
 ### <a name="example-b-ce-understands-that-filtered-predicates-on-the-same-table-are-often-correlated"></a>Пример Б. Расчет CE выполняется с допущением, что фильтрованные предикаты в одной и той же таблице часто коррелируют  
@@ -245,33 +247,29 @@ SELECT CustomerId, OrderAddedDate
   
 На уровне 120 расчет CE выполняется с тем допущением, что, возможно, существует корреляция между двумя столбцами одной и той же таблицы: Model и ModelVariant. CE более точно оценивает, сколько строк будет возвращено запросом, а оптимизатор запросов создает оптимизированный план.  
   
-```tsql  
+```sql  
 SELECT Model, Purchase_Price  
-    FROM dbo.Hardware  
-    WHERE  
-        Model  = 'Xbox'  AND  
-        ModelVariant = 'One';  
+FROM dbo.Hardware  
+WHERE Model  = 'Xbox'  AND  
+      ModelVariant = 'One';  
 ```  
   
-### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tablescc"></a>Пример В. При расчете CE мы более не допускаем никаких корреляций между фильтрованными предикатами из разных таблиц. 
+### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tables"></a>Пример В. При расчете CE мы более не допускаем никаких корреляций между фильтрованными предикатами из разных таблиц 
 Если провести новое исследование с актуальными рабочими нагрузками и фактическими бизнес-данными, обнаружится, что фильтры предикатов из разных таблиц, как правило, не коррелируют друг с другом. В следующем запросе при расчете CE предполагается, что между s.type и r.date нет никакой корреляции. Следовательно, CE оценивает, что число возвращаемых строк будет меньше.  
   
-```tsql  
+```sql  
 SELECT s.ticket, s.customer, r.store  
-    FROM  
-                   dbo.Sales    AS s  
-        CROSS JOIN dbo.Returns  AS r  
-    WHERE  
-        s.ticket = r.ticket  AND  
-        s.type   = 'toy'     AND  
-        r.date   = '2016-05-11';  
+FROM dbo.Sales    AS s  
+CROSS JOIN dbo.Returns  AS r  
+WHERE s.ticket = r.ticket  AND  
+      s.type   = 'toy'     AND  
+      r.date   = '2016-05-11';  
 ```  
   
   
 ## <a name="see-also"></a>См. также:  
- [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
-  [Оптимизация планов запроса с помощью средства оценки кратности SQL Server 2014](http://msdn.microsoft.com/library/dn673537.aspx)  
- [Указания запросов](../../t-sql/queries/hints-transact-sql-query.md)  
- [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
- [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md)
-
+ [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
+ [Оптимизация планов запроса с помощью средства оценки кратности SQL Server 2014](http://msdn.microsoft.com/library/dn673537.aspx)  
+ [Указания запросов](../../t-sql/queries/hints-transact-sql-query.md)    
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
+ [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md)   

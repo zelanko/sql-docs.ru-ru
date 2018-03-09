@@ -3,8 +3,11 @@ title: "Инструкции SET (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - statistical information [SQL Server], SET statements
 - locking [SQL Server], SET statements
 ms.assetid: f7e107f8-0fcf-408b-b30f-da2323eeb714
-caps.latest.revision: 38
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f0426730b33f0b70fda11a8cb07242a365d10fae
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 3832a2be6952354122c999d3c88c7ad1610b623d
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="set-statements-transact-sql"></a>Инструкции SET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Язык [!INCLUDE[tsql](../../includes/tsql-md.md)] предоставляет несколько инструкций SET, которые изменяют текущий сеанс, управляя специфическими данными. Инструкции SET группируются в категории, показанные в следующей таблице.  
   
@@ -91,4 +93,3 @@ ms.lasthandoff: 09/01/2017
      Если необходимое значение любого из этих параметров не задано, инструкции INSERT, UPDATE, DELETE, DBCC CHECKDB и DBCC CHECKTABLE для индексированных представлений или таблиц с индексами на основе вычисляемых столбцов не смогут быть выполнены. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сформирует ошибку с указанием всех неправильно заданных параметров. Также [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет выполнять инструкции SELECT на этих таблицах или индексных представлениях, как будто индексы на вычисляемых столбцах или на представлениях не существуют.  
   
   
-

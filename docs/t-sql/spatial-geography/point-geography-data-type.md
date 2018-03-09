@@ -3,8 +3,11 @@ title: "Точка (тип данных geography) | Документы Microsof
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +21,19 @@ helpviewer_keywords:
 - Point method
 - Point (geography Data Type)
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7cefb6e199bbd4617b1fc2f6f71d9bb3997445dc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f37072d64159d5d8bfb1d44a64dd017adf0fceed
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="point-geography-data-type"></a>Point (тип данных geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Создает **geography** представляет экземпляр **точки** экземпляра по значениям широты и долготы и Идентификатору пространственной ссылки (SRID).
   
@@ -43,7 +45,7 @@ Point ( Lat, Long, SRID )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *LAT*  
+ *Lat*  
  — **Float** выражение, представляющее координату по оси x **точки** создается.  
   
  *Long*  
@@ -69,8 +71,7 @@ SET @g = geography::Point(47.65100, -122.34900, 4326)
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные статические географические методы](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   
-

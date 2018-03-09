@@ -1,27 +1,27 @@
 ---
-title: "Добавление датчика в отчет (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Добавление датчика в отчет (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45da4fef-2b02-40e1-977c-f8f80d87155e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de434ef80732d2a845fb41c972f0118fee357d14
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 115b8f60a66378458b05234386dade8df290ec7e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>Добавление датчика в отчет (построитель отчетов и службы SSRS)
   Если в отчете с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] необходимо создать сводку данных в визуальном формате, то можно использовать область данных "Датчик". После добавления области данных датчика в область конструктора можно перетаскивать поля набора данных отчета на панель данных в датчике.  
@@ -37,9 +37,9 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  В отличие от диаграмм, для датчиков существует только два типа: линейный и радиальный. В диалоговом окне **Выбор типа датчика** представлены шаблоны этих двух типов датчиков. По этой причине нельзя производить изменение типа датчика после его добавления в отчет. Чтобы изменить его тип, нужно удалить и вновь добавить датчик.  
   
-     Если в отчете нет источника данных и набора данных, то откроется диалоговое окно **Свойства источника данных** , которое поможет выполнить шаги для их создания. Дополнительные сведения см. в разделе [добавить и проверить подключение данных &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+     Если в отчете нет источника данных и набора данных, то откроется диалоговое окно **Свойства источника данных** , которое поможет выполнить шаги для их создания. Дополнительные сведения см. в разделе [Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-     Если в отчете есть источник данных, но нет набора данных, то откроется диалоговое окно **Свойства набора данных** , которое поможет выполнить шаги для его создания. Дополнительные сведения см. в разделе [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
+     Если в отчете есть источник данных, но нет набора данных, то откроется диалоговое окно **Свойства набора данных** , которое поможет выполнить шаги для его создания. Дополнительные сведения см. в разделе [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
 4.  Щелкните датчик, чтобы отобразить панель данных. По умолчанию датчик имеет один указатель, соответствующий одному значению. Можно добавить дополнительные указатели.  
   
@@ -49,7 +49,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также:  
  [Вложенные области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Датчики &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [Датчики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   
-

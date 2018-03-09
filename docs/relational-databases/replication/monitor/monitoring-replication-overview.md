@@ -2,31 +2,32 @@
 title: "Наблюдение за репликацией | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
 - Replication Monitor, about Replication Monitor
 ms.assetid: 81f596d2-27a5-489d-bf8d-0f4361decd02
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "37"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2dc65ac3d6356ff9c2a69d0a30a8c5a1ecc76782
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d753e6f33d721fe409af8ca71afc6812f500a95f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitoring-replication-overview"></a>Обзор наблюдения за репликацией
-  Монитор репликации[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] представляет собой графический инструмент для наблюдения за исправностью топологии репликации. Монитор репликации предоставляет детальные сведения о состоянии и производительности публикаций и подписок, позволяющие получать ответы на следующие общие вопросы:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Монитор репликации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] представляет собой графическое средство для наблюдения за исправностью топологии репликации. Монитор репликации предоставляет детальные сведения о состоянии и производительности публикаций и подписок, позволяющие получать ответы на следующие общие вопросы:  
   
 -   Исправна ли система репликации?  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
  Для наблюдения за репликацией пользователь должен быть членом предопределенной роли сервера **sysadmin** на распространителе или членом предопределенной роли базы данных **replmonitor** в базе данных распространителя. Системный администратор может добавить любого пользователя в роль **replmonitor** , которая позволяет пользователю наблюдать операции репликации в мониторе репликации. Однако такой пользователь не может управлять репликацией.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  В следующих разделах содержатся сведения о возможностях монитора репликации.  
   
  [Обзор интерфейса монитора репликации](../../../relational-databases/replication/monitor/overview-of-the-replication-monitor-interface.md)  
@@ -51,7 +52,7 @@ ms.lasthandoff: 06/22/2017
  [Запуск монитора репликации](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)  
  Описывается запуск монитора репликации.  
   
- [Предоставление пользователям без прав администратора разрешений на использование монитора репликации](../../../relational-databases/replication/monitor/allow-non-administrators-to-use-replication-monitor.md)  
+ [Allow Non-Administrators to Use Replication Monitor](../../../relational-databases/replication/monitor/allow-non-administrators-to-use-replication-monitor.md) (Предоставление пользователям без прав администратора разрешения на использование монитора репликации)  
  Описывается выдача разрешений пользователю без прав администратора на использование монитора репликации.  
   
  [Добавление и удаление издателей в мониторе репликации](../../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md)  
@@ -69,7 +70,7 @@ ms.lasthandoff: 06/22/2017
  [Наблюдение за агентами репликации](../../../relational-databases/replication/monitor/monitor-replication-agents.md)  
  Описываются способы поиска сведений о каждом агенте репликации.  
   
- [Настройка пороговых значений и предупреждений в мониторе репликации](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
  Описываются предупреждения, пороги и оповещения, которые можно установить в мониторе репликации. Рекомендуется включить предупреждения для используемой топологии, чтобы своевременно получать сведения о состоянии и производительности репликации.  
   
  [Кэширование, обновление и производительность монитора репликации](../../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md)  
@@ -94,4 +95,3 @@ ms.lasthandoff: 06/22/2017
  Описывается просмотр сведений и выполнение задач для агентов, связанных с подпиской, с помощью монитора репликации.  
   
   
-

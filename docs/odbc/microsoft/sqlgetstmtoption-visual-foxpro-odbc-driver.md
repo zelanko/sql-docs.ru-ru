@@ -3,26 +3,26 @@ title: "SQLGetStmtOption (драйвер ODBC для Visual FoxPro) | Докум
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLGetStmtOption function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLGetStmtOption function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 984a8b1d-f12c-420c-8be4-f555114c764b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9042a1a951d08c60e8dc795cd58f2a525cf39cda
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 601dd559d7bf13d1a12d032d8431a8c3fe0287d4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetstmtoption-visual-foxpro-odbc-driver"></a>SQLGetStmtOption (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
@@ -43,4 +43,3 @@ ms.lasthandoff: 09/09/2017
  Драйвер ODBC для Visual FoxPro имеет преобразование библиотеки DLL.  
   
  Дополнительные сведения см. в разделе [SQLGetStmtOption](../../odbc/reference/syntax/sqlgetstmtoption-function.md) в *справочнике программиста ODBC*.
-

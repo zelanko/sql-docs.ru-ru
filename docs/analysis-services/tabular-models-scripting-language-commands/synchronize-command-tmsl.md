@@ -2,30 +2,29 @@
 title: "Synchronize, команда (TMSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 08/09/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a32ff053-f38f-49d7-afdc-e19f59c88135
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bdf14cf2c3ac199c1108cd8d1178ede676976baa
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2904954269f32dc80d603c3c0b045685d58bc2d5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="synchronize-command-tmsl"></a>Synchronize, команда (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later](../../includes/ssas-appliesto-sql2016-later.md)]
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
   Синхронизирует базу данных служб Analysis Services с другой базой данных.  
   
@@ -47,8 +46,8 @@ ms.lasthandoff: 09/01/2017
   
 ||||  
 |-|-|-|  
-|**Свойство**|**Default**|**Description**|  
-|базой данных||Имя объекта базы данных для синхронизации.|  
+|**Свойство**|**Default**|**Описание**|  
+|База данных||Имя объекта базы данных для синхронизации.|  
 |источник||Строка подключения, используемая для подключения к исходному серверу.|  
 |synchronizeSecurity|skipMembership|Значение перечисления, определяющее способ восстановления определений безопасности, включая роли и разрешения. Допустимые значения включают skipMembership, copyAll, ignoreSecurity.|  
 |applyCompression|True|Логическое значение, при значении true указывает, что сжатие будет применяться при выполнении операции синхронизации; в противном случае — значение false.|  
@@ -73,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [Справочник по языку TMSL (Tabular Model Scripting Language)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

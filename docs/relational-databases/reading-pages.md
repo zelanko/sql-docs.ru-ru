@@ -3,8 +3,11 @@ title: "Считывание страниц | Документация Майк�
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - server-general
 ms.tgt_pltfrm: 
@@ -12,19 +15,19 @@ ms.topic: article
 helpviewer_keywords:
 - pages
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
-caps.latest.revision: 3
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c7ac5398f3b10db59812539e58abaff9ef2c7cd0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 1561e7c3cea406881dc9722f26a4dfa4cefe0310
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="reading-pages"></a>Считывание страниц
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Процесс ввода-вывода экземпляра компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] в базе данных SQL Server включает физические и логические операции чтения. Логическое чтение выполняется каждый раз, когда компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] запрашивает страницу из [буферного кэша](../relational-databases/memory-management-architecture-guide.md). Если в этот момент страница не находится в кэше, то сначала при помощи операции физического чтения она копируется в него с диска.
 

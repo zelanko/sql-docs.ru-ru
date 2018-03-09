@@ -2,9 +2,12 @@
 title: "Включение индексов и ограничений | Документация Майкрософт"
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-indexes
 ms.tgt_pltfrm: 
@@ -17,30 +20,29 @@ helpviewer_keywords:
 - constraints [SQL Server], enabling
 - clustered indexes, enabling disabled indexes
 ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
-caps.latest.revision: 27
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2e0e171e2cf2bdc35a3e9c3c7e5ed1077aabe4dc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7d57ace5eda942fe9dba91d8a4f521bbd1dbca25
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="enable-indexes-and-constraints"></a>Включение индексов и ограничений
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   В этом разделе описывается включение отключенного индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. После отключения индекс остается в отключенном состоянии до тех пор, пока он не будет перестроен или удален.  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Включение отключенного индекса с помощью различных средств.**  
   
@@ -74,10 +76,12 @@ ms.lasthandoff: 06/22/2017
     |ALTER INDEX REBUILD.|Не удалось выполнить операцию.|Операция выполнена успешно.|  
     |DROP INDEX.|Операция выполнена успешно.|Операция выполнена успешно.|  
     |CREATE INDEX WITH DROP_EXISTING.|Не удалось выполнить операцию.|Операция выполнена успешно.|  
+
+-   При перестроении отключенных сжатых некластеризованных индексов параметр data_compression по умолчанию имеет значение none. Это означает, что индексы не будут сжиматься. Связано это с тем, что при отключении некластеризованных индексов метаданные параметров сжатия теряются. Чтобы обойти эту проблему, необходимо явно настроить сжатие данных в инструкции перестроения.
+
+###  <a name="Security"></a> безопасность  
   
-###  <a name="Security"></a> Безопасность  
-  
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER для таблицы или представления. При использовании инструкции DBCC DBREINDEX пользователь должен быть владельцем таблицы, членом предопределенной роли сервера **sysadmin** либо предопределенной роли базы данных **db_ddladmin** или **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -189,7 +193,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-enable-all-indexes-on-a-table-using-dbcc-dbreindex"></a>Использование инструкции DBCC DBREINDEX для включения всех индексов в таблице  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -207,4 +211,3 @@ ms.lasthandoff: 06/22/2017
  Дополнительные сведения см. в разделах [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md), [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md) и [DBCC DBREINDEX (Transact-SQL)](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md).  
   
   
-

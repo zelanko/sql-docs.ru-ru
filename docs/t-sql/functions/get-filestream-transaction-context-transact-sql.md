@@ -3,8 +3,11 @@ title: "GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL) | Документы M
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
-caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a5ba8077d0df80044a66da4863bba1dd603d369f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 1bab9267495b6e5f41507bf058f84ca571f9728e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает токен, который представляет текущий контекст транзакции сеанса. Этот токен используется приложением для связывания потоковых операций FILESTREAM файловой системы с транзакцией. Список разделов по FILESTREAM см. в разделе [большой двоичный объект &#40; Большой двоичный объект &#41; Данные &#40; SQL Server &#41; ](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
@@ -49,7 +51,7 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращается значение NULL, если транзакция не была запущена, а также, если она отменена или зафиксирована.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Транзакция должна быть явной. Используйте инструкцию BEGIN TRANSACTION, за которой следует инструкция COMMIT TRANSACTION или ROLLBACK TRANSACTION.  
   
  Если вызывается функция GET_FILESTREAM_TRANSACTION_CONTEXT, участнику предоставляется доступ к файловой системе для транзакции в течение транзакции. Чтобы разрешить доступ другому пользователю к транзакции через файловую систему, используйте инструкцию EXECUTE AS для запуска функции GET_FILESTREAM_TRANSACTION_CONTEXT от имени другого пользователя.  
@@ -280,9 +282,8 @@ Namespace ConsoleApplication
 End Namespace  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Путь к &#40; Transact-SQL &#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
  [Данные большого двоичного объекта (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   
   
-

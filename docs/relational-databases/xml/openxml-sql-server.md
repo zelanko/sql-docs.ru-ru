@@ -2,9 +2,12 @@
 title: "OPENXML (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -23,26 +26,27 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-caps.latest.revision: 43
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 47cd6e281772125ee7d424425fb6185623c0afc8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: ab0c04534f730157d6112c2428b0cd2ff4a7277f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="openxml-sql-server"></a>Инструкция OPENXML (SQL Server)
-  Ключевое слово OPENXML языка [!INCLUDE[tsql](../../includes/tsql-md.md)] предоставляет набор строк по XML-документам в памяти, подобный таблице или представлению. OPENXML позволяет получить доступ к XML-данным так, как если бы это был реляционный набор строк. Это делается при помощи представления внутреннего отображения XML-документа в виде набора строк. Записи в наборе строк могут храниться в таблицах базы данных.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Ключевое слово OPENXML языка [!INCLUDE[tsql](../../includes/tsql-md.md)] предоставляет набор строк по XML-документам в памяти, подобный таблице или представлению. OPENXML позволяет получить доступ к XML-данным так, как если бы это был реляционный набор строк. Это делается при помощи представления внутреннего отображения XML-документа в виде набора строк. Записи в наборе строк могут храниться в таблицах базы данных.  
   
  OPENXML может использоваться в инструкциях SELECT и SELECT INTO в любых позициях, где в качестве источника могут присутствовать поставщики наборов строк, представления или функция OPENROWSET. Дополнительные сведения о синтаксисе инструкции OPENXML см. в разделе [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md).  
   
  Чтобы писать запросы к XML-документу с использованием OPENXML, необходимо сначала вызвать хранимую процедуру **sp_xml_preparedocument**. Таким образом производится синтаксический анализ XML-документа и возвращается дескриптор для проанализированного документа, готового к использованию. Проанализированный документ является представлением дерева объектной модели документа (DOM) различных узлов в XML-документе. Дескриптор документа передается OPENXML. Затем инструкция OPENXML выдает представление документа в виде набора строк, основываясь на переданных ей аргументах.  
   
 > [!NOTE]  
-> Хранимая процедура **sp_xml_preparedocument** использует обновленную под SQL версию средства синтаксического анализа MSXML, Msxmlsql.dll. Эта версия средства синтаксического анализа MSXML разработана для поддержки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и остается обратно совместимой с версией MSXML 2.6.  
+>  Хранимая процедура**sp_xml_preparedocument** использует обновленную под SQL версию средства синтаксического анализа MSXML, Msxmlsql.dll. Эта версия средства синтаксического анализа MSXML разработана для поддержки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и остается обратно совместимой с версией MSXML 2.6.  
   
  Внутреннее представление XML-документа должно быть удалено из памяти посредством вызова системной хранимой процедуры **sp_xml_removedocument** для освобождения памяти.  
   
@@ -141,7 +145,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  В следующей таблице описывается структура краевой таблицы.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**bigint**|Уникальный идентификатор узла документов.<br /><br /> Корневой элемент имеет значение идентификатора, равное 0. Отрицательные значения идентификаторов зарезервированы.|  
 |**parentid**|**bigint**|Идентифицирует родителя узла. Родительский узел, определенный этим идентификатором, необязательно является родительским элементом. Однако это зависит от типа узла, родительский узел которого определен этим идентификатором. Например, если узел является текстовым, его родительский узел может быть узлом атрибута.<br /><br /> Если узел находится на верхнем уровне XML-документа, то его столбец **ParentID** принимает значение NULL.|  

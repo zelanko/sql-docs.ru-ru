@@ -3,26 +3,26 @@ title: "ALTER TABLE - команда SQL | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- alter table [ODBC]
+helpviewer_keywords: alter table [ODBC]
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1bf0849ee91170b09ab927363dafda28bff474c2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bafb2f2a11b7108d550dae66db0b5d8e158086a3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - команда SQL
 Программно изменяет структуру таблицы.  
@@ -185,7 +185,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  NOVALIDATE  
  Указывает, что Visual FoxPro позволяет вносить изменения в структуру таблицы. Эти изменения могут нарушить целостность данных в таблице. По умолчанию Visual FoxPro предотвращает внесение изменений, которые нарушают целостность данных в таблице ALTER TABLE. Включить NOVALIDATE, чтобы переопределить это поведение по умолчанию.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  ALTER TABLE может использоваться для изменения структуры таблицы, который не был добавлен в базу данных. Однако если включают по умолчанию, FOREIGN KEY, PRIMARY KEY, ссылки или предложений SET при изменении свободного таблицы Visual FoxPro возникает ошибка.  
   
  ALTER TABLE может перестроить таблицу, создав новый заголовок таблицы и добавления записей в заголовке таблицы. Например изменения типа или ширина поля может привести к таблице, чтобы перестроить.  
@@ -198,5 +198,4 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
 ## <a name="see-also"></a>См. также:  
  [Создание таблицы - команда SQL](../../odbc/microsoft/create-table-sql-command.md)   
- [ИНДЕКС команды](../../odbc/microsoft/index-command.md)
-
+ [Команда INDEX](../../odbc/microsoft/index-command.md)

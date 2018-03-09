@@ -2,25 +2,26 @@
 title: "Добавление знаний в базу знаний | Microsoft Docs"
 ms.custom: 
 ms.date: 06/04/2013
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
-caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "14"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: be0d167e1d4daf0049fed85c4cd28d670ddce200
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f247bb5a8b739b1f2d35ce4e7fb08c5904ef7d50
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Добавление знаний в базу знаний
   В этом разделе описываются способы, которыми можно добавить знания в базу знаний служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Прежде чем приступать к работе со службами DQS, необходимо получить набор знаний о данных. Для этого необходимо построить и поддерживать базу знаний служб DQS, а также пополнять ее наборами знаний, связанными с соответствующими типами источников данных. База знаний является репозиторием знаний о данных, который дает представление о данных и помогает поддерживать их целостность.  
@@ -76,4 +77,3 @@ ms.lasthandoff: 09/09/2017
 -   Дополнительные сведения в документации см. в разделе [Using the DQS Default Knowledge Base](../data-quality-services/using-the-dqs-default-knowledge-base.md).  
   
   
-

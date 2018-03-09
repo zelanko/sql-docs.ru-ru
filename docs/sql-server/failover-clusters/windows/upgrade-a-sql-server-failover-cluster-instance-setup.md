@@ -2,11 +2,13 @@
 title: "Обновление экземпляра отказоустойчивого кластера SQL Server (программа установки) | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/22/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +18,19 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - failover clustering [SQL Server], upgrading
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 50db49a567f4247b1014fba9114aa168b90709f5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 9e35eab411af665d7758d76fa7e9f3f1353be7ce
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Обновление экземпляра отказоустойчивого кластера SQL Server (программа установки)
-  Отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно обновить до отказоустойчивого кластера [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью пользовательского интерфейса установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или из командной строки.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно обновить до отказоустойчивого кластера [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью пользовательского интерфейса установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или из командной строки.  
   
  Для локальных установок программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] нужно запускать с правами администратора. Если [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливается с удаленного общего ресурса, необходимо использовать учетную запись домена, у которой есть разрешения на чтение на этом удаленном ресурсе.  
   
@@ -115,4 +117,3 @@ ms.lasthandoff: 06/22/2017
  [Добавление компонентов в экземпляр SQL Server 2016 (программа установки)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)  
   
   
-

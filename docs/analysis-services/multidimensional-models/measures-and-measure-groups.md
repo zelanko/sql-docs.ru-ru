@@ -2,13 +2,13 @@
 title: "Меры и группы мер | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,30 +22,30 @@ helpviewer_keywords:
 - aggregations [Analysis Services], measures
 - fact tables [Analysis Services]
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
-caps.latest.revision: 42
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: c8775c33a50d25379f1de53f00b7e66830cbf971
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd15969978480e68505747609332f6224355a22f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="measures-and-measure-groups"></a>Меры и их группы
-  Куб содержит *меры* в *группах мер*, бизнес-логику, а также коллекцию измерений, дающих контекст для вычисления числовых данных, которые предоставляет мера. Меры и группы мер являются неотъемлемой частью куба. Куб не может существовать без них.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Куб содержит *меры* в *группах мер*, бизнес-логику, а также коллекцию измерений, дающих контекст для вычисления числовых данных, которые предоставляет мера. Меры и группы мер являются неотъемлемой частью куба. Куб не может существовать без них.  
   
  В этом разделе описываются [Measures](#bkmk_measure) и [Measure Groups](#bkmk_mg). Здесь также приведена следующая таблица с ссылками на инструкции по созданию и настройке мер и групп мер.  
   
 |**Ссылка**|**Description**|  
 |--------------|---------------------|  
-|[Создание мер и групп мер в многомерных моделях](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|Выберите один из способов создания мер и групп мер.|  
+|[Создание меры и группы мер в многомерных моделях](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|Выберите один из способов создания мер и групп мер.|  
 |[Настройка свойств мер](../../analysis-services/multidimensional-models/configure-measure-properties.md)|Если мастер кубов используется для запуска куба, возможно, потребуется изменить метод агрегирования, применить формат данных, настроить видимость для меры в клиентских приложениях или добавить выражение меры для работы с данными, прежде чем значения объединятся.|  
 |[Настройка свойств группы мер](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)|В многомерной модели группа мер соответствует таблице фактов в хранилище данных источника. Свойства в группе мер позволяют задавать поведение кэширования, хранения и директивы обработки, которые работают вместе на уровне группы мер. Конфигурация раздела частично определяется свойствами, заданными для объектов группы мер.|  
 |[Использование агрегатных функций](../../analysis-services/multidimensional-models/use-aggregate-functions.md)|Понимание методов агрегирования, которые могут быть присвоены мере.|  
-|[Определить полуаддитивный режим](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|Полуаддитивный режим ссылается на агрегаты, которые являются допустимыми для одних измерений, но не других. Распространенным примером является баланс банковского счета. Может потребоваться выполнить агрегирование баланса по клиентам и областям, но не по времени. Например, нет смысла складывать баланс одного и того же счета за несколько дней подряд. Чтобы определить полуаддитивный режим, используйте мастер добавления бизнес-аналитики.|  
+|[Определение полуаддитивного режима](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|Полуаддитивный режим ссылается на агрегаты, которые являются допустимыми для одних измерений, но не других. Распространенным примером является баланс банковского счета. Может потребоваться выполнить агрегирование баланса по клиентам и областям, но не по времени. Например, нет смысла складывать баланс одного и того же счета за несколько дней подряд. Чтобы определить полуаддитивный режим, используйте мастер добавления бизнес-аналитики.|  
 |[Связанные группы мер](../../analysis-services/multidimensional-models/linked-measure-groups.md)|Используйте существующую группу мер в других кубах той же базы данных или в других базах данных служб Analysis Services.|  
   
 ##  <a name="bkmk_measure"></a> Measures  
@@ -74,7 +74,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>См. также  
  [Кубы в многомерных моделях](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
- [Создание мер и групп мер в многомерных моделях](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
+ [Создание меры и группы мер в многомерных моделях](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
   
   
-

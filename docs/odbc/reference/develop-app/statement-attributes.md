@@ -3,27 +3,28 @@ title: "Атрибуты инструкции | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], statement attributes
 - statement attributes [ODBC]
 ms.assetid: 4c59cd8e-a713-4095-9065-20d5bdeafe43
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9c5ccfeb2d7cf3ba4b0db5767ced1eeeee92c960
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d50c660ed3b405a7ae9fec6b9c66a9b395605025
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="statement-attributes"></a>Атрибуты инструкции
 Атрибуты инструкции представляют собой характеристики инструкции. Например установлены ли использование закладок и что тип курсора для использования с результатом инструкции являются атрибуты инструкции.  
@@ -40,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 >  Ни один из атрибутов инструкции, представленные в ODBC 3. *x* (SQL_ATTR_METADATA_ID) может быть задано на уровне соединения.  
   
  Дополнительные сведения см. в разделе [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) описание функции.
-

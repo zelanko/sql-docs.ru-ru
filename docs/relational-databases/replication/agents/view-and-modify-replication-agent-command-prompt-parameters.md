@@ -2,9 +2,12 @@
 title: "Просмотр и изменение параметров командной строки агента репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: 
@@ -12,19 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - agents [SQL Server replication], command prompt parameters
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1e9dafe794470f2b0307459e774e01a1ef07d784
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 3edb80c4a90ede1059481d918506b97cb1669901
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>Просмотр и изменение параметров командной строки агента репликации
-  Агенты репликации — это исполняемые файлы, принимающие параметры командной строки. По умолчанию агенты выполняются в рамках шагов заданий агента [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], поэтому эти параметры можно просматривать и изменять с помощью диалогового окна **Свойства задания — \<задание>**. Доступ к этому диалоговому окну можно получить из папки **Задания** в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] и на вкладке **Агенты** монитора репликации. Сведения о запуске монитора репликации см. в [этой статье](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Агенты репликации — это исполняемые файлы, принимающие параметры командной строки. По умолчанию агенты выполняются в рамках шагов заданий агента [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], поэтому эти параметры можно просматривать и изменять с помощью диалогового окна **Свойства задания — \<задание>**. Доступ к этому диалоговому окну можно получить из папки **Задания** в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] и на вкладке **Агенты** монитора репликации. Сведения о запуске монитора репликации см. в [этой статье](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 > [!NOTE]  
 >  Изменения параметров агента вступают в действие при следующем запуске агента. Если агент выполняется в непрерывном режиме, следует остановить и перезапустить агент.  
@@ -35,15 +39,15 @@ ms.lasthandoff: 06/22/2017
   
 |Агент|Имя задания|Для просмотра списка параметров см...|  
 |-----------|--------------|------------------------------------|  
-|агент моментальных снимков|**\<Издатель>-\<база данных публикации>-\<публикация>-\<целое число>**|[Агент моментальных снимков репликации](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
-|Агент моментальных снимков для секции публикации слиянием|**Dyn_\<Издатель>-\<база данных публикации>-\<публикация>-\<идентификатор GUID>**|[Агент моментальных снимков репликации](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
+|агент моментальных снимков|**\<Издатель>-\<база данных публикации>-\<публикация>-\<целое число>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
+|Агент моментальных снимков для секции публикации слиянием|**Dyn_\<Издатель>-\<база данных публикации>-\<публикация>-\<идентификатор GUID>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
 |Агент чтения журнала.|**\<Издатель>-\<база данных публикации>-\<целое число>**|[Агент чтения журнала репликации](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|  
-|Агент слияния для подписок по запросу|**\<Издатель>-\<база данных публикации>-\<публикация>-\<подписчик>-\<база данных подписки>-\<целое число>**|[Агент слияния репликации](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
-|Агент слияния для принудительных подписок|**\<Издатель>-\<база данных публикации>-\<публикация>-\<подписчик>-\<целое число>**|[Агент слияния репликации](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
-|Агент распространителя для принудительных подписок|**\<Издатель>-\<база данных публикации>-\<публикация>-\<подписчик>-\<целое число>***|[Агент распространения репликации](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|Агент распространителя для подписок по запросу|**\<Издатель>-\<база данных публикации>-\<публикация>-\<подписчик>-\<база данных подписки>-\<идентификатор GUID>***\*|[Агент распространения репликации](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|Агент распространителя для принудительных подписок подписчиков серверов, отличных от подписчиков SQL Server|**\<Издатель>-\<база данных публикации>-\<публикация>-\<подписчик>-\<целое число>**|[Агент распространения репликации](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|Агент чтения очереди.|**[\<Распространитель>].\<целое_число>**|[Агент чтения очереди репликации](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
+|Агент слияния для подписок по запросу|**\<Издатель>-\<база данных публикации>-\<публикация>-\<подписчик>-\<база данных подписки>-\<целое число>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
+|Агент слияния для принудительных подписок|**\<Издатель>-\<база данных публикации>-\<публикация>-\<подписчик>-\<целое число>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
+|Агент распространителя для принудительных подписок|**\<Издатель>-\<база данных публикации>-\<публикация>-\<подписчик>-\<целое число>***|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|Агент распространителя для подписок по запросу|**\<Издатель>-\<база данных публикации>-\<публикация>-\<подписчик>-\<база данных подписки>-\<идентификатор GUID>***\*|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|Агент распространителя для принудительных подписок подписчиков серверов, отличных от подписчиков SQL Server|**\<Издатель>-\<база_данных_публикации>-\<публикация>-\<подписчик>-\<целое_число>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|Агент чтения очереди.|**[\<Распространитель>].\<целое_число>**|[Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
   
  \*Для принудительных подписок на публикации Oracle это значение должно иметь вид **\<Издатель>-\<Издатель**>, а не **\<Издатель>-\<БД_публикации>**.  
   
@@ -103,4 +107,3 @@ ms.lasthandoff: 06/22/2017
  [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   
-

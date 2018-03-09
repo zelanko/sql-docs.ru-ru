@@ -2,28 +2,30 @@
 title: "Создание хранимых процедур, скомпилированных в собственном коде | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
-caps.latest.revision: 15
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 108baf378ee99256bef1f3dd11aead8dac68307b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: f0ebadeaa959c6eb148cdd9a9d6e0a1019d858ab
-ms.openlocfilehash: 413be658a429308744b303d2d3ef82892c964c5a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Создание хранимых процедур, скомпилированных в собственном коде
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Скомпилированные в собственном коде хранимые процедуры не реализуют полные возможности программирования [!INCLUDE[tsql](../../includes/tsql-md.md)] и контактную зону запросов. Некоторые конструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] не могут быть использованы внутри хранимых процедур, скомпилированных в собственном коде. Дополнительные сведения см. в разделе [Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
@@ -43,7 +45,7 @@ ms.lasthandoff: 07/27/2017
   
  Скомпилированные в собственном коде хранимые процедуры создаются с помощью [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md). В следующем примере показаны оптимизированная для памяти таблица и скомпилированная в собственном коде хранимая процедура, используемая для вставки строк в таблицу.  
   
-```tsql  
+```sql  
 create table dbo.Ord  
 (OrdNo integer not null primary key nonclustered,   
  OrdDate datetime not null,   
@@ -66,7 +68,7 @@ go
   
  В образце кода **NATIVE_COMPILATION** указывает, что данная хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)] представляет собой хранимую процедуру, скомпилированную в собственном коде. Требуются следующие параметры.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |------------|-----------------|  
 |**SCHEMABINDING**|Скомпилированная в собственном коде хранимая процедура должна быть привязана к схеме объектов, на которые она ссылается. Это означает, что таблицы, на которые ссылается процедура, не могут быть удалены. Таблицы, на которые имеются ссылки в процедуре, должны содержать имя схемы, а подстановочные знаки (\*) в запросах недопустимы (то есть не нужно использовать выражения наподобие `SELECT * from...`). Параметр**SCHEMABINDING** поддерживается только для хранимых процедур, скомпилированных в собственном коде, в этой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**BEGIN ATOMIC**|Тело хранимой процедуры, скомпилированной в собственном коде, должно представлять собой только один блок ATOMIC. Блоки ATOMIC гарантируют атомарное выполнение хранимой процедуры. Если процедура вызывается вне контекста активной транзакции, то запускает новую транзакцию, которая фиксируется после блока ATOMIC. Блоки ATOMIC в хранимых процедурах, скомпилированных в собственном коде, имеют два обязательных параметра:<br /><br /> **TRANSACTION ISOLATION LEVEL**. См. раздел [Уровни изоляции транзакций у оптимизированных для памяти таблиц](http://msdn.microsoft.com/library/8a6a82bf-273c-40ab-a101-46bd3615db8a) , содержащий описание поддерживаемых уровней изоляции.<br /><br /> **LANGUAGE**. Для хранимой процедуры необходимо назначить один из доступных языков или псевдонимов языка.|  
@@ -75,4 +77,3 @@ go
  [Скомпилированные в собственном коде хранимые процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   
-

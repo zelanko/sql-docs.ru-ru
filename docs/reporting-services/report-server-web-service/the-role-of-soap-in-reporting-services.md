@@ -1,33 +1,32 @@
 ---
-title: "Роль протокола SOAP в службах Reporting Services | Документы Microsoft"
+title: "Роль протокола SOAP в службах Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Web service [Reporting Services], SOAP
 - SOAP [Reporting Services], role in Reporting Services
 - Report Server Web service, SOAP
 - XML Web service [Reporting Services], SOAP
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
-caps.latest.revision: 34
-author: guyinacube
-ms.author: asaxton
+caps.latest.revision: "34"
+author: markingmyname
+ms.author: maghan
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 0d6c14934417d4ece40596c17a7335e09ec1ad78
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: fddf0fb03060a989c97a3fde8a8923e0d64e1cca
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
   Веб-служба сервера отчетов использует обмен сообщениями по протоколу SOAP для отправки текстовых команд по сети. Эти команды имеют вид XML-текста, передаваемого через Интернет по протоколу HTTP. Использование протокола связи SOAP в веб-службе сервера отчетов позволяет приложениям и компонентам обмениваться данными с сервером отчетов, используя широко признанную открытую инфраструктуру. Стандарт SOAP определен на веб-сайте www.w3.org/TR/SOAP.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/12/2017
 </soap:Envelope>  
 ```  
   
- Протокол SOAP требует, чтобы сообщения помещались в **конверт** элемент, а большая часть сообщения располагалась **текст** элемента. В этом примере элемент Body содержит вызов метода <xref:ReportService2010.ReportingService2010.DeleteItem%2A>, который принимает строковый параметр, представляющий путь к удаляемому элементу. Можно создать [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] клиентского прокси-класса, который инкапсулирует все операции SOAP в методы. Следующие [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] метод представляет пример SOAP, приведенный ранее.  
+ Протокол SOAP требует, чтобы сообщения помещались в элемент **Envelope**, а большая часть сообщения располагалась в элементе **Body**. В этом примере элемент Body содержит вызов метода <xref:ReportService2010.ReportingService2010.DeleteItem%2A>, который принимает строковый параметр, представляющий путь к удаляемому элементу. Можно создать класс-посредник клиента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], в котором все операции SOAP инкапсулируются в методы. Следующий метод [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] представляет пример SOAP-запроса, приведенный ранее.  
   
 ```  
 public void DeleteItem(string item);  
@@ -67,10 +66,9 @@ public void DeleteItem(string item);
  Метод <xref:ReportService2010.ReportingService2010.DeleteItem%2A> не имеет возвращаемого значения, поэтому возвращается пустой ответ.  
   
 ## <a name="see-also"></a>См. также:  
- [Доступ к API-Интерфейс SOAP](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
- [Диспетчер отчетов &#40; Собственный режим служб SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Сервером отчетов служб Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
+ [Доступ к API SOAP](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Сервер отчетов служб Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [Веб-службы сервера отчетов](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   
-

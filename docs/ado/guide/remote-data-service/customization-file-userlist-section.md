@@ -3,7 +3,7 @@ title: "Настройки файла UserList раздел | Документы
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - UserList section in rds [ADO]
 - customization file in RDS [ADO]
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5f883b100d522f90ae802578256108ee9e658b71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5521648ed1c4d125168d3f9afb7a4c884854d9b4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-userlist-section"></a>Раздел UserList настройки файла
 **Userlist** раздел относится к **подключения** раздел с тот же раздел *идентификатор* параметра.  
@@ -39,15 +38,15 @@ ms.lasthandoff: 09/09/2017
 ## <a name="syntax"></a>Синтаксис  
  Доступ пользователя в записи имеет следующую форму:  
   
- *имя пользователя***=**   
- ***Права***  
+ *userName* **=**   
+ ***accessRights***  
   
-|Часть|Description|  
+|Часть|Описание|  
 |----------|-----------------|  
-|*имя пользователя*|*Имя пользователя* пользователя, при использовании этого подключения. Допустимые имена пользователей, установленных с IIS **Service Manager** диалогового окна.|  
-|***Права***|Одно из следующих прав:<br /><br /> -   **NoAccess** — пользователь не может получить доступ к источнику данных.<br />-   **Только для чтения** — пользователь может просматривать источника данных.<br />-   **ReadWrite** — пользователь может считывать или запись в источнике данных.|  
+|*userName*|*Имя пользователя* пользователя, при использовании этого подключения. Допустимые имена пользователей, установленных с IIS **Service Manager** диалогового окна.|  
+|***accessRights***|Одно из следующих прав:<br /><br /> -   **NoAccess** — пользователь не может получить доступ к источнику данных.<br />-   **Только для чтения** — пользователь может просматривать источника данных.<br />-   **ReadWrite** — пользователь может считывать или запись в источнике данных.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Файл настроек присоединения раздела](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [Раздел журналы настройки файла](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [Раздел SQL настройки файла](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
@@ -55,6 +54,5 @@ ms.lasthandoff: 09/09/2017
  [Параметры клиента](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Основные сведения о настройке файла](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Запись собственного настраиваемого обработчика](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 

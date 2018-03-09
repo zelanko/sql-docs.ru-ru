@@ -2,12 +2,13 @@
 title: "Средства интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,19 @@ helpviewer_keywords:
 - data mining [Analysis Services], tools
 - data mining [Analysis Services], development
 ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
-caps.latest.revision: 49
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 130c8098a7083019671b3b799246b16757fd1b5b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2ebbfe4e003be235b2265c215bfd731f8f2c1562
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-tools"></a>Средства интеллектуального анализа данных
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] включены следующие средства создания решений интеллектуального анализа данных.  
   
 -   **Мастер интеллектуального анализа данных** , который является компонентом среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Он упрощает создание структур и моделей интеллектуального анализа данных либо в реляционных источниках данных, либо в многомерных данных в кубах.  
@@ -67,7 +68,7 @@ ms.lasthandoff: 09/01/2017
   
 -   Создание прогнозов и запросы содержания существующей модели интеллектуального анализа данных. Построение запросов с неизвестным компонентом, а также настройка запросов для формирования прогнозов для полных таблиц внешних данных.  
   
-## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
+## <a name="sql-server-management-studio"></a>Среда SQL Server Management Studio  
  После создания и развертывания моделей интеллектуального анализа данных на сервере можно в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] работать с базой данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , в которой размещены объекты интеллектуального анализа базы данных. Можно также продолжить выполнять задачи, в которых используется созданная модель, — исследование моделей, обработку новых данных и создание прогнозов.  
   
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] также содержит редакторы запросов, которые могут быть использованы для проектирования и выполнения расширений интеллектуального анализа данных либо для работы с объектами интеллектуального анализа данных средствами XMLA.  
@@ -93,11 +94,10 @@ ms.lasthandoff: 09/01/2017
   
  **Дополнительные сведения см. в разделе** [Связанные проекты для решений интеллектуального анализа данных](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
   
-## <a name="see-also"></a>См. также раздел  
- [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../../dmx/data-mining-extensions-dmx-reference.md)   
- [Задачи и инструкции по модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+## <a name="see-also"></a>См. также  
+ [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Ссылка](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Задачи модели интеллектуального анализа данных и инструкции](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Решения для интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   
-

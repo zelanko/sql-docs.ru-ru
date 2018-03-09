@@ -2,9 +2,12 @@
 title: "Создание встроенных схем XSD | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -18,20 +21,20 @@ helpviewer_keywords:
 - inline XSD schema generation [SQL Server]
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8290d7fe8b7900291d4afe3c944564d8f2aef608
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2b651f16b3bf5c43755aafa1c6b67cbef06fc1cd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Создание встроенных схем XSD
-  В предложении FOR XML можно запросить, чтобы запрос возвращал встроенную схему вместе с результатами запроса. Если нужно получить XDR-схему, то в предложении FOR XML следует использовать ключевое слово XMLDATA. Если нужно получить XSD-схему, то тогда следует использовать ключевое слово XMLSCHEMA.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+В предложении FOR XML можно запросить, чтобы запрос возвращал встроенную схему вместе с результатами запроса. Если нужно получить XDR-схему, то в предложении FOR XML следует использовать ключевое слово XMLDATA. Если нужно получить XSD-схему, то тогда следует использовать ключевое слово XMLSCHEMA.  
   
  В этом разделе описывается ключевое слово XMLSCHEMA и объясняется структура результирующей встроенной XSD-схемы. Далее приведены ограничения, возникающие при запросе встроенных схем.  
   
@@ -41,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
  Если в запросе FOR XML задан параметр XMLSCHEMA, то в результат запроса входит и схема, и XML-данные. Каждый элемент данных высшего уровня ссылается на предыдущую схему посредством заданного по умолчанию объявления пространства имен, которое, в свою очередь, ссылается на целевое пространство имен встроенной схемы.  
   
- Например:  
+ Пример:  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="http://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -474,4 +477,3 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
 -   В результате каждый экземпляр элемента <`Col`> ссылается на свой тип экземпляра при помощи атрибута `xsi:type`.  
   
   
-

@@ -3,10 +3,12 @@ title: "Основной интерфейс соответствия | Доку�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - conformance levels [ODBC], interface
 - core-level interface conformance levels [ODBC]
 ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1df0215014eea87559e87aeb2f29e848e1473a66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c535d6756ba2fa5eaa20d6dec9ca3ad7ae3c85b4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="core-interface-conformance"></a>Основной интерфейс соответствия
 Все драйверы ODBC должна обладать по крайней мере основной уровень соответствия интерфейса. Так как функции в базовом уровне требованиям большая часть универсальных взаимодействующие приложения, драйвер может работать с таких приложений. Функции в базовом уровне также соответствуют для функции, определенные в спецификации ISO CLI и необходимые компоненты, определенные в спецификации Open CLI группы. Драйвер ODBC уровня ядра интерфейс совместимую позволяет приложению выполнять любые из следующих:  
@@ -73,4 +74,3 @@ ms.lasthandoff: 09/09/2017
   
     > [!IMPORTANT]  
     >  Драйверы ODBC необходимо реализовать функции уровень соответствия основной интерфейс.
-

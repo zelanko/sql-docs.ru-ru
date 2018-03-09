@@ -2,9 +2,12 @@
 title: "Управление закладками | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ f1_keywords:
 helpviewer_keywords:
 - bookmarks [SQL Server Management Studio]
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
-caps.latest.revision: 26
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0f77006d812e4ba114f5fc161f3701457f836d62
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 933f5b57a1c6a5b8516ec9ca8985c800b3fa36b7
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="manage-bookmarks"></a>Управление закладками
-  При работе в редакторе кода в окне **Закладки** можно создавать ссылки на определенные строки кода в документе. Это окно можно открыть из меню **Вид** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] При работе в редакторе кода в окне **Закладки** можно создавать ссылки на определенные строки кода в документе. Это окно можно открыть из меню **Вид** .  
   
  Для создания закладок и навигации по ним пользуйтесь кнопками, расположенными на панели инструментов **Текстовый редактор** , а также в верхней части окна **Закладки** . Закладки можно добавлять или удалять, включать или отключать, а также организовывать их в папки. Кроме того, определенные команды доступны в контекстном меню в окне **Закладки** . Для добавления или удаления закладки поместите точку вставки на нужной строке в редакторе и нажмите **Переключить закладку**. Для активации закладки отметьте ее флажок в окне **Закладки** ; для отключения (но не удаления) закладки снимите соответствующий флажок.  
   
@@ -76,7 +78,7 @@ ms.lasthandoff: 06/22/2017
  **Отключение-включение всех закладок**  
  Снимает или устанавливает флажки для всех закладок в окне **Закладки** . Не удаляет закладок и не изменяет строк кода, на которые они указывают.  
   
- **Delete**  
+ **Удаление**  
  Удаляет выбранную закладку из окна **Закладки** и из документа, в котором была сделана закладка. Не удаляет строку кода, на которой была сделана закладка.  
   
  Флажки закладок  
@@ -85,10 +87,10 @@ ms.lasthandoff: 06/22/2017
 ## <a name="bookmarks-window-shortcut-menu"></a>Контекстное меню в окне «Закладки»  
  Если щелкнуть правой кнопкой мыши запись в окне **Закладки** , то в контекстном меню будут доступны следующие команды.  
   
- **Delete**  
+ **Удаление**  
  Удаляет выбранную закладку из окна **Закладки** и из документа, в котором была сделана закладка. Не удаляет строку кода, на которой была сделана закладка.  
   
- **Rename**  
+ **Переименование**  
  Позволяет связать с закладкой или папкой новое отображаемое имя.  
   
  **Отключить-включить закладку**  
@@ -101,4 +103,3 @@ ms.lasthandoff: 06/22/2017
  [Сочетания клавиш среды SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   
-

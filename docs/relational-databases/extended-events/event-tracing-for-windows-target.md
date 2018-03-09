@@ -2,9 +2,12 @@
 title: "Цель \"Средство трассировки событий для Windows\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
@@ -15,19 +18,19 @@ helpviewer_keywords:
 - ETW target
 - targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d69eb01f34774812aeaafbddcaa08b17f22ac097
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 74ba5c0435a64cbeb6271967c4ca37c4a5ac1d86
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="event-tracing-for-windows-target"></a>Цель «Средство трассировки событий для Windows»
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Прежде чем использовать средство трассировки событий для Windows (ETW) в качестве назначения, рекомендуется сначала попрактиковаться в работе с данным средством. Трассировка событий Windows используется совместно с расширенными событиями или в качестве потребителя расширенных событий. Следующие внешние ссылки помогут получить начальные сведения о трассировке событий Windows.  
   
@@ -55,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
  В следующей таблице описаны доступные параметры для настройки назначения ETW.  
   
-|Параметр|Допустимые значения|Описание|  
+|Параметр|Допустимые значения|Description|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|Любая строка длиной до 256 символов. Это значение является необязательным.|Имя сеанса расширенных событий. По умолчанию это XE_DEFAULT_ETW_SESSION.|  
 |default_etw_session_logfile_path|Любая строка длиной до 256 символов. Это значение является необязательным.|Путь к файлу журнала сеанса расширенных событий. По умолчанию %TEMP%\ XEEtw.etl.|  

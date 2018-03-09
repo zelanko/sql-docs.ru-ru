@@ -1,30 +1,31 @@
 ---
 title: "Реализация инструкции UPDATE с предложением FROM или вложенными запросами | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 138f5b0e-f8a4-400f-b581-8062aebc62b6
-caps.latest.revision: 4
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c9f044bbde8edd542e3a2a1017a726b8d939654a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3235dffe296bb77f94807ac517fb86fcda33b64e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>Реализация инструкции UPDATE с предложением FROM или вложенными запросами
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Модули, скомпилированные в собственном коде T-SQL, не поддерживают предложение FROM и вложенные запросы в инструкциях UPDATE (они поддерживаются в инструкции SELECT). Инструкции UPDATE с предложением FROM обычно используются для обновления данных в таблице, основанной на возвращающем табличное значение параметре (TVP), или для обновления столбцов в таблице в триггере AFTER. 
 
@@ -36,13 +37,13 @@ ms.lasthandoff: 06/22/2017
   
   
   
-  
+   ```
     UPDATE dbo.Table1  
         SET LastUpdated = SysDateTime()  
         FROM  
             dbo.Table1 t  
             JOIN Inserted i ON t.Id = i.Id;  
-  
+   ```
   
   
 
@@ -54,13 +55,13 @@ ms.lasthandoff: 06/22/2017
   
   
   
-
+ ```
     DROP TABLE IF EXISTS dbo.Table1;  
     go  
     DROP TYPE IF EXISTS dbo.Type1;  
     go  
     -----------------------------  
-    <a name="---table-and-table-type"></a>-- Table and table type
+    -- Table and table type
     -----------------------------
   
     CREATE TABLE dbo.Table1  
@@ -83,14 +84,15 @@ ms.lasthandoff: 06/22/2017
         WITH (MEMORY_OPTIMIZED = ON);  
     go  
     ----------------------------- 
-    <a name="---trigger-that-contains-the-workaround-for-update-with-from"></a>-- trigger that contains the workaround for UPDATE with FROM 
+    -- trigger that contains the workaround for UPDATE with FROM 
     -----------------------------  
   
     CREATE TRIGGER dbo.tr_a_u_Table1  
         ON dbo.Table1  
         WITH NATIVE_COMPILATION, SCHEMABINDING  
         AFTER UPDATE  
-    AS BEGIN ATOMIC WITH  
+    AS 
+    BEGIN ATOMIC WITH  
         (  
         TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
         LANGUAGE = N'us_english'  
@@ -106,7 +108,7 @@ ms.lasthandoff: 06/22/2017
           @max INT = SCOPE_IDENTITY();  
     
       ---- Loop as a workaround to simulate a cursor.
-    ---- Iterate over the rows in the memory-optimized table  
+      ---- Iterate over the rows in the memory-optimized table  
       ----   variable and perform an update for each row.  
     
       WHILE @i <= @max  
@@ -124,7 +126,7 @@ ms.lasthandoff: 06/22/2017
     END  
     go  
     -----------------------------  
-    <a name="---test-to-verify-functionality"></a>-- Test to verify functionality
+    -- Test to verify functionality
     -----------------------------  
   
     SET NOCOUNT ON;  
@@ -148,7 +150,7 @@ ms.lasthandoff: 06/22/2017
     go  
     -----------------------------  
   
-    / *** Фактические выходные данные:  
+    /**** Actual output:  
   
     BEFORE-Update   Id   Column2   LastUpdated  
     BEFORE-Update   1       9      2016-04-20 21:18:42.8394659  
@@ -162,5 +164,4 @@ ms.lasthandoff: 06/22/2017
     ****/  
   
   
-  
-
+ ```

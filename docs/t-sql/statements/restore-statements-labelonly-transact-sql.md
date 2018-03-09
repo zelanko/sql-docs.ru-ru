@@ -3,8 +3,11 @@ title: "RESTORE LABELONLY (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,25 +23,24 @@ helpviewer_keywords:
 - RESTORE LABELONLY statement
 - backup media [SQL Server], content information
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
-caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9f69efb096931108fdaea084b337fcb319f7cfb6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c5cbf694abdf86a5e5e13f2799f5b1f4b808a498
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>Инструкции - RESTORE LABELONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает результирующий набор, содержащий сведения о носителях резервного копирования, которые определяются данным устройством резервного копирования.  
   
 > [!NOTE]  
->  Описания аргументов см. в разделе [аргументы инструкции RESTORE & #40; Transact-SQL & #41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+>  Описания аргументов см. в разделе [аргументы инструкции RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -76,12 +78,12 @@ FROM <backup_device>
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- Описания аргументов инструкции RESTORE LABELONLY см. в разделе [аргументы инструкции RESTORE & #40; Transact-SQL & #41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+ Описания аргументов инструкции RESTORE LABELONLY см. в разделе [аргументы инструкции RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Результирующий набор инструкции RESTORE LABELONLY состоит из единственной строки со следующими сведениями.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**MediaName**|**nvarchar(128)**|Имя носителя.|  
 |**MediaSetId**|**uniqueidentifier**|Уникальный идентификационный номер набора носителей.|  
@@ -95,7 +97,7 @@ FROM <backup_device>
 |**SoftwareVendorId**|**int**|Уникальный идентификационный номер поставщика программы, записавшей резервную копию.|  
 |**MediaDate**|**datetime**|Дата и время записи метки.|  
 |**Mirror_Count**|**int**|Количество зеркал в наборе (1 — 4).<br /><br /> Примечание: Метки, записанные для различных зеркал в наборе являются идентичными.|  
-|**IsCompressed**|**bit**|Указывает, является ли резервная копия сжатой:<br /><br /> 0 = не сжатая;<br /><br /> 1 = сжатая.|  
+|**IsCompressed**|**бит**|Указывает, является ли резервная копия сжатой:<br /><br /> 0 = не сжатая;<br /><br /> 1 = сжатая.|  
   
 > [!NOTE]  
 >  Если для набора носителей определен пароль, инструкция RESTORE LABELONLY возвращает сведения только в том случае, если в аргументе MEDIAPASSWORD задан правильный пароль.  
@@ -109,10 +111,10 @@ FROM <backup_device>
 > [!IMPORTANT]  
 >  Данный пароль не обеспечивает надежную защиту. Он предназначен для предотвращения неверного восстановления при использовании средств [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] авторизованными или неавторизованными пользователями. При этом остается возможным чтение данных резервных копий с помощью других средств или замена пароля. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Защита резервных копий, рекомендуется хранить ленты резервной копии в безопасном месте или создать резервную копию файлов, которые защищены списками управления доступом (ACL). Списки ACL должны располагаться в корневом каталоге, в котором создаются резервные копии.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Разрешения  
  В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях для получения сведений о резервном наборе данных или устройстве резервного копирования необходимо разрешение CREATE DATABASE. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений для базы данных (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [RESTORE REWINDONLY (Transact-SQL)](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
@@ -121,4 +123,3 @@ FROM <backup_device>
  [Журнал и сведения о заголовке резервной копии (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   
-

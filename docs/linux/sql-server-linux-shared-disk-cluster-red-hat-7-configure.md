@@ -3,44 +3,49 @@ title: "Настройка кластера общего Red Hat Enterprise Linu
 description: "Реализация высокой доступности с помощью конфигурации кластера общего диска Red Hat Enterprise Linux для SQL Server."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
+ms.workload: On Demand
+ms.openlocfilehash: 5263a40e37388ea9a884cafeffe2302f56f0043e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 1b71dbe381c2b1c3db6ac686c40a3065b851c26a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Настройка кластера общего диска Red Hat Enterprise Linux для SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Это руководство содержит инструкции для создания кластера с двумя узлами общего диска для SQL Server в Red Hat Enterprise Linux. Уровень кластеризации основан на Red Hat Enterprise Linux (RHEL) [высокого уровня ДОСТУПНОСТИ надстройки](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) построены на основе [Pacemaker](http://clusterlabs.org/). Экземпляр SQL Server активен на одном узле или другой.
 
 > [!NOTE] 
 > Доступ к Red Hat HA надстройки и документации требует подписку. 
 
-В диаграмме ниже показан хранилище представляется двумя серверами. Кластерные компоненты - Corosync и Pacemaker - координировать связи и управление ресурсами. Один из серверов имеет активное подключение к ресурсам хранилища и SQL Server. Когда Pacemaker обнаруживает сбой кластеризации компоненты управления перемещения ресурсов на другой узел.  
+Как показано на следующей диаграмме, хранилище представляется двумя серверами. Кластерные компоненты - Corosync и Pacemaker - координировать связи и управление ресурсами. Один из серверов имеет активное подключение к ресурсам хранилища и SQL Server. Когда Pacemaker обнаруживает сбой кластеризации компоненты управления перемещения ресурсов на другой узел.  
 
 ![Red Hat Enterprise Linux 7 общий диск кластера SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Дополнительные сведения о конфигурации кластера, параметры агентов ресурсов и управления на сайте [RHEL справочной документации](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Дополнительные сведения о конфигурации кластера, параметры агентов ресурсов и управление [RHEL справочной документации](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 
 > [!NOTE] 
 > На этом этапе интеграции SQL Server с Pacemaker не, а также как WSFC в Windows. Из в SQL, неизвестно о наличии кластера, все orchestration находится за пределами в и служба управляется как отдельный экземпляр Pacemaker. Также к примеру, кластер sys.dm_os_cluster_nodes динамические административные представления и sys.dm_os_cluster_properties будет ни одной записи.
-Чтобы использовать строку подключения, указывающая на строку имя сервера и не используйте IP-адрес, они будут иметь для регистрации в своих DNS-сервера IP-адрес, используемый для создания виртуального IP-ресурс (как описано ниже) с именем выбранного сервера.
+Чтобы использовать строку подключения, указывающая на строку имя сервера и не используйте IP-адрес, они будут иметь IP-адрес, используемый для создания виртуального IP-ресурс (как описано в следующих разделах) регистрация в DNS-сервер с именем выбранного сервера.
 
 Следующие разделы выполните эти шаги для настройки решения отказоустойчивого кластера. 
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
-Для выполнения сценария конца в конец ниже необходимы две машины для развертывания двух узлов кластера и другой сервер, чтобы настроить NFS-сервер. Шаги, описанные ниже описываются настройки этих серверов.
+Чтобы выполнить следующий сценарий начала до конца, требуется две машины для развертывания двух узлов кластера и другой сервер, чтобы настроить NFS-сервер. Шаги, описанные ниже описываются настройки этих серверов.
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Установка и настройка операционной системы на каждом узле кластера
 
@@ -48,7 +53,7 @@ ms.lasthandoff: 10/24/2017
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>Установка и настройка SQL Server на каждом узле кластера
 
-1. Установить и настроить SQL Server на обоих узлах.  Подробные сведения содержатся в разделе [Установка SQL Server в Linux](sql-server-linux-setup.md).
+1. Установить и настроить SQL Server на обоих узлах.  Подробные инструкции см. в разделе [Установка SQL Server в Linux](sql-server-linux-setup.md).
 
 1. Назначить один узел в качестве основной, а другой — как получателя для целей конфигурации. Использовать эти термины для следующих в этом руководстве.  
 
@@ -63,7 +68,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE] 
 > Во время установки, созданный для экземпляра SQL Server и помещается в главный ключ сервера `/var/opt/mssql/secrets/machine-key`. SQL Server в Linux, всегда выполняется под локальной учетной записью, называется mssql. Так как он является локальной учетной записью, его подлинность, не являющихся общими между узлами. Таким образом необходимо скопировать ключ шифрования от основного узла для каждого дополнительного узла, поэтому каждой учетной записи локального mssql можно получить доступ к его расшифровать главный ключ сервера. 
 
-1. На основном узле, создайте имя входа SQL server для Pacemaker и предоставьте имени входа разрешение для запуска `sp_server_diagnostics`. Pacemaker будет использовать эту учетную запись, чтобы проверить, какой узел работает под управлением SQL Server. 
+1. На основном узле, создайте имя входа SQL server для Pacemaker и предоставьте имени входа разрешение для запуска `sp_server_diagnostics`. Pacemaker использует эту учетную запись, чтобы проверить, какой узел работает под управлением SQL Server. 
 
    ```bash
    sudo systemctl start mssql-server
@@ -108,7 +113,10 @@ ms.lasthandoff: 10/24/2017
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>Настройка общего хранилища и перемещение файлов базы данных 
 
-Существуют различные решения для обеспечения общего хранилища. Это пошаговое руководство демонстрирует Настройка общего хранилища с помощью NFS. Рекомендуется следовать рекомендациям и использовать Kerberos для защиты NFS (можно найти в данном примере: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). Если этого не сделать, любой пользователь, можно получить доступ к сети и подмены IP-адрес узла SQL будет возможность доступа к файлам данных. Как всегда убедитесь, что вы угроз модели системы перед его использованием в рабочей среде. Другой вариант хранения данных — использовать общую папку SMB.
+Существуют различные решения для обеспечения общего хранилища. Это пошаговое руководство демонстрирует Настройка общего хранилища с помощью NFS. Рекомендуется следовать рекомендациям и использовать Kerberos для защиты NFS (можно найти в данном примере: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). 
+
+>[!Warning]
+>Если не защитить NFS, любой пользователь, можно получить доступ к сети и подмены IP-адрес узла SQL будет может получить доступ к файлам данных. Как всегда убедитесь, что вы угроз модели системы перед его использованием в рабочей среде. Другой вариант хранения данных — использовать общую папку SMB.
 
 ### <a name="configure-shared-storage-with-nfs"></a>Настройка общего хранилища с помощью NFS
 
@@ -117,25 +125,25 @@ ms.lasthandoff: 10/24/2017
 
 NFS-сервера выполните следующие действия.
 
-1. Установка`nfs-utils`
+1. Установка `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils
    ```
 
-1. Включение и начало`rpcbind`
+1. Включение и начало `rpcbind`
 
    ```bash
-   sudo systemctl enable rpcbind && systemctl start rpcbind
+   sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
-1. Включение и начало`nfs-server`
+1. Включение и начало `nfs-server`
  
    ```bash
-   systemctl enable nfs-server && systemctl start nfs-server
+   sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  Изменение `/etc/exports` для экспорта в каталог, который вы хотите поделиться. Для каждой общей папки, которые нужно потребуется 1 строка. Например: 
+1.  Изменение `/etc/exports` для экспорта в каталог, который вы хотите поделиться. Требуется 1 строка для каждой общей папки, которые нужно. Например: 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
@@ -172,7 +180,7 @@ NFS-сервера выполните следующие действия.
 
 Выполните следующие действия на всех узлах кластера.
 
-1.  От NFS-сервера Установка`nfs-utils`
+1.  Установка `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils
@@ -206,7 +214,7 @@ NFS-сервера выполните следующие действия.
 1.  **На основном узле только**, сохранить во временное расположение файлов базы данных. Следующий скрипт создает новый временный каталог и копирует файлы базы данных в новый каталог удаляет старые файлы базы данных. Как SQL Server выполняется как mssql локального пользователя, необходимо убедитесь в том, что после передачи данных в общую папку подключенного, локальный пользователь имеет доступ для чтения и записи к общей папке. 
 
    ``` 
-   $ su mssql
+   $ sudo su mssql
    $ mkdir /var/opt/mssql/tmp
    $ cp /var/opt/mssql/data/* /var/opt/mssql/tmp
    $ rm /var/opt/mssql/data/*
@@ -225,16 +233,16 @@ NFS-сервера выполните следующие действия.
    10.8.8.0:/mnt/nfs /var/opt/mssql/data nfs timeo=14,intr 
    ``` 
 > [!NOTE] 
->При использовании ресурсов системы файла (FS), согласно рекомендациям ниже, нет необходимости сохранять команда подключения в/etc/fstab. Pacemaker берет на себя монтирование папку при запуске FS кластеризованных ресурсов. С помощью разграничения он будет ensurethe, он не может быть смонтирована дважды. 
+>Если с помощью ресурсов системы файла (FS) согласно рекомендациям здесь нет необходимости сохранять команда подключения в/etc/fstab. Pacemaker берет на себя монтирование папку при запуске FS кластеризованных ресурсов. С помощью разграничения он будет убедитесь, что он не может быть смонтирована дважды. 
 
 1.  Запустите `mount -a` команду для обновления подключенных пути системы.  
 
 1.  Скопируйте файлы базы данных и журналов, сохраненные на `/var/opt/mssql/tmp` к общей папке только что подключенном `/var/opt/mssql/data`. Это необходимо сделать **на основном узле**. Убедитесь, что предоставить разрешения на чтение и запись к «mssql» локального пользователя.
 
    ``` 
-   $ chown mssql /var/opt/mssql/data
-   $ chgrp mssql /var/opt/mssql/data
-   $ su mssql
+   $ sudo chown mssql /var/opt/mssql/data
+   $ sudo chgrp mssql /var/opt/mssql/data
+   $ sudo su mssql
    $ cp /var/opt/mssql/tmp/* /var/opt/mssql/data/
    $ rm /var/opt/mssql/tmp/*
    $ exit
@@ -257,8 +265,8 @@ NFS-сервера выполните следующие действия.
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
-   sudo echo '<loginName>' >> /var/opt/mssql/secrets/passwd
-   sudo echo '<loginPassword>' >> /var/opt/mssql/secrets/passwd
+   echo '<loginName>' | sudo tee -a /var/opt/mssql/secrets/passwd
+   echo '<loginPassword>' | sudo tee -a /var/opt/mssql/secrets/passwd
    sudo chown root:root /var/opt/mssql/secrets/passwd 
    sudo chmod 600 /var/opt/mssql/secrets/passwd    
    ```
@@ -324,10 +332,9 @@ NFS-сервера выполните следующие действия.
    sudo pcs property set start-failure-is-fatal=false
    ```
 
-2. Настройка ресурсов кластера для SQL Server, файловую систему и виртуальный IP- и принудительной отправки конфигурации кластера. Требуются следующие сведения:
+2. Настройка ресурсов кластера для SQL Server, файловую систему и виртуальный IP- и принудительной отправки конфигурации кластера. Необходимы следующие сведения:
 
    - **Имя ресурса SQL Server**: имя кластеризованного ресурса SQL Server. 
-   - **Значение времени ожидания**: значение времени ожидания — это объем времени ожидания кластера при подключении ресурса. Для SQL Server, это время, которое предполагается, что SQL Server необходимо выполнить, чтобы перевести `master` базы данных в сети.  
    - **С плавающей запятой IP-имя ресурса**: имя виртуального ресурса IP-адреса.
    - **IP-адрес**: IP-адрес, который будет использоваться клиентами для подключения к кластеризованного экземпляра SQL Server. 
    - **Имя файловой системы ресурсов**: имя ресурса файловой системы.
@@ -335,11 +342,11 @@ NFS-сервера выполните следующие действия.
    - **устройство**: локальный путь, что он подключен к общей папке
    - **тип_файловой_системы**: тип файла общий ресурс (т. е. nfs)
 
-   Обновление значений из приведенный ниже сценарий для вашей среды. Запустите на одном узле, чтобы настроить и запустить кластеризованной службы.  
+   Обновление значений из следующий сценарий для вашей среды. Запустите на одном узле, чтобы настроить и запустить кластеризованной службы.  
 
    ```bash
    sudo pcs cluster cib cfg 
-   sudo pcs -f cfg resource create <sqlServerResourceName> ocf:mssql:fci op defaults timeout=<timeout_in_seconds>
+   sudo pcs -f cfg resource create <sqlServerResourceName> ocf:mssql:fci
    sudo pcs -f cfg resource create <floatingIPResourceName> ocf:heartbeat:IPaddr2 ip=<ip Address>
    sudo pcs -f cfg resource create <fileShareResourceName> Filesystem device=<networkPath> directory=<localPath>         fstype=<fileShareType>
    sudo pcs -f cfg constraint colocation add <virtualIPResourceName> <sqlResourceName>
@@ -351,7 +358,7 @@ NFS-сервера выполните следующие действия.
 
    ```bash
    sudo pcs cluster cib cfg
-   sudo pcs -f cfg resource create mssqlha ocf:mssql:fci op defaults timeout=60s
+   sudo pcs -f cfg resource create mssqlha ocf:mssql:fci
    sudo pcs -f cfg resource create virtualip ocf:heartbeat:IPaddr2 ip=10.0.0.99
    sudo pcs -f cfg resource create fs Filesystem device="10.8.8.0:/mnt/nfs" directory="/var/opt/mssql/data" fstype="nfs"
    sudo pcs -f cfg constraint colocation add virtualip mssqlha
@@ -391,4 +398,3 @@ NFS-сервера выполните следующие действия.
 ## <a name="next-steps"></a>Следующие шаги
 
 [Эксплуатация SQL Server в Red Hat Enterprise Linux общего диска кластера](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-

@@ -2,33 +2,33 @@
 title: "Задача \"Резервное копирование базы данных\" (план обслуживания) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.maint.maintplanproperties.logbackup.f1
 - sql13.swb.maint.backup.f1
-helpviewer_keywords:
-- Back Up Database Task dialog box
+helpviewer_keywords: Back Up Database Task dialog box
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
-caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "52"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 190b77647ebce66f7cf7af006f3b817605969bae
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 49e8fb933c835ff58dbb8efb3aa91881abdbc807
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>Возможности для плана обслуживания в задаче "Создание резервной копии базы данных"
-  Используйте диалоговое окно **Задача «Резервное копирование базы данных»** , чтобы добавить задачу резервного копирования в план обслуживания. Резервное копирование баз данных важно на случай системного или аппаратного сбоя (или ошибок пользователя), которые приводят к повреждению базы данных, в таком случае база данных восстанавливается из резервной копии. Эта задача позволяет выполнять полное и разностное резервное копирование, резервное копирование файлов, файловых групп и журналов транзакций.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Используйте диалоговое окно **Задача "Резервное копирование базы данных"**, чтобы добавить задачу резервного копирования в план обслуживания. Резервное копирование баз данных важно на случай системного или аппаратного сбоя (или ошибок пользователя), которые приводят к повреждению базы данных, в таком случае база данных восстанавливается из резервной копии. Эта задача позволяет выполнять полное и разностное резервное копирование, резервное копирование файлов, файловых групп и журналов транзакций.  
   
  **Создание задачи резервного копирования базы данных**  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 06/22/2017
  Проверка полноты резервного набора данных и читаемости всех томов.  
   
  **Создать резервную копию заключительного фрагмента журнала и оставить базу данных в состоянии восстановления**  
- Создайте резервную копию журналов в самом конце перед восстановлением базы данных. Дополнительные сведения см. в разделе [Резервные копии заключительного фрагмента журнала (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
+ Создайте резервную копию журналов в самом конце перед восстановлением базы данных. Дополнительные сведения см. в статье [Резервные копии заключительного фрагмента журнала (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
  **Установка сжатия резервной копии**  
  В выпуске [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (или более поздней версии) выберите одно из следующих значений параметра [backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md) :  
@@ -132,7 +132,7 @@ ms.lasthandoff: 06/22/2017
  **Использовать указанные имя пользователя и пароль**  
  Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
   
- **Имя пользователя**  
+ **User name**  
  Укажите имя входа, используемое при проверке подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
   
  **Пароль**  
@@ -142,4 +142,3 @@ ms.lasthandoff: 06/22/2017
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
   
   
-

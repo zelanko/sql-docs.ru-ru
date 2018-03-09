@@ -2,8 +2,12 @@
 title: "В ЧАСОВОМ ПОЯСЕ (Transact-SQL) | Документы Microsoft"
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +18,19 @@ f1_keywords:
 helpviewer_keywords:
 - AT TIME ZONE function
 ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f0983cbd76b1ec3a71985537f098f8faf002b93e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 8b77aeb47515f4140f78a70288e9e25d2acc52d1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="at-time-zone-transact-sql"></a>В ЧАСОВОМ ПОЯСЕ (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Преобразует *inputdate* к соответствующим *datetimeoffset* значение в целевой часовой пояс. Если *inputdate* предоставляется без сведения о смещении, функция применяется смещение часового пояса, при условии, что *inputdate* значение указано в целевой часовой пояс. Если *inputdate* предоставляется как *datetimeoffset* значение, чем **AT TIME ZONE** предложение преобразует его в целевой часовой пояс с помощью правил преобразования часового пояса.  
   
@@ -45,7 +48,7 @@ inputdate AT TIME ZONE timezone
  *inputdate*  
  Выражение, которое разрешается к **smalldatetime**, **datetime**, **datetime2**, или **datetimeoffset** значение.  
   
- *часовой пояс*  
+ *timezone*  
  Имя часового пояса назначения. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]зависит от часовых поясов, которые хранятся в реестре Windows. Все часовые пояса, установленных на компьютере, хранятся в следующих куст реестра: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time зоны**. Список установленных часовые пояса также предоставляются через [sys.time_zone_info &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) представления.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
@@ -54,7 +57,7 @@ inputdate AT TIME ZONE timezone
 ## <a name="return-value"></a>Возвращаемое значение  
  **Datetimeoffset** значение в целевой часовой пояс.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **В ЧАСОВОМ ПОЯСЕ** применяет специальные правила для преобразования входных значений в **smalldatetime**, **datetime** и **datetime2** типы данных, которые попадают в интервал, затрагиваемых изменением летнего времени:  
   
 -   Если часы имеет значение заранее, то имеется разрыв в формате местного времени, длительность которого зависит от времени взаимных часов (обычно 1 час, но он может быть 30-45 минут, в зависимости от часового пояса). В этом случае при преобразовании моменты времени, принадлежащих пропуска смещение *после* перехода на летнее.  
@@ -169,9 +172,8 @@ FROM  Person.Person_Temporal
 FOR SYSTEM_TIME AS OF @ASOF;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Типы даты и времени](../../t-sql/data-types/date-and-time-types.md)   
  [Данных даты и времени типы и функции &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
   
-

@@ -2,29 +2,32 @@
 title: "Просмотр куба | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 3819946e-d3fa-4c1d-afe3-599c938b1b2e
-caps.latest.revision: 18
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: f7b95813f17802e22e4b9308cc0a3805f65f5ff2
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ceaf229bb81771fe2b839f77858d0f41d2bd28ba
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-6---browsing-the-cube"></a>Занятие 2-6-Просмотр куба
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 После развертывания куба данные куба отображаются на вкладке **Обозреватель** конструктора кубов, а данные измерений отображаются на вкладке **Браузер** конструктора измерений. Просмотр данных куба и измерения позволяет постепенно проверять свою работу. Можно видеть, что небольшие изменения свойств, связей и других объектов оказывают нужный эффект после обработки объекта. Вкладка «Обозреватель» используется как для данных куба, так и для данных измерения, однако в зависимости от просматриваемого объекта она предлагает разные возможности.  
   
 Для измерений вкладка «Обозреватель» позволяет просматривать элементы или осуществлять навигацию по иерархии вплоть до конечных узлов. Данные измерения можно просматривать на разных языках, если в модель были добавлены переводы.  
@@ -46,11 +49,10 @@ ms.lasthandoff: 09/01/2017
     Левая панель конструктора отображает объекты куба учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . В правой части вкладки **Браузер** находятся две панели: верхняя — панель **Фильтр** , нижняя — панель **Данные** . На следующем занятии будет выполнен анализ с помощью средства просмотра кубов.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Урок 3. Изменение мер, атрибутов и иерархий](../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+[Урок 3: Изменение мер, атрибутов и иерархий](../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>См. также:  
 [Редактор запросов многомерных выражений (службы Analysis Services — многомерные данные)](http://msdn.microsoft.com/library/777f2c23-1c1c-4b72-9d19-48a4866551f8)  
   
   
   
-

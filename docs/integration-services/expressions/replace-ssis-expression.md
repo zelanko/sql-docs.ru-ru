@@ -1,11 +1,13 @@
 ---
-title: "REPLACE (выражение служб SSIS) | Документы Microsoft"
-ms.custom:
-- ssisdev020617
+title: "REPLACE (выражение служб SSIS) | Документы Майкрософт"
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - replacing string expression
 - REPLACE function
 ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5208747b21d3380a7f8fead98ec47522c2ad6e12
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 93f62c9307e149e2bfcae74282c1bd6b0e6f9ea4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="replace-ssis-expression"></a>REPLACE (выражение служб SSIS)
   Возвращает символьное выражение после замены символьной строки в выражении другой символьной строкой или пустой строкой.  
@@ -52,7 +53,7 @@ REPLACE(character_expression,searchstring,replacementstring)
 ## <a name="result-types"></a>Типы результата  
  DT_WSTR  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Длина *searchstring* должна быть больше нуля.  
   
  Длина *replacementstring* может быть нулевой.  
@@ -82,9 +83,8 @@ REPLACE(Product, "Bike","")
 REPLACE((DT_WSTR,8)DaysToManufacture,"6","5")  
 ```  
   
-## <a name="see-also"></a>См. также  
- [ПОДСТРОКА &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/substring-ssis-expression.md)   
- [Функции &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>См. также:  
+ [SUBSTRING (выражение служб SSIS)](../../integration-services/expressions/substring-ssis-expression.md)   
+ [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

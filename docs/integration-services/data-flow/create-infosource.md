@@ -1,26 +1,28 @@
 ---
-title: "Создание InfoSource | Документы Microsoft"
+title: "Создание InfoSource | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e4fe8f6aefb8e191e0648666db7e7faf63f8f845
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7ece5cfb628de45d2d4a0aced018b7215a87a617
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-infosource"></a>Создание InfoSource
   Используйте диалоговое окно **Создание InfoSource** для создания нового InfoSource. Для создания нового InfoSource используется либо диалоговое окно **Создание InfoSource для данных транзакции** , либо диалоговое окно **Создание InfoSource для основных данных** .  
@@ -51,8 +53,7 @@ ms.lasthandoff: 08/03/2017
   
  Если выбран этот параметр, то откроется диалоговое окно **Создание InfoSource для основных данных** . Используйте диалоговое окно **Создание InfoSource для основных данных** для создания нового InfoSource. Дополнительные сведения об этом диалоговом окне см. в разделе [Create InfoSource for Master Data](../../integration-services/data-flow/create-infosource-for-master-data.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 по Microsoft Connector для SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

@@ -3,10 +3,12 @@ title: "Создание учетных данных области базы д�
 ms.custom: 
 ms.date: 02/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -21,20 +23,19 @@ helpviewer_keywords:
 - DATABASE SCOPED CREDENTIAL statement
 - credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 6b0cb350ffccb7ad61335de314765f2b85dc0821
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: 49ff2aa300fc8f8e74424ae6e334bee823e8176c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>Создание учетных данных области базы данных (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Создает учетные данные базы данных. Учетные данные базы данных не сопоставляется сервера имя входа или пользователя базы данных. Учетные данные базы данных используется для доступа к внешнее расположение, каждый раз, когда выполняет операции, требующие доступа к базе данных.  
   
@@ -62,7 +63,7 @@ WITH IDENTITY = 'identity_name'
 >  [!WARNING]
 >  Значение ключа SAS может начинаться с "?" (вопросительный знак). При использовании ключа SAS, необходимо удалить начальные "?". В противном случае может быть заблокирован усилий.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Учетные данные уровня базы данных — это запись, содержащая данные для проверки подлинности, необходимые для подключения к ресурсу за пределами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Большинство учетных данных включают имя пользователя и пароль Windows.  
   
  Для создания базы данных учетные данные области, база должна иметь главный ключ для защиты учетных данных. Дополнительные сведения см. в разделе [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md).  
@@ -86,14 +87,14 @@ WITH IDENTITY = 'identity_name'
 
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) в области базы данных используйте учетные данные для доступа к данным из хранилища BLOB-объектов Azure. Дополнительные сведения см. в разделе [примеры массового доступ к данным в хранилище больших двоичных объектов Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md). 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется **УПРАВЛЕНИЯ** разрешения в базе данных.  
   
 ## <a name="examples"></a>Примеры  
 ### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>A. Создание базы данных в области видимости учетных данных для вашего приложения.
  В следующем примере создаются учетные данные уровня базы данных с именем `AppCred`. Учетные данные уровня базы данных содержит пользователя Windows `Mary5` и пароль.  
   
-```tsql  
+```sql  
 -- Create a db master key if one does not already exist, using your own password.  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD='<EnterStrongPasswordHere>';  
   
@@ -105,7 +106,7 @@ GO
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>Б. Создание базы данных в области видимости учетные данные для подписанного URL-адреса.   
 В следующем примере создаются учетные данные уровня базы данных, которые можно использовать для создания [внешнего источника данных](../../t-sql/statements/create-external-data-source-transact-sql.md), который можно сделать объема массовых операций, таких как [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Подписи общего доступа не может использоваться с PolyBase в SQL Server, APS или хранилища данных SQL.
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
@@ -117,7 +118,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 Хранилище Озера данных Azure использует приложение Azure Active Directory для проверки подлинности служб.
 Проверьте [создать приложение AAD](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) и задокументировать ваши client_id, OAuth_2.0_Token_EndPoint и ключ, прежде чем пытаться создать учетные данные уровня базы данных.
 
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL ADL_User
 WITH
     IDENTITY = '<client_id>@\<OAuth_2.0_Token_EndPoint>'
@@ -136,4 +137,3 @@ WITH
  [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   
   
-

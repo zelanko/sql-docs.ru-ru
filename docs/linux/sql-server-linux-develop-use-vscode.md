@@ -3,28 +3,31 @@ title: "Использовать расширение mssql кода Visual Stud
 description: "Этого учебника показано, как использовать расширение mssql для VS Code. Это расширение позволяет редактировать и запускать скрипты Transact-SQL в VS Code."
 author: erickangMSFT
 ms.author: erickang
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
-ms.custom: H1Hack27Feb2017
+ms.custom: sql-linux
 ms.workload: Active
+ms.openlocfilehash: caf053ca9dc50df6d3433a11e992e097f2147d7a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 2d8ba0dcd52de143cd935eab6e8bba95e924409d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Использование кода Visual Studio для создания и выполнения скриптов Transact-SQL для SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этом разделе показано, как использовать **mssql** расширения для Visual Studio код (VS) для разработки баз данных SQL Server.
+В этой статье показано, как использовать **mssql** расширения для Visual Studio код (VS) для разработки баз данных SQL Server.
 
-Код Visual Studio — это редактор графического кода для Linux, macOS и Windows, которая поддерживает расширения. [**Mssql** расширения VS Code] позволяет подключиться к SQL Server, запрос с помощью Transact-SQL (T-SQL) и просмотреть результаты.
+Код Visual Studio — это редактор графического кода для Linux, macOS и Windows, которая поддерживает расширения. [ **Mssql** расширения VS Code] позволяет подключиться к SQL Server, запрос с помощью Transact-SQL (T-SQL) и просмотреть результаты.
 
 ## <a name="install-vs-code"></a>Установить VS Code
 1. Если вы еще не установили VS Code [загрузки и установки VS Code] на компьютере.
@@ -77,7 +80,7 @@ ms.lasthandoff: 10/10/2017
 
 Ниже показано, как подключиться к SQL Server с VS Code.
 
-1. В VS Code нажмите **CTRL + SHIFT + P** (или **F1**) для открытия в палитру команд.
+1. В Visual Studio Code нажмите клавиши **CTRL+SHIFT+P** (или **F1**), чтобы открыть палитру команд.
 
 2. Тип **sql** для отображения команд mssql.
 
@@ -88,11 +91,11 @@ ms.lasthandoff: 10/10/2017
 
 4. Выберите **создать профиль подключения**. Это создает профиль подключения для экземпляра SQL Server.
 
-5. Следуйте инструкциям на экране, чтобы задать свойства соединения для нового профиля подключения. После ввода каждого значения, нажмите клавишу **ввод** для продолжения. 
+5. Следуя указаниям, настройте свойства подключения для нового профиля подключения. После указания каждого значения нажимайте клавишу **ВВОД**, чтобы продолжить. 
 
    В следующей таблице описаны свойства профиля подключения.
 
-   | Настройка | Description |
+   | Настройка | Описание |
    |-----|-----|
    | **Имя сервера** | Имя экземпляра SQL Server. В этом учебнике использовать **localhost** для подключения к локальному экземпляру SQL Server на компьютере. При подключении к удаленному серверу SQL Server, введите имя машины целевого SQL Server или его IP-адрес. |
    | **[Необязательно] Имя базы данных** | База данных, который вы хотите использовать. В целях этого учебника не указать базу данных и нажмите клавишу **ввод** для продолжения. |
@@ -104,12 +107,12 @@ ms.lasthandoff: 10/10/2017
    > [!Tip] 
    > Можно создавать и изменять профили подключения в файле параметров пользователя (settings.json). Откройте файл параметров, выбрав **предпочтения** и затем **параметры пользователя** в меню VS Code. Дополнительные сведения см. в разделе [управления профилями подключения].
 
-6. Нажмите клавишу **ESC** клавишу, чтобы закрыть информационное сообщение, информирующее о том, что профиль создан и подключены.
+6. Чтобы закрыть информационное сообщение о том, что профиль создан и подключен, нажмите клавишу **ESC**.
 
    > [!TIP]
    > Если появляется ошибка подключения, сначала будет предпринята попытка диагностировать проблемы из сообщения об ошибках в **выходные данные** панель в VS Code (выберите **вывода** на **представление** меню). Затем ознакомьтесь с [рекомендациями по устранению неполадок с подключением].
 
-7. Проверки подключения в строке состояния.
+7. Проверьте состояние подключения в строке состояния.
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-connection-status.png" alt="Connection status" style="width: 500px;" />
 
@@ -269,4 +272,3 @@ ms.lasthandoff: 10/10/2017
 [среды выполнения Windows 10 универсальной C]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
 [настройки параметров расширения]: https://github.com/Microsoft/vscode-mssql/wiki/customize-options
 [на вики-сайте mssql расширения проекта]: https://github.com/Microsoft/vscode-mssql/wiki
-

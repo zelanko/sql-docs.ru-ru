@@ -2,36 +2,33 @@
 title: "Набор строк DISCOVER_LITERALS | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DISCOVER_LITERALS
+apiname: DISCOVER_LITERALS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_LITERALS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_LITERALS rowset
 ms.assetid: 1bf0a2e2-a419-4c25-b271-37dfa44de2ea
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ae4dfbe2c5f7d9ce9281dd483b7544fb358dd1df
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 95037ba44f93df3aa0dbe5ad4279ca1ca9a1bf28
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverliterals-rowset"></a>Набор строк DISCOVER_LITERALS
-  Возвращает сведения о литералах, включая типы данных и значения, поддерживаемые поставщиком XML для аналитики [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Возвращает сведения о литералах, включая типы данных и значения, поддерживаемые [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) поставщика.  
   
  При вызове метода [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) метод с **DISCOVER_LITERALS** значения перечисления в [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) элемент, **Discover** метод возвращает **DISCOVER_LITERALS** набора строк.  
   
@@ -54,11 +51,10 @@ ms.lasthandoff: 09/01/2017
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**LiteralName**|**DBTYPE_WSTR**|Необязательно.|  
+|**LiteralName**|**DBTYPE_WSTR**|Необязательный параметр.|  
   
 ## <a name="see-also"></a>См. также:  
  [XML для аналитики наборы строк схемы](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)   
  [Набор строк DISCOVER_KEYWORDS &#40; XML для Аналитики &#41;](../../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)  
   
   
-

@@ -2,32 +2,31 @@
 title: "Свойства группы доступности: создание группы доступности (страница настроек резервного копирования) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.availabilitygroupproperties.backuppreferences.f1
-helpviewer_keywords:
-- read-only routing
+f1_keywords: sql13.swb.availabilitygroupproperties.backuppreferences.f1
+helpviewer_keywords: read-only routing
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 84684e7c9327cce92add49ff44aa881b3af25023
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c1eccc3d7673f6c8e7f127deda45e9f409447585
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>Свойства группы доступности: создание группы доступности (страница настроек резервного копирования)
-  С помощью этого диалогового окна можно просмотреть и изменить параметры резервного копирования выбранной группы доступности.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью этого диалогового окна можно просмотреть и изменить параметры резервного копирования для выбранной группы доступности.  
   
  **Просмотр свойств группы доступности**  
   
@@ -68,5 +67,4 @@ ms.lasthandoff: 08/02/2017
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
-
 

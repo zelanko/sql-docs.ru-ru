@@ -2,28 +2,29 @@
 title: "Детализация структур интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
-caps.latest.revision: 6
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ac35e52322e82cff60dd9f62504db59f8f4b982e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: db582bae24d9bfb18cbb9f7b7febf6a1e4da45fb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="drillthrough-on-mining-structures"></a>Детализация структур интеллектуального анализа данных
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   *Детализация* — это возможность выполнять запросы к модели или структуре интеллектуального анализа данных и получать подробные данные, не представленные в модели.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] обеспечивает два различных варианта для детализации данных вариантов. Можно детализировать данные, которые были использованы для построения модели интеллектуального анализа данных, или исходные данные в структуре интеллектуального анализа данных.  
@@ -61,10 +62,9 @@ ms.lasthandoff: 09/01/2017
 |-|-|  
 |Использование детализации для структуры из средств просмотра моделей интеллектуального анализа данных|[Использование детализации из средств просмотра моделей](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
 |См. примеры запросов детализации для конкретных типов моделей.|[Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md)|  
-|Получите сведения о разрешениях, относящихся к конкретным структурам и моделям интеллектуального анализа данных.|[Предоставление разрешений структурам интеллектуального анализа данных и моделям интеллектуального анализа данных (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|Получите сведения о разрешениях, относящихся к конкретным структурам и моделям интеллектуального анализа данных.|[Предоставление разрешений на &#40; структур интеллектуального анализа данных и моделей Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>См. также  
  [Детализация моделей интеллектуального анализа данных](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
   
-

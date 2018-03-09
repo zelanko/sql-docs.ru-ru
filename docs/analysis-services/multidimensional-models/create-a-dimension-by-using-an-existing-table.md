@@ -2,13 +2,13 @@
 title: "Создать измерение с помощью существующей таблицы | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - dimensions [Analysis Services], standard
 - standard dimensions [Analysis Services]
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
-caps.latest.revision: 52
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b748f139d4eed14ea9d00d275aedcc8ef8fc9fec
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1828a2a8c2150c4fabfd809be2e5edba5b0e0036
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Создание измерения с помощью существующей таблицы
-  Для создания измерения на основе существующей таблицы в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно использовать мастер измерений среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Для этого на странице **Выберите метод создания** мастера измерений необходимо выбрать параметр **Использовать существующую таблицу** . Если выбран этот параметр, мастер сформирует структуру измерения на основе таблиц измерения, их столбцов и всех связей между этими столбцами в существующем представлении источника данных. Мастер делает выборку данных из исходной таблицы и связанных с ней таблиц. На основе этих данных он определяет столбцы атрибутов, основанные на столбцах таблиц измерения, а также иерархии атрибутов (называемые *пользовательскими* иерархиями). Создав измерение с помощью мастера измерений, можно использовать конструктор измерений для добавления, удаления и настройки атрибутов и иерархий в измерении.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Для создания измерения на основе существующей таблицы в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно использовать мастер измерений среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Для этого на странице **Выберите метод создания** мастера измерений необходимо выбрать параметр **Использовать существующую таблицу** . Если выбран этот параметр, мастер сформирует структуру измерения на основе таблиц измерения, их столбцов и всех связей между этими столбцами в существующем представлении источника данных. Мастер делает выборку данных из исходной таблицы и связанных с ней таблиц. На основе этих данных он определяет столбцы атрибутов, основанные на столбцах таблиц измерения, а также иерархии атрибутов (называемые *пользовательскими* иерархиями). Создав измерение с помощью мастера измерений, можно использовать конструктор измерений для добавления, удаления и настройки атрибутов и иерархий в измерении.  
   
  Если измерение создается на основе существующей таблицы, мастер измерений проведет по следующим этапам:  
   
@@ -93,11 +93,10 @@ ms.lasthandoff: 09/01/2017
  Чтобы завершить работу, на странице **Завершение работы мастера** введите имя для нового измерения и просмотрите структуру измерения.  
   
 ## <a name="see-also"></a>См. также  
- [Создание измерения путем формирования в источнике данных таблицы, отличной от таблицы времени](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
+ [Создание измерения путем формирования в источнике данных таблицы не содержащую время](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
  [Создание измерения времени посредством формирования таблицы времени](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
  [Справочник по свойствам атрибута измерения](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
  [Создание измерения времени посредством формирования таблицы времени](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
  [Создание измерения путем формирования в источнике данных таблицы не содержащую время](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   
-

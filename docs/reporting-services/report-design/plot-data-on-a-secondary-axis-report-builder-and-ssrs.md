@@ -1,38 +1,37 @@
 ---
-title: "Построение данных на вспомогательной оси (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Построение данных на вспомогательной оси (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 094f39bf-3634-4852-9fc3-3adec4b266e5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d4ca3cc183fb405fc9379f29012a92e39b7ad95b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: aced9ab6cc698d045d113bc3f5227c815ef2aef1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="plot-data-on-a-secondary-axis-report-builder-and-ssrs"></a>Построение данных на вспомогательной оси (построитель отчетов и службы SSRS)
 
 Диаграмма имеет оси двух типов: основную и вспомогательную. Вспомогательная ось полезна при сравнении двух наборов значений с двумя различающимися диапазонами данных с общей категорией.  
   
  Например, предположим, что имеется диаграмма, вычисляющая доходы за 2008 год в зависимости от налогов. В этом случае период времени в течение 2008 года является общим для обоих наборов данных. Однако, если оба ряда построить на одной оси Y, нельзя сделать полезное сравнение, т. к. шкала оси Y оптимизирована для самых больших значений в наборе данных. Если показать доход на первичной оси, а налог на вторичной, можно отобразить каждый ряд на своей собственной оси Y со своей собственной шкалой значений. Ряды продолжают использовать общую ось X.  
   
- Если сравнивается более двух рядов, необходимо использовать другой подход для сравнения и отображения на диаграмме нескольких рядов. Дополнительные сведения см. в разделе [несколько рядов на диаграмме](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
+ Если сравнивается более двух рядов, необходимо использовать другой подход для сравнения и отображения на диаграмме нескольких рядов. Дополнительные сведения см. в разделе [Несколько рядов на диаграмме](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   
- Пример этой диаграммы доступен в виде образца отчета. Дополнительные сведения о загрузке этого образца и других отчетов см. в разделе [примеры отчетов построителя отчетов и конструктора отчетов](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Пример этой диаграммы доступен в виде образца отчета. Дополнительные сведения о скачивании этого и других образцов отчетов см. в статье [(Примеры отчетов построителя отчетов и конструктора отчетов)](http://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -46,7 +45,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>Следующие шаги
 
 [Форматирование меток оси на диаграмме](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
-[Задание интервала оси](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)  
+[Указание интервала оси](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

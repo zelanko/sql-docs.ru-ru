@@ -2,31 +2,30 @@
 title: "Командлет Update-PowerPivotSystemService | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a90f1158-68d3-4330-98c1-fb0f81e13328
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 045979085e6d8e1622fef2a961f6c9fdb21d772a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4ac64af222158746d63530f236eeda8cb94f2260
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="update-powerpivotsystemservice-cmdlet"></a>Командлет «Update-PowerPivotSystemService»
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Обновляет родительский объект системной службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Обновляет родительский объект системной службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме.  
 
 >[!NOTE] 
 >В этой статье может содержать устаревшие сведения и примеры. С помощью командлета Get-Help для последней версии.
@@ -39,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 Update-PowerPivotSystemService [-Confirm <switch>] [<CommonParameters>]  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Командлет **Update-PowerPivotSystemService** выполняет ряд операций обновления применительно к родительскому объекту системной службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , экземплярам и приложениям службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме. Все службы и приложения среднего уровня в развертывании [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint должны работать на одном функциональном уровне. Этот командлет выполняет действия обновления для всех таких объектов.  
   
  Запустите этот командлет после выполнения программы установки SQL Server для установки новой версии [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint или применения накопительного обновления к серверу. Для проверки того, была ли операция обновления успешной, выполните `Get-PowerPivotSystemService` для определения значения свойства **NeedsUpgrade** . Если свойство **NeedsUpgrade** имеет значение true, необходимо выполнить указанный командлет для обновления объектов [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] промежуточного уровня в ферме.  
@@ -64,7 +63,7 @@ Update-PowerPivotSystemService [-Confirm <switch>] [<CommonParameters>]
 ### <a name="commonparameters"></a>\<Общие параметры >  
  Этот командлет поддерживает следующие параметры:  
   
--   Подробно  
+-   Подробный  
   
 -   Отладка  
   
@@ -91,4 +90,3 @@ Update-PowerPivotSystemService [-Confirm <switch>] [<CommonParameters>]
 |Выходные данные|Нет.|  
   
   
-

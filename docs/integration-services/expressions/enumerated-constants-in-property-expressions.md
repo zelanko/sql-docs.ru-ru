@@ -1,10 +1,13 @@
 ---
-title: "Перечисляемые константы в выражениях свойств | Документы Microsoft"
+title: "Перечислимые константы в выражениях свойств | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -17,17 +20,16 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-caps.latest.revision: 34
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8483c36dca5a24485e865b1115e766aa579635b9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1ba138c4315bf31efc281aff9a42b0e8a513b756
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Констант-перечислителей в выражениях свойств
   Если выражения свойств включают в себя значения из списка элементов-перечислителей, эти выражения должны использовать числовое значение элементов-перечислителей вместо понятного имени элемента. Например, если выражение устанавливает свойство **LoggingMode** , необходимо использовать числовое значение 2 вместо понятного имени «Запрещено».  
@@ -55,7 +57,7 @@ ms.lasthandoff: 08/03/2017
   
 |Понятное имя в перечислении DTSPackageType|Числовое значение|  
 |-------------------------------------|-------------------|  
-|По умолчанию|0|  
+|Default|0|  
 |DTSWizard|1|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
@@ -74,7 +76,7 @@ ms.lasthandoff: 08/03/2017
   
 |Понятное имя в перечислении DTSPriorityClass|Числовое значение|  
 |---------------------------------------|-------------------|  
-|По умолчанию|0|  
+|Default|0|  
 |AboveNormal|1|  
 |Нормальный|2|  
 |BelowNormal|3|  
@@ -160,7 +162,7 @@ ms.lasthandoff: 08/03/2017
 |FileConnection|1|  
 |Переменная|2|  
   
-### <a name="bulk-insert-task"></a>Задача «Массовая вставка»  
+### <a name="bulk-insert-task"></a>задача «Массовая вставка»  
  Свойство**DataFileType** устанавливается с помощью значений перечисления **DTSBulkInsert_DataFileType** .  
   
 |Понятное имя в перечислении DTSBulkInsert_DataFileType|Числовое значение|  
@@ -170,7 +172,7 @@ ms.lasthandoff: 08/03/2017
 |DTSBulkInsert_DataFileType_WideChar|2|  
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
-### <a name="execute-sql-task"></a>Задача «Выполнение SQL»  
+### <a name="execute-sql-task"></a>Задача "Выполнение SQL"  
  Свойство**ResultSetType** устанавливается с помощью значений перечисления **ResultSetType** .  
   
 |Понятное имя в перечислении ResultSetType|Числовое значение|  
@@ -210,9 +212,9 @@ ms.lasthandoff: 08/03/2017
 |----------------------------------------------|-------------------|  
 |Нормальный|0|  
 |Архив|1|  
-|Скрыта|2|  
+|Скрытый|2|  
 |ReadOnly|4|  
-|System|8|  
+|Система|8|  
   
 ### <a name="ftp-task"></a>Задача «FTP»  
  Свойство**Operation** устанавливается с помощью значений перечисления **DTSFTPOp** .  
@@ -228,7 +230,7 @@ ms.lasthandoff: 08/03/2017
 |RemoveDirLocal|6|  
 |RemoveDirRemote|7|  
   
-### <a name="message-queue-task"></a>Задача «Очередь сообщений»  
+### <a name="message-queue-task"></a>Message Queue Task  
  Свойство**MessageType** устанавливается с помощью значений перечисления **MQMessageType** .  
   
 |Понятное имя в перечислении MQMessageType|Числовое значение|  
@@ -462,7 +464,7 @@ ms.lasthandoff: 08/03/2017
   
 |Понятное имя в перечислении DTSXMLDiffOptions|Числовое значение|  
 |----------------------------------------|-------------------|  
-|Нет|0|  
+|None|0|  
 |IgnoreChildOrder|1|  
 |IgnoreComments|2|  
 |IgnorePI|4|  
@@ -476,8 +478,8 @@ ms.lasthandoff: 08/03/2017
   
 |Понятное имя в перечислении DTSXMLDiffAlgorithm|Числовое значение|  
 |------------------------------------------|-------------------|  
-|Автоматически|0|  
-|Быстрый|1|  
+|Auto|0|  
+|быстрый;|1|  
 |Точный|2|  
   
 ##  <a name="MaintenancePlanTasks"></a> Задачи плана обслуживания  
@@ -492,9 +494,9 @@ ms.lasthandoff: 08/03/2017
   
 |Понятное имя в перечислении DatabaseSelection|Числовое значение|  
 |----------------------------------------|-------------------|  
-|Нет|0|  
-|все|1|  
-|System|2|  
+|None|0|  
+|All|1|  
+|Система|2|  
 |Пользователь|3|  
 |Specific|4|  
   
@@ -502,15 +504,15 @@ ms.lasthandoff: 08/03/2017
   
 |Понятное имя в перечислении TableSelection|Числовое значение|  
 |-------------------------------------|-------------------|  
-|Нет|0|  
-|все|1|  
+|None|0|  
+|All|1|  
 |Specific|2|  
   
  Свойство**ObjectTypeSelection** устанавливается с помощью значений перечисления **ObjectType** .  
   
 |Понятное имя в перечислении ObjectType|Числовое значение|  
 |---------------------------------|-------------------|  
-|Таблица|0|  
+|Table|0|  
 |Просмотр|1|  
 |TableView|2|  
   
@@ -519,7 +521,7 @@ ms.lasthandoff: 08/03/2017
   
 |Понятное имя в перечислении DestinationType|Числовое значение|  
 |--------------------------------------|-------------------|  
-|Автоматически|0|  
+|Auto|0|  
 |Вручную|1|  
   
  Свойство**ExistingBackupsAction** устанавливается с помощью значений перечисления **ActionForExistingBackups** .  
@@ -533,7 +535,7 @@ ms.lasthandoff: 08/03/2017
   
 |Понятное имя в перечислении BackupTaskType|Числовое значение|  
 |-------------------------------------|-------------------|  
-|База данных|0|  
+|база данных|0|  
 |Files|1|  
 |Журнал|2|  
   
@@ -547,7 +549,7 @@ ms.lasthandoff: 08/03/2017
 |Pipe|3|  
 |VirtualDevice|4|  
   
-### <a name="maintenance-cleanup-task"></a>Задача «Очистка после обслуживания»  
+### <a name="maintenance-cleanup-task"></a>задача «Очистка после обслуживания»  
  Свойство**FileTypeSelected** устанавливается с помощью значений перечисления **FileType** .  
   
 |Понятное имя в перечислении FileType|Числовое значение|  
@@ -569,9 +571,9 @@ ms.lasthandoff: 08/03/2017
   
 |Понятное имя в перечислении StatisticsTarget|Числовое значение|  
 |---------------------------------------|-------------------|  
-|Столбец|1|  
+|столбцом|1|  
 |Указатель|2|  
-|все|3|  
+|All|3|  
   
 ##  <a name="CommonProperties"></a> Общие свойства  
  Пакеты, задачи, а также контейнеры последовательности, «цикл по каждому элементу» и «цикл по элементам» могут использовать следующие перечисления для задания специфических свойств.  
@@ -580,7 +582,7 @@ ms.lasthandoff: 08/03/2017
   
 |Понятное имя в перечислении DTSForcedExecResult|Числовое значение|  
 |------------------------------------------|-------------------|  
-|Нет|-1|  
+|None|-1|  
 |Успешно|0|  
 |Failure|1|  
 |Completion|2|  
@@ -592,7 +594,7 @@ ms.lasthandoff: 08/03/2017
 |Понятное имя в перечислении DTSLoggingMode|Числовое значение|  
 |-------------------------------------|-------------------|  
 |UseParentSetting|0|  
-|Включено|1|  
+|Активировано|1|  
 |Выключено|2|  
   
  Свойство**TransactionOption** устанавливается с помощью значений перечисления **DTSTransactionOption** .  
@@ -603,15 +605,14 @@ ms.lasthandoff: 08/03/2017
 |Поддерживается|1|  
 |Обязательно|2|  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Добавление или изменение выражение свойства](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование выражений свойств в пакетах](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Службы Integration Services &#40; Службы SSIS &#41; Пакеты](../../integration-services/integration-services-ssis-packages.md)   
+ [Пакеты служб Integration Services (SSIS)](../../integration-services/integration-services-ssis-packages.md)   
  [Контейнеры служб Integration Services](../../integration-services/control-flow/integration-services-containers.md)   
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
- [Ограничения очередностью](../../integration-services/control-flow/precedence-constraints.md)  
+ [Управление очередностью](../../integration-services/control-flow/precedence-constraints.md)  
   
   
-

@@ -2,32 +2,29 @@
 title: "Объект Tables (TMSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 98da08fc-8744-4d0f-bc62-e63f1e9e6b08
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a8da10beb14c0cf376a73cb2416af7e78d42bac4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94e61c3077b748c7a2a33f1bcef8ac8b7ebae9e0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tables-object-tmsl"></a>Объект Tables (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Определяет таблиц, содержащихся в модели. Таблицы в модели либо привязаны к таблицам во внешней базе данных, из которого импортируются и запрашивать данные или вычисляемой таблицы, построенным на основе выражения DAX. В таблице один или несколько **секции** объектов описания источника данных.  Между таблицами **связь** объект указывает количество элементов, направление фильтрации и другие свойства связи.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Определяет таблиц, содержащихся в модели. Таблицы в модели либо привязаны к таблицам во внешней базе данных, из которого импортируются и запрашивать данные или вычисляемой таблицы, построенным на основе выражения DAX. В таблице один или несколько **секции** объектов описания источника данных.  Между таблицами **связь** объект указывает количество элементов, направление фильтрации и другие свойства связи.  
   
 ## <a name="object-definition"></a>Определение объекта  
  Все объекты имеют общий набор свойств, включая имя, тип, описание, коллекцию свойств и заметки. **Таблица** объекты также имеют следующие свойства.  
@@ -37,7 +34,7 @@ ms.lasthandoff: 09/01/2017
   
  isHidden  
  Логическое значение, указывающее, является ли таблица обрабатывается как скрытый клиентскими средствами визуализации.  
-Значение true, если таблица обрабатывается как скрытый; в противном случае — значение false.  
+Значение true, если таблица обрабатывается как скрытая; в противном случае значение false.  
   
  столбцы  
  Представляет столбец в таблице. Это дочерний объект для объекта Table. Каждый столбец имеет несколько свойств, определенные в нем, влияющих на как клиентские приложения визуализации данных в столбце.  
@@ -822,4 +819,3 @@ ms.lasthandoff: 09/01/2017
  [Справочник по языку TMSL (Tabular Model Scripting Language)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

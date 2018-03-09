@@ -2,11 +2,13 @@
 title: "Элемент Issue (программа ssbdiagnose) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssbdiagnose
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - XML output file format [ssbdiagnose], issue element
 - ssbdiagnose
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "17"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e4f82ff987d465b6dc765d06b83652e398069274
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: efd14c796a0769ebc44d00c2e6e0278bf2d3f3a4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="issue-element-ssbdiagnose"></a>Элемент Issue (программа ssbdiagnose)
-  Сообщает о проблеме, обнаруженной программой **ssbdiagnose** . В выходном XML-файле программы **ssbdiagnose** для каждой из обнаруженных проблем присутствует один элемент Issue.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Сообщает о проблеме, обнаруженной программой **ssbdiagnose** программы. В выходном XML-файле программы **ssbdiagnose** для каждой из обнаруженных проблем присутствует один элемент Issue.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -58,8 +59,8 @@ ms.lasthandoff: 08/02/2017
 |Характеристика|Описание|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|**string**, неограниченная длина|  
-|**Значение**|Возвращает текст сообщения об ошибке.|  
-|**Применяемость**|Один раз для каждой ошибки.|  
+|**Value**|Возвращает текст сообщения об ошибке.|  
+|**Наличие**|Один раз для каждой ошибки.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -75,8 +76,7 @@ ms.lasthandoff: 08/02/2017
 <Issue type="Diagnosis" code="1102" server="TestComputer" database="TargetDB" object="TargetDB">The master key was not found</diagnostic>  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Программа ssbdiagnose &#40; Компонент Service Broker &#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
   
-

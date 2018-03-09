@@ -3,10 +3,12 @@ title: "Явное типов данных функции преобразова
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - data type conversion functions [ODBC]
 - functions [ODBC], explicit data type conversion functions
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c1520ca18c42d2efbc2822630fe7ccae9f90302a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e0bba777a69607447428d83115c545edfeccec5d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicit-data-type-conversion-function"></a>Явный тип функции преобразования
 Явного преобразования типов данных задается в рамках определения типов данных SQL.  
@@ -61,7 +62,7 @@ ms.lasthandoff: 09/09/2017
   
  Синтаксис ODBC функцию преобразования типа явные данных не поддерживает спецификацию преобразования формата. Если спецификация явную форматов поддерживается в источнике данных, драйвер должен задавать значение по умолчанию или реализации спецификации формата.  
   
- Аргумент *value_exp* может быть имя столбца, результат другой скалярной функцией или numeric или строка литерала. Например:  
+ Аргумент *value_exp* может быть имя столбца, результат другой скалярной функцией или numeric или строка литерала. Пример:  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  
@@ -116,4 +117,3 @@ SELECT {fn ABS(EMPNO)}, {fn CONVERT(EMPNAME,SQL_SMALLINT)}
     ```  
     SELECT abs(EMPNO), int2(EMPNAME) FROM EMPLOYEES WHERE EMPNO <> 0  
     ```
-

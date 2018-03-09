@@ -2,33 +2,35 @@
 title: "Настройка распределенной группы доступности (группы доступности AlwaysOn) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 67aaeb56b3d3230e650dc24d16221e2af6872344
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
-ms.openlocfilehash: 5112630e01953d16f1ed6cec04e16ee5af55d470
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/20/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
-
 # <a name="configure-distributed-availability-group"></a>Настройка распределенной группы доступности  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Для создания распределенной группы доступности необходимо создать группу доступности и прослушиватель в каждом отказоустойчивом кластере Windows (WSFC). После этого можно объединить эти группы доступности в распределенную группу доступности. Ниже представлен простой пример c Transact-SQL. В этом примере представлены не все детали создания группы доступности и прослушивателей; основное внимание уделяется ключевым требованиям. 
 
 Технические сведения о распределенных группах доступности см. в статье [Распределенные группы доступности](distributed-availability-groups.md).   
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>Настройка прослушивателей конечных точек на прослушивание всех IP-адресов
 
@@ -207,12 +209,18 @@ ALTER AVAILABILITY GROUP [distributedag]
 GO  
 ```  
 
+## <a name="failover"></a>Присоединение базы данных во вторичной реплике второй группы доступности
+Когда база данных во вторичной реплике второй группы доступности перейдет в состояние восстановления, вам нужно вручную присоединить ее к группе доступности.
+
+```sql  
+ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag1];   
+```  
   
 ## <a name="failover"></a> Отработка отказа во вторичную группу доступности  
 В настоящее время поддерживается только отработка отказа вручную. Следующая инструкция Transact-SQL проводит отработку отказа в распределенную группу доступности с именем `distributedag`.  
 
 
-1. Задайте режим доступности синхронной фиксации для дополнительной группы доступности. 
+1. Задайте в качестве режима доступности синхронную фиксацию для обеих групп доступности. 
     
       ```sql  
       ALTER AVAILABILITY GROUP [distributedag] 
@@ -221,7 +229,7 @@ GO
       'ag1' WITH 
          ( 
           LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',  
-          AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT, 
+          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
           FAILOVER_MODE = MANUAL, 
           SEEDING_MODE = MANUAL 
           ), 
@@ -344,4 +352,3 @@ ALTER AVAILABILITY GROUP [SQLFCIDAG]
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
-

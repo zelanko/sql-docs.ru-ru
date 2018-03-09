@@ -2,11 +2,13 @@
 title: "Страница \"Указание реплик\" (мастер создания группы доступности/мастер добавления реплики) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,19 +16,19 @@ f1_keywords:
 - sql13.swb.addreplicawizard.specifyreplicas.f1
 - sql13.swb.newagwizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 7fc2b166d0e56bb1590e3da1705553ffab2b6ac0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 18521a8d3f0deb2c7ada0a3633c3d9e606eff9b5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Укажите страницу реплик (мастер создания группы доступности: мастер добавления реплики)
-  В этом разделе описываются параметры страницы **Выбор реплик** . Эта страница применяется к **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** и **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**. Страницу **Выбор реплик** можно использовать для настройки одной или нескольких реплик доступности и добавления ее в группу доступности. Эта страница содержит четыре вкладки, представленные в следующей таблице. Щелкните имя вкладки в таблице, чтобы перейти в соответствующий подраздел, далее в этом разделе.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описываются параметры страницы **Выбор реплик**. Эта страница применяется к **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** и **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**. Страницу **Выбор реплик** можно использовать для настройки одной или нескольких реплик доступности и добавления ее в группу доступности. Эта страница содержит четыре вкладки, представленные в следующей таблице. Щелкните имя вкладки в таблице, чтобы перейти в соответствующий подраздел, далее в этом разделе.  
   
 |Вкладка|Краткое описание|  
 |---------|-----------------------|  
@@ -218,4 +220,3 @@ ms.lasthandoff: 08/02/2017
  [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   
-

@@ -3,33 +3,30 @@ title: "Функция SQLSetStmtAttr | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetStmtAttr
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetStmtAttr
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetStmtAttr
-helpviewer_keywords:
-- SQLSetStmtAttr function [ODBC]
+f1_keywords: SQLSetStmtAttr
+helpviewer_keywords: SQLSetStmtAttr function [ODBC]
 ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: be7fb7064f3e6508b481011ed2aa05068542cef9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d652d9e028cb9eb8edd2ec2865449a4b379c4c64
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetstmtattr-function"></a>Функция SQLSetStmtAttr
 **Соответствия**  
@@ -164,7 +161,7 @@ SQLRETURN SQLSetStmtAttr(
 ## <a name="statement-attributes"></a>Атрибуты инструкции  
  В настоящее время определены атрибуты и используемая версия ODBC, в котором они были введены показаны в следующей таблице; Ожидается, что дополнительные атрибуты определены драйверы, чтобы воспользоваться преимуществами различных источников данных. Диапазон атрибутов зарезервирован ODBC. Разработчики необходимо зарезервировать значения для собственных нужд конкретного драйвера из Open Group. Дополнительные сведения см. в разделе [типов данных драйвера, дескрипторов типов, типов данных, типы диагностики и атрибуты](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
-|Attribute|*ValuePtr* содержимое|  
+|attribute|*ValuePtr* содержимое|  
 |---------------|-------------------------|  
 |SQL_ATTR_APP_PARAM_DESC (ODBC 3.0)|Дескриптор APD для последующих вызовов **SQLExecute** и **SQLExecDirect** для дескриптора инструкции. Начальное значение этого атрибута является дескриптором, неявно выделена при инструкция изначально был выделен. Если значение этого атрибута равно SQL_NULL_DESC или дескриптор, исходно выделенного для дескриптора, явно выделенный дескриптор APD, который был ранее связан с дескриптором инструкции, отделена от него, и происходит возврат дескриптора инструкции неявно выделена в APD дескриптор.<br /><br /> Этот атрибут нельзя присвоить дескриптор окна, выделенная для другой инструкции неявно или другого дескриптора, явно установленного на одной и той же инструкции; неявно выделенного дескриптора не может быть связан с более чем одной инструкции или дескриптора.|  
 |SQL_ATTR_APP_ROW_DESC (ODBC 3.0)|Дескриптор Отменить для последующих выборках для дескриптора инструкции. Начальное значение этого атрибута является дескриптором, неявно выделена при инструкция изначально был выделен. Если значение этого атрибута равно SQL_NULL_DESC или дескриптор, исходно выделенного для дескриптора, явно выделенный дескриптор Отменить, который был ранее связан с дескриптором инструкции, отделена от него, и происходит возврат дескриптора инструкции неявно выделена Отменить маркер.<br /><br /> Этот атрибут нельзя присвоить дескриптор окна, выделенная для другой инструкции неявно или другого дескриптора, явно установленного на одной и той же инструкции; неявно выделенного дескриптора не может быть связан с более чем одной инструкции или дескриптора.|  
@@ -220,4 +217,3 @@ SQLRETURN SQLSetStmtAttr(
 ## <a name="see-also"></a>См. также:  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

@@ -1,29 +1,31 @@
 ---
-title: "Catalog.object_versions (база данных SSISDB) | Документы Microsoft"
+title: "catalog.object_versions (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-views
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
-caps.latest.revision: 14
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3ea7c5ae054a002b9bb4f150e60f323ae03d702a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a8a790874900f5fc69e4f8e50d4f84d835d63c1a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogobjectversions-ssisdb-database"></a>catalog.object_versions (база данных SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Отображает версии объектов в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. В этом выпуске в данном представлении поддерживаются только версии проектов.  
   
@@ -39,20 +41,19 @@ ms.lasthandoff: 09/26/2017
 |restored_by|**nvarchar(128)**|Имя пользователя, который восстановил объект.|  
 |last_restored_time|**datetimeoffset**|Дата и время последнего восстановления объекта.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В этом представлении отображается по одной строке для каждой из версий объекта в каталоге.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для просмотра строк в этом представлении необходимо иметь одно из следующих разрешений:  
   
 -   разрешение READ на объект  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера.  
+-   Членство в роли сервера **sysadmin**.  
   
 > [!NOTE]  
 >  Действует защита на уровне строки. Отображаются только строки, на которые у вас имеется разрешение.  
   
   
-

@@ -2,28 +2,31 @@
 title: "Столбцы и типы XML-данных (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-caps.latest.revision: 6
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 457cf9fb3c207a89467b96e0f1744f9371edb9a4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1c46731315da67c4258b4a08983b54e381bd6dbf
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Столбцы и типы XML-данных (SQL Server)
-  В этом разделе описаны преимущества и ограничения типа данных **xml** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также сведения, помогающие выбрать способ хранения XML-данных.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+В этом разделе описаны преимущества и ограничения типа данных **xml** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также сведения, помогающие выбрать способ хранения XML-данных.  
   
 ## <a name="relational-or-xml-data-model"></a>Модель данных: реляционная или XML  
  Если данные хорошо структурированы и известна их схема, то для их хранения наверняка лучше всего подойдет реляционная модель. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включает все необходимые для этого средства и функции. С другой стороны, если данные структурированы частично, не структурированы или если их структура неизвестна, следует подумать о моделировании таких данных.  
@@ -183,4 +186,3 @@ ms.lasthandoff: 06/22/2017
  [Примеры массового импорта и экспорта XML-документов (SQL Server)](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
   
-

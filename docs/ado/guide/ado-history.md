@@ -8,23 +8,22 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords:
 - ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4e76e56b9d1840d4e6e1f42acd10b3b9226a61d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1ace4237c41b4a92b62e958970ebb49dcf2156d0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-features-for-each-release"></a>Функции ADO для каждого выпуска
 В этом разделе перечислены новые функции, представленные для каждого выпуска ADO, ADO MD и ADOX.
@@ -51,17 +50,17 @@ ms.lasthandoff: 09/09/2017
  *Поддержка 64-разрядной платформы* ADO 2.7 появилась поддержка для 64-разрядных процессоров.
 
 ## <a name="ado-26"></a>ADO 2.6
- **CubDef.GetSchemaObject***метод* начиная с ADO 2.6, объекты ADO MD можно получить с помощью уникальные имена в соответствии с [свойство UniqueName (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md).   Имена родительских объектов не обязательно должны быть известны и родительские коллекции, не нужно заполнять для получения схемы объекта. В разделе [GetSchemaObject метод (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
+ **CubDef.GetSchemaObject***метод* начиная с ADO 2.6, объекты ADO MD можно получить с помощью уникальные имена в соответствии с [свойство UniqueName (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md). Имена родительских объектов не обязательно должны быть известны и родительские коллекции, не нужно заполнять для получения схемы объекта. В разделе [GetSchemaObject метод (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
 
  *Команда потоки* **команда** объект поддерживает команды в формате потока в качестве альтернативы использованию **CommandText** свойство. [Свойство CommandStream (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md) может использоваться для указания XML-шаблоны или диаграмм обновления как **команда** входа с поставщик Microsoft OLE DB для SQL Server.
 
- **Диалект***свойство* [диалект](../../ado/reference/ado-api/dialect-property.md) новое свойство, которое определяет синтаксис и общие правила, что поставщик использует для синтаксического анализа в строку или поток.  
+ **Диалект***свойство* [диалект](../../ado/reference/ado-api/dialect-property.md) новое свойство, которое определяет синтаксис и общие правила, что поставщик использует для синтаксического анализа в строку или поток.
 
- **Command.Execute***метод* [выполнить метод](../../ado/reference/ado-api/execute-method-ado-command.md) объекта ADO **команда** объект был расширен и теперь использовать потоки для ввода и вывода.  
+ **Command.Execute***метод* [выполнить метод](../../ado/reference/ado-api/execute-method-ado-command.md) объекта ADO **команда** объект был расширен и теперь использовать потоки для ввода и вывода.
 
  *Поле statusvalues* Если пользователь, возникает ошибка DB_E_ERRORSOCCURRED, при изменении **поле** из **записей**, теперь заполнит ADO **Field.Status**свойство информация о состоянии соответствующие, чтобы пользователь будет иметь дополнительные сведения о том, что пошло не так. В разделе [свойство Status (поле ADO)](../../ado/reference/ado-api/status-property-ado-field.md).
 
- **NamedParameters***свойство* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) — это новое свойство **команды** с именем объекта, который указывает, должен использовать поставщика параметры.  
+ **NamedParameters***свойство* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) — это новое свойство **команды** с именем объекта, который указывает, должен использовать поставщика параметры.
 
  *Результирующие наборы в потоках* ADO может возвращать результирующие наборы из источника данных в **поток**, а не **записей** объекта. Использует последнюю версию поставщика Microsoft OLE DB для SQL Server, можно получить XML-результатов от поставщика, выполнение запроса «Для XML». Объект **поток** результирующий набор, который получает можно открыть с помощью команды «Для XML» как источник. В разделе [получение результирующих наборов в потоки](../../ado/guide/data/retrieving-resultsets-into-streams.md).
 
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/09/2017
  *URL-адрес привязки* ADO 2.5 знакомит с использованием URL-адрес, в качестве альтернативы подключения строку и команду текстовый, имен объектов хранилища данных. URL-адрес может использоваться с существующим **подключения** и **записей** объектов, а также как и в случае с новым **запись** и **поток** объектов.
 
  *Поставщики данных, поддерживающие привязку URL-адресов* ADO 2.5 поддерживает поставщиков OLE DB, которые распознают URL-схем. Это включает поставщик OLE DB для публикаций в Интернете, который получает доступ к файловой системе Windows 2000 и распознает существующие схемы HTTP.
-

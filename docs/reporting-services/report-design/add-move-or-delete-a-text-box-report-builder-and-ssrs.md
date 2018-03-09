@@ -1,26 +1,27 @@
 ---
-title: "Добавить, переместить или удалить текстовое поле (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Добавление, перемещение или удаление текстового поля (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: e153164c2e8d527363b42b74629f97ed1e018014
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 75444343968c9901a24c1a4d431d4d8cfacb1567
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>Добавление, перемещение или удаление текстового поля (построитель отчетов и службы SSRS)
   Текстовые поля — это наиболее часто используемые элементы отчета в отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы. В текст отчета можно добавить текстовое поле, в котором будут отображаться такие сведения, как заголовки, выбранные значения параметров, встроенные поля и даты.  
@@ -75,9 +76,9 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  Если щелкнуть текстовое поле в режиме редактирования, то для выбора этого текстового поля необходимо нажать клавишу ESC.  
   
-## <a name="see-also"></a>См. также  
- [Текстовые поля &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [Выражения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Сочетания клавиш &#40; Построитель отчетов &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
+## <a name="see-also"></a>См. также:  
+ [Текстовые поля (построитель отчетов и службы SSRS)](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
+ [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Сочетания клавиш (построитель отчетов)](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
   

@@ -1,29 +1,30 @@
 ---
 title: "Выбор и настройка затронутые объекты (OracleToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Columns Comparison Settings
 - Selection of Affected Objects
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 1a4fe479f53c914b4417cd0069335fa8bb0da027
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 75fd62bd569709733c1915357057d9b8a88556e6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Выбор и настройка затронутые объекты (OracleToSQL)
 На этой странице можно выбрать таблицы и внешние ключи, изменения в которой следует сравнивать при SSMA проверяет результаты выполнения для объектов, выбранным в предыдущем шаге. Кроме того можно настроить параметры проверки.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 08/02/2017
   
 Если тест-инженер SSMA не может проверить любые из этих объектов, вы увидите ссылку с меткой **некоторые из выделенных объектов содержат ошибки** в дереве объектов. Щелкните эту ссылку для просмотра причины, почему не удается сравнить эти объекты и снимите флажок не тот объект.  
   
-## <a name="table"></a>Таблица  
+## <a name="table"></a>Table  
 Вкладка «таблица» содержит представление сетки выбранную таблицу. Сетка содержит следующие сведения о выбранной таблицы.  
   
 -   Имя столбца  
@@ -46,7 +47,7 @@ ms.lasthandoff: 08/02/2017
   
 -   Правило  
   
--   По умолчанию  
+-   Default  
   
 -   Идентификатор  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="sql"></a>SQL  
 Вкладка «SQL» содержит «создание таблицы» SQL из выбранной таблицы.  
   
-## <a name="data"></a>Данные  
+## <a name="data"></a>data  
 Вкладка "данные" отображает данные в выбранную таблицу.  
   
 ## <a name="properties"></a>Свойства  
@@ -63,7 +64,7 @@ ms.lasthandoff: 08/02/2017
   
 -   Создания или последнего изменения  
   
--   Имя объекта  
+-   Имени объекта  
   
 ## <a name="columns-comparison-settings"></a>Параметры сравнения столбцов  
 Задать правила сравнения строк для столбцов таблицы на **сравнения столбцов** страницы. Можно внести следующие параметры.  
@@ -119,4 +120,3 @@ ms.lasthandoff: 08/02/2017
 [Выполнение тестовых случаев &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [Тестирование миграции объектов базы данных &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
-

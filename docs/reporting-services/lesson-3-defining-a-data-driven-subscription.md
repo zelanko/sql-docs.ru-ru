@@ -1,28 +1,28 @@
 ---
-title: "Занятие 3: Определение управляемой данными подписки | Документы Microsoft"
+title: "Занятие 3. Определение управляемой данными подписки | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
-caps.latest.revision: 50
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "50"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ae87a509d3d5d1eb55645408b63f8267498efbd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 94e39c709c030c29d88bd874b279024c60f57fd7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 На этом занятии учебника по [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] будут использоваться страницы управляемой данными подписки на веб-порталах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для подключения к источнику данных подписки, построен запрос, получающий данные для этой подписки, а также сопоставлен результирующий набор с отчетом и параметрами доставки.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="destination"></a>Назначение  
 1.  В разделе "Назначение" выберите **Общая папка Windows** в качестве способа доставки.  
 
-## <a name="dataset"></a>Набор данных
+## <a name="dataset"></a>Dataset
 1. Щелкните **Изменить набор данных**.
 2. Выберите **Пользовательский источник данных**.
 3. Выберите **Microsoft SQL Server** в качестве типа **подключения** к источнику данных.
@@ -88,22 +88,22 @@ ms.lasthandoff: 08/09/2017
 **Формат отображения** | Получение значения из набора данных | Формат
 **Режим записи**| Ввод значения| Автоувеличение    
 **Расширение файла** |Ввод значения |True
-**Имя пользователя** | Ввод значения | Введите учетную запись пользователя домена. Введите его в следующем формате: \<домена >\\\<учетной записи >. Учетная запись пользователя должна обладать разрешениями для настроенного пути. 
+**Имя пользователя** | Ввод значения | Введите учетную запись пользователя домена. Введите учетную запись в формате: \<домен>\\\<учетная_запись>. Учетная запись пользователя должна обладать разрешениями для настроенного пути. 
 **Пароль** | Ввод значения | Введите пароль
 
 ## <a name="report-parameters"></a>Параметры отчета
  1. В поле **OrderNumber** выберите **Получить значение из набора данных**. В поле «Значение параметра» выберите **Order**. 
  2. Щелкните **Создать подписку**.
    
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 При выполнении подписки в указанную общую папку будут доставлены четыре файла отчетов, по одному для каждого заказа из источника данных *Подписчики* . Каждая доставка должна содержать уникальные данные (данные должны различаться в зависимости от заказа), иметь свой формат подготовки и формат файла. Можно открыть любой отчет из общей папки, чтобы убедиться, что каждая версия настроена в соответствии с указанными параметрами подписки.  
   
-![Список файлов, созданных подпиской](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "список файлов, созданных подпиской")  
+![Список файлов, созданных подпиской](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "Список файлов, созданных подпиской")  
   
 Страница подписки на веб-портале будет содержать **дату последнего запуска** и **состояние** подписки. 
 **Примечание** . Для вывода обновленной информации необходимо обновить страницу после запуска подписки.  
     
-![В диспетчере отчетов приводит подписки](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "подписки результатов в диспетчере отчетов")  
+![Результаты подписки в диспетчере отчетов](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "Результаты подписки в диспетчере отчетов")  
   
 Этот шаг завершает учебник "Определение управляемой данными подписки".   
   
@@ -115,5 +115,4 @@ ms.lasthandoff: 08/09/2017
   
   
   
-
 

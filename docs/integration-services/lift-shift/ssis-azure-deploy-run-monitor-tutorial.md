@@ -1,120 +1,189 @@
 ---
-title: "Развертывание, запуск и отслеживание пакета служб SSIS в Azure | Документы Microsoft"
-ms.date: 09/25/2017
+title: "Развертывание, запуск и отслеживание пакета служб SSIS в Azure | Документы Майкрософт"
+ms.date: 02/05/2018
 ms.topic: article
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: lift-shift
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 2e16666c412870cc55024e7156752f43ddbc1800
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/13/2017
-
+ms.openlocfilehash: bde92101af0b761df9f37171b35952fa3ab9d25b
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Развертывание, запуск и отслеживание пакета служб SSIS в Azure
-Этого учебника показано, как развертывание проекта SQL Server Integration Services в базе данных каталога SSISDB в базе данных SQL Azure, запустить пакет в среде выполнения служб SSIS Azure интеграции и отслеживать выполнение пакета.
+Этот учебник рассказывает, как развернуть проект служб SQL Server Integration Services в базе данных каталога SSISDB, расположенной в базе данных SQL Azure, запустить пакет в среде Integration Runtime для Azure-SSIS и отслеживать его выполнение.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
-Прежде чем начать, убедитесь, что у вас есть 17,2 или более поздней версии среды SQL Server Management Studio. Загрузить последнюю версию SSMS [загрузить SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Прежде чем начать, убедитесь в наличии SQL Server Management Studio версии 17.2 или более поздней. Чтобы скачать последнюю версию SSMS, перейдите на страницу [скачивания SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Также убедитесь, что настройка базы данных SSISDB и подготовить выполнения интеграции служб SSIS Azure. Сведения о настройке служб SSIS в Azure см. в разделе [усилие Azure пакеты служб SQL Server Integration Services (SSIS)](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure).
+Также убедитесь, что настроена база данных SSISDB и подготовлена среда Integration Runtime для Azure-SSIS. Дополнительные сведения о том, как подготовить SSIS в Azure, см. в разделе [Развертывание пакетов SSIS в Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
-## <a name="connect-to-the-ssisdb-database"></a>Подключения к базе данных SSISDB
+## <a name="connect-to-the-ssisdb-database"></a>Подключение к базе данных SSISDB
 
-Используйте SQL Server Management Studio для подключения к каталогу служб SSIS на сервере базы данных SQL Azure. Дополнительные сведения см. в разделе [подключение к базе данных каталога SSISDB в Azure](ssis-azure-connect-to-catalog-database.md).
+С помощью SQL Server Management Studio подключитесь к каталогу служб SSIS на сервере базы данных SQL Azure. Дополнительные сведения см. в разделе [Подключение к базе данных каталога SSISDB в Azure](ssis-azure-connect-to-catalog-database.md).
 
 > [!IMPORTANT]
-> Сервер базы данных SQL Azure прослушивает порт 1433. Если вы пытаетесь подключиться к серверу базы данных SQL Azure внутри корпоративного брандмауэра, этот порт должен быть открыт в корпоративный брандмауэр, для успешного подключения.
+> Сервер базы данных SQL Azure прослушивает порт 1433. Если вы пытаетесь подключиться к серверу базы данных SQL Azure изнутри корпоративного брандмауэра, для успешного подключения в этом брандмауэре должен быть открыт данный порт.
 
 1. Откройте среду SQL Server Management Studio.
 
-2. **Подключиться к серверу**. В **соединение с сервером** диалоговом окне введите следующие сведения:
+2. **Подключение к серверу**. В диалоговом окне **Соединение с сервером** введите следующие данные:
 
    | Настройка       | Предлагаемое значение | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Тип сервера** | Компонент Database Engine | Это значение обязательно. |
-   | **Имя сервера** | Полное имя сервера | Имя должно быть в следующем формате: **mysqldbserver.database.windows.net**. Если требуется указать имя сервера, см. раздел [подключение к базе данных каталога SSISDB в Azure](ssis-azure-connect-to-catalog-database.md). |
-   | **Проверка подлинности** | Проверка подлинности SQL Server | Это краткое руководство использует проверку подлинности SQL. |
-   | **Имя входа** | Учетная запись администратора сервера | Это учетная запись, указанную при создании сервера. |
-   | **Пароль** | Пароль для учетной записи администратора сервера | Это пароль, указанный при создании сервера. |
+   | **Имя сервера** | Полное имя сервера | Имя должно быть в следующем формате: **mysqldbserver.database.windows.net**. Если вам нужно узнать имя сервера, см. раздел [Подключение к базе данных каталога SSISDB в Azure](ssis-azure-connect-to-catalog-database.md). |
+   | **Проверка подлинности** | Проверка подлинности SQL Server | В этом кратком руководстве используется проверка подлинности SQL. |
+   | **Имя входа** | Учетная запись администратора сервера | Учетная запись, которая была указана при создании сервера. |
+   | **Пароль** | Пароль для учетной записи администратора сервера | Пароль, который был указан при создании сервера. |
 
-3. **Подключения к базе данных SSISDB**. Выберите **параметры** разверните **соединение с сервером** диалоговое окно. В развернутом **соединение с сервером** выберите **свойства соединения** вкладки. В **подключение к базе данных** выберите или введите `SSISDB`.
+3. **Подключитесь к базе данных SSISDB**. Чтобы развернуть диалоговое окно **Соединение с сервером**, выберите **Параметры**. В развернутом окне **Соединение с сервером** откройте вкладку **Свойства подключения**. В поле **Подключение к базе данных** выберите или введите `SSISDB`.
 
-4. Выберите **Connect**. Открывается окно обозревателя объектов в среде SSMS. 
+4. В этом случае выберите **Подключиться**. В SSMS открывается окно обозревателя объектов. 
 
-5. В обозревателе объектов разверните **каталоги служб Integration Services** и разверните **SSISDB** для просмотра объектов в базе данных каталога служб SSIS.
+5. В обозревателе объектов разверните узел **Каталоги служб Integration Services** и затем узел **SSISDB** для просмотра объектов в базе данных каталога служб SSIS.
 
-## <a name="deploy-a-project"></a>Развертывание проекта
+## <a name="deploy-a-project-with-the-deployment-wizard"></a>Развертывание проекта с помощью мастера развертываний
 
-### <a name="start-the-integration-services-deployment-wizard"></a>Запуск мастера развертывания служб Integration Services
-1. В обозревателе объектов в среде SSMS с **каталоги служб Integration Services** узла и **SSISDB** развернутый узел, разверните папку проекта.
+### <a name="start-the-integration-services-deployment-wizard"></a>Запуск мастера развертывания Integration Services
+1. В обозревателе объектов SSMS разверните узлы **Каталоги служб Integration Services** и **SSISDB**, а затем папку проекта.
 
-2.  Выберите **проекты** узла.
+2.  Выберите узел **Проекты**.
 
-3.  Щелкните правой кнопкой мыши **проекты** , а затем выберите **развертывание проекта**. Откроется мастер развертывания служб Integration Services. Можно развернуть проект из базы данных каталога служб SSIS или из файловой системы.
+3.  Щелкните правой кнопкой мыши узел **Проекты** и выберите **Развернуть проект**. Откроется мастер развертывания служб Integration Services. Вы можете развернуть проект из базы данных каталога SSIS или из файловой системы.
 
-### <a name="deploy-a-project-with-the-deployment-wizard"></a>Развертывание проекта с помощью мастера развертывания
-1. На **Введение** страницы мастера развертывания, ознакомьтесь с общими сведениями. Выберите **Далее** Открытие **Выбор источника** страницы.
+### <a name="deploy-a-project-with-the-deployment-wizard"></a>Развертывание проекта с помощью мастера развертываний
+1. Ознакомьтесь с информацией, представленной на странице **Введение** мастера развертывания. Нажмите кнопку **Далее**, чтобы перейти на страницу **Выбор источника**.
 
-2. На **Выбор источника** выберите существующий проект служб SSIS для развертывания.
+2. На странице **Выбор источника** выберите существующий проект служб SSIS для развертывания.
     -   Чтобы развернуть созданный файл развертывания проекта, выберите **Файл развертывания проекта** и введите путь к ISPAC-файлу.
-    -   Для развертывания проекта, который находится в каталоге служб SSIS, выберите **каталог служб Integration Services**, а затем введите имя сервера и путь к проекту в каталоге.
-    -   Выберите **Далее** для просмотра **Выбор назначения** страницы.
+    -   Для развертывания проекта, который находится в каталоге служб SSIS, выберите **Каталог служб Integration Services**, а затем введите имя сервера и путь к проекту в каталоге.
+    -   Нажмите кнопку **Далее**, чтобы просмотреть страницу **Выбор назначения**.
   
-3.  На **Выбор назначения** выберите место назначения для проекта.
+3.  На странице **Выбор назначения** выберите назначение для проекта.
     -   Введите полное имя сервера в формате `<server_name>.database.windows.net`.
-    -   Выберите **Обзор** для выбора целевой папки в SSISDB.
-    -   Выберите **Далее** Открытие **проверки** страницы.  
+    -   Нажмите кнопку **Обзор** для выбора целевой папки в SSISDB.
+    -   Нажмите кнопку **Далее**, чтобы перейти на страницу **Проверка**.  
   
-4.  На **просмотрите** просмотрите выбранные параметры.
-    -   Можно изменить выбранные параметры, выбрав **Назад**, или путем выбора любого из этих шагов на левой панели.
-    -   Выберите **развернуть** для запуска процесса развертывания.
-  
-5.  После завершения процесса развертывания **результатов** откроется страница. На ней отображается состояние выполнения каждого действия.
-    -   Если не удалось выполнить действие, выберите **сбой** в **результат** столбец для отображения описания ошибки.
-    -   При необходимости установите **сохранить отчет...**  для сохранения результатов в XML-файл.
-    -   Выберите **закрыть** для завершения работы мастера.
+4.  Просмотрите выбранные параметры на странице **Проверка**.
+    -   Вы можете изменить выбранные параметры, нажав кнопку **Назад** или кнопку любого из шагов на левой панели.
+    -   Щелкните **Развернуть**, чтобы начать развертывание.
+
+    > ![ПРИМЕЧАНИЕ] Если появляется сообщение об ошибке **Нет активного агента рабочей роли (поставщик данных .Net SqlClient)**, убедитесь в том, что запущена среда выполнения интеграции Azure и служб SSIS. Эта ошибка возникает при попытке выполнить развертывание, когда среда выполнения интеграции Azure и служб SSIS остановлена.
+
+5.  После завершения развертывания появится страница **Результаты**. На ней отображается состояние выполнения каждого действия.
+    -   Если действие не выполнено, нажмите кнопку **Ошибка** в столбце **Результат** для отображения описания ошибки.
+    -   Чтобы сохранить результаты в XML-файл при необходимости, нажмите кнопку **Сохранить отчет...**.
+    -   Нажмите кнопку **Закрыть**, чтобы выйти из мастера.
+
+## <a name="deploy-a-project-with-powershell"></a>Развертывание проекта с помощью PowerShell
+
+Чтобы развернуть проект с помощью PowerShell в базе данных SSISDB, размещенной в базе данных SQL Azure, приспособьте следующий скрипт под свои требования. Скрипт перечисляет дочерние папки в `$ProjectFilePath` и проекты в каждой дочерней папке, а затем создает те же папки в базе данных SSISDB и развертывает в них проекты.
+
+На компьютере, где будет выполняться этот скрипт, должны быть установлены SQL Server Data Tools 17.x или среда SQL Server Management Studio.
+
+```powershell
+# Variables
+$ProjectFilePath = "C:\<folder>"
+$SSISDBServerEndpoint = "<servername>.database.windows.net"
+$SSISDBServerAdminUserName = "<username>"
+$SSISDBServerAdminPassword = "<password>"
+
+# Load the IntegrationServices Assembly
+[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Management.IntegrationServices") | Out-Null;
+
+# Store the IntegrationServices Assembly namespace to avoid typing it every time
+$ISNamespace = "Microsoft.SqlServer.Management.IntegrationServices"
+
+Write-Host "Connecting to server ..."
+
+# Create a connection to the server
+$sqlConnectionString = "Data Source=" + $SSISDBServerEndpoint + ";User ID="+ $SSISDBServerAdminUserName +";Password="+ $SSISDBServerAdminPassword + ";Initial Catalog=SSISDB"
+$sqlConnection = New-Object System.Data.SqlClient.SqlConnection $sqlConnectionString
+
+# Create the Integration Services object
+$integrationServices = New-Object $ISNamespace".IntegrationServices" $sqlConnection
+
+# Get the catalog
+$catalog = $integrationServices.Catalogs['SSISDB']
+
+write-host "Enumerating all folders..."
+
+$folders = ls -Path $ProjectFilePath -Directory
+
+if ($folders.Count -gt 0)
+{
+    foreach ($filefolder in $folders)
+    {
+        Write-Host "Creating Folder " $filefolder.Name " ..."
+
+        # Create a new folder
+        $folder = New-Object $ISNamespace".CatalogFolder" ($catalog, $filefolder.Name, "Folder description")
+        $folder.Create()
+
+        $projects = ls -Path $filefolder.FullName -File -Filter *.ispac
+        if ($projects.Count -gt 0)
+        {
+            foreach($projectfile in $projects)
+            {
+                $projectfilename = $projectfile.Name.Replace(".ispac", "")
+                Write-Host "Deploying " $projectfilename " project ..."
+
+                # Read the project file, and deploy it to the folder
+                [byte[]] $projectFileContent = [System.IO.File]::ReadAllBytes($projectfile.FullName)
+                $folder.DeployProject($projectfilename, $projectFileContent)
+            }
+        }
+    }
+}
+
+Write-Host "All done." 
+```
 
 ## <a name="run-a-package"></a>Запуск пакета
 
-1. В обозревателе объектов в среде SSMS выберите пакет, которую требуется запустить.
+1. Выберите пакет, который хотите запустить, в обозревателе объектов SSMS.
 
-2. Щелкните правой кнопкой мыши и выберите **Execute** Открытие **выполнение пакета** диалоговое окно.
+2. Щелкните правой кнопкой мыши и выберите **Выполнить**, чтобы открыть диалоговое окно **Выполнение пакета**.
 
-3.  В **выполнение пакета** диалоговом окне настройте выполнение пакета с помощью параметров на **параметры**, **диспетчеры соединений**, и **Дополнительно**  вкладки.
+3.  В диалоговом окне **Выполнение пакета** настройте выполнение пакета с помощью параметров на вкладках **Параметры**, **Диспетчеры соединений** и **Расширенные**.
 
-4.  Выберите **ОК** для запуска пакета.
+4.  Нажмите кнопку **ОК**, чтобы выполнить пакет.
 
-## <a name="monitor-the-running-package-in-ssms"></a>Монитор запуске пакета в среде SSMS
+## <a name="monitor-the-running-package-in-ssms"></a>Отслеживание выполнения пакета в SSMS
 
-Чтобы просмотреть состояние текущих операций службы Integration Services на сервере служб Integration Services, таких как развертывание, проверки и выполнения пакета, используйте **активные операции** диалоговое окно в среде SSMS. Открытие **активные операции** диалоговое окно, щелкните правой кнопкой мыши **SSISDB**, а затем выберите **активные операции**.
+Чтобы просмотреть состояние запущенных операций служб Integration Services на сервере Integration Services, таких как развертывание, проверка и выполнение пакетов, используйте диалоговое окно **Активные операции** в SSMS. Чтобы открыть диалоговое окно **Активные операции**, щелкните базу данных **SSISDB** правой кнопкой мыши и выберите пункт **Активные операции**.
 
-Можно также выбрать пакет в обозревателе объектов, щелкните правой кнопкой мыши и выберите **отчеты**, затем **стандартные отчеты**, затем **все выполнения**.
+Вы также можете выбрать пакет в обозревателе объектов, щелкнуть его правой кнопкой мыши, выбрать пункт **Отчеты**, а затем **Стандартные отчеты** и **Все выполнения**.
 
-Дополнительные сведения о наблюдении за выполнением пакетов в среде SSMS см. в разделе [монитор выполняемые пакеты и другие операции](https://docs.microsoft.com/en-us/sql/integration-services/performance/monitor-running-packages-and-other-operations).
+Дополнительные сведения о том, как отслеживать выполнение запущенных пакетов в SSMS, см. в разделе [Наблюдение за выполнением пакетов и других операций](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations).
 
-## <a name="monitor-the-azure-ssis-integration-runtime"></a>Монитор выполнения интеграции служб SSIS Azure
+## <a name="monitor-the-azure-ssis-integration-runtime"></a>Мониторинг среды Integration Runtime для Azure-SSIS
 
-Чтобы получить сведения о состоянии, сведения о среде выполнения интеграции служб SSIS Azure, в которой выполняются пакеты, используйте следующие команды PowerShell: для каждой команды, укажите имена фабрики данных Azure SSIS IR и группе ресурсов.
+Чтобы получить сведения о состоянии среды Integration Runtime для Azure-SSIS, где выполняются пакеты, используйте приведенные ниже команды PowerShell — для каждой команды укажите имена фабрики данных, Azure-SSIS IR и группы ресурсов.
 
-### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>Получение метаданных о интеграции среды выполнения служб SSIS Azure
+### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>Получение метаданных о среде Integration Runtime для Azure-SSIS
 
 ```powershell
 Get-AzureRmDataFactoryV2IntegrationRuntime -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
 ```
 
-### <a name="get-the-status-of-the-azure-ssis-integration-runtime"></a>Получить состояние выполнения интеграции служб SSIS Azure
+### <a name="get-the-status-of-the-azure-ssis-integration-runtime"></a>Получение сведений о состоянии среды Integration Runtime для Azure-SSIS
 
 ```powershell
 Get-AzureRmDataFactoryV2IntegrationRuntime -Status -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
 ```
 
 ## <a name="next-steps"></a>Следующие шаги
-- Узнайте, как для планирования выполнения пакетов. Дополнительные сведения см. в разделе [пакета служб SSIS расписание выполнения в Azure](ssis-azure-schedule-packages.md)
-
+- Сведения о планировании выполнения пакета. Дополнительные сведения см. в разделе [Планирование выполнения пакета служб SSIS в Azure](ssis-azure-schedule-packages.md).

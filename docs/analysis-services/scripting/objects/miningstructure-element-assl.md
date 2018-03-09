@@ -2,40 +2,35 @@
 title: "Элемент MiningStructure (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MiningStructure Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: MiningStructure Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- MiningStructure
-helpviewer_keywords:
-- MiningStructure element
+applies_to: SQL Server 2016 Preview
+f1_keywords: MiningStructure
+helpviewer_keywords: MiningStructure element
 ms.assetid: b943cd92-0ed8-4bd8-8fbc-7dab0534aede
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 455d874cf279e44e8381c5183d2d376e40e2a351
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0f0ce9ca930e54c1cf8ac989330e00f298a06a28
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="miningstructure-element-assl"></a>Элемент MiningStructure (язык ASSL)
-  Определяет структуру для набора моделей интеллектуального анализа данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет структуру для набора моделей интеллектуального анализа данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -70,7 +65,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -83,7 +78,7 @@ ms.lasthandoff: 09/01/2017
 |Родительские элементы|[MiningStructures](../../../analysis-services/scripting/collections/miningstructures-element-assl.md)|  
 |Дочерние элементы|[Заметки](../../../analysis-services/scripting/collections/annotations-element-assl.md), [CacheMode](../../../analysis-services/scripting/properties/cachemode-element-assl.md), [сортировки](../../../analysis-services/scripting/properties/collation-element-assl.md), [столбцы](../../../analysis-services/scripting/collections/columns-element-assl.md), [CreatedTimestamp](../../../analysis-services/scripting/properties/createdtimestamp-element-assl.md), [ Описание](../../../analysis-services/scripting/properties/description-element-assl.md), [ErrorConfiguration](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md),<br /><br /> [HoldoutActualSize](../../../analysis-services/scripting/properties/holdoutactualsize-element.md),<br /><br /> [HoldoutMaxCases](../../../analysis-services/scripting/properties/holdoutmaxcases-element.md),<br /><br /> [HoldoutMaxPercent](../../../analysis-services/scripting/properties/holdoutmaxpercent-element.md),<br /><br /> [HoldoutSeed](../../../analysis-services/scripting/properties/holdoutseed-element.md),<br /><br /> [Идентификатор](../../../analysis-services/scripting/properties/id-element-assl.md), [язык](../../../analysis-services/scripting/properties/language-element-assl.md), [LastProcessed](../../../analysis-services/scripting/properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../../../analysis-services/scripting/properties/lastschemaupdate-element-assl.md), [MiningModels](../../../analysis-services/scripting/collections/miningmodels-element-assl.md), [ MiningStructurePermissions](../../../analysis-services/scripting/collections/miningstructurepermissions-element-assl.md), [имя](../../../analysis-services/scripting/properties/name-element-assl.md), [источника](../../../analysis-services/scripting/properties/source-element-binding-assl.md), [состояние](../../../analysis-services/scripting/properties/state-element-assl.md), [переводов](../../../analysis-services/scripting/collections/translations-element-assl.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Структура интеллектуального анализа данных определяет столбцы и привязки. После того, как структура интеллектуального анализа данных определена, ее можно использовать для определения различных моделей интеллектуального анализа данных. Структура интеллектуального анализа данных и входящие в нее модели могут обрабатываться независимо.  
   
 > [!NOTE]  
@@ -102,4 +97,3 @@ ms.lasthandoff: 09/01/2017
  [ВЫБЕРИТЕ &#40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ &#41;](../../../dmx/select-dmx.md)  
   
   
-

@@ -3,8 +3,11 @@ title: "Привязка реляционных данных внутри XML-д
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - variables [XML in SQL Server], relational data binding
 - columns [XML in SQL Server], relational data binding
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
-caps.latest.revision: 36
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fbb6d199812f90c07e9efa81da11f834e58cdb59
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 87dca9b5bcd70335a6121b1be1e49f4cc352826e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Привязка реляционных данных внутри XML-данных
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Можно указать [методы типа данных xml](../../t-sql/xml/xml-data-type-methods.md) от **xml** переменной или столбце типа данных. Например [запрос &#40; &#41; Метод &#40; тип данных xml &#41; ](../../t-sql/xml/query-method-xml-data-type.md) выполняет заданный запрос XQuery к экземпляру XML. При построении XML таким способом может понадобиться ввести значение их столбца с типом данных, отличным от XML или переменной Transact-SQL. Данный процесс называется привязкой реляционных данных внутри XML.  
   
@@ -61,8 +63,7 @@ WHERE   xCol.exist ('/book/@ISBN[. = sql:variable("@isbn")]') = 1
   
  **SQL: column()** можно использовать так же, как и дает дополнительные преимущества. Для повышения эффективности могут использоваться индексы столбца — это решает оптимизатор запросов на основе траты ресурсов. В вычисляемом столбце можно хранить свойство, для которого было выполнено продвижение.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы для типа данных XML](../../t-sql/xml/xml-data-type-methods.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Использование программы sqlcmd | Документация Майкрософт"
 ms.custom: 
 ms.date: 06/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ helpviewer_keywords:
 - statements [SQL Server], executing
 - sqlcmd utility, about sqlcmd utility
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
-caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: mightypen
+ms.author: genemi
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: ea2018f4b9b0ad9c0ef29dbacaeaa6e7639a1a34
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
-ms.sourcegitcommit: 0c1e5939ddf08692998f26ccbb2c2fa699342c55
-ms.openlocfilehash: 4ff24dabc28ae25ec38a546ed8f119979eef4e60
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlcmd---use-the-utility"></a>Использование программы sqlcmd
-  Служебная программа **sqlcmd** представляет собой программу командной строки для нерегламентированного интерактивного выполнения инструкций и скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] , а также для автоматизации задач скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] . Интерактивная работа с **sqlcmd** и создание файлов скриптов, исполняемых с помощью **sqlcmd**, требует от пользователя понимания языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Программа **sqlcmd** обычно применяется следующим образом.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Служебная программа **sqlcmd** представляет собой программу командной строки для нерегламентированного интерактивного выполнения инструкций и скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)], а также для автоматизации задач скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)]. Интерактивная работа с **sqlcmd** и создание файлов скриптов, исполняемых с помощью **sqlcmd**, требует от пользователя понимания языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Программа **sqlcmd** обычно применяется следующим образом.  
   
 -   Пользователь вводит инструкции на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] точно так же, как при работе в командной строке. Результаты выводятся в окно командной строки. Чтобы открыть окно командной строки, введите "cmd" в поле поиска Windows и выберите пункт **Командная строка**. В окне командной строки введите **sqlcmd** и необходимые параметры. Полный перечень параметров, поддерживаемых программой **sqlcmd**, см. в разделе [Программа sqlcmd](../../tools/sqlcmd-utility.md).  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 07/31/2017
     sqlcmd -S <ComputerName>\<InstanceName>  
     ```  
   
-     либо  
+     или диспетчер конфигурации служб  
   
     ```  
     sqlcmd -S .\<InstanceName>  
@@ -101,7 +103,7 @@ ms.lasthandoff: 07/31/2017
     > **ПОДСКАЗКА.** Для просмотра полного перечня параметров, поддерживаемых служебной программой **sqlcmd** , введите `sqlcmd -?`.  
   
 ## <a name="run-transact-sql-statements-interactively-by-using-sqlcmd"></a>Интерактивный запуск инструкций Transact-SQL с помощью программы sqlcmd  
- С помощью программы **sqlcmd** можно интерактивно запускать инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] из окна командной строки. Для интерактивного выполнения инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью программы **sqlcmd**запустите ее без параметров **-Q**, **-q**, **-Z**или **-i** , чтобы задать входные файлы или запросы. Например:  
+ С помощью программы **sqlcmd** можно интерактивно запускать инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] из окна командной строки. Для интерактивного выполнения инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью программы **sqlcmd**запустите ее без параметров **-Q**, **-q**, **-Z**или **-i** , чтобы задать входные файлы или запросы. Пример:  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -116,7 +118,7 @@ ms.lasthandoff: 07/31/2017
 ## <a name="quoted-strings"></a>Строки в кавычках  
  Символы, заключенные в кавычки, используются без какой-либо дополнительной предварительной обработки, за исключением кавычек, которые вставляются в строку путем ввода двух последовательных кавычек. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рассматривает такую последовательность символов как одни кавычки. однако на сервере выполняется преобразование. Переменные скрипта при появлении в строке не раскрываются.  
   
- Например:  
+ Пример:  
   
  `sqlcmd`  
   
@@ -566,4 +568,3 @@ SQLCMD –E –N –C
  [Создание шага задания «CmdExec»](http://msdn.microsoft.com/library/b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c)  
   
   
-

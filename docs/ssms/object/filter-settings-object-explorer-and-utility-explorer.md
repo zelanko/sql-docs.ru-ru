@@ -3,30 +3,31 @@ title: "Настройки фильтра (обозреватель объект
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.common.filtersettings.f1
 - sql13.ag.job.filtersettings.f1
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 68c03b5f5fd4fc9a4ca371331309e971dcc540c0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 049d826cfe7170462ed3942202f208a621362613
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="filter-settings-object-explorer-and-utility-explorer"></a>Настройки фильтра (обозреватель объектов и проводник служебной программы)
-Используйте данное диалоговое окно для задания фильтра. Фильтр позволяет настроить обозреватель объектов и проводник служебной программы для отображения только тех элементов, которые соответствуют заданным критериям. Например, фильтр можно использовать для отображения только тех заданий, имена которых содержат слово «Maintenance». В заголовке диалогового окна **Настройки фильтра** содержится имя сервера и может содержаться имя базы данных.  
+# <a name="filter-settings-object-explorer-and-utility-explorer"></a>Настройки фильтра (обозреватель объектов и обозреватель программ)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Используйте данное диалоговое окно для задания фильтра. Фильтр позволяет настроить обозреватель объектов и проводник служебной программы для отображения только тех элементов, которые соответствуют заданным критериям. Например, фильтр можно использовать для отображения только тех заданий, имена которых содержат слово «Maintenance». В заголовке диалогового окна **Настройки фильтра** содержится имя сервера и может содержаться имя базы данных.  
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
 **Свойство**  
@@ -71,7 +72,7 @@ ms.lasthandoff: 06/22/2017
   
     Доступно для дат. Отображаются элементы, дата которых не входит в диапазон двух заданных дат. Выберите **Вне** и в последней ячейке столбца **Оператор** нажмите клавишу TAB, чтобы добавить строку ввода второй даты.  
   
-**Значение**  
+**Value**  
 Введите значение, на основе которого будет сравниваться свойство. Для дат нажмите кнопку со стрелкой вниз, чтобы открыть календарь, и выберите в нем дату.  
   
 **Очистить фильтр**  
@@ -81,4 +82,3 @@ ms.lasthandoff: 06/22/2017
 [Использование среды SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
 [Общие сведения о служебной программе SQL Server](http://msdn.microsoft.com/en-us/6e6cbd25-6b1c-4e21-9ade-4584e243fd8f)  
   
-

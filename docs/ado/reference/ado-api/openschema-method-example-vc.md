@@ -3,7 +3,7 @@ title: "Пример метода OpenSchema (VC ++) | Документы Micros
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - OpenSchema method [ADO], VC++ example
 ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 017efa1dd3f4ef516511b9d90cfcf851b1895e86
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4b50dc1e18d2dabd9f06d9734fbaff183aff3504
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="openschema-method-example-vc"></a>Пример метода OpenSchema (VC ++)
 В этом примере используется [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) метод, чтобы отобразить имя и тип каждой таблицы в ***Pubs*** базы данных.  
@@ -201,6 +200,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод OpenSchema](../../../ado/reference/ado-api/openschema-method.md)
-

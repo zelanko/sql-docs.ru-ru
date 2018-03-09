@@ -2,35 +2,36 @@
 title: "Объект General Statistics (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:General Statistics
 - General Statistics object
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
-caps.latest.revision: 26
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "26"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e179c0523d8d406f9413f98a0a5a7acbc7e714a1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d9d3c24bb7875975221d3af721fe29d6dd3b0433
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server, объект General Statistics
-  Объект **SQLServer: общая статистика** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики, позволяющие наблюдать общую активность сервера, например количество одновременных соединений и количество пользователей в секунду, подключающихся или отключающихся от компьютера, где запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эти показатели полезно использовать в больших системах оперативной обработки транзакций (OLTP), где большое количество клиентов постоянно подключаются и отключаются от экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект **SQLServer:General Statistics** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики, позволяющие наблюдать общую активность сервера, например количество одновременных соединений и количество пользователей в секунду, подключающихся или отключающихся от компьютера, где запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эти показатели полезно использовать в больших системах оперативной обработки транзакций (OLTP), где большое количество клиентов постоянно подключаются и отключаются от экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  В следующей таблице описаны счетчики объекта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **общая статистика** .  
   
-|Счетчики объекта общей статистики сервера SQL Server|Описание|  
+|Счетчики объекта общей статистики сервера SQL Server|Description|  
 |--------------------------------------------|-----------------|  
 |**Активных временных таблиц**|Количество используемых временных таблиц/табличных переменных.|  
 |**Число сбросов соединений в сек.**|Общее число входов в систему из пула соединений.|  
@@ -61,4 +62,3 @@ ms.lasthandoff: 06/22/2017
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

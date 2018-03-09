@@ -2,11 +2,13 @@
 title: "Извлечение приложения уровня данных из базы данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.suite: sql
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,20 +23,19 @@ helpviewer_keywords:
 - data-tier application [SQL Server], extract
 - wizard [DAC], extract
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
-caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "21"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: faeab1963609f5563f31e13b2ee965fdac8a43b8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 510eb23505fde879a82d3ded7282cabd410cacaf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="extract-a-dac-from-a-database"></a>Извлечение приложения уровня данных из базы данных
-  Извлечение пакета приложения уровня данных из существующей базы данных SQL Server можно с помощью **мастера извлечения приложения уровня данных** или скрипта Windows PowerShell. В результате извлечения будет создан файл пакета DAC, содержащий определения объектов базы данных и связанные элементы уровня экземпляра. Например, файл пакета DAC содержит все таблицы базы данных, хранимые процедуры, представления, пользователей и имена входа, сопоставленные с пользователями базы данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Извлечь пакет приложения уровня данных из существующей базы данных SQL Server можно с помощью **мастера извлечения приложения уровня данных** или скрипта Windows PowerShell. В результате извлечения будет создан файл пакета DAC, содержащий определения объектов базы данных и связанные элементы уровня экземпляра. Например, файл пакета DAC содержит все таблицы базы данных, хранимые процедуры, представления, пользователей и имена входа, сопоставленные с пользователями базы данных.  
   
  
 ## <a name="before-you-begin"></a>Перед началом  
@@ -43,7 +44,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="LimitationsRestrictions"></a> Ограничения  
  Приложение уровня данных может быть извлечено только из базы данных в [!INCLUDE[ssSDS](../../includes/sssds-md.md)], либо в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 4 (SP4) и более поздних версиях. Извлечь приложение уровня данных нельзя, если в базе данных имеются объекты, не поддерживаемые в приложении уровня данных, или содержащиеся пользователи. Дополнительные сведения о типах объектов, поддерживаемых в DAC, см. в разделе [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
-##  <a name="Permissions"></a> Разрешения  
+##  <a name="Permissions"></a> Permissions  
  Чтобы извлечь DAC, необходимы по крайней мере разрешение ALTER ANY LOGIN и разрешение VIEW DEFINITION на уровне базы данных, а также разрешения SELECT для представления каталога **sys.sql_expression_dependencies**. Извлечение DAC может выполняться членами предопределенной роли сервера securityadmin, которые также обладают правами предопределенной роли базы данных database_owner в базе данных, из которой извлекается DAC. Приложения уровня данных могут также извлекать члены предопределенной роли сервера sysadmin или встроенной учетной записи системного администратора SQL Server с именем **sa** .  
   
 ##  <a name="UsingDACExtractWizard"></a> Использование мастера извлечения приложения уровня данных  
@@ -166,8 +167,7 @@ $extractionunit.Description = $description
 $extractionunit.Extract($dacpacPath)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Приложения уровня данных](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   
-

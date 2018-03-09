@@ -3,7 +3,7 @@ title: "Примеры кода ADO в Microsoft JScript | Документы Mi
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - ADO code examples, JScript
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 40bbf8b39fb1da60418c43074926b5115e6e1448
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8b935c1d355817af0401c1088d366db4af29561f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Примеры кода ADO в Microsoft JScript
 Позволяет узнать, как использовать ADO методы, свойства и события при записи в JScript в следующих примерах кода.  
@@ -63,9 +62,8 @@ ms.lasthandoff: 09/09/2017
   
 -   [Фильтр и пример RecordCount свойства](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-jscript.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры кода ADO в Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [VBScript примеры кода ADO](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Примеры кода ADO в Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [Приложение г. Примеры ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
-
+ [Приложение Г. Образцы объектов ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

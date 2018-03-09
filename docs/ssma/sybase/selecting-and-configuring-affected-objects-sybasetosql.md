@@ -3,29 +3,29 @@ title: "Выбор и настройка затронутые объекты (Sy
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Tester Component,Affected Objects
+helpviewer_keywords: Tester Component,Affected Objects
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 102de8f523d91c34369ca84a4577e5978934349d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8e5f4fcb5af81da2b78520542e2b57bd66bc4fd1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Выбор и настройка затронутые объекты (SybaseToSQL)
 На этой странице можно выбрать таблицы и внешние ключи, изменения в которой следует сравнивать при SSMA проверяет результаты выполнения для объектов, выбранным в предыдущем шаге. Кроме того можно настроить параметры проверки.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/02/2017
   
 Если тест-инженер SSMA не может проверить любые из этих объектов, вы увидите ссылку с меткой **некоторые из выделенных объектов содержат ошибки** в дереве объектов. Щелкните эту ссылку для просмотра причины, почему не удается сравнить эти объекты и снимите флажок не тот объект.  
   
-## <a name="table"></a>Таблица  
+## <a name="table"></a>Table  
 Вкладка «таблица» содержит представление сетки выбранную таблицу. Сетка содержит следующие сведения о выбранной таблицы.  
   
 -   Имя столбца  
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/02/2017
   
 -   Правило  
   
--   По умолчанию  
+-   Default  
   
 -   Идентификатор  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="sql"></a>SQL  
 Вкладка «SQL» содержит «создание таблицы» SQL из выбранной таблицы.  
   
-## <a name="data"></a>Данные  
+## <a name="data"></a>data  
 Вкладка "данные" отображает данные в выбранную таблицу.  
   
 ## <a name="properties"></a>Свойства  
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/02/2017
   
 -   Создания или последнего изменения  
   
--   Имя объекта  
+-   Имени объекта  
   
 ## <a name="table-comparison-settings"></a>Параметры сравнения таблицы  
 Задать правила сравнения строк для таблицы на **сравнение таблиц** страницы. Можно внести следующие параметры.  
@@ -130,4 +130,3 @@ ms.lasthandoff: 08/02/2017
 [Выполнение тестовых случаев &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [Тестирование миграции объектов базы данных &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   
-

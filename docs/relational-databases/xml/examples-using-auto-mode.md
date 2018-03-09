@@ -2,9 +2,12 @@
 title: "Примеры: использование режима AUTO | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
-caps.latest.revision: 11
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd35722bc0392701813ad17877c19c8ef0583988
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: edb1a03183a36c6308b2b7d14253179ac52d9494
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="examples-using-auto-mode"></a>Примеры. Использование режима AUTO
-  В следующем примере иллюстрируется применение режима AUTO. Многие из этих запросов являются запросами к XML-документам с инструкциями по производству велосипедов, хранящимся в столбце Instructions таблицы ProductModel образца базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+В следующем примере иллюстрируется применение режима AUTO. Многие из этих запросов являются запросами к XML-документам с инструкциями по производству велосипедов, хранящимся в столбце Instructions таблицы ProductModel образца базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
 ## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Пример. Извлечение данных о заказчике, заказе и подробных сведений о заказе  
  Следующий запрос получает данные о заказчике, заказе и подробные данные о заказе определенного заказчика.  
@@ -208,7 +211,7 @@ FOR XML AUTO, BINARY BASE64;
   
  По умолчанию при использовании режима AUTO для получения двоичных данных вместо самих двоичных данных возвращается ссылка на относительный URL-адрес виртуального корня базы данных, на которой выполняется запрос. Это происходит, если аргумент BINARY BASE64 не задается.  
   
- Если режим AUTO возвращает ссылку на URL-адрес двоичных данных в базах данных, в которых не учитывается регистр, запрос выполняется, даже если задаваемое в запросе имя таблицы или столбца не соответствует имени таблицы или столбца в базе данных. Однако значение регистра, возвращаемое в ссылке, не будет согласованным. Например:  
+ Если режим AUTO возвращает ссылку на URL-адрес двоичных данных в базах данных, в которых не учитывается регистр, запрос выполняется, даже если задаваемое в запросе имя таблицы или столбца не соответствует имени таблицы или столбца в базе данных. Однако значение регистра, возвращаемое в ссылке, не будет согласованным. Пример:  
   
 ```  
 SELECT ProductPhotoID, ThumbnailPhoto  
@@ -278,4 +281,3 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
  [Использование режима AUTO совместно с FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)  
   
   
-

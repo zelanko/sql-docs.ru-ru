@@ -2,13 +2,13 @@
 title: "Работа с элементами, кортежами и наборами (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,20 +29,20 @@ helpviewer_keywords:
 - tuples
 - set functions [MDX]
 ms.assetid: b6ec2439-caef-46d3-9fd7-5f4526cee334
-caps.latest.revision: 41
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 6bfa28850b007de34937834d80c79fe81c58b7fc
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c5929d1c9d926005cd919d4e939e46c950723b64
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>Работа с элементами, кортежами и наборами (многомерные выражения)
-  Многомерные выражения предоставляют функции, возвращающие один или более элементов, кортежей или наборов, или действуют на элемент, кортеж или набор.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Многомерные выражения предоставляют функции, возвращающие один или более элементов, кортежей или наборов, или действуют на элемент, кортеж или набор.  
   
 ## <a name="member-functions"></a>Функции элементов  
  В языке многомерных выражений есть несколько функций для получения элементов из других многомерных сущностей, таких как измерения, уровни или кортежи. Например, функция [FirstChild](../../../mdx/firstchild-mdx.md) действует на элемент и возвращает элемент.  
@@ -83,10 +83,10 @@ ON COLUMNS
 FROM [Adventure Works]  
 ```  
   
- Дополнительные сведения о функциях кортежей см. в разделе [Справочник по функциям многомерных выражений (многомерные выражения)](../../../mdx/mdx-function-reference-mdx.md).  
+ Дополнительные сведения о функциях кортежей см. в разделе [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="set-functions"></a>Функции наборов  
- В языке многомерных выражений есть несколько функций, возвращающих наборы. Чтобы извлечь набор, не обязательно явно перечислять все кортежи в квадратных скобках. Дополнительные сведения о функциях элементов, возвращающих наборы, см. в разделе [Основные понятия многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Существует множество дополнительных функций над наборами.  
+ В языке многомерных выражений есть несколько функций, возвращающих наборы. Чтобы извлечь набор, не обязательно явно перечислять все кортежи в квадратных скобках. Дополнительные сведения о функциях элементов, возвращающих наборы, см. в разделе [Key Concepts in MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Существует множество дополнительных функций над наборами.  
   
  Оператор «двоеточие» (:) позволяет использовать естественный порядок элементов для создания набора. Например, набор, представленный в следующем примере, содержит четыре кортежа: с первого по четвертый квартал календарного 2002 г.  
   
@@ -112,16 +112,16 @@ FROM [Adventure Works]
   
  Оператор «двоеточие» (:) является инклюзивной функцией. Результирующий набор содержит элементы, указанные с обеих сторон оператора двоеточия.  
   
- Дополнительные сведения о функциях наборов см. в разделе [Справочник по функциям многомерных выражений (многомерные выражения)](../../../mdx/mdx-function-reference-mdx.md).  
+ Дополнительные сведения о функциях наборов см. в разделе [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="array-functions"></a>Функции массивов  
- Функции массивов обрабатывают набор и возвращают массив. Дополнительные сведения о функциях массивов см. в разделе [Справочник по функциям многомерных выражений (многомерные выражения)](../../../mdx/mdx-function-reference-mdx.md).  
+ Функции массивов обрабатывают набор и возвращают массив. Дополнительные сведения о функциях массивов см. в разделе [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="hierarchy-functions"></a>Функции иерархий  
- Функции иерархий возвращают иерархию, обрабатывая элемент, уровень, иерархию или строку. Дополнительные сведения о функциях иерархий см. в разделе [Справочник по функциям многомерных выражений (многомерные выражения)](../../../mdx/mdx-function-reference-mdx.md).  
+ Функции иерархий возвращают иерархию, обрабатывая элемент, уровень, иерархию или строку. Дополнительные сведения о функциях иерархий см. в разделе [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="level-functions"></a>Функции уровней  
- Функции уровней возвращают уровень, обрабатывая элемент, уровень или строку. Дополнительные сведения о функциях уровней см. в разделе [Справочник по функциям многомерных выражений (многомерные выражения)](../../../mdx/mdx-function-reference-mdx.md).  
+ Функции уровней возвращают уровень, обрабатывая элемент, уровень или строку. Дополнительные сведения о функциях уровней см. в разделе [MDX Function Reference &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="logical-functions"></a>Логические функции  
  Логическая функция обрабатывает многомерное выражение, возвращая информацию о кортежах, элементах или наборах в выражении. Например, функция [IsEmpty (многомерные выражения)](../../../mdx/isempty-mdx.md) оценивает, возвращает ли выражение значение пустой ячейки. Дополнительные сведения о логических функциях см. в разделе [Справочник по функциям многомерных выражений (многомерные выражения)](../../../mdx/mdx-function-reference-mdx.md).  
@@ -133,9 +133,8 @@ FROM [Adventure Works]
  Строковая функция обрабатывает многомерное выражение, возвращая строку. Например, функция [UniqueName (многомерные выражения)](../../../mdx/uniquename-mdx.md) возвращает строковое значение, включающее в себя уникальное имя измерения, иерархии, уровня или элемента. Дополнительные сведения о строковых функциях см. в разделе [Справочник по функциям многомерных выражений (многомерные выражения)](../../../mdx/mdx-function-reference-mdx.md).  
   
 ## <a name="see-also"></a>См. также  
- [Основные понятия многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Ключевые понятия многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Основные принципы запросов многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   
-

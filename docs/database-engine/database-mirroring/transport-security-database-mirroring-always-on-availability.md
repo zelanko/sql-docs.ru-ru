@@ -2,9 +2,12 @@
 title: "Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-high-availability
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - transport security
 - database mirroring [SQL Server], security
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
-caps.latest.revision: 59
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ff841106e99cd34bedd1d93e106fb04d452b411f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 367ed2873b0f1fff6dcd852d84b4c53104cb9696
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Защита транспорта подразумевает проверку подлинности и (необязательно) шифрование сообщений, которыми обмениваются базы данных. Для зеркального отображения базы данных и [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]проверка подлинности и шифрование настраиваются в конечной точке зеркального отображения базы данных. Базовые сведения о конечных точках зеркального отображения базы данных см. в разделе [Конечная точка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 08/02/2017
   
 -   Если экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняются как службы под разными учетными записями домена (одного и того же или доверенных доменов), вам нужно создать имя входа для каждой учетной записи в базе данных **master** на каждом экземпляре сервера, а затем предоставить этому имени входа разрешение CONNECT для конечной точки.  
   
--   Если экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняются как учетные записи сетевой службы, вам нужно создать в базе данных*master***\\***на каждом из остальных серверов имя входа для каждой учетной записи главного компьютера (*имя_домена **имя_компьютера$** ), а затем предоставить этому имени входа разрешение CONNECT для конечной точки. Это обусловлено тем, что экземпляр сервера, выполняемый под учетной записью Network Service, выполняет проверку подлинности с помощью учетной записи домена главного компьютера.  
+-   Если экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняются как учетные записи сетевой службы, вам нужно создать в базе данных**master** на каждом из остальных серверов имя входа для каждой учетной записи главного компьютера (*имя_домена***\\***имя_компьютера$*), а затем предоставить этому имени входа разрешение CONNECT для конечной точки. Это обусловлено тем, что экземпляр сервера, выполняемый под учетной записью Network Service, выполняет проверку подлинности с помощью учетной записи домена главного компьютера.  
   
 > [!NOTE]  
 >  Пример установки сеанса для зеркального отображения базы данных с помощью проверки подлинности Windows см. в разделе [Пример. Настройка зеркального отображения базы данных с помощью проверки подлинности Windows (язык Transact-SQL)](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
@@ -76,7 +78,7 @@ ms.lasthandoff: 08/02/2017
   
  При необходимости пользователь обладает возможностью управлять алгоритмом шифрования, который может быть использован конечной точкой, путем определения одного из следующих значений для параметра ALGORITHM в инструкции CREATE ENDPOINT или в инструкции ALTER ENDPOINT:  
   
-|Значение параметра ALGORITHM|Описание|  
+|Значение параметра ALGORITHM|Description|  
 |---------------------|-----------------|  
 |RC4|Указывает на то, что конечная точка должна использовать алгоритм RC4. Это значение по умолчанию.<br /><br /> **\*\* Предупреждение. \*\*** Алгоритм RC4 использовать не рекомендуется. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Вместо этого рекомендуется использовать алгоритм AES.|  
 |AES|Указывает на то, что конечная точка должна использовать алгоритм AES.|  
@@ -116,4 +118,3 @@ ms.lasthandoff: 08/02/2017
  [Поиск и устранение неисправностей конфигурации групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   
-

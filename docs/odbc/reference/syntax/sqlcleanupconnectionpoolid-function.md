@@ -3,26 +3,26 @@ title: "Функция SQLCleanupConnectionPoolID | Документы Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLCleanupConnectionPoolID function [ODBC]
+helpviewer_keywords: SQLCleanupConnectionPoolID function [ODBC]
 ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4131ad3555a0206f500b28fc8df7b16a0f4ee707
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 49d204d7d77ae39c6a7eb3c9d408f6d72bafcc91
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>Функция SQLCleanupConnectionPoolID
 **Соответствия**  
@@ -54,7 +54,7 @@ SQLRETURN  SQLCleanupConnectionPoolID (
   
  Приложение не может получить сообщение об ошибке, возвращаемую драйвером.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **SQLCleanupConnectionPoolID** можно вызвать в любое время, но диспетчер драйверов гарантирует, что ни один поток одновременно вызов **SQLGetPoolID** и ни один поток одновременно вызов  **SQLRateConnection** и **SQLPoolConnect** с маркером сведения соединения с этим идентификатором пула. Таким образом драйвер должен убедитесь, что эта функция является потокобезопасным.  
   
  Драйвер можно очистить ресурсы, связанные с идентификатором пула.  
@@ -66,5 +66,4 @@ SQLRETURN  SQLCleanupConnectionPoolID (
 ## <a name="see-also"></a>См. также:  
  [Разработка драйвера ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Организация пулов соединений с учетом драйвера](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
- [Разработка драйвера ODBC, поддерживающие пула соединений](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)
-
+ [Разработка драйвера ODBC с поддержкой пула подключений](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

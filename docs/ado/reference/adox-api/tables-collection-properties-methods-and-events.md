@@ -3,7 +3,7 @@ title: "Таблицы в коллекции свойства, методы и �
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Tables collection [ADOX], members
 ms.assetid: 98101a52-53a6-4287-a8d9-2a7c76c3e0b9
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 356ea7d747cbc18d2d5f6c1d58e9c4e88c75b03a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6432ccf66838640bf02021d188d5b62d07658e15
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="tables-collection-properties-methods-and-events"></a>Свойства коллекции таблиц, методы и события
 ## <a name="properties"></a>Свойства  
@@ -43,6 +42,5 @@ ms.lasthandoff: 09/09/2017
 ## <a name="events"></a>События  
  Нет.  
   
-## <a name="see-also"></a>См. также:  
- [Коллекция таблиц (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)
-
+## <a name="see-also"></a>См. также  
+ [Коллекция Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)

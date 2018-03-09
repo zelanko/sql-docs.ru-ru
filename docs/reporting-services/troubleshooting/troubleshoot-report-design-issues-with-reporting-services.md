@@ -1,27 +1,27 @@
 ---
-title: "Устранение проблем проектирования отчетов со службами Reporting Services | Документы Microsoft"
+title: "Устранение проблем с проектированием отчетов в Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 02/27/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
-caps.latest.revision: 5
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "5"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7646ed9709e6d293b3e72a0255efc2f3bc17eebf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1a4660fb6aaf21c418ecf19d9ef5953015eaa36e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Устранение проблем проектирования отчетов с помощью служб Reporting Services
 Проблемы проектирования отчетов могут возникать при создании макета отчета с помощью конструктора в приложении разработки отчетов. Этот раздел помогает устранять эти проблемы.   
@@ -60,13 +60,12 @@ ms.lasthandoff: 08/09/2017
   
 Чтобы сгруппировать вместе области данных или элементы отчета, поместите их в один родительский контейнер. Например, поместите диаграмму и таблицу в прямоугольный контейнер и выровняйте их верхние края так, чтобы они отображались рядом. Дополнительные сведения см. в статье [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>См. также  
-[Устранение неполадок при извлечении данных с помощью отчетов служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
+## <a name="see-also"></a>См. также:  
+[Устранение неполадок с извлечением данных с помощью отчетов служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Устранение неполадок, связанных с подписками и доставкой служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
   
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

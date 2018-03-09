@@ -2,11 +2,13 @@
 title: "Повторная инициализация подписки| Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +16,19 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], reinitializing
 - reinitializing subscriptions
 ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
-caps.latest.revision: 51
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c32d39141bc874bfe29c1be2a5ed40f04b5706c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "51"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 7c39a03ad202750975089bf9bb44b3a65ca29fc3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="reinitialize-subscriptions"></a>Повторная инициализация подписок
-  Повторная инициализация подписки влечет за собой применение нового моментального снимка одной или нескольких статей к одному или нескольким подписчикам: репликация транзакций и репликация моментальных снимков позволяют повторно инициализировать отдельные статьи; репликация слиянием требует, чтобы повторно были инициализированы все статьи. Узлы в одноранговой топологии репликации транзакций не могут быть инициализированы повторно. Если нужно убедиться в том, что узел имеет новую копию данных, восстановите резервную копию на этом узле. Повторная инициализация выполняется по одной из двух причин.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Повторная инициализация подписки влечет за собой применение нового моментального снимка одной или нескольких статей к одному или нескольким подписчикам: репликация транзакций и репликация моментальных снимков позволяют повторно инициализировать отдельные статьи; репликация слиянием требует, чтобы повторно были инициализированы все статьи. Узлы в одноранговой топологии репликации транзакций не могут быть инициализированы повторно. Если нужно убедиться в том, что узел имеет новую копию данных, восстановите резервную копию на этом узле. Повторная инициализация выполняется по одной из двух причин.  
   
 -   Подписка явно помечена для повторной инициализации.  
   
@@ -47,6 +49,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также:  
  [Инициализация подписки](../../relational-databases/replication/initialize-a-subscription.md)   
- [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
+ [Окончание срока действия и отключение подписки](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
   

@@ -3,8 +3,11 @@ title: "Запросы | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,21 +15,21 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5ff02a32-e8d3-479c-ae8b-07581e41f5f8
-caps.latest.revision: 8
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d84ba599666f474dbee06199088425a5ad3ed2e2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: dab62a8aae5a986bc54928208a258cab48d16247
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="queries"></a>Запросы
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Язык обработки данных DML представляет словарь, используемый для получения данных и работы с ними в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Эти инструкции предназначены для добавления данных, изменения данных, запроса данных и удаления данных из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Язык обработки данных (DML) — это словарь, используемый для получения и работы с данными в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и базы данных SQL. Наиболее работают также в хранилище данных SQL и PDW (просмотрите каждая отдельная инструкция подробные сведения). Эти инструкции предназначены для добавления данных, изменения данных, запроса данных и удаления данных из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>В этом разделе  
  В следующей таблице перечислены инструкции DML, используемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -54,4 +57,3 @@ ms.lasthandoff: 09/01/2017
 |[С общее_табличное_выражение &#40; Transact-SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)|DELETE, INSERT, MERGE, SELECT, UPDATE|  
   
   
-

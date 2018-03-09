@@ -1,31 +1,33 @@
 ---
-title: "Catalog.disable_worker_agent (база данных SSISDB) | Документы Microsoft"
+title: "catalog.disable_worker_agent (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3f19dc4c-a000-4318-8fe1-e80d56720e66
-caps.latest.revision: 3
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 8f4a8cd24278742ffb13d16791ce5f1f3a95f301
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: e24b479fbc6205a63efd86371a3ee4e3119b01ee
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogdisableworkeragent-ssisdb-database"></a>Catalog.disable_worker_agent (база данных SSISDB)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="catalogdisableworkeragent-ssisdb-database"></a>catalog.disable_worker_agent (база данных SSISDB)
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Отключить работника Out масштабирования для масштабирования Out Master работу с этим [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] каталога.
+Отключает рабочую роль Scale Out для мастера Scale Out, работающего с этим каталогом [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,10 +35,10 @@ ms.lasthandoff: 10/20/2017
 catalog.disable_worker_agent [@WorkerAgentId =] WorkerAgentId
 ```
 ## <a name="arguments"></a>Аргументы
-[@WorkerAgentId =] *WorkerAgentId* агента работника идентификатор из шкалы Out рабочих. *WorkerAgentId* — **uniqueidentifier**.
+[@WorkerAgentId =] *WorkerAgentId* Идентификатор агента рабочей роли для рабочей роли Scale Out. Параметр *WorkerAgentId* имеет тип **uniqueidentifier**.
 
 ## <a name="example"></a>Пример
-В этом примере отключается работника Out шкалы на неисправного.
+В этом примере рабочая роль Scale Out включается на компьютере A.
 
 ```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]
@@ -53,15 +55,14 @@ GO
  0 (успешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера 
+-   Членство в роли сервера **sysadmin** 
 
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения
-Если идентификатор работника агента не является допустимым, хранимая процедура возвращает ошибку.
-
+Если идентификатор агента рабочей роли недействителен, хранимая процедура возвращает ошибку.

@@ -1,29 +1,31 @@
 ---
-title: "Catalog.object_parameters (база данных SSISDB) | Документы Microsoft"
+title: "catalog.object_parameters (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-views
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
-caps.latest.revision: 18
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9d538e5b55ef4e8880afb2d008b11c17d9a03189
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c154da24447377cb9f2602a46a116364336e1c1e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogobjectparameters-ssisdb-database"></a>catalog.object_parameters (база данных SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Отображает параметры для всех пакетов и проектов в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -40,22 +42,21 @@ ms.lasthandoff: 09/26/2017
 |description|**nvarchar(1024)**|Необязательное описание пакета.|  
 |design_default_value|**sql_variant**|Стандартное значение параметра, назначенное во время проектирования проекта или пакета.|  
 |default_value|**sql_variant**|Значение по умолчанию, используемое сервером в настоящий момент.|  
-|value_type|**char(1)**|Указывает тип значения параметра. В этом поле отображается `V` при parameter_value представляет собой литеральное значение и `R` при назначении значения с помощью ссылки на переменную среды.|  
+|value_type|**char(1)**|Указывает тип значения параметра. Поле отображает `V`, если parameter_value имеет символьное значение, и `R`, если значение приписывается посредством ссылки на переменную среды.|  
 |value_set|**bit**|Если значение равно `1`, то значение параметра было назначено. Если значение равно `0`, то значение параметра не было назначено.|  
-|referenced_variable_name|**nvarchar(128)**|Имя переменной среды, назначенное значению параметра. Значение по умолчанию — **NULL**.|  
+|referenced_variable_name|**nvarchar(128)**|Имя переменной среды, назначенное значению параметра. Значение по умолчанию — **NULL**.|  
 |validation_status|**char(1)**|Указано только в ознакомительных целях. Не используется в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|last_validation_time|**DateTimeOffset(7)**|Указано только в ознакомительных целях. Не используется в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|last_validation_time|**datetimeoffset(7)**|Указано только в ознакомительных целях. Не используется в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для просмотра строк в этом представлении необходимо иметь одно из следующих разрешений:  
   
 -   Разрешение READ на проект  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера.  
+-   Членство в роли сервера **sysadmin**.  
   
  Действует защита на уровне строки. Отображаются только строки, на которые у вас имеется разрешение.  
   
   
-

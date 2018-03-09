@@ -3,7 +3,7 @@ title: "Сценарии служб удаленных рабочих СТОЛО
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 05bd95fc39fe21b5df9edfaa876a69d5935de9b2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 920df727d2714629a45280133c53011afccc5c4d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-scenario"></a>Сценарии служб удаленных рабочих СТОЛОВ
 > [!IMPORTANT]
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/09/2017
   
  Этот сценарий предполагает, что вы знаете, как использовать основные теги разметки HTML, методы привязки данных используйте DHTML и программы с элементами управления ActiveX.  
   
- После установки пакета SDK в каталоге SDK на samples\dataaccess\rds\AddressBook\AddressBook.asp можно найти полный исходный код для примера приложения адресной книги. Чтобы просмотреть сценарий адресную книгу, введите в Internet Explorer 4.0 или более поздней версии,  **http://*веб-сервере*/RDS/AddressBook/AddressBook.asp** где *веб-сервере* имя присвоенное Windows NT 4.0 или Windows 2000, веб-сервере, на котором работает сервер Internet Information Services (IIS) и ASP.  
+ После установки пакета SDK в каталоге SDK на samples\dataaccess\rds\AddressBook\AddressBook.asp можно найти полный исходный код для примера приложения адресной книги. Чтобы просмотреть сценарий адресную книгу, введите в Internet Explorer 4.0 или более поздней версии, **http://*веб-сервере*/RDS/AddressBook/AddressBook.asp** где *веб-сервер* имеет имя, заданное Windows NT 4.0 или Windows 2000, веб-сервере под управлением служб Internet Information Services (IIS) и ASP.  
   
 ## <a name="introduction-to-address-book"></a>Введение в адресную книгу  
  Образец приложения адресная книга предоставляет простой online адресной книги, можно использовать для публикации каталога с возможностью поиска через интрасеть. Адресная книга разработан таким образом, пользователь может вводить строку поиска в одно или несколько полей для запроса сведений о сотрудниках. Чтобы показать основные возможности удаленной службы данных, пример приложения намеренно хранится на небольшой минимальное число объектов и полей.  
@@ -69,11 +68,10 @@ ms.lasthandoff: 09/09/2017
   
 -   [Кнопки навигации адресной книги](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Требования к системе для применение адресной книги](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)   
  [Объекты данных Microsoft ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Принципы работы служб удаленных рабочих СТОЛОВ](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [Учебник по RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
 
 

@@ -2,12 +2,13 @@
 title: "Технический справочник по алгоритму линейной регрессии Майкрософт | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +16,20 @@ helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
-caps.latest.revision: 25
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2ad96596830cc3bb091a7f57639c0a7d0d84dd9c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ed842a83a00412da1fce19e7519049d4171baf21
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Технический справочник по алгоритму линейной регрессии (Майкрософт)
-  Алгоритм линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] — это частный случай алгоритма дерева принятия решений (Майкрософт), оптимизированный для моделирования пар непрерывных атрибутов. В данном разделе описывается реализация алгоритма и настройка его поведения. Приводятся также ссылки на дополнительную информацию о запросах к моделям.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Алгоритм линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] — это частный случай алгоритма дерева принятия решений (Майкрософт), оптимизированный для моделирования пар непрерывных атрибутов. В данном разделе описывается реализация алгоритма и настройка его поведения. Приводятся также ссылки на дополнительную информацию о запросах к моделям.  
   
 ## <a name="implementation-of-the-linear-regression-algorithm"></a>Реализация алгоритма линейной регрессии (Майкрософт)  
  Алгоритм дерева принятия решений Майкрософт можно использовать во многих задачах, таких как линейная регрессия, классификация или анализ взаимосвязей. Для реализации этого алгоритма с целью изучения линейной регрессии параметры алгоритма настраиваются так, чтобы контролировать рост дерева и держать все данные модели в едином узле. Иными словами, несмотря на то, что алгоритм линейной регрессии основан на дереве принятия решений, это дерево содержит только один корень и не имеет ветвей: все данные содержатся в корневом узле.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 ### <a name="setting-algorithm-parameters"></a>Задание параметров алгоритма  
  В следующей таблице описываются параметры, которые можно использовать с алгоритмом линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] :  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |*MAXIMUM_INPUT_ATTRIBUTES*|Определяет количество входных атрибутов, которые алгоритм может обработать перед вызовом выбора компонентов. Установите значение 0, чтобы отключить выбор компонентов.<br /><br /> Значение по умолчанию — 255.|  
 |*MAXIMUM_OUTPUT_ATTRIBUTES*|Определяет количество выходных атрибутов, которые алгоритм может обработать перед вызовом выбора компонентов. Установите значение 0, чтобы отключить выбор компонентов.<br /><br /> Значение по умолчанию — 255.|  
@@ -88,12 +89,11 @@ ms.lasthandoff: 09/01/2017
 |Прогнозируемый атрибут|Continuous, Cyclical и Ordered|  
   
 > [!NOTE]  
->  Типы содержимого**Cyclical** и **Ordered** content types are supported, but the algorithm treats them as discrete values и does not perform special processing.  
+>  Типы содержимого**Cyclical** и **Ordered** поддерживаются, но алгоритм обрабатывает их как дискретные величины и не производит их особой обработки.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритм линейной регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
+ [Алгоритм линейной регрессии Майкрософт](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Примеры запросов модели линейной регрессии](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Содержимое моделей интеллектуального анализа данных для моделей линейной регрессии (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Содержимое модели интеллектуального анализа данных для модели линейной регрессии &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   
-

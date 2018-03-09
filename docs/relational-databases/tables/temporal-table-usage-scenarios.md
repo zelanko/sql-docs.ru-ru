@@ -1,30 +1,30 @@
 ---
 title: "Сценарии использования темпоральных таблиц | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0dc0b52ee5b62ceba53c1a092f67e7b0983c833e
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
-ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
-ms.openlocfilehash: 007b40b36317a67c6b9714b89aac0d3324312f30
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="temporal-table-usage-scenarios"></a>Сценарии использования темпоральных таблиц
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Темпоральные таблицы обычно используются в сценариях, в которых требуется отслеживание журнала изменений данных.    
 Мы рекомендуем использовать темпоральные таблицы в следующих случаях, поскольку они дают существенный выигрыш в производительности:  
@@ -368,7 +368,7 @@ JOIN vw_ProductInventoryDetails FOR SYSTEM_TIME AS OF @monthAgo AS inventoryMont
     ON inventoryDayAgo.ProductId = inventoryMonthAgo.ProductId AND inventoryDayAgo.LocationId = inventoryMonthAgo.LocationID;  
 ```  
   
-## <a name="anomaly-detection"></a>обнаружение аномалий;  
+## <a name="anomaly-detection"></a>Обнаружение аномалий  
  Обнаружение аномалий (или обнаружение выбросов) представляет собой выявление элементов, которые не соответствуют ожидаемому шаблону или другим элементам в наборе данных.   
 Для обнаружения аномалий, возникающих периодически или нерегулярно, можно использовать темпоральные таблицы с системным управлением версиями, поскольку вы можете быстро находить определенные шаблоны с помощью темпоральных запросов.  
 Вид аномалии зависит от собираемого типа данных и бизнес-логики.  
@@ -545,7 +545,7 @@ UPDATE Employee
   
 ```  
   
- Эта хранимая процедура принимает входные параметры @EmployeeID и @versionNumber . По умолчанию эта процедура восстанавливает состояние строки из журнала до последней версии (@versionNumber = 1).  
+ Эта хранимая процедура принимает входные параметры @EmployeeID и @versionNumber. По умолчанию эта процедура восстанавливает состояние строки из журнала до последней версии (@versionNumber = 1).  
   
  На следующем рисунке показано состояние строки до и после вызова процедуры. Красный прямоугольник отмечает текущую, неправильную версию строки, а зеленый прямоугольник отмечает правильную версию из журнала.  
   
@@ -596,4 +596,3 @@ UPDATE Employee
  [Представления и функции метаданных для временной таблицы](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

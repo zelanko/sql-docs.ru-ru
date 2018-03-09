@@ -2,11 +2,13 @@
 title: "Инструкция CREATE SET (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,26 +16,24 @@ f1_keywords:
 - CREATE SET
 - CREATE_SET
 - CREATE
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - named sets [MDX]
 - CREATE SET statement
 ms.assetid: eff51eeb-5e7e-4706-b861-c57b6f3f89f0
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: c709890d1c9e9ff3b1e6351fc4b62e067e12a864
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 12462e2b5a81c34e53332fa9749d698fecca36a8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---create-set"></a>Определения данных многомерных Выражений — создать ЗАДАНО
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Создает именованный набор с областью сеанса для текущего куба.  
   
@@ -63,7 +63,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  *Property_Value*  
  Допустимое скалярное выражение, представляющее значение набора свойств.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Именованный набор — это набор элементов измерения (или выражение, задающее набор), создаваемый для многократного использования. Например, в именованном наборе можно определить набор элементов измерения, состоящий из набора из десяти магазинов с самыми высокими объемами продаж. Этот набор можно определить статически или с помощью такой функции, как [TopCount](../mdx/topcount-mdx.md). Затем этот именованный набор можно использовать в любой момент, когда требуется получить набор из 10 магазинов с самыми высокими объемами продаж.  
   
  Инструкция CREATE SET создает именованный набор, доступный в течение сеанса, к которому, следовательно, можно обращаться в нескольких запросах в сеансе. Дополнительные сведения см. в разделе [Creating Session-Scoped вычисляемые элементы &#40; Многомерные Выражения &#41; ](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
@@ -121,4 +121,3 @@ SELECT [Core Products] ON 0
  [Инструкции определения данных &#40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
-

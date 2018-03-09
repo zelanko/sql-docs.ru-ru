@@ -3,7 +3,7 @@ title: "Что такое курсора | Документы Майкрософ
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - cursors [ADO], about cursors
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e467c01afe9ebdb53d5d66e4c939205a97ca4be7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 03b7d4fe16a379e04fe25fe8fef95802aedabe1d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="what-is-a-cursor"></a>Что такое курсора
 Операции в реляционной базе данных выполняются над множеством строк. Набор строк, возвращаемый инструкцией SELECT, содержит все строки, которые удовлетворяют условиям, указанным в предложении WHERE инструкции. Такой полный набор строк, возвращаемых инструкцией, называется результирующим набором. Приложения, особенно интерактивные и сети, не всегда эффективно работают с результирующим набором как единое целое. Им нужен механизм, позволяющий обрабатывать одну строку или небольшое их число за один раз. Курсоры являются расширением результирующих наборов, которые предоставляют такой механизм.  
@@ -80,4 +79,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="scrollability"></a>Прокручиваемость  
  Тип курсора, используемые вашим приложением, также влияет на возможность перемещаться вперед и назад по строкам в результирующем наборе; Это иногда называется прокручивание. Возможность перемещаться вперед *и* назад по результирующий набор курсора усложняет и поэтому более высокая стоимость реализации. По этой причине необходимо обратиться в курсоре эта функциональная возможность только при необходимости.
-

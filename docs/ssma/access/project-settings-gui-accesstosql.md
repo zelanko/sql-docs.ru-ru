@@ -1,29 +1,30 @@
 ---
 title: "Параметры (GUI) (AccessToSQL) проекта | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: e0f611ac-7b67-4245-8d1c-804c1c44c935
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eb8a538b22a1623b2b54bec8cf339ba8be365fc0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d27eafc855c33e8e323a74f5a045df0c18dc2c43
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-gui-accesstosql"></a>Параметры проекта (GUI) (AccessToSQL)
 Параметры проекта графического пользовательского интерфейса позволяют настроить способ отображения данных на **данные** вкладку и, если для включения данных отчетов с отчетами оценки.  
@@ -50,4 +51,3 @@ ms.lasthandoff: 08/02/2017
   
 **По умолчанию**: False  
   
-

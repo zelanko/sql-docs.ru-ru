@@ -1,11 +1,14 @@
 ---
-title: "Какой &#39; новые возможности служб Integration Services в SQL Server 2016 | Документы Microsoft"
+title: "Новые возможности служб Integration Services в SQL Server 2016 | Документы Майкрософт"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 09/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,34 +17,33 @@ helpviewer_keywords:
 - Integration Services, what's new
 - what's new [Integration Services]
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
-caps.latest.revision: 183
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
-ms.openlocfilehash: 084c6eeaf3b83df5435092f3fc424fb9c86ea446
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/29/2017
-
+ms.openlocfilehash: 0d684f94dcd18d45c1a8b860b80d20ab07f64529
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Какой &#39; новые возможности служб Integration Services в SQL Server 2016
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+# <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Новые возможности служб Integration Services в SQL Server 2016
+[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-В этом разделе описаны функции, которые были добавлены или обновлены в SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Он также включает компоненты добавленных или обновленных в [пакет дополнительных компонентов Azure для служб Integration Services &#40; Службы SSIS &#41; ](../integration-services/azure-feature-pack-for-integration-services-ssis.md) за промежуток времени SQL Server 2016.  
+В этой статье описаны функции, которые были добавлены или обновлены в SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. К ним также относятся функции, добавленные или обновленные в [пакете дополнительных компонентов Azure для служб Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) в течение жизненного цикла SQL Server 2016.  
 
-## <a name="new-for-ssis-in-azure-data-factory"></a>Новые возможности для служб SSIS в фабрике данных Azure
+## <a name="new-for-ssis-in-azure-data-factory"></a>Новые возможности служб SSIS в фабрике данных Azure
 
-В общедоступной предварительной версии фабрики данных Azure версии 2 в сентябре 2017 г. Теперь можно выполнять следующие действия:
--   Развертывание пакетов на базу данных каталога служб SSIS (SSISDB) в базе данных SQL Azure.
--   Запускайте пакеты развертывания в Azure на среду выполнения служб SSIS Azure интеграции компонента фабрики данных Azure версии 2.
+В общедоступной предварительной версии 2 фабрики данных Azure, выпущенной в сентябре 2017 г., теперь можно выполнять следующие действия:
+-   развертывать пакеты в базе данных каталога служб SSIS (SSISDB) в базе данных SQL Azure;
+-   запускать пакеты, развернутые в Azure, в Azure-SSIS Integration Runtime, компоненте фабрики данных Azure версии 2.
 
-Дополнительные сведения см. в разделе [усилие SQL Server Integration Services рабочих нагрузок в облако](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+Дополнительные сведения см. в разделе [Перенос рабочих нагрузок SQL Server Integration Services в облако](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
-Эти новые возможности SQL Server Data Tools (SSDT) 17,2 или более поздней версии требуется, но не требуют 2017 г. SQL Server или SQL Server 2016. При развертывании пакетов в Azure, мастер развертывания пакетов всегда обновляет пакеты в формате последней версии пакета.
+Для этих новых возможностей требуются средства SQL Server Data Tools (SSDT) версии 17.2 или более поздней, но не требуется SQL Server 2017 или SQL Server 2016. При развертывании пакетов в Azure мастер развертывания пакетов всегда обновляет их до новейшего формата.
 
-## <a name="2016-improvements-by-category"></a>Усовершенствования 2016 по категориям  
+## <a name="2016-improvements-by-category"></a>Усовершенствования в версии 2016 по категориям  
   
 -   **Управляемость**  
   
@@ -160,16 +162,16 @@ ms.lasthandoff: 09/29/2017
   
 -   База данных восстановлена из более старой версии SQL Server.  
   
--   База данных не была удалена из группы доступности AlwaysOn перед обновлением экземпляра SQL Server. Это препятствует автоматическому обновлению базы данных. Дополнительные сведения см. в разделе [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade).  
+-   База данных не была удалена из группы доступности AlwaysOn перед обновлением экземпляра SQL Server. Это препятствует автоматическому обновлению базы данных. Дополнительные сведения см. в разделе [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade).  
   
- Дополнительные сведения см. в разделе [каталога служб SSIS &#40; SSISDB &#41; ](../integration-services/service/ssis-catalog.md). 
+ Дополнительные сведения см. в разделе [Каталог служб SSIS &#40;SSISDB&#41;](../integration-services/catalog/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> Поддержка Always On в каталоге служб SSIS  
  Группы доступности AlwaysOn — это решение для высокой доступности и аварийного восстановления, являющееся альтернативой зеркальному отображению баз данных на уровне предприятия. Группа доступности поддерживает среду отработки отказа для дискретного набора пользовательских баз данных, известных как базы данных доступности, которые выполняют отработку отказа совместно. Дополнительные сведения см. в статье [Группы доступности AlwaysOn](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
- В SQL Server 2016 SSIS предоставляют новые возможности, обеспечивающие легкое развертывание в централизованном каталоге служб SSIS (т. е. пользователь база данных SSISDB). Чтобы обеспечить высокую доступность для базы данных SSISDB и ее содержимого (проектов, пакетов, журналов выполнения и т. п.), можно добавить ее в группу доступности Always On, как и любую другую пользовательскую базу данных. В случае сбоя один из вторичных узлов автоматически становится новым основным узлом.  
+ В SQL Server 2016 службы SSIS предоставляют новые возможности, позволяющие легко производить развертывание в централизованном каталоге служб SSIS (например, в пользовательской базе данных SSISDB). Чтобы обеспечить высокую доступность для базы данных SSISDB и ее содержимого (проектов, пакетов, журналов выполнения и т. п.), можно добавить ее в группу доступности Always On, как и любую другую пользовательскую базу данных. В случае сбоя один из вторичных узлов автоматически становится новым основным узлом.  
   
- Подробные сведения и пошаговые инструкции по включению Always On для SSISDB см. в разделе [каталога служб SSIS](../integration-services/service/ssis-catalog.md).  
+ Подробное описание и пошаговые инструкции по включению AlwaysOn для SSISDB см. в статье [Каталог служб SSIS](../integration-services/catalog/ssis-catalog.md).  
 
 ####  <a name="IncrementalDeployment"></a> Добавочное развертывание пакетов  
 Функция добавочного развертывания пакетов позволяет развертывать один или несколько пакетов в существующем или новом проекте без развертывания всего проекта. Для этого можно использовать следующие средства:  
@@ -184,7 +186,7 @@ ms.lasthandoff: 09/29/2017
   
 -   API объектной модели управления (MOM)  
   
- Дополнительные сведения см. в разделе [развертывания Integration Services (SSIS) проектов и пакетов] (.. / integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
+ Дополнительные сведения см. в разделе [Развертывание проектов и пакетов служб Integration Services (SSIS)](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
 
 ####  <a name="encrypted"></a> Поддержка Always Encrypted в каталоге служб SSIS  
  Службы SSIS уже поддерживают функцию постоянного шифрования в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в следующих записях блога:  
@@ -204,12 +206,12 @@ ms.lasthandoff: 09/29/2017
  Новый уровень ведения журнала **RuntimeLineage** в каталоге служб SSIS собирает данные, необходимые для отслеживания сведений о журнале преобразований в потоке данных. Вы можете проанализировать эти сведения журнала преобразований, чтобы сопоставить отношение преобразований между задачами. С помощью этой информации независимые поставщики программного обеспечения и разработчики могут создавать пользовательские средства сопоставления для журнала преобразований. 
 
 ####  <a name="CustomLogging"></a> Новый настраиваемый уровень ведения журнала в каталоге служб SSIS  
- Предыдущие версии каталога служб SSIS позволяют выбрать один из четырех встроенных уровней ведения журнала при выполнении пакета: **None, Basic, Performance или Verbose**. SQL Server 2016 добавляет **RuntimeLineage** уровень ведения журнала. Кроме того, теперь можно создавать и сохранять несколько настроенных уровней ведения журнала в каталоге служб SSIS, а также выбрать уровень, используемый при каждом запуске пакета. Для каждого настроенного уровня ведения журнала можно выбрать те статистические данные и события, которые необходимо регистрировать. При необходимости укажите контекст событий для просмотра значений переменных, строк подключения и свойств задачи. Дополнительные сведения см. в разделе [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
+ Предыдущие версии каталога служб SSIS позволяют выбрать один из четырех встроенных уровней ведения журнала при выполнении пакета: **None, Basic, Performance или Verbose**. В SQL Server 2016 добавлен уровень **RuntimeLineage**. Кроме того, теперь можно создавать и сохранять несколько настроенных уровней ведения журнала в каталоге служб SSIS, а также выбрать уровень, используемый при каждом запуске пакета. Для каждого настроенного уровня ведения журнала можно выбрать те статистические данные и события, которые необходимо регистрировать. При необходимости укажите контекст событий для просмотра значений переменных, строк подключения и свойств задачи. Дополнительные сведения см. в разделе [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
 
 ####  <a name="ErrorColumn"></a> Имена столбцов для ошибок в потоке данных  
  Когда перенаправления строк в потоке данных, содержащих ошибки в вывод ошибок, результат содержит числовой идентификатор столбца, в котором произошла ошибка, но не отображает имя столбца. Теперь существует несколько способов для поиска или отображения имени столбца, где произошла ошибка.  
   
--   При настройке ведения журнала выберите событие **DiagnosticEx** для регистрации. Это событие записывает карту столбцов потока данных в журнал. Потом вы сможете найти имя столбца в этой карте столбцов с помощью идентификатора столбца, записанного в выводе ошибок. Дополнительные сведения см. в разделе [Error Handling in Data](../integration-services/data-flow/error-handling-in-data.md).  
+-   При настройке ведения журнала выберите событие **DiagnosticEx** для регистрации. Это событие записывает карту столбцов потока данных в журнал. Потом вы сможете найти имя столбца в этой карте столбцов с помощью идентификатора столбца, записанного в выводе ошибок. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../integration-services/data-flow/error-handling-in-data.md).  
   
 -   При просмотре свойств входного или выходного столбца для компонента потока данных в расширенном редакторе отображается имя восходящего столбца.  
   
@@ -259,7 +261,7 @@ ms.lasthandoff: 09/29/2017
 ####  <a name="ODatav4"></a> Поддержка источников данных OData версии 4  
  Источник OData и диспетчер подключений OData теперь поддерживают протоколы OData версии&3; и&4;.  
   
--   Для протокола OData версии&3; компонент поддерживает форматы данных ATOM и JSON.  
+-   Для протокола OData версии 3 компонент поддерживает форматы данных ATOM и JSON.  
   
 -   Для протокола OData версии&4; компонент поддерживает формат данных JSON.  
   
@@ -300,7 +302,7 @@ ms.lasthandoff: 09/29/2017
 ### <a name="expanded-connectivity-to-the-cloud"></a>Расширенные возможности связи в облаке
 
 ####  <a name="AFP2016"></a> выпуск пакета дополнительных компонентов Azure для служб SSIS для SQL Server 2016  
- Пакет дополнительных компонентов Azure для служб Integration Services для SQL Server 2016 был освобожден. Он содержит диспетчеры подключений для соединения с источниками данных Azure, а также задачи для выполнения общих операций Azure. Дополнительные сведения см. в статье [Пакет дополнительных компонентов Azure для служб Integration Services (SSIS)](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
+ Состоялся выпуск пакета дополнительных компонентов Azure для служб Integration Services для SQL Server 2016. Он содержит диспетчеры подключений для соединения с источниками данных Azure, а также задачи для выполнения общих операций Azure. Дополнительные сведения см. в статье [Пакет дополнительных компонентов Azure для служб Integration Services (SSIS)](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
 
 #### <a name="dynamics"></a> Поддержка ресурсов Microsoft Dynamics Online в пакете обновления 1 (SP1)
 
@@ -319,7 +321,7 @@ ms.lasthandoff: 09/29/2017
 ### <a name="better-install-experience"></a>Улучшенная процедура установки
 
 ####  <a name="Upgrade"></a> Блокировка обновления, когда база данных SSISDB относится к группе доступности  
- Если база данных каталога служб SSIS (SSISDB) относится к группе доступности AlwaysOn, необходимо удалить SSISDB из группы доступности обновить SQL Server, а затем добавить SSISDB обратно в группу. Дополнительные сведения см. в разделе [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade).  
+ Если база данных каталога служб SSIS (SSISDB) относится к группе доступности AlwaysOn, необходимо удалить SSISDB из группы доступности обновить SQL Server, а затем добавить SSISDB обратно в группу. Дополнительные сведения см. в разделе [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade).  
 
 ### <a name="better-design-experience"></a>Улучшенная процедура разработки
 
@@ -328,7 +330,7 @@ ms.lasthandoff: 09/29/2017
 
  В обозревателе решений щелкните правой кнопкой мыши проект служб Integration Services и выберите пункт **Свойства** , чтобы открыть страницу свойств проекта. На вкладке **Общие** окна **Свойства конфигурации**выберите свойство **TargetServerVersion** и затем SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
    
- ![Свойство TargetServerVersion, в диалоговом окне свойств проекта](../integration-services/media/targetserverversion2.png "свойство TargetServerVersion, в диалоговом окне свойств проекта")  
+ ![Свойство TargetServerVersion в диалоговом окне свойств проекта](../integration-services/media/targetserverversion2.png "Свойство TargetServerVersion в диалоговом окне свойств проекта")  
 
 >   [!IMPORTANT]
 > При разработке пользовательских расширений для служб SSIS см. разделы [Support multi-targeting in your custom components](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) (Поддержка нескольких версий в настраиваемых компонентах) и [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)(Получение пользовательских расширений служб SSIS, поддерживаемых несколькими версиями SSDT 2015 для SQL Server 2016).  
@@ -377,5 +379,4 @@ ms.lasthandoff: 09/29/2017
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 

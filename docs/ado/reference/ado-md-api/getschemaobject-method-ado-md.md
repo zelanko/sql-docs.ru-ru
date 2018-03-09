@@ -3,7 +3,7 @@ title: "Метод GetSchemaObject (ADO MD) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - GetSchemaObject method [ADO MD]
 ms.assetid: 36b754b4-6b17-4dd1-a925-bca46938b7c4
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 01142e27e03cd85dcdd59e92737ee46a3bb4cf09
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2f7dca37be4fdebaab7bb16f82086b01a90a3665
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getschemaobject-method-ado-md"></a>Метод GetSchemaObject (ADO MD)
 Извлекает объект схемы ADO MD ([измерения](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [иерархии](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md), или [член](../../../ado/reference/ado-md-api/member-object-ado-md.md)) по его [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md).  
@@ -48,12 +47,11 @@ Set object = CubeDef.GetSchemaObject (ObjType, UniqueName)
  *UniqueName*  
  Объект **строка** указание **UniqueName** значение свойства объекта для извлечения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **GetSchemaObject** получает объекты, используя свои уникальные имена в соответствии с **UniqueName** свойство. Имена родительских объектов не обязательно должны быть известны и родительские коллекции, не нужно заполнять для получения схемы объекта.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект CubeDef (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)  
+ [Объект CubeDef (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)  
   
-## <a name="see-also"></a>См. также:  
- [Объект CubeDef (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)
-
+## <a name="see-also"></a>См. также  
+ [Объект CubeDef (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)

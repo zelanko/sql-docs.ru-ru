@@ -2,13 +2,13 @@
 title: "Свойства ячеек (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - cell properties [MDX]
 - CELL PROPERTIES keyword
 ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
-caps.latest.revision: 36
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9e6094d7b88ef2c8da50ced24b49c89dc9658885
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d66dddc93eb3293ea79d306095aa21bf78f4ea58
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>Свойства ячеек MDX - свойства ячеек
-  Свойства ячеек в языке многомерных выражений содержат сведения о содержимом и формате ячеек многомерного источника данных, такого как куб.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Свойства ячеек в языке многомерных выражений содержат сведения о содержимом и формате ячеек многомерного источника данных, такого как куб.  
   
  В многомерных выражениях поддерживается ключевое слово CELL PROPERTIES инструкции многомерных выражений SELECT, которое служит для обращения к внутренним свойствам ячеек. Внутренние свойства ячеек чаще всего применяются для наглядного представления данных ячейки.  
   
@@ -54,17 +54,17 @@ SELECT [<axis_specification>
 ## <a name="supported-intrinsic-cell-properties"></a>Поддерживаемые внутренние свойства ячеек  
  В следующей таблице перечислены поддерживаемые внутренние свойства ячеек, используемые в качестве значений `<property>` .  
   
-|Свойство|Description|  
+|property|Описание|  
 |--------------|-----------------|  
 |**ACTION_TYPE**|Битовая маска, определяющая существующие типы действий над ячейкой. Это свойство может принимать одно из следующих значений:<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Примечание. Действия детализации не поддерживаются для запросов, содержащих набор в предложении WHERE.|  
-|**BACK_COLOR**|Цвет фона при отображении свойства **VALUE** или **FORMATTED_VALUE** . Дополнительные сведения см. в разделе [Свойства ячеек FORE_COLOR и BACK_COLOR (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).|  
+|**BACK_COLOR**|Цвет фона при отображении свойства **VALUE** или **FORMATTED_VALUE**. Дополнительные сведения см. в разделе [Свойства ячеек FORE_COLOR и BACK_COLOR (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).|  
 |**CELL_ORDINAL**|Порядковый номер ячейки в наборе данных.|  
 |**FONT_FLAGS**|Битовая маска, определяющая стиль шрифта. Значение представляет собой результат побитовой операции OR над одной или несколькими следующими константами.<br /><br /> **MDFF_BOLD** = 1<br /><br /> **MDFF_ITALIC** = 2<br /><br /> **MDFF_UNDERLINE** = 4<br /><br /> **MDFF_STRIKEOUT** = 8<br /><br /> <br /><br /> Например, значение 5 соответствует комбинации полужирного (**MDFF_BOLD**) и подчеркнутого (**MDFF_UNDERLINE**) стилей.|  
 |**FONT_NAME**|Название шрифта, используемого для отображения свойства **VALUE** или **FORMATTED_VALUE** .|  
 |**FONT_SIZE**|Размер шрифта, используемого для отображения свойства **VALUE** или **FORMATTED_VALUE** .|  
-|**FORE_COLOR**|Цвет переднего плана для отображения свойства **VALUE** или **FORMATTED_VALUE** . Дополнительные сведения см. в разделе [Свойства ячеек FORE_COLOR и BACK_COLOR (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).|  
+|**FORE_COLOR**|Цвет переднего плана для отображения свойства **VALUE** или **FORMATTED_VALUE**. Дополнительные сведения см. в разделе [Свойства ячеек FORE_COLOR и BACK_COLOR (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).|  
 |**FORMAT**|То же, что и **FORMAT_STRING**.|  
-|**FORMAT_STRING**|Строка формата, с помощью которой создается значение свойства **FORMATTED_VALUE** . Дополнительные сведения см. в разделе [Содержание строки FORMAT_STRING (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md).|  
+|**FORMAT_STRING**|Строка формата, с помощью которой создается значение свойства **FORMATTED_VALUE**. Дополнительные сведения см. в разделе [Содержание строки FORMAT_STRING (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md).|  
 |**FORMATTED_VALUE**|Символьная строка, представляющая собой форматированный вывод свойства **VALUE** .|  
 |**LANGUAGE**|Локаль, к которой будет применяться **FORMAT_STRING** . **LANGUAGE** обычно используется для конвертации валют.|  
 |**UPDATEABLE**|Значение, определяющее возможность обновления ячейки. Это свойство может принимать одно из следующих значений:|  
@@ -113,7 +113,6 @@ CELL PROPERTIES VALUE, FORMATTED_VALUE, FORE_COLOR, BACK_COLOR, FONT_SIZE
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Основные принципы запросов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Основные принципы запросов многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

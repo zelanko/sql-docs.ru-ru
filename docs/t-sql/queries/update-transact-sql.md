@@ -3,8 +3,11 @@ title: "UPDATE (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,20 +40,19 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: 91
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: c2a0a43aefe59bc11f16445b5ee0c781179a33fa
-ms.openlocfilehash: 42506702b06f57923d18e3986a29f8036d26d7eb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 227cafdd68eddac2ff6a515853f0fcded0c07f63
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Изменяет существующие данные в таблице или представлении в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Примеры см. в разделе [примеры](#UpdateExamples).  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 09/07/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [...n] ]  
@@ -124,7 +126,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  Обобщенные табличные выражения могут также использоваться с инструкциями SELECT, INSERT, DELETE и CREATE VIEW. Дополнительные сведения см. в разделе [с общее_табличное_выражение &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- Начало **(** *выражение***)** [%]  
+ Начало **(** *выражение ***)** [%]  
  Указывает количество или процент строк, которые обновляются. *expression* может быть либо числом, либо процентом от числа строк.  
   
  Строки, на которые ссылается выражение TOP, используемое с инструкциями INSERT, UPDATE и DELETE, не упорядочиваются.  
@@ -134,7 +136,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *table_alias*  
  Псевдоним, заданный в предложении FROM и представляющий таблицу или представление, строки которых будут обновлены.  
   
- *имя_сервера*  
+ *server_name*  
  Имя сервера (с использованием имени связанного сервера или [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) работать в качестве имени сервера) на котором расположена таблица или представление. Если *имя_сервера* указано, *имя_базы_данных* и *schema_name* являются обязательными.  
   
  *database_name*  
@@ -149,7 +151,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *rowset_function_limited*  
  Либо [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) или [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) функции, в зависимости от возможностей поставщика.  
   
- С **(** \<Table_Hint_Limited > **)**  
+ WITH **(** \<Table_Hint_Limited> **)**  
  Задает одно или несколько табличных указаний, разрешенных для целевой таблицы. Ключевое слово WITH и круглые скобки обязательны. Использование ключевых слов NOLOCK и READUNCOMMITTED запрещено. Сведения о табличных подсказках см. в разделе [табличные подсказки &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
   
  @*table_variable*  
@@ -174,7 +176,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  Составной оператор присваивания:  
  += Сложение и присваивание  
  -= Вычитание и присваивание  
- * = Умножение и присваивание  
+ *= Умножение и присваивание  
  / = Деление и присваивание  
  % = Остаток от деления и присваивание  
  & = выполнить побитовое и и присвоить  
@@ -184,13 +186,13 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *udt_column_name*  
  Столбец определяемого пользователем типа.  
   
- *property_name* | *имя_поля*  
+ *property_name* | *field_name*  
  Общедоступное свойство или общедоступный элемент данных определяемого пользоватлем типа.  
   
  *имя_метода* **(** *аргумент* [ **,**... *n*] **)**  
  Метод общего мутатора *udt_column_name* , принимающий один или несколько аргументов.  
   
- **.** Записи **(***выражение***,***@Offset***,** *@Length***)**  
+ **.** Записи **(***выражение***,***@Offset***,***@Length***)**  
  Указывает, что раздел значение *column_name* подлежит изменению. *выражение* заменяет  *@Length*  элементы, начиная с  *@Offset*  из *column_name*. Только столбцы **varchar(max)**, **nvarchar(max)**, или **varbinary(max)** можно указать с помощью этого предложения. *column_name* не может иметь значение NULL и не может быть дополнены именем таблицы или псевдонимом таблицы.  
   
  *выражение* является значением, которое копируется в *column_name*. *выражение* должен преобразовываться или может быть неявно приведен к *column_name* типа. Если *выражение* имеет значение NULL,  *@Length*  игнорируется, а значение в *column_name* усекается по указанному индексу  *@Offset* .  
@@ -204,9 +206,9 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  **@***переменной*  
  Объявленная переменная, которой присваивается значение, возвращаемое *выражение*.  
   
- ЗАДАТЬ  **@**  *переменной* = *столбца* = *выражение* задает переменную с тем же значение в виде столбца. Это отличается от НАБОРА  **@**  *переменной* = *столбца*, *столбца*  =  *выражение*, который присваивает переменной значение столбца перед обновлением.  
+ ЗАДАТЬ **@*** переменной* = *столбца* = *выражение* присваивает переменной то же значение, что и столбец. Это отличается от НАБОРА **@*** переменной* = *столбца*, *столбца* = *выражение*, который устанавливает переменная, значение столбца перед обновлением.  
   
- \<OUTPUT_Clause >  
+ \<OUTPUT_Clause>  
  Возвращает обновленные данные или основанные на них выражения в рамках выполнения операции UPDATE. Предложение OUTPUT не поддерживается ни в одной инструкции DML, целью которой являются удаленные таблицы или представления. Дополнительные сведения см. в разделе [предложение OUTPUT &#40; Transact-SQL &#41; ](../../t-sql/queries/output-clause-transact-sql.md).  
   
  ИЗ \<table_source >  
@@ -226,7 +228,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
 -   В позиционных обновлениях используется предложение CURRENT OF для указания курсора. Операция обновления выполняется в текущем положении курсора.  
   
-\<search_condition >  
+\<search_condition>  
  Задает условие, которому должны удовлетворять обновляемые строки. Условие поиска может также представлять собой условие, на котором основано соединение. Количество предикатов, которое может содержать условие поиска, не ограничено. Дополнительные сведения о предикатах и условиях поиска см. в разделе [условие поиска &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
   
 CURRENT OF  
@@ -334,7 +336,7 @@ GO
 >  **Ntext**, **текст**, и **изображения** типов данных будет удалена в будущей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следует избегать использования этих типов данных при новой разработке и запланировать изменение приложений, использующих их в настоящий момент. Вместо них следует использовать типы данных [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)и [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
   
 ### <a name="updating-large-value-data-types"></a>Обновление типов данных большого объема  
- Используйте **.** ЗАПИСЬ (*выражение***,**  *@Offset*  **,***@Length*) предложения выполнить частичное или полное обновление **varchar(max)**, **nvarchar(max)**, и **varbinary(max)** типов данных. Например, частичное обновление **varchar(max)** столбца может удалить или изменить только первые 200 символов столбца, тогда как полное обновление удалит или изменит все данные в столбце. **.** Записи, обновления, вставки или добавления новых данных регистрируются на минимальном уровне Если с неполным протоколированием или простая модель восстановления базы данных. Если обновляются существующие значения, ведение журнала не сокращается до минимума. Дополнительные сведения см. в статье [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ Используйте **.** ЗАПИСЬ (*выражение ***** *@Offset***,***@Length*) предложение для выполнения частичного или полного обновления  **varchar(max)**, **nvarchar(max)**, и **varbinary(max)** типов данных. Например, частичное обновление **varchar(max)** столбца может удалить или изменить только первые 200 символов столбца, тогда как полное обновление удалит или изменит все данные в столбце. **.** Записи, обновления, вставки или добавления новых данных регистрируются на минимальном уровне Если с неполным протоколированием или простая модель восстановления базы данных. Если обновляются существующие значения, ведение журнала не сокращается до минимума. Дополнительные сведения см. в разделе [Резервная копия журнала транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
  Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] преобразует частичное обновление в полное, если инструкция UPDATE приводит к одному из следующих действий.  
 -   Изменения ключевого столбца секционированного представления или таблицы.  
@@ -346,7 +348,7 @@ GO
   
 В целях увеличения производительности рекомендуется вставлять или обновлять данные фрагментами, кратными 8040 байтам.  
   
-Если столбец, изменяемый предложением **.** WRITE, ссылается предложение OUTPUT, полное значение данного столбца, либо исходный образ в **удалены.** *column_name* или в последующем образе **вставлен.** *column_name*, возвращается к указанному столбцу в табличной переменной. См. в следующем примере R.  
+Если столбец, изменяемый предложением **.** WRITE, ссылается предложение OUTPUT, полное значение данного столбца, либо исходный образ в **удалены. *** column_name* или в последующем образе **вставлен. *** column_name*, возвращается к указанному столбцу в табличной переменной. См. в следующем примере R.  
   
 Чтобы добиться функциональности предложения **.** ЗАПИСИ с других символьных или двоичных типов данных следует использовать [STUFF &#40; Transact-SQL &#41; ](../../t-sql/functions/stuff-transact-sql.md).  
   
@@ -466,7 +468,7 @@ ID     Value
   
 ## <a name="security"></a>безопасность  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Разрешения  
  Требуются разрешения на выполнение UPDATE в целевой таблице. Разрешения SELECT также необходимы для обновляемой таблицы, если инструкция UPDATE содержит предложение WHERE или *выражение* в НАБОРЕ предложение используется столбец в таблице.  
   
  ОБНОВИТЬ разрешения по умолчанию для членов **sysadmin** предопределенной роли сервера **db_owner** и **db_datawriter** фиксированной роли базы данных, а также владельцу таблицы. Члены **sysadmin**, **db_owner**, и **db_securityadmin** ролей, а также владелец таблицы могут передавать разрешения другим пользователям.  
@@ -920,7 +922,7 @@ SET Location = CONVERT(Point, '12.3:46.2')
 WHERE Name = 'Anchorage';  
 ```  
   
-#### <a name="w-invoking-a-method"></a>ВТ. Вызов метода  
+#### <a name="w-invoking-a-method"></a>W. Вызов метода  
  Определяемый пользователем тип можно обновить путем вызова метода, отмеченного в качестве мутатора определяемого пользователем типа, для выполнения обновления. Следующий пример вызывает метод мутатора типа `Point` с именем `SetXY`. Это обновляет состояние экземпляра типа.  
   
 ```sql  
@@ -1216,7 +1218,7 @@ DROP TABLE CTAS_acs
 ;
 ```
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Курсоры (Transact-SQL)](../../t-sql/language-elements/cursors-transact-sql.md)   
@@ -1224,7 +1226,6 @@ DROP TABLE CTAS_acs
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [Текст и изображения функции &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [С общее_табличное_выражение &#40; Transact-SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
- [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
+ [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)  
   
   
-

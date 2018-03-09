@@ -3,7 +3,7 @@ title: "Свойства коллекции свойств, методов и с
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Properties collection [ADO], members
 ms.assetid: 03dc1e08-5f03-49e5-8596-76b306b931bd
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4fa5fc21e43f2bdc231116c3498660f13693c7d4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c8bad9bc8d2d24ebf3a4cb42639c02995ed33e3f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="properties-collection-properties-methods-and-events"></a>Свойства коллекции свойств, методов и событий
 ## <a name="properties"></a>Свойства  
@@ -39,6 +38,5 @@ ms.lasthandoff: 09/09/2017
 ## <a name="events"></a>События  
  Нет.  
   
-## <a name="see-also"></a>См. также:  
- [Коллекция свойств (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+## <a name="see-also"></a>См. также  
+ [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

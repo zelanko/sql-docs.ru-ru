@@ -1,10 +1,13 @@
 ---
 title: "Настройка учетных записей службы Windows и разрешений | Документы Майкрософт"
 ms.custom: 
-ms.date: 08/24/2017
-ms.prod: sql-server-2016
+ms.date: 11/15/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -50,20 +53,19 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: 207
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: MikeRayMSFT
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 32412d70d3dcf52fb467c5c4854526feb2fafe9d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: 2fa9ca92039b8e26aecd78ca0f6c1bdc03f36d71
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Настройка учетных записей службы Windows и разрешений
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Материалы по предыдущим версиям SQL Server см. в статье [Настройка учетных записей службы Windows и разрешений](https://msdn.microsoft.com/en-US/library/ms143504(SQL.120).aspx).
 
 
@@ -78,9 +80,7 @@ ms.lasthandoff: 08/29/2017
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
- 
- 
-  
+
 ##  <a name="Service_Details"></a> Службы, устанавливаемые с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  В зависимости от компонентов, которые выбраны для установки, программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливает следующие службы.  
   
@@ -98,20 +98,24 @@ ms.lasthandoff: 08/29/2017
   
 -   **Полнотекстовый поиск** — быстро создает полнотекстовые индексы содержимого и свойства структурированных и полуструктурированных данных, чтобы обеспечить фильтрацию документа и разбиение по словам для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Модуль записи SQL** — служит для резервного копирования и восстановления приложений для работы в составе платформы служб теневого копирования томов (VSS).  
+-   **Модуль записи SQL** — служит для резервного копирования и восстановления приложений для работы в составе платформы служб теневого копирования томов (VSS).
   
 -   **Контроллер распределенного воспроизведения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — обеспечивает согласование воспроизведения трассировки по нескольким клиентским компьютерам распределенного воспроизведения.  
   
 -   **Клиент распределенного воспроизведения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — один или несколько клиентских компьютеров распределенного воспроизведения, работающих вместе с контроллером распределенного воспроизведения для имитации параллельных рабочих нагрузок на экземпляре [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
--   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]** — доверенная служба, в которой находятся внешние исполняемые файлы, предоставляемые корпорацией Майкрософт, такие как среда выполнения R, установленная как часть служб [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Вспомогательные процессы могут запускаться при работе панели запуска, однако они регулируются ресурсами в зависимости от конфигурации отдельного экземпляра. Служба панели запуска выполняется с использованием собственной учетной записи, и каждому вспомогательному процессу для конкретной зарегистрированной среды выполнения присваивается учетная запись пользователя панели запуска. Вспомогательные процессы создаются и удаляются по запросу во время выполнения.  
+-   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]** — доверенная служба, в которой находятся внешние исполняемые файлы, предоставляемые корпорацией Майкрософт, такие как среда выполнения R, установленная как часть служб [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Вспомогательные процессы могут запускаться при работе панели запуска, однако они регулируются ресурсами в зависимости от конфигурации отдельного экземпляра. Служба панели запуска выполняется с использованием собственной учетной записи, и каждому вспомогательному процессу для конкретной зарегистрированной среды выполнения присваивается учетная запись пользователя панели запуска. Вспомогательные процессы создаются и удаляются по запросу во время выполнения.
+
+    Панель запуска не может создавать используемые ею учетные записи, если вы установили SQL Server на компьютере, который используется в качестве контроллера домена. Таким образом, программа установки служб R Services (в базе данных) или служб машинного обучения (в базе данных) завершается сбоем на контроллере домена.
+
   
  - **SQL Server PolyBase Engine** — позволяет применять распределенные запросы к внешним источникам данных.
  
  - **Служба перемещения данных SQL Server Polybase** — позволяет перемешать данные между SQL Server и внешними источниками данных, а также между узлами SQL в группах горизонтального масштабирования PolyBase.
   
-##  <a name="Serv_Prop"></a> Свойства и настройка служб  
- В качестве стартовых учетных записей автоматического запуска, используемых для запуска и выполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , могут использоваться [учетные записи пользователей домена](#Domain_User), [учетные записи локальных пользователей](#Local_User), [управляемые учетные записи служб](#MSA), [виртуальные учетные записи](#VA_Desc)или [встроенные системные учетные записи](#Local_Service). Для запуска и выполнения каждая служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должна иметь стартовую учетную запись автоматического запуска, настраиваемую во время установки.  
+##  <a name="Serv_Prop"></a> Свойства и настройка служб
+
+В качестве стартовых учетных записей автоматического запуска, используемых для запуска и выполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , могут использоваться [учетные записи пользователей домена](#Domain_User), [учетные записи локальных пользователей](#Local_User), [управляемые учетные записи служб](#MSA), [виртуальные учетные записи](#VA_Desc)или [встроенные системные учетные записи](#Local_Service). Для запуска и выполнения каждая служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должна иметь стартовую учетную запись автоматического запуска, настраиваемую во время установки.
   
  В этом разделе описываются учетные записи, которые могут быть настроены для запуска служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , значения, используемые при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию, понятие удостоверений безопасности служб, параметры запуска и настройка брандмауэра.  
   
@@ -123,43 +127,44 @@ ms.lasthandoff: 08/29/2017
   
 -   [Порт брандмауэра](#Firewall)  
   
-###  <a name="Default_Accts"></a> Учетные записи служб по умолчанию  
- В следующей таблице перечислены учетные записи служб по умолчанию, используемые программой установки при установке всех компонентов. Перечисленные учетные записи по умолчанию являются рекомендуемыми, если не указано иное.  
+###  <a name="Default_Accts"></a> Учетные записи служб по умолчанию
+
+В следующей таблице перечислены учетные записи служб по умолчанию, используемые программой установки при установке всех компонентов. Перечисленные учетные записи по умолчанию являются рекомендуемыми, если не указано иное.
   
- **Изолированный сервер или контроллер домена**  
+ **Изолированный сервер или контроллер домена**
   
 |Компонент|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]|Windows 7 и [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 и выше|  
 |---------------|------------------------------------|----------------------------------------------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
-|Агент[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
 |[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
 |[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
-|Контроллер распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
-|Клиент распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Контроллер распределенного воспроизведения|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Клиент распределенного воспроизведения|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)*|  
 |Средство запуска FD (полнотекстовый поиск)|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|[Виртуальная учетная запись](#VA_Desc)|  
-|Браузер[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|  
-|службы синхронизации контроля версий[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ;|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Браузер|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ;|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|  
 |[!INCLUDE[rsql_extensions](../../includes/rsql-extensions-md.md)]|NTSERVICE\MSSQLLaunchpad|NTSERVICE\MSSQLLaunchpad|  
 |Ядро PolyBase  |[СЕТЕВАЯ СЛУЖБА](#Network_Service) |[СЕТЕВАЯ СЛУЖБА](#Network_Service)  |
 |Служба перемещения данных PolyBase |[СЕТЕВАЯ СЛУЖБА](#Network_Service) |[СЕТЕВАЯ СЛУЖБА](#Network_Service)  |
   
  * Если требуются ресурсы вне [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует использовать управляемую учетную запись службы (MSA), которой предоставлены следующие необходимые разрешения.  
   
- **Экземпляр отказоустойчивого кластера SQL Server**  
+ **Экземпляр отказоустойчивого кластера SQL Server**
   
 |Компонент|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2|  
 |---------------|------------------------------------|---------------------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]|Нет. Укажите учетную запись [пользователя домена](#Domain_User) .|Укажите учетную запись [пользователя домена](#Domain_User) .|  
-|Агент[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Нет. Укажите учетную запись [пользователя домена](#Domain_User) .|Укажите учетную запись [пользователя домена](#Domain_User) .|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент|Нет. Укажите учетную запись [пользователя домена](#Domain_User) .|Укажите учетную запись [пользователя домена](#Domain_User) .|  
 |[!INCLUDE[ssAS](../../includes/ssas-md.md)]|Нет. Укажите учетную запись [пользователя домена](#Domain_User) .|Укажите учетную запись [пользователя домена](#Domain_User) .|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)|  
 |[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[СЕТЕВАЯ СЛУЖБА](#Network_Service)|[Виртуальная учетная запись](#VA_Desc)|  
 |Средство запуска FD (полнотекстовый поиск)|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|[Виртуальная учетная запись](#VA_Desc)|  
-|Браузер[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|  
-|службы синхронизации контроля версий[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ;|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|  
-  
-####  <a name="Changing_Accounts"></a> Изменение свойств учетной записи  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Браузер|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|[ЛОКАЛЬНАЯ СЛУЖБА](#Local_Service)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ;|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|[ЛОКАЛЬНАЯ СИСТЕМА](#Local_System)|  
+
+####  <a name="Changing_Accounts"></a> Изменение свойств учетной записи
   
 > [!IMPORTANT]  
 >  -   Всегда используйте такие средства [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , как диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для изменения учетной записи, используемой службами [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] или агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо для изменения пароля учетной записи. В дополнение к изменению имени учетной записи диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет дополнительную настройку, например обновление локального хранилища безопасности Windows, которое защищает главный ключ службы для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Другие средства, такие как диспетчер управления службами Windows, могут изменить имя учетной записи, но не изменяют все необходимые параметры.  
@@ -190,7 +195,7 @@ ms.lasthandoff: 08/29/2017
   
 -   <a name="VA_Desc"></a>**Virtual Accounts**  
   
-    Виртуальные учетные записи (начиная с Windows Server 2008 R2 и Windows 7) — это *управляемые локальные учетные записи* , которые предоставляют следующие возможности для упрощения администрирования служб. Управление виртуальной учетной записью осуществляется автоматически, и она может получать доступ к сети в среде домена. Если установка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется со значением по умолчанию для учетных записей служб, используется виртуальная учетная запись с именем, соответствующим имени экземпляра, в формате **NT SERVICE\\***\<ИМЯ_СЛУЖБЫ>*. Службы, запускаемые от имени виртуальных учетных записей, получают доступ к сетевым ресурсам с использованием учетных данных учетной записи компьютера в формате *<имя_домена>***\\***<имя_компьютера>***$**.  При указании виртуальной учетной записи для запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оставьте поле пароля пустым. Если для виртуальной учетной записи не удалось зарегистрировать имя участника-службы (SPN), выполните регистрацию вручную. Дополнительные сведения о регистрации SPN вручную см. в статье [Регистрация имени участника-службы для соединений Kerberos](https://msdn.microsoft.com/library/ms191153.aspx).  
+    Виртуальные учетные записи (начиная с Windows Server 2008 R2 и Windows 7) — это *управляемые локальные учетные записи* , которые предоставляют следующие возможности для упрощения администрирования служб. Управление виртуальной учетной записью осуществляется автоматически, и она может получать доступ к сети в среде домена. Если установка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется со значением по умолчанию для учетных записей служб, используется виртуальная учетная запись с именем, соответствующим имени экземпляра, в формате **NT SERVICE\\***\<ИМЯ_СЛУЖБЫ>*. Службы, запускаемые от имени виртуальных учетных записей, получают доступ к сетевым ресурсам с использованием учетных данных учетной записи компьютера в формате *<имя_домена>*__\\__*<имя_компьютера>*__$__.  При указании виртуальной учетной записи для запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оставьте поле пароля пустым. Если для виртуальной учетной записи не удалось зарегистрировать имя участника-службы (SPN), выполните регистрацию вручную. Дополнительные сведения о регистрации SPN вручную см. в статье [Регистрация имени участника-службы для соединений Kerberos](https://msdn.microsoft.com/library/ms191153.aspx).  
   
     > [!NOTE]  
     >  Виртуальные учетные записи не могут использоваться для экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так как у виртуальной учетной записи будет отличаться идентификатор безопасности на каждом узле кластера.  
@@ -201,15 +206,16 @@ ms.lasthandoff: 08/29/2017
     |-------------|--------------------------|  
     |Экземпляр по умолчанию службы компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]|**NT SERVICE\MSSQLSERVER**|  
     |Именованный экземпляр службы компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] с именем **PAYROLL**|**NT SERVICE\MSSQL$PAYROLL**|  
-    |Служба агента[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]по умолчанию|**NT SERVICE\SQLSERVERAGENT**|  
+    |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Служба агента на экземпляре по умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|**NT SERVICE\SQLSERVERAGENT**|  
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с именем **PAYROLL**|**NT SERVICE\SQLAGENT$PAYROLL**|  
   
  Дополнительные сведения об управляемых учетных записях служб и виртуальных учетных записях см. в разделе **Основные понятия управляемых учетных записей служб и виртуальных учетных записей** [Пошагового руководства по учетным записям служб](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx) , а также в документе [Вопросы и ответы по управляемым учетным записям служб](http://technet.microsoft.com/library/ff641729\(WS.10\).aspx).  
   
  **Примечание по безопасности.** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] По возможности используйте [управляемую учетную запись службы](#MSA) или агентом [virtual account](#VA_Desc) . Если использование управляемых учетных записей служб и виртуальных учетных записей невозможно, используйте специальную учетную запись пользователя с ограниченными правами доступа или учетную запись домена вместо общей учетной записи для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Используйте отдельные учетные записи для разных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Не предоставляйте дополнительные разрешения учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или группам службы. Разрешения идентификатору безопасности службы будут предоставлены через членство в группе или напрямую самому идентификатору службы там, где поддерживается идентификатор службы.  
   
-###  <a name="Auto_Start"></a> Автоматический запуск  
- Кроме учетной записи каждая служба имеет три возможных типа запуска, которыми могут управлять пользователи.  
+###  <a name="Auto_Start"></a> Автоматический запуск
+
+Кроме учетной записи каждая служба имеет три возможных типа запуска, которыми могут управлять пользователи.
   
 -   **Отключено** . Служба установлена, но в данный момент не запущена.  
   
@@ -219,8 +225,9 @@ ms.lasthandoff: 08/29/2017
   
  Тип запуска выбирается во время установки. При установке именованного экземпляра службу браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] следует настроить на автоматический запуск.  
   
-###  <a name="Configure_services"></a> Настройка служб во время автоматической установки  
- В таблице ниже приведены службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые могут быть настроены в ходе установки. Для автоматической установки можно задать параметры в файле конфигурации или командной строке.  
+###  <a name="Configure_services"></a> Настройка служб во время автоматической установки
+
+В таблице ниже приведены службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые могут быть настроены в ходе установки. Для автоматической установки можно задать параметры в файле конфигурации или командной строке.  
   
 |Имя службы SQL Server|Параметры для автоматической установки*|  
 |-----------------------------|---------------------------------------------|  
@@ -229,20 +236,24 @@ ms.lasthandoff: 08/29/2017
 |MSSQLServerOLAPService|ASSVCACCOUNT, ASSVCPASSWORD, ASSVCSTARTUPTYPE|  
 |ReportServer|RSSVCACCOUNT, RSSVCPASSWORD, RSSVCSTARTUPTYPE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|ISSVCACCOUNT, ISSVCPASSWORD, ISSVCSTARTUPTYPE|  
-|Контроллер распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |DRU_CTLR, CTLRSVCACCOUNT, CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
-|Клиент распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
-|[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Контроллер распределенного воспроизведения|DRU_CTLR, CTLRSVCACCOUNT, CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Клиент распределенного воспроизведения|DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
+|[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS***|
 |Ядро PolyBase| PBENGSVCACCOUNT, PBENGSVCPASSWORD, PBENGSVCSTARTUPTYPE, PBDMSSVCACCOUNT,PBDMSSVCPASSWORD, PBDMSSVCSTARTUPTYPE, PBSCALEOUT, PBPORTRANGE
   
  * Дополнительные сведения и примеры синтаксиса для автоматической установки см. в статье [Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
- * Служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отключена на экземплярах [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] и [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] с дополнительными службами.  
+ * Служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отключена на экземплярах [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] и [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] с дополнительными службами.
+
+ *** Настройка учетной записи для панели запуска с помощью одних только параметров сейчас не поддерживается. Используйте диспетчер конфигурации SQL Server, чтобы изменить учетную запись и другие параметры службы.
+
+###  <a name="Firewall"></a> Порт брандмауэра
+
+Обычно при начальной установке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] к нему можно подключаться с помощью таких средств, как среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , установленных на том же компьютере, что и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Программа установки[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не открывает порты брандмауэра Windows. Соединение с другими компьютерами может оказаться невозможным, пока компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] будет настроен для прослушивания TCP-порта, закрытого для соединений в брандмауэре Windows. Дополнительные сведения см. в статье [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-###  <a name="Firewall"></a> Порт брандмауэра  
- Обычно при начальной установке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] к нему можно подключаться с помощью таких средств, как среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , установленных на том же компьютере, что и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Программа установки[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не открывает порты брандмауэра Windows. Соединение с другими компьютерами может оказаться невозможным, пока компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] будет настроен для прослушивания TCP-порта, закрытого для соединений в брандмауэре Windows. Дополнительные сведения см. в статье [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
-  
-##  <a name="Serv_Perm"></a> Разрешения службы  
- В этом разделе описаны разрешения, которые настраивает программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для удостоверений безопасности служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+##  <a name="Serv_Perm"></a> Разрешения службы
+
+В этом разделе описаны разрешения, которые настраивает программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для удостоверений безопасности служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   [Настройка служб и управление доступом](#Serv_SID)  
   
@@ -262,30 +273,31 @@ ms.lasthandoff: 08/29/2017
   
 -   [Именованные каналы](#Pipes)  
   
-###  <a name="Serv_SID"></a> Настройка служб и управление доступом  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] позволяет обеспечить изоляцию и всестороннюю защиту идентификатора безопасности каждой службы. Идентификатор безопасности службы создается на основе имени службы и является уникальным для этой службы. Например, именем идентификатора безопасности службы для службы [!INCLUDE[ssDE](../../includes/ssde-md.md)] может быть **NT Service\MSSQL$***\<InstanceName>*. Изоляция служб обеспечивает доступ к конкретным объектам без необходимости использования учетной записи с высоким уровнем привилегий или ослабления защиты этих объектов. Используя запись управления доступом, содержащую удостоверение безопасности службы, служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может ограничить доступ к своим ресурсам.  
+###  <a name="Serv_SID"></a> Настройка служб и управление доступом
+
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] позволяет обеспечить изоляцию и всестороннюю защиту идентификатора безопасности каждой службы. Идентификатор безопасности службы создается на основе имени службы и является уникальным для этой службы. Например, именем идентификатора безопасности службы для службы [!INCLUDE[ssDE](../../includes/ssde-md.md)] может быть **NT Service\MSSQL$***\<имя_экземпляра>*. Изоляция служб обеспечивает доступ к конкретным объектам без необходимости использования учетной записи с высоким уровнем привилегий или ослабления защиты этих объектов. Используя запись управления доступом, содержащую удостоверение безопасности службы, служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может ограничить доступ к своим ресурсам.
   
 > [!NOTE]  
->  В Windows 7 и [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 (и более поздних версиях) удостоверением безопасности службы может быть виртуальная учетная запись, используемая этой службой.  
+>  В Windows 7 и [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 (и более поздних версиях) удостоверением безопасности службы может быть виртуальная учетная запись, используемая этой службой.
   
- Для большинства компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настраивает список управления доступом для учетной записи службы непосредственно, поэтому изменение учетной записи службы можно выполнить без необходимости повторения обработки списка управления доступом к ресурсу.  
+ Для большинства компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настраивает список управления доступом для учетной записи службы непосредственно, поэтому изменение учетной записи службы можно выполнить без необходимости повторения обработки списка управления доступом к ресурсу.
   
- При установке служб [!INCLUDE[ssAS](../../includes/ssas-md.md)]создается удостоверение безопасности для службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Создается локальная группа Windows с именем в формате **SQLServerMSASUser$***имя_компьютера***$***имя_экземпляра*. Удостоверению безопасности службы **NT SERVICE\MSSQLServerOLAPService** предоставляется членство в локальной группе Windows, а локальной группе Windows — соответствующие разрешения в списке управления доступом. В случае изменения учетной записи, используемой для запуска службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен изменить некоторые разрешения Windows (например, право на вход в качестве службы), но разрешения, назначенные локальной группе Windows, будут все равно доступны без обновления, так как удостоверение безопасности службы не было изменено. Этот метод позволяет переименовывать службу [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] во время обновлений.  
+ При установке служб [!INCLUDE[ssAS](../../includes/ssas-md.md)]создается удостоверение безопасности для службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Создается локальная группа Windows с именем в формате **SQLServerMSASUser$***имя_компьютера***$***имя_экземпляра*. Удостоверению безопасности службы **NT SERVICE\MSSQLServerOLAPService** предоставляется членство в локальной группе Windows, а локальной группе Windows — соответствующие разрешения в списке управления доступом. В случае изменения учетной записи, используемой для запуска службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен изменить некоторые разрешения Windows (например, право на вход в качестве службы), но разрешения, назначенные локальной группе Windows, будут все равно доступны без обновления, так как удостоверение безопасности службы не было изменено. Этот метод позволяет переименовывать службу [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] во время обновлений.
   
  Во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает локальные группы Windows для службы [!INCLUDE[ssAS](../../includes/ssas-md.md)] и службы браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Для этих служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настраивает список управления доступом к локальным группам Windows.  
   
- В зависимости от конфигурации службы учетная запись службы или ее идентификатор безопасности добавляется как элемент группы служб во время установки или обновления.  
+ В зависимости от конфигурации службы учетная запись службы или ее идентификатор безопасности добавляется как элемент группы служб во время установки или обновления.
   
 ###  <a name="Windows"></a> Права доступа и права Windows  
- Учетной записи, назначенной для запуска службы, необходимы **разрешения на запуск, остановку и приостановку** службы. Они автоматически назначаются программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  Сначала установите средства администрирования удаленного сервера (RSAT). См. раздел [Средства администрирования удаленного сервера для Windows 7](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d).  
+ Учетной записи, назначенной для запуска службы, необходимы **разрешения на запуск, остановку и приостановку** службы. Они автоматически назначаются программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  Сначала установите средства администрирования удаленного сервера (RSAT). См. раздел [Средства администрирования удаленного сервера для Windows 7](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d).
   
- В следующей таблице перечислены разрешения, которые запрашивает программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для удостоверений безопасности служб или локальных групп Windows, используемых компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ В следующей таблице перечислены разрешения, которые запрашивает программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для удостоверений безопасности служб или локальных групп Windows, используемых компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
-|Служба[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Разрешения, предоставляемые программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|---------------------------------------|------------------------------------------------------------|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Служба|Разрешения, предоставляемые программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|
+|---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT SERVICE\MSSQLSERVER**. Именованный экземпляр: **NT SERVICE\MSSQL$**имя_экземпляра.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> **Замена токена уровня процесса** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)<br /><br /> Разрешение на запуск модуля записи SQL Writer<br /><br /> Разрешение на чтение службы журнала событий<br /><br /> Разрешение на чтение службы удаленного вызова процедур (RPC)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :** \*<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT Service\SQLSERVERAGENT**. Именованный экземпляр: **NT Service\SQLAGENT$***имя_экземпляра*.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> **Замена токена уровня процесса** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)|  
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Все права предоставляются локальной группе Windows. Экземпляр по умолчанию: **SQLServerMSASUser$***имя_компьютера***$MSSQLSERVER**. Именованный экземпляр: **SQLServerMSASUser$***имя_компьютера***$***имя_экземпляра*. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] : **SQLServerMSASUser$***имя_компьютера***$***PowerPivot*.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> Только для табличного режима:<br /><br /> **Увеличение рабочего набора процесса** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Настройка квот памяти для процесса** (SeIncreaseQuotaSizePrivilege)<br /><br /> **Блокировка страниц в памяти** (SeLockMemoryPrivilege) — это право доступа требуется только в случае полного отключения функции разбиения по страницам.<br /><br /> Только для установок отказоустойчивого кластера:<br /><br /> **Увеличение приоритета планирования** (SeIncreaseBasePriorityPrivilege)|  
+|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Все права предоставляются локальной группе Windows. Экземпляр по умолчанию: **SQLServerMSASUser$***имя_компьютера***$MSSQLSERVER**. Именованный экземпляр: **SQLServerMSASUser$***имя_компьютера***$***имя_экземпляра*. Экземпляр [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]: **SQLServerMSASUser$***имя_компьютера***$***PowerPivot*.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> Только для табличного режима:<br /><br /> **Увеличение рабочего набора процесса** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Настройка квот памяти для процесса** (SeIncreaseQuotaSizePrivilege)<br /><br /> **Блокировка страниц в памяти** (SeLockMemoryPrivilege) — это право доступа требуется только в случае полного отключения функции разбиения по страницам.<br /><br /> Только для установок отказоустойчивого кластера:<br /><br /> **Увеличение приоритета планирования** (SeIncreaseBasePriorityPrivilege)|  
 |**[!INCLUDE[ssRS](../../includes/ssrs-md.md)]:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT SERVICE\ReportServer**. Именованный экземпляр: **NT SERVICE\\ReportServer$***имя_экземпляра*.)|**Вход в систему в качестве службы** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию и именованный экземпляр: **NT SERVICE\MsDtsServer130**. У служб[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] нет отдельного процесса для именованного экземпляра.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> Разрешение на запись в журнал событий приложений<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br /> **Олицетворение клиента после проверки подлинности** (SeImpersonatePrivilege)|  
 |**Полнотекстовый поиск:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT Service\MSSQLFDLauncher**. Именованный экземпляр: **NT Service\ MSSQLFDLauncher$***имя_экземпляра*.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)|  
@@ -300,7 +312,7 @@ ms.lasthandoff: 08/29/2017
  * Служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отключена на экземплярах [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
 ###  <a name="Reviewing_ACLs"></a> Разрешения файловой системы, предоставляемые для SQL Server согласно SID-идентификаторам служб или локальным группам Windows  
- Учетные записи служб[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны иметь доступ к ресурсам. Списки управления доступом задаются для каждого удостоверения безопасности службы или локальной группы Windows.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны иметь доступ к ресурсам. Списки управления доступом задаются для каждого удостоверения безопасности службы или локальной группы Windows.  
   
 > [!IMPORTANT]  
 >  В конфигурации с отказоустойчивым кластером ресурсы на общих дисках должны быть включены в список управления доступом для локальной учетной записи.  
@@ -309,7 +321,7 @@ ms.lasthandoff: 08/29/2017
   
 |Учетная запись службы для|Файлы и папки|Доступ|  
 |-------------------------|-----------------------|------------|  
-|MSSQLSERVER|Instid\MSSQL\backup|Полный доступ|  
+|MSSQLServer|Instid\MSSQL\backup|Полный доступ|  
 ||Instid\MSSQL\binn|Чтение и выполнение|  
 ||Instid\MSSQL\data|Полный доступ|  
 ||Instid\MSSQL\FTData|Полный доступ|  
@@ -350,7 +362,7 @@ ms.lasthandoff: 08/29/2017
 ||130\dts\binn|Чтение и выполнение|  
 ||130\shared|Чтение и выполнение|  
 ||130\shared\Errordumps|Чтение и запись|  
-|Браузер[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |130\shared\ASConfig|Чтение|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Браузер|130\shared\ASConfig|Чтение|  
 ||130\shared|Чтение и выполнение|  
 ||130\shared\Errordumps|Чтение и запись|  
 |SQLWriter|н/д (запускается с учетной записью локальной системы)||  
@@ -367,16 +379,16 @@ ms.lasthandoff: 08/29/2017
 ||80\tools|Чтение и выполнение|  
 ||130\sdk|Чтение|  
 ||Microsoft SQL Server\130\Setup Bootstrap|Чтение и выполнение|  
-|Контроллер распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |\<ToolsDir>\DReplayController\Log\ (пустой каталог)|Чтение и выполнение, список содержимого папки|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Контроллер распределенного воспроизведения|\<ToolsDir>\DReplayController\Log\ (пустой каталог)|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayController\DReplayController.exe|Чтение и выполнение, список содержимого папки|  
-||\<ToolsDir>\DReplayController\resources\|Чтение и выполнение, список содержимого папки|  
+||\<ToolsDir>\DReplayController\resources\|Чтение, выполнение, просмотр содержимого папки|  
 ||\<ToolsDir>\DReplayController\\{все DLL-библиотеки}|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayController\DReplayController.config|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayController\IRTemplate.tdf|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayController\IRDefinition.xml|Чтение и выполнение, список содержимого папки|  
-|Клиент распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |\<ToolsDir>\DReplayClient\Log\|Чтение и выполнение, список содержимого папки|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Клиент распределенного воспроизведения|\<ToolsDir>\DReplayClient\Log\|Чтение, выполнение, просмотр содержимого папки|  
 ||\<ToolsDir>\DReplayClient\DReplayClient.exe|Чтение и выполнение, список содержимого папки|  
-||\<ToolsDir>\DReplayClient\resources\|Чтение и выполнение, список содержимого папки|  
+||\<ToolsDir>\DReplayClient\resources\|Чтение, выполнение, просмотр содержимого папки|  
 ||\<ToolsDir>\DReplayClient\ (все DLL-библиотеки)|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayClient\DReplayClient.config|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayClient\IRTemplate.tdf|Чтение и выполнение, список содержимого папки|  
@@ -390,17 +402,18 @@ ms.lasthandoff: 08/29/2017
  Когда файлы базы данных хранятся в определяемом пользователем расположении, идентификатору безопасности службы необходимо предоставить доступ к этому расположению. Дополнительные сведения о предоставлении разрешений файловой системы идентификаторам безопасности служб см. в статье [Настройка разрешений файловой системы для доступа к компоненту ядра СУБД](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md).  
   
 ###  <a name="File_System_Other"></a> Разрешения файловой системы, предоставляемые другим учетным записям или группам Windows  
- Некоторые управляющие разрешения на доступ могут быть предоставлены для встроенных и других учетных записей служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В следующей таблице перечислены дополнительные списки управления доступом, настраиваемые программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+
+Некоторые управляющие разрешения на доступ могут быть предоставлены для встроенных и других учетных записей служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В следующей таблице перечислены дополнительные списки управления доступом, настраиваемые программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Запрашивающий компонент|Учетная запись|Ресурс|Разрешения|  
 |--------------------------|-------------|--------------|-----------------|  
-|MSSQLSERVER|Пользователи журнала производительности|Instid\MSSQL\binn|Просмотр содержимого папки|  
+|MSSQLServer|Пользователи журнала производительности|Instid\MSSQL\binn|Просмотр содержимого папки|  
 ||Пользователи системного монитора|Instid\MSSQL\binn|Просмотр содержимого папки|  
 ||Пользователи журнала производительности, пользователи системного монитора|\WINNT\system32\sqlctr130.dll|Чтение и выполнение|  
 ||Только администратор|\\\\.\root\Microsoft\SqlServer\ServerEvents\\<имя_экземпляра_SQL>*|Полный доступ|  
 ||Администраторы, система|\tools\binn\schemas\sqlserver\2004\07\showplan|Полный доступ|  
 ||Пользователи|\tools\binn\schemas\sqlserver\2004\07\showplan|Чтение и выполнение|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<Учетная запись веб-службы сервера отчетов>|*\<установка>*\Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<Учетная запись веб-службы сервера отчетов>|*\<установка>*\Reporting Services\LogFiles|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||Удостоверение пула приложений диспетчера отчетов, учетная запись [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , все|*\<папка установки>*\Reporting Services\ReportManager, *\<папка установки>*\Reporting Services\ReportManager\Pages\\\*.\*, *\<папка установки>*\Reporting Services\ReportManager\Styles\\\*.\*, *\<папка установки>*\Reporting Services\ReportManager\webctrl_client\1_0\\*.\*|Чтение|  
 ||Удостоверение пула приложений диспетчера отчетов|*\<установка>*\Reporting Services\ReportManager\Pages\\*.\*|Чтение|  
 ||\<Учетная запись веб-службы сервера отчетов>|*\<установка>*\Reporting Services\ReportServer|Чтение|  
@@ -408,7 +421,7 @@ ms.lasthandoff: 08/29/2017
 ||Все|*\<установка>*\Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
 ||СЕТЕВАЯ СЛУЖБА|*\<установка>*\Reporting Services\ReportServer\ReportService.asmx|Полное|  
 ||Все|*\<установка>*\Reporting Services\ReportServer\ReportService.asmx|READ_CONTROL<br /><br /> SYNCHRONIZE FILE_GENERIC_READ<br /><br /> FILE_GENERIC_EXECUTE<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_EXECUTE<br /><br /> FILE_READ_ATTRIBUTES|  
-||Учетная запись службы Windows для сервера отчетов|*\<установка>*\Reporting Services\ReportServer\RSReportServer.config|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||Учетная запись службы Windows для сервера отчетов|*\<установка>*\Reporting Services\ReportServer\RSReportServer.config|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||Все|Разделы реестра сервера отчетов (куст Instid)|Запрос значения<br /><br /> Перечисление подразделов<br /><br /> Уведомление<br /><br /> Управление чтением|  
 ||Пользователь служб терминала|Разделы реестра сервера отчетов (куст Instid)|Запрос значения<br /><br /> Установка значения<br /><br /> Создание подраздела<br /><br /> Перечисление подразделов<br /><br /> Уведомление<br /><br /> DELETE<br /><br /> Управление чтением|  
 ||Опытные пользователи|Разделы реестра сервера отчетов (куст Instid)|Запрос значения<br /><br /> Установка значения<br /><br /> Создание подраздела<br /><br /> Перечисление подразделов<br /><br /> Уведомление<br /><br /> DELETE<br /><br /> Управление чтением|  
@@ -416,7 +429,8 @@ ms.lasthandoff: 08/29/2017
  * Это пространство имен поставщика WMI.  
   
 ###  <a name="Unusual_Locations"></a> Разрешения файловой системы, связанные с нестандартными дисковыми расположениями  
- Диском по умолчанию для установки является **systemdrive**, обычно это диск C. При установке базы данных tempdb или пользовательских баз данных  
+
+Диском по умолчанию для установки является **systemdrive**, обычно это диск C. Этот раздел содержит дополнительные рекомендации, относящиеся к установке базы данных tempdb или пользовательских баз данных в необычных расположениях.  
   
  **Диск не по умолчанию**  
   
@@ -430,14 +444,15 @@ ms.lasthandoff: 08/29/2017
 >  Виртуальные учетные записи не могут проходить проверку подлинности в удаленном расположении. Все виртуальные учетные записи используют разрешение локальной учетной записи. Укажите учетную запись компьютера в формате *<имя_домена>***\\***<имя_компьютера>***$**.  
   
 ###  <a name="Review_additional_considerations"></a> Обзор дополнительных вопросов  
- В следующей таблице перечислены разрешения, которые необходимы службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для поддержки дополнительных функций.  
+
+В следующей таблице перечислены разрешения, которые необходимы службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для поддержки дополнительных функций.  
   
 |Служба или приложение|Функциональность|Требуемое разрешение|  
 |--------------------------|-------------------|-------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)|Запись в почтовый слот с помощью xp_sendmail.|Разрешения на запись по сети.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)|Запуск xp_cmdshell пользователем, не являющимся администратором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Работа в качестве части операционной системы, а также замена токена уровня процесса.|  
-|Агент[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)|Использование функции автоматического перезапуска.|Должен быть членом локальной группы «Администраторы».|  
-|Помощник по настройке[!INCLUDE[ssDE](../../includes/ssde-md.md)] |Позволяет настраивать базы данных для оптимальной производительности запросов.|При первом запуске приложение должно быть инициализировано пользователем с учетными данными системного администратора. После этого пользователи dbo могут при использовании помощника по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] настраивать только те таблицы, владельцами которых они являются. Дополнительные сведения см. в статье "Инициализация помощника по настройке [!INCLUDE[ssDE](../../includes/ssde-md.md)] при первом использовании" в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент (MSSQLSERVER)|Использование функции автоматического перезапуска.|Должен быть членом локальной группы «Администраторы».|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] )|Позволяет настраивать базы данных для оптимальной производительности запросов.|При первом запуске приложение должно быть инициализировано пользователем с учетными данными системного администратора. После этого пользователи dbo могут при использовании помощника по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] настраивать только те таблицы, владельцами которых они являются. Дополнительные сведения см. в статье "Инициализация помощника по настройке [!INCLUDE[ssDE](../../includes/ssde-md.md)] при первом использовании" в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
 > [!IMPORTANT]  
 >  Перед обновлением [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]включите проверку подлинности Windows для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и проверьте необходимые настройки конфигурации по умолчанию: является ли учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] членом группы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin.  
@@ -460,7 +475,8 @@ ms.lasthandoff: 08/29/2017
 -   **[HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\Instance Names\RS] "InstanceName"="MSRSSQL13"**  
   
 ###  <a name="WMI"></a> WMI  
- Инструментарий управления Windows (WMI) должен иметь возможность подключиться к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Для этого компонент**предоставляет удостоверение безопасности службы поставщика WMI (**NT SERVICE\winmgmt [!INCLUDE[ssDE](../../includes/ssde-md.md)]).  
+
+Инструментарий управления Windows (WMI) должен иметь возможность подключиться к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Для этого компонент**предоставляет удостоверение безопасности службы поставщика WMI (**NT SERVICE\winmgmt [!INCLUDE[ssDE](../../includes/ssde-md.md)]).  
   
  Поставщику SQL WMI необходимы следующие разрешения:  
   
@@ -472,10 +488,11 @@ ms.lasthandoff: 08/29/2017
   
 -   Разрешение уровня сервера**VIEW ANY DATABASE** .  
   
-     Программа установки[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает пространство имен SQL WMI и предоставляет разрешение на чтение удостоверению безопасности службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программа установки создает пространство имен SQL WMI и предоставляет разрешение на чтение удостоверению безопасности службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ###  <a name="Pipes"></a> Именованные каналы  
- Во всех видах установки программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет доступ к компоненту [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] через протокол общей памяти, который является локальным именованным каналом.  
+
+Во всех видах установки программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет доступ к компоненту [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] через протокол общей памяти, который является локальным именованным каналом.  
   
 ##  <a name="Provisioning"></a> Подготовка  
  В этом разделе описывается, как учетные записи подготавливаются к работе в разных компонентах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -522,13 +539,13 @@ ms.lasthandoff: 08/29/2017
  Удостоверение безопасности службы модуля записи VSS в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляется в качестве имени входа в экземпляр [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Имя входа удостоверения безопасности службы является членом предопределенной роли сервера **sysadmin** .  
   
 ####  <a name="SQLWMI"></a> SQL WMI и права доступа  
- Программа установки[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подготавливает учетную запись **NT SERVICE\Winmgmt** как имя входа [!INCLUDE[ssDE](../../includes/ssde-md.md)] и добавляет ее к фиксированной роли сервера **sysadmin** .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программа установки подготавливает учетную запись **NT SERVICE\Winmgmt** как имя входа [!INCLUDE[ssDE](../../includes/ssde-md.md)] и добавляет ее к фиксированной роли сервера **sysadmin** .  
   
 #### <a name="ssrs-provisioning"></a>Подготовка служб SSRS  
  Учетная запись, указанная во время установки, предоставляется в качестве члена роли базы данных **RSExecRole** . Дополнительные сведения см. в разделе [Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
 ###  <a name="SSAS"></a> Подготовка служб SSAS  
- Требования к учетной записи службы[!INCLUDE[ssAS](../../includes/ssas-md.md)] различаются в зависимости от способа развертывания сервера. При установке [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]программе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется, чтобы служба [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] запускалась под учетной записью домена. Учетные записи домена необходимы для поддержки механизма управляемых учетных записей, встроенного в SharePoint. По этой причине программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не предоставляет учетную запись службы по умолчанию, например виртуальную учетную запись, для установки [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Дополнительные сведения о подготовке [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint см. в статье [Настройка учетных записей служб Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md).  
+ [!INCLUDE[ssAS](../../includes/ssas-md.md)] различаются в зависимости от способа развертывания сервера. При установке [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]программе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется, чтобы служба [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] запускалась под учетной записью домена. Учетные записи домена необходимы для поддержки механизма управляемых учетных записей, встроенного в SharePoint. По этой причине программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не предоставляет учетную запись службы по умолчанию, например виртуальную учетную запись, для установки [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Дополнительные сведения о подготовке [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint см. в статье [Настройка учетных записей служб Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md).  
   
  Для всех других случаев автономной установки служб [!INCLUDE[ssAS](../../includes/ssas-md.md)] можно предоставить службу для запуска под учетной записью домена, встроенной системной учетной записью, управляемой или виртуальной учетной записью. Дополнительные сведения о подготовке учетных записей см. в статье [Настройка учетных записей службы (службы Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md).  
   
@@ -605,7 +622,7 @@ ms.lasthandoff: 08/29/2017
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   Агент[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]   
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент  
   
      Необходимо помнить, что служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отключена в экземплярах [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] и [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services.  
   
@@ -619,7 +636,7 @@ ms.lasthandoff: 08/29/2017
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
--   Браузер[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]   
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Браузер  
   
 -   Модуль записи SQL  
   
@@ -645,4 +662,3 @@ ms.lasthandoff: 08/29/2017
  [Установка служб Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   
-

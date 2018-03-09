@@ -2,11 +2,13 @@
 title: "Объект зеркального отображения базы данных (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,22 +17,21 @@ helpviewer_keywords:
 - performance counters [SQL Server], database mirroring
 - Database Mirroring object
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
-caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "26"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 41cc798b19f243d91b9693ca63c70d1de6661d0c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 751d65e88be75199a2f6f6a892e5cc221b0a8006
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server, объект Database Mirroring
-  Объект производительности **SQLServer:Database Mirroring** содержит счетчики производительности, сообщающие сведения о зеркальном отображении базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В следующей таблице перечислены счетчики этого объекта.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект производительности **SQLServer:Database Mirroring** содержит счетчики производительности, сообщающие сведения о зеркальном отображении базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В следующей таблице перечислены счетчики этого объекта.  
   
-|Название|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |**Получено байт/с**|Число байт, получаемых в секунду.|  
 |**Отправлено байт/с**|Число байт, отправляемых в секунду.|  
@@ -57,11 +58,10 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  Для каждого участника некоторые из счетчиков показывают нулевое значение, в зависимости от того, в какой роли в настоящий момент выступает участник.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Счетчики производительности позволяют отслеживать производительность при зеркальном отображении баз данных. Например, можно просмотреть счетчик **Задержка транзакции** , чтобы узнать, влияет ли зеркальное отображение базы данных на производительность основного сервера, или просмотреть счетчики **Очередь на повтор** и **Очередь отправки журнала** , чтобы узнать, насколько быстро зеркальная база данных воспроизводит изменения основной базы данных. Можно просмотреть счетчик **Отправлено байтов журнала/с** , чтобы отследить объем данных журнала, пересылаемый за секунду.  
   
 ## <a name="see-also"></a>См. также:  
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

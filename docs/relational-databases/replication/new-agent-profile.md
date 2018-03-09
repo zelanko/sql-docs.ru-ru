@@ -2,31 +2,31 @@
 title: "Создать профиль агента | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.profiles.newperfprofile.f1
-helpviewer_keywords:
-- New Agent Profile dialog box
+f1_keywords: sql13.rep.profiles.newperfprofile.f1
+helpviewer_keywords: New Agent Profile dialog box
 ms.assetid: ebf59330-a421-45a5-9020-0484a96852bc
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5c6ca56759235723bf052365e9a4187f41c7ce53
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "21"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: b456153f06f449086e5ba740f1a4a0e896de3440
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="new-agent-profile"></a>Создать профиль агента
-  Диалоговое окно **Создать профиль агента** позволяет создать новый профиль. Новые профили всегда основываются на существующих, но их можно изменить для соответствия требованиям приложения. После создания профиля его можно применить к текущим и будущим заданиям агента в диалоговом окне **Профили агента** . Значения параметров агента можно изменить в диалоговом окне \<Свойства **имя_профиля_агента>**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Диалоговое окно **Создать профиль агента** позволяет создать профиль. Новые профили всегда основываются на существующих, но их можно изменить для соответствия требованиям приложения. После создания профиля его можно применить к текущим и будущим заданиям агента в диалоговом окне **Профили агента** . Значения параметров агента можно изменить в диалоговом окне \<Свойства **имя_профиля_агента>**.  
   
 ## <a name="options"></a>Параметры  
  **Название**  
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
  **Параметр**  
  Параметры агента, включенные в профиль. Профиль, на котором основан новый профиль, не обязательно указывает значения всех параметров. Для просмотра всех допустимых для данного агента параметров снимите флажок **Показывать только параметры, используемые в этом профиле** . Описание каждого параметра см. в разделах:  
   
--   [Агент моментальных снимков репликации](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+-   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
 -   [Агент чтения журнала репликации](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Агент слияния репликации](../../relational-databases/replication/agents/replication-merge-agent.md)  
   
--   [Агент чтения очереди репликации](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+-   [Replication Queue Reader Agent](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
  **Значение по умолчанию**  
  Значение по умолчанию для каждого параметра агента.  

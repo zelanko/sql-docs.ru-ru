@@ -2,9 +2,12 @@
 title: "Группы DDL-событий | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-ddl
 ms.tgt_pltfrm: 
@@ -14,19 +17,20 @@ helpviewer_keywords:
 - DDL event groups
 - DDL triggers, event groups
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ccd63253ce183861e0aef4caafe00179bf00051a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: c3ffbbf2c2aa0fb781bc6f3a5927d95d4975092f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ddl-event-groups"></a>группы DDL-событий
-  В следующем перечне таблиц показаны группы DDL-событий, при помощи которых можно вызвать запуск триггеров DDL или уведомлений о событиях, а также инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , охватываемые этими событиями. Обратите внимание на иерархическую природу групп событий. Так, например, триггер DDL или уведомление о событиях, указывающие на событие FOR DDL_TABLE_EVENTS (10018), охватывают инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE и DROP TABLE. Триггер DDL или уведомление о событиях, указывающие на событие FOR DDL_TABLE_VIEW_EVENTS (10017), охватывают все инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] для типов DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS и DDL_STATISTICS_EVENTS.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+В следующем перечне таблиц показаны группы DDL-событий, при помощи которых можно вызвать запуск триггеров DDL или уведомлений о событиях, а также инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , охватываемые этими событиями. Обратите внимание на иерархическую природу групп событий. Так, например, триггер DDL или уведомление о событиях, указывающие на событие FOR DDL_TABLE_EVENTS (10018), охватывают инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE и DROP TABLE. Триггер DDL или уведомление о событиях, указывающие на событие FOR DDL_TABLE_VIEW_EVENTS (10017), охватывают все инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] для типов DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS и DDL_STATISTICS_EVENTS.  
   
 > [!NOTE]  
 >  Некоторые системные хранимые процедуры, выполняющие операции, подобные операциям DDL, также могут запускать триггеры DDL или уведомления о событии. Проверьте имеющиеся триггеры DDL и уведомления о событии, чтобы определить их ответы на выполняемые системные хранимые процедуры. Например, как инструкция CREATE TYPE, так и хранимая процедура **sp_addtype** приведут к инициации триггера DDL или уведомления о событии, создаваемом при наступлении события CREATE_TYPE.  
@@ -36,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
 ||||  
 |-|-|-|  
-|parent_type|type|имя|  
+|parent_type|Тип|NAME|  
 |NULL|296|ALTER_SERVER_CONFIGURATION|  
 |NULL|10001|DDL_EVENTS|  
 |10001|10016|&#124;    DDL_DATABASE_LEVEL_EVENTS|  

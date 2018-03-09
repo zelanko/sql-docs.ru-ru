@@ -1,29 +1,30 @@
 ---
 title: "Установка компонентов SSMA на SQL Server (OracleToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Installign the Extension Pack
 - SQL Server Database Objects
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 76880266efb8c38bffdaa4223e49822c6d3b0778
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a363954dd56d20d3fb47d15c6325526bba8cf808
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Установка компонентов SSMA на SQL Server (OracleToSQL)
 Помимо установки SSMA, необходимо установить компоненты на компьютере, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Эти компоненты включают пакет расширения SSMA, поддерживающей переноса данных и поставщики Oracle, чтобы включить возможность подключения сервера к серверу.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 08/02/2017
   
 Кроме того, при переносе данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], создает SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] заданий агента, когда модуль переноса данных стороне сервера используется для переноса данных.  
   
-### <a name="prerequisites"></a>Предварительные требования  
+### <a name="prerequisites"></a>предварительные требования  
 Перед установкой SSMA для компонентов сервера Oracle на [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], убедитесь в том, что система соответствует следующим требованиям:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]установлен экземпляр. SSMA не поддерживает SQL Server 2008 Express Edition.  
@@ -112,4 +113,3 @@ ms.lasthandoff: 08/02/2017
 [Установка SSMA для клиента Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
 [Миграция баз данных Oracle в SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
-

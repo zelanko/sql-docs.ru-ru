@@ -2,34 +2,32 @@
 title: "ParallelPeriod (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- PARALLELPERIOD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- ParallelPeriod function
+f1_keywords: PARALLELPERIOD
+dev_langs: kbMDX
+helpviewer_keywords: ParallelPeriod function
 ms.assetid: 9c87f5a6-5694-46f1-9890-bd9705190ea7
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 03157756a26301dc0dbaec037b51826b0f6fd6da
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 294bab2d1403b6f6195a0888c731c95cfd938df8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="parallelperiod-mdx"></a>ParallelPeriod (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает элемент предыдущего периода, расположенный в той же относительной позиции, что и заданный элемент.  
   
@@ -44,13 +42,13 @@ ParallelPeriod( [ Level_Expression [ ,Index [ , Member_Expression ] ] ] )
  *Level_Expression*  
  Допустимое многомерное выражение, возвращающее уровень.  
   
- *Индекс*  
+ *Index*  
  Допустимое числовое выражение, указывающее количество параллельных периодов для отставания.  
   
  *Member_Expression.*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Несмотря на сходство с [Cousin](../mdx/cousin-mdx.md) функции **ParallelPeriod** функции более тесно связана с временным рядом. **ParallelPeriod** функция берет предок заданного элемента на заданном уровне, находит родственный элемент предка с указан и наконец возвращает параллельный период среди потомков того же уровня заданного элемента.  
   
  **ParallelPeriod** функция имеет следующие значения по умолчанию:  
@@ -92,4 +90,3 @@ SELECT ParallelPeriod ([Date].[Calendar].[Calendar Semester]
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: "Создание учетных данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - authentication [SQL Server], credentials
 - logins [SQL Server], credentials
 ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80dba3f156735179c0fb016e39f3065acd6f5ac1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 100ee5ba087e151ac0c025324dc01651b1b1a3c5
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-a-credential"></a>Создание учетных данных
-  В этом разделе описано, как создать учетные данные в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описано, как создать учетные данные в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Учетные данные обеспечивают возможность проходить проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пользователям, имеющим удостоверение вне [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Это в первую очередь необходимо для выполнения программного кода в сборках с набором разрешений EXTERNAL_ACCESS. Учетные данные также применяются в случае, когда пользователям, использующим проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , требуется доступ к ресурсам домена, например к хранилищу файлов для создания резервной копии.  
   
@@ -101,4 +102,3 @@ ms.lasthandoff: 06/22/2017
  Дополнительные сведения см. в разделе [CREATE CREDENTIAL (Transact-SQL)](../../../t-sql/statements/create-credential-transact-sql.md).  
   
   
-

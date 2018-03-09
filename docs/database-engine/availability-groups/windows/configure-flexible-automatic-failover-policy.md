@@ -2,9 +2,12 @@
 title: "Настройка гибкой политики отработки отказа для автоматического перехода на другой ресурс | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-high-availability
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
-caps.latest.revision: 24
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7e82b63c2bbc3d3788272f065d1cdb795decc8b1
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4e9d1acd33ad8d10022703cde1f6a3acabb7c268
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>Настройка гибкой политики отработки отказа для автоматического перехода на другой ресурс
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В данном разделе описывается настройка гибкой политики отработки отказа в группе доступности AlwaysOn при помощи [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Гибкая политика отработки отказа предоставляет гранулярное управление условиями, которые могут вызвать автоматический переход на другой ресурс для группы доступности. Изменяя условия отказа, которые инициируют автоматический переход на другой ресурс, и частоту проверки исправности, вы можете увеличить или уменьшить вероятность автоматического перехода на другой ресурс и добиться высокого уровня доступности соглашения об уровне обслуживания.  
   
@@ -62,13 +64,13 @@ ms.lasthandoff: 08/02/2017
   
 -   Необходимо подключиться к экземпляру сервера, на котором размещена первичная реплика.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
   
 |Задача|Разрешения|  
 |----------|-----------------|  
-|Настройка гибкой политики отработки отказа для новой группы доступности|Требуется членство в предопределенной роли сервера **sysadmin** и разрешение сервера CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.|  
+|Настройка гибкой политики отработки отказа для новой группы доступности|Требуется членство в фиксированной роли сервера **sysadmin** и одно из разрешений: CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.|  
 |Изменение политики существующей группы доступности|Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.|  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
@@ -111,11 +113,11 @@ ms.lasthandoff: 08/02/2017
 ##  <a name="PowerShellProcedure"></a> Использование PowerShell  
  **Настройка гибкой политики отработки отказа**  
   
-1.  Установите значение по умолчанию (**cd**) равным серверу экземпляра, на котором размещена первичная реплика.  
+1.  Установите в качестве значения по умолчанию (**cd**) экземпляр сервера, на котором размещена первичная реплика.  
   
 2.  При добавлении реплики доступности в группу доступности воспользуйтесь командлетом **New-SqlAvailabilityGroup** . При изменении существующей реплики доступности воспользуйтесь командлетом **Set-SqlAvailabilityGroup** .  
   
-    -   Чтобы установить уровень условий отработки отказа, используйте параметр **FailureConditionLevel***level* , где *level* принимает одно из следующих значений.  
+    -   Чтобы установить уровень условий отработки отказа, используйте параметр **FailureConditionLevel***level*, где *level* принимает одно из следующих значений:  
   
         |Значение|Level|Автоматическая отработка отказа запускается при...|  
         |-----------|-----------|-------------------------------------------|  
@@ -135,7 +137,7 @@ ms.lasthandoff: 08/02/2017
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   Чтобы установить пороговое значение времени ожидания для проверки работоспособности, используйте параметр **HealthCheckTimeout***n* , где *n* является целым числом от 15000 миллисекунд (15 секунд) до 4294967295 миллисекунд. Значение по умолчанию — 30 000 миллисекунд (30 секунд).  
+    -   Чтобы установить пороговое значение времени ожидания для проверки работоспособности, используйте параметр **HealthCheckTimeout***n*, где *n* является целым числом от 15 000 миллисекунд (15 секунд) до 4 294 967 295 миллисекунд. Значение по умолчанию — 30 000 миллисекунд (30 секунд).  
   
          Например, следующая команда изменяет пороговое значение времени ожидания проверки работоспособности существующей группы доступности `AG1`на значение 120 000 миллисекунд (две минуты).  
   
@@ -146,13 +148,13 @@ ms.lasthandoff: 08/02/2017
         ```  
   
 > [!NOTE]  
->  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+>  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [SQL Server PowerShell, поставщик](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Поставщик SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
--   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+-   [Получение справок по SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
@@ -163,4 +165,3 @@ ms.lasthandoff: 08/02/2017
  [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)  
   
   
-

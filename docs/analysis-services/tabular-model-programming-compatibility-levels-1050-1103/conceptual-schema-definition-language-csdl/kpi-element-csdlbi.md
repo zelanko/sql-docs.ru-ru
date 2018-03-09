@@ -2,31 +2,32 @@
 title: "Элемент KPI (CSDLBI) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 203ee6e8-eef2-4476-b09f-bd95e492ddaa
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 28f4f65bc65ac1a5d231717ddbc552e83ef302de
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc60e58643df0a47c0f31b93278e95bd1b64a804
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="kpi-element-csdlbi"></a>Элемент KPI (CSDLBI)
-  В элементе Kpi определяется вычисление, которое может быть использовано в качестве ключевого показателя эффективности (KPI). В модели данных бизнес-аналитики ключевые показатели эффективности (KPI) основаны на мерах, поэтому определение KPI содержит все метаданные, связанные с мерами, а также сведения, необходимые для представления значений KPI, в том числе рисунок по умолчанию.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+В элементе Kpi определяется вычисление, которое может быть использовано в качестве ключевого показателя эффективности (KPI). В модели данных бизнес-аналитики ключевые показатели эффективности (KPI) основаны на мерах, поэтому определение KPI содержит все метаданные, связанные с мерами, а также сведения, необходимые для представления значений KPI, в том числе рисунок по умолчанию.  
   
  В элементе Kpi не указывается формула, содержащаяся в определении меры, однако указаны дополнительные метаданные, связанные с мерами, используемыми в качестве ключевых показателей эффективности. Обозначив меру в качестве ключевого показателя эффективности, уже нельзя использовать ее в других контекстах.  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 09/01/2017
  При разработке модели можно создать ключевой показатель эффективности,, создав меру и назначив ее в качестве ключевого показателя эффективности. Затем добавляются сведения, относящиеся к ключевым показателям эффективности, например рисунок, который используется при отображении трендов.  
   
 ## <a name="example"></a>Пример  
- **Табличный**  
+ **Табличные**  
   
  В следующем примере CSDLBI версии1.0 представлен ключевой показатель эффективности, с помощью которого измеряются продажи. Пример взят из образца табличной модели AdventureWorks.  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="example"></a>Пример  
- **Multidimensional**  
+ **Многомерные**  
   
  В следующем примере для CSDLBI версии 1.1 показан ключевой показатель эффективности из куба операций Contoso.  
   
@@ -96,4 +97,3 @@ ms.lasthandoff: 09/01/2017
  [Технический справочник по заметки бизнес-Аналитики для языка CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   
-

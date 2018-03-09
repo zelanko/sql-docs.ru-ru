@@ -1,10 +1,13 @@
 ---
 title: "ROUND (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 03/13/2017
+ms.date: 12/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +21,19 @@ helpviewer_keywords:
 - rounding expressions
 - ROUND function [Transact-SQL]
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
-caps.latest.revision: 40
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: cba8b5a9b62a21fc810ff9bb5fcd3d0c6429f9f5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: 9dbfe719e4216e778a28f1a9afb8a1995c09acb1
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает числовое значение, округленное до указанной длины или точности.  
   
@@ -40,15 +42,8 @@ ms.lasthandoff: 10/17/2017
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
   
 ROUND ( numeric_expression , length [ ,function ] )  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-ROUND (numeric_expression , length )  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -74,7 +69,7 @@ ROUND (numeric_expression , length )
 |**Money** и **smallmoney** категории|**money**|  
 |**число с плавающей запятой** и **реальные** категории|**float**|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция ROUND всегда возвращает значение. Если *длина* является отрицательным или больше, чем количество цифр перед десятичной запятой, ROUND возвращает 0.  
   
 |Пример|Результат|  
@@ -88,7 +83,7 @@ ROUND (numeric_expression , length )
 |ROUND (748,58, -1)|750.00|  
 |ROUND (748,58, -2)|700.00|  
 |ROUND(748.58, -3)|В результате возникает арифметическое переполнение, так как для значения 748,58 по умолчанию используется тип decimal (5,2), который не позволяет вернуть значение 1000.|  
-|Чтобы округлить результат до четырех цифр, измените тип данных на входе. Например:<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
+|Чтобы округлить результат до четырех цифр, измените тип данных на входе. Пример:<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
   
 ## <a name="examples"></a>Примеры  
   
@@ -143,22 +138,6 @@ GO
 150.00  
   
 (1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="d-using-round-and-estimates"></a>Г. Использование функции ROUND и приближений  
- Следующий пример показывает два выражения, которые демонстрируют, используя `ROUND`, что последний знак всегда является приближением.  
-  
-```  
-SELECT ROUND(123.994999, 3), ROUND(123.995444, 3);  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-
- ```
---------  ---------
-123.995000    123.995444
 ```
   
 ## <a name="see-also"></a>См. также:  
@@ -166,8 +145,4 @@ SELECT ROUND(123.994999, 3), ROUND(123.995444, 3);
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Функция FLOOR &#40; Transact-SQL &#41;](../../t-sql/functions/floor-transact-sql.md)   
- [Математические функции &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
-  
-  
-
-
+ [Математические функции &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)

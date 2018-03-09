@@ -2,12 +2,13 @@
 title: "Секции, режим хранения и обработки | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -24,20 +25,20 @@ helpviewer_keywords:
 - MOLAP
 - ROLAP
 ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
-caps.latest.revision: 40
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 2d5eab13f606ada93eaf927e8c01ecb09644b7ac
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d94daaeb72996f418f7f1b30dd8a8b4d76e9a5c6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>Секции — обработка и режимы хранения секции
-  Режим хранения секции определяет производительность выполнения запросов и обработки, требования к хранилищу и месту хранения секции, а также ее родительскую группу мер и куб. Кроме того, режим хранения влияет на выбор обработки.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Режим хранения секции определяет производительность выполнения запросов и обработки, требования к хранилищу и месту хранения секции, а также ее родительскую группу мер и куб. Кроме того, режим хранения влияет на выбор обработки.  
   
  Секция может использовать один из трех основных режимов хранения:  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
 -   Гибридный OLAP (HOLAP)  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает все три основных режимов хранения. Также поддерживается упреждающее кэширование, позволяющее совмещать характеристики хранилищ ROLAP и MOLAP для незамедлительного доступа к данным и высокой производительности запросов. Дополнительные сведения см. в разделе [Упреждающее кэширование (секции)](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает все три основных режимов хранения. Также поддерживается упреждающее кэширование, позволяющее совмещать характеристики хранилищ ROLAP и MOLAP для незамедлительного доступа к данным и высокой производительности запросов. Дополнительные сведения см. в разделе [Упреждающее кэширование (секции)](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
 ## <a name="molap"></a>MOLAP  
  В режиме хранения MOLAP агрегаты секции и копия исходных данных при ее обработке сохраняются в многомерной структуре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. В целях повышения производительности запросов структура MOLAP значительно оптимизирована. Местом хранения может быть либо компьютер, на котором определена секция, либо любой другой компьютер, на котором запущены службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Учитывая тот факт, что многомерные структуры содержат копию исходных данных, запрос может быть выполнен без обращения к секции исходных данных. При использовании статистической обработки время выполнения запроса может значительно возрасти. Данные в структуре секции MOLAP соответствуют последней обработке секции.  
@@ -80,7 +81,7 @@ ms.lasthandoff: 09/01/2017
   
     -   QUOTED_IDENTIFIER  
   
--   Общий размер ключа индекса в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] не может превышать 900 байт. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]проверяет это условие, на основании ключевых столбцов фиксированной длины при обработке инструкции CREATE INDEX. Тем не менее, если есть столбцы переменной длины в ключе индекса [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] также проверяет это условие при каждом обновлении базовых таблиц. Так как различные агрегаты имеют различные определения представлений, то обработка в режиме ROLAP с использованием индексированных представлений может быть удачной или нет, в зависимости от статистической схемы.  
+-   Общий размер ключа индекса в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] не может превышать 900 байт. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] проверяет это условие, на основании ключевых столбцов фиксированной длины при обработке инструкции CREATE INDEX. Тем не менее, если есть столбцы переменной длины в ключе индекса [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] также проверяет это условие при каждом обновлении базовых таблиц. Так как различные агрегаты имеют различные определения представлений, то обработка в режиме ROLAP с использованием индексированных представлений может быть удачной или нет, в зависимости от статистической схемы.  
   
 -   В сеансе создания индексированного представления должен иметь значение ON следующие параметры: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING и ANSI_WARNING. Эти настройки можно произвести в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -91,10 +92,9 @@ ms.lasthandoff: 09/01/2017
   
  Секции с режимом хранения HOLAP меньше аналогичных секций MOLAP, потому что в них не содержится источник данных, а для запросов со сводными данными они имеют меньшее время отклика, чем в секциях ROLAP. Режим хранения HOLAP, как правило, подходит для секций в кубах, требующих малого времени ответа на запросы сводных данных из большого количества исходных данных. Однако если пользователи создают запросы к данным конечного уровня, например вычисление средних значений, более предпочтительно использовать режим MOLAP.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Упреждающее кэширование &#40; Секций &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
- [Синхронизация баз данных служб Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Секции (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Синхронизация баз данных Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
+ [Секций &#40; Analysis Services — многомерные данные &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   
-

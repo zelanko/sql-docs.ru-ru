@@ -3,8 +3,11 @@ title: "Синтаксический анализ (Transact-SQL) | Докуме�
 ms.custom: 
 ms.date: 07/05/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,17 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - PARSE function
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
-caps.latest.revision: 18
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b332b92c77340c9cc7f6276d28286e048b2b0f2b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 3e172a7d68edc212ce4803103dc1f975e4bf89db
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -129,7 +131,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |eesti|Эстонский|1061|Et-EE|  
 |latviešu|Латышский|1062|lv-LV|  
 |lietuvių|Литовский|1063|lt-LT|  
-|Português (Brasil)|Бразильский|1046|pt-BR|  
+|Português (Brasil)|Бразильский португальский|1046|pt-BR|  
 |繁體中文|Китайский (традиционный)|1028|zh-TW|  
 |한국어|Корейский|1042|Ko-KR|  
 |简体中文|Китайский (упрощенный)|2052|zh-CN|  
@@ -189,4 +191,3 @@ Result
 ```  
   
   
-

@@ -2,35 +2,32 @@
 title: "PredictProbability (расширения интеллектуального анализа данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- PredictProbability
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictProbability function
+f1_keywords: PredictProbability
+dev_langs: DMX
+helpviewer_keywords: PredictProbability function
 ms.assetid: 7bb7e74f-e33b-4f7b-ade8-be21ace0dbd0
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 7b990b0c695e0502924796ce51ec6bd0bab26814
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8e0cdcf4b193cf1b05967fdbc5b266ebd0ca9700
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predictprobability-dmx"></a>PredictProbability (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает вероятность для указанного состояния.  
   
@@ -47,7 +44,7 @@ PredictProbability(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Скалярное значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если прогнозируемое состояние не указано, используется состояние с наибольшей вероятностью, за исключением сегмента отсутствующих состояний. Для включения сегмента отсутствующих состояний, установите \<прогнозируемое состояние > для **INCLUDE_NULL**. Для возвращения вероятности для отсутствующих состояний, установите \<прогнозируемое состояние > в NULL.  
   
 > [!NOTE]  
@@ -82,4 +79,3 @@ NATURAL PREDICTION JOIN
  [Общие функции прогнозирования &#40; расширений интеллектуального анализа данных &#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

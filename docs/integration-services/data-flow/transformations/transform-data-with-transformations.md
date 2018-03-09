@@ -1,10 +1,13 @@
 ---
-title: "Преобразование данных с помощью преобразования | Документы Microsoft"
+title: "Преобразование данных с помощью преобразований | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ helpviewer_keywords:
 - transformations [Integration Services], about transformations
 - transforming data [Integration Services]
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
-caps.latest.revision: 43
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0d7feb12fd7b258fb876ff1ed554159e54a7ac33
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c3bd6e635fb364619933d23699f99da85591df31
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transform-data-with-transformations"></a>Преобразование данных с помощью преобразований
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] включают три различных типа компонентов потока данных: источники, преобразования и назначения.  
@@ -63,7 +65,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задача потока данных](../../../integration-services/control-flow/data-flow-task.md)   
  [Поток данных](../../../integration-services/data-flow/data-flow.md)   
  [Соединение компонентов с путями](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
@@ -71,4 +73,3 @@ ms.lasthandoff: 08/03/2017
  [Поток данных](../../../integration-services/data-flow/data-flow.md)  
   
   
-

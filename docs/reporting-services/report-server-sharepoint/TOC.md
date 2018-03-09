@@ -18,6 +18,7 @@
 ### [Добавление веб-части средства просмотра отчетов на веб-страницу](add-report-viewer-web-part-to-page.md)
 ### [Подключение к веб-части фильтров или документов](connect-filter-or-documents-web-part-sharepoint-integrated-mode.md)  
 ### [Настройка веб-части средства просмотра отчетов](customize-the-report-viewer-web-part.md)  
+### [Параметры сайта SharePoint для веб-части "Средство просмотра отчетов"](report-viewer-web-part-sharepoint-site-settings.md)
 # [Высокий уровень доступности](high-availability-reporting-services.md)  
 # [Включение и отключение песочницы для языка определения отчетов](enable-and-disable-rdl-sandboxing.md)  
 # [Настройка использования альтернативного имени субъекта в Reporting Services](configure-reporting-services-to-use-a-subject-alternative-name.md)  

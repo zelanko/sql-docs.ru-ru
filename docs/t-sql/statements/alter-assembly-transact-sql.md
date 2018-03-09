@@ -3,8 +3,11 @@ title: "Инструкцию ALTER ASSEMBLY (Transact-SQL) | Документы 
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - adding files
 - ALTER ASSEMBLY statement
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
-caps.latest.revision: 76
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4b69c3ea4cc94c6b0b318cc13453d9d04b57df0b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 8b8918d653d6d9ff5f26588ad1626bfc62e3679d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Изменяет сборку, изменяя при этом свойства каталога [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сборки. ALTER ASSEMBLY обновляет ее до последней копии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] модулей, содержащих ее реализацию и добавляет или удаляет файлы, связанные с ним. Сборки создаются с помощью [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
 
@@ -115,7 +117,7 @@ ALTER ASSEMBLY assembly_name
   
  Дополнительные сведения см. в разделе [реализации сборки](../../relational-databases/clr-integration/assemblies-implementing.md).  
   
- [DROP FILE { *имя_файла*[ **,***.. .n*] | ВСЕ}]  
+ [DROP FILE { *имя_файла*[**, ***.. .n*] | ВСЕ}]  
  Удаляет из базы данных файл, связанный со сборкой, или все файлы, связанные со сборкой. Если следующей является инструкция ADD FILE, инструкция DROP FILE выполняется в первую очередь. Это позволяет заменить файл другим файлом с тем же именем.  
   
 > [!NOTE]  
@@ -127,7 +129,7 @@ ALTER ASSEMBLY assembly_name
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Инструкция ALTER ASSEMBLY не нарушает сеансы, в которых в настоящий момент работает код изменяемой сборки. Текущие сеансы завершают выполнение с неизмененной сборкой.  
   
  Если указывается предложение FROM, инструкция ALTER ASSEMBLY обновляет сборку в соответствии с последними предоставленными копиями модулей. Так как в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут быть функции среды CLR, хранимые процедуры, триггеры, типы данных и пользовательские агрегатные функции, уже использующие сборку, инструкция ALTER ASSEMBLY привязывает их к последней реализации сборки. Для выполнения этой привязки в измененной сборке должны существовать методы с подписями, с которыми сопоставлены функции CLR, хранимые процедуры и триггеры. Классы, реализующие определяемые пользователем типы данных CLR и пользовательские агрегатные функции, должны удовлетворять требованиям для определяемых пользователем типов или агрегатных функций.  
@@ -169,7 +171,7 @@ ALTER ASSEMBLY assembly_name
   
  Если инструкция ALTER ASSEMBLY выполняется без предложения UNCHECKED для данных, выполняются проверки того, что новая версия сборки не влияет на существующие данные в таблицах. В зависимости от объема данных, для которых необходима проверка, это может повлиять на производительность.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER на сборку. Дополнительные требования.  
   
 -   Для изменения сборки, права которого существующий набор является EXTERNAL_ACCESS, требует**EXTERNAL ACCESS ASSEMBLY**разрешение на сервере.  
@@ -221,10 +223,9 @@ ADD FILE FROM 'C:\MyClassProject\Class1.cs';
 ALTER ASSEMBLY ComplexNumber WITH PERMISSION_SET = EXTERNAL_ACCESS;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [СОЗДАТЬ СБОРКУ &#40; Transact-SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [УДАЛИТЬ СБОРКУ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

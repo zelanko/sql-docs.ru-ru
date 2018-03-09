@@ -3,7 +3,7 @@ title: "Объект пользователя (ADOX) | Документы Micros
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - User object [ADOX]
 ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 70271f780557a7ad63df504f50962e88113348b1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3565b06fa33ddf0990b89724639d9538da37e9b6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="user-object-adox"></a>Объект пользователя (ADOX)
 Представляет учетную запись пользователя, имеет разрешения на доступ в защищенной базы данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  [Пользователей](../../../ado/reference/adox-api/users-collection-adox.md) коллекцию [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) представляет каталог пользователей. **Пользователей** коллекции для [группы](../../../ado/reference/adox-api/group-object-adox.md) представляет только определенной группе пользователей.  
   
  С помощью свойств, коллекций и методов **пользователя** объекта, вы можете:  
@@ -52,10 +51,9 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующий раздел.  
   
--   [Свойства объекта пользователя, методы и события](../../../ado/reference/adox-api/user-object-properties-methods-and-events.md)  
+-   [Свойства, методы и события объекта User](../../../ado/reference/adox-api/user-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [GetPermissions и пример SetPermissions методы (Visual Basic)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Коллекция групп (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
- [Коллекции пользователей (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
-
+ [Коллекция Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

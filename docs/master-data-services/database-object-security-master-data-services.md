@@ -2,9 +2,12 @@
 title: "Защита объектов базы данных (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-caps.latest.revision: 10
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ff125a02dced7c074ee04dcdbf501d964a579b4e
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f4aef82cdb9291215f41bad29e4de8ff61b031a8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="database-object-security-master-data-services"></a>Защита объектов базы данных (службы Master Data Services)
   В базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] данные хранятся во многих таблицах базы данных, а также отображаются в представлениях. Информация, которая может быть защищена в веб-приложении [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , видна пользователям, у которых есть доступ к базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -47,7 +49,7 @@ ms.lasthandoff: 09/07/2017
 ##  <a name="Staging"></a> Промежуточное сохранение данных  
  В следующей таблице каждый защищаемый объект имеет строку «name» в составе имени. Это указывает на имя промежуточной таблицы, которая определена при создании сущности. Дополнительные сведения см. в разделе [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
-|Действие|Защищаемые объекты|Permissions|  
+|Действие|Защищаемые объекты|Разрешения|  
 |------------|----------------|-----------------|  
 |Создание, обновление и удаление конечных элементов и их атрибутов.|stg.name_Leaf|Требуется: INSERT<br /><br /> Необязательно: SELECT и UPDATE|  
 |Загрузить данные из конечной промежуточной таблицы в соответствующие таблицы базы данных MDS.|stg.udp_name_Leaf|EXECUTE|  
@@ -61,7 +63,7 @@ ms.lasthandoff: 09/07/2017
   
 ##  <a name="rules"></a> Проверка данных на соответствие бизнес-правилам  
   
-|Действие|Защищаемый объект|Permissions|  
+|Действие|Защищаемый объект|Разрешения|  
 |------------|---------------|-----------------|  
 |Проверка версии данных на соответствие бизнес-правилам|MDM.udpValidateModel|EXECUTE|  
   
@@ -69,7 +71,7 @@ ms.lasthandoff: 09/07/2017
   
 ##  <a name="Versions"></a> Удаление версий  
   
-|Действие|Защищаемые объекты|Permissions|  
+|Действие|Защищаемые объекты|Разрешения|  
 |------------|----------------|-----------------|  
 |Определение идентификатора версии, которую необходимо удалить|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
 |Удаление версии модели|mdm.udpVersionDelete|EXECUTE|  
@@ -78,7 +80,7 @@ ms.lasthandoff: 09/07/2017
   
 ##  <a name="Hierarchy"></a> Немедленное применение разрешений для элементов иерархии  
   
-|Действие|Защищаемые объекты|Permissions|  
+|Действие|Защищаемые объекты|Разрешения|  
 |------------|----------------|-----------------|  
 |Срочное применение разрешений для элемента|mdm.udpSecurityMemberProcessRebuildModel|EXECUTE|  
   
@@ -91,4 +93,3 @@ ms.lasthandoff: 09/07/2017
  [Безопасность (службы Master Data Services)](../master-data-services/security-master-data-services.md)  
   
   
-

@@ -2,31 +2,29 @@
 title: "Проверка модели в режиме DirectQuery | Документы Microsoft"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11260792-ff8b-4d0e-b845-ca210dd3fced
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ad389541ba4bb964df0c3a0ca7cb08277d1bd1d9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 71352e3066d7964ad6e795563d049368285c79e8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="test-a-model-in-directquery-mode"></a>Тестирование модели в режиме DirectQuery
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Просмотрите параметры тестирования табличной модели в режиме DirectQuery на каждом этапе разработки, начиная с проектирования.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Просмотрите параметры тестирования табличной модели в режиме DirectQuery на каждом этапе разработки, начиная с разработки.  
   
 ## <a name="test-in-excel"></a>Тестирование в Excel 
   
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/01/2017
  При использовании Oracle или Teradata применяйте для этих систем средства мониторинга трассировки.  
   
   
-

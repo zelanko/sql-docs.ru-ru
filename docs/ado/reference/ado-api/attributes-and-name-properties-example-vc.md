@@ -3,7 +3,7 @@ title: "Атрибуты и свойства пример имени (VC ++) | �
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Attributes property [ADO], VC++ example
 - Name property [ADO], VC++ example
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 04002f424c40ac91ea44e1625c879033392e796a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ce39b2b1c7a580be7cc4e51dd0c5c83b2d863907
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>Атрибуты и свойства пример имени (VC ++)
 В этом примере отображается значение [атрибуты](../../../ado/reference/ado-api/attributes-property-ado.md) свойство [подключения](../../../ado/reference/ado-api/connection-object-ado.md), [поле](../../../ado/reference/ado-api/field-object.md), и [свойство](../../../ado/reference/ado-api/property-object-ado.md) объектов. Она использует [имя](../../../ado/reference/ado-api/name-property-ado.md) свойство для отображения имени каждого **поле** и **свойство** объекта.  
@@ -188,10 +187,9 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойства атрибутов (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
  [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Объект field](../../../ado/reference/ado-api/field-object.md)   
  [Свойство Name (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
- [Свойства объекта (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
-
+ [Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

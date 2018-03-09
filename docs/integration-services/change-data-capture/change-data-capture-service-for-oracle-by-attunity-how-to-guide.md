@@ -1,26 +1,28 @@
 ---
-title: "Служба для Oracle от Attunity Практическое руководство для отслеживания измененных данных | Документы Microsoft"
+title: "Руководство по Change Data Capture Service для Oracle от Attunity | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f50178e7-6d9a-45f9-bfce-61260aa882c1
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d6bd845f244c0ed7484d91961502bfa63879544b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 35472bddf5b145c89a8d94a32cbb030773aed3a6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-how-to-guide"></a>Руководство по службе системы отслеживания измененных данных для Oracle компании Attunity
   В этом разделе приведены инструкции по выполнению задач при помощи консоли конфигурации служб CDC.  
@@ -31,11 +33,10 @@ ms.lasthandoff: 08/03/2017
   
 -   [Как управлять локальной службой CDC](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
   
--   [Подготовка SQL Server для CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
+-   [Как подготовить SQL Server для CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   
 -   [Как использовать интерфейс командной строки службы CDC](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)  
   
--   [Работа со службами CDC](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)  
+-   [Как работать со службами CDC](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)  
   
   
-

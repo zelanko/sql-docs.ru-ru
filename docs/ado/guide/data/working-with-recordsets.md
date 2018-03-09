@@ -3,7 +3,7 @@ title: "Работа с наборами записей | Документы Mic
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b29d34907c7e4dcccc8494101c819cca05c02066
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 368e3b3a793bce6b6182ba262493d9a8ed1ac1bd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="working-with-recordsets"></a>Работа с наборами записей
 **Записей** объект имеет встроенные функции, которые позволяют изменить порядок данных в результирующем наборе для поиска конкретной записи на основе критериев, которые предоставляются и даже для оптимизации этих операций поиска с помощью индексов. Эти возможности доступны для использования зависит от поставщика и в некоторых случаях — например, [индекс](../../../ado/reference/ado-api/index-property.md) свойство — Структура самого источника данных.  
@@ -119,7 +118,7 @@ ms.lasthandoff: 09/09/2017
 ### <a name="filtering-with-a-constant"></a>Фильтрация с помощью константы  
  Для фильтрации доступны следующие константы **наборы записей**.  
   
-|Константа|Description|  
+|Константа|Описание|  
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|Фильтры для просмотра только записей, затронутых последней **удаление**, **Resync**, **UpdateBatch**, или **CancelBatch** вызова.|  
 |**adFilterConflictingRecords**|Фильтры для просмотра записей, прошедших с последнего пакета обновления.|  
@@ -174,4 +173,3 @@ Loop
  Закрытие исходного **записей** не закрывает ее копии также не закрывает копии закройте исходные или любой из других копий.  
   
  Можно клонировать **записей** объекта, если он поддерживает закладки. Закладка значения являются взаимозаменяемыми; то есть закладки ссылку из одного **записей** относится к одной и той же записи в одном из его клонов.
-

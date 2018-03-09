@@ -2,29 +2,31 @@
 title: "Создание хранимой процедуры R для кода R с помощью пакета sqlrutils | Документация Майкрософт"
 ms.custom: 
 ms.date: 02/28/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
 ms.assetid: d8739f16-ac26-4f69-870c-51c77cf286d3
-caps.latest.revision: 8
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 2a119867b30b0d3ff8a0abb0b32e8017e5663969
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 42372fde9b8b948c65093f635bda0ffa70441d26
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package"></a>Создание хранимой процедуры R для кода R с помощью пакета sqlrutils
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 Пакет **sqlrutils** предоставляет пользователям R механизм для помещения скриптов R в хранимую процедуру T-SQL, регистрации этой хранимой процедуры с базой данных и ее запуска из среды разработки R. 
 
 Преобразование кода R для выполнения в рамках одной хранимой процедуры позволяет более эффективно использовать службы SQL Server R Services, которые требуют внедрить скрипт R в качестве параметра в [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Пакет **sqlrutils** помогает создать такой внедренный скрипт R и правильно настроить соответствующие параметры.
@@ -92,7 +94,6 @@ help(package="sqlrutils")
 
 
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 [Создание хранимой процедуры с помощью sqlrutils](../../advanced-analytics/r-services/how-to-create-a-stored-procedure-using-sqlrutils.md)
-
 

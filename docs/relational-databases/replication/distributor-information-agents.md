@@ -2,29 +2,30 @@
 title: "Сведения о распространителе, вкладка \"Агенты\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.monitor.Distributor.commonjobs..f1
+f1_keywords: sql13.rep.monitor.Distributor.commonjobs..f1
 ms.assetid: 5d601a64-6af0-42f9-81b1-cf0087f1c50d
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5b1db16b9faf24e2255857203ac4a685d5326ca3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "13"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: a60816a7220a5d1c2b9f15aeeac98e1a74da21ea
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-information-agents"></a>Сведения о распространителе, агенты
-  На вкладке **Агенты** отображаются сведения об агентах и заданиях обслуживания, связанных с издателем и подписчиком.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] На вкладке **Агенты** приводятся сведения об агентах и заданиях обслуживания, связанных с издателем и подписчиком.  
   
  В списке агентов на вкладке **Агенты** и в представлении «Распространитель» для распространителя присутствуют все агенты, имеющиеся на вкладке **Агенты** для издателя. Однако на вкладке **Агенты** в представлении «Распространитель» для распространителя указаны также агент распространителя и агент слияния.  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 06/22/2017
  **Ср. кол-во команд**  
  Среднее количество команд за транзакцию во время самого последнего выполнения агента.  
   
-### <a name="merge-agent"></a>Агент слияния  
+### <a name="merge-agent"></a>Агент слияния.  
  **Состояние**  
  Состояние агента. Возможные значения состояния показаны в следующем списке:  
   

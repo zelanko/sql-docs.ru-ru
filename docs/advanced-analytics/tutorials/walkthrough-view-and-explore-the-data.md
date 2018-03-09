@@ -2,31 +2,32 @@
 title: "Просмотр и изучение данных с помощью SQL (Пошаговое руководство) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/14/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 ms.assetid: d3835d6d-e68b-486d-81a0-81b717cc6134
-caps.latest.revision: 33
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 97d1e0b468222162644e98f5813d4e4d97fd5add
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: 3508b4ac9188906a85a272918ae5cabf4628a3eb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="view-and-explore-the-data-using-sql-walkthrough"></a>Просмотр и изучение данных с помощью SQL (Пошаговое руководство)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Изучение данных — важный этап моделирования. Он включает в себя просмотр сводок по объектам данных, которые будут использоваться при анализе, а также визуализацию данных. На этом занятии просмотра объектов данных и создавать диаграммы, с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] и функций R, включенных в [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
 
@@ -75,4 +76,3 @@ ms.lasthandoff: 10/04/2017
 ## <a name="previous-lesson"></a>Предыдущее занятие
 
 [Подготовка данных с помощью PowerShell](walkthrough-prepare-the-data.md)
-

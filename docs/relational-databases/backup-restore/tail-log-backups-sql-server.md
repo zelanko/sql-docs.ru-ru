@@ -2,11 +2,13 @@
 title: "Резервные копии заключительного фрагмента журнала (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +19,19 @@ helpviewer_keywords:
 - tail-log backups
 - backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
-caps.latest.revision: 55
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1b6a1f1ec700325de57742261e5b8911f9c90c27
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "55"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 06e3604fcd70a4ce7948d704d923c84cbc5acf2a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tail-log-backups-sql-server"></a>Резервные копии заключительного фрагмента журнала (SQL Server)
-  В данном разделе рассматриваются вопросы резервного копирования и восстановления только тех баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые используют модель полного восстановления или модель восстановления с неполным протоколированием.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В данном разделе рассматриваются вопросы резервного копирования и восстановления только тех баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые используют модель полного восстановления или восстановления с неполным протоколированием.  
   
  В *резервную копию заключительного фрагмента журнала* попадают все записи, резервная копия которых еще не была создана ( *заключительный фрагмент журнала*), что позволяет предотвратить потерю работы и сохранить неповрежденную цепочку журналов. Для восстановления базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на последний момент времени необходимо предварительно выполнить резервное копирование заключительного фрагмента журнала ее транзакций. Заключительный фрагмент журнала является становится последней рассматриваемой частью резервной копии в плане восстановления базы данных.  
   
@@ -50,10 +52,10 @@ ms.lasthandoff: 06/22/2017
   
 |Параметр BACKUP LOG|Комментарии|  
 |-----------------------|--------------|  
-|NORECOVERY|Если планируется продолжить операцию восстановления базы данных, используйте параметр NORECOVERY. NORECOVERY переводит базу данных в состояние восстановления. Это гарантирует, что после создания резервной копии заключительного фрагмента журнала база данных не изменится. Если параметры NO_TRUNCATE или COPY_ONLY не заданы, журнал усекается.<br /><br /> **\*\* Важно! \*\*** Рекомендуется использовать параметр NO_TRUNCATE исключительно в том случае, если база данных повреждена.|  
+|NORECOVERY|Если планируется продолжить операцию восстановления базы данных, используйте параметр NORECOVERY. NORECOVERY переводит базу данных в состояние восстановления. Это гарантирует, что после создания резервной копии заключительного фрагмента журнала база данных не изменится. Если параметры NO_TRUNCATE или COPY_ONLY не заданы, журнал усекается.<br /><br /> **Важно!** Параметр NO_TRUNCATE рекомендуется использовать, только если база данных повреждена.|  
 |CONTINUE_AFTER_ERROR|Параметр CONTINUE_AFTER_ERROR следует указывать только в том случае, если создается резервная копия заключительного фрагмента журнала поврежденной базы данных.<br /><br /> При резервном копировании заключительного фрагмента журнала поврежденной базы данных, некоторые метаданные, захватываемые обычно в резервные копии журналов, могут быть недоступны. Дополнительные сведения см. в подразделе [Резервное копирование заключительного фрагмента журнала с неполными метаданными резервной копии](#IncompleteMetadata)этого раздела.|  
   
-##  <a name="IncompleteMetadata"></a> Резервное копирование заключительного фрагмента журнала с неполными метаданными резервной копии  
+##  <a name="IncompleteMetadata"></a> Резервные копии заключительного фрагмента журнала с неполными метаданными  
  Резервное копирование заключительного фрагмента журнала захватывает конец журнала даже в тех случаях, когда база данных работает вне сети, повреждена или в ней не хватает файлов данных. В результате этого метаданные команд восстановления данных и базы данных **msdb**могут быть неполными. Однако несмотря на неполноту метаданных, захваченный журнал будет полным и готовым к использованию.  
   
  Если резервная копия заключительного фрагмента журнала содержит неполные метаданные, то параметр [has_incomplete_metadata](../../relational-databases/system-tables/backupset-transact-sql.md) в таблице **backupset** принимает значение **1**. Кроме того, выходной аргумент [HasIncompleteMetadata](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)инструкции **RESTORE HEADERONLY** принимает значение **1**.  
@@ -61,13 +63,9 @@ ms.lasthandoff: 06/22/2017
  Если метаданные в резервной копии заключительного фрагмента журнала неполные, то в таблице [backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md) большая часть сведений о файловых группах того времени в резервной копии заключительного фрагмента журнала будет утеряна. Большинство столбцов таблицы **backupfilegroup** содержит значение NULL, другие значения имеют следующие столбцы:  
   
 -   **backup_set_id**  
-  
 -   **filegroup_id**  
-  
 -   **type**  
-  
 -   **type_desc**  
-  
 -   **is_readonly**  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
@@ -81,7 +79,6 @@ ms.lasthandoff: 06/22/2017
  [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Резервные копии только для копирования (SQL Server)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
  [Резервные копии журналов транзакций (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
- [Применение резервных копий журналов транзакций (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
+ [Применение резервных копий журналов транзакций (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [Руководство по архитектуре журнала транзакций SQL Server и управлению им](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)
   
-  
-

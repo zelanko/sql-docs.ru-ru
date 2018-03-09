@@ -2,9 +2,12 @@
 title: "Администраторы (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ helpviewer_keywords:
 - administrators [Master Data Services]
 - models [Master Data Services], administrators
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
-caps.latest.revision: 14
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 11e0c1225adf86349c2d049e231463e1c7c1bea6
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: c4944d4a47c7581c1273d21e5dbf3df59ae258a3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="administrators-master-data-services"></a>Администраторы (службы Master Data Services)
   В этой статье описываются типы администраторов в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]: администраторы моделей, администраторы сущностей и суперпользователь.  
@@ -81,4 +83,3 @@ ms.lasthandoff: 09/07/2017
  [Уведомления (службы Master Data Services)](../master-data-services/notifications-master-data-services.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Недопустимые символы и правила экранирования | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - FOR XML clause, invalid characters
 - FOR XML clause, escape rules
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de1546c1f7adc1671cef873a594b9bc5444bc230
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1490c56f7df93aee63d9a8f90e0902893d2b7d08
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="invalid-characters-and-escape-rules"></a>Недопустимые символы и правила экранирования
-  В данном разделе описана обработка недопустимых символов XML при помощи предложения FOR XML и перечислены правила экранирования для символов, недопустимых в XML-именах.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+В данном разделе описана обработка недопустимых символов XML при помощи предложения FOR XML и перечислены правила экранирования для символов, недопустимых в XML-именах.  
   
 ## <a name="for-xml-and-invalid-characters"></a>Предложение FOR XML и недопустимые символы  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преобразует недопустимые XML-символы в сущности, когда они возвращаются в запросах FOR XML, не содержащих директивы TYPE.  
@@ -74,4 +77,3 @@ ms.lasthandoff: 06/22/2017
  [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md)  
   
   
-

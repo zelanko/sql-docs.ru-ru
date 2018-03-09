@@ -2,9 +2,12 @@
 title: "Настройка многосетевого компьютера для доступа к SQL Server | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
@@ -14,24 +17,26 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-caps.latest.revision: 23
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 61df6c613fec3d5a549f5dc1468b44affa37f047
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 084fc871f35c8902fab894ad170db57b44f2b824
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Настройка многосетевого компьютера для доступа к SQL Server
-  Если сервер должен предоставить соединение с двумя или более сетями или подсетями, обычно используется многосетевой компьютер. Часто этот компьютер расположен в пограничной сети (также известной как ДМЗ, демилитаризованная зона или экранированная подсеть). В этом разделе описываются настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и брандмауэра Windows в режиме повышенной безопасности для предоставления сетевого подключения экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в многосетевой среде.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  Если сервер должен предоставить соединение с двумя или более сетями или подсетями, обычно используется многосетевой компьютер. Часто этот компьютер расположен в пограничной сети (также известной как ДМЗ, демилитаризованная зона или экранированная подсеть). В этой статье описываются настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и брандмауэра Windows в режиме повышенной безопасности для предоставления сетевого подключения к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в многосетевой среде.  
   
 > [!NOTE]  
 >  Многосетевой компьютер имеет несколько сетевых адаптеров или настроен для использования нескольких IP-адресов через один сетевой адаптер. Компьютер с двойной привязкой имеет два сетевых адаптера или настроен для использования двух IP-адресов через один сетевой адаптер.  
   
- Прежде чем продолжать знакомство с этим разделом, необходимо ознакомиться со сведениями, представленными в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). Этот раздел содержит основные сведения о работе компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с брандмауэром.  
+ Прежде чем продолжать знакомство с этой статьей, необходимо ознакомиться со сведениями, представленными в статье [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). Эта статья содержит основные сведения о работе компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с брандмауэром.  
   
  **В этом примере предполагается следующее.**  
   
@@ -42,7 +47,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Адреса IPv4 представляют собой ряд четырехзначных цифр, которые называются октетами. Каждый номер меньше 255 и разделяется точками, например 127.0.0.1. Адреса IPv6 представляют собой ряд из восьми шестнадцатеричных цифр, разделенных двоеточием, например fe80:4898:23:3:49a6:f5c1:2452:b994.  
   
--   Правила брандмауэра могут разрешать доступ к конкретному порту, например к порту 1433. Также правила брандмауэра могут разрешать доступ к программе компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] (sqlservr.exe). Эти методы мало отличаются друг от друга. Поскольку сервер в пограничной сети более уязвим для атаки, чем серверы в интрасети, в этом разделе предполагается, что обеспечивается более полный контроль путем открытия конкретных портов. По этой причине предполагается настройка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для прослушивания фиксированного порта. Дополнительные сведения о портах, используемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , см. в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+-   Правила брандмауэра могут разрешать доступ к конкретному порту, например к порту 1433. Также правила брандмауэра могут разрешать доступ к программе компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] (sqlservr.exe). Эти методы мало отличаются друг от друга. Так как сервер в сети периметра более уязвим для атаки, чем серверы в интрасети, в этой статье предполагается, что обеспечивается более полный контроль путем открытия конкретных портов. По этой причине предполагается настройка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для ожидания передачи данных через фиксированный порт. Дополнительные сведения о портах, используемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , см. в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 -   В примере настраивается доступ к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] через TCP-порт 1433. Другие порты, которые используются различными компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , можно настроить с помощью тех же общих шагов.  
   
@@ -143,7 +148,7 @@ ms.lasthandoff: 06/22/2017
 9. Чтобы настроить другие IP-адреса на многосетевом компьютере, повторите эту процедуру для каждого IP-адреса, используя другое правило.  
   
 ## <a name="see-also"></a>См. также:  
- [Служба обозревателя SQL Server (ядро СУБД и SSAS)](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
+ [Служба обозревателя SQL Server (компонент Database Engine и SSAS)](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [Подключение к SQL Server через прокси-сервер (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md)  
   
   

@@ -3,7 +3,7 @@ title: "FieldAttributeEnum | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - FieldAttributeEnum enumeration [ADO]
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e2b737b179a47aa28196bf8ff334dfe3256f91ef
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dfac02887d8f66066a11674ca6dded410df709aa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 Указывает один или несколько атрибутов [поле](../../../ado/reference/ado-api/field-object.md) объекта.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|Указывает, что поставщик хранит значения полей и что последующие операции чтения выполняются из кэша.|  
 |**adFldFixed**|0x10|Указывает, что поле содержит данные фиксированной длины.|  
@@ -75,5 +74,4 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[Append-метод (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[Свойства атрибутов (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)|
-
+|[Метод Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[Свойство Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)|

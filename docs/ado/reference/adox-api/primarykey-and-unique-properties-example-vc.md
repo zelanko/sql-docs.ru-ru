@@ -3,7 +3,7 @@ title: "Пример уникальные свойства (VC ++) и PrimaryKey
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Unique property [ADOX], VC++ example
 - PrimaryKey property [ADOX], VC++ example
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 77be65b93a93b64083261ceaa85ce36528da38ae
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b5d85bffe15ae7c9ad93ccad9588542274bba3e3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="primarykey-and-unique-properties-example-vc"></a>PrimaryKey и пример уникальные свойства (VC ++)
 В этом примере демонстрируется [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) и [Unique](../../../ado/reference/adox-api/unique-property-adox.md) свойства [индекса](../../../ado/reference/adox-api/index-object-adox.md). Код создает новую таблицу с двумя столбцами. **PrimaryKey** и **Unique** свойства используются для отображения один столбец первичного ключа, для которой не разрешены повторяющиеся значения.  
@@ -132,4 +131,3 @@ int main() {
    ::CoUninitialize();  
 }  
 ```
-

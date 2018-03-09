@@ -1,32 +1,32 @@
 ---
-title: "Изучение возможностей области данных Табликса (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Изучение возможностей области данных табликса (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2e6bf4a1dcb406f12eb212380fe09a546a982880
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b795c6ab6d2106c781dbcd75cbf913dda85298d5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Изучение возможностей области данных табликса (построитель отчетов и службы SSRS)
 В отчете [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы добавление области данных таблицы, матрицы или списка на вкладке "Вставка" на ленте начинается с исходного шаблона для области данных табликса, но не ограничивается этим шаблоном. Можно продолжать разработку способа отображения данных путем добавления или удаления любых средств области данных табликса, таких как группы, строки и столбцы.  
   
- При удалении группы строк или столбцов имеется возможность удаления строк и столбцов, используемых для отображения значений группы. Строки и столбцы можно также добавлять и удалять вручную. Дополнительные сведения об использовании строк и столбцов для отображения подробных данных и данных группы см. в разделе [Tablix Data Region &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md).  
+ При удалении группы строк или столбцов имеется возможность удаления строк и столбцов, используемых для отображения значений группы. Строки и столбцы можно также добавлять и удалять вручную. Дополнительные сведения об использовании строк и столбцов для отображения подробных данных и данных группы см. в разделе [Область данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md).  
   
  После изменения структуры области данных табликса можно устанавливать свойства для упрощения управления тем, каким образом в отчете производится подготовка области данных к просмотру. Например, можно повторять заголовки столбцов на каждой странице или сохранять заголовок группы с группой. Дополнительные сведения см. в разделе [Управление отображением области данных табликса на странице отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
@@ -51,11 +51,10 @@ ms.lasthandoff: 08/09/2017
  По умолчанию группа подробностей является самой внутренней дочерней группой в иерархии групп. В группу подробностей нельзя вложить группу. Можно создать дополнительные соседние группы подробностей, например, для отображения пяти продуктов с максимальными и пяти продуктов с минимальными объемами продажи. Вследствие того, что можно добавлять фильтр и сортировать выражения по каждой группе, имеется возможность показывать два представления подробных данных из одного набора данных области данных табликса. Дополнительные сведения см. в разделах [Основные сведения о группах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md), [Добавление или удаление группы в области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) и [Добавление фильтра к набору данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Область данных Табликса &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Tables &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Матрицы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Область данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Таблицы &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Матрицы &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [Списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
   
   
-

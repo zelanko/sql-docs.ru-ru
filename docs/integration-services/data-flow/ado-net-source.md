@@ -1,10 +1,13 @@
 ---
-title: "Источник ADO NET | Документы Microsoft"
+title: "Источник ADO NET | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -21,17 +24,16 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-caps.latest.revision: 101
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 9e7aade0a21f0a77d05c0550aac8aed5b1ace4d8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 05753f3cea7979f78499dc68cb4baa784367b383
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ado-net-source"></a>Источник ADO NET
   Источник ADO NET использует данные поставщика .NET и делает данные доступными для потока данных.  
@@ -125,7 +127,7 @@ ms.lasthandoff: 08/17/2017
  Осуществляйте предварительный просмотр результатов в диалоговом окне **Просмотр данных** . В окне**Предварительный просмотр** может отображаться до 200 строк.  
   
 > [!NOTE]  
->  При предварительном просмотре столбцы с определяемым пользователем типом данных CLR не содержат данных. Вместо этого значения \<значение слишком велико для отображения > или System.Byte []. Первый вариант отображается во время доступа к источнику данных с помощью поставщика [!INCLUDE[vstecado](../../includes/vstecado-md.md)] , а последний — при использовании поставщика данных для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+>  При предварительном просмотре столбцы с определяемым пользователем типом данных CLR не содержат данных. Вместо этого отображается текст \<значение слишком велико для отображения> или System.Byte[]. Первый вариант отображается во время доступа к источнику данных с помощью поставщика [!INCLUDE[vstecado](../../includes/vstecado-md.md)] , а последний — при использовании поставщика данных для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="data-access-mode-dynamic-options"></a>Динамические параметры режима доступа к данным  
   
@@ -137,7 +139,7 @@ ms.lasthandoff: 08/17/2017
  **Текст команды SQL**  
  Введите текст SQL-запроса, постройте запрос, нажав кнопку **Создать запрос**, или выберите файл, содержащий текст запроса, нажав кнопку **Обзор**.  
   
- **Build query**  
+ **Создать запрос**  
  Воспользуйтесь диалоговым окном **Построитель запросов** для визуального конструирования SQL-запроса.  
   
  **Обзор**  
@@ -194,7 +196,7 @@ ms.lasthandoff: 08/17/2017
  **Усечение**  
  Укажите, что нужно сделать при усечении: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
- **Description**  
+ **Описание**  
  Просмотреть описание ошибки.  
   
  **Присвоить указанное значение выбранным ячейкам**  
@@ -205,8 +207,7 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="see-also"></a>См. также:  
  [Назначение DataReader](../../integration-services/data-flow/datareader-destination.md)   
- [Назначение «ADO.NET»](../../integration-services/data-flow/ado-net-destination.md)   
+ [Назначение "ADO.NET"](../../integration-services/data-flow/ado-net-destination.md)   
  [Поток данных](../../integration-services/data-flow/data-flow.md)  
   
   
-

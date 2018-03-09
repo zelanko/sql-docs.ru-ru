@@ -2,13 +2,13 @@
 title: "Доступ к данным многомерной модели (службы Analysis Services — многомерные данные) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - manipulating objects [Analysis Services]
 - Analysis Services data access interfaces, about data access interfaces
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: 46
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b659b4fd581742270fe5d38e5791ef215002757b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Доступ к данным многомерной модели (службы Analysis Services — многомерные данные)
-  Сведения в этом разделе помогут ознакомиться со способами доступа к многомерным данным служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] с помощью программных методов доступа, скриптов или клиентских приложений, включающих встроенную поддержку соединения с сервером служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в сети.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Сведения в этом разделе помогут ознакомиться со способами доступа к многомерным данным служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] с помощью программных методов доступа, скриптов или клиентских приложений, включающих встроенную поддержку соединения с сервером служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в сети.  
   
  Этот раздел состоит из следующих подразделов.  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 09/01/2017
   
  Средства SQL Server Data Tools основаны на оболочке Visual Studio, и для хранения и упорядочивания моделей в них используются проекты. Дополнительные сведения см. в разделе [Создание многомерных моделей с помощью SQL Server Data Tools (SSDT)](../../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md).  
   
-### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
+### <a name="sql-server-management-studio"></a>Среда SQL Server Management Studio  
  Для администраторов баз данных среда SQL Server Management Studio служит интегрированной средой управления экземплярами SQL Server, в том числе и экземплярами служб Analysis Services и многомерными базами данных. Дополнительные сведения см. в разделах [Среда SQL Server Management Studio](http://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b) и [Подключение к службам Analysis Services](../../../analysis-services/instances/connect-to-analysis-services.md).  
   
 ##  <a name="bkmk_querylang"></a> Языки запросов  
@@ -76,11 +76,11 @@ ms.lasthandoff: 09/01/2017
   
  [Запрос многомерных данных с помощью многомерных выражений](../../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  
   
- [Основные понятия многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Ключевые понятия многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
  [Основные принципы запросов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
- [Основные принципы создания скриптов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [Основные понятия о сценариях многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
 ##  <a name="bkmk_api"></a> Программные интерфейсы  
  При разработке пользовательского приложения, использующего многомерные данные, скорее всего, будет использоваться один из следующих способов доступа к данным.  
@@ -93,7 +93,7 @@ ms.lasthandoff: 09/01/2017
   
  В следующих таблицах содержатся дополнительные сведения и ссылки по клиентским библиотекам, используемым для соединения со службами Analysis Services из пользовательских приложений.  
   
-|Интерфейс|Description|  
+|Интерфейс|Описание|  
 |---------------|-----------------|  
 |Управляющие объекты служб Analysis Services (AMO)|Объекты AMO — это основная объектная модель для администрирования экземпляров служб Analysis Services и многомерных баз данных из кода. Например, среда SQL Server Management Studio использует объекты AMO для поддержки администрирования серверов и баз данных. Дополнительные сведения см. в разделе [Разработка объектов управления аналитикой (объекты AMO)](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).|  
 |ADOMD.NET|ADOMD.NET служит основной объектной моделью для создания многомерных данных и доступа к ним в пользовательских приложениях. Для получения сведений служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] с помощью стандартных интерфейсов доступа к данным платформы Microsoft .NET в управляемом пользовательском приложении можно использовать ADOMD.NET. Дополнительные сведения см. в разделах [Разработка с использованием ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md) и [Программирование клиента ADOMD.NET](../../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md).|  
@@ -109,4 +109,3 @@ ms.lasthandoff: 09/01/2017
  [Доступ к данным табличной модели](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
   
   
-

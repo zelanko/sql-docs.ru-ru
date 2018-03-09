@@ -2,29 +2,30 @@
 title: "Средство просмотра конфликтов репликации (Майкрософт) (репликация транзакций) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.replconflictviewer.cvqueued.f1
+f1_keywords: sql13.rep.replconflictviewer.cvqueued.f1
 ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8ee6e349e5627a169d38ece1d90a9b68ebca6593
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "22"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 110c636ba2a86f698f2955e7cb6a067885c2165f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Средство просмотра конфликтов репликации Майкрософт (репликация транзакций)
-  Средство просмотра конфликтов репликации позволяет просматривать конфликты, возникшие во время синхронизации для одноранговой репликации транзакций и репликации транзакций с подписками, обновляемыми посредством очередей. Дополнительные сведения см. в статье [Просмотр конфликтов данных для публикаций транзакций (среда SQL Server Management Studio)](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Средство просмотра конфликтов репликации позволяет просматривать конфликты, возникшие во время синхронизации для одноранговой репликации транзакций и репликации транзакций с подписками, обновляемыми посредством очередей. Дополнительные сведения см. в статье [Просмотр конфликтов данных для публикаций транзакций (среда SQL Server Management Studio)](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
   
 > [!NOTE]  
 >  Средство просмотра конфликтов репликации отображает конфликты, возникшие в репликации слиянием и репликации транзакций. В случае репликации транзакций средство просмотра конфликтов можно использовать для просмотра данных конфликта, но нельзя выбрать другое разрешение конфликта.  

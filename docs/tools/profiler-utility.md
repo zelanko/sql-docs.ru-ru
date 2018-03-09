@@ -2,11 +2,13 @@
 title: "Приложение SQL Profiler | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: profiler
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
-caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "42"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9eb834190093ae44b8ccc80334b33bd3e0c147a1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f7387a32510b879e995b998b1a3e9d56a7e691a3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="profiler-utility"></a>Приложение SQL Profiler
-  Служебная программа **profiler** запускает средство [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. Дополнительные аргументы, перечисленные ниже в этом разделе, позволяют управлять способом запуска приложения.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Профилировщик** служебная программа запускает [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] средства. Дополнительные аргументы, перечисленные ниже в этом разделе, позволяют управлять способом запуска приложения.  
   
 > [!NOTE]  
 >  Служебная программа **profiler** не предназначена для написания скриптов трассировки. Дополнительные сведения см. в разделе [Start SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md).  
@@ -133,4 +134,3 @@ profiler /S MyServer\MyInstance /T "Standard"
  [Справочник по программе командной строки ( компонент Database Engine)](../tools/command-prompt-utility-reference-database-engine.md)  
   
   
-

@@ -1,13 +1,14 @@
 ---
-title: "Форматирование текста и заполнителей (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Форматирование текста и заполнителей (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +19,16 @@ f1_keywords:
 - "10132"
 - sql11.rtp.rptdesigner.textproperties.font.f1
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: abd69f541a322d5fd82ab2a7940732f820be2365
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 18a17ad4befad58d70db0f52f08fe9c8bea98e06
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Форматирование текста и заполнителей (построитель отчетов и службы SSRS)
   Текстовое поле может представлять собой элемент отчета или отдельную ячейку в области данных, которая содержит текст, вычисляемое поле, указатель на поле в базе данных или сочетание всех этих трех элементов. Предусмотрена возможность смешивать шрифты и цвета, добавлять полужирный и курсивный стили и использовать такие стили абзаца, как выравнивание и выступы. Можно форматировать все текстовое поле или конкретный текст, числа, выражения или поля в текстовом поле.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Введите любое простое или сложное выражение в текстовое поле. Например, если ввести в текстовое поле выражение **Name: [Name]** , то в качестве заполнителя будет показан текст **[Name]** , который представляет выражение `=Fields!Name.Value`.  
   
--   Введите выражение в пустом текстовом поле, начиная со знака равенства (=). После перевода фокуса с этого текстового поля результирующее выражение преобразуется в заполнитель, который можно изменять. Если текстовое поле не пусто или знак равенства вставлен где-то в другом месте, но не в качестве первого символа в текстовом поле, то знак равенства рассматривается как строковый литерал и заполнитель не создается. Дополнительные сведения об определении простых и сложных выражений см. в разделе [выражения используются в отчетах &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
+-   Введите выражение в пустом текстовом поле, начиная со знака равенства (=). После перевода фокуса с этого текстового поля результирующее выражение преобразуется в заполнитель, который можно изменять. Если текстовое поле не пусто или знак равенства вставлен где-то в другом месте, но не в качестве первого символа в текстовом поле, то знак равенства рассматривается как строковый литерал и заполнитель не создается. Дополнительные сведения об определении простых и сложных выражений см. в разделе [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
   
 ## <a name="formatting-placeholders-and-static-text-in-a-text-box"></a>Форматирование заполнителей и статического текста в текстовом поле  
  Предусмотрена возможность форматировать заполнители с использованием диалогового окна **Свойства местозаполнителя** . Можно форматировать только весь заполнитель, а не его разделы. Если потребуется увидеть базовое выражение, то можно приостановить указатель мыши над заполнителем. Можно изменить базовое выражение, дважды щелкнув заполнитель или щелкнув заполнитель правой кнопкой мыши и выбрав элемент **Свойства местозаполнителя**. Можно также задать метку пользовательского интерфейса с использованием свойства **Метка** в области **Общие** диалогового окна **Свойства заполнителя** . Она будет представлять собой текст, который отображается во время разработки для заполнителя.  
@@ -71,19 +71,18 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Действия, определенные по отношению к текстовому полю, имеют более высокий приоритет по сравнению с действиями, определенными для отдельного фрагмента текста в текстовом поле.  
   
- Дополнительные сведения о смешанном форматировании см. в разделе [форматирование текста в текстовом поле &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
+ Дополнительные сведения о смешанном форматировании см. в разделе [Форматирование текста в текстовом поле (построитель отчетов и службы SSRS)](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
 ## <a name="aligning-horizontal-text-using-general"></a>Выравнивание горизонтального текста с использованием общих свойств  
  В поле **Выравнивание** в диалоговом окне **Свойства текстового поля** можно указать, как текст будет выравниваться по горизонтали. Если значение для выравнивания не задано, то применяется выравнивание, определяемое значением **По умолчанию**. Это означает, что текст выравнивается с учетом типа поля применяемого значения заполнителя. Если задано выражение, вычисление которого приводит к получению нестрокового значения, то текст выравнивается по правому краю. Если при вычислении выражения получается строковое значение, то текст выравнивается по левому краю.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Форматирование меток оси на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Форматирование шкал на датчике &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Диалоговое окно «Свойства заполнителя», общие &#40; Построитель отчетов и службы SSRS &#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
- [Экспорт в Microsoft Excel &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
- [Текстовые поля &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
+ [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Форматирование шкал на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Диалоговое окно "Свойства заполнителя" — "Общие" (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
+ [Экспорт в Microsoft Excel (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
+ [Текстовые поля (построитель отчетов и службы SSRS)](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
   
   
-

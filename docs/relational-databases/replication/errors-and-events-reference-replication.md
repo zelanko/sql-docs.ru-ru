@@ -2,11 +2,13 @@
 title: "Справочник по ошибкам и событиям (репликация) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - errors [SQL Server replication]
 - errors and events reference [SQL Server replication]
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "25"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 29667a31a69460d6408a84d21035a1a16cf4dc31
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7a053348a203ad7d1e3a9a3cf9fa0f7672300b64
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="errors-and-events-reference-replication"></a>Справочник по ошибкам и событиям (репликация)
-  Этот раздел документации содержит информацию о причинах и способах устранения ошибок, связанных с репликацией.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Этот раздел документации содержит информацию о причинах и способах устранения ошибок, связанных с репликацией.  
   
 |Ошибка|Сообщение|  
 |-----------|-------------|  
@@ -88,4 +89,3 @@ ms.lasthandoff: 06/22/2017
 |[MSSQL_REPL027183](../../relational-databases/replication/mssql-repl027183.md)|Процессу слияния не удалось перечислить изменения в статьях с параметризованными фильтрами строк. Если эта ошибка продолжает возникать, увеличьте тайм-аут запроса для этого процесса, уменьшите срок хранения публикации и оптимизируйте индексы по опубликованным таблицам.|  
   
   
-

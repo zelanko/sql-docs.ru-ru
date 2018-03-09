@@ -3,7 +3,7 @@ title: "С помощью страниц | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - AbsolutePage property [ADO]
 - PageCount property [ADO]
 ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cd893e19c1ab5ac5a4dd657ce61ef76295f2b188
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 34361d01b914d68cba1ff1e0e0f9378baf035be5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-pages"></a>С помощью страниц
 Используйте **PageCount** свойство, чтобы определить, сколько страниц данных в **записей** объекта. *Страницы* — это группы записи, размер которого равен размеру **PageSize** значение свойства. Даже если последняя страница является неполным, поскольку меньше записей, чем **PageSize** значение, он считается дополнительную страницу в **PageCount** значение. Если **записей** объект не поддерживает это свойство **PageCount** равно-1, чтобы указать, что **PageCount** невозможно определить.  
@@ -41,4 +40,3 @@ ms.lasthandoff: 09/09/2017
  Используйте **AbsolutePage** свойство для идентификации номер страницы, на котором расположена текущая запись. Опять же поставщик должен поддерживать соответствующие функциональные возможности для этого свойства доступно.  
   
  **AbsolutePage** начинается с 1 и имеет значение 1, если текущая запись является первой записью в **записей**. Задайте это свойство, чтобы перейти к первой записи определенной страницы. Получить общее число страниц из **PageCount** свойство.
-

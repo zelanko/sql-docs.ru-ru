@@ -3,10 +3,12 @@ title: "ODBC и стандартная CLI | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - call-level interface [ODBC]
 - call-level interface [ODBC], about call-level interface
 ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8133a266e81a1711947af9acb34a89b861a32b16
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 068750e91f59a20976113277ad8871723d045acd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC и стандартная CLI
 ODBC выравнивает со следующими спецификации и стандарты, которые имеют дело с интерфейс уровня вызова (CLI). (Функции ODBC являются подмножеством каждого из этих стандартов).  
@@ -84,4 +85,3 @@ ODBC выравнивает со следующими спецификации �
 -   Поддержка хранимых процедур, включая escape-последовательностей, выходные механизмы привязки и функции каталога  
   
 -   Усовершенствования подключений, включая поддержку для атрибутов соединения и просмотр атрибута
-

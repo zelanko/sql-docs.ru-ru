@@ -1,11 +1,13 @@
 ---
 title: "OPENJSON (Transact-SQL) | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-json
 ms.tgt_pltfrm: 
@@ -18,20 +20,19 @@ helpviewer_keywords:
 - JSON, importing
 - JSON, converting from
 ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
-caps.latest.revision: 32
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
-ms.openlocfilehash: 27eeb54d6493bb200e56caada1238d6fafb5b339
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/11/2017
-
+ms.openlocfilehash: fe464bedc22fa5ebc47fc7f783e75b994d0cff49
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 **OPENJSON** является табличная функция, которая выполняет синтаксический анализ текста JSON и возвращает объекты и свойства из входных данных JSON в виде строк и столбцов. Другими словами **OPENJSON** предоставляет представления наборов строк документа JSON. Можно явно указать столбцы в наборе строк и пути к свойствам JSON, используемый для заполнения столбцов. Поскольку **OPENJSON** возвращает набор строк, можно использовать **OPENJSON** в `FROM` предложения [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции так же, как можно использовать таблицу, представление или табличную функцию.  
   
@@ -371,4 +372,3 @@ DECLARE @json NVARCHAR(max)  = N'{
  [Использование функции OPENJSON с явной схемой &#40; SQL Server &#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)  
   
   
-

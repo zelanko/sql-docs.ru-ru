@@ -2,29 +2,31 @@
 title: "Целевые объекты для расширенных событий в SQL Server | Документация Майкрософт"
 ms.custom: 
 ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
-caps.latest.revision: 2
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a3c0d634e359b9b3578ba46649d202beef3367dd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 640fa43bc4db2907f676dadad8688b7cf5a1bef4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Целевые объекты для расширенных событий в SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 В этой статье объясняется, когда и как использовать целевые объекты package0 для расширенных событий в SQL Server. Для каждого целевого объекта в этой статье описываются следующие аспекты:
@@ -39,7 +41,7 @@ ms.lasthandoff: 09/27/2017
 [Раздел Ring_buffer](#h2_target_ring_buffer) содержит пример использования [XQuery в Transact-SQL](../../xquery/xquery-language-reference-sql-server.md) для копирования строки XML-кода в реляционный набор строк.
 
 
-### <a name="prerequisites"></a>Предварительные требования
+### <a name="prerequisites"></a>предварительные требования
 
 
 - Общее знакомство с основами расширенных событий, как описано в разделе [Краткое руководство. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
@@ -120,7 +122,7 @@ sqlserver      checkpoint_begin   4
 Далее идет CREATE EVENT SESSION, который привел к предыдущим результатам. Для этого теста использовалось поле **package0.counter** в предложении EVENT...WHERE, чтобы прекратить подсчета после достижения значения 4.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [event_counter_1]
     ON SERVER 
     ADD EVENT sqlserver.checkpoint_begin   -- Test by issuing CHECKPOINT; statements.
@@ -158,7 +160,7 @@ CREATE EVENT SESSION [event_counter_1]
 Далее идет CREATE EVENT SESSION, который мы использовали для тестирования. Одно из предложений ADD TARGET указывает event_file.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -290,7 +292,7 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lo
 - Для отслеживания более одного исходного действия можно добавить второй целевой объект histogram в инструкцию CREATE EVENT SESSION.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [histogram_lockacquired]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -356,7 +358,7 @@ sqlserver      create_dump_single_thread   Create mini dump for the current thre
 
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [histogram_checkpoint_dbid]
     ON SERVER 
     ADD EVENT  sqlserver.checkpoint_begin
@@ -449,7 +451,7 @@ sqlserver   lock_acquired   resource_type            NULL
 Чтобы сократить число результатов, мы сначала использовали инструкцию SELECT для sys.objects, чтобы найти object_id нашей тестовой таблицы. Мы добавили фильтр для этого идентификатора в предложение EVENT...WHERE.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [pair_matching_lock_a_r_33]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -553,7 +555,7 @@ sqlserver      lock_acquired   2016-08-05 12:45:47.9980000   InMemTest2      0  
 В этой инструкции CREATE EVENT SESSION, которая использует целевой объект ring_buffer, нет ничего особенного.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -666,7 +668,7 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
 Чтобы просмотреть предыдущий XML-код, вы можете использовать приведенную ниже инструкцию SELECT, пока активен сеанс событий. Активные XML-данные извлекаются из системного представления **sys.dm_xe_session_targets**.
 
 
-```tsql
+```sql
 SELECT
         CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml,
     INTO
@@ -698,7 +700,7 @@ SELECT * FROM #XmlAsTable;
 Чтобы просмотреть предыдущий XML-кода в виде реляционного набора строк, после указанной выше инструкции SELECT выполните приведенный ниже код T-SQL. Каждое использование XQuery поясняется с помощью закомментированных строк.
 
 
-```tsql
+```sql
 SELECT
          -- (A)
          ObjectLocks.value('(@timestamp)[1]',
@@ -787,7 +789,6 @@ Package0 имеет еще два целевых объекта, но их не�
 - [Пространство имен Microsoft.SqlServer.Management.XEvent](https://msdn.microsoft.com/library/microsoft.sqlserver.management.xevent.aspx)
 
 - [Пространство имен Microsoft.SqlServer.XEvent.Linq](https://msdn.microsoft.com/library/microsoft.sqlserver.xevent.linq.aspx)
-
 
 
 

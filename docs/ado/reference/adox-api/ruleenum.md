@@ -3,7 +3,7 @@ title: "RuleEnum | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - RuleEnum enumeration [ADOX]
 ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5a727bf73e4602aa231b1fe064b294137566e3ba
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3c0f801043d9d3f3125fdea54b176b1743e177f7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ruleenum"></a>RuleEnum
 Указывает правило, когда [ключ](../../../ado/reference/adox-api/key-object-adox.md) удаляется.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adRICascade**|1|Каскадное обновление.|  
 |**adRINone**|0|По умолчанию. Не выполняется никаких действий.|  
@@ -42,4 +41,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="applies-to"></a>Объект применения  
  [Свойство DeleteRule (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)
-

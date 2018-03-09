@@ -1,110 +1,102 @@
 ---
-title: "Создание моделей R | Документы Microsoft"
+title: "Создание моделей R (SQL и R глубокое погружение) | Документы Microsoft"
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-server-2016
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
+- SQL Server 2017
 dev_langs:
 - R
 ms.assetid: a195d5e2-72e2-4dd6-bf43-947312e4a52a
-caps.latest.revision: 14
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: a076c6b1bdc06709d14cb8e98be1d01b59cb935e
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 50176ffbdaa8631f6f928bd6ecd23ab0feb28839
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="create-r-models"></a>Создание моделей R
+# <a name="create-r-models-sql-and-r-deep-dive"></a>Создание моделей R (SQL и R глубокое погружение)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+В этой статье является частью учебника по глубокое погружение обработки и анализа данных, о том, как использовать [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
 
 Теперь, когда вы расширили данные обучения, пора проанализировать их с помощью линейной регрессии. Линейные модели — важный инструмент в области прогнозирующего анализа, и пакет **RevoScaleR** в службах [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] содержит масштабируемый алгоритм с высокой производительностью.
 
-## <a name="create-a-linear-regression-model"></a>Создание модели линейной регрессии
+## <a name="create-a-linear-regression-model"></a>создание модели линейной регрессии;
 
-Вы создадите простую линейную модель, которая оценивает баланс держателя кредитной карты, используя значения в столбцах *gender* и *creditLine* в качестве независимых переменных.
+На этом шаге создания простой линейной модели, которая оценивает баланс кредитной карты для клиентов, используя как независимые переменные значения в *Пол* и *creditLine* столбцы.
   
-Для этого вы будете использовать функцию **rxLinMod** , которая поддерживает контексты удаленных вычислений.
+Чтобы сделать это, используйте [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) функции, которая поддерживает контекстах удаленных вычислений.
   
-1. Создайте переменную R для хранения готовой модели и вызовите функцию *rxLinMod* .
+1. Создайте переменную R для хранения завершенный модель и вызвать метод **rxLinMod**, передавая соответствующие формулы.
   
     ```R
     linModObj <- rxLinMod(balance ~ gender + creditLine,  data = sqlFraudDS)
     ```
   
-2. Чтобы просмотреть сводку результатов, можно просто вызвать стандартную функцию R *summary* применительно к объекту модели.
+2. Чтобы просмотреть сводку результатов, вызовите стандартный R `summary` функции объекта модели.
   
      ```R
      summary(linModObj)
      ```
 
-Вам может показаться странным, что обыкновенная функция R, такая как **summary** , будет здесь работать, поскольку на предыдущем шаге контекст вычислений был переключен на серверный. Однако даже если функция **rxLinMod** использует контекст удаленных вычислений для создания модели, она также возвращает объект, который содержит модель для локальной рабочей станции, и сохраняет его в общем каталоге.
+Может показаться необычные plain функцию R, такие как `summary` будет работать, поскольку на предыдущем шаге был переключен контекст вычислений на сервер. Однако даже если функция **rxLinMod** использует контекст удаленных вычислений для создания модели, она также возвращает объект, который содержит модель для локальной рабочей станции, и сохраняет его в общем каталоге.
 
 Таким образом, для модели можно выполнять стандартные команды R, как если бы она была создана с помощью контекста local.
 
 **Результаты**
 
-*Результаты линейной регрессии для: balance ~ gender + creditLineData: sqlFraudDS (RxSqlServerData Data Source)*
+```
+Linear Regression Results for: balance ~ gender + creditLineData: sqlFraudDS (RxSqlServerData Data Source)
+Dependent variable(s): balance
+Total independent variables: 4 (Including number dropped: 1)
+Number of valid observations: 10000
+Number of missing observations: 0
+Coefficients: (1 not defined because of singularities)
 
-*Зависимые переменные: balance*
+Estimate Std. Error t value Pr(>|t|) (Intercept)
+3253.575 71.194 45.700 2.22e-16
+gender=Male -88.813 78.360 -1.133 0.257
+gender=Female Dropped Dropped Dropped Dropped
+creditLine 95.379 3.862 24.694 2.22e-16
+Signif. codes: 0  0.001  0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-*Всего независимых переменных: 4 (в том числе удаленных: 1)*
+Residual standard error: 3812 on 9997 degrees of freedom
+Multiple R-squared: 0.05765
+Adjusted R-squared: 0.05746
+F-statistic: 305.8 on 2 and 9997 DF, p-value: < 2.2e-16
+Condition number: 1.0184
+```
 
-*Число допустимых наблюдений: 10000*
+## <a name="create-a-logistic-regression-model"></a>создание модели логистической регрессии;
 
-*Число отсутствующих наблюдений: 0*
-
-*Коэффициенты: (1 не определен из-за особенностей)*
-
-*Значение z оценки средней квадратической Значение ошибки t Pr (> | t |) (Отсекаемый отрезок)*
-
-*3253,575 71,194 45,700 2,22e-16*
-
-*gender=Male -88,813 78,360 -1,133 0,257*
-
-*gender=Female Удалено Удалено Удалено Удалено*
-
-*creditLine 95,379 3,862 24,694 2,22e-16*
-
-*Коды значимости: 0  0,001  0,01 "*" 0,05 "." 0.1 ‘ ’ 1*
-
-*Остаточная среднеквадратическая ошибка: 3812 при 9997 степенях свободы*
-
-*Квадрат коэффициента множественной корреляции: 0,05765*
-
-*Квадрат нормированного коэффициента корреляции: 0,05746*
-
-*Критерий Фишера: 305,8 при 2 и 9997 DF, p-величина: < 2,2e-16*
-
-*Коэффициент переноса: 1,0184*
-
-## <a name="create-a-logistic-regression-model"></a>Создание модели логистической регрессии
-
-Теперь вы создадите модель логистической регрессии, которая указывает, связан ли риск мошенничества с определенным заказчиком. Вы будете использовать функцию *rxLogit* , входящую в пакет **RevoScaleR** , которая поддерживает размещение моделей логистической регрессии в контекстах удаленных вычислений.
+Создайте модель логистической регрессии, который указывает, является ли конкретный заказчик риск мошенничества. Вы воспользуетесь **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) функции, какие подгонки поддерживает моделей логистической регрессии в удаленных контекстов вычислений.
 
 1.  Не меняйте контекст вычисления. Кроме того, по-прежнему будет использоваться тот же источник данных.
 
 2.  Вызовите функцию **rxLogit** и передайте формулу, необходимую для определения модели.
 
     ```R
-    logitObj <- rxLogit(fraudRisk ~ state + gender + cardholder + balance +      numTrans + numIntlTrans + creditLine, data = sqlFraudDS,      dropFirst = TRUE)
+    logitObj <- rxLogit(fraudRisk ~ state + gender + cardholder + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS, dropFirst = TRUE)
     ```
   
     Так как это большая модель, содержащая 60 независимых переменных, в том числе три фиктивные переменные, которые удаляются, возможно, придется подождать некоторое время, пока контекст вычислений вернет объект.
     
     Причина такого большого размера модели в том, что в языке R (и в пакете **RevoScaleR** ) каждый уровень категориальной факторной переменной автоматически обрабатывается как отдельная фиктивная переменная.
   
-3.  Чтобы просмотреть сводку по полученной модели, вызовите функцию R **summary** .
+3.  Чтобы просмотреть сводные данные, возвращенные модели, вызовите R `summary` функции.
   
     ```R
     summary(logitObj)
@@ -112,53 +104,36 @@ ms.lasthandoff: 09/01/2017
   
 **Частичные результаты**
 
-*Результаты логистической регресии для: fraudRisk ~ state + gender +     cardholder + balance + numTrans + numIntlTrans + creditLine*
+```
+Logistic Regression Results for: fraudRisk ~ state + gender + cardholder + balance + numTrans + numIntlTrans + creditLine
+Data: sqlFraudDS (RxSqlServerData Data Source)
+Dependent variable(s): fraudRisk
+Total independent variables: 60 (Including number dropped: 3)
+Number of valid observations: 10000 -2
 
-*Данные: sqlFraudDS (RxSqlServerData Data Source)*
+LogLikelihood: 2032.8699 (Residual deviance on 9943 degrees of freedom)
 
-*Зависимые переменные: fraudRisk*
+Coefficients:
+Estimate Std. Error z value Pr(>|z|)     (Intercept)
+-8.627e+00  1.319e+00  -6.538 6.22e-11
+state=AK                Dropped    Dropped Dropped  Dropped
+state=AL             -1.043e+00  1.383e+00  -0.754   0.4511
 
-*Всего независимых переменных: 60 (в том числе удаленных: 3)*
+(other states omitted)
 
-*Число допустимых наблюдений: 10000 -2*
+gender=Male             Dropped    Dropped Dropped  Dropped
+gender=Female         7.226e-01  1.217e-01   5.936 2.92e-09
+cardholder=Principal    Dropped    Dropped Dropped  Dropped
+cardholder=Secondary  5.635e-01  3.403e-01   1.656   0.0977
+balance               3.962e-04  1.564e-05  25.335 2.22e-16
+numTrans              4.950e-02  2.202e-03  22.477 2.22e-16
+numIntlTrans          3.414e-02  5.318e-03   6.420 1.36e-10
+creditLine            1.042e-01  4.705e-03  22.153 2.22e-16
 
-*LogLikelihood: 2032,8699 (остаточное отклонение при 9943 степенях свободы)*
-
-*Коэффициенты:*
-
-*Значение z оценки средней квадратической ошибки Pr(>|z|) (отсекаемый отрезок)*
-
-*-8,627e+00  1,319e+00  -6,538 6,22e-11*
-
-*state=AK                Удалено    Удалено Удалено  Удалено*
-
-*state=AL             -1,043e+00  1,383e+00  -0,754   0,4511*
-
-*(другие состояния опущены)*
-
-*gender=Male             Удалено    Удалено Удалено  Удалено*
-
-*gender=Female         7,226e-01  1,217e-01   5,936 2,92e-09*
-
-*cardholder=Principal    Удалено    Удалено Удалено  Удалено*
-
-*владельца = вторичный 5.635e-01 3.403e-01 1.656 0.0977*
-
-*balance               3,962e-04  1,564e-05  25,335 2,22e-16*
-
-*numTrans              4,950e-02  2,202e-03  22,477 2,22e-16*
-
-*numIntlTrans          3,414e-02  5,318e-03   6,420 1.36e-10*
-
-*creditLine            1,042e-01  4,705e-03  22,153 2.22e-16*
-
-*---*
-
-*Коды значимости:  0 "\*\*\*" 0,001 "\*\*" 0,01 "\*" 0,05 "." 0.1 ‘ ’ 1*
-
-*Коэффициент переноса итоговой матрицы дисперсий и ковариаций: 3997,308*
-
-*Число итераций: 15*
+Signif. codes:  0 ‘\*\*\*’ 0.001 ‘\*\*’ 0.01 ‘\*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Condition number of final variance-covariance matrix: 3997.308
+Number of iterations: 15
+```
 
 ## <a name="next-step"></a>Следующий шаг
 
@@ -166,7 +141,4 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="previous-step"></a>Предыдущий шаг
 
-[Визуализация данных SQL Server с помощью R](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
-
-
-
+[Визуализация данных SQL Server с помощью языка R](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)

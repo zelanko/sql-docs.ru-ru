@@ -2,27 +2,27 @@
 title: "Начальный экран клиента Data Quality Client | Microsoft Docs"
 ms.custom: 
 ms.date: 02/29/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.clienthome.f1
+f1_keywords: sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
-caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "14"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 370c6cc6e18c7064db092a92d3b8a5d826927689
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 00ed6a9eaa24ff9981ca4184a7ec8ef3107ffc0f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-quality-client-home-screen"></a>Главный экран клиента DQS
   Этот экран обеспечивает доступ к пользовательским интерфейсам каждой из трех основных групп задач служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): управление базами знаний, проекты служб DQS и администрирование.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 09/09/2017
  **Мониторинг активности**  
  Отображает состояние всех действий (как текущих, так и прошлых), которые связаны с подключенным [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. Типы отслеживаемых действий включают управление базами знаний, проекты качества данных и исправление данных на основе служб SSIS.  
   
- **Конфигурация**  
+ **Configuration**  
  Показывает свойства конфигурации для учетных записей службы эталонных данных (через Windows Azure Marketplace и непосредственно в службы эталонных данных), общие параметры (интерактивная очистка, сопоставление и профилирование) и параметры серьезности журнала.  
   
 ## <a name="see-also"></a>См. также:  
@@ -70,4 +70,3 @@ ms.lasthandoff: 09/09/2017
  [Администрирование DQS](../data-quality-services/dqs-administration.md)  
   
   
-

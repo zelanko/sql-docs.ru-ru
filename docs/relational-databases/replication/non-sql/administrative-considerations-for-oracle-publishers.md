@@ -2,30 +2,32 @@
 title: "Вопросы управления издателями Oracle | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], administrative considerations
 - administering replication, Oracle publishing
 ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 058c10375ed15b5375f814199a57d032c5291018
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "29"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: c4e7330c7b1b6f0220d2cc40d50be71885cedfd1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Вопросы управления издателями Oracle
-  После завершения настройки издателя Oracle и установки механизмов отслеживания изменения репликаций администраторы систем баз данных Oracle могут использовать стандартные служебные программы Oracle и выполнять типичные задачи системного администратора. Однако необходимо знать о влиянии некоторых административных задач на публикуемые данные.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Завершив настройку издателя Oracle и реализовав механизмы отслеживания изменения репликации, администраторы систем баз данных Oracle могут использовать стандартные служебные программы Oracle и выполнять типичные задачи системного администратора. Однако необходимо знать о влиянии некоторых административных задач на публикуемые данные.  
   
  За исключением удаления или изменения столбца, публикуемого для репликации, либо удаления или изменения любого объекта репликации, эти вопросы не относятся к публикациям моментальных снимков.  
   
@@ -69,6 +71,6 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
  [Настройка издателя Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Рекомендации по структуре и ограничения для издателей Oracle](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Обзор публикации Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

@@ -3,8 +3,11 @@ title: "СОХРАНИТЕ ТРАНЗАКЦИИ (Transact-SQL) | Докумен�
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,20 +28,19 @@ helpviewer_keywords:
 - marked transactions [SQL Server], SAVE TRANSACTION statement
 - duplicate savepoints
 ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
-caps.latest.revision: 53
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 47e4c74c0f7e060d5f133e6941487df5923f41ef
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4acf3a47b6c023320caad72764dae20f3e16d460
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Устанавливает точку сохранения внутри транзакции.  
   
@@ -54,12 +56,12 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>Аргументы  
  *savepoint_name*  
- Имя, назначенное точке сохранения. Имена точек сохранения должны соответствовать правилам для идентификаторов, но ограничены 32 символами. *transaction_name* — всегда учитывается регистр, даже если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистр не учитывается.  
+ Имя, назначенное точке сохранения. Имена точек сохранения должны соответствовать правилам для идентификаторов, но ограничены 32 символами. *savepoint_name* — всегда учитывается регистр, даже если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистр не учитывается.  
   
  @*savepoint_variable*  
  Имя пользовательской переменной, содержащей допустимое имя точки сохранения. Переменная должна быть объявлена с **char**, **varchar**, **nchar**, или **nvarchar** тип данных. В переменную может быть передано более 32 символов, но будут использованы только 32 первых символа.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Пользователь может установить точку сохранения или маркер, внутри транзакции. Точка сохранения определяет место, к которому может возвратиться транзакция, если часть транзакции условно отменена. Если транзакция откатывается к точке сохранения, то ее выполнение должно быть продолжено до завершения с обработкой дополнительных инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)], если необходимо, и инструкции COMMIT TRANSACTION, либо транзакция должна быть полностью отменена откатом к началу. Для отмены всей транзакции, используйте инструкцию ROLLBACK TRANSACTION *transaction_name*. Отменяются все инструкции или процедуры транзакции.  
   
  В транзакции разрешены дублирующие имена точек сохранения, но инструкция ROLLBACK TRANSACTION, содержащая имя точки сохранения, откатывает транзакцию к точке сохранения последней инструкции SAVE TRANSACTION, использовавшей это имя.  
@@ -69,7 +71,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
 > [!IMPORTANT]  
 >  Инструкция ROLLBACK TRANSACTION с параметром savepoint_name освобождает все блокировки, полученные после точки сохранения, за исключением укрупненных блокировок и блокировок преобразования. Такие блокировки не освобождаются и не переводятся в прежний режим.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в роли public.  
   
 ## <a name="examples"></a>Примеры  
@@ -165,7 +167,7 @@ AS
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION (Transact-SQL)](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ФИКСАЦИЯ РАБОЧЕГО &#40; Transact-SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
@@ -182,4 +184,3 @@ GO
  [Функция XACT_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/xact-state-transact-sql.md)  
   
   
-

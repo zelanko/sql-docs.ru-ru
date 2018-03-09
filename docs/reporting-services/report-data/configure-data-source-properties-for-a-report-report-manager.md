@@ -1,28 +1,28 @@
 ---
-title: "Настройка свойств источника данных для отчета (диспетчер отчетов) | Документы Microsoft"
+title: "Настройка свойств источника данных для отчета (диспетчер отчетов) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data sources [Reporting Services], embedded
+helpviewer_keywords: data sources [Reporting Services], embedded
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
-caps.latest.revision: 44
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "44"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 57b647c8ad686dfe75509bcb946ff45867c743cd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d4edfc347b8ad4bb90d807f4f0c9ecc602ca3f2e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>Настройка свойств источника данных для отчета (диспетчер отчетов)
   При запуске отчета сервер отчетов получает сведения о свойствах для определения способа подключения к источнику данных. На странице свойств «Источник данных» опубликованного отчета указываются тип источника данных, строка соединения и сведения об учетных данных. Можно установить эти свойства, чтобы они отличались от исходных значений, заданных при создании отчета.  
@@ -31,11 +31,11 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-configure-an-embedded-data-source"></a>Настройка внедренного источника данных  
   
-1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  В диспетчере отчетов перейдите на страницу **Содержимое** . Перейдите к отчету, для которого нужно настроить источник данных, связанный с отчетом, и откройте его.  
   
-3.  Перейдите на вкладку **Свойства** . Откроется страница свойств **Общие** .  
+3.  Перейдите на вкладку **Свойства** . Откроется страница свойств **Общие**.  
   
 4.  Перейдите на вкладку **Источники данных** . Откроется страница свойств «Источник данных» отчета.  
   
@@ -64,11 +64,11 @@ ms.lasthandoff: 08/09/2017
  Дополнительные сведения о настройке учетных данных см. в разделе [Указание учетных данных и сведений о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Дополнительные сведения об учетной записи автоматического выполнения см. в разделе [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Страница «содержимое» &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Новая страница источника данных &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)   
- [Создание, изменение и удаление общих источников данных &#40; Службы SSRS &#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+ [Страница "Содержимое" (диспетчер отчетов)](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Страница "Создание источника данных" (диспетчер отчетов)](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)   
+ [Создание, изменение и удаление общих источников данных (службы SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Управление источниками данных отчета](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Создать, удалить или изменить общий источник данных &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Страницы свойств источников данных &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)  
+ [Создание, удаление или изменение общего источника данных (диспетчер отчетов)](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Страница "Свойства источников данных" (диспетчер отчетов)](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)  
   
   

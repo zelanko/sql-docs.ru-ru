@@ -2,36 +2,37 @@
 title: "Элемент Property (CSDLBI) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: f0770c5e-6420-4d0c-a5bf-b94eaf6877ca
-caps.latest.revision: 7
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1fee5461b3b779227839c3f722c9c75626ed44fe
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d61770b935ad397d5d0db48a3651f143ebef5522
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="property-element-csdlbi"></a>Элемент Property (CSDLBI)
-  Элемент Property в CSDLBI — сложный тип, предоставляющий дополнения к элементу языка CSDL Property для моделей данных бизнес-аналитики.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Элемент Property в CSDLBI — сложный тип, предоставляющий дополнения к элементу языка CSDL Property для моделей данных бизнес-аналитики.  
   
 ## <a name="elements-and-attributes"></a>Элементы и атрибуты  
  В следующей таблице перечислены элементы и атрибуты, определяющие элемент CSDLBI Property.  
   
-|Имя|Обязателен|Описание|  
+|Название|Обязателен|Описание|  
 |----------|-----------------|-----------------|  
 |Содержание|Нет|Строка, которая содержит код языка запроса.|  
 |DefaultAggregationFunction|Да|Строка, указывающая агрегатную функцию, которая должна использоваться при вычислениях с атрибутом, если никакой другой функции не задано.<br /><br /> Если этот параметр не указан, используется статистическое вычисление по умолчанию для модели — обычно SUM.|  
@@ -63,7 +64,7 @@ ms.lasthandoff: 09/01/2017
 |Временный|Свойство не может оставаться константным между операциями обновления.|  
   
 ## <a name="example"></a>Пример  
- **Табличный**  
+ **Табличные**  
   
  В следующем коде XML показано представление для CSDLBI версии 1.1 некоторых свойств в примере табличной модели AdventureWorks.  
   
@@ -98,7 +99,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="example"></a>Пример  
- **Multidimensional**  
+ **Многомерные**  
   
  В следующем примере для CSDLBI версии 1.1 показаны некоторые свойства столбцов в модели данных, представляющей куб операций Contoso. Обратите внимание, что заметки бизнес-аналитики не являются необходимыми и применяются не к большинству столбцов, а только к требующим специальной обработки на уровне представления данных.  
   
@@ -137,4 +138,3 @@ ms.lasthandoff: 09/01/2017
  [Технический справочник по заметки бизнес-Аналитики для языка CSDL](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   
-

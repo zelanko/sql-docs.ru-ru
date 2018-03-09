@@ -1,13 +1,14 @@
 ---
-title: "Предоставление разрешений для элементов сервера отчетов на сайте SharePoint | Документы Microsoft"
+title: "Предоставление разрешений для элементов сервера отчетов на сайте SharePoint | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,19 @@ helpviewer_keywords:
 - permissions [Reporting Services], native mode
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
-caps.latest.revision: 13
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "13"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: 106fb25d4fd8f58d34881e692a3bf508d6571d8c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b785da81bc694c8442d2a7a618e2abe8f1cec907
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Предоставление разрешений для элементов сервера отчетов на сайте SharePoint
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPF2010](../../includes/spf2010-md.md)] предоставляют встроенные средства безопасности, можно использовать для предоставления доступа к элементам сервера отчетов, которые доступны через сайтов и библиотек SharePoint. Если пользователям уже назначены разрешения, они получат и доступ к элементам и операциям сервера отчетов сразу после настройки параметров интеграции служб [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] и сервера отчетов. Можно использовать имеющиеся разрешения для передачи определений отчетов и других документов, просмотра отчетов, создания подписок и управления элементами.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] предоставляют встроенные средства безопасности, которые можно использовать для предоставления права доступа к элементам сервера отчетов, к которым предоставляется доступ с сайтов и из библиотек SharePoint. Если пользователям уже назначены разрешения, они получат и доступ к элементам и операциям сервера отчетов сразу после настройки параметров интеграции служб [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] и сервера отчетов. Можно использовать имеющиеся разрешения для передачи определений отчетов и других документов, просмотра отчетов, создания подписок и управления элементами.  
   
  Если вы не назначили разрешения или не знакомы со средствами безопасности служб [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], следуйте следующим рекомендациям.  
   
@@ -47,11 +48,11 @@ ms.lasthandoff: 08/09/2017
   
 -   В числе защищаемых объектов сайты, списки, библиотеки, папки и документы.  
   
--   Разрешение позволяет выполнить конкретную задачу. Службы [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] предоставляют 33 стандартных разрешения, которые можно объединить в уровень разрешений.  
+-   Разрешение позволяет выполнить конкретную задачу. [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] предоставляют 33 стандартных разрешения, которые можно объединить в уровень разрешений.  
   
 -   Уровень разрешений — это набор разрешений на защищаемые объекты, такие как сайт, библиотека, список, папка, элемент или документ, которые можно предоставлять пользователям или группам SharePoint. Он эквивалентен определению роли в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Существует пять стандартных уровней разрешений. При необходимости можно настроить любую из них или создать новые.  
   
--   Группа SharePoint — это группа пользователей, которую можно создать на сайте SharePoint для управления разрешениями на сайт и поддержки списков рассылки по электронной почте для членов сайта. Группа SharePoint состоит из учетных записей пользователей и групп Windows либо имен входа пользователей, если используется проверка подлинности с помощью форм. Службы [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] предоставляют три группы. При необходимости можно настроить любую из них или создать новые.  
+-   Группа SharePoint — это группа пользователей, которую можно создать на сайте SharePoint для управления разрешениями на сайт и поддержки списков рассылки по электронной почте для членов сайта. Группа SharePoint состоит из учетных записей пользователей и групп Windows либо имен входа пользователей, если используется проверка подлинности с помощью форм. [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] предоставляют три группы. При необходимости можно настроить любую из них или создать новые.  
   
 -   Наследование разрешений позволяет вложенным сайтам, спискам и библиотекам, а также элементам наследовать настройки безопасности родительского сайта. Унаследованные разрешения можно использовать для доступа к элементам сервера отчетов, хранящихся в библиотеке SharePoint. Использование наследования разрешений и стандартных групп SharePoint позволяет упростить развертывание и обеспечить немедленный доступ к большинству операций сервера отчетов.  
   
@@ -79,23 +80,23 @@ ms.lasthandoff: 08/09/2017
   
  Для использования встроенных средств безопасности необходимо назначить учетным записям пользователей или групп Windows группы SharePoint. За исключением администратора сервера и владельца сайта портала, которые имеют автоматический доступ к службам [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] после установки ПО, остальным пользователям должны быть предоставлены разрешения для доступа к серверу.  
   
-## <a name="in-this-section"></a>В этом разделе  
- [Использование встроенных средств безопасности служб Windows SharePoint Services, для элементов сервера отчетов](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+## <a name="in-this-section"></a>в этом разделе  
+ [Использование встроенных средств безопасности служб Windows SharePoint Services при работе с элементами сервера отчетов](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
  Объясняется, как использовать стандартные группы и уровни разрешений SharePoint для доступа к элементам сервера отчетов.  
   
- [Сайт SharePoint и List Permission Reference для элементов сервера отчетов](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ [Справочная таблица по разрешениям на доступ к спискам и сайтам SharePoint для элементов сервера отчетов](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
  Предоставляет ссылку на все разрешения продукта SharePoint, которые могут использоваться для получения доступа к операциям сервера отчетов.  
   
- [Задание разрешений для операций сервера отчетов в веб-приложении SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
+ [Задание разрешений для работы сервера отчетов в веб-приложении SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
  Описываются требования к разрешениям для создания автоматизированных отчетов и рекомендованные подходы по обеспечению доступности функций.  
   
- [Сравнение ролей и задач в службах Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ [Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
  Содержит краткое сравнение групп SharePoint со стандартными определениями ролей служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Задание разрешений для элементов сервера отчетов на сайте SharePoint &#40; Службы Reporting Services в SharePoint интегрированная режим &#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+ [Задание разрешений для элементов сервера отчетов на сайте SharePoint (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  Содержит инструкции по созданию новых групп SharePoint, имеющих разрешение на запуск построителя отчетов и установки параметров безопасности элементов модели. Этот раздел содержит также общее руководство по настройке пользовательских разрешений на любые элементы и операции сервера отчетов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Защита и обеспечение безопасности служб Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)  
   
   

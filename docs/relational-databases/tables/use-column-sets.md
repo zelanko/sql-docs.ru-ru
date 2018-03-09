@@ -2,31 +2,32 @@
 title: "Использование наборов столбцов | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/30/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - sparse columns, column sets
 - column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
-caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "28"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7ae01121fcb9c3cfaf67297fee281979a7ee8627
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: fece12352dc2691fdab3906a00f8cb64151590b2
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-column-sets"></a>Использование наборов столбцов
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   В таблицах, использующих разреженные столбцы, можно назначить набор столбцов, который будет возвращать все разреженные столбцы в таблице. Набор столбцов — это нетипизированное XML-представление, которое объединяет на выходе все разреженные столбцы таблицы в структурированном виде. Набор столбцов похож на вычисляемые столбцы тем, что набор столбцов физически не хранится в таблице. Набор столбцов отличается от вычисляемого столбца тем, что он может быть напрямую обновлен.  
   
@@ -132,7 +133,7 @@ GO
   
  ** Неприменимо — во время операции выбора из набора столбцов нет никаких выходных значений для этих атрибутов. Формируется ошибка, если в XML-представлении, предоставленном для набора столбцов в операции вставки или обновления, вызывающий указал значение для этого атрибута.  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
  Модель безопасности набора столбцов работает схожим образом с моделью безопасности между таблицами и столбцами. Наборы столбцов могут быть визуализированы как минитаблица; операции выбора для данной минитаблицы имеют вид SELECT *. Однако связь между набором столбцов и разреженными столбцами — это связь группирования, а не просто контейнер. Модель безопасности проверяет безопасность столбцов в наборе столбцов и выполняет операции DENY над базовыми разреженными столбцами. Далее приводятся дополнительные характеристики модели безопасности.  
   
 -   Права доступа могут быть предоставлены и отменены на столбец в наборе столбцов так же, как и на любой другой столбец в таблице.  
@@ -266,4 +267,3 @@ GO
  [Использование разреженных столбцов](../../relational-databases/tables/use-sparse-columns.md)  
   
   
-

@@ -1,13 +1,14 @@
 ---
-title: "Использование внешнего источника данных для данных подписчика (управляемая данными подписка) | Документы Microsoft"
+title: "Использование внешнего источника данных подписчика (управляемая данными подписка) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +19,16 @@ helpviewer_keywords:
 - data-driven subscriptions
 - data sources [Reporting Services], subscriptions
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
-caps.latest.revision: 43
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "43"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a337202cea263001fe810c91a607fa1746219bd6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d500b82566f2efaed147f7c7697bf0cf404e37b5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Использование внешнего источника данных подписчика (управляемая данными подписка)
   В управляемой данными подписке динамические данные подписки определяются запросом или командой, которые получают данные из внешнего источника данных. Данные подписки могут быть получены из любого поддерживаемого источника данных, который удовлетворяет требованиям обработки управляемой данными подписки. Запрос или синтаксис команды должны быть верными для модуля обработки данных, установленного на сервере отчетов.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>Передача значений параметров из базы данных подписчика в отчет  
  При создании управляемой данными подписки для параметризованного отчета, можно использовать значения переменных параметров для настройки выхода каждого отчета. Например, база данных подписчика может содержать идентификационные номера служащих, даты принятия на работу, названия должностей, а также сведения о расположении офиса, которые могут использоваться для применения фильтра к данным отчета. Если отчет принимает параметры, основанные на тех или иных доступных данных столбца, можно сопоставить параметр с соответствующим столбцом.  
   
- При сопоставлении полей подписчика и параметров отчета убедитесь в том, что типы данных и длины столбцов совместимы между собой. При несоответствии типов данных во время обработки подписки возникнет ошибка. Дополнительные сведения об использовании данных подписчика в параметризованных отчетах см. в разделе [Создание управляемой данными подписки &#40; Учебник по службам SSRS &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ При сопоставлении полей подписчика и параметров отчета убедитесь в том, что типы данных и длины столбцов совместимы между собой. При несоответствии типов данных во время обработки подписки возникнет ошибка. Дополнительные сведения об использовании данных подписчика в параметризованном отчете см. в разделе [Создание управляемой данными подписки (учебник по службам SSRS)](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
 ## <a name="modifying-the-subscriber-data-source"></a>Изменение источника данных подписчика  
  Предотвратить выполнение подписок могут следующие изменения источника данных подписчика:  
@@ -84,10 +84,9 @@ ms.lasthandoff: 08/09/2017
   
  При проведении любых из этих изменений необходимо обновить подписку.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание, изменение и удаление управляемых данными подписок](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
  [Подписки, управляемые данными](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [&#40; подписки и доставки Службы Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   
-

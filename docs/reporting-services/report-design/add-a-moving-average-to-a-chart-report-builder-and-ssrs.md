@@ -1,27 +1,27 @@
 ---
-title: "Добавление скользящего среднего в диаграмму (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Добавление скользящего среднего в диаграмму (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f838e4a7e9518587e91dddec6c2cab61c1061232
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: adbfab0284cb9af445df263a1e3792206148fab1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>Добавление скользящего среднего в диаграмму (построитель отчетов и службы SSRS)
 Скользящее среднее — это среднее по данным в ряде, вычисленное за определенный период времени. В отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы скользящее среднее можно отобразить в диаграмме для определения важных трендов.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/09/2017
   
  Формула скользящего среднего является наиболее популярным признаком цены, используемым в техническом анализе. Многие другие формулы, включая среднее, медиану и стандартное отклонение также могут быть производными от ряда на диаграмме. При указании скользящего среднего каждая формула может иметь один или более параметров, которые необходимо указать.  
  
- [Учебника: Добавление гистограммы к отчету (построитель отчетов)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md) поможет выполнить добавление скользящего среднего в диаграмму, если вы хотите попробовать с образцами данных.
+ Чтобы попробовать сделать это с образцами данных, см. раздел [Учебник. Добавление гистограммы к отчету (построитель отчетов)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md), где приводятся пошаговые инструкции по добавлению скользящего среднего в диаграмму.
   
  Когда формула скользящего среднего добавляется в режиме конструктора, добавляемый ряд линий является только видимым заполнителем. Диаграмма вычислит точки данных каждой формулы во время обработки отчета.  
   
@@ -51,10 +51,9 @@ ms.lasthandoff: 08/09/2017
     >  Период — это количество дней, используемых для подсчета скользящего среднего. Если значения даты-времени не указываются на оси X, период представляется количеством точек данных, используемых для вычисления скользящего среднего. Если есть только одна точка данных, формула скользящего среднего не вычисляется. Скользящее среднее вычисляется, начиная со второй точки. При задании параметра **Начать с первой точки** , диаграмма начнет вычисление скользящего среднего с первой точки. Если существует только одна точка данных, то точка в вычисленном скользящем среднем будет идентична первой точке исходного ряда.  
   
 ## <a name="see-also"></a>См. также:  
-* [Учебник: Добавление гистограммы к отчету (построитель отчетов)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
+* [Учебник. Добавление гистограммы к отчету (построитель отчетов)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
 *  [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
 *  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 *  [Добавление пустых точек на диаграмму (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
   
   
-

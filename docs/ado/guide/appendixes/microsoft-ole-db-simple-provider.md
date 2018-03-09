@@ -3,7 +3,7 @@ title: "Простой поставщик Microsoft OLE DB | Документы 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB simple provider
 - OLE DB simple provider [ADO]
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ae0672fc209e2a31608a36fdef6757bef8d60cf6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b81dae92dcb8f6493fd6d6c74515750d4e4a0f66
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Общие сведения о простой поставщик Microsoft OLE DB
 Microsoft OLE DB простого поставщика (Обещание) обеспечивает доступ к данным, для которых поставщик будет записана с помощью ADO [OLE DB простого поставщика (OSP) Toolkit](http://msdn.microsoft.com/en-us/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Простые поставщики предназначены для доступа к источникам данных, которые требуют только основных поддержки OLE DB, например в памяти массивов или XML-документов.
@@ -52,7 +51,7 @@ MSDAOSP
 
  Строка состоит из следующих ключевых слов:
 
-|Ключевое слово|Description|
+|Ключевое слово|Описание|
 |-------------|-----------------|
 |**Поставщик**|Определяет поставщик OLE DB для SQL Server.|
 |**Источник данных**|Указывает имя сервера.|
@@ -237,4 +236,3 @@ Sub WalkHier(ByVal iLevel As Integer, ByVal adoRS As ADODB.Recordset)
     iLevel = PriorLevel
 End Sub
 ```
-

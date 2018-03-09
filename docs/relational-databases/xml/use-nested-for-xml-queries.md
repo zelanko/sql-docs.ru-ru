@@ -2,9 +2,12 @@
 title: "Использование вложенных запросов FOR XML | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -14,20 +17,20 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-caps.latest.revision: 41
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: af44fc3250f620dcaad219e67b0e414cd76974a7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 53640114803f1dc03a10a0ed79edaaf09e08f638
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-nested-for-xml-queries"></a>Использование вложенных запросов FOR XML
-  Тип данных **xml** и директива [TYPE в запросах FOR XML](../../relational-databases/xml/type-directive-in-for-xml-queries.md) позволяют обрабатывать XML-документы, возвращаемые запросами FOR XML, как на сервере, так и на клиенте.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Тип данных **xml** и директива [TYPE в запросах FOR XML](../../relational-databases/xml/type-directive-in-for-xml-queries.md) позволяют обрабатывать XML-документы, возвращаемые запросами FOR XML, как на сервере, так и на клиенте.  
   
 ## <a name="processing-with-xml-type-variables"></a>Обработка переменных типа XML  
  Результат запроса FOR XML можно присвоить переменной типа **xml** или воспользоваться языком XQuery, чтобы выполнить к нему запрос, после чего и присвоить полученный результат переменной типа **xml** для дополнительной обработки.  
@@ -88,7 +91,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>Передача результатов внутреннего запроса FOR XML внешним запросам в виде экземпляров типа xml  
- Можно создать вложенные запросы `FOR XML` , в которых результат внутреннего запроса возвращает внешнему запросу данные типа **xml** . Например:  
+ Можно создать вложенные запросы `FOR XML` , в которых результат внутреннего запроса возвращает внешнему запросу данные типа **xml** . Пример:  
   
 ```  
 SELECT Col1,   
@@ -134,4 +137,3 @@ FOR XML AUTO, TYPE;
  Показывает применение вложенных запросов FOR XML для управления структурой XML-документов, создаваемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
-

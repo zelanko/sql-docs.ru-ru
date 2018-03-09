@@ -3,27 +3,28 @@ title: "Общие сведения об ODBC | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC [ODBC]
 - ODBC [ODBC], about ODBC
 ms.assetid: dbe0b5a3-d7fa-440d-80b4-6cc00de159dc
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0a12e6d1c51997dced4f7a19d3dd64c3eb2ebd36
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f6bd2400d4c81147a2537c9a68eb4714bc2c66e0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="introduction-to-odbc"></a>Общие сведения об ODBC
 В этом разделе содержится краткое журнал языка SQL и ODBC и включает общие сведения об интерфейсе ODBC.  
@@ -36,5 +37,4 @@ ms.lasthandoff: 09/09/2017
   
 -   [Архитектура ODBC](../../odbc/reference/odbc-architecture.md)  
   
--   [Сведения о 64-разрядных ODBC](../../odbc/reference/odbc-64-bit-information.md)
-
+-   [Сведения о 64-разрядном интерфейсе ODBC](../../odbc/reference/odbc-64-bit-information.md)

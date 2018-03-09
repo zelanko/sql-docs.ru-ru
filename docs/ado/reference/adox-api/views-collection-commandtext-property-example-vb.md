@@ -3,7 +3,7 @@ title: "Представления коллекции примера свойс�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - CommandText property [ADOX]
 - Views collection [ADOX], Visual Basic example
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0d610a39e0f22a893597652fcf4916e0164a920b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 45e92a822f8a8acc6abbab756a44668bb4c966c6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="views-collection-commandtext-property-example-vb"></a>Коллекция представлений, пример свойства CommandText (Visual Basic)
 Следующий код демонстрирует использование [команда](../../../ado/reference/adox-api/command-property-adox.md) свойство обновление текста представления.  
@@ -84,10 +83,9 @@ End Sub
 ' EndViewsCollectionVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Свойство команды (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
  [Объект представления (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Коллекции представлений (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
-
+ [Коллекция Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

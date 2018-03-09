@@ -2,31 +2,31 @@
 title: "Защита агента слияния | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.security.MA.f1
-helpviewer_keywords:
-- Merge Agent Security dialog box
+f1_keywords: sql13.rep.security.MA.f1
+helpviewer_keywords: Merge Agent Security dialog box
 ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
-caps.latest.revision: 24
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 91b56fdfcd9865baf0063b15998572a228b83852
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "24"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: d6f95cce617a490f37f4f8171ebf0e67e1d781d5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="merge-agent-security"></a>Безопасность агента слияния
-  При помощи диалогового окна **Безопасность агента слияния** можно указать учетную запись Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] , под которой необходимо запускать агент слияния. Агент слияния запускается на распространителе для принудительных подписок и на подписчике для подписок по запросу. На учетную запись Windows можно также ссылаться как на *учетную запись процесса*, потому что процесс агента работает под этой учетной записью. Дополнительные параметры в этом диалоговом окне зависят от метода доступа к нему.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью диалогового окна **Безопасность агента слияния** можно указать учетную запись Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)], под которой необходимо запускать агент слияния. Агент слияния запускается на распространителе для принудительных подписок и на подписчике для подписок по запросу. На учетную запись Windows можно также ссылаться как на *учетную запись процесса*, потому что процесс агента работает под этой учетной записью. Дополнительные параметры в этом диалоговом окне зависят от метода доступа к нему.  
   
 -   Если это диалоговое окно вызывается из мастера создания подписки, можно указать контекст, при котором агент слияния устанавливает соединение с сервером подписчика (для принудительных подписок) или с серверами издателя и распространителя (для подписок по запросу). Соединение можно установить с помощью учетной записи Windows или в контексте указанной учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -87,9 +87,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также:  
  [Управление именами для входа и паролями при репликации](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
- [Модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md)   
+ [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)  (Модель безопасности агента репликации)  
  [Обзор агентов репликации](../../relational-databases/replication/agents/replication-agents-overview.md)   
- [Рекомендации по защите репликации](../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

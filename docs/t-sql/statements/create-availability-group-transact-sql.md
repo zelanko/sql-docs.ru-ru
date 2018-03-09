@@ -1,10 +1,13 @@
 ---
 title: "Создание группы ДОСТУПНОСТИ (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 10/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
-caps.latest.revision: 196
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cebeb43402be1762021738096b9a0e959082d986
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: e0a4792974ec9aa78678aec74dc390e992471e64
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Создание новой группы доступности при условии, что экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включен для функции [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
@@ -48,7 +50,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```SQL  
   
 CREATE AVAILABILITY GROUP group_name  
    WITH (<with_option_spec> [ ,...n ] )  
@@ -73,8 +75,8 @@ CREATE AVAILABILITY GROUP group_name
   <server_instance> WITH  
     (  
        ENDPOINT_URL = 'TCP://system-address:port',  
-       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
-       FAILOVER_MODE = { AUTOMATIC | MANUAL }  
+       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
+       FAILOVER_MODE = { AUTOMATIC | MANUAL | EXTERNAL }  
        [ , <add_replica_option> [ ,...n ] ]  
     )   
   
@@ -118,7 +120,7 @@ CREATE AVAILABILITY GROUP group_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *имя_группы*  
+ *group_name*  
  Указывает имя новой группы доступности. *имя_группы* должен быть допустимым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [идентификатор](../../relational-databases/databases/database-identifiers.md), и оно должно быть уникальным во всех группах доступности в кластере WSFC. Максимальная длина имени группы доступности составляет 128 символов.  
   
  AUTOMATED_BACKUP_PREFERENCE  **=**  {ОСНОВНОЙ | SECONDARY_ONLY | ВТОРИЧНЫЙ | НЕТ}  
@@ -188,10 +190,10 @@ CREATE AVAILABILITY GROUP group_name
  Используется для создания распределенной группы доступности. Этот параметр используется с параметром ON группы ДОСТУПНОСТИ для подключения двух групп доступности в отдельные отказоустойчивые кластеры Windows Server.  Дополнительные сведения см. в разделе [Распределенные группы доступности (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md). Распределенные группы доступности поддерживаются начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. 
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
- Появился в SQL Server CTP 2.2 — 2017 г. Позволяет задать минимальное число синхронных вторичных реплик, необходимые для фиксации, прежде чем основной фиксирует транзакцию. Гарантирует транзакций SQL Server ожидает журналы транзакций будут обновлены на минимальное число вторичных реплик. Значение по умолчанию — 0, что дает то же поведение, что SQL Server 2016. Минимальное значение — 0. Максимальное значение — количество реплик минус 1. Этот параметр относится к репликам в режиме синхронной фиксации. Когда реплики находятся в режиме синхронной фиксации, операций записи на первичной реплике ждать до записи на вторичных репликах синхронной фиксации в журнал транзакций базы данных реплики. Если SQL Server, на котором размещена вторичная реплика перестает отвечать, SQL Server, на котором размещена первичная реплика реплика помечает вторичную как не СИНХРОНИЗИРОВАНЫ и продолжить работу. Когда отвечать на запросы базы данных в оперативный он находится в состоянии «не синхронизировано» и реплика помечена как как имеющий неполадки, пока основной можно вновь сделать ее синхронной. Данный параметр гарантирует, что первичная реплика ожидает, пока минимальное число реплик, которые были зафиксированы каждой транзакции. Если минимальное число реплик недоступен ошибкой фиксации на сервере-источнике. Этот параметр применяется к группам доступности с типом кластера `WSFC` и `EXTERNAL`. Для типа кластера `EXTERNAL` параметр изменяется при добавлении группы доступности для ресурса кластера. В разделе [высокий уровень доступности и защиты данных в конфигурации группы доступности](../../linux/sql-server-linux-availability-group-ha.md).
+ Появился в SQL Server 2017 г. Позволяет задать минимальное число синхронных вторичных реплик, необходимые для фиксации, прежде чем основной фиксирует транзакцию. Гарантирует транзакций SQL Server ожидает журналы транзакций будут обновлены на минимальное число вторичных реплик. Значение по умолчанию — 0, что дает то же поведение, что SQL Server 2016. Минимальное значение — 0. Максимальное значение — количество реплик минус 1. Этот параметр относится к репликам в режиме синхронной фиксации. Когда реплики находятся в режиме синхронной фиксации, операций записи на первичной реплике ждать до записи на вторичных репликах синхронной фиксации в журнал транзакций базы данных реплики. Если SQL Server, на котором размещена вторичная реплика перестает отвечать, SQL Server, на котором размещена первичная реплика реплика помечает вторичную как не СИНХРОНИЗИРОВАНЫ и продолжить работу. Когда отвечать на запросы базы данных в оперативный он находится в состоянии «не синхронизировано» и реплика помечена как как имеющий неполадки, пока основной можно вновь сделать ее синхронной. Данный параметр гарантирует, что первичная реплика ожидает, пока минимальное число реплик, которые были зафиксированы каждой транзакции. Если минимальное число реплик недоступен ошибкой фиксации на сервере-источнике. Для типа кластера `EXTERNAL` параметр изменяется при добавлении группы доступности для ресурса кластера. В разделе [высокий уровень доступности и защиты данных в конфигурации группы доступности](../../linux/sql-server-linux-availability-group-ha.md).
 
  CLUSTER_TYPE  
- Появился в SQL Server CTP 2.2 — 2017 г. Используется для определения, если группа доступности на кластере отработки отказа Windows Server (WSFC).  Значение WSFC, если группа доступности находится на экземпляре отказоустойчивого кластера в отказоустойчивом кластере Windows Server. Значение ВНЕШНЕЙ при кластера управляется диспетчером кластеров, не отказоустойчивого кластера Windows Server, такие как Linux Pacemaker. Задано значение NONE, если не используется WSFC для координации кластера группы доступности. Например, если группы доступности включает серверы Linux. 
+ Появился в SQL Server 2017 г. Используется для определения, если группа доступности на кластере отработки отказа Windows Server (WSFC).  Значение WSFC, если группа доступности находится на экземпляре отказоустойчивого кластера в отказоустойчивом кластере Windows Server. Значение ВНЕШНЕЙ при кластера управляется диспетчером кластеров, не отказоустойчивого кластера Windows Server, такие как Linux Pacemaker. Задано значение NONE, если не используется WSFC для координации кластера группы доступности. Например, при группы доступности включает серверы Linux с без диспетчера кластеров. 
 
  База данных *имя_базы_данных*  
  Задает список из одной или нескольких пользовательских баз данных на локальном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (то есть на экземпляре сервера, на котором создается группа доступности). Можно указать несколько баз данных для группы доступности, но каждая база данных может принадлежать только к одной группе доступности. Сведения о типе баз данных, которые могут поддерживаться группой доступности см. в разделе [условия, ограничения и рекомендации для групп доступности AlwaysOn &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). Чтобы узнать, какие локальные базы данных уже принадлежит к группе доступности, в разделе **replica_id** столбца в [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) представления каталога.  
@@ -234,9 +236,9 @@ CREATE AVAILABILITY GROUP group_name
  ENDPOINT_URL **= "**TCP**://***системный_адрес***:***порт***"**  
  Указывает URL-адрес [конечной точки зеркального отображения базы данных](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещена реплика доступности, которая определяется в текущем предложении REPLICA ON.  
   
- Предложение ENDPOINT_URL является обязательным. Дополнительные сведения см. в разделе [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
+ Предложение ENDPOINT_URL является обязательным. Дополнительные сведения см. в разделе [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **"**TCP**://***системный_адрес***:***порт***"**  
+ **'**TCP**://***system-address***:***port***'**  
  Задает URL-адрес для конечной точки или URL-адрес маршрутизации, доступный только для чтения. Параметры URL-адреса:  
   
  *system-address*  
@@ -245,16 +247,25 @@ CREATE AVAILABILITY GROUP group_name
  *port*  
  Номер порта, связанный с конечной точкой зеркального отображения экземпляра сервера-участника (для параметра ENDPOINT_URL), или номер порта, используемый компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] в экземпляре сервера (для параметра READ_ONLY_ROUTING_URL).  
   
- AVAILABILITY_MODE  **=**  {{SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT НЕ БОЛЕЕ ЧЕМ}  
- SYNCHRONOUS_COMMIT или asynchronous_commit не более чем указывает, имеет ли первичная реплика ожидания вторичной реплики подтверждения фиксации (записи) записи журнала на диск, прежде чем первичная реплика может фиксировать транзакции на сервере-источнике данного База данных. Фиксация транзакций в других базах данных, расположенных в этой первичной реплике, может выполняться независимо.
+ AVAILABILITY_MODE  **=**  {{SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT НЕ БОЛЕЕ ЧЕМ | CONFIGURATION_ONLY}  
+ SYNCHRONOUS_COMMIT или asynchronous_commit не более чем указывает, имеет ли первичная реплика ожидания вторичной реплики подтверждения фиксации (записи) записи журнала на диск, прежде чем первичная реплика может фиксировать транзакции на сервере-источнике данного База данных. Фиксация транзакций в других базах данных, расположенных в этой первичной реплике, может выполняться независимо. SQL Server 2017 г накопительным пакетом обновления 1 появились CONFIGURATION_ONLY. Реплика CONFIGURATION_ONLY применяется только в группы доступности с CLUSTER_TYPE = ВНЕШНИЕ или CLUSTER_TYPE = NONE. 
   
  SYNCHRONOUS_COMMIT  
  Указывает, что первичная реплика ожидает фиксации транзакции, пока они не записаны в этой вторичной реплике (режим синхронной фиксации). Вы можете указать SYNCHRONOUS_COMMIT не более чем для трех реплик, включая первичную.  
   
  ASYNCHRONOUS_COMMIT  
  Указывает, что первичная реплика фиксирует транзакции без ожидания записи журнала на данной вторичной реплике (режим доступности синхронной фиксации). Вы можете указать ASYNCHRONOUS_COMMIT не более чем для пяти реплик доступности, включая первичную реплику.  
+
+ CONFIGURATION_ONLY указывает, что первичная реплика синхронно фиксировать метаданные конфигурации группы доступности к базе данных master в этой реплике. Реплика не будет содержать данные пользователя. Этот параметр:
+
+- Может размещаться в любом выпуске SQL Server, включая экспресс-выпуск.
+- Требуется реплики CONFIGURATION_ONLY должен иметь тип конечной точки зеркального отображения данных `WITNESS`.
+- Не может быть изменен.
+- Не является допустимым при `CLUSTER_TYPE = WSFC`. 
+
+   Дополнительные сведения см. в разделе [конфигурации реплицируют только](../../linux/sql-server-linux-availability-group-ha.md).
   
- Предложение AVAILABILITY_MODE является обязательным. Дополнительные сведения см. в статье [Режимы доступности (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+ Предложение AVAILABILITY_MODE является обязательным. Дополнительные сведения см. в разделе [Режимы доступности (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
  FAILOVER_MODE  **=**  {АВТОМАТИЧЕСКОГО | ВРУЧНУЮ}  
  Указывает режим отработки отказов определяемой реплики доступности.  
@@ -371,7 +382,7 @@ CREATE AVAILABILITY GROUP group_name
   
  Предложение ПРОСЛУШИВАТЕЛЯ является обязательным.  
   
- **"**TCP**://***системный_адрес***:***порт***"**  
+ **'**TCP**://***system-address***:***port***'**  
  Указывает URL-адрес для прослушивателя, связанного с группой доступности. Параметры URL-адреса:  
   
  *system-address*  
@@ -380,7 +391,7 @@ CREATE AVAILABILITY GROUP group_name
  *port*  
  — Номер порта, который связан с конечной точкой зеркального отображения для группы доступности. Обратите внимание, что это не порта прослушивателя.  
   
- AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT НЕ БОЛЕЕ ЧЕМ}  
+ AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT НЕ БОЛЕЕ ЧЕМ | CONFIGURATION_ONLY}  
  Указывает, имеет ли первичная реплика ожидания вторичной группы доступности для подтверждения фиксации (записи) записи журнала на диск, прежде чем первичная реплика может фиксировать транзакцию в указанной базе данных.  
   
  SYNCHRONOUS_COMMIT  
@@ -408,7 +419,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  Указывает ручного заполнения (по умолчанию). Этот метод необходимо создать резервную копию базы данных на первичной реплике и вручную восстановите эту резервную копию на реплику группы доступности вторичной.  
   
- ПРОСЛУШИВАТЕЛЬ **"***dns_name***" (** \<listener_option > **)** определяет новый прослушиватель группы доступности для этого группы доступности. Аргумент LISTENER является необязательным.  
+ ПРОСЛУШИВАТЕЛЬ **"***dns_name***" (** \<listener_option > **)** определяет новый прослушиватель группы доступности для этой группы доступности. Аргумент LISTENER является необязательным.  
   
 > [!IMPORTANT]  
 >  Перед созданием первого прослушивателя настоятельно рекомендуется ознакомиться с [Создание или настройка прослушивателя группы доступности &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
@@ -440,7 +451,7 @@ CREATE AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- С IP-адресом **(** { **("***four_part_ipv4_address***«,»***four_part_ipv4_mask* **')** | **("***ipv6_address***")** } [ **,** ...  *n*  ] **)** [ **,** ПОРТ  **=**  *listener_port* ]  
+ WITH IP **(** { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘***ipv6_address***’)** } [ **,** ...*n* ] **)** [ **,** PORT **=***listener_port* ]  
  Указывает, что вместо использования протокола DHCP, прослушиватель группы доступности использует один или несколько статических IP-адресов. Чтобы создать группу доступности, охватывающую несколько подсетей, в конфигурации прослушивателя должен присутствовать один статический IP-адрес для каждой подсети. Для конкретной подсети статический IP-адрес может иметь формат IPv4 или IPv6. Обратитесь к администратору сети, чтобы получить статический IP-адрес для каждой подсети, в которой размещены реплики новой группы доступности.  
   
  Например:  
@@ -456,12 +467,12 @@ CREATE AVAILABILITY GROUP group_name
  *ipv6_address*  
  Задает IPv6-адрес для прослушивателя группы доступности. Например, `2001::4898:23:1002:20f:1fff:feff:b3a3`.  
   
- ПОРТ  **=**  *listener_port*  
+ PORT **=** *listener_port*  
  Указывает номер порта —*listener_port*— для использования прослушивателя группы доступности, который задается с помощью предложения WITH IP. Параметр PORT является необязательным.  
   
  По умолчанию поддерживается номер порта 1433. Однако из соображений безопасности, рекомендуется использовать другой номер порта.  
   
- Например: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`.  
+ Например: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
 ## <a name="prerequisites-and-restrictions"></a>Требования и ограничения  
  Сведения о компонентах, необходимых для создания группы доступности см. в разделе [условия, ограничения и рекомендации для групп доступности AlwaysOn &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
@@ -478,7 +489,7 @@ CREATE AVAILABILITY GROUP group_name
 ### <a name="a-configuring-backup-on-secondary-replicas-flexible-failover-policy-and-connection-access"></a>A. Настройка резервного копирования на вторичных репликах, гибкие политики обработки отказов и доступ к соединению  
  В следующем примере создается группа доступности `MyAg` для двух пользовательских баз данных, `ThisDatabase` и `ThatDatabase`. В следующей таблице представлена сводка значений для параметров, установленных для группы доступности в целом.  
   
-|Параметр группы|Настройка|Description|  
+|Параметр группы|Настройка|Описание|  
 |------------------|-------------|-----------------|  
 |AUTOMATED_BACKUP_PREFERENCE|SECONDARY|Параметр предпочтения автоматического резервного копирования указывает, что резервное копирование должно выполняться на вторичной реплике, за исключением тех случаев, когда в режиме «в сети» находится только первичная реплика (это режим по умолчанию). Чтобы параметр AUTOMATED_BACKUP_PREFERENCE как-то влиял на работу, необходимо создать скрипт заданий резервного копирования для баз данных доступности, чтобы они принимали в расчет предпочтения автоматического резервного копирования.|  
 |FAILURE_CONDITION_LEVEL|3|Настройка уровня условия сбоя указывает, что следует запустить автоматический переход на другой ресурс в случае появления критических внутренних ошибок SQL Server, таких как потерянные спин-блокировки, серьезные нарушения доступа для записи или формирование слишком больших дампов.|  
@@ -486,9 +497,9 @@ CREATE AVAILABILITY GROUP group_name
   
  Три реплики доступности должны быть размещены на экземплярах сервера по умолчанию на компьютерах с именами `COMPUTER01`, `COMPUTER02` и `COMPUTER03`. В следующей таблице приведена сводка значений, указанных в качестве параметров каждой реплики.  
   
-|Параметр реплики|Настройка на `COMPUTER01`|Настройка на `COMPUTER02`|Настройка на `COMPUTER03`|Description|  
+|Параметр реплики|Настройка на `COMPUTER01`|Настройка на `COMPUTER02`|Настройка на `COMPUTER03`|Описание|  
 |--------------------|-----------------------------|-----------------------------|-----------------------------|-----------------|  
-|ENDPOINT_URL|TCP: / /*COMPUTER01:5022*|TCP: / /*COMPUTER02:5022*|TCP: / /*COMPUTER03:5022*|В этом примере системы находятся в одном домене, поэтому URL-адреса конечной точки могут использовать имена компьютерной системы в качестве системного адреса.|  
+|ENDPOINT_URL|TCP://*COMPUTER01:5022*|TCP://*COMPUTER02:5022*|TCP://*COMPUTER03:5022*|В этом примере системы находятся в одном домене, поэтому URL-адреса конечной точки могут использовать имена компьютерной системы в качестве системного адреса.|  
 |AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|Две реплики используют режим синхронной фиксации. При синхронизации они поддерживают отработку отказа без потери данных. Третья реплика использует режим доступности с асинхронной фиксацией.|  
 |FAILOVER_MODE|AUTOMATIC|AUTOMATIC|MANUAL|Реплики с синхронной фиксацией поддерживают автоматический переход на другой ресурс и запланированный переход на другой ресурс вручную. Реплика режима доступности с синхронной фиксацией поддерживает только принудительный переход на другой ресурс вручную.|  
 |BACKUP_PRIORITY|30|30|90|Более высокий приоритет со значением 90 назначается реплике с асинхронной фиксацией, а не репликам с синхронной фиксацией. Как правило, резервные копии на экземпляре сервера, на котором размещена реплика асинхронной фиксации.|  
@@ -498,7 +509,7 @@ CREATE AVAILABILITY GROUP group_name
   
  И наконец, в примере указано необязательное предложение LISTENER, предназначенное для создания прослушивателя группы доступности для новой группы доступности. Для этого прослушивателя задается уникальное имя DNS — `MyAgListenerIvP6`. Две реплики находятся в разных подсетях, поэтому прослушивателю необходимо использовать статические IP-адреса. Для каждой из двух реплик доступности предложение WITH IP указывает статический IP-адрес `2001:4898:f0:f00f::cf3c` и `2001:4898:e0:f213::4ce2`, использующий формат IPv6. В этом примере также указывается и используется необязательный параметр PORT, указывающий порт `60173` в качестве порта прослушивателя.  
   
-```  
+```SQL
 CREATE AVAILABILITY GROUP MyAg   
    WITH (  
       AUTOMATED_BACKUP_PREFERENCE = SECONDARY,  
@@ -555,22 +566,21 @@ GO
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
--   [Создание группы доступности (Transact-SQL)](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)  
+-   [Создание группы доступности &#40; Transact-SQL &#41;](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)  
   
--   [Использование мастера групп доступности (среда SQL Server Management Studio)](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [Использование мастера групп доступности &#40; SQL Server Management Studio &#41;](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Использование диалогового окна "Создание группы доступности" (среда SQL Server Management Studio)](../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Использование диалогового окна "Создание группы доступности" (SQL Server Management Studio)](../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [Использование мастера групп доступности (среда SQL Server Management Studio)](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [Использование мастера групп доступности &#40; SQL Server Management Studio &#41;](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [ALTER DATABASE SET HADR (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
  [DROP AVAILABILITY GROUP &#40; Transact-SQL &#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   
  [Поиск и устранение неисправностей конфигурации групп доступности #40; SQL Server &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Обзор групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+ [Прослушиватели группы доступности, возможность подключения клиентов и отработка отказа приложений &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
-
 

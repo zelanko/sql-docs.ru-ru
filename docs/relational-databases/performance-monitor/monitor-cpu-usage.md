@@ -2,11 +2,13 @@
 title: "Мониторинг использования ЦП | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,20 +24,19 @@ helpviewer_keywords:
 - CPU [SQL Server], monitoring
 - monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "20"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 53ee7928baad42733f9b9cfaaf699153b993a287
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 873cf5a337f18dc9faa8e095d438de79843fde7d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-cpu-usage"></a>Мониторинг использования ЦП
-  Периодически контролируйте экземпляр Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы определить, находятся ли уровни загрузки ЦП в стандартных диапазонах. Постоянный высокий уровень использования ЦП может указывать на необходимость обновления ЦП или на необходимость добавления нескольких процессоров. Кроме того, высокий уровень использования ЦП может указывать на плохо настроенное или плохо разработанное приложение. Оптимизация работы приложения может снизить уровень загрузки ЦП.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Периодически контролируйте экземпляр Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы определить, находятся ли уровни загрузки ЦП в допустимых диапазонах. Постоянный высокий уровень использования ЦП может указывать на необходимость обновления ЦП или на необходимость добавления нескольких процессоров. Кроме того, высокий уровень использования ЦП может указывать на плохо настроенное или плохо разработанное приложение. Оптимизация работы приложения может снизить уровень загрузки ЦП.  
   
  Эффективным способом определения уровня загрузки ЦП является использование счетчика **Процессор: % загруженности процессора** в служебной программе «Системный монитор». Этот счетчик отслеживает время, которое ЦП тратит на выполнение потока во время работы. Постоянный уровень загрузки ЦП в диапазоне от 80 до 90 % может указывать на необходимость обновления ЦП или на необходимость добавления нескольких процессоров. При работе с многопроцессорными системами следите за отдельным экземпляром упомянутого счетчика для каждого процессора. Это значение представляет суммарное процессорное время указанного процессора. Чтобы определить среднее для всех процессоров, воспользуйтесь вместо этого счетчиком **Система: % общего процессорного времени** .  
   
@@ -61,4 +62,3 @@ ms.lasthandoff: 06/22/2017
  Уровни загрузки ЦП около 100 % при обработке многочисленных запросов клиентов могут указывать на то, что процессы стоят в очереди, ожидая обработки процессором, который является узким местом системы. Данная проблема может быть решена установкой более быстрых процессоров.  
   
   
-

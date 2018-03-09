@@ -2,33 +2,32 @@
 title: "ALTER ВНЕШНЕЙ БИБЛИОТЕКИ (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER EXTERNAL LIBRARY
 - ALTER_EXTERNAL_LIBRARY_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- ALTER EXTERNAL LIBRARY
+dev_langs: TSQL
+helpviewer_keywords: ALTER EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: d0fe9adc1907d773bdfddda38b5900774ec97deb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: b728fa43959ee047173b1533e70d46e5b1e0f7c1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER ВНЕШНЕЙ БИБЛИОТЕКИ (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Изменяет содержимое существующего пакета, внешние библиотеки.
 
@@ -74,7 +73,7 @@ WITH ( LANGUAGE = 'R' )
 
 При необходимости можно указать платформу операционной системы для файла. Для каждой платформы операционной системы для конкретного языка или среды выполнения разрешена артефакта только один файл или содержимое.
 
-**Источник_данных = external_data_source_name**
+**DATA_SOURCE = external_data_source_name**
 
 Задает имя внешнего источника данных, содержащий местоположение файла библиотеки. Это расположение должно указывать путь к хранилищу BLOB-объектов Azure. Для создания внешнего источника данных, используйте [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md).
 
@@ -89,13 +88,13 @@ WITH ( LANGUAGE = 'R' )
 
 Указывает платформу для библиотеки содержимого. Это значение является обязательным при изменении существующей библиотеки для добавления другой платформе. Windows является единственным поддерживаемой платформы.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 
 Для языка R, пакеты необходимо подготовить в виде файлов ZIP-архив. ПОЧТОВЫЙ модуль для Windows. В настоящее время поддерживается только на платформу Windows.  
 
 `ALTER EXTERNAL LIBRARY` Инструкции только отправляет биты библиотеки в базе данных. Изменения библиотеки фактически не устанавливается, пока пользователь запускает внешнего скрипта после него, выполнив [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Разрешения
 
 Требуется `ALTER ANY EXTERNAL LIBRARY` разрешение. Пользователей, создавших внешней библиотеки, можно изменить, внешние библиотеки.
 
@@ -142,4 +141,3 @@ ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 
 [DROP ВНЕШНЕЙ БИБЛИОТЕКИ (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
-

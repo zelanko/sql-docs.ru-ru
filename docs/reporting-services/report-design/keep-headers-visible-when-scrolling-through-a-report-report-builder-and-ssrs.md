@@ -1,44 +1,45 @@
 ---
-title: "Сохранение заголовков видимыми при прокрутке отчета (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Сохранение заголовков видимыми при прокрутке отчета (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: b3e96ac7fb60f00d87e5a596895e1422c9502869
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f2fac57fe0e898a1ccbfbe33fb271eae76da1389
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Сохранение заголовков видимыми при прокрутке отчета (построитель отчетов и службы SSRS)
   Чтобы предотвратить исчезновение заголовков строк и столбцов из поля видимости при прокрутке после подготовки отчета к просмотру, можно закрепить заголовок строки или столбца.  
   
  Способ управления строками и столбцами зависит от того, используется ли таблица или матрица. Если имеется таблица, то в качестве видимых настраиваются статические элементы (заголовки строк и столбцов). Если же имеется матрица, то в качестве видимых настраиваются заголовки групп строк и столбцов.  
   
- Если вы экспортируете отчет в Excel, заголовок не будет автоматически зафиксирован. Вы можете зафиксировать вкладку в Excel. Дополнительные сведения см. **верхних и нижних колонтитулов** раздел [Экспорт в Microsoft Excel &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
+ Если вы экспортируете отчет в Excel, заголовок не будет автоматически зафиксирован. Вы можете зафиксировать вкладку в Excel. Дополнительные сведения см. в подразделе **Верхние и нижние колонтитулы страницы** раздела [Экспорт в Microsoft Excel (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Даже если в таблице есть группы строк и столбцов, сохранить видимость этих заголовков групп при прокрутке нельзя.  
   
  На следующем рисунке показана таблица.  
   
- ![Таблица](../../reporting-services/report-design/media/table.png "таблицы")  
+ ![Таблица](../../reporting-services/report-design/media/table.png "Таблица")  
   
  На следующем рисунке показана матрица.  
   
- ![Матрица](../../reporting-services/report-design/media/matrix.png "матрицы")  
+ ![Матрица](../../reporting-services/report-design/media/matrix.png "Матрица")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -55,7 +56,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  В области конструктора щелкните в любом месте таблицы, чтобы открыть статические элементы и группы на панели группирования.  
   
-     ![Панель группирования](../../reporting-services/report-design/media/grouppane-updated.png "панель группирования")  
+     ![Панель группирования](../../reporting-services/report-design/media/grouppane-updated.png "Панель группирования")  
   
      На панели «Группы строк» отображаются иерархические статические и динамические элементы иерархии групп строк, а на панели «Группы столбцов» аналогично отображается иерархия групп столбцов.  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  Щелкните статический член (строку или столбец), который нужно оставить видимым при прокрутке. В панели «Свойства» отображаются свойства **Элемент табликса** .  
   
-     ![Свойства элемента Табликса](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "свойства элемента Табликса")  
+     ![Свойства элемента табликса](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "Свойства элемента табликса")  
   
 4.  В панели «Свойства» присвойте параметру **FixedData** значение **True**.  
   
@@ -73,12 +74,12 @@ ms.lasthandoff: 08/09/2017
   
  При переходе на страницу вниз или по отчету статические элементы табликса остаются в поле зрения.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Область данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Поиск, просмотр и управление отчетами &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Отображение верхних и нижних колонтитулов группы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
- [Отображение заголовков строк и столбцов на нескольких страницах &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
- [Панель группирования &#40; Построитель отчетов &#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)  
+ [Отображение верхних и нижних колонтитулов в группе (построитель отчетов и службы SSRS)](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
+ [Отображение заголовков строк и столбцов на нескольких страницах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
+ [Панель группировки (построитель отчетов)](../../reporting-services/report-design/grouping-pane-report-builder.md)  
   
   

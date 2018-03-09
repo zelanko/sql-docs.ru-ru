@@ -2,12 +2,13 @@
 title: "Доступные для записи секции | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,20 +21,20 @@ helpviewer_keywords:
 - writeback [Analysis Services], partitions
 - storing data [Analysis Services], partitions
 ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 82cafa346d2347afa9022a61d9ffce018d9d0dd8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 87ca933c004d59a8c2e680d79e9d9499700f7e43
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="partitions---write-enabled-partitions"></a>Секции — секции, доступные для записи
-  Как правило, данные в кубе доступны только для чтения. Однако для определенных сценариев может быть необходимым иметь доступ к секции с возможностью записи. Секции, доступные для записи, позволяют пользователям исследовать сценарии, изменяя значения ячеек и анализируя влияние этих изменений на данные куба. При разрешении записи в секцию клиентские приложения могут записывать изменения данных секции. Эти изменения, называющиеся данными обратной записи, сохраняются в отдельной таблице, и не перезаписывают существующие данные в группе мер. Однако они включены в результаты запросов, поскольку являются частью данных куба.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Как правило, данные в кубе доступны только для чтения. Однако для определенных сценариев может быть необходимым иметь доступ к секции с возможностью записи. Секции, доступные для записи, позволяют пользователям исследовать сценарии, изменяя значения ячеек и анализируя влияние этих изменений на данные куба. При разрешении записи в секцию клиентские приложения могут записывать изменения данных секции. Эти изменения, называющиеся данными обратной записи, сохраняются в отдельной таблице, и не перезаписывают существующие данные в группе мер. Однако они включены в результаты запросов, поскольку являются частью данных куба.  
   
  Доступ для записи может быть предоставлен всему кубу или определенным секциям в кубе. Измерения, доступные для записи, являются различными, но взаимодополняющими объектами.  Секция, доступная для записи, дает возможность пользователям обновлять ячейки секции, в то время как доступное для записи измерение позволяет пользователям обновлять элементы измерения. Эти две функции можно сочетать друг с другом. Например, куб или секция, доступные для записи, необязательно должны включать в себя какие-либо измерения, доступные для записи. **См. также:**[измерениях](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
@@ -61,11 +62,10 @@ ms.lasthandoff: 09/01/2017
 ## <a name="security"></a>безопасность  
  Пользователю разрешается записывать изменения в таблицу обратной записи куба, только если этот пользователь принадлежит роли с разрешением на чтение и запись в ячейки куба. Для каждой роли можно управлять тем, какие ячейки куба можно обновлять, а какие нельзя. Дополнительные сведения см. в разделе [предоставить куба или модели разрешения &#40; Службы Analysis Services &#41; ](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Измерения, доступные для записи](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)   
  [Агрегаты и статистические схемы](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
- [Секции (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Секций &#40; Analysis Services — многомерные данные &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Измерения, доступные для записи](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   
-

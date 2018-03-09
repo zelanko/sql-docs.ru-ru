@@ -1,13 +1,13 @@
 ---
 title: "Планирование установки SQL Server | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/23/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
@@ -15,18 +15,19 @@ ms.topic: get-started-article
 helpviewer_keywords:
 - installing SQL Server, planning
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
-caps.latest.revision: 36
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.openlocfilehash: 6fa512799bf19e284b25b7f847d71d3f6e5aab7a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 21f4d7344c22a3426e343ff6e3682029a863369f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="planning-a-sql-server-installation"></a>Планирование установки SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Чтобы установить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполните описанные далее действия.  
   
 -   Ознакомьтесь с требованиями по установке, сведениями о проверках конфигурации системы и вопросами безопасности для установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -42,27 +43,27 @@ ms.lasthandoff: 08/28/2017
 > [!NOTE]  
 >  В зависимости от способа получения ПО (например, по [!INCLUDE[msCoName](../../includes/msconame-md.md)] ), на его использование могут распространяться дополнительные условия.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Новые возможности установки SQL Server](../../sql-server/install/what-s-new-in-sql-server-installation.md)  
- В этом разделе подробно рассматриваются новые и усовершенствованные возможности установки в данной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ В этой статье подробно рассматриваются новые и усовершенствованные возможности установки в данной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Требования к оборудованию и программному обеспечению для установки SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
- В этом разделе перечислены минимальные требования к оборудованию и программному обеспечению, необходимые для установки и запуска экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ В этой статье перечислены минимальные требования к оборудованию и программному обеспечению, необходимые для установки и запуска экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  [Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
- В этой статье приведены некоторые рекомендации по безопасности, которых следует придерживаться как до, так [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ В этой статье приведены некоторые рекомендации по безопасности, которых следует придерживаться как до установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], так и после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
- В этом разделе описана конфигурация по умолчанию служб данного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также параметры конфигурации служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые можно настроить во время и после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ В этой статье описана конфигурация по умолчанию служб данного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также параметры конфигурации служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые можно настроить во время и после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Сетевые протоколы и библиотеки](../../sql-server/install/network-protocols-and-network-libraries.md)  
- В этом разделе описана конфигурация сетевых протоколов, устанавливаемая по умолчанию для служб данной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также доступные параметры для настройки.  
+ В этой статье описана конфигурация сетевых протоколов, устанавливаемая по умолчанию для служб данной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также доступные для настройки параметры.  
   
  [Работа с несколькими версиями и экземплярами SQL Server](../../sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
- В этом разделе описаны рекомендации по установке нескольких версий и экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ В этой статье описаны рекомендации по установке нескольких версий и экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Версии SQL Server на местных языках](../../sql-server/install/local-language-versions-in-sql-server.md)  
- В этом разделе рассматриваются локализованные версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ В этой статье рассматриваются локализованные версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="related-sections"></a>См. также  
  [Установка SQL Server](../../database-engine/install-windows/install-sql-server.md)  
@@ -85,4 +86,3 @@ ms.lasthandoff: 08/28/2017
  [Решения высокого уровня доступности (SQL Server)](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
  [Подготовка к установке отказоустойчивого кластера](../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
  [Обновление SQL Server с помощью мастера установки (программа установки)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
-

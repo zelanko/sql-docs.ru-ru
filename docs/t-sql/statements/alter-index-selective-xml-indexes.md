@@ -3,8 +3,11 @@ title: "Инструкция ALTER INDEX (Селективные XML-индек�
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
-caps.latest.revision: 13
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e7854dd1d9365f97628341c4160c368f97308302
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 9f875f7d34c568bc1156c5f8bce60d893fce8039
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (селективные XML-индексы)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Изменяет существующий селективный XML-индекс. Инструкция ALTER INDEX изменяет один или несколько из следующих элементов:  
   
@@ -142,20 +144,20 @@ identifier
  [С **(** \<index_options > **)**]  
  Можно указать только \<index_options > при использовании инструкции ALTER INDEX без предложения FOR. Если для добавления или удаления пути в индексе используется ALTER INDEX, то параметры индекса являются недопустимыми аргументами. Сведения о параметрах индекса см. в разделе [CREATE XML INDEX &#40; Выборочные XML-индексы &#41; ](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  При выполнении инструкции ALTER INDEX селективный XML-индекс всегда перестраивается. Необходимо учитывать влияние этого процесса на ресурсы сервера.  
   
 ## <a name="security"></a>безопасность  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Разрешения  
  Для использования ALTER INDEX требуется разрешение ALTER для таблицы или представления.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере показана инструкция ALTER INDEX. Эта инструкция добавляет путь `'/a/b/m'` в часть XQuery индекса и удаляет путь `'/a/b/e'` из части SQL индекса, созданного в примере в разделе [CREATE SELECTIVE XML INDEX (Transact-SQL)](../../t-sql/statements/create-selective-xml-index-transact-sql.md). Путь для удаления определяется по имени, указанному при его создании.  
   
-```tsql  
+```sql  
 ALTER INDEX sxi_index  
 ON Tbl  
 FOR   
@@ -167,7 +169,7 @@ FOR
   
  В следующем примере показана инструкция ALTER INDEX с параметром индекса. Параметры индекса недопустимы, так как инструкция не использует предложение FOR для добавления или удаления пути.  
   
-```tsql  
+```sql  
 ALTER INDEX sxi_index  
 ON Tbl  
 PAD_INDEX = ON;  
@@ -179,4 +181,3 @@ PAD_INDEX = ON;
  [Задание путей и указания по оптимизации для селективных XML-индексов](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)  
   
   
-

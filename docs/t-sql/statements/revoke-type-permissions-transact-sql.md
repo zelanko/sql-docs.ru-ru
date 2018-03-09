@@ -3,8 +3,11 @@ title: "Отмена разрешений на тип (Transact-SQL) | Доку�
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,19 @@ helpviewer_keywords:
 - permissions [SQL Server], types
 - type permissions [SQL Server]
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
-caps.latest.revision: 30
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b7421493593b931d8178e2b4b3377ef7d9fcdd80
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c3de9121b53223ed03a2c3858fe7279cfb52af89
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE, отмена разрешения на тип (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Отменяет разрешения на использование типа.  
   
@@ -142,13 +144,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Разрешения типа GRANT & #40; Transact-SQL & #41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)   
- [Запрет разрешения типа & #40; Transact-SQL & #41;](../../t-sql/statements/deny-type-permissions-transact-sql.md)   
+ [Разрешения типа GRANT &#40; Transact-SQL &#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)   
+ [Запрет разрешения типа &#40; Transact-SQL &#41;](../../t-sql/statements/deny-type-permissions-transact-sql.md)   
  [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Защищаемые объекты](../../relational-databases/security/securables.md)  
   
   
-
 

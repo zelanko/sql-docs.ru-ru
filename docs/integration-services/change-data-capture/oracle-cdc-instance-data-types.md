@@ -1,26 +1,28 @@
 ---
-title: "Типы данных экземпляра Oracle CDC | Документы Microsoft"
+title: "Типы данных экземпляра CDC Oracle | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
-caps.latest.revision: 9
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ce8e5f7622c520f819b65000729b7d3c750764fc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6d259e5b3c54db6856cc62b301889036faee6e10
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Типы данных экземпляра CDC Oracle
   Экземпляр Oracle CDC поддерживает большинство типов данных Oracle. В следующих разделах описаны поддерживаемые и неподдерживаемые типы данных.  
@@ -30,7 +32,7 @@ ms.lasthandoff: 08/03/2017
   
 |Тип данных базы данных Oracle|Тип данных SQL Server|  
 |-------------------------------|--------------------------|  
-|BINARY_FLOAT|REAL|  
+|BINARY_FLOAT|real|  
 |BINARY_DOUBLE|FLOAT|  
 |CHAR|NVARCHAR|  
 |DATE|DATETIME|  
@@ -41,7 +43,7 @@ ms.lasthandoff: 08/03/2017
 |NUMBER|FLOAT|  
 |NAVARCHAR2|NVARCHAR|  
 |RAW|VARBINARY|  
-|REAL|FLOAT|  
+|real|FLOAT|  
 |TIMESTAMP|DATETIME2|  
 |TIMESTAMP WITH TIME ZONE|VARCHAR (37)|  
 |TIMESTAMP WITH LOCAL TIME ZONE|VARCHAR (37)|  
@@ -77,9 +79,8 @@ ms.lasthandoff: 08/03/2017
   
 -   VARRAY  
   
-## <a name="see-also"></a>См. также  
- [Конструктор системы отслеживания измененных данных для Oracle компании attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
+## <a name="see-also"></a>См. также:  
+ [Конструктор системы отслеживания измененных данных для Oracle компании Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
  [Экземпляр CDC Oracle](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   
   
-

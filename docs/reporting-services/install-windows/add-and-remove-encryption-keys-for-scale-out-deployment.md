@@ -1,12 +1,14 @@
 ---
-title: "Добавление и удаление ключей шифрования для масштабного развертывания | Документы Microsoft"
+title: "Добавление и удаление ключей шифрования для масштабного развертывания | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
-caps.latest.revision: 10
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "10"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ffe0a7ea7f46ed7b1ae5d1e5070d58afa0540b12
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0b7c90c1760c555f0099d9a6ea8fc675d0bd0719
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>Добавление и удаление ключей шифрования для масштабного развертывания
   Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут работать в модели масштабного развертывания, где несколько серверов отчетов настроены на использование общей базы данных. Членство в масштабном развертывании основано на том, хранит ли сервер отчетов ключ шифрования в базе данных сервера отчетов. Этим членством можно управлять за счет добавления и удаления ключей шифрования для конкретных экземпляров серверов отчетов. При удалении узлов из конфигурации развертывания их можно удалять в любом порядке. Если добавляются узлы к конфигурации, необходимо подключать все новые экземпляры с сервера отчетов, который уже входит в конфигурацию.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="how-to-remove-a-report-server-from-a-scale-out-deployment-rskeymgmt"></a>Как исключить сервер отчетов из масштабного развертывания (rskeymgmt)  
   
-1.  Откройте файл сервера отчетов rsperportserver.config, который необходимо удалить, и найдите идентификатор установки. По умолчанию этот файл находится в Program Files\Microsoft SQL Server\MSSQL.  *n* \Reporting Services\ReportServer).  
+1.  Откройте файл сервера отчетов rsperportserver.config, который необходимо удалить, и найдите идентификатор установки. По умолчанию этот файл находится в папке Program Files\Microsoft SQL Server\MSSQL.*n*\Reporting Services\ReportServer).  
   
      Если установлен всего один экземпляр, на компьютере будет находиться один файл rsreportserver.config. Если установлено несколько экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , то на странице «Состояние сервера» программы настройки служб Reporting Services выполните поиск идентификатора экземпляра сервера отчетов (например, «MSSQL.2»), который необходимо удалить. Имя папки, в которой хранятся программные файлы экземпляра сервера отчетов, содержит идентификатор экземпляра (например: Program Files\Microsoft SQL Server\MSSQL.2).  
   
@@ -66,11 +67,10 @@ ms.lasthandoff: 08/09/2017
     ```  
 4. Перезапустите службу Windows Reporting Services.
   
- Данные шаги удаляют сервер отчетов из масштабного развертывания, однако удаления экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на сервере отчетов не производится. После того как сервер отчетов будет удален из масштабного развертывания, службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно удалить с сервера (если службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] более не нужны). Сведения см. в разделе [Удаление существующего экземпляра SQL Server (программа установки)](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Данные шаги удаляют сервер отчетов из масштабного развертывания, однако удаления экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на сервере отчетов не производится. После того как сервер отчетов будет удален из масштабного развертывания, службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно удалить с сервера (если службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] более не нужны). Сведения см. в разделе [Удаление существующего экземпляра SQL Server (программа установки)](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>См. также:  
- [Настройка и управление ключами &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Инициализация сервера отчетов &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Инициализация сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: "Веб-синхронизация для репликации слиянием | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +19,19 @@ helpviewer_keywords:
 - Web synchronization, about
 - Web synchronization
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
-caps.latest.revision: 45
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6cc2d5200c154a9857f2e634dcf91aef57c278c2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "45"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 95942267f871946f402f2261d4a5dc0cd1873256
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Веб-синхронизация для репликации слиянием
-  Веб-синхронизация для репликации слиянием позволяет производить репликацию данных по протоколу HTTPS и может оказаться полезной в следующих случаях.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Веб-синхронизация для репликации слиянием позволяет производить репликацию данных по протоколу HTTPS и может оказаться полезной в указанных ниже случаях.  
   
 -   Синхронизация данных от мобильных пользователей через Интернет.  
   
@@ -85,7 +87,7 @@ ms.lasthandoff: 06/22/2017
 3.  После получения HTTPS-ответа агент слияния на подписчике применяет загруженные изменения к базе данных подписки.  
   
 ## <a name="see-also"></a>См. также:  
- [Настройка веб-синхронизации](../../relational-databases/replication/configure-web-synchronization.md)   
+ [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
  [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
   
   

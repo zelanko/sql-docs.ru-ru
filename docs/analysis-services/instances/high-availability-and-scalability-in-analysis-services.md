@@ -2,28 +2,30 @@
 title: "Высокий уровень доступности и масштабируемость в службах Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
-caps.latest.revision: 14
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ac8292e9319bef3d535ff6f3977b50ac22805e27
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5417a642fd9522ffb3453caff198480e1d930a0a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Высокий уровень доступности и масштабируемость в службах Analysis Services
-  В этой статье описаны наиболее часто используемые методы для создания высокодоступных масштабируемых баз данных для служб Analysis Services. Несмотря на то что к каждой цели можно обращаться отдельно, в реальности они часто идут рука об руку: от масштабируемого развертывания больших рабочих нагрузок по выполнению запросов или обработке данных обычно ожидается высокая доступность.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В этой статье описаны наиболее часто используемые методы для создания высокодоступных масштабируемых баз данных для служб Analysis Services. Несмотря на то что к каждой цели можно обращаться отдельно, в реальности они часто идут рука об руку: от масштабируемого развертывания больших рабочих нагрузок по выполнению запросов или обработке данных обычно ожидается высокая доступность.  
   
  А вот обратное верно не всегда. Высокий уровень доступности без масштабирования может быть единственной целью при наличии строгих соглашений об уровне обслуживания для критически важных, но умеренных рабочих нагрузок по выполнению запросов.  
   
@@ -111,4 +113,3 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services практический пример: Использование табличных моделей в крупномасштабных коммерческих решениях](https://msdn.microsoft.com/library/dn751533.aspx)  
   
   
-

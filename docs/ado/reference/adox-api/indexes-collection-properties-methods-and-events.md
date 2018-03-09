@@ -3,7 +3,7 @@ title: "Индексы в коллекции свойства, методы и �
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Indexes collection [ADOX], members
 ms.assetid: b27b5c37-3db2-4831-a447-ee6442e24d87
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 02101339d74da43957dc216d70e9a67299a27915
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a0f27d77231653e0bd2c00711610cfd3983cbace
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="indexes-collection-properties-methods-and-events"></a>Свойства коллекции индексов, методы и события
 ## <a name="properties"></a>Свойства  
@@ -43,6 +42,5 @@ ms.lasthandoff: 09/09/2017
 ## <a name="events"></a>События  
  Нет.  
   
-## <a name="see-also"></a>См. также:  
- [Коллекция индексов (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)
-
+## <a name="see-also"></a>См. также  
+ [Коллекция Indexes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)

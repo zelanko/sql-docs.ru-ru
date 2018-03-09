@@ -3,10 +3,12 @@ title: "Добавление и изменение данных источник
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - data sources [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], adding data sources
 ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d9533da991d1a50c9051b428490afacf2421efb0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fd665c63873ba8331290ddeae4ad91137ef1e3c7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>Добавление и изменение источников данных с помощью программы установки
 > [!IMPORTANT]  
@@ -83,4 +84,3 @@ ms.lasthandoff: 09/09/2017
 3.  Изменить поля источника данных применимых и нажмите кнопку ОК.  
   
  Завершив внесение изменений в этом диалоговом администратора ODBC обновляет данные реестра.
-

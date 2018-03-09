@@ -2,32 +2,31 @@
 title: "Элемент FeatureSet (DTA) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- FeatureSet element
+dev_langs: XML
+helpviewer_keywords: FeatureSet element
 ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "14"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 73bfa6884ff978c962215924287be551e29ec07e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 44937796c574f852b47de5bd681a8550b0aa3f6e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="featureset-element-dta"></a>Элемент FeatureSet (DTA)
-  Содержит структуры физического проектирования (индексы или индексированные представления), которые помощник по настройке ядра СУБД должен использовать во время анализа.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Содержит структуры физического проектирования (индексы или индексированные представления), которые вы хотите использовать во время анализа помощник по настройке ядра СУБД.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,4 +61,3 @@ ms.lasthandoff: 08/02/2017
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

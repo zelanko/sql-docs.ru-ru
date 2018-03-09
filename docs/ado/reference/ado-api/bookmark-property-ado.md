@@ -3,7 +3,7 @@ title: "Bookmark-свойство (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Bookmark property [ADO]
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3c6076acd2bde7e82bf142bad76093d582106877
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0e98d0519652cc5d28723e635672815629ce1621
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="bookmark-property-ado"></a>Свойство закладка (ADO)
 Указывает закладка, которая однозначно определяет текущую запись в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта или задает текущую запись **записей** объект для записи, определяемый допустимую закладку.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **Variant** выражение, результатом которого является допустимое закладка.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **закладки** свойство, чтобы сохранить позицию текущей записи и вернуться на эту запись в любое время. Закладки, доступны только в **записей** объектов, которые поддерживают функцию закладок.  
   
  При открытии **записей** объектов, каждый из него записей имеет уникальный закладки. Чтобы сохранить закладку в текущей записи, присвойте значение **закладки** свойства переменной. Чтобы быстро вернуться к этой записи в любое время после перемещения в другой записи, задайте **записей** объекта **закладки** значение этой переменной.  
@@ -49,10 +48,9 @@ ms.lasthandoff: 09/09/2017
 >  **Удаленное использование службы данных** при использовании на стороне клиента **записей** объекта, **закладки** свойство доступна всегда.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BOF EOF и пример свойства закладки (Visual Basic)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
  [BOF EOF и пример свойства закладки (VC ++)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
- [Поддерживает метод](../../../ado/reference/ado-api/supports-method.md)
-
+ [Метод Supports](../../../ado/reference/ado-api/supports-method.md)

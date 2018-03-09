@@ -2,12 +2,13 @@
 title: "Обозначения в ASSL XML | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -27,20 +28,20 @@ helpviewer_keywords:
 - hierarchies [Analysis Services Scripting Language]
 - inherited defaults [Analysis Services Scripting Language]
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
-caps.latest.revision: 24
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3b7e4c800454a2e2eddac81a2420b5a6d6436c70
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a8cd244f64d45ff81ff51cba6b528c81ba743ff1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="assl-xml-conventions"></a>Обозначения в XML языка ASSL
-  Язык ASSL представляет иерархию объектов в виде набора типов элементов, каждый из которых определяет дочерние элементы, которые они могут содержать.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Язык ASSL представляет иерархию объектов в виде набора типов элементов, каждый из которых определяет дочерние элементы, которые они могут содержать.  
   
  Чтобы можно было представлять иерархию объектов в языке ASSL, используются следующие обозначения XML.  
   
@@ -134,7 +135,7 @@ ms.lasthandoff: 09/01/2017
  **Long**  
  Целое число в диапазоне от -263 до 263 — 1.  
   
- **Строковые значения**  
+ **String**  
  Строковое значение, соответствующее следующим глобальным правилам.  
   
 -   Управляющие символы удалены.  
@@ -157,9 +158,9 @@ ms.lasthandoff: 09/01/2017
 |Тип данных XML|Значение по умолчанию|  
 |-------------------|-------------------|  
 |**Логическое значение**|False|  
-|**Строковые значения**|"" (пустая строка)|  
+|**String**|"" (пустая строка)|  
 |**Целое число со знаком** или **Long**|0 (ноль)|  
-|**Отметка времени**|12:00:00 AM, 1/1/0001 (в зависимости от платформы .NET **System.DateTime** с 0 тактов)|  
+|**Timestamp**|12:00:00 AM, 1/1/0001 (в зависимости от платформы .NET **System.DateTime** с 0 тактов)|  
   
  Элемент, который имеется в наличии, но является пустым, интерпретируется как имеющий значение пустой строки, а не значение по умолчанию.  
   
@@ -189,4 +190,3 @@ ms.lasthandoff: 09/01/2017
  Дополнительные сведения о унаследованные значения по умолчанию см. в разделе [объекты ASSL и характеристики объектов](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md).  
   
   
-

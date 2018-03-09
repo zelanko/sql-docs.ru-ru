@@ -2,11 +2,12 @@
 title: "Настройка SQL Server в установке Server Core | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/05/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
@@ -15,26 +16,28 @@ helpviewer_keywords:
 - IsHadrEnabled server property
 - Server Core Installation [SQL Server]
 ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: a453e4c8a5ec3bc3e93d5c7f7e6ce6f1e354d21c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 2356991aa91bc1390638d5cb84935068c79f2fd3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Настройка SQL Server на установке Server Core
-Этот раздел содержит сведения о настройке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на установке Server Core.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Эта статья содержит сведения о настройке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в установке Server Core.  
 
 ##  <a name="BKMK_ConfigureWindows"></a> Настройка и управление Server Core в Windows Server  
-Раздел содержит ссылки на разделы, в которых приведены сведения о настройке установки Server Core и управлении ей.  
+Раздел содержит ссылки на статьи, в которых приведены сведения о настройке установки Server Core и управлении ею.  
   
 Не все компоненты [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] поддерживаются в режиме Server Core.  Некоторые из этих компонентов могут быть установлены на клиентском компьютере или другом сервере, на котором нет Server Core, и подключены к службам компонента ядра СУБД, установленным в Server Core.  
   
-Дополнительные сведения о дистанционной настройке и управлении установкой Server Core см. в следующих разделах:  
+Дополнительные сведения о дистанционной настройке установкой Server Core и управлении еюсм. в следующих статьях:  
   
 - [Установка Server Core](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)  
   
@@ -116,7 +119,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 7. Перейдите на вкладку **Высокий уровень доступности AlwaysOn** .  
   
-8. Убедитесь, что поле Имя отказоустойчивого кластера Windows содержит имя локального узла отказоустойчивого кластера. Если это поле не заполнено, значит в настоящее время этот экземпляр сервера не поддерживает группы доступности AlwaysOn. Либо локальный компьютер не является узлом кластера, кластер WSFC завершил работу, либо этот выпуск [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] не поддерживает группы доступности AlwaysOn.  
+8. Убедитесь, что поле Имя отказоустойчивого кластера Windows содержит имя локального узла отказоустойчивого кластера. Если это поле не заполнено, значит в настоящее время этот экземпляр сервера не поддерживает группы доступности AlwaysOn. Локальный компьютер не является узлом кластера, кластер WSFC завершил работу либо этот выпуск [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] не поддерживает группы доступности Always On.  
   
 9. Установите флажок «Включить группы доступности AlwaysOn» и нажмите кнопку «ОК».  
   
@@ -228,11 +231,10 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> Использование средств устранения неполадок  
  Программа [SQLdiag](../../tools/sqldiag-utility.md) позволяет выполнять сбор журналов и файлов данных с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и других типов серверов, а также мониторинг серверов и устранение определенных неполадок на серверах. SQLdiag предназначена для исследования и упрощения сбора диагностической информации для Microsoft Customer Support Services.  
   
- Служебную программу можно запустить в командной строке администратора в Server Core, используя синтаксис, описанный в статье [SQLdiag Utility](../../tools/sqldiag-utility.md).  
+ Служебную программу можно запустить в командной строке администратора в Server Core, используя синтаксис, описанный в статье [Служебная программа SQLdiag](../../tools/sqldiag-utility.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Установка SQL Server в Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
  [Инструкции по установке](http://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   
-

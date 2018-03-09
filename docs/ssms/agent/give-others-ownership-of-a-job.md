@@ -3,10 +3,12 @@ title: "Передача другим пользователям права вл
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,26 +16,25 @@ helpviewer_keywords:
 - owners [SQL Server], jobs
 - SQL Server Agent jobs, owners
 ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d337913274836597bbcdf26947e3884c4c5c8c2a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c6fc8870f446b9b34f55c965ad13132e6ce7d418
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
-В этом разделе описано, как изменить владельца заданий агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описано, как изменить владельца заданий агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 -   **Перед началом:**  [Ограничения](#Restrictions), [Безопасность](#Security)  
   
 -   **Для передачи другим пользователям права владения заданием используется:**  
   
-    [Среда Среда SQL Server Management Studio](#SSMSProc2)  
+    [Среда SQL Server Management Studio](#SSMSProc2)  
   
     [Transact-SQL](#TsqlProc2)  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="TsqlProc2"></a>Использование Transact-SQL  
 **Передача другим пользователям права владения заданием**  
   
-1.  В обозревателе объектов подключитесь к экземпляру ядра СУБД и разверните его.  
+1.  В обозревателе объектов подключитесь к экземпляру компонента Database Engine и разверните его.  
   
 2.  На панели инструментов нажмите кнопку **Создать запрос**.  
   
@@ -97,4 +98,3 @@ ms.lasthandoff: 06/22/2017
 [Реализация заданий](../../ssms/agent/implement-jobs.md)  
 [Создание заданий](../../ssms/agent/create-jobs.md)  
   
-

@@ -1,13 +1,14 @@
 ---
 title: "Разработка с использованием XML для Аналитики в службах Analysis Services | Документы Microsoft"
 ms.custom: 
-ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,28 +21,27 @@ helpviewer_keywords:
 - XML for Analysis, Analysis Services tasks
 - XMLA, Analysis Services tasks
 ms.assetid: 54445ee7-720c-4683-99a6-e75b3dcca904
-caps.latest.revision: 31
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6bf41801ce6b81c532d8be56b5afdfe4fd5e901f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e66b7b47c25412bf52fe296461c4993d2a533632
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Разработка с использованием XMLA в службах Analysis Services
   XML для аналитики (XMLA) — это XML-протокол, основанный на протоколе SOAP и специально предназначенный для обеспечения унифицированного доступа к данным в любом стандартном многомерном источнике данных, доступном через HTTP-соединение. В службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XMLA является единственным протоколом для связи с клиентскими приложениями. Все клиентские библиотеки, поддерживаемые службами Analysis Services, в конечном итоге формируют запросы и ответы по протоколу XMLA.  
   
  С помощью XMLA разработчик может интегрировать клиентское приложение со службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], не создавая зависимости от платформы .NET Framework и COM-интерфейсов. Требования приложений, в том числе касающиеся размещения на широком диапазоне платформ, можно выполнить с помощью XMLA и HTTP-соединения со службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] полностью соответствуют спецификации XMLA 1.1 и расширяют ее для поддержки описания данных, обработки данных и управления данными. Расширения служб Analysis Services называются языком ASSL. Совместное использование XMLA и ASSL расширяет набор возможностей XMLA. Дополнительные сведения о ASSL см. в разделе [разработки в язык сценариев служб Analysis Services &#40; ASSL &#41; ](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] полностью соответствует спецификации XML для Аналитики 1.1, но также расширяет его, чтобы включить определение данных, управление данными и поддержки управления данными. Расширения служб Analysis Services называются языком ASSL. Совместное использование XMLA и ASSL расширяет набор возможностей XMLA. Дополнительные сведения о ASSL см. в разделе [разработки в язык сценариев служб Analysis Services &#40; ASSL &#41; ](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Управление &#40; соединений и сеансов XML для Аналитики &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)|Описывает соединение с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и управление сеансами и поддержкой состояния в XML для аналитики.|  
 |[Обработка ошибок и предупреждений &#40; XML для Аналитики &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/handling-errors-and-warnings-xmla.md)|Описывает, каким образом службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] возвращают сведения об ошибках и предупреждениях для методов и команд XML для аналитики.|  
@@ -54,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 |[Обработка объектов &#40; XML для Аналитики &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)|Описывает использование [процесс](../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) для обработки [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объекта.|  
 |[Слияние секций &#40; XML для Аналитики &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)|Описывает использование [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) для слияния секций на [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляра.|  
 |[Проектирование агрегатов &#40; XML для Аналитики &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md)|Описывает использование [DesignAggregations](../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) команды, в последовательном или пакетном режиме для проектирования агрегатов для статистических схем в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
-|[Резервное копирование, восстановление и синхронизация баз данных (XMLA)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)|Описывает использование [резервного копирования](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) и [восстановить](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) команды, чтобы резервное копирование и восстановление [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных из файла резервной копии.<br /><br /> Также описывается использование [Synchronize](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) команда синхронизации [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных с существующей базы данных на том же экземпляре или на другом экземпляре.|  
+|[Резервное копирование, восстановление и синхронизация баз данных &#40; XML для Аналитики &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)|Описывает использование [резервного копирования](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) и [восстановить](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) команды, чтобы резервное копирование и восстановление [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных из файла резервной копии.<br /><br /> Также описывается использование [Synchronize](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) команда синхронизации [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных с существующей базы данных на том же экземпляре или на другом экземпляре.|  
 |[Вставка, обновление и удаление элементов &#40; XML для Аналитики &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)|Описывает использование [вставить](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [обновление](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), и [Drop](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) команды, чтобы добавить, изменить или удалить элементы из измерения, доступные для записи.|  
 |[Обновление ячеек &#40; XML для Аналитики &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md)|Описывает использование [UpdateCells](../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md) команду, чтобы изменить значения ячеек в секции, доступной для записи.|  
 |[Управление кэшами &#40; XML для Аналитики &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-caches-xmla.md)|Дополнительные сведения об использовании [ClearCache](../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md) команду, чтобы очистить кэш [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объектов.|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 09/01/2017
 ### <a name="namespace"></a>Пространство имен  
  Пространство имен XML используется со схемой, определенной в данной спецификации `http://schemas.microsoft.com/AnalysisServices/2003/Engine` и стандартное сокращение «DDL».  
   
-### <a name="schema"></a>схема  
+### <a name="schema"></a>Схема  
  В основе определения схемы XSD для языка определения объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] лежат определение элементов схемы и иерархии, приведенное в этом разделе.  
   
 ## <a name="extensibility"></a>Расширяемость  
@@ -86,9 +86,8 @@ ms.lasthandoff: 09/01/2017
   
  Схема языка определения объектов является закрытой; под этим подразумевается то, что сервер не позволяет производить замену производных типов для элементов, определенных в схеме. Поэтому сервер принимает только набор элементов, определенных в схеме, и не принимает другие элементы или атрибуты. Обнаружение неизвестного элемента вынуждает ядро служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] активизировать ошибку.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разработка с использованием служб Analysis Services Scripting Language &#40; ASSL &#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Основные сведения об архитектуре Microsoft OLAP](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  
   
   
-

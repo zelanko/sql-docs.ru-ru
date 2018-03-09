@@ -2,42 +2,38 @@
 title: "Элемент Mode (XML для Аналитики) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Mode Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Mode Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Mode
 - microsoft.xml.analysis.mode
 - http://schemas.microsoft.com/analysisservices/2003/engine#Mode
-helpviewer_keywords:
-- Mode element
+helpviewer_keywords: Mode element
 ms.assetid: 43a54181-6494-48c3-b14b-376d8939fa9f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 656ea9623b7dea8296bc10221c916fe7afdd0568
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 57c3450e8928b24dc03e2d5915983f39330d0b0c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mode-element-xmla"></a>Элемент Mode (XML для аналитики)
-  Определяет режим, который будет использоваться в родительском [блокировки](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md) элемент при создании блокировки на указанный объект.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Определяет режим, который будет использоваться в родительском [блокировки](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md) элемент при создании блокировки на указанный объект.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|String (перечисление)|  
 |Значение по умолчанию|None|  
@@ -65,7 +61,7 @@ ms.lasthandoff: 09/01/2017
 |Родительские элементы|[Блокировка](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md), [разблокировки](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Родительский **блокировки** элемент использует **режим** элемент для определения типа создаваемой блокировки на объект. Значением этого элемента может быть только одна из строк в следующей таблице.  
   
 |Значение|Description|  
@@ -79,4 +75,3 @@ ms.lasthandoff: 09/01/2017
  [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "NumericScale и пример точности свойства (Visual B
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - NumericScale property [ADO], Visual Basic example
 - Precision property [ADO], Visual Basic example
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d24b7d6fa72a8559b8f0e0f1ec3243006be5f0f3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 51c7b958564503382a89c13b39545d4b6e3d0821
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale и пример точности свойства (Visual Basic)
 В этом примере используется [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) и [точности](../../../ado/reference/ado-api/precision-property-ado.md) свойства для отображения числовой масштаб и точность полей в ***скидки*** таблицу  ***Pubs*** базы данных.  
@@ -81,9 +80,8 @@ End Sub
 'EndNumericScaleVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект field](../../../ado/reference/ado-api/field-object.md)   
  [Свойство NumericScale (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
  [Объект параметра](../../../ado/reference/ado-api/parameter-object.md)   
- [Свойство точности (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
-
+ [Свойство Precision (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

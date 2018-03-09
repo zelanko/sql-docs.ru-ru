@@ -2,9 +2,12 @@
 title: "Настройка и администрирование средства разбиения на слова и парадигматические модули для поиска | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -20,19 +23,19 @@ helpviewer_keywords:
 - conjugating verbs [full-text search]
 - word breakers [full-text search]
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
-caps.latest.revision: 89
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5023aeceed2edd6170b58500edafb7342c21ba28
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: e50f02ed70002a7f8af8d6464672328d20e70ea3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Настройка и управление средством разбиения на слова и парадигматические модули для поиска
-
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Средства разбиения по словам и парадигматические модули выполняют лингвистический анализ данных, проходящих полнотекстовое индексирование. При лингвистическом анализе выполняются следующие два действия:
 
 -   **Поиск границ слов (разбиение по словам).** *Средство разбиения по словам* определяет слова по границам слов согласно лексическим правилам языка. Каждое слово (называемое также *токеном*) вставляется в полнотекстовый индекс с использованием сжатого представления для уменьшения его размера.
@@ -52,7 +55,7 @@ ms.lasthandoff: 06/22/2017
 
 Чтобы просмотреть список языков, поддерживаемых компонентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Full-Text Search, используйте следующую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)]. Наличие языка в этом списке указывает, что средства разбиения по словам зарегистрированы для языка. 
   
-```tsql
+```sql
 SELECT * FROM sys.fulltext_languages
 ```
 
@@ -62,7 +65,7 @@ SELECT * FROM sys.fulltext_languages
 
 Чтобы просмотреть список зарегистрированных компонентов средства разбиения по словам, используйте следующую инструкцию.
 
-```tsql
+```sql
 EXEC sp_help_fulltext_system_components 'wordbreaker';  
 GO  
 ```
@@ -87,7 +90,7 @@ GO
   
 Чтобы просмотреть язык средства разбиения по словам для определенных столбцов, выполните следующую инструкцию.
    
-```tsql 
+```sql 
 SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 ```  
 
@@ -145,4 +148,3 @@ SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
  [Настройка и управление стоп-словами и списками стоп-слов для полнотекстового поиска](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  
   
-

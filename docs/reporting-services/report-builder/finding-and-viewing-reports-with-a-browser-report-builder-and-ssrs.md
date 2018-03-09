@@ -1,27 +1,27 @@
 ---
-title: "Поиск и просмотр отчетов с помощью браузера (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Поиск и просмотр отчетов с помощью браузера (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
-caps.latest.revision: 8
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "8"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a94db96fd785ebaa1ed511f5bf9c6e262d180104
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 241966104849ba33d0797d337c5a993d06d0c661
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Поиск и просмотр отчетов с помощью браузера (построитель отчетов и службы SSRS)
   Для просмотра отчета при непосредственном соединении с сервером отчетов можно использовать любой поддерживаемый веб-браузер. Каждому отчету на сервере отчетов соответствует URL-адрес. Предусмотрена возможность ввести веб-адрес отчета, чтобы открыть его в окне браузера независимо от веб-приложения. Отчет открывается в формате HTML и включает панель инструментов отчета, с помощью которых можно переходить по страницам или выполнять поиск значений данных в отчете. Можно задать параметры в URL-адресе, чтобы скрыть панель инструментов, или выбрать выходной формат отчета.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/09/2017
   
  Если веб-адрес отчета неизвестен, то можно открыть веб-адрес сервера отчетов, а затем перейти по иерархии папок сервера отчетов, чтобы выбрать для просмотра требуемый отчет. В приведенной ниже диаграмме показана иерархия папок в том виде, в котором она отображается в окне браузера.  
   
- ![Папки в браузере](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Folders in a browser")  
+ ![Папки в браузере](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Папки в браузере")  
 Папки в браузере  
   
 > [!NOTE]  
@@ -48,9 +48,9 @@ ms.lasthandoff: 08/09/2017
   
 -   Ссылка без каких-либо других признаков относится к отчету или модели.  
   
--   Тег \<доменных служб Active Directory > указывает на общий источник данных.  
+-   Тег \<ds> является признаком общего источника данных.  
   
--   Тег \<dir > является признаком папки.  
+-   Тег \<dir> является признаком папки.  
   
 -   Расширение файла указывает на ресурс. Расширение файла определяет тип MIME ресурса. Например, расширение JPG указывает на изображение в формате JPEG.  
   
@@ -64,4 +64,3 @@ ms.lasthandoff: 08/09/2017
  Дополнительные сведения о доступе к отчету по URL-адресу, в том числе правила составления URL-адреса, см. в разделе «Доступ по URL-адресу» [документации по службам Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) , входящей в состав электронной документации по SQL Server.  
   
   
-

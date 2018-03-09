@@ -2,12 +2,13 @@
 title: "Выбор (интеллектуальный анализ данных) компонентов | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +23,19 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: 39
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: eb5669b2043c34cb9a960b92abae6b76df36daea
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6ae50c18dab1894b42e209d2a37762e0fa9e0d57
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="feature-selection-data-mining"></a>Выбор компонентов (интеллектуальный анализ данных)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   *Выбор компонентов* является важной частью машинного обучения. Выбор компонентов — это процесс уменьшения объема входных данных для обработки и анализа либо поиска наиболее значимых входных данных. Близкий термин *реконструирование компонентов* (или *извлечение компонентов*) обозначает процесс извлечения полезной информации или функций из существующих данных.  
   
 ## <a name="why-do-feature-selection"></a>Зачем выполнять выбор компонентов?  
@@ -137,8 +138,7 @@ ms.lasthandoff: 09/01/2017
   
  Помимо этих методов выбора компонентов, можно повысить эффективность алгоритма по определению или продвижению значимых атрибутов, задав *флаги моделирования* в модели либо *флаги распределения* в структуре. Дополнительные сведения об этих понятиях см. в разделах [Флаги моделирования (интеллектуальный анализ данных)](../../analysis-services/data-mining/modeling-flags-data-mining.md) и [Распределения столбцов (интеллектуальный анализ данных)](../../analysis-services/data-mining/column-distributions-data-mining.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка структуры и моделей интеллектуального анализа данных](../../analysis-services/data-mining/customize-mining-models-and-structure.md)  
   
   
-

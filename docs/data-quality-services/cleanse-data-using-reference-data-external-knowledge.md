@@ -2,25 +2,26 @@
 title: "Очистка данных с использованием набора знаний об эталонных данных (внешних) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
-caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "15"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 47e80eabb6c81b79a13ebfe6fa6e35288f1c160a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 453eb45dcefe48397911039ab075b4bb301774a9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Очистка данных с использованием знаний о справочных данных (внешних знаний)
   В этом разделе описывается очистка данных с использованием набора знаний из поставщиков ссылочных данных. Все этапы очистки данных с использованием набора знаний из поставщиков эталонных данных точно такие же, как описано в разделе [Очистка данных с использованием набора знаний служб DQS &#40;внутренних&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md), а в этом разделе приведены сведения по очистке данных с использованием службы эталонных данных в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -49,9 +50,9 @@ ms.lasthandoff: 09/09/2017
 ###  <a name="Prerequisites"></a> Предварительные требования  
  Следует предварительно сопоставить требуемые домены в базе знаний DQS с соответствующей службой ссылочных данных. Кроме того, база знаний должна содержать набор знаний о типе данных, которые требуется очистить. Например, если требуется очистить исходные данные, содержащие адреса в США, необходимо сопоставить домены с поставщиком службы ссылочных данных, предоставляющим высококачественные данные по адресам в США. Дополнительные сведения см. в разделе [Добавление домена или составного домена к ссылочным данным](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Для выполнения очистки данных необходимо иметь роль dqs_kb_editor или dqs_kb_operator в базе данных DQS_MAIN.  
   
 ##  <a name="Cleanse"></a> Очистка данных с использованием набора знаний о ссылочных данных  
@@ -102,4 +103,3 @@ ms.lasthandoff: 09/09/2017
     >  Если используется 64-разрядная версия Excel, то нельзя экспортировать очищенные данные в файл Excel. Можно экспортировать данные только в базу данных SQL Server или в CSV-файл.  
   
   
-

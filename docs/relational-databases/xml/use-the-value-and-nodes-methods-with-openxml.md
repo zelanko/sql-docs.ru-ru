@@ -2,9 +2,12 @@
 title: "Использование методов value() и nodes() совместно с OPENXML | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -14,20 +17,20 @@ helpviewer_keywords:
 - value method [XML in SQL Server]
 - nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
-caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 35a983b1ca79bab7563744285349b84a2517db76
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 831efec8d02c212f5a037423c42148e0c93fd072
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>Использование методов value() и nodes() совместно с OPENXML
-  Методы **value()** можно выполнять в инструкции **SELECT** в типе данных **xml** для создания набора строк извлеченных значений. Метод **nodes()** позволяет получить внутреннюю ссылку на каждый выбранный узел, которую можно использовать в дополнительных запросах. При создании набора строк из нескольких столбцов и, возможно, при высокой сложности используемых для этого выражений пути более эффективным подходом может оказаться сочетание методов **nodes()** и **value()** .  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Методы **value()** можно выполнять в инструкции **SELECT** в типе данных **xml** для создания набора строк извлеченных значений. Метод **nodes()** позволяет получить внутреннюю ссылку на каждый выбранный узел, которую можно использовать в дополнительных запросах. При создании набора строк из нескольких столбцов и, возможно, при высокой сложности используемых для этого выражений пути более эффективным подходом может оказаться сочетание методов **nodes()** и **value()** .  
   
  Метод **nodes()** позволяет получать экземпляры специального типа данных **xml**, для каждого из которых контекст сопоставлен с другим выбранным узлом. Этот вид экземпляра XML поддерживает методы **query()**, **value()**, **nodes()** и **exist()** и может быть использован в статистических функциях **count(\*)**. Все другие способы его использования приводят к ошибке.  
   
@@ -82,4 +85,3 @@ DEALLOCATE name_cursor
  [OPENXML (SQL Server)](../../relational-databases/xml/openxml-sql-server.md)  
   
   
-

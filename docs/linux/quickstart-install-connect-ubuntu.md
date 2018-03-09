@@ -1,34 +1,38 @@
 ---
 title: "Приступая к работе с SQL Server 2017 г. на Ubuntu | Документы Microsoft"
-description: "Этого краткого руководства показано, как установить на Ubuntu 2017 г. SQL Server, а затем создать и запросов к базе данных с помощью sqlcmd."
+description: "Краткого руководства показано, как установить на Ubuntu 2017 г. SQL Server, а затем создать и запросов к базе данных с помощью sqlcmd."
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 10/02/2017
+manager: craigg
+ms.date: 02/22/2018
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
+ms.openlocfilehash: 9aa37f843d446357997bf553ca87d2d93b41bfb9
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
-ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
-ms.openlocfilehash: ea8a0eb15a17cb7bc0032cf951c3fce0830761ac
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/21/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>Установка SQL Server и создать базу данных на Ubuntu
+# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Краткое руководство: Установка SQL Server и создать базу данных на Ubuntu
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этом учебнике быстрого запуска сначала установите 2017 г. SQL Server на Ubuntu 16.04. Подключитесь с **sqlcmd** для создания первой базы данных и выполнения запросов.
+В этом кратком руководстве сначала установите 2017 г. SQL Server на Ubuntu 16.04. Затем мы подключимся при помощи **sqlcmd** для создания первой базы данных и выполнения запросов.
 
 > [!TIP]
 > Этот учебник требуется ввод данных пользователем и подключение к Интернету. Если вы заинтересованы в [автоматической](sql-server-linux-setup.md#unattended) или [автономного](sql-server-linux-setup.md#offline) процедуры установки. в разделе [руководство по установке для SQL Server в Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
-Необходимо иметь компьютер Ubuntu 16.04 с **по крайней мере 3,25 ГБ** памяти.
+Необходимо иметь компьютер Ubuntu 16.04 с **по крайней мере 2 ГБ** памяти.
 
 Чтобы установить Ubuntu на компьютере, перейдите к [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server). Можно также создать Ubuntu виртуальных машин в Azure. В разделе [Создание и управление виртуальными машинами Linux с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
@@ -47,17 +51,17 @@ ms.lasthandoff: 10/21/2017
 1. Импортируйте ключи GPG общедоступный репозиторий:
 
    ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
 1. Регистрация в Microsoft SQL Server Ubuntu репозиторий:
 
    ```bash
-   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
 
    > [!NOTE]
-   > Это накопительное обновление (CU) репозитория. Дополнительные сведения о параметрах репозитория и различия между ними см. в разделе [изменение исходных репозиториев](sql-server-linux-setup.md#repositories).
+   > Это накопительное обновление (CU) репозитория. Дополнительные сведения о параметрах репозитория и различия между ними см. в разделе [настроить репозитории для SQL Server в Linux](sql-server-linux-change-repo.md).
 
 1. Выполните следующие команды для установки SQL Server:
 
@@ -95,13 +99,13 @@ ms.lasthandoff: 10/21/2017
 1. Импортируйте ключи GPG общедоступный репозиторий:
 
    ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
 1. Регистрация репозитория Microsoft Ubuntu:
 
    ```bash
-   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
    ```
 
 1. Обновление списка источников и выполните команду установки пакета разработчика unixODBC:
@@ -120,7 +124,11 @@ ms.lasthandoff: 10/21/2017
    ```
 
 > [!TIP]
-> **Sqlcmd** — лишь один инструмент для подключения к SQL Server для выполнения запросов и выполнять задачи управления и разработки. Другие средства включают в себя [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) и [кода Visual Studio](sql-server-linux-develop-use-vscode.md).
+> **Sqlcmd** — лишь один инструмент для подключения к SQL Server для выполнения запросов и выполнять задачи управления и разработки. Ниже перечислены другие инструменты.
+>
+> * [SQL Server Operations Studio (предварительная версия)](../sql-operations-studio/what-is.md);
+> * [Среда SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * [Код Visual Studio](sql-server-linux-develop-use-vscode.md).
+> * [mssql-cli (предварительная версия)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/).
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]
-

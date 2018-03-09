@@ -2,12 +2,13 @@
 title: "Создание отчета перекрестной проверки | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - cross-validation [data mining]
 - statistical standard deviation
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
-caps.latest.revision: 17
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6b8b5dad234adf73717b5785fc0f3b06becaebce
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 87f3809146240a6e807cad3a5e1e22981f8bbf4d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-cross-validation-report"></a>создать отчет перекрестной проверки
-  В данном разделе описывается создание отчета перекрестной проверки с помощью вкладки «Диаграмма точности» в конструкторе интеллектуального анализа данных. Дополнительные сведения о том, как выглядит отчет перекрестной проверки, и содержащихся в нем статистических мерах см. в разделе [Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В данном разделе описывается создание отчета перекрестной проверки с помощью вкладки «Диаграмма точности» в конструкторе интеллектуального анализа данных. Дополнительные сведения о том, как выглядит отчет перекрестной проверки, и содержащихся в нем статистических мерах см. в разделе [Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
   
  Отчет перекрестной проверки существенно отличается от диаграммы точности, в том числе от диаграммы точности прогнозов или матрицы классификации.  
   
@@ -100,4 +101,3 @@ ms.lasthandoff: 09/01/2017
  [Меры в отчете перекрестной проверки](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
   
   
-

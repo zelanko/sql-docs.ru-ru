@@ -1,30 +1,31 @@
 ---
 title: "Рабочий процесс ETL | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: samples
+ms.technology: samples
 ms.custom: 
 ms.date: 06/15/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 679e58fe-b062-4934-a94c-9bb916b0bcb0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: bbda77b86b4c804ae0cf261f54f51fc487090e1d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 85898dfc3a12ee195910bf965f0099b35f95b239
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Рабочий процесс WideWorldImportersDW ETL
-ETL-пакета WWI_Integration используется для переноса данных из базы данных WideWorldImporters WideWorldImportersDW базы данных при изменении данных. Пакет периодически запускается (чаще всего ежедневно).
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]ETL-пакета WWI_Integration используется для переноса данных из базы данных WideWorldImporters WideWorldImportersDW базы данных при изменении данных. Пакет периодически запускается (чаще всего ежедневно).
 
 ## <a name="overview"></a>Обзор
 
@@ -80,4 +81,3 @@ ETL-пакета WWI_Integration используется для перенос�
    - Нажмите кнопку ОК, чтобы создать задание.
 
 3. Выполнение или планирование задания.
-

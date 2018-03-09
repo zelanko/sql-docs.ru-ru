@@ -2,35 +2,34 @@
 title: "Свойства ролей пользователей (Management Studio) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.userroleproperties.f1
+f1_keywords: sql13.swb.reportserver.userroleproperties.f1
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
-caps.latest.revision: 27
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "27"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 76bd80e1fc470d9cdb998d23834d0a3473d411fe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1f5f631a74f1dfe77e5b7ee8c1f42f7335523576
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="user-role-properties-management-studio"></a>Свойства пользовательской роли (среда Management Studio)
   На этой странице можно просмотреть задачи, выбранные для определения роли на уровне элемента. Эту страницу также можно использовать для изменения списка задач или модификации описания роли.  
   
  Определение роли на уровне элемента является именованной коллекцией задач, выполняемых пользователем относительно определенного элемента (например, папки, отчета, ресурса или общего источника данных). Определения ролей назначаются пользователю или группе для создания назначения роли в диспетчере отчетов. Задачи в определении роли описывают, что пользователь или группа могут делать.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]включает ряд определения стандартных ролей на уровне элемента, с которыми можно работать. Определения ролей можно изменить, изменив список задач для каждого из них. Изменение определения роли влияет на все назначения ролей, включенные в ее определение.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают в себя несколько заранее заданных определений ролей на уровне элемента, с которыми может работать пользователь. Определения ролей можно изменить, изменив список задач для каждого из них. Изменение определения роли влияет на все назначения ролей, включенные в ее определение.  
   
 > [!NOTE]  
 >  Пользовательские назначения ролей применяются только на сервере отчетов, который работает в собственном режиме. Если сервер отчетов настроен для работы в режиме интеграции с SharePoint, то на этой странице отображаются сведения только для чтения о ролях и уровнях разрешений, которые определены на сайте SharePoint.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 08/09/2017
  **Название**  
  Название определения роли.  
   
- **Description**  
+ **Описание**  
  Описание определения системной роли. В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]это описание отображается только на данной странице. В диспетчере отчетов это описание позволяет пользователям решить, следует ли использовать роль в назначении роли.  
   
  **Задача**  
@@ -48,12 +47,11 @@ ms.lasthandoff: 08/09/2017
  **Описание задачи**  
  Выводит сведения по каждой из задач. Нельзя изменять описания задач.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи уровня элемента](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)   
- [Определения ролей](../../reporting-services/security/role-definitions.md)   
- [Сервер отчетов в Справка F1 среды Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Определение ролей](../../reporting-services/security/role-definitions.md)   
+ [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Задачи и разрешения](../../reporting-services/security/tasks-and-permissions.md)   
  [Предопределенные роли](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   
-

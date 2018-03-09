@@ -1,27 +1,27 @@
 ---
-title: "Печать отчетов из других приложений (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Печать отчетов из других приложений (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5560581-fd57-4a45-b7ea-43b21a8a7419
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a77635508b96b02254e90b77e4f67800a6afc49f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 993291ac022a395f8700bace77982462554f157d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="print-reports-from-other-applications-report-builder-and-ssrs"></a>Печать отчетов из других приложений (построитель отчетов и службы SSRS)
   Построитель отчетов поддерживает возможность экспорта, которая позволяет просматривать отчеты в других приложениях. При открытии отчета в браузере или в веб-приложении в его верхней части появляется панель инструментов отчета, в которой доступна команда **Экспорт** . Экспорт обеспечивает просмотр отчетов в других приложениях (например, экспортированный в [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]отчет открывается именно в этом приложении). Рекомендуется экспортировать отчет для печати только в том случае, если это дает существенные преимущества при распечатывании.  
@@ -33,12 +33,11 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Печать отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)   
- [Печать отчетов из браузера с помощью элемента управления печатью &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
+ [Печать отчетов из браузера с помощью элемента управления печатью (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
  [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Экспорт отчета в файл другого типа &#40; Построитель отчетов и службы SSRS &#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)   
- [Поиск, просмотр и управление отчетами &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Экспорт отчета в файл другого типа (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)   
+ [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
-

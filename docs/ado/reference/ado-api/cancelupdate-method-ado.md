@@ -3,7 +3,7 @@ title: "Метод CancelUpdate (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - CancelUpdate method [ADO]
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cd858ec4d40f307027a75fa657c4e4d2b0539064
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9a85b135d743b356f5e4f5bd28e6bb2f2bb1eec0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cancelupdate-method-ado"></a>Метод CancelUpdate (ADO)
 Отменяет все изменения, внесенные в текущем или новом строку из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта, или [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекцию [запись](../../../ado/reference/ado-api/record-object-ado.md) объект перед вызовом [обновления ](../../../ado/reference/ado-api/update-method.md) метод.  
@@ -40,7 +39,7 @@ ms.lasthandoff: 09/09/2017
 recordset.CancelUpdaterecord.Fields.CancelUpdate  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="recordset"></a>набор записей  
  Используйте **CancelUpdate** метод отменить все изменения, внесенные в текущей строке или отменить вновь добавленной строкой. Нельзя отменить изменения в текущей строке или новую строку после вызова метода **обновление** метод, если изменения являются частью транзакции, можно выполнить откат с [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) , или часть, метод обновления пакета. В случае пакетного обновления, вы можете отменить **обновление** с **CancelUpdate** или [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) метод.  
@@ -56,9 +55,9 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
   
 |||  
 |-|-|  
-|[Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
+|[Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обновление и пример CancelUpdate методы (Visual Basic)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Обновление и пример методы CancelUpdate (VC ++)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
  [Метод AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
@@ -67,5 +66,4 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
  [Метод CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [Метод CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
  [Свойство EditMode](../../../ado/reference/ado-api/editmode-property.md)   
- [Метод обновления](../../../ado/reference/ado-api/update-method.md)
-
+ [Метод Update](../../../ado/reference/ado-api/update-method.md)

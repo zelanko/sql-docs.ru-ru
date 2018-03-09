@@ -3,8 +3,11 @@ title: "STArea (тип данных geometry) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - STArea (geometry Data Type)
 ms.assetid: a7dd6083-c649-4ac3-885d-1234e0db62f1
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5ec0a874d0dc2dd8bb37ce7e04fe71cbea85f860
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 87325f0124b52f6b77c9b62d67b1eec6915afbbb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="starea-geometry-data-type"></a>STArea (тип данных geometry)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Возвращает общую площадь поверхности **geometry** экземпляра.  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
  Возвращаемый тип CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  `STArea()`Возвращает 0, если **geometry** экземпляр содержит только 0 и 1-размерности, или если она пуста. `STArea()`Возвращает **NULL** Если **geometry** экземпляр не инициализирован.  
   
 ## <a name="examples"></a>Примеры  
@@ -69,8 +71,7 @@ SELECT @g.STArea();
  SELECT @g.STArea() AS Area;
  ```  
   
-## <a name="see-also"></a>См. также:  
- [Методы OGC для геометрических объектов](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+## <a name="see-also"></a>См. также  
+ [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-

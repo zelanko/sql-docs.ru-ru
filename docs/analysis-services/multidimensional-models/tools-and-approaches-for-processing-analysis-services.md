@@ -2,33 +2,33 @@
 title: "Средства и подходы для обработки (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - process [Analysis Services]
 - processing [Analysis Services]
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2cf9e507347a28aa36f96b1d2499ec0ff0ee741f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5eecf424cf155c53a2f636590ba002028f24db84
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Средства и способы обработки (службы Analysis Services)
-  Обработка — это операция, при которой службы Analysis Services запрашивают реляционный источник данных и заполняют этими данными объекты служб Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Обработка — это операция, при которой службы Analysis Services запрашивают реляционный источник данных и заполняют этими данными объекты служб Analysis Services.  
   
  Как администратор служб Analysis Services, вы можете выполнять и мониторить обработку объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с применением следующих подходов.  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 09/01/2017
  Обработка имеет широкие возможности настройки, управляемые набором параметров обработки, которые определяют тип обработки (полная или добавочная), выполняемой на уровне объектов. Дополнительные сведения об обработке параметров и объектов см. в разделах [Параметры обработки (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md) и [Обработка объектов служб Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  В этом разделе описываются средства и подходы для обработки многомерных моделей. Дополнительные сведения об обработке табличных моделей см. в разделах [Обработка базы данных, таблицы или секции (службы Analysis Services)](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) и [Обработка данных (табличные службы Analysis Services)](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
+>  В этом разделе описываются средства и подходы для обработки многомерных моделей. Дополнительные сведения об обработке табличных моделей см. в разделе [Обработка базы данных, таблицы, или раздел &#40; Службы Analysis Services &#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) и [обработки данных](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>Обработка объектов в среде SQL Server Management Studio  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 09/01/2017
   
     -   [Командлет Invoke-ProcessDimension](../../analysis-services/powershell/invoke-processdimension-cmdlet.md)  
   
-    -   [Командлет Invoke-PolicyEvaluation](../../analysis-services/powershell/invoke-processpartition-cmdlet.md)  
+    -   [Командлет Invoke-ProcessPartition](../../analysis-services/powershell/invoke-processpartition-cmdlet.md)  
   
     -   [Командлет Invoke-ASCmd](../../analysis-services/powershell/invoke-ascmd-cmdlet.md), который может использоваться для выполнения скриптов XMLA, MDX или DMX, содержащих команды обработки.  
   
@@ -167,4 +167,3 @@ ms.lasthandoff: 09/01/2017
  [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   
-

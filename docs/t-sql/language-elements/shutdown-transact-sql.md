@@ -3,8 +3,11 @@ title: "Завершение работы (Transact-SQL) | Документы Mi
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - stopping SQL Server
 - immediately stopping SQL Server
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a959b807bf566eab860b93350ebe07664e4965fa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: df8ef0a3cfe0ac4adb6f45bddb0bef650fea6ff3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Немедленно останавливает SQL Server.  
   
@@ -51,7 +53,7 @@ SHUTDOWN [ WITH NOWAIT ]
  WITH NOWAIT  
  Необязательно. Закрывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не выполнив контрольные точки в каждой базе данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляет выход после попытки завершить все пользовательские процессы. При перезапуске сервера ко всем незавершенным транзакциям применяется откат.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если не используется параметр WITHNOWAIT, Shutdown закрывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по:  
   
 1.  Отключает имена входа (за исключением членов **sysadmin** и **serveradmin** предопределенных ролей сервера).  
@@ -69,7 +71,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];  
   
--   Запустив **mssqlserver net stop** из командной строки для экземпляра по умолчанию или запустив **net stop mssql$***instancename* из командной строки для именованного экземпляра.  
+-   Запустив **mssqlserver net stop** из командной строки для экземпляра по умолчанию или запустив **net stop mssql$ *** instancename* из командной строки для именованного экземпляра.  
   
 -   с помощью служб на панели управления.  
   
@@ -78,15 +80,14 @@ SHUTDOWN [ WITH NOWAIT ]
 > [!NOTE]  
 >  Использование любого из этих методов для остановки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отправляет сообщение `SERVICE_CONTROL_STOP` в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Разрешения SHUTDOWN назначаются членам **sysadmin** и **serveradmin** предопределенных ролей сервера и они не могут передаваться.  
   
-## <a name="see-also"></a>См. также:  
- [CHECKPOINT (Transact-SQL)](../../t-sql/language-elements/checkpoint-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Контрольная точка &#40; Transact-SQL &#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
  [sp_lock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [sp_who &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [Приложение sqlservr](../../tools/sqlservr-application.md)   
- [Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
+ [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
   
-

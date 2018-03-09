@@ -2,9 +2,12 @@
 title: "Занятие 2. Создание подписки на публикацию слиянием | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: 
@@ -14,19 +17,19 @@ applies_to:
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 423ad3b42e75c70e6826e04a298c5eac4e590291
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1fb890bc73be0a4d27c5ea9cafe1e2fbed930679
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Занятие 2. Создание подписки на публикацию слиянием
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 На этом занятии будет создана подписка с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Затем будут установлены разрешения на базу данных подписки и вручную будет сформирован моментальный снимок отфильтрованных данных для новой подписки. Приступать к этому занятию нужно только по завершении предыдущего: [Занятие 1. Публикация данных с помощью репликации слиянием](../../relational-databases/replication/lesson-1-publishing-data-using-merge-replication.md).  
   
 ### <a name="to-create-the-subscription"></a>Создание подписки  
@@ -77,7 +80,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  Выберите добавленную секцию, щелкните **Создать выбранные моментальные снимки**и нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 Подписка на публикацию слиянием создана успешно, и сформирован отфильтрованный моментальный снимок секций данных новой подписки, так что снимок будет доступен при инициализации подписки. Далее предстоит предоставить права агенту слияния на базу данных подписки и запустить агент слияния, чтобы приступить к синхронизации и инициализировать подписку. См. [Занятие 3. Синхронизация подписки на публикацию слиянием](../../relational-databases/replication/lesson-3-synchronizing-the-subscription-to-the-merge-publication.md).  
   
 ## <a name="see-also"></a>См. также:  
@@ -85,4 +88,3 @@ ms.lasthandoff: 06/22/2017
 [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md)  
 [Моментальные снимки для публикаций слиянием с параметризованными фильтрами](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
   
-

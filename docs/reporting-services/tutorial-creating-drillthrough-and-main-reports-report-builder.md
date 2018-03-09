@@ -1,27 +1,28 @@
 ---
-title: "Учебник: Создание детализированных и главных отчетов (построитель отчетов) | Документы Microsoft"
+title: "Учебник. Создание детализированных и главных отчетов (построитель отчетов) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 32ff76d9fd8d90b780d66ed1e12c5a4d33deca7f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 0c67ffbd38887cd9428551a369a4d864d8b972d8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Учебник. Создание детализированных и главных отчетов (построитель отчетов)
 В этом учебнике описывается создание двух типов отчетов [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы: детализированного отчета и главного отчета. Образцы данных по продажам, использованные в этих отчетах, извлекаются из куба служб Analysis Services. 
@@ -59,7 +60,7 @@ ms.lasthandoff: 08/09/2017
 3.  Убедитесь в том, что на панели справа выбран **Мастер таблицы или матрицы** .  
   
 ## <a name="DConnection"></a>1a. Задание подключения к данным  
-Подключение к данным содержит сведения, необходимые для подключения к внешнему источнику данных, например к кубу служб Analysis Services или базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Чтобы указать подключение к данным, можно воспользоваться общим источником данных с сервера отчетов или создать внедренный источник данных, используемый только в этом отчете. В этом учебнике используется внедренный источник данных. Дополнительные сведения об использовании общего источника данных см. в разделе [альтернативой способы подключения к данным &#40; Построитель отчетов &#41; ](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+Подключение к данным содержит сведения, необходимые для подключения к внешнему источнику данных, например к кубу служб Analysis Services или базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Чтобы указать подключение к данным, можно воспользоваться общим источником данных с сервера отчетов или создать внедренный источник данных, используемый только в этом отчете. В этом учебнике используется внедренный источник данных. Дополнительные сведения об использовании общих источников данных см. в разделе [Альтернативные способы создания подключения к данным (построитель отчетов)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>Создание внедренного источника данных  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 08/09/2017
 2.  В диалоговом окне **Выбор куба** выберите Sales и нажмите кнопку **ОК**.  
   
     > [!TIP]  
-    > Если вы не хотите строить запрос многомерных Выражений вручную, нажмите кнопку ![переключиться в режим конструктора](../reporting-services/media/rsqdicon-designmode.gif "переключиться в режим конструктора") значок, переключите конструктор запросов в режим запроса, вставьте законченное многомерное Выражение в конструктор запросов и перейдите к шагу 6 в [Создание набора данных](#DSkip).  
+    > Если вы не хотите строить запрос многомерных выражений вручную, щелкните значок ![Переключение в режим конструктора](../reporting-services/media/rsqdicon-designmode.gif "Переключение в режим конструктора"), переключите конструктор запросов в режим "Запрос", вставьте законченное многомерное выражение в конструктор запросов и перейдите к шагу 6 раздела [Создание набора данных](#DSkip).  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -405,7 +406,7 @@ ms.lasthandoff: 08/09/2017
 2.  В диалоговом окне **Выбор куба** выберите Sales и нажмите кнопку **ОК**.  
   
     > [!TIP]  
-    > Если вы не хотите строить запрос многомерных Выражений вручную, нажмите кнопку ![переключиться в режим конструктора](../reporting-services/media/rsqdicon-designmode.gif "переключиться в режим конструктора") значок, переключите конструктор запросов в режим запроса, вставьте законченное многомерное Выражение в конструктор запросов и перейдите к шагу 5 в [Создание набора данных](#MSkip).  
+    > Если вы не хотите строить запрос многомерных выражений вручную, щелкните значок ![Переключение в режим конструктора](../reporting-services/media/rsqdicon-designmode.gif "Переключение в режим конструктора"), переключите конструктор запросов в режим "Запрос", вставьте законченное многомерное выражение в конструктор запросов и перейдите к шагу 5 раздела [Создание набора данных](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -691,4 +692,3 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>См. также:  
 [Учебники по построителю отчетов](../reporting-services/report-builder-tutorials.md)  
   
-

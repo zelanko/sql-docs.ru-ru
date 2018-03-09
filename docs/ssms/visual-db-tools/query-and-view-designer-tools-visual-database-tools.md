@@ -3,10 +3,12 @@ title: "Инструменты конструктора запросов и пр
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,20 +24,19 @@ helpviewer_keywords:
 - Query Designer [SQL Server], components
 - View Designer, components
 ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7dfecc428309240485cbd05b4b4da95c65e0a04b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 45b05e606f083b20fa7b1ba9e8a25b4defcf7c7c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>Инструменты конструктора запросов и представлений (визуальные инструменты для баз данных)
-При конструировании запроса, представления, встроенной функции или хранимой процедуры, состоящей из одной инструкции, окно конструктора состоит из четырех панелей: панель диаграмм, область критериев, панель «SQL» и панель результатов.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] При конструировании запроса, представления, встроенной функции или хранимой процедуры, состоящей из одной инструкции, окно конструктора состоит из четырех панелей: панель диаграмм, область критериев, панель "SQL" и панель результатов.  
   
 ![Конструктор запросов](../../ssms/visual-db-tools/media/vs_queryviewdsgpanes.gif "Конструктор запросов")  
   
@@ -57,4 +58,3 @@ ms.lasthandoff: 08/18/2017
 [Открытие конструктора запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  
 [Редактор SQL (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/sql-editor-visual-database-tools.md)  
   
-

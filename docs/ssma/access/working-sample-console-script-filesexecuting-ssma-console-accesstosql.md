@@ -1,29 +1,30 @@
 ---
 title: "Работать с FilesExecuting сценария образец консоли консоли SSMA | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ad75b648-d119-4119-98f0-d18f058be68d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b9ab154381c09d1b697cf0a9a46a864280ba5022
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a2ac9806e1f7577312ede0dddfcd38b3721f94f0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>Работа с FilesExecuting сценария образец консоли SSMA консоли (AccessToSQL)
 Несколько файлов образец предоставляется вместе с продуктом использования и справочник по пользовательскому. Этот раздел описывает способ легко настроить эти сценарии, в соответствии с потребностями пользователя.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 08/02/2017
   
 -   **ConversionAndDataMigrationSample.xml:** в этом примере пользователь может выполнить миграцию комплексных преобразование для переноса данных. Список значения обязательных атрибутов, которые потребуется изменить перечисленные ниже.  
   
-    |Имя команды|Description|Attribute|  
+    |Имя команды|Description|attribute|  
     |----------------|---------------|-------------|  
     |`map-schema`|Сопоставление схемы базы данных-источника в целевую схему.|`source-schema:`Указывает, требуется для преобразования базы данных-источника.<br /><br />`sql-server-schema`: Указывает, перемещаются в целевой базе данных|  
     |`convert-schema`|Выполняет преобразование схемы из источника в целевую схему.<br /><br />Если пользователь имеет для оценки нескольких объектов и баз данных, он можно указать несколько `metabase-object` узлов, как показано в `convert-schema` 4 пример команды консоли образца файла скрипта.|`object-name`Для указания базы данных-источника или имя, которое требуется для преобразования объекта. Убедитесь, что соответствующие `object-type` изменяется в зависимости от типа объекта, указанного в`object-name`|  
@@ -77,4 +78,3 @@ ms.lasthandoff: 08/02/2017
 [Создание файлов подключения сервера &#40; AccessToSQL &#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
 [Создание отчетов &#40; AccessToSQL &#41;](../../ssma/access/generating-reports-accesstosql.md)  
   
-

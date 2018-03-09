@@ -2,30 +2,30 @@
 title: "Использование соединения семантической модели бизнес-Аналитики в Excel или Reporting Services | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8fc3d2ae19c9b8237593d1b4e1b559f22c5da1ed
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1d99b45a632ed04e68b75f456178844ad59e500d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services
-  В этом разделе описывается использование соединений BISM, созданных по указаниям из других разделов. Если семантическая модель бизнес-аналитики еще не создана, см. разделы [Создание подключения между семантической моделью бизнес-аналитики и книгой PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) и [Создание соединения семантической модели бизнес-аналитики с табличным шаблоном базы данных](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В этом разделе описывается использование соединений BISM, созданных по указаниям из других разделов. Если семантическая модель бизнес-аналитики еще не создана, см. разделы [Создание подключения между семантической моделью бизнес-аналитики и книгой PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) и [Создание соединения семантической модели бизнес-аналитики с табличным шаблоном базы данных](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 ##  <a name="bkmk_connect"></a> Соединение из Excel  
  Можно указать соединение BISM в качестве источника данных в Excel или другом бизнес-приложении, использующем данные табличной модели служб Analysis Services. Этот раздел объясняет два типа подключения к данным BISM с помощью Excel.  
@@ -66,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  Для создания нерегламентированных отчетов в SharePoint пользователь, создающий отчет, должен иметь разрешения SharePoint для файла соединения BISM (BISM-файл) и  семантического шаблона базы данных бизнес-аналитики. Контекст безопасности соединения определяется пользователем, создающим отчет в интерактивном режиме.  
   
   
-

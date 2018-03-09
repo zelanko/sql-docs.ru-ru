@@ -1,31 +1,31 @@
 ---
 title: "Установка компонентов SSMA на SQL Server (MySQLToSql) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- SSMA extension pack, Installation
+helpviewer_keywords: SSMA extension pack, Installation
 ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 15e50ed4dd915f524a2e9980d4aa4997053af912
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9544fb62402871b9a93284df88e0082f62fec582
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>Установка компонентов SSMA на SQL Server (MySQLToSql)
 Помимо установки SSMA, необходимо установить компоненты на компьютере, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Эти компоненты включают пакет расширения SSMA, поддерживающей переноса данных и поставщики MySQL, чтобы включить возможность подключения сервера к серверу.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/02/2017
   
 Кроме того, при переносе данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], создает SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] задания агента, когда модуль переноса данных стороне сервера используется для переноса данных.  
   
-### <a name="prerequisites"></a>Предварительные требования  
+### <a name="prerequisites"></a>предварительные требования  
 Перед установкой SSMA для компонентов сервера MySQL на [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], убедитесь в том, что компьютер соответствует следующим требованиям:  
   
 -   Установщик [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows версии 3.1 или более поздняя версия.  
@@ -89,4 +89,3 @@ ms.lasthandoff: 08/02/2017
 [Установка SSMA для клиента MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
 [Миграция баз данных MySQL в SQL Server — база данных Azure SQL &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   
-

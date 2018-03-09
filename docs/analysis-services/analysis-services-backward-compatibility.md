@@ -1,13 +1,14 @@
 ---
 title: "Обратная совместимость служб SQL Server 2016 Analysis Services | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +20,16 @@ helpviewer_keywords:
 - SSAS, backward compatibility
 - SQL Server Analysis Services, backward compatibility
 ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dbefbaac019a9e7b4193162384469524336cb430
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f54505056125f11f3843a671a76136288f54b5d1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Обратная совместимость служб Analysis (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -52,9 +52,9 @@ ms.lasthandoff: 09/01/2017
 |Multidimensional|Кубы сеансов. Замена отсутствует.|  
 |Multidimensional|Локальные кубы. Замена отсутствует.|  
 |Табличный|Уровни совместимости 1100 и 1103 табличной модели не будут поддерживаться в будущем выпуске. Замена — можно задать на уровне совместимости 1200 или выше, преобразовав определения модели в табличных метаданных. См. раздел [Уровень совместимости табличных моделей в службах Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
-|Средства|Приложение SQL Server Profiler для перехвата трассировки<br /><br /> В качестве замены можно использовать профилировщик расширенных событий, встроенный в SQL Server Management Studio.  <br /> См. раздел [Мониторинг служб Analysis Services с помощью расширенных событий SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
-|Средства|Воспроизведение трассировки с помощью приложения SQL Server Profiler <br />Замена. Замена отсутствует.|  
-|Объекты управления трассировкой и интерфейсы API трассировки|Объекты Microsoft.AnalysisServices.Trace (содержат интерфейсы API для объектов трассировки и воспроизведения Analysis Services). Замена состоит из нескольких частей:<br /><br /> — настройка трассировки:  Microsoft.SqlServer.Management.XEvent;<br />— чтение трассировки: Microsoft.SqlServer.XEvent.Linq;<br />— воспроизведение трассировки: отсутствует.|  
+|Инструменты|Приложение SQL Server Profiler для перехвата трассировки<br /><br /> В качестве замены можно использовать профилировщик расширенных событий, встроенный в SQL Server Management Studio.  <br /> См. раздел [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
+|Инструменты|Воспроизведение трассировки с помощью приложения SQL Server Profiler <br />Замена. Замена отсутствует.|  
+|Объекты управления трассировкой и интерфейсы API трассировки|Объекты Microsoft.AnalysisServices.Trace (содержат интерфейсы API для объектов трассировки и воспроизведения Analysis Services). Замена состоит из нескольких частей:<br /><br /> -Настройка трассировки: Microsoft.SqlServer.Management.xevent;<br />-Чтение трассировки: Microsoft.SqlServer.xevent.Linq.<br />— воспроизведение трассировки: отсутствует.|  
   
 > [!NOTE]  
 >  Предыдущие объявления нерекомендуемых функций из [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] остаются в силе. Так как код поддержки этих функций еще не удален из продукта, многие из них все еще присутствуют в данной версии. При устаревшие ранее функции могут быть доступны, они все равно считаются устаревшим и могут быть физически удалены из продукта в любое время.  
@@ -127,6 +127,5 @@ using Microsoft.AnalysisServices.Core;
  Нет не обновление на месте модели DirectQuery, так как параметры предыдущих уровней совместимости не имеют точных аналогов в новых уровней совместимости 1200 и выше. При наличии существующей табличной модели, работающей в режиме DirectQuery, следует открыть модель в SQL Server Data Tools, отключить этот режим, задайте **уровень совместимости** свойство 1200 или выше, а затем изменить DirectQuery свойства. В разделе [режим DirectQuery](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md) подробные сведения.
 
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Обратная совместимость служб Analysis (SQL Server 2017)](analysis-services-backward-compatibility-sql2017.md)
-

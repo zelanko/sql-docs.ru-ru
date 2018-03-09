@@ -3,27 +3,28 @@ title: "Создание рабочих процессов в бизнес-Ан�
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/18/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34c3b1c2-97db-4cea-b287-c7f4fe4ecc1b
-caps.latest.revision: 11
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: dcfd7571f5dd555e6654eb65c4bbb7852f82feff
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 98baa7b40a232f21c5be51dff3806217cd73139b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="creating-bi-workflows-with-r"></a>Создание рабочих процессов в бизнес-Аналитики с помощью R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Реляционная база данных является высокооптимизированной технологией разработки масштабируемых решений для обработки транзакций, хранения и опроса данных.
 
@@ -68,7 +69,7 @@ ms.lasthandoff: 09/01/2017
 
 В этой записи блога демонстрирует основные способы работы с кодом R с помощью [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]: 
 
-+ Вызовите R, используя задачу «Выполнение SQL», для формирования данных и сохранения его в[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
++ Вызовите R, используя задачу «Выполнение SQL», для формирования данных и сохранения его в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 + использование хранимой процедуры для обучения модели R и ее сохранения в базе данных;
 
@@ -80,7 +81,7 @@ ms.lasthandoff: 09/01/2017
 
 С помощью [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] вы можете выполнять сложные операции в R через хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)], которые легко можно использовать во множестве средств создания отчетов, включая [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и Power BI.
 
-+ Визуализация графических объектов, возвращаемых сценарием R, с помощью [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
++ Визуализация графических объектов, возвращаемых сценарием R с помощью [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
 + Использование таблицы в Power BI
 
 ### <a name="examples"></a>Примеры
@@ -95,4 +96,3 @@ ms.lasthandoff: 09/01/2017
 
 > [!NOTE]
 > В этом примере код, который поддерживает графического устройства R для служб Reporting Services должны быть установлены на сервере служб Reporting Services, а также в Visual Studio. Кроме того, требуется компиляция и настройка вручную.
-

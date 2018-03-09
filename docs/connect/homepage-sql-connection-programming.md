@@ -2,20 +2,23 @@
 title: "Домашняя страница для программирования клиента SQL | Документы Microsoft"
 description: "Страница концентратора с заметками ссылки на файлы для загрузки и документации для различных сочетаний языков и операционных систем, для подключения к SQL Server, или к базе данных SQL Azure."
 author: MightyPen
-ms.date: 09/13/2017
+ms.date: 11/29/2017
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.prod_service: drivers
+ms.service: 
+ms.component: connect
+ms.suite: sql
+ms.custom: 
+ms.technology: drivers
 ms.topic: article
 ms.reviewer: meetb
 ms.author: genemi
 ms.workload: Inactive
+ms.openlocfilehash: 804a1f1e27e531d2282775db63628ed02fb50829
+ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
 ms.translationtype: MT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: 000325a2e2c53e36f7a74a725962b8dd3be98988
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Домашняя страница для программирования для Microsoft SQL Server клиента
 
@@ -54,7 +57,7 @@ ms.lasthandoff: 10/10/2017
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
 | &nbsp;[ ![Логотип C#][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM Entity Framework платформы .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Эмблема Java][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp;[ ![Node.js логотип][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[ ![Логотип PHP][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp;[ ![Node.js логотип][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![CPP big плюс][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp;[ ![Логотип PHP][image-ref-360-php]](#an-170-php-docu) |
 | &nbsp;[ ![Логотип Python][image-ref-370-python]](#an-180-python-docu) | &nbsp;[ ![Произносится эмблемы][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
@@ -181,7 +184,7 @@ Node.js можно подключаться к серверу SQL Server с Wind
 
 ## <a name="odbc-for-c"></a>ODBC для C++ 
 
-![Эмблема ODBC][image-ref-350-odbc]
+![Эмблема ODBC][image-ref-350-odbc] ![CPP big плюс][image-ref-322-cpp]
 
 Интерфейс ODBC (ODBC) был разработан в 90-х, и эта реализация предшествовала .NET Framework. ODBC должен быть независимым от любой системе конкретной базы данных и зависит от операционной системы.
 
@@ -361,7 +364,6 @@ Ruby можно использовать для взаимодействия с 
 
 <!-- Image references. -->
 
-[image-ref-310-ado-net]: ./media/homepage-sql-connection-drivers/gm-ado-net-an51.png
 [image-ref-322-cpp]: ./media/homepage-sql-connection-drivers/gm-cpp-4point-p61f.png
 [image-ref-320-csharp]: ./media/homepage-sql-connection-drivers/gm-csharp-c10c.png
 [image-ref-333-ef]: ./media/homepage-sql-connection-drivers/gm-entity-framework-ef20d.png
@@ -373,5 +375,4 @@ Ruby можно использовать для взаимодействия с 
 [image-ref-380-ruby]: ./media/homepage-sql-connection-drivers/gm-ruby-un-r82.png
 [image-ref-390-aka-ms-sqldev-choose-language]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png
 [image-ref-400-aka-ms-sqldev-java-ubuntu]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-java-ubuntu-c31.png
-
 

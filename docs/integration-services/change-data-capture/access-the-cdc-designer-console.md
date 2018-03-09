@@ -1,10 +1,13 @@
 ---
-title: "Доступ к консоли конструктора CDC | Документы Microsoft"
+title: "Доступ к консоли конструктора CDC | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,16 +15,16 @@ ms.topic: article
 f1_keywords:
 - accMsDes
 ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
-caps.latest.revision: 9
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e1266809582119e6316b821c54f93f4217c21316
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 036a9457f09587ef93fdd8409643613194d404bf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="access-the-cdc-designer-console"></a>Доступ к консоли конструктора CDC
   Доступ к консоли конструктора CDC осуществляется с компьютера, где установлена консоль. Дополнительные сведения об установке см. в разделе «Установка».  
@@ -61,7 +64,7 @@ ms.lasthandoff: 08/03/2017
   
  Дополнительные сведения о диалоговом окне «Дополнительные свойства подключения» см. в разделе [Advanced Connection Properties](../../integration-services/change-data-capture/advanced-connection-properties.md).  
   
-## <a name="see-also"></a>См. также  
- [Соединение с SQL Server разрешения, необходимые конструктору CDC](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+## <a name="see-also"></a>См. также:  
+ [Разрешения, необходимые конструктору CDC для соединения с SQL Server](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

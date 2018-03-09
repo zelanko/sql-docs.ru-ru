@@ -3,27 +3,28 @@ title: "Возврат массива параметров с хранимыми
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - stored procedures [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], stored procedures
 ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f0742b7158ae8a3fe94b325dacc1c29807610e9b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 23b57350ae1abccf39e20f6b8ed6d14fa7d04a7b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="returning-array-parameters-from-stored-procedures"></a>Возврат массива параметров из хранимых процедур
 > [!IMPORTANT]  
@@ -144,4 +145,3 @@ END SimplePackage;
   
 > [!NOTE]  
 >  В драйвере ODBC для Oracle версии 2.0 Oracle функции, возвращающие массивы PL/SQL не может использоваться для возврата результирующих наборов.
-

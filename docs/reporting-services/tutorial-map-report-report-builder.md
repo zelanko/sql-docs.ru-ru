@@ -2,26 +2,27 @@
 title: "Учебник. Отчет-карта (построитель отчетов) | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 5e5cbb6a1ac4cb9edf2baff1eb68c341c8187872
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: efe91a2e1e8ca7b0744639ed718d63b70e3adc5c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-map-report-report-builder"></a>Учебник. Отчет-карта (построитель отчетов)
 Этот учебник по [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] позволяет изучить функции карты, которые можно использовать для отображения данных отчета [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы в географическом контексте. 
@@ -544,7 +545,7 @@ ms.lasthandoff: 08/09/2017
 
 ![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 На этом пошаговое руководство по добавлению карты в отчет завершается.  
   
 Дополнительные сведения см. в разделе [Карты (построитель отчетов и службы SSRS)](../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
@@ -555,5 +556,4 @@ ms.lasthandoff: 08/09/2017
 [Мастер карт и мастер слоев карт (построитель отчетов и службы SSRS)](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
 [Изменение параметров отображения многоугольников, линий и точек с помощью правил и аналитических данных (построитель отчетов и службы SSRS)](../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
-
 

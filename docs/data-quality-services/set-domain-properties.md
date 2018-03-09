@@ -2,27 +2,27 @@
 title: "Установка свойств домена | Microsoft Docs"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.domainproperties.f1
+f1_keywords: sql13.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
-caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "22"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5f67adedb0a54b35bb9ca5d4a27f42086e010d4b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e097256faccb24e82194edc7247ae7010a601430
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="set-domain-properties"></a>Установка свойств домена
   В этом разделе описывается, как настроить свойства домена в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -32,9 +32,9 @@ ms.lasthandoff: 09/09/2017
 ###  <a name="Prerequisites"></a> Предварительные требования  
  Чтобы настроить свойства домена, необходимо создать базу знаний и домен.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Для настройки свойств домена необходимо иметь в базе данных DQS_MAIN роль dqs_administrator или dqs_kb_editor.  
   
 ##  <a name="Set"></a> Установка свойств домена  
@@ -43,7 +43,7 @@ ms.lasthandoff: 09/09/2017
   
 2.  Задайте свойства нового домена после его создания, как описано в разделе [Create a Domain](../data-quality-services/create-a-domain.md).  
   
-3.  Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+3.  Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [Завершение операции по управлению доменами](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия: после настройки свойств домена  
  После настройки свойств домена можно выполнить другие задачи управления доменами для этого домена, провести обнаружение набора знаний для добавления набора знаний в домен или добавить в домен политику сопоставления. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md).  
@@ -54,7 +54,7 @@ ms.lasthandoff: 09/09/2017
  После создания домена имя или описание домена можно изменить. Имя домена должно быть уникальным для базы знаний. Длина описания может быть не более 256 символов.  
   
 ###  <a name="Type"></a> Тип данных  
- При создании домена выберите один из следующих типов данных для значений в домене: **Строка** (по умолчанию), **Дата**, **Целое число**или **Десятичный**. После создания домена вы можете просмотреть его тип данных, но не изменить его. Выбранный для домена тип данных определяет тип исходных данных, которые могут быть сопоставлены с доменом. Дополнительные сведения о поддерживаемых типах данных для каждого из 4 типов данных домена в службах DQS см. в разделе [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+ При создании домена выберите один из следующих типов данных для значений в домене: **Строка** (по умолчанию), **Дата**, **Целое число**или **Десятичный**. После создания домена вы можете просмотреть его тип данных, но не изменить его. Выбранный для домена тип данных определяет тип исходных данных, которые могут быть сопоставлены с доменом. Дополнительные сведения о поддерживаемых типах данных для каждого из 4 типов данных домена в службах DQS см. в разделе [Типы данных SQL Server и службы SSIS, поддерживаемые для доменов DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 ###  <a name="Leading"></a> Использование ведущих значений  
  Установите этот флажок, чтобы указать, что будет выдано ведущее значение в группе синонимов, а не значение, которое является его синонимом. Снимите флажок **Использовать ведущие значения** , чтобы указать, что каждое значение синонима выводится в правильной или исправленной форме, и не заменяется ведущим значением для группы.  
@@ -94,4 +94,3 @@ ms.lasthandoff: 09/09/2017
  Если типом данных является **String**, выберите, чтобы службы DQS не определяли синтаксические ошибки в домене в процессе очистки. Установите этот флажок, если определять синтаксические ошибки для этого домена не нужно. Например, синтаксические ошибки не имеют смысла для серийного номера. Этот элемент управления применяется только к данным строкового типа. Службы DQS не будут проверять синтаксические ошибки в данных нестрокового типа.  
   
   
-

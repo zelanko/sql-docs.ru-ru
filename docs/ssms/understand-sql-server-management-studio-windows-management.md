@@ -3,10 +3,12 @@ title: "Общие сведения об управлении окнами ср�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - push pin [SQL Server Management Studio]
 - tool windows [SQL Server Management Studio]
 ms.assetid: bebf8383-dcaf-466e-84f5-63b81c9cfe52
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 010413d849d1d3bdab0c1d72c6bd6375c340a753
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f290bba3b9312d861e63d54b19a8ad7dee5299a7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>Общие сведения об управлении окнами среды SQL Server Management Studio
-Окна инструментов в [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] — это высокофункциональная, гибкая и эффективная система, позволяющая:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Окна инструментов в [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] — это высокофункциональная, гибкая и эффективная система, позволяющая:  
   
 -   увеличивать рабочее пространство пользователя для задач разработки и управления;  
   
@@ -52,4 +53,3 @@ ms.lasthandoff: 06/22/2017
 [Использование среды SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
 [Среда SQL Server Management Studio](../ssms/the-sql-server-management-studio-environment.md)  
   
-

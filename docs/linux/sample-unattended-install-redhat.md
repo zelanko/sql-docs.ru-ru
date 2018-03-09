@@ -2,32 +2,36 @@
 title: "Автоматическая установка SQL Server в Red Hat Enterprise Linux | Документы Microsoft"
 description: "Пример сценария SQL Server - автоматической установки для Red Hat Enterprise Linux"
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 67f9d71c2a5bd1f57e270c07028f6e8c0ac036a1
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 50f3e867f17987c36a15810eaace668d59b738f2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Пример: Автоматической установки SQL Server сценария установки для Red Hat Enterprise Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Этот образец скрипта Bash устанавливает 2017 г. SQL Server в Red Hat Enterprise Linux (RHEL) без ввода. Он предоставляет примеры установке ядра СУБД, средства командной строки SQL Server, агент SQL Server и выполняет шаги после установки. При необходимости можно установить компонент full-text search и создать пользователя с правами администратора.
 
 > [!TIP]
-> Если не требуется использовать сценарий автоматической установки, то самый быстрый способ установки SQL Server является выполните [краткого руководства по Red Hat](quickstart-install-connect-red-hat.md). Другие сведения о настройке в разделе [руководство по установке для SQL Server в Linux](sql-server-linux-setup.md).
+> Если не требуется использовать сценарий автоматической установки, то самый быстрый способ установки SQL Server является выполните [краткое руководство по Red Hat](quickstart-install-connect-red-hat.md). Другие сведения о настройке в разделе [руководство по установке для SQL Server в Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
-- Необходимо по крайней мере 3,25 ГБ памяти для запуска SQL Server в Linux.
+- Необходимо по крайней мере 2 ГБ памяти для запуска SQL Server в Linux.
 - Файловая система должна быть **XFS** или **EXT4**. Других файловых систем, таких как **BTRFS**, не поддерживаются.
 - Другие требования к системе см. в разделе [требования к системе для SQL Server в Linux](sql-server-linux-setup.md#system).
 
@@ -35,7 +39,7 @@ ms.lasthandoff: 10/02/2017
 Сохранить сценарий в файле и замените значения переменных в сценарии для ее настройки. Можно также задать любое переменных скрипта как переменные среды, при условии, что он удаляется из файла скрипта.
 
 ```bash
-#!/bin/bash
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 
@@ -220,4 +224,3 @@ export SQL_INSTALL_AGENT='y'
 ```
 
 Дополнительные сведения о SQL Server в Linux см. в разделе [Linux Обзор SQL Server на](sql-server-linux-overview.md).
-

@@ -2,30 +2,32 @@
 title: "Реализация сжатия страниц | Документация Майкрософт"
 ms.custom: 
 ms.date: 06/30/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: compression
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-data-compression
+ms.suite: sql
+ms.technology: dbe-data-compression
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - page compression [Database Engine]
 - compression [SQL Server], page
 ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20038dcaae2d0d33e2a38e1d0fcd1567b2520c03
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "21"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 88c9afd04b30360316f6476364831a35e23638a3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="page-compression-implementation"></a>Реализация сжатия страниц
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Этот раздел содержит описание того, как компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] реализует сжатие страниц. В этой сводке представлены основные сведения, которые помогут при планировании объема хранения.  
   
@@ -77,4 +79,3 @@ ms.lasthandoff: 06/22/2017
  [Row Compression Implementation](../../relational-databases/data-compression/row-compression-implementation.md)  
   
   
-

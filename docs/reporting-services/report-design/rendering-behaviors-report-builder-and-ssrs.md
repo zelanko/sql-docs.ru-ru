@@ -1,27 +1,27 @@
 ---
-title: "Подготовка к просмотру поведения (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Поведение при подготовке к просмотру (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 518b74abc3238fcebee1e8b5356315e49f35db01
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fda90a3b613306b1dcb162f55e007225eb03b181
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)
   В зависимости от выбранного модуля подготовки отчетов, при обработке отчета к его тексту и содержимому будут применяться некоторые правила. Размещение элементов отчета на странице определяется сочетанием этих факторов.  
@@ -133,10 +133,9 @@ ms.lasthandoff: 08/09/2017
   
 -   Логические разрывы страниц, заданные в таблице или ячейках матрикса, не сохраняются. Это не относится к элементам списков.  
   
-## <a name="see-also"></a>См. также  
- [Интерактивные возможности различных подготовки отчетов к просмотру расширения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Подготовка к просмотру в формате HTML &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
- [Макет страницы и визуализации &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>См. также:  
+ [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Подготовка к просмотру в виде HTML (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
+ [Макет страницы и подготовка к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   
-

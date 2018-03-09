@@ -2,9 +2,12 @@
 title: "Включение и настройка FILESTREAM | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: abc638065f8a8a9201d5dbd37f240e82a5c81a22
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
-ms.openlocfilehash: 19f5d560766c4bc70bd16fcff4f9f12f23b80146
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/24/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="enable-and-configure-filestream"></a>Включение и настройка FILESTREAM
-  Перед началом использования хранилища FILESTREAM его необходимо включить в экземпляре компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. В этом разделе описано, как включить FILESTREAM с помощью диспетчера конфигурации SQL Server.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Перед началом использования хранилища FILESTREAM его необходимо включить в экземпляре компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. В этом разделе описано, как включить FILESTREAM с помощью диспетчера конфигурации SQL Server.  
   
 ##  <a name="enabling"></a> Включение FILESTREAM  
   
@@ -53,7 +56,7 @@ ms.lasthandoff: 08/24/2017
   
 11. В редакторе запросов введите следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
-    ```tsql  
+    ```sql  
     EXEC sp_configure filestream_access_level, 2  
     RECONFIGURE  
     ```  
@@ -82,7 +85,7 @@ ms.lasthandoff: 08/24/2017
   
 ||||||  
 |-|-|-|-|-|  
-|Уровень RAID|Производительность записи|Производительность чтения|Отказоустойчивость|Замечания|  
+|Уровень RAID|Производительность записи|Производительность чтения|Отказоустойчивость|Remarks|  
 |RAID 5|Нормальный|Нормальный|Высокая|Производительность лучше, чем у диска или JBOD, но хуже, чем у RAID 0 или RAID 5 с чередованием.|  
 |RAID 0|Высокая|Высокая|None||  
 |RAID 5 + чередование|Высокая|Высокая|Высокая|Самый дорогостоящий вариант.|  
@@ -98,4 +101,3 @@ ms.lasthandoff: 08/24/2017
 -   Управление местом на диске и соответствующие политики не поддерживаются FILESTREAM напрямую. Однако можно управлять местом и применять политики косвенно путем присвоения каждой файловой группы FILESTREAM отдельному тому с последующим применением функций управления данного тома.  
   
   
-

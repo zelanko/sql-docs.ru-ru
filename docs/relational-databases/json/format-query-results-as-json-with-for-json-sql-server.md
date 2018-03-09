@@ -1,11 +1,12 @@
 ---
 title: "Форматирование результатов запроса как JSON с помощью предложения FOR JSON (SQL Server) | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.component: json
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-json
 ms.tgt_pltfrm: 
@@ -15,20 +16,19 @@ helpviewer_keywords:
 - JSON, exporting
 - exporting JSON
 ms.assetid: 15b56365-58c2-496c-9d4b-aa2600eab09a
-caps.latest.revision: 31
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: daf63df4b1999618b39d67953b465143d3d5434d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 8ee99c52515908e93a44e936504fd8ccbd74793f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Форматирование результатов запроса как JSON с помощью предложения FOR JSON (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Вы можете отформатировать результаты запроса как JSON или экспортировать данные из SQL Server в формате JSON, добавив предложение **FOR JSON** к инструкции **SELECT**. Предложение **FOR JSON** упрощает клиентские приложения, делегируя форматирование выходных данных JSON из приложения в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
@@ -101,7 +101,7 @@ FOR JSON AUTO
     -   Небольшой результирующий набор может содержать одну строку.
     -   Большой результирующий набор разбивает длинную строку JSON по нескольким строкам.
         -   По умолчанию SQL Server Management Studio (SSMS) сцепляет результаты в одну строку, если выходной параметр **В виде сетки**. В строке состояния SSMS отображается действительное число строк.
-        -   В других клиентских приложениях может потребоваться внести код, который будет перераспределять большой объем результатов в одну общую допустимую строку JSON, объединяя содержимое множества записей. Пример этого кода в приложении C# см. в разделе [Использование выходных данных FOR JSON в клиентском приложении C#](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app).
+        -   В других клиентских приложениях может потребоваться внести код, который будет перераспределять большой объем результатов в одну общую допустимую строку JSON, объединяя содержимое множества записей. Пример этого кода в приложении C# см. в разделе [Использование выходных данных FOR JSON в клиентском приложении C#](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md#use-for-json-output-in-a-c-client-app).
   
      ![Пример выходных данных FOR JSON](../../relational-databases/json/media/forjson-example2.png)  
   
@@ -156,12 +156,24 @@ FOR JSON AUTO
 -   [Как FOR JSON экранирует специальные и управляющие символы (SQL Server)](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)  
     Предложение **FOR JSON** экранирует специальные символы и представляет управляющие символы в выходных данных JSON, как описано в этом разделе.  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Дополнительные сведения о встроенной поддержке JSON в SQL Server  
-Большое количество решений, варианты использования и рекомендации см. в [записях Йована Поповича (Jovan Popovic), руководителя программы Майкрософт, в блогах о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) в SQL Server и базах данных SQL Azure.
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Дополнительные сведения о JSON в SQL Server и базе данных SQL Azure  
+  
+### <a name="microsoft-blog-posts"></a>Публикации блога Майкрософт  
+  
+Конкретные решения, варианты использования и рекомендации см. в [записях блога](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) о встроенной поддержке JSON в SQL Server и базе данных SQL Azure.  
+
+### <a name="microsoft-videos"></a>Видео Майкрософт
+
+Наглядные инструкции по встроенной поддержке JSON в SQL Server и базе данных SQL Azure см. в следующих видео.
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support) (SQL Server 2016 и поддержка JSON)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database) (Использование JSON в SQL Server 2016 и базе данных SQL Azure)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds) (JSON как мост между NoSQL и реляционными решениями)
   
 ## <a name="see-also"></a>См. также:  
  [Предложение FOR (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)   
  [Использование выходных данных FOR JSON в SQL Server и клиентских приложениях &#40;SQL Server&#41;](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md)  
   
   
-

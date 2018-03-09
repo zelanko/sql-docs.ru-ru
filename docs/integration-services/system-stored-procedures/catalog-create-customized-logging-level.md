@@ -1,31 +1,33 @@
 ---
-title: "Catalog.create_customized_logging_level | Документы Microsoft"
+title: "catalog.create_customized_logging_level  | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
-caps.latest.revision: 9
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 126fa0af811033bb0be035b1f4c550620c696bb3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 027e2790bc59e3e9839de83c98984c19df1a982e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogcreatecustomizedlogginglevel"></a>Catalog.create_customized_logging_level
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="catalogcreatecustomizedlogginglevel"></a>catalog.create_customized_logging_level
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Создает новый пользовательский уровень ведения журнала. Дополнительные сведения о пользовательских уровней ведения журнала см. в разделе [службы Integration Services &#40; Службы SSIS &#41; Ведение журнала](../../integration-services/performance/integration-services-ssis-logging.md).  
+  Создает новый настроенный уровень ведения журнала. Дополнительные сведения о настроенных уровнях ведения журналов см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,47 +40,47 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @level_name =] *level_name*  
- Имя для нового существующий пользовательский уровень ведения журнала.  
+ [ @level_name = ] *level_name*  
+ Название нового существующего настроенного уровня ведения журнала.  
   
- *Level_name* — **nvarchar(128)**.  
+ Параметр *level_name* имеет тип **nvarchar(128)**.  
   
- [ @level_description =] *level_description*  
- Описание для нового существующий пользовательский уровень ведения журнала.  
+ [ @level_description = ] *level_description*  
+ Описание нового существующего настроенного уровня ведения журнала.  
   
- *Level_description* — **nvarchar(1024)**.  
+ Параметр *level_description* имеет тип **nvarchar(1024)**.  
   
- [ @profile_value =] *profile_value*  
- Статистические данные, что требуется новый пользовательский уровень ведения журнала для входа.  
+ [ @profile_value = ] *profile_value*  
+ Статистические данные, которые будут включаться в новый настроенный уровень ведения журнала.  
   
- Ниже представлены допустимые значения для статистики. Эти значения соответствуют значениям на **статистики** вкладке **настроить управление** диалоговое окно.  
+ К допустимым значениям статистических данных относятся следующие. Эти значения соответствуют значениям на вкладке **Статистика** диалогового окна **Управление настроенным уровнем ведения журнала**.  
   
--   Выполнение = 0  
+-   Execution = 0  
   
--   Тома = 1  
+-   Volume = 1  
   
--   Производительность = 2  
+-   Performance = 2  
   
- *Profile_value* — **bigint**.  
+ Параметр *profile_value* имеет тип **bigint**.  
   
- [ @event_value =] *event_value*  
- События, что требуется новый пользовательский уровень ведения журнала для входа.  
+ [ @event_value = ] *event_value*  
+ События, которые будут включаться в новый настроенный уровень ведения журнала.  
   
- Ниже представлены допустимые значения для события. Эти значения соответствуют значениям на **событий** вкладке **настроить управление** диалоговое окно.  
+ К допустимым значениям событий относятся следующие. Эти значения соответствуют значениям на вкладке **События** диалогового окна **Управление настроенным уровнем ведения журнала**.  
   
-|События без контекста события|События с контекст событий|  
+|События без контекста событий|События с контекстом событий|  
 |----------------------------------|-------------------------------|  
-|OnVariableValueChanged = 0<br /><br /> OnExecutionStatusChanged = 1<br /><br /> OnPreExecute = 2<br /><br /> OnPostExecute = 3<br /><br /> OnPreValidate = 4<br /><br /> OnPostValidate = 5<br /><br /> OnWarning = 6<br /><br /> OnInformation = 7<br /><br /> OnError = 8<br /><br /> OnTaskFailed = 9<br /><br /> OnProgress = 10<br /><br /> OnQueryCancel = 11<br /><br /> OnBreakpointHit = 12<br /><br /> OnCustomEvent = 13<br /><br /> Диагностические = 14<br /><br /> DiagnosticEx = 15<br /><br /> NonDiagnostic = 16|OnVariableValueChanged_IncludeContext = 32<br /><br /> OnExecutionStatusChanged_IncludeContext = 33<br /><br /> OnPreExecute_IncludeContext = 34<br /><br /> OnPostExecute_IncludeContext = 35<br /><br /> OnPreValidate_IncludeContext = 36<br /><br /> OnPostValidate_IncludeContext = 37<br /><br /> OnWarning_IncludeContext = 38<br /><br /> OnInformation_IncludeContext = 39<br /><br /> OnError_IncludeContext = 40<br /><br /> OnTaskFailed_IncludeContext = 41<br /><br /> OnProgress_IncludeContext = 42<br /><br /> OnQueryCancel_IncludeContext = 43<br /><br /> OnBreakpointHit_IncludeContext = 44<br /><br /> OnCustomEvent_IncludeContext = 45<br /><br /> Diagnostic_IncludeContext = 46<br /><br /> DiagnosticEx_IncludeContext = 47<br /><br /> NonDiagnostic_IncludeContext = 48|  
+|OnVariableValueChanged = 0<br /><br /> OnExecutionStatusChanged = 1<br /><br /> OnPreExecute = 2<br /><br /> OnPostExecute = 3<br /><br /> OnPreValidate = 4<br /><br /> OnPostValidate = 5<br /><br /> OnWarning = 6<br /><br /> OnInformation = 7<br /><br /> OnError = 8<br /><br /> OnTaskFailed = 9<br /><br /> OnProgress = 10<br /><br /> OnQueryCancel = 11<br /><br /> OnBreakpointHit = 12<br /><br /> OnCustomEvent = 13<br /><br /> Diagnostic = 14<br /><br /> DiagnosticEx = 15<br /><br /> NonDiagnostic = 16|OnVariableValueChanged_IncludeContext = 32<br /><br /> OnExecutionStatusChanged_IncludeContext = 33<br /><br /> OnPreExecute_IncludeContext = 34<br /><br /> OnPostExecute_IncludeContext = 35<br /><br /> OnPreValidate_IncludeContext = 36<br /><br /> OnPostValidate_IncludeContext = 37<br /><br /> OnWarning_IncludeContext = 38<br /><br /> OnInformation_IncludeContext = 39<br /><br /> OnError_IncludeContext = 40<br /><br /> OnTaskFailed_IncludeContext = 41<br /><br /> OnProgress_IncludeContext = 42<br /><br /> OnQueryCancel_IncludeContext= 43<br /><br /> OnBreakpointHit_IncludeContext = 44<br /><br /> OnCustomEvent_IncludeContext = 45<br /><br /> Diagnostic_IncludeContext = 46<br /><br /> DiagnosticEx_IncludeContext = 47<br /><br /> NonDiagnostic_IncludeContext = 48|  
   
- *Event_value* — **bigint**.  
+ Параметр *event_value* имеет тип **bigint**.  
   
- [ @level_id =] *level_id* OUT  
- Идентификатор нового пользовательский уровень ведения журнала.  
+ [ @level_id = ] *level_id* OUT  
+ Идентификатор нового настроенного уровня ведения журнала.  
   
- *Level_id* — **bigint**.  
+ Параметр *level_id* имеет тип **bigint**.  
   
-## <a name="remarks"></a>Замечания  
- Объединение нескольких значений в Transact-SQL для *profile_value* или *event_value* аргумент, выполните в этом примере. Чтобы зафиксировать OnError (8) и события DiagnosticEx (15), формула для вычисления *event_value* — `2^8 + 2^15 = 33024`.  
+## <a name="remarks"></a>Remarks  
+ Чтобы объединить несколько значений в Transact-SQL для аргумента *profile_value* или *event_value*, воспользуйтесь следующим примером. Чтобы захватить события OnError (8) и DiagnosticEx (15), необходимо использовать следующую формулу для расчета *event_value*: `2^8 + 2^15 = 33024`.  
   
 ## <a name="return-codes"></a>Коды возврата  
  0 (успешное завершение)  
@@ -86,9 +88,9 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  В случае отказа хранимой процедуры выдается ошибка.  
   
 ## <a name="result-set"></a>Результирующий набор  
- Нет  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   Членство в роли базы данных **ssis_admin**  
@@ -98,7 +100,6 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
  В следующем списке описываются условия, приводящие к сбою хранимой процедуры.  
   
--   Пользователь не имеет необходимых разрешений.  
+-   У пользователя отсутствуют необходимые разрешения.  
   
   
-

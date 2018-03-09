@@ -1,15 +1,14 @@
 ---
 title: "Образцы служб Analysis Services | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/28/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 
@@ -17,20 +16,19 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 637efbc19b5ced51e06f77366e3af665439e6dbb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a904cc21ff035388a15b9f985b81ec006aead7e6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-samples"></a>Образцы служб Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
 
   Используйте сведения, здесь можно найти образцы баз данных и проекты, которые помогут вам узнать о и тестируйте решение служб Analysis Services.
   
 
-## <a name="samples-on-github"></a>Примерами на GitHub
+## <a name="samples-on-github"></a>Образцы на GitHub
 
 [Репозиторий Git для служб Analysis Services](https://github.com/Microsoft/Analysis-Services) включает образцы кода и проекты сообщества.
 
@@ -44,9 +42,8 @@ ms.lasthandoff: 09/01/2017
 
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
 *   [Руководства по службам Analysis Services](../analysis-services/analysis-services-tutorials-ssas.md)
 
   
   
-

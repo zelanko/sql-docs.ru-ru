@@ -3,10 +3,12 @@ title: "Рекомендации по программированию драй�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,26 +17,24 @@ helpviewer_keywords:
 - Access driver [ODBC]
 - desktop database drivers [ODBC], Access driver
 ms.assetid: 2d2f09c0-18ef-45a4-a72a-d7a3bdcef646
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0390c6688d05dddd9523dca2986b36a7e2f99c61
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a2141d765b3f32b5a4c884d72e660e78e1ddcf31
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-access-driver-programming-considerations"></a>Рекомендации по программированию драйвер Microsoft Access
 Этот раздел содержит следующие подразделы.  
   
--   [Настройка параметров программным образом с целью драйвер доступа](../../odbc/microsoft/setting-options-programmatically-for-the-access-driver.md)  
+-   [Программная настройка параметров драйвера для Access](../../odbc/microsoft/setting-options-programmatically-for-the-access-driver.md)  
   
 -   [Типы данных Microsoft Access](../../odbc/microsoft/microsoft-access-data-types.md)  
   
--   [SQLGetInfo, значения, возвращаемые для доступа](../../odbc/microsoft/sqlgetinfo-returned-values-for-access.md)  
+-   [Возвращаемые значения SQLGetInfo для Access](../../odbc/microsoft/sqlgetinfo-returned-values-for-access.md)  
   
--   [Другие подробные сведения о программировании драйвер для доступа](../../odbc/microsoft/other-access-driver-programming-details.md)
-
+-   [Другие сведения о программировании драйверов для Access](../../odbc/microsoft/other-access-driver-programming-details.md)

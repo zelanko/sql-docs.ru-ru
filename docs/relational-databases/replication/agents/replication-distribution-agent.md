@@ -2,9 +2,12 @@
 title: "Агент распространения репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 02/23/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: 
@@ -15,19 +18,20 @@ helpviewer_keywords:
 - Distribution Agent, parameter reference
 - command prompt [SQL Server replication]
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
-caps.latest.revision: 64
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ed4deeaf1b608410977ba5d5bbe14a09d379020f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: b3a92cdd309e4bc4c60ff922b8444d810a2981cf
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="replication-distribution-agent"></a>Агент распространения репликации
-  Агент распространения репликации перемещает моментальный снимок (для репликации моментальных снимков или транзакций) и транзакции, находящиеся в таблицах базы данных распространителя (для репликации транзакций), в целевые таблицы на подписчиках.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Агент распространения репликации перемещает моментальный снимок (для репликации моментальных снимков или транзакций) и транзакции, находящиеся в таблицах базы данных распространителя (для репликации транзакций), в целевые таблицы на подписчиках.  
   
 > [!NOTE]  
 >  Параметры можно указывать в любом порядке. Если необязательные параметры не указаны, используются стандартные значения из реестра локального компьютера.  
@@ -94,14 +98,14 @@ distrib [-?]
  **-?**  
  Выводит список всех доступных параметров.  
   
- **-Publisher** *server_name*[**\\***i**nstance_name*]  
- Имя издателя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите *server_name***\\***instance_name* , чтобы обратиться к именованному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию.  
+ **-Publisher** *имя_сервера*[**\\***и**мя_экземпляра*]  
+ Имя издателя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите *имя_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере.  
   
- **-PublisherDB** *publisher_database*  
+ **-PublisherDB** *база_данных_издателя*  
  Имя базы данных издателя.  
   
- **-Subscriber** *server_name*[**\\***instance_name*]  
- Имя подписчика. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите *server_name***\\***instance_name* , чтобы обратиться к именованному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию.  
+ **-Subscriber** *имя_сервера*[**\\***имя_экземпляра*]  
+ Имя подписчика. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите *имя_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере.  
   
  **-SubscriberDB** *subscriber_database*  
  Имя базы данных подписчика.  
@@ -127,7 +131,7 @@ distrib [-?]
  **-Distributor** *distributor*  
  Имя распространителя. Для принудительного распространения по умолчанию используется имя локального распространителя.  
   
- **-DistributorLogin** *distributor_login*  
+ **-DistributorLogin** *имя_входа_распространителя*  
  Имя входа распространителя.  
   
  **-DistributorPassword** *distributor_password*  
@@ -139,7 +143,7 @@ distrib [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Уровень шифрования по протоколу SSL, который используется агентом распространителя при установлении соединений.  
   
-|Значение EncryptionLevel|Описание|  
+|Значение EncryptionLevel|Description|  
 |---------------------------|-----------------|  
 |**0**|Указывает, что SSL не используется.|  
 |**1**|Указывает, что SSL используется, но агент не проверяет, подписан ли сертификат сервера SSL надежным издателем.|  
@@ -171,7 +175,7 @@ distrib [-?]
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
  Указывает объем данных, регистрируемых в журнале во время операции распространения. Влияние на производительность, оказываемое ведением журнала, можно максимально уменьшить, выбрав значение **1**.  
   
-|Значение HistoryVerboseLevel|Описание|  
+|Значение HistoryVerboseLevel|Description|  
 |-------------------------------|-----------------|  
 |**0**|Сообщения о ходе работы записываются либо в консоль, либо в выходной файл. Записи журнала не регистрируются в базе данных распространителя.|  
 |**1**|По умолчанию. Всегда обновлять предыдущее сообщение журнала с таким же состоянием (запуск, выполнение, успех и т. д.). Если предыдущих сообщений с таким состоянием нет, то вставить новую запись.|  
@@ -184,10 +188,10 @@ distrib [-?]
  **-KeepAliveMessageInterval** *keep_alive_message_interval_seconds*  
  Количество секунд до того, как поток журнала проверяет наличие соединений, ожидающих ответа от сервера. Это значение можно уменьшить, чтобы во время проверки при выполнении длительной пакетной операции агент распространителя не был помечен как подозрительный. Значение по умолчанию — **300** секунд.  
   
- **-LoginTimeOut** *login_time_out_seconds*  
+ **-LoginTimeOut** *время_ожидания_входа_в_сек*  
  Время ожидания входа в секундах. Значение по умолчанию составляет **15** секунд.  
   
- **-MaxBcpThreads** *number_of_threads*  
+ **-MaxBcpThreads** *число_потоков*  
  Указывает число операций массового копирования, которые можно проводить параллельно. Максимальное число потоков и соединений ODBC, которые существуют одновременно, равно меньшему из **MaxBcpThreads** и числа запросов на массовое копирование, которые появляются в транзакции синхронизации в базе данных распространителя. Значение**MaxBcpThreads** должно быть больше **0** и не имеет жестко запрограммированного максимума. Значение по умолчанию равно числу процессоров, умноженному на **2** . Максимальное значение равно **8**. Применение моментального снимка, созданного в издателе в режиме одновременного моментального снимка, производится в один поток, независимо от значения, указанного в параметре **MaxBcpThreads**.  
   
  **-MaxDeliveredTransactions** *number_of_transactions*  
@@ -223,7 +227,7 @@ distrib [-?]
  **-ProfileName** *profile_name*  
  Указывает профиль агента, из которого берутся параметры агента. Если **ProfileName** имеет значение NULL, профиль агента отключен. Если значение **ProfileName** не указано, используется профиль по умолчанию для агентов этого типа. Дополнительные сведения см. в статье [Профили агента репликации](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
- **-Publication**  *publication*  
+ **-Publication**  *публикация*  
  Имя публикации. Этот параметр допустим только в том случае, если в данной публикации моментальный снимок всегда доступен для новых или повторно инициализированных подписок.  
   
  **-QueryTimeOut** *query_time_out_seconds*  
@@ -232,7 +236,7 @@ distrib [-?]
  **-QuotedIdentifier** *quoted_identifier*  
  Указывает символ, применяемый для идентификаторов, заключенных в кавычки. Первый символ значения указывает значение, используемое агентом распространителя. Если параметр **QuotedIdentifier** указан без значения, то агент распространителя использует пробел. Если параметр **QuotedIdentifier** не указан, то агент распространителя использует заключенный в кавычки идентификатор, поддерживаемый подписчиком.  
   
- **-SkipErrors** *native_error_id* [**:***...n*]  
+ **-SkipErrors** *собственный_идентификатор_ошибки* [**:***...n*]  
  Список с разделителями-двоеточиями, перечисляющий коды ошибок, которые этот агент должен пропускать.  
   
  **-SubscriberDatabasePath** *subscriber_database_path*  
@@ -250,7 +254,7 @@ distrib [-?]
  **-SubscriberType** [ **0**| **1**| **3**]  
  Указывает тип соединения с подписчиком, используемый агентом распространителя.  
   
-|Значение SubscriberType|Описание|  
+|Значение SubscriberType|Description|  
 |--------------------------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**1**|Источник данных ODBC|  
@@ -286,7 +290,7 @@ distrib [-?]
  **-UseOledbStreaming**  
  Если этот параметр указан, то разрешает привязку двоичных данных больших объектов в виде потока. Задать размер (в байтах), при превышении которого будет использоваться поток, можно с помощью параметра **-OledbStreamThreshold** . Параметр**UseOledbStreaming** включен по умолчанию. **UseOledbStreaming** записывает данные в папку **C:\Program Files\Microsoft SQL Server\\<версия\>\COM**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Если агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] настроен для запуска от учетной записи пользователя не домена (по умолчанию), а локальной системы, то служба имеет доступ только к локальному компьютеру. Если агент распространителя, запускаемый агентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , настроен для входа в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]с проверкой подлинности Windows, то работа агента слияния завершится ошибкой. Значением по умолчанию является проверка подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения об изменении учетных записей безопасности см. в разделе [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
@@ -303,4 +307,3 @@ distrib [-?]
  [Администрирование агента репликации](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   
-

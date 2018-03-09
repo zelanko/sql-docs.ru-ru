@@ -1,29 +1,31 @@
 ---
 title: "Завершение обновления ядра СУБД | Документы Майкрософт"
 ms.custom: 
-ms.date: 07/21/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.date: 10/23/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: 9248c9f2868246d1b8da927d6563b3de8d7cb8cd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 581e8cd7a43dd1e4c878cc56b49644e51d7a3a79
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="complete-the-database-engine-upgrade"></a>Завершение обновления ядра СУБД
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 После завершения обновления SQL Server вам, возможно, потребуется выполнить некоторые дополнительные действия. следующие основные параметры.  
   
@@ -31,7 +33,7 @@ ms.lasthandoff: 08/02/2017
   
 - **Резервное копирование баз данных:** создайте полную резервную копию каждой базы данных.  
 
-- **Включение новых функций:** в SQL Server 2016 b SQL Server 2017 некоторые изменения включаются только после того, как уровень совместимости базы данных DATABASE_COMPATIBILITY изменится на 130 или выше.  Дополнительные сведения и рекомендуемый рабочий процесс см. в разделе [Изменение режима совместимости базы данных и использование хранилища запросов](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md).  
+- **Включение новых функций:** в SQL Server 2016 b SQL Server 2017 некоторые изменения включаются только после того, как уровень совместимости базы данных DATABASE_COMPATIBILITY изменится на 130 или выше.  Дополнительные сведения и рекомендуемый рабочий процесс см. в разделе [Изменение режима совместимости базы данных и использование хранилища запросов](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). Если база данных содержит оптимизированные для памяти таблицы, созданные в SQL Server 2014, см. статью [Статистика для таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md).
   
 - **Службы Integration Services.**  
   
@@ -45,4 +47,3 @@ ms.lasthandoff: 08/02/2017
   
 - **Полнотекстовый поиск:** для обеспечения семантической согласованности результатов запросов заполните полнотекстовые каталоги повторно. Дополнительные сведения см. в разделе [Заполнение полнотекстовых индексов](../../relational-databases/search/populate-full-text-indexes.md).  
   
-

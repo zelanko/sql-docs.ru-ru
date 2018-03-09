@@ -1,32 +1,33 @@
 ---
 title: "Подготовка данных с помощью PowerShell (Пошаговое руководство) | Документы Microsoft"
 ms.custom: 
-ms.date: 07/26/2017
-ms.prod: sql-server-2016
+ms.date: 11/10/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: 30
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: a1ed4da0aca0b2876e2162c012aabc6c4043c567
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e1d85684da36ef69caf9dfa39f155a320def37b5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Подготовка данных с помощью PowerShell (Пошаговое руководство)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 К этому времени должны иметь одно из следующих:
 
@@ -100,7 +101,7 @@ ms.lasthandoff: 09/01/2017
 > [!NOTE]
 > На сервере **не** установить библиотеку пользователя даже при появлении соответствующего запроса. При установке в библиотеке пользователя экземпляра SQL Server не удается найти или запускать пакеты. Дополнительные сведения см. в статье [Installing New R Packages on SQL Server](../r/install-additional-r-packages-on-sql-server.md)(Установка новых пакетов R в SQL Server).
 
-1. На компьютере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откройте программу RGui.exe **от имени администратора**.  Если вы установили службы SQL Server R Services с настройками по умолчанию, программу RGui.exe можно найти в папке C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64.
+1. На компьютере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откройте программу RGui.exe **от имени администратора**.  Если вы установили службы R SQL Server с настройками по умолчанию, программу RGui.exe можно найти в папке C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64.
 
 2.  В командной строке R выполните следующие команды R:
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 09/01/2017
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - В этом примере используется функция R grep для поиска вектора доступных путей и нахождения пути в каталоге Program files. Дополнительные сведения см. на странице [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep).
+    - В этом примере функция grep R используется для поиска вектор доступные пути и найти пути, включающего «Program Files». Дополнительные сведения см. на странице [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep).
 
     - Если вы считаете, что пакеты уже установлены, проверьте список установленных пакетов с `installed.packages()`.
 
@@ -129,7 +130,7 @@ ms.lasthandoff: 09/01/2017
 
 - перезаписывает аргументы в файле скрипта R так, чтобы использовалось указанное имя базы данных.
 
-Необходимо запустить этот сценарий на компьютере, где построения решения: например, ноутбуке, где разработки и тестирования кода R. Компьютер с клиентом обработки и анализа данных должен подключаться к компьютеру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью протокола именованных каналов.
+Запустите этот скрипт на компьютере, где построения решения: например, ноутбуке, где разработки и тестирования кода R. Компьютер с клиентом обработки и анализа данных должен подключаться к компьютеру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью протокола именованных каналов.
 
 1. Откройте командную строку PowerShell **администратор**.
   
@@ -156,7 +157,7 @@ ms.lasthandoff: 09/01/2017
       > [!WARNING]
       > При использовании строки в сценарии PowerShell для предоставления учетных данных пароля записывается в файл обновленный скрипт в виде обычного текста. Удалите учетные данные из файла сразу же после создания необходимых объектов R.
       
-    **Путь к CSV-файлу.** Укажите полный путь к файлу данных. По умолчанию путь и имя файла — `C:\tempR\nyctaxi1pct.csv1`.
+    **Путь к CSV-файлу.** Укажите полный путь к файлу данных. По умолчанию путь и имя файла — `C:\tempR\nyctaxi1pct.csv`.
   
 4.  Чтобы запустить скрипт, нажмите клавишу ВВОД.
 
@@ -260,7 +261,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 Если в базе данных в существующую таблицу с одинаковым именем и той же схеме, **bcp** вставляет новую копию данных, а не перезаписывают существующие данные.
 
-Чтобы избежать повторяющихся данных, необходимо усечь все имеющиеся таблицы перед повторным запуском скрипта.
+Чтобы избежать повторяющихся данных, усечение все существующие таблицы перед повторным запуском сценария.
 
 ## <a name="whats-included-in-the-sample"></a>Что входит в образце
 
@@ -274,7 +275,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 ### <a name="bkmk_data"></a>Обучение и оценки данных
 
-Данные представляют собой представительную выборку из набора данных по работе такси в Нью-Йорке, который содержит записи о более чем 173 миллионах отдельных поездок в 2013 году, включая сведения о размере оплаты и чаевых за каждую поездку. Чтобы с этими данными было проще работать, команда Майкрософт по обработке и анализу данных произвела выборку приблизительно 1 % из всего набора.  Эти данные были помещены в общедоступный контейнер хранилища BLOB-объектов в Azure в формате CSV. Исходные данные представляют собой несжатый файл размером немного менее 350 МБ.
+Данные представляют собой представительную выборку из набора данных по работе такси в Нью-Йорке, который содержит записи о более чем 173 миллионах отдельных поездок в 2013 году, включая сведения о размере оплаты и чаевых за каждую поездку. Чтобы с этими данными было проще работать, команда Майкрософт по обработке и анализу данных произвела выборку приблизительно 1 % из всего набора.  Эти данные были помещены в общедоступный контейнер хранилища BLOB-объектов в Azure в формате CSV. Источник данных находится несжатого файла, непосредственно под 350 МБ.
 
 + Открытый набор данных: [такси NYC и Limousine Commission] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
@@ -292,9 +293,9 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 При выполнении сценария PowerShell несколько [!INCLUDE[tsql](../../includes/tsql-md.md)] сценариев на экземпляре SQL Server. В следующей таблице перечислены [!INCLUDE[tsql](../../includes/tsql-md.md)] сценариев и их функции.
 
-|Имя файла скрипта SQL|Description|
+|Имя файла скрипта SQL|Описание|
 |------------------------|----------------|
-|create-db-tb-upload-data.sql|Создает базу данных и две таблицы:<br /><br /> *nyctaxi_sample:*таблица, в которой хранятся данные для обучения — выборка из набора данных по работе такси в Нью-Йорке. К таблице добавляется кластеризованный индекс columnstore для оптимизации хранения данных и производительности запросов.<br /><br /> *nyc_taxi_models:*пустая таблица, которая будет использоваться в дальнейшем для сохранения обученной модели классификации.|
+|create-db-tb-upload-data.sql|Создает базу данных и две таблицы:<br /><br /> *nyctaxi_sample:*таблица, в которой хранятся данные для обучения — выборка из набора данных по работе такси в Нью-Йорке. К таблице добавляется кластеризованный индекс columnstore для оптимизации хранения данных и производительности запросов.<br /><br /> *nyc_taxi_models*: таблица, используемая для хранения обученных моделей в двоичном формате.|
 |PredictTipBatchMode.sql|Создает хранимую процедуру, которая вызывает обученную модель с целью прогнозирования меток для новых наблюдений. В качестве входного параметра она принимает запрос.|
 |PredictTipSingleMode.sql|Создает хранимую процедуру, которая вызывает обученную модель классификации с целью прогнозирования меток для новых наблюдений. Переменные новых наблюдений передаются в процедуру в виде встроенных параметров.|
 |PersistModel.sql|Создает хранимую процедуру, которая позволяет сохранять двоичное представление модели классификации в таблице базы данных.|
@@ -314,5 +315,4 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 [Пошаговое руководство обработки и анализа данных с начала до конца R и SQL Server](/walkthrough-data-science-end-to-end-walkthrough.md)
 
-[Предварительные требования для данного пошагового руководства обработки и анализа данных](walkthrough-prerequisites-for-data-science-walkthroughs.md)
-
+[Предварительные требования для работы с пошаговыми руководствами по обработке и анализу данных](walkthrough-prerequisites-for-data-science-walkthroughs.md)

@@ -2,35 +2,36 @@
 title: "Объект статистики ожидания (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Wait Statistics object
 - SQLServer:Wait Statistics
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "15"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e81641439bc17a678f7713e6b8088495b09db618
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 86fed40dbd12e7124aa837b7e428af711e33ef24
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server, объект Wait Statistics
-  Объект производительности **SQLServer:Wait Statistics** содержит счетчики производительности, сообщающие сведения о состоянии ожидания.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект производительности **SQLServer:Wait Statistics** содержит счетчики производительности, сообщающие сведения о состоянии ожидания.  
   
  В таблице ниже перечислены счетчики, содержащиеся в объекте статистики ожидания.  
   
-|SQL Server, счетчики статистики ожидания|Описание|  
+|SQL Server, счетчики статистики ожидания|Description|  
 |-----------------------------------------|-----------------|  
 |**Ожиданий блокировок**|Статистика процессов, ожидающих в состоянии блокировки.|  
 |**Ожиданий буфера журнала**|Статистика процессов, ожидающих освобождения буфера журнала.|  
@@ -47,7 +48,7 @@ ms.lasthandoff: 06/22/2017
   
  Каждый из счетчиков объекта содержит следующие экземпляры.  
   
-|Элемент|Описание|  
+|Элемент|Description|  
 |----------|-----------------|  
 |**Среднее время ожидания блокировки (мс)**|Среднее время для выбранного типа ожидания.|  
 |**Совокупное время ожидания (мс) в секунду**|Общее время ожидания в секунду для выбранного типа ожидания.|  
@@ -58,4 +59,3 @@ ms.lasthandoff: 06/22/2017
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

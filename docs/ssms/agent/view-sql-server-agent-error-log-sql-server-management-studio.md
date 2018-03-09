@@ -3,8 +3,11 @@ title: "Просмотр журнала ошибок агента SQL Server (с
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - tools-ssms
 ms.tgt_pltfrm: 
@@ -16,26 +19,26 @@ helpviewer_keywords:
 - SQL Server Agent, errors
 - errors [SQL Server Agent]
 ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
-caps.latest.revision: 6
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 31fbf087c088a0f83471a37b60d5151b9db315b3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e34811ab5bdff948a59bcf69a7abc1f7d5b8827c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>просмотреть журнал ошибок агента SQL Server (среда SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 В этом разделе содержатся сведения о просмотре журнала ошибок агента  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
 Средство просмотра журнала позволяет просматривать многие журналы различных компонентов. Когда средство просмотра журнала открыто, нужный журнал можно выбрать при помощи панели **Выбор журналов** . В каждом журнале отображаются столбцы, соответствующие типу журнала. Список доступных журналов зависит от того, каким способом было открыто средство просмотра журнала.  
   
 **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
     [Ограничения](#Restrictions)  
   
@@ -75,7 +78,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  Щелкните правой кнопкой журнал ошибок, который необходимо просмотреть, и выберите **Просмотреть журнал агента**.  
   
-    В диалоговом окне **Просмотр файла журнала —***имя_сервера* доступны следующие параметры:  
+    В диалоговом окне **Просмотр файла журнала —***имя_сервера* доступны указанные ниже параметры.  
   
     **Загрузить журнал**  
     Открывает диалоговое окно, в котором можно указать загружаемый файл журнала.  
@@ -87,7 +90,7 @@ ms.lasthandoff: 06/22/2017
     Позволяет обновить представление выбранных журналов. При нажатии кнопки **Обновить** выбранные журналы заново считываются с целевого сервера с применением параметров фильтра.  
   
     **Фильтр**  
-    Открывает диалоговое окно, позволяющее указывать параметры фильтрации файла журнала, например **Соединение**и **Дата**или другие условия фильтра **Общие** .  
+    Открывает диалоговое окно, позволяющее указывать параметры фильтрации файла журнала, например **Соединение**и **Дата**или другие **Общие** условия фильтра.  
   
     **Поиск**  
     Позволяет найти определенный текст в файле журнала. Поиск с символами-шаблонами не поддерживается.  
@@ -121,4 +124,3 @@ ms.lasthandoff: 06/22/2017
   
 5.  После завершения нажмите кнопку **Закрыть**.  
   
-

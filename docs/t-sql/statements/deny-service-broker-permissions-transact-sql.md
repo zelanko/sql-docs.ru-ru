@@ -3,8 +3,11 @@ title: "ЗАПРЕТ разрешений компонента Service Broker (T
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - contracts [Service Broker], permissions
 - services [Service Broker], permissions
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
-caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ed0ab0e375ecddbf9086647adce744a8ef4cb53d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 100c447d3a258ecf8a590173a7c0ef161f0fad3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY, запрет разрешений компонента Service Broker (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Запрещает разрешения по контрактам, типам сообщений, привязкам удаленной службы, маршрутам или службам компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
@@ -60,21 +62,21 @@ DENY permission  [ ,...n ] ON
   
 ## <a name="arguments"></a>Аргументы  
  *разрешение*  
- Указывает разрешение, которое может быть запрещено для защищаемых элементов компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
+ Указывает разрешение, которое может быть запрещено для защищаемых элементов компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- КОНТРАКТ **::***contract_name*  
+ CONTRACT **::***contract_name*  
  Указывает контракт, для которого запрещено разрешение. Квалификатор области **::** является обязательным.  
   
- Тип сообщения **::***message_type_name*  
+ MESSAGE TYPE **::***message_type_name*  
  Указывает тип сообщений, для которого запрещено разрешение. Квалификатор области **::** является обязательным.  
   
- REMOTE SERVICE BINDING **::***remote_binding_name*  
+ REMOTE SERVICE BINDING **:: *** remote_binding_name*  
  Указывает привязку удаленной службы, для которой запрещено разрешение. Квалификатор области **::** является обязательным.  
   
- МАРШРУТ **::***route_name*  
+ ROUTE **::***route_name*  
  Указывает маршрут, для которого запрещено разрешение. Квалификатор области **::** является обязательным.  
   
- Служба **::***message_type_name*  
+ SERVICE **::***message_type_name*  
  Указывает службу, для которой запрещено разрешение. Квалификатор области **::** является обязательным.  
   
  *database_principal*  
@@ -104,7 +106,7 @@ CASCADE
 -   Пользователь базы данных, сопоставленный асимметричному ключу  
 -   Пользователь базы данных, не сопоставленный серверу-участнику  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="service-broker-contracts"></a>Контракты компонента Service Broker  
  Контракт компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] — это защищаемый объект уровня базы данных, находящийся в базе данных, которая является родительской в иерархии разрешений. Наиболее специфичные и ограниченные разрешения, которые могут быть запрещены на [!INCLUDE[ssSB](../../includes/sssb-md.md)] контракта, перечислены в следующей таблице вместе с более общими разрешениями, неявно их содержащими.  
@@ -159,14 +161,13 @@ CASCADE
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения CONTROL по контрактам, типам сообщений, привязкам удаленной службы, маршрутам или службам компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. При использовании предложения AS указанный участник должен быть владельцем защищаемого объекта, разрешения на который для него запрещаются.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [ОТЗЫВ разрешений компонента Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)   
  [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   
  [Разрешения &#40; компонент Database Engine &#41;](../../relational-databases/security/permissions-database-engine.md)  
   
   
-

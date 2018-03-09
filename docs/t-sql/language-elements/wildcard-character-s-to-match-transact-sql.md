@@ -1,10 +1,13 @@
 ---
-title: "(Шаблон — символ(ы) для сопоставления) (Transact-SQL) | Документы Microsoft"
+title: "[] (Шаблон — символ(ы) для сопоставления) (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,19 +23,18 @@ helpviewer_keywords:
 - wildcard characters [SQL Server]
 - '[ ] (wildcard - character(s) to match)'
 ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
-caps.latest.revision: 32
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 18688c96cd0369905844d79a1a109f4e5032bce3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 04fcf0d9e76db380430bfbf4c4ed6e5fadf14afb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="wildcard---characters-to-match-transact-sql"></a>(Шаблон — символ(ы) для сопоставления) (Transact-SQL)
+# <a name="--wildcard---characters-to-match-transact-sql"></a>\[\] (Подстановочный знак — знаков для совпадения) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Соответствует любому одиночному символу в пределах указанного диапазона или набора, указывается в квадратных скобках `[ ]`. Эти символы-шаблоны можно использовать при сравнении строк, которые задействуют соответствие шаблону, таких как `LIKE` и `PATINDEX`.  
@@ -41,7 +43,7 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-simple-example"></a>А. простой пример   
 Следующий пример возвращает имена, начинающиеся с буквы `m`. `[n-z]`Указывает, что вторая буква должен быть где-нибудь в диапазоне от `n` для `z`. Шаблон процента `%` позволяет ни один не символов, начиная с 3. `model` И `msdb` базы данных соответствуют этому критерию. `master` База данных не поддерживает и исключается из результирующего набора.
  
-```tsql
+```sql
 SELECT name FROM sys.databases
 WHERE name LIKE 'm[n-z]%';
 ```
@@ -59,7 +61,7 @@ msdb
 ### <a name="b-more-complex-example"></a>Б. более сложный пример   
  В следующем примере оператор [] используется для поиска идентификаторов и имен всех сотрудников из базы данных [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], имеющих адреса с четырехзначным почтовым индексом.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.BusinessEntityID, p.FirstName, p.LastName, a.PostalCode  
@@ -81,12 +83,11 @@ EmployeeID      FirstName      LastName      PostalCode
 
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [КАК &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [Функция PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
-  [% (Шаблон — символ(ы) для сопоставления)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
- [&#91; ^ &#93; (Шаблон — символ(ы) должны совпасть)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
- [_ (Шаблон — совпадение одного символа)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
+  [% &#40; Подстановочный знак — символ &#40; s &#41; для соответствия &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
+ [&#91; ^ &#93; &#40; Подстановочный знак — символ &#40; s &#41; Не для соответствия &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
+ [\_&#40; Шаблон — совпадение одного символа &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
     
   
-

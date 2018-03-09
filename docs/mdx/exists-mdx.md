@@ -2,32 +2,31 @@
 title: "EXISTS (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Exists function
+dev_langs: kbMDX
+helpviewer_keywords: Exists function
 ms.assetid: 1e1d93b5-5be6-421c-b82b-839538ea50b1
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 2adc9ae709257cc3d44496e9ad4c7d078b76cb92
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5483a7da135f6e486610d8a53e9dc23078a6cd3b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="exists-mdx"></a>Exists (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает набор кортежей первого указанного набора, которые один или более раз встречаются во втором наборе. Эта функция вручную выполняет операцию автоматической проверки. Дополнительные сведения об автоматической проверке, см. в разделе [основные понятия многомерных Выражений &#40; Службы Analysis Services &#41; ](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
   
@@ -50,7 +49,7 @@ Exists( Set_Expression1 , Set_Expression2 [, MeasureGroupName] )
  *MeasureGroupName*  
  Допустимое строковое выражение, обозначающее имя группы мер.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 1.  Строки группы мер, содержащих значения null влияют **Exists** Если указан аргумент MeasureGroupName. Разница между данной формой функции Exists и Nonempty заключается в том, что если свойство NullProcessing данных мер имеет значение Preserve, то это означает, что меры будут показывать значения NULL при выполнении запросов для данной части куба. Функция NonEmpty всегда будет удалять кортежи из набора со значениями мер NULL, тогда как функция Exists с аргументом MeasureGroupName не будет отфильтровывать кортежи со связанными строками групп мер, даже если меры имеют значения NULL.  
   
@@ -111,4 +110,3 @@ FROM [Adventure Works]
  [IsEmpty &#40; Многомерные Выражения &#41;](../mdx/isempty-mdx.md)  
   
   
-

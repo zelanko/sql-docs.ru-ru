@@ -1,29 +1,29 @@
 ---
-title: "Добавьте типы содержимого служб Reporting Services в библиотеку SharePoint | Документы Microsoft"
+title: "Добавление типов содержимого служб Reporting Services в библиотеку SharePoint | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
-caps.latest.revision: 7
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "7"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 77b7a28486715b0583fb64a8ae6da169a27507da
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 2fe50a939544eb7f3d58bbd38ad98e9ffcc82733
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Добавьте типы содержимого служб Reporting Services в библиотеке SharePoint
+# <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Добавление типов содержимого служб Reporting Services в библиотеку SharePoint
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 10/06/2017
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] обеспечивают стандартные типы содержимого SharePoint, предназначенные для управления файлами общих источников данных (RSDS), моделей отчетов (SMDL) и определений отчетов (RDL) построителя отчетов. После добавления в библиотеку типов содержимого **Отчет построителя отчетов**, **Модель отчета**и **Источник данных отчета** становится доступной команда **Создать** , позволяющая создавать новые документы этих типов.
 
 > [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
 
  Добавить типы содержимого в библиотеку может администратор веб-сайта или пользователь с разрешениями уровня «Полный доступ».  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 10/06/2017
   
 2.  Перейдите в раздел **Параметры сайта**.  
   
-    -   В SharePoint 2013 щелкните значок **Параметры** . ![Параметры SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "параметров SharePoint")  
+    -   В SharePoint 2013 щелкните значок **Параметры** . ![Параметры SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint")  
   
     -   В SharePoint 2010 щелкните **Действия сайта**и выберите **Параметры сайта**.  
   
@@ -162,7 +162,7 @@ ms.lasthandoff: 10/06/2017
   
 8.  После завершения добавления типов содержимого нажмите кнопку **ОК**.  
   
-##  <a name="bkmk_enable_multiple_sites"></a>Чтобы включить типы содержимого и управления содержимым для нескольких сайтов бизнес-Аналитики  
+##  <a name="bkmk_enable_multiple_sites"></a> Активация типов содержимого и управления содержимым для нескольких сайтов бизнес-аналитики  
   
 1.  Для серверов отчетов SQL Server Reporting Services 2008 и 2008 R2 можно включить типы содержимого и управление содержимым для нескольких сайтов центра бизнес-аналитики:  
   
@@ -176,9 +176,8 @@ ms.lasthandoff: 10/06/2017
   
 4.  Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [Запуск построителя отчетов](../../reporting-services/report-builder/start-report-builder.md)  
   
   
-

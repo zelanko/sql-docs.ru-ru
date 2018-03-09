@@ -3,26 +3,26 @@ title: "Асинхронное выполнение (метод опроса) | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- asynchronous execution [ODBC]
+helpviewer_keywords: asynchronous execution [ODBC]
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 357ee77565e711e886184d803540b5745edb1f25
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1d4237eddad4847840d16440fbd4cb0940a61d40
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asynchronous-execution-polling-method"></a>Асинхронное выполнение (метод опроса)
 Перед ODBC 3.8 и пакета SDK Windows 7 асинхронные операции было разрешено только для функций с инструкциями. Дополнительные сведения см. в разделе **выполнения асинхронной операции инструкции**далее в этом разделе.  
@@ -219,7 +219,7 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 ### <a name="description"></a>Description  
  В следующем примере показано, как использовать **SQLSetConnectAttr** по включению асинхронного выполнения для функции, относящиеся к соединению.  
   
-### <a name="code"></a>код  
+### <a name="code"></a>Код  
   
 ```  
 BOOL AsyncConnect (SQLHANDLE hdbc)   
@@ -273,7 +273,7 @@ BOOL AsyncConnect (SQLHANDLE hdbc)
 ### <a name="description"></a>Description  
  В этом примере показаны операции асинхронной фиксации. Операции отмены также могут быть выполнены таким образом.  
   
-### <a name="code"></a>код  
+### <a name="code"></a>Код  
   
 ```  
 BOOL AsyncCommit ()   
@@ -300,5 +300,4 @@ BOOL AsyncCommit ()
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Выполнение инструкций ODBC](../../../odbc/reference/develop-app/executing-statements-odbc.md)
-
+ [Выполнение инструкций (ODBC)](../../../odbc/reference/develop-app/executing-statements-odbc.md)

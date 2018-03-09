@@ -3,8 +3,11 @@ title: "КОНСТРУКЦИЯ TRY... CATCH (Transact-SQL) | Документы 
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,20 +31,19 @@ helpviewer_keywords:
 - BEGIN TRY statement
 - CATCH block
 ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
-caps.latest.revision: 79
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 6214ff450fd85eb3bd580850aef1e56056a43a54
-ms.openlocfilehash: 0b3842a160ba6a98db1aabb39585d76caa8743f5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/22/2017
-
+ms.openlocfilehash: 4278a699e1624521fb781e9eda6ffab40e221d8e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Реализация обработчика ошибок на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] похожа на обработку исключений в языках [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# и [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Группа инструкций на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] может быть заключена в блок TRY. Если ошибка возникает в блоке TRY, управление передается следующей группе инструкций, заключенных в блок CATCH.  
   
@@ -66,7 +68,7 @@ END CATCH
  *statement_block*  
  Любая группа инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)] в пакете или заключенная в блок BEGIN…END.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Конструкция TRY…CATCH перехватывает все ошибки исполнения с кодом серьезности, большим 10, которые не закрывают подключение к базе данных.  
   
  За блоком TRY сразу же должен следовать блок CATCH. Размещение каких-либо инструкций между инструкциями END TRY и BEGIN CATCH вызовет синтаксическую ошибку.  
@@ -108,7 +110,7 @@ END CATCH
   
  Эти функции возвращают значение NULL, если их вызов происходит вне области блока CATCH. С помощью этих функций сведения об ошибке могут быть получены из любого места внутри блока CATCH. Например, следующий скрипт демонстрирует хранимую процедуру, которая содержит функции обработки ошибок. В блоке `CATCH` конструкции `TRY…CATCH` вызывается хранимая процедура и возвращаются сведения об ошибке.  
   
-```t-sql  
+```sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_GetErrorInfo', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -161,7 +163,7 @@ END CATCH;
   
  Следующий пример показывает, как ошибка разрешения имени объекта, формируемая инструкцией `SELECT`, не отлавливается конструкцией `TRY…CATCH`, но отлавливается блоком `CATCH`, когда та же самая инструкция `SELECT` выполняется внутри хранимой процедуры.  
   
-```t-sql  
+```sql  
 BEGIN TRY  
     -- Table does not exist; object name resolution  
     -- error not caught.  
@@ -178,7 +180,7 @@ END CATCH
   
  Выполнение инструкции `SELECT` внутри хранимой процедуры приведет к ошибке, которая возникнет на уровне ниже, чем блок `TRY`. Такая ошибка будет обработана конструкцией `TRY…CATCH`.  
   
-```t-sql  
+```sql  
 -- Verify that the stored procedure does not exist.  
 IF OBJECT_ID ( N'usp_ExampleProc', N'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -211,7 +213,7 @@ END CATCH;
 ### <a name="a-using-trycatch"></a>A. Использование TRY…CATCH  
  В следующем примере приведена инструкция `SELECT`, вызывающая ошибку деления на нуль. Эта ошибка приводит к передаче управления связанному блоку `CATCH`.  
   
-```t-sql  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -231,7 +233,7 @@ GO
 ### <a name="b-using-trycatch-in-a-transaction"></a>Б. Использование конструкции TRY…CATCH внутри транзакции  
  В следующем примере показано использование блока `TRY…CATCH` внутри транзакции. Инструкция внутри блока `TRY` приводит к ошибке нарушения ограничения.  
   
-```t-sql  
+```sql  
 BEGIN TRANSACTION;  
   
 BEGIN TRY  
@@ -260,7 +262,7 @@ GO
 ### <a name="c-using-trycatch-with-xactstate"></a>В. Использование TRY…CATCH с XACT_STATE  
  В следующем примере показано, как использовать конструкцию `TRY…CATCH` для обработки ошибок, возникших внутри транзакции. Функция `XACT_STATE` определяет, должна ли транзакция быть зафиксирована или откачена. В данном примере параметр `SET XACT_ABORT` находится в состоянии `ON`. В результате, если произойдет ошибка нарушения ограничения, транзакция станет нефиксируемой.  
   
-```t-sql  
+```sql  
 -- Check to see whether this stored procedure exists.  
 IF OBJECT_ID (N'usp_GetErrorInfo', N'P') IS NOT NULL  
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -329,7 +331,7 @@ GO
 ### <a name="d-using-trycatch"></a>Г. Использование TRY…CATCH  
  В следующем примере приведена инструкция `SELECT`, вызывающая ошибку деления на нуль. Эта ошибка приводит к передаче управления связанному блоку `CATCH`.  
   
-```t-sql  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -345,7 +347,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [THROW &#40; Transact-SQL &#41;](../../t-sql/language-elements/throw-transact-sql.md)   
  [Уровни серьезности ошибок ядра базы данных](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE (Transact-SQL)](../../t-sql/functions/error-line-transact-sql.md)   
@@ -362,5 +364,4 @@ GO
  [Инструкция SET XACT_ABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-xact-abort-transact-sql.md)  
   
   
-
 

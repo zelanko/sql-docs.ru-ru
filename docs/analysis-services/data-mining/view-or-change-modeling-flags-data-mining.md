@@ -2,29 +2,30 @@
 title: "Просмотр или изменение флагов модели (интеллектуальный анализ данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d1169735-fb18-417b-b8d6-9a161e444020
-caps.latest.revision: 6
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0109b4a95a81536cee4b00a5b4da05697219f769
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cbffc4a5312dc83976915653141247d27dc8eae4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>Просмотр или изменение флагов модели (интеллектуальный анализ данных)
-  Флаги модели представляют собой свойства, которые можно задать в столбце структуры интеллектуального анализа данных или столбцах модели интеллектуального анализа данных для определения того, как алгоритм обрабатывает данные во время анализа.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Флаги модели представляют собой свойства, которые можно задать в столбце структуры интеллектуального анализа данных или столбцах модели интеллектуального анализа данных для определения того, как алгоритм обрабатывает данные во время анализа.  
   
  В конструкторе моделей интеллектуального анализа данных можно просматривать и изменять флаги модели, связанные со структурой интеллектуального анализа данных или столбцом интеллектуального анализа, рассматривая свойства структуры или модели. Флаги моделирования также можно задавать с помощью DMX, AMO или XMLA.  
   
@@ -57,8 +58,7 @@ ms.lasthandoff: 09/01/2017
     ```  
   
 ## <a name="see-also"></a>См. также  
- [Задачи и инструкции по модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Флаги моделирования (интеллектуальный анализ данных)](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
+ [Задачи модели интеллектуального анализа данных и инструкции](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Моделирование флаги &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   
-

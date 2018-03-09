@@ -1,12 +1,14 @@
 ---
 title: "Подготовка зеркальной базы данных к зеркальному отображению (SQL Server) | Документы Майкрософт"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 11/10/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,24 +16,23 @@ helpviewer_keywords:
 - logins [SQL Server], database mirroring
 - mirror database [SQL Server]
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 6a14d697865f099b584e3f8f7132f0bfc6a0cf49
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e813cf330d3c2d61b9c3163bac75ec5441d06455
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)
-  Перед началом сеанса зеркального отображения базы данных ее владелец или системный администратор должен убедиться, что зеркальная база данных создана и готова к работе. Чтобы создать новую зеркальную базу данных, требуется как минимум наличие полной резервной копии основной базы данных и последующих резервных копий журналов. Они восстанавливаются на экземпляре зеркального сервера с параметром WITH NORECOVERY.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Перед началом сеанса зеркального отображения базы данных ее владелец или системный администратор должны убедиться, что зеркальная база данных создана и готова к отображению. Чтобы создать новую зеркальную базу данных, требуется как минимум наличие полной резервной копии основной базы данных и последующих резервных копий журналов. Они восстанавливаются на экземпляре зеркального сервера с параметром WITH NORECOVERY.  
   
  В этом разделе описано, как подготовить зеркальную базу данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Требования](#Requirements)  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 08/02/2017
   
      [Рекомендации](#Recommendations)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   [Подготовка существующей зеркальной базы данных к повторному запуску зеркального отображения](#PrepareToRestartMirroring)  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 08/02/2017
   
 -   На основном сервере и на экземплярах зеркального сервера должна работать одна и та же версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для зеркального сервера возможна более поздняя версия SQL Server, но эта конфигурация рекомендуется только во время процесса тщательно спланированного обновления. В такой конфигурации есть риск автоматического перехода на другой ресурс, в котором движение данных автоматически приостанавливается, так как данные нельзя переместить на более раннюю версию SQL Server. Дополнительные сведения см. в статье [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
--   На основном сервере и на экземплярах зеркального сервера должен работать один и тот же выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о поддерживаемых выпусках [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+-   На основном сервере и на экземплярах зеркального сервера должен работать один и тот же выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о поддержке зеркального отображения базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md).  
   
 -   База данных должна использовать модель полного восстановления.  
   
@@ -90,12 +91,12 @@ ms.lasthandoff: 08/02/2017
   
 -   Для производственной базы данных необходимо всегда создавать резервные копии на разных устройствах.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
  Параметр TRUSTWORTHY устанавливается в значение OFF каждый раз при создании резервной копии базы данных. Таким образом, в новой зеркальной базе данных он всегда имеет значение OFF. Если после отработки отказа необходимо, чтобы база данных снова стала надежной, следует выполнить дополнительные действия. Дополнительные сведения см. в статье [Настройка зеркальной базы данных на использование свойства TRUSTWORTHY (Transact-SQL)](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md).  
   
  Сведения о включении автоматической расшифровки главного ключа базы данных в зеркальной базе данных см. в статье [Настройка зашифрованной зеркальной базы данных](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Владелец базы данных или системный администратор.  
   
 ##  <a name="PrepareToRestartMirroring"></a> Подготовка существующей зеркальной базы данных к повторному запуску зеркального отображения  
@@ -140,7 +141,7 @@ ms.lasthandoff: 08/02/2017
   
     -   [Восстановление резервной копии журнала транзакций (SQL Server)](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
+###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  Перед тем как начать сеанс зеркального отображения базы данных, нужно создать зеркальную базу данных. Это нужно сделать непосредственно перед запуском сеанса зеркального отображения.  
   
  В этом примере используется образец базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , в котором по умолчанию применяется простая модель восстановления.  
@@ -276,5 +277,4 @@ ms.lasthandoff: 08/02/2017
  [Аргументы инструкции RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)  
   
   
-
 

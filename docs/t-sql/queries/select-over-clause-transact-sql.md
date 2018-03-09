@@ -3,8 +3,11 @@ title: "OVER, предложение (Transact-SQL) | Документы Microso
 ms.custom: 
 ms.date: 08/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - rowsets [SQL Server], ordering
 - OVER clause
 ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
-caps.latest.revision: 75
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: db58418025c1659d42c4f1b76a06af8b08ff2ea6
-ms.openlocfilehash: 9e6dad4cbd3e3b64b35f859986b4b7b9928babd5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/06/2017
-
+ms.openlocfilehash: 1144e82253c5e9d2988ec9ff4a8aa47bb3cb2fb1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---over-clause-transact-sql"></a>ВЫБЕРИТЕ - OVER, предложение (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Определяет секционирование и упорядочение набора строк до применения соответствующей оконной функции. То есть предложение OVER определяет окно или определяемый пользователем набор строк внутри результирующего набора запроса. Затем оконная функция вычисляет значение для каждой строки в окне. Вы можете использовать предложение OVER вместе с функциями для вычисления статистических значений, например для вычисления скользящих средних, суммарных статистических выражений, промежуточных итогов или первых N результатов в группе.  
   
@@ -121,7 +123,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  \<Предложение ORDER BY >  
  Определяет логический порядок строк в каждой секции результирующего набора. То есть он указывает логический порядок, в котором выполняется вычисление оконной функции.  
   
- *выражении order_by_expression*  
+ *order_by_expression*  
  Указывает столбец или выражение, по которому производится сортировка. *выражении order_by_expression* может ссылаться только на столбцы, которые становятся доступными с помощью предложения FROM. Нельзя указывать целое число для обозначения имени или псевдонима столбца.  
   
  COLLATE *collation_name*  
@@ -195,7 +197,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 ### <a name="a-using-the-over-clause-with-the-rownumber-function"></a>A. Использование предложения OVER с функцией ROW_NUMBER  
  Следующий пример демонстрирует использование предложения OVER с функцией ROW_NUMBER для отображения номера каждой строки в секции. Предложение ORDER BY, указанное в предложении OVER упорядочивает строки каждой секции по столбцу `SalesYTD`. Предложение ORDER BY в инструкции SELECT определяет порядок, в котором возвращается весь результирующий набор запроса.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ROW_NUMBER() OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS "Row Number",   
@@ -235,7 +237,7 @@ GO
 ### <a name="b-using-the-over-clause-with-aggregate-functions"></a>Б. Использование предложения OVER с агрегатными функциями  
  В следующем примере предложение `OVER` используется с агрегатной функцией для всех возвращаемых запросом строк. В данном примере использование предложения `OVER` является более эффективным, чем использование вложенных запросов для получения статистических значений.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -278,7 +280,7 @@ SalesOrderID ProductID   OrderQty Total       Avg         Count       Min    Max
   
  Следующий пример демонстрирует использование предложения `OVER` с агрегатной функцией в вычисляемом значении.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -322,7 +324,7 @@ SalesOrderID ProductID   OrderQty Total       Percent by ProductID
 ### <a name="c-producing-a-moving-average-and-cumulative-total"></a>В. Нахождение скользящей средней и кумулятивной суммы  
  В следующем примере показано использование функций AVG и SUM с предложением OVER для вычисления скользящей средней и кумулятивной суммы годовых продаж по каждой территории, указанной в таблице `Sales.SalesPerson`. Данные секционируются по `TerritoryID` и логически сортируются по `SalesYTD`. Это означает, что функция AVG вычисляется для каждой территории на основании объема продаж за год. Обратите внимание, что в `TerritoryID` 1 для продаж за 2005 год используются две строки, в которых представлены два менеджера по продажам с показателями за этот год. После расчета среднего значения продаж для двух данных строк в вычисление включается третья строка, представляющая продажи за 2006 год.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, TerritoryID   
@@ -361,7 +363,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  В этом примере предложение OVER не включает в себя предложение PARTITION BY. Это означает, что функция будет применяться для всех строк, возвращаемых запросом. Предложение ORDER BY, указанное в предложении OVER, определяет логический порядок применения функции AVG. Запрос возвращает скользящее среднее значение продаж за год для всех территорий, указанных в предложении WHERE. Предложение ORDER BY, указанное в инструкции SELECT, определяет порядок отображения строк запроса.  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
@@ -398,7 +400,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  В следующем примере предложение ROWS для определения окна, по которому вычисляется как текущую строку и *N* строк, которые (1 строка в этом примере).  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -428,7 +430,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
  В следующем примере предложение ROWS указывается с UNBOUNDED PRECEDING. В результате окно начинается с первой строки секции.  
   
-```t-sql  
+```sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -462,7 +464,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
 ### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>Д. Использование предложения OVER с функцией ROW_NUMBER  
  В следующем примере возвращается ROW_NUMBER для торговых представителей, в зависимости от их установленной квоты продаж.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS RowNumber,  
@@ -489,7 +491,7 @@ GROUP BY LastName, FirstName;
 ### <a name="f-using-the-over-clause-with-aggregate-functions"></a>Е. Использование предложения OVER с агрегатными функциями  
  В следующих примерах показано использование предложения OVER с агрегатными функциями. В этом примере использование предложения OVER является более эффективным, чем использование вложенных запросов.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey,   
@@ -521,7 +523,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  
  В следующем примере показано использование предложения OVER с агрегатной функцией в вычисляемом значении. Обратите внимание, что статистические выражения для вычисления, `SalesOrderNumber` и процент общего заказа на продажу вычисляется для каждой строки каждого `SalesOrderNumber`.  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey AS Product,   
@@ -547,10 +549,9 @@ ORDER BY SalesOrderNumber,ProductKey;
  SO43659      229      2    16     18.75  
  ```
  
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Агрегатные функции &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [Аналитические функции &#40; Transact-SQL &#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   
  [Лучший в блоге о Оконные функции и при СБОЕ на sqlmag.com Ицик Бен-Gan](http://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
   
   
-

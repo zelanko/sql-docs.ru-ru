@@ -3,8 +3,11 @@ title: "BufferWithCurves (тип данных geography) | Документы Mi
 ms.custom: 
 ms.date: 08/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithCurves method (geography)
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
-caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 80f16777999a029e1063305a0d1b8501af7e05d7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 0978418fe682728d02f7c65b5bff581154ae231c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (тип данных geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Возвращает **geography** экземпляр, представляющий набор всех точек, расстояние которых от вызывающего **geography** экземпляр меньше или равно *расстояние* параметр.  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *расстояние*  
+ *distance*  
  — **Float** указывает максимальное расстояние, на котором точки, составляющие буфер, могут находиться от экземпляра географического объекта.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
@@ -59,7 +61,7 @@ ms.lasthandoff: 09/01/2017
   
 -   **Значение NULL** передается методу, например`@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В следующей таблице показаны результаты, возвращенные для разных значений расстояния.  
   
 |Значение расстояния|Измерения типа|Возвращенный пространственный тип|  
@@ -144,9 +146,8 @@ ms.lasthandoff: 09/01/2017
   
  Обратите внимание на то, что в предыдущих двух примерах передавался строковый литерал методу `BufferWithCurves()`. Первый пример будет работать, поскольку строковый литерал может быть преобразован в числовое значение. Но во втором примере возникнет исключение `ArgumentException`.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные методы в экземплярах географических объектов](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [BufferWithCurves &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   
   
-

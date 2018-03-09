@@ -3,26 +3,26 @@ title: "Привязка параметров ODBC | Документы Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- binding parameters [ODBC]
+helpviewer_keywords: binding parameters [ODBC]
 ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 53c032a38f81b87b596e05f22137c80f5c54853c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 20879f658c1fdc2ca8a4527f76a540ab2700b98f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binding-parameters-odbc"></a>Привязка параметров ODBC
 Каждый параметр в инструкции SQL должен быть связан, или *привязаны,* переменной в приложении перед выполнением инструкции. Если приложение связывает параметр переменной, он описывает этой переменной — адрес, тип данных C и т. д — к драйверу. Он также описывает сам параметр — SQL данных типа, точность и т. д. Драйвер сохраняет эти сведения в структуре, он поддерживает для этого оператора и использует сведения для извлечения значения из переменной при выполнении инструкции.  
@@ -47,11 +47,10 @@ SELECT * FROM Orders WHERE OrderID = ?, OpenDate = ?, Status = ?
   
  Этот раздел содержит следующие подразделы.  
   
--   [Маркеры параметров привязки](../../../odbc/reference/develop-app/binding-parameter-markers.md)  
+-   [Привязка маркеров параметров](../../../odbc/reference/develop-app/binding-parameter-markers.md)  
   
 -   [Привязка параметров по имени (именованные параметры)](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)  
   
--   [Привязка параметров смещения](../../../odbc/reference/develop-app/parameter-binding-offsets.md)  
+-   [Смещения привязки параметров](../../../odbc/reference/develop-app/parameter-binding-offsets.md)  
   
--   [Описания параметров](../../../odbc/reference/develop-app/describing-parameters.md)
-
+-   [Описывающие параметры](../../../odbc/reference/develop-app/describing-parameters.md)

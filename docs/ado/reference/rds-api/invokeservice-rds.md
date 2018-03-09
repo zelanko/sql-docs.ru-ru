@@ -3,7 +3,7 @@ title: "InvokeService (RDS) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - InvokeService [RDS]
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0b0cf05dcc458245d1c8d64bd0f5c8d00178db9e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 20e7b09600a0ec96b089322a1bd4d55e75eb9acf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 Возвращает указатель на запрошенный интерфейс на более производительные версию объекта.  
@@ -57,14 +56,13 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение HRESULT, указывающее, если вызов **InvokeService** метод выполнен успешно.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Реализация ядра курсора служб удаленных рабочих СТОЛОВ **InvokeService** принимает входной набор строк (или несколько объектов результатов), заполняет ядро курсора из входного набора строк и затем возвращает указатель на себя.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Интерфейс IRDSService (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  
+ [Интерфейс IRDSService (служба удаленных рабочих столов)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  
   
-## <a name="see-also"></a>См. также:  
- [Методы служб удаленных рабочих СТОЛОВ](../../../ado/reference/rds-api/rds-methods.md)
-
+## <a name="see-also"></a>См. также  
+ [Методы службы удаленных рабочих столов](../../../ado/reference/rds-api/rds-methods.md)
 
 

@@ -3,8 +3,11 @@ title: "KILL (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,20 +36,19 @@ helpviewer_keywords:
 - KILL statement
 - terminating process
 ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
-caps.latest.revision: 61
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: 5a67eb7c7f3686dcb0735f6e1c4a1255ab8b59bd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/02/2017
-
+ms.openlocfilehash: a96601a65e413d4990e9acb77f49c4724bf7b85c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Прерывает пользовательский процесс, определяемый идентификатором сеанса или единицей работы (UOW). Если указанный сеанса или UOW объем работы для отмены, инструкции KILL может занять некоторое время, особенно если он включает в себя отката длительной транзакции.  
   
@@ -91,7 +93,7 @@ JOIN sys.dm_exec_connections AS conn
  WITH STATUSONLY  
  Создает отчет о ходе выполнения о указанного *идентификатор сеанса* или *UOW* , производится откат из-за выполненной ранее инструкции KILL. Инструкция KILL WITH STATUSONLY не завершает и откат *идентификатор сеанса* или *UOW*; команда только отображает текущее состояние отката.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Инструкция KILL обычно используется для прерывания процессов, блокирующих другие важные процессы или выполняющих запросы, занимающие необходимые системные ресурсы. Системные процессы и процессы, выполняющие расширенные хранимые процедуры, не могут быть прерваны.  
   
  Используйте инструкцию KILL осторожно, особенно если запущены критические процессы. Существует опасность прерывания собственного процесса. Не нужно прерывать следующие процессы:  
@@ -124,7 +126,7 @@ JOIN sys.dm_exec_connections AS conn
   
  Аналогичный отчет о состоянии может быть получен при повторном выполнении инструкции KILL *идентификатор сеанса*|*UOW* без использования параметра WITH STATUSONLY, однако не рекомендуется делать это. Повторение KILL *идентификатор сеанса* инструкция может вызвать завершение нового процесса, если процесс отката был завершен, и идентификатор сеанса было присвоено новой задачи до запуска новой инструкции KILL. Указание параметра WITH STATUSONLY предотвращает указанные последствия.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Необходимо разрешение ALTER ANY CONNECTION. Разрешение ALTER ANY CONNECTION включено с членством в предопределенных ролях сервера sysadmin или processadmin.  
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** Требуется разрешение KILL DATABASE CONNECTION. Имя входа субъекта серверного уровня имеет KILL DATABASE CONNECTION.  
@@ -159,17 +161,16 @@ KILL 'D5499C66-E398-45CA-BF7E-DC9C194B48CF';
 ```  
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [KILL STATS JOB &#40; Transact-SQL &#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40; Transact-SQL &#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
  [Завершение работы &#40; Transact-SQL &#41;](../../t-sql/language-elements/shutdown-transact-sql.md)   
  [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)   
- [sys.dm_exec_requests &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys.dm_exec_sessions &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [sys.dm_tran_locks &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)   
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
+ [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)   
  [sp_lock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   
-

@@ -1,27 +1,28 @@
 ---
-title: "Обзор и архитектура | Документы Microsoft"
+title: "Общие сведения об архитектуре служб SQL Server Machine Learning | Документы Microsoft"
 ms.custom: 
-ms.date: 06/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 4272a0f421bc8286fc9be7be44e3b7ef8cc13905
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7549b59d4edc00dd620deeb515f6cd7143a62db7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
-
-# <a name="architecture-and-overview-of-machine-learning-services"></a>Архитектура и общие сведения о службах машины обучения
+# <a name="architecture-overview-for-sql-server-machine-learning-services"></a>Общие сведения об архитектуре служб SQL Server машины обучения 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом разделе описываются цели extensibility Framework, которая поддерживает выполнение сценария Python и R в SQL Server.
 
@@ -70,7 +71,6 @@ ms.lasthandoff: 09/01/2017
 
   Оптимизация производительности зависит от два аспекта столь же мощных платформы: управление ресурсами и параллельной обработки с помощью SQL Server и распределенных вычислений, предоставляемых алгоритмами в **RevoScaleR** и **revoscalepy**.
 
-
 ## <a name="solution-development-and-deployment"></a>Разработка и развертывание решений
 
 Помимо этих основных целей для расширяемости платформы призваны обеспечить тесную интеграцию с ядром СУБД и стека бизнес-Аналитики, эти преимущества службы обучения машины в SQL Server:
@@ -93,7 +93,7 @@ ms.lasthandoff: 09/01/2017
 
 Не знаете, какие решения машинного обучения соответствует требованиям? Помимо внедренные аналитика в SQL Server 2016 и на SQL Server 2017 г. Корпорация Майкрософт предоставляет следующие машинного обучения платформы и служб:
 
-+ [Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver)
++ [Microsoft R Server и сервера Machine обучения](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)
 
   Среде несколькими платформами разработки, распределение и управление заданиями обучения машины
 + [Виртуальная машина обработки и анализа данных](https://docs.microsoft.com/azure/machine-learning/machine-learning-data-science-virtual-machine-overview)
@@ -101,6 +101,7 @@ ms.lasthandoff: 09/01/2017
   Все средства, необходимые для компьютера, обучения и предварительно. Используйте записные книжки Jupyter, Python или R.
   
   Воспользуйтесь новым [ознакомительного выпуска Windows 2016](http://aka.ms/dsvm/win2016), включая версии GPU популярных углубленного обучения платформ, например CNTK mxNet, а также поддержку контейнеров Windows!
+
 + [Когнитивных служб Azure](https://azure.microsoft.com/services/cognitive-services/)
 
   Широкий набор облачных служб для добавления в приложения, включая индексирование естественного языка распознавания видео, лиц, AI и ML эмоций обнаружения, анализа текста компьютера более значения преобразования и очень много операций,
@@ -108,7 +109,6 @@ ms.lasthandoff: 09/01/2017
 
   Интерфейс и перетащите облачной разработки обучения конечных автоматов, вместе с возможностью для автоматизации и интеграция с приложениями через веб-службы и PowerShell
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Изолированный сервер R](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone)
-
+[Сравнение продуктов машины обучения Server и Microsoft R](https://docs.microsoft.com/machine-learning-server/what-is-r-server-interoperability)

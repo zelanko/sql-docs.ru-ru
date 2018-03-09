@@ -2,28 +2,30 @@
 title: "Не удалось загрузить «Microsoft.AnalysisServices.SharePoint.Integration» | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 6e350b67-5e18-4b90-8fb7-a0109cbb27b7
-caps.latest.revision: 7
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0854f5c3cdf740c68b8f83dcb3d847cefc256edd
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a69a219376c2a67b003eaa6769843dc23791d829
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="could-not-load-microsoftanalysisservicessharepointintegration"></a>Не удалось загрузить Microsoft.AnalysisServices.SharePoint.Integration
-  В среде SharePoint 2010, где установлен [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint, эта ошибка возникает, если решение на уровне приложений для [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] развернуто неправильно.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В среде SharePoint 2010, где установлен [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint, эта ошибка возникает, если решение на уровне приложений для [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] развернуто неправильно.  
   
 ## <a name="details"></a>Сведения  
   
@@ -50,8 +52,7 @@ ms.lasthandoff: 09/01/2017
   
 5.  Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
  [Развертывание решений PowerPivot в SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)  
   
   
-

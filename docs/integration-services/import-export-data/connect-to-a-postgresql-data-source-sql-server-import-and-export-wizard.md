@@ -1,65 +1,67 @@
 ---
-title: "Подключения к источнику данных PostgreSQL (мастер экспорта и импорта SQL Server) | Документы Microsoft"
+title: "Подключение к источнику данных PostgreSQL (мастер импорта и экспорта SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: import-export-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4c82ae7eedc3e18e7591cf7ab30a507920695247
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5f57bd2510c80e676a979c691b1e3d43707c6885
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Подключения к источнику данных PostgreSQL (мастер экспорта и импорта SQL Server)
-В этом разделе показано, как подключиться к **PostgreSQL** из источника данных **выберите источник данных** или **Выбор назначения** страницы мастера экспорта и импорта SQL Server. 
+# <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных PostgreSQL (мастер импорта и экспорта SQL Server)
+В этом разделе показано, как подключаться к источникам данных **PostgreSQL** со страницы **Выбор источника данных** или **Выбор назначения** в мастере импорта и экспорта SQL Server. 
 
 > [!IMPORTANT]
-> Подробные требования и необходимые условия для подключения к базе данных PostgreSQL выходят за рамки данной статьи Microsoft. Предполагается, что у вас уже есть PostgreSQL клиентское программное обеспечение и что возможность уже установления подключения к целевой базе данных PostgreSQL. Дополнительные сведения обратитесь к администратору базы данных PostgreSQL или PostgreSQL документации.
+> Подробные требования и необходимые условия для подключения к базе данных PostgreSQL выходят за рамки этой статьи Майкрософт. В ней предполагается, что у вас уже установлено клиентское программное обеспечение PostgreSQL и вы можете успешно подключиться к целевой базе данных PostgreSQL. Для получения дополнительных сведений обратитесь к администратору базы данных PostgreSQL или к документации по PostgreSQL.
 
-## <a name="get-the-postgresql-odbc-driver"></a>Получить драйвер PostgreSQL ODBC
+## <a name="get-the-postgresql-odbc-driver"></a>Получение драйвера ODBC для PostgreSQL
 
 ### <a name="install-the-odbc-driver-with-stack-builder"></a>Установка драйвера ODBC с помощью построителя стека
-Запустите построитель стека для добавления драйверов PostgreSQL ODBC (psqlODBC) к установке PostgreSQL.
+Запустите построитель стека, чтобы добавить драйвер ODBC для PostgreSQL (psqlODBC) в вашу установку PostgreSQL.
 
-![Установите PostgreSQL ODBC с помощью построителя стека](../../integration-services/import-export-data/media/install-postgresql-odbc-with-stack-builder.png)
+![Установка ODBC для PostgreSQL с помощью построителя стека](../../integration-services/import-export-data/media/install-postgresql-odbc-with-stack-builder.png)
 
-### <a name="or-download-the-latest-odbc-driver"></a>Также загрузить последнюю версию драйвера ODBC
-Или загрузка установщика Windows для последней версии драйвера PostgreSQL ODBC (psqlODBC) непосредственно из FTP-сайта — [https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/). Извлеките файлы из ZIP-файл и запустите файл MSI.
+### <a name="or-download-the-latest-odbc-driver"></a>Скачивание последней версии драйвера ODBC
+Или скачайте установщик Windows для последней версии драйвера ODBC для PostgreSQL (psqlODBC) прямо с этого FTP-сайта — [https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/). Извлеките содержимое ZIP-файла и запустите файл MSI.
 
-## <a name="connect-to-postgresql-with-the-postgresql-odbc-driver-psqlodbc"></a>Подключиться к PostgreSQL с помощью драйвера PostgreSQL ODBC (psqlODBC)
-Драйверы ODBC не перечислены в раскрывающемся списке источников данных. Чтобы подключиться с помощью драйвера ODBC, начинают с выбора **поставщик данных .NET Framework для ODBC** как источник данных на **выберите источник данных** или **Выбор назначения** страницы. Этот поставщик действует как оболочка для драйвера ODBC.
+## <a name="connect-to-postgresql-with-the-postgresql-odbc-driver-psqlodbc"></a>Подключение к PostgreSQL с помощью драйвера ODBC для PostgreSQL (psqlODBC)
+Драйверы ODBC не приводятся в раскрывающемся списке источников данных. Чтобы подключиться с помощью драйвера ODBC, сначала выберите **поставщик данных .NET Framework для ODBC** в качестве источника данных на странице **Выбор источника данных** или **Выбор назначения**. Этот поставщик служит оболочкой для драйвера ODBC.
 
-Вот универсального экран, появляется сразу после выбора поставщик данных .NET Framework для ODBC.
+Ниже показан экран, который появляется сразу после выбора поставщика данных .NET Framework для ODBC.
 
-![Подключиться к PostgreSQL с ODBC до](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
+![Подключение к PostgreSQL с помощью ODBC ранее](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
 
-### <a name="options-to-specify-postgresql-odbc-driver"></a>Параметры, задающие (драйвер PostgreSQL ODBC)
+### <a name="options-to-specify-postgresql-odbc-driver"></a>Указываемые параметры (драйвер ODBC для PostgreSQL)
 
 > [!NOTE]
-> Параметры соединения для этого поставщика данных и драйвера ODBC одинаковы ли PostgreSQL источнике или месте назначения. То есть варианты, вы увидите одинаковы на обоих **выберите источник данных** и **Выбор назначения** страницах мастера.
+> Параметры подключения для этого поставщика данных и драйвера ODBC одинаковы независимо от того, является ли PostgreSQL источником или назначением. Таким образом, на страницах **Выбор источника данных** и **Выбор назначения** мастера отображаются одинаковые параметры.
 
-Чтобы подключиться с помощью драйвера PostgreSQL ODBC PostgreSQL, сформируйте строку подключения, которая включает следующие параметры и их значения. Формат полной строки соединения непосредственно после списка параметров.
+Чтобы подключиться к PostgreSQL с помощью драйвера ODBC для PostgreSQL, соберите строку подключения, используя указанные ниже параметры и их значения. Полный формат строки подключения приведен после списка параметров.
 
 > [!TIP]
-> Получите справку по сборке выбрана правильная строка подключения. А не строку подключения, укажите существующего источника данных (имя источника данных) или создайте новую. Дополнительные сведения об этих параметрах см. в разделе [подключение к источнику данных ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
+> Вы можете получить помощь в построении строки подключения. Кроме того, вместо указания строки подключения вы можете предоставить существующее имя DSN (имя источника данных) или создать новое. Дополнительные сведения об этих возможностях см. в разделе [Подключение к источнику данных ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
 
 **Драйвер**  
-Имя драйвера ODBC — либо **PostgreSQL ODBC Driver(UNICODE)** или **PostgreSQL ODBC Driver(ANSI)**.
+Имя драйвера ODBC — **PostgreSQL ODBC Driver(UNICODE)** или **PostgreSQL ODBC Driver(ANSI)**.
 
 **Server**  
-Имя сервера, PostgreSQL. 
+Имя сервера PostgreSQL. 
 
 **Порт**  
 Порт, используемый для подключения к серверу PostgreSQL.
@@ -67,34 +69,33 @@ ms.lasthandoff: 08/03/2017
 **База данных**  
 Имя базы данных PostgreSQL.
 
-**UID** и **Pwd**   
+**Uid** и **Pwd**   
 **Uid** (идентификатор пользователя) и **Pwd** (пароль) для подключения.
 
-### <a name="connection-string-format"></a>Формат строки соединения
-Ниже приведен формат строки соединения. 
+### <a name="connection-string-format"></a>Формат строки подключения
+Ниже приведен формат типичной строки подключения. 
 
     ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=<server>;Port=<port>;Database=<database>;UID=<user id>;PWD=<password>
     ```
 
-### <a name="enter-the-connection-string"></a>Введите строку подключения
-Введите строку подключения в **ConnectionString** , либо ввести имя DSN в **Dsn** в **выберите источник данных** или **Выбор назначения** страницы. Введите строку подключения, мастер анализирует строку и отображает отдельные свойства и их значения в списке.
+### <a name="enter-the-connection-string"></a>Ввод строки подключения
+Введите строку подключения в поле **ConnectionString** либо введите имя DSN в поле **Dsn** на странице **Выбор источника данных** или **Выбор назначения**. После того как вы введете строку подключения, мастер проанализирует ее и отобразит отдельные свойства и их значения в списке.
 
-В следующем примере эта строка подключения.
+В приведенном ниже примере используется следующая строка подключения:
 
     ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=127.0.0.1;Port=5432;Database=postgres;UID=postgres;PWD=********
     ```
 
-Вот экрана, которое будет отображаться после ввода строки подключения.
+Ниже показан экран, который появляется после ввода строки подключения.
 
-![Подключиться к PostgreSQL с ODBC](../../integration-services/import-export-data/media/connect-to-postgresql-with-odbc.png)
+![Подключение к PostgreSQL с помощью ODBC](../../integration-services/import-export-data/media/connect-to-postgresql-with-odbc.png)
 
-## <a name="other-data-providers-and-more-info"></a>Другие поставщики данных и Дополнительные сведения
-Сведения о том, как подключиться к PostgreSQL с помощью поставщика данных, не указанного в этом разделе [строки подключения PostgreSQL](https://www.connectionstrings.com/postgresql/). Этот сторонний сайт также содержит дополнительные сведения о поставщиках данных и параметры подключения, описанных на этой странице.
+## <a name="other-data-providers-and-more-info"></a>Другие поставщики данных и дополнительные сведения
+Сведения о подключении к PostgreSQL с помощью поставщика данных, не представленного в этом списке, см. в разделе [Строки подключения PostgreSQL](https://www.connectionstrings.com/postgresql/). Этот сторонний сайт также содержит дополнительные сведения о поставщиках данных и параметрах подключения, описанных на этой странице.
 
-## <a name="see-also"></a>См. также:
-[Выберите источник данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
+## <a name="see-also"></a>См. также раздел
+[Выбор источника данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Выбор назначения](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
 

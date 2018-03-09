@@ -3,8 +3,11 @@ title: "Верхний (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,20 +25,19 @@ helpviewer_keywords:
 - characters [SQL Server], uppercase
 - lowercase characters
 ms.assetid: 5ced55f7-ac89-4cf2-9465-f63f4dc480db
-caps.latest.revision: 26
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: c46fb930d1bba04b4a30725cc3c40e196b3f9a8b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 7fc98d515cef0d4a1f11e44ada8ff45174b8c95e
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upper-transact-sql"></a>UPPER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает символьное выражение, в котором символы нижнего регистра преобразованы в символы верхнего регистра.  
   
@@ -77,10 +79,10 @@ ABERCROMBIE, Kim
 ABOLROUS, Hazem
  ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [НИЖНЕГО &#40; Transact-SQL &#41;](../../t-sql/functions/lower-transact-sql.md)  
   
   
-
 

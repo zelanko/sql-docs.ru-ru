@@ -1,32 +1,35 @@
 ---
 title: "Новые возможности в SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/02/2017
-ms.prod: sql-server-2017
+ms.date: 10/19/2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- server-general
+ms.suite: sql
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
-caps.latest.revision: 71
+caps.latest.revision: "71"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
+ms.workload: Active
+ms.openlocfilehash: 445de7e87daf3d7e083532a06269d810f574fa96
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
-ms.sourcegitcommit: a85dbb34e357d4d00a411e35dce877991337d876
-ms.openlocfilehash: a432f7d48ff537832d76a998bc34c0d012b76b32
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Новые возможности в SQL Server 2017
-SQL Server 2017 — это важный шаг к созданию универсальной платформы SQL Server, которая позволит вам свободно выбирать языки разработки, типы данных, локальные или облачные среды и операционные системы, обеспечивая совместимость с Linux, контейнерами Docker на базе Linux и с Windows. Этот раздел содержит сводку о новых возможностях в отдельных функциональных областях, а также ссылки на дополнительные сведения.
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)] SQL Server 2017 — это важный шаг к созданию универсальной платформы SQL Server, которая позволит вам свободно выбирать языки для разработки, типы данных, локальные или облачные среды и операционные системы, обеспечивая совместимость с Linux, контейнерами Docker на базе Linux и с Windows. Этот раздел содержит сводку о новых возможностях в отдельных функциональных областях, а также ссылки на дополнительные сведения. Дополнительные сведения о SQL Server в Linux см. в [документации по SQL Server в Linux](https://docs.microsoft.com/sql/linux/).
 
 [![Скачать из центра оценки](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Опробуйте сами:** [скачайте выпуск SQL Server 2017 за октябрь 2017 г.:](http://go.microsoft.com/fwlink/?LinkID=829477).
 
->**Запускайте SQL Server в Linux!** Дополнительные сведения см. в разделе [Документации по SQL Server на Linux](https://docs.microsoft.com/sql/linux/).
+> [!NOTE]
+> Помимо приведенных ниже изменений следует отметить накопительные обновления, которые регулярно выпускаются после выхода общедоступной версии. Эти накопительные обновления содержат много усовершенствований и исправлений. Сведения о последнем выпуске накопительного обновления см в разделе [Накопительные обновления SQL Server 2017](http://aka.ms/sql2017cu).
 
 ## <a name="sql-server-2017-database-engine"></a>Ядро СУБД SQL Server 2017
 
@@ -95,9 +98,10 @@ SQL Server Analysis Services 2017 включает множество улуч
 Дополнительные сведения см. в разделе [What's new in SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md) (Новые возможности SQL Server Analysis Services 2017).
 
 ## <a name="sql-server-2017-reporting-services-ssrs"></a>Службы SQL Server 2017 Reporting Services (SSRS)
-Что касается CTP 2.1, службы SSRS больше не доступны для установки с помощью программы установки SQL Server. Перейдите в Центр загрузки Майкрософт, чтобы [загрузить релиз-кандидат Microsoft SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252). 
-- В отчетах теперь доступны комментарии, позволяющие сообщать свою точку зрения и взаимодействовать с другими пользователями. Для комментариев также доступны вложения. (CTP 2.1)
+Службы SQL Server Reporting Services больше не доступны для установки с помощью программы установки SQL Server. Перейдите в Центр загрузки Майкрософт, чтобы [загрузить службы Microsoft SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252). 
+- В отчетах теперь доступны комментарии, позволяющие сообщать свою точку зрения и взаимодействовать с другими пользователями. Для комментариев также доступны вложения.
 - В последних выпусках построителя отчетов и SQL Server Data Tools вы можете создавать собственные запросы DAX для поддерживаемых табличных моделей данных SQL Server Analysis Services, перетаскивая нужные поля в конструкторах запросов. См. [блог по Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
+- В целях разработки и настройки современных приложений службы SSRS теперь поддерживают API RESTful, полностью совместимый с OpenAPI. Полная спецификация и документация по API теперь находится на сайте [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
 Дополнительные сведения см. в разделе [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) (Новые возможности служб SQL Server Reporting Services (SSRS)).
 
@@ -125,3 +129,4 @@ SQL Server Analysis Services 2017 включает множество улуч
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
+![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

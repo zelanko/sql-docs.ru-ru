@@ -1,103 +1,111 @@
 ---
-title: "SQL Server Integration Services (SSIS) масштабирования поддержка высокого уровня доступности | Документы Microsoft"
+title: "Поддержка высокого уровня доступности в SQL Server Integration Services (SSIS) Scale Out | Документы Майкрософт"
+ms.description: This article describes how to configure SSIS Scale Out for high availability
 ms.custom: 
-ms.date: 07/18/2017
-ms.prod: sql-server-2017
+ms.date: 12/19/2017
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: scale-out
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2405235bcfa09d2cc49e007f4eae6975d9ebf7a5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 906edbe80e7c762cdd9a271218d790edc9da8f5b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="scale-out-support-for-high-availability"></a>Масштабное развертывание поддержка высокого уровня доступности
+# <a name="scale-out-support-for-high-availability"></a>Поддержка высокого уровня доступности в Scale Out
 
-В SSIS масштабное развертывание стороне работника высокий уровень доступности обеспечивается выполнение пакетов с помощью нескольких Out работников для масштабирования.
-Высокая доступность стороне главного достигается с [Always On для каталога служб SSIS](../service/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) и отказоустойчивого кластера Windows. Несколько экземпляров шкалы Out Master размещаются в отказоустойчивом кластере Windows. Если служба шкалы Out Master или SSISDB не работает на основном узле, службы или SSISDB на вторичном узле будет продолжать принимать запросы пользователей и взаимодействовать с ними шкалы ожидания рабочих процессов. 
+В SSIS Scale Out высокий уровень доступности на стороне рабочей роли Scale Out обеспечивается за счет выполнения пакетов с использованием нескольких рабочих ролей Scale Out.
 
-Настройка на стороне главного высокий уровень доступности, выполните следующие действия.
+Высокий уровень доступности на стороне мастера Scale Out достигается за счет применения функций [AlwaysOn для каталога служб SSIS](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) и отказоустойчивой кластеризации Windows. Несколько экземпляров мастера Scale Out размещаются в отказоустойчивом кластере Windows. Если служба мастера Scale Out или SSISDB на основном узле отключены, служба или SSISDB на вторичном узле продолжают принимать запросы пользователей и взаимодействовать с рабочими ролями Scale Out. 
 
-## <a name="1-prerequisites"></a>1. Предварительные требования
-Настроить отказоустойчивый кластер Windows. Инструкции см. в записи блога [Установка компонентов и средств отказоустойчивого кластера для Windows Server 2012)](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Installing the Failover Cluster Feature and Tools for Windows Server 2012). Компоненты и средства необходимо установить на всех узлах кластера.
+Чтобы настроить высокий уровень доступности на стороне мастера Scale Out, выполните указанные ниже действия.
 
-## <a name="2-install-scale-out-master-on-primary-node"></a>2. Установить масштаб Out главного на основном узле
-Установка службы компонента Database Engine, службы Integration Services и масштаб Out главного на основном узле для масштабирования Out Master. 
+## <a name="1-prerequisites"></a>1. предварительные требования
+Настроить отказоустойчивый кластер Windows. Инструкции см. в записи блога [Установка компонента и средств отказоустойчивого кластера для Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx). Установите компоненты и средства на всех узлах кластера.
 
-Во время установки следует 
-### <a name="21-set-the-account-running-scale-out-master-service-to-a-domain-account"></a>2.1 задайте учетной записи шкалы Out Master службы с учетной записью домена.
-Эта учетная запись должна иметь доступ к SSISDB на вторичном узле в отказоустойчивом кластере Windows в будущем. Как служба шкалы Out главного и SSISDB можно отдельно отработки отказа, они не могут быть на том же узле.
+## <a name="2-install-scale-out-master-on-the-primary-node"></a>2. Установка мастера Scale Out в основном узле
+Установите службы ядра СУБД SQL Server, службы Integration Services и мастер Scale Out в основном узле для мастера Scale Out. 
 
-![Конфигурация сервера высокой ДОСТУПНОСТИ](media/ha-server-config.PNG)
+Во время установки выполните указанные ниже действия.
 
-### <a name="22-include-scale-out-master-service-dns-host-name-in-the-cns-of-scale-out-master-certificate"></a>2,2 включают шкалы Out Master службы имя узла DNS в общих имен для масштабирования Out главного сертификата.
+### <a name="21-set-the-account-running-scale-out-master-service-to-a-domain-account"></a>2.1. Настройте учетную запись, с помощью которой выполняется служба мастера Scale Out, в качестве учетной записи домена.
+Эта учетная запись должна впоследствии иметь доступ к SSISDB во вторичном узле в отказоустойчивом кластере Windows. Так как служба мастера Scale Out и SSISDB реализуют отдельную отработку отказа, они не могут находиться на одном узле после отработки отказа.
 
-Имя этого узла будет использоваться в конечной точке шкалы Out Master. 
+![Конфигурация сервера высокой доступности](media/ha-server-config.PNG)
 
-![Основной конфигурации высокого уровня ДОСТУПНОСТИ](media/ha-master-config.PNG)
+### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2. Включите имя узла DNS для службы мастера Scale Out в список CN для сертификата мастера Scale Out.
 
-## <a name="3-install-scale-out-master-on-secondary-node"></a>3. Установить масштаб Out Master на вторичном узле
-Установка службы компонента Database Engine, службы Integration Services и масштаб Out главного на вторичном узле для масштабирования Out Master. 
+Это имя узла используется в конечной точке мастера Scale Out. 
 
-Следует использовать один и тот же сертификат шкалы Out главного с основного узла. Экспортировать шкалы Out Master SSL-сертификат на основном узле с помощью закрытого ключа и установить его в корневое хранилище сертификатов loacl машины на вторичном узле. Выберите этот сертификат при установке шкалы Out Master.
+![Конфигурация мастера высокой доступности](media/ha-master-config.PNG)
 
-![Основной конфигурации HA 2](media/ha-master-config2.PNG)
+## <a name="3-install-scale-out-master-on-the-secondary-node"></a>3. Установка мастера Scale Out во вторичном узле
+Установите службы ядра СУБД SQL Server, службы Integration Services и мастер Scale Out во вторичном узле для мастера Scale Out. 
 
-> [!Note]
-> Можно настроить несколько резервного копирования шкалы Out образцов, повторив операций для дополнительного масштабирования ожидания базы данных Master.
+Используйте тот же сертификат мастера Scale Out, что и в основном узле. Экспортируйте SSL-сертификат мастера Scale Out в основном узле с закрытым ключом и установите его в корневое хранилище сертификатов локального компьютера во вторичном узле. Выберите этот сертификат при установке мастера Scale Out во вторичном узле.
 
-## <a name="4-set-up-ssisdb-always-on"></a>4. Настройка SSISDB всегда на
+![Конфигурация мастера высокой доступности 2](media/ha-master-config2.PNG)
 
-Инструкции по настройке всегда на для SSISDB можно увидеть в [Always On для каталога служб SSIS (SSISDB)](../service/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
+> [!NOTE]
+> Вы можете настроить несколько резервных мастеров Scale Out, повторив эти действия для мастера Scale Out в других вторичных узлах.
 
-Кроме того необходимо создать прослушиватель gourp доступности для группы доступности, добавления SSISDB. В разделе [Создание или настройка прослушивателя группы доступности](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
+## <a name="4-set-up-ssisdb-always-on"></a>4. Настройка AlwaysOn для SSISDB
 
-## <a name="5-update-scale-out-master-service-configuration-file"></a>5. Обновить файл конфигурации службы шкалы Out Master
-Файл конфигурации службы шкалы Out Master обновление \<драйвер\>: \Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config на первичных и вторичных узлах. Обновление **SqlServerName** для *[имя DNS прослушивателя группы доступности], [порт]*.
+Выполните инструкции по настройке AlwaysOn для SSISDB, которые приводятся в разделе [AlwaysOn для каталога служб SSIS (SSISDB)](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
 
-## <a name="6-enable-package-execution-logging"></a>6. Включение ведения журнала выполнения пакета
+Кроме того, необходимо создать прослушиватель группы доступности для группы доступности, в которую добавляется SSISDB. См. раздел [Создание или настройка прослушивателя группы доступности](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
 
-Ведения журналов в SSISDB выполняется путем входа **MS_SSISLogDBWorkerAgentLogin ##**, пароль которого является формируется автоматически. Чтобы сделать работает ведение журнала для всех реплик SSISDB, выполните следующие действия.
+## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5. Обновление файла конфигурации для службы мастера Scale Out
+Обновите файл конфигурации для службы мастера Scale Out (`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`) в основном и вторичном узлах. Присвойте атрибуту **SqlServerName** значение *[имя DNS прослушивателя группы доступности],[порт]*.
 
-### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-primary-sql-server"></a>6.1 изменение пароля **MS_SSISLogDBWorkerAgentLogin ##** на сервере-источнике Sql.
-### <a name="62-add-the-login-to-secondary-sql-server"></a>6.2. Добавьте имя входа для сервера-получателя Sql.
-### <a name="63-update-connection-string-of-logging"></a>6.3 Обновите строку соединения для ведения журнала.
-Вызовите хранимую процедуру [catalog]. [update_logdb_info] с 
+## <a name="6-enable-package-execution-logging"></a>6. Включение ведения журнала выполнения пакетов
 
-@server_name= "*[Имя DNS прослушивателя группы доступности], [порт]*" 
+Ведение журналов в SSISDB реализуется посредством имени входа **##MS_SSISLogDBWorkerAgentLogin##**, пароль для которого формируется автоматически. Чтобы настроить ведение журналов для всех реплик SSISDB, выполните указанные ниже действия.
 
-и @connection_string = "источник данных =*[имя DNS прослушивателя группы доступности]*,*[порт]*; Initial Catalog = SSISDB; ИД пользователя = MS_SSISLogDBWorkerAgentLogin ##; Пароль =*[пароль]*]; ".
+### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1. Смените пароль для **##MS_SSISLogDBWorkerAgentLogin##** в основном экземпляре SQL Server.
 
-## <a name="7-congifure-scale-out-master-service-role-of-windows-failover-cluster"></a>7. Роль службы Congifure шкалы Out Master отказоустойчивого кластера Windows
+### <a name="62-add-the-login-to-the-secondary-sql-server"></a>6.2. Добавьте имя входа для вторичного экземпляра SQL Server.
 
-Диспетчер кластеров отработки отказа, подключитесь к кластеру для масштабное развертывание. Выберите кластер и нажмите кнопку **действие** в меню, а затем **настроить роль...** .
+### <a name="63-update-the-connection-string-used-for-logging"></a>6.3. Обновите строку подключения, используемую для ведения журналов.
+Вызовите хранимую процедуру `[catalog].[update_logdb_info]` со следующими значениями параметров:
 
-В стека вверх **мастер высокой доступности**выберите **Универсальная служба** в **выберите роль** странице и выберите SQL Server Integration служб шкалы Out Master 14.0 в **Выбор службы** страницы.
+-   `@server_name = '[Availability Group Listener DNS name],[Port]' `
 
-В **точки доступа клиента** введите имя узла DNS службы шкалы Out Master.
+-   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 
-![HA мастер 1](media/ha-wizard1.PNG)
+## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster"></a>7. Настройка роли службы мастера Scale Out для отказоустойчивого кластера Windows
 
-Завершите работу мастера.
+1.  В диспетчере отказоустойчивости кластеров установите подключение к кластеру для Scale Out. Выберите кластер. Выберите в меню пункт **Действие**, после чего выберите **Настроить роль**.
 
-## <a name="8-update-master-address-in-ssisdb"></a>8. Мастер обновления адрес в SSISDB
+2.  В диалоговом окне **Мастер высокой доступности** выберите **Универсальная служба** на странице **Выбор роли**. На странице **Выбор службы** выберите "Главная служба развертывания SQL Server Integration Services 14.0".
 
-На основном сервере SQL выполните хранимую процедуру [службы SSIS]. [catalog]. [update_master_address] с параметром @MasterAddress = N'https: / / [имя узла службы шкалы Out главного DNS]: [порт Master] ". 
+3.  На странице **Точка доступа клиента** введите имя узла DNS службы мастера Scale Out.
 
-## <a name="9-add-scale-out-worker"></a>9. Добавить работника для горизонтального масштабирования
+    ![Мастер высокой доступности 1](media/ha-wizard1.PNG)
 
-Теперь вы можете добавлять шкалы Out работников с помощью [шкалы ожидания диспетчера](integration-services-ssis-scale-out-manager.md). Введите *[SQL Server доступности группы DNS-имя прослушивателя]*,*[порт]* на странице подключения.
+4.  Завершите работу мастера.
 
+## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8. Обновление адреса мастера Scale Out в SSISDB
 
+На основном сервере SQL Server выполните хранимую процедуру `[catalog].[update_master_address]` со значением параметра `@MasterAddress = N'https://[Scale Out Master service DNS host name]:[Master Port]'`. 
 
+## <a name="9-add-the-scale-out-workers"></a>9. Добавление рабочих ролей Scale Out
 
+Теперь можно добавить рабочие роли Scale Out с помощью [диспетчера Integration Services Scale Out](integration-services-ssis-scale-out-manager.md). Введите `[SQL Server Availability Group Listener DNS name],[Port]` на странице подключения.
 
+## <a name="next-steps"></a>Следующие шаги
+Дополнительные сведения см. в следующих статьях:
+-   [Главная роль масштабного развертывания служб Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
+-   [Рабочая роль масштабного развертывания служб Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)

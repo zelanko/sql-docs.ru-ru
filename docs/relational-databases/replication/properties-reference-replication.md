@@ -2,32 +2,32 @@
 title: "Справочник по свойствам (репликация) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- F1 Help [SQL Server replication]
+helpviewer_keywords: F1 Help [SQL Server replication]
 ms.assetid: 0c8c282a-d428-417f-ac83-7f37593d40c5
-caps.latest.revision: 19
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "19"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9c15f108757b6e644251e897290c98956d379117
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f9f95a8dc9bf49d315ee857ae08c1e29efc8ce72
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="properties-reference-replication"></a>Справочник по свойствам (репликация)
-  Этот раздел содержит сведения о следующих мастерах репликаций и диалоговых окон:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Этот раздел содержит сведения о следующих мастерах репликаций и диалоговых окнах:  
   
--   [Мастер настройки распространения](../../relational-databases/replication/configure-distribution-wizard.md)  
+-   [Configure Distribution Wizard](../../relational-databases/replication/configure-distribution-wizard.md)  
   
 -   [Свойства распространителя](../../relational-databases/replication/distributor-properties.md)  
   
@@ -54,4 +54,3 @@ ms.lasthandoff: 06/22/2017
 -   [Диалоговые окна репликации в среде SQL Server Management Studio](../../relational-databases/replication/sql-server-management-studio-replication-dialog-boxes.md)  
   
   
-

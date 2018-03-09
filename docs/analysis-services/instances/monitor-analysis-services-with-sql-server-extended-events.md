@@ -1,15 +1,14 @@
 ---
 title: "Мониторинг служб Analysis Services с помощью расширенных событий SQL Server | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.custom: 
+ms.date: 12/29/2017
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,20 +18,20 @@ f1_keywords:
 - Sql13.ssms.XeASNewEventSession.Targets.f1
 - Sql13.ssms.XeASNewEventSession.Advanced.f1
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
-caps.latest.revision: 11
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: abe5ce23dfb6f16fcc8fb27f16918895f6a51650
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cec6da660c202dfde5a1169dd34397fca5c51207
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>Мониторинг служб Analysis Services с помощью расширенных событий SQL Server
-  Расширенные события (*xEvents*) — это упрощенная система трассировки и мониторинга производительности, которая использует очень небольшое количество системных ресурсов. Это делает систему идеальным средством для диагностики проблем как на производственных, так и на тестовых серверах. Система также характеризуется высокой масштабируемостью и возможностями настройки. В SQL Server 2016 ее использование упрощено благодаря поддержке новых встроенных средств. В SQL Server Management Studio для подключений к экземплярам служб Analysis Services можно настроить, запустить и отслеживать динамическую трассировку так же, как и при использовании приложения SQL Server Profiler. Добавление улучшенных средств не только делает xEvents более рациональной заменой SQL Server Profiler, но и позволяет упорядочить диагностику проблем в ядре СУБД и рабочих нагрузках служб Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+Расширенные события (*xEvents*) — это упрощенная система трассировки и мониторинга производительности, которая использует очень небольшое количество системных ресурсов. Это делает систему идеальным средством для диагностики проблем как на производственных, так и на тестовых серверах. Система также характеризуется высокой масштабируемостью и возможностями настройки. В SQL Server 2016 ее использование упрощено благодаря поддержке новых встроенных средств. В SQL Server Management Studio для подключений к экземплярам служб Analysis Services можно настроить, запустить и отслеживать динамическую трассировку так же, как и при использовании приложения SQL Server Profiler. Добавление улучшенных средств не только делает xEvents более рациональной заменой SQL Server Profiler, но и позволяет упорядочить диагностику проблем в ядре СУБД и рабочих нагрузках служб Analysis Services.  
   
  Кроме использования [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]вы также можете настроить сеансы расширенных событий  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] традиционным способом — с помощью скриптов XMLA, поддерживаемых в предыдущих выпусках.  
   
@@ -80,7 +79,7 @@ ms.lasthandoff: 09/01/2017
   
  Параметр**Настроить** находится в удаленной области диалогового окна.  
   
- ![Настройка SSAS xevents](../../analysis-services/instances/media/ssas-xevents-configure.PNG "Настройка ssas xevents")  
+ ![ssas-xevents-configure](../../analysis-services/instances/media/ssas-xevents-configure.PNG "ssas-xevents-configure")  
   
  В конфигурации на вкладке "Поля событий" выберите поле **TextData** , чтобы оно отображалось рядом с событием и показывало возвращаемые значения, включая запросы, которые выполняются на сервере.  
   
@@ -172,8 +171,7 @@ ms.lasthandoff: 09/01/2017
 |-|  
 |![Значок стрелки, используемый с обратно к верхней](../../analysis-services/instances/media/uparrow16x16.gif "значок стрелки, используемый с обратно к верхней") [в этом разделе](#bkmk_top)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  
   
   
-

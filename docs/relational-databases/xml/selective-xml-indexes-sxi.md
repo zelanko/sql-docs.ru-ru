@@ -2,28 +2,31 @@
 title: "Селективные XML-индексы | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
-caps.latest.revision: 9
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9c9821e721ce4fdc9187bb69c75cf05c74ff3f40
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3e845dd3ae91488060e72ad75c3f60d7dc0c7977
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="selective-xml-indexes-sxi"></a>Выборочный XML-индекс (SXI)
-  Селективные XML-индексы — это еще один тип XML-индексов, доступный наряду с обычными XML-индексами. Селективный XML-индекс используется в следующих целях.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Селективные XML-индексы — это еще один тип XML-индексов, доступный наряду с обычными XML-индексами. Селективный XML-индекс используется в следующих целях.  
   
 -   Для повышения производительности запросов к XML-данным, хранящимся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -81,7 +84,7 @@ ms.lasthandoff: 06/22/2017
   
  Если запросы к данным выполняются только по путям `/book/title` и `/book/subjects` , вы можете создать следующий селективный XML-индекс.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX SXI_index  
 ON Tbl(xmlcol)  
 FOR   
@@ -206,4 +209,3 @@ FOR
   
   
   
-

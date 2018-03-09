@@ -3,7 +3,7 @@ title: "Свойство FetchOptions (RDS) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - FetchOptions property [ADO]
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f53c6be35a4b3035e81653ecd828c52ea0c959db
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9ca6ede3ae154cbb3b6e13038185e4a54a466009
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fetchoptions-property-rds"></a>Свойство FetchOptions (RDS)
 Указывает тип асинхронной доставки данных.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="setting-and-return-values"></a>Задание и возвращаемые значения  
  Задает или возвращает одно из следующих значений.  
   
-|Константа|Description|  
+|Константа|Описание|  
 |--------------|-----------------|  
 |**adcFetchUpFront**|Все записи из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) будут выбраны до возврата управления в приложение. Полный **записей** извлечь, прежде чем приложение сможет выполнять никаких действий с ним.|  
 |**adcFetchBackground**|Элемент управления может возвращать приложению сразу после первого пакета записей будут выбраны. Последующие чтение всех **записей** , попытки получения доступа к записи не выбраны в первого пакета будет отложено до фактического извлечения искомому записи, в какое время управление возвращается приложению.|  
@@ -46,15 +45,14 @@ ms.lasthandoff: 09/09/2017
 > [!NOTE]
 >  Каждый клиентский исполняемый файл, который использует эти константы должен предоставить их объявления. Можно вырезать и вставить объявления констант из файла Adcvbs.inc, расположенный в папке установки по умолчанию для библиотеки служб удаленных рабочих СТОЛОВ.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Веб-приложения, обычно требуется использовать **adcFetchAsync** (значение по умолчанию), так как он обеспечивает более высокую производительность. В скомпилированных в клиентском приложении, обычно требуется использовать **adcFetchBackground**.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ExecuteOptions и пример свойства FetchOptions (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
- [Метод Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
-
+ [Метод Cancel (служба удаленных рабочих столов)](../../../ado/reference/rds-api/cancel-method-rds.md)
 
 

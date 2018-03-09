@@ -2,31 +2,32 @@
 title: "Элемент BaseProperty (CSDLBI) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: d0f63e52-7330-4b2c-a929-7a517acc6921
-caps.latest.revision: 6
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7f28d100ef59df6fe73b8dd93d1fbfebdb87bbb7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b82b9b6f137b09768fbfdadb78d98f9cd293e81e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="baseproperty-element-csdlbi"></a>Элемент BaseProperty (CSDLBI)
-  Элемент BaseProperty — сложный тип, который служит основой для других элементов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Элемент BaseProperty — сложный тип, который служит основой для других элементов.  
   
  Эти атрибуты могут появляться в столбцах и в мерах.  
   
@@ -59,8 +60,7 @@ ms.lasthandoff: 09/01/2017
 |Контекст|Использовать имя входящей связи.|  
 |Объединить|Объединить имя входящей связи и имя свойства.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о модели табличного объекта на совместимость уровни 1050 до 1103](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
   
-

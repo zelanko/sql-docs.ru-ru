@@ -1,28 +1,28 @@
 ---
-title: "Конструктор запросов к спискам SharePoint (построитель отчетов) | Документы Microsoft"
+title: "Конструктор запросов к спискам SharePoint (построитель отчетов) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10016"
+f1_keywords: "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
-caps.latest.revision: 7
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "7"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: f4b92fd68ee2202a6998b8d772d36e3aa08bd484
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 957ddf233fbbf41f468f8c981c3e8303a3672d9b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>Конструктор запросов к спискам SharePoint (построитель отчетов)
   Построитель и конструктор отчетов предоставляют как графический, так и текстовый конструктор запросов, которые помогают создавать запросы, указывающие, какие данные следует получить с сайта SharePoint для набора данных отчета. Графический конструктор запросов используется для просмотра метаданных списка SharePoint, интерактивного создания запроса, а также для просмотра его результатов. Текстовый конструктор запросов используется для просмотра запроса, созданного графическим конструктором запросов, для его изменения или ввода команд запроса. Также можно импортировать существующий запрос из файла или отчета.  
@@ -99,7 +99,7 @@ ms.lasthandoff: 08/09/2017
 |**Выполнить запрос**|Выполните запрос. Результирующий набор отображается на панели результатов запроса.|  
 |**Показать скрытые поля**|Переключите, чтобы показать или скрыть поля, которые создаются SharePoint автоматически (например, ProgId и Level для элементов ссылок SharePoint), но, как правило, не используются в отчетах. Скрытие этих полей позволяет сделать список полей короче и удобнее в использовании.|  
   
-## <a name="see-also"></a>См. также  
- [Конструкторы запросов &#40; Построитель отчетов &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+## <a name="see-also"></a>См. также:  
+ [Конструкторы запросов (построитель отчетов)](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

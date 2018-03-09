@@ -1,10 +1,13 @@
 ---
-title: "&amp;&amp;(Логическое и) (Выражение служб SSIS) | Документы Microsoft"
+title: "&amp;&amp; (логическое И) (выражение служб SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,19 +17,18 @@ helpviewer_keywords:
 - AND, logical AND
 - logical AND (&&)
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a52d1a0bf10aba48b1e628a9253c7f2361f58506
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 762ba60573bfcaf08fb9d2c38f1a8ec2e5a08cfc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp;(Логическое и) (Выражение служб SSIS)
+# <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (логическое И) (выражение служб SSIS)
   Выполняет логическую операцию И. Выражение принимает значение TRUE, если все условия имеют значение TRUE.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -43,7 +45,7 @@ boolean_expression1 && boolean_expression2
 ## <a name="result-types"></a>Типы результата  
  DT_BOOL  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Следующая таблица демонстрирует результаты выполнения оператора &&.  
   
 |Результат|Выражение|Выражение|  
@@ -68,10 +70,9 @@ StandardCost < 300 && ListPrice > 500
 StandardCost < @SPrice && ListPrice > @LPrice  
 ```  
   
-## <a name="see-also"></a>См. также  
- [& &#40; Побитовое и &#41; &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/bitwise-and-ssis-expression.md)   
- [Приоритет и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Операторы &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>См. также:  
+ [& (битовое И) (выражение служб SSIS)](../../integration-services/expressions/bitwise-and-ssis-expression.md)   
+ [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

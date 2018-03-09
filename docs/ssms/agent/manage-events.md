@@ -3,10 +3,12 @@ title: "Управление событиями | Документация Ма�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +20,19 @@ helpviewer_keywords:
 - alerts [SQL Server], management servers
 - SQL Server Agent alerts, management servers
 ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 86ffe880e225a5673d35be3f7c42d862d145274c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: aaa831f2f09c12a02fa997a912bd9d0b97ec6cba
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="manage-events"></a>Управление событиями
-Все сообщения об ошибках, удовлетворяющие заданному уровню серьезности либо превышающие его, могут быть перенаправлены экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Данное действие называется *пересылкой событий*. Сервер пересылки является выделенным сервером, который может также являться главным. Пересылка событий может быть использована для централизации управления предупреждениями в группе серверов, что позволяет снизить рабочую нагрузку на сильно загруженные серверы.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Все сообщения об ошибках, удовлетворяющие заданному уровню серьезности либо превышающие его, могут быть перенаправлены экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Данное действие называется *пересылкой событий*. Сервер пересылки является выделенным сервером, который может также являться главным. Пересылка событий может быть использована для централизации управления предупреждениями в группе серверов, что позволяет снизить рабочую нагрузку на сильно загруженные серверы.  
   
 Сервер, предназначенный для получения событий на всю группу серверов, называется *сервером управления предупреждениями*. В многосерверной среде сервером управления предупреждениями должен быть главный сервер.  
   
@@ -82,7 +83,7 @@ ms.lasthandoff: 06/22/2017
   
 **Определение ответа на предупреждение**  
   
--   [SQL Server Management Studio](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)  
+-   [Среда SQL Server Management Studio](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)  
   
 -   [Transact-SQL](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
   
@@ -95,4 +96,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
 [sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/en-us/44bee7d9-7517-4071-99be-8b36f979c7cc)  
   
-

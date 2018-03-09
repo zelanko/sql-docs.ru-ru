@@ -3,7 +3,7 @@ title: "Значение свойства примере (VC ++) | Докуме�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Value property [ADO], VC++ example
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4f8e13c408d08daafcb397314c9635f1578fe9ab
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c22b67fabafdf82734222bd3a5d56e19c157c395
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="value-property-example-vc"></a>Пример значения свойства (VC ++)
 В этом примере демонстрируется [значение](../../../ado/reference/ado-api/value-property-ado.md) свойство с [поле](../../../ado/reference/ado-api/field-object.md) и [свойство](../../../ado/reference/ado-api/property-object-ado.md) объектов путем отображения значения поля и свойства для ***сотрудников*** таблицы.  
@@ -177,8 +176,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект field](../../../ado/reference/ado-api/field-object.md)   
  [Свойства объекта (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Значение свойства (ADO)](../../../ado/reference/ado-api/value-property-ado.md)
-
+ [Свойство Value (ADO)](../../../ado/reference/ado-api/value-property-ado.md)

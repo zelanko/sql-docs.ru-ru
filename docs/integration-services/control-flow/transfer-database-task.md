@@ -1,10 +1,13 @@
 ---
-title: "Задача «Передача базы данных» | Документы Microsoft"
+title: "Задача \"Передача базы данных\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -18,17 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 29f66d1eeed7e2af0df962b62020169fb2095f6e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 83ba4c606ccf7779f01219fcf69e90d2b3b6dea9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transfer-database-task"></a>Задача «Передача базы данных»
   Задача «Передача базы данных» передает базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между двумя экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В отличие от других задач, передающих объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только путем копирования, задача «Передача базы данных» может копировать или перемещать базу данных. Эту задачу можно также использовать для копирования базы данных в пределах того же сервера.  
@@ -80,7 +82,7 @@ ms.lasthandoff: 08/11/2017
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующем разделе:  
   
--   [Страница "Выражения"](../../integration-services/expressions/expressions-page.md)  
+-   [Страница «Выражения»](../../integration-services/expressions/expressions-page.md)  
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
@@ -101,7 +103,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Description**  
+ **Описание**  
  Введите описание задачи передачи базы данных.  
   
 ## <a name="transfer-database-task-editor-databases-page"></a>Редактор задачи «Передача базы данных» (страница «Базы данных»)
@@ -109,10 +111,10 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Параметры  
  **SourceConnection**  
- Выберите из списка диспетчер соединений SMO или нажмите кнопку  **\<создать соединение... >** для создания нового соединения с исходным сервером.  
+ Выберите в списке диспетчер подключений SMO или нажмите кнопку **\<Создать подключение...>**, чтобы создать подключение к исходному серверу.  
   
  **DestinationConnection**  
- Выберите из списка диспетчер соединений SMO или нажмите кнопку  **\<создать соединение... >** для создания нового соединения на сервере назначения.  
+ Выберите в списке диспетчер подключений SMO или нажмите кнопку **\<Создать подключение...>**, чтобы создать подключение к целевому серверу.  
   
  **DestinationDatabaseName**  
  Укажите имя базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на целевом сервере.  
@@ -211,4 +213,3 @@ ms.lasthandoff: 08/11/2017
  Введите размещение сетевой общей папки или нажмите кнопку обзора для ее указания.  
   
  При передаче базы данных в режиме вне сети файлы базы данных копируются в **Сетевую общую папку** перед тем, как они переданы в расположение **Целевая папка** .  
-

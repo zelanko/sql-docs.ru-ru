@@ -2,29 +2,32 @@
 title: "Изменение измерения «Заказчик» | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
-caps.latest.revision: 22
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 4fe3a7adab5e0c4f87abaf09b04efa64f27e124f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c7ba21519d0ea16952d3aa4cc086fc78309a2108
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>Занятие 3-2-изменение измерения «Заказчик»
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Существует много способов повысить удобство использования и функциональность измерений куба. При выполнении задач этого раздела будет изменено измерение «Заказчик».  
   
 ## <a name="renaming-attributes"></a>Переименование атрибутов  
@@ -227,11 +230,11 @@ ms.lasthandoff: 09/01/2017
   
 2.  На диаграмме щелкните правой кнопкой мыши атрибут **Город** и выберите команду **Создать связь атрибутов**.  
   
-3.  В диалоговом окне **Создание связи атрибутов** поле **Исходный атрибут** содержит значение **Город**. Для поля **Связанный атрибут** задайте значение **Республика — область или край**.  
+3.  В диалоговом окне **Создание связи атрибутов** поле **Исходный атрибут** содержит значение **Город**. Для поля **Связанный атрибут** задайте значение **Республика — область или край**.  
   
 4.  В списке **Тип связи** выберите тип **Жесткая**.  
   
-    Связь имеет тип **Жесткая** , так как связи между элементами не будут меняться с течением времени. Например, переход города под юрисдикцию другого штата или провинции — явление крайне редкое.  
+    Связь имеет тип **Жесткая**, так как связи между элементами не будут меняться с течением времени. Например, переход города под юрисдикцию другого штата или провинции — явление крайне редкое.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -271,10 +274,9 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Изменение измерения Product](../analysis-services/lesson-3-3-modifying-the-product-dimension.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Справочник по свойствам атрибута измерения](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
 [Удаление атрибута из измерения](../analysis-services/multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)  
 [переименовать атрибут](../analysis-services/multidimensional-models/attribute-properties-rename-an-attribute.md)  
 [Определение именованных вычислений в представлении источника данных (службы Analysis Services)](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
-

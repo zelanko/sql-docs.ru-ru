@@ -3,10 +3,12 @@ title: "Внедренные пример SQL | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], embedded SQL
 - embedded SQL [ODBC]
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 13890248b3e724f2a41db5a3425c62dc7635b63a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e9f19c26cf77e0f5cfbff8a8ebad193ba9e9cdf2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="embedded-sql-example"></a>Пример Embedded SQL
 В следующем коде показан простой встроенной программы SQL, написана на языке C. Программа иллюстрирует многие, но не всех встроенный приемы SQL. Программа запросит у пользователя номер заказа, получает номер клиента, менеджер по продажам и состояние заказа и выводит полученные сведения на экран.  
@@ -78,4 +79,3 @@ bad_number:
 -   **Обработка ошибок** СУБД сообщает программе приложений с помощью области связи SQL, или SQLCA ошибки во время выполнения. В предыдущем примере кода первый внедренный инструкция SQL является ВКЛЮЧАЮТ SQLCA. Это заставляет предварительной компиляции для включения структуры SQLCA в программе. Это необходимо, каждый раз, когда программа будет обрабатывать ошибки, возвращенные СУБД. WHENEVER... Оператор GOTO сообщает предварительной компиляции для создания кода обработки ошибок, происходящих ветви для определенной метки при возникновении ошибки.  
   
 -   **Одноэлементный ВЫБЕРИТЕ** оператор, используемый для получения данных является инструкцией SELECT одноэлементный; то есть он возвращает только одну строку данных. Таким образом в примере кода не объявлять и использовать курсоры.
-

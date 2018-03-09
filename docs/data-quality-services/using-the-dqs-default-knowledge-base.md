@@ -2,25 +2,26 @@
 title: "Использование базы знаний DQS по умолчанию | Microsoft Docs"
 ms.custom: 
 ms.date: 07/31/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
-caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "13"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d240a27603b780e919d29c24b922ce2c99e49aae
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bbd80ca8bdeb9412646409eb08ba1955b31b75c4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>Использование базы знаний DQS по умолчанию
   В этом разделе описывается база знаний **DQS Data**, которая используется по умолчанию и устанавливается со службами [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Эта готовая база данных содержит следующие домены.  
@@ -56,4 +57,3 @@ ms.lasthandoff: 09/09/2017
  [Базы знаний и домены DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   
-

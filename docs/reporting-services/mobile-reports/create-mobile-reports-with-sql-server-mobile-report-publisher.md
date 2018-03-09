@@ -1,34 +1,34 @@
 ---
-title: "Создание мобильных отчетов с SQL Server Mobile Report Publisher | Документы Microsoft"
-description: "Дополнительные сведения о службах Reporting Services мобильные отчеты для мобильных устройств, подключения к данным в локальной среде, через различные представления данных."
-ms.custom:
-- SQL2016_New_Updated
+title: "Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server | Документы Майкрософт"
+description: "Ознакомьтесь со сведениями о мобильных отчетах служб Reporting Services для мобильных устройств, подключенных к локальным данным и содержащих различные визуализации данных."
+ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4fe797ac21e1f659b1a2a196be3f860a65b36896
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5109bc0d5fddfa5a69f0880b2167615ac860f3ba
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server
 Ознакомьтесь со сведениями о мобильных отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , оптимизированных для мобильных устройств, подключенных к локальным данным и содержащих различные визуализации данных. 
 
 >[!NOTE]
->  Необходимо перенести содержимое Datazen сервера, таких как панели мониторинга и ключевые показатели эффективности в SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] сервера? Воспользуйтесь [помощником по миграции SQL Server для Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
+>  . Требуется перенести содержимое сервера Datazen, такое как панели мониторинга и ключевые индикаторы производительности на сервер SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] ? Воспользуйтесь [помощником по миграции SQL Server для Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/09/2017
 
 * Подключите мобильные отчеты к различным источникам данных, включая локальные данные SQL Server и Analysis Services. 
 * Мобильные отчеты можно составлять в области конструктора, настраивая строки и столбцы сетки и используя гибкие элементы мобильных отчетов, которые масштабируются в соответствии с любым размером экрана. 
-* Сохраните эти мобильные отчеты на сервере служб Reporting Services и просматривать и взаимодействовать с ними в браузере или в мобильном приложении Power BI для устройств iPad, устройства iPhone, телефоны Android и планшетных ПК и устройств Windows 10.
+* Мобильные отчеты можно сохранять на сервере служб Reporting Services, а затем просматривать в браузере или мобильном приложении Power BI на устройствах iPad, iPhone, телефонах и планшетах Android и на устройствах Windows 10.
   
 ## <a name="create-includessrsnoversionmdincludesssrsnoversion-mdmd--mobile-reports"></a>Создание мобильных отчетов [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  
   
@@ -54,8 +54,8 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="ssrs-mobile-reports-in-the-power-bi-mobile-apps"></a>Мобильные отчеты SSRS в мобильных приложениях Power BI
 
--  Представление [мобильные отчеты служб Reporting Services и ключевых показателей эффективности в мобильном приложении iOS](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports)
--  Представление [мобильных отчетов Reporting Services и ключевых показателей эффективности в приложении Power BI для устройств Android](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
+-  См. статью [Просмотр ключевых показателей эффективности и мобильных отчетов Reporting Services в мобильных приложениях iOS](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports).
+-  См. статью [Просмотр ключевых показателей эффективности и мобильных отчетов Reporting Services в приложении Power BI для устройств Android](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports).
 -  См. статью [Просмотр ключевых показателей эффективности и мобильных отчетов Reporting Services в мобильном приложении Power BI для Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/).    
 
 ## <a name="see-also"></a>См. также:  
@@ -67,5 +67,4 @@ ms.lasthandoff: 08/09/2017
 
   
   
-
 

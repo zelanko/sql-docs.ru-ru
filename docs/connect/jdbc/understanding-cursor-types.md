@@ -3,24 +3,25 @@ title: "Основные сведения о типах курсоров | До�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dfd697881fbde24c797707990d53c2cc33576a24
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a65c11a0f6c623162049661a11cbc392a3d8b178
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="understanding-cursor-types"></a>Основные сведения о типах курсоров
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -117,7 +118,6 @@ ms.lasthandoff: 09/09/2017
 >  SQL Server ограничивает использование серверных курсоров единственным результирующим набором. Если пакет или хранимая процедура содержит несколько инструкций, то необходимо использовать клиентский однопроходный курсор, доступный только для чтения.  
   
 ## <a name="see-also"></a>См. также:  
- [Управление результирующими наборами с драйвером JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
+ [Управление результирующими наборами с помощью драйвера JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   
-

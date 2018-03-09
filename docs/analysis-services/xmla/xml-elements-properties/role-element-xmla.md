@@ -2,31 +2,30 @@
 title: "Элемент Role (XMLA) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 2b851ad5-cc46-4a2e-8873-d8556faca809
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dee3f366a21d19d1e57dd65a3f1a0397ca3b9ac4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e91769a65e8103a9cd0f8e1c5b2421e199145cdf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="role-element--xmla"></a>Элемент Role (XMLA)
-  Идентифицирует один конец связи один ко многим для использования в родительском [RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Идентифицирует один конец связи один ко многим для использования в родительском [RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,9 +40,9 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
-|Тип данных и длина|Строковые значения|  
+|Тип данных и длина|String|  
 |Значение по умолчанию|None|  
 |Количество элементов|1. обязательный элемент, который может появляться только один раз.|  
   
@@ -54,6 +53,5 @@ ms.lasthandoff: 09/01/2017
 |Родительские элементы|[RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
-

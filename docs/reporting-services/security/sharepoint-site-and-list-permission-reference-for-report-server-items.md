@@ -1,13 +1,14 @@
 ---
-title: "Элементами сервера отчетов SharePoint Site and List Permission Reference для | Документы Microsoft"
+title: "Справочная таблица по разрешениям на доступ к спискам и сайтам SharePoint для элементов сервера отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +17,16 @@ helpviewer_keywords:
 - security [Reporting Services], SharePoint integrated mode
 - permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
-caps.latest.revision: 14
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "14"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ca45a9fc4c37798983c4cc8956fbb27828a5ff01
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b2f7a54c6f2cb7f404635971edd3650b2d9e92ae
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов
   В этом разделе содержится список разрешений в SharePoint, которые могут быть использованы для предоставления доступа к операциям сервера отчетов, работающего в режиме интеграции с SharePoint. Данный раздел может использоваться в качестве справки при создании пользовательских уровней разрешений.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 08/09/2017
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Режиме интеграции с SharePoint &#124; SharePoint 2010 и SharePoint 2013.|  
+|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Режим SharePoint &#124; SharePoint 2010 и SharePoint 2013.|  
   
 ## <a name="list-permissions"></a>Разрешения списка  
  Разрешения, присваиваемые на доступ к библиотеке, содержащей элементы сервера отчетов, определяют порядок доступа пользователей к указанным элементам.  
@@ -78,9 +78,8 @@ ms.lasthandoff: 08/09/2017
 |Использование удаленных интерфейсов|Использование интерфейсов Use SOAP, Web DAV или приложения SharePoint Designer для доступа к веб-сайту.|X|X|X|Используется для вызова URL-адреса конечной точки учетной записи-посредника при соединении с сервером отчетов.|  
 |Открытие|Открывает веб-сайт, список либо папку для доступа к элементам внутри контейнера.|X|X|X|Чтение расписаний и свойств элементов.|  
   
-## <a name="see-also"></a>См. также  
- [Сравнение ролей и задач в службах Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+## <a name="see-also"></a>См. также:  
+ [Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   
-

@@ -2,12 +2,13 @@
 title: "Примеры запросов к модели кластеризации последовательностей | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +16,20 @@ helpviewer_keywords:
 - content queries [DMX]
 - sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
-caps.latest.revision: 22
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5e7b6cf1a00c650e49282e611eae18bed14b9179
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 580fc9147e787d22bf3a87f7ba2bc6752cf4a816
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Примеры запросов к модели кластеризации последовательностей
-  К модели интеллектуального анализа данных можно создать два вида запросов: запросы содержимого, возвращающие подробные сведения об информации, содержащейся в модели, и прогнозирующие запросы, использующие закономерности, содержащиеся в модели, для прогнозирования на основе новых данных. Что касается модели кластеризации последовательностей, то запросы содержимого обычно возвращают дополнительную информацию об обнаруженных кластерах или о переходах в этих кластерах. Запрос также позволяет получить метаданные, описывающие модель.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+К модели интеллектуального анализа данных можно создать два вида запросов: запросы содержимого, возвращающие подробные сведения об информации, содержащейся в модели, и прогнозирующие запросы, использующие закономерности, содержащиеся в модели, для прогнозирования на основе новых данных. Что касается модели кластеризации последовательностей, то запросы содержимого обычно возвращают дополнительную информацию об обнаруженных кластерах или о переходах в этих кластерах. Запрос также позволяет получить метаданные, описывающие модель.  
   
  Прогнозирующие запросы на модели кластеризации последовательностей обычно позволяют делать рекомендации, основанные либо на последовательностях и переходах, либо на не связанных с последовательностью атрибутах, включенных в модель, либо на сочетании связанных и не связанных с последовательностью атрибутов.  
   
@@ -187,7 +188,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetNodeGraph
 SELECT * FROM [Sequence Clustering].SAMPLE_CASES WHERE IsInNode('12')  
 ```  
   
- Дополнительные сведения см. в разделе [SELECT FROM <модель>. SAMPLE_CASES (расширения интеллектуального анализа данных)](../../dmx/select-from-model-sample-cases-dmx.md).  
+ Дополнительные сведения см. в разделе [SELECT FROM &#60;модель&#60;. SAMPLE_CASES &#40;расширения интеллектуального анализа данных&#41;](../../dmx/select-from-model-sample-cases-dmx.md).  
   
 #### <a name="cluster-characteristics-and-cluster-discrimination"></a>Характеристики кластера и сравнение кластеров  
  Вкладка **Характеристики кластера** содержит сводную информацию об основных атрибутах каждого кластера, ранжированную по вероятностям. Можно узнать, сколько вариантов принадлежит к этому кластеру и как выглядит распределение вариантов в этом кластере: у каждой характеристики есть несущее множество определенной мощности. Чтобы увидеть характеристики конкретного кластера, нужно знать его идентификатор.  
@@ -264,24 +265,23 @@ AS t
 |[ClusterDistance (расширения интеллектуального анализа данных)](../../dmx/clusterdistance-dmx.md)|Возвращает расстояние до входного варианта от указанного кластера, а если кластер не указан, то расстояние до входного варианта от наиболее вероятного кластера.<br /><br /> Эту функцию можно использовать с любой моделью кластеризации (максимизация ожиданий, K-среднее и т. д.), но полученные результаты будут зависеть от алгоритма.|  
 |[ClusterProbability (расширения интеллектуального анализа данных)](../../dmx/clusterprobability-dmx.md)|Возвращает вероятность того, что входной вариант принадлежит определенному кластеру.|  
 |[IsInNode (расширения интеллектуального анализа данных)](../../dmx/isinnode-dmx.md)|Указывает, содержит ли заданный узел текущий вариант.|  
-|[PredictAdjustedProbability (расширения интеллектуального анализа данных)](../../dmx/predictadjustedprobability-dmx.md)|Возвращает настроенную вероятность указанного состояния.|  
+|[PredictAdjustedProbability &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictadjustedprobability-dmx.md)|Возвращает настроенную вероятность указанного состояния.|  
 |[PredictAssociation (расширения интеллектуального анализа данных)](../../dmx/predictassociation-dmx.md)|Прогнозирует ассоциированное членство.|  
 |[PredictCaseLikelihood (расширения интеллектуального анализа данных)](../../dmx/predictcaselikelihood-dmx.md)|Возвращает достоверность, с которой входной вариант соответствует существующей модели.|  
-|[PredictHistogram (расширения интеллектуального анализа данных)](../../dmx/predicthistogram-dmx.md)|Возвращает таблицу, представляющую гистограмму прогноза данного столбца.|  
-|[PredictNodeId (расширения интеллектуального анализа данных)](../../dmx/predictnodeid-dmx.md)|Возвращает значение параметра Node_ID узла, к которому относится вариант.|  
-|[PredictProbability (расширения интеллектуального анализа данных)](../../dmx/predictprobability-dmx.md)|Возвращает вероятность для указанного состояния.|  
+|[PredictHistogram &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predicthistogram-dmx.md)|Возвращает таблицу, представляющую гистограмму прогноза данного столбца.|  
+|[PredictNodeId &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictnodeid-dmx.md)|Возвращает значение параметра Node_ID узла, к которому относится вариант.|  
+|[PredictProbability &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictprobability-dmx.md)|Возвращает вероятность для указанного состояния.|  
 |[PredictSequence (расширения интеллектуального анализа данных)](../../dmx/predictsequence-dmx.md)|Дает предварительную оценку будущих значений заданной последовательности данных.|  
 |[PredictStdev (расширения интеллектуального анализа данных)](../../dmx/predictstdev-dmx.md)|Возвращает прогнозируемое среднеквадратичное отклонение для заданного столбца.|  
-|[PredictSupport (расширения интеллектуального анализа данных)](../../dmx/predictsupport-dmx.md)|Возвращает опорное значение для указанного состояния.|  
-|[PredictVariance (расширения интеллектуального анализа данных)](../../dmx/predictvariance-dmx.md)|Возвращает дисперсию указанного столбца.|  
+|[PredictSupport &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictsupport-dmx.md)|Возвращает опорное значение для указанного состояния.|  
+|[PredictVariance &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictvariance-dmx.md)|Возвращает дисперсию указанного столбца.|  
   
  Список функций, общих для всех алгоритмов [!INCLUDE[msCoName](../../includes/msconame-md.md)], см. в статье [Общие функции прогнозирования (расширения интеллектуального анализа данных)](../../dmx/general-prediction-functions-dmx.md). Синтаксис отдельных функций см. в статье [Справочник по функциям расширений интеллектуального анализа данных (расширения интеллектуального анализа данных)](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md)   
  [Технический справочник по алгоритму кластеризации последовательностей (Microsoft)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Содержимое моделей интеллектуального анализа данных для моделей кластеризации последовательностей (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Алгоритм кластеризации последовательностей (Майкрософт)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Содержимое модели интеллектуального анализа данных для моделей кластеризации последовательностей &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   
-

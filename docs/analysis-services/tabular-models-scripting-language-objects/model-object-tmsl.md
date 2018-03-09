@@ -2,32 +2,29 @@
 title: "Объект модели (TMSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dadb4807613b23449fd87dfea35acc0d6d201615
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 369bf544360d50c061314f45c04e8fb55784184c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="model-object-tmsl"></a>Объект модели (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Определяет табличной модели. Имеется одна модель на базу данных и только одну базу данных, которые могут быть указаны в командам. Объект базы данных является родительским объектом.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Определяет табличной модели. Имеется одна модель на базу данных и только одну базу данных, которые могут быть указаны в командам. Объект базы данных является родительским объектом.  
   
  Определения модели слишком велики для воспроизведения полный синтаксис в один раздел. По этой причине частичного выделения основных частей синтаксиса находятся ниже со ссылками на дочерние объекты.  
   
@@ -41,10 +38,10 @@ ms.lasthandoff: 09/01/2017
  Все объекты имеют общий набор свойств, включая имя, тип, описание, коллекцию свойств и заметки. **Модель** объекты также имеют следующие свойства.  
   
  storageLocation  
- Расположение на диске, чтобы поместить модель.  
+ Место на диске, где размещается модель.  
   
  defaultMode  
- Метод по умолчанию для предоставления данных в секции.  
+ Метод по умолчанию для предоставления доступа к данным в секции.  
   
  defaultDataView  
  Для моделей в режиме DirectQuery это свойство определяет, какие разделы используются для выполнения запросов к модели.  Допустимые значения: Full и образец.  
@@ -53,7 +50,7 @@ ms.lasthandoff: 09/01/2017
  Язык и региональные параметры для форматирования.  
   
  collation  
- Порядок сортировки. В разделе [сценарии глобализации для служб Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md) для получения дополнительной информации.  
+ Последовательность параметров сортировки. В разделе [сценарии глобализации для служб Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md) для получения дополнительной информации.  
   
  таблицы  
  Полная коллекция таблиц в модели, включая секции, столбцы, меры, ключевые показатели эффективности и заметки. В разделе [таблиц объект &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) подробные сведения.  
@@ -103,4 +100,3 @@ ms.lasthandoff: 09/01/2017
  [Уровень совместимости табличных моделей в службах Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   
-

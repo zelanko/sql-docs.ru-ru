@@ -2,30 +2,30 @@
 title: "Столбцы данных событий уведомлений | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- Notification Events event category
+helpviewer_keywords: Notification Events event category
 ms.assetid: 0ecf06da-1586-415a-9da8-60d4c634f030
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 901c9935629b584a0eb9c1fa4320fe590efa5e3d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f671eb89295049c09da1f037fdb4544db84b7280
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="notification-events-data-columns"></a>Столбцы данных событий уведомлений
-  События уведомлений — это события, не вызванные непосредственно пользователями служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Например, уведомления происходят при обновлении пользователями базовых таблиц для упреждающего кэширования.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]События уведомлений — это события, не вызванные непосредственно пользователями служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Например, уведомления происходят при обновлении пользователями базовых таблиц для упреждающего кэширования.  
   
  В категории событий «События уведомления» есть следующие классы событий:  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 09/01/2017
 |CurrentTime|2|5|Содержит текущее время события оповещения, если оно доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |StartTime|3|5|Содержит время начала события, если оно доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |EndTime|4|5|Содержит время окончания события. Этот столбец не заполняется для таких классов событий запуска, как SQL:BatchStarting или SP:Starting. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
-|Длительность|5|2|Содержит время в миллисекундах, использованное событием.|  
+|Duration|5|2|Содержит время в миллисекундах, использованное событием.|  
 |IntegerData|10|1|Содержит целочисленные данные, связанные с событием уведомления. Если в столбце EventSubclass содержится 8, значения следующие:<br /><br /> 1 = создано<br /><br /> 2 = удалено<br /><br /> 3 = изменены свойства объекта<br /><br /> 4 = изменены свойства потомков объекта<br /><br /> 6 = добавлены потомки<br /><br /> 7 = удалены потомки<br /><br /> 8 = объект полностью обработан<br /><br /> 9 = объект частично обработан<br /><br /> 10 = объект не обработан<br /><br /> 11 = объект полностью оптимизирован<br /><br /> 12 = объект частично оптимизирован<br /><br /> 13 = объект не оптимизирован|  
 |ObjectID|11|8|Содержит идентификатор объекта, для которого выдано данное уведомление; это строковое значение.|  
 |ObjectType|12|1|Содержит тип объекта, связанный с событием уведомления.|  
@@ -81,8 +81,7 @@ ms.lasthandoff: 09/01/2017
 |TextData|42|9|Содержит текстовые данные, связанные с событием уведомления.|  
 |ServerName|43|8|Содержит имя экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , в котором было создано уведомление.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   
-

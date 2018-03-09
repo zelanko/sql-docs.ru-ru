@@ -3,7 +3,7 @@ title: "Адрес кнопки навигации книги | Документ
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - RDS scenarios [ADO], navigation buttons
 - address book application scenario [ADO], navigation buttons
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 211e05c548d38ad364e8a7daa85f280e8ca62414
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f8e7c2a6b16b8190a86f2c656fcb0a76b2e6984a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="address-book-navigation-buttons"></a>Адрес книги кнопки навигации
 Адресная книга приложение отображает кнопки навигации в нижней части веб-страницы. Можно использовать кнопки навигации для просмотра данных в сетке отображается HTML, выбирая первой или последней строк данных или рядом с выделенной строки.  
@@ -69,10 +68,9 @@ Sub Last_OnClick
 End Sub  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [MoveFirst, MoveLast, MoveNext и MovePrevious методов (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
-
+ [Методы MoveFirst, MoveLast, MoveNext и MovePrevious (служба удаленных рабочих столов)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
 
 
 

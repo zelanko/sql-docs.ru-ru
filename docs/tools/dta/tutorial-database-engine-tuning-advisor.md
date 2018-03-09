@@ -2,33 +2,33 @@
 title: "Учебник: Компонент Database Engine, помощник по настройке | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], tutorials
 - tutorials [Database Engine Tuning Advisor]
 ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
-caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "38"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0c6068064e47e571f143070bfd853c6df4e913d4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8ca6d555b129e216dcff7f2ba6793aa844d3a4b8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>Учебник. помощник по настройке ядра СУБД
-Добро пожаловать в учебник по помощнику по настройке ядра СУБД. Помощник по настройке ядра СУБД выявляет, каким образом запросы обрабатываются в указанных пользователем базах данных, а затем выдает рекомендации по повышению скорости обработки запросов путем изменения структур базы данных, таких как индексы, индексированные представления и секции.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Добро пожаловать в учебник по настройке ядра СУБД. Помощник по настройке ядра СУБД выявляет, каким образом запросы обрабатываются в указанных пользователем базах данных, а затем выдает рекомендации по повышению скорости обработки запросов путем изменения структур базы данных, таких как индексы, индексированные представления и секции.  
   
 Помощник по настройке ядра СУБД предоставляет два пользовательских интерфейса: графический интерфейс пользователя (GUI) и программу командной строки **dta** . Графический пользовательский интерфейс позволяет быстро просматривать результаты сеансов настройки, а программа **dta** облегчает внедрение функциональных возможностей помощника по настройке ядра СУБД в скрипты для автоматической настройки. Кроме того, помощник по настройке ядра СУБД может принимать входные данные на языке XML, что обеспечивает расширенный контроль процесса настройки.  
   
@@ -61,4 +61,3 @@ ms.lasthandoff: 08/02/2017
   
   
   
-

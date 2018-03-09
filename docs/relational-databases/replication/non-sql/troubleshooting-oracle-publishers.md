@@ -2,30 +2,32 @@
 title: "Диагностика издателей Oracle | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], troubleshooting
 - troubleshooting [SQL Server replication], Oracle publishing
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
-caps.latest.revision: 62
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f6b52a9fc10c8dae7a0b01a6a615076bcc257104
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "62"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 115bdbf97a35d4035c00a8e547a2c38125ce6970
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Диагностика издателей Oracle
-  В этой теме рассматривается ряд вопросов, которые могут возникнуть при настройке и использовании издателя Oracle.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе рассматривается ряд вопросов, которые могут возникнуть при настройке и использовании издателя Oracle.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>Ошибка, касающаяся клиентского и сетевого программного обеспечения Oracle  
  Учетной записи, под которой в распространителе выполняется [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , должны быть предоставлены разрешения на чтение и выполнение для каталога (и всех подкаталогов), в котором установлено клиентское сетевое программное обеспечение Oracle. Если разрешения не предоставляются или клиентские компоненты Oracle не установлены должным образом, пользователь получает следующее сообщение об ошибке:  
@@ -99,9 +101,9 @@ ms.lasthandoff: 06/22/2017
  Если вам нужно подключиться к издателю Oracle через соединение связанного сервера, создайте другое имя службы TNS и используйте его при вызове процедуры [sp_addlinkedserver (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Сведения о создании имен службы TNS см. в документации Oracle.  
   
 ## <a name="sql-server-error-21617-is-raised"></a>Ошибка SQL Server 21617  
- Публикация Oracle использует приложение Oracle SQL*PLUS для загрузки пакета вспомогательного кода издателя в базу данных Oracle. Перед попыткой настроить издатель Oracle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проверяет, доступно ли приложение SQL\*PLUS по системному пути на распространителе. Если приложение SQL\*PLUS не может быть загружено, появляется следующее сообщение об ошибке:  
+ Публикация Oracle использует приложение Oracle SQL\*PLUS для загрузки пакета вспомогательного кода издателя в базу данных Oracle. Перед попыткой настроить издатель Oracle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проверяет, доступно ли приложение SQL\*PLUS по системному пути на распространителе. Если приложение SQL\*PLUS не может быть загружено, появляется следующее сообщение об ошибке:  
   
- «Не удается запустить SQL*PLUS. Убедитесь, что на распространителе установлена текущая версия клиентской программы Oracle».  
+ «Не удается запустить SQL\*PLUS. Убедитесь, что на распространителе установлена текущая версия клиентской программы Oracle».  
   
  Попытайтесь найти SQL\*PLUS на распространителе. Для установки клиента Oracle 10g имя этого исполняемого файла — sqlplus.exe. Обычно данная программа устанавливается в каталог %ORACLE_HOME%/bin. Чтобы убедиться, что путь SQL\*PLUS содержится в системном пути, проверьте значение системной переменной **Path**:  
   
@@ -251,6 +253,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также:  
  [Настройка издателя Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Обзор публикации Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

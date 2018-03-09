@@ -2,9 +2,12 @@
 title: "Просмотр эквивалентов расширенных событий для классов событий трассировки SQL | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - extended events [SQL Server], SQL Trace equivalents
 - extended events [SQL Server], user configurable events
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d179d2b485a69fabb747ed02a2e77c420db053fa
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
-ms.openlocfilehash: 008cdb3fc158b36793f7d4b42ee4b24fd2b56ea5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/16/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Просмотр эквивалентов расширенных событий для классов событий трассировки SQL
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Если требуется с помощью расширенных событий выполнять сбор данных о событиях, эквивалентных классам и столбцам событий трассировки SQL, желательно иметь представление о том, как события SQL-трассировки сопоставляются с событиями и действиями расширенных событий.  
   
@@ -76,4 +78,3 @@ ms.lasthandoff: 10/16/2017
  [Хранимая процедура sp_trace_generateevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)  
   
   
-

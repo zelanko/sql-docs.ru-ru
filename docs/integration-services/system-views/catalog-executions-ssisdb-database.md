@@ -1,10 +1,13 @@
 ---
-title: "Catalog.executions (база данных SSISDB) | Документы Microsoft"
+title: "catalog.executions (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-views
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,28 +16,27 @@ helpviewer_keywords:
 - executions view [Integration Services]
 - catalog.executions view [Integration Services]
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
-caps.latest.revision: 32
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5e60664352054cd8f62250cc7c6b8082e84f607f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c9660ea26696e31362bf9b88b343a08936f8e9ed
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (база данных SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Отображает экземпляры выполнения пакета в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Пакеты, которые выполняются с помощью задачи «Выполнение пакета», запускаются в том же экземпляре выполнения, что и родительский пакет.  
   
 |Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |execution_id|**bigint**|Уникальный идентификатор для экземпляра выполнения.|  
-|имя_папки|**sysname(nvarchar(128))**|Имя папки, которая содержит проект.|  
-|имя_проекта|**sysname(nvarchar(128))**|Имя проекта.|  
+|folder_name|**sysname(nvarchar(128))**|Имя папки, которая содержит проект.|  
+|project_name|**sysname(nvarchar(128))**|Имя проекта.|  
 |package_name|**nvarchar(260)**|Имя первого пакета, запущенного во время выполнения.|  
 |reference_id|**bigint**|Среда, на которую ссылается экземпляр выполнения.|  
 |reference_type|**char(1)**|Указывает, может среда находиться в той же папке, что и проект (относительная ссылка), или в другой папке (абсолютная ссылка). Если значение равно `R`, для определения расположения сред используется относительная ссылка. Если значение равно `A`, то для определения расположения сред используется абсолютная ссылка.|  
@@ -63,20 +65,19 @@ ms.lasthandoff: 09/26/2017
 |machine_name|**nvarchar(128)**|Имя компьютера, на котором запущен экземпляр сервера.|  
 |dump_id|**uniqueidentifier**|Идентификатор дампа выполнения.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В этом представлении отображается по одной строке для каждого экземпляра выполнения в каталоге.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Это представление требует применения одного из следующих разрешений:  
   
 -   Разрешение READ на экземпляр выполнения  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 > [!NOTE]  
 >  Действует защита на уровне строки. Отображаются только строки, на которые у вас имеется разрешение.  
   
   
-

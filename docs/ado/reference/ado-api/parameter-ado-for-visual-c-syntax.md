@@ -3,7 +3,7 @@ title: "Параметр (ADO для синтаксиса Visual C++) | Доку
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - Parameter collection [ADO], ADO for Visual C++ syntax
 ms.assetid: 74801dc1-cf0f-4a6e-960b-5990fe55e30d
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1a6f15ff49e53b79847986e1234d06e4366433d2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a46bb9cb6387b5531b4d701915deb17fd2a295d0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameter-ado-for-visual-c-syntax"></a>Параметр (ADO для синтаксиса Visual C++)
 ## <a name="methods"></a>Методы  
@@ -58,6 +57,5 @@ get_Value(VARIANT *pvar)
 put_Value(VARIANT val)  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект параметра](../../../ado/reference/ado-api/parameter-object.md)
-
+## <a name="see-also"></a>См. также  
+ [Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)

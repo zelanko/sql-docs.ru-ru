@@ -2,9 +2,12 @@
 title: "Класс событий SP:StmtCompleted | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,33 +15,34 @@ ms.topic: article
 helpviewer_keywords:
 - SP:StmtCompleted event class
 ms.assetid: 9e8147a4-aeeb-49a6-80f8-df753d0f34cc
-caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0ff9f91227c08c932e33afb97c47a2019e1cd0f0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: f236e410647dc6c00fb381d16e49e4bc268674f6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted, класс событий
-  Класс событий SP:StmtCompleted указывает на то, что выполнение инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] в хранимой процедуре было завершено.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Класс событий SP:StmtCompleted указывает на то, что выполнение инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] в хранимой процедуре было завершено.  
   
 ## <a name="spstmtcompleted-event-class-data-columns"></a>Столбцы данных класса событий SP:StmtCompleted  
   
-|Имя столбца данных|**Тип данных**|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|**Data type**|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |ClientProcessID|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |ЦП|**int**|Объем времени ЦП (в миллисекундах), использованного событием.|18|Да|  
 |DatabaseID|**int**|Идентификатор базы данных, в которой выполняется хранимая процедура. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |DatabaseName|**nvarchar**|Имя базы данных, в которой выполняется хранимая процедура.|35|Да|  
-|Длительность|**bigint**|Длительность события (в микросекундах).|13|Да|  
+|Duration|**bigint**|Длительность события (в микросекундах).|13|Да|  
 |EndTime|**datetime**|Время окончания события. Этот столбец не заполняется для таких классов событий запуска, как SQL:BatchStarting или SP:Starting.|15|Да|  
-|EventClass|**int**|Тип события = 45.|27|Нет|  
-|EventSequence|**int**|Последовательность данного события в запросе.|51|Нет|  
+|EventClass|**int**|Тип события = 45.|27|нет|  
+|EventSequence|**int**|Последовательность данного события в запросе.|51|нет|  
 |GroupID|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IntegerData|**int**|Целочисленное значение, зависящее от класса событий, перехватываемых при трассировке.|25|Да|  
@@ -57,7 +61,7 @@ ms.lasthandoff: 06/22/2017
 |Reads|**bigint**|Число логических чтений диска, выполненное сервером для данного события.|16|Да|  
 |RequestID|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
 |RowCounts|**bigint**|Количество строк, на которые повлияло событие.|48|Да|  
-|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
+|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|нет|  
 |SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SourceDatabaseID|**int**|Идентификатор базы данных, в которой находится объект.|62|Да|  
 |SPID|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  

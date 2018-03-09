@@ -3,10 +3,12 @@ title: "Преобразование данных из SQL в типы данн�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +22,16 @@ helpviewer_keywords:
 - converting data from SQL to c types [ODBC], about converting
 - C data types [ODBC], converting from SQL types
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b2133c6b155b163b971f7049cdd8238f091669dc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8fae054b572cb0d61299781d67adc0038afa9a97
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Преобразование данных из SQL в типы данных C
 Если приложение вызывает **SQLFetch**, **SQLFetchScroll**, или **SQLGetData**, драйвер получает данные из источника данных. Если необходимо, оно преобразует данные из типа данных, в котором драйвер выборки его тип данных, указанный в *TargetType* аргумент в **SQLBindCol** или **SQLGetData.** Наконец, данные сохраняются в расположении, указанном *TargetValuePtr* аргумент в **SQLBindCol** или **SQLGetData** (и поле SQL_DESC_DATA_PTR Отменить).  
@@ -57,25 +58,24 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующие подразделы.  
   
--   [SQL в символ C:](../../../odbc/reference/appendixes/sql-to-c-character.md)  
+-   [Преобразование данных из SQL в C: символы](../../../odbc/reference/appendixes/sql-to-c-character.md)  
   
--   [SQL в числовые C:](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
+-   [Преобразование данных из SQL в C: числовые данные](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
   
--   [SQL битом C:](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
+-   [Преобразование данных из SQL в C: битовые данные](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
   
--   [SQL в двоичное C:](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
+-   [Преобразование данных из SQL в C: двоичные данные](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
   
--   [SQL, чтобы дата C:](../../../odbc/reference/appendixes/sql-to-c-date.md)  
+-   [Преобразование данных из SQL в C: даты](../../../odbc/reference/appendixes/sql-to-c-date.md)  
   
--   [SQL в C: GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
+-   [Преобразование данных из SQL в C: GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
   
--   [SQL, чтобы время C:](../../../odbc/reference/appendixes/sql-to-c-time.md)  
+-   [Преобразование данных из SQL в C: время](../../../odbc/reference/appendixes/sql-to-c-time.md)  
   
--   [SQL с отметкой времени C:](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
+-   [Преобразование данных из SQL в C: отметки времени](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
   
--   [SQL, чтобы интервалы год месяц C:](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
+-   [Преобразование данных из SQL в C: интервалы месяцев года](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
   
--   [SQL, чтобы интервалы времени дня C:](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
+-   [Преобразование данных из SQL в C: интервалы времени дня](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
   
--   [SQL, чтобы примеры преобразования данных C](../../../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md)
-
+-   [Примеры преобразования данных из SQL в C](../../../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md)

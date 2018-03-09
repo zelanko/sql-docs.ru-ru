@@ -2,13 +2,13 @@
 title: "Настройка нестандартных формул элементов для атрибутов в измерении | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - custom member formulas [Analysis Services]
 - CustomRollupColumn property
 ms.assetid: c4467b08-ce59-4de7-a2d9-c22e246bdd52
-caps.latest.revision: 25
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: acec3f91c8229acc6c17f5989b63677b394b6129
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e9f2afe453c4321ec9767a3cb8a97215d55c877
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="bi-wizard---custom-member-formulas-for-attributes-in-a-dimension"></a>Мастер бизнес-Аналитики — нестандартных формул элементов для атрибутов в измерении
-  Добавьте расширение нестандартных формул элементов к кубу или измерению, чтобы заменить статистическое вычисление по умолчанию, связанное с элементом измерения, результатами многомерного выражения. (Это расширение устанавливает свойство **CustomRollupColumn** для указанного атрибута в измерении.)  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Добавьте расширение нестандартных формул элементов к кубу или измерению, чтобы заменить статистическое вычисление по умолчанию, связанное с элементом измерения, результатами многомерного выражения. (Это расширение устанавливает свойство **CustomRollupColumn** для указанного атрибута в измерении.)  
   
 > [!NOTE]  
 >  Нестандартная формула элемента доступна только для измерений, основанных на существующих источниках данных. Для измерений, созданных без использования источника данных, необходимо запустить мастер формирования схем, чтобы создать представление источника данных перед тем, как добавить нестандартную формулу элемента.  
@@ -48,4 +48,3 @@ ms.lasthandoff: 09/01/2017
  [Использование мастера бизнес-аналитики для улучшения измерений](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
   
   
-

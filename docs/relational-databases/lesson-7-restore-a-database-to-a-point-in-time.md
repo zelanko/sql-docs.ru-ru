@@ -1,11 +1,13 @@
 ---
 title: "Занятие 7. Восстановление базы данных на момент времени | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-backup-restore
 ms.tgt_pltfrm: 
@@ -13,19 +15,19 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a25788a3b7eda518aeff01329eb5e207d9092bd6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f2341db7864a6122ae9bb182afe664f10fd73359
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lesson-7-restore-a-database-to-a-point-in-time"></a>Занятие 7. Восстановление базы данных на момент времени
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 На этом занятии вы восстановите базу данных AdventureWorks2014 на определенный момент времени между двумя резервными копиями журнала транзакций.  
   
 Чтобы выполнить восстановление на определенный момент времени из традиционных резервных копий, потребуется полная резервная копия базы данных, возможно, разностная резервная копия и все файлы журналов транзакций вплоть до того момента, на который необходимо выполнить восстановление, и сразу после него. При использовании резервных копий моментальных снимков файлов требуются только два ближайших файла резервных копий журнала, которые ограничивают период восстановления. Требуются только два резервных набора моментальных снимков файлов, так как каждая операция резервного копирования журнала создает моментальный снимок каждого файла базы данных (то есть файла данных и файла журнала).  
@@ -75,4 +77,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

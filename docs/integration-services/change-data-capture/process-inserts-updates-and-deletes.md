@@ -1,10 +1,13 @@
 ---
-title: "Обработка операций вставки, обновления и удаления | Документы Microsoft"
+title: "Обработка операций вставки, обновления и удаления | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],processing data
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da3350dc91dff2547ca683f8c69a7160640e37da
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7023e7444b5a7eb9b4905e6b6632214ba2d888e4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="process-inserts-updates-and-deletes"></a>Обработка операций вставки, обновления и удаления
   В потоке данных пакета служб Integration Services, выполняющего добавочную загрузку информации об измененных данных, второй задачей является разделение вставок, обновлений и удалений. Затем можно использовать соответствующие команды, чтобы применить их к назначению.  
@@ -74,9 +76,8 @@ select
   
  **Следующий раздел:** [Применение изменений в назначении](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Преобразование «Условное разбиение»](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
- [Разбиение набора данных с помощью преобразования «Условное разбиение»](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+ [Разбиение набора данных с помощью преобразования "Условное разбиение"](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   
-

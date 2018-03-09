@@ -1,38 +1,36 @@
 ---
-title: "Как: развертывание пользовательского элемента отчета | Документы Microsoft"
+title: "Развертывание пользовательского элемента отчета | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/18/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: custom-report-items
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom report items, deploying
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom report items, deploying
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
-caps.latest.revision: 26
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "26"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 742e80b96e6887188620b4f2a7ab3808475ceda2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: cbbd9a7fc05e7149dcb03eab3ed3c522500b7e0a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>Развертывание пользовательского элемента отчета
   Чтобы развернуть пользовательский элемент отчета в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], нужно изменить файлы конфигурации сервера отчетов и скопировать сборки времени разработки и времени выполнения в соответствующие папки приложений для конструктора отчетов и сервера отчетов.  
   
 ### <a name="to-deploy-a-custom-report-item"></a>Развертывание пользовательского элемента отчета  
   
-1.  Произведите редактирование файла Rsreportdesigner.config, настроив компоненты времени разработки и компоненты времени выполнения, принадлежащие пользовательскому элементу отчета, для использования в конструкторе.  Обратите внимание, что **ReportItemName** запись должна соответствовать **CustomReportItemAttribute** атрибут, используемый в вашей **CustomReportItemDesigner** класса. Например:  
+1.  Произведите редактирование файла Rsreportdesigner.config, настроив компоненты времени разработки и компоненты времени выполнения, принадлежащие пользовательскому элементу отчета, для использования в конструкторе.  Обратите внимание на то, что запись **ReportItemName** должна соответствовать атрибуту **CustomReportItemAttribute**, используемому в классе **CustomReportItemDesigner**. Пример:  
   
     ```  
     <ReportItems>  
@@ -46,7 +44,7 @@ ms.lasthandoff: 08/12/2017
     </ReportItemConverter>  
     ```  
   
-2.  Произведите редактирование файла Rsreportdesigner.config, зарегистрировав компонент времени выполнения пользовательского элемента отчета. Например:  
+2.  Произведите редактирование файла Rsreportdesigner.config, зарегистрировав компонент времени выполнения пользовательского элемента отчета. Пример:  
   
     ```  
     <ReportItems>  
@@ -54,7 +52,7 @@ ms.lasthandoff: 08/12/2017
     </ReportItems>  
     ```  
   
-3.  Отредактируйте файл Rsssrvpolicy.config, чтобы добавить **CodeGroup** , предоставляет разрешения, необходимые для пользовательского элемента отчета. Например:  
+3.  Отредактируйте файл Rsssrvpolicy.config, добавив запись **CodeGroup**, предоставляющую соответствующие разрешения для пользовательского элемента отчета. Пример:  
   
     ```  
     <CodeGroup   
@@ -74,8 +72,7 @@ ms.lasthandoff: 08/12/2017
 5.  Скопируйте динамическую библиотеку компонента времени разработки пользовательского элемента отчета в каталог %ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
 ## <a name="see-also"></a>См. также:  
- [Файлы конфигурации служб отчетов](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Библиотеки классов элемента пользовательского отчета](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
+ [Файлы конфигурации служб Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
+ [Библиотеки классов пользовательских элементов отчета](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
   
   
-

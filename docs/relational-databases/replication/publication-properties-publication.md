@@ -2,31 +2,32 @@
 title: "Свойства публикации — &lt;Публикация&gt; | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Publication Properties dialog box
+helpviewer_keywords: Publication Properties dialog box
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
-caps.latest.revision: 19
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 31f80253fe7e0fa562e67c9bbf8d685fa72ec37d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "19"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: fa06b62a1b687af1db14b15e255c3aa4a596c549
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-properties----ltpublicationgt"></a>Свойства публикации — &lt;Публикация&gt;
-  В этом разделе приведены сведения обо всех страницах диалогового окна **Свойства публикации** .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе приведены сведения о всех страницах диалогового окна **Свойства публикации**.  
   
--   [Свойства публикации, страница "Общие"](../../relational-databases/replication/publication-properties-general.md)  
+-   [Диалоговое окно "Свойства публикации", страница "Общие"](../../relational-databases/replication/publication-properties-general.md)  
   
 -   [Свойства публикации, страница "Статьи"](../../relational-databases/replication/publication-properties-articles.md)  
   

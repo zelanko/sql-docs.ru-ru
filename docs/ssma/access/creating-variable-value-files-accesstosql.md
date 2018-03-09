@@ -1,29 +1,30 @@
 ---
 title: "Создание файлов значение переменной (AccessToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 08/17/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4d19975c619dcbcbf2b0c99b26d6065940d7414f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b7ccb1d92b39d41ec3fa961b03b33c229a274af0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Создание файлов значение переменной (AccessToSQL)
 Файл значение переменной является XML-файл, состоящий из значений параметра команд (например, имя сервера источника или назначения), которые часто изменяются в разных миграция сервера. При возникновении большое количество миграции базы данных, несколько файлов переменной для хранения значения каждого исходного сервера создаются и на которые ссылается файл сценария master **– v** переключения командной строки. Это помогает в поддержании статических значений в несколько файлов скриптов, если значения переменных в нескольких файлах переменной.  
@@ -102,7 +103,6 @@ ms.lasthandoff: 08/17/2017
 ## <a name="next-step"></a>Следующий шаг  
 Следующий шаг в работе консоли — [Создание файлы подключения Server &#40; AccessToSQL &#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
 [Создание файлов подключения сервера (Access)](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   
-

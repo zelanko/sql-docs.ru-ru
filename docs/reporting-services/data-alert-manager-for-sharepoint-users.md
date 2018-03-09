@@ -1,44 +1,43 @@
 ---
-title: "Диспетчер предупреждений данных для пользователей SharePoint | Документы Microsoft"
+title: "Диспетчер предупреждений данных для пользователей SharePoint | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
-caps.latest.revision: 16
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "16"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: e9644b5bfcc57b24793684095aba912c688346b8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6ab979ec6cbf0d6dc3f63623545418e32af0b3d6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="data-alert-manager-for-sharepoint-users"></a>Диспетчер предупреждений данных для пользователей SharePoint
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]предоставляет диспетчер предупреждений данных для информационных работников SharePoint управлять предупреждениями об изменении данных. Они могут просматривать сведения о созданных ими предупреждениях, удалять предупреждения, открывать определения предупреждений для изменения, а также запускать предупреждения по запросу. Они могут просматривать предупреждения для одного или всех отчетов. На следующем рисунке показаны функции, доступные информационным работникам в диспетчере предупреждений об изменении данных.
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляется диспетчер предупреждений об изменении данных для SharePoint, позволяющий информационным работникам управлять предупреждениями об изменении данных. Они могут просматривать сведения о созданных ими предупреждениях, удалять предупреждения, открывать определения предупреждений для изменения, а также запускать предупреждения по запросу. Они могут просматривать предупреждения для одного или всех отчетов. На следующем рисунке показаны функции, доступные информационным работникам в диспетчере предупреждений об изменении данных.
 
-![Функции диспетчера предупреждений для пользователей SharePoint](../reporting-services/media/rs-alertmanageriw.gif "диспетчер предупреждений об изменении возможности для пользователей SharePoint")  
+![Функции диспетчера предупреждений для пользователей SharePoint](../reporting-services/media/rs-alertmanageriw.gif "Функции диспетчера предупреждений для пользователей SharePoint")  
 
 > [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
 
 Если на сайте SharePoint включены предупреждения об изменении данных, создаются две страницы SharePoint, MyDataAlerts.aspx и SiteDataAlerts.aspx и добавляются к сайту SharePoint. Страница MyDataAlerts.aspx является диспетчером предупреждений об изменении данных для информационных работников SharePoint. Информационные работники могут открывать диспетчер предупреждений об изменении данных из контекстного меню отчетов, в которых они создали предупреждения.  
 
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="ViewingAlerts"></a> Просмотр сведений о предупреждениях об изменении данных  
  Вы можете просматривать список предупреждений об изменении данных, созданных вами в конструкторе предупреждений об изменении данных. Чтобы открыть диспетчер предупреждений об изменении данных, щелкните правой кнопкой мыши отчет, опубликованный в библиотеке SharePoint. На следующем рисунке показан пункт **Управление предупреждениями об изменении данных** контекстного меню отчетов.  
   
- ![Открыть диспетчер предупреждений из контекстного меню отчета](../reporting-services/media/rs-openalertmanager.gif "открыть диспетчер предупреждений из контекстного меню отчета")  
+ ![Открытие диспетчера предупреждений из контекстного меню отчета](../reporting-services/media/rs-openalertmanager.gif "Открытие диспетчера предупреждений из контекстного меню отчета")  
   
  Диспетчер предупреждений об изменении данных включает таблицу, содержащую имя предупреждения, имя отчета, ваше имя в качестве имени пользователя, создавшего определение предупреждения, сколько раз предупреждение было отправлено, время последней отправки предупреждения, время последнего изменения определения предупреждения и состояние последнего предупреждения. Если предупредительное сообщение не удалось создать или отправить, в столбце состояния будут содержаться сведения об ошибке, которые помогают устранить проблемы с предупреждением. Дополнительные сведения см. в разделе [Управление предупреждениями данных в диспетчере предупреждений данных](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
@@ -87,14 +86,13 @@ ms.lasthandoff: 08/09/2017
   
 -   [Управление предупреждениями данных в диспетчере предупреждений данных](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
   
--   [Изменить предупреждение в конструкторе предупреждений](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Изменение предупреждения данных в конструкторе предупреждений](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Конструктор предупреждений об изменении данных](../reporting-services/data-alert-designer.md)   
-[Создание предупреждения данных в конструкторе предупреждений](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   
+[Создание предупреждения данных в конструкторе предупреждений данных](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   
 [Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

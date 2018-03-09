@@ -3,7 +3,7 @@ title: "Свойство ExecuteOptions (RDS) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - ExecuteOptions property [ADO], VBScript example
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7cc52b6deb9915abd9f90b8596edee5ded07f816
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 29d46a26f7e4a80ae7a22954f388597552a5fb86
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="executeoptions-property-rds"></a>Свойство ExecuteOptions (RDS)
 Указывает, включен ли асинхронное выполнение.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает одно из следующих значений.  
   
-|Константа|Description|  
+|Константа|Описание|  
 |--------------|-----------------|  
 |**adcExecSync**|Выполняет следующего обновления [записей](../../../ado/reference/ado-api/recordset-object-ado.md) синхронно.|  
 |**adcExecAsync**|По умолчанию. Выполняет следующего обновления **записей** асинхронно.|  
@@ -45,7 +44,7 @@ ms.lasthandoff: 09/09/2017
 > [!NOTE]
 >  Каждый исполняемый файл, который использует эти константы должен предоставить их объявления. Можно вырезать и вставить объявления констант, которые из файла Adcvbs.inc, расположенный в папке установки по умолчанию для библиотеки служб удаленных рабочих СТОЛОВ.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если **ExecuteOptions** задано значение **adcExecAsync**, то это асинхронно выполняет следующий **обновления** вызывать [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта **записей**.  
   
  Если попытаться вызвать [Сброс](../../../ado/reference/rds-api/reset-method-rds.md), [обновление](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), или [записей](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) тогда как другая асинхронная операция, которая может изменить [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта **записей** выполняется, возникает ошибка.  
@@ -53,11 +52,10 @@ ms.lasthandoff: 09/09/2017
  При возникновении ошибки во время асинхронной операции, **RDS. DataControl** объекта [состояние готовности](../../../ado/reference/rds-api/readystate-property-rds.md) значение изменяется с **adcReadyStateLoaded** для **adcReadyStateComplete**и  **Набор записей** значение свойства остается *ничего не*.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ExecuteOptions и пример свойства FetchOptions (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
- [Метод Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
-
+ [Метод Cancel (служба удаленных рабочих столов)](../../../ado/reference/rds-api/cancel-method-rds.md)
 
 

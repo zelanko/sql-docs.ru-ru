@@ -2,40 +2,35 @@
 title: "Содержимое элемента (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Content Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Content Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Content
-helpviewer_keywords:
-- Content element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Content
+helpviewer_keywords: Content element
 ms.assetid: 221addef-2f88-49c5-b8f5-9eee330497a9
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f9d0cd4dc1e60a59af3b8d3e976eeff888d24aa1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c42c6d4af398dd08021b8b9e308155f2d23b11cb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="content-element-assl"></a>Элемент Content (ASSL)
-  Описывает содержимое столбца в [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Описывает содержимое столбца в [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,7 +45,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|String (перечисление)|  
 |Значение по умолчанию|None|  
@@ -63,7 +58,7 @@ ms.lasthandoff: 09/01/2017
 |Родительский элемент|[ScalarMiningStructureColumn](../../../analysis-services/scripting/data-type/scalarminingstructurecolumn-data-type-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Это перечисление описывает тип содержимого, представленного столбцом структуры интеллектуального анализа данных, и может быть расширено по мере необходимости с применением поставщиков алгоритма интеллектуального анализа данных. Дополнительные сведения о типах содержимого и типах данных см. в разделе [Типы содержимого (интеллектуальный анализ данных)](../../../analysis-services/data-mining/content-types-data-mining.md).  
   
  Значения, перечисленные в следующей таблице, обычно поддерживаются всеми поставщиками алгоритма интеллектуального анализа.  
@@ -99,4 +94,3 @@ ms.lasthandoff: 09/01/2017
  [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

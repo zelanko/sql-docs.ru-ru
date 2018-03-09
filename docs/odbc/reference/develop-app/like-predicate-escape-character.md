@@ -3,27 +3,28 @@ title: "КАК предиката Escape-символ | Документы Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - LIKE predicate [ODBC]
 - escape sequences [ODBC], LIKE predicate
 ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3946b81210ce439579464fa7e10e8fad63bfd225
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 132359972cebd3dded36fb911a2ee8e561e5ca64
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="like-predicate-escape-character"></a>КАК предиката Escape-символ
 В **как** предиката, знак процента (%) соответствует ноль или несколько любых символов, и символ подчеркивания (_) соответствует любому символу. В соответствии с фактический процент или символ подчеркивания в **как** предиката, escape-символ должен указываться до знак процента или знака подчеркивания. Escape-последовательность, которая определяет **как** предиката escape-символ —:  
@@ -43,4 +44,3 @@ SELECT Name FROM Customers WHERE Name LIKE '[%]AAA%'
 ```  
   
  Чтобы определить, является ли **как** предиката escape-символ поддерживается источником данных, приложение вызывает **SQLGetInfo** с параметром SQL_LIKE_ESCAPE_CLAUSE.
-

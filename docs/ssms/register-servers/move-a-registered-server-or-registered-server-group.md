@@ -2,9 +2,12 @@
 title: "Перемещение зарегистрированного сервера или зарегистрированной группы серверов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,20 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], moving server or server group
 - groups [SQL Server], server
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
-caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6cf97c1bdf28d3f6ab6523d463c44a92a6ba7a87
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 0f10ce19a0dff3da8ab598e07ee53a407af06b38
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>Перемещение зарегистрированного сервера или зарегистрированной группы серверов
-  В этом разделе описывает организация серверов в компоненте «Зарегистрированные серверы» путем перемещения зарегистрированного сервера или групп серверов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Группа серверов может содержать зарегистрированные серверы или вложенные группы серверов. Как серверы, так и группы серверов можно перемещать из одной группы в другую.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+В этом разделе описывает организация серверов в компоненте «Зарегистрированные серверы» путем перемещения зарегистрированного сервера или групп серверов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Группа серверов может содержать зарегистрированные серверы или вложенные группы серверов. Как серверы, так и группы серверов можно перемещать из одной группы в другую.  
   
 ##  <a name="SSMSProcedure"></a>  
   
@@ -44,4 +47,3 @@ ms.lasthandoff: 07/31/2017
  [Создание или изменение группы серверов (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
   
-

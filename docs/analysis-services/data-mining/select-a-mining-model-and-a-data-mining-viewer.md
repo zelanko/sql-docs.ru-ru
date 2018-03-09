@@ -2,31 +2,30 @@
 title: "Выберите модель интеллектуального анализа данных и средства просмотра интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Mining Model Viewer [Analysis Services], types
+helpviewer_keywords: Mining Model Viewer [Analysis Services], types
 ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 66c80a12bb03635d48078f5be284e6718dc33e9e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 13296651eb2fd572106c52014ce0a42ac81c9781
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>Выбор модели интеллектуального анализа данных и средства просмотра интеллектуального анализа данных
-  Модель интеллектуального анализа данных можно изучать с помощью одного из средств просмотра на вкладке **Средство просмотра моделей интеллектуального анализа данных** конструктора моделей интеллектуального анализа данных. Можно легко переключаться между моделями и менять используемое средство просмотра.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Модель интеллектуального анализа данных можно изучать с помощью одного из средств просмотра на **средство просмотра моделей интеллектуального анализа данных** конструктора интеллектуального анализа данных. Можно легко переключаться между моделями и менять используемое средство просмотра.  
   
 -   Раскрывающийся список **Модель интеллектуального анализа данных** на вкладке **Средство просмотра моделей интеллектуального анализа данных** конструктора интеллектуального анализа данных в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] содержит все модели интеллектуального анализа, находящиеся в текущей структуре интеллектуального анализа.  
   
@@ -46,8 +45,7 @@ ms.lasthandoff: 09/01/2017
   
  Выбранная модель интеллектуального анализа данных откроется в средстве просмотра, связанном с типом данной модели.  
   
-## <a name="see-also"></a>См. также  
- [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+## <a name="see-also"></a>См. также:  
+ [Задачи и инструкции по средству просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   
-

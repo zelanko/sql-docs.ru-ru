@@ -1,68 +1,69 @@
 ---
-title: "Подключения к источникам данных с помощью мастера экспорта и импорта SQL Server | Документы Microsoft"
+title: "Подключение к источникам данных с помощью мастера импорта и экспорта SQL Server | Документы Майкрософт"
 ms.custom: 
 ms.date: 02/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: import-export-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
-caps.latest.revision: 15
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
-ms.openlocfilehash: d4107dab192ae5f0bfa3c221dcb7997f83642eb8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 4679367f544000c384e897c85e18cba1d0936a81
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>Подключения к источникам данных с помощью мастера экспорта и импорта SQL Server
-В подразделах этого раздела показано, как подключиться к нескольким источникам данных, часто используемых при запуске мастера экспорта и импорта SQL Server. Вы должны предоставить сведения о соединении для источников данных на **выберите источник данных** и **Выбор назначения** страницах мастера.
+# <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>Подключение к источникам данных с помощью мастера импорта и экспорта SQL Server
+В подразделах этого раздела показано, как подключиться к нескольким наиболее распространенным источникам данных с помощью мастера экспорта и импорта SQL Server. Вы должны предоставить сведения о подключении для источников данных на страницах **Выбор источника данных** и **Выбор назначения** мастера.
 
-В этом разделе описываются только как для **подключения к источникам данных** из **выберите источник данных** и **Выбор назначения** страницах мастера. Если вам нужны для других целей, см. раздел [задач и содержимого, связанные с](#related).
+Эти подразделы описывают только **подключение к источникам данных** со страниц **Выбор источника данных** и **Выбор назначения мастера**. Если вам нужны другие сведения, см. раздел [Связанные задачи и содержимое](#related).
 
-## <a name="connect-to-a-commonly-used-data-source"></a>Подключения к источнику данных часто используемые
+## <a name="connect-to-a-commonly-used-data-source"></a>Подключение к часто используемому источнику данных
 Щелкните ссылку для получения дополнительных сведений о подключении к одному из следующих часто используемых источников данных.
 -   [SQL Server](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)
 -   [Oracle](../../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)
--   [Неструктурированных файлов (текст)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
+-   [Неструктурированные (текстовые) файлы](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
 -   [Доступ](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
--   [Хранилище больших двоичных объектов](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
+-   [Хранилище BLOB-объектов Azure](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
 -   [ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
 -   [PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
 -   [MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
 
-## <a name="connect-to-other-data-providers"></a>Подключение к другим источникам данных
-Сведения о подключении к источнику данных, не указанного в этом разделе [Reference строки соединения](https://www.connectionstrings.com/). Этот сайт стороннего содержит примеры строк подключения и Дополнительные сведения о поставщиках данных и сведений о соединении, которые необходимы.
+## <a name="connect-to-other-data-providers"></a>Подключение к другим поставщикам данных
+Сведения о подключении к источникам данных, не представленным в этом списке, см. в [справочнике по строкам подключения](https://www.connectionstrings.com/). На этом стороннем сайте представлены примеры строк подключения и дополнительные сведения о поставщиках данных и используемых ими данных подключений.
 
-## <a name="related"></a>Связанные задачи и содержимое  
+## <a name="related"></a> Связанные задачи и содержимое  
 Ниже приведены некоторые основные задачи.
--   **См. краткий пример того, как работает мастер.**
+-   **См. краткий пример работы мастера.**
 
-    -   **Если вы хотите просмотреть снимков экрана.** Рассмотрим этот простой пример начала до конца на одной странице - [Приступая к работе с простой пример мастера импорта и экспорта](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
+    -   **Ознакомьтесь со снимками экрана.** Просмотрите простой полный пример в разделе [Приступая к работе с простым примером мастера импорта и экспорта](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
 
-    -   **Если вы предпочитаете смотреть видео.** В этом видеоролике четыре минуты с YouTube, демонстрирует мастера и объясняет четко и просто Экспорт данных в Excel — [с помощью мастера экспорта для экспорта в Excel и импорта SQL Server](https://go.microsoft.com/fwlink/?linkid=829049).
+    -   **Посмотрите видео.** В этом четырехминутном видео на YouTube демонстрируется работа мастера и объясняется, как с его помощью экспортировать данные в Excel: [Использование мастера импорта и экспорта SQL Server для экспорта в Excel](https://go.microsoft.com/fwlink/?linkid=829049).
 
 -   **Дополнительные сведения о работе мастера.**
 
     -   **Дополнительные сведения о мастере.** Обзор мастера см. в статье [Импорт и экспорт данных с помощью мастера импорта и экспорта SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
-    -   **Дополнительные сведения о шагах в мастере.** Если вы ищете сведения о шагах мастера, см. раздел [шаги в мастере экспорта и импорта SQL Server](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). Имеется также отдельной странице документации для каждой страницы мастера.
+    -   **Дополнительные сведения о шагах в мастере.** Если вам нужны сведения о шагах, выполняемых в мастере, см. в разделе [Шаги в мастере импорта и экспорта SQL Server](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). Каждой странице мастера соответствует отдельная страница документации.
 
--   **Запустите мастер.** Если вы готовы запустить мастер и хотите знать, как это сделать, см. раздел [Запуск мастера экспорта и импорта SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
+-   **Запуск мастера.** Если вы готовы запустить мастер и хотите знать, как это сделать, см. раздел [Запуск мастера экспорта и импорта SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
 -   **Запустите мастер.** Если вы хотите запустить мастер, но на вашем компьютере не установлен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить с помощью SQL Server Data Tools (SSDT). Дополнительные сведения см. в разделе [Скачивание SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
-## <a name="see-also"></a>См. также:
-[Выберите источник данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
+## <a name="see-also"></a>См. также раздел
+[Выбор источника данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Выбор назначения](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
 
 

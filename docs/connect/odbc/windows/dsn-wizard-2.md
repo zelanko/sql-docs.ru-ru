@@ -3,24 +3,25 @@ title: "Экран мастера 2 (драйвер ODBC для SQL Server) ис
 ms.custom: 
 ms.date: 09/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c2291b951c0df4f365b76f80ebab3572a39375d1
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: e861bc52621e520a27e930dd22f1a1eb9613cc76
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="data-source-wizard-screen-2"></a>Экран 2 мастера источников данных
 
@@ -69,5 +70,4 @@ ms.lasthandoff: 10/06/2017
 [Первый экран мастера источника данных](../../../connect/odbc/windows/dsn-wizard-1.md)
 
 [Мастер источника данных 3](../../../connect/odbc/windows/dsn-wizard-3.md)
-
 

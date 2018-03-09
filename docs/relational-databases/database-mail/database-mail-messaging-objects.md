@@ -2,9 +2,12 @@
 title: "Объекты обмена сообщениями компонента Database Mail | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,19 +18,20 @@ helpviewer_keywords:
 - mail host databases [SQL Server]
 - host databases [Database Mail]
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
-caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0ac02628b0b385841805994ec17dd121d84d7399
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 8de888cea76c64cf8c5356b68ac8d852bd46bd1f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-mail-messaging-objects"></a>Объекты обмена сообщениями компонента Database Mail
-  Для размещения компонента Database Mail используется база данных обслуживания почты **msdb** . Она содержит хранимые процедуры и объекты обмена сообщениями компонента Database Mail. Используя входящий в среду Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] мастер настройки компонента Database Mail, можно активировать компонент Database Mail, создавать и администрировать профили и учетные записи и настраивать параметры компонента Database Mail.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Для размещения компонента Database Mail используется база данных обслуживания почты **msdb** . Она содержит хранимые процедуры и объекты обмена сообщениями компонента Database Mail. Используя входящий в среду Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] мастер настройки компонента Database Mail, можно активировать компонент Database Mail, создавать и администрировать профили и учетные записи и настраивать параметры компонента Database Mail.  
   
 ##  <a name="ComponentsAndConcepts"></a> Объекты в базе данных **msdb**  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] msdb **msdb** . Однако компонент Database Mail не пользуется сетевыми возможностями компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Поэтому для использования компонента Database Mail пользователи не должны создавать конечную точку компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Для взаимодействия с [!INCLUDE[vstecado](../../includes/vstecado-md.md)] внешний процесс компонента Database Mail использует стандартное соединение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -36,14 +40,14 @@ ms.lasthandoff: 06/22/2017
   
  Эти объекты являются интерфейсом для компонента Database Mail в рамках базы данных обслуживания почты. Остальные установленные объекты предназначены для реализации выполнения функций, предоставляемых перечисленными выше объектами. Тем не менее они зарезервированы для внутреннего использования.  
   
-|Название|Тип|Описание|  
+|Имя|Тип|Description|  
 |----------|----------|-----------------|  
-|[sysmail_allitems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**Просмотр**|Содержит список сообщений, полученных компонентом Database Mail.|  
-|[sysmail_event_log (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**Просмотр**|Содержит список сообщений, касающихся работы [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md).|  
-|[sysmail_faileditems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)|**Просмотр**|Содержит сведения о сообщениях, которые компоненту Database Mail не удалось отправить.|  
-|[sysmail_mailattachments (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)|**Просмотр**|Содержит сведения о вложениях в сообщениях компонента Database Mail.|  
+|[sysmail_allitems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**Вид**|Содержит список сообщений, полученных компонентом Database Mail.|  
+|[sysmail_event_log (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**Вид**|Содержит список сообщений, касающихся работы [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md).|  
+|[sysmail_faileditems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)|**Вид**|Содержит сведения о сообщениях, которые компоненту Database Mail не удалось отправить.|  
+|[sysmail_mailattachments (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)|**Вид**|Содержит сведения о вложениях в сообщениях компонента Database Mail.|  
 |[sysmail_sentitems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)|**Просмотр**|Содержит сведения о сообщениях, отправленных с помощью компонента Database Mail.|  
-|[sysmail_unsentitems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)|**Просмотр**|Содержит сведения о сообщениях, которые компонент Database Mail в настоящий момент пытается отправить.|  
+|[sysmail_unsentitems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)|**Вид**|Содержит сведения о сообщениях, которые компонент Database Mail в настоящий момент пытается отправить.|  
 |[sp_send_dbmail (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)|**Хранимая процедура**|Отправляет сообщения электронной почты при помощи компонента Database Mail.|  
 |[sysmail_delete_log_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)|**Хранимая процедура**|Удаляет сообщения из журнала компонента Database Mail.|  
 |[sysmail_delete_mailitems_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)|**Хранимая процедура**|Удаляет почтовые элементы из очереди компонента Database Mail.|  

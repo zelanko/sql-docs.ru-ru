@@ -2,31 +2,32 @@
 title: "Добавление или замена следящего сервера зеркального отображения базы данных (среда SQL Server Management Studio) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - witness [SQL Server], establishing
 - database mirroring [SQL Server], witness
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: bf344815c90bbabcab08d75880fb2605f6683a36
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 004b19ca2fe75f3a34f21eac1fa531e7f72d258b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Добавление или замена следящего сервера зеркального отображения базы данных (среда SQL Server Management Studio)
-  Если конечные точки зеркального отображения базы данных используют проверку подлинности Windows, для добавления или замены следящего сервера можно использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Добавление следящего сервера в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] изменяет текущий режим работы на режим высокого уровня безопасности с автоматической отработкой отказа.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Если конечные точки зеркального отображения базы данных используют проверку подлинности Windows, для добавления или замены следящего сервера можно использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Добавление следящего сервера в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] изменяет текущий режим работы на режим высокого уровня безопасности с автоматической отработкой отказа.  
   
 > [!NOTE]  
 >  Настоятельно рекомендуется размещать следящий сервер на отдельном компьютере, не используемом ни одним из участников зеркального отображения. Учетная запись службы, используемая следящим сервером, должна располагаться в том же самом домене, что и учетные записи служб, используемые экземплярами основного и зеркального серверов, либо в доверенном домене.  
@@ -81,4 +82,3 @@ ms.lasthandoff: 08/02/2017
  [Следящий сервер зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   
-

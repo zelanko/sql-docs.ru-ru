@@ -1,13 +1,14 @@
 ---
-title: "Защита общих элементов источника данных | Документы Microsoft"
+title: "Защита элементов общего источника данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +16,16 @@ helpviewer_keywords:
 - data sources [Reporting Services], shared
 - security [Reporting Services], data sources
 ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
-caps.latest.revision: 35
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "35"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e056f5577c2c569e333f2341060862c06d803f6b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3db92934757b56ac3b37ee0d83ccfdaa4261fa88
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="secure-shared-data-source-items"></a>Защита совместно используемых элементов источника данных
   Можно задать параметры безопасности для общего элемента источника данных, чтобы разрешить или запретить доступ к нему.  
@@ -45,12 +45,11 @@ ms.lasthandoff: 08/09/2017
 |Управление источниками данных|Просмотр свойств, задающих имя, описание и сведения о соединении. Эта задача используется также для отображения общего элемента источника данных в иерархии папок. Если эта задача выбрана, можно опустить задачу «Просмотр источников данных».|  
 |Установка безопасности элементов|Создание и изменение назначений ролей, управляющих доступом к общему источнику данных. Эта задача должна использоваться совместно с задачей «Просмотр источников данных» или «Управление источниками данных». В противном случае она не будет действовать, поскольку пользователь не сможет выбрать источник.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление источниками данных отчета](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Обеспечение защиты папок](../../reporting-services/security/secure-folders.md)   
+ [Защита папок](../../reporting-services/security/secure-folders.md)   
  [Защищенные отчеты и ресурсы](../../reporting-services/security/secure-reports-and-resources.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Хранить учетные данные в источнике данных Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Сохраненные учетные данные в источнике данных Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   
-

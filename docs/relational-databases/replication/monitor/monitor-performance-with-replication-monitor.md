@@ -2,11 +2,13 @@
 title: "Наблюдение за производительностью с помощью монитора репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +21,19 @@ helpviewer_keywords:
 - Distribution Agent, monitoring
 - monitoring performance [SQL Server replication]
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
-caps.latest.revision: 36
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ae1be084b689f760b6d10db4d7d975b0489048f7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "36"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: f21560e068dab73097f517bce249724e391a6701
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Наблюдение за производительностью с помощью монитора репликации
-  Монитор репликации[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет осуществлять наблюдение за производительностью репликации транзакций и репликации слиянием следующими способами:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Монитор репликации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет осуществлять наблюдение за производительностью репликации транзакций и репликации слиянием следующими способами:  
   
 -   Установка предупреждений и порогов.  
   
@@ -79,7 +81,7 @@ ms.lasthandoff: 06/22/2017
   
     |Высокая|Хорошая.|удовлетворительная|Низкая|Критическая|  
     |---------------|----------|----------|----------|--------------|  
-    |0–34 %|35–59 %|60–84 %|85–99 %|100 % +|  
+    |0–34 %|35–59 %|60–84 %|85–99 %|100 % +|  
   
 -   Для репликаций слиянием качество производительности не зависит ни от каких пороговых значений (пороговое значение для обработки строк определяет только появление значения **Критическое для производительности** в столбце **Состояние** ). Оценка качества производительности определяется посредством сравнения производительности индивидуальной подписки со средним значением производительности за длительный период для подписок на данную публикацию, имеющих один и тот же тип соединения (коммутируемое или по локальной сети). Монитор репликации отображает значение после пяти синхронизаций, использующих один тип соединения, каждая из которых содержит 50 или более изменений. В случае, если произошло менее 5 синхронизаций с 50 и более изменениями или если в последней выполненной синхронизации менее 50 изменений, монитор репликации не отображает это значение.  
   

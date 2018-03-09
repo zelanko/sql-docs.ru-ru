@@ -2,44 +2,47 @@
 title: "Использование измененной версией Analysis Services учебного проекта | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
-caps.latest.revision: 25
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 90a1b92087d0f753fdd637830bc4dd4c86d601a3
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 10cb63369b23a19ecb126ee210de2a90ed114fc4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Занятие 4-1-использование измененной версии проекта Tutorial служб Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Оставшиеся занятия этого учебника основаны на улучшенной версии проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, с которым велась работа на первых трех занятиях. В представление источника данных **Adventure Works DW 2012** были добавлены некоторые таблицы и именованные вычисления, в проект были добавлены дополнительные измерения, которые также были добавлены в куб учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Кроме того, была добавлена вторая группа мер, которая содержит меры из второй таблицы фактов. Улучшенная версия проекта позволит продолжить изучение добавления новых функций в приложение бизнес-аналитики без необходимости повторного применения полученных навыков.  
   
 Перед продолжением работы с учебником необходимо загрузить, извлечь, выполнить и обработать улучшенную версию проекта учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  Инструкции в этом разделе помогут выполнить все эти шаги.  
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Загрузка и извлечение файла проекта  
   
-1.  [Щелкните здесь](http://go.microsoft.com/fwlink/?LinkID=221866) , чтобы перейти на страницу загрузки, где представлены образцы проектов, прилагаемых к этому учебнику. Образцы проектов включены в состав пакета для скачивания **Учебник по службам SQL Server 2012 Analysis Services** .  
+1.  [Щелкните здесь](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services), чтобы перейти на страницу загрузки, где представлены образцы проектов, прилагаемых к этому учебнику. Проекты учебника включены в **adventure-works — многомерный учебник projects.zip** загрузки.  
   
-2.  Щелкните **Учебник по службам SQL Server 2012 Analysis Services** , чтобы скачать пакет, содержащий проекты для этого учебника.  
+2.  Нажмите кнопку **adventure-works — многомерный учебник projects.zip** для загрузки пакета, содержащий проекты для этого учебника.  
   
     По умолчанию этот ZIP-файл сохраняется в папке «Загрузки». Этот ZIP-файл необходимо перенести в расположение с более коротким путем (например, создайте папку C:\Tutorials для хранения таких файлов).  После этого можно извлечь файлы из ZIP-файла. При попытке распаковать файлы из папки «Загрузки», путь к которой значительно больше, возникнет ошибка из занятия 1.  
   
 3.  Создайте папку на уровне корневого диска или с неглубоким вложением, например C:\Tutorial.  
   
-4.  Переместите файл **Analysis Services Tutorial SQL Server 2012.zip** во вложенную папку.  
+4.  Переместить **adventure-works — многомерный учебник projects.zip** во вложенную папку.  
   
 5.  Щелкните файл правой кнопкой мыши и выберите команду **Извлечь все**.  
   
@@ -123,7 +126,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Определение свойств родительского атрибута в иерархии «родители-потомки»](../analysis-services/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Развертывание проекта служб Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   
-

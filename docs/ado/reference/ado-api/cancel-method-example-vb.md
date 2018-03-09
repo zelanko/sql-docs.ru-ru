@@ -3,7 +3,7 @@ title: "Отмена пример метода (Visual Basic) | Документ
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Cancel method [ADO], Visual Basic example
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 63c0512622045cb4c65820826cbb8e120a91ead4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 15253360d29de93ca756b2427037251469d7c881
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cancel-method-example-vb"></a>Пример метода Cancel (Visual Basic)
 В этом примере используется [отменить](../../../ado/reference/ado-api/cancel-method-ado.md) метода для отмены команды, выполняемые на [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта, если соединение занято.  
@@ -110,7 +109,6 @@ End Sub
 'EndCancelVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод Cancel (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
-
+ [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

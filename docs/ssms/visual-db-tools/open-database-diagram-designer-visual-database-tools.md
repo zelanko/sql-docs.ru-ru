@@ -3,10 +3,12 @@ title: "Открытие конструктора диаграмм баз дан
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - database diagrams [SQL Server], Database Diagram Designer
 - diagrams [SQL Server], Database Diagram Designer
 ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: f80f91be3c5ad55103011beb0f56c8a9e0595968
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 498879e88ad3e92323741ad035845843fd214bd7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>Открытие конструктора диаграмм баз данных (визуальные инструменты для баз данных)
-Конструктор диаграмм баз данных представляет собой визуальное средство разработки и визуализации базы данных. Конструктор баз данных используется для создания, редактирования и удаления таблиц, столбцов, ключей, индексов, связей и ограничений. Для визуализации базы данных можно создать одну или несколько диаграмм, иллюстрирующих некоторые или все имеющиеся в ней таблицы, столбцы, ключи и связи.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Конструктор диаграмм баз данных представляет собой визуальное средство разработки и визуализации базы данных. Конструктор баз данных используется для создания, редактирования и удаления таблиц, столбцов, ключей, индексов, связей и ограничений. Для визуализации базы данных можно создать одну или несколько диаграмм, иллюстрирующих некоторые или все имеющиеся в ней таблицы, столбцы, ключи и связи.  
   
 Конструктор диаграмм баз данных автоматически запускается при открытии новой или уже существующей диаграммы.  
   
@@ -56,4 +57,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>См. также:  
 [Конструирование диаграмм баз данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
   
-

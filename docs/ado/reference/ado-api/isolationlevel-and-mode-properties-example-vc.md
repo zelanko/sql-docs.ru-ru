@@ -3,7 +3,7 @@ title: "IsolationLevel и пример свойства режима (VC ++) | �
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Mode property [ADO], VC++ example
 - IsolationLevel property [ADO], VC++ example
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: dfb9da4ee435ef3ebbf6980f6d9dfd9822c3450d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4e4d8d23a4f9ffb09ca7f2048ec429752502da8b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel и пример свойства режима (VC ++)
 В этом примере используется [режим](../../../ado/reference/ado-api/mode-property-ado.md) свойства, чтобы открыть монопольное подключение и [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) свойства, чтобы открыть транзакцию, которая ведется изолированно от других транзакций.  
@@ -242,7 +241,7 @@ void PrintComError(_com_error &e) {
 **Учитывает особенностей кулинарии компьютера - UNDECIDED**  
 **Но это понятного имени пользователя? -popular_comp**  
 **Секреты Силиконовая Долина - popular_comp**  
-**NET тоном - popular_comp**  
+**Net Etiquette -  popular_comp**  
 **: Компьютер Phobic Phobic не отдельных пользователей поведение варианты и - Self_help**  
 **Является Anger злоумышленником? -self_help**  
 **Срок, не опасаясь - self_help**  
@@ -251,7 +250,6 @@ void PrintComError(_com_error &e) {
 **Onions, Ликс и чесночный: кулинарии секреты морская - trad_cook**  
 **50 лет на машины Palace Buckingham - trad_cook**  
 **Суши, любой пользователь? -trad_cook**   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)   
- [Свойство режима (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)
-
+ [Свойство Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

@@ -3,8 +3,11 @@ title: "Создание функции (хранилище данных SQL) | 
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
-caps.latest.revision: 14
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 55f1b7e612a1c7d120e06078b0fdba45d6409d36
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4957b8d665f9aa887a5ad4ab18a2e8441ea4cc2d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-function-sql-data-warehouse"></a>Создание функции (хранилище данных SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Создает определяемую пользователем функцию в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Определяемая пользователем функция является [!INCLUDE[tsql](../../includes/tsql-md.md)] подпрограмму, которая принимает параметры, выполняет действия, такие как сложные вычисления и возвращает результат этого действия в качестве значения. Возвращаемое значение должно быть скалярное значение (одно). При помощи этой инструкции можно создать подпрограмму, которую можно повторно использовать следующими способами.  
   
@@ -72,13 +74,13 @@ RETURNS return_data_type
  *schema_name*  
  Имя схемы, к которой принадлежит определяемая пользователем функция.  
   
- *имя функции*  
+ *function_name*  
  Имя определяемой пользователем функции. Имена функций должны соответствовать правилам для идентификаторов и должно быть уникальным в пределах базы данных и схемы.  
   
 > [!NOTE]  
 >  Даже при отсутствии аргументов скобки после имени функции обязательны.  
   
- @*имя_параметра*  
+ @*parameter_name*  
  Аргумент пользовательской функции. Может быть объявлен один или несколько аргументов.  
   
  Для функций допускается не более 2 100 параметров. При выполнении функции значение каждого из объявленных параметров должно быть указано пользователем, если для них не определены значения по умолчанию.  
@@ -91,7 +93,7 @@ RETURNS return_data_type
  *parameter_data_type*  
  Представляет тип данных параметра. Для [!INCLUDE[tsql](../../includes/tsql-md.md)] функции, все скалярные типы данных поддерживаются в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] разрешены. Тип данных timestamp (rowversion) не является поддерживаемым типом.  
   
- [=*по умолчанию* ]  
+ [ =*default* ]  
  Значение по умолчанию для аргумента. Если *по умолчанию* определено, функция может быть выполнена без указания значения для этого параметра.  
   
  Если параметр функции имеет значение по умолчанию, то для него должно быть указано ключевое слово DEFAULT для получения функцией значения по умолчанию. Применение ключевого слова DEFAULT следует отличать от использования аргументов со значениями по умолчанию в хранимых процедурах, когда не указанный аргумент неявно принимает значение по умолчанию.  
@@ -107,7 +109,7 @@ RETURNS return_data_type
  *scalar_expression*  
  Указывает скалярное значение, возвращаемое скалярной функцией.  
   
- **\<function_option >:: =** 
+ **\<function_option>::=** 
   
  Указывает, что функция будет иметь один или несколько из следующих параметров.  
   
@@ -173,7 +175,7 @@ GO
   
  [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) : отображает базовые объекты ссылается функция.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется разрешение CREATE FUNCTION на базу данных и разрешение ALTER на схему, в которой создается функция.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -195,11 +197,10 @@ GO
 SELECT dbo.ConvertInput(15) AS 'ConvertedValue';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/25ff3798-eb54-4516-9973-d8f707a13f6c)   
  [Удалите ФУНКЦИЮ (SQL Server PDW)](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   
   
-
 
 

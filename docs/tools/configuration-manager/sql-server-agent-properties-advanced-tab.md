@@ -2,28 +2,31 @@
 title: "Свойства агента SQL Server (вкладка «Дополнительно») | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7e704be1826d638b7e2c92b53a21da1b39450ad6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: db5196065193b9d74f5ec792914db6e3dc3b7d15
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-agent-properties-advanced-tab"></a>Свойства агента SQL Server (вкладка «Дополнительно»)
-  По умолчанию на вкладке **Дополнительно** присутствуют пять свойств. Если определены пользовательские свойства, они также отображаются на этой вкладке вместе со значениями.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+По умолчанию на вкладке **Дополнительно** присутствуют пять свойств. Если определены пользовательские свойства, они также отображаются на этой вкладке вместе со значениями.  
   
 ## <a name="options"></a>Параметры  
  **Кластеризованный**  
@@ -42,4 +45,3 @@ ms.lasthandoff: 08/02/2017
  Указывает экземпляр, использующий эту службу.  
   
   
-

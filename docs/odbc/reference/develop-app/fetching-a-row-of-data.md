@@ -3,10 +3,12 @@ title: "Выборка строки данных | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - fetches [ODBC], row of data
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b51491fa5ab071d679c7f89990977275a4e45f1d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 142c9a2c95900e5b3776f96d86a145defc447512
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fetching-a-row-of-data"></a>Выборка строки данных
 Чтобы получить строки данных, приложение вызывает **SQLFetch**. **SQLFetch** может вызываться с помощью любого типа курсора, но только курсор перемещается в набор строк в направлении только вперед. **SQLFetch** перемещает курсор на следующую строку и возвращает данные для всех столбцов, связанные с обращениями к **SQLBindCol**. Когда курсор достигает конца результат задано, **SQLFetch** не вернет значение SQL_NO_DATA. Примеры вызова **SQLFetch**, в разделе [с помощью SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).  
@@ -41,4 +42,3 @@ ms.lasthandoff: 09/09/2017
  Символьные данные должны быть символом null, драйвер перед возвратом к приложению, даже если он был усечен. Знак завершения null не включается в возвращаемый байт, но требует пространства в буфере, связанных. Например предположим, приложение использует строки, состоящие из символьных данных в кодировке ASCII, драйвер содержит 50 символов для возврата данных и приложения буфера не 25 байт. В буфере приложения драйвер возвращает первые 24 символов, за которым следует символ завершения null. В буфер длины/индикатора возвращается число 50 байт.  
   
  Приложение можно ограничить количество строк в результирующем наборе, задав атрибут SQL_ATTR_MAX_ROWS инструкции перед выполнением инструкции, который создает результат. Например в режиме предварительного просмотра в приложение, используемое для настройки форматирования отчетов требует достаточно данных для отображения первой страницы отчета. Путем ограничения размера результирующего набора, такая возможность может выполняться быстрее. Этот атрибут инструкции предназначены для сокращения сетевого трафика и могут поддерживаться не все драйверы.
-

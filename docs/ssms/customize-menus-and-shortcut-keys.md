@@ -3,10 +3,12 @@ title: "Настройка меню и сочетаний клавиш | Док�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +22,19 @@ helpviewer_keywords:
 - customizing menus [SQL Server]
 - accelerator keys
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3bcf61e149e5e2a9460709330d72d7ba23023c62
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 26565d1078d8fcb813cc634ce5d3cee05d151f4a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Настройка меню и сочетаний клавиш
-Сочетания клавиш позволяют выбрать команду меню или нажать кнопку путем нажатия клавиш ALT+*<single letter>*. Например, чтобы открыть меню **Правка** , нажмите клавиши ALT+E. В диалоговом окне **Настройка** можно переставить и изменить кнопки панели инструментов, меню и команды меню. Имеются инструкции по изменению настроек с помощью мыши или только с помощью клавиатуры.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Сочетания клавиш позволяют выбрать команду меню или нажать кнопку путем нажатия клавиш ALT+*<single letter>*. Например, чтобы открыть меню **Правка** , нажмите клавиши ALT+E. В диалоговом окне **Настройка** можно переставить и изменить кнопки панели инструментов, меню и команды меню. Имеются инструкции по изменению настроек с помощью мыши или только с помощью клавиатуры.  
   
 Сочетания клавиш для хранимых процедур с использованием клавиши CTRL можно создать на странице **Клавиатура** диалогового окна **Сервис**/**Параметры** .  
   
@@ -168,4 +169,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
 [Возможности среды SQL Server Management Studio](../ssms/features-in-sql-server-management-studio.md)  
   
-

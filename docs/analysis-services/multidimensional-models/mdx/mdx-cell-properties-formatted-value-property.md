@@ -2,30 +2,30 @@
 title: "LANGUAGE и FORMAT_STRING для FORMATTED_VALUE | Документы Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0e69f9e798dd5922bae7c677fc599c8f82293ee1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 465b5ce3730dc73357502ff88517eb3c5dd29d20
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-cell-properties---formattedvalue-property"></a>Свойства ячеек MDX - свойства FORMATTED_VALUE
-  Свойство FORMATTED_VALUE основано на взаимодействии свойств ячейки VALUE, FORMAT_STRING и LANGUAGE. В этом разделе объясняется, как эти свойства взаимодействуют для построения свойства FORMATTED_VALUE.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Свойство FORMATTED_VALUE основано на взаимодействии свойств ячейки VALUE, FORMAT_STRING и LANGUAGE. В этом разделе объясняется, как эти свойства взаимодействуют для построения свойства FORMATTED_VALUE.  
   
 ## <a name="value-formatstring-language-properties"></a>Свойства VALUE, FORMAT_STRING, LANGUAGE  
  В следующей таблице описано, что представляют собой эти свойства. Эти сведения помогут сочетать указанные свойства.  
@@ -149,10 +149,9 @@ ms.lasthandoff: 09/01/2017
 |L|06:30|Свойству FORMAT_STRING явно присвоено значение `Short Time` . Свойству LANGUAGE явно присвоено значение `1041` (японский).|  
   
 ## <a name="see-also"></a>См. также  
- [Содержание строки FORMAT_STRING (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
+ [Строка формата Format_string &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
  [С помощью свойства ячейки &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
  [Создание и использование значений свойств &#40; Многомерные Выражения &#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [Основные принципы запросов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Основные принципы запросов многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

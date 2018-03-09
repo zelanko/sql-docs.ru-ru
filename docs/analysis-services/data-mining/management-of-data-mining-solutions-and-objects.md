@@ -2,31 +2,32 @@
 title: "Управление решениями интеллектуального анализа данных и объектами | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data mining [Analysis Services], managing
 - managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
-caps.latest.revision: 26
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 486ba5cb40f30921374a4f66040f2a080e4a1152
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4154a0e542ed8e2bc6799dbc3f3c9ecb25ad5f4e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Управление решениями и объектами интеллектуального анализа данных
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] содержит клиентские средства, предназначенные для управления структурами и моделями интеллектуального анализа данных. В этом разделе описаны операции управления, которые могут выполняться с помощью каждой из сред.  
   
  Кроме этого, управление объектами интеллектуального анализа данных может осуществляться программно через объекты AMO или путем соединения с базами данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из других клиентов, например надстройки интеллектуального анализа данных для [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007.  
@@ -51,13 +52,13 @@ ms.lasthandoff: 09/01/2017
   
  По следующим ссылкам можно получить полезные сведения об изменении объектов интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
--   [Изменение представления источников данных, используемого для структуры интеллектуального анализа данных](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Изменить представление источника данных, используемого для структуры интеллектуального анализа данных](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
--   [изменить свойства структуры интеллектуального анализа данных](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
+-   [Изменить свойства структуры интеллектуального анализа данных](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
 -   [Изменение свойств модели интеллектуального анализа данных](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
--   [Просмотр или изменение флагов моделирования (интеллектуальный анализ данных)](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [Просмотр или изменение модели флаги &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
 -   [Просмотр или изменение параметров алгоритма](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>Управление объектами интеллектуального анализа данных в среде SQL Server Management Studio  
  Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]позволяет создавать скрипты со структурами и моделями интеллектуального анализа данных, обрабатывать эти структуры и модели и удалять их. В обозревателе объектов можно просмотреть лишь ограниченный набор свойств, однако дополнительные метаданные о моделях интеллектуального анализа данных доступны в окне редактора **DMX-запрос** , где нужно выбрать соответствующую структуру интеллектуального анализа данных.  
   
--   [Создание DMX-запроса в среде SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+-   [Создать запрос расширений интеллектуального анализа данных в SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## <a name="managing-data-mining-objects-programmatically"></a>Программное управление объектами интеллектуального анализа данных  
  Создание, изменение, обработка и удаление объектов интеллектуального анализа данных реализуются при помощи следующих языков программирования. Разные языки предназначены для выполнения разных задач. Результатом могут стать ограничения на типы операций, доступных для выполнения. Например, некоторые свойства объектов интеллектуального анализа данных нельзя изменить с помощью расширений интеллектуального анализа данных, для этого придется использовать язык XMLA или объекты AMO.  
@@ -81,7 +82,7 @@ ms.lasthandoff: 09/01/2017
 ### <a name="analysis-management-objects-amo"></a>Объекты AMO  
  Объекты AMO — это объектная модель, построенная на основе XMLA, которая обеспечивает полный доступ к объектам интеллектуального анализа данных. Объекты AMO позволяют создавать, развертывать и отслеживать структуры и модели интеллектуального анализа данных.  
   
--   [Основные понятия и модель объектов AMO](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)  
+-   [Основные понятия и объектная модель AMO](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)  
   
 -   <xref:Microsoft.AnalysisServices>  
   
@@ -103,4 +104,3 @@ ms.lasthandoff: 09/01/2017
  [Документация для разработчика служб Analysis Services](../../analysis-services/analysis-services-developer-documentation.md)  
   
   
-

@@ -3,10 +3,12 @@ title: "Прямое выполнение ODBC | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - direct execution [ODBC]
 - SQL statements [ODBC], executing
 ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 058dada1c14b901b32f721bc2d42f3cc24434f07
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bdc332f2541fd8537fbd924e1da9ea631d8d3189
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="direct-execution-odbc"></a>Прямое выполнение ODBC
 Самый простой способ выполнения инструкции является непосредственное выполнение. Когда инструкция подается на выполнение, источника данных компилирует его в плане доступа, а затем выполняет этот план доступа.  
@@ -58,4 +59,3 @@ SQLExecDirect(hstmt, SQLStatement, SQL_NTS);
     -   Отправляет инструкции и значения параметров, преобразованных в источник данных для выполнения.  
   
     -   Возвращает все ошибки. Сюда входят виртуализации или состояние диагностики, как SQLSTATE 24000 (недопустимое состояние курсора), синтаксические ошибки, такие как SQLSTATE 42000 (синтаксическая ошибка или нарушение доступа) и семантические ошибки, такие как SQLSTATE 42S02 (базовая таблица или представление не найдены).
-

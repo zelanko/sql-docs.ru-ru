@@ -3,7 +3,7 @@ title: "Устранение неполадок служб удаленных р
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - troubleshooting RDS [ADO]
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 940a5c58912443b087afa6d712dcb494c95c6df6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 961b010d2dc2ecf2e22e36346420f110c4dff8f8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="troubleshooting-rds"></a>Устранение неполадок служб удаленных рабочих СТОЛОВ
 > [!IMPORTANT]
@@ -45,8 +44,7 @@ ms.lasthandoff: 09/09/2017
   
 -   [Минимизация использования места в файле журнала](../../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные принципы RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
 
 

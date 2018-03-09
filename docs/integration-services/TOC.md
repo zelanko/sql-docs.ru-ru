@@ -3,7 +3,7 @@
 # Обзор
 ## [Новые возможности служб Integration Services в SQL Server 2016](what-s-new-in-integration-services-in-sql-server-2016.md)
 ## [Новые возможности служб Integration Services в SQL Server 2017](what-s-new-in-integration-services-in-sql-server-2017.md)
-## [Новые и недавно обновленные статьи](new-updated-integration-services.md)
+## [Новые и обновленные Статьи](new-updated-integration-services.md)
 ## [Функции служб Integration Services, поддерживаемые различными выпусками SQL Server](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Обратная совместимость служб Integration Services](integration-services-backward-compatibility.md)
 
@@ -25,9 +25,12 @@
 
 # [Перенос пакетов SSIS в Azure методом lift-and-shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
 ## [Учебник: развертывание, запуск и отслеживание пакета в Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+## [Подключения к источникам данных с проверкой подлинности Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
+## [Подключение к файлам и общим папкам](lift-shift/ssis-azure-files-file-shares.md)
+## [Проверка пакетов, развертываемых в Azure](lift-shift/ssis-azure-validate-packages.md)
 ## [Подключение к каталогу служб SSIS в Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Планирование выполнения пакета в Azure](lift-shift/ssis-azure-schedule-packages.md)
-## [Подключения к источникам данных с проверкой подлинности Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
+
 # [Установка или обновление](../integration-services/install-windows/install-integration-services.md)
 
 # [Инструменты разработки и управления](integration-services-ssis-development-and-management-tools.md)
@@ -70,8 +73,9 @@
 # [Развертывание пакетов](packages/deploy-integration-services-ssis-projects-and-packages.md)
 # [Масштабирование](scale-out/integration-services-ssis-scale-out.md)
 
+# [Каталог и сервер](catalog/integration-services-ssis-server-and-catalog.md)
 # [Обслуживание (для прежних версий)](../integration-services/service/integration-services-service-ssis-service.md)
-# [Безопасность](../integration-services/security/security-overview-integration-services.md)
+# [безопасность](../integration-services/security/security-overview-integration-services.md)
 # [Производительность](../integration-services/performance/monitor-running-packages-and-other-operations.md)
 # [Устранение неполадок](../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md)
 # [Системные представления](../integration-services/system-views/views-integration-services-catalog.md)
@@ -169,3 +173,10 @@
 #### [Занятие 3-1. Копирование пакета развертывания](lesson-3-1-copying-the-deployment-bundle.md)
 #### [Занятие 3-2. Запуск мастера установки пакета](lesson-3-2-running-the-package-installation-wizard.md)
 #### [Занятие 3-3. Тестирование развернутых пакетов](lesson-3-3-testing-the-deployed-packages.md)
+
+# Ресурсы
+## [Получить справку на форуме SSIS](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+## [Получить справку на сайте Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+## [Читать блог группы разработки служб SSIS](https://blogs.msdn.microsoft.com/ssis/)
+## [Сообщить о проблемах или запросить новые функции](https://feedback.azure.com/forums/908035-sql-server)
+## [Получить документы на ПК](../sql-server/sql-server-help-installation.md)

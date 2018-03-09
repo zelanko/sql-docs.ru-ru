@@ -2,9 +2,12 @@
 title: "Добавление бизнес-логики для данных XML | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fcb398dc1cd451f55446efee763d7d33891b7ca4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c6794df397b0cdb304a03f5d18c5facfd43dc146
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="add-business-logic-to-xml-data"></a>Добавление бизнес-логики для XML-данных
-  Бизнес-логику можно добавить в XML-данные несколькими способами.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Бизнес-логику можно добавить в XML-данные несколькими способами.  
   
 -   Можно создать ограничения строк или столбцов, чтобы наложить ограничения, специфические для домена, во время вставки и модификации XML-данных.  
   
@@ -69,4 +72,3 @@ WHERE  xCol.exist('/book/title/text()[contains(.,"custom")]') =1;
  Интеграция со средой CLR в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] расширяет возможности продвижения свойств и декомпозиции XML-данных в таблицы, а также средства запроса XML-данных с использованием управляемых классов из пространства имен System.Xml. Дополнительные сведения см в разделе [Данные XML (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md).  
   
   
-

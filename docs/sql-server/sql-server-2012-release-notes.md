@@ -1,30 +1,31 @@
 ---
 title: "Заметки о выпуске SQL Server 2012 | Документация Майкрософт"
-ms.prod: sql-server-2012
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Release Notes, SQL Server
+helpviewer_keywords: Release Notes, SQL Server
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e7adc5d4b4fdcf8886b2c8d08bce8de90d9b3eb1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 855dc52c2d4ac7a4d28864328536de62e23ced3d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2012-release-notes"></a>Заметки о выпуске SQL Server 2012
-В этих заметках о выпуске описаны известные проблемы, с которыми необходимо ознакомиться перед началом установки или устранения неполадок с Microsoft SQL Server 2012 ([щелкните здесь для скачивания](http://go.microsoft.com/fwlink/?LinkId=238647)). Этот документ «Заметки о выпуске» доступен только для загрузки в сети и постоянно обновляется. Этот документ не содержится на установочном носителе.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] В этих заметках о выпуске описаны известные проблемы, с которыми необходимо ознакомиться перед началом установки или устранения неполадок с Microsoft SQL Server 2012 ([щелкните здесь для скачивания](http://go.microsoft.com/fwlink/?LinkId=238647)). Этот документ «Заметки о выпуске» доступен только для загрузки в сети и постоянно обновляется. Этот документ не содержится на установочном носителе.  
   
 Дополнительные сведения о том, как приступить к установке SQL Server 2012, см. в файле сведений для SQL Server 2012. Файл сведений доступен на установочном носителе, а также на странице скачивания [файла сведений](http://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) . Дополнительные сведения также можно найти в [электронной документации по SQL Server](http://go.microsoft.com/fwlink/?LinkId=190948) и на [форумах по SQL Server](http://go.microsoft.com/fwlink/?LinkId=213599).  
   
@@ -637,4 +638,3 @@ SQL Server 2012 включает в себя StreamInsight 2.0. Для рабо�
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
-

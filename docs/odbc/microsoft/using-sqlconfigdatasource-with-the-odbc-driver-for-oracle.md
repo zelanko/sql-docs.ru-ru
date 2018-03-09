@@ -3,26 +3,26 @@ title: "Использование SQLConfigDatasource с драйвером ODB
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLConfigDataSource function [ODBC], ODBC driver for Oracle
+helpviewer_keywords: SQLConfigDataSource function [ODBC], ODBC driver for Oracle
 ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 676ab0116fa14af4d2f29c2620a4f6e15f17cdc0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aa32db53ef43da7f01200dcf057f9855a4f5707e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>Использование SQLConfigDatasource с драйвером ODBC для Oracle
 > [!IMPORTANT]  
@@ -48,9 +48,9 @@ ms.lasthandoff: 09/09/2017
 |NumberFloat|2|""|0 или 1|Если значение равно 0, число с плавающей запятой столбцы рассматриваются как SQL_FLOAT. Если значение равно 1, число с плавающей запятой столбцы рассматриваются как SQL_DOUBLE.|  
 |PWD|30|""|A/N|Пароль.|  
 |RDOSupport|2|""|0 или 1|Позволяет RDO вызов процедур Oracle.|  
-|Замечания|2|0|0 или 1|Включите примечания в функции работы с каталогами.|  
+|Remarks|2|0|0 или 1|Включите примечания в функции работы с каталогами.|  
 |RowLimit|4|""|0 до 99|Максимальное число строк, возвращаемых инструкцией SELECT. Указывает строку нулевой длины, ограничения не применяются.|  
-|Server|128|""|A/N|Имя сервера Oracle.|  
+|Сервер|128|""|A/N|Имя сервера Oracle.|  
 |SynonymColumns|2|1|0 или 1|Включите синонимы в SQLColumns.|  
 |SystemTable|2|""|0 или 1|Если значение равно 0, системных таблиц не отображается. Если значение равно 1, будет отображаться системных таблиц.|  
 |TranslationDLL|33|""|A/N|Имя DLL-файла перевода.|  
@@ -58,4 +58,3 @@ ms.lasthandoff: 09/09/2017
 |TranslationOption|33|""|A/N|Параметр миграции.|  
 |TxnCap|2|""|A/N|Поддерживает транзакции. Если значение равно 0, драйвер сообщает, что он не поддерживает транзакции. Если значение равно 1, драйвер сообщает, что он может выполнять операции.|  
 |UID|30|""|A/N|Имя пользователя.|
-

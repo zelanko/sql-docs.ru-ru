@@ -2,38 +2,34 @@
 title: "Элемент (ASSL) запроса | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Query Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Query Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Query element
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Query element
 ms.assetid: 832c3337-de6d-43b2-8f1c-75bdba76539b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d852211b20e77db6a13681753c12e8b568799c2d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d61494c22eda620a17ccf56fa6a8be74193fedb5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="query-element-assl"></a>Элемент Query (ASSL)
-  Содержит текст запроса, который следует выполнить для создания уведомления.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит текст запроса для выполнения для уведомления.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,9 +42,9 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
-|Тип данных и длина|Строковые значения|  
+|Тип данных и длина|String|  
 |Значение по умолчанию|None|  
 |Количество элементов|1-1: обязательный элемент, который встречается ровно один раз.|  
   
@@ -59,7 +55,7 @@ ms.lasthandoff: 09/01/2017
 |Родительский элемент|[QueryNotification](../../../analysis-services/scripting/objects/querynotification-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Элемент, соответствующий родителю параметра **запроса** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.QueryNotification>.  
   
 ## <a name="see-also"></a>См. также:  
@@ -67,4 +63,3 @@ ms.lasthandoff: 09/01/2017
  [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

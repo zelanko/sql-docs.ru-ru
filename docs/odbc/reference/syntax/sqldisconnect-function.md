@@ -3,33 +3,30 @@ title: "Функция SQLDisconnect | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLDisconnect
-apilocation:
-- sqlsrv32.dll
+apiname: SQLDisconnect
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLDisconnect
-helpviewer_keywords:
-- SQLDisconnect function [ODBC]
+f1_keywords: SQLDisconnect
+helpviewer_keywords: SQLDisconnect function [ODBC]
 ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0d210614a32c2dd8190c37777d3ac06a99756156
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: af65dee0cfa0efcb4b4daffa55e02dfbebff8473
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldisconnect-function"></a>Функция SQLDisconnect
 **Соответствия**  
@@ -101,4 +98,3 @@ SQLRETURN SQLDisconnect(
 ## <a name="see-also"></a>См. также:  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

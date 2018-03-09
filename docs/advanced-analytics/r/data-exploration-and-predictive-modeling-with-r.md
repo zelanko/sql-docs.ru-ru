@@ -3,27 +3,28 @@ title: "Изучение данных и прогнозное моделиров
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/18/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf6de7e2-f394-4b8a-a4b7-0b8dadf25426
-caps.latest.revision: 20
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: d7c5430e585d7324e94ebe64e5138246e26049c4
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 563266ba60fd9ef4a9514d14e7549934b8cebd07
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r"></a>Изучение данных и прогнозное моделирование с помощью R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом разделе описаны усовершенствования процесса обработки и анализа данных, которые возможны при интеграции с SQL Server.
 
@@ -107,9 +108,8 @@ ms.lasthandoff: 09/01/2017
 
 Обычно процесс развертывания начинается с очистки скрипта от ненужного в рабочей среде кода. При движении вычислений ближе к данным, может оказаться способов более эффективно перемещать, обобщения и представлять данные, чем делать все, что в среде R.  Мы рекомендуем обратитесь к анализу данных разработчик баз данных о способах повышения производительности, особенно в том случае, если решение не очистки данных или компонента, проектирование, могут оказаться более эффективными в SQL. Возможно, потребуется изменить процессы извлечения, преобразования и загрузки, чтобы рабочие процессы для создания или оценки модели выполнялись без сбоев, а входные данные имели нужный формат.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Сравнение базовых функций R с функциями ScaleR](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
 
 [ScaleR Functions for Working with SQL Server Data](../../advanced-analytics/r/scaler-functions-for-working-with-sql-server-data.md) (Функции ScaleR для работы с данными SQL Server)
-

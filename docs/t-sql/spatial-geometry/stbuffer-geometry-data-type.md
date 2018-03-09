@@ -3,8 +3,11 @@ title: "STBuffer (тип данных geometry) | Документы Microsoft"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - STBuffer (geometry Data Type)
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 87ad6ea01e471cf1ec407f0b8372300d07f0118f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ff65df2a1216a29b15a0458e9e4537c748140714
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (тип данных geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Возвращает геометрический объект, представляющий объединение всех точек, расстояние которых от **geometry** экземпляр меньше или равно указанному значению.
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *расстояние*  
+ *distance*  
  Значение типа **float** (**двойные** в платформе .NET Framework) указывающее расстояние от экземпляра геометрического объекта, вокруг которого вычисляется буфер.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
@@ -50,7 +52,7 @@ ms.lasthandoff: 09/01/2017
   
  Возвращаемый тип CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  `STBuffer()`Вычисляет буфер аналогично [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), указав *отклонения* = distance \* .001 и *относительный*  =   **false**.  
   
  Когда *расстояние* > 0, то **многоугольника** или **MultiPolygon** возвращается экземпляр.  
@@ -167,10 +169,9 @@ ms.lasthandoff: 09/01/2017
   
  Первые два **ВЫБЕРИТЕ** инструкции возвращают `MultiPolygon` экземпляра, так как параметр *расстояние* меньше или равен 1/2 расстояния между двумя точками (1 1) и (1-4). Третий **ВЫБЕРИТЕ** инструкция возвращает `Polygon` экземпляра, так как помещенные в буфер экземпляры двух точек (1 1) и (1-4) перекрываются.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BufferWithTolerance &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
- [Методы OGC для геометрических объектов](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
+ [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
-
 

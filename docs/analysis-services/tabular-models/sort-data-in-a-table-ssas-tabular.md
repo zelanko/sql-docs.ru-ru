@@ -1,31 +1,31 @@
 ---
-title: "Сортировка данных в таблице (табличные службы SSAS) | Документы Microsoft"
+title: "Сортировка данных в таблицу | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5fa6ad56-bf68-4aac-a226-52556173b7e2
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 15fb7dedf1207965fe7bf24d76d12985d7d27945
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 48ec433aeb6884117d1341c52a5735ef5302ad58
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="sort-data-in-a-table-ssas-tabular"></a>Сортировка данных в таблице (табличные службы SSAS)
-  Данные могут быть отсортированы по алфавиту (в прямом или обратном порядке) и по значениям (по возрастанию или по убыванию) в одном или нескольких столбцах.  
+# <a name="sort-data-in-a-table"></a>Сортировка данных в таблице 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Данные могут быть отсортированы по алфавиту (в прямом или обратном порядке) и по значениям (по возрастанию или по убыванию) в одном или нескольких столбцах.  
   
 ### <a name="to-sort-the-data-in-a-table-based-on-a-text-column"></a>Сортировка данных в таблице по текстовому столбцу  
   
@@ -54,9 +54,8 @@ ms.lasthandoff: 09/01/2017
     >  Если результаты не соответствуют ожиданию, возможно, столбец содержит числа, сохраненные в формате текста. Например, отрицательные числа, импортированные из систем составления отчетности, или число, введенное с апострофом «’» в начале, сохраняются как текст.  
   
 ## <a name="see-also"></a>См. также  
- [Сортировка и фильтрация данных (табличные службы SSAS)](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)   
- [Перспективы (табличные службы SSAS)](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [Роли (табличные службы SSAS)](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
+ [Сортировка и фильтрация данных](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)   
+ [Перспективы](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
+ [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
   
-

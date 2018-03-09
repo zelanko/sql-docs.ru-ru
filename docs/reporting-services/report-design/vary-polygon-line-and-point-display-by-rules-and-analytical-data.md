@@ -1,13 +1,14 @@
 ---
-title: "Изменение многоугольников, линий и отображение точек с помощью правил и аналитических данных | Документы Microsoft"
+title: "Изменение параметров отображения многоугольников, линий и точек с помощью правил и аналитических данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +22,16 @@ f1_keywords:
 - "10536"
 - sql13.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-caps.latest.revision: 12
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 00778c0861d701aee22b366e202c25f8be60871e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 428f89c51b60f1e9f33170ab03cb43a87caf6a78
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Изменение параметров отображения многоугольников, линий и точек с помощью правил и аналитических данных
   Параметры отображения многоугольников, линий и точек слоя карты управляются настройками слоя, правилами для элементов слоя карты или переопределенными параметрами отдельных внедренных элементов слоя карты.  
@@ -123,7 +123,7 @@ ms.lasthandoff: 08/09/2017
   
  Для управления местом отображения условных обозначений используйте диалоговое окно «Свойства условных обозначений», которое позволяет указать положение условных обозначений относительно окна просмотра карты. Дополнительные сведения см. в разделе [Изменение условных обозначений карты, цветовой шкалы и связанных правил (построитель отчетов и службы SSRS)](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
- Условные обозначения автоматически расширяются, чтобы отобразить заголовок или текст условных обозначений. Чтобы форматировать текст элементов условных обозначений, используйте ключевые слова для условных обозначений карты и пользовательские форматы. Дополнительные сведения см. в разделе [To change the format of content in a legend](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md#ChangeFormatItems).  
+ Условные обозначения автоматически расширяются, чтобы отобразить заголовок или текст условных обозначений. Чтобы форматировать текст элементов условных обозначений, используйте ключевые слова для условных обозначений карты и пользовательские форматы. Дополнительные сведения см. в разделе [Изменение формата содержимого в условных обозначениях](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md#ChangeFormatItems).  
   
  В следующей таблице показаны примеры различных доступных форматов.  
   
@@ -134,10 +134,9 @@ ms.lasthandoff: 08/09/2017
 |`#TOVALUE`|Отображает действительное числовое значение поля данных.|10000|  
 |`#FROMVALUE{N0} - #TOVALUE{N0}`|Отображает текущее числовое значение начала и конца диапазона.|10–790|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Изменение условных обозначений карты, цветовой шкалы и связанных правил (построитель отчетов и службы SSRS)](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
- [Maps &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Мастер карт и мастер слоев карт &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
+ [Карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Мастер карт и мастер слоев карт (построитель отчетов и службы SSRS)](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
   
-

@@ -3,8 +3,11 @@ title: "Функция PATINDEX (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/19/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - PATINDEX function
 ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
-caps.latest.revision: 53
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: abf357840512c1447f0977a151ca742b148f45d2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 95a86e78aad7ea01a7f57a046b250825c9e37192
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Для любого допустимого символьного или текстового типа данных возвращает начальную позицию первого вхождения шаблона в указанном выражении или нули, если шаблон не найден.  
   
@@ -47,7 +49,7 @@ PATINDEX ( '%pattern%' , expression )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *шаблон*  
+ *pattern*  
  Символьное выражение, содержащее последовательность символов, которую надо найти. Можно использовать подстановочные знаки; Тем не менее, необходимо следовать после и выполнить знак % *шаблон* (за исключением того, когда производится поиск первых или последних символов). *шаблон* выражение относится к символьному типу данных. *шаблон* ограничен 8000 символов.  
   
  *expression*  
@@ -56,7 +58,7 @@ PATINDEX ( '%pattern%' , expression )
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **bigint** Если *выражение* имеет **varchar(max)** или **nvarchar(max)** типов данных; в противном случае **int**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если параметр *шаблон* или *выражение* имеет значение NULL, функция PATINDEX возвращает NULL.  
   
  Функция PATINDEX выполняет сравнение с учетом параметров сортировки входных значений. Для выполнения сравнения в указанных параметрах сортировки можно воспользоваться функцией COLLATE, чтобы явно указать параметры сортировки для входных данных.  
@@ -146,7 +148,9 @@ WHERE DocumentNode = 0x7B40;
   
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
+ [Функция CHARINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/charindex-transact-sql.md)  
+ [Функция LEN &#40; Transact-SQL &#41;](../../t-sql/functions/len-transact-sql.md)  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [&#40; Подстановочный знак — символ &#40; s &#41; для соответствия &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
@@ -155,6 +159,5 @@ WHERE DocumentNode = 0x7B40;
  [Символ процента &#40; Подстановочный знак — символ &#40; s &#41; для соответствия &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
   
-
 
 

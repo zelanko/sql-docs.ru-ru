@@ -3,8 +3,11 @@ title: "Количественные выражения (XQuery) | Докуме�
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - EBV
 - expressions [XQuery], quantifiers
 ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
-caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d0efc9fb3b26dd8ebbd7df02609d0570fa67098a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 483c3779e53389d34da12c974f3a13672216c9a9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="quantified-expressions-xquery"></a>Выражения с квантором (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Кванторы существования и кванторы всеобщности указывают различную семантику для логических операторов, применяемых к двум последовательностям. Это показано ниже.  
   
@@ -113,8 +115,7 @@ ProductModelID SmallPicturesStored
   
 -   Утверждение типов не поддерживается как часть привязки переменной в выражениях с квантором.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выражения XQuery](../xquery/xquery-expressions.md)  
   
   
-

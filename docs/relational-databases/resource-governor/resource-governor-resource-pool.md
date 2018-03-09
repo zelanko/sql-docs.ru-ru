@@ -2,11 +2,13 @@
 title: "Пул ресурсов регулятора ресурсов | Документация Майкрософт"
 ms.custom: 
 ms.date: 10/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - resource pool [SQL Server], overview
 - resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
-caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "17"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 575436714273ffc0611fda557381099418e70531
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
-ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
-ms.openlocfilehash: e016d57148d09109f894269007d613774c4e8263
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/23/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="resource-governor-resource-pool"></a>Пул ресурсов регулятора ресурсов
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В регуляторе ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пул ресурсов представляет подмножество физических ресурсов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Регулятор ресурсов позволяет задать ограничения на загрузку ЦП, физических средств ввода-вывода и использование памяти, которые доступны для входящих запросов приложений в пуле ресурсов. Каждый пул ресурсов может содержать одну или несколько групп рабочей нагрузки. После запуска сеанса классификатор регулятора ресурсов назначает этот сеанс группе рабочей нагрузки и этот сеанс должен функционировать с ресурсами, назначенными этой группе рабочей нагрузки.  
   
@@ -129,11 +130,10 @@ ms.lasthandoff: 10/23/2017
 |Описывает, как удалить пул ресурсов.|[Удаление пула ресурсов](../../relational-databases/resource-governor/delete-a-resource-pool.md)|  
   
 ## <a name="see-also"></a>См. также:  
- [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
+ [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
  [Группа рабочей нагрузки регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [Функция-классификатор регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   
  [Настройка регулятора ресурсов с помощью шаблона](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)   
  [Просмотр свойств регулятора ресурсов](../../relational-databases/resource-governor/view-resource-governor-properties.md)  
   
   
-

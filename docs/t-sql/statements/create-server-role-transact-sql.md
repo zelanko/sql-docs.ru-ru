@@ -3,8 +3,11 @@ title: "Создание РОЛИ сервера (Transact-SQL) | Докумен
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
+ms.prod_service: pdw, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - user-defined server roles [SQL Server]
 - roles, server
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
-caps.latest.revision: 18
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 445c44ad009ff9bd6509d077f5f579d0f7f42855
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ad6b6aa0eac42e8f415de6e4633027aa70ee9158
+ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Создает новую, определяемую пользователем роль сервера.  
   
@@ -56,7 +58,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
  АВТОРИЗАЦИЯ *server_principal*  
  Является именем входа, которому будет принадлежать новая роль сервера. Если имя входа не указано, владельцем роли сервера станет имя входа, выполнившее инструкцию CREATE SERVER ROLE.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Роли сервера являются защищаемыми объектами уровня сервера. После создания роли сервера необходимо настроить для нее разрешения уровня сервера при помощи инструкций GRANT, DENY и REVOKE. Для добавления или удаления имен входа из роли сервера, используйте [ALTER SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-server-role-transact-sql.md). Чтобы удалить роль сервера, используйте [DROP SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-server-role-transact-sql.md). Дополнительные сведения см. в разделе [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Для просмотра ролей сервера можно запросить [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) и [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) представления каталога.  
@@ -65,7 +67,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
   
  Сведения о проектировании системы разрешений см. в статье [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения CREATE SERVER ROLE или членства в предопределенной роли сервера.  
   
  Также требует разрешения IMPERSONATE на *server_principal* для имен входа, разрешения ALTER для ролей сервера, которые используются в качестве *server_principal*, или членства в группе Windows, которая используется в качестве server_principal.  
@@ -98,7 +100,7 @@ CREATE SERVER ROLE auditors AUTHORIZATION securityadmin;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [УДАЛИТЬ РОЛЬ сервера &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
@@ -108,4 +110,3 @@ GO
  [Приступая к работе с разрешениями Database Engine](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
   
   
-

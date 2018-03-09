@@ -1,30 +1,31 @@
 ---
-title: "Источники данных | Документы Microsoft"
+title: "Источники данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC]
 - data sources [ODBC], about data sources
 ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: 84c415fd10a757cebfc365759d7fb038f9630ec4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 179efeac4673884e615648d1ed118398132dc6f9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="data-sources"></a>Источники данных
+# <a name="data-sources"></a>обозревателе решений
 Объект *источника данных* является просто источником данных. Он может быть файл, в конкретной базе данных СУБД, или даже канал динамических данных. Данные могут быть расположены на том же компьютере, что и программа или на другом компьютере, где-нибудь в сети. Например источник данных может быть СУБД Oracle под управлением операционной системы, OS/2®, использованным Novell® Netware; СУБД IBM DB2, доступ через шлюз; Коллекция Xbase файлы в каталоге сервера. или локального файла базы данных Microsoft® Access.  
   
  Источник данных предназначен для сбора, все технические сведения, необходимые для доступа к данным — имя драйвера, сетевой адрес, сетевое программное обеспечение и т. д — в единую разместить и скрыть его от пользователя. Пользователь должен иметь возможность просмотрите список, включающий заработной платы, инвентаризация и службу, выберите в списке заработной платы и подключение к данным заработной платы, все это, не зная, где хранятся данные заработной платы или как приложение дошла до его приложения.  
@@ -37,4 +38,4 @@ ms.lasthandoff: 09/09/2017
   
 -   [Использование источников данных](../../odbc/reference/using-data-sources.md)  
   
--   [Пример источника данных](../../odbc/reference/data-source-example.md)
+-   [Образец источника данных](../../odbc/reference/data-source-example.md)

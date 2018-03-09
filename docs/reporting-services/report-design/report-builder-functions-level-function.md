@@ -1,29 +1,29 @@
 ---
-title: "Функция (построитель отчетов и службы SSRS) Level | Документы Microsoft"
+title: "Функция Level (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 171842909a300d0c98fca2a26bbf4567810e8e95
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 07c04ef8576eaeec00b629c045c54136cb10e463
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="report-builder-functions---level-function"></a>Функции построителя отчетов - функция Level
+# <a name="report-builder-functions---level-function"></a>Функции построителя отчетов — функция Level
   Возвращает текущий уровень глубины в рекурсивной иерархии.  
   
 > [!NOTE]  
@@ -43,7 +43,7 @@ Level(scope)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Возвращает значение типа **Integer**. Если параметр *scope* определяет набор данных, область данных или нерекурсивное группирование (т. е. группирование без элемента **Parent** ), функция **Level** возвращает значение 0. Если параметр *scope* не указан, то возвращается уровень текущей области.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Возвращаемые функцией **Level** значения отсчитываются от нуля, т. е. первым уровнем в иерархии является 0.  
   
  Функция **Level** может использоваться для обеспечения автоматического определения отступов в рекурсивной иерархии, такой как список сотрудников.  
@@ -57,11 +57,10 @@ Level(scope)
 =Level("Employees")  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Использование выражений в отчетах &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Примеры выражений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Типы данных в выражениях &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Область выражения для итогов, статистические выражения и встроенных коллекций &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+## <a name="see-also"></a>См. также:  
+ [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Типы данных в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   
-

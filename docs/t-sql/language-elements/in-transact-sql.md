@@ -3,8 +3,11 @@ title: "IN (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 08/29/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,20 +25,19 @@ helpviewer_keywords:
 - IN keyword
 - 8632 (Database Engine error)
 ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 70b186107966791e29ccb76ea9c310724b76e3b6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 86d03b96015869efb8ff2ab873b1c838c50387f8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Определяет, совпадает ли указанное значение с одним из значений, содержащихся во вложенном запросе или списке.  
   
@@ -53,7 +55,7 @@ test_expression [ NOT ] IN
  *test_expression*  
  Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- *вложенный запрос*  
+ *subquery*  
  Вложенный запрос, содержащий результирующий набор, состоящий из одного столбца. Этот столбец должен иметь тот же тип данных, *test_expression*.  
   
  *выражение*[ **,**... *n* ]  
@@ -70,7 +72,7 @@ test_expression [ NOT ] IN
 > [!CAUTION]  
 >  Пустые значения, возвращаемые методом *вложенный запрос* или *выражение* , по сравнению с *test_expression* с помощью предложения IN или NOT IN, возвращается UNKNOWN. Использование значений NULL с предложениями IN или NOT IN может привести к непредвиденным результатам.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Намеренное Включение очень большого количества значений (много тысяч значений, разделенных запятыми) в круглых скобках в предложение IN может использовать ресурсы и возвратить ошибки 8623 или 8632. Чтобы обойти эту проблему, храните элементы списка IN в таблице и использовать вложенный запрос SELECT внутри предложения.  
   
  Ошибки 8623:  
@@ -209,7 +211,7 @@ FROM DimEmployee
 WHERE FirstName IN ('Mike', 'Michael');  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [РЕГИСТР &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
@@ -220,7 +222,6 @@ WHERE FirstName IN ('Mike', 'Michael');
  [НЕКОТОРЫЕ &#124; ВСЕ &#40; Transact-SQL &#41;](../../t-sql/language-elements/some-any-transact-sql.md)  
   
   
-
 
 
 

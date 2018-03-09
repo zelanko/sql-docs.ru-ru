@@ -3,26 +3,26 @@ title: "Команда SET PATH | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SET PATH command [ODBC]
+helpviewer_keywords: SET PATH command [ODBC]
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 553c3f464b5a14d578aa05bece939126f7251974
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 490fefba9286a970b21014c66d681426703978fc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-path-command"></a>ПУТЬ команды SET
 Указывает путь для поиска файлов. Дополнительные сведения см.  
@@ -38,7 +38,7 @@ SET PATH TO [Path]
  ДЛЯ [ *путь*]  
  Указывает каталог, который требуется Visual FoxPro для поиска. Используйте запятую или точку с запятой для разделения каталогов.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  ЗАДАЙТЕ путь можно указать пути поиска для других программ Visual FoxPro, которые можно вызывать хранимые процедуры. ЗАДАЙТЕ путь не изменит путь источника данных, который вы указали для подключения.  
   
  Выдавать ЗАДАТЬ путь без *путь* для восстановления путь к каталогу по умолчанию или папку.  
@@ -59,4 +59,3 @@ SET PATH TO [Path]
  [SQLColumns (драйвер ODBC для Visual FoxPro)](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)   
  [SQLDriverConnect (драйвер ODBC для Visual FoxPro)](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)   
  [SQLTables (драйвер ODBC для Visual FoxPro)](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)
-

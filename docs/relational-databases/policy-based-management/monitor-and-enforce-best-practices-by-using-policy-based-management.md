@@ -2,30 +2,30 @@
 title: "Наблюдение с помощью управления на основе политик и принудительное применение рекомендаций с помощью управления на основе политик | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Best Practices [Database Engine]
+helpviewer_keywords: Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
-caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "27"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a8e343ee942845bda5c874a3a238a4450ec391aa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f48c7d177acea6812a7b10610a2ab67930b3e9e2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Наблюдение с помощью управления на основе политик и принудительное применение рекомендаций с помощью управления на основе политик
-  Управление на основе политик позволяет отслеживать рекомендации для [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет набор файлов политик, которые можно импортировать в качестве политик рекомендаций, а затем оценивать эти политики для набора целей, включающего экземпляры, объекты экземпляров, базы данных или объекты базы данных. Политики можно оценивать вручную или устанавливать их для оценки набора целей согласно расписанию либо тому или иному событию. Дополнительные сведения об управлении на основе политик см. в статье [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Управление на основе политик позволяет отслеживать рекомендации для [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет набор файлов политик, которые можно импортировать в качестве политик рекомендаций, а затем оценивать эти политики для набора целей, включающего экземпляры, объекты экземпляров, базы данных или объекты базы данных. Политики можно оценивать вручную или устанавливать их для оценки набора целей согласно расписанию либо тому или иному событию. Дополнительные сведения об управлении на основе политик см. в статье [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="policy-and-rules-for-database-engine"></a>Политика и правила для компонента Database Engine  
  В следующей таблице приводится список политик, включенных в установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также сведения о правилах рекомендаций, которые вычисляет каждая политика. Политики хранятся в виде XML-файлов и должны импортироваться в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения об импорте политик см. в статье [Импорт политики управления на основе политик](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md).  
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
 |Разрешения гостя|[Разрешения гостя для пользовательских баз данных](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
 |Дата последнего успешного резервного копирования|[Устаревшая резервная копия](../../relational-databases/policy-based-management/outdated-backup.md)|  
 |Роли Public не предоставлены разрешения на сервер|[Разрешения роли сервера public](../../relational-databases/policy-based-management/server-public-permissions.md)|  
-|SQL Server: перекрытие 64-разрядной маски сходства|[Правильное перекрытие параметров affinity mask и affinity input-output mask](../../relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|SQL Server: перекрытие 64-разрядной маски сходства|[Correct Affinity Mask and Affinity Input and Output Mask Overlap](../../relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |SQL Server: маска сходства|[Сохранение значения маски сходства по умолчанию](../../relational-databases/policy-based-management/keep-the-affinity-mask-default-value.md)|  
 |SQL Server: пороговый интервал ожидания блокированных процессов|[Увеличение или отключение порога заблокированных процессов](../../relational-databases/policy-based-management/increase-or-disable-blocked-process-threshold.md)|  
 |SQL Server: трассировка по умолчанию|[Отключение предусмотренных по умолчанию файлов журнала трассировки](../../relational-databases/policy-based-management/default-trace-log-files-disabled.md)|  
@@ -64,9 +64,9 @@ ms.lasthandoff: 06/22/2017
 |Журнал событий Windows: ошибка из-за повреждения дискового ресурса кластера|[Определение неполадок хост-адаптера SCSI](../../relational-databases/policy-based-management/detect-scsi-host-adapter-issues.md)|  
 |Журнал событий Windows: ошибка управления драйвером устройства|[Ошибка управления драйвером устройства](../../relational-databases/policy-based-management/device-driver-control-error.md)|  
 |Журнал событий Windows, ошибка: устройство не готово|[Ошибка отсутствия готовности устройства](../../relational-databases/policy-based-management/device-not-ready-error.md)|  
-|Журнал событий Windows: ошибка запроса ввода-вывода|[Обнаружение неудачно завершившегося запроса ввода-вывода](../../relational-databases/policy-based-management/detect-failed-input-and-output-requests.md)|  
-|Журнал событий Windows: предупреждение об отложенном вводе-выводе|[Проверка на наличие проблем задержки ввода-вывода в подсистеме дискового ввода-вывода](../../relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
-|Журнал событий Windows: ошибка ввода-вывода при сбое страницы физической памяти|[Ошибка ввода-вывода при отсутствии страницы в памяти](../../relational-databases/policy-based-management/input-and-output-error-during-hard-page-fault.md)|  
+|Журнал событий Windows: ошибка запроса ввода-вывода|[Detect Failed Input and Output Requests](../../relational-databases/policy-based-management/detect-failed-input-and-output-requests.md)|  
+|Журнал событий Windows: предупреждение об отложенном вводе-выводе|[Check Disk Input and Output Subsystem for IO Delay Problems](../../relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
+|Журнал событий Windows: ошибка ввода-вывода при сбое страницы физической памяти|[Input and Output Error During Hard Page Fault](../../relational-databases/policy-based-management/input-and-output-error-during-hard-page-fault.md)|  
 |Журнал событий Windows: ошибка при повторном считывании|[Проверка на наличие проблем повторного чтения в подсистеме дискового ввода-вывода](../../relational-databases/policy-based-management/check-disk-input-output-subsystem-for-read-retry-problems.md)|  
 |Журнал событий Windows: ошибка из-за истечения времени ожидания ввода-вывода системы хранения|[Время ожидания ввода-вывода для системы хранения](../../relational-databases/policy-based-management/storage-system-input-output-time-out.md)|  
 |Журнал событий Windows: сбой в системе|[Непредвиденные сбои системы](../../relational-databases/policy-based-management/unexpected-system-failures.md)|  
@@ -75,4 +75,3 @@ ms.lasthandoff: 06/22/2017
  [Работа с аспектами управления на основе политик](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
   
   
-

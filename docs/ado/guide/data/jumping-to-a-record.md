@@ -3,7 +3,7 @@ title: "Переход к записи | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - record jumping [ADO]
 - jumping to record [ADO]
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f458006db74ce8701f0ceb6a0b227771d941eea0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19a4275d339132db8efd4b09a313b482fc8cb666
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="jumping-to-a-record"></a>Переход к записи
 [Переместить](../../../ado/reference/ado-api/move-method-ado.md) метода можно перемещаться вперед или назад в **записей** указанное число записей, используя следующий синтаксис:  
@@ -35,7 +34,7 @@ ms.lasthandoff: 09/09/2017
 oRs.Move NumRecords, Start  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **Переместить** метод поддерживается на всех **записей** объектов.  
   
  Если *NumRecords* аргумент больше нуля, положение текущей записи перемещается вперед (ближе к концу **записей**). Если *NumRecords* меньше нуля, положение текущей записи выполняется перемещение назад (к началу **записей**).  
@@ -49,4 +48,3 @@ oRs.Move NumRecords, Start
  При передаче закладки в *запустить* аргумента перемещения указывается относительно записи с этой закладкой, при условии, что **записей** объект поддерживает закладки. Закладки можно получить с помощью [закладки](../../../ado/reference/ado-api/bookmark-property-ado.md) свойство. Если не указан, перемещение задается относительно текущей записи.  
   
  Если вы используете **CacheSize** свойство локально кэширование записи от поставщика, передавая *NumRecords* аргумент, который перемещает текущую позицию записей за пределами текущей группы кэшированных записей принудительно ADO, чтобы получить новую группу записи, начиная с записи назначения. **CacheSize** свойство определяет размер только что полученный группы и назначения запись является первой записи получены.
-

@@ -1,26 +1,28 @@
 ---
-title: "Общие сведения о консоли конструктора CDC | Документы Microsoft"
+title: "Общие сведения о консоли конструктора CDC | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
-caps.latest.revision: 16
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b11270e4535868da764601fcce1a2d3c12e077d
-ms.openlocfilehash: 12afe7ad2b83c4ab25e4c0803d015442ef9cfc55
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b89045fbbda6920dbeb57e6d19da3813932ba597
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Общие сведения о консоли конструктора CDC
   В этом разделе описаны процедуры установки конструктора отслеживания измененных данных для Oracle от Attunity.  
@@ -43,8 +45,8 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="source-oracle-database"></a>Исходная база данных Oracle
   
--   Версии 10g базы данных Oracle 2
--   База данных Oracle 11g выпуске 1 и версии 2
+-   База данных Oracle 10g, выпуск 2
+-   База данных Oracle 11g, выпуск 1 и 2
 -   База данных Oracle 12c в классической установке. (Многоклиентская установка не поддерживается.)  
 
 ### <a name="target-sql-server-database"></a>Целевая база данных SQL Server
@@ -67,4 +69,3 @@ ms.lasthandoff: 08/03/2017
  Консоль конструктора CDC удаляется через пункт панели управления "Программы и компоненты".  
   
   
-

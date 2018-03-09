@@ -2,13 +2,13 @@
 title: "Обновление служб Analysis Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/12/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,18 +22,20 @@ helpviewer_keywords:
 - installing Analysis Services, upgrading
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-caps.latest.revision: 79
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.openlocfilehash: eb0bcf7a72e59e58bdd4f980c5be175c2a0affdd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: 7e6b4f4e6c984e8d3e6f88939e88d73dfc2d3909
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-analysis-services"></a>Обновление служб Analysis Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
   Чтобы воспользоваться преимуществами функций, появившихся в текущем выпуске, вы можете перевести экземпляры служб Analysis Services на версию SQL Server с аналогичным режимом сервера. Эта процедура описана в разделе [Новые возможности в службах Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
   
  Вы можете обновить каждый экземпляр на месте независимо от других экземпляров, выполняемых на том же оборудовании. Но большинство администраторов устанавливают экземпляр новой версии для тестирования приложений, прежде чем переносить рабочие нагрузки на новый сервер. Однако для серверов разработки или тестирования обновление на месте может быть более удобным.  
@@ -77,12 +79,12 @@ ms.lasthandoff: 09/12/2017
   
  В табличных и многомерных базах данных используются различные пути к версиям. То, что числа уровней совместимости для многомерных и табличных моделей похожи — случайность.  Если изменение функции влияет только на один режим, режимы будут изменяться с различной скоростью.  
   
- Для образовательных целей в следующей таблице перечислены уровни совместимости, но для понимания возможностей каждого уровня нужно изучить соответствующий раздел.  
+ Для образовательных целей в следующей таблице перечислены уровни совместимости, но для понимания возможностей каждого уровня нужно изучить соответствующую статью.  
   
 ||||  
 |-|-|-|  
 |Табличный|1400|SQL Server 2017|
-|Табличный|1200|SQL Server 2016|  
+|Табличный|1200|SQL Server 2016|  
 |Табличный|1103|SQL Server 2014|  
 |Табличный|1100|SQL Server 2012|  
 |Multidimensional|1100|SQL Server 2012 и более поздней версии|  
@@ -90,9 +92,8 @@ ms.lasthandoff: 09/12/2017
   
  Дополнительные сведения см. в статьях [Уровень совместимости многомерной базы данных &#40;службы Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md) и [Уровень совместимости табличных моделей служб Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Планирование установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Обновление Power Pivot для SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
   
   
-

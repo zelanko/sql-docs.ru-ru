@@ -1,27 +1,27 @@
 ---
-title: "Справочник выражений (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Справочник выражений (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c398f3e0b6e3d6eae50fbd9f2bad35c47524c808
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e1882bcd9d22cf98e940264aa3b62569417f8a1a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>Справочник выражений (построитель отчетов и службы SSRS)
   Выражения отчета поддерживают различные ссылки на встроенные функции и встроенные коллекции. Чтобы отчет можно было опубликовать или обработать, выражения должны иметь допустимый синтаксис [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/09/2017
   
  Этот раздел предназначен для помощи в написании простых выражений в отчете.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)  
   
  [Константы в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)  
@@ -54,8 +54,7 @@ ms.lasthandoff: 08/09/2017
   
  [Ссылки на коллекцию ReportItems (построитель отчетов и службы SSRS)](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

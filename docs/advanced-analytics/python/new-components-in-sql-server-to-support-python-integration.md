@@ -1,26 +1,27 @@
 ---
 title: "Компоненты интеграции Python с SQL Server | Документы Microsoft"
 ms.custom: 
-ms.date: 08/20/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 495b7757073cea48773dd7c03f32f7ccf4240cd0
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 07f8e18b4481b2773f3ac16cdea08c27feff1ba3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="components-in-sql-server-to-support-python-integration"></a>Компоненты SQL Server для поддержки интеграции Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Начиная с SQL Server 2017 г., Machine Learning Services поддерживает Python как внешний язык, который может быть выполнен из T-SQL, или выполняется удаленно с помощью SQL Server в контексте.
 
@@ -104,7 +105,7 @@ BxlServer использует вспомогательное соединени
   + Записи данных в таблицы: например, при сохранении результатов в таблицу
   + Создание объектов базы данных: например, при сохранении внешнего скрипта в рамках новой хранимой процедуры.
 
-  Когда [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] — используется в качестве контекста вычислений для выполнения сценария Python с удаленного клиента, а исполняемый файл Python должны получать данные из внешнего источника, ODBC используется для обратной записи. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]будет сопоставить удостоверение пользователя, выполняющего удаленной команды к удостоверению пользователя в текущем экземпляре и выполните команду ODBC с использованием учетных данных пользователя. Строка подключения, необходимая для выполнения этого вызова ODBC, получается из клиентского кода.
+  Когда [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] — используется в качестве контекста вычислений для выполнения сценария Python с удаленного клиента, а исполняемый файл Python должны получать данные из внешнего источника, ODBC используется для обратной записи. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]Сопоставляет удостоверение пользователя, выполняющего удаленной команды к удостоверению пользователя в текущем экземпляре и выполняет команду ODBC, используя учетные данные пользователя. Строка подключения, необходимая для выполнения этого вызова ODBC, получается из клиентского кода.
 
 ## <a name="interaction-of-components"></a>Взаимодействие компонентов
 
@@ -116,26 +117,26 @@ BxlServer использует вспомогательное соединени
 
 После скрипт внедренными в хранимой процедуре, любое приложение, которое можно сделать вызов хранимой процедуры можно инициировать выполнение кода Python.  После этого [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] управляет выполнением кода, как показано на следующей схеме.
 
-![сценарий в db python](../../advanced-analytics/python/media/script-in-db-python.png)
+![сценарий в db python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
-1. Запрос для среды выполнения Python, определяемый параметром  _@language= «Python»_ передается хранимой процедуре. SQL Server отправляет запрос службы панели запуска.
+1. Запрос для среды выполнения Python, определяемый параметром `@language='Python'` передается хранимой процедуре. SQL Server отправляет запрос службы панели запуска.
 2. Служба панели запуска начинается соответствующие запуска; в этом случае PythonLauncher.
 3. PythonLauncher запускается внешний процесс Python35.
 4. BxlServer координаты с помощью среды выполнения Python для управления обмен данными и хранения результатов работы.
 5. Вспомогательные SQL управляет взаимодействием связанные задачи и процессы, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 6. BxlServer использует вспомогательное соединение SQL для передачи состояния и результатов в [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] получает результаты и закрывает связанные задачи и процессы.
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Возвращает результаты и закрывает связанные задачи и процессы.
 
 ### <a name="python-scripts-executed-from-a-remote-client"></a>Python скриптов, выполненных с помощью удаленного клиента
 
 Можно запускать сценарии Python с удаленного компьютера, например переносного компьютера и их выполнения в контексте компьютера SQl Server, при соблюдении следующих условий:
 
 + Сценарии разработки соответствующим образом
-+ Удаленный компьютер установил библиотеки расширения, которые используются службами машины обучения
++ Удаленный компьютер после установки библиотеки расширения, которые используются службами машины обучения. [Revoscalepy](what-is-revoscalepy.md) пакет необходим для использования в контекстах удаленных вычислений.
 
 На следующей диаграмме показаны общего рабочего процесса, если сценарии осуществляется с удаленного компьютера.
 
-![удаленное sqlcc из python](../../advanced-analytics/python/media/remote-sqlcc-from-python2.png)
+![remote-sqlcc-from-python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
 
 1. Для функций, которые поддерживаются в **revoscalepy**, среда выполнения Python вызывает связывания функции, которая в свою очередь вызывает BxlServer.
 2. BxlServer входит в состав службы обучения машины (в базе данных) и выполняется в отдельном процессе от среды выполнения Python.
@@ -150,4 +151,3 @@ BxlServer использует вспомогательное соединени
 ## <a name="next-steps"></a>Следующие шаги
 
 [Общие сведения об архитектуре для Python в SQL Server](architecture-overview-sql-server-python.md)
-

@@ -2,42 +2,38 @@
 title: "Элемент Restrictions (XML для Аналитики) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Restrictions Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Restrictions Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Restrictions
 - http://schemas.microsoft.com/analysisservices/2003/engine#Restrictions
 - microsoft.xml.analysis.restrictions
-helpviewer_keywords:
-- Restrictions element
+helpviewer_keywords: Restrictions element
 ms.assetid: e745ce13-b468-4372-a6f0-0da3d772dda3
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 704906a3b42557feace9c75ce5f2702be553ff08
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7d48910dbd2e2179fbd8a803e80bb7238d631f76
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="restrictions-element-xmla"></a>Элемент Restrictions (XML для аналитики)
-  Содержит столбцы ограничений и данные, используемые [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) метод.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит столбцы ограничений и данные, используемые [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) метод.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,7 +50,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -67,7 +63,7 @@ ms.lasthandoff: 09/01/2017
 |Родительские элементы|[Обнаружение](../../../analysis-services/xmla/xml-elements-methods-discover.md)|  
 |Дочерние элементы|[RestrictionList](../../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **Ограничения** элемент представляет столбцы ограничений и данные, используемые для ограничения сведений, получаемых методом **Discover** метод.  
   
 ## <a name="example"></a>Пример  
@@ -88,4 +84,3 @@ ms.lasthandoff: 09/01/2017
  [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

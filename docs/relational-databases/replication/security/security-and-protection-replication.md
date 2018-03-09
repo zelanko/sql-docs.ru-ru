@@ -2,11 +2,13 @@
 title: "Безопасность и защита (репликация) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,29 +19,29 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], security
 - transactional replication, security
 ms.assetid: 310a8203-c0aa-4794-93fe-737d7c3fcfd6
-caps.latest.revision: 44
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8e9675b71eaadc2e86015c4de49be55d026fd02
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "44"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: baa793a3d82a7420af7ceb1ddfdb30d23b91c3b8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="security-and-protection-replication"></a>Безопасность и защита (репликация)
-  Защита сценариев репликации, развертываемых в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , от вредоносных атак и повышение безопасности данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Защитите свои сценарии репликации, развертываемые в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], от вредоносных атак и повысьте безопасность своих данных.  
   
- ![Маленький значок папки](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Общие сведения о безопасности**  
+ ![Маленький значок папки с файлами](../../../analysis-services/media/filefolder-small.png "Маленький значок папки с файлами") **Обзор безопасности**  
  [Предотвращение угроз и устранение уязвимостей (репликация)](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md)  
   
  [Идентификатор и контроль доступа (репликация)](../../../relational-databases/replication/security/identity-and-access-control-replication.md)  
   
  [Подробнее...](../../../relational-databases/replication/security/security-overview-replication.md)  
   
- ![Маленький значок папки](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Безопасная разработка**  
- [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)  
+ ![Маленький значок папки с файлами](../../../analysis-services/media/filefolder-small.png "Маленький значок папки с файлами") **Безопасная разработка**  
+ [Модель безопасности агента репликации](../../../relational-databases/replication/security/replication-agent-security-model.md)  
   
  [Security Role Requirements for Replication](../../../relational-databases/replication/security/security-role-requirements-for-replication.md)  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
  [Подробнее...](../../../relational-databases/replication/security/secure-development-replication.md)  
   
- ![Маленький значок папки](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Безопасное развертывание**  
+ ![Маленький значок папки с файлами](../../../analysis-services/media/filefolder-small.png "Маленький значок папки с файлами") **Безопасное развертывание**  
  [Защита распространителя](../../../relational-databases/replication/security/secure-the-distributor.md)  
   
  [Защита издателя](../../../relational-databases/replication/security/secure-the-publisher.md)  
@@ -60,7 +62,7 @@ ms.lasthandoff: 06/22/2017
   
  [Подробнее...](../../../relational-databases/replication/security/secure-deployment-replication.md)  
   
- ![Маленький значок папки](../../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Безопасная эксплуатация**  
+ ![Маленький значок папки с файлами](../../../analysis-services/media/filefolder-small.png "Маленький значок папки с файлами") **Безопасная работа**  
  [Управление именами для входа и паролями при репликации](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)  
   
 ## <a name="see-also"></a>См. также:  

@@ -2,9 +2,12 @@
 title: "Сравнение запросов FOR XML и вложенных запросов FOR XML | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - FOR XML query
 - queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
-caps.latest.revision: 11
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2e83d836d3cf5e736847c5ebbb1934e8cde5374a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: dbbc80f4b96765da5cbb2e7533d5c46e80a26935
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Сравнение запросов FOR XML и вложенных запросов FOR XML
-  В этом разделе сравнивается одноуровневый запрос FOR XML с вложенным запросом FOR XML. Одним из преимуществ вложенных запросов FOR XML является то, что в них для результатов запроса можно задать сочетание XML-данных по атрибутивной или элементной модели. Это демонстрируется в примере.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+В этом разделе сравнивается одноуровневый запрос FOR XML с вложенным запросом FOR XML. Одним из преимуществ вложенных запросов FOR XML является то, что в них для результатов запроса можно задать сочетание XML-данных по атрибутивной или элементной модели. Это демонстрируется в примере.  
   
 ## <a name="example"></a>Пример  
  Следующий запрос `SELECT` позволяет получить сведения о категории и подкатегории продукта в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . В запросе нет вложенных запросов FOR XML.  
@@ -209,4 +212,3 @@ FOR XML AUTO, TYPE
  [Использование вложенных запросов FOR XML](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   
-

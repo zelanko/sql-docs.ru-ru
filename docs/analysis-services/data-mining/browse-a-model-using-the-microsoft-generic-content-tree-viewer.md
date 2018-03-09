@@ -2,31 +2,30 @@
 title: "Просмотр модели с помощью средства просмотра деревьев содержимого Microsoft Generic | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining model content, viewing
+helpviewer_keywords: mining model content, viewing
 ms.assetid: 4a5f7c51-c704-4214-b05d-21cf735e6d96
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6489f35c5d438dd234e97eeed3d042ea41cc291c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dcb5c01581dd9d42e7504dc00f514544479b27fc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>Просмотр модели в средстве просмотра деревьев содержимого общего вида (Майкрософт)
-  Средство просмотра содержимого общего вида модели интеллектуального анализа данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] предоставляет подробные сведения о закономерностях, обнаруженных алгоритмом интеллектуального анализа данных, а также доступ к различной статистической информации, созданной в процессе анализа. Объем и тип этих сведений зависит от использованного алгоритма, но может включать в себя следующие категории:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Универсального просмотра содержимого модели интеллектуального анализа данных предоставляет подробные сведения о закономерностях, обнаруженных алгоритмом интеллектуального анализа данных, а также предоставляет доступ к различной статистики, созданной в процессе анализа. Объем и тип этих сведений зависит от использованного алгоритма, но может включать в себя следующие категории:  
   
 -   сегменты данных и их характеристики;  
   
@@ -54,9 +53,8 @@ SELECT * FROM [<mining model name>].CONTENT
   
  Дополнительные сведения см. в статье [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Средство просмотра деревьев содержимого общего вида (Майкрософт) (интеллектуальный анализ данных)](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
  [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   
-

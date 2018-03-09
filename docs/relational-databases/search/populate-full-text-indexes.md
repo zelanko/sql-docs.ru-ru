@@ -2,9 +2,12 @@
 title: "Заполнение полнотекстовых индексов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -24,20 +27,20 @@ helpviewer_keywords:
 - full populations [full-text search]
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
-caps.latest.revision: 78
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: c139299c1613bb3d76328097fd1235f67ebe121a
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d68baa882e382b2b68e5eded3ea7807e4b13aa6d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="populate-full-text-indexes"></a>Заполнение полнотекстовых индексов
-  Создание и обслуживание полнотекстового индекса включает процесс *заполнения* индекса (которое также называется *сканированием*).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Создание и обслуживание полнотекстового индекса включает процесс *заполнения* индекса (которое также называется *сканированием*).  
   
 ##  <a name="types"></a> Types of population  
 Полнотекстовый индекс поддерживает следующие типы заполнения:
@@ -57,7 +60,7 @@ ms.lasthandoff: 07/31/2017
 ### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>Пример создания полнотекстового индекса без выполнения полного заполнения  
  В следующем примере создается полнотекстовый индекс для таблицы `Production.Document` образца базы данных `AdventureWorks` . В этом примере используется параметр `WITH CHANGE_TRACKING OFF, NO POPULATION` для задержки первоначального полного заполнения.  
   
-```tsql
+```sql
 CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
 CREATE FULLTEXT CATALOG AW_Production_FTCat;  
 CREATE FULLTEXT INDEX ON Production.Document  
@@ -76,7 +79,7 @@ GO
 ### <a name="example---run-a-full-population-on-a-table"></a>Пример выполнения полного заполнения в таблице  
  В следующем примере полное заполнение выполняется в таблице `Production.Document` образца базы данных `AdventureWorks` .  
   
-```tsql
+```sql
 ALTER FULLTEXT INDEX ON Production.Document  
    START FULL POPULATION;  
 ```  
@@ -109,7 +112,7 @@ ALTER FULLTEXT INDEX ON Production.Document
     **Пример переключения полнотекстового индекса на автоматическое отслеживание изменений**  
     В следующем примере полнотекстовый индекс таблицы `HumanResources.JobCandidate` образца базы данных `AdventureWorks` переключается на отслеживание изменений с автоматическим заполнением.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate SET CHANGE_TRACKING AUTO;  
@@ -129,7 +132,7 @@ ALTER FULLTEXT INDEX ON Production.Document
     **Пример создания полнотекстового индекса с отслеживанием изменений вручную**  
     В следующем примере создается полнотекстовый индекс, который будет использовать отслеживание изменений с заполнением вручную в таблице `HumanResources.JobCandidate` образца базы данных `AdventureWorks` .  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE UNIQUE INDEX ui_ukJobCand ON HumanResources.JobCandidate(JobCandidateID);  
@@ -143,7 +146,7 @@ ALTER FULLTEXT INDEX ON Production.Document
     **Пример выполнения заполнения вручную**  
     В следующем примере выполняется заполнение вручную на полнотекстовом индексе с отслеживанием изменений для таблицы `HumanResources.JobCandidate` образца базы данных `AdventureWorks` .  
   
-    ```tsql 
+    ```sql 
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate START UPDATE POPULATION;  
@@ -234,4 +237,3 @@ ALTER FULLTEXT INDEX ON Production.Document
  [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
   
-

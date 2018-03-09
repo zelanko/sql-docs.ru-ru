@@ -3,8 +3,11 @@ title: "Замечания - драйвер Microsoft ODBC для SQL Server в 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -13,15 +16,40 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8fe5c32ed34d9056c69069d6b390a49fc71b396c
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: 84bb78e184f1bca9e683aeebf46b178e3a7dd61f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Заметки о выпуске для Microsoft ODBC Driver for SQL Server для Linux и macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 17 драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] на macOS и Linux
+
+**Новый распределение, поддерживаемое**: macOS Сьерра высокого уровня и Ubuntu 17.10 
+
+**Повышение производительности**: больше 10 раз улучшение производительности, когда драйвер выполняет преобразование из UTF-8 или 16.
+
+**Добавлены возможности**:
+
+Всегда зашифровано поддержку BCP API
+
+Новый атрибут строки подключения UseFMTOnly драйвер для использования устаревших метаданных в особых случаях, требующие временных таблиц.
+
+Поддержка управляемого экземпляра Azure SQL (расширенные получения личной предварительной версии). 
+> [!NOTE]
+> Существует ряд различий при использовании управляемого экземпляра.
+> -   FILESTREAM не поддерживается 
+> -   Доступа к локальной файловой системе не поддерживается, но требуется для таких вещей, как tracefiles 
+> -   Создание определяемого пользователем ТИПА из локального пути не поддерживается. 
+> -   Встроенная проверка подлинности Windows не поддерживается. 
+> -   DTC не поддерживается. 
+> -   Учетная запись «sa» не указан (по умолчанию учетная запись называется «cloudSA»)
+> -   Ошибка маркера потока табличных данных (0xAA) возвращает указано неправильное имя сервера
+> -   Специальные символы в имени базы данных не поддерживаются. 
+> -   [Dbname1] ALTER DATABASE MODIFY NAME = [dbname2] не поддерживается.
+> -   Сообщения об ошибках всегда отображаются на английском языке независимо от языка параметров (то же, как Azure) 
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-131-for-includessnoversionincludesssnoversionmdmd-on-linux-and-macos"></a>Новые возможности [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] на macOS и Linux  
 
@@ -54,4 +82,3 @@ ODBC Driver 13.1 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.
 Драйвер ODBC для Linux поддерживает подключения к Базе данных SQL Microsoft Azure. Дополнительные сведения см. в статье [Практическое руководство. Подключение к Базе данных Azure SQL Windows с помощью ODBC](http://msdn.microsoft.com/library/hh974312.aspx).  
 
 `-l` Будет добавлен параметр (время ожидания входа) `bcp`. Дополнительные сведения см. в разделе [соединение с помощью **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).
-

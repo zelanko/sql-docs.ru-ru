@@ -3,29 +3,28 @@ title: "Метод getIndexInfo (SQLServerDatabaseMetaData) | Документы
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDatabaseMetaData.getIndexInfo
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDatabaseMetaData.getIndexInfo
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0400e9241fa1856a33a6c483734b3f87e7285758
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 028937d023b6cf899eb5fa47354cb0c5d21545bc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>Метод getIndexInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -86,10 +85,10 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 |TYPE|**короткий**|Тип индекса. Может иметь одно из следующих значений.<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
 |ORDINAL_POSITION|**короткий**|Порядковый номер столбца в индексе. Номер первого столбца в таблице равен 1.|  
 |COLUMN_NAME|**Строковые значения**|Имя столбца.|  
-|ASC_OR_DESC|**Строковые значения**|Порядок, используемый в параметрах сортировки индекса. Может иметь одно из следующих значений.<br /><br /> A (по возрастанию)<br /><br /> D (по убыванию)<br /><br /> NULL (неприменимо)<br /><br /> **Примечание:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] всегда возвращает «A».  |  
+|ASC_OR_DESC|**Строковые значения**|Порядок, используемый в параметрах сортировки индекса. Может иметь одно из следующих значений.<br /><br /> A (по возрастанию)<br /><br /> D (по убыванию)<br /><br /> NULL (неприменимо)<br /><br /> **Примечание:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] всегда возвращает «A».|  
 |CARDINALITY|**int**|Число строк в таблице или уникальных значений в индексе.|  
 |PAGES|**int**|Число страниц для хранения индекса или таблицы.|  
-|FILTER_CONDITION|**Строковые значения**|Условие фильтра.<br /><br /> **Примечание:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] всегда возвращает значение null.  |  
+|FILTER_CONDITION|**Строковые значения**|Условие фильтра.<br /><br /> **Примечание:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] всегда возвращает значение null.|  
   
 > [!NOTE]  
 >  Дополнительные сведения о данных, возвращаемых методом getIndexInfo см. в разделе «sp_indexes (Transact-SQL)» в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] электронной документации.  
@@ -126,4 +125,3 @@ public static void executeGetIndexInfo(Connection con) {
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
-

@@ -3,30 +3,31 @@ title: "Диалоговое окно \"Соединение\" (визуальн
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vdt.ppg.joinline
 - vdtsql.chm:69638
 ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 65ee5adf9736860cd9cd9e8e75d6ff387af84348
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 82c974b0a34c99af677eb783b12809e6d185072b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>Диалоговое окно «Соединение» (визуальные инструменты для баз данных)
-Это диалоговое окно позволяет задать параметры соединения таблиц. Чтобы открыть это окно, выберите на панели **Проект** линию соединения. Затем в окне **Свойства** щелкните **Условие и тип соединения**, затем нажмите кнопку с многоточием **(…)** справа от этого свойства.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Используйте это диалоговое окно, чтобы указать параметры объединения таблиц. Чтобы открыть это окно, выберите на панели **Проект** линию соединения. Затем в окне **Свойства** щелкните **Условие и тип соединения**, затем нажмите кнопку с многоточием **(…)** справа от этого свойства.  
   
 По умолчанию связанные таблицы соединяются внутренним соединением, создающим результирующий набор на основании строк, содержащих совпадающие данные в столбцах соединения. С помощью параметров диалогового окна **Соединение** можно выбирать соединение на основе различных операторов, а также внешнее соединение.  
   
@@ -53,4 +54,3 @@ ms.lasthandoff: 08/18/2017
 [Запросы с соединениями (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
 [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
-

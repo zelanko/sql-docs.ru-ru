@@ -2,27 +2,31 @@
 title: "Задание путей и указания по оптимизации для селективных XML-индексов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
-caps.latest.revision: 12
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3c07b191fe73f8cab21a9f3876230d344ad99968
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: bf2e9bf99c208efeb26fe0a2b87b6a7bab964dd2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Задайте путь и указания по оптимизации для селективных XML-индексов
-  В данном разделе описывается настройка путей узла для индексирования и задание указаний по оптимизации для индексирования при создании или изменении селективных XML-индексов.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+В данном разделе описывается настройка путей узла для индексирования и задание указаний по оптимизации для индексирования при создании или изменении селективных XML-индексов.  
   
  Пути узла и указания по оптимизации задаются одновременно в одной из следующих инструкций:  
   
@@ -65,7 +69,7 @@ ms.lasthandoff: 06/22/2017
   
  Ниже приведен пример селективного XML-индекса, созданного с сопоставлениями по умолчанию. Для всех трех методов используется тип узла (**xs:untypedAtomic**) и количество элементов по умолчанию.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_default  
 ON Tbl(xmlcol)  
 FOR  
@@ -96,7 +100,7 @@ mypath03 = '/a/b/d'
   
  Отображенный селективный XML-индекс вы можете оптимизировать следующим образом:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_optimized  
 ON Tbl(xmlcol)  
 FOR  
@@ -120,7 +124,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
  Обратите внимание на следующий запрос:  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/d)[1]', 'NVARCHAR(200)')  
 FROM myXMLTable T  
@@ -128,7 +132,7 @@ FROM myXMLTable T
   
  Указанный запрос возвращает значение из пути `/a/b/d` , упакованного в тип данных NVARCHAR(200), поэтому тип данных, указываемый для узла, является очевидным. Однако нет схемы, в которой можно было бы указать количество элементов узла в нетипизированном XML. Чтобы указать, что узел `d` должен встречаться не более одного раза в родительском узле `b`, создайте селективный XML-индекс, в котором подсказка оптимизации SINGLETON используется следующим образом:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_US  
 ON Tbl(xmlcol)  
 FOR  
@@ -226,7 +230,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
      Рассмотрим следующий простой запрос к [образцу XML-документа](#sample) в данном разделе:  
   
-    ```tsql  
+    ```sql  
     SELECT T.record FROM myXMLTable T  
     WHERE T.xmldata.exist('/a/b[./c = "43"]') = 1  
     ```  
@@ -241,7 +245,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
  Для улучшения производительности инструкции SELECT, описанной выше, вы можете создать следующий селективный XML-индекс.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX simple_sxi  
 ON Tbl(xmlcol)  
 FOR  
@@ -254,7 +258,7 @@ FOR
 ### <a name="indexing-identical-paths"></a>Индексирование одинаковых путей  
  Невозможно повысить уровень одинаковых путей в качестве того же типа данных с другими именами пути. Например, следующий запрос формирует ошибку, поскольку пути `pathOne` и `pathTwo` идентичны:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -265,7 +269,7 @@ FOR
   
  Однако вы можете повысить уровень одинаковых путей в качестве различных типов данных с разными именами. Например, следующий запрос теперь является допустимым, поскольку типы данных отличаются:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -281,7 +285,7 @@ FOR
   
  Вот простой запрос Xquery, в котором используется метод exist():  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1  
 ```  
@@ -296,7 +300,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1
   
  Вот более сложный вариант предыдущего запроса XQuery с примененным предикатом:  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1  
 ```  
@@ -312,7 +316,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1
   
  Вот более сложный запрос с предложением value():  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/c/d/e[./f = "SQL"]/g)[1]', 'nvarchar(100)')  
 FROM myXMLTable T  
@@ -330,7 +334,7 @@ FROM myXMLTable T
   
  Вот запрос, в котором предложение FLWOR используется внутри предложения exist(). (Имя FLWOR образуется из 5 предложений, которые могут составлять выражение FLWOR в XQuery: for, let, where, order by и return.)  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('  
   For $x in /a/b/c/d/e  
@@ -360,8 +364,8 @@ WHERE T.xmldata.exist('
   
 |Указание по оптимизации|Более эффективное хранение|Повышенная производительность|  
 |-----------------------|----------------------------|--------------------------|  
-|**node()**|Да|Нет|  
-|**SINGLETON**|Нет|Да|  
+|**node()**|Да|нет|  
+|**SINGLETON**|нет|Да|  
 |**DATA TYPE**|Да|Да|  
 |**MAXLENGTH**|Да|Да|  
   
@@ -370,10 +374,10 @@ WHERE T.xmldata.exist('
   
 |Указание по оптимизации|Типы данных XQuery|Типы данных SQL|  
 |-----------------------|-----------------------|--------------------|  
-|**node()**|Да|Нет|  
+|**node()**|Да|нет|  
 |**SINGLETON**|Да|Да|  
-|**DATA TYPE**|Да|Нет|  
-|**MAXLENGTH**|Да|Нет|  
+|**DATA TYPE**|Да|нет|  
+|**MAXLENGTH**|Да|нет|  
   
 ### <a name="node-optimization-hint"></a>Указание по оптимизации node()  
  Применимо для типов данных XQuery  
@@ -382,7 +386,7 @@ WHERE T.xmldata.exist('
   
  Рассмотрим следующий пример:  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b[./c=5]') = 1  
 ```  

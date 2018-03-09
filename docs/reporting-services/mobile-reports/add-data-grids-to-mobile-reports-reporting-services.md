@@ -1,26 +1,27 @@
 ---
-title: "Добавлять таблицы данных для мобильных отчетов | Службы Reporting Services | Документы Microsoft"
+title: "Добавление сеток данных в мобильные отчеты | Службы Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c51169b12265eea7e6d57e0daa7539322e338851
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 656c40ea8c8bc7d20fd2fe9de0a189f451731ae5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>Добавление сеток данных в мобильные отчеты | Службы Reporting Services
 Иногда лучшая визуализация — это сами данные. Рассмотрим три вида *сеток данных*(или таблиц) для отображения данных в [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]:
@@ -83,11 +84,10 @@ ms.lasthandoff: 08/09/2017
    * **Поиск по месту назначения** — это поле в таблице данных, выбранной в поле **Эталонные данные для визуализаций диаграмм**. Данные для диаграммы в каждой строке будут связаны по этим двум полям.   
    * **Поле "Данные диаграммы"** определяет, какой показатель в таблице **Эталонные данные для визуализаций диаграмм** будет использоваться как значение по оси y или ряд на диаграмме в каждой строке.  
 
-## <a name="see-also"></a>См. также: 
-* [Maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
+## <a name="see-also"></a>См. также раздел 
+* [Карты в мобильных отчетах служб Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Navigators in Reporting Services mobile reports (Навигаторы в мобильных отчетах служб Reporting Services)](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Visualizations in Reporting Services mobile reports (Визуализации в мобильных отчетах служб Reporting Services)](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Gauges in Reporting Services mobile reports (Датчики в мобильных отчетах служб Reporting Services)](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)  
  
   
-

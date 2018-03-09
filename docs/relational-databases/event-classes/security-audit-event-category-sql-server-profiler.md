@@ -2,9 +2,12 @@
 title: "Категория событий Security Audit (приложение SQL Server Profiler) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,24 +17,24 @@ helpviewer_keywords:
 - event classes [SQL Server], Security Audit event category
 - SQL Server event classes, Security Audit event category
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
-caps.latest.revision: 36
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb5a25cf31ddd1581f2e0954d4b7fb78689fa115
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5b93277d27d4a797fc5ca5924794a7631673445f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Категория событий Security Audit (приложение SQL Server Profiler)
-  Категория событий **Security Audit** включает в себя события аудита безопасности.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Категория событий **Security Audit** включает в себя события аудита безопасности.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Класс событий Audit Add DB User](../../relational-databases/event-classes/audit-add-db-user-event-class.md)|Указывает, что имя входа пользователя базы данных было добавлено или удалено из базы данных.|  
 |[Класс событий Audit Add Login to Server Role](../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)|Указывает, что имя входа было добавлено или удалено из предопределенной роли сервера.|  
@@ -82,4 +85,3 @@ ms.lasthandoff: 06/22/2017
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  
   
   
-

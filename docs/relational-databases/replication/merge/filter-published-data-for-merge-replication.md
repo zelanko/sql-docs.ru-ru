@@ -2,35 +2,36 @@
 title: "Фильтрация опубликованных данных для репликации слиянием | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - merge replication [SQL Server replication], filtering published data
 - replication [SQL Server], filtering published data
 ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "34"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c63e2459ddca9a4265b00a458c820ebee088811
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ed6d8575d2dfbcc6f6ad29c8910346eb5ef27b41
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filter-published-data-for-merge-replication"></a>Фильтрация опубликованных данных для репликации слиянием
-  Кроме статических фильтров строк и фильтров столбцов, которые можно определять с другими типами репликации, репликация слиянием позволяет определять параметризованные фильтры строк и фильтры соединения. Дополнительные сведения о статических фильтрах строк и фильтрах столбцов см. в разделе [Фильтрация опубликованных данных](../../../relational-databases/replication/publish/filter-published-data.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Кроме статических фильтров строк и фильтров столбцов, которые можно определять с другими типами репликации, репликация слиянием позволяет определять параметризованные фильтры строк и фильтры соединения. Дополнительные сведения о статических фильтрах строк и фильтрах столбцов см. в разделе [Фильтрация опубликованных данных](../../../relational-databases/replication/publish/filter-published-data.md).  
   
  Репликация слиянием используется во многих приложениях, поддерживающих мобильных пользователей; эти приложения обычно имеют большое количество подписок, при этом каждая подписка получает уникальный набор данных. Параметризованные фильтры в сочетании с фильтрами соединения позволяют администратору настраивать одну публикацию (или в крайнем случае небольшое количество публикаций) и тем не менее предоставлять пользователям различные наборы данных, сокращая затраты на управление, связанные с созданием многочисленных публикаций.  
   
--   Параметризованные фильтры позволяют посылать разным подписчикам разные сегменты данных без необходимости создавать многочисленные публикации. Например, можно отфильтровать таблицу, чтобы данные для определенного продавца реплицировались только этому представителю. Параметризованные фильтры имеют множество параметров, позволяющих подстраивать фильтрацию для оптимизации производительности и лучшего соответствия требованиям данных и приложений. Дополнительные сведения см. в статье [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+-   Параметризованные фильтры позволяют посылать разным подписчикам разные сегменты данных без необходимости создавать многочисленные публикации. Например, можно отфильтровать таблицу, чтобы данные для определенного продавца реплицировались только этому представителю. Параметризованные фильтры имеют множество параметров, позволяющих подстраивать фильтрацию для оптимизации производительности и лучшего соответствия требованиям данных и приложений. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Для распространения фильтрации на связанные таблицы фильтры соединения обычно используются совместно с параметризованными фильтрами (они также могут использоваться совместно со статическими фильтрами). Например, торговый представитель обычно имеет данные в разных таблицах, таких как таблицы клиентов и заказов. Эти данные могут быть отфильтрованы, чтобы продавец получал только данные по своим клиентам и заказам своих клиентов. Дополнительные сведения см. в статье [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   
@@ -40,4 +41,3 @@ ms.lasthandoff: 06/22/2017
  [Публикация данных и объектов базы данных](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   
-

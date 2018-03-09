@@ -3,33 +3,30 @@ title: "SQLBindCol, функция | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLBindCol
-apilocation:
-- sqlsrv32.dll
+apiname: SQLBindCol
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLBindCol
-helpviewer_keywords:
-- SQLBindCol function [ODBC]
+f1_keywords: SQLBindCol
+helpviewer_keywords: SQLBindCol function [ODBC]
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 4b2031680faefcdf0b701ad8065b9d90cd8678f8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 641b08ab3d3aec59f66dd0405770cf19d4690769
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol, функция
 **Соответствия**  
@@ -388,4 +385,3 @@ int main() {
 ## <a name="see-also"></a>См. также:  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

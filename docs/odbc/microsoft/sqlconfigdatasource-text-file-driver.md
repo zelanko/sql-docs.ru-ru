@@ -3,27 +3,28 @@ title: "SQLConfigDataSource (драйвера текстового файла) |
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - text file driver [ODBC], SQLConfigDataSource
 - SQLConfigDataSource function [ODBC], Text File Driver
 ms.assetid: c505d36e-1e72-47b2-a9e5-e4926b408468
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b26eba11563baeef77e0fc47597a50776c5dc179
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e781871cc8507d10617e1a147fa6d5a7c06ac756
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlconfigdatasource-text-file-driver"></a>SQLConfigDataSource (драйвера текстового файла)
 > [!NOTE]  
@@ -45,4 +46,3 @@ ms.lasthandoff: 09/09/2017
 |FORMAT|Драйвер текст может быть FIXEDLENGTH, TABDELIMITED, CSVDELIMITED (запятую) или DELIMITED() (по специальный символ, который указан в скобках). Специальный символ имеет длину в один символ и может иметь знак, десятичный или шестнадцатеричный формат.|  
 |MAXSCANROWS|Число строк для просмотра при задании типа данных столбца на основе существующих данных.<br /><br /> Для драйвера текста можно ввести число от 1 до 32767 для числа строк для сканирования; Тем не менее значение по умолчанию всегда 25. (Число за пределами ограничение будет возвращена ошибка.)<br /><br /> Таким образом задается один и тот же параметр как **строк для просмотра** в диалоговом окне программы установки.|  
 |READONLY|Значение TRUE, чтобы сделать файл доступным только для чтения; Значение FALSE, чтобы сделать файл не только для чтения.<br /><br /> Таким образом задается один и тот же параметр как **только для чтения** в диалоговом окне программы установки.|
-

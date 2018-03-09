@@ -2,13 +2,13 @@
 title: "Родитель потомок измерения | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - members [Analysis Services], data
 - parent-child dimensions [Analysis Services]
 ms.assetid: 4657f5dc-d88e-48d2-a448-08f79bc89546
-caps.latest.revision: 42
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 2c9416e3035d42db5e2087d14358344671288bb6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b0c336d30bf5034106d02d29d7e12a50ccf1a194
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="parent-child-dimension"></a>Родитель потомок измерения
-  Иерархия типа «родители-потомки» представляет собой стандартное измерение, содержащее родительский атрибут. Родительский атрибут описывает *связь, ссылающуюся на себя*(или *самосоединение*) в пределах главной таблицы измерения. Иерархии типа «родители-потомки» создаются из одного родительского атрибута. Иерархии типа «родители-потомки» присваивается только один уровень, поскольку присутствующие в ней уровни наследуют связи типа «родители-потомки» между элементами, связанными с родительским атрибутом. Положение элемента в пределах иерархии типа "родители-потомки" определяется свойствами **KeyColumns** и **RootMemberIf** родительского атрибута, в то время как положение элемента в пределах уровня определяется свойством **OrderBy** родительского атрибута. Дополнительные сведения о свойствах атрибутов см. в статье [Атрибуты и иерархии атрибутов](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Иерархия типа «родители-потомки» представляет собой стандартное измерение, содержащее родительский атрибут. Родительский атрибут описывает *связь, ссылающуюся на себя*(или *самосоединение*) в пределах главной таблицы измерения. Иерархии типа «родители-потомки» создаются из одного родительского атрибута. Иерархии типа «родители-потомки» присваивается только один уровень, поскольку присутствующие в ней уровни наследуют связи типа «родители-потомки» между элементами, связанными с родительским атрибутом. Положение элемента в пределах иерархии типа "родители-потомки" определяется свойствами **KeyColumns** и **RootMemberIf** родительского атрибута, в то время как положение элемента в пределах уровня определяется свойством **OrderBy** родительского атрибута. Дополнительные сведения о свойствах атрибутов см. в статье [Атрибуты и иерархии атрибутов](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
   
  Из-за связей типа «родители-потомки» между уровнями в иерархии типа «родители-потомки» некоторые неконечные элементы, помимо данных, статистически вычисленных из дочерних элементов, могут также иметь данные, наследуемые из базовых источников данных.  
   
@@ -59,8 +59,7 @@ ms.lasthandoff: 09/01/2017
  Однако иерархии типа «родители-потомки» могут содержать некоторые неконечные элементы, данные которых выводятся из базовых источников данных в дополнение к данным, статистически вычисленным из дочерних элементов. Для этих неконечных элементов в иерархии типа «родители-потомки» можно создавать специальные дочерние элементы, формируемые системой, которые содержат данные базовых таблиц фактов. Они называются *элементы данных*и содержат значение, которое непосредственно связано с неконечным элементом и независимо от сводного значения, вычисленного на основе наследников неконечного элемента. Дополнительные сведения об элементах данных см. в разделе [Атрибуты в иерархиях типа "родители-потомки"](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md).  
   
 ## <a name="see-also"></a>См. также  
- [Атрибуты в иерархиях типа "родители-потомки"](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)   
+ [Атрибуты в иерархиях родителей потомков](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)   
  [Свойства измерений базы данных](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)  
   
   
-

@@ -3,10 +3,12 @@ title: "SQL в C: GUID | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - data conversions from SQL to C types [ODBC], guid
 - GUID data type [ODBC]
 ms.assetid: cf56c684-c261-4b89-994a-db14ab2241d6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a33d7e2ada5aa13bbd2bf42f85a9aa7e4bbdc44b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0d60ca76d44f443c564bd354535833ab6c7b407f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-to-c-guid"></a>SQL в C: GUID
 Идентификатор для типа данных GUID ODBC SQL является:  
@@ -46,4 +47,3 @@ ms.lasthandoff: 09/09/2017
  [] значение *BufferLength* учитывается для этого преобразования. Драйвер предполагает, что размер **TargetValuePtr* — это размер типа данных C.  
   
  [b] это размер соответствующие типы данных C.
-

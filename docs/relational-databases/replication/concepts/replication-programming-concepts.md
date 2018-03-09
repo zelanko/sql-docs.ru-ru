@@ -2,34 +2,34 @@
 title: "Основные понятия программирования репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - replication [SQL Server], planning
 - programming [SQL Server replication], planning
 - programming [SQL Server replication]
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
-caps.latest.revision: 43
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "43"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 01257c38de98453f4672ebcf0d9101bdeedd5ae9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 12b8b87460c4cb21776780af955eeecad3b5cda3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-programming-concepts"></a>Основные понятия программирования репликации
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   До начала разработки приложения, в котором используются функциональные возможности репликации, необходимо выполнить следующие общие шаги планирования:  
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 07/31/2017
 |<xref:Microsoft.SqlServer.Replication>|Управляемый код|Синхронизация.|  
 |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|Управляемый код|Создание обработчиков бизнес-логики для интеграции пользовательской логики с процессом синхронизации слиянием.|  
 |[Хранимые процедуры репликации (Transact-SQL)](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Создание скриптов|Администрирование и текущее наблюдение.|  
-|[Основные понятия исполняемых файлов агента репликации](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Создание скриптов|Синхронизация.|  
+|[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Создание скриптов|Синхронизация.|  
   
 ## <a name="example"></a>Пример  
  В [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] должна обеспечиваться публикация данных для 200 торговых представителей во всем мире. Торговые представители часто находятся в командировках и вынуждены использовать переносные компьютеры или карманные компьютеры для обмена данными с заказчиком и добавления новых заказов. Затем изменения в данных должны быть синхронизированы с издателем, после подключения торговым представителем своего переносного компьютера к сети.  
@@ -138,4 +138,3 @@ ms.lasthandoff: 07/31/2017
  Этот пример используется в тестовом приложении AdventureWorks, которое можно скачать для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
   
-

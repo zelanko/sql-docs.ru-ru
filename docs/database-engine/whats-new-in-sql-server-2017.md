@@ -1,29 +1,30 @@
 ---
 title: "Новые возможности в ядре СУБД SQL Server 2017 | Документация Майкрософт"
 ms.custom: 
-ms.date: 09/11/2017
-ms.prod: sql-server-2017
+ms.date: 10/24/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-engine
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "15"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 8f6f7d38bf06e453017b48108b5bda5594f0870c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
-ms.openlocfilehash: 6cc679441602d4aa1d125c2f61f9d538e3b716a2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/12/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Новые возможности в ядре СУБД SQL Server 2017
-[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 В этом разделе описаны усовершенствования, внесенные в [!INCLUDE[ssdenoversion-md](../includes/ssdenoversion-md.md)] для [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. Для перехода к дополнительным сведениям по каждому элементу щелкайте ссылки.
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/12/2017
 - Новая функция DMF [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) предоставляет сводку атрибутов и сведения о файлах журналов транзакций, которые помогают контролировать работоспособность журнала транзакций.  
 - Возобновляемое перестроение индексов в подключенном режиме. Возобновляемое перестроение индексов в подключенном режиме позволяет возобновить эту операцию с момента остановки после сбоя (например, при отработке отказа в реплику или нехватке места на диске). Ее можно также приостановить и возобновить позже. Например, может потребоваться временно высвободить ресурсы системы с целью выполнения задачи высоким приоритетом или выполнить перестроение индекса в другом периоде обслуживания, если доступные периоды недостаточны для обработки большой таблицы. И, наконец, для возобновляемого перестроения индексов в подключенном режиме не требуется значительное пространство журнала, что позволяет выполнять усечение журнала во время работы операции возобновляемого перестроения. В разделе [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) и [руководящие принципы для операций с индексами в сети](../relational-databases/indexes/guidelines-for-online-index-operations.md).
 - **Параметр IDENTITY_CACHE для ALTER DATABASE SCOPED CONFIGURATION**. Новый параметр IDENTITY_CACHE был добавлен в инструкцию T-SQL `ALTER DATABASE SCOPED CONFIGURATION`. Если этому параметру задано значение `OFF`, он позволяет ядру СУБД избежать пропусков в значениях столбцов удостоверений при непредвиденной перезагрузке или отработке отказа сервера на вторичный сервер. В разделе [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).   
--  [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] теперь предоставляет возможности диаграммы базы данных для моделирования связей "многие ко многим". Сюда входят новый синтаксис [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) для создания таблиц узлов и граничных таблиц и ключевое слово [MATCH](../t-sql/queries/match-sql-graph.md) для запросов. Дополнительные сведения см. в разделе [Graph Processing with SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md) (Работа с графами в SQL Server 2017).   
+-  [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] теперь предоставляет возможности диаграммы базы данных для моделирования более значимых данных, ориентированных на связи. Сюда входят новый синтаксис [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) для создания таблиц узлов и граничных таблиц и ключевое слово [MATCH](../t-sql/queries/match-sql-graph.md) для запросов. Дополнительные сведения см. в разделе [Graph Processing with SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md) (Работа с графами в SQL Server 2017).   
 - Новое поколение функций обработки запросов, использующих стратегии оптимизации для адаптации к среде выполнения рабочих нагрузок ваших приложений. В первую версию семейства функций для **адаптивной обработки запросов** мы включили три улучшения: **адаптивные соединения в пакетном режиме**, **обратная связь по временно предоставляемому буферу памяти в пакетном режиме** и **выполнение с чередованием** для многооператорных функций с табличными значениями.  См. раздел [Адаптивная обработка запросов в базах данных SQL](../relational-databases/performance/adaptive-query-processing.md).
 - Функция автоматической настройки базы данных предоставляет сведения о возможных проблемах с обработкой запросов и рекомендуемые решения. Она также может автоматически исправлять выявленные проблемы. Автоматическая настройка в [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] уведомляет об обнаружении потенциальных проблем производительности, а также дает возможность применять корректирующие действия или позволяет [!INCLUDE[ssde-md](../includes/ssde-md.md)] автоматически устранять проблемы с производительностью. Дополнительные сведения см. в разделе [Automatic tuning](../relational-databases/automatic-tuning/automatic-tuning.md) (Автоматическая настройка).
 - Повышение производительности для сборки некластеризованных индексов в таблицах, оптимизированных для памяти. Значительно оптимизирована производительность (некластеризованного) перестроения индекса в таблицах MEMORY_OPTIMIZED во время восстановления базы данных. Это усовершенствование значительно сокращает время восстановления базы данных при использовании некластеризованных индексов.  
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/12/2017
     - В модули, скомпилированные в машинном коде, добавлен оператор`CROSS APPLY` .   
 - Добавлены новые строковые функции [CONCAT_WS](../t-sql/functions/concat-ws-transact-sql.md), [TRANSLATE](../t-sql/functions/translate-transact-sql.md) и [TRIM](../t-sql/functions/trim-transact-sql.md).   
 - Предложение `WITHIN GROUP` теперь поддерживается для функции [STRING_AGG](../t-sql/functions/string-agg-transact-sql.md).
-- Добавлены два новых семейства параметров сортировки для японского языка (Japanese_Bushu_Kakusu_140 и Japanese_XJIS_140). Для использования в японских параметрах сортировки добавлен параметр Variation-selector-sensitive (_VSS). Подробные сведения см. в разделе [Поддержка параметров сортировки и Юникода](../relational-databases/collations/collation-and-unicode-support.md).   
+- Добавлены два новых семейства параметров сортировки для японского языка (Japanese_Bushu_Kakusu_140 и Japanese_XJIS_140). Для использования в новых японских параметрах сортировки добавлен параметр Variation-selector-sensitive (_VSS). Кроме того, все новые параметры сортировки автоматически поддерживают дополнительные символы без необходимости указания параметра _SC. Подробные сведения см. в разделе [Поддержка параметров сортировки и Юникода](../relational-databases/collations/collation-and-unicode-support.md).   
 - Новые параметры группового доступа ([BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) и [OPENROWSET(BULK...)](../t-sql/functions/openrowset-transact-sql.md)) обеспечивают доступ к данным непосредственно из CSV-файлов и из файлов в хранилище BLOB-объектов Azure посредством нового параметра `BLOB_STORAGE` [EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 - Добавлен уровень совместимости базы данных **COMPATIBILITY_LEVEL** 140.   Клиенты, использующие его, получат доступ к самым новым возможностям языков и режимам оптимизатора запросов. Сюда входят изменения, вносимые корпорацией Майкрософт в каждую предварительную версию.
 - Улучшен способ вычисления пороговых значений для обновления добавочной статистики (требуется режим совместимости 140).
@@ -86,5 +87,4 @@ ms.lasthandoff: 10/12/2017
 - Новые разрешения: `DATABASE SCOPED CREDENTIAL` теперь является классом защищаемого объекта, поддерживающим разрешения `CONTROL`, `ALTER`, `REFERENCES`, `TAKE OWNERSHIP`и `VIEW DEFINITION` . `ADMINISTER DATABASE BULK OPERATIONS`, который ограничен базой данных SQL, теперь отображается в `sys.fn_builtin_permissions`.   
 - Добавлено динамическое административное представление [sys.dm_os_host_info](../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md), предоставляющее сведения об операционной системе как для Windows, так и для Linux.   
 - Роли базы данных создаются с помощью служб R Services для управления разрешениями, связанными с пакетами. Дополнительные сведения см. в разделе [Управление пакетами R для SQL Server](../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
-
 

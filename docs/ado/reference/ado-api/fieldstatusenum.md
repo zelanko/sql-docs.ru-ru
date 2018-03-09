@@ -3,7 +3,7 @@ title: "FieldStatusEnum | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,24 +18,23 @@ f1_keywords:
 helpviewer_keywords:
 - FieldStatusEnum enumeration [ADO]
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e04f98c5691a66b02a4c5daa8d745f529a9820e0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 33ea3379808e818b1afd723ce9223858896ea709
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 Указывает [состояние](../../../ado/reference/ado-api/status-property-ado-field.md) из [объект поля](../../../ado/reference/ado-api/field-object.md).  
   
- **AdFieldPending\***  значения указывают на операцию, которая вызвала нужно задать состояние и могут объединяться с другими значениями состояния.  
+ **AdFieldPending\* ** значения указывают на операцию, которая вызвала нужно задать состояние и могут объединяться с другими значениями состояния.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|Указывает, что и указанное поле уже существует.|  
 |**adFieldBadStatus**|12|Указывает, что значение недопустимое состояние было отправлено из ADO для поставщика OLE DB. Возможные причины включают OLE DB 1.0 или 1.1 поставщика или неправильной сочетание [значение](../../../ado/reference/ado-api/value-property-ado.md) и [состояние](../../../ado/reference/ado-api/status-property-ado-field.md).|  
@@ -72,5 +71,4 @@ ms.lasthandoff: 09/09/2017
  Эти константы не имеют эквивалентов ADO/WFC.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Свойство Status (ADO поле)](../../../ado/reference/ado-api/status-property-ado-field.md)
-
+ [Свойство Status (объект Field ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)

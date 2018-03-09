@@ -1,10 +1,13 @@
 ---
-title: "Остаток равно (Transact-SQL) | Документы Microsoft"
+title: "% = (Назначение модуля) (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,21 +19,23 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - '%= (modulo equals)'
+- '%= (modulus assignment)'
 - compound operators, %=
+- assignment operators, %=
+- augmented operators, %=
 ms.assetid: 45e35516-1f4c-406b-a580-70a14b087847
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5d425882e4d0e6b16334bcd0ec7dc5af0487a5c0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 064b586b1e6bbf10828ce7dfa1f8d759e5201e85
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="modulo-equals-transact-sql"></a>РАВНО остатку от деления (Transact-SQL)
+# <a name="-modulus-assignment-transact-sql"></a>% = (Назначение модуля) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Одно число делится на другое, и значение задается для результата операции. Например, если переменная @x равно 38, затем @x % = 5 принимает исходное значение @x, делит 5 и задает @x остаток от этого деления (3).  
@@ -50,13 +55,12 @@ expression %= expression
 ## <a name="result-types"></a>Типы результата  
  Возвращает результат типа данных аргумента с более высоким приоритетом. Дополнительные сведения см. в разделе [Приоритет типов данных (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Замечания  
- Дополнительные сведения см. в разделе [остаток от деления &#40; Transact-SQL &#41; ](../../t-sql/language-elements/modulo-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Дополнительные сведения см. в разделе [% &#40; Модуль &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/modulo-transact-sql.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Составные операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
-

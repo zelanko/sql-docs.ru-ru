@@ -2,9 +2,12 @@
 title: "Добавление пространств имен в запросы с помощью WITH XMLNAMESPACES | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -21,18 +24,19 @@ helpviewer_keywords:
 - xml data type [SQL Server], WITH XMLNAMESPACES clause
 - WITH XMLNAMESPACES clause
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
-caps.latest.revision: 19
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 63cc371d0a4b1c19971fe7f9e614f10d5c04765f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 432e833f5cd9341a083973f8060ddbd477d386c6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Добавление пространств имен в запросы с WITH XMLNAMESPACES
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Предложение[WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md) поддерживает пространство имен URI следующим образом:  
   
 -   Разрешается сопоставление префикса пространства имен с адресом URI при [создании XML с помощью предложения FOR XML](../../relational-databases/xml/for-xml-sql-server.md) .  
@@ -222,7 +226,7 @@ WHERE CatalogDescription.exist('
     ) = 1  
 ```  
   
- В представленном выше запросе в прологах обоих методов (**query()** и **exist()**) объявляются одинаковые пространства имен. Например:  
+ В представленном выше запросе в прологах обоих методов (**query()** и **exist()**) объявляются одинаковые пространства имен. Пример:  
   
 ```  
 declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  

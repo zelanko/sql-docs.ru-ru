@@ -2,28 +2,30 @@
 title: "Загрузка и сохранение столбцы данных файлов | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0101e809-d6ea-4d0c-95ec-65dd77acf665
-caps.latest.revision: 5
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8f10d93cf8670da5e14d2fb65193c43398ad1c6c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fc37f3342781ace5e54a3ab9550e046933d25928
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="file-load-and-save-data-columns"></a>Столбцы загрузки файлов и сохранения данных
-  В категорию событий «Загрузка и сохранение файлов» входят следующие классы событий:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В категорию событий «Загрузка и сохранение файлов» входят следующие классы событий:  
   
 |**Идентификатор события**|**Имя события**|**Описание события**|  
 |------------------|--------------------|---------------------------|  
@@ -223,7 +225,6 @@ ms.lasthandoff: 09/01/2017
 |ServerName|43|8|Имя сервера, формирующего событие.|  
   
 ## <a name="see-also"></a>См. также раздел  
- [Категория событий «Загрузка и сохранение файлов»](../../analysis-services/trace-events/file-load-and-save-event-category.md)  
+ [Категория событий и сохранение файлов загрузки](../../analysis-services/trace-events/file-load-and-save-event-category.md)  
   
   
-

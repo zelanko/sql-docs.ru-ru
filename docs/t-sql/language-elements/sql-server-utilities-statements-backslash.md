@@ -1,10 +1,13 @@
 ---
-title: "(Обратная косая черта) (Transact-SQL) | Документы Microsoft"
+title: "Обратная косая черта (продолжение строки) (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 07/27/2017
+ms.date: 11/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,24 +33,21 @@ helpviewer_keywords:
 - line continuation character
 - reverse solidus
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 011025d20b6341b9fa43b25f6c14c91a135a6ffa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 6cc27da58953985a2fa4910583bde2dd31d67405
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="sql-server-utilities-statements---backslash"></a>Инструкции служебных программ сервера SQL - обратная косая черта
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="backslash-line-continuation-transact-sql"></a>Обратная косая черта (продолжение строки) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]предоставляет команды, которые не являются [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций, но распознаются **sqlcmd** и **osql** служебных программ и [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] редактора кода. Эти команды используются для повышения удобочитаемости и упрощения выполнения пакетов и скриптов.  
-  
-\ разбивает длинную строку константой на две или несколько строк для удобства чтения.  
+`\`Разбивает длинные строковую константу, символ или двоичные данные, на две или несколько строк для удобства чтения.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,17 +65,18 @@ ms.lasthandoff: 09/01/2017
  \<Продолжение части строки >  
  Продолжение строки.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эта команда возвращает первую и последующие секции строки как одну строку без символов обратной косой черты.  
-  
- Обратная косая черта не является инструкцией [!INCLUDE[tsql](../../includes/tsql-md.md)]. Это команда, распознаваемая программами **sqlcmd** и **osql** служебных программ и [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] редактора кода.  
-  
+
 ## <a name="examples"></a>Примеры  
- В следующем примере использованы обратная косая черта и возврат каретки для разбиения строки на две строчки.  
+
+### <a name="a-splitting-a-character-string"></a>A. Разделение строки символов  
+
+В следующем примере обратную косую черту и символ возврата каретки для разбиения строки символов двух строк.  
   
 ```  
 SELECT 'abc\  
-def' AS ColumnResult;  
+def' AS [ColumnResult];  
   
 ```  
   
@@ -86,14 +87,31 @@ def' AS ColumnResult;
  ------------  
  abcdef
  ```    
+
+### <a name="b-splitting-a-binary-string"></a>Б. Разделение двоичная строка  
+
+В следующем примере обратную косую черту и символ возврата каретки для разбиения двоичную строку на две строки.  
+
+```  
+SELECT 0xabc\  
+def AS [ColumnResult];  
   
-## <a name="see-also"></a>См. также:  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+ ```  
+ ColumnResult  
+ ------------  
+ 0xABCDEF
+ ```    
+
+## <a name="see-also"></a>См. также  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
  [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [&#40; деления &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/divide-transact-sql.md)   
- [&#40; разделить равно &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
+ [&#40; присваивание деления &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
  [Составные операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
-

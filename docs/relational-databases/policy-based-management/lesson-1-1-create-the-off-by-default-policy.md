@@ -2,9 +2,12 @@
 title: "Создание политики, отключенной по умолчанию | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-query-tuning
 ms.tgt_pltfrm: 
@@ -12,19 +15,19 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
-caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ad1ef04caea4fc15cc53fced05ab5861d54ad7eb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 69702e51df3f1cec504647f333105abe56ecbd65
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-1-1---create-the-off-by-default-policy"></a>Занятие 1.1. Создание политики, отключенной по умолчанию
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 В этой задаче создается условие с именем «Mail Off», основанное на аспекте «Настройка контактной зоны». Затем создается политика с именем «Отключена по умолчанию».  
   
 ### <a name="to-create-the-mail-off-condition"></a>Создание условия «Mail Off»  
@@ -70,4 +73,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

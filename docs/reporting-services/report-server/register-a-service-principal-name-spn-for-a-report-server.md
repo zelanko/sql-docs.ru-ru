@@ -1,27 +1,27 @@
 ---
-title: "Регистрация имени участника-службы (SPN) для сервера отчетов | Документы Microsoft"
+title: "Регистрация имени субъекта-службы для сервера отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
-caps.latest.revision: 7
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "7"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9518d1bd3ee166a0f21292ca08130214afc841be
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d8f339aea53a9da7ee183bb2a6efee25bc603c13
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>зарегистрировать имя участника-службы для сервера отчетов
   При развертывании служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в сети, где для взаимной проверки подлинности используется протокол Kerberos, а сервер отчетов настроен для запуска от учетной записи пользователя домена, необходимо создать для службы сервера отчетов имя участника-службы (SPN).  
@@ -48,7 +48,7 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
   
  **HTTP** — класс службы. Веб-служба сервера отчетов работает в компоненте HTTP.SYS. Создание имени участника-службы для компонента HTTP имеет один побочный эффект: всем веб-приложениям, запускаемым компонентом HTTP.SYS (включая размещенные в службе IIS), будут предоставляться билеты на основе учетной записи пользователя домена. Если эти службы запускаются от имени других учетных записей, то запросы на проверку подлинности будут завершаться ошибкой. Чтобы избежать этой проблемы, необходимо настроить все HTTP-приложения для запуска от одной и той же учетной записи либо назначить для каждого из приложений заголовок, а для каждого из узлов создать отдельное имя участника-службы. При настройке заголовков узлов изменения в DNS придется вносить вне зависимости от настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- Значения, заданные для \< *computername*>, \< *domainname*>, и \< *порт*> определяют уникальный сетевой адрес компьютера, на котором размещен сервер отчетов. Это может быть как локальное имя узла, так и полное доменное имя. Если вы только один домен и используется порт 80, можно опустить \< *domainname*> и \< *порт*> командной строки. \<*Учетная запись пользователя домена*> является учетная запись пользователя, под которой выполняется служба сервера отчетов, для которого необходимо зарегистрировать имя участника-службы.  
+ Значения, указанные для \<*имя_компьютера*>, \<*имя_домена*> и \<*порт*>, определяют уникальный сетевой адрес компьютера, на котором размещен сервер отчетов. Это может быть как локальное имя узла, так и полное доменное имя. Если у вас единственный домен и используется порт 80, то \<*имя_домена*> и \<*порт*> можно не указывать в команде. \<*учетная_запись_пользователя_домена*> — это учетная запись пользователя, с которой будет выполняться служба сервера отчетов; для нее должно быть зарегистрировано имя субъекта-службы.  
   
 ## <a name="register-an-spn-for-domain-user-account"></a>Регистрация имени участника-службы для учетной записи пользователя домена  
   
@@ -74,10 +74,9 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
   
 7.  Добавьте `<RSWindowsNegotiate/>` в качестве первой записи этого раздела для включения NTLM.  
   
-## <a name="see-also"></a>См. также  
- [Настройка учетной записи службы &#40; Диспетчер конфигурации служб SSRS &#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
- [Настройка учетной записи службы сервера отчетов &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Управление сервером отчетов служб Reporting собственный режим служб](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+## <a name="see-also"></a>См. также:  
+ [Настройка учетной записи службы (диспетчер конфигурации служб SSRS)](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
+ [Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Управление сервером отчетов Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   
-

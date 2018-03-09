@@ -1,13 +1,14 @@
 ---
 title: "Выбор алгоритма шифрования | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 01/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +17,19 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - algorithms [SQL Server encryption]
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: b0c946ccc0547e3efadf26f78bb66fcdd3feb517
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 77cee9391335f384c94aa0fa3cf71808baf36056
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="choose-an-encryption-algorithm"></a>Выбор алгоритма шифрования
-  Шифрование — одно из нескольких эффективных средств защиты, позволяющих администраторам обеспечивать безопасность экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Шифрование — одно из нескольких эффективных средств защиты, позволяющих администраторам обеспечивать безопасность экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Алгоритмы шифрования определяют преобразования данных, исключающие возможность легкого восстановления исходного текста неавторизированными пользователями. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет администраторам и разработчикам выбирать из нескольких алгоритмов, в том числе DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, RC4 со 128-разрядным ключом, DESX, AES со 128-разрядным ключом, AES со 192-разрядным ключом и AES с 256-разрядным ключом.  
   
@@ -82,4 +82,3 @@ ms.lasthandoff: 08/28/2017
  [Иерархия средств шифрования](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
-

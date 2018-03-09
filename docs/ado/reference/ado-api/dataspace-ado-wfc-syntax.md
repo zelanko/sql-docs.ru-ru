@@ -3,7 +3,7 @@ title: "Пространство данных (ADO - синтаксис WFC) | �
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - DataSpace collection [ADO], ADO/WFC syntax
 ms.assetid: 950d45d8-07de-467b-b255-f9a7b997204c
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3a393ae11d8248bc10c7d9831743426e2687ae76
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0344190472a9548880e828786bd252bdb17de29b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dataspace-ado---wfc-syntax"></a>Пространство данных (ADO - WFC синтаксис)
 **CreateObject** метод **DataSpace** класс задает оба бизнес-объект к обработке клиентских запросов приложения (*progid*) и протокол связи и сервера (*подключения*). **createObject** возвращает [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md) объект, представляющий сервер.  
@@ -53,6 +52,5 @@ public static int getInternetTimeout()
 public static void setInternetTimeout(int plInetTimeout)  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект пространства данных (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)
-
+## <a name="see-also"></a>См. также  
+ [Объект DataSpace (служба удаленных рабочих столов)](../../../ado/reference/rds-api/dataspace-object-rds.md)

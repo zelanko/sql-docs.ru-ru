@@ -3,7 +3,7 @@ title: "Члены коллекции свойства, методы и собы
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Members collection [ADO MD], members
 ms.assetid: da2c0761-fe23-421b-acbf-d97dfa02d2b9
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c27ccb85acc6a6288a7c3c4b7d4722ea5cf15884
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 793bda0c2251e719e678543e6a5303a390d0a0db
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="members-collection-properties-methods-and-events"></a>Члены коллекции свойства, методы и события
 ## <a name="properties"></a>Свойства  
@@ -39,6 +38,5 @@ ms.lasthandoff: 09/09/2017
 ## <a name="events"></a>События  
  Нет.  
   
-## <a name="see-also"></a>См. также:  
- [Члены коллекции (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)
-
+## <a name="see-also"></a>См. также  
+ [Коллекция Members (многомерные объекты ADO)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)

@@ -2,12 +2,13 @@
 title: "Пользовательский интерфейс графического конструктора запросов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,21 +21,21 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 - Reporting Services, query designers
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
-caps.latest.revision: 54
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "54"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: b68330e1d9297462462888e1138e57649d03efa7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c3bc432fc4dd02527f617b920cdf045103247a9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="graphical-query-designer-user-interface"></a>Пользовательский интерфейс графического конструктора запросов
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графический и текстовый конструкторы запросов, предназначенных для получения данных из реляционной базы данных в качестве набора данных отчета в конструкторе отчетов. Графический конструктор запросов используется для интерактивного создания запроса и для просмотра результатов при работе с источниками данных следующих типов: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, OLE DB и ODBC. Текстовый конструктор запросов применяется для задания нескольких инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] , запросов и команд со сложным синтаксисом и запросов на основе выражений. Дополнительные сведения см. в разделе [Пользовательский интерфейс текстового конструктора запросов](http://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c). Дополнительные сведения о работе с конкретными типами источников данных см. в разделе [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
- .  
+ , и делает это по-другому.  
   
 ## <a name="graphical-query-designer"></a>Графический конструктор запросов  
  Графический конструктор запросов поддерживает три типа команд запроса: **Text**, **StoredProcedure**или **TableDirect**. До создания запроса для набора данных нужно выбрать параметр типа команды на странице «Запрос» диалогового окна [Свойства набора данных](http://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) .  
@@ -59,7 +60,7 @@ ms.lasthandoff: 08/09/2017
   
  В следующей таблице описываются функции каждой панели.  
   
-|Панель|Функция|  
+|Панель|Компонент|  
 |----------|--------------|  
 |Схема|Отображает графическое представление таблиц в запросе. Используйте эту панель для выбора полей и определения связей между таблицами.|  
 |Сетка|Отображает список полей, возвращаемых запросом. Используйте эту панель, чтобы определить псевдонимы, порядок сортировки, фильтры, группирования и параметры.|  
@@ -110,7 +111,7 @@ EXEC uspGetEmployeeManagers '1';
   
  В следующей таблице описываются функции каждой панели.  
   
-|Панель|Функция|  
+|Панель|Компонент|  
 |----------|--------------|  
 |Раскрывающийся список таблиц|Содержит перечень всех доступных таблиц из источника данных. Выберите хранимую процедуру из списка, чтобы сделать ее активной.|  
 |Результат|Отображает все столбцы из выбранной таблицы. Для запуска запроса к таблице нажмите кнопку **Выполнить** на панели инструментов.|  
@@ -128,7 +129,7 @@ EXEC uspGetEmployeeManagers '1';
 ### <a name="command-type-storedprocedure"></a>Тип команды StoredProcedure  
  При использовании типа **StoredProcedure** графический конструктор запросов отображает раскрывающийся список доступных хранимых процедур из источника данных и панель "Результат". В следующей таблице описываются функции каждой панели.  
   
-|Панель|Функция|  
+|Панель|Компонент|  
 |----------|--------------|  
 |Раскрывающийся список хранимых процедур|Содержит список всех доступных хранимых процедур из источника данных. Выберите хранимую процедуру из списка, чтобы сделать ее активной.|  
 |Результат|Отображает результат выполнения хранимой процедуры. Для запуска выбранной хранимой процедуры нажмите кнопку **Выполнить** на панели инструментов.|  
@@ -148,7 +149,7 @@ EXEC uspGetEmployeeManagers '1';
   
  `uspGetEmployeeManagers '1';`  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Средства проектирования запросов (службы SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Тип соединения SQL Server (службы SSRS)](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)   

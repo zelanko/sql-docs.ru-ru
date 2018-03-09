@@ -3,7 +3,7 @@ title: "ConnectPromptEnum | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectPromptEnum enumeration [ADO]
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4761b8375e78c10556d3c9f414e3558cb59a4e21
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ae0c2179e321e521a86fdc76e5f8978ab4ab747
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 Указывает, следует ли отображать диалоговое окно для запроса отсутствуют параметры при открытии соединения с источником данных.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adPromptAlways**|1|Запросы всегда.|  
 |**adPromptComplete**|2|Запрос, если требуются дополнительные сведения.|  
@@ -51,5 +50,4 @@ ms.lasthandoff: 09/09/2017
 |AdoEnums.ConnectPrompt.NEVER|  
   
 ## <a name="applies-to"></a>Объект применения  
- [Запрашивать динамические свойства (ADO)](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)
-
+ [Свойство Prompt (динамическое) (ADO)](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)

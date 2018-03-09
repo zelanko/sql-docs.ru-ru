@@ -2,9 +2,12 @@
 title: "Получение и запрос данных XML | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -13,26 +16,26 @@ helpviewer_keywords:
 - XML data [SQL Server], retrieving
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cff6370e1e57b4f1163100f029bd56d7bf63e552
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: fb75d37756c398d52db27a6fce7dd1d79feec44e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="retrieve-and-query-xml-data"></a>Получение и запрос XML-данных
-  В этом разделе описываются параметры запроса, которые необходимо указать для запроса XML-данных. Кроме того, в нем описаны компоненты экземпляров XML, нефиксируемых при сохранении экземпляров в базах данных.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+В этом разделе описываются параметры запроса, которые необходимо указать для запроса XML-данных. Кроме того, в нем описаны компоненты экземпляров XML, нефиксируемых при сохранении экземпляров в базах данных.  
   
 ##  <a name="features"></a> Компоненты экземпляра XML, которые не сохраняются  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохраняется содержимое экземпляра XML, но не сохраняются его аспекты, которые в модели XML-данных не рассматриваются как значительные. Это означает, что полученный экземпляр XML может отличаться от экземпляра, сохраненного на сервере, но при этом будет содержать те же самые данные.  
   
 ### <a name="xml-declaration"></a>XML-декларация  
- XML-декларация экземпляра не сохраняется при сохранении экземпляра в базе данных. Например:  
+ XML-декларация экземпляра не сохраняется при сохранении экземпляра в базе данных. Пример:  
   
 ```  
 CREATE TABLE T1 (Col1 int primary key, Col2 xml)  
@@ -84,7 +87,7 @@ SELECT @x.query('/*')
 GO  
 ```  
   
- Префикс пространства имен в результате может быть другим. Например:  
+ Префикс пространства имен в результате может быть другим. Пример:  
   
 ```  
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>  
@@ -111,4 +114,3 @@ GO
  [Создание экземпляров XML-данных](../../relational-databases/xml/create-instances-of-xml-data.md)  
   
   
-

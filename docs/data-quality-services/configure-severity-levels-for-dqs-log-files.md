@@ -2,15 +2,16 @@
 title: "Настройка уровней серьезности для файлов журнала DQS | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.admin.config.log.f1
+f1_keywords: sql13.dqs.admin.config.log.f1
 helpviewer_keywords:
 - severity levels
 - log files,severity levels
@@ -18,17 +19,16 @@ helpviewer_keywords:
 - logging,severity levels
 - configure severity levels
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
-caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "11"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 967e548b420d056526135da89519da75dd8ab6a6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 336ea328d7a72ed46477781fb687135ee78b429a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Настройка степеней серьезности для файлов журнала DQS
   В данном разделе описывается, как настраивать степени серьезности для различных операций и модулей в службе [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) при помощи [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Степени серьезности определяют интенсивность событий, которые происходят в DQS. События DQS имеют следующие степени серьезности, в порядке убывания серьезности:  
@@ -47,9 +47,9 @@ ms.lasthandoff: 09/09/2017
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Для настройки параметров серьезности для записи в журнал необходимо иметь роль dqs_administrator в базе данных DQS_MAIN.  
   
 ##  <a name="ConfigureActivity"></a> Настройка степени серьезности на уровне активности  
@@ -97,4 +97,3 @@ ms.lasthandoff: 09/09/2017
  [Настройка дополнительных параметров для файлов журнала DQS](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  
   
   
-

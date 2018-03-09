@@ -2,31 +2,32 @@
 title: "Ключ представление показателя эффективности (табличное) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5b159965ba0428c267b62fd712cd34bc26cca833
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 11a88bc42863076381cf2798a9bbc7c4a73f070e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables---key-performance-indicator-representation"></a>Таблицы - представление ключевого показателя эффективности
-  KPI служит показателем производительности значения, определяемого базовой мерой, относительно целевого значения  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+KPI служит показателем производительности значения, определяемого базовой мерой, относительно целевого значения  
   
 ## <a name="key-performance-indicator-representation"></a>Представление ключевого показателя эффективности  
  В табличных объектных моделях ключевой показатель эффективности –kpi- является мерой с дополнительными сведениями для графического отображения в клиентском приложении. Ключевой показатель эффективности обычно содержит данные о заданной цели, состояние меры по сравнению с целью и сведения, сообщающие клиентскому средству о том, каким образом следует графически представить состояние.  
@@ -232,4 +233,3 @@ private void addStaticKPI(object sender, EventArgs e)
  Чтобы получить представление об использовании объектов AMO для создания и управления ключевой показатель эффективности представлений см. исходный код объектов AMO в образец «Tabular»; в частности, проверьте следующий исходный код: AddKPIs.cs. Этот образец доступен на сайте Codeplex. Важное примечание о коде. Код предоставляется только для иллюстрации логических концепций, поясняемых в этом разделе. Его не следует использовать в рабочей среде или для других целей, за исключением учебных.  
   
   
-

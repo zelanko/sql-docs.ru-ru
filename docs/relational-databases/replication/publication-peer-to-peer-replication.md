@@ -2,29 +2,30 @@
 title: "Публикация (одноранговая репликация) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.p2pwizard.publication.f1
+f1_keywords: sql13.rep.p2pwizard.publication.f1
 ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
-caps.latest.revision: 11
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c5e0b5d87a843b2711d9d1b008ec966b3070d4ad
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "11"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 14c83e8ed92a1dc5274528dd13e4ff80d5dc9285
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-peer-to-peer-replication"></a>Публикация (одноранговая репликация)
-  Страница **Публикация** отображает публикации транзакций, разрешенные для одноранговых репликаций. Публикации включаются на странице **Параметры подписки** диалогового окна **Свойства публикации** .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] На странице **Публикация** выводятся публикации транзакций, для которых разрешена одноранговая репликация. Публикации включаются на странице **Параметры подписки** диалогового окна **Свойства публикации** .  
   
 ## <a name="options"></a>Параметры  
  **Издатель**  
@@ -35,6 +36,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также:  
  [Администрирование одноранговой топологии (программирование репликации на языке Transact-SQL)](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Одноранговая репликация транзакций](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

@@ -3,8 +3,11 @@ title: "INTO, предложение (Transact-SQL) | Документы Microso
 ms.custom: 
 ms.date: 05/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,20 +31,19 @@ helpviewer_keywords:
 - clauses [SQL Server], INTO
 - row additions [SQL Server], INTO clause
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-caps.latest.revision: 63
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d8aa3c2ff42396114287f58b7d9d431d13de8a2f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 410e71466944f1744d0c8092f0ad030ffa1da29b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO, предложение (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Инструкция SELECT…INTO создает новую таблицу в файловой группе по умолчанию и вставляет в нее результирующие строки из запроса. Чтобы просмотреть полный синтаксис SELECT, в разделе [ВЫБЕРИТЕ &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 09/01/2017
  *new_table*  
  Указывает имя новой таблицы, создаваемой на основе столбцов, указанных в списке выбора, и строк, выбираемых из источника данных.  
  
-  *файловая группа*
+  *filegroup*
  
  Указывает имя файловой группы, в котором будет создана новая таблица. Файловой группы, указанной должна существовать в базе данных еще обработчик SQL Server создает ошибку. Этот параметр поддерживается только начиная с версии [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
  
@@ -99,9 +101,9 @@ ms.lasthandoff: 09/01/2017
  Если в список выбора входит вычисляемый столбец, соответствующий столбец новой таблицы не будет вычисляемым. Значениями нового столбца становятся значения, вычисленные при выполнении инструкции SELECT...INTO.  
   
 ## <a name="logging-behavior"></a>Режим ведения журнала  
- Объем информации, записываемой в журнал для операции SELECT...INTO, зависит от модели восстановления, действующей для базы данных. В модели восстановления с неполным протоколированием и в простой модели массовые операции минимально протоколируются. С минимальным протоколированием, с помощью SELECT... В инструкции может быть более эффективным, чем создание таблицы и заполнение таблицы с инструкцией INSERT. Дополнительные сведения см. в статье [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ Объем информации, записываемой в журнал для операции SELECT...INTO, зависит от модели восстановления, действующей для базы данных. В модели восстановления с неполным протоколированием и в простой модели массовые операции минимально протоколируются. С минимальным протоколированием, с помощью SELECT... В инструкции может быть более эффективным, чем создание таблицы и заполнение таблицы с инструкцией INSERT. Дополнительные сведения см. в разделе [Резервная копия журнала транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется разрешение CREATE TABLE в целевой базе данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -109,7 +111,7 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>A. Создание таблицы путем указания столбцов из нескольких источников  
  В следующем примере таблица `dbo.EmployeeAddresses` создается в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] с помощью выбора семи столбцов из различных таблиц, содержащих сведения о сотрудниках и адресах.  
   
-```tsql  
+```sql  
 SELECT c.FirstName, c.LastName, e.JobTitle, a.AddressLine1, a.City,   
     sp.Name AS [State/Province], a.PostalCode  
 INTO dbo.EmployeeAddresses  
@@ -128,7 +130,7 @@ GO
 ### <a name="b-inserting-rows-using-minimal-logging"></a>Б. Вставка строк с применением минимального протоколирования  
  В следующем примере создается таблица `dbo.NewProducts`, а затем вставляются строки из таблицы `Production.Product`. В примере предполагается, что для базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] выбрана модель восстановления FULL. Чтобы убедиться, что применяется минимальное протоколирование, модель восстановления базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] устанавливается в значение BULK_LOGGED перед вставкой строк и возвращается в значение FULL после инструкции SELECT...INTO. Эта процедура обеспечивает минимальное использование журнала транзакций инструкцией SELECT...INTO и ее эффективное выполнение.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY BULK_LOGGED;  
 GO  
   
@@ -144,7 +146,7 @@ GO
 ### <a name="c-creating-an-identity-column-using-the-identity-function"></a>В. Создание столбца идентификаторов с помощью функции IDENTITY  
  В следующем примере используется функция IDENTITY для создания столбца идентификаторов в новой таблице `Person.USAddress` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Это необходимо, поскольку инструкция SELECT, которая определяет таблицу, содержит соединение, и в результате свойство IDENTITY не переносится в новую таблицу. Обратите внимание, что начальное значение и шаг приращения, заданные в функции IDENTITY, отличаются от значений в столбце `AddressID` исходной таблицы `Person.Address`.  
   
-```tsql  
+```sql  
 -- Determine the IDENTITY status of the source column AddressID.  
 SELECT OBJECT_NAME(object_id) AS TableName, name AS column_name, 
   is_identity, seed_value, increment_value  
@@ -173,7 +175,7 @@ WHERE name = 'AddressID';
   
  **Применяется к:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -216,7 +218,7 @@ GO
   
  **Область применения:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql
+```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
 SELECT DISTINCT   
         Insured_Customers.FirstName, Insured_Customers.LastName,   
@@ -230,11 +232,11 @@ ORDER BY YearlyIncome
   
 ```  
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>Е. Создание новой таблицы как копию другой таблицы и их открытии указанной файловой группе
-Следующий пример demostrates Создание новой таблицы как копию другой таблицы и их загрузки в указанной файловой группе, отличается от файловой группой по умолчанию для пользователя.
+В следующем примере показано создание новой таблицы как копию другой таблицы и их загрузки в указанной файловой группе, отличается от файловой группой по умолчанию для пользователя.
 
  **Применяется к:**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
-```tsql
+```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE
@@ -247,11 +249,10 @@ GO
 SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
 ```
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [ВЫБЕРИТЕ примеры &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [УДОСТОВЕРЕНИЕ &#40; Функция &#41; &#40; Transact-SQL &#41;](../../t-sql/functions/identity-function-transact-sql.md)  
   
   
-

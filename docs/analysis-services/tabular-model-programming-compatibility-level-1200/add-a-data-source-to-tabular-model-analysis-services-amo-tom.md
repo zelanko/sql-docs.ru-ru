@@ -2,32 +2,29 @@
 title: "Добавление источника данных для табличной модели (службы Analysis AMO-TOM) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e54a8a1b-b964-4b6e-9057-44d50af676c0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 501e99294ccc603a8815448c7c23b380ea125b46
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 692de4d83bfef7a61b11079fb31bb395da8771aa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="add-a-data-source-to-tabular-model-analysis-services-amo-tom"></a>Добавление источника данных для табличной модели (службы Analysis AMO-TOM)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-**DataSource** класса в пространстве имен Microsoft.AnalysisServices.Tabular — абстракцию источника данных табличной модели, который определяет тип и расположение импортированных данных во время операции обновления данных. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]**DataSource** класса в пространстве имен Microsoft.AnalysisServices.Tabular — абстракцию источника данных табличной модели, который определяет тип и расположение импортированных данных во время операции обновления данных. 
 
 Можно добавить источник данных для табличной модели путем создания экземпляра объекта класса, производного от **DataSource**и затем добавить его в **DataSources** коллекции объекта модели. Чтобы зафиксировать изменения на сервере, вызовите **Model.SaveChanges()** или **Database.Update(UpdateOptions.ExpandFull)**. 
 
@@ -139,4 +136,3 @@ namespace TOMSamples
 ## <a name="next-step"></a>Следующий шаг 
 
 В модели необходимо настроить привязки данных, которые сопоставить исходные столбцы в источнике данных с целевыми столбцами в модели. Также будет необходимо определить секции, как минимум одна каждой таблицы, которых хранятся данные. Используйте следующую ссылку, вы узнаете: [создавать таблицы, секции и столбцы](../../analysis-services/tabular-model-programming-compatibility-level-1200/create-tables-partitions-and-columns-in-a-tabular-model.md) 
-

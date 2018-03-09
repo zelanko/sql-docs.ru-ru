@@ -2,36 +2,33 @@
 title: "Набор строк MDSCHEMA_MEASURES | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_MEASURES
+apiname: MDSCHEMA_MEASURES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_MEASURES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_MEASURES rowset
 ms.assetid: 6ff5bd1a-aad0-49b8-9f8d-7df2637caacf
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1c48694e2ba54cd28612ce01418b4dd46f63b4a6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c77b91b179e360f539549cda05d0a17f0697ee56
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemameasures-rowset"></a>Набор строк MDSCHEMA_MEASURES
-  Описывает каждую меру в кубе.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Описывает каждую меру в кубе.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **MDSCHEMA_MEASURES** набор строк содержит следующие столбцы.  
@@ -67,17 +64,16 @@ ms.lasthandoff: 09/01/2017
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**MEASURE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**MEASURE_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**MEASUREGROUP_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**MEASURE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**MEASURE_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**MEASUREGROUP_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Необязательно) Ограничение по умолчанию имеет значение 1. Битовая карта с одним из следующих допустимых значений:<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION|  
 |**MEASURE_VISIBILITY**|**DBTYPE_UI2**|(Необязательно) Ограничение по умолчанию имеет значение 1. Битовая карта с одним из следующих допустимых значений:<br /><br /> 1 Отображается<br /><br /> 2 Не отображается|  
   
 ## <a name="see-also"></a>См. также:  
- [OLE DB для OLAP наборы строк схемы](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [Наборы строк схемы OLE DB для OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

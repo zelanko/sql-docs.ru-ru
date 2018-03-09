@@ -1,34 +1,38 @@
 ---
 title: "Приступая к работе с 2017 г. SQL Server в SUSE Linux Enterprise Server | Документы Microsoft"
-description: "Этого краткого руководства показано, как установить 2017 г. SQL Server в SUSE Linux Enterprise Server, а затем создать и запросов к базе данных с помощью sqlcmd."
+description: "Краткого руководства показано, как установить 2017 г. SQL Server в SUSE Linux Enterprise Server, а затем создать и запросов к базе данных с помощью sqlcmd."
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 10/02/2017
+manager: craigg
+ms.date: 02/22/2018
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.workload: On Demand
+ms.openlocfilehash: e1690120790be2de70ddd19aa3c1c4893178cb08
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
-ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
-ms.openlocfilehash: a15f88d8bc7d7684e8e8d0014bb24a082c5b0be2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/21/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Установка SQL Server и создать базу данных на SUSE Linux Enterprise Server
+# <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Краткое руководство: Установка SQL Server и создать базу данных на SUSE Linux Enterprise Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этом учебнике быстрого запуска сначала установите 2017 г. SQL Server на v12 SUSE Linux Enterprise Server (SLES) с пакетом обновления 2. Подключитесь с **sqlcmd** для создания первой базы данных и выполнения запросов.
+В этом кратком руководстве сначала установить 2017 г. SQL Server в SUSE Linux Enterprise Server (SLES) версии 12 SP2. Затем мы подключимся при помощи **sqlcmd** для создания первой базы данных и выполнения запросов.
 
 > [!TIP]
 > Этот учебник требуется ввод данных пользователем и подключение к Интернету. Если вы заинтересованы в [автоматической](sql-server-linux-setup.md#unattended) или [автономного](sql-server-linux-setup.md#offline) процедуры установки. в разделе [руководство по установке для SQL Server в Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
-Необходимо иметь компьютер SP2 SLES версии 12 с **по крайней мере 3,25 ГБ** памяти. Файловая система должна быть **XFS** или **EXT4**. Других файловых систем, таких как **BTRFS**, не поддерживаются.
+Необходимо иметь компьютер SP2 SLES версии 12 с **по крайней мере 2 ГБ** памяти. Файловая система должна быть **XFS** или **EXT4**. Других файловых систем, таких как **BTRFS**, не поддерживаются.
 
 Чтобы установить SUSE Linux Enterprise Server на компьютере, перейдите к [https://www.suse.com/products/server](https://www.suse.com/products/server). Можно также создать SLES виртуальных машин в Azure. В разделе [Создание и управление виртуальными машинами Linux с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)и использовать `--image SLES` в вызове `az vm create`.
 
@@ -48,12 +52,17 @@ ms.lasthandoff: 10/21/2017
 
    ```bash
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
-   sudo zypper --gpg-auto-import-keys refresh
    ```
 
    > [!NOTE]
-   > Это накопительное обновление (CU) репозитория. Дополнительные сведения о параметрах репозитория и различия между ними см. в разделе [изменение исходных репозиториев](sql-server-linux-setup.md#repositories).
+   > Это накопительное обновление (CU) репозитория. Дополнительные сведения о параметрах репозитория и различия между ними см. в разделе [настроить репозитории для SQL Server в Linux](sql-server-linux-change-repo.md).
 
+1. Обновите свои хранилища.
+
+   ```bash
+   sudo zypper --gpg-auto-import-keys refresh 
+   ```
+   
 1. Выполните следующие команды для установки SQL Server:
 
    ```bash
@@ -112,7 +121,11 @@ ms.lasthandoff: 10/21/2017
    ```
 
 > [!TIP]
-> **Sqlcmd** — лишь один инструмент для подключения к SQL Server для выполнения запросов и выполнять задачи управления и разработки. Другие средства включают в себя [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) и [кода Visual Studio](sql-server-linux-develop-use-vscode.md).
+> **Sqlcmd** — лишь один инструмент для подключения к SQL Server для выполнения запросов и выполнять задачи управления и разработки. Ниже перечислены другие инструменты.
+>
+> * [SQL Server Operations Studio (предварительная версия)](../sql-operations-studio/what-is.md);
+> * [Среда SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * [Код Visual Studio](sql-server-linux-develop-use-vscode.md).
+> * [mssql-cli (предварительная версия)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/).
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]
-

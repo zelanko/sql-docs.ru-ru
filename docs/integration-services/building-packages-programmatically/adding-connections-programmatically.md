@@ -1,12 +1,14 @@
 ---
-title: "Добавление соединений программным образом | Документы Microsoft"
+title: "Добавление соединений программным образом | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: building-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -26,33 +28,32 @@ helpviewer_keywords:
 - SSIS connection managers
 - adding package connections
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
-caps.latest.revision: 59
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: b768ad80f2b28cc3fb73a2210188bab26c902441
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3f1671c37f23d1b4b124c9c0528a22384025d727
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="adding-connections-programmatically"></a>Добавление соединений программным образом
-  Класс <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> представляет физические соединения с внешними источниками данных. Класс <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> изолирует данные о реализации соединения от среды выполнения. Это обеспечивает согласованное и прогнозируемое взаимодействие среды выполнения с каждым диспетчером соединений. Диспетчеры соединений содержат набор основных свойств, общих для всех соединений, например, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>. Однако, как правило, только свойства <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> требуются для настройки диспетчера соединений. В отличие от других парадигм, где подключение классы предоставляют методы, такие как программирования **откройте** или **Connect** физически для подключения к источнику данных, среда выполнения управляет всеми соединениями пакета во время его выполнения.  
+  Класс <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> представляет физические соединения с внешними источниками данных. Класс <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> изолирует данные о реализации соединения от среды выполнения. Это обеспечивает согласованное и прогнозируемое взаимодействие среды выполнения с каждым диспетчером соединений. Диспетчеры соединений содержат набор основных свойств, общих для всех соединений, например, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>. Однако, как правило, только свойства <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> требуются для настройки диспетчера соединений. Обычно классами подключения используются такие методы, как **Open** или **Connect** для установления физического соединения с источником данных, однако подсистема среды выполнения управляет всеми подключениями пакета во время его выполнения.  
   
  Класс <xref:Microsoft.SqlServer.Dts.Runtime.Connections> представляет собой коллекцию диспетчеров соединений, добавленных в этот пакет и доступных для использования во время выполнения. Можно добавить в коллекцию дополнительные диспетчеры соединений, используя метод <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> коллекции и указав строку, определяющую тип диспетчера соединений. Метод <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> возвращает экземпляр <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>, который был добавлен в пакет.  
   
 ## <a name="intrinsic-properties"></a>Важные свойства  
- Класс <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> представляет набор свойств, общих для всех соединений. Однако иногда может потребоваться доступ к уникальным свойствам, характеризующим определенный тип соединений. Коллекция <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Properties%2A> класса <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> обеспечивает доступ к таким свойствам. Свойства можно получить из коллекции с помощью индексатора или имени свойства и **GetValue** метода, а значения задаются с использованием **SetValue** метод. Свойства базового объекта соединения также можно задать, получив фактический экземпляр объекта и непосредственно определив его свойства. Чтобы получить базовое соединение, используйте свойство <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.InnerObject%2A> диспетчера соединений. Ниже приведена строка кода на языке C#, создающая диспетчер соединений ADO.NET, имеющий базовый класс <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.ConnectionManagerAdoNetClass>.  
+ Класс <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> представляет набор свойств, общих для всех соединений. Однако иногда может потребоваться доступ к уникальным свойствам, характеризующим определенный тип соединений. Коллекция <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Properties%2A> класса <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> обеспечивает доступ к таким свойствам. Свойства можно извлечь из коллекции с помощью индексатора или имени свойства и метода **GetValue**, а значения задаются с использованием метода **SetValue**. Свойства базового объекта соединения также можно задать, получив фактический экземпляр объекта и непосредственно определив его свойства. Чтобы получить базовое соединение, используйте свойство <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.InnerObject%2A> диспетчера соединений. Ниже приведена строка кода на языке C#, создающая диспетчер соединений ADO.NET, имеющий базовый класс <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.ConnectionManagerAdoNetClass>.  
   
  `ConnectionManagerAdoNetClass cmado = cm.InnerObject as ConnectionManagerAdoNet;`  
   
- Таким образом, выполняется приведение объекта управляемого диспетчера соединений к объекту его базового соединения. Если вы используете C++, **QueryInterface** метод <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> вызывается и запрашивается интерфейс объекта базового соединения.  
+ Таким образом, выполняется приведение объекта управляемого диспетчера соединений к объекту его базового соединения. При использовании языка C++ вызывается метод **QueryInterface** объекта <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и запрашивается интерфейс объекта базового соединения.  
   
- В следующей таблице перечислены диспетчеры соединений, входящие в состав служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. и строка, которая используется в инструкции `package.Connections.Add("xxx")`. Список всех диспетчеров соединений см. в разделе [службы Integration Services &#40; Службы SSIS &#41; Соединения](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
+ В следующей таблице перечислены диспетчеры соединений, входящие в состав служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. и строка, которая используется в инструкции `package.Connections.Add("xxx")`. Список всех диспетчеров подключений см. в разделе [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
-|Строковые значения|Диспетчер соединений|  
+|String|Диспетчер соединений|  
 |------------|------------------------|  
 |OLEDB|Диспетчер соединений для соединений OLE DB.|  
 |ODBC|Диспетчер соединений для соединений ODBC.|  
@@ -63,7 +64,7 @@ ms.lasthandoff: 08/03/2017
 |FILE|Диспетчер соединений для соединений файлов.|  
 |MULTIFLATFILE|Диспетчер соединений для соединений нескольких неструктурированных файлов.|  
 |MULTIFILE|Диспетчер соединений для соединений нескольких файлов.|  
-|SQLMOBILE|Диспетчер соединений для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact подключений.|  
+|SQLMOBILE|Диспетчер подключений для соединений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.|  
 |MSOLAP100|Диспетчер соединений для соединений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |FTP|Диспетчер соединений для FTP-соединений.|  
 |HTTP|Диспетчер соединений для HTTP-соединений.|  
@@ -205,7 +206,7 @@ Public Class CreateConnection
 End Class  
 ```  
   
- **Вывод образца:**  
+ **Образец вывода:**  
   
  `Connection description: OLE DB connection to the AdventureWorks database.`  
   
@@ -214,11 +215,10 @@ End Class
  `Number of connections in package: 2`  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- Техническая статья [строки подключения](http://go.microsoft.com/fwlink/?LinkId=220743), на сайте carlprothman.net.  
+ Техническая статья [Строки подключения](http://go.microsoft.com/fwlink/?LinkId=220743) на сайте carlprothman.net.  
   
 ## <a name="see-also"></a>См. также:  
- [Службы Integration Services &#40; Службы SSIS &#41; Подключения](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [Создание диспетчеров соединений](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   
   
-

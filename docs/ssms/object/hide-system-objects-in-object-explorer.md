@@ -3,10 +3,12 @@ title: "Скрытие системных объектов в обозреват
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - objects [SQL Server], hiding
 - Object Explorer, hiding objects
 ms.assetid: c01d8804-838c-4f75-b78c-80e41e4fffdc
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bdfc1a61fe7602f3883ac0e0aea1f89a23eb4893
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2b2fc6a0c8f840bb51eb758506c08240a66820a5
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="hide-system-objects-in-object-explorer"></a>Скрыть системные объекты в обозревателе объектов
-В этом разделе описывается, как скрыть системные объекты в обозревателе объектов [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Узел **Базы данных** в обозревателе объектов содержит системные объекты, такие как системные базы данных. На страницах **Сервис**/**Параметры** можно скрыть системные объекты. На некоторые системные объекты, например системные функции и типы данных, эта настройка не влияет.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этом разделе описывается, как скрыть системные объекты в обозревателе объектов [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Узел **Базы данных** в обозревателе объектов содержит системные объекты, такие как системные базы данных. На страницах **Сервис**/**Параметры** можно скрыть системные объекты. На некоторые системные объекты, например системные функции и типы данных, эта настройка не влияет.  
   
 ## <a name="SSMSProcedure"></a>Использование среды SQL Server Management Studio  
   
@@ -42,4 +43,3 @@ ms.lasthandoff: 06/22/2017
   
 4.  Закройте и снова откройте среду SQL Server Management Studio.  
   
-

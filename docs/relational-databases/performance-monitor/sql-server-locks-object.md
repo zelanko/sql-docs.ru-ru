@@ -2,40 +2,41 @@
 title: "SQL Server, объект Locks | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Locks object
 - SQLServer:Locks
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "25"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2aca441cd00d9626914117e2f2e60d4786332ba1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 159bb57b8f8798a0e6043d57b0c033374482d079
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-locks-object"></a>SQL Server, объект Locks
-  Объект **SQLServer: блокировки** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет сведения о блокировках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , полученных для отдельных типов ресурсов. Блокировки выдаются на такие ресурсы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , как прочитанные или измененные транзакцией строки, для предотвращения одновременного использования ресурсов несколькими транзакциями. Например, если исключительная (X) блокировка получена транзакцией на строку в таблице, никакая другая транзакция не сможет изменить эту строку, пока блокировка не будет освобождена. Минимизация использования блокировок повышает параллелизм, что может улучшить общую производительность. Одновременно может отслеживаться несколько экземпляров объекта **Locks** , каждый из которых будет представлять собой блокировку отдельного вида ресурсов.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект **SQLServer:Locks** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет сведения о блокировках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], полученных для отдельных типов ресурсов. Блокировки выдаются на такие ресурсы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , как прочитанные или измененные транзакцией строки, для предотвращения одновременного использования ресурсов несколькими транзакциями. Например, если исключительная (X) блокировка получена транзакцией на строку в таблице, никакая другая транзакция не сможет изменить эту строку, пока блокировка не будет освобождена. Минимизация использования блокировок повышает параллелизм, что может улучшить общую производительность. Одновременно может отслеживаться несколько экземпляров объекта **Locks** , каждый из которых будет представлять собой блокировку отдельного вида ресурсов.  
   
  В этой таблице описаны счетчики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** .  
   
-|Счетчики SQL Server Locks|Описание|  
+|Счетчики SQL Server Locks|Description|  
 |-------------------------------|-----------------|  
 |**Среднее время ожидания блокировки (мс)**|Средняя длительность ожидания (в миллисекундах) для всех запросов блокировки, при которых потребовалось ожидание.|  
 |**Базовое время ожидания**|Только для внутреннего применения.|
 |**Запросов блокировок/с**|Количество новых блокировок и преобразований блокировок за секунду, запрошенное у диспетчера блокировок.|  
-|**Значения времени ожидания блокировки (время ожидания &gt; 0)/с**|Количество запросов блокировок в секунду, время ожидания которых истекло, кроме запросов блокировок NOWAIT|  
+|**Значения времени ожидания блокировки (время ожидания > 0)/с**|Количество запросов блокировок в секунду, время ожидания которых истекло, кроме запросов блокировок NOWAIT|  
 |**Превышений времени ожидания блокировки в секунду**|Количество запросов блокировок в секунду, время ожидания которых истекло, включая запросы блокировок NOWAIT|  
 |**Время ожидания блокировки (мс)**|Суммарное время ожидания (в миллисекундах) блокировок за последнюю секунду.|  
 |**Ожиданий блокировок/с**|Количество запросов блокировок в секунду, которые потребовали ожидания участника.|  
@@ -43,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может выполнить блокировку следующих ресурсов.  
   
-|Элемент|Описание|  
+|Элемент|Description|  
 |----------|-----------------|  
 |**_Total**|Данные по всем блокировкам.|  
 |**AllocUnit**|Блокировка на единицу распределения.|  
@@ -62,4 +63,3 @@ ms.lasthandoff: 06/22/2017
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

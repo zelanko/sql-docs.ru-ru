@@ -3,10 +3,12 @@ title: "Тип курсора и параллелизма сочетания | �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - concurrency options [ODBC]
 - ODBC driver for Oracle [ODBC], cursor options
 ms.assetid: db63d610-f86f-4029-9d66-fed616c8a818
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8a5811471e64f2f269747906f490bde04d61d5db
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a20223e272ce2790a8959df3d9f7ed318e700aef
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cursor-type-and-concurrency-combinations"></a>Тип курсора и параллелизма сочетания
 > [!IMPORTANT]  
@@ -45,4 +46,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>См. также:  
  [Параметры подключения](../../odbc/microsoft/connect-options.md)
-

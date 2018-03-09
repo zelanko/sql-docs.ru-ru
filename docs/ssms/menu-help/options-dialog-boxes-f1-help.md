@@ -3,30 +3,31 @@ title: "Справка F1 по диалоговым окнам \"Парамет�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Options [SQL Server Management Studio], dialog boxes
 - Options [SQL Server Management Studio]
 ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 14a3f463d74000c9d7df7d089073f93fa00fc3f4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8af8c347e4225f1beb4cef6f4b515568115146f1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Справка F1 по диалоговым окнам «Параметры»
-В этом разделе содержатся материалы справки F1 для диалоговых окон, доступ к которым осуществляется выбором пункта **Параметры** меню **Сервис** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этом разделе содержатся материалы справки F1 для диалоговых окон, доступ к которым осуществляется выбором пункта **Параметры** меню **Сервис** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
 [Параметры ("Конструкторы" — "Конструкторы служб Analysis Services" — "Общие")](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   
@@ -80,4 +81,3 @@ ms.lasthandoff: 08/18/2017
   
 [Параметры ("Текстовый редактор" — "XML" — страница "Вкладки")](http://msdn.microsoft.com/en-us/13bf5f8c-aba3-4c05-b8bb-eb475797c9bd)  
   
-

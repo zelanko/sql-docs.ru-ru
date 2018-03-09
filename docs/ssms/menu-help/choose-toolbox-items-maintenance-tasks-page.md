@@ -3,32 +3,32 @@ title: "Выбор элементов инструментария (страни
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.chooseitems.maintenance_tasks
 - VS.ToolboxPages.Maintenance_Tasks
-helpviewer_keywords:
-- Customize Toolbox dialog box
+helpviewer_keywords: Customize Toolbox dialog box
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9002551a59ec21f0572906f256577e7157503414
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5f53e840362768dde02db91d5305f043fc384985
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Выбор элементов инструментария (страница «Задачи обслуживания»)
-На этой вкладке диалогового окна **Настройка области элементов** выводится список всех компонентов задачи обслуживания, зарегистрированных на компьютере, и предоставляется возможность изменять компоненты, отображаемые на панели элементов. Диалоговое окно **Настройка области элементов** можно открыть из меню **Сервис** . Для сортировки списка компонентов выберите любой заголовок столбца.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] На этой вкладке диалогового окна **Настройка** области элементов выводится список всех компонентов задачи обслуживания, зарегистрированных на компьютере, и предоставляется возможность изменять компоненты, отображаемые на панели элементов. Диалоговое окно **Настройка области элементов** можно открыть из меню **Сервис** . Для сортировки списка компонентов выберите любой заголовок столбца.  
   
 ## <a name="options"></a>Параметры  
 Вкладка **Задачи обслуживания** содержит указанные ниже столбцы данных.  
@@ -51,4 +51,3 @@ ms.lasthandoff: 06/22/2017
 **Версия**  
 Версия компонента.  
   
-

@@ -2,39 +2,38 @@
 title: "SELECT DISTINCT FROM &lt;модель &gt; (DMX) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DISTINCT
 - SELECT
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - discrete columns [DMX]
 - discretized columns [DMX]
 - SELECT DISTINCT FROM <model> statement
 - continuous columns
 ms.assetid: 0ab44ef6-1c3b-4809-a687-4d5d13f343af
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: b9911bf2fb1184412cb7b66765f3502e656c82d3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9aa916d15654b1fb4f806291d7d05ca7a683709f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;модель &gt; (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает все возможные состояния выбранного столбца модели. Возвращаемые значения зависят от того, какие значения содержит указанный столбец — дискретные, дискретизированные числовые или непрерывные числовые значения.  
   
@@ -48,7 +47,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 ## <a name="arguments"></a>Аргументы  
  *n*  
- Необязательно. Целое число, указывающее количество возвращаемых строк.  
+ Необязательный параметр. Целое число, указывающее количество возвращаемых строк.  
   
  *список выражений*  
  Список связанных идентификаторов столбцов (производных от модели) или выражений.  
@@ -60,12 +59,12 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  Условие ограничения значений, возвращаемых из списка столбцов.  
   
  *expression*  
- Необязательно. Выражение, возвращающее скалярное значение.  
+ Необязательный параметр. Выражение, возвращающее скалярное значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **SELECT DISTINCT FROM** инструкции работает только с одним столбцом или же с набором связанных столбцов. С набором несвязанных столбцов это предложение не работает.  
   
- **SELECT DISTINCT FROM** инструкция позволяет напрямую ссылаться на столбец внутри вложенной таблицы. Например:  
+ **SELECT DISTINCT FROM** инструкция позволяет напрямую ссылаться на столбец внутри вложенной таблицы. Пример:  
   
 ```  
 <model>.<table column reference>.<column reference>  
@@ -89,7 +88,7 @@ FROM [TM Decision Tree]
   
  Пример результатов:  
   
-|Пол|  
+|Gender|  
 |------------|  
 ||  
 |Ж|  
@@ -154,7 +153,6 @@ FROM [TM Decision Tree]
 ## <a name="see-also"></a>См. также:  
  [ВЫБЕРИТЕ &#40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ &#41;](../dmx/select-dmx.md)   
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции управления данными](../dmx/dmx-statements-data-manipulation.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

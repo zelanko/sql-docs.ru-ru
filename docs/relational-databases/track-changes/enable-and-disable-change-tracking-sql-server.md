@@ -2,9 +2,12 @@
 title: "Включение и отключение отслеживания изменений (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,26 +20,26 @@ helpviewer_keywords:
 - change tracking [SQL Server], configuring
 - data [SQL Server], changing
 ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 156e5514169d9b4ca9f8cca9e5f06a46187211aa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: a8ebd0d24e5c3e52d469342ed8fe6d23cc96a215
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>Включение и отключение отслеживания изменений (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   В этом разделе описано, как включить и отключить отслеживания изменений для базы данных и таблицы.  
   
 ## <a name="enable-change-tracking-for-a-database"></a>Включение отслеживания изменений для базы данных  
  Прежде чем начать отслеживание изменений, его надо включить на уровне базы данных. В следующем примере показано, как включить отслеживание изменений с помощью инструкции [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET CHANGE_TRACKING = ON  
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
@@ -61,7 +64,7 @@ SET CHANGE_TRACKING = ON
   
  В следующем примере показано, как настроить отслеживание изменений для таблицы с помощью инструкции [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
-```tsql  
+```sql  
 ALTER TABLE Person.Contact  
 ENABLE CHANGE_TRACKING  
 WITH (TRACK_COLUMNS_UPDATED = ON)  
@@ -76,14 +79,14 @@ WITH (TRACK_COLUMNS_UPDATED = ON)
   
  Если ни для одной из таблиц базы данных отслеживание изменений не настроено, то оно может быть отключено и на уровне базы данных. В следующем примере показано, как отключить отслеживание изменений для базы данных с помощью инструкции [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET CHANGE_TRACKING = OFF  
 ```  
   
  В следующем примере показано, как отключить отслеживание изменений для таблицы с помощью инструкции [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
-```tsql  
+```sql  
 ALTER TABLE Person.Contact  
 DISABLE CHANGE_TRACKING;  
 ```  
@@ -99,4 +102,3 @@ DISABLE CHANGE_TRACKING;
  [Управление отслеживанием изменений (SQL Server)](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)  
   
   
-

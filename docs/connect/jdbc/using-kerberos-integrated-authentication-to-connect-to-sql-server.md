@@ -3,24 +3,25 @@ title: "С помощью Kerberos, встроенная проверка под
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 4ddd65d18a4a335ac7ad5d416d87afccf1748fbb
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f26a429563aaf5c079c45b064b4723cb19cada90
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Использование встроенной проверки подлинности Kerberos для подключения к SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -190,7 +191,6 @@ jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationSc
 Свойство username не требуется область, если пользователь принадлежит к default_realm, в файл krb5.conf. Когда `userName` и `password` устанавливается вместе с `integratedSecurity=true;` и `authenticationScheme=JavaKerberos;` свойство соединения устанавливается значение имени пользователя как участника Kerberos вместе с паролем, указанному.
  
 ## <a name="see-also"></a>См. также:  
- [Подключение к SQL Server с помощью драйвера JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+ [Соединение с SQL Server с помощью драйвера JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: "Согласованное восстановление связанных баз данных с помощью помеченных транзакций | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +22,19 @@ helpviewer_keywords:
 - BEGIN TRAN...WITH MARK statement
 - two-phase commit
 ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
-caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 937eb729c5252b09a82576805102d3cdcbceeb21
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "45"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: c294b6643456930d2198a3fc80734facf95430c2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>Согласованное восстановление связанных баз данных с помощью помеченных транзакций
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Этот раздел относится только к тем базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые используют модель полного восстановления или модель восстановления с неполным протоколированием.  
   
@@ -95,7 +97,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="examples"></a>Примеры  
  В следующем примере журнал транзакций восстанавливается до метки в помеченной транзакции с именем `ListPriceUpdate`.  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
 BEGIN TRANSACTION ListPriceUpdate  
@@ -133,7 +135,7 @@ RESTORE LOG AdventureWorks
   
  Например, рассмотрим секционированную базу данных, существующую в нескольких экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В каждом экземпляре находится база данных под названием `coyote`. Во-первых, необходимо создать хранимую процедуру, например `sp_SetMark`, в каждой базе данных.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_SetMark  
 @name nvarchar (128)  
 AS  
@@ -145,7 +147,7 @@ GO
   
  Затем необходимо создать хранимую процедуру `sp_MarkAll` , которая содержит транзакцию, размещающую отметку в каждой базе данных. `sp_MarkAll` может быть запущена из любого экземпляра.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_MarkAll  
 @name nvarchar (128)  
 AS  

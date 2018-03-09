@@ -1,37 +1,36 @@
 ---
-title: "Использование интерфейса IDeliveryReportServerInformation в модуле доставки | Документы Microsoft"
+title: "Использование интерфейса IDeliveryReportServerInformation для модуля доставки | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - IDeliveryReportServerInformation interface
 - delivery extensions [Reporting Services], retrieving report server information
 ms.assetid: adbce647-18f3-470c-8114-42f8bcc95dc2
-caps.latest.revision: 34
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "34"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: caebc70ede4475cef103d0d76598ea3125231252
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 69bef74be0fc5c25a47c827fbaa69d6cad6ffbc3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension"></a>Использование интерфейса IDeliveryReportServerInformation в модуле доставки
   В интерфейсе <xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation> доступно несколько свойств, с помощью которых можно получить сведения о сервере отчетов. Эти сведения моно использовать для доставки уведомлений и отчетов. Во время реализации класса модуля доставки реализуется свойство <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ReportServerInformation%2A>, требуемое интерфейсом <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension>. Свойство <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ReportServerInformation%2A> возвращает объект, который реализует интерфейс <xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation>. Из этого объекта можно получить список модулей подготовки отчетов, которые в данный момент поддерживаются сервером отчетов.  
   
- Следующие **для** цикла может использоваться для хранения списка доступных модулей подготовки отчетов на сервере отчетов в **ArrayList** объекта.  
+ В следующем цикле **for** можно сохранить список модулей подготовки отчетов, доступных в данный момент на сервере отчетов, в объекте **ArrayList**.  
   
 ```vb  
 Dim renderFormats As New ArrayList()  
@@ -54,12 +53,11 @@ foreach (Microsoft.ReportingServices.Interfaces.Extension e in ReportServerInfor
 }  
 ```  
   
- Дополнительные сведения о <xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation> интерфейса см. в разделе [использование интерфейса IDeliveryReportServerInformation в модуле доставки](../../../reporting-services/extensions/delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md).  
+ Дополнительные сведения об использовании интерфейса <xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation> см. в разделе [Использование интерфейса IDeliveryReportServerInformation для модуля доставки](../../../reporting-services/extensions/delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md).  
   
 ## <a name="see-also"></a>См. также:  
  <xref:Microsoft.ReportingServices.Interfaces>   
  [Реализация модуля доставки](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
- [Библиотека служб Reporting Services расширения](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Библиотека модулей Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

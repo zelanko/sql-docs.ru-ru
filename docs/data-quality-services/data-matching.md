@@ -2,25 +2,26 @@
 title: "Сопоставление данных | Microsoft Docs"
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
-caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "29"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7b1785dc0435baf024a68c62e256e54498d1c8d3
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 04c6e34258d4e732373ea003e8457582bea9c4eb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-matching"></a>Сопоставление данных
   Процесс сопоставления данных [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) позволяет сократить дублирование данных и повысить их точность в источнике данных. Сопоставление анализирует степень дублирования во всех записях одного источника данных, возвращая взвешенные вероятности совпадения между всеми наборами сравниваемых записей. Затем вы можете принять решение, какие записи совпадают, и предпринять соответствующие действия в исходных данных.  
@@ -73,7 +74,7 @@ ms.lasthandoff: 09/09/2017
   
  Вы можете экспортировать результаты процесса сопоставления в таблицу SQL Server или CSV-файл. Экспортировать результаты сопоставления вы можете в двух форматах: первый — совпадающие и несовпадающие записи; второй — «выжившие» записи, которые содержат только «выжившую» запись для кластера, и несовпадающие результаты. При использовании правила выживания записей, если одна и та же запись определена как «выжившая» для нескольких кластеров, она будет экспортирована только один раз.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  Можно выполнять следующие задачи, связанные с сопоставлением в службах DQS.  
   
 |||  
@@ -82,4 +83,3 @@ ms.lasthandoff: 09/09/2017
 |Запуск сопоставления в проекте служб DQS|[Запуск проекта сопоставления](../data-quality-services/run-a-matching-project.md)|  
   
   
-

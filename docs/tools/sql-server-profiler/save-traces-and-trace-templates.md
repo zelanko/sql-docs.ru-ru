@@ -2,11 +2,13 @@
 title: "Сохранение трассировок и шаблонов трассировок | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - importing trace templates
 - SQL Server Profiler, templates
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
-caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "26"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 77aa4dc8d36f7d46cf7685c1d371516044bc6427
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 89be4ac89e89f5ebba68fb9261f32cf315bb81c1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="save-traces-and-trace-templates"></a>Сохранение трассировок и шаблонов трассировок
-  Сохранение файлов трассировки нужно отличать от сохранения шаблонов трассировок. Сохранение файла трассировки предполагает сохранение собранных данных о событиях в указанном месте. Сохранение шаблона трассировки связано с сохранением определения трассировки (например указанных столбцов данных, классов событий или фильтров).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Важно различать сохранение файлов трассировки от сохранения шаблонов трассировок. Сохранение файла трассировки предполагает сохранение собранных данных о событиях в указанном месте. Сохранение шаблона трассировки связано с сохранением определения трассировки (например указанных столбцов данных, классов событий или фильтров).  
   
 ## <a name="saving-traces"></a>сохранение трассировок  
  Сохраняйте собранные данные о событиях в файле или таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если позднее нужно будет проанализировать или воспроизвести их. Используйте файл трассировки для решения следующих задач.  
@@ -75,4 +76,3 @@ ms.lasthandoff: 08/02/2017
  [Импорт шаблона трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
   
-

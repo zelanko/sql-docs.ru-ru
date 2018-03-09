@@ -1,12 +1,14 @@
 ---
-title: "Программное управление пакетами и папками | Документы Microsoft"
+title: "Программное управление пакетами и папками | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: run-manage-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -16,22 +18,21 @@ helpviewer_keywords:
 - packages [Integration Services], managing
 - custom enumerators [Integration Services]
 ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a40acf3a586c74119d948291fd179f78833cb37a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4d0213c5ae32099a934daf88c2c60ef12204b86c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>Программное управление пакетами и папками
-<a name="top"></a>При программной работе с [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакеты, может потребоваться определить, существует ли отдельный пакет или папка, или для управления папками, в которых хранятся пакеты. Класс <xref:Microsoft.SqlServer.Dts.Runtime.Application> из пространства имен <xref:Microsoft.SqlServer.Dts.Runtime> предоставляет разнообразные методы, выполняющие эти требования.    
+<a name="top"></a> В процессе программирования при работе с пакетами служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] может возникнуть необходимость определить, существует ли отдельный пакет или папка, либо управлять папками, где хранятся пакеты. Класс <xref:Microsoft.SqlServer.Dts.Runtime.Application> из пространства имен <xref:Microsoft.SqlServer.Dts.Runtime> предоставляет разнообразные методы, выполняющие эти требования.    
     
-##  <a name="exists"></a>Определение существования пакета или папки    
+##  <a name="exists"></a> Определение существования пакета или папки    
  Чтобы определить программным способом, существует ли сохраненный пакет, перед попыткой загрузить и выполнить его вызовите один из следующих методов:    
     
 |Место хранения|Вызываемый метод|    
@@ -46,12 +47,12 @@ ms.lasthandoff: 09/26/2017
 |Хранилище пакетов служб SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|    
     
- [К началу](#top)    
+ [В начало](#top)    
     
-##  <a name="managing"></a>Управление пакетами и папками    
+##  <a name="managing"></a> Управление пакетами и папками    
  Класс <xref:Microsoft.SqlServer.Dts.Runtime.Application> пространства имен <xref:Microsoft.SqlServer.Dts.Runtime> предоставляет дополнительные методы для управления пакетами и папками, в которых эти пакеты хранятся.    
     
-###  <a name="managing_rempkg"></a>Удаление пакета    
+###  <a name="managing_rempkg"></a> Удаление пакета    
  Для удаления сохраненного пакета программным способом вызовите один из следующих методов:    
     
 |Место хранения|Вызываемый метод|    
@@ -59,9 +60,9 @@ ms.lasthandoff: 09/26/2017
 |Хранилище пакетов служб SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFromDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFromSqlServer%2A>|    
     
- [К началу](#top)    
+ [В начало](#top)    
     
-###  <a name="managing_create"></a>Создание папки    
+###  <a name="managing_create"></a> Создание папки    
  Для создания папки хранения программным способом вызовите один из следующих методов:    
     
 |Место хранения|Вызываемый метод|    
@@ -69,9 +70,9 @@ ms.lasthandoff: 09/26/2017
 |Хранилище пакетов служб SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.CreateFolderOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.CreateFolderOnSqlServer%2A>|    
     
- [К началу](#top)    
+ [В начало](#top)    
     
-###  <a name="managing_remfldr"></a>Удаление папки    
+###  <a name="managing_remfldr"></a> Удаление папки    
  Для удаления папки хранения программным способом вызовите один из следующих методов:    
     
 |Место хранения|Вызываемый метод|    
@@ -79,9 +80,9 @@ ms.lasthandoff: 09/26/2017
 |Хранилище пакетов служб SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFolderFromDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFolderFromSqlServer%2A>|    
     
- [К началу](#top)    
+ [В начало](#top)    
     
-###  <a name="managing_rename"></a>Переименование папки    
+###  <a name="managing_rename"></a> Переименование папки    
  Для переименования папки хранения программным способом вызовите один из следующих методов:    
     
 |Место хранения|Вызываемый метод|    
@@ -89,11 +90,10 @@ ms.lasthandoff: 09/26/2017
 |Хранилище пакетов служб SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RenameFolderOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RenameFolderOnSqlServer%2A>|    
     
- [К началу](#top)    
+ [В начало](#top)    
     
 ## <a name="see-also"></a>См. также:    
- [Управление пакетами &#40; Службы SSIS &#41;](../../integration-services/service/package-management-ssis-service.md)     
+ [Управление пакетами (службы SSIS)](../../integration-services/service/package-management-ssis-service.md)     
  [Программное перечисление доступных пакетов](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)    
     
   
-

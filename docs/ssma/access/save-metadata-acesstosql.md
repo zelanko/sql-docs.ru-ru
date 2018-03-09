@@ -1,29 +1,30 @@
 ---
 title: "Сохранение метаданных (AcessToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: fa4ce8ad-9935-4195-90f9-3fdac587a4ee
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 38d74c7c7bd5d1cc2ac3bf4dbbf940ecf1abafc3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5cc772d20da71bc811d88fa4b27bfe4d9b8f6fe0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-metadata-acesstosql"></a>Сохранение метаданных (AcessToSQL)
 **Сохранить метаданные** диалоговом окне будет предложено загрузить метаданные в проект SSMA перед сохранением. Это позволяет иметь полный файл проекта, который можно использовать в автономном режиме и отправить другим пользователям, например, сотрудники службы технической поддержки.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 08/02/2017
 Чтобы получить доступ к **сохранить метаданные** диалоговое окно, сохраните проект. Если отсутствуют какие-либо метаданные, будет отображаться SSMA **сохранить метаданные** диалоговое окно.  
   
 ## <a name="options"></a>Параметры  
-**Имя**  
+**Название**  
 Имя каждой базы данных в проекте.  
   
 **Состояние**  
@@ -51,4 +52,3 @@ SSMA загружает метаданные в проект при необхо
 **Отмена**  
 Отменяет сохранения операции. Отсутствующие метаданные не загружается в проект.  
   
-

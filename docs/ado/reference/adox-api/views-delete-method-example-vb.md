@@ -3,7 +3,7 @@ title: "Пример метода (Visual Basic) удаления предста
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Delete method [ADOX]
 ms.assetid: 17df2a83-4166-4df8-8c17-0a33aaac8582
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f44ea4cc272dceb46b98b2977b30d4d87943f34a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d8990c77ac61b8c85ffe4d6d48cfcc80cdab77f6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="views-delete-method-example-vb"></a>Представления удаления пример метода (Visual Basic)
 Следующий код показывает, как использовать [удалить](../../../ado/reference/adox-api/delete-method-adox-collections.md) метод удаление представления из каталога.  
@@ -61,7 +60,6 @@ End Sub
 ' EndDeleteViewVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Удаление метода (ADOX коллекций)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
- [Коллекции представлений (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
-
+ [Коллекция Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

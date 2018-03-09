@@ -2,30 +2,30 @@
 title: "Добавление отступов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9dce05c1-c52f-455d-8b8d-6f303e242760
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "25"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d67659da2d03dc7c4927b77551241fe9ad880202
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 55241a0b99024f557718654869d0ab728089e569
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-2-2---adding-indentation"></a>Занятие 2–2. Добавление отступов
-Редактор запросов позволяет одновременно задать отступ для больших участков кода, а также изменить величину отступа.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Редактор запросов позволяет одновременно задать отступ для больших участков кода, а также изменить величину отступа.  
   
 ## <a name="indenting-code"></a>Добавление отступов кода  
   
@@ -66,4 +66,3 @@ ms.lasthandoff: 07/31/2017
   
   
   
-

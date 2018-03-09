@@ -1,28 +1,28 @@
 ---
-title: "Работа с разбиением на страницы (веб-портал) | Документы Microsoft"
+title: "Работа с отчетами с разбивкой на страницы (веб-портал) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-non-specified
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: c6dcc44b05633004bd525d337c8303c1a8180121
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0f8ff65614eac486e11fc907c42737eb330c8b83
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="working-with-paginated-reports-web-portal"></a>Работа с отчетами с разбивкой на страницы (веб-портал)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]
 > Если отчеты с разбивкой на страницы не отображаются в папке, убедитесь, что вы просматриваете отчеты с разбивкой на страницы. Выберите **Вид** в строке меню в правом верхнем углу веб-портала. Убедитесь, что установлен флажок **Отчеты с разбивкой на страницы** .  
   
-1.  Выберите **кнопку с многоточием (...)**  для набора данных, которым требуется управлять.  
+1.  Щелкните **многоточие (…)** рядом с набором данных, которым требуется управлять.  
       
     ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
@@ -127,12 +127,12 @@ ms.lasthandoff: 08/09/2017
 Чтобы использовать этот параметр, необходимо иметь заранее настроенную учетную запись автоматического выполнения для сервера отчетов. Учетная запись автоматического выполнения используется для соединения с внешними источниками данных, если другие источники учетных данных недоступны. Если этот параметр установлен, а учетная запись не настроена, то соединение с источником данных отчета завершится ошибкой и отчет не будет обработан. Дополнительные сведения о такой учетной записи см. в разделе [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="subscriptions"></a>Подписки  
-Подписка служб Reporting Services представляет собой конфигурацию, создающую отчет в определенное время или в ответ на конкретное событие. Отчет выводится в указанном формате файла. Например, каждую среду отчет MonthlySales.rdl можно сохранять в виде документа Microsoft Word на общем файловом ресурсе. С помощью подписок можно планировать и автоматизировать создание отчетов, в которых будет использоваться заданный набор значений параметров. Дополнительные сведения см. в разделе [работа с подписками](working-with-subscriptions-web-portal.md).
+Подписка служб Reporting Services представляет собой конфигурацию, создающую отчет в определенное время или в ответ на конкретное событие. Отчет выводится в указанном формате файла. Например, каждую среду отчет MonthlySales.rdl можно сохранять в виде документа Microsoft Word на общем файловом ресурсе. С помощью подписок можно планировать и автоматизировать создание отчетов, в которых будет использоваться заданный набор значений параметров. Дополнительные сведения см. в разделе [Работа с подписками](working-with-subscriptions-web-portal.md).
   
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>Зависимые элементы  
-Страница "Зависимые элементы" позволяет просмотреть список элементов, ссылающихся на этот отчет. Значок типа элемента показывает, что это за элемент. Затем можно выбрать **кнопку с многоточием (...)**  применительно к каждому элементу для управления этими элементами Далее.  
+Страница "Зависимые элементы" позволяет просмотреть список элементов, ссылающихся на этот отчет. Значок типа элемента показывает, что это за элемент. Затем можно нажать кнопку с многоточием **(...)** для каждого элемента, чтобы настроить его более детально.  
   
 ## <a name="caching"></a>Caching  
 Имеются несколько вариантов кэширования данных для отчета с разбиением на страницы. Начать можно с простого выбора.  
@@ -149,7 +149,7 @@ ms.lasthandoff: 08/09/2017
   
 ![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
 
-Дополнительные сведения см. в разделе [работе с моментальными снимками](working-with-snapshots-web-portal.md).
+Дополнительные сведения см. в разделе [Работа с моментальными снимками](working-with-snapshots-web-portal.md).
   
 ### <a name="cache-expiration"></a>Срок действия кэша  
   
@@ -201,5 +201,4 @@ ms.lasthandoff: 08/09/2017
 [Веб-портал](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Работа с общими наборами данных](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

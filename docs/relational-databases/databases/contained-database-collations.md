@@ -2,30 +2,30 @@
 title: "Параметры сортировки автономной базы данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- contained database, collations
+helpviewer_keywords: contained database, collations
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
-caps.latest.revision: 12
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "12"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 777ff52e5670d97b6dfe3813d8e05dfcccf00103
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 00a724d305e55a58b257b699f298cbd5044a3510
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="contained-database-collations"></a>Параметры сортировки автономной базы данных
-  На порядок сортировки и семантику сравнения текстовых данных влияют различные свойства, в том числе учет регистра, учет диакритических знаков и используемый базовый язык. Эти характеристики выражаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] посредством выбора параметров сортировки для данных. Подробное обсуждение параметров сортировки см. в разделе [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] На порядок сортировки и семантику сравнения текстовых данных влияют различные свойства, в том числе учет регистра, учет диакритических знаков и используемый базовый язык. Эти характеристики выражаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] посредством выбора параметров сортировки для данных. Подробное обсуждение параметров сортировки см. в разделе [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Параметры сортировки применяются не только к данным, хранящимся в пользовательских таблицах, но и ко всему тексту, обрабатываемому [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая метаданные, временные объекты, имена переменных и т. д. Обработка таких объектов в автономных и неавтономных базах данных различается. Это изменение коснется небольшого числа пользователей и обеспечит независимость и единообразие экземпляров. При этом возможны некоторые затруднения, а также проблемы в сеансах, которые обращаются и к автономным и к неавтономным базам данных.  
   
@@ -37,13 +37,13 @@ ms.lasthandoff: 06/22/2017
 ### <a name="example-1"></a>Пример 1  
  Например, для работы в Пекине можно использовать параметры сортировки китайского языка:  
   
-```tsql  
+```sql  
 ALTER DATABASE MyDB COLLATE Chinese_Simplified_Pinyin_100_CI_AS;  
 ```  
   
  Теперь для создаваемого столбца по умолчанию будут применяться параметры сортировки китайского языка, но в случае необходимости можно выбрать другие параметры.  
   
-```tsql  
+```sql  
 CREATE TABLE MyTable  
       (mycolumn1 nvarchar,  
       mycolumn2 nvarchar COLLATE Frisian_100_CS_AS);  
@@ -56,7 +56,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```tsql  
+```sql  
 name            collation_name  
 --------------- ----------------------------------  
 mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS  
@@ -68,7 +68,7 @@ mycolumn2       Frisian_100_CS_AS
 ### <a name="example-2"></a>Пример 2  
  Например, пусть база данных с китайскими параметрами сортировки (упомянутая выше) используется в экземпляре с параметрами сортировки **Latin1_General** :  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max)) ;  
@@ -92,7 +92,7 @@ JOIN #T2
   
  Чтобы исправить эту проблему, можно явно задать параметры сортировки временной таблицы. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эта задача несколько упрощается благодаря наличию ключевого слова **DATABASE_DEFAULT** для предложения **COLLATE** .  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max) COLLATE DATABASE_DEFAULT);  
@@ -142,7 +142,7 @@ END;
   
  В ранее описанном примере с временной таблицей видно, что такой принцип работы параметров сортировки исключает необходимость явно задавать предложение **COLLATE** в большинстве случаев использования временной таблицы. В автономной базе данных этот код теперь работает без ошибок, даже в случае, когда параметры сортировки различаются для базы данных и для экземпляра.  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max));  
@@ -287,4 +287,3 @@ GO
  [Автономные базы данных](../../relational-databases/databases/contained-databases.md)  
   
   
-

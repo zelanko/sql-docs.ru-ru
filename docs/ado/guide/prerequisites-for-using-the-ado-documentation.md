@@ -8,23 +8,22 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords:
 - ADO, prerequisites
 ms.assetid: 557ee99f-3cc8-4578-9694-6b1b0788cfdd
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 99d44aac8ce764c7d7220cf1c2cd32b267d7a230
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3f24131913e671adb505f51ad467db0cdb1b7caf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>Предварительные требования для использования в документации по ADO
 Чтобы использовать в этой документации, необходимо, как минимум, опыт разработки приложений с помощью Visual Basic, так как в большинстве примеров в руководстве по записываются на этом языке. Существуют также некоторые примеры на языке Microsoft Visual C++, Java, Visual Basic Scripting Edition (VBScript) и Microsoft JScript.  
@@ -32,4 +31,3 @@ ms.lasthandoff: 09/09/2017
  Так как ADO используется для доступа к данным из различных источников, некоторые основные сведения о систем управления реляционными базами данных и интерактивной аналитической обработки (OLAP) и знакомство с в Интернете и в Интернете необходимо также протоколов.  
   
  Так как ADO и связанные технологии OLE DB основаны на модели объектов Microsoft компонентов (COM), знание COM поможет вам лучше понять сложных понятиях в ADO.
-

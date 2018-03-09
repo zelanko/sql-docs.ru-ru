@@ -2,31 +2,30 @@
 title: "Командлет New-PowerPivotServiceApplication | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7bb2a2d2-04c8-43d4-a0fc-e8339ea22138
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 59b91b7bfc168b0722d5b8d37f74e521557c4416
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0a574a1159d984e59a7a8ee5ff58ae63f16199b0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-powerpivotserviceapplication-cmdlet"></a>Командлет «New-PowerPivotServiceApplication»
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Создает новое приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Создает новое приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
 
 >[!NOTE] 
 >В этой статье может содержать устаревшие сведения и примеры. С помощью командлета Get-Help для последней версии.
@@ -39,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseServerName] <string> [-DatabaseName] <string> [-AddToDefaultProxyGroup <switch>] [<CommonParameters>]  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Командлет New-PowerPivotServiceApplication создает новое приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме. В ферме следует определить по крайней мере одно приложение службы PowerPivot, которое должно быть членом группы служб-посредников по умолчанию. При необходимости можно создавать дополнительные приложения службы, если требуется изменить свойства или параметры конфигурации. Дополнительные приложения службы должны быть членами пользовательских групп соединений со службами. В группе служб-посредников по умолчанию может быть только одно приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  Приложение службы PowerPivot создается с использованием конфигурации по умолчанию. Чтобы настроить свойства конфигурации, используйте командлет Set-PowerPivotServiceApplication.  
@@ -112,4 +111,3 @@ C:\PS>New-PowerPivotServiceApplication -ServiceApplicationName "PowerPivot Servi
  В этом примере создается новое приложение службы. База данных приложения службы создается на сервере баз данных с именем AdvWorks-SRV01, который был установлен в качестве именованного экземпляра [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Это является обычной конфигурацией для большинства установок [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Для создания базы данных нужно обладать разрешениями dbcreator на соответствующем экземпляре SQL Server. Необходимо также быть членом роли db_owner в базе данных конфигурации SharePoint. Поскольку это первое приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме, оно должно быть членом группы прокси-сервера по умолчанию.  
   
   
-

@@ -2,13 +2,13 @@
 title: "Источники данных и привязки (многомерные службы SSAS) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -35,20 +35,20 @@ helpviewer_keywords:
 - measure groups [Analysis Services], bindings
 - partitions [Analysis Services], bindings
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
-caps.latest.revision: 40
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 49a0e62db64a1eb0dc27df9785a90234a4b39207
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a182451583f04bd52a4f720c4cc057226261e21
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Источники данных и привязки (многомерные службы SSAS)
-  Кубы, измерения и другие объекты служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно привязать к источнику данных. Источником данных может быть один из следующих объектов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Кубы, измерения и другие объекты служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно привязать к источнику данных. Источником данных может быть один из следующих объектов.  
   
 -   Реляционный источник данных.  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="analysis-services-data-types"></a>Типы данных служб Analysis Services  
  Типы данных, используемые в привязках, должны соответствовать типам данных, которые поддерживаются службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. В службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]определены следующие типы данных:  
   
-|Тип данных служб Analysis Services|Description|  
+|Тип данных служб Analysis Services|Описание|  
 |---------------------------------|-----------------|  
 |BigInt|64-разрядное целое число со знаком. Этот тип данных соответствует типу данных Int64 в Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_I8 в OLE DB.|  
 |Bool|Значение типа Boolean. Этот тип данных соответствует типу данных Boolean в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_BOOL в OLE DB.|  
@@ -175,9 +175,9 @@ ms.lasthandoff: 09/01/2017
   
  Внешние привязки указываются с помощью включения в команду обработки необязательного объекта коллекции **Bindings** . Необязательная коллекция **Bindings** содержит следующие элементы:  
   
-|Свойство|Количество элементов|Тип|Description|  
+|property|Количество элементов|Тип|Описание|  
 |--------------|-----------------|----------|-----------------|  
-|**Binding**|От 0 до n|**Binding**|Предоставляет коллекцию новых привязок.|  
+|**Привязки**|От 0 до n|**Binding**|Предоставляет коллекцию новых привязок.|  
 |**DataSource**|0–1|**DataSource**|Заменяет **DataSource** с сервера, который будет использоваться.|  
 |**DataSourceView**|0–1|**DataSourceView**|Заменяет **DataSourceView** с<br /><br /> сервера, который должен был бы использоваться.|  
   
@@ -195,4 +195,3 @@ ms.lasthandoff: 09/01/2017
  Еще одним элементом, который может использоваться в коллекции **Binding** и не существующим непосредственно в библиотеке DDL, является объект **ParentColumnID**, который применяется во вложенных таблицах для интеллектуального анализа данных. В этом случае необходимо идентифицировать родительский столбец вложенной таблицы, для которого предоставляется привязка.  
   
   
-

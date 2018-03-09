@@ -1,25 +1,30 @@
 ---
 title: "Рекомендации по производительности для SQL Server для Linux | Документы Microsoft"
-description: "В этом разделе предоставляют рекомендации по производительности и рекомендации по запуску 2017 г. SQL Server в Linux."
+description: "Данная статья содержит рекомендации по производительности и рекомендации по запуску 2017 г. SQL Server в Linux."
 author: rgward
 ms.author: bobward
-manager: jhubbard
+manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 18d40800ee74783b0ce3df4d9d4e0458fbb72ebb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
-
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Рекомендации по производительности и рекомендации по конфигурации для 2017 г. SQL Server в Linux
 
-В этом разделе содержатся советы и рекомендации для повышения производительности для приложений баз данных, которые подключаются к SQL Server в Linux. Эти рекомендации относятся к работе на платформе Linux. Все обычные рекомендации по SQL Server, такие как Проектирование индекса, продолжают действовать.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+Эта статья содержит советы и рекомендации для повышения производительности для приложений баз данных, которые подключаются к SQL Server в Linux. Эти рекомендации относятся к работе на платформе Linux. Все обычные рекомендации по SQL Server, такие как Проектирование индекса, продолжают действовать.
 
 Следующие правила содержат рекомендации по настройке SQL Server и операционной системы Linux.
 
@@ -31,7 +36,7 @@ ms.lasthandoff: 10/02/2017
 
 - **Используйте СХОДСТВО ПРОЦЕССОВ для узел и/или процессоров**
 
-   Рекомендуется использовать `ALTER SERVER CONFIGURATION` для задания `PROCESS AFFINITY` для всех **NUMANODEs** и/или процессоров вы используете для SQL Server (как правило для всех узлов и ЦП) в операционной системе Linux. Соответствие процессоров позволяет обеспечить эффективное поведение Linux и планирования SQL. С помощью **NUMANODE** параметр — самый простой метод. Обратите внимание, что следует использовать **СХОДСТВО ПРОЦЕССОВ** даже при наличии только на одном узле NUMA на компьютере.  В разделе [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) документации Дополнительные сведения о том, как задать **СХОДСТВО ПРОЦЕССОВ**.
+   Рекомендуется использовать `ALTER SERVER CONFIGURATION` для задания `PROCESS AFFINITY` для всех **NUMANODEs** и/или процессоров вы используете для SQL Server (как правило для всех узлов и ЦП) в операционной системе Linux. Соответствие процессоров позволяет обеспечить эффективное поведение Linux и планирования SQL. С помощью **NUMANODE** параметр — самый простой метод. Обратите внимание, что следует использовать **СХОДСТВО ПРОЦЕССОВ** даже при наличии только на одном узле NUMA на компьютере.  В разделе [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) Дополнительные сведения о том, как задать **СХОДСТВО ПРОЦЕССОВ**.
 
 - **Настройка нескольких файлов данных tempdb**
 
@@ -52,7 +57,6 @@ ms.lasthandoff: 10/02/2017
 Рекомендуется использовать следующие параметры конфигурации операционной системы Linux в работе Наилучшая производительность для установки SQL Server.
 
 ### <a name="kernel-settings-for-high-performance"></a>Параметры ядра для повышения производительности
-
 Это рекомендуемый операционной системы Linux настройки для высокого уровня производительности и пропускной способности для установки SQL Server. Обратитесь к документации операционной системы Linux процесс настройки этих параметров.
 
 
@@ -74,7 +78,7 @@ ms.lasthandoff: 10/02/2017
 | Настройка | Значение | Дополнительные сведения |
 |---|---|---|
 | предварительно считанных с диска | 4096 | В разделе **blockdev** команды |
-| Параметры sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>VM.dirty_ratio = 40<br/>VM.dirty_background_ratio = 10<br/>VM.swappiness=10 | В разделе **sysctl** команды |
+| Параметры sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>VM.dirty_ratio = 40<br/>VM.dirty_background_ratio = 10<br/>vm.swappiness=10 | В разделе **sysctl** команды |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>Ядра параметр auto numa балансировки для систем несколькими узлами NUMA
 
@@ -89,7 +93,7 @@ sysctl -w kernel.numa_balancing=0
 Значение по умолчанию **vm.max_map_count** (то есть 65536) не может быть достаточным для установки SQL Server. Измените это значение, (который верхний предел) до 256 КБ.
 
 ```bash
-sysctl -w vm.max_map_count 262144
+sysctl -w vm.max_map_count=262144
 ```
 
 ### <a name="disable-last-accessed-datetime-on-file-systems-for-sql-server-data-and-log-files"></a>Отключить доступ к которым осуществляется Дата и время последнего в файловых системах для файлов данных и журналов SQL Server
@@ -113,4 +117,3 @@ sysctl -w vm.max_map_count 262144
 Дополнительные сведения о возможностях SQL Server, которые повышают производительность см. в разделе [приступить к работе с функциями производительности](sql-server-linux-performance-get-started.md).
 
 Дополнительные сведения о SQL Server в Linux см. в разделе [Обзор SQL Server в Linux](sql-server-linux-overview.md).
-

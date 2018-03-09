@@ -2,28 +2,30 @@
 title: "Демонстрация повышения производительности для выполняющейся в памяти OLTP | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
-caps.latest.revision: 16
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6a6edd38b5efb5b617308b9359eea8d255daeb8d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c482c0a7e79f2732e98594eccdd1da57e3d5d37d
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Демонстрация. Улучшение производительности выполняющейся в памяти OLTP
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Пример кода в этом разделе демонстрирует повышение производительности оптимизированных для памяти таблиц. Повышение производительности наблюдается, когда доступ к данным в оптимизированных для памяти таблицах осуществляется из традиционного интерпретированного [!INCLUDE[tsql](../../includes/tsql-md.md)]. Улучшение производительности будет даже заметнее, если доступ к данным в оптимизированной для памяти таблице выполняется из хранимой процедуры, скомпилированной в собственном коде (NCSProc).  
  
@@ -45,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Запустите короткий код T-SQL, чтобы создать базу данных и соответствующую оптимизированную для памяти файловую группу.  
   
-```tsql  
+```sql  
 go  
 CREATE DATABASE imoltp;    --  Transact-SQL  
 go  
@@ -78,7 +80,7 @@ go
   
 2.  Запустите следующий код T-SQL в базе данных.  
   
-```tsql  
+```sql  
 go  
 DROP PROCEDURE IF EXISTS ncsp;  
 DROP TABLE IF EXISTS sql;  
@@ -130,7 +132,7 @@ go
   
 2.  Повторно запустите приведенный ниже код T-SQL в базе данных с помощью SSMS.exe.  
   
-```tsql  
+```sql  
 go  
 SET STATISTICS TIME OFF;  
 SET NOCOUNT ON;  
@@ -193,7 +195,7 @@ go
   
  Ниже приведены статистические данные о времени вывода, сформированные при выполнении второго тестового запуска.  
   
-```tsql  
+```sql  
 10453 ms , A: Disk-based table and interpreted Transact-SQL.  
 5626 ms , B: memory-optimized table with hash index and interpreted Transact-SQL.  
 3937 ms , C: memory-optimized table with hash index and native SP.  
@@ -203,4 +205,3 @@ go
  [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
-

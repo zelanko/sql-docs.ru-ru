@@ -2,31 +2,30 @@
 title: "Обработать модель интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining models [Analysis Services], processing
+helpviewer_keywords: mining models [Analysis Services], processing
 ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3152bfff58d0e5163c3ef3635ebee59a9258bd07
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d2ff8b606dfa9c7d6f4692afcd57d0c633989924
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="process-a-mining-model"></a>обработать модель интеллектуального анализа данных
-  На вкладке «Модели интеллектуального анализа данных» конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]можно либо обработать конкретную модель, которая связана со структурой интеллектуального анализа данных, либо обработать все модели, связанные с этой структурой.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]На вкладке «модели интеллектуального анализа данных» конструктора интеллектуального анализа данных в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], можно либо обработать конкретную модель, связанными со структурой интеллектуального анализа данных, или обработать все модели, связанные с этой структурой.  
   
  Обработка модели интеллектуального анализа данных производится с помощью следующих инструментов.  
   
@@ -70,8 +69,7 @@ ms.lasthandoff: 09/01/2017
   
  Были обработаны структура интеллектуального анализа данных и все связанные с ней модели интеллектуального анализа данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи и инструкции по модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   
-

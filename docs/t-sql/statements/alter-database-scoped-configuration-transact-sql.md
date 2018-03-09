@@ -1,11 +1,13 @@
 ---
 title: "ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/27/2017
+ms.custom: 
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,36 +24,31 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 32
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: fce97e74e2b4bbc5ae0fbdadf596734677734155
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: f9eb68c07f9e163dfba699627e41ea825b041540
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Эта инструкция включает несколько параметров конфигурации базы данных на **отдельная база данных** уровне. Эта инструкция доступен в обеих [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Эти значения.  
+  Эта инструкция включает несколько параметров конфигурации базы данных на **отдельная база данных** уровне. Эта инструкция доступна в [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Эти значения.  
   
 - очистить кэш процедур;  
-  
-- задать для параметра MAXDOP произвольное значение (1, 2,...) для базы данных-источника в зависимости от того, что лучше всего подходит для конкретной базы данных, и указать другое значение (например, 0) всех используемых баз данных-получателей (например, для запросов отчетов);  
-  
+- Значение параметра MAXDOP произвольное значение (1, 2,...) для базы данных-источника на основании, что лучше всего подходит для конкретной базы данных и задать другое значение (например, 0) для всех баз данных-получателей используется (например, для запросов отчетов).  
 - настроить модель оценки кратности оптимизатора запросов независимо от уровня совместимости базы данных;  
-  
 - включить или выключить перехват параметров на уровне базы данных;
-  
 - включить или выключить исправления оптимизации запросов на уровне базы данных.
-
 - Включить или отключить кэш идентификации на уровне базы данных.
+- Включить или отключить заглушка скомпилированного плана для сохранения в кэше при первой компиляции пакета.    
   
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![значок ссылки](../../database-engine/configure-windows/media/topic-link.gif "значок ссылки") [синтаксические обозначения Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -71,6 +68,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}    
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
+    | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
 }  
 ```  
   
@@ -81,11 +79,11 @@ ALTER DATABASE SCOPED CONFIGURATION
 Задает параметры для баз данных-получателей (все базы данных-получатели должны иметь одинаковые значения).  
   
 MAXDOP  **=**  {\<значение > | ОСНОВНОЙ}  
-**\<Значение >**  
+**\<value>**  
   
 Указывает значение по умолчанию, следует использовать параметр MAXDOP для инструкций. значение по умолчанию 0 и указывает, что конфигурация сервера будет использоваться вместо этого. Переопределяет MAXDOP на уровне базы данных (если он установлен в 0) **максимальная степень параллелизма** заданы на уровне сервера с процедуры sp_configure. Указания запросов по-прежнему можно переопределить DB области для настройки определенных запросов, требующих другой параметр MAXDOP. Эти параметры ограничены MAXDOP для группы рабочей нагрузки.   
 
-Для ограничения количества процессоров в плане параллельного выполнения может быть использован параметр max degree of parallelism. SQL Server учитывает планы параллельного выполнения для запросов, операций языка DDL индексами, параллельной вставки, сети изменить столбец, collectiion параллельных статистики и курсоры заполнения статических курсоров и.
+Для ограничения количества процессоров в плане параллельного выполнения может быть использован параметр max degree of parallelism. SQL Server учитывает планы параллельного выполнения для запросов, операций языка DDL индексами, параллельной вставки, сети изменить столбец, сбора статистики параллельных и курсоры заполнения статических курсоров и.
  
 Чтобы задать этот параметр на уровне экземпляра, в разделе [Настройка параметра max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). 
 
@@ -94,7 +92,7 @@ MAXDOP  **=**  {\<значение > | ОСНОВНОЙ}
   
 PRIMARY  
   
-Может устанавливаться только для баз данных-получателей, пока база данных в на сервере-источнике и показывает, что конфигурация одному набору на сервере-источнике. Если конфигурация для основные изменения значения на сервере-получателе изменится соответствующим образом не требуется задать баз данных-получателей значение, явным образом данном. **ОСНОВНОЙ** параметр по умолчанию для баз данных-получателей.  
+Может устанавливаться только для баз данных-получателей, пока база данных в на сервере-источнике и показывает, что конфигурация одному набору на сервере-источнике. Если конфигурация для основные изменения значения на сервере-получателе будут изменяться соответствующим образом не требуется задать баз данных-получателей значение явно. **ОСНОВНОЙ** параметр по умолчанию для баз данных-получателей.  
   
 LEGACY_CARDINALITY_ESTIMATION  **=**  {ON | **OFF** | ОСНОВНОЙ}  
 
@@ -116,7 +114,7 @@ PARAMETER_SNIFFING  **=**  { **ON** | ОТКЛЮЧИТЬ | ОСНОВНОЙ}
   
 PRIMARY  
   
-Это значение допустимо только для баз данных-получателей пока база данных на сервере-источнике в и указывает, значение на всех баз данных-получателей для этого параметра значение, заданное для источника. Если на сервере-источнике с помощью конфигурации [пробное сохранение параметров](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) изменений на сервере-получателе изменится соответствующим образом баз данных-получателей не требуется задать значение явным образом данном. Это значение по умолчанию для баз данных-получателей.  
+Это значение допустимо только для баз данных-получателей пока база данных на сервере-источнике в и указывает, значение на всех баз данных-получателей для этого параметра значение, заданное для источника. Если на сервере-источнике с помощью конфигурации [пробное сохранение параметров](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) изменений на сервере-получателе изменится соответствующим образом не требуется задать баз данных-получателей значение явно. Это значение по умолчанию для баз данных-получателей.  
   
 QUERY_OPTIMIZER_HOTFIXES  **=**  {ON | **OFF** | ОСНОВНОЙ}  
 
@@ -127,7 +125,7 @@ QUERY_OPTIMIZER_HOTFIXES  **=**  {ON | **OFF** | ОСНОВНОЙ}
   
 PRIMARY  
   
-Это значение допустимо только для баз данных-получателей пока база данных на сервере-источнике в и указывает, значение на всех баз данных-получателей для этого параметра значение, заданное для источника. Если конфигурация для основные изменения значения на сервере-получателе изменится соответствующим образом не требуется задать баз данных-получателей значение, явным образом данном. Это значение по умолчанию для баз данных-получателей.  
+Это значение допустимо только для баз данных-получателей пока база данных на сервере-источнике в и указывает, что значение на всех баз данных-получателей для этого параметра значение, заданное для источника. При изменении конфигурации основной изменения значения на сервере-получателе соответствующим образом не требуется задать баз данных-получателей значение явно. Это значение по умолчанию для баз данных-получателей.  
   
 ОЧИСТИТЬ PROCEDURE_CACHE  
 
@@ -135,25 +133,33 @@ PRIMARY
 
 IDENTITY_CACHE  **=**  { **ON** | {OFF}  
 
-**Применяется к**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (компонент находится в общедоступной предварительной версии) 
+**Применяется к**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 Включает или отключает кэш идентификации на уровне базы данных. Значение по умолчанию — **ON**. Кэширование удостоверение используется для повышения производительности INSERT для таблицы со столбцами идентификаторов. Чтобы избежать пропусков значений столбца идентификаторов в случаях, когда сервер неожиданно перезапускается или при сбое сервера-получателя, отключите параметр IDENTITY_CACHE. Этот параметр, похожие на существующие [272 флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), за исключением того, что оно может быть задано на уровне базы данных, а не только на уровне сервера.   
 
 > [!NOTE] 
 > Этот параметр можно задать только для ПЕРВИЧНОЙ. Дополнительные сведения см. в разделе [столбцы идентификаторов](create-table-transact-sql-identity-property.md).  
 
+OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }  
+
+**Область применения**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+
+Включает или отключает заглушка скомпилированного плана для сохранения в кэше при первой компиляции пакета. Значение по умолчанию — OFF. После конфигурации уровня базы данных, которые OPTIMIZE_FOR_AD_HOC_WORKLOADS включен для базы данных, заглушка скомпилированного плана будет храниться в кэше, когда пакет компилируется в первый раз. Заглушки плана имеют меньше памяти по сравнению с размером полное скомпилированного плана.  При компиляции или повторного выполнения пакета, скомпилированная заглушка плана будут удалены и заменены полное скомпилированного плана.
+
 ##  <a name="Permissions"></a> Разрешения  
  Необходимо изменить любой конфигурации области базы данных   
 в базе данных. Это разрешение можно предоставить пользователем, имеющим разрешение CONTROL на базу данных.  
   
 ## <a name="general-remarks"></a>Общие замечания  
- При настройке базы данных-получатели имеют разные области Параметры конфигурации из их основных всех баз данных-получателей будет использовать ту же конфигурацию. Нельзя настроить разные параметры для отдельных баз данных-получателей.  
+ При настройке базы данных-получатели имеют разные области Параметры конфигурации из их основных все получатели используют такую же конфигурацию. Нельзя настроить разные параметры для отдельных баз данных-получателей.  
   
- При выполнении этой инструкции приведет к очистке кэша процедур в текущей базе данных, это означает, что все запросы придется перекомпилировать.  
+ При выполнении этой инструкции очищает кэш процедур в текущей базе данных, это означает, что нужно перекомпилировать все запросы.  
   
- Для запросов трехчастным, параметры для подключения к текущей базе данных для запроса будут выполняться, отличных от для модулей SQL (например, процедуры, функции и триггеры), которые компилируются в текущем контексте базы данных и поэтому будет использовать параметры База данных, в которой они находятся.  
+ Для запросов трехчастным, параметры для подключения к текущей базе данных для запроса обрабатывается, отличных от для модулей SQL (например, процедуры, функции и триггеры), которые компилируются в текущем контексте базы данных и таким образом использует параметры База данных, в которой они находятся.  
   
  Событие ALTER_DATABASE_SCOPED_CONFIGURATION добавляется как события DDL, который может использоваться для запуска триггера DDL. Это дочерние группы ALTER_DATABASE_EVENTS триггера.  
+ 
+ В области базы данных конфигурации, параметры будут перенесены с базой данных. Это означает, что при заданной базы данных была восстановлена или прикреплена, существующие параметры конфигурации будет оставаться.
   
 ## <a name="limitations-and-restrictions"></a>Ограничения  
 **MAXDOP**  
@@ -162,7 +168,7 @@ IDENTITY_CACHE  **=**  { **ON** | {OFF}
   
 -   Указание запроса переопределяет sp_configure и уровня базы данных установки. Если группа ресурсов значение MAXDOP для группы рабочей нагрузки:  
   
-    -   Если указание запроса имеет значение 0 переопределяется параметр регулятора ресурсов.  
+    -   Если указание запроса имеет значение 0, переопределяется параметр регулятора ресурсов.  
   
     -   Если указание запроса не равно 0, то не может превышать Настройка регулятора ресурсов.  
   
@@ -172,15 +178,15 @@ IDENTITY_CACHE  **=**  { **ON** | {OFF}
   
 **QUERY_OPTIMIZER_HOTFIXES**  
   
- При использовании QUERYTRACEON подсказки для оптимизатора запросов прежних версий или исправлений оптимизатора запросов будет условие OR между указание запроса и установки, то есть если либо включен, будут применяться параметры конфигурации уровня базы данных.  
+ При использовании QUERYTRACEON подсказки для оптимизатора запросов прежних версий или исправлений оптимизатора запросов будет условие OR между указание запроса и установки, то есть если либо включены, параметры применяются конфигурации уровня базы данных.  
   
 **GeoDR**  
   
- Для чтения вторичной базы данных, например группы доступности AlwaysOn и GeoReplication, используйте значение получателей, проверяя состояние базы данных. Хотя мы не перекомпилировать во время отработки отказа и технически основным есть запросы, использующие параметры получателя, идея заключается в том, что параметр между первичной и вторичной зависит только при рабочей нагрузке отличается, поэтому их переполнение кэша запросы используя оптимальной конфигурации, тогда как новые запросы будут принимать новые параметры, которые подходят для них.  
+ Для чтения вторичной базы данных, например группы доступности AlwaysOn и GeoReplication, используйте значение получателей, проверяя состояние базы данных. Даже если recompile не возникает при отработке отказа и технически новой первичной реплике есть запросы, использующие параметры получателя, идея заключается в том что параметр между первичной и вторичной различаются только когда рабочая нагрузка отличается, поэтому их переполнение кэша запросы используя оптимальной конфигурации, тогда как новые параметры, которые подходят для их выбора новых запросов.  
   
 **DacFx**  
   
- Поскольку ALTER DATABASE SCOPED CONFIGURATION — это новая функция в базе данных SQL Azure и SQL Server 2016, которая влияет на схему базы данных, Экспорт схемы (с данными или без) не будет невозможно импортировать с более старой версией SQL Server, например [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или < C2 настроек [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] . Например, экспорт в [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) или [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) из [!INCLUDE[ssSDS](../../includes/sssds-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] базы данных, используемой этой новой функции не удастся импортировать на сервер нижнего уровня.  
+ Так как инструкции ALTER DATABASE SCOPED CONFIGURATION — это новая функция в базе данных SQL Azure и SQL Server, начиная с SQL Server 2016, что влияет на схему базы данных, Экспорт схемы (с данными или без) невозможно импортировать в более старой версии SQL Server например [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. Например, экспорт в [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) или [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) из [!INCLUDE[ssSDS](../../includes/sssds-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] базы данных, используемой этой новой функции не удастся импортировать на сервер нижнего уровня.  
   
 ## <a name="metadata"></a>Метаданные  
 
@@ -194,7 +200,7 @@ IDENTITY_CACHE  **=**  { **ON** | {OFF}
 В этом примере разрешения, необходимые для выполнения инструкции ALTER DATABASE SCOPED CONFIGURATION     
 Пользователь [Joe].  
   
-```tsql  
+```sql  
 GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;  
 ```  
   
@@ -202,14 +208,14 @@ GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 
 В этом примере задается MAXDOP = 1 для базы данных-источника и MAXDOP = 4 для базы данных-получателя в случае географической репликации.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 1 ;  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=4 ;  
 ```  
   
 В этом примере задается MAXDOP для базы данных-получателя должны совпадать, заданным для его базы данных-источника в случае географической репликации.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 ```  
   
@@ -217,13 +223,13 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 
 Этот пример устанавливает LEGACY_CARDINALITY_ESTIMATION в значение ON для базы данных-получателя в случае географической репликации.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=ON ;  
 ```  
   
 Этот пример устанавливает LEGACY_CARDINALITY_ESTIMATION для базы данных-получателя, как и для его базы данных-источника в случае географической репликации.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;  
 ```  
   
@@ -231,29 +237,27 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 
 В этом примере задает PARAMETER_SNIFFING OFF для базы данных-источника в случае географической репликации.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING =OFF ;  
 ```  
   
 В этом примере задает PARAMETER_SNIFFING OFF для базы данных-источника в случае географической репликации.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;  
 ```  
   
-В этом примере устанавливается PARAMETER_SNIFFING для базы данных-получателя, он находится в базе данных-источнике   
-в случае географической репликации.  
+Этот пример устанавливает PARAMETER_SNIFFING для базы данных-получателя, он находится в базы данных-источника в случае географической репликации.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;  
 ```  
   
 ### <a name="e-set-queryoptimizerhotfixes"></a>Д. Набор QUERY_OPTIMIZER_HOTFIXES  
 
-Значение QUERY_OPTIMIZER_HOTFIXES ON для базы данных-источника   
-в случае географической репликации.  
+Значение QUERY_OPTIMIZER_HOTFIXES ON для базы данных-источника в случае географической репликации.  
 
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;  
 ```  
   
@@ -261,7 +265,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;
 
 Этот пример очищает кэш процедур (доступно только для базы данных-источника).  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;  
 ```  
 
@@ -271,8 +275,18 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 
 В этом примере отключается кэша идентификаторов.
 
-```tsql 
+```sql 
 ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ; 
+```
+
+### <a name="h-set-optimizeforadhocworkloads"></a>З. Set OPTIMIZE_FOR_AD_HOC_WORKLOADS
+
+**Область применения**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+
+В этом примере включается заглушка скомпилированного плана для сохранения в кэше при первой компиляции пакета.
+
+```sql 
+ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
@@ -290,14 +304,12 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [«Я чуждо параметр!»](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
 ### <a name="queryoptimizerhotfixes-resources"></a>QUERY_OPTIMIZER_HOTFIXES ресурсы    
-* [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+* [Флаги трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 * [SQL Server модель оптимизатора запросов исправление трассировки флаг 4199 обслуживания](https://support.microsoft.com/en-us/kb/974006)
 
 ## <a name="more-information"></a>Дополнительные сведения  
- [sys.database_scoped_configurations &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
- [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
- [Представления каталогов баз данных и файлов (Transact-SQL)](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [Параметры конфигурации сервера &#40; SQL Server &#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
-  
-  
-
+ [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+ [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [Представления каталога файлов и баз данных](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+ [Параметры конфигурации сервера](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+ 

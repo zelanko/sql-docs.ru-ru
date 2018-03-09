@@ -3,7 +3,7 @@ title: "SeekEnum | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - SeekEnum enumeration [ADO]
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 40c15bd116b4e0a7ba13127dc48ec18421b5924b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 051f4e1c300796e2777e9b06a1514c9ce00b9b02
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="seekenum"></a>SeekEnum
 Указывает тип [Seek](../../../ado/reference/ado-api/seek-method.md) для выполнения.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adSeekFirstEQ**|1|Выполняет поиск первого ключа равно *KeyValues*.|  
 |**adSeekLastEQ**|2|Выполняет поиск последнего ключа равно *KeyValues*.|  
@@ -55,5 +54,4 @@ ms.lasthandoff: 09/09/2017
 |AdoEnums.Seek.BEFORE|  
   
 ## <a name="applies-to"></a>Объект применения  
- [Метод поиска](../../../ado/reference/ado-api/seek-method.md)
-
+ [Метод Seek](../../../ado/reference/ado-api/seek-method.md)

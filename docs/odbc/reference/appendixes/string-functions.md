@@ -3,32 +3,33 @@ title: "Строковые функции | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], string functions
 - string functions [ODBC]
 ms.assetid: 270f669e-8aab-4db0-95a4-f2b3c69538b3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 049e1acec8ad27e9fd65d838c17f48c78519ad46
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1a9afffd67b839b36e663404048ac741e068b015
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-functions"></a>Строковые функции
 В следующей таблице перечислены функции обработки строк. Приложение может определить, какие строковые функции поддерживаются драйвером путем вызова **SQLGetInfo** с *типу информации* из SQL_STRING_FUNCTIONS.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Аргументы обозначается как *строковое_выражение* может быть именем столбца, *символ строковый литерал*, или результат другой скалярной функцией, где базовый тип данных может быть представлено как SQL_CHAR, SQL_ VARCHAR или SQL_LONGVARCHAR.  
   
  Аргументы обозначается как *character_exp* — это строка символов переменной длины.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 09/09/2017
   
  BIT_LENGTH, CHAR_LENGTH, CHARACTER_LENGTH, OCTET_LENGTH и ПОЗИЦИИ строки скалярные функции были добавлены в ODBC версии 3.0 в соответствии со стандартом SQL-92.  
   
-|Функция|Description|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |**ASCII (** *строковое_выражение* **)** (ODBC 1.0)|Возвращает код ASCII первого символа указанного *строковое_выражение* как целое число.|  
 |**BIT_LENGTH (** *строковое_выражение* **)** (ODBC 3.0)|Возвращает длину строкового выражения в битах.<br /><br /> Работает только для строковых типов данных, поэтому будет не неявно преобразовать *строковое_выражение* со строкой, а возвращается (внутренний) размер любого типа данных, ей присваивается.|  
@@ -64,4 +65,3 @@ ms.lasthandoff: 09/09/2017
 |**ПРОБЕЛ (** *число* **)** (ODBC 2.0)|Возвращает символьную строку, состоящую из *число* пробелы.|  
 |**SUBSTRING (** *строковое_выражение*, *запустить*, длина**)** (ODBC 1.0)|Возвращает строку символов, который является производным от *строковое_выражение*, начиная с позиции, указанной параметром *запустить* для *длина* символов.|  
 |**UCASE (** *строковое_выражение* **)** (ODBC 1.0)|Возвращает строку, в *строковое_выражение*, со всеми нижний регистр, переведенную в верхний регистр.|
-

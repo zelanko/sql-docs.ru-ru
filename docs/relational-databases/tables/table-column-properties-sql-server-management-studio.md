@@ -2,11 +2,13 @@
 title: "Свойства столбца таблицы (среда SQL Server Management Studio) | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,20 +16,19 @@ f1_keywords:
 - vdtsql.chm:69657
 - vdt.ppg.columns
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
-caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "33"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8eefd641ac7c9672b6e5f52412bd7cafe623ea09
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2d2860c28663df8c5b2fc9ef995dafdefcb892e2
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Свойства столбца таблицы (среда SQL Server Management Studio)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Эти свойства отображаются на нижней панели конструктора таблиц. Если не оговорено обратное, эти свойства можно изменять в окне «Свойства» при выборе столбца. **Свойства столбца** можно просматривать по категориям или по алфавитному списку. Многие свойства только отображаются и доступны для изменения только для определенных типов данных.  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 06/22/2017
  **Общие сведения**  
  Отображает свойства **Имя**, **Разрешить значения NULL**, **Тип данных**, **Значение по умолчанию или привязка**, **Длина**, **Точность**и **Масштаб**.  
   
- **Имя**  
+ **Название**  
  Отображает имя выбранного столбца.  
   
  **Разрешить значения NULL**  
@@ -142,4 +143,3 @@ ms.lasthandoff: 06/22/2017
 >  Длина типов данных **(max)** различна для каждой строки. **sp_help** возвращает (-1) в качестве длины столбцов **(max)** . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] отображает значение -1 как размер столбца.  
   
   
-

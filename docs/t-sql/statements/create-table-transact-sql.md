@@ -1,11 +1,13 @@
 ---
 title: "Создание таблицы (Transact-SQL) | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -47,20 +49,19 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 256
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0978041b1c2683f6af3f6c531ddc10edc6b9bcbf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ad0dd6ed4d8006a596ac05c35730a8132368d5df
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-table-transact-sql"></a>Инструкция CREATE TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Создает новую таблицу в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -395,7 +396,7 @@ column_name <data_type>
  ON {*partition_scheme* | *файловой группы* | **»**по умолчанию**»**} также могут быть указаны в первичный ключ или ограничения уникальности. С помощью этих ограничений создаются индексы. Если *файловой группы* указан, индекс сохраняется в именованной файловой группе. Если **»**по умолчанию**»** указан, или если ON не определен вообще, индекс сохраняется в той же файловой группе, что и таблица. Если ограничение PRIMARY KEY или UNIQUE создает кластеризованный индекс, страницы данных таблицы сохраняются в той же файловой группе, что и индекс. Если указан параметр CLUSTERED или ограничение создает кластеризованный индекс, а также *partition_scheme* указан, отличается от *partition_scheme* или *файловойгруппы* определение таблицы, или наоборот, будет принята только определение ограничения, а остальные будут проигнорированы.  
   
 > [!NOTE]  
->  В этом контексте default не является ключевым словом. Он представляет собой идентификатор файловой группы по умолчанию и должен иметь разделители, как в выражениях ON **»**по умолчанию**»** или ON **[**по умолчанию**]**. Если **»**по умолчанию**»** указан, параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в разделе [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  В этом контексте default не является ключевым словом. Он представляет собой идентификатор файловой группы по умолчанию и должен иметь разделители, как в выражениях ON **»**по умолчанию**»** или ON **[**по умолчанию**]**. Если **»**по умолчанию**»** указан, параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 > [!NOTE]  
 >  После создания секционированной таблицы рассмотрите возможность присвоить параметру LOCK_ESCALATION для таблицы значения AUTO. При этом можно усовершенствовать параллелизм, разрешив укрупнение блокировок до уровня секции (HoBT) вместо таблицы. Дополнительные сведения см. в разделе [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md).  
@@ -411,7 +412,7 @@ column_name <data_type>
 
 
 > [!NOTE]  
->  В этом контексте default не является ключевым словом. Он представляет собой идентификатор файловой группы по умолчанию и должен иметь разделители, как в выражениях TEXTIMAGE_ON **»**по умолчанию**»** или TEXTIMAGE_ON **[**по умолчанию**]**. Если **»**по умолчанию**»** указан, параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в разделе [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  В этом контексте default не является ключевым словом. Он представляет собой идентификатор файловой группы по умолчанию и должен иметь разделители, как в выражениях TEXTIMAGE_ON **»**по умолчанию**»** или TEXTIMAGE_ON **[**по умолчанию**]**. Если **»**по умолчанию**»** указан, параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  FILESTREAM_ON { *partition_scheme_name* | файловая группа | **»**по умолчанию**»** } **применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  
@@ -541,7 +542,7 @@ column_name <data_type>
  ON **»**по умолчанию**»**  
  Создает заданный индекс в файловой группе, используемой по умолчанию.  
   
- Слово «default» в этом контексте не является ключевым. Он представляет собой идентификатор файловой группы по умолчанию и должен иметь разделители, как в выражениях ON **»**по умолчанию**»** или ON **[**по умолчанию**]**. Если указано значение «default» (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в разделе [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ Слово «default» в этом контексте не является ключевым. Он представляет собой идентификатор файловой группы по умолчанию и должен иметь разделители, как в выражениях ON **»**по умолчанию**»** или ON **[**по умолчанию**]**. Если указано значение «default» (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  [FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | «NULL»}]  
    
@@ -717,7 +718,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  *Logical_Expression*  
  Логическое выражение, возвращающее значения TRUE или FALSE. Псевдонимы типа данных частью выражения быть не могут.  
   
- *столбец*  
+ *column*  
  Столбец или список столбцов (в скобках), используемый в ограничениях таблицы для указания столбцов, используемых в определении ограничения.  
   
  [ **ASC** | DESC]  
@@ -764,7 +765,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  DATA_COMPRESSION  
  Задает режим сжатия данных для указанной таблицы, номера секции или диапазона секций. Существуют следующие параметры выбора.  
   
- NONE  
+ None  
  Таблица или указанные секции не сжимаются.  
   
  ROW  
@@ -902,7 +903,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  **Включение базы данных Stretch для таблицы**  
   
- Если включить растяжение для таблицы, указав `ON`, можно дополнительно указать `MIGRATION_STATE = OUTBOUND` начинается немедленно, перенос данных или `MIGRATION_STATE = PAUSED` чтобы отложить перенос данных. Значение по умолчанию — `MIGRATION_STATE = OUTBOUND`. Дополнительные сведения о включении растяжения для таблицы см. в разделе [включения базы данных Stretch для таблицы](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).  
+ Если включить растяжение для таблицы, указав `ON`, можно дополнительно указать `MIGRATION_STATE = OUTBOUND` начинается немедленно, перенос данных или `MIGRATION_STATE = PAUSED` чтобы отложить перенос данных. Значение по умолчанию — `MIGRATION_STATE = OUTBOUND`. Дополнительные сведения о включении растяжения для таблицы см. в разделе [включения базы данных Stretch для таблицы](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).  
   
  **Предварительные требования**. Прежде чем включать Stretch для таблицы, необходимо включить растяжение на сервере и в базе данных. Дополнительные сведения см. в разделе [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).  
   
@@ -981,7 +982,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  Хэш-индексы поддерживаются только в таблицах, оптимизированных для памяти.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Сведения о количестве допустимых таблиц, столбцов, ограничений и индексов см. в разделе [Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
   
  Пространство таблицам и индексам обычно выделяется по одному экстенту за раз. Если ЗАДАТЬ инструкции mixed_page_allocation ALTER DATABASE присвоено значение TRUE, или всегда до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]при создании таблицы или индекса им выделяются страницы из смешанных экстентов, пока число страниц для однородного экстента. Каждый раз, когда число страниц достигает размера однородного экстента, и текущие выделенные экстенты становятся заполненными, выделяется новый экстент. Отчет об объеме пространства выделение и использование таблицы, выполнение **sp_spaceused**.  
@@ -1020,7 +1021,7 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
 CREATE PROCEDURE dbo.Test2  
 AS  
-    CREATE TABLE #t(x INT PRIMARY KEY);  
+n    CREATE TABLE #t(x INT PRIMARY KEY);  
     INSERT INTO #t VALUES (2);  
     SELECT Test2Col = x FROM #t;  
 GO  
@@ -1030,7 +1031,7 @@ AS
     CREATE TABLE #t(x INT PRIMARY KEY);  
     INSERT INTO #t VALUES (1);  
     SELECT Test1Col = x FROM #t;  
-EXEC Test2;  
+ EXEC Test2;  
 GO  
   
 CREATE TABLE #t(x INT PRIMARY KEY);  
@@ -1069,22 +1070,22 @@ GO
 Глобальные временные таблицы для базы данных SQL Azure следуйте того же синтаксиса и семантики, SQL Server использует для временных таблиц.  Аналогичным образом глобальные временные хранимые процедуры распространяются также на уровне базы данных в базе данных SQL Azure. Локальные временные таблицы (# имя таблицы для инициализации) также поддерживается для базы данных SQL Azure и следуйте же синтаксис и семантику, используемый SQL Server.  См. в разделе выше [временные таблицы](#temporary-tables).  
 
 > [!IMPORTANT]
-> Эта функция находится в общедоступной предварительной версии и доступно для баз данных SQL Azure.
+> Эта функция доступна только для базы данных SQL Azure.
 >
 
 ### <a name="troubleshooting-global-temporary-tables-for-azure-sql-db"></a>Глобальные временные таблицы для устранения неполадок в базе данных SQL Azure 
 
 Для устранения неполадок tempdb [Устранение неполадок недостаточно места на диске в базе данных tempdb](https://technet.microsoft.com/library/ms176029%28v=sql.105%29.aspx?f=255&MSPPError=-2147217396). Для доступа к устранению неполадок динамических административных представлений в базе данных SQL Azure, необходимо быть администратором сервера.
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Разрешения  
 
- Любой пользователь может создавать глобальные временные объекты. Если не предоставлены какие-либо дополнительные разрешения, то пользователи могут производить доступ только к тем объектам, которыми они владеют. .  
+ Любой пользователь может создавать глобальные временные объекты. Если не предоставлены какие-либо дополнительные разрешения, то пользователи могут производить доступ только к тем объектам, которыми они владеют. , и делает это по-другому.  
   
 ### <a name="examples"></a>Примеры 
 
 - Объект сеанса создает глобальных временных таблиц ##test в testdb1 базы данных SQL Azure и добавляет одну строку
 
-```tsql
+```sql
 CREATE TABLE ##test ( a int, b int);
 INSERT INTO ##test values (1,1);
 
@@ -1102,7 +1103,7 @@ SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
 ```
 - Сеанс B подключается к базе данных SQL Azure testdb1 и может получить доступ к таблице ##test созданные в сеансе A
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 1,1
@@ -1110,7 +1111,7 @@ SELECT * FROM ##test
 
 - Сеанс C подключается к другой базе данных в базе данных SQL Azure testdb2 и хочет получить доступ к ##test в testdb1. Выберите неудачей из-за области базы данных, для глобальных временных таблиц 
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 Msg 208, Level 16, State 0, Line 1
@@ -1119,7 +1120,7 @@ Invalid object name '##test'
 
 - Обращение с текущего пользователя базы данных testdb1 системный объект в базе данных tempdb базы данных SQL Azure
 
-```tsql
+```sql
 SELECT * FROM tempdb.sys.objects
 SELECT * FROM tempdb.sys.columns
 SELECT * FROM tempdb.sys.database_files
@@ -1256,7 +1257,7 @@ SELECT * FROM tempdb.sys.database_files
   
  Оценить состояние сжатия таблицы, индекса или секции можно с помощью хранимой процедуры [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) .  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения CREATE TABLE в базе данных и разрешения ALTER на схему, в которой создается таблица.  
   
  Если какие-либо столбцы в инструкции CREATE TABLE определены как принадлежащие к определяемому пользователем типу данных CLR, необходимо быть владельцем данного типа либо иметь разрешение REFERENCES на него.  
@@ -1660,6 +1661,5 @@ GO
  [sp_spaceused &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
   
   
-
 
 

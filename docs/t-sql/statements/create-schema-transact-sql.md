@@ -3,8 +3,11 @@ title: "Создание СХЕМЫ (Transact-SQL) | Документы Microsof
 ms.custom: 
 ms.date: 12/01/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - schemas [SQL Server], creating
 - CREATE SCHEMA statement
 ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
-caps.latest.revision: 60
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 58eaf0c325ab4884dfe1e67ae0b0889a2ca6769a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 3185725a8b5db647d047830f4b87248b839ad230
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Создает схему в текущей базе данных. При помощи транзакции CREATE SCHEMA также можно создавать таблицы и представления в новой схеме и предоставлять разрешения GRANT, DENY или REVOKE на такие объекты.  
   
@@ -194,6 +196,5 @@ GO
  [Создание схемы базы данных](../../relational-databases/security/authentication-access/create-a-database-schema.md)  
   
   
-
 
 

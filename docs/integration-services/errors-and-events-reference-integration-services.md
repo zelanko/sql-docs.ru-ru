@@ -1,10 +1,13 @@
 ---
-title: "Ошибки и события (службы Integration Services) | Документы Microsoft"
+title: "Справочник по ошибкам и событиям (службы Integration Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ helpviewer_keywords:
 - errors [Integration Services]
 - Integration Services, errors
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c98113795981fb4c080fac83f3f69a6242c1e86b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cecb7c7bf6210f1c4c343f168af650f454322d64
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Справочник по ошибкам и событиям (службы Integration Services)
   Этот раздел документации содержит сведения о некоторых ошибках и событиях, связанных со службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Сведения о причинах и способах устранения включены в сообщения об ошибках.  
@@ -81,8 +83,7 @@ ms.lasthandoff: 08/03/2017
 |SQLISService_273|Указывает, что файл конфигурации не может быть прочитан или недопустим.|  
 |SQLISService_274|Указывает, что параметр реестра, указывающий местонахождение файла конфигурации, не существует или пуст.|  
   
-## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../integration-services/integration-services-error-and-message-reference.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по сообщениям об ошибках служб Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
   
   
-

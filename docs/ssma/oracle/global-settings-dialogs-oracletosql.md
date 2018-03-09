@@ -1,26 +1,27 @@
 ---
 title: "Глобальные параметры (диалоговые окна) (OracleToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
+ms.openlocfilehash: aa5f62dbde4489b17f2863fcbe1ebbf751e1198d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e2feffc4f4fdf2d37797bf51581eaad83580210e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-dialogs--oracletosql"></a>Глобальные параметры (диалоговые окна) (OracleToSQL)
 Используйте диалоговые окна страницу **глобальные параметры** для указания действий пользователя по умолчанию и параметры предупреждения для SSMA.  
@@ -46,4 +47,3 @@ ms.lasthandoff: 08/02/2017
   
 -   При выборе **False**, SSMA не перезаписывает метаданные объекта во время преобразования.  
   
-

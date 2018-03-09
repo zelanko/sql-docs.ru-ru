@@ -2,34 +2,32 @@
 title: "Descendants (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- DESCENDANTS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Descendants function
+f1_keywords: DESCENDANTS
+dev_langs: kbMDX
+helpviewer_keywords: Descendants function
 ms.assetid: d103b0f5-e794-4828-aa57-43f6918a0749
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: a641da0586093194c2ae64614a7cdf845827001f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 82ae4fdab005443b03802f443097ddb435342c1a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="descendants-mdx"></a>Descendants (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает набор потомков элемента на указанном уровне или расстоянии, по желанию включая или исключая потомков на других уровнях.  
   
@@ -67,7 +65,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Desc_Flag*  
  Допустимая строка выражения, указывающая описание флага, коррелирующего с возможными наборами потомков.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если уровень указан, **потомков** функция возвращает набор, содержащий потомки заданного элемента или элементы заданного набора на заданном уровне, выборочно изменяемом при помощи флага, определенного в *Desc_Flag*.  
   
  Если *расстояние* указано, **потомков** функция возвращает набор, содержащий потомки заданного элемента или элементы заданного набора, заданного количество уровней вне иерархии заданного элемента, выборочно изменяемом при помощи флага, определенного в *Desc_Flag*. Обычно эта функция используется с аргументом Distance для распределения неоднородных иерархий. Если заданное расстояние равно нулю, то функция возвращает набор, состоящий только из заданного элемента или заданного набора.  
@@ -178,4 +176,3 @@ FROM [Adventure Works]
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

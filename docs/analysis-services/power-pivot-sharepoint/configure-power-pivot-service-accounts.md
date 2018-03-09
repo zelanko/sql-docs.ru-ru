@@ -2,30 +2,30 @@
 title: "Настройка учетных записей служб Power Pivot | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
-caps.latest.revision: 15
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 590f8ebba552477bf3622570c3cb6aa1e2a73247
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7bdd53a084d7438152d4ae83eeeb884984d48e51
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Настройка учетных записей служб Power Pivot
-  Установка [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]включает две службы, поддерживающие операции сервера. **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** — это службы Windows, обеспечивающие обработку данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и поддержку запросов на сервере приложений. Учетная запись входа для этих служб всегда указывается во время настройки SQL Server при установке служб Analysis Services в режиме интеграции SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Установка [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]включает две службы, поддерживающие операции сервера. **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** — это службы Windows, обеспечивающие обработку данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и поддержку запросов на сервере приложений. Учетная запись входа для этих служб всегда указывается во время настройки SQL Server при установке служб Analysis Services в режиме интеграции SharePoint.  
   
  Для приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , которая является общей веб-службой, работающей под идентификатором пула приложений на ферме SharePoint, необходимо указать вторую учетную запись. Эта учетная запись указывается, когда вы настраиваете установку [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]с помощью средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или PowerShell.  
   
@@ -106,7 +106,7 @@ ms.lasthandoff: 09/01/2017
   
 #### <a name="analysis-services-service-account"></a>Учетная запись службы Analysis Services  
   
-|Требование|Description|  
+|Требование|Описание|  
 |-----------------|-----------------|  
 |Требования провизионирования|Эта учетная запись может быть указана во время установки SQL Server на странице **Службы Analysis Services — конфигурация мастера установки** (либо параметром установки **ASSVCACCOUNT** в случае установки из командной строки).<br /><br /> Имя пользователя или пароль можно изменить с помощью центра администрирования, PowerShell или средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Использование других средств для изменения учетных записей и паролей не поддерживается.|  
 |Требования к учетной записи пользователя домена|Эта учетная запись должна быть учетной записью пользователя домена Windows. Использование встроенных учетных записей компьютера (таких как учетные записи локальной или сетевой службы) недопустимо. Программа установки SQL Server обеспечивает выполнение требования использовать учетную запись пользователя домена, блокируя установку при указании учетной записи компьютера.|  
@@ -115,7 +115,7 @@ ms.lasthandoff: 09/01/2017
   
 #### <a name="power-pivot-service-application-pool"></a>Пул приложений службы Power Pivot  
   
-|Требование|Description|  
+|Требование|Описание|  
 |-----------------|-----------------|  
 |Требования провизионирования|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] — это общий ресурс фермы, который становится доступным после создания приложения службы. Пул приложений службы должен быть указан при его создании. Его можно указать двумя способами: с помощью средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или с помощью команд PowerShell.<br /><br /> Удостоверение пула приложений можно настроить для запуска под уникальной учетной записью. Но если удостоверение пула приложения не настроено таким образом, рекомендуется изменить его для запуска под другой учетной записью.|  
 |Требования к учетной записи пользователя домена|Это удостоверение пула приложений должно быть учетной записью пользователя домена Windows. Использование встроенных учетных записей компьютера (таких как учетные записи локальной или сетевой службы) недопустимо.|  
@@ -186,9 +186,8 @@ ms.lasthandoff: 09/01/2017
   
  Если установлены службы Reporting Services, используйте диспетчер конфигурации служб Reporting Services для обновления паролей сервера отчетов и соединения с базой данных сервера отчетов. Дополнительные сведения см. в разделе [Настройка и администрирование сервера отчетов (режим интеграции с SharePoint служб Reporting Services)](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск и остановка службы PowerPivot для SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)   
  [Настройка учетной записи автоматического обновления данных Power Pivot (Power Pivot для SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   
   
-

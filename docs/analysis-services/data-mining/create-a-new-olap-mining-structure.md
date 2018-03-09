@@ -2,12 +2,13 @@
 title: "Создать новую структуру интеллектуального анализа данных OLAP | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +16,20 @@ helpviewer_keywords:
 - mining structures [Analysis Services], creating
 - OLAP [Analysis Services], mining models
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
-caps.latest.revision: 32
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a60a88bbf9816e4af0260cde3063f5bd6d5240e6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 41047907b0e53f6d17fc49a9734ed4b9a52817f1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-new-olap-mining-structure"></a>создать новую структуру интеллектуального анализа OLAP
-  Можно воспользоваться мастером интеллектуального анализа данных в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , чтобы создать структуру интеллектуального анализа данных, в которой будут использоваться данные многомерной модели. Модели интеллектуального анализа данных, основанные на кубах OLAP, способны использовать столбец и его значения в таблицах фактов, измерениях и в группах мер в качестве атрибутов для анализа.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Можно воспользоваться мастером интеллектуального анализа данных в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , чтобы создать структуру интеллектуального анализа данных, в которой будут использоваться данные многомерной модели. Модели интеллектуального анализа данных, основанные на кубах OLAP, способны использовать столбец и его значения в таблицах фактов, измерениях и в группах мер в качестве атрибутов для анализа.  
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>Создание новой структуры интеллектуального анализа OLAP  
   
@@ -136,7 +137,6 @@ ms.lasthandoff: 09/01/2017
      **Создать куб с использованием измерения модели интеллектуального анализа данных**: отметьте флажком этот пункт и введите имя нового куба. При использовании этого режима будет создан новый куб, который будет содержать как существующие измерения, которые использовались для построения структуры, так и новое измерение интеллектуального анализа данных, содержащее результаты из модели.  
   
 ## <a name="see-also"></a>См. также  
- [Задачи и инструкции по структуре интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Интеллектуального анализа данных структуры задачи и инструкции](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Вызов хранимой процедуры в качестве ме�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ab6ec30a05bed643b032845c6ecf9777e1a14453
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8d9ddfc9497f744e2904ae06fa32e93887ae5080
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Вызов хранимой процедуры в качестве метода объекта подключения
 Можно вызвать хранимую процедуру, как если бы оно метода машинного кода при открытии связанного **подключения** объекта. Это похоже на вызов именованную команду для **подключения** объекта.  
@@ -86,6 +85,5 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
-
+## <a name="see-also"></a>См. также  
+ [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

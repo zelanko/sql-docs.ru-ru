@@ -3,10 +3,12 @@ title: "Реализация SQLGetDiagRec и SQLGetDiagField | Документ
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c32f6f927dfc62a3a9adb782619c469e0edc995b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 463ddfe552c94a9e90ceb2a24f8061674955979d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>Реализация SQLGetDiagRec и SQLGetDiagField
 **SQLGetDiagRec** и **SQLGetDiagField** реализуются диспетчера драйверов и каждого драйвера. Диспетчер драйверов драйверу Ведение диагностические записи для каждой среды, подключения, инструкции и дескриптора и освободить эти записи только в том случае, если будет вызвана другая функция с дескриптором или дескриптор освобождается.  
@@ -37,9 +38,8 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующие подразделы.  
   
--   [Правила обработки диагностики](../../../odbc/reference/develop-app/diagnostic-handling-rules.md)  
+-   [Правила диагностической обработки](../../../odbc/reference/develop-app/diagnostic-handling-rules.md)  
   
--   [Роли диспетчера драйверов](../../../odbc/reference/develop-app/role-of-the-driver-manager.md)  
+-   [Роль диспетчера драйверов](../../../odbc/reference/develop-app/role-of-the-driver-manager.md)  
   
 -   [Роль драйвера](../../../odbc/reference/develop-app/role-of-the-driver.md)
-

@@ -1,28 +1,28 @@
 ---
-title: "Работа с подписками (веб-портал) | Документы Microsoft"
+title: "Работа с подписками (веб-портал) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-non-specified
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 4f49f5376344d6c52159c3a4dcff553255c79320
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: bee70a9c4d77be578aae8c77af8772bdd2faadc0
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="working-with-subscriptions-web-portal"></a>Работа с подписками (веб-портал)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-Страница «подписки» можно получить, выбрав **кнопку с многоточием (...)**  отчета, выбрав **управление** и выбрав **подписки**.  
+Чтобы открыть страницу "Подписки", нажмите **многоточие (...)** в отчете, выберите пункт **Управление**, а затем — **Подписки**.  
   
 На странице "Подписки" можно создавать подписки, нажимая **+ новая подписка**. Можно также изменять существующие или удалять выбранные подписки.  
   
@@ -93,8 +93,7 @@ ms.lasthandoff: 08/09/2017
 После создания запроса укажите значения в обязательных полях. Введите данные вручную или выберите поле из созданного набора данных.
 
 [Веб-портал](../reporting-services/web-portal-ssrs-native-mode.md)  
-[Работа с разбиением на страницы](working-with-paginated-reports-web-portal.md)  
+[Работа с отчетами с разбиением на страницы](working-with-paginated-reports-web-portal.md)  
 [Работа с общими наборами данных](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

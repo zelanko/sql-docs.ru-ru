@@ -3,10 +3,12 @@ title: "Обработка инструкции SQL | Документы Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - SQL statements [ODBC]
 - ODBC [ODBC], SQL
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: aaf3c1fddb673e0cd62d334e9b87eeb2d9016ec6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cdd0b22d4e75e6e665dc07fd8e2be5bb2e178548
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="processing-a-sql-statement"></a>Обработка инструкции SQL
 Прежде чем обсуждать методы обеспечения программными средствами с помощью SQL, бывает необходимо рассматривается способ обработки инструкции SQL. Этапы являются общими для всех трех методов, несмотря на то, что каждый метод выполняет их в разное время. На следующем рисунке показаны действия, включенные в обработки инструкции SQL, которые рассматриваются на протяжении всего этого раздела.  
@@ -47,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 5.  СУБД выполняет инструкцию, выполнив план доступа.  
   
  Количество доступ к базе данных, которые необходимы и количество времени, они принимают зависят действия, используемые для обработки инструкции SQL. Синтаксический анализ инструкции SQL не требуется доступ к базе данных и может выполняться очень быстро. Оптимизации, с другой стороны, является очень интенсивно обработки и требуется доступ к системного каталога. Для сложных соединять запроса оптимизатор может просматривать тысячи различные способы выполнения того же запроса. Тем не менее обычно настолько высок, что время, потраченное на оптимизацию более был восстановлен в запрос на повышение скорости выполнения затраты на выполнение запроса неэффективно. Это еще более значительные, если один и тот же план оптимизированного доступа может использоваться многократно, для выполнения повторяющихся запросов.
-

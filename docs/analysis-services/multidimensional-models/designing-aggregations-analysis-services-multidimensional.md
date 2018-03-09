@@ -2,33 +2,33 @@
 title: "Проектирование статистических схем (службы Analysis Services — многомерные) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - aggregations [Analysis Services], partitions
 - partitions [Analysis Services], aggregations
 ms.assetid: 3072b7e0-6961-42ad-a287-16f391f2cec4
-caps.latest.revision: 33
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 71e50fc874562cceddc91b454a246b29370cf7c7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7fef45841f28152dfed66aa95f670e8a21a3d903
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="designing-aggregations-analysis-services---multidimensional"></a>Проектирование агрегатов (службы Analysis Services — многомерные данные)
-  Агрегатами называются предварительно вычисленные сводки по данным куба, помогающие службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ускорить выполнение запросов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Агрегатами называются предварительно вычисленные сводки по данным куба, помогающие службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ускорить выполнение запросов.  
   
  Для настройки параметров хранения и проектирования статистических схем для секции применяется мастер статистических схем. Мастер работает с одной секцией группы мер, поэтому каждую секцию можно настроить по-своему. Мастер руководит настройкой хранилища и проектированием статистических схем для секции. Для получения дополнительных сведений о настройке хранилища см.  
   
@@ -52,4 +52,3 @@ ms.lasthandoff: 09/01/2017
  [Агрегаты и статистические схемы](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   
-

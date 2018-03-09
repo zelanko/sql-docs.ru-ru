@@ -2,9 +2,13 @@
 title: "INSERT (SQL граф) | Документы Microsoft"
 description: "ВСТАВЬТЕ синтаксис SQL Graph узла или края таблицы."
 ms.date: 05/12/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,21 +19,19 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], SQL graph
 - SQL graph, INSERT statement
 ms.assetid: 
-caps.latest.revision: 1
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e694d89efef130d2abcd5cd6424e2be576ef09de
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 6bac7f1d7da67f319a9c84425b370bb61a35ca19
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-
 # <a name="insert-sql-graph"></a>INSERT (граф SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Добавляет одну или несколько строк для `node` или `edge` в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
@@ -120,7 +122,7 @@ INSERT
  Пользователи должны предоставить значения для `$from_id` и `$to_id` при вставке в граница. Если значение не указано или пустые значения вставляются в этих столбцах, будет возвращена ошибка. 
   
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Вставка в узел — то же, что вставка в любой реляционной таблицы. Значения для столбца node_id $ создаются автоматически.
 
 При вставке в краевую таблицу, пользователи должны предоставить значения для `$from_id` и `$to_id` столбцов.   
@@ -130,7 +132,7 @@ INSERT
 Перед массовой вставки в краевую таблицу необходимо импортировать узел таблиц. Значения для `$from_id` и `$to_id` можно извлечь из `$node_id` узел таблицы и вставляются в качестве границ. 
 
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Разрешения  
  Требуется разрешение INSERT на целевую таблицу.  
   
  Вставить разрешения по умолчанию предоставляются членам **sysadmin** предопределенной роли сервера **db_owner** и **db_datawriter** фиксированной роли базы данных, а также владельцу таблицы. Члены **sysadmin**, **db_owner**и **db_securityadmin** ролей, а также владелец таблицы могут передавать разрешения другим пользователям.  
@@ -165,9 +167,8 @@ INSERT
  ```
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Вставить ТАБЛИЦУ &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
  [График обработка с помощью SQL Server 2017 г.](../../relational-databases/graphs/sql-graph-overview.md)  
-
 
 

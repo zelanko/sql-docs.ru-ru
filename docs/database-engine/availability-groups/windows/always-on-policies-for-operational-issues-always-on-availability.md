@@ -2,31 +2,32 @@
 title: "Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], policies
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b92e1a679cfa738620e8e46195b2df14e8ee03ad
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c8256ee37c22d96961c78b5c5a057c0e60b81269
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="always-on-policies-for-operational-issues---always-on-availability"></a>Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Модель правил определения исправности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] вычисляет набор стандартных (PBM) политик управления на основе политик. Их можно использовать для просмотра исправности группы доступности и реплики доступности и базы данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
@@ -76,12 +77,12 @@ ms.lasthandoff: 08/02/2017
 |Состояние роли реплик доступности|[Some availability replicas do not have a healthy role](../../../database-engine/availability-groups/windows/some-availability-replicas-do-not-have-a-healthy-role.md).|Предупреждение|группа доступности|  
 |Состояние соединения с репликами доступности|[Some availability replicas are disconnected](../../../database-engine/availability-groups/windows/some-availability-replicas-are-disconnected.md).|Предупреждение|группа доступности|  
 |Состояние роли реплики доступности|[Availability replica does not have a healthy role](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md).|Критическая|реплика доступности|  
-|Состояние соединения с репликами доступности|[Availability replica is disconnected](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md).|Критическая|реплика доступности|  
-|Состояние присоединения реплики доступности|[Реплика доступности не присоединена](../../../database-engine/availability-groups/windows/availability-replica-is-not-joined.md).|Предупреждение|реплика доступности|  
-|Состояние синхронизации данных реплики доступности|[Data synchronization state of some availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Предупреждение|реплика доступности|  
-|Состояние приостановки базы данных доступности|[Availability database is suspended](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md).|Предупреждение|база данных доступности|  
-|Состояние присоединения базы данных доступности|[Secondary database is not joined](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md).|Предупреждение|база данных доступности|  
-|Состояние синхронизации базы данных доступности|[Data synchronization state of availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Предупреждение|база данных доступности|  
+|Состояние соединения с репликами доступности|[Availability replica is disconnected](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md).|Критическая|Реплика доступности|  
+|Состояние присоединения реплики доступности|[Реплика доступности не присоединена](../../../database-engine/availability-groups/windows/availability-replica-is-not-joined.md).|Предупреждение|Реплика доступности|  
+|Состояние синхронизации данных реплики доступности|[Data synchronization state of some availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Предупреждение|Реплика доступности|  
+|Состояние приостановки базы данных доступности|[Availability database is suspended](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md).|Предупреждение|База данных доступности|  
+|Состояние присоединения базы данных доступности|[Secondary database is not joined](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md).|Предупреждение|База данных доступности|  
+|Состояние синхронизации базы данных доступности|[Data synchronization state of availability database is not healthy](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md).|Предупреждение|База данных доступности|  
   
 > [!IMPORTANT]  
 >  **\*** При работе с политиками AlwaysOn имена категорий используются в качестве идентификаторов. При изменении имени категории AlwaysOn ее функция оценки работоспособности будет нарушена. Поэтому не следует изменять имена категорий AlwaysOn.  
@@ -110,7 +111,7 @@ ms.lasthandoff: 08/02/2017
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
--   [Использование политик AlwaysOn для определения работоспособности группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
+-   [Использование политик AlwaysOn для просмотра состояния группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
 -   [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
@@ -137,4 +138,3 @@ ms.lasthandoff: 08/02/2017
  [Отслеживание групп доступности (SQL Server)](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
-

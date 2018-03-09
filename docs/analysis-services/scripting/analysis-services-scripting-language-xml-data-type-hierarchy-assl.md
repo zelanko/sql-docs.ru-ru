@@ -2,12 +2,13 @@
 title: "Иерархия (ASSL) типа данных XML языка сценариев служб Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
@@ -24,20 +25,20 @@ helpviewer_keywords:
 - inheritance [Analysis Services Scripting Language]
 - hierarchies [Analysis Services Scripting Language]
 ms.assetid: f143c9f8-225d-495d-ac8e-ac2d2a7b4c07
-caps.latest.revision: 12
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0ea49ba2092ac91481615403456dfb33268e2ee6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d95434e118735dca90480933a1d7e04c18307fe6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="analysis-services-scripting-language-xml-data-type-hierarchy-assl"></a>Иерархия типов данных XML в языке ASSL
-  В следующей таблице представлена иерархия наследования типов данных в языке сценариев служб Analysis Services (ASSL).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В следующей таблице представлена иерархия наследования типов данных в языке сценариев служб Analysis Services (ASSL).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -125,4 +126,3 @@ TableMiningStructureColumn
  [Службы Analysis Services Scripting Language &#40; ASSL для XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   
-

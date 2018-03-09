@@ -2,33 +2,31 @@
 title: "Службы Analysis Services модулей персонализации | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- personalization extensions [Multidimensional Databases]
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: personalization extensions [Multidimensional Databases]
 ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bd55cabe877554254b63ba31e80a504117d2cf36
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8da5ac35a5e9f46fbaedf831555d6b1475b41234
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-personalization-extensions"></a>Модули персонализации служб Analysis Services
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] модулей персонализации являются основой лежат в основе архитектуры подключаемых модулей. С помощью архитектуры подключаемых модулей можно динамически разрабатывать новые объекты кубов и функциональность и легко обмениваться ими с другими разработчиками. Таким образом [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] модулей персонализации предоставляют функциональность, позволяет добиться следующего:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] модулей персонализации являются основой лежат в основе архитектуры подключаемых модулей. С помощью архитектуры подключаемых модулей можно динамически разрабатывать новые объекты кубов и функциональность и легко обмениваться ими с другими разработчиками. Таким образом [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] модулей персонализации предоставляют функциональность, позволяет добиться следующего:  
   
 -   **Динамическое проектирование и разработка** сразу же после создания и развертывания [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] модулей персонализации, пользователи имеют доступ к объектам и функциональности в начале следующего сеанса пользователя.  
   
@@ -154,4 +152,3 @@ ms.lasthandoff: 09/01/2017
  Добавлен столбец scope  в набор строк схемы MDSCHEMA_KPIS. Ниже приведены значения области: MDKPI_SCOPE_GLOBAL = 1, MDKPI_SCOPE_SESSION = 2.  
   
   
-

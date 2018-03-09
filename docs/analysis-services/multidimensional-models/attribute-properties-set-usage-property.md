@@ -2,33 +2,33 @@
 title: "Установка свойства использования | Документы Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - attributes [Analysis Services], usage setting
 - usage options [Analysis Services]
 ms.assetid: 7b0ebc58-94b9-4523-8994-e7bc796b0bd8
-caps.latest.revision: 35
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 931dcdc1f2f9cf6210c5993b8be14da4995d73d3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1dfeeb95c534bd68879d101cd208eae8871d817c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---set-usage-property"></a>Свойства атрибута — задать свойство использования
-  Можно задать использование атрибута с помощью представления **Структура измерения** в конструкторе измерений, доступ к которому выполняется из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Можно задать использование атрибута с помощью представления **Структура измерения** в конструкторе измерений, доступ к которому выполняется из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  При задании использования атрибута изменения вступают в силу только после обработки измерения. Дополнительные сведения см. в разделе [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
@@ -51,4 +51,3 @@ ms.lasthandoff: 09/01/2017
  [Добавление атрибута в измерение](../../analysis-services/multidimensional-models/attribute-properties-add-an-attribute-to-a-dimension.md)  
   
   
-

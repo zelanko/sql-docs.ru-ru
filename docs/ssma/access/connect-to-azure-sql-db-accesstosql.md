@@ -1,31 +1,31 @@
 ---
 title: "Подключения к базе данных Azure SQL (AccessToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Connect to SQL Azure dialog box
+helpviewer_keywords: Connect to SQL Azure dialog box
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 54f826bd9b4bd2bdec0c7cd79c6faf20b0630639
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 86a145cd23f40e41ef63b166e7536f91ee2129d9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-azure-sql-db-accesstosql"></a>Подключения к базе данных Azure SQL (AccessToSQL)
 Подключения в SQL Azure-диалоговое окно можно используйте для подключения к базе данных SQL Azure, которые требуется перенести.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/02/2017
 > [!IMPORTANT]  
 > SSMA для Access не поддерживает подключение к базе данных master в SQL Azure.  
   
-**Имя пользователя**  
+**User name**  
   
 Введите имя пользователя, который будет использоваться SSMA для подключения к базе данных SQL Azure  
   
@@ -73,4 +73,3 @@ SSMA рекомендует зашифрованное соединение с S
   
     2.  **Размер базы данных:** выбрать размер базы данных, который необходимо создать в учетной записи SQL Azure.  
   
-

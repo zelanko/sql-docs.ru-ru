@@ -3,27 +3,28 @@ title: "Глобальные параметры (тестировщик) (Sybase
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1b5ba92c5972df1e29bbe3c4cd3df4f093739a86
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 21178ca7326678504244658192d7395bab79a9ac
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-tester-sybasetosql"></a>Глобальные параметры (тестировщик) (SybaseToSQL)
 Используйте страницу тест-инженер **глобальные параметры** диалогового окна для задания параметров для тест-инженера SSMA.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 08/02/2017
   
 1.  Да  
   
-2.  Нет  
+2.  нет  
   
 **Дополнительные таблицы, в режиме энергосбережения**  
 Этот параметр определяет способ сохранения внутренних вспомогательных таблицах, созданному в ходе выполнения тестового случая. Для этого конкретного значения параметра можно задать следующие параметры:  
@@ -60,7 +61,7 @@ ms.lasthandoff: 08/02/2017
   
 1.  Да  
   
-2.  Нет  
+2.  нет  
   
 **Остановить выполнение теста после первой ошибки**  
 Этот параметр указывает, следует ли остановить текущее выполнение тестового случая, если произошла ошибка во время выполнения. Набор параметров по умолчанию — **Да**.  
@@ -69,9 +70,8 @@ ms.lasthandoff: 08/02/2017
   
 1.  Да  
   
-2.  Нет  
+2.  нет  
   
 ## <a name="see-also"></a>См. также:  
 [Завершение подготовки тестового случая &#40; SybaseToSQL &#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
   
-

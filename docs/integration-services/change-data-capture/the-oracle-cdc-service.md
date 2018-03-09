@@ -1,26 +1,28 @@
 ---
-title: "Служба Oracle CDC | Документы Microsoft"
+title: "Служба CDC Oracle | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d1c3535f7818b1865d9ff7b0da1d098884b042ca
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7371c120f4ff874a878a77cd3db0df8755aebd75
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="the-oracle-cdc-service"></a>Служба CDC Oracle
   Служба CDC Oracle — это служба Windows, благодаря которой запускается программа xdbcdcsvc.exe. Служба Oracle CDC может настраиваться для запуска нескольких служб Windows на одном компьютере, каждая из которых должна иметь другое имя службы Windows. Создание нескольких служб Windows для Oracle CDC на одном компьютере обычно выполняется для достижения лучшего их разделения или в случае, если каждой из них требуется работать с другим экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -48,7 +50,7 @@ GO
   
  Конфигурация экземпляра Oracle CDC сохраняется в таблице **cdc.xdbcdc_config** , которая является таблицей, с которой работает консоль конструктора Oracle CDC. Поскольку вся конфигурация экземпляра Oracle CDC находится в целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и в базах данных CDC, становится возможным создание скриптов развертывания [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для экземпляра Oracle CDC. Это делается с помощью консолей конфигурации службы Oracle CDC и конструктора Oracle CDC.  
   
-## <a name="security-considerations"></a>Вопросы безопасности  
+## <a name="security-considerations"></a>Соображения безопасности  
  Ниже описываются требования безопасности, необходимые для работы со службой CDC для Oracle.  
   
 ### <a name="protection-of-source-oracle-data"></a>Защита исходных данных Oracle  
@@ -87,7 +89,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
 ### <a name="oracle-cdc-service-windows-service-account"></a>Учетная запись службы Windows для службы Oracle CDC  
  Учетная запись службы, используемая для службы Windows для Oracle CDC, не требует каких-либо дополнительных привилегий. Учетная запись должна использовать API собственного клиента Native Client Oracle и API источника данных ODBC собственного клиента SQL Server. Также для нее необходим доступ к ключу настройки службы в реестре (для этого данная консоль настройки службы CDC специально настраивает ACL).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Поддержка высокого уровня доступности](../../integration-services/change-data-capture/high-availability-support.md)  
   
@@ -97,9 +99,8 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 -   [Работа со службой CDC Oracle](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Как управлять локальной службой CDC](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)   
  [Управление службой CDC Oracle](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   
-

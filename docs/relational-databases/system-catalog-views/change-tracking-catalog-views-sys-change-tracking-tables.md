@@ -1,0 +1,56 @@
+---
+title: "sys.change_tracking_tables (Transact-SQL) | Документы Microsoft"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: system-catalog-views
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- change_tracking_tables_TSQL
+- sys.change_tracking_tables
+- change_tracking_tables
+- sys.change_tracking_tables_TSQL
+dev_langs: TSQL
+helpviewer_keywords:
+- change tracking [SQL Server], sys.change_tracking_tables
+- sys.change_tracking_tables
+ms.assetid: 97ec69b6-0d49-4d98-82f0-d3e77ba1ad2b
+caps.latest.revision: "13"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: a921017fae8b8ec70c04787a8327c9389df23f3f
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
+---
+# <a name="change-tracking-catalog-views---syschangetrackingtables"></a>Изменение представления каталога отслеживания - sys.change_tracking_tables
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
+  Возвращает по одной строке для каждой таблицы в текущей базе данных, для которой включено отслеживание изменений.  
+   
+|Имя столбца|Тип данных|Description|  
+|-----------------|---------------|-----------------|  
+|object_id|**int**|Идентификатор таблицы, для которой ведется журнал изменений. Ведение журнала изменений для таблицы возможно даже в случае, если отслеживание изменений отключено.<br /><br /> Идентификатор таблицы уникален в пределах базы данных.|  
+|is_track_columns_updated_on|**bit**|Текущее состояние отслеживания изменений для таблицы:<br /><br /> 0 = выключен.<br /><br /> 1 = включен;|  
+|begin_version|**bigint**|Версия базы данных, с которой началось отслеживание изменений для таблицы. Эта версия обычно указывает, когда было включено отслеживание изменений, однако это значение сбрасывается при усечении таблицы.|  
+|cleanup_version|**bigint**|Версия, вплоть до которой при очистке могли быть удалены данные отслеживания изменений.|  
+|min_valid_version|**bigint**|Минимально допустимая версия данных отслеживания изменений, доступная для таблицы.<br /><br /> При получении изменений из таблицы, связанной с данной строкой, значение last_sync_version должно быть больше либо равно версии, указанной в этом столбце. Дополнительные сведения см. в разделе [CHANGE_TRACKING_MIN_VALID_VERSION &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md).|  
+  
+## <a name="permissions"></a>Permissions  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+  
+## <a name="see-also"></a>См. также:  
+ [CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   
+ [Изменение представления каталога отслеживания &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
+ [Отслеживание измененных данных (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
+  
+  

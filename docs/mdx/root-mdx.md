@@ -2,34 +2,32 @@
 title: "Root (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- Root
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Root function
+f1_keywords: Root
+dev_langs: kbMDX
+helpviewer_keywords: Root function
 ms.assetid: f6c42e87-5a52-4e43-9dd1-ca757f2db79c
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 16e6fb8fb10816391a25d71a717cff5f4c7abe58
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9e6eb1b8be0c5ef654ccf07bfce45070cf6bcc14
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="root-mdx"></a>Root (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает кортеж, состоящий из **все** элементов из каждой иерархии атрибута в текущей области куба, измерения или кортежа. Дополнительные сведения об области см. в разделе [инструкции SCOPE &#40; Многомерные Выражения &#41; ](../mdx/mdx-scripting-scope.md).  
   
@@ -55,7 +53,7 @@ Root( Tuple_Expression )
  *Tuple_Expression*  
  Допустимое многомерное выражение, возвращающее кортеж.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если ни имя измерения, ни кортежное выражение указано, **корневой** функция возвращает кортеж, содержащий **все** элемента (или элемент по умолчанию если **все** член не существует) из каждой иерархии атрибута в кубе. Порядок элементов в кортеже основан на той последовательности, в которой иерархии атрибутов определены в кубе.  
   
  Если имя измерения указано, **корневой** функция возвращает кортеж, содержащий **все** элемента (или элемент по умолчанию если **все** член не существует) из каждой иерархии атрибута заданного измерения на основе контекста текущего элемента. Порядок элементов в кортеже основан на той последовательности, в которой иерархии атрибутов определены в измерении.  
@@ -93,4 +91,3 @@ WHERE [Measures].[Order Count]
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

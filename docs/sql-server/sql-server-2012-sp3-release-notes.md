@@ -1,26 +1,30 @@
 ---
 title: "Заметки о выпуске SQL Server 2012 с пакетом обновления 3 (SP3) | Документация Майкрософт"
-ms.prod: sql-server-2012
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 05/17/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-caps.latest.revision: 0
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 960803406d9dcf81e49b08ecf23c21fdb6e76645
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: HT
-ms.sourcegitcommit: ef40e08f051397ed158d06cb4cc8de71d95f6fa2
-ms.openlocfilehash: dfe0d48b613c7c4d589fb8bc5f9a5a45be6ba019
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="sql-server-2012-sp3-release-notes"></a>Заметки о выпуске SQL Server 2012 с пакетом обновления 3 (SP3)
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 В этих заметках о выпуске описываются вопросы, которые вам необходимо знать перед установкой пакета обновлений 3 SQL Server 2012 или устранением связанных с ним проблем. Заметки о выпуске доступны только в сети Интернет, а не на установочном носителе. Они периодически обновляются при добавлении новых вопросов. Список усовершенствований и исправлений и дополнительные сведения см. в статье [Замечания к выпуску SQL Server 2012 с пакетом обновления 3](http://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information).  
   
 ## <a name="choose-the-correct-file-to-download-and-install"></a>Выберите правильный файл для загрузки и установите его  
@@ -32,7 +36,7 @@ ms.lasthandoff: 07/31/2017
 - [SQL Server 2012 Express с пакетом обновления 3 (SP3)](http://go.microsoft.com/fwlink/?linkid=692144)
 - [Пакет дополнительных компонентов Microsoft SQL Server 2012 с пакетом обновления 3 (SP3)](http://go.microsoft.com/fwlink/?linkid=615941)
 
-Дополнительные сведения об определении расположении и имени файла для скачивания в зависимости от установленной у вас версии программы см. в разделе "Выбор подходящего файла для скачивания" статьи [Информация о выпуске SQL Server 2012 с пакетом обновления 3](https://support.microsoft.com/en-us/help/3072779/sql-server-2012-service-pack-3-release-information).
+Дополнительные сведения об определении местонахождения и имени файла для скачивания в зависимости от установленной у вас версии программы см. в разделе "Выбор подходящего файла для скачивания" статьи [Информация о выпуске SQL Server 2012 с пакетом обновления 3](https://support.microsoft.com/en-us/help/3072779/sql-server-2012-service-pack-3-release-information).
 
 ## <a name="see-also"></a>См. также:
 - [Установка обновлений для обслуживания SQL Server 2012](https://msdn.microsoft.com/en-us/library/hh479746(v=sql.110).aspx)

@@ -2,12 +2,13 @@
 title: "Элемент StorageEngineUsed (XMLA) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
@@ -18,20 +19,20 @@ apitype: Schema
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 98895c10-f3c2-4d8a-be94-6128c828561d
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bbd6a47e68c069ca9eef8c8fe8f414d4025ebeba
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 188c9261964839c055b75e2abb4c1e8fc4ec3633
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="storageengineused-element-xmla"></a>Элемент StorageEngineUsed (XMLA)
-  Содержит значение, доступное только для чтения, описывающее тип текущей базы данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Содержит значение, доступное только для чтения, описывающее тип текущей базы данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>Замечания  
  Значением этого элемента может быть только одна из строк в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*Традиционные*|База данных model соответствует режиму хранения MOLAP, ROLAP или HOLAP.|  
 |*InMemory*|База данных model соответствует режиму хранения IMBI.|  
@@ -98,4 +99,3 @@ ms.lasthandoff: 09/01/2017
  Элементы, соответствующие родителям элемента **StorageEngineUsed** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Database>.  
   
   
-

@@ -3,10 +3,12 @@ title: "Типы данных SQL | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], about SQL data types
 - data types [ODBC], SQL data types
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d63ef11103b88f70233f269914c54425402b1def
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9594ce3aa76af66cccc69936677cf2d9aa682a6f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-data-types"></a>Типы данных SQL
 Каждой СУБД определяет собственные типы SQL. Каждый ODBC-драйвер предоставляет только те типы данных SQL, который определяет связанный СУБД. Сведения о сопоставление драйвер СУБД SQL типах идентификаторы типа SQL, определенных для ODBC и драйвером сопоставление типов СУБД SQL свои собственные идентификаторы типа специфические для драйвера SQL возвращается путем вызова **SQLGetTypeInfo**. Драйвер возвращает типы данных SQL, при описании типы данных столбцов и параметров с помощью вызовов **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, и **SQLSpecialColumns**.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 09/09/2017
 |SQL_NUMERIC|ЧИСЛОВОЙ (*p*,*s*)|Точное числовое значение с точностью *p* и масштаб *s* (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
 |SQL_SMALLINT|SMALLINT|Точное числовое значение с точностью 5 и масштабом 0 (подпись: –32,768 < =  *n*  < = 32 767, без учета знака: 0 < =  *n*  < = 65 535) [3].|  
 _INTEGER|INTEGER|Точное числовое значение с точностью 10 и масштабом 0 (подпись: – 2 [31] < =  *n*  < = 2 [31] – 1, без учета знака: 0 < =  *n*  < = 2 [32] – 1) [3].|  
-|SQL_REAL|REAL|С подписью, Приблизительное числовое значение с двоичной точностью 24 (ноль или абсолютное значение 10 [–38] до 10[38]).|  
+|SQL_REAL|real|С подписью, Приблизительное числовое значение с двоичной точностью 24 (ноль или абсолютное значение 10 [–38] до 10[38]).|  
 |SQL_FLOAT|Число с плавающей запятой (*p*)|Подписанные Приблизительное числовое значение с точностью двоичные по крайней мере *p*. (Максимальная точность, определяемым драйвером). [5]|  
 |SQL_DOUBLE|DOUBLE PRECISION|С подписью, Приблизительное числовое значение с двоичной точностью 53 (ноль или абсолютное значение 10 [–308] до 10[308]).|  
 |SQL_BIT|BIT|Один бит двоичных данных. [8]|  
@@ -100,5 +101,4 @@ _INTERVAL_MINUTE_TO_SECOND [7]|ИНТЕРВАЛ МИНУТУ (*p*) в СЕКУН
   
  Пример в этом разделе.  
   
--   [Пример SQLGetTypeInfo результирующего набора](../../../odbc/reference/appendixes/example-sqlgettypeinfo-result-set.md)
-
+-   [Пример результирующего набора SQLGetTypeInfo](../../../odbc/reference/appendixes/example-sqlgettypeinfo-result-set.md)

@@ -2,31 +2,30 @@
 title: "Создание одноэлементного прогнозирующего запроса из шаблона | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- singleton query predictions [DMX]
+helpviewer_keywords: singleton query predictions [DMX]
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 021faf311132e7bd104c66f02340159a9a8b290c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c54b65567095408f66c01d22b7f39d839ae939b2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>создать одноэлементный прогнозирующий запрос из шаблона
-  Одноэлементный запрос удобен, если есть модель, которую предполагается использовать для прогнозирования, но нужно обойтись без сопоставления ее с внешним набором входных данных, либо для массовых прогнозов. Одноэлементный запрос позволяет предоставлять модели значения и мгновенно видеть спрогнозированное значение.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Одноэлементный запрос используется в тех случаях, когда у вас есть модель, которая будет использоваться для прогнозирования, но не требуется сопоставляется с внешним набором входных данных или массовых прогнозов. Одноэлементный запрос позволяет предоставлять модели значения и мгновенно видеть спрогнозированное значение.  
   
  Например, следующий запрос расширений интеллектуального анализа данных представляет одноэлементный запрос к модели целевой рассылки, TM_Decision_Tree.  
   
@@ -98,8 +97,7 @@ AS [t]
   
 11. Нажмите кнопку **Выполнить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание прогнозов (учебник по интеллектуальному анализу данных — начальный уровень)](http://msdn.microsoft.com/library/a8410ed2-bb98-4d51-a9eb-b239be1201c2)  
   
   
-

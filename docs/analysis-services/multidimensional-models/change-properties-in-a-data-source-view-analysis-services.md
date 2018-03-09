@@ -2,13 +2,13 @@
 title: "Измените свойства в представлении источника данных (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - data source views [Analysis Services], tables
 - tables [Analysis Services], data source views
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f17e0880839470e128266ae62993bceeb4457c3e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d2d7af5e8fa2adb597380aded86778e57135ae0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Изменение свойств в представлении источника данных (службы Analysis Services)
-  После определения представления источников данных с помощью мастера представлений источников данных и добавления в представление источника данных таблиц, представлений, именованных вычислений и именованных запросов, может понадобиться изменить свойства, связанные с:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+После определения представления источников данных с помощью мастера представлений источников данных и добавления в представление источника данных таблиц, представлений, именованных вычислений и именованных запросов, может понадобиться изменить свойства, связанные с:  
   
 -   критерием совпадения представления источников данных;  
   
@@ -88,7 +88,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>См. также  
  [Представления источников данных в многомерных моделях](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Работа с диаграммами в конструкторе представлений источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Работа с диаграммами в конструкторе представлений источников данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   
-

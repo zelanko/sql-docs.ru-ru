@@ -2,31 +2,29 @@
 title: "Командлет Invoke-ASCmd | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 2896b74a-3911-4b3f-89ab-bb375bdb34d8
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: dd40b6d9f777fbea8d12f804b01b537d0ad846ce
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 366263980ae7ad9d5a792e6525888080a38ebbf6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="invoke-ascmd-cmdlet"></a>Командлет Invoke-ASCmd
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Позволяет администратору базы данных выполнить сценарий XMLA, многомерные выражения (MDX), инструкции расширений интеллектуального анализа данных (DMX) или сценарий TMSL.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Позволяет администратору базы данных выполнить скрипт XML для Аналитики, многомерных выражений (MDX), инструкций расширений интеллектуального анализа данных (DMX) или сценария табличной языка скриптов модели (TMSL).  
   
  Язык TMSL поддерживается только в табличном режиме сервера в экземпляре служб Analysis Services SQL Server 2016.  
   
@@ -206,7 +204,7 @@ ms.lasthandoff: 09/01/2017
 |||  
 |-|-|  
 |Входные данные|PSObject|  
-|Выходные данные|Строковые значения|  
+|Выходные данные|String|  
   
 ## <a name="example-1-xmla-input-file"></a>Пример 1 (с входным файлом XMLA)  
   
@@ -247,4 +245,3 @@ Invoke-ASCmd -Database:"Adventure Works DW" -Query:"<Discover xmlns='urn:schemas
   
   
   
-

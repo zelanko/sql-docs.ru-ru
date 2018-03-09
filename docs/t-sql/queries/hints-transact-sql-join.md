@@ -3,8 +3,11 @@ title: "Указания (Transact-SQL) в соединении | Докумен
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,20 +25,19 @@ helpviewer_keywords:
 - MERGE join hint
 - hints [SQL Server], join
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
-caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 230241b9626c8d2790fb55fa82c40bab24613dbc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 9e0652286a1f9da56df54ec2e00eee5bea20e1be
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hints-transact-sql---join"></a>Указания (Transact-SQL) - соединения
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Подсказки в соединении указывают оптимизатору запросов на выбор определенной стратегии соединения двух таблиц в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Общие сведения о соединениях и синтаксисе соединения см. в разделе [FROM &#40; Transact-SQL &#41; ](../../t-sql/queries/from-transact-sql.md).  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 09/01/2017
   
  Аргумент REMOTE может быть использован только при операциях INNER JOIN.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Указания по соединению задаются в запросе в предложении FROM. Указания по соединению принудительно активируют стратегию соединения между двумя таблицами. При задании указаний соединений для любых двух таблиц оптимизатор запросов принудительно автоматически активирует порядок соединения для всех соединенных таблиц в запросе, основанном на положении ключевого слова ON. При использовании CROSS JOIN без предложения ON для определения порядка соединения могут использоваться скобки.  
   
 ## <a name="examples"></a>Примеры  
@@ -112,8 +114,7 @@ INNER MERGE JOIN Purchasing.PurchaseOrderDetail AS pod
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Указания &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)  
   
   
-

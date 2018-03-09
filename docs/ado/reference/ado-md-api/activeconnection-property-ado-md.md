@@ -3,7 +3,7 @@ title: "Свойство ActiveConnection (ADO MD) | Документы Microsof
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADO MD]
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0ec51c77b1963832cf101278b5c00bcbfe253093
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ae0ad910a0535599d7e134d3314030537068ab25
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activeconnection-property-ado-md"></a>Свойство ActiveConnection (ADO MD)
 Указывает, какие ADO [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта текущего набора ячеек или каталога в данный момент принадлежит.  
@@ -38,7 +37,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **Variant** , содержащий строку, определяющую соединение или **подключения** объекта. Значение по умолчанию является пустым.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Это свойство может быть присвоено допустимое ADO **подключения** объекта или допустимую строку соединения. Если это свойство имеет значение в строку соединения, поставщик создает новую **подключение** с помощью данного определения и открывает соединение.  
   
  При использовании *ActiveConnection* аргумент [откройте](../../../ado/reference/ado-md-api/open-method-ado-md.md) метод, чтобы открыть [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) объекта, **ActiveConnection** свойство наследовать значения аргумента.  
@@ -68,10 +67,9 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[Объект каталога (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[Объект набора ячеек (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|  
+|[Объект Catalog (многомерные объекты ADO)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[Объект Cellset (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример набора ячеек (Visual Basic)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Метод Open (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)
-
+ [Метод Open (многомерные объекты ADO)](../../../ado/reference/ado-md-api/open-method-ado-md.md)

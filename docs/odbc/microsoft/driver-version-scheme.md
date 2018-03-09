@@ -3,26 +3,26 @@ title: "Драйвер версии схемы | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC driver for Oracle [ODBC], versions
+helpviewer_keywords: ODBC driver for Oracle [ODBC], versions
 ms.assetid: e4a8d9d7-8aba-48ab-8be6-1a6129adfb8f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1151f1ce5c1c8644c448555e25a03a0b455e1a9d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e3a8132d535b764818fb9dcab72b3cba8bb48154
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-version-scheme"></a>Схема версии драйвера
 > [!IMPORTANT]  
@@ -52,4 +52,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  С помощью выпуска 2.573.2973, соглашение об именовании привело к путанице 2.573 является более ранней версии, чем 2,73, что каждый раздел номер сборки следует рассматривать отдельно. Номер 573 превышает 73, поэтому он является более новой версии. Кроме того «2.5» указывает номер версии драйвера.
-

@@ -3,8 +3,11 @@ title: "Метод (тип данных xml) nodes() | Документы Micros
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - nodes() method
 - nodes method
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
-caps.latest.revision: 39
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5fbbbd268398ab46b150f647a8d19689d198e6e8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f75f08164b84e803a6a54d039a09cf481a1886e9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="nodes-method-xml-data-type"></a>Метод nodes() (тип данных xml)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   **Nodes()** метод полезен, когда нужно взять часть **xml** экземпляр типа данных в реляционных данных. Он позволяет идентифицировать узлы, которые будут ставиться в соответствие новой строке.  
   
@@ -52,7 +54,7 @@ nodes (XQuery) as Table(Column)
  *Таблица*(*столбца*)  
  Имя таблицы и имя столбца для результирующего набора строк.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В качестве примера предположим, что имеется следующая таблица:  
   
 ```  
@@ -301,10 +303,9 @@ WHERE ProductModelID=7
 GO    
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Добавление пространств имен в запросы с WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Создание экземпляров XML-данных](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [Методы для типа данных XML](../../t-sql/xml/xml-data-type-methods.md)  
   
   
-

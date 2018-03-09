@@ -2,9 +2,12 @@
 title: "Агент слияния репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: 
@@ -15,19 +18,20 @@ helpviewer_keywords:
 - agents [SQL Server replication], Merge Agent
 - command prompt [SQL Server replication]
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
-caps.latest.revision: 64
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e8d07eaf421703fb57b9682780027f4e909583dd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: d28310275dd8df9e8e0ee205322291098ea4a626
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="replication-merge-agent"></a>Агент слияния репликации
-  Агент слияния репликации — это исполняемый файл программы, который применяет к подписчикам исходный моментальный снимок, содержащийся в таблицах базы данных. Кроме того, он выполняет слияние добавочных изменений данных, которые произошли на издателе после создания исходного моментального снимка, а также улаживает конфликты либо в соответствии с правилами, заданными пользователем, либо с помощью созданного пользователем сопоставителя.  
+# <a name="replication-merge-agent"></a>Replication Merge Agent
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Агент слияния репликации — это исполняемый файл программы, который применяет к подписчикам исходный моментальный снимок, содержащийся в таблицах базы данных. Кроме того, он выполняет слияние добавочных изменений данных, которые произошли на издателе после создания исходного моментального снимка, а также улаживает конфликты либо в соответствии с правилами, заданными пользователем, либо с помощью созданного пользователем сопоставителя.  
   
 > [!NOTE]  
 >  Параметры можно указывать в любом порядке. Если необязательные параметры не указаны, используются стандартные значения из реестра локального компьютера.  
@@ -115,17 +119,17 @@ replmerg [-?]
  **-?**  
  Выводит список всех доступных параметров.  
   
- **-Publisher** *server_name*[**\\***instance_name*]  
- Имя издателя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите *server_name***\\***instance_name* , чтобы обратиться к именованному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию.  
+ **-Publisher** *имя_сервера*[**\\***имя_экземпляра*]  
+ Имя издателя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите *имя_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере.  
   
- **-PublisherDB** *publisher_database*  
+ **-PublisherDB** *база_данных_издателя*  
  Имя базы данных издателя.  
   
  **-Publication** *publication*  
  Имя публикации. Этот параметр допустим только в том случае, если в данной публикации моментальный снимок всегда доступен для новых или повторно инициализированных подписок.  
   
- **-Subscriber** *server_name*[**\\***instance_name*]  
- Имя подписчика. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите *server_name***\\***instance_name* , чтобы обратиться к именованному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию.  
+ **-Subscriber** *имя_сервера*[**\\***имя_экземпляра*]  
+ Имя подписчика. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите *имя_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере.  
   
  **-SubscriberDB** *subscriber_database*  
  Имя базы данных подписчика.  
@@ -142,10 +146,10 @@ replmerg [-?]
  **-DefinitionFile** *def_path_and_file_name*  
  Путь к файлу определения агента. Файл определения агента содержит параметры командной строки для агента. Содержимое файла анализируется как для исполняемого файла. Для указания значений параметров, содержащих произвольные символы, используются двойные кавычки (").  
   
- **-Distributor** *server_name*[**\\***instance_name*]  
- Имя распространителя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите *server_name***\\***instance_name* , чтобы обратиться к именованному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. При распространении (принудительном) с помощью распространителя по умолчанию используется имя применяемого по умолчанию экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на локальном компьютере.  
+ **-Distributor** *имя_сервера*[**\\***имя_экземпляра*]  
+ Имя распространителя. Укажите *имя_сервера* для экземпляра служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере. Укажите *имя_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере. При распространении (принудительном) с помощью распространителя по умолчанию используется имя применяемого по умолчанию экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на локальном компьютере.  
   
- **-DistributorLogin** *distributor_login*  
+ **-DistributorLogin** *имя_входа_распространителя*  
  Имя входа распространителя.  
   
  **-DistributorPassword** *distributor_password*  
@@ -169,7 +173,7 @@ replmerg [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Уровень шифрования по протоколу SSL, используемый агентом слияния при установлении соединений.  
   
-|Значение EncryptionLevel|Описание|  
+|Значение EncryptionLevel|Description|  
 |---------------------------|-----------------|  
 |**0**|Указывает, что SSL не используется.|  
 |**1**|Указывает, что SSL используется, но агент не проверяет, подписан ли сертификат сервера SSL надежным издателем.|  
@@ -179,11 +183,11 @@ replmerg [-?]
   
  **-ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Для ограничения передачи используйте **@subscriber_upload_options** вместо **sp_addmergearticle** .  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Для ограничения передачи используйте **@subscriber_upload_options** вместо **sp_addmergearticle**.  
   
  Указывает тип обмена данными во время синхронизации, который может быть одним из следующих значений.  
   
-|Значение ExchangeType|Описание|  
+|Значение ExchangeType|Description|  
 |------------------------|-----------------|  
 |**1**|Агент должен передавать изменения данных с подписчика на издатель.|  
 |**2**|Агент должен загружать изменения данных с издателя на подписчик.|  
@@ -202,7 +206,7 @@ replmerg [-?]
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  Указывает уровень конвергенции, которого должен придерживаться агент слияния. Может принимать одно из следующих значений.  
   
-|Значение ForceConvergenceLevel|Описание|  
+|Значение ForceConvergenceLevel|Description|  
 |---------------------------------|-----------------|  
 |**0** (по умолчанию)|По умолчанию. Выполнить стандартное слияние без дополнительной конвергенции.|  
 |**1**|Принудительно включить конвергенцию для всех поколений.|  
@@ -223,7 +227,7 @@ replmerg [-?]
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
  Указывает объем данных, регистрируемых в журнале при выполнении операции слияния. Выбрав значение **1**, можно свести к минимуму влияние ведения журнала на производительность.  
   
-|Значение HistoryVerboseLevel|Описание|  
+|Значение HistoryVerboseLevel|Description|  
 |-------------------------------|-----------------|  
 |**0**|Регистрировать последнее сообщение о состоянии агента, подробные сведения о последнем сеансе и любые ошибки.|  
 |**1**|В каждой записи о состоянии сеанса регистрировать дополнительные сведения о сеансе, в том числе процент выполнения операции, а также последнее сообщение о состоянии агента, подробные сведения о последнем сеансе и любые ошибки.|  
@@ -263,7 +267,7 @@ replmerg [-?]
  **-KeepAliveMessageInterval** *keep_alive_message_interval_seconds*  
  Количество секунд до того, как поток журнала проверяет наличие соединений, ожидающих ответа от сервера. Это значение можно уменьшить, чтобы агент проверки не помечал агент слияния как подозрительный при выполнении долго выполняющегося пакета. Значение по умолчанию — **300** секунд.  
   
- **-LoginTimeOut** *login_time_out_seconds*  
+ **-LoginTimeOut** *время_ожидания_входа_в_сек*  
  Время ожидания входа в секундах. Значение по умолчанию составляет **15** секунд.  
   
  **-MakeGenerationInterval** *make_generation_interval_seconds*  
@@ -301,10 +305,10 @@ replmerg [-?]
  **-ProfileName** *profile_name*  
  Указывает профиль агента, из которого берутся параметры агента. Если **ProfileName** имеет значение NULL, профиль агента отключен. Если значение **ProfileName** не указано, используется профиль по умолчанию для агентов этого типа. Дополнительные сведения см. в статье [Профили агента репликации](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
- **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
- Указывает партнера по обеспечению отработки отказа служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участвующего в сеансе зеркального отображения базы данных с базой данных публикации. Дополнительные сведения см. в статье [Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
+ **-PublisherFailoverPartner** *имя_сервера*[**\\***имя_экземпляра*]  
+ Указывает партнера по обеспечению отработки отказа служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участвующего в сеансе зеркального отображения базы данных с базой данных публикации. Дополнительные сведения см. в статье [Зеркальное отображение и репликация баз данных (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
- **-PublisherLogin** *publisher_login*  
+ **-PublisherLogin** *имя_входа_на_издателе*  
  Имя входа издателя. Данный параметр должен быть указан, если значение **PublisherSecurityMode** равно **0** (при проверке подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
   
  **-PublisherPassword** *publisher_password*  
@@ -328,7 +332,7 @@ replmerg [-?]
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  Указывает, имеется ли существующая база данных подписчика.  
   
-|Значение SubscriberDBAddOption|Описание|  
+|Значение SubscriberDBAddOption|Description|  
 |---------------------------------|-----------------|  
 |**0**|Использовать существующую базу данных (по умолчанию).|  
 |**1**|Создать новую пустую базу данных подписчика.|  
@@ -374,7 +378,7 @@ replmerg [-?]
  **-Validate** [**0**|**1**|**2**|**3**]  
  Указывает, следует ли осуществлять проверку в конце сеанса слияния и, если да, каков ее тип. Рекомендуется указывать значение **3** .  
   
-|Значение Validate|Описание|  
+|Значение Validate|Description|  
 |--------------------|-----------------|  
 |**0** (по умолчанию)|Проверка не выполняется.|  
 |**1**|Проверка достоверности только количества строк.|  
@@ -387,7 +391,7 @@ replmerg [-?]
  **-ValidateInterval** *validate_interval*  
  Указывает частоту (в минутах) проверки подписки в непрерывном режиме. Значение по умолчанию равно **60** минут.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Если агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] установлен для запуска от учетной записи пользователя не домена (по умолчанию), а локальной системы, то служба имеет доступ только к локальному компьютеру. Если агент слияния, запускаемый агентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , настроен для входа в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]с проверкой подлинности Windows, то работа агента слияния завершится ошибкой. Значением по умолчанию является проверка подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -400,4 +404,3 @@ replmerg [-?]
  [Администрирование агента репликации](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   
-

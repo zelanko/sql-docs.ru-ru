@@ -7,5 +7,5 @@
 # [Указание логических операторов в запросах XPath (SQLXML 4.0)](specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)
 # [Определение предикатов с логическим значением в запросах XPath (SQLXML 4.0)](specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-4-0.md)
 # [Определение явных функций преобразования в запросах XPath (SQLXML 4.0)](specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)
-# [Применение реляционных операторов в запросах XPath (SQLXML 4.0)](specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)
+# [Указание реляционных операторов в запросах XPath (SQLXML 4.0)](specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)
 # [Указание переменных XPath в запросах XPath (SQLXML 4.0)](specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)

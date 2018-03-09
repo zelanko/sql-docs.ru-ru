@@ -2,9 +2,12 @@
 title: "Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 09/20/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - OPENROWSET function, bulk importing
 - data formats [SQL Server], default values
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
-caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5a92149a67789fa37b80fb841a5691efb2d375c1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 74e0dabe8b6691e467e82d7267c40ef578d84490
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 При импорте данных в таблицу команда [bcp](../../tools/bcp-utility.md) и инструкция [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) используют значения по умолчанию, которые определены для столбцов таблицы.  Например, если поле в файле данных имеет значение NULL, вместо него загружается значение по умолчанию соответствующего столбца.  И команда [bcp](../../tools/bcp-utility.md) , и инструкция [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) позволяют пользователю указать, следует ли оставлять значения NULL.
 
@@ -355,9 +357,8 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 ## <a name="see-also"></a>См. также:  
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Программа bcp](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)  
   
   
-

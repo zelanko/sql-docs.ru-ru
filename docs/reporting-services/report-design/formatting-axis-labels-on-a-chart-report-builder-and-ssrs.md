@@ -1,13 +1,14 @@
 ---
-title: "Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,20 +26,18 @@ f1_keywords:
 - sql13.rtp.rptdesigner.axisproperties.labelfont.f1
 - sql13.rtp.rptdesigner.axisproperties.minortickmarks.f1
 - "10141"
-helpviewer_keywords:
-- "10140"
+helpviewer_keywords: "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d3bb6bc91b9b96830074bac3de28fc6a5f6b0143
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c5fd2ef17552e0f27fd2206b4a14acdb1e1231bd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)
   Диаграммы, основанные на системе координат (гистограммы, линейчатые диаграммы, диаграммы с областями, точечные, графики, диаграммы диапазонов), имеют две оси, использующиеся для классификации и отображения связей между данными. Для каждой оси применимы свои виды форматирования.  
@@ -53,7 +52,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="types-of-axes"></a>Типы осей  
  В диаграмме есть две основные оси: ось значений и ось категорий.  
   
- ![Диаграммы категорий, а значение оси](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "диаграммы категорий, а значение оси")  
+ ![Оси категорий и значений на диаграмме](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "Оси категорий и значений на диаграмме")  
   
  При перетаскивании поля из набора данных в область диаграммы диаграмма определяет, принадлежит ли поле оси категорий или оси значений.  
   
@@ -83,7 +82,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>Пример вычисления меток оси  
  В таблице содержится образец данных по продажам, которые должны быть показаны на гистограмме. Поле Nameдобавляется для области групп категорий, поле Quantity — для области значений.  
   
-|Название|Количество|  
+|Имя|Количество|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  
@@ -106,21 +105,21 @@ ms.lasthandoff: 08/09/2017
  Диаграмма вычисляет приблизительно 5 интервалов меток оси вне зависимости от размера диаграммы. Если ширина и высота диаграммы велики и имеется по 5 меток на каждой оси, то между метками могут образоваться большие пробелы. Это усложняет определение значения каждой точки данных на оси. Чтобы избежать такой особенности на больших диаграммах, можно задать интервал оси переменных. В зависимости от ширины и высоты диаграммы и от конкретной оси диаграмма вычисляет оптимальное количество меток, появляющееся на оси. Дополнительные сведения см. в разделе [Задание интервала оси (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 ## <a name="sorting-axis-values"></a>Сортировка значений оси  
- Категории появляются на оси X в том порядке, в котором они расположены в результирующем наборе. Порядок групп можно изменить, добавив в запрос команду SORT или отсортировав набор данных с помощью выражения. Области данных диаграммы сортируются так же, как и все остальные области данных. Дополнительные сведения о сортировке данных см. в разделе [сортировка данных в области данных &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
+ Категории появляются на оси X в том порядке, в котором они расположены в результирующем наборе. Порядок групп можно изменить, добавив в запрос команду SORT или отсортировав набор данных с помощью выражения. Области данных диаграммы сортируются так же, как и все остальные области данных. Дополнительные сведения о сортировке данных см. в разделе [Сортировка данных в области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
 ## <a name="specifying-scalar-values-on-the-category-axis"></a>Задание скалярных значений по оси категорий  
  По умолчанию диаграмма отображает метки оси для точек данных в наборе, содержащих допустимые значения. Например, если на оси категорий имеются значения 1, 2 и 6, то диаграмма покажет только категории 1, 2 и 6. Чтобы сохранить масштаб значений категорий, можно задать в диаграмме использование скалярной оси. В этом случае на диаграмме отобразятся метки для 1–6 по оси X, даже если в наборе данных отсутствуют значения для 3–5.  
   
  Существует два способа задать скалярную ось:  
   
--   Выберите параметр **Скалярная ось** в диалоговом окне **Свойства оси** . При этом на ось, не содержащую значения группирования данных, будут добавлены числовые значения (либо значения дата-время). Дополнительные сведения см. в разделе [диалоговое окно «Свойства оси», параметры оси &#40; Построитель отчетов и службы SSRS &#41; ](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
+-   Выберите параметр **Скалярная ось** в диалоговом окне **Свойства оси** . При этом на ось, не содержащую значения группирования данных, будут добавлены числовые значения (либо значения дата-время). Дополнительные сведения см. в разделе [Диалоговое окно "Свойства оси" — "Параметры оси" (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
   
 -   В диалоговом окне **Свойства ряда** выберите поле или введите выражение для параметра **Поле категории** . Диаграмма добавит интервалы оси для всех значений указанного поля категории.  
   
 ## <a name="adding-or-removing-side-margins-from-the-category-axis"></a>Добавление или удаление боковых полей с оси категорий  
  В линейчатой диаграмме, гистограмме и точечной диаграмме боковые поля автоматически добавляются по краям оси X. Размер поля изменить нельзя. Для всех остальных диаграмм боковые поля не добавляются. Дополнительные сведения см. в разделе [Добавление или удаление полей из диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Форматирование меток оси в виде значений даты или валюты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
   
  [Размещение меток на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/position-labels-in-a-chart-report-builder-and-ssrs.md)  
@@ -131,10 +130,9 @@ ms.lasthandoff: 08/09/2017
   
  [Задание логарифмической шкалы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Форматирование точек данных на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
+ [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
   
   
-

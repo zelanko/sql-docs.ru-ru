@@ -1,11 +1,13 @@
 ---
 title: "Предварительные условия для минимального протоколирования массового импорта данных | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -17,19 +19,19 @@ helpviewer_keywords:
 - minimally logged operations [SQL Server]
 - bulk importing [SQL Server], minimal logging
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
-caps.latest.revision: 48
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1f64cc4fc8ab747d137777e7a14c17ac796eb9ee
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: b0c1e2b27007ba05fd458fe596ebfab7c95de0bb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Предварительные условия для минимального протоколирования массового импорта данных
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В базе данных, использующей модель полного восстановления, все операции вставки строк, выполняющиеся при массовом импорте, полностью записываются в журнал транзакций. Если используется модель полного восстановления, импорт большого количества данных может привести к быстрому заполнению журнала транзакций. При использовании простой модели восстановления или модели восстановления с неполным протоколированием минимальное протоколирование операций массового импорта, напротив, снижает вероятность того, что операция массового импорта заполнит все пространство журнала. Минимальное протоколирование также более эффективно, чем полное.  
   

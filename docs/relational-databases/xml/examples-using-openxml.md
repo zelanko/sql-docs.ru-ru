@@ -2,9 +2,12 @@
 title: "Примеры: использование инструкции OPENXML | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -26,19 +29,20 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-caps.latest.revision: 36
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a559fe0e900d3c4e0ffd70b454f995292169880
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 6e399083e8f1d12d5a762074e2f4746d452f3e75
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="examples-using-openxml"></a>Примеры. Использование OPENXML
-  Примеры в этом подразделе иллюстрируют использование инструкции OPENXML для создания представления наборов строк XML-документа. Дополнительные сведения о синтаксисе инструкции OPENXML см. в разделе [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md). Примеры показывают все аспекты инструкции OPENXML, но не определяют метасвойства в ней. Дополнительные сведения о том, как использовать метасвойства в OPENXML, см. в статье [Определение метасвойств в инструкции OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Примеры в этом подразделе иллюстрируют использование инструкции OPENXML для создания представления наборов строк XML-документа. Дополнительные сведения о синтаксисе инструкции OPENXML см. в разделе [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md). Примеры показывают все аспекты инструкции OPENXML, но не определяют метасвойства в ней. Дополнительные сведения о том, как использовать метасвойства в OPENXML, см. в статье [Определение метасвойств в инструкции OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Примеры  
  При получении данных шаблон *rowpattern* используется для определения узлов в XML-документе, которые определяют строки. Кроме того, шаблон *rowpattern* выражен на языке шаблонов XPath, который используется в реализации языка XPath в MSXML. Например, если шаблон заканчивается элементом или атрибутом, то строка создается для каждого узла элемента или атрибута, который выбран шаблоном *rowpattern*.  
@@ -54,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 -   шаблон *rowpattern* (/ROOT/Customer) определяет, что следует обрабатывать узлы <`Customer`>;  
   
--   параметр *flags* имеет значение **1**, которое указывает на сопоставление с использованием атрибутивной модели; В результате XML-атрибуты сопоставляются со столбцами в наборе строк, определенном в элементе *SchemaDeclaration*;  
+-   параметр *flags* имеет значение **1** , которое указывает на сопоставление с использованием атрибутивной модели; В результате XML-атрибуты сопоставляются со столбцами в наборе строк, определенном в элементе *SchemaDeclaration*;  
   
 -   в элементе *SchemaDeclaration*предложения WITH заданные значения параметра *ColName* совпадают с соответствующими именами XML-атрибутов. Поэтому параметр *ColPattern* не указывается в элементе *SchemaDeclaration*.  
   
@@ -290,7 +294,7 @@ LILAS      Carlos Gonzlez
 ### <a name="d-specifying-the-text-xpath-function-as-colpattern"></a>Г. Задание функции text() языка XPath вместо параметра ColPattern  
  XML-документ в этом примере состоит из элементов <`Customer`> и <`Order`>. Инструкция OPENXML возвращает набор строк, который состоит из атрибута **oid** элемента <`Order`>, идентификатора родителя узла, заданного шаблоном *rowpattern*, и строки конечных значений содержимого элемента.  
   
- Сначала вызывается хранимая процедура **sp_xml_preparedocument**, чтобы получить дескриптор документа. Дескриптор документа передается инструкции OPENXML.  
+ Сначала вызывается хранимая процедура **sp_xml_preparedocument** , чтобы получить дескриптор документа. Дескриптор документа передается инструкции OPENXML.  
   
  Инструкция OPENXML иллюстрирует следующее:  
   
@@ -446,7 +450,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Результат возвращается в виде краевой таблицы. Можно написать запрос к краевой таблице для получения данных. Например:  
+ Результат возвращается в виде краевой таблицы. Можно написать запрос к краевой таблице для получения данных. Пример:  
   
 -   следующий запрос возвращает количество узлов **Customer** в документе. Поскольку предложение WITH не используется, инструкция OPENXML возвращает краевую таблицу. Инструкция SELECT запрашивает краевую таблицу:  
   
@@ -527,7 +531,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>З. Задание XML-документа, имеющего несколько текстовых узлов  
- При наличии нескольких текстовых узлов в XML-документе инструкция SELECT с параметром *ColPattern*, **text()**, возвращает только первый текстовый узел, а не все. Например:  
+ При наличии нескольких текстовых узлов в XML-документе инструкция SELECT с параметром *ColPattern*, **text()**, возвращает только первый текстовый узел, а не все. Пример:  
   
 ```  
 DECLARE @h int  

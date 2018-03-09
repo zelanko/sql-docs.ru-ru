@@ -3,8 +3,11 @@ title: "Имя_файла (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,19 +28,18 @@ helpviewer_keywords:
 - FILE_NAME function
 - logical file names [SQL Server]
 ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
-caps.latest.revision: 35
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 0fcf9f37da268e266cb94037995f271c54536cb8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/24/2017
-
+manager: craigg
+ms.openlocfilehash: 35b7f2b516227e00af629cadb5c1dccadad2b092
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="filename-transact-sql"></a>FILE_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает логическое имя файла, соответствующее указанному идентификатору (ID) файла.  
   
@@ -56,13 +58,13 @@ FILE_NAME ( file_id )
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  *file_ID* соответствует столбцу file_id в представлениях каталога sys.master_files или sys.database_files.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример возвращает имена файлов для `file_ID 1` и `file_ID` в [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базы данных.  
   
-```tsql  
+```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  
 GO  
 ```  

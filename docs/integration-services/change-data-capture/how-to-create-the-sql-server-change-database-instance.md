@@ -1,26 +1,28 @@
 ---
-title: "Как создать экземпляр изменения базы данных SQL Server | Документы Microsoft"
+title: "Как создать экземпляр изменения базы данных SQL Server | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: db156f59fe1e77bd3abb50be85ecca1f693a0b73
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f7a732fb4dc26672fbc99c99160218263a709919
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-create-the-sql-server-change-database-instance"></a>Как создать экземпляр изменения базы данных SQL Server
   В этой процедуре описано создание экземпляров CDC с помощью консоли конструктора CDC.  
@@ -40,4 +42,3 @@ ms.lasthandoff: 08/03/2017
 5.  Введите необходимые сведения в мастере создания экземпляра, чтобы создать новый экземпляр. Сведения о том, какие данные требуются мастеру, см. в разделе [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md).  
   
   
-

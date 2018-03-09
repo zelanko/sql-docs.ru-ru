@@ -2,12 +2,13 @@
 title: "(Интеллектуальный анализ данных) типы содержимого | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,20 +28,20 @@ helpviewer_keywords:
 - continuous columns
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
-caps.latest.revision: 42
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c159c5fa111a4c1e04c6ad0871aea5ec13c2191c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bdf7e955c5c4dd36d604bffa5dce1602f93788d2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="content-types-data-mining"></a>Типы содержимого (интеллектуальный анализ данных)
-  В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно определить как физический тип данных для столбца в структуре интеллектуального анализа данных, так и логический тип содержимого для столбца, используемого в модели.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно определить как физический тип данных для столбца в структуре интеллектуального анализа данных, так и логический тип содержимого для столбца, используемого в модели.  
   
  *Тип данных* определяет обработку данных алгоритмами в этих столбцах при создании моделей интеллектуального анализа данных. Определение типа данных столбца дает алгоритму сведения о типе данных в столбцах и о способах обработки данных. Каждый тип данных в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает один или несколько типов содержимого для интеллектуального анализа данных.  
   
@@ -118,11 +119,10 @@ ms.lasthandoff: 09/01/2017
  Выше были описаны типы содержимого, широко применяемые во всех моделях, но, кроме них, для данных некоторых типов могут использоваться классифицированные столбцы, позволяющие определять типы содержимого. Дополнительные сведения о классификационных столбцах см. в разделе [Классифицированные столбцы (интеллектуальный анализ данных)](../../analysis-services/data-mining/classified-columns-data-mining.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Типы содержимого (расширения интеллектуального анализа данных)](../../dmx/content-types-dmx.md)   
+ [Содержимого типы &#40; расширений интеллектуального анализа данных &#41;](../../dmx/content-types-dmx.md)   
  [Типы данных &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
  [Типы данных &#40; расширений интеллектуального анализа данных &#41;](../../dmx/data-types-dmx.md)   
  [Изменить свойства структуры интеллектуального анализа данных](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   
  [Столбцы структуры интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   
-

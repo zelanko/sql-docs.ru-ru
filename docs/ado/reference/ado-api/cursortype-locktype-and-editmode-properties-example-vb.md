@@ -3,7 +3,7 @@ title: "CursorType LockType и пример EditMode свойства (Visual Ba
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - CursorType property [ADO], Visual Basic example
 - LockType property [ADO], Visual Basic example
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 56d778c210b196621d846fce5b06596571c01b8a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e7a2ac4243578480e2b9d3af74b2c78ae4c471ef
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType LockType и пример EditMode свойства (Visual Basic)
 В этом примере демонстрируется настройка [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) и [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) свойства перед открытием [записей](../../../ado/reference/ado-api/recordset-object-ado.md). Здесь также показано значение [EditMode](../../../ado/reference/ado-api/editmode-property.md) свойство в различных условиях. Функция EditModeOutput является обязательным для выполнения этой процедуры.  
@@ -130,12 +129,11 @@ End Function
 'EndEditModeVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)   
  [Свойство EditMode](../../../ado/reference/ado-api/editmode-property.md)   
  [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md)   
  [Свойство LockType (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)   
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

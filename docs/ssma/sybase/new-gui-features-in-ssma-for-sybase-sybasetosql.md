@@ -3,27 +3,28 @@ title: "Новые возможности графического пользо�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c65710ff7ff0a89a326a4c7d5594d23fd660b8cb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2dd0e259bdb6b5e31cd60da49561f47acde784b0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-gui-features-in-ssma-for-sybase-sybasetosql"></a>Новые возможности графического пользовательского интерфейса в SSMA для СУБД Sybase (SybaseToSQL)
 В этой главе Описание новых возможностей пользовательского интерфейса SSMA.  
@@ -132,4 +133,3 @@ ms.lasthandoff: 08/02/2017
 ### <a name="advanced-search"></a>Расширенный поиск  
 Чтобы открыть диалоговое окно расширенного поиска, для поиска точек редактирования меню, а затем нажмите кнопку расширенного поиска. В диалоговом окне можно будет найти любой объект, с помощью шаблона. В верхней части диалогового окна можно выбрать область и объект категории поиска.  
   
-

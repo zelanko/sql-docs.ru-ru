@@ -3,27 +3,28 @@ title: "SQLSetConnectOption (драйвер доступа) | Документы
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Access driver [ODBC], SQLSetConnectOption
 - SQLSetConnectOption function [ODBC], Access Driver
 ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8183c706378493b2fd854019228e429a7cfcc839
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b8f7497cb6b36602908443ab4fd9bdeb592ce8af
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetconnectoption-access-driver"></a>SQLSetConnectOption (драйвер доступа)
 > [!NOTE]  
@@ -44,4 +45,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_TXN_ISOLATION|SQL_TXN_ISOLATION всегда является SQL_TXN_READ_COMMITTED.|  
   
  [1] атомарные транзакции не поддерживается драйвером Microsoft Access. При фиксации транзакции с помощью драйвера Microsoft Access, конечное задержки существует между времени, транзакция завершается и значения записываются на диск. Эта задержка определяется задержки, встроенные в ядро Microsoft Jet. Время ожидания страницы не будет меньше, чем минимальное значение, даже если параметр PageTimeout имеет значение ниже этого значения. Как следствие, нет никакой гарантии, что зафиксированные данные стабильна, так как во время задержки могут быть внесены изменения.
-

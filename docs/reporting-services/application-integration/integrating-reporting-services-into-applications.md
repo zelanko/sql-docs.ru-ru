@@ -1,27 +1,26 @@
 ---
-title: "Интеграция службы Reporting Services в приложения | Документы Microsoft"
+title: "Интеграция служб Reporting Services в приложения | Документы Майкрософт"
 ms.custom: 
 ms.date: 10/19/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: application-integration
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+applies_to: SQL Server 2016 Preview
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 26e1da5a720aab965d014cada16f85086e0f70a0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 0185a0cb501242355d99369f3084eaa6f6a2e3da
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="integrating-reporting-services-into-applications"></a>Интеграция служб Reporting Services в приложения
 
@@ -30,17 +29,17 @@ ms.lasthandoff: 10/20/2017
   Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] представляют собой открытую и расширяемую платформу создания отчетов, которая позволяет предоставить разработчикам всеобъемлющий набор API для разработки решений.
 
 > [!NOTE]
-> Начиная с SQL Server 2017 г. Reporting Services, доступ к REST API доступен для разработки решений. Доступ к SOAP API является устаревшим. Дополнительные сведения см. в разделе [разработка с помощью API REST для служб Reporting Services](../developer/rest-api.md).
+> Начиная с SQL Server 2017 Reporting Services, для разработки решений используется доступ через API REST. Доступ через API SOAP является нерекомендуемым. Дополнительные сведения см. в разделе [Разработка с помощью API REST для служб Reporting Services](../developer/rest-api.md).
   
- Существует три способа интеграции [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательские приложения: сервер отчетов веб-службы, также известный как [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API-Интерфейс SOAP, элементы управления ReportViewer для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]и URL-адресов. В каждом из этих вариантов реализуется отдельный подход к интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в приложения.
+ Предусмотрены три способа интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательские приложения: веб-служба сервера отчетов, которую также называют SOAP API [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], элементы управления ReportViewer для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] и средства доступа по URL-адресу. В каждом из этих вариантов реализуется отдельный подход к интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в приложения.
   
 ## <a name="report-server-web-service"></a>Веб-служба сервера отчетов
 
- Веб-служба сервера отчетов является основным интерфейсом разработки приложений служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Эта веб-служба предоставляет все необходимые методы для интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в приложения, независимо от того, ведется ли разработка кода для управления каталогом отчетов или для подготовки отчетов в поддерживаемом формате. Примером такого приложения является диспетчер отчетов, который входит в состав [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]; он использует веб-службы для управления базой данных сервера отчетов.  
+ Веб-служба сервера отчетов является основным интерфейсом разработки приложений служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Эта веб-служба предоставляет все необходимые методы для интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в приложения, независимо от того, ведется ли разработка кода для управления каталогом отчетов или для подготовки отчетов в поддерживаемом формате. Примером такого приложения может служить диспетчер отчетов, входящий в комплект поставки службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]; в нем веб-служба используется для управления базой данных сервера отчетов.  
   
 ## <a name="reportviewer-controls-for-visual-studio"></a>Элементы управления ReportViewer для Visual Studio
 
- Элементы управления ReportViewer, доступными для [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] используются для интеграции средств просмотра отчетов в приложения. Имеется два элемента управления: один для приложений на основе Windows Forms, а другой — для приложений Web Forms. Каждый элемент управления обеспечивает возможность просмотра отчетов, развернутых на сервере отчетов, а также возможность отображения отчетов, существующих в среде, где сервер отчетов пока еще не установлен.  
+ Элементы управления ReportViewer, включенные в состав [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], используются для интеграции средств просмотра отчетов в приложения. Имеется два элемента управления: один для приложений на основе Windows Forms, а другой — для приложений Web Forms. Каждый элемент управления обеспечивает возможность просмотра отчетов, развернутых на сервере отчетов, а также возможность отображения отчетов, существующих в среде, где сервер отчетов пока еще не установлен.  
   
 ## <a name="url-access"></a>доступ по URL-адресу  
  Доступ по URL-адресу представляет собой еще один метод интеграции средств просмотра отчетов в приложения; он используется в случаях, когда применение элементов управления ReportViewer не представляется возможным. Метод доступа по URL-адресу также позволяет отправлять пользователям ссылки на отчеты по электронной почте.  
@@ -58,9 +57,8 @@ ms.lasthandoff: 10/20/2017
   
 ## <a name="next-steps"></a>Следующие шаги
 
-Выбор с помощью URL-адресов или API-интерфейс SOAP, в разделе [Выбор между URL-адресов и SOAP в службах Reporting Services](choosing-between-url-access-and-soap.md).
+Сведения о выборе между доступом по URL-адресу или API-интерфейсами SOAP см. в разделе [Выбор между доступом по URL-адресу и протоколом SOAP в службах Reporting Services](choosing-between-url-access-and-soap.md).
 
-Сведения о SQL Server 2017 г REST API служб Reporting Services см. в разделе [разработка с помощью API REST для служб Reporting Services](../developer/rest-api.md).
+Сведения об API REST в SQL Server 2017 Reporting Services см. в разделе [Разработка с помощью API REST для служб Reporting Services](../developer/rest-api.md).
 
 Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

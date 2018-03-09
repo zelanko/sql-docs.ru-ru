@@ -2,12 +2,13 @@
 title: "Вызов хранимых процедур | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -18,20 +19,20 @@ helpviewer_keywords:
 - MDX queries [Analysis Services]
 - CALL statement
 ms.assetid: 96a9660d-875b-4ee4-b339-90020b1d9895
-caps.latest.revision: 22
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0ea0a687bd6e5482211a4f953c0f7565c483a586
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9e2c8656c28db458104a3793175a739d311ac379
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="calling-stored-procedures"></a>Вызов хранимых процедур
-  Хранимые процедуры можно вызывать на сервере или из клиентского приложения. В любом случае хранимые процедуры всегда выполняются на сервере либо в контексте сервера, либо в контексте базы данных. Для выполнения хранимой процедуры не нужны специальные разрешения. После того как хранимая процедура добавлена сборкой к контексту сервера или базы данных, любой пользователь может выполнить эту хранимую процедуру, если только роль для этого пользователя разрешает действия, выполняемые этой хранимой процедурой.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Хранимые процедуры можно вызывать на сервере или из клиентского приложения. В любом случае хранимые процедуры всегда выполняются на сервере либо в контексте сервера, либо в контексте базы данных. Для выполнения хранимой процедуры не нужны специальные разрешения. После того как хранимая процедура добавлена сборкой к контексту сервера или базы данных, любой пользователь может выполнить эту хранимую процедуру, если только роль для этого пользователя разрешает действия, выполняемые этой хранимой процедурой.  
   
  Вызов хранимой процедуры в многомерном выражении осуществляется аналогично вызову внутренней функции многомерного выражения. Для хранимой процедуры, не принимающей параметров, используется имя процедуры и пустая пара скобок, как показано ниже:  
   
@@ -89,9 +90,8 @@ Call MyStoredProcedure(a,b,c)
 CALL(MyVoidFunction)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление сборками многомерной модели](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)   
  [Определение хранимых процедур](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   
-

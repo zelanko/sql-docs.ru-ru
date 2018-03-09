@@ -2,32 +2,31 @@
 title: "Начало работы с программой командной строки dta и настройка рабочей нагрузки | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.suite: sql
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- Database Engine [SQL Server], tutorials
+applies_to: SQL Server 2016
+helpviewer_keywords: Database Engine [SQL Server], tutorials
 ms.assetid: f34a5acf-1f3b-4484-a770-6470cb925ab0
-caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "28"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b4adf756444c22146108fead4f607c20c6108dc3
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f18a532488aaa0b40ec976ae01c96a4405d3b26f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Занятие 3-1 — начало работы с программой командной строки dta и настройка рабочей нагрузки
-Эта задача помогает запустить программу **dta**, просмотреть ее справку, а затем использовать эту программу для настройки рабочей нагрузки из командной строки. Программа использует рабочую нагрузку MyScript.sql, созданную в ходе выполнения практической работы по использованию графического пользовательского интерфейса помощника по настройке ядра СУБД [Настройка рабочей нагрузки](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Эта задача помогает запустить **dta** программы, просмотреть ее справку, а затем использовать его для настройки рабочей нагрузки из командной строки. Программа использует рабочую нагрузку MyScript.sql, созданную в ходе выполнения практической работы по использованию графического пользовательского интерфейса помощника по настройке ядра СУБД [Настройка рабочей нагрузки](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
   
 В учебнике используется образец базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . В целях повышения безопасности образцы баз данных не установлены. Дополнительные сведения об установке образцов баз данных см. в статье [Установка образцов SQL Server и образцов баз данных](http://sqlserversamples.codeplex.com).  
   
@@ -76,4 +75,3 @@ ms.lasthandoff: 08/02/2017
   
   
   
-

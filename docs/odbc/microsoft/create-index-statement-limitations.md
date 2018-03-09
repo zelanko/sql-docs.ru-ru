@@ -3,27 +3,28 @@ title: "Создание ограничений инструкции ИНДЕК�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - CREATE INDEX statement limitations [ODBC]
 - ODBC SQL grammar, CREATE INDEX statement limitations
 ms.assetid: 832dcda1-e452-48e6-8adb-7fb33c4fb4ff
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c3923fdf02d70fe87b0748b7a861cac85ec4b786
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 874aba454df680626a126f19faa821f885e9d040
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-index-statement-limitations"></a>Создание ограничений оператора ИНДЕКСА
 Инструкции CREATE INDEX не поддерживается для драйверов Microsoft Excel или текст.  
@@ -37,4 +38,3 @@ ms.lasthandoff: 09/09/2017
  При использовании драйвера dBASE индекса, созданного с помощью инструкции CREATE UNIQUE INDEX фактически не являются уникальными и повторяющиеся значения могут быть вставлены в индексированный столбец. Только одна запись из набора с одинаковыми значениями ключа можно добавить в индекс.  
   
  При использовании драйвера Paradox после смежных подмножества столбцов в таблице, включая первый столбец должен быть определен уникальный индекс. Если не определен уникальный индекс для таблицы или при использовании драйвера Paradox без реализации компонента Borland Database Engine таблицу невозможно обновить драйвером Paradox.
-

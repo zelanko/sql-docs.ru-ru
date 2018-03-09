@@ -3,24 +3,25 @@ title: "Обновление 3.5 драйвер 3.8 драйверу | Доку�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ffba36ac-d22e-40b9-911a-973fa9e10bd3
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6772088bfbb33590f7986ee65550f64d5845cc69
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 98b9c8e3e2179801a4cb7cd2947939d6f2927a02
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>Обновление драйвера 3.5 3.8 драйверу
 Данный раздел содержит рекомендации и замечания по обновлению с драйвером ODBC 3.5 с драйвером ODBC 3.8.  
@@ -80,5 +81,4 @@ SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1
 ## <a name="see-also"></a>См. также:  
  [Разработка драйвера ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Драйверы ODBC, предоставляемые корпорацией Майкрософт](../../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)   
- [Новые возможности ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)
-
+ [Новые возможности ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

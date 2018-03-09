@@ -1,10 +1,13 @@
 ---
-title: "Включение профилирования задач в рабочем процессе пакета данных | Документы Microsoft"
+title: "Включение задачи \"Профилирование данных\" в рабочий процесс пакета | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ea3c68e0320216c81ce2a47f426112dd4a25f22f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8f7e2cbac0c5a86c4792991dc1634721ac1cb635
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Включение задачи «Профилирование данных» в рабочий процесс пакета
   Профилирование и очистка данных на ранних стадиях не подходят для автоматизации. В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]выходные данные задачи профилирования данных обычно требуют визуального анализа и вмешательства человека, чтобы определить, являются ли зафиксированные нарушения реальными. Для очистки данных, даже после обнаружения проблем с их качеством, нужен хорошо продуманный план.  
@@ -90,7 +92,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  Добавьте к пакету диспетчер соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] . Настройте этот диспетчер подключений для использования поставщика данных .NET для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) и для соединения с доступным экземпляром базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-     По умолчанию диспетчер соединений имеет следующее имя: \<имя сервера >. AdventureWorks1.  
+     По умолчанию диспетчеру подключений присваивается следующее имя: \<имя сервера>.AdventureWorks1.  
   
 3.  Добавьте к пакету диспетчер соединения файлов. Настройте этот диспетчер соединений, чтобы он создавал выходной файл для задачи «Профилирование данных».  
   
@@ -332,9 +334,8 @@ ms.lasthandoff: 08/03/2017
   
 7.  В объектах управления очередностью, соединяющих задачу «Скрипт» с нисходящими компонентами в рабочем процессе, напишите выражения направления рабочего процесса, использующие значения переменных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка задачи «Профилирование данных»](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)   
  [Средство просмотра профиля данных](../../integration-services/control-flow/data-profile-viewer.md)  
   
   
-

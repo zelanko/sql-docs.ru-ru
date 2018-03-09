@@ -1,13 +1,14 @@
 ---
-title: "Определение параметров в конструкторе запросов многомерных Выражений для служб Analysis Services | Документы Microsoft"
+title: "Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +18,16 @@ helpviewer_keywords:
 - MDX [Reporting Services], defining parameters
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
-caps.latest.revision: 37
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "37"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f989ec80fe80d85381673cb12a90b8e3cea82da4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 728bbc3b0e39d7818460795144c09f56a15500d9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services
   Чтобы параметризовать запрос многомерных выражений для источника данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , необходимо добавить параметр запроса к этому запросу. В конструкторе запросов многомерных выражений параметр запроса можно добавить как в режиме конструктора, так и в режиме запроса, настроив фильтр. После определения запроса с параметром запроса, службы Reporting Services автоматически создают параметр отчета и набор данных, чтобы предоставить список допустимых значений. Это позволяет пользователю указать значение, которое передается непосредственно запросу.  
@@ -65,9 +65,9 @@ ms.lasthandoff: 08/09/2017
   
 2.  На панели инструментов нажмите кнопку **Конструктор** , чтобы переключиться в режим запроса.  
   
-3.  На панели многомерных Выражений инструментов конструктора запросов, нажмите кнопку **параметров запроса** (![значок диалоговое окно «Параметры запроса»](../../reporting-services/report-data/media/iconqueryparameter.gif "значок диалоговое окно «Параметры запроса»")). Откроется диалоговое окно «Параметры запроса».  
+3.  На панели инструментов в конструкторе запросов многомерных выражений нажмите кнопку **Параметры запроса** (![Значок диалогового окна "Параметры запроса"](../../reporting-services/report-data/media/iconqueryparameter.gif "Значок диалогового окно "Параметры запроса"")). Откроется диалоговое окно «Параметры запроса».  
   
-4.  В **параметр** столбец, нажмите кнопку  **\<введите параметр >**, а затем введите имя параметра.  
+4.  В столбце **Параметр** щелкните **\<Введите параметр>**, а затем введите имя параметра.  
   
 5.  В столбце **Измерение** выберите значение в раскрывающемся списке.  
   
@@ -88,8 +88,7 @@ ms.lasthandoff: 08/09/2017
      Чтобы просмотреть набор данных, который включает доступные значения для параметра отчета, щелкните правой кнопкой мыши в любом пустом месте на панели данных отчета и выберите пункт **Показывать скрытые наборы данных**. В области данных отчета отображаются все наборы данных отчета.  
   
 ## <a name="see-also"></a>См. также:  
- [Тип соединения служб Analysis Services для многомерных Выражений &#40; Службы SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
- [Analysis Services MDX пользовательский интерфейс конструктора запросов](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
+ [Тип соединения служб Analysis Services для запросов многомерных выражений (службы SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
+ [Пользовательский интерфейс конструктора запросов многомерных выражений Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
   
   
-

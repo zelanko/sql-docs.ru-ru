@@ -1,10 +1,13 @@
 ---
-title: "В службах Integration Services (SSIS) выражения | Документы Microsoft"
+title: "Выражения служб Integration Services (SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -16,17 +19,16 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-caps.latest.revision: 51
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 988f9993207daeebe6c5aaea0f60d887fe74024c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7dedaa6d36fb0618b6124b1d2b1014c32fb2f44c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-expressions"></a>Выражения служб Integration Services (SSIS)
   Выражение — это сочетание символов (идентификаторов, литералов, функций и операторов), которое дает одно значение данных. Простые выражения могут включать одну константу, переменную или функцию. Чаще встречаются сложные выражения, включающие несколько операторов и функций и ссылающиеся на несколько столбцов и переменных. В службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]выражения могут использоваться для определения условий в инструкциях CASE, создания и обновления значений в столбцах данных, присвоения значений переменным, обновления или заполнения свойств во время выполнения, определения ограничений в управлении очередностью и указания выражений, используемых контейнером «цикл по элементам».  
@@ -48,7 +50,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Переменные используют выражение для установки значений. Например, GETDATE() присваивает переменной значение, равное текущей дате.  
   
--   Управление очередностью может использовать выражения для указания условий, определяющих, будет ли выполняться задача с ограничением или контейнер пакета. Выражения, используемые в элементах управления очередностью, должны давать значение **true** или **false**. Например, выражение @A > @B сравнивает две переменные, определяемые пользователем, чтобы определить, будет ли выполняться задача с ограничением.  
+-   Управление очередностью может использовать выражения для указания условий, определяющих, будет ли выполняться задача с ограничением или контейнер пакета. Выражения, используемые в элементах управления очередностью, должны давать значение **true** или **false**. Например, выражение @A > @B сравнивает две определяемые пользователем переменные для определения того, будет ли выполняться задача, для которой задано управление.  
   
 -   Контейнер «цикл по элементам» может использовать выражения для создания инструкций инициализации, оценки выражения и приращения счетчика, используемые структурами цикла. Например, выражение @Counter = 1 инициализирует счетчик циклов.  
   
@@ -67,14 +69,13 @@ ms.lasthandoff: 08/03/2017
   
  У переменных есть область действия, и папка **Переменные** в списке построителя выражений содержит только те переменные, которые находятся в данной области и доступны для использования. Дополнительные сведения см. в разделе [Переменные служб Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Использование выражения в компоненте потока данных](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>См. также  
  Техническая статья [Примеры выражений служб SSIS](http://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
   
-## <a name="see-also"></a>См. также  
- [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
+## <a name="see-also"></a>См. также:  
+ [службы SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

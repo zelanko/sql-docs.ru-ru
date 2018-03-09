@@ -3,33 +3,30 @@ title: "SQLStatistics, функция | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLStatistics
-apilocation:
-- sqlsrv32.dll
+apiname: SQLStatistics
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLStatistics
-helpviewer_keywords:
-- SQLStatistics function [ODBC]
+f1_keywords: SQLStatistics
+helpviewer_keywords: SQLStatistics function [ODBC]
 ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c1e66748edcc81f87c261d6958a766f5b651c31a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 664c3c439eacc7bfa5b5b1d59b8421f8067c3376
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics, функция
 **Соответствия**  
@@ -85,7 +82,7 @@ SQLRETURN SQLStatistics(
  *Уникальный*  
  [Вход] Тип индекса: SQL_INDEX_UNIQUE или SQL_INDEX_ALL.  
   
- *Зарезервировано*  
+ *Reserved*  
  [Вход] Показывает важность количества ЭЛЕМЕНТОВ и СТРАНИЦАХ столбцов в результирующем наборе. Следующие параметры, влияющие на возврат количества ЭЛЕМЕНТОВ и СТРАНИЦАХ только столбцы; сведения об индексе возвращается, даже если количество ЭЛЕМЕНТОВ и страницы не возвращаются.  
   
  SQL_ENSURE запросов, что драйверу безусловно запрашивать статистическую. (Драйверы, которые соответствуют стандарту Open Group и не поддерживают расширения ODBC не будет поддерживать SQL_ENSURE.)  
@@ -176,4 +173,3 @@ SQLRETURN SQLStatistics(
 ## <a name="see-also"></a>См. также:  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

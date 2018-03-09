@@ -2,32 +2,30 @@
 title: "Уровень совместимости для табличных моделей в службах Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 10/16/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.versioncompat.f1
+f1_keywords: sql13.asvs.bidtoolset.versioncompat.f1
 ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 4dcc372bb9eac9887a06923cf517e4375ec1bbcb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
-ms.openlocfilehash: 93b718beae4e42b2544ca18ada707f4459d12bf6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/16/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Уровень совместимости для табличных моделей служб Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
   *Уровень совместимости* ссылается на поведения конкретного выпуска в ядро служб Analysis Services. Например DirectQuery и метаданные табличных объектов имеют разные реализации в зависимости от уровня совместимости. В целом, следует выбирать последний уровень совместимости, поддерживаемых вашими серверами.
 
@@ -72,10 +70,9 @@ ms.lasthandoff: 10/16/2017
   
  Это свойство указывает наивысший уровень совместимости базы данных, которая будет выполняться на сервере. Поддерживаемый уровень совместимости доступен только для чтения. Его нельзя изменить.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Уровень совместимости многомерной базы данных](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [Новые возможности служб Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md)   
  [Создание нового проекта табличной модели](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)  
   
   
-

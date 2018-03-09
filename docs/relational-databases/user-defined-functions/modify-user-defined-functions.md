@@ -2,36 +2,39 @@
 title: "Изменение определяемых пользователем функций | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: udf
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
-caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7ab838367ccbe310bbb57220fdec695a46fd849c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c7b7c08f7f2a853402fa2f9b8e870a317cb44554
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="modify-user-defined-functions"></a>Изменение определяемых пользователем функций
-  Определяемые пользователем функции [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно изменять с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. При изменении определяемых пользователем функций описанными ниже методами, разрешения этих функций не будут изменены, также не будут затронуты любые другие зависимые функции, хранимые процедуры или триггеры.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Определяемые пользователем функции [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно изменять с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. При изменении определяемых пользователем функций описанными ниже методами, разрешения этих функций не будут изменены, также не будут затронуты любые другие зависимые функции, хранимые процедуры или триггеры.  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Изменение определяемой пользователем функции с помощью:**  
   
@@ -52,7 +55,7 @@ ms.lasthandoff: 06/22/2017
   
 ###  <a name="Security"></a> Безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Требует разрешения ALTER для функции или для схемы. Если в функции указан определяемый пользователем тип, требуется разрешение EXECUTE на этот тип.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -75,7 +78,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  В окне запроса внесите нужные изменения в инструкцию ALTER FUNCTION.  
   
-6.  В меню **Файл** выберите пункт **Сохранить***имя_функции*.  
+6.  В меню **Файл** выберите команду **Сохранить***имя_функции*.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
@@ -165,4 +168,3 @@ ms.lasthandoff: 06/22/2017
  Дополнительные сведения см. в статье [ALTER FUNCTION (Transact-SQL)](../../t-sql/statements/alter-function-transact-sql.md).  
   
   
-

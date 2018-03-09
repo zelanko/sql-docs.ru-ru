@@ -1,38 +1,40 @@
 ---
 title: "Подключение с использованием проверки подлинности Azure Active Directory | Документы Microsoft"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.technology:
 - drivers
 ms.topic: article
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 28c8e53032cacb6620aeb304c228c35deec9e7a6
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 83d5ad3bae131b58dd344c3f5f9bfc7f5d0c4f5a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Подключение с использованием проверки подлинности Azure Active Directory
 Это статье содержатся сведения о разработке приложений Java, чтобы использовать функцию проверки подлинности Azure Active Directory с Microsoft JDBC Driver 6.0 (или более поздней версии) для SQL Server.
 
-Начиная с Microsoft JDBC Driver 6.0 для SQL Server, можно использовать проверки подлинности Active Direcoty Azure (AAD), который представляет собой механизм подключения к базе данных SQL Azure версии 12 с использованием удостоверения в Azure Active Directory. Используйте проверку подлинности Azure Active Directory для централизованного управления удостоверениями пользователей базы данных и в качестве альтернативы проверке подлинности SQL Server. Драйвер JDBC 6.0 (или более поздней версии) позволяет указать учетные данные Azure Active Directory в строке подключения JDBC для подключения к базе данных SQL Azure. Сведения о настройке проверки подлинности Azure Active Directory [подключение к SQL базы данных с использованием Azure Active Directory проверки подлинности](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
+Можно использовать проверку подлинности Azure Active Directory (AAD), который представляет собой механизм подключения к базе данных SQL Azure версии 12 с использованием удостоверения в Azure Active Directory. Используйте проверку подлинности Azure Active Directory для централизованного управления удостоверениями пользователей базы данных и в качестве альтернативы проверке подлинности SQL Server. Драйвер JDBC можно указать учетные данные Azure Active Directory в строке подключения JDBC для подключения к базе данных SQL Azure. Сведения о настройке проверки подлинности Azure Active Directory [подключение к SQL базы данных с использованием Azure Active Directory проверки подлинности](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
 
 Для поддержки проверки подлинности Azure Active Directory были добавлены два новых свойства подключения:
-*   **Проверка подлинности**: используйте это свойство, чтобы указать, какой метод проверки подлинности SQL для подключения. Возможными значениями являются: **ActiveDirectoryIntegrated**, **ActiveDirectoryPassword**, **SqlPassword** и значение по умолчанию **NotSpecified** .
-    * Использовать ' authentication = ActiveDirectoryIntegrated "для подключения к базе данных SQL, используя встроенную проверку подлинности Windows. Чтобы использовать этот режим проверки подлинности, необходимо создать федерацию локального федерации Active Directory Services (ADFS) с Azure AD в облаке. После установки, можно получить доступ к базе данных SQL Azure без необходимости вводить ceredentials при входе в компьютер присоединен к домену. 
+*   **Проверка подлинности**: используйте это свойство, чтобы указать, какой метод проверки подлинности SQL для подключения. Возможными значениями являются: **ActiveDirectoryIntegrated**, **ActiveDirectoryPassword**, **SqlPassword**и значение по умолчанию **NotSpecified**.
+    * Использовать ' authentication = ActiveDirectoryIntegrated "для подключения к базе данных SQL, используя встроенную проверку подлинности Windows. Чтобы использовать этот режим проверки подлинности, необходимо создать федерацию локального федерации Active Directory Services (ADFS) с Azure AD в облаке. После этого настроена и билет Kerberos, становятся доступными базу данных SQL Azure без необходимости вводить учетные данные при входе в компьютер присоединен к домену. 
     * Используйте ' authentication = ActiveDirectoryPassword "для подключения к базе данных SQL с помощью Azure AD основное имя и пароль.
     * Использовать ' authentication = SqlPassword "для подключения к SQL Server, с помощью свойств пользователе или имя пользователя и пароль.
-    * Используйте ' authentication = не указан "или оставьте его значения по умолчанию, если ни один из этих методов проверки подлинности необходимо.
+    * Использовать ' authentication = не указан "или оставьте значения по умолчанию, когда ни один из этих методов проверки подлинности необходимы.
 
 *   **accessToken**: это свойство используется для подключения к базе данных SQL с помощью маркера доступа. accessToken можно задать только с помощью свойства параметра метода getConnection() класса DriverManager. Он не может использоваться в URL-АДРЕСЕ соединения.  
 
@@ -42,23 +44,22 @@ ms.lasthandoff: 09/09/2017
 ## <a name="client-setup-requirements"></a>Требования к установке клиента
 Убедитесь, что на клиентском компьютере установлены следующие компоненты:
 * Java 7 или более поздней версии
-*   Драйвер Microsoft JDBC Driver 6.2 (или более поздней версии) для SQL Server
-*   Если вы используете режим токена проверки подлинности на основе доступа, необходимо будет [azure-activedirectory библиотека for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) и его зависимости, для выполнения примеров в данной статье. В разделе **подключение с помощью токена доступа** более подробные сведения.
-*   При использовании режима проверки подлинности ActiveDirectoryPassword потребуется [azure-activedirectory библиотека for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) и его зависимости. В разделе **подключении с использованием режима проверки подлинности ActiveDirectoryPassword** более подробные сведения.
-*   Если вы используете режим ActiveDirectoryIntegrated, необходимо установить библиотеку аутентификации Active Directory для SQL Server (ADALSQL. Библиотека DLL) и sqljdbc_auth.dll.
-    * ADALSQL. Библиотека DLL позволяет проверять подлинность приложений в базе данных SQL Microsoft Azure с помощью Azure Active Directory. Загрузка библиотеки DLL из [библиотека проверки подлинности Microsoft Active Directory для Microsoft SQL Server](http://www.microsoft.com/en-us/download/details.aspx?id=48742)
-    * Для ADALSQL. Библиотека DLL два двоичных версиях X86- и X64 доступны для загрузки. Если установлена неправильная версия двоичный или если отсутствует библиотека DLL, в драйвере возникнет следующая ошибка: «не удалось загрузить adalsql.dll (Authentication =...). Код ошибки: 0x2.». В этом случае загрузите нужную версию ADALSQL. БИБЛИОТЕКИ DLL. 
-    * sqljdbc_auth.dll доступен в пакете драйверов. Скопируйте файл sqljdbc_auth.dll в каталог в пути системы Windows на компьютере, где установлен драйвер JDBC. Или можно задать системное свойство java.libary.path для указания каталога, в котором содержится файл sqljdbc_auth.dll. 
-    * При использовании 64-разрядной виртуальной машины и процессора x64 используйте файл sqljdbc_auth.dll в папке x64. 
-    * При использовании 32-разрядной виртуальной машины Java (JVM) следует использовать файл sqljdbc_auth.dll в папке x86 folder, даже если используется операционная система x64. 
-    * Например если вы используете 32-разрядной виртуальной машины Java и JDBC драйвера в каталог по умолчанию, можно указать расположение библиотеки DLL с помощью следующий аргумент виртуальной машины (VM) при запуске приложения Java:  
-        ```
-        -Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86
-        ```
+*   Драйвер Microsoft JDBC Driver 6.0 (или более поздней версии) для SQL Server
+*   Если вы используете режим проверки подлинности на основе маркеров доступа, необходимо [azure-activedirectory библиотека for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) и его зависимости, для выполнения примеров в данной статье. Дополнительные сведения см. в разделе **подключение с помощью токена доступа** раздела.
+*   Если вы используете ActiveDirectoryPassword режим проверки подлинности, необходимо [azure-activedirectory библиотека for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) и его зависимости. Дополнительные сведения см. в разделе **подключении с использованием режима проверки подлинности ActiveDirectoryPassword** раздела.
+*   При использовании режима ActiveDirectoryIntegrated требуется azure-activedirectory библиотека for-java и его зависимости. Дополнительные сведения см. в разделе **подключении с использованием режима проверки подлинности ActiveDirectoryIntegrated** раздела.
     
 ## <a name="connecting-using-activedirectoryintegrated-authentication-mode"></a>Подключение с использованием режима проверки подлинности ActiveDirectoryIntegrated
+ С помощью версии 6.4 драйвера JDBC добавляет поддержку для ActiveDirectoryIntegrated проверки подлинности с использованием билета Kerberos для нескольких платформ (Windows, Linux и Mac).
+В разделе [билет Kerberos, задайте в Windows, Linux и Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac) для получения дополнительных сведений. Кроме того в Windows, sqljdbc_auth.dll может также использоваться для проверки подлинности ActiveDirectoryIntegrated с драйвером JDBC.
+
+> [!NOTE]
+>  Если вы используете старую версию драйвера, установите этот флажок, [ссылку](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) для соответствующих зависимостей, которые требуются для использования этого режима проверки подлинности. 
+
 Приведенный ниже показано, как использовать ' authentication = ActiveDirectoryIntegrated "режим. Этот пример можно выполнить на компьютер присоединен к домену, который входит в федерацию с Azure Active Directory. Пользователь автономной базы данных, представляющий на основном Azure AD или одной из групп, вам принадлежит, должен существовать в базе данных и должна иметь разрешение CONNECT. 
-    
+
+Перед построением и запуском примера на клиентском компьютере (на котором, вы хотите запустить в примере), загрузите [библиотеки azure-activedirectory библиотека for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) и его зависимостей и включать их в путь построения Java
+
 Замените имя сервера и базы данных перед выполнением в примере имя сервера или базы данных в следующих строках:
 
 ```
@@ -91,10 +92,66 @@ public class IntegratedExample {
     }
 }
 ```
-Выполнение данного примера на компьютере, присоединенных к домену, который входит в федерацию с Azure Active Directory будут автоматически использовать учетные данные Windows и пароль не требуется. Если соединение установлено, появится следующее сообщение:
+Выполнение этого примера на клиентском компьютере автоматически использует ваш билета Kerberos и пароль не требуется. Если подключение установлено, появится следующее сообщение:
 ```
 You have successfully logged on as: <your domain user name>
 ```
+
+### <a name="set-kerberos-ticket-on-windows-linux-and-mac"></a>Задать билет Kerberos в Windows, Mac и Linux
+
+Необходимо настроить билет Kerberos, связывание текущего пользователя с учетной записью домена Windows. Ниже приведены Сводка ключевых шагов.
+
+#### <a name="windows"></a>Windows
+JDK поставляется с `kinit` которому можно использовать для получения TGT из центра распространения КЛЮЧЕЙ (центр распространения ключей) в домене соединение машины, которая включена в федерацию с Azure Active Directory.
+
+##### <a name="step-1-ticket-granting-ticket-retrieval"></a>Шаг 1: Получение билет предоставления билета
+- **Запустите на**: Windows
+- **Действие**:
+  - Команда `kinit username@DOMAIN.COMPANY.COM` Чтобы получить БИЛЕТ предоставления билета KDC, затем он предложит ввести пароль для домена.
+  - Используйте `klist` для просмотра доступных билетов. При успешном выполнении kinit, вы увидите, что билет krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
+
+> [!NOTE]
+>  Необходимо указать `.ini` файл с `-Djava.security.krb5.conf` для вашего приложения найти центр распространения КЛЮЧЕЙ.
+
+#### <a name="linux-and-mac"></a>Linux и Mac
+
+##### <a name="requirements"></a>Требования
+Доступ к компьютером присоединенных к домену Windows, чтобы выполнять запросы к контроллеру домена Kerberos
+
+##### <a name="step-1-find-kerberos-kdc"></a>Шаг 1: Найти центр распространения КЛЮЧЕЙ Kerberos
+- **Запустите на**: командной строки Windows
+- **Действие**: `nltest /dsgetdc:DOMAIN.COMPANY.COM` (где «DOMAIN.COMPANY.COM» сопоставляет имя вашего домена)
+- **Образец вывода**
+  ```
+  DC: \\co1-red-dc-33.domain.company.com
+  Address: \\2111:4444:2111:33:1111:ecff:ffff:3333
+  ...
+  The command completed successfully
+  ```
+- **Сведения для извлечения** имя контроллера домена, в этом случае `co1-red-dc-33.domain.company.com`
+
+##### <a name="step-2-configuring-kdc-in-krb5conf"></a>Шаг 2: Настройка KDC в krb5.conf
+- **Запустите на**: Linux или Mac
+- **Действие**: изменение /etc/krb5.conf в редакторе по своему усмотрению. Настройте следующие ключи
+  ```
+  [libdefaults]
+    default_realm = DOMAIN.COMPANY.COM
+   
+  [realms]
+  DOMAIN.COMPANY.COM = {
+     kdc = co1-red-dc-28.domain.company.com
+  }
+  ```
+  Затем сохраните файл krb5.conf и выход
+
+> [!NOTE]
+>  Домен должен быть в прописными буквами.
+
+##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>Шаг 3: Проверка получения билета предоставления билета
+- **Запустите на**: Linux или Mac
+- **Действие**:
+  - Команда `kinit username@DOMAIN.COMPANY.COM` Чтобы получить БИЛЕТ предоставления билета KDC, затем он предложит ввести пароль для домена.
+  - Используйте `klist` для просмотра доступных билетов. При успешном выполнении kinit, вы увидите, что билет krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 
 ## <a name="connecting-using-activedirectorypassword-authentication-mode"></a>Подключение с использованием режима проверки подлинности ActiveDirectoryPassword
 Приведенный ниже показано, как использовать ' authentication = ActiveDirectoryPassword "режим.
@@ -139,19 +196,19 @@ public class UserPasswordExample {
     }
 }
 ```
-Если соединение установлено, появится следующее сообщение в качестве выходных данных:
+Если соединение установлено, в качестве выходных данных должны появиться следующее сообщение:
 ```
 You have successfully logged on as: <your user name>
 ```
 
 > [!NOTE]  
-> Пользователь автономной базы данных должен существовать и пользователя автономной базы данных, представляющий указанный пользователя Azure AD или одной из групп, указанной Azure пользователя AD принадлежит, должен существовать в базе данных и должен иметь разрешение на ПОДКЛЮЧЕНИЕ (за исключением Azure Active Directory Администратор сервера или группы)
+> Пользователь автономной базы данных должен существовать и пользователя автономной базы данных, представляющий указанный пользователя Azure AD или одной из групп, указанной Azure принадлежит пользователя AD, должен существовать в базе данных и должен иметь разрешение на ПОДКЛЮЧЕНИЕ (за исключением Azure Active Directory Администратор сервера или группы)
 
 
 ## <a name="connecting-using-access-token"></a>Подключение с помощью токена доступа
 Приложений и служб можно получить маркер доступа из Azure Active Directory и используйте его для подключения к базе данных SQL Azure. Обратите внимание, что accessToken можно задать только с помощью свойства параметра метода getConnection() класса DriverManager. Он не может использоваться в строке подключения.
  
-В приведенном ниже примере содержит простое приложение Java, которое подключается к базе данных SQL Azure с помощью проверки подлинности на основе токена доступа. Перед построением и запуском примера, выполните следующие действия:
+В приведенном ниже примере содержит простое приложение Java, которое подключается к базе данных SQL Azure с помощью проверки подлинности на основе маркера доступа. Перед построением и запуском примера, выполните следующие действия:
 1.  Создайте учетную запись приложения в Azure Active Directory для службы.
     1. Войдите в портал управления Azure
     2. В панели навигации слева щелкните Azure Active Directory
@@ -162,23 +219,20 @@ You have successfully logged on as: <your user name>
     7. Введите mytokentest как понятное имя для приложения, выберите «Веб-приложение и/или Web API» и нажмите кнопку Далее.
     8. При условии, что это приложение является управляющей программы или службы и не веб-приложения, оно не содержит знак в URL-адрес или URI идентификатора приложения. Для этих двух полей введите http://mytokentest
     9. Хотя по-прежнему на портале Azure на вкладке Настройка приложения
-    10. Найдите значение идентификатора клиента и скопируйте его, он потребуется позже при настройке приложения (т. е.  a4bbfe26-dbaa-4fec-8ef5-223d229f647d). См. ниже моментального снимка.
+    10. Найдите значение идентификатора клиента и скопируйте его, потребуется позднее при настройке приложения (например, a4bbfe26-dbaa-4fec-8ef5-223d229f647d). См. в следующем моментальном снимке.
     11. В разделе «Ключи» выберите длительность ключ, сохранить конфигурацию и скопируйте ключ для последующего использования. Это секрет клиента.
     12. Внизу щелкните «Просмотреть конечные точки» и скопируйте URL-адрес в разделе «ENDPOINT АВТОРИЗАЦИИ OAUTH 2.0» для последующего использования. Это URL-адрес службы маркеров безопасности.
 
-
-![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)
-
-
-2. Войдите в пользовательской базе данных сервера SQL Azure, как администратора Azure Active Directory и пользователь автономной базы данных с помощью резервов команды T-SQL, для вашего приложения субъекта. В разделе [подключение к базе данных SQL или SQL данные хранилища с использованием Azure Active Directory проверки подлинности](https://azure.microsoft.com/en-us/documentation/articles/sql-database-aad-authentication/) Дополнительные сведения о создании администратора Azure Active Directory и пользователь автономной базы данных.
+    ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
+2. Войдите на сервер SQL Azure пользовательской базы данных как администратора Azure Active Directory и пользователь автономной базы данных с помощью резервов команды T-SQL, для основного приложения. В разделе [подключение к базе данных SQL или SQL данные хранилища с использованием Azure Active Directory проверки подлинности](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/) Дополнительные сведения о создании администратора Azure Active Directory и пользователь автономной базы данных.
 
     ```
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
     ```
 
-3.  На клиентском компьютере (на котором, вы хотите запустить в примере), загрузите [azure-activedirectory библиотека for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) библиотеки и ее зависимости и включать их в путь построения Java. Обратите внимание, что azure-activedirectory библиотека for-java требуется только для запуска этот конкретный пример, как оно использует API-интерфейсы из этой библиотеки для получения токена доступа из Azure AD. Если уже имеется маркер доступа, этот шаг можно пропустить. Обратите внимание, что также будет необходимо удалить раздел в примере, который получает маркер доступа.
+3.  На клиентском компьютере (на котором, вы хотите запустить в примере), загрузите [azure-activedirectory библиотека for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) библиотеки и ее зависимости и включать их в путь построения Java. Обратите внимание, что azure-activedirectory библиотека for-java требуется только для запуска этот конкретный пример, как оно использует API-интерфейсы из этой библиотеки для получения токена доступа из Azure AD. Если уже имеется маркер доступа, этот шаг можно пропустить. Обратите внимание, что необходимо удалить раздел в примере, который получает маркер доступа.
 
-В следующем примере замените STS URL-адрес, идентификатор клиента, секрет клиента, сервера и имя базы данных с помощью этих значений.
+В следующем примере замените имя URL-адрес службы маркеров безопасности, идентификатор клиента, секрет клиента, сервера и базы данных значения.
 
 ```
 import java.sql.Connection;
@@ -234,4 +288,3 @@ public class TokenBasedExample {
 Access Token: <your access token>
 You have successfully logged on as: <your client ID>    
 ``` 
-

@@ -2,29 +2,30 @@
 title: "Импорт проекта интеллектуального анализа данных с помощью мастера импорта служб Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
-caps.latest.revision: 6
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9ac94cfcd17842f118ea6bda19af830d8d737b94
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aaa433e5bd9b8730c38e4853eda591177e592a92
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Импорт проекта интеллектуального анализа данных с помощью мастера импорта служб Analysis Services
-  В этом разделе описано, как создать новый проект интеллектуального анализа данных путем импорта метаданных из существующего проекта интеллектуального анализа данных на другом сервере, используя шаблон **Импорт с сервера (многомерные данные и интеллектуальный анализ данных)**, в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В этом разделе описано, как создать новый проект интеллектуального анализа данных путем импорта метаданных из существующего проекта интеллектуального анализа данных на другом сервере, используя шаблон **Импорт с сервера (многомерные данные и интеллектуальный анализ данных)**, в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>Импорт источников данных, структур интеллектуального анализа данных и моделей интеллектуального анализа данных из существующего проекта интеллектуального анализа данных  
  При использовании шаблона **Импорт с сервера (многомерные данные и интеллектуальный анализ данных)**среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] создает новый проект интеллектуального анализа данных, а затем копирует метаданные из указанного проекта интеллектуального анализа данных. Новый проект содержит те же источники данных, представления источников данных, структуры интеллектуального анализа данных и модели интеллектуального анализа данных, что и база данных ssASnoversion, из которой был выполнен импорт. Однако этот проект нельзя использовать до тех пор, пока некоторые свойства не будут обновлены, а объекты — обработаны согласно описанию.  
@@ -65,7 +66,6 @@ ms.lasthandoff: 09/01/2017
      Новый проект будет автоматически открыт в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="see-also"></a>См. также  
- [Свойства проекта (табличные службы SSAS)](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
+ [Свойства проекта](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   
   
-

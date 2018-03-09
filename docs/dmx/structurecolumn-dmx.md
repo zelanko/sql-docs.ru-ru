@@ -2,35 +2,32 @@
 title: "StructureColumn (расширения интеллектуального анализа данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- StructureColumn
-dev_langs:
-- DMX
-helpviewer_keywords:
-- StructureColumn function
+f1_keywords: StructureColumn
+dev_langs: DMX
+helpviewer_keywords: StructureColumn function
 ms.assetid: 57557536-4bfa-4fa7-bf7a-fb8722ca200d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 24b7869462815e6d636572a093a332ecce6dc02c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3e7f727e1007c6502e6612ccef563f670837cf5c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает значение столбца структуры, соответствующего указанному варианту, либо табличное значение для вложенной таблицы в указанном варианте.  
   
@@ -50,7 +47,7 @@ StructureColumn('structure column name')
   
  Если же столбец структуры интеллектуального анализа данных содержит вложенную таблицу, то функция возвращает табличное значение. Затем его можно указать в предложении FROM вложенной инструкции SELECT.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эта функция полиморфна и может использоваться в любом месте инструкции, где допустимы выражения, в том числе список выражений инструкции SELECT, выражение WHERE или ORDER BY.  
   
  Имя столбца в структуре интеллектуального анализа данных является строковым значением и таким образом, должны заключаться в одинарные кавычки: например, `StructureColumn('` **столбец 1**`')`. Если несколько столбцов имеют одинаковые имена, то имя определяется в контексте содержащей его инструкции SELECT.  
@@ -155,4 +152,3 @@ WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)
  [Общие функции прогнозирования &#40; расширений интеллектуального анализа данных &#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

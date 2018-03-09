@@ -1,10 +1,13 @@
 ---
-title: "Хранимые процедуры (каталог служб Integration Services) | Документы Microsoft"
+title: "Хранимые процедуры (каталог служб Integration Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,30 +15,29 @@ ms.topic: language-reference
 helpviewer_keywords:
 - stored procedures [Integration Services]
 ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 21715bf65f3a85669dfe823511ddb9b6c2dd4d57
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c937ee4c21b3446a50dbd7ce29bbe8b5fb25b0f0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>Хранимые процедуры (каталог служб Integration Services)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описываются хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)], доступные для администрирования проектов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], развернутых в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Вызовите [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] хранимые процедуры для добавления, удаления, изменения или выполнения объектов, которые хранятся в **SSISDB** каталога.  
+ Вызывайте хранимые процедуры служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для добавления, удаления, изменения и выполнения объектов, которые хранятся в каталоге **SSISDB**.  
   
  Имя каталога по умолчанию — SSISDB. Объекты, которые хранятся в каталоге, включают проекты, пакеты, параметры, среды и журнал операций.  
   
  Представления базы данных и хранимые процедуры можно использовать непосредственно или писать пользовательский код, который вызывает управляемый API. Среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и управляемый API запрашивают представления и вызывают хранимые процедуры, описанные в этом разделе, для выполнения многих своих задач.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [catalog.add_data_tap](../../integration-services/system-stored-procedures/catalog-add-data-tap.md)  
  Добавляет отвод данных на выходе компонента в потоке данных пакета.  
   
@@ -45,10 +47,10 @@ ms.lasthandoff: 09/26/2017
  [catalog.check_schema_version](../../integration-services/system-stored-procedures/catalog-check-schema-version.md)  
  Определяет, совместимы ли схема каталога SSISDB и двоичные файлы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (сборка ISServerExec и SQLCLR).  
   
- [Catalog.clear_object_parameter_value &#40; База данных SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md)  
+ [catalog.clear_object_parameter_value (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md)  
  Очищает значение параметра для существующего проекта или пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], который хранится на сервере.  
   
- [Catalog.configure_catalog &#40; База данных SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)  
+ [catalog.configure_catalog (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)  
  Настраивает каталог служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], задавая свойство каталога равным указанному значению.  
   
  [catalog.create_environment (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-create-environment-ssisdb-database.md)  
@@ -60,7 +62,7 @@ ms.lasthandoff: 09/26/2017
  [catalog.create_environment_variable (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-create-environment-variable-ssisdb-database.md)  
  Создайте переменную среды в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- [Catalog.create_execution &#40; База данных SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)  
+ [catalog.create_execution (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)  
  Создает экземпляр выполнения в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [catalog.create_execution_dump](../../integration-services/system-stored-procedures/catalog-create-execution-dump.md)  
@@ -84,19 +86,19 @@ ms.lasthandoff: 09/26/2017
  [catalog.delete_project (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-delete-project-ssisdb-database.md)  
  Удаляет существующий проект из папки в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- [Catalog.deny_permission &#40; База данных SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md)  
+ [catalog.deny_permission (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md)  
  Отменяет разрешение на защищаемый объект в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [catalog.deploy_project (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md)  
  Развертывает проект в папке каталога служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] или обновляет существующий проект, который был развернут ранее.  
   
- [Catalog.get_parameter_values &#40; База данных SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md)  
+ [catalog.get_parameter_values (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md)  
  Обеспечивает разрешение и выборку значений параметров по умолчанию из проекта и соответствующих пакетов в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [catalog.get_project (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md)  
  Получает свойства существующего проекта в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- [Catalog.grant_permission &#40; База данных SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
+ [catalog.grant_permission (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
  Предоставляет разрешение на защищаемый объект в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [catalog.move_environment (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database.md)  
@@ -117,7 +119,7 @@ ms.lasthandoff: 09/26/2017
  [catalog.restore_project (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md)  
  Восстанавливает проект в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с переходом к предыдущей версии.  
   
- [Catalog.revoke_permission &#40; База данных SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md)  
+ [catalog.revoke_permission (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md)  
  Отзывает разрешение на защищаемый объект в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [catalog.set_environment_property (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-environment-property-ssisdb-database.md)  
@@ -129,7 +131,7 @@ ms.lasthandoff: 09/26/2017
  [catalog.set_environment_variable_property (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-environment-variable-property-ssisdb-database.md)  
  Задает свойство переменной среды в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- [Catalog.set_environment_variable_protection &#40; База данных SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-set-environment-variable-protection-ssisdb-database.md)  
+ [catalog.set_environment_variable_protection (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-environment-variable-protection-ssisdb-database.md)  
  Задает бит конфиденциальности переменной среды в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [catalog.set_environment_variable_value (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-environment-variable-value-ssisdb-database.md)  
@@ -144,32 +146,31 @@ ms.lasthandoff: 09/26/2017
  [catalog.set_folder_description (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md)  
  Задает описание папки в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- [Catalog.set_object_parameter_value &#40; База данных SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md)  
+ [catalog.set_object_parameter_value (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md)  
  Задает значение параметра в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Связывает значение с переменной среды или назначает литеральное значение, которое будет использоваться по умолчанию, если не будет назначено других значений.  
   
- [Catalog.start_execution &#40; База данных SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)  
+ [catalog.start_execution (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)  
  Запускает экземпляр выполнения в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [catalog.startup](../../integration-services/system-stored-procedures/catalog-startup.md)  
  Осуществляет обслуживание состояния операций для каталога SSISDB.  
   
- [Catalog.stop_operation &#40; База данных SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md)  
+ [catalog.stop_operation (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md)  
  Останавливает проверку или экземпляр выполнения в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- [Catalog.validate_package &#40; База данных SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database.md)  
+ [catalog.validate_package (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database.md)  
  Асинхронно проверяет пакет в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- [Catalog.validate_project &#40; База данных SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database.md)  
+ [catalog.validate_project (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database.md)  
  Асинхронно проверяет проект в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-[Catalog.add_execution_worker &#40; База данных SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)   
-Добавляет [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] шкалы ожидания рабочий процесс, для экземпляра выполнения в масштабное развертывание.
+[catalog.add_execution_worker (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)   
+Добавляет рабочую роль [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out в экземпляр выполнения в Scale Out.
 
-[Catalog.enable_worker_agent &#40; База данных SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-enable-worker-agent-ssisdb-database.md)   
-Включить шкалы ожидания рабочий процесс для масштабирования ожидания базы данных Master работу с этим [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] каталога.
+[catalog.enable_worker_agent (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-enable-worker-agent-ssisdb-database.md)   
+Включает рабочую роль Scale Out для мастера Scale Out, работающего с этим каталогом [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
 
-[Catalog.disable_worker_agent &#40; База данных SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md)   
-Отключить работника Out масштабирования для масштабирования Out Master работу с этим [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] каталога.
-
+[catalog.disable_worker_agent (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md)   
+Отключает рабочую роль Scale Out для мастера Scale Out, работающего с этим каталогом [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
 
 

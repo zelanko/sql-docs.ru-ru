@@ -2,9 +2,12 @@
 title: "Создание хранимой процедуры | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
 ms.tgt_pltfrm: 
@@ -14,30 +17,29 @@ helpviewer_keywords:
 - stored procedures [SQL Server], creating
 - creating stored procedures
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: 85b2194d4535c4edb2d4a27039fde6ca87911871
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 36ca0485ec35bcfd14ee1da0d01ac66c0a40c886
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-a-stored-procedure"></a>Создание хранимой процедуры
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
  > Материалы по предыдущим версиям SQL Server см. в разделе [Создание хранимой процедуры](https://msdn.microsoft.com/en-US/library/ms345415(SQL.120).aspx).
 
   В этом разделе описывается, как можно создать хранимую процедуру [!INCLUDE[tsql](../../includes/tsql-md.md)] в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] с использованием инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE PROCEDURE.  
   
 ##  <a name="Top"></a>   
--   **Before you begin:**  [Permissions](#Permissions)  
+-   **Перед началом работы выполните следующие действия.**  [Разрешения](#Permissions)  
   
 -   **To create a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> Разрешения  
+##  <a name="Permissions"></a> Permissions  
  Для выполнения этой инструкции требуется разрешение CREATE PROCEDURE в отношении базы данных и разрешение ALTER в отношении схемы, в которой создается процедура.  
   
 ##  <a name="Procedures"></a> Создание хранимой процедуры  
@@ -64,7 +66,7 @@ ms.lasthandoff: 06/22/2017
     |---------------|-----------|  
     |Автор|*Ваше имя*|  
     |Дата создания|*Сегодняшняя дата*|  
-    |Описание|Возвращает данные о сотрудниках.|  
+    |Description|Возвращает данные о сотрудниках.|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
     |@Datatype_For_Param1|**nvarchar**(50)|  
@@ -77,7 +79,7 @@ ms.lasthandoff: 06/22/2017
   
 7.  В **редакторе запросов**замените инструкцию SELECT следующей инструкцией:  
   
-    ```tsql  
+    ```sql  
     SELECT FirstName, LastName, Department  
     FROM HumanResources.vEmployeeDepartmentHistory  
     WHERE FirstName = @FirstName AND LastName = @LastName  
@@ -141,4 +143,3 @@ ms.lasthandoff: 06/22/2017
  [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   
-

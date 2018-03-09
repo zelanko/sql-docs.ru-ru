@@ -1,13 +1,14 @@
 ---
 title: "Создание и изменение объектов (XMLA) | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -21,17 +22,16 @@ helpviewer_keywords:
 - deleting objects
 - XMLA, objects
 ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
-caps.latest.revision: 17
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3a57805854f7a7dfa51546425090f9e323511112
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4b96c43a4004e69969af12d83798f9fe76fc801c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Создание и изменение объектов (XMLA)
   Основные объекты можно создавать, изменять и удалять независимо. Основные объекты включают следующие объекты:  
@@ -102,7 +102,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Описание  
  В следующем примере создается источника реляционных данных, который ссылается на [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] пример [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных.  
   
 ### <a name="code"></a>код  
@@ -127,7 +127,7 @@ ms.lasthandoff: 09/01/2017
 </Create>  
 ```  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Описание  
  В следующем примере реляционный источник данных, созданный в предыдущем примере, изменяется путем задания времени ожидания запроса для источника данных, равного 30 секундам.  
   
 ### <a name="code"></a>код  
@@ -153,10 +153,9 @@ ms.lasthandoff: 09/01/2017
 ### <a name="comments"></a>Комментарии  
  **ObjectExpansion** атрибут **Alter** команды было задано значение *ObjectProperties*. Этот параметр позволяет [ImpersonationInfo](../../analysis-services/scripting/properties/impersonationinfo-element-assl.md) элемент, второстепенный объект, который необходимо исключить из источника данных, определенного в **ObjectDefinition**. Поэтому в качестве данных об олицетворении для этого источника данных остается заданной учетная запись службы, как указано в первом примере.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выполнение метода &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
  [Разработка с использованием служб Analysis Services Scripting Language &#40; ASSL &#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Разработка с использованием XML для Аналитики в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

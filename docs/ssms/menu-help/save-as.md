@@ -3,31 +3,30 @@ title: "Команда \"Сохранить как\" | Документация 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.saveas
-helpviewer_keywords:
-- Save As dialog box
+f1_keywords: vs.saveas
+helpviewer_keywords: Save As dialog box
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: acbf3b32cdcbe92838532d7711fb2edf0a6238b5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 16e9002516156238be7eac9faa203b64f0d23318
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="save-as"></a>Сохранить как
-Позволяет сохранить экземпляр текущего элемента в указанном расположении и файле указанного формата. Щелкните **Сохранить** *<file>* **как** в меню **Файл** (где *<file>* — имя текущего элемента) либо нажмите клавиши ALT+F, A в редакторе кода.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Позволяет сохранить экземпляр текущего элемента в указанном расположении и файле указанного формата. Щелкните **Сохранить** *<file>* **как** в меню **Файл** (где *<file>* — имя текущего элемента) либо нажмите клавиши ALT+F, A в редакторе кода.  
   
 ## <a name="central-panel"></a>Центральная панель  
 **Сохранить в**  
@@ -59,4 +58,3 @@ ms.lasthandoff: 06/22/2017
 [Дополнительные параметры сохранения](../../ssms/menu-help/advanced-save-options.md)  
 [Управление файлами с помощью кодировок](../../ssms/solution/manage-files-with-encoding.md)  
   
-

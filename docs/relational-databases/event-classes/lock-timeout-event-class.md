@@ -2,9 +2,12 @@
 title: "Класс событий Lock:Timeout | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,19 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - Timeout event class
 ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
-caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cab3380bdd9773435fc7a8c4348a992ef8b2aba7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: f50705fbc3639cc5301a1c2c4c621cff1e14ef94
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="locktimeout-event-class"></a>Класс событий Lock:Timeout
-  Класс событий Lock:Timeout указывает на то, что запрос на захват некоторого ресурса, например страницы, превысил время ожидания, поскольку данный ресурс был захвачен в блокирующем режиме другой транзакцией. Время ожидания определяется системной функцией @@LOCK_TIMEOUT и может быть задано инструкцией SET LOCK_TIMEOUT.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Класс событий Lock:Timeout указывает на то, что запрос на захват некоторого ресурса, например страницы, превысил время ожидания, поскольку данный ресурс был захвачен в блокирующем режиме другой транзакцией. Время ожидания определяется системной функцией @@LOCK_TIMEOUT и может быть задано инструкцией SET LOCK_TIMEOUT.  
   
  Класс событий Lock:Timeout используется для мониторинга выполнения условия истечения времени ожидания. Эти сведения полезны для определения влияния времени ожидания на производительность приложения, а также состава задействованных объектов. Можно просмотреть код приложения, изменяющий эти объекты, и определить возможные изменения для минимизации времени ожидания.  
   
@@ -32,17 +36,17 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="locktimeout-event-class-data-columns"></a>Столбцы данных класса событий Lock:Timeout  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |BinaryData|**image**|Идентификатор ресурса блокировки.|2|Да|  
 |ClientProcessID|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|**int**|Идентификатор базы данных, в которой истекло время ожидания блокировки. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных ServerName захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |DatabaseName|**nvarchar**|Имя базы данных, в которой истекло время ожидания.|35|Да|  
-|Длительность|**bigint**|Промежуток времени в микросекундах между моментом запроса на блокировку и истечением времени блокировки.|13|Да|  
+|Duration|**bigint**|Промежуток времени в микросекундах между моментом запроса на блокировку и истечением времени блокировки.|13|Да|  
 |EndTime|**datetime**|Время окончания события.|15|Да|  
-|EventClass|**int**|Тип события = 27.|27|Нет|  
-|EventSequence|**int**|Порядковый номер данного события в запросе.|51|Нет|  
+|EventClass|**int**|Тип события = 27.|27|нет|  
+|EventSequence|**int**|Порядковый номер данного события в запросе.|51|нет|  
 |GroupID|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IntegerData2|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|55|Да|  
@@ -56,7 +60,7 @@ ms.lasthandoff: 06/22/2017
 |ObjectID2|**bigint**|Идентификатор связанного объекта или сущности, если он доступен и применим.|56|Да|  
 |OwnerID|**int**|1 = TRANSACTION<br /><br /> 2 = CURSOR<br /><br /> 3 = SESSION<br /><br /> 4 = SHARED_TRANSACTION_WORKSPACE<br /><br /> 5 = EXCLUSIVE_TRANSACTION_WORKSPACE|58|Да|  
 |RequestID|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
+|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|нет|  
 |SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени Login1 и при выполнении инструкции под именем Login2, SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|**datetime**|Время начала события, если оно известно.|14|Да|  

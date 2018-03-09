@@ -1,36 +1,36 @@
 ---
-title: "Удаление столбца (табличные службы SSAS) | Документы Microsoft"
+title: "Удаление столбца | Документы Microsoft"
 ms.custom: 
-ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.date: 02/22/2017
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 703db83b-e554-450e-813e-23ad08c1cdad
-caps.latest.revision: 5
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c18504b3e6430807f124938b60d7f022a8050379
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fa8c3945f37f19c8ca14039084907bb8eb693f90
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="delete-a-column-ssas-tabular"></a>Удаление столбца (табличные службы SSAS)
-  В этом разделе описано, как удалить столбец из таблицы в табличной модели.  
+# <a name="delete-a-column"></a>Удаление столбца 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+В этой статье описывается удаление столбца из таблицы в табличной модели.  
   
 ## <a name="delete-a-model-table-column"></a>Удаление столбца таблицы модели  
   
 > [!NOTE]  
->  При удалении столбца из таблицы модели этот столбец не удаляется из определения запроса секции. Если удаляемый столбец является частью секции, необходимо удалить его вручную из определения запроса секции. Несоблюдение требования по удалению столбца из определения запроса секции приведет к тому, что запросы к этому столбцу и возврат данных будут выполняться, но столбец не будет заполняться в таблице модели во время операций обработки. Дополнительные сведения см. в разделе [Секции (табличные службы SSAS)](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+>  При удалении столбца из таблицы модели этот столбец не удаляется из определения запроса секции. Если удаляемый столбец является частью секции, необходимо удалить его вручную из определения запроса секции. Несоблюдение требования по удалению столбца из определения запроса секции приведет к тому, что запросы к этому столбцу и возврат данных будут выполняться, но столбец не будет заполняться в таблице модели во время операций обработки. Дополнительные сведения см. в разделе [секций](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
 #### <a name="to-delete-a-model-table-column"></a>Удаление столбца таблицы модели  
   
@@ -45,8 +45,7 @@ ms.lasthandoff: 09/01/2017
 3.  В диалоговом окне **Изменение свойств таблицы** в окне предварительного просмотра таблицы снимите флажок, соответствующий удаляемому столбцу, после чего нажмите кнопку **ОК**.  
   
 ## <a name="see-also"></a>См. также  
- [Добавление столбцов в таблицу (табличные службы SSAS)](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)   
- [Секции (табличные службы SSAS)](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
+ [Добавление столбцов в таблицу](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)   
+ [Секции](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
   
   
-

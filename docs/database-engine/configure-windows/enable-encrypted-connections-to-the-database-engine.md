@@ -1,12 +1,14 @@
 ---
 title: "Включение зашифрованных соединений для ядра СУБД | Документы Майкрософт"
 ms.custom: 
-ms.date: 09/11/2017
-ms.prod: sql-server-2016
+ms.date: 12/21/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +22,19 @@ helpviewer_keywords:
 - installing certificates
 - security [SQL Server], encryption
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
-caps.latest.revision: 48
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "48"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 9986789b1734fb8d5651a591876043754d94efbf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
-ms.openlocfilehash: a00e09f47685eba578296b8e390d3c7d15fc6953
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Включение зашифрованных соединений для ядра СУБД
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описано, как активировать зашифрованные соединения для экземпляра компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , указав сертификат для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Компьютеру сервера должен быть назначен сертификат, а компьютер клиента должен доверять корневому центру сертификации. Провизионирование — это процесс установки сертификата путем импорта сертификата в систему Windows.  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 09/12/2017
   
 2.  Чтобы сохранить файл сертификата в удобном расположении, выполните **мастер экспорта сертификатов**.  
   
-##  <a name="ConfigureServerConnections"></a> Настройка сервера на прием зашифрованных соединений  
+##  <a name="ConfigureServerConnections"></a> Настройка принудительного использования зашифрованных соединений на сервере  
   
 1.  В **диспетчере конфигурации SQL Server** разверните узел **Сетевая конфигурация SQL Server**, щелкните правой кнопкой мыши элемент **Протоколы для** *\<экземпляр сервера>* и выберите пункт **Свойства**.  
   
@@ -89,11 +90,18 @@ ms.lasthandoff: 09/12/2017
   
 4.  Перезапустите службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
+
+> [!NOTE]
+> Чтобы обеспечить безопасный обмен данными между клиентом и сервером, настройте клиент так, чтобы он запрашивал зашифрованные соединения. Дополнительные сведения приводятся [далее в этой статье](#client-request-encrypt-connect-23h).
+
+
+
 ### <a name="wildcard-certificates"></a>Групповые сертификаты  
 Начиная с версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client поддерживают групповые сертификаты. Другие клиенты могут их не поддерживать. Дополнительные сведения см. в документации клиента. Групповые сертификаты не выбираются с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Чтобы использовать групповой сертификат, нужно изменить раздел реестра `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` и ввести отпечаток сертификата без пробелов в качестве значения **Сертификат**.  
 > [!WARNING]  
 > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry_md.md)]  
-  
+
+<a name="client-request-encrypt-connect-23h"/>
 ##  <a name="ConfigureClientConnections"></a> Настройка клиента на прием зашифрованных соединений  
   
 1.  Скопируйте на компьютер клиента исходный сертификат или экспортированный файл сертификата.  
@@ -115,5 +123,4 @@ ms.lasthandoff: 09/12/2017
 ## <a name="see-also"></a>См. также:
 
 [Поддержка TLS 1.2 для Microsoft SQL Server](https://support.microsoft.com/kb/3135244)  
-
 

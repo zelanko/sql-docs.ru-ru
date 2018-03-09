@@ -3,27 +3,28 @@ title: "Подключения к базе данных Azure SQL (SybaseToSQL) 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1267aecb68c344b6de0fad2c7c129a0b6ab2205c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 76a29a448dfbbba4b8fc0771edf352545d361cf9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Подключения к базе данных Azure SQL (SybaseToSQL)
 Используйте подключение к базе данных SQL Azure-диалоговое окно для подключения к базе данных SQL Azure базы данных, которые требуется перенести.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 08/02/2017
 > [!IMPORTANT]  
 > SSMA для СУБД Sybase в базе данных SQL Azure не поддерживает подключение к базе данных master.  
   
-**Имя пользователя**  
+**User name**  
   
 Введите имя пользователя, который SSMA будет использоваться для подключения к базе данных в базе данных SQL Azure  
   
@@ -73,4 +74,3 @@ SSMA рекомендует зашифрованное подключение к
   
     2.  **Размер базы данных:** выбрать размер базы данных, который необходимо создать в базе данных SQL Azure учетной записи.  
   
-

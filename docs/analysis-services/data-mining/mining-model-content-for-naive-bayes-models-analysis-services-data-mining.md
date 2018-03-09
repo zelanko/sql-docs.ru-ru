@@ -2,12 +2,13 @@
 title: "Модель интеллектуального анализа данных для моделей упрощенного алгоритма Байеса (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - naive bayes algorithms [Analysis Services]
 - mining model content, naive bayes models
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
-caps.latest.revision: 16
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ea4b76bc06098491a1ef7025b326cc254a5e1cdc
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f7786d6273c7941863b413f384ea8eb86bbbe84e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей упрощенного алгоритма Байеса (службы Analysis Services — интеллектуальный анализ данных)
-  В этом разделе описано содержимое модели интеллектуального анализа данных, характерное для моделей, в которых используется упрощенный алгоритм Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Объяснение способов интерпретации статистики и описание структуры, общей для всех типов моделей, а также общие определения терминов, связанных с содержимым моделей интеллектуального анализа данных, см. в разделе [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В этом разделе описано содержимое модели интеллектуального анализа данных, характерное для моделей, в которых используется упрощенный алгоритм Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Объяснение способов интерпретации статистики и описание структуры, общей для всех типов моделей, а также общие определения терминов, связанных с содержимым моделей интеллектуального анализа данных, см. в разделе [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-naive-bayes-model"></a>Основные сведения о структуре модели упрощенного алгоритма Байеса  
  Модель упрощенного алгоритма Байеса состоит из одного родительского узла, который представляет модель и ее метаданные, и нескольких независимых деревьев, расположенных под родительским узлом и представляющих выбранные прогнозируемые атрибуты. Помимо деревьев для атрибутов, каждая модель содержит один узел граничной статистики (NODE_TYPE = 26), в котором приведена описательная статистика по набору обучающих вариантов. Дополнительные сведения см. в разделе [Данные в узле граничной статистики](#bkmk_margstats).  
@@ -44,7 +45,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="model-content-for-a-naive-bayes-model"></a>Содержимое модели упрощенного алгоритма Байеса  
  В этом разделе представлено подробное описание с примерами только для тех столбцов модели интеллектуального анализа данных, которые имеют отношение к моделям упрощенного алгоритма Байеса.  
   
- Сведения о столбцах общего назначения в наборе строк схемы, таких как MODEL_CATALOG и MODEL_NAME, которые здесь не рассмотрены, а также объяснение терминологии моделей интеллектуального анализа данных см. в разделе [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+ Сведения о столбцах общего назначения в наборе строк схемы, таких как MODEL_CATALOG и MODEL_NAME, которые здесь не рассмотрены, а также объяснение терминологии моделей интеллектуального анализа данных см. в разделе [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Имя базы данных, в которой хранится модель.  
@@ -269,7 +270,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0.472934117|4|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|1|4216|0.527065883|4|  
   
- В этих результатах значение столбца SUPPORT сообщает число клиентов с указанным семейным положением, которые приобрели велосипед. Столбец PROBABILITY содержит вероятность каждого значения атрибута, рассчитанную только для этого узла. Общие определения терминов, используемых в таблице NODE_DISTRIBUTION, см. в разделе [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+ В этих результатах значение столбца SUPPORT сообщает число клиентов с указанным семейным положением, которые приобрели велосипед. Столбец PROBABILITY содержит вероятность каждого значения атрибута, рассчитанную только для этого узла. Общие определения терминов, используемых в таблице NODE_DISTRIBUTION, см. в разделе [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ###  <a name="bkmk_margstats"></a> Данные в узле граничной статистики  
  В модели упрощенного алгоритма Байеса вложенная таблица для узла граничной статистики содержит распределение значений для всего набора обучающих данных. Например, в следующей таблице содержится частичный список статистических данных из вложенной таблицы NODE_DISTRIBUTION для модели `TM_NaiveBayes`.  
@@ -294,10 +295,9 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
  Значение **Missing** (VALUE_TYPE = 1) добавляется к каждому входному и выходному атрибуту, представляя возможные значения, которые не присутствовали в обучающих данных. Важно различать строку «missing» и значение **Missing** по умолчанию. Дополнительные сведения см. в разделе [Отсутствующие значения (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Содержимое модели интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md)   
- [Упрощенный алгоритм Байеса (Майкрософт)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  
+ [Алгоритма Байеса (Майкрософт)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  
   
   
-

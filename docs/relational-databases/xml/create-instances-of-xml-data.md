@@ -2,9 +2,12 @@
 title: "Создание экземпляров XML-данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -19,19 +22,20 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-caps.latest.revision: 40
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d02273b721b1b75b7bd134c8cd50c94ed2e9848d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 1fd7895dae9dd1e1008c848b471cf02b0b53953a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-instances-of-xml-data"></a>Создание экземпляров XML-данных
-  В этом разделе описывается формирование XML-экземпляров.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+В этом разделе описывается формирование XML-экземпляров.  
   
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]сформировать XML-экземпляры можно следующими способами:  
   
@@ -71,11 +75,11 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
  Синтаксический XML-анализатор отменяет незначащие пробелы при преобразовании строковых данных в XML по умолчанию, если выполняется одно из следующих условий:  
   
--   `The xml:space` не определен на элементе или его родителях;  
+-   атрибут `xml:space` не определен в элементе или его предках;  
   
 -   атрибут `xml:space` , действующий на элемент или на одного из его родителей, имеет значение по умолчанию.  
   
- Например:  
+ Пример:  
   
 ```  
 declare @x xml  
@@ -89,7 +93,7 @@ select @x
 <root><child/></root>  
 ```  
   
- Однако можно изменить это поведение. Чтобы сохранить пробел для экземпляра xml DT, необходимо использовать оператор CONVERT и его дополнительный параметр *style* , установленный в значение 1. Например:  
+ Однако можно изменить это поведение. Чтобы сохранить пробел для экземпляра xml DT, необходимо использовать оператор CONVERT и его дополнительный параметр *style* , установленный в значение 1. Пример:  
   
 ```  
 SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)  
@@ -137,7 +141,7 @@ select @x
 ```  
   
 ## <a name="using-the-select-statement-with-a-for-xml-clause"></a>Использование инструкции SELECT с предложением FOR XML  
- Чтобы получить результаты в виде XML, можно использовать предложение FOR XML в инструкции SELECT. Например:  
+ Чтобы получить результаты в виде XML, можно использовать предложение FOR XML в инструкции SELECT. Пример:  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -187,7 +191,7 @@ go
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает экземпляры типа данных **xml** клиенту в результате выполнения различных серверных конструкций, таких как запросы FOR XML с директивой TYPE или запросы, в которых тип данных **xml** используется для возвращения XML из столбцов, переменных и выходных параметров SQL. В коде клиентского приложения поставщик ADO.NET требует, чтобы информация типа данных **xml** отправлялась сервером в двоичном представлении. Однако в запросах FOR XML без директивы TYPE XML-данные возвращаются в строковом формате. В любом случае поставщик клиента всегда будет иметь возможность обрабатывать XML-данные в любом из форматов.  
   
 ## <a name="using-constant-assignments"></a>Использование постоянных назначений  
- Строковая константа может быть использована там, где ожидается экземпляр **xml** -типа. Это то же самое, что и неявное приведение (CAST) строки в XML. Например:  
+ Строковая константа может быть использована там, где ожидается экземпляр **xml** -типа. Это то же самое, что и неявное приведение (CAST) строки в XML. Пример:  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -211,9 +215,9 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 ## <a name="using-bulk-load"></a>Использование массовой загрузки  
  Улучшенная функциональность [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md) позволяет произвести массовую загрузку XML-документов в базу данных. Можно выполнить массовую загрузку XML-экземпляров из файлов в **xml** -столбец базы данных. Дополнительные сведения см. в статье [Примеры массового импорта и экспорта XML-документов (SQL Server)](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md). Дополнительные сведения о загрузке XML-документов см. в статье [Загрузка XML-данных](../../relational-databases/xml/load-xml-data.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Получение и запрос XML-данных](../../relational-databases/xml/retrieve-and-query-xml-data.md)|Описывает компоненты экземпляров XML, не фиксируемых при сохранении экземпляров в базах данных.|  
   

@@ -2,9 +2,12 @@
 title: "Создание таблицы (SQL граф) | Документы Microsoft"
 ms.custom: 
 ms.date: 05/04/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,21 +34,19 @@ helpviewer_keywords:
 - EDGE
 - SQL graph, CREATE TABLE statement
 ms.assetid: 
-caps.latest.revision: 1
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c32a8c4f683f20c4384089c1d2552614090f9b3d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: fe8ace1b8f8c55c14d4807514fcb1436f6966fed
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-
 # <a name="create-table-sql-graph"></a>Создание таблицы (граф SQL)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]   
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Создает новую таблицу graph SQL либо как `NODE` или `EDGE` таблицы. 
   
@@ -68,13 +69,13 @@ CREATE TABLE
 ## <a name="arguments"></a>Аргументы  
 Этот документ описывает только аргументы, относящиеся к SQL graph. Полный список и описание поддерживаемых аргументов см. в разделе [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
 
- *имя_базы_данных*    
+ *database_name*    
  Имя базы данных, в которой создается таблица. *database_name* необходимо указать имя существующей базы данных. Если не указан, *имя_базы_данных* значения по умолчанию для текущей базы данных. Имя входа для текущего соединения должны быть связаны с Идентификатором пользователя, существующего в базы данных, указанной *имя_базы_данных*, и этот пользователь должен обладать разрешениями CREATE TABLE.  
   
  *schema_name*    
  Имя схемы, которой принадлежит новая таблица.  
   
- *имя_таблицы*    
+ *table_name*    
  — Это имя узла или края таблицы. Имена таблиц должны соответствовать правилам для [идентификаторы](../../relational-databases/databases/database-identifiers.md). *имя_таблицы* не может превышать 128 символов, за исключением имен локальных временных таблиц (имена с префиксом знак номера (#)), не должна превышать 116 символов.  
   
  УЗЕЛ   
@@ -83,7 +84,7 @@ CREATE TABLE
  EDGE  
  Создает краевую таблицу.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Создание временной таблицы, узел или краевой таблице не поддерживается.  
 
 Создание узла или край таблицы как временная таблица не поддерживается.
@@ -124,9 +125,8 @@ CREATE TABLE
 ```
 
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [INSERT (SQL граф)](../../t-sql/statements/insert-sql-graph.md)]  
  [График обработка с помощью SQL Server 2017 г.](../../relational-databases/graphs/sql-graph-overview.md)
-
 

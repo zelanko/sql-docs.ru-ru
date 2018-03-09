@@ -1,12 +1,14 @@
 ---
 title: "Транзакции — группы доступности AlwaysOn и зеркальное отображение баз данных | Документы Майкрософт"
 ms.custom: 
-ms.date: 07/06/2017
-ms.prod: sql-server-2016
+ms.date: 11/01/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - troubleshooting [SQL Server], cross-database transactions
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 25e9efc5d7ffb6d4d0c09cc88e19671ed7f7b043
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bc86ef8e495bacaaaebf2470306b25d38d5158e5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Транзакции — группы доступности AlwaysOn и зеркальное отображение баз данных
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В этом разделе описываются транзакции между базами данных и распределенные транзакции для групп доступности AlwaysOn и зеркального отображения базы данных.  
 
@@ -55,7 +56,7 @@ SQL Server 2017 поддерживает распределенные транз
 Межбазовые транзакции также не поддерживаются для зеркального отображения базы данных.  
   
 ##  <a name="dtcsupport"></a> SQL Server 2016: поддержка распределенных транзакций  
-Распределенные транзакции поддерживаются для групп доступности. Это относится к распределенным транзакциям между базами данных, размещенными в двух разных экземплярах SQL Server, и к распределенным транзакциям между SQL Server и другим сервером, совместимым с DTC.  
+Распределенные транзакции поддерживаются для групп доступности. Это относится к распределенным транзакциям между базами данных, размещенными в двух разных экземплярах SQL Server, и к распределенным транзакциям между SQL Server и другим сервером, соответствующим DTC.  
  
 Координатор распределенных транзакций (Майкрософт) (MSDTC) — это служба Windows, которая предоставляет инфраструктуру транзакций для распределенных систем. MSDTC позволяет клиентским приложениям включать несколько источников данных в одну транзакцию, которая затем фиксируется на всех серверах, включенных в транзакцию. Например, с помощью MSDTC можно координировать транзакции, которые охватывают несколько баз данных на разных серверах.
 
@@ -65,7 +66,7 @@ SQL Server 2017 поддерживает распределенные транз
   
 -   Группы доступности должны быть запущены на Windows Server 2016 или Windows Server 2012 R2. Для Windows Server 2012 R2 необходимо установить обновление KB3090973, доступное по адресу [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973).  
   
--   Availability groups must be created with the **CREATE AVAILABILITY GROUP** и предложения **WITH DTC_SUPPORT = PER_DB** . Сейчас невозможно изменить существующую группу доступности.  
+-   Группы доступности необходимо создать с помощью команды **CREATE AVAILABILITY GROUP** и предложения **WITH DTC\_SUPPORT = PER_DB**. Сейчас невозможно изменить существующую группу доступности.  
 
 - Все экземпляры SQL Server, которые будут входить в группу доступности, должна быть экземплярами SQL Server 2016 или более поздней версии.
  
@@ -93,8 +94,7 @@ SQL Server 2017 поддерживает распределенные транз
 > [!NOTE]  
 >  Применение зеркального отображения базы данных или использование групп доступности с помощью DTC способами, которые не утверждены в этом разделе, не поддерживается.  Это не означает, что компоненты продукта, не связанные с DTC, также не поддерживаются. Однако проблемы в связи с ненадлежащим использованием распределенных транзакций не будут устранены.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="next-steps"></a>Следующие шаги  
  [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   
-

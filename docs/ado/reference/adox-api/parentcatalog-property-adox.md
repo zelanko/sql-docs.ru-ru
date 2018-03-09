@@ -3,7 +3,7 @@ title: "Свойство ParentCatalog (ADOX) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -43,17 +43,16 @@ f1_keywords:
 helpviewer_keywords:
 - ParentCatalog property [ADOX]
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c255beddbc240f30f51642a0e8fe4fd785cf88bb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f5229c37299494ca2b3b31e3ca3e0d091c93d96a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parentcatalog-property-adox"></a>Свойство ParentCatalog (ADOX)
 Указывает каталог родительского объекта таблицы, пользователя или столбца для предоставления доступа к свойствам конкретного поставщика.  
@@ -61,7 +60,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) объекта. Установка **ParentCatalog** открытому **каталога** разрешает доступ к свойствам определенного поставщика перед добавлением, таблицу или столбец для **каталога** коллекции.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Некоторые поставщики данных допускает значения свойства поставщика для записи только в момент создания: то есть, когда таблицы или столбца добавляется к его **каталога** коллекции. Для доступа к этим свойствам перед добавлением эти объекты, и **каталога**, укажите **каталога** в **ParentCatalog** свойства первого.  
   
  Ошибка возникает, когда таблица или столбец добавляется к другому **каталога** чем **ParentCatalog**.  
@@ -70,9 +69,8 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[Объект столбца (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Объект таблицы (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|  
-|[Объект пользователя (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)||  
+|[Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|  
+|[Объект User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)||  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства ParentCatalog (Visual Basic)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)
-

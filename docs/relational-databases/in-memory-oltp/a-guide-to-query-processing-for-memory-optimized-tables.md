@@ -2,28 +2,30 @@
 title: "Руководство по обработке запросов к таблицам, оптимизированных для памяти | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-caps.latest.revision: 26
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a09967430cc92c19a48d7559b3f0783a71f4bb6e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ee2351e74989e9a574b591366af4a8764b89dea0
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Руководство по обработке запросов для таблиц, оптимизированных для памяти
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]In-Memory OLTP вводятся оптимизированные для памяти таблицы и скомпилированные в собственном коде хранимые процедуры. В данной статье приводится обзор обработки запросов для таблиц, оптимизированных для памяти, и хранимых процедур, скомпилированных в собственном коде.  
   
@@ -48,7 +50,7 @@ ms.lasthandoff: 06/22/2017
   
  Мы рассмотрим две таблицы, Customer и Order. Следующий скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] содержит определения для этих двух таблиц и связанных индексов (в их традиционной форме для таблиц на диске):  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY,  
   ContactName nvarchar (30) NOT NULL   
@@ -71,13 +73,13 @@ GO
   
  Рассмотрим следующий запрос, который выполняет соединение таблиц Customer и Order и возвращает идентификатор заказа и связанную с ним информацию о клиенте:  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
  Предполагаемый план выполнения в соответствии с отображением в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] следующий:  
   
- ![План запроса для соединения дисковых таблиц.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.gif "Query plan for join of disk-based tables.")  
+ ![План запроса для соединения дисковых таблиц.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.gif "План запроса для соединения дисковых таблиц.")  
 План запроса для соединения дисковых таблиц.  
   
  О данном плане запроса:  
@@ -90,13 +92,13 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Рассмотрим немного другую версию этого запроса, которая возвращает все строки из таблицы Order, а не только OrderID.  
   
-```tsql  
+```sql  
 SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
  Предполагаемый план выполнения для этого запроса:  
   
- ![план запроса для хэш-соединений дисковых таблиц.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.gif "Query plan for a hash join of disk-based tables.")  
+ ![План запроса для хэш-соединений дисковых таблиц.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.gif "План запроса для хэш-соединений дисковых таблиц.")  
 план запроса для хэш-соединений дисковых таблиц.  
   
  В этом запросе строки из таблицы заказов получаются с помощью кластеризованного индекса. Физический оператор **Hash Match** теперь используется для **Inner Join**. Кластеризованный индекс в таблице Order не отсортирован по столбцу CustomerID, поэтому для **Merge Join** потребуется оператор сортировки, который повлияет на производительность запроса. Обратите внимание на относительную стоимость оператора **Hash Match** (75 %) по сравнению с затратами оператора **Merge Join** в предыдущем примере (46 %). Оптимизатором также рассматривался оператор **Hash Match** из предыдущего примера, но оказалось, что оператор **Merge Join** обеспечивает лучшую производительность.  
@@ -104,7 +106,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Обработка запросов для дисковых таблиц  
  На следующей диаграмме показан поток обработки запросов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для нерегламентированных запросов:  
   
- ![Канал обработки запросов в SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.gif "SQL Server query processing pipeline.")  
+ ![Конвейер обработки запросов в SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.gif "Конвейер обработки запросов в SQL Server.")  
 Канал обработки запросов в SQL Server.  
   
  В этом сценарии.  
@@ -128,7 +130,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  Интерпретируемый код [!INCLUDE[tsql](../../includes/tsql-md.md)] можно использовать для доступа к таблицам, оптимизированных для памяти, и к дисковым таблицам. На следующей диаграмме показана обработка запросов для доступа с помощью интерпретируемого кода [!INCLUDE[tsql](../../includes/tsql-md.md)] к таблицам, оптимизированным для памяти.  
   
- ![Канал обработки запросов для интерпретируемых инструкций tsql.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.gif "Query processing pipeline for interpreted tsql.")  
+ ![Конвейер обработки запросов для интерпретируемых инструкций tsql.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.gif "Конвейер обработки запросов для интерпретируемых инструкций tsql.")  
 Конвейер обработки запросов для доступа к оптимизированным для памяти таблицам с помощью интерпретируемого кода Transact-SQL.  
   
  Как показано на рисунке, конвейер обработки запросов в основном остается неизменным:  
@@ -143,7 +145,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  Следующий скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] содержит оптимизированные для памяти версии таблиц Order и Customer, использующих хэш-индексы:  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY NONCLUSTERED,  
   ContactName nvarchar (30) NOT NULL   
@@ -160,13 +162,13 @@ GO
   
  Тот же запрос, выполненный к таблицам, оптимизированным для памяти:  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
  Предполагаемый план:  
   
- ![План запроса для соединения таблиц, оптимизированных для памяти.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.gif "Query plan for join of memory optimized tables.")  
+ ![План запроса для соединения таблиц, оптимизированных для памяти.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.gif "План запроса для соединения таблиц, оптимизированных для памяти.")  
 План запроса для соединения таблиц, оптимизированных для памяти.  
   
  Изучите следующие отличия от плана для того же запроса к дисковым таблицам (рисунок 1):  
@@ -179,10 +181,10 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   Этот план содержит оператор **Hash Match** , а не **Merge Join**. Индексы в таблицах Order и Customer представляют собой хэш-индексы и, следовательно, не упорядочены. Оператор **Merge Join** потребовал бы добавления операторов сортировки, которые вызвали бы снижение производительности запроса.  
   
-## <a name="natively-compiled-stored-procedures"></a>Скомпилированные в собственном коде хранимые процедуры  
+## <a name="natively-compiled-stored-procedures"></a>скомпилированные в собственном коде хранимые процедуры  
  Скомпилированные в собственном коде хранимые процедуры — это хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] , скомпилированные в машинный код, а не интерпретируемые подсистемой выполнения запросов. Следующий скрипт создает скомпилированную в собственном коде хранимую процедуру, которая выполняет пример запроса (из раздела «Пример запроса»).  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_SampleJoin  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
@@ -207,7 +209,7 @@ END
 ### <a name="compilation-and-query-processing"></a>Компиляция и обработка запросов  
  На следующей диаграмме показан процесс компиляции для скомпилированных в собственном коде хранимых процедур:  
   
- ![Компиляция хранимых процедур в собственном коде.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.gif "Native compilation of stored procedures.")  
+ ![Компиляция хранимых процедур в собственном коде.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.gif "Компиляция хранимых процедур в собственном коде.")  
 Компиляция хранимых процедур в собственном коде.  
   
  Описание процесса  
@@ -224,12 +226,12 @@ END
   
  Вызов хранимой процедуры, скомпилированной в собственном коде, транслируется в вызов функции из библиотеки DLL.  
   
- ![Выполнение хранимых процедур, скомпилированных в собственном коде.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.gif "Execution of natively compiled stored procedures.")  
+ ![Выполнение хранимых процедур, скомпилированных в собственном коде.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.gif "Выполнение хранимых процедур, скомпилированных в собственном коде.")  
 Выполнение хранимых процедур, скомпилированных в собственном коде.  
   
  Описание вызова хранимой процедуры, скомпилированной в собственном коде:  
   
-1.  Пользователь выполняет инструкцию **EXEC***usp_myproc* .  
+1.  Пользователь выполняет инструкцию **EXEC***usp_myproc*.  
   
 2.  Средство синтаксического анализа извлекает имя и параметры хранимой процедуры.  
   
@@ -246,9 +248,9 @@ END
  Пробное сохранение параметров не используется для компиляции хранимых процедур, скомпилированных в собственном коде. Предполагается, что у всех параметров хранимой процедуры значения UNKNOWN (неизвестны). Как и интерпретируемые хранимые процедуры, скомпилированные в собственном коде хранимые процедуры также поддерживают указание **OPTIMIZE FOR** . Дополнительные сведения см. в разделе [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Получение плана выполнения запроса для скомпилированных в собственном коде хранимых процедур  
- План выполнения запроса для скомпилированной в собственном коде хранимой процедуры можно получить с помощью **предполагаемого плана выполнения** в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]или с помощью параметра SHOWPLAN_XML в [!INCLUDE[tsql](../../includes/tsql-md.md)]. Например:  
+ План выполнения запроса для скомпилированной в собственном коде хранимой процедуры можно получить с помощью **предполагаемого плана выполнения** в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]или с помощью параметра SHOWPLAN_XML в [!INCLUDE[tsql](../../includes/tsql-md.md)]. Пример:  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC dbo.usp_myproc  
@@ -267,11 +269,11 @@ GO
 |SELECT|`SELECT OrderID FROM dbo.[Order]`||  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`||  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`||  
-|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
+|Delete|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
 |Compute Scalar|`SELECT OrderID+1 FROM dbo.[Order]`|Этот оператор используется как для встроенных функций, так и для преобразований типов. Не все функции и преобразования типов поддерживаются в хранимых процедурах, скомпилированных в собственном коде.|  
 |Соединение вложенными циклами|`SELECT o.OrderID, c.CustomerID FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|Nested Loops — единственный оператор соединения, который поддерживается в хранимых процедурах, скомпилированных в собственном коде. Все планы, которые содержат соединения, будут использовать оператор Nested Loops, даже если план одного и того же запроса, выполненного как интерпретируемый код [!INCLUDE[tsql](../../includes/tsql-md.md)] , содержит хэш-соединение или соединение слиянием.|  
-|Сортировка|`SELECT ContactName FROM dbo.Customer ORDER BY ContactName`||  
-|В начало|`SELECT TOP 10 ContactName FROM dbo.Customer`||  
+|Sort|`SELECT ContactName FROM dbo.Customer ORDER BY ContactName`||  
+|TOP|`SELECT TOP 10 ContactName FROM dbo.Customer`||  
 |Оператор Top-sort|`SELECT TOP 10 ContactName FROM dbo.Customer  ORDER BY ContactName`|Выражение **TOP** (количество возвращаемых строк) не может превышать 8000 строк. Если в запросе есть операторы объединения и агрегирования, то строк должно быть еще меньше. Соединения и агрегатные выражения обычно уменьшают количество строк для сортировки в сравнении с количеством строк в базовых таблицах.|  
 |Статистическое выражение потока|`SELECT count(CustomerID) FROM dbo.Customer`|Обратите внимание, что оператор Hash Match для статической обработки не поддерживается. Поэтому все агрегаты в скомпилированных в собственном коде хранимых процедурах используют оператор Stream Aggregate, даже если план для этого же запроса в интерпретируемом [!INCLUDE[tsql](../../includes/tsql-md.md)] использует оператор Hash Match.|  
   
@@ -310,4 +312,3 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
  [Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
-

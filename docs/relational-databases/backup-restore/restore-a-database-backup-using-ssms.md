@@ -2,11 +2,13 @@
 title: "Восстановление резервной копии базы данных с помощью среды SSMS | Документация Майкрософт"
 ms.custom: 
 ms.date: 11/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - database backups [SQL Server], full backups
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
-caps.latest.revision: 79
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "79"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: d51837413865aedb9b4610b045355556634ea6df
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 4557b2183cf0043050cbf240b837b53796150653
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Этот раздел содержит сведения о восстановлении полной резервной копии базы данных с использованием среды SQL Server Management Studio.    
        
@@ -79,7 +80,7 @@ ms.lasthandoff: 09/27/2017
             **Добавить**  
             В зависимости от типа носителя данных, выбранного в поле **Носитель резервной копии** , при нажатии кнопки **Добавить** открывается одно из следующих диалоговых окон. (Если список в поле со списком **Тип носителя резервной копии** заполнен, кнопка **Добавить** недоступна.)
 
-            |Тип носителя данных|.|Описание|    
+            |Тип носителя данных|.|Description|    
             |----------------|----------------|-----------------|    
             |**Файл**|**Локальный файл резервной копии**|В данном диалоговом окне можно выбрать локальный файл из дерева или указать удаленный файл, используя его полное имя в формате UNC. Дополнительные сведения см. в разделе [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md).|    
             |**Устройство**|**Выбор устройства резервного копирования**|В данном диалоговом окне из списка можно выбрать логические устройства резервного копирования, определенные на экземпляре сервера.|    
@@ -286,4 +287,3 @@ ms.lasthandoff: 09/27/2017
  [Восстановление базы данных (страница "Общие")](../../relational-databases/backup-restore/restore-database-general-page.md)    
     
   
-

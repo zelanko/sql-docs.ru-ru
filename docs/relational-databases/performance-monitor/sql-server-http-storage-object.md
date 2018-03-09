@@ -2,30 +2,31 @@
 title: "SQL Server, HTTP_STORAGE_OBJECT | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
-caps.latest.revision: 7
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "7"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ea717edbbed863b262617e457ac29fc3d45a4be4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: eeac17b8e62ca25f3f1257005f0911e603f91440
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-httpstorageobject"></a>SQL Server, HTTP_STORAGE_OBJECT
-  Объект производительности **SQLServer: HTTP_STORAGE_OBJECT** состоит из счетчиков производительности, которые контролируют учетную запись хранилища Windows Azure. С помощью функции [Файлы данных SQL Server в Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) можно сохранять файлы базы данных в больших двоичных объектах хранилища Windows Azure. Этот объект производительности обрабатывает каждую учетную запись хранилища Windows Azure как отдельный диск.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект производительности **SQLServer:HTTP_STORAGE_OBJECT** состоит из счетчиков производительности, которые контролируют учетную запись хранения Microsoft Azure. С помощью функции [Файлы данных SQL Server в Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) можно сохранять файлы базы данных в больших двоичных объектах хранилища Windows Azure. Этот объект производительности обрабатывает каждую учетную запись хранилища Windows Azure как отдельный диск.  
   
-|Имя счетчика|Описание|  
+|Имя счетчика|Description|  
 |------------------|-----------------|  
 |**Прочитано Байт/с**|Объем данных, передаваемый из хранилища HTTP в секунду во время операций чтения.|  
 |**Скорость записи (Байт/с)**|Объем данных, передаваемый из хранилища HTTP в секунду во время операций записи.|  
@@ -57,4 +58,3 @@ ms.lasthandoff: 06/22/2017
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

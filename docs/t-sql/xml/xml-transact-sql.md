@@ -3,8 +3,11 @@ title: "XML (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - xml data type [SQL Server], about xml data type
 ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
-caps.latest.revision: 35
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9e85eb245cf9d53f7d38579928a5145828797002
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 6b9d3c8c512611ea9d8d0482acb7fd848c04629b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xml-transact-sql"></a>xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Тип данных, в котором хранятся XML-данные. Можно хранить **xml** экземпляров в столбце или переменной **xml** типа.  
   
@@ -55,7 +57,7 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
  *xml_schema_collection*  
  Имя коллекции XML-схем. Чтобы создать типизированный **xml** столбца или переменной, при необходимости можно указать имя коллекции схем XML. Дополнительные сведения о типизированном и нетипизированном XML, см. в разделе [сравнение типизированного XML нетипизированного XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Размер хранимого представления **xml** экземпляры типа данных не может превышать 2 гигабайт (ГБ).  
   
  Аспекты CONTENT и DOCUMENT применяются только к типизованным XML. Дополнительные сведения см. [сравнение типизированного XML нетипизированного XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
@@ -71,11 +73,10 @@ SELECT @y;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Преобразование типов данных &#40; компонент Database Engine &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [методов типа данных xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Справочник по языку XQuery (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Сохранение записей в формате XML | Докуме
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - XML persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
-caps.latest.revision: 17
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 538905bce39a603b6bda5f1164ae52c70ee2be24
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a45c434bdcf551e97eb97f85997ab73c883b599c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="persisting-records-in-xml-format"></a>Сохранение записей в формате XML
 Формату ADTG **записей** сохраняемости в формате XML реализуется с помощью поставщика сохраняемости Microsoft OLE DB. Этот поставщик создает однопроходный, только для чтения строк из сохраненных XML-файл или поток, содержащий данные схемы ADO. Аналогичным образом, может потребоваться ADO **записей**, создают XML-документ и сохранить его в файл или любой объект, реализующий COM **IStream** интерфейса. (На самом деле он просто еще один пример объекта, который поддерживает **IStream**.) 2.5 и более поздних версиях ADO использует для синтаксического анализа Microsoft XML (MSXML) для загрузки XML в **записей**; поэтому msxml.dll не требуется.  
@@ -78,7 +77,7 @@ rs.Save "btitles.sav", adPersistXML
   
  Этот раздел содержит следующие подразделы.  
   
--   [Формат хранения XML](../../../ado/guide/data/xml-persistence-format.md)  
+-   [Формат сохраняемости XML](../../../ado/guide/data/xml-persistence-format.md)  
   
 -   [Пространства имен](../../../ado/guide/data/namespaces.md)  
   
@@ -86,15 +85,14 @@ rs.Save "btitles.sav", adPersistXML
   
 -   [Раздел данных](../../../ado/guide/data/data-section.md)  
   
--   [Иерархические наборы записей в формате XML](../../../ado/guide/data/hierarchical-recordsets-in-xml.md)  
+-   [Иерархические наборы записей в XML](../../../ado/guide/data/hierarchical-recordsets-in-xml.md)  
   
--   [Динамический набор записей свойств в XML](../../../ado/guide/data/recordset-dynamic-properties-in-xml.md)  
+-   [Динамические свойства набора записей в XML](../../../ado/guide/data/recordset-dynamic-properties-in-xml.md)  
   
 -   [Преобразования XSLT](../../../ado/guide/data/xslt-transformations.md)  
   
--   [Сохранение объекта XML DOM](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
+-   [Сохранение в объект DOM XML](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
   
--   [Вопросы безопасности XML](../../../ado/guide/data/xml-security-considerations.md)  
+-   [Вопросы безопасности при работе с XML](../../../ado/guide/data/xml-security-considerations.md)  
   
--   [Сценарий сохраняемости XML набора записей](../../../ado/guide/data/xml-recordset-persistence-scenario.md)
-
+-   [Сценарий сохраняемости набора записей XML](../../../ado/guide/data/xml-recordset-persistence-scenario.md)

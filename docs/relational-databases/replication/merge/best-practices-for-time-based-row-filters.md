@@ -2,29 +2,30 @@
 title: "Рекомендации для фильтров строк на основе времени | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- best practices
+helpviewer_keywords: best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20d358387ae5eb342519c3f6e388fe77279bbe26
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "15"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: ecfd4a72f00c5b8199f7db64ec0c9175c2487e7e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Оптимальные методы для фильтров строк на основе времени
-  Пользователям приложений часто требуется подмножество данных из таблицы, относящихся к определенному времени. Например, менеджеру по продажам могут понадобиться данные заказов за последнюю неделю, или планировщику событий требуются данные о событиях на следующей неделе. Во многих случаях приложения используют для этого запросы, содержащие функцию **GETDATE()** . Рассмотрим следующую инструкцию фильтра строк:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Пользователям приложений часто требуется подмножество данных из таблицы, относящихся к определенному времени. Например, менеджеру по продажам могут понадобиться данные заказов за последнюю неделю, или планировщику событий требуются данные о событиях на следующей неделе. Во многих случаях приложения используют для этого запросы, содержащие функцию **GETDATE()** . Рассмотрим следующую инструкцию фильтра строк:  
   
 ```  
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
@@ -97,6 +98,6 @@ GO
 ## <a name="see-also"></a>См. также:  
  [GETDATE (Transact-SQL)](../../../t-sql/functions/getdate-transact-sql.md)   
  [Реализация заданий](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
- [Параметризованные фильтры строк](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

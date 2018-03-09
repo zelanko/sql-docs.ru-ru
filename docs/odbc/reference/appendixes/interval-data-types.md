@@ -3,10 +3,12 @@ title: "Типы данных интервала | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,17 +27,16 @@ helpviewer_keywords:
 - C data types [ODBC], interval
 - interval fields [ODBC]
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 394bc2f0efdc061bdaaca1c3fbdacd13e9cbc944
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f1e19ac3f7c14326524ab7cbaa60f499c5d81e91
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interval-data-types"></a>Типы данных интервала
 Интервал определяется как разница между двумя значениями даты и времени. Интервалы времени выражаются в одном из двух способов. Один является *год месяц* интервала, который выражает интервалы в лет и целое число месяцев. Другой подход — *дневное время* интервала, который выражает интервалы в днях, минуты и секунды. Эти два типа интервалов отличаются друг от друга и не может одновременно, так как месяцев может иметь различное количество дней.  
@@ -64,13 +65,12 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующие подразделы.  
   
--   [Структура интервала C](../../../odbc/reference/appendixes/c-interval-structure.md)  
+-   [Структура Interval (C)](../../../odbc/reference/appendixes/c-interval-structure.md)  
   
--   [Точность типа данных Interval](../../../odbc/reference/appendixes/interval-data-type-precision.md)  
+-   [Точность интервального типа данных](../../../odbc/reference/appendixes/interval-data-type-precision.md)  
   
--   [Длина типа данных Interval](../../../odbc/reference/appendixes/interval-data-type-length.md)  
+-   [Длина интервального типа данных](../../../odbc/reference/appendixes/interval-data-type-length.md)  
   
--   [Интервал литералы](../../../odbc/reference/appendixes/interval-literals.md)  
+-   [Литералы интервала](../../../odbc/reference/appendixes/interval-literals.md)  
   
--   [Переопределение первое значение по умолчанию и точность секунды для типа данных Interval](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)
-
+-   [Переопределение заданной по умолчанию точности ведущего значения и точности значения долей секунды для интервальных типов данных](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)

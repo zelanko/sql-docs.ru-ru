@@ -1,26 +1,28 @@
 ---
-title: "Поиск назначения RFC | Документы Microsoft"
+title: "Поиск назначения RFC | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c9db6a056a69d502b4a93b9575cb565da798adf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6ef3df6097c04767caf5d6aaf10f30f968460bbf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="look-up-rfc-destination"></a>Поиск назначения RFC
   Используйте диалоговое окно **Поиск назначения RFC** для поиска назначения RFC, определенного в системе SAP Netweaver BW. После открытия списка доступных назначений RFC выберите необходимое назначение и компонент заполнит связанные параметры необходимыми значениями.  
@@ -55,10 +57,9 @@ ms.lasthandoff: 08/03/2017
  **ID программы**  
  Просмотрите идентификатор программы, связанный с назначением RFC.  
   
-## <a name="see-also"></a>См. также  
- [Редактор источников SAP BW &#40; Страницы диспетчера соединений &#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
- [Редактор назначений SAP BW &#40; Страницы диспетчера соединений &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
- [Справка F1 по Microsoft Connector для SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+## <a name="see-also"></a>См. также:  
+ [Редактор источника SAP BW (страница "Диспетчер подключений")](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
+ [Редактор назначений SAP BW (страница "Диспетчер подключений")](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [Справка F1 по соединителю с SAP BW (Microsoft)](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

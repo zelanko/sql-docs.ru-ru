@@ -3,10 +3,12 @@ title: "Запросы с соединениями (визуальные инс�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,24 +20,23 @@ helpviewer_keywords:
 - Query Designer [SQL Server], joins
 - joins [SQL Server], queries
 ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 011d5fd28f4a5f5bab66fd6579c8e84f52a5989d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7ed79dcb5c61626c229f4d4c361764be1b1193e2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="query-with-joins-visual-database-tools"></a>Запросы с соединениями (визуальные инструменты для баз данных)
-Результат запроса может содержать данные из нескольких таблиц или табличных объектов. Чтобы соединить данные из нескольких возвращающих табличное значение объектов, используется оператор SQL JOIN.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Результат запроса может содержать данные из нескольких таблиц или табличных объектов. Чтобы соединить данные из нескольких возвращающих табличное значение объектов, используется оператор SQL JOIN.  
   
 Сведения о создании запросов с использованием нескольких таблиц см. в следующих разделах.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 [Изменение операторов соединения (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/modify-join-operators-visual-database-tools.md)  
 Заметим, что таблицы не могут быть соединены с помощью оператора «равно» (=).  
   
@@ -76,4 +77,3 @@ ms.lasthandoff: 08/18/2017
 [Определение критериев поиска (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 Содержит ссылки на разделы, в которых перечисляются различные типы критериев поиска и рассказывается об их применении.  
   
-

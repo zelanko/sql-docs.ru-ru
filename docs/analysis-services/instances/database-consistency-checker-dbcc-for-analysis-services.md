@@ -1,32 +1,31 @@
 ---
 title: "Базы данных проверка согласованности (DBCC) для служб Analysis Services | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
-caps.latest.revision: 15
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8348c7c3ee60d7032f9c8af373ce5b9e1a026f8f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2e8ecc3c51619c7f1ebbe5b109f0710500184a27
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Проверки согласованности базы данных (DBCC) для служб Analysis Services
-  DBCC обеспечивает проверку базы данных по требованию для многомерных и табличных баз данных в экземпляре служб Analysis Services. Команду DBCC можно выполнить в окне запроса многомерных выражений или XMLA в SQL Server Management Studio (SSMS). Отслеживать выходные данные DBCC можно в сеансах SQL Server Profiler или xEvent в среде SSMS.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+DBCC обеспечивает проверку базы данных по требованию для многомерных и табличных баз данных в экземпляре служб Analysis Services. Команду DBCC можно выполнить в окне запроса многомерных выражений или XMLA в SQL Server Management Studio (SSMS). Отслеживать выходные данные DBCC можно в сеансах SQL Server Profiler или xEvent в среде SSMS.  
 Команда принимает определение объекта и возвращает пустой результирующий набор или подробные сведения об ошибке, если объект поврежден.   Прочитав эту статью, вы узнаете, как выполнить команду, интерпретировать результаты и решить возникшие проблемы.  
   
  Для табличных баз данных проверки согласованности с помощью DBCC эквивалентны встроенной проверке, которая выполняется автоматически при каждой перезагрузке, синхронизации и восстановлении базы данных.  Напротив, проверки согласованности для многомерных баз данных происходят только при запуске средства DBCC по требованию.  
@@ -174,7 +173,7 @@ Execution complete
   
 4.  В SQL Server Profiler действия DBCC можно идентифицировать по событиям **Command** , имеющим подкласс событий DBCC:  
   
-     ![службы SSAS dbcc профилировщик eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "ssas dbcc профилировщик eventsubclass")  
+     ![ssas-dbcc-profiler-eventsubclass](../../analysis-services/instances/media/ssas-dbcc-profiler-eventsubclass.PNG "ssas-dbcc-profiler-eventsubclass")  
   
      Код события 32 указывает на выполнение команды DBCC.  
   
@@ -226,8 +225,8 @@ Execution complete
 ||||  
 |-|-|-|  
 |**Объект**|**Описание проверки DBCC**|**Ошибка при сбое**|  
-|База данных|Проверка количества таблиц в базе данных.  Значение меньше нуля означает повреждение.|Имеется повреждение на уровне хранилища. Коллекция таблиц в базе данных "%{parent/}" повреждена.|  
-|База данных|Проверка внутренней структуры для отслеживания ссылочной целостности и вывод ошибки, если размер неправильный.|Файлы базы данных не прошли проверку согласованности.|  
+|база данных|Проверка количества таблиц в базе данных.  Значение меньше нуля означает повреждение.|Имеется повреждение на уровне хранилища. Коллекция таблиц в базе данных "%{parent/}" повреждена.|  
+|база данных|Проверка внутренней структуры для отслеживания ссылочной целостности и вывод ошибки, если размер неправильный.|Файлы базы данных не прошли проверку согласованности.|  
 |Таблица|Проверка внутреннего значения, используемого для определения типа таблицы: таблица фактов или таблица измерений.  Значение, которое находится за пределами известного диапазона, означает повреждение.|Сбой проверок соответствия базы данных (DBCC) при проверке статистики таблицы.|  
 |Таблица|Проверка соответствия количества секций в сопоставлении сегментов для таблицы количеству секций, определенных для таблицы.|Имеется повреждение на уровне хранилища. Коллекция секций в таблице "%{parent/}" повреждена.|  
 |Таблица|Если табличная база данных была создана или импортирована из PowerPivot для Excel 2010 и включает несколько секций, возникает ошибка, поскольку поддержка секций была добавлена в более поздней версии и это является признаком повреждения.|Сбой проверок соответствия базы данных (DBCC) при проверке сопоставления сегментов.|  
@@ -312,4 +311,3 @@ Execution complete
  [Свойства сервера служб Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   
   
-

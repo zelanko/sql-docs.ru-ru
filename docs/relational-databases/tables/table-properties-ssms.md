@@ -2,11 +2,13 @@
 title: "Свойства таблицы (SSMS) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,19 +18,19 @@ f1_keywords:
 - sql12.SWB.SELECTCOLUMNS.F1
 - sql13.swb.tableproperties.filetable.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
-caps.latest.revision: 43
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e1bc425e913f88fe7becd220f2275bacf6b21340
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "43"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 4afb3c196e046c7f7517df5489c4c62f10da6ec2
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Данный раздел описывает свойства таблицы, отображаемые в диалоговом окне «Свойства таблицы» в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения по отображению этих свойств см. в разделе [Просмотр определения таблицы](../../relational-databases/tables/view-the-table-definition.md).  
   
@@ -103,7 +105,7 @@ ms.lasthandoff: 06/22/2017
  Дополнительные сведения об отслеживании изменений см. в статье [Об отслеживании изменений (SQL Server)](../../relational-databases/track-changes/about-change-tracking-sql-server.md).  
   
 ##  <a name="FileTable"></a> Страница FileTable  
- Отображаются свойства таблицы, относящиеся к таблицам FileTable. Дополнительные сведения см в статье [Таблицы FileTable (SQL Server)](../../relational-databases/blob/filetables-sql-server.md).  
+ Отображаются свойства таблицы, относящиеся к таблицам FileTable. Дополнительные сведения см в разделе [FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md).  
   
  **Параметры сортировки столбцов с именами в FileTable**  
  Параметры сортировки, применяемые к столбцу **Имя** в FileTable. Столбец **Name** содержит имена файлов и каталогов.  
@@ -145,7 +147,7 @@ ms.lasthandoff: 06/22/2017
   
  Если таблица не содержит данных FILESTREAM, то это поле пусто.  
   
-### <a name="general"></a>Общие сведения  
+### <a name="general"></a>Общие  
  **Включен формат хранения Vardecimal**  
  Если задано **True**, это доступное только для чтения значение указывает, что типы данных **decimal** и **numeric** хранятся в формате vardecimal. Изменить его можно параметром **vardecimal storage format** хранимой процедуры [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Формат хранения Vardecimal устарел. Вместо этого используйте сжатие ROW.  
   

@@ -2,9 +2,12 @@
 title: "Уведомления о событиях | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: service-broker
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -13,19 +16,20 @@ helpviewer_keywords:
 - event notifications, about
 - events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
-caps.latest.revision: 18
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 01d42e113fabb39353971749462c144374e470fe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 8590e3177aefa3889743069c8b69b63ec5f93953
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="event-notifications"></a>Уведомления о событиях
-  Уведомления о событии отправляют данные о событиях в службу [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Уведомления о событиях выполняются в ответ на множество инструкций языка определения данных (DDL) [!INCLUDE[tsql](../../includes/tsql-md.md)] и на события трассировки SQL; уведомления отправляют сведения об этих событиях службе компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Уведомления о событии отправляют данные о событиях в службу [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Уведомления о событиях выполняются в ответ на множество инструкций языка определения данных (DDL) [!INCLUDE[tsql](../../includes/tsql-md.md)] и на события трассировки SQL; уведомления отправляют сведения об этих событиях службе компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
   
  Уведомления о событиях можно использовать следующим образом.  
   

@@ -3,7 +3,7 @@ title: "Метод CreateObject (RDS) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: aeca3cd5d525a3712511a3d7fd59f82210c041e0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8697a45869d503a2c21dc61b2defed182b02b559
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createobject-method-rds"></a>Метод CreateObject (RDS)
 Создает прокси для целевого бизнес-объекта и возвращает указатель на него. Прокси-сервер пакеты и выполняет маршалинг данные заглушки стороне сервера для взаимодействия с бизнес-объект для отправки запросов и данных через Интернет. Для объектов в работе компонента без прокси-серверы используются, и предоставляется только указатель на объект.  
@@ -48,25 +47,24 @@ ms.lasthandoff: 09/09/2017
  *Объект*  
  Объектную переменную, результатом которого является объект, это тип, заданный в *ProgID*.  
   
- *Пространство данных*  
+ *DataSpace*  
  Объектную переменную, которая представляет [RDS. Пространство данных](../../../ado/reference/rds-api/dataspace-object-rds.md) объект, используемый для создания экземпляра объекта.  
   
- *Идентификатор progID*  
+ *ProgID*  
  Объект **строка** значение, содержащее программный идентификатор, указывающий серверные бизнес-объект, реализующий приложения бизнес-правила.  
   
  *awebsrvr* или *computername*  
  Объект **строка** значение, представляющее URL-адрес, идентифицирующий Internet Information Services (IIS) веб-сервере, где создается экземпляр бизнес-объекта сервера.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  *Протокол HTTP* — стандартные веб-протокол; *HTTPS* — безопасное веб-протокол. Используйте *протокол DCOM* при выполнении локальной сети без HTTP. *В процессе* протоколом является локальной библиотеки динамической компоновки (DLL); он не использует сеть.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект пространства данных (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
+ [Объект DataSpace (служба удаленных рабочих столов)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект DataFactory, метод запроса и пример метода CreateObject (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
  [Пространство данных объект и метод CreateObject примере (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)   
- [Метод CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)
-
+ [Метод CreateRecordset (служба удаленных рабочих столов)](../../../ado/reference/rds-api/createrecordset-method-rds.md)
 
 

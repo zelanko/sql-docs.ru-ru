@@ -2,29 +2,30 @@
 title: "Фильтрация строк таблицы | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.filtertablerows.f1
+f1_keywords: sql13.rep.newpubwizard.filtertablerows.f1
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 610fb6065c2261ae6f1e2c8627656b193cb5d456
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "25"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 7917c67c302800a23ed20c974115641f644b513f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filter-table-rows"></a>Фильтрация строк таблицы
-  Страница **Фильтрация строк таблицы** позволяет следующее.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Страница **Фильтрация строк таблицы** позволяет следующее:  
   
 -   Применить статические фильтры строк к статьям таблиц в моментальном снимке, в публикациях транзакций и в публикациях слиянием.  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 06/22/2017
  **Правка**  
  Выберите фильтр строк или фильтр соединения на панели фильтров и нажмите кнопку **Изменить** для запуска диалогового окна **Изменение фильтра** или **Изменение соединения** .  
   
- **Delete**  
+ **Удаление**  
  Выберите фильтр строк или фильтр соединения на панели фильтров и нажмите кнопку **Удалить** для его удаления.  
   
  **Найти таблицу**  
@@ -80,14 +81,14 @@ ms.lasthandoff: 06/22/2017
   
  Выберите узел ярлыка в этой панели и щелкните **Найти таблицу**. Панель развернется, и данная таблица будет выделена. Если нажать кнопку **Найти таблицу** без указания ссылки на узел, открывается диалоговое окно **Найти таблицу** .  
   
- **Фильтр**  
+ **Filter**  
  Содержит определение на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] для фильтра, выбранного на панели фильтров.  
   
 ## <a name="see-also"></a>См. также:  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Просмотр и изменение свойств публикации](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Фильтрация опубликованных данных](../../relational-databases/replication/publish/filter-published-data.md)   
- [Фильтры соединения](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Публикация данных и объектов базы данных](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

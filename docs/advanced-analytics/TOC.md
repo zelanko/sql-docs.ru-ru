@@ -3,7 +3,7 @@
 # Обзор
 ## [Что такое службы машины обучения Майкрософт](r/r-services.md)
 ## [Новые возможности машинного обучения](what-s-new-in-sql-server-machine-learning-services.md)
-## [Новые и недавно обновленные статьи](new-updated-advanced-analytics.md)
+## [Новые и обновленные Статьи](new-updated-advanced-analytics.md)
 ## [Архитектура и обзор](architecture-overview-machine-learning.md)
 ## [Различия в машинном обучении между выпусками SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
 
@@ -84,7 +84,10 @@
 ## [Учебники по Python](tutorials/sql-server-python-tutorials.md)
 
 ### [Python. Запуск Python с помощью T-SQL](tutorials/run-python-using-t-sql.md)
-### [Python. Создание модели с помощью revoscalepy](tutorials/use-python-revoscalepy-to-create-model.md)
+#### [Упаковка Python в хранимую процедуру](tutorials/wrap-python-in-tsql-stored-procedure.md)
+#### [Обучение и оценка на основе модели Python в SQL Server](tutorials/train-score-using-python-in-tsql.md)
+#### [Создание модели с помощью revoscalepy в контексте вычислений SQL Server](tutorials/use-python-revoscalepy-to-create-model.md)
+
 ### [Python. Дополнительные аналитические функции в базе данных для разработчиков SQL](tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 #### [Скачивание образца данных](tutorials/sqldev-py1-download-the-sample-data.md)
@@ -94,7 +97,7 @@
 #### [Обучение и сохранение модели](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [Ввод модели в эксплуатацию](tutorials/sqldev-py6-operationalize-the-model.md)
 
-### [Python. Развертывание и использование моделей](../advanced-analytics/python/publish-consume-python-code.md)
+### [Python. Развертывание и использование моделей с помощью отдельного сервера](../advanced-analytics/python/publish-consume-python-code.md)
 
 # [Сервер машинного обучения (автономный)](r/r-server-standalone.md)
 ## [Приступая к работе](r/getting-started-with-microsoft-r-server-standalone.md)
@@ -107,6 +110,8 @@
 ## [Управление пакетами R для SQL Server](r/r-package-management-for-sql-server-r-services.md)
 
 ### [Установка новых пакетов R в SQL Server](r/install-additional-r-packages-on-sql-server.md)
+
+### [Установка новых пакетов Python в SQL Server](python/install-additional-python-packages-on-sql-server.md)
 
 ### [Включение управления пакетами R для экземпляра SQL Server](r/r-package-how-to-enable-or-disable.md)
 
@@ -121,7 +126,6 @@
 ### [Создание локального репозитория пакетов с помощью miniCRAN](r/create-a-local-package-repository-using-minicran.md)
 
 ### [Как избежать ошибок, связанных с библиотеками пакетов пользователей для R](r/packages-installed-in-user-libraries.md)
-
 
 ## Изучение данных и моделирование
 
@@ -153,14 +157,16 @@
 ### [Дополнительные параметры конфигурации для служб машинного обучения](r/configure-and-manage-advanced-analytics-extensions.md)
 ### [Вопросы безопасности для среды выполнения R в SQL Server](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [Изменение пула учетных записей пользователей для служб машинного обучения SQL Server](r/modify-the-user-account-pool-for-sql-server-r-services.md)
-### [Настройка расширений машинного обучения и управление ими](r/configure-and-manage-advanced-analytics-extensions.md)
+
+### [Добавление SQLRUserGroup в качестве пользователя базы данных](r/add-sqlrusergroup-to-database.md)
 
 ### [Развертывание и использование моделей с помощью веб-служб](operationalization-with-mrsdeploy.md)
+
 ### [Управление решениями машинного обучения и их мониторинг](r/managing-and-monitoring-r-solutions.md)
 ### [Известные проблемы в службах машинного обучения](r/resource-governance-for-r-services.md)
-### [Создание пула ресурсов для R](r/how-to-create-a-resource-pool-for-r.md)
+### [Создание пула ресурсов для машинного обучения](r/how-to-create-a-resource-pool-for-r.md)
 ### [Расширенные события для служб машинного обучения](r/extended-events-for-sql-server-r-services.md)
-
+### [Расширенные события для наблюдения за инструкциями PREDICT](xe-event-predict-tsql.md)
 ### [Представления DMV для служб машинного обучения](r/dmvs-for-sql-server-r-services.md)
 ### [Использование функций профилирования кода R](r/using-r-code-profiling-functions.md)
 ### [Мониторинг служб машинного обучения с помощью настраиваемых отчетов в Management Studio](r/monitor-r-services-using-custom-reports-in-management-studio.md)
@@ -180,7 +186,7 @@
 ### [Добавление R в существующую виртуальную машину](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ### [Обновление экземпляра с помощью sqlBindR.exe](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ### [Установка R Server из командной строки](r/install-microsoft-r-server-from-the-command-line.md)
-### [Подготовка виртуальной машины обработки и анализа данных](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+### [Подготовка виртуальной машины обработки и анализа данных предприятия](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 ### [Настройка средств обработки и анализа данных](r/setup-or-configure-r-tools.md)
 ### [Настройка клиента обработки и анализа данных](r/set-up-a-data-science-client.md)
 

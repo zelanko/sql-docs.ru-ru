@@ -1,29 +1,30 @@
 ---
 title: "Свойства служб удаленных рабочих СТОЛОВ | Документы Microsoft"
-ms.prod: sql-non-specified
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - RDS properties [ADO]
 - properties [ADO], RDS
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ee22ac8887a628d4b1ada9bf7f42b58e3c997274
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2909975ad790702f24ee6536a1ddca2ac13447cf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-properties"></a>Свойства служб удаленных рабочих СТОЛОВ
 > [!IMPORTANT]
@@ -46,7 +47,6 @@ ms.lasthandoff: 09/09/2017
 |[Направления сортировки (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)|Указывает, является ли порядок сортировки по возрастанию или по убыванию.|  
 |[SQL (RDS)](../../../ado/reference/rds-api/sql-property.md)|Указывает строку запроса, используемую для получения **записей**.|  
 |[URL-АДРЕС (RDS)](../../../ado/reference/rds-api/url-property-rds.md)|Указывает строку, содержащую относительный или абсолютный URL-адрес.|
-
 
 
 

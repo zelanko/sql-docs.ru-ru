@@ -1,10 +1,13 @@
 ---
-title: "Измените конструктор системы отслеживания измененных данных для Oracle от Attunity | Документы Microsoft"
+title: "Конструктор системы отслеживания измененных данных для Oracle компании Attunity | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - desCons
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
-caps.latest.revision: 9
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dd65ef848696254aa8badb47e41196106401e100
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6eec0f35ddccef3653c9ad4cb06e5c8e1b887257
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Конструктор системы отслеживания измененных данных для Oracle компании Attunity
   Консоль конструктора CDC служит для разработки и обслуживания экземпляров Oracle CDC. Консоль конструктора CDC ― это надстройка консоли управления (MMC), состоящая из следующих элементов.  
@@ -47,9 +49,9 @@ ms.lasthandoff: 08/03/2017
   
 -   [Базы данных CDC Oracle](../../integration-services/change-data-capture/the-oracle-cdc-databases.md)  
   
--   [Конструктор системы отслеживания измененных данных для Oracle от Attunity F1 справка](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
+-   [Справка F1 конструктора системы отслеживания измененных данных для Oracle компании Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
   
--   [Конструктор системы отслеживания измененных данных для Oracle от Attunity Практическое руководство](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
+-   [Руководство по конструктору системы отслеживания измененных данных для Oracle компании Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
   
 -   [Соединение с SQL Server для создания экземпляров](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   
@@ -61,7 +63,6 @@ ms.lasthandoff: 08/03/2017
   
 -   [Скрипт развертывания экземпляра CDC](../../integration-services/change-data-capture/cdc-instance-deployment-script.md)  
   
--   [Соединение с SQL Server разрешения, необходимые конструктору CDC](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+-   [Разрешения, необходимые конструктору CDC для соединения с SQL Server](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   
-

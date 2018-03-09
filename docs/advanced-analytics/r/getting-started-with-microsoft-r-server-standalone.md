@@ -1,79 +1,89 @@
 ---
 title: "Приступая к работе с изолированным сервером Microsoft R Server | Документация Майкрософт"
 ms.custom: 
-ms.date: 03/01/2017
-ms.prod: r-server
+ms.date: 10/31/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 52347d0d-ce60-4bb8-98d2-6163e87716b0
-caps.latest.revision: 21
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: b7a9ec054b512e8825bf5cf9208a0c1deb3abbb8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fc7874c6900474c7c2f3d927183616b2f5e69699
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="getting-started-with-microsoft-r-server-standalone"></a>Приступая к работе с изолированным сервером Microsoft R Server
-  Изолированный сервер Microsoft R Server позволяет использовать на предприятии популярный язык R с открытым кодом, чтобы внедрять высокопроизводительные аналитические решения и обеспечить интеграцию с другими бизнес-приложениями.  
-
-  
-## <a name="install-microsoft-r-server"></a>Установка Microsoft R Server 
-
-Установка R Microsoft Server зависит от того, нужно ли использовать в приложениях данные SQL Server. Если да, тогда следует выполнить установку с помощью программы установки SQL Server. Если данные SQL Server не будут использоваться или не требуется выполнять код R в базе данных, можно использовать программу установки SQL Server или новый автономный установщик.
+# <a name="getting-started-with-machine-learning-server-standalone"></a>Приступая к работе с машины обучения Server (изолированный)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
- 
-+ Установите изолированный сервер Microsoft R Server с помощью программы установки SQL Server. Будет создан отдельный экземпляр двоичных файлов R для R Server, который получит лицензию политики поддержки SQL Server Enterprise Edition. Дополнительные сведения см. в статье [Создание изолированного сервера R Server](../../advanced-analytics/r-services/create-a-standalone-r-server.md).  
+В SQL Server 2016 Microsoft R Server (изолированный) помогли приведения популярных R с открытым кодом языка в предприятии, чтобы включить высокопроизводительные аналитические решения, а также интеграцию с другими бизнес-приложениями.  
 
-+ Используйте новый автономный установщик Windows для создания нового экземпляра Microsoft R Server, который использует политику современного жизненного цикла поддержки программного обеспечения Майкрософт. Дополнительные сведения см. в статье [Install R Server 9.0.1 for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows) (Установка R Server 9.0.1 для Windows).
+На 2017 г. SQL Server имя было изменено на машине обучения Server (изолированный) в соответствии с добавлением поддержки для языка Python. Обе версии доступны бесплатно для пользователей Enterprise Edition или Software Assurance.
 
-+ Если у вас есть экземпляр R Server (изолированный) или служб R, который требуется обновить, необходимо скачать и запустить установщик Windows. Дополнительные сведения см. в статье [Install R Server 9.0.1 for Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows) (Установка R Server 9.0.1 для Windows).
-  
-## <a name="install-additional-r-tools"></a>Установка дополнительных средств R  
+В этой статье Общие сведения об использовании сервера обучения машины (или сервера R) и приступить к работе с установкой и образцы.
 
- Мы рекомендуем использовать бесплатную версию [Microsoft R Client](http://aka.ms/rclient/download) (скачать).  
+## <a name="why-use-a-standalone-server-for-machine-learning"></a>Зачем использовать отдельный сервер для машинного обучения
 
- Также можно использовать предпочтительную среду разработки R, чтобы разрабатывать решения для служб R SQL Server или Microsoft R Server. Дополнительные сведения см. в статье [Установка или настройка средств R](../../advanced-analytics/r-services/setup-or-configure-r-tools.md). 
- 
+Если не нужно интегрировать машинного обучения решений с данными SQL Server, машины обучения Server предоставляет такую же поддержку распределенные и масштабируемые R и Python и более позволяет развертывание решений в Spark, Linux или Hadoop.
 
-### <a name="location-of-r-server-binaries"></a>Расположение двоичных файлов R Server
+Сервер обучения машины также включает предварительно обученной модели для анализа изображения и анализ мнений, который можно сразу же использовать в приложениях.
 
-В зависимости от метода, используемого для установки Microsoft R Server, расположение по умолчанию может отличаться. Прежде чем использовать предпочитаемую среду разработки, проверьте, установлены ли библиотеки R:
+Возможности ввода в эксплуатацию машины обучения Server поддерживает развертывания и распространения решений R и Python с помощью веб-служб с удаленного выполнения кластерных топологии для Spark и Hadoop MapReduce и поддержку для Windows или Linux.
 
-+ Microsoft R Server, установленный с помощью нового установщика Windows.
+**SQL Server 2016**
 
-  `C:\Program Files\Microsoft\R Server\R_SERVER`
++ Установка Microsoft R Server (изолированный) из программы установки SQL Server 2016.
 
-+ R Server (изолированный), установленный с помощью программы установки SQL Server.
+    Создание изолированного сервера, который полностью независим от служб R (в базе данных). Эта версия поддерживает только R. Настройка изолированного сервера включен в политике поддержки SQL Server Enterprise Edition. Дополнительные сведения см. в разделе [Создание изолированного сервера R Server](../../advanced-analytics/r/create-a-standalone-r-server.md).
 
-  `C:\Program Files\Microsoft SQL Server\130\R_SERVER`
++ Установка сервера R, с помощью отдельного установщика Windows.
 
-+ Службы R (в базе данных)
-
-  `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES`
-      
-## <a name="start-using-r-on-microsoft-r-server"></a>Начало работы с R на сервере Microsoft R Server  
-
- После настройки компонентов сервера и интегрированной среды разработки R для использования двоичных файлов R Server можно приступать к разработке решения с помощью новых интерфейсов API, таких как пакет RevoScaleR, MicrosoftML и olapR.
+    Этот установщик создает новый экземпляр Microsoft R Server, использующего политика поддержки жизненного цикла современного программного обеспечения Microsoft. Можно также установить R Server для Linux, Cloudera, Teradata и Hadoop.
     
-Чтобы начать работу с R Server, ознакомьтесь с руководством в библиотеке MSDN [Get started with Microsoft R](https://msdn.microsoft.com/microsoft-r/microsoft-r-get-started-node) (Приступая к работе с Microsoft R Server).   
-  
--   [ScaleR.](https://msdn.microsoft.com/microsoft-r/scaler-getting-started) Просмотрите эту коллекцию распространяемых аналитических функций, которые обеспечивают высокую производительность и масштабирование решений R. Она содержит параллелизуемые версии многих популярных пакетов моделирования для R, например кластеризацию методом К-средних, деревья и леса принятия решений, а также средства для работы с данными. Дополнительные сведения см. в статье [Explore R and ScaleR in 25 functions](https://msdn.microsoft.com/microsoft-r/microsoft-r-getting-started-tutorial) (Обзор R и ScaleR в 25 функциях).  
+    Дополнительные сведения см. в разделе [установить 9.1 R Server для Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
+
+**SQL Server 2017**
+
++ Установите сервер обучения машины (изолированный) из программы установки 2017 г. SQL Server. 
+
+    Этот параметр создает изолированный сервер для поддержки ввода в эксплуатацию машинного обучения в R и Python. Настройка изолированного сервера включен в политике поддержки SQL Server Enterprise Edition. Дополнительные сведения см. в разделе [Создание изолированного сервера R Server](../../advanced-analytics/r/create-a-standalone-r-server.md).  
+
++ Используйте новый автономный установщик Windows.
+
+    Этот метод установки создает новый экземпляр сервера обучения компьютера, использующего политика поддержки жизненного цикла современного программного обеспечения Microsoft. Также можно установить сервер обучения машины Hadoop, Spark или Linux без дополнительной платы.
     
-- [MicrosoftML.](https://msdn.microsoft.com/library/mt790482.aspx) Пакет MicrosoftML — это набор новых быстрых и масштабируемых алгоритмов машинного обучения и преобразований, разрабатываемых в Майкрософт. Дополнительные сведения см. в статье [MicrosoftML: State-of-the-Art Machine Learning R Algorithms from Microsoft Corporation](https://msdn.microsoft.com/microsoft-r/microsoftml/microsoftml) (MicrosoftML. Современные алгоритмы машинного обучения от корпорации Майкрософт).
-  
+    Дополнительные сведения см. в разделе [Установка машины обучения сервера для Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
 
+**Обновление существующего сервера**
 
-  
-## <a name="see-also"></a>См. также:  
- [Начало работы со службами R SQL Server](../../advanced-analytics/r-services/getting-started-with-sql-server-r-services.md)  
-  
-  
++ Если имеется существующий сервер или экземпляр, который нужно обновить, загрузите и запустите установщик на основе Windows для получения обновлений. 
 
+    Дополнительные сведения см. в разделе [с помощью SqlBindR, чтобы обновить экземпляр](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+
+## <a name="start-using-machine-learning-server"></a>Приступить к использованию сервера Machine обучения
+
+ После настройки компонентов сервера и настройки IDE, что позволяет использовать двоичные файлы сервера обучения машины можно приступать к разработке решения с помощью новых API, например RevoScaleR и revoscalepy, MicrosoftML и olapR.
+    
+Чтобы приступить к работе, см. Эти руководства:
+
++ [Шаблоны решений](https://docs.microsoft.com/machine-learning-server/r/sample-solutions)
+
+    Эти примеры служат для решений, которые демонстрируют, как применить машинного обучения в различных отраслях. Текущий сценарии находятся в розничной торговли, Финансы, здравоохранение и маркетинга.
+
++ [Изучите R и ScaleR в 25 функции](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler): изучение этой коллекции распространяемый аналитические функции, которые обеспечивают высокий уровень производительности и масштабируемости для решения R. Она содержит параллелизуемые версии многих популярных пакетов моделирования для R, например кластеризацию методом К-средних, деревья и леса принятия решений, а также средства для работы с данными.
+
+- [MicrosoftML](https://msdn.microsoft.com/library/mt790482.aspx)
+
+    Пакет MicrosoftML — это набор обучения алгоритмов и преобразования, разрабатываемых в Майкрософт, быстрых и масштабируемых новой машины. Его можно использовать в R или Python. Дополнительные сведения см. в разделе [MicrosoftML для Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) и [MicrosoftML для R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package).
+
+## <a name="see-also"></a>См. также:
+
+[Приступая к работе с SQL Server машинного самообучения, службы](../../advanced-analytics/r/getting-started-with-sql-server-r-services.md)

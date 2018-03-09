@@ -3,26 +3,26 @@ title: "При рассмотрении возможности базы данн
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- interoperability [ODBC], database features
+helpviewer_keywords: interoperability [ODBC], database features
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f879d11b4c9f393accaaf96beda6a159aec2363f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d17758711dd0e4e1590a3b4176829d9709a5dfd0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="considering-database-features-to-use"></a>При рассмотрении возможности базы данных для использования
 Выяснив базовый уровень совместимости, необходимо учитывать функции базы данных, используемых приложением. Например какие инструкции SQL приложение выполнит? Будет ли приложение использовать Прокручиваемые курсоры? Транзакции? Процедуры? Длинные данные? Идей, о возможностях может поддерживаться не все СУБД, см. в разделе [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), и [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) описаний функций и [ Приложение в. грамматику SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Функции, необходимые для приложения может решить некоторые СУБД из списка целевой СУБД. Они также показывают, что приложение может легко ориентироваться большинства СУБД.  
@@ -52,4 +52,3 @@ ms.lasthandoff: 09/09/2017
 -   **Поддерживает несколько запросов только в том случае, если драйвер.** После подключения к драйверу, приложение проверяет число активных инструкций. Приложение позволяет пользователю начать новую инструкцию, когда уже активным, только в том случае, если драйвер поддерживает несколько активных инструкций. Приложение имеет выше функции и возможности взаимодействия, но сложно реализовать.  
   
 -   **Всегда поддерживать несколько запросов и эмулировать их при необходимости.** После подключения к драйверу, приложение проверяет число активных инструкций. Всегда приложение позволяет пользователю начать новую инструкцию, когда уже active. Если драйвер поддерживает только одну активную инструкцию, приложение открывается дополнительное подключение для этого драйвера и выполняет новый оператор для этого соединения. Приложение обладает всеми функциональными возможностями и высокий уровень совместимости, но его сложно реализовать.
-

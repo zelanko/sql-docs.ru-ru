@@ -2,31 +2,30 @@
 title: "Командлет New-RestoreLocation | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 5ca13d8c-1c5d-4f02-869c-72e0defce6d7
-caps.latest.revision: 11
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ca5bf33d2d528b8e216915170d7df528589a85c3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a87852e69b55ea26cb56fe6918d1d4310c339f27
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-restorelocation-cmdlet"></a>Командлет New-RestoreLocation
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Указывает сведения, используемые для восстановления базы данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Указывает сведения, используемые для восстановления базы данных.  
 
 >[!NOTE] 
 >В этой статье может содержать устаревшие сведения и примеры. С помощью командлета Get-Help для последней версии.
@@ -38,7 +37,7 @@ ms.lasthandoff: 09/01/2017
   
  Общие параметры, такие как –Verbose, -Debug, сообщения управления ошибками и предупреждениями, -Whatif и –Confir документированы в справке по Windows PowerShell. Дополнительные сведения см. в разделе [Об общих параметрах](http://technet.microsoft.com/library/dd315352.aspx).  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Командлет New-RestoreLocation содержит сведения, используемые для восстановления базы данных, в том числе строку подключения с сервером и базой данных, свойства источника данных, файлы и папки, связанные с восстанавливаемой базой данных.  
   
 ## <a name="parameters"></a>Параметры  
@@ -145,4 +144,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="examples"></a>Примеры  
   
   
-

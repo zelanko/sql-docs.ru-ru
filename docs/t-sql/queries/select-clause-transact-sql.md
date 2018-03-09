@@ -3,8 +3,11 @@ title: "Предложение SELECT (Transact-SQL) | Документы Micros
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,20 +29,19 @@ helpviewer_keywords:
 - $ROWGUID keyword
 - queries [SQL Server], results
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
-caps.latest.revision: 54
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a85dbb34e357d4d00a411e35dce877991337d876
-ms.openlocfilehash: 885ff94e3cecb82bb93e0abac26838d6c265275c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.openlocfilehash: 34a1dee420dd8e409df2043f3278a32235656ace
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-clause-transact-sql"></a>Выражение SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Указывает столбцы, возвращаемые запросом.  
   
@@ -85,7 +87,7 @@ SELECT [ ALL | DISTINCT ]
  \*  
  Указывает на то, что все столбцы из всех таблиц и представлений в предложении FROM должны быть возвращены. Столбцы возвращаются таблицей или представлением, как указано в предложении FROM, и в порядке, в котором они находятся в таблице или представлении.  
   
- *имя_таблицы* | *view_name* | *таблицы*_*псевдоним*. *  
+ *table_name* | *view_name* | *table*_*alias*.*  
  Ограничивает область \* для указанной таблицы или представления.  
   
  *column_name*  
@@ -116,10 +118,10 @@ SELECT [ ALL | DISTINCT ]
  *property_name*  
  Представляет открытое свойство *udt_column_name*.  
   
- *имя_поля*  
+ *field_name*  
  Является членом открытых данных *udt_column_name*.  
   
- *имя_метода*  
+ *method_name*  
  — Это открытый метод *udt_column_name* , принимающий один или несколько аргументов. *имя_метода* не может быть методом мутатора.  
   
  В следующем примере выбираются значения столбца `Location`, определенного типом `point`, из таблицы `Cities` путем обращения к методу типа, названного `Distance`:  
@@ -150,7 +152,7 @@ FROM Cities;
   
  *column_alias* может использоваться в предложении ORDER BY. Однако он не может быть использован в предложениях WHERE, GROUP BY или HAVING. Если выражение запроса является частью инструкции DECLARE CURSOR, *псевдоним_столбца* не может использоваться в предложении FOR UPDATE.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Длина возвращаемых данных для **текст** или **ntext** столбцов, включенных в список выбора устанавливается в минимальное значение из следующих: фактический размер **текста** столбец, TEXTSIZE сеанса по умолчанию или жестко запрограммированное ограничение. Чтобы изменить длину возвращаемого текста для сеанса, используйте инструкцию SET. По умолчанию ограничение на длину возвращаемых при помощи инструкции SELECT текстовых данных равно 4 000 байт.  
   
  Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] вызывает исключение номер 511 и осуществляет откат транзакции до момента выполнения текущей инструкции, если наблюдается одно из следующих явлений.  
@@ -161,10 +163,9 @@ FROM Cities;
   
  Ошибка возникает в случае, если не указано имя столбца, созданного при помощи инструкции SELECT INTO или CREATE VIEW.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ВЫБЕРИТЕ примеры &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
  [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  
   
   
-

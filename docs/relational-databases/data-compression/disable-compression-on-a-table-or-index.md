@@ -2,38 +2,40 @@
 title: "Отключение сжатия таблицы или индекса | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-data-compression
+ms.suite: SQL
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: data-compression
+ms.technology: dbe-data-compression
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data compression [SQL Server], disabling
+helpviewer_keywords: data compression [SQL Server], disabling
 ms.assetid: bda1e452-397b-4757-82a4-181217361589
-caps.latest.revision: 8
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "8"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 342baf08233852778ca7caaf5a528d0362490de6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 26617d7ebdeae568acb35d518cc17f068b607ba3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Отключение сжатия таблицы или индекса
+
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
   В этом разделе описывается, как отключить сжатие для таблицы или индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Отключение сжатия для таблицы или индекса при помощи:**  
   
@@ -51,9 +53,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Если у таблицы есть невыровненные индексы, изменить настройку сжатия отдельной секции невозможно.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на таблицу или индекс.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -94,7 +96,7 @@ ms.lasthandoff: 06/22/2017
      После нажатия кнопки **Вычислить**в этом столбце будет показан приблизительный размер каждой секции после сжатия на основе значения в столбце **Тип сжатия** . Столбец доступен только для чтения.  
   
      **Вычислить**  
-     Нажмите эту кнопку, чтобы получить размер каждой секции после сжатия на основе параметра в столбце **Тип сжатия** .  
+     Нажмите эту кнопку, чтобы получить размер каждой секции после сжатия на основе значения в столбце **Тип сжатия** .  
   
 6.  На странице **Выбор выходного параметра** укажите способ завершения этого задания. Выберите **Создать скрипт** для создания скрипта SQL на основе данных на предыдущих страницах мастера. Выберите **Запустить немедленно** , чтобы создать новую секционированную таблицу после завершения работ со всеми оставшимися страницами мастера. Выберите **Расписание** , чтобы создать новую секционированную таблицу в заранее заданное время в будущем.  
   
@@ -228,4 +230,3 @@ ms.lasthandoff: 06/22/2017
  Дополнительные сведения см. в разделах [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md) и [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).  
   
   
-

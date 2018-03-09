@@ -1,42 +1,42 @@
 ---
-title: "Служба SharePoint служб и приложений служб Reporting | Документы Microsoft"
+title: "Служба и приложения службы Reporting Services в SharePoint | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 3b0351819369c0c17a5f97318b1132c69ec71432
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: d9eb45bb1f33cb781907e8c2c39fc9a9b2b4e524
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="reporting-services-sharepoint-service-and-service-applications"></a>Службы Reporting Services SharePoint и служебные приложения
+# <a name="reporting-services-sharepoint-service-and-service-applications"></a>Служба и приложения службы Reporting Services в SharePoint
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  Службы Reporting Services SharePoint режиме спроектирован на основе архитектуры службы SharePoint и использует службу SharePoint, а также одно или несколько приложений службы. Создание приложения службы открывает доступ к службе и формирует базу данных приложения службы. Можно создать несколько приложений службы Reporting Services, однако для большинства сценариев развертывания достаточно одного приложения службы.  
+  Службы Reporting Services в режиме интеграции с SharePoint спроектированы на основе архитектуры службы SharePoint и используют службу SharePoint, а также одно или несколько приложений службы. Создание приложения службы открывает доступ к службе и формирует базу данных приложения службы. Можно создать несколько приложений службы Reporting Services, однако для большинства сценариев развертывания достаточно одного приложения службы.  
 
 > [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
   
 ## <a name="creating-a-reporting-services-service-application"></a>Создание приложения службы Reporting Services
 
- Центр администрирования SharePoint или скрипты PowerShell можно использовать для создания приложений служб Reporting Services. Дополнительные сведения об использовании центра администрирования SharePoint см. в разделе «Создание отчетов служб приложения службы» в [установить службы Reporting Services в режиме SharePoint для SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c). В подразделе PowerShell этого раздела приведен пример скрипта PowerShell для создания приложений службы.  
+ Для создания приложений служб Reporting Services можно использовать центр администрирования SharePoint или скрипты PowerShell. Дополнительные сведения об использовании центра администрирования SharePoint см. в разделе "Создание приложения службы Reporting Services" статьи [Установка служб Reporting Services в режиме интеграции с SharePoint для SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c). В подразделе PowerShell этого раздела приведен пример скрипта PowerShell для создания приложений службы.  
   
-## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>Изменение взаимосвязей приложения службы с группой прокси-сервера
+## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>Изменение взаимосвязей приложения службы с использованием группы прокси
 
  Новая страница для создания приложения служб содержит раздел **Связь с веб-приложением**. Данный раздел позволяет связать приложение службы во время его создания. Для изменения взаимосвязи и установки пользовательской конфигурации в приложении службы выполните следующие шаги. Можно использовать тот же общий процесс, но вместо изменения взаимосвязи приложения службы с пользовательской группой добавить учетную запись-посредник в группу по умолчанию.  
   
@@ -86,8 +86,7 @@ ms.lasthandoff: 10/06/2017
   
 |Задача|Ссылка|  
 |----------|----------|  
-|Управление параметрами приложения службы.|[Управление Служебным приложением SharePoint службы Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)|  
+|Управление параметрами приложения службы.|[Управление приложением службы SharePoint — Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)|  
 |Резервное копирование и восстановление приложения службы и связанных компонентов, таких как ключи шифрования и прокси-серверы.|[Резервное копирование и восстановление приложения службы SharePoint — Reporting Services](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
 
 Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

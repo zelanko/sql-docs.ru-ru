@@ -3,7 +3,7 @@ title: "Метод GetChunk (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - GetChunk method [ADO]
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b479146e26196e42836ce381e3f5e555dd0a9a6b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4972e08f1db08bde4cdb1241fa36895f2f33ad7b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getchunk-method-ado"></a>Метод GetChunk (ADO)
 Возвращает все или часть, содержимое большие текстовые или двоичные данные [поле](../../../ado/reference/ado-api/field-object.md) объекта.  
@@ -48,7 +47,7 @@ variable = field.GetChunk(Size)
  *Размер*  
  Объект **длинные** выражение, которое равно числу байт или символов, которые требуется извлечь.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **GetChunk** метод **поле** объекта для извлечения всех или части его долго двоичных или символьных данных. В ситуациях, где ограничена системной памяти, можно использовать **GetChunk** метод для обработки длинные значения в части, а не полностью.  
   
  Данные, **GetChunk** вызов возвращает назначается *переменной*. Если *размер* больше, чем оставшиеся данные **GetChunk** метод возвращает оставшиеся данные без заполнения *переменной* пробелами. Если поле не заполнено, **GetChunk** метод возвращает значение null.  
@@ -63,11 +62,10 @@ variable = field.GetChunk(Size)
 >  **GetChunk** метод не выполняет операций **поле** объектов [записи](../../../ado/reference/ado-api/record-object-ado.md) объекта. Он не осуществляет никаких операций и приведет к ошибке во время выполнения.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект field](../../../ado/reference/ado-api/field-object.md)  
+ [Объект Field](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [AppendChunk и пример GetChunk методы (Visual Basic)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
  [AppendChunk и пример методы GetChunk (VC ++)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
  [Метод AppendChunk (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [Свойства атрибутов (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
-
+ [Свойство Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

@@ -2,9 +2,12 @@
 title: "Удаление XML-индексов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -14,20 +17,20 @@ helpviewer_keywords:
 - dropping indexes
 - XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
-caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1508a40b460939fc1aa4ddfa8271d28a10958bb9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b1d7f2f2e8eb4fedd4184cb65647bb295af3f1b0
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="drop-xml-indexes"></a>Удаление XML-индексов
-  Инструкция [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет удалить существующие первичные и вторичные XML-индексы и индексы других типов. Однако к XML-индексам не применяется ни один из параметров DROP INDEX. Если удаляется первичный XML-индекс, то вместе с ним удаляются также и все имеющиеся вторичные индексы.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Инструкция [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет удалить существующие первичные и вторичные XML-индексы и индексы других типов. Однако к XML-индексам не применяется ни один из параметров DROP INDEX. Если удаляется первичный XML-индекс, то вместе с ним удаляются также и все имеющиеся вторичные индексы.  
   
  Синтаксис инструкции DROP для *TableName.IndexName* постепенно вытесняется и для XML-индексов не поддерживается.  
   
@@ -105,4 +108,3 @@ AND    si.object_id=object_id('T')
  [XML-индексы (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   
-

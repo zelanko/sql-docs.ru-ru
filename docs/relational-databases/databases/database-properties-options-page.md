@@ -1,32 +1,31 @@
 ---
 title: "Свойства базы данных (страница \"Параметры\") | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.databaseproperties.options.f1
+f1_keywords: sql13.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
-caps.latest.revision: 67
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "67"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 342f7d2f57d8832ca0188ceea9112673746690b7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 24561dd19ef8992aba1d5e48ceadd49a68f18c1f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-options-page"></a>Свойства базы данных (страница «Параметры»)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Эта страница используется для изменения параметров выделенной базы данных. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделах [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) и [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
@@ -54,13 +53,13 @@ ms.lasthandoff: 09/27/2017
  Укажите, следует ли использовать добавочное создание при создании статистики для каждой секции. Сведения о добавочной статистике см. в разделе [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).  
   
  **Автоматическое создание статистики**  
- Укажите, будет ли база данных автоматически создавать отсутствующие статистические данные оптимизации. Допустимые значения — **True** и **False**. Если значение равно **True**, во время оптимизации автоматически формируются все отсутствующие статистические данные, необходимые запросу для оптимизации. Дополнительные сведения см. в разделе [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).  
+ Укажите, будет ли база данных автоматически создавать отсутствующие статистические данные оптимизации. Допустимые значения — **True** и **False**. Если значение равно **True**, во время оптимизации автоматически формируются все отсутствующие статистические данные, необходимые запросу для оптимизации. Дополнительные сведения см. в статье [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).  
   
  **Автоматическое сжатие**  
  Укажите, будут ли файлы базы данных доступны для периодического сжатия. Допустимые значения — **True** и **False**. Дополнительные сведения см. в разделе [Shrink a Database](../../relational-databases/databases/shrink-a-database.md).  
   
  **Автоматическое обновление статистики**  
- Укажите, будет ли база данных автоматически обновлять устаревшие статистические данные оптимизации. Допустимые значения — **True** и **False**. Если значение равно **True**, во время оптимизации автоматически формируются все устаревшие статистические данные, необходимые запросу для оптимизации. Дополнительные сведения см. в разделе [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).  
+ Укажите, будет ли база данных автоматически обновлять устаревшие статистические данные оптимизации. Допустимые значения — **True** и **False**. Если значение равно **True**, во время оптимизации автоматически формируются все устаревшие статистические данные, необходимые запросу для оптимизации. Дополнительные сведения см. в статье [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).  
   
  **Асинхронное автоматическое обновление статистики**  
  При значении **True** запросы, которые запускают автоматическое обновление устаревшей статистики, не будут ожидать обновления статистики перед компиляцией. Последующие запросы будут использовать обновленную статистику, когда она будет доступна.  
@@ -69,7 +68,7 @@ ms.lasthandoff: 09/27/2017
   
  Установка данного параметра в значение **True** имеет смысл только в том случае, если параметр **Автоматическое обновление статистики** также имеет значение **True**.  
   
-## <a name="containment"></a>Включение  
+## <a name="containment"></a>Containment  
  В автономных базах данных некоторые параметры, обычно настраиваемые на уровне сервера, можно настроить на уровне базы данных.  
   
  **Код языка полнотекстового поиска по умолчанию**  
@@ -173,7 +172,7 @@ ms.lasthandoff: 09/27/2017
  Если выбрано значение **SIMPLE**, параметризация запросов выполняется на основе режима базы данных по умолчанию. Если выбрано значение **FORCED**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет параметризацию всех запросов в базе данных.  
   
  **Включены заключенные в кавычки идентификаторы**  
- Укажите, можно ли использовать ключевые слова [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как идентификаторы (имена объектов или переменных), если они заключены в кавычки. Допустимые значения — **True** и **False**. Дополнительные сведения см. в разделе [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ Укажите, можно ли использовать ключевые слова [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как идентификаторы (имена объектов или переменных), если они заключены в кавычки. Допустимые значения — **True** и **False**. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  **Включены рекурсивные триггеры**  
  Укажите, могут ли триггеры запускаться другими триггерами. Допустимые значения — **True** и **False**. Если значение равно **True**, рекурсивный запуск триггеров разрешен. Если значение равно **False**, запрещается только прямая рекурсия. Чтобы отключить косвенную рекурсию, присвойте параметру сервера вложенные триггеры значение 0, используя процедуру sp_configure. Дополнительные сведения см. в разделе [Создание вложенных триггеров](../../relational-databases/triggers/create-nested-triggers.md).  
@@ -244,4 +243,3 @@ ms.lasthandoff: 09/27/2017
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
-

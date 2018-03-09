@@ -2,29 +2,30 @@
 title: "Защита агента &lt;Имя_агента&gt; | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newsubwizard.agentnameagentsecurity.f1
+f1_keywords: sql13.rep.newsubwizard.agentnameagentsecurity.f1
 ms.assetid: d34c7ef8-cf77-4ffd-887f-3c4214dfd71e
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9fe03b88f10b4b23d4ec121fd46fe08ec87d8d6f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "22"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 946cba7a7af21e52de146d753728aa30bbc15b16
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="ltagentnamegt-agent-security"></a>Защита агента &lt;Имя_агента&gt;
-  На странице **\<Безопасность агента <имя_агента>** можно указать учетные записи, от имени которых выполняется агент распространителя (для репликации транзакций или репликации моментальных снимков) или агент слияния (для репликации слиянием), а также создать подключения к компьютерам в топологии репликации. Сведения о разрешениях, требуемых агентами, и об оптимальных методах защиты репликации см. в статьях [Модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md) и [Рекомендации по защите репликации](../../relational-databases/replication/security/replication-security-best-practices.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]На странице **Безопасность агента \<имя_агента>** можно указать учетные записи, от имени которых выполняется агент распространителя (для репликации транзакций или репликации моментальных снимков) или агент слияния (для репликации слиянием), а также создать подключения к компьютерам в топологии репликации. Сведения о разрешениях, требуемых агентами, и об оптимальных методах защиты репликации см. в статьях [Модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md) и [Рекомендации по защите репликации](../../relational-databases/replication/security/replication-security-best-practices.md).  
   
 ## <a name="options"></a>Параметры  
  Нажмите кнопку свойств (**...**) в строке для каждого подписчика, чтобы открыть диалоговое окно **Безопасность агента распространителя** или **Безопасность агента слияния** . Для получения дополнительных сведений о разрешениях, необходимых для учетных записей агентов, нажмите кнопку **Справка** в появившемся диалоговом окне.  

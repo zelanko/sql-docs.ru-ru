@@ -3,8 +3,11 @@ title: "Операторы (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - operators [Transact-SQL], about operators
 - operators [Transact-SQL]
 ms.assetid: 1fc2de8b-e7e0-4c61-9a02-4776a7d93ab7
-caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 565444ca9c738dfd7ceaff3e3c7be036264d28e5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 535dcd920d25c347dc507c8f869706a49a1163a8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="operators-transact-sql"></a>Операторы (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Оператор — это символ, указывающий на действие, которое выполняется над одним или несколькими выражениями. В следующих таблицах перечислены категории операторов, используемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -40,8 +42,7 @@ ms.lasthandoff: 09/01/2017
 |[Операторы сравнения](../../t-sql/language-elements/comparison-operators-transact-sql.md)|[Оператор объединения строк](../../t-sql/language-elements/string-operators-transact-sql.md)|  
 |[Составные операторы](../../t-sql/language-elements/compound-operators-transact-sql.md)|[Унарные операторы](http://msdn.microsoft.com/library/c4748146-4049-4040-8826-56c464410878)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Приоритет операторов &#40; Transact-SQL &#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   
-

@@ -1,13 +1,14 @@
 ---
 title: "Сжатие данных | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: compression
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-data-compression
+ms.suite: sql
+ms.technology: dbe-data-compression
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,20 +24,19 @@ helpviewer_keywords:
 - data compression [Database Engine]
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
-caps.latest.revision: 60
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "60"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d999c313752ccbb23f31b9763463fc69e10ac20b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 5aa858aff03e93db9db36b8caa710cc3a3b874ca
-ms.openlocfilehash: 22b2a3faf4357a8ac26aabeafe4661a73cbebac0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="data-compression"></a>Data Compression
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] поддерживают сжатие строк и страниц для таблиц и индексов rowstore, а также поддерживают columnstore и архивное сжатие columnstore для таблиц и индексов columnstore.  
   
@@ -191,7 +191,7 @@ REBUILD PARTITION = ALL WITH (
 |Выполнить сжатие таблицы на подписчике при условии, что на издателе были сжаты все секции, но не выполнять репликацию схемы секционирования.|False|True|Проверить, что для всех секций включено сжатие.<br /><br /> Создать скрипт сжатия на уровне таблицы.|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>Влияние сжатия на другие компоненты SQL Server 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
    
  Сжатие происходит в подсистеме хранилища, и данные предоставляются большинству других компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в распакованном состоянии. Это ограничивает влияние сжатия на другие компоненты следующим.  
 -   Операции массового импорта и экспорта  
@@ -215,5 +215,4 @@ REBUILD PARTITION = ALL WITH (
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
   
   
-
 

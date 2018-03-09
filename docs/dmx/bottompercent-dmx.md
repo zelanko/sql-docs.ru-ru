@@ -2,35 +2,32 @@
 title: "BottomPercent (расширения интеллектуального анализа данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- BOTTOMPERCENT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- BottomPercent function
+f1_keywords: BOTTOMPERCENT
+dev_langs: DMX
+helpviewer_keywords: BottomPercent function
 ms.assetid: 984eb18a-c55c-49f3-81fa-918dfc983174
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 086ac8bb714bca7c182a59040d64badf89f261d3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cdc60cbc61d0c84953f2e80a5896dbd8465bdb8a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает, в порядке возрастания ранга, нижние строки таблицы, сумма которых, как минимум, равна указанному процентному соотношению.  
   
@@ -54,7 +51,7 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ## <a name="result-type"></a>Тип результата  
  Таблица.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **BottomPercent** функция возвращает нижние строки в порядке возрастания их ранга. Ранг основывается на вычисляемом значении из \<ранжирования выражения > аргумент для каждой строки таким образом, что сумма \<ранжирования выражения > значения по меньшей мере заданному проценту, заданному по \<% > аргумент. **BottomPercent** возвращает возможные наименьшее количество элементов, соответствующих указанному значению процента.  
   
 ## <a name="examples"></a>Примеры  
@@ -131,4 +128,3 @@ NATURAL PREDICTION JOIN
  [Функции &#40; расширений интеллектуального анализа данных &#41;](../dmx/functions-dmx.md)  
   
   
-

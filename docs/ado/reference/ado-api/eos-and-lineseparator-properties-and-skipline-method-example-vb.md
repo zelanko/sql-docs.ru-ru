@@ -3,7 +3,7 @@ title: "Электрической ПЕРЕГРУЗКИ LineSeparator свойс
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Skipline method [ADO], Visual Basic example
 - EOS property [ADO], Visual Basic example
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8e333bc3eeefcdf4e6ba4439833b2aef9c6f8d25
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: af08ca92b0f9a6f20e7b1aa0544ea41361945c9d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>Электрической ПЕРЕГРУЗКИ LineSeparator свойства и пример метода SkipLine (Visual Basic)
 В этом примере показано, как управлять текстового потоки по одной строке за раз. Эффект от изменения разделителя строк из возврата и перевода каретки по умолчанию (**adCRLF**) для просто перевода строки (**adLF**) или символ возврата каретки (**adCR**) отображается.  
@@ -120,8 +119,7 @@ End Sub
 'EndSkipLineVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство электрической ПЕРЕГРУЗКИ](../../../ado/reference/ado-api/eos-property.md)   
  [Свойство LineSeparator (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
  [Метод SkipLine](../../../ado/reference/ado-api/skipline-method.md)
-

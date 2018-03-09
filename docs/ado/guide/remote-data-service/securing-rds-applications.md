@@ -3,7 +3,7 @@ title: "Защита приложений служб удаленных рабо
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - RDS security [ADO]
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2d36700bc704f575d69207398499823a173b4f58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 72a46915beed5bb65953788b2b1b7283d90cb8e5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="securing-rds-applications"></a>Защита приложений служб удаленных рабочих СТОЛОВ
 Этот раздел содержит сведения о безопасности для RDS.  
@@ -50,6 +49,5 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="password-authentication"></a>Проверка пароля  
  Служб удаленных рабочих СТОЛОВ может взаимодействовать с веб-сервер IIS под управлением в одном из трех режимов проверки подлинности пароль: анонимный, обычная, или проверку подлинности NT Challenge/Response (называемых встроенную проверку подлинности Windows в Windows 2000). Эти параметры определяют, как веб-сервер управляет доступом через него, например требование, что клиентский компьютер права явный доступ на сервере веб-NT.
-
 
 

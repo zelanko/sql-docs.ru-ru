@@ -3,7 +3,7 @@ title: "Обновить метод (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Refresh method [ADO]
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 422f04618e6e63b6143a8459c869316e47450796
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 00a739b4bf90651f1e38402a8309482bf8217680
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="refresh-method-ado"></a>Обновить метод (ADO)
 Обновляет объекты в коллекции объектов, доступных из и относящиеся к поставщику.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 09/09/2017
 collection.Refresh  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **Обновление** метод выполняет различные задачи в зависимости от коллекции, из которого она вызывается.  
   
 ### <a name="parameters"></a>Параметры  
@@ -73,9 +72,8 @@ collection.Refresh
 |[Коллекция свойств](../../../ado/reference/ado-api/properties-collection-ado.md)|[Коллекция таблиц](../../../ado/reference/adox-api/tables-collection-adox.md)|[Коллекции пользователей](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Коллекции представлений](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обновить пример метода (Visual Basic)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Обновить пример метода (VC ++)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   
  [Свойство Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
- [Обновить метод (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)
-
+ [Метод Refresh (служба удаленных рабочих столов)](../../../ado/reference/rds-api/refresh-method-rds.md)

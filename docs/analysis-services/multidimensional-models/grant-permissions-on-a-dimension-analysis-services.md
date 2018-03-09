@@ -2,37 +2,35 @@
 title: "Предоставление разрешений измерению (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.dimensions.f1
+f1_keywords: sql13.asvs.roledesignerdialog.dimensions.f1
 helpviewer_keywords:
 - dimensions [Analysis Services], security
 - read/write permissions
 - user access rights [Analysis Services], dimensions
 - permissions [Analysis Services], dimensions
 ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dba9778b626da43a404c773eaeb1745b3bcd3528
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 72ea5d3842b0fbf2f568606004b2de7a7e66825f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Предоставление разрешений измерению (службы Analysis Services
-  Настройка безопасности измерения используется для установки разрешений на объект измерения, а не на его данные. Обычно, при предоставлении или ограничении доступа к операциям обработки является основной целью при установке разрешений на измерение.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Безопасности измерения используется для задания разрешений на объект измерения, а не на его данные. Обычно, при предоставлении или ограничении доступа к операциям обработки является основной целью при установке разрешений на измерение.  
   
  Однако, возможно, вашей целью является не управление операциями обработки, а доступ данных к измерению, или к атрибутам и иерархиям, которые оно содержит. Например, компания с региональным отделом продаж возможно желает подготовить информацию по превышению объемов продаж тем, кто находится за пределами отдела. Для того, чтобы разрешить или ограничить доступ к фрагментам данных измерения для различных клиентов, вы можете установить разрешения на атрибуты измерения и элементы измерения. Обратите внимание на то, то вы не можете запретить доступ к самому индивидуальному объекту измерения, только к его данным. Если ваша ближайшая цель — предоставление или ограничение доступа к элементам в измерении, включая права доступа к индивидуальным иерархиям атрибута, обратитесь к разделу [Предоставление настраиваемого доступа к данным измерений (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) за дополнительной информацией.  
   
@@ -82,4 +80,3 @@ ms.lasthandoff: 09/01/2017
  [Предоставление настраиваемого доступа к данным ячейки (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   
-

@@ -1,10 +1,13 @@
 ---
-title: "Задача файловой системы для хранилища Озера данных Azure | Документы Microsoft"
+title: "Задача \"Файловая система\" для Azure Data Lake Store | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/22/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: douglasl
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,44 +17,42 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPADLSTASK.F1
 author: Lingxi-Li
 ms.author: lingxl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
-ms.openlocfilehash: cbc72958f992e0b5cae12cdfc8c0996378f9708c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/11/2017
-
+ms.openlocfilehash: 5b04b005bde1b6ef3f930de614c8e7fb003b0985
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="azure-data-lake-store-file-system-task"></a>Задача файловой системы для хранилища Озера данных Azure
+# <a name="azure-data-lake-store-file-system-task"></a>Задача "Файловая система" для Azure Data Lake Store
 
-Задача Azure хранилища Озера данных файла система позволяет пользователям выполнять различные операции файловой системы на [хранилища Озера данных Azure (ADLS)](https://azure.microsoft.com/services/data-lake-store/).
+Задача "Файловая система" для Azure Data Lake Store позволяет пользователям выполнять различные операции файловой системы в [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/services/data-lake-store/).
 
-Задача Azure хранилища Озера данных файла системы — это компонент [пакет дополнительных компонентов SQL Server Integration Services (SSIS) для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
+Компонент задачи "Файловая система" для Azure Data Lake Store входит в состав [пакета дополнительных компонентов SQL Server Integration Services (SSIS) для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
-## <a name="configure-the-azure-data-lake-store-file-system-task"></a>Настройка хранилища Озера данных Azure File System Task
+## <a name="configure-the-azure-data-lake-store-file-system-task"></a>Настройка задачи "Файловая система" для Azure Data Lake Store
 
-Чтобы добавить пакет Azure данных Озера хранилище File System Task, перетащите его из области элементов служб SSIS на полотно конструктора. Затем дважды щелкните задачу, или щелкните правой кнопкой мыши задачу и выберите **изменить**, чтобы открыть **Azure хранилища Озера данных файла редактор задачи системы** диалоговое окно.
+Чтобы добавить в пакет задачу "Файловая система" для Azure Data Lake Store, перетащите ее с панели элементов служб SSIS на панель холста конструктора. Затем дважды щелкните задачу или щелкните ее правой кнопкой мыши и выберите команду **Изменить**, чтобы открыть диалоговое окно **редактора задачи "Файловая система" для Azure Data Lake Store**.
 
-**Операции** свойство указывает, для выполнения операции файловой системы. Выберите один из следующих операций:
+Операция файловой системы, которая будет выполнена, задается свойством **Операция**. Выберите одну из следующих операций:
 
-- **CopyToADLS:** передачи файлов в ADLS.
-- **CopyFromADLS:** загрузка файлов из ADLS.
+- **CopyToADLS**. Загрузка файлов в ADLS.
+- **CopyFromADLS**. Скачивание файлов из ADLS.
 
-## <a name="configure-the-properties-for-the-operation"></a>Настройка свойств для операции
-Для любой операции необходимо указать диспетчер соединений Озера данных Azure.
+## <a name="configure-the-properties-for-the-operation"></a>Настройка свойств операции
+Для любой операции необходимо указать диспетчер подключений Azure Data Lake.
 
-Ниже приведены свойства, относящиеся к каждой операции.
+Ниже приведены свойства, относящиеся к каждой операции:
 
 ### <a name="copytoadls"></a>CopyToADLS
-- **LocalDirectory:** указывает каталог локального источника, содержащего файлов для отправки.
-- **FileNamePattern:** указывает фильтр имен файлов для исходных файлов. Передаются только файлы, имя которого соответствует указанному шаблону. Подстановочные знаки `*` и `?` поддерживаются.
-- **SearchRecursively:** указывает, следует ли выполнять поиск рекурсивно в исходный каталог для файлов для отправки.
-- **AzureDataLakeDirectory:** указывает на отправку файлов в каталог назначения ADLS.
-- **FileExpiry:** задает срок действия и время для файлов переданы ADLS. Оставьте это свойство пустым, чтобы указать, что файлы никогда не истекает.
+- **LocalDirectory**. Задает каталог локального источника, в котором содержатся загружаемые файлы.
+- **FileNamePattern**. Определяет фильтр имен для исходных файлов. Загружаются только те файлы, имя которых соответствует указанному шаблону. Поддерживаются подстановочные знаки `*` и `?`.
+- **SearchRecursively**. Указывает, следует ли выполнять рекурсивный поиск файлов для загрузки в каталоге источника.
+- **AzureDataLakeDirectory**. Указывает каталог назначения ADLS, в который будут загружены файлы.
+- **FileExpiry**. Задает дату и время истечения срока действия для файлов, загруженных в ADLS. Если файлы не имеют срока действия, оставьте это свойство пустым.
 
 ### <a name="copyfromadls"></a>CopyFromADLS
-- **AzureDataLakeDirectory:** указывает исходный каталог ADLS, которая содержит файлы для загрузки.
-- **SearchRecursively:** указывает, следует ли выполнять поиск рекурсивно в исходный каталог для файлов для загрузки.
-- **LocalDirectory:** указывает каталог назначения, чтобы сохранить загруженные файлы.
-
+- **AzureDataLakeDirectory**. Указывает каталог источника ADLS, в котором содержатся файлы для скачивания.
+- **SearchRecursively**. Указывает, следует ли выполнять рекурсивный поиск файлов для скачивания в каталоге источника.
+- **LocalDirectory**. Указывает каталог назначения, в который будут сохранены скачанные файлы.

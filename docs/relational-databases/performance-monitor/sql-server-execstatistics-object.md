@@ -2,35 +2,36 @@
 title: "Объект статистики выполнения (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:ExecStatistics
 - ExecStatistics object
 ms.assetid: 4f8557a8-345f-4622-a8a5-763a0388ad94
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "14"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 709d44983ef7010b36de6238ce99b2d20397017a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 837b52d5d457a4466a46d08df918e25616d14bff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-execstatistics-object"></a>SQL Server, объект ExecStatistics
-  Объект **SQLServer:ExecStatistics** в Microsoft SQL Server предоставляет счетчики для контроля над различными выполнениями.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект **SQLServer:ExecStatistics** в Microsoft SQL Server предоставляет счетчики для контроля над различными выполнениями.  
   
  В этой таблице приведено описание счетчиков **Ведения статистики** SQL Server.  
   
-|Счетчики ведения статистики SQL Server|Описание|  
+|Счетчики ведения статистики SQL Server|Description|  
 |-----------------------------------------|-----------------|  
 |**Распределенный запрос**|Статистика, относящаяся к выполнению распределенных запросов.|  
 |**Вызовы DTC**|Статистика, относящаяся к выполнению вызовов DTC.|  
@@ -39,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
  Каждый из счетчиков объекта содержит следующие экземпляры.  
   
-|Элемент|Описание|  
+|Элемент|Description|  
 |----------|-----------------|  
 |**Среднее время выполнения (сек)**|Среднее время выполнения выбранного типа выполнения.|  
 |**Совокупное время выполнения (мс) в секунду**|Агрегированное время выполнения выбранного типа выполнения в секунду.|  
@@ -50,4 +51,3 @@ ms.lasthandoff: 06/22/2017
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Open-метод (соединение ADO) | Документы Microsof
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: aecc064b9030adb40347737dc68998de3eee4d64
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c61284bb59c01e22ef4f2cb46664fe7d7f7bbd2f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-connection"></a>Метод Open (соединение ADO)
 Открывает подключение к источнику данных.  
@@ -46,7 +45,7 @@ connection.Open ConnectionString, UserID, Password, Options
  *ConnectionString*  
  Необязательно. Объект **строка** значение, содержащее сведения о соединении. В разделе [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойство сведения о допустимых значений.  
   
- *Идентификатор пользователя*  
+ *UserID*  
  Необязательно. Объект **строка** значение, содержащее имя пользователя для использования при установке соединения.  
   
  *Пароль*  
@@ -55,7 +54,7 @@ connection.Open ConnectionString, UserID, Password, Options
  *Параметры*  
  Необязательно. Объект [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) значение, определяющее, является ли этот метод должен возвращать после (синхронно) или до (асинхронно) подключения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  С помощью **откройте** метод [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объект устанавливает физическое соединение с источником данных. После успешного завершения этого метода, подключение считается активным и может отдавать команды ее и обрабатывать результаты.  
   
  Дополнительно *ConnectionString* аргумент, чтобы указать строку соединения, содержащий ряд *аргумент* *= значение* инструкций, разделенных точкой с запятой, или файл или каталог ресурс, указанный в URL-адресе. **ConnectionString** свойство автоматически наследует значение, используемое для *ConnectionString* аргумент. Таким образом, можно либо установить **ConnectionString** свойство **подключения** объекта перед его открытием или использовать *ConnectionString* аргумент, чтобы задать или переопределить параметры текущего подключения во время **откройте** вызова метода.  
@@ -71,9 +70,9 @@ connection.Open ConnectionString, UserID, Password, Options
 >  URL-адреса, с помощью схемы http автоматически вызывает [поставщик Microsoft OLE DB для публикаций в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [абсолютные и относительные URL-адреса](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Открытие и закрытие примере методы (Visual Basic)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Пример методов открытия и закрытия (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [Пример методов открытия и закрытия (VC ++)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
@@ -81,4 +80,3 @@ connection.Open ConnectionString, UserID, Password, Options
  [Метод Open (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Метод Open (поток ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Метод OpenSchema](../../../ado/reference/ado-api/openschema-method.md)
-

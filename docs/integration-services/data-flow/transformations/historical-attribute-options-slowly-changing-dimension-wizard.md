@@ -1,10 +1,13 @@
 ---
-title: "Параметры атрибутов с предысторией (мастер медленно изменяющихся измерений) | Документы Microsoft"
+title: "Параметры атрибутов с предысторией (мастер медленно изменяющихся измерений) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.loaddimwizard.histattriboption.f1
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2867e5173235520c521ca70952f50d1fa7bc8487
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c4a6e2702d214a7d5c4ab73cb4e226fb8e4c33dd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>Параметры атрибутов с предысторией (мастер медленно изменяющихся измерений)
   Диалоговое окно **Параметры атрибутов с предысторией** используется для просмотра атрибутов с предысторией по дате начала и окончания, а также для записи атрибутов с предысторией в специально предназначенный для этого столбец.  
@@ -48,8 +50,7 @@ ms.lasthandoff: 08/03/2017
 |**Столбец, содержащий дату окончания события**|Выберите в таблице измерения столбец, в котором находится дата окончания.|  
 |**Переменная для установки значений даты**|Выберите переменную даты из списка.|  
   
-## <a name="see-also"></a>См. также  
- [Настройка выходов при помощи мастера медленно меняющихся измерений](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+## <a name="see-also"></a>См. также:  
+ [Настройка выходов при помощи мастера медленно изменяющихся измерений](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   
-

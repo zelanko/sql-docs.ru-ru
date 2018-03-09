@@ -1,31 +1,31 @@
 ---
-title: "Настройка обычной проверки подлинности на сервере отчетов | Документы Microsoft"
+title: "Настройка обычной проверки подлинности на сервере отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
-caps.latest.revision: 28
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "28"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 722fd9bb97ee8fc3dc5ec618467b9ce028a0bf8c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bfadbdb617198fe04b789d0d1d6589f4af2d887f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configure-basic-authentication-on-the-report-server"></a>Настройка обычной проверки подлинности на сервере отчетов
+# <a name="configure-basic-authentication-on-the-report-server"></a>Настройка проверки подлинности Windows на сервере отчетов
   По умолчанию службы Reporting Services принимают запросы, в которых задана проверка подлинности NTLM или Negotiated. Если конфигурация развертывания включает клиентские приложения или браузеры, использующие обычную проверку подлинности, то необходимо добавить обычную проверку подлинности в список поддерживаемых типов. Кроме того, если планируется использование построителя отчетов, то необходимо разрешить анонимный доступ к его файлам.  
   
  Настройка обычной проверки подлинности сервера отчетов производится путем изменения XML-элементов и значений в файле RSReportServer.config. Чтобы заменить значения по умолчанию, можно скопировать и вставить примеры из этого раздела.  
@@ -43,9 +43,9 @@ ms.lasthandoff: 08/09/2017
   
 1.  Откройте файл конфигурации RSReportServer.config в текстовом редакторе.  
   
-     Этот файл расположен в  *\<диск >:*\Program Files\Microsoft SQL Server\MSRS13. MSSQLSERVER\Reporting Services\ReportServer.  
+     Файл находится в каталоге *\<диск>:*\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer.  
   
-2.  Найти \< **проверки подлинности**>.  
+2.  Найдите параметр \<**Authentication**>.  
   
 3.  Выберите и скопируйте наиболее подходящую из следующих XML-структур. Первая XML-структура содержит заполнители для всех элементов, описанных в следующем разделе.  
   
@@ -70,13 +70,13 @@ ms.lasthandoff: 08/09/2017
           </AuthenticationTypes>  
     ```  
   
-4.  Вставьте его поверх существующих записей для \< **проверки подлинности**>.  
+4.  Вставьте ее на место существующих элементов параметра \<**Authentication**>.  
   
      При использовании нескольких типов проверки подлинности добавьте только элемент **RSWindowsBasic** , но не удаляйте элементы для **RSWindowsNegotiate**, **RSWindowsNTLM**или **RSWindowsKerberos**.  
   
      Следует заметить, что **Custom** нельзя использовать с другими типами проверки подлинности.  
   
-5.  Замените пустые значения для \< **область**> или \< **DefaultDomain**> со значениями, которые являются допустимыми для вашей среды.  
+5.  Замените пустые значения для элементов \<**Realm**> и \<**DefaultDomain**> значениями для своей среды.  
   
 6.  Сохраните файл.  
   
@@ -89,13 +89,12 @@ ms.lasthandoff: 08/09/2017
   
 |Элемент|Обязательно|Допустимые значения|  
 |-------------|--------------|------------------|  
-|LogonMethod|Да<br /><br /> Если значение не указано, то будет использовано значение 3.|**2** — вход в сеть, предназначенный для высокопроизводительных серверов и проверки подлинности паролей в виде обычного текста.<br /><br /> **3** — вход с открытым паролем, при котором учетные данные сохраняются в пакете проверки подлинности, отправляемом в каждом HTTP-запросе. Это позволяет серверу олицетворять пользователя при соединении с другими серверами в сети. (по умолчанию)<br /><br /> Примечание. Значения 0 (для интерактивного входа) и 1 (для пакетного входа) в службах ****  НЕ [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]поддерживаются.|  
+|LogonMethod|Да<br /><br /> Если значение не указано, то будет использовано значение 3.|**2** — вход в сеть, предназначенный для высокопроизводительных серверов и проверки подлинности паролей в виде обычного текста.<br /><br /> **3** — вход с открытым паролем, при котором учетные данные сохраняются в пакете проверки подлинности, отправляемом в каждом HTTP-запросе. Это позволяет серверу олицетворять пользователя при соединении с другими серверами в сети. (по умолчанию)<br /><br /> Примечание. Значения 0 (для интерактивного входа) и 1 (для пакетного входа) в службах **НЕ** [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]поддерживаются.|  
 |Realm|Необязательно|Задает секцию ресурса, включающую функции авторизации и проверки подлинности, используемые для управления доступом к защищенным ресурсам организации.|  
 |DefaultDomain|Необязательно|Задает домен, используемый сервером для проверки подлинности пользователя. Это значение является необязательным, однако если оно не указано, то сервер отчетов будет использовать в качестве домена имя компьютера. Если компьютер является членом домена, то этот домен является доменом по умолчанию. Если сервер отчетов установлен на контроллере домена, то используется домен, котроллером которого является этот компьютер.|  
   
 ## <a name="see-also"></a>См. также:  
  [Домены приложений для приложений сервера отчетов](../../reporting-services/report-server/application-domains-for-report-server-applications.md)   
- [Службы Reporting Services, безопасность и защита](../../reporting-services/security/reporting-services-security-and-protection.md)  
+ [Защита и обеспечение безопасности служб Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)  
   
   
-

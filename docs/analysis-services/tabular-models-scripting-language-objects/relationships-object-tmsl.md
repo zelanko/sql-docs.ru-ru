@@ -2,38 +2,35 @@
 title: "Объект связи (TMSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7588565f-ea34-4402-8be9-331188bdb8c2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c41594e9e4ef5776a4e170ba3d9895d5799e9bd7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 260788cabb01d26215a51f0853b1b8dffc8163d5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="relationships-object-tmsl"></a>Объект связи (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Определяет связь между исходной и целевой таблицы, с возможностью указать количество элементов и направление фильтры запросов и безопасности.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Определяет связь между исходной и целевой таблицы, с возможностью указать количество элементов и направление фильтры запросов и безопасности.  
   
 ## <a name="object-definition"></a>Определение объекта  
  Все объекты имеют общий набор свойств, включая имя, тип, описание, коллекцию свойств и заметки. **Связь** объекты также имеют следующие свойства.  
   
  isActive  
- Логическое значение, указывающее, помечена ли связь как активным или неактивным. Активная связь автоматически используется для фильтрации по таблицам. Неактивная связь может использоваться явно путем вычисления DAX с помощью функции USERELATIONSHIP.  
+ Логическое значение, указывающее, помечена ли связь как активным или неактивным. Активная связь автоматически используется для фильтрации в таблицах. Неактивная связь может использоваться явным образом в вычислениях DAX с применением функции USERELATIONSHIP.  
   
  crossFilteringBehavior  
  Указывает, как связи влияют на фильтрацию данных. В разделе [двунаправленные кросс-фильтры для табличных моделей в SQL Server 2016 Analysis Services](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) для получения дополнительной информации. Допустимы следующие значения:  
@@ -52,7 +49,7 @@ ms.lasthandoff: 09/01/2017
 -   (2) при объединении двух столбцов, DatePartOnly соединения только по дате.  
   
  relyOnReferentialIntegrity  
- Не используется; Зарезервировано для будущего использования.  
+ Не используется — зарезервировано для будущего использования.  
   
  отношениями securityFilteringBehavior  
  Перечисление, указывающее, как связи влияют на фильтрацию данных при вычислении выражения безопасности уровня строк. Допустимы следующие значения:  
@@ -176,4 +173,3 @@ ms.lasthandoff: 09/01/2017
  [Создание связей](../../integration-services/data-flow/transformations/create-relationships.md)  
   
   
-

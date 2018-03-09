@@ -3,10 +3,12 @@ title: "Использует данных каталога | Документы 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - functions [ODBC], catalog functions
 - catalog functions [ODBC], using catalog data
 ms.assetid: d5915d0c-eec3-4382-850e-bd863763c99a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d47c73a7281ebdb094e87a01e78985cf97844a79
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 61a112f126eb83d40e350c5cc275f28438f15383
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uses-of-catalog-data"></a>Использует данных каталога
 Приложения используют данные каталога в различными способами. Ниже приведены некоторые распространенные варианты.  
@@ -38,4 +39,3 @@ ms.lasthandoff: 09/09/2017
      Также можно использовать такие среды **SQLTables** и **SQLColumns** для создания списков, из которых программист может нужные значения. Также можно использовать эти среды **SQLPrimaryKeys** и **SQLForeignKeys** автоматически определить и Показать связи между выбранными таблицами и использовать **SQLStatistics** для определения и выделите индексированные поля, чтобы программист могут создавать эффективные запросы.  
   
 -   **Создав курсоров.** Может использовать приложения, драйвера или по промежуточного слоя, который предоставляет механизм Прокручиваемый курсор **SQLSpecialColumns** для определения, какие столбцы или столбец однозначно идентифицировать строку. Программа может собрать *ключей* содержит значения этих столбцов для каждой строки, выбранных. Когда приложение выполняет прокрутку к строке, он будет затем использовать эти значения для выборки самые последние данные для строки. Дополнительные сведения о Прокручиваемые курсоры и наборы ключей см. в разделе [Прокручиваемые курсоры](../../../odbc/reference/develop-app/scrollable-cursors.md).
-

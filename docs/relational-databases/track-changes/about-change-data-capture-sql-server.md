@@ -2,9 +2,12 @@
 title: "Об отслеживании измененных данных (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,19 +17,20 @@ helpviewer_keywords:
 - change data capture [SQL Server]
 - 22832 (Database Engine error)
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f5e5b6ee02f9bb6dbed74be980a56e4e36dd31a0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: a56878e9a37195e63e03b04b84c4a8d296844ff2
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="about-change-data-capture-sql-server"></a>Об отслеживании измененных данных (SQL Server)
-  Система отслеживания измененных данных регистрирует операции вставки, обновления и удаления, которые применяются к таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Тем самым обеспечивается доступ к подробностям этих изменений в легко обрабатываемом реляционном формате. Сведения о столбцах и метаданных, которые требуются для применения изменений к целевой среде, отслеживаются в измененных строках и хранятся в таблицах изменений, отражающих структуру столбцов исходных таблиц. Чтобы потребители данных могли систематически получать доступ к информации об изменениях, предоставляются функции с табличным значением.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Система отслеживания измененных данных регистрирует операции вставки, обновления и удаления, которые применяются к таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Тем самым обеспечивается доступ к подробностям этих изменений в легко обрабатываемом реляционном формате. Сведения о столбцах и метаданных, которые требуются для применения изменений к целевой среде, отслеживаются в измененных строках и хранятся в таблицах изменений, отражающих структуру столбцов исходных таблиц. Чтобы потребители данных могли систематически получать доступ к информации об изменениях, предоставляются функции с табличным значением.  
   
  Хорошим примером потребителя данных, для которого предназначена эта технология, является приложение для извлечения, преобразования и загрузки данных (ETL). ETL-приложение постепенно загружает информацию об изменениях из исходных таблиц [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в хранилище или витрину данных. Хотя представление исходных таблиц в хранилище данных должно отражать изменения в этих таблицах, использование технологии, которая обновляла бы реплики исходной таблицы, в данном случае не подходит. Вместо этого необходим надежный поток информации об изменениях, структурированный таким образом, чтобы клиенты могли применить его к другим целевым предоставлениям данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

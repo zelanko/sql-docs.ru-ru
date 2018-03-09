@@ -2,9 +2,12 @@
 title: "Использование режима EXPLICIT для FOR XML | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -14,19 +17,20 @@ helpviewer_keywords:
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-caps.latest.revision: 33
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4195550f1810bd344c85f2be7110b039ab3f09b2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: a5d96f28856360f9a57b29d28086cc487f156320
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Использование режима EXPLICIT совместно с предложением FOR XML
-  Как описано в подразделе [Конструирование XML используя FOR XML](../../relational-databases/xml/for-xml-sql-server.md), режимы RAW и AUTO не предоставляют больших возможностей контроля формы XML, порождаемого из результата запроса. Однако режим EXPLICIT предоставляет наибольшую гибкость при формировании желаемого XML из результатов запроса.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Как описано в подразделе [Конструирование XML используя FOR XML](../../relational-databases/xml/for-xml-sql-server.md), режимы RAW и AUTO не предоставляют больших возможностей контроля формы XML, порождаемого из результата запроса. Однако режим EXPLICIT предоставляет наибольшую гибкость при формировании желаемого XML из результатов запроса.  
   
  Запрос в режиме EXPLICIT должен быть написан особым способом, при котором в запросе явно задаются дополнительные сведения о требуемом XML, такие как ожидаемый уровень вложенности в XML. В зависимости от запрашиваемого XML написание запросов режима EXPLICIT может оказаться весьма трудоемким. Может оказаться, что [использование режима PATH](../../relational-databases/xml/use-path-mode-with-for-xml.md) с вложениями является более простой альтернативой написанию запросов в режиме EXPLICIT.  
   
@@ -128,7 +132,7 @@ ElementName!TagNumber!AttributeName!Directive
  При указании значения *Directive*значение *AttributeName* может быть пустым. Например: ElementName!TagNumber!!Directive. В этом случае значение столбца напрямую содержится в *ElementName*.  
   
  *Directive*  
-Значение *Directive* является необязательным и может использоваться с целью предоставления дополнительных сведений для создания XML. Значение*Directive* служит двум целям.  
+ Значение*Directive* является необязательным и может использоваться с целью предоставления дополнительных сведений для создания XML. Значение*Directive* служит двум целям.  
   
  Одной из целей является кодирование значений в виде ID, IDREF и IDREFS. Можно указать ключевые слова **ID**, **IDREF**и **IDREFS** в качестве значений *Directive*. Эти директивы переопределяют типы атрибутов. Это позволяет создавать связи внутри документа.  
   
@@ -148,7 +152,7 @@ ElementName!TagNumber!AttributeName!Directive
   
  Если задано значение *AttributeName* , имя тега заменяется указанным именем. В противном случае атрибут добавляется к текущему списку атрибутов включаемых элементов путем помещения содержимого в начало содержимого без кодирования сущности. Столбец с этой директивой должен быть текстового типа, например **varchar**, **nvarchar**, **char**, **nchar**, **text**или **ntext**. Эта директива может использоваться только совместно с **hide**. Эта директива полезна при выборке перегруженных данных, хранящихся в столбце. Если содержимое не является корректным XML, поведение не определено.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  В следующем примере демонстрируется применение режима EXPLICIT.  
   
 -   [Пример. Получение сведений о сотрудниках](../../relational-databases/xml/example-retrieving-employee-information.md)  

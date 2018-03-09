@@ -3,33 +3,30 @@ title: "Функция SQLDataSources | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLDataSources
-apilocation:
-- sqlsrv32.dll
+apiname: SQLDataSources
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLDataSources
-helpviewer_keywords:
-- SQLDataSources function [ODBC]
+f1_keywords: SQLDataSources
+helpviewer_keywords: SQLDataSources function [ODBC]
 ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8aee3d9e1caa424f4792fb1fae0551adcacfcdc3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fc056c3877b76bebdb0402248b6fe6cb9a919d49
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldatasources-function"></a>Функция SQLDataSources
 **Соответствия**  
@@ -75,7 +72,7 @@ SQLRETURN SQLDataSources(
  *NameLength1Ptr*  
  [Выход] Указатель на буфер, в который возвращается общее число символов (за исключением знака завершения null) для возврата в \* *имя_сервера*. Если количество символов вернуть больше или равно *BufferLength1*, имя источника данных в \* *ServerName* усекается до *BufferLength1* за вычетом длины символ конечное значение null.  
   
- *Описание*  
+ *Description*  
  [Выход] Указатель на буфер, в который возвращается Описание драйвера, связанного с источником данных. Например dBASE или SQL Server.  
   
  Если *описание* имеет значение NULL, *NameLength2Ptr* по-прежнему возвращает общее число символов (за исключением символа конечное значение null, символьные данные) для возврата в буфере, на который указывает *Описание*.  
@@ -125,4 +122,3 @@ SQLRETURN SQLDataSources(
 ## <a name="see-also"></a>См. также:  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

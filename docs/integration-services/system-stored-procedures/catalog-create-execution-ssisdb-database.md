@@ -1,29 +1,31 @@
 ---
-title: "Catalog.create_execution (база данных SSISDB) | Документы Microsoft"
+title: "catalog.create_execution (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
-caps.latest.revision: 18
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 7e9d38935a91bba81359bee7fdbd64dba86d0d26
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 8e6f141ea682108f3cb3e7f169692bb2752091de
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (база данных SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Создает экземпляр выполнения в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -43,40 +45,46 @@ catalog.create_execution [@folder_name = folder_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [@folder_name =] *имя_папки*  
- Имя папки, содержащей пакет, который необходимо выполнить. *Имя_папки* — **nvarchar(128)**.  
+ [@folder_name =] *folder_name*  
+ Имя папки, содержащей пакет, который необходимо выполнить. Параметр *folder_name* имеет тип **nvarchar(128)**.  
   
  [@project_name =] *project_name*  
- Имя проекта, содержащего пакет, который необходимо выполнить. *Project_name* — **nvarchar(128)**.  
+ Имя проекта, содержащего пакет, который необходимо выполнить. Параметр *project_name* имеет тип **nvarchar(128)**.  
   
- [@package_name =] *имя_пакета*  
- Имя пакета, который необходимо выполнить. *Имя_пакета* — **nvarchar(260)**.  
+ [@package_name =] *package_name*  
+ Имя пакета, который необходимо выполнить. Параметр *package_name* имеет тип **nvarchar(260)**.  
   
  [@reference_id =] *reference_id*  
- Уникальный идентификатор ссылки на среду. Этот параметр является необязательным. *Reference_id* — **bigint**.  
+ Уникальный идентификатор ссылки на среду. Этот параметр является необязательным. Параметр *reference_id* имеет тип **bigint**.  
   
  [@use32bitruntime =] *use32bitruntime*  
- Указывает, должна ли использоваться 32-разрядная среда выполнения для запуска этого пакета в 64-разрядной операционной системе. Используйте значение 1 для запуска пакета в 32-разрядной средой выполнения при запуске в 64-разрядной операционной системе. Используйте значение 0, чтобы выполнить пакет в 64-разрядной среде выполнения при прогоне в 64-разрядной операционной системе. Этот параметр является необязательным. *Use32bitruntime* — **бит**.  
+ Указывает, должна ли использоваться 32-разрядная среда выполнения для запуска этого пакета в 64-разрядной операционной системе. Используйте значение 1, чтобы выполнить пакет в 32-разрядной среде выполнения при прогоне в 64-разрядной операционной системе. Используйте значение 0, чтобы выполнить пакет в 64-разрядной среде выполнения при прогоне в 64-разрядной операционной системе. Этот параметр является необязательным. Параметр *Use32bitruntime* имеет тип **bit**.  
  
  [@runinscaleout =] *runinscaleout*  
- Укажите, является ли выполнение в масштабное развертывание. Используйте значение 1 для выполнения пакета в масштабное развертывание. Используйте значение 0 для выполнения пакета без масштабное развертывание. Этот параметр является необязательным. Если не указан, его значение равно DEFAULT_EXECUTION_MODE в [SSISDB]. [catalog]. [catalog_properties]. *Runinscaleout* — **бит**. 
+ Указывает, осуществляется ли выполнение в Scale Out. Используйте значение 1 для выполнения пакета в Scale Out. Используйте значение 0 для выполнения пакета вне Scale Out. Этот параметр является необязательным. Если этот параметр не указан, присваивается значение DEFAULT_EXECUTION_MODE в [SSISDB].[catalog].[catalog_properties]. Параметр *runinscaleout* имеет тип **bit**. 
  
- [@useanyworker =] *useanyworker*  
-  Указывает, разрешено ли рабочие Out шкалы для выполнения. Используйте значение 1 для выполнения пакета с любого масштаба Out работника. Используйте значение 0, чтобы показать, что не все ожидания работников для масштабирования для выполнения пакета. Этот параметр является необязательным. Если не указан, его значение равно 1. *Useanyworker* — **бит**. 
+[@useanyworker =] *useanyworker*  
+Указывает, разрешено ли выполнение с помощью любой рабочей роли Scale Out.
+
+-   Используйте значение 1 для выполнения пакета с помощью любой рабочей роли Scale Out. При задании `@useanyworker` значения "Истина" любая рабочая роль, максимальное количество задач которой (как указано в файле конфигурации рабочей роли) еще не достигнуто, может запускать пакет. Сведения о файле конфигурации рабочей роли см. в разделе [Рабочая роль масштабного развертывания служб Integration Services (SSIS)](../scale-out/integration-services-ssis-scale-out-worker.md).
+
+-   Значение 0 указывает, что выполнение пакета с помощью любой рабочей роли Scale Out не разрешено. При задании `@useanyworker` значения "Ложь" вам нужно будет указать рабочие роли, которым разрешен запуск пакета, с помощью диспетчера Scale Out или вызова хранимой процедуры `[catalog].[add_execution_worker]`. Если указать рабочую роль, в которой уже запущен другой пакет, она завершает выполнение текущего пакета, прежде чем запросить другое выполнение.
+
+Этот параметр является необязательным. Если параметр не задан, используется значение 1. Параметр *useanyworker* имеет тип **bit**. 
   
  [@execution_id =] *execution_id*  
- Возвращает уникальный идентификатор для экземпляра выполнения. *Execution_id* — **bigint**.  
+ Возвращает уникальный идентификатор для экземпляра выполнения. Параметр *execution_id* имеет тип **bigint**.  
 
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Выполнение применяется для задания значений параметров, которые будут использоваться пакетом во время выполнения одного экземпляра пакета.  
   
- Если указано ссылку на среду с *reference_id* параметра, хранимая процедура заполняет параметры проекта и пакета литеральными значениями или ссылочными значениями из соответствующих переменных среды. Если указана ссылка на среду, при выполнении пакета используются значения параметров по умолчанию. Чтобы определить точно значения, которые используются в определенном экземпляре выполнения, используйте *execution_id* значение выходного параметра из этой хранимой процедуры и запроса [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md) представления.  
+ Если ссылка на среду задается параметром *reference_id*, хранимая процедура заполняет параметры проекта и пакета литеральными значениями или ссылочными значениями из соответствующих переменных среды. Если указана ссылка на среду, при выполнении пакета используются значения параметров по умолчанию. Чтобы определить, какие именно значения используются в конкретном экземпляре выполнения, воспользуйтесь значением выходного параметра *execution_id* из этой хранимой процедуры и выполните запрос к представлению [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md).  
   
  В выполнении могут указываться только пакеты, отмеченные как пакеты точек входа. В случае указания пакета, который не является пакетом точки входа, происходит сбой выполнения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере вызов catalog.create_execution для создания экземпляра выполнения пакета Child1.dtsx, который не находится в масштабное развертывание. Проект Project1 служб Integration Services содержит пакет. В этом примере выполняется вызов catalog.set_execution_parameter_value для задания значений для параметров Parameter1, Parameter2 и LOGGING_LEVEL. В этом примере выполняется вызов catalog.start_execution для запуска экземпляра выполнения.  
+ В следующем примере выполняется вызов catalog.create_execution для создания экземпляра выполнения пакета Child1.dtsx, не входящего в Scale Out. Проект Project1 служб Integration Services содержит пакет. В этом примере выполняется вызов catalog.set_execution_parameter_value для задания значений для параметров Parameter1, Parameter2 и LOGGING_LEVEL. В этом примере выполняется вызов catalog.start_execution для запуска экземпляра выполнения.  
   
 ```sql  
 Declare @execution_id bigint  
@@ -96,24 +104,24 @@ GO
  0 (успешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   разрешения READ и EXECUTE на проект, а также, если применимо, разрешение READ на среду, указанную в ссылке  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
 
- Если @runinscaleout имеет значение 1, хранимая процедура требует один из следующих разрешений:
+ Если параметр @runinscaleout имеет значение 1, эта хранимая процедура требует применения одного из следующих разрешений:
  
--   Членство в **ssis_admin** роли базы данных
+-   Членство в роли базы данных **ssis_admin**
 
--   Членство в **ssis_cluster_executor** роли базы данных
+-   Членство в роли базы данных **ssis_cluster_executor**
 
--   Членство в **sysadmin** роли сервера
+-   Членство в роли сервера **sysadmin**
   
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
  Следующий список содержит описания некоторых условий, которые могут вызвать ошибку или предупреждение.  
@@ -122,7 +130,7 @@ GO
   
 -   Пользователь не имеет соответствующих разрешений.  
   
--   Ссылки на среду *reference_id*, является недопустимым.  
+-   Ссылка на среду *reference_id* недопустима.  
   
 -   Указанный пакет не является пакетом точки входа.  
   
@@ -130,11 +138,10 @@ GO
   
 -   Проект или пакет содержит параметры, которым требуются значения, но значения не назначены.  
   
--   Не удается найти переменные среды, на которые имеются ссылки в среде, указанной ссылкой, *reference_id*, указывает.  
+-   Переменные среды, на которые имеется ссылка, не найдены в среде, указанной ссылкой *reference_id*.  
   
 ## <a name="see-also"></a>См. также:  
- [Catalog.start_execution &#40; База данных SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)   
+ [catalog.start_execution (база данных)](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)   
  [catalog.set_execution_parameter_value (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
- [Catalog.add_execution_worker &#40; База данных SSISDB &#41;](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)  
+ [catalog.add_execution_worker (база данных)](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)  
   
-

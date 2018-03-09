@@ -3,10 +3,12 @@ title: "Параметры подключения | Документы Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], connection options
 - custom connection options [ODBC]
 ms.assetid: abfdc133-cb33-435f-a467-fbe15444f687
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8ae5a9e91e76608b46daf7f0bf5f532f30141cff
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9bb45857d47ef145c5693f6718696cbf75ccd666
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-options"></a>Параметры подключения
 > [!IMPORTANT]  
@@ -43,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_TXN_ISOLATION|Драйвер допускает использование только SQL_TXN_READ_COMMITTED.<br /><br /> Не поддерживаются следующие vParams:<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
 |SQL_ATTR_ENLIST_IN_DTC|Этот атрибут подключения ODBC 3.0 позволяет использовать драйвер ODBC для Oracle в распределенных транзакциях, координируемых служб компонентов Microsoft (или MTS, если вы используете Windows NT). Он предоставляет указатель на интерфейс *pITransaction* для транзакции как *vParam* аргумент.|  
 |SQL_ATTR_CONNECTION_DEAD|Этот атрибут подключения ODBC 3.5 только для чтения позволяет определить, является ли сбой подключения к серверу Oracle. Получить только; не удалось установить.|
-

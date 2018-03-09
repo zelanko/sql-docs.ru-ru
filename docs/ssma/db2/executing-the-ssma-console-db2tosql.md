@@ -1,29 +1,30 @@
 ---
 title: "Выполнение консоли SSMA (DB2ToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 55415d575aac34cdee2ed2acdb8c9ceaade6465c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7431b1906dcb647bfea80249a4019246f56910f2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>Выполнение консоли SSMA (DB2ToSQL)
 Корпорация Майкрософт предоставляет широкий набор сценариев файл команд для выполнения и контроля над SSMA действий. В последующих разделах подробно одинаковыми. В консольном приложении используется определенных команд файла стандартный сценарий как перечисленные в этом разделе.  
@@ -167,7 +168,7 @@ Force нагрузки-/ target-базы данных источника
   
   metabase="<source/target>"/>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <force-load>  
@@ -280,7 +281,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <generate-assessment-report  
@@ -352,7 +353,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <convert-schema  
@@ -418,7 +419,7 @@ Force нагрузки-/ target-базы данных источника
   
 </migrate-data>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <migrate-data  
@@ -528,7 +529,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <synchronize-target  
@@ -537,7 +538,7 @@ Force нагрузки-/ target-базы данных источника
   
    object-type="<object-category>"/>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <synchronize-target>  
@@ -593,7 +594,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <refresh-from-database  
@@ -602,7 +603,7 @@ Force нагрузки-/ target-базы данных источника
   
    object-type="<object-category>"/>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <refresh-from-database>  
@@ -652,7 +653,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <save-as-script  
@@ -728,7 +729,7 @@ Force нагрузки-/ target-базы данных источника
   
 </convert-sql-statement>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```  
 <convert-sql-statement  
@@ -751,7 +752,7 @@ Force нагрузки-/ target-базы данных источника
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```  
 <convert-sql-statement  
@@ -778,4 +779,3 @@ Force нагрузки-/ target-базы данных источника
   
 -   Для устранения неполадок в консоли, в разделе [Устранение неполадок &#40; DB2ToSQL &#41;](../../ssma/db2/troubleshooting-db2tosql.md).  
   
-

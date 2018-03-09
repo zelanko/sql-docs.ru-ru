@@ -2,12 +2,13 @@
 title: "Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +18,20 @@ helpviewer_keywords:
 - filters [data mining]
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
-caps.latest.revision: 27
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 83c491408707f1a7107a3bb6d485418189d9eb1c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: db42f50eca097c58afac1ded71d143f8230fd42d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
-  Фильтрация моделей на основе данных помогает создавать модели интеллектуального анализа, использующие подмножества данных в структуре интеллектуального анализа данных. Фильтрация обеспечивает гибкость при проектировании структур интеллектуального анализа и источников данных, поскольку это позволяет создать одну структуру интеллектуального анализа на основе всеобъемлющего представления источников данных. Затем можно создать фильтры для использования части данных для обучения и проверки различных моделей, а не строить отдельную структуру и связанную с ней модель для каждого подмножества данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Фильтрация моделей на основе данных помогает создавать модели интеллектуального анализа, использующие подмножества данных в структуре интеллектуального анализа данных. Фильтрация обеспечивает гибкость при проектировании структур интеллектуального анализа и источников данных, поскольку это позволяет создать одну структуру интеллектуального анализа на основе всеобъемлющего представления источников данных. Затем можно создать фильтры для использования части данных для обучения и проверки различных моделей, а не строить отдельную структуру и связанную с ней модель для каждого подмножества данных.  
   
  Например, определяется представление источника данных для таблицы Customers и связанных с ней таблиц. Далее определяется единая структура интеллектуального анализа данных, в состав которой входят все необходимые поля. Наконец, создается модель, которая фильтруется по определенному атрибуту покупателя, например по региону. Это позволяет легко копировать данную модель либо создавать новые модели на основе различных регионов путем изменения только условий фильтра.  
   
@@ -128,7 +129,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>См. также  
  [Синтаксис и примеры фильтра модели (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Тестирование и проверка (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Тестирование и проверка &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
-

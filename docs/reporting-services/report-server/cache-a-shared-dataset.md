@@ -1,26 +1,27 @@
 ---
-title: "Кэшировать общий набор данных | Документы Microsoft"
+title: "Кэширование общих наборов данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
-caps.latest.revision: 7
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "7"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: 167e448c51792ca91dfcdf01dd7e9ae32c1c82c7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b80d9627570c00b68fd0728377053f4bba6b2031
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cache-a-shared-dataset"></a>кэшировать общий набор данных
   Один из способов повышения производительности состоит в настройке свойств кэширования общего набора данных. При кэшировании общего набора данных копия результатов запроса сохраняется на указанный период времени. Первый пользователь, запрашивающий отчет, в котором используется общий набор данных, должен будет дождаться получения результатов запроса и завершения всех процессов обработки до просмотра отчета. Производительность работы последующих пользователей, запрашивающих тот же отчет в пределах времени кэширования, будет значительно повышена, поскольку запрос и обработка уже выполнены. Также можно указать расписание обновления кэша для выполнения запроса и кэширования результатов до истечения указанного периода кэширования.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-schedule-the-expiration-of-a-cached-report"></a>Назначение момента для истечения срока действия кэшированного отчета  
   
-1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  В диспетчере отчетов перейдите к общему набору данных, для которого необходимо задать свойства кэширования, наведите на него курсор мыши и щелкните стрелку раскрывающегося списка.  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  Нажмите кнопку **Применить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление общими наборами данных](../../reporting-services/report-data/manage-shared-datasets.md)  
   
   

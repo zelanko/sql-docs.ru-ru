@@ -2,25 +2,26 @@
 title: "Базы знаний и домены DQS | Microsoft Docs"
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
-caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "32"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 039357d36d63b485eff66febbf4bf1df53a0e359
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d4cb9317da6bda1e0620a7a98299416999a8394
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Базы знаний и домены DQS
   В этом разделе описывается значение базы знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Для очистки данных необходимо иметь знания об этих данных. Чтобы подготовить знания для проекта качества данных, строится и ведется база знаний, которая используется DQS для выявления неверных или недопустимых данных. DQS позволяет использовать автоматические и интерактивные процессы для создания, построения и обновления базы знаний. Знания в базе знаний хранятся в доменах, каждый из которых относится к некоторому полю данных. База знаний является репозиторием знаний о данных, который дает представление о данных и помогает поддерживать их целостность.  
@@ -146,7 +147,7 @@ ms.lasthandoff: 09/09/2017
   
  Дополнительные сведения о базе знаний и сопоставлении данных см. в разделе [Сопоставление данных](../data-quality-services/data-matching.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  В базе знаний и ее доменах вы можете выполнять следующие операции:  
   
 |||  
@@ -158,4 +159,3 @@ ms.lasthandoff: 09/09/2017
 |Использовать базу знаний по умолчанию DQS Data, встроенную в DQS.|[Использование базы знаний DQS по умолчанию](../data-quality-services/using-the-dqs-default-knowledge-base.md)|  
   
   
-

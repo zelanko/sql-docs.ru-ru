@@ -1,13 +1,14 @@
 ---
 title: "Управление соединениями и сеансами (XMLA) | Документы Microsoft"
 ms.custom: 
-ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,17 +21,16 @@ helpviewer_keywords:
 - XMLA, sessions
 - sessions [XML for Analysis]
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
-caps.latest.revision: 31
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 761618d7a0d651fb24257e03c5fcb261fde051c6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc532f9097c8023fcdc160d597c2cd0830782891
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Управление соединениями и сеансами (XMLA)
   *Пользуясь* — это условие, в течение которого сервер сохраняет идентификатор и контекст клиента между вызовами методов. *Отсутствие поддержки состояния* — это условие, в течение которого сервер не запоминает идентификатор и контекст клиента после завершения вызова метода.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 09/01/2017
   
  В спецификации протокола SOAP консорциума World Wide Web (W3C) рекомендуется использовать заголовки SOAP для построения новых протоколов поверх сообщений SOAP. В приведенной далее таблице перечислены элементы и атрибуты заголовков SOAP, которые XMLA определяет для запуска, ведения и закрытия сеанса.  
   
-|Заголовок SOAP|Description|  
+|Заголовок SOAP|Описание|  
 |-----------------|-----------------|  
 |BeginSession|Этот заголовок запрашивает у поставщика создание нового сеанса. В ответ поставщик должен создать новый сеанс и возвратить его идентификатор, как часть заголовка Session в ответе SOAP.|  
 |SessionId|Область значения содержит идентификатор сеанса, который необходимо использовать в каждом вызове метода в течение сеанса. В ответе SOAP поставщик отправляет этот тег, а клиент также должен отправлять этот атрибут с каждым элементом заголовка Session.|  
@@ -113,8 +113,7 @@ ms.lasthandoff: 09/01/2017
     </SOAP-ENV:Header>  
     ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разработка с использованием XML для Аналитики в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

@@ -1,13 +1,14 @@
 ---
-title: "Публикация отчетов на сервере отчетов | Документы Microsoft"
+title: "Публикация отчетов на сервере отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/01/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +25,16 @@ helpviewer_keywords:
 - deploying [Reporting Services], reports
 - Report Designer [Reporting Services], publishing reports
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
-caps.latest.revision: 47
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "47"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f7e44b6527c90419e5ae220260ab08a706c2372
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 94377a58c5d61ea2d62d5c8e75cea5d4b82f9a4f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Публикация отчетов на сервере отчетов
   После создания и проверки отчета или набора отчетов можно воспользоваться функциями развертывания в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для публикации отчетов на сервере отчетов. Можно опубликовать отдельные отчеты или проект "Сервер отчетов", включающий несколько отчетов и источников данных. Публикация проекта сервера отчетов — это самый простой способ публикации нескольких отчетов. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует термин *развернуть*вместо термина *опубликовать*. Два этих термина взаимозаменяемы.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-publish-all-reports-in-a-project"></a>Публикация всех отчетов в проекте  
   
-На **построения** меню, нажмите кнопку **развернуть \<имя проекта отчета >**. Или в обозревателе решений щелкните правой кнопкой мыши проект отчета и выберите команду **Развернуть**. Можно просмотреть состояние процесса публикации в окне вывода.  
+В меню **Сборка** выберите пункт **Развернуть \<имя проекта отчета>**. Или в обозревателе решений щелкните правой кнопкой мыши проект отчета и выберите команду **Развернуть**. Можно просмотреть состояние процесса публикации в окне вывода.  
   
 При развертывании проекта «Сервер отчетов» будут развернуты и общие источники данных проекта отчета. Все отчеты разворачиваются с использованием одной конфигурации проекта: на одном сервере отчетов, в одной папке сервера и т. д. Публикацию отчетов на разных серверах необходимо либо выполнять последовательно, либо включить в проект «Сервер отчетов» только необходимые отчеты. Решение может включать несколько проектов сервера отчетов, а использование нескольких проектов поможет облегчить процесс управления развертыванием отчетов, так как дает возможность использовать разные конфигурации для развертывания разных проектов. 
   
@@ -74,10 +74,9 @@ ms.lasthandoff: 08/09/2017
  Необходимо указать URL-адрес целевого сервера на сервере отчетов и, возможно, изменить папки по умолчанию, в которых буду разворачиваться отчеты и общие источники данных.  
 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диалоговое окно страниц свойств проекта](../../reporting-services/tools/project-property-pages-dialog-box.md)   
- [Управление содержимым сервера отчетов &#40; Собственный режим служб SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Обновление отчетов](../../reporting-services/install-windows/upgrade-reports.md)  
   
   
-

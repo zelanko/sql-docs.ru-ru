@@ -3,7 +3,7 @@ title: "Свойство CacheSize (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - CacheSize property [ADO]
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: de4d82f2788ce1166e8b69cd13e8f214b6338688
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 29d5a36905a4de936dcac630adf97688d2b40855
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cachesize-property-ado"></a>Свойство CacheSize (ADO)
 Указывает количество записей из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта, которые локально кэшируются в памяти.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **длинные** значение, которое должно быть больше 0. По умолчанию — 1.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **CacheSize** свойства, сколько записей следует извлекать за один раз в локальную память от поставщика. Например если **CacheSize** равно 10, после первого открытия **записей** объекта, поставщик возвращает первые 10 записей в локальную память. При перемещении по **записей** объекта, поставщик возвращает данные из буфера локальной памяти. После перемещения за последней записью в кэше, поставщик извлекает следующие 10 записей из источника данных в кэш.  
   
 > [!NOTE]
@@ -53,10 +52,9 @@ ms.lasthandoff: 09/09/2017
  Если **CacheSize** задано значение больше одной, методы навигации ([переместить](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext и MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) может привести к переходу для удалена запись, если происходит удаление после записи были получены. После первоначальной fetch последующих операций удаления не отразится в кэше данных до попытки получить доступ к значению данных из удаленной строки. Однако задание **CacheSize** одно устраняет эту проблему, так как удаленные строки не могут быть выбраны.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства CacheSize (Visual Basic)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
  [Пример свойства CacheSize (VC ++)](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
  [Пример свойства CacheSize (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)
-

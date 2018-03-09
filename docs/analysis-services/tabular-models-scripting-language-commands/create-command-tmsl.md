@@ -2,32 +2,29 @@
 title: "Создание команды (TMSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e3024f89-ebfa-47e4-9893-708f379fd9b8
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 98af912235d950e787a925ce751fc1df5d1fa6bf
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9ab10d4af0caa658bff323c2bcd484d37ee354f3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-command-tmsl"></a>Создание команды (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Создает указанный объект и все дочерние объекты, которые указаны. Если объект уже существует, команда вызывает ошибку.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Создает указанный объект и все дочерние объекты, которые указаны. Если объект уже существует, команда вызывает ошибку.  
   
 ## <a name="request"></a>Запрос  
  Структура запроса различается в зависимости от объекта. Объект, который является родительским должна включать все его дочерние элементы, несмотря на то, что полный объект определения одноуровневые элементы и родительские элементы не являются обязательными.  
@@ -189,4 +186,3 @@ ms.lasthandoff: 09/01/2017
  [Справочник по языку TMSL (Tabular Model Scripting Language)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

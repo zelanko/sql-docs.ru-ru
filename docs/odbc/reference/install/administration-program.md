@@ -3,27 +3,28 @@ title: "Программа администрирования | Документ
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - administration program [ODBC]
 - ODBC administrator [ODBC]
 ms.assetid: a6c8248a-7a01-42e7-aaed-99dc94d50028
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8d2fce2aa391f452286a15aa635e26c52ca96952
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 476c4710a4265214235bdd7b80a330fad5b37f34
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="administration-program"></a>Программа администрирования
 > [!NOTE]  
@@ -42,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 -   **Добавить, изменить или удалить источники данных без вмешательства пользователя.** Программа администрирования вызовет **SQLConfigDataSource** в установщик DLL и передает его окно null обработки, имя источника данных, чтобы добавить, изменить или удалить и список значений для раздела реестра. Библиотеки DLL вызывает установщик **ConfigDSN** в DLL-файлов для добавления установки драйвера, изменить или удалить источник данных.  
   
 -   **Добавить, изменить или удалить источник данных по умолчанию.** Источник данных по умолчанию является таким же, как любой другой источник данных, за исключением того, его имя по умолчанию. Он будет добавлен, измененных или удаленных так же, как любой другой источник данных.
-

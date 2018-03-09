@@ -1,32 +1,34 @@
----
+﻿---
 title: "Драйвер node.js для SQL Server | Документы Microsoft"
 ms.custom: 
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: node-js
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
-caps.latest.revision: 17
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: c3f3203af56f39a4f9beffc8a7a616c0cde64270
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 049852043326d39188592b19077276cf04f98764
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Драйвер node.js для SQL Server
 
 ![Круг_со_стрелкой_загрузки](../../ssdt/media/download.png)[Скачать драйвер Node.js для SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access) 
 
-Модуль Tedious — это javascript-реализация протокола потока табличных данных (TDS), которую поддерживают все современные версии SQL Server. Драйвер представляет собой проект с открытым кодом на сайте Github.   
+Модуль Tedious — это javascript-реализация протокола потока табличных данных (TDS), которую поддерживают все современные версии SQL Server Драйвер не проекта с открытым кодом, на сайте Github.  
   
 Можно подключиться к базе данных SQL с помощью Node.js в Windows, Linux или Mac.  
   
@@ -49,4 +51,3 @@ ms.lasthandoff: 09/09/2017
 * [Приступая к работе с Node.js на Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/node/ubuntu/)
 * [Приступая к работе с Node.js в Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/node/rhel/)
 * [Приступая к работе с Node.js на SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/node/sles/)
-

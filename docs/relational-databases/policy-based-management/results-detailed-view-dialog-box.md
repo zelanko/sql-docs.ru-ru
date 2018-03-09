@@ -2,30 +2,32 @@
 title: "Диалоговое окно \"Подробный просмотр результатов\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.results.f1
 - sql13.swb.dmf.policy.resultdetails.f1
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
-caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7893f4dbf2a91106721e2d6c266a7f938bce3c45
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "21"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: aa4a078b2e5e130e8bc4f739dab5b515b37852ec
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="results-detailed-view-dialog-box"></a>Диалоговое окно «Подробный просмотр результатов»
-  В этом диалоговом окне отображаются результаты оценки политики после ее запуска с помощью диалогового окна **Выполнить политики** и нажатия кнопки **Оценить**. Это диалоговое окно доступно только для чтения; оно помогает понять, в какой части выражения свойства может содержаться ошибка.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом диалоговом окне приводятся результаты оценки политики после ее запуска с помощью диалогового окна **Выполнение политик** и нажатия кнопки **Оценить**. Это диалоговое окно доступно только для чтения; оно помогает понять, в какой части выражения свойства может содержаться ошибка.  
   
 ## <a name="options"></a>Параметры  
  **AndOr**  

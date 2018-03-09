@@ -3,7 +3,7 @@ title: "Набор RDS. DataControl сервера и выполнить при�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - SortColumn property [RDS], VBScript example
 - FilterValue property [ADO], VBScript example
 ms.assetid: 8a74802f-34d6-4676-bf94-07df5f8bff66
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 476c75653f06699d7d3fdcb0167e49fdf616a37a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 83021d7a5f350d33c5ecd55f464c8bc3a596a20b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filtercolumn-filtercriterion-filtervalue-sortcolumn-and-sortdirection-properties-and-reset-method-example-vbscript"></a>FilterColumn, FilterCriterion, FilterValue, SortColumn, направления сортировки, свойства и пример метода сброса (VBScript)
 > [!IMPORTANT]
@@ -211,14 +210,13 @@ End Sub
 <!-- EndFilterColumnVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Свойство FilterColumn (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
  [Свойство FilterCriterion (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)   
  [Свойство FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   
  [Метод Reset (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)   
  [Свойство SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
- [Свойство SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
-
+ [Свойство SortDirection (служба удаленных рабочих столов)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
 
 

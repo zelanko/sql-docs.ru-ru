@@ -3,33 +3,30 @@ title: "SQLExecute, функция | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLExecute
-apilocation:
-- sqlsrv32.dll
+apiname: SQLExecute
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLExecute
-helpviewer_keywords:
-- SQLExecute function [ODBC]
+f1_keywords: SQLExecute
+helpviewer_keywords: SQLExecute function [ODBC]
 ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0b1660fbd60346aff1c4ef24dcba32a778a00d5e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e81f813f00513add62298c5f7ebb2d0dd3e85a50
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlexecute-function"></a>SQLExecute, функция
 **Соответствия**  
@@ -152,4 +149,3 @@ SQLRETURN SQLExecute(
 ## <a name="see-also"></a>См. также:  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

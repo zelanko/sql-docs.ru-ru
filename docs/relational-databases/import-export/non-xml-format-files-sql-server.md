@@ -2,9 +2,12 @@
 title: "Файлы форматирования, отличные от XML (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -14,20 +17,20 @@ helpviewer_keywords:
 - format files [SQL Server], non-XML format files
 - bulk importing [SQL Server], format files
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
-caps.latest.revision: 63
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5248b62f5b027dcfa99a9bc5028cc88b3f6ef633
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 990578bd6e9efd4e29f5db35fad27089b04512d5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="non-xml-format-files-sql-server"></a>Файлы формата, отличные от XML (SQL Server)
-  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]поддерживаются два типа файлов форматирования для массового экспорта и импорта: *файлы формата, отличного от XML* , и *XML-файлы форматирования*.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]поддерживаются два типа файлов форматирования для массового экспорта и импорта: *файлы формата, отличного от XML* , и *XML-файлы форматирования*.  
   
  **В этом разделе.**  
   
@@ -61,14 +64,14 @@ ms.lasthandoff: 10/13/2017
   
  Поля **Version** и **Number of columns** встречаются только один раз. Описание этих параметров приводится в следующей таблице.  
   
-|Поле файла форматирования|Описание|  
+|Поле файла форматирования|Description|  
 |------------------------|-----------------|  
 |Version|Номер версии программы **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Номер версии распознается по программе **bcp[!INCLUDE[tsql](../../includes/tsql-md.md)], а не по** .<br /><br /> <br /><br /> Примечание. Версия служебной программы **bcp** (Bcp.exe), используемая для считывания файла форматирования, должна быть той же или более поздней по сравнению с программой, с помощью которой создавался файл форматирования. Например, служебная программа [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** может считать файл форматирования версии 10.0, созданный служебной программой [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**, но служебная программа [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** не может считать файл форматирования версии 12.0, созданный служебной программой [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**bcp**.|  
 |Number of columns|Число полей в файле данных. Это значение должно быть одинаковым во всех строках.|  
   
  Другие поля файла форматирования описывают поля данных, массовый импорт и экспорт которых должен быть произведен. Для каждого поля данных необходима отдельная строка файла форматирования. Каждая строка файла форматирования содержит значения полей файла форматирования, описание которых находится в следующей таблице.  
   
-|Поле файла форматирования|Описание|  
+|Поле файла форматирования|Description|  
 |------------------------|-----------------|  
 |**Порядковый номер поля в файле данных**|Число, указывающее на расположение поля в файле данных. Первое поле в строке имеет номер 1 и т. д.|  
 |**Тип данных файла**|Указывает тип данных, хранящихся в этом поле файла данных. Для ASCII-файлов используйте SQLCHAR; для файлов данных в собственном формате используйте типы данных по умолчанию. Дополнительные сведения см. в разделе [Указание типа файлового хранилища с помощью программы bcp (SQL Server)](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md).|  
@@ -118,4 +121,3 @@ ms.lasthandoff: 10/13/2017
  [Файлы форматирования для импорта или экспорта данных (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
   
-

@@ -2,32 +2,35 @@
 title: "Документация для разработчиков ядра СУБД | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - developer's guide [SQL Server Database Engine]
 - Database Engine [SQL Server], development
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
-caps.latest.revision: 17
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c9495c959569ab4801570612d890e39087fdee3a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 23d61cdb9d6f82ddd2e35e7e4e8999cd814557b7
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-engine-developer-documentation"></a>Документация для разработчиков ядра СУБД
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] содержит богатый набор средств разработки, администрирования и управления приложениями баз данных.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] содержит широкий набор средств разработки, администрирования приложений баз данных и управления ими.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Основные понятия о программировании интеграции со средой CLR](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
  Объясняет интеграцию компонента среды CLR платформы .NET Framework для [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Это означает, что хранимые процедуры, триггеры, определяемые пользователем типы, функции и агрегатные функции, а также потоковые функции с табличным значением теперь можно разрабатывать с использованием любого языка .NET Framework, включая [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic .NET и [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#.  
   

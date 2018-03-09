@@ -1,12 +1,14 @@
 ---
-title: "В службах Integration Services документации для разработчиков | Документы Microsoft"
+title: "Документация для разработчиков служб Integration Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,19 +22,18 @@ helpviewer_keywords:
 - SQL Server Integration Services, programming
 - packages [Integration Services], programming
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-caps.latest.revision: 76
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cf7d7afba8ada3f6027db3053914b1822597792c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 718bc3b4bad9f3444f3ba47871c86bb18c45c7ac
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="integration-services-developer-documentation"></a>Документация для разработчиков служб интеграции
+# <a name="integration-services-developer-documentation"></a>Документация для разработчиков служб Integration Services
   Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] включают полностью переписанную модель объектов, которая была улучшена многими функциями, позволяющими упростить расширение и программирование пакетов и сделать их более гибкими и более мощными. Разработчики могут расширять и программировать пакеты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] почти в любом аспекте.  
   
  Разработчик служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] может воспользоваться двумя фундаментальными подходами при программировании служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -57,7 +58,7 @@ ms.lasthandoff: 09/26/2017
   
  Эти подходы к программированию служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] описаны в этом разделе и демонстрируются на примерах.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения о программировании служб Integration Services](../integration-services/integration-services-programming-overview.md)  
  Описывает роли потока управления и потока данных в разработке служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 09/26/2017
  Описывает важное различие между синхронными и асинхронными выходами, а также описывает компоненты, в которых используются эти выходы в потоке данных.  
   
  [Работа с диспетчерами соединений программным образом](../integration-services/working-with-connection-managers-programmatically.md)  
- Список диспетчеров соединений, которые можно использовать из управляемого кода и значения, возвращаемые диспетчерами при вызове кодом **AcquireConnection** метод.  
+ Описывает диспетчеры соединений, которые можно использовать из управляемого кода, а также значения, возвращаемые диспетчерами при вызове метода **AcquireConnection** из кода.  
   
  [Расширение пакетов с помощью сценариев](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  Показывает, как расширить поток управления с помощью задачи «Скрипт» или поток данных с помощью компонента скрипта.  
@@ -95,4 +96,3 @@ ms.lasthandoff: 09/26/2017
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Канонические формы и ограничения шаблона | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - pattern restrictions
 - canonical forms
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
-caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 91512853c317e905feaf4c799516191458264c8e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8492b7bae99daa71c801f4d32314efa51067fcfe
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>Канонические формы и ограничения шаблона
-  Аспект шаблона XSD позволяет вводить ограничение лексического пространства простых типов. Когда ограничение шаблона наложено на тип, для которого есть больше одного возможного лексического представления, некоторые значения могут вызвать непредвиденное поведение в ходе проверки.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Аспект шаблона XSD позволяет вводить ограничение лексического пространства простых типов. Когда ограничение шаблона наложено на тип, для которого есть больше одного возможного лексического представления, некоторые значения могут вызвать непредвиденное поведение в ходе проверки.  
   
  Такое поведение возникает, потому что лексические представления этих значений не сохраняются в базе данных. Поэтому значения будут преобразованы к их каноническим представлениям при сериализации вывода. Если документ содержит значение, каноническая форма которого не соответствует ограничению шаблона для его типа, то документ будет отклонен, если пользователь попытается вставить его повторно.  
   
@@ -40,4 +43,3 @@ ms.lasthandoff: 06/22/2017
  [Требования и ограничения для коллекций XML-схем на сервере](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   
-

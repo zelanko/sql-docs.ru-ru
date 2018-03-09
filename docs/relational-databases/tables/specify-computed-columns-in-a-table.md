@@ -2,9 +2,12 @@
 title: "Указание вычисляемых столбцов в таблице | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-tables
 ms.tgt_pltfrm: 
@@ -12,30 +15,29 @@ ms.topic: article
 helpviewer_keywords:
 - computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
-caps.latest.revision: 19
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a540a749f8682e47215f18ca022fbfc446f93e1d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 95980febab6a2801ca2f751a0cadd22f14991c59
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Указание вычисляемых столбцов в таблице
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Вычисляемый столбец представляет собой виртуальный столбец, физически не хранящийся в таблице, если для него не установлен признак PERSISTED. В выражении вычисляемого столбца для вычисления значения могут использоваться данные из других столбцов. Можно задать выражение для вычисляемого столбца в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с использованием [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Limitations)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Задание вычисляемого столбца с использованием:**  
   
@@ -45,15 +47,15 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Limitations"></a> Ограничения  
+###  <a name="Limitations"></a> ограничения  
   
 -   Вычисляемый столбец нельзя использовать ни в качестве определения ограничения DEFAULT или FOREIGN KEY, ни вместе с определением ограничения NOT NULL. Однако если вычисляемый столбец определен детерминированным выражением и тип данных результата допускается для индексных столбцов, то вычисляемый столбец может быть использован как ключевой столбец в индексе или как часть ограничений PRIMARY KEY или UNIQUE. Например, если таблица содержит столбцы a и b со значениями целого типа, то вычисляемый столбец a + b может быть индексирован, но вычисляемый столбец a+DATEPART(dd, GETDATE()) не может быть индексирован, так как значение может меняться при каждом следующем вычислении.  
   
 -   Вычисляемый столбец не может быть целевым столбцом инструкций INSERT или UPDATE.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Требуется разрешение ALTER на таблицу.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -71,9 +73,9 @@ ms.lasthandoff: 06/22/2017
     > [!IMPORTANT]  
     >  Если формула связывает два выражения различных типов данных, то по правилам приоритета типов данных определяется, какой тип данных имеет меньший приоритет и будет преобразован в тип данных с большим приоритетом. Если неявное преобразование не поддерживается, возвращается ошибка «`Error validating the formula for column column_name.`». Используйте функцию CAST или CONVERT, чтобы устранить конфликт типа данных. Например, если столбец типа **nvarchar** объединяется со столбцом типа **int**, то целочисленный тип необходимо преобразовать в **nvarchar** , как показано в следующей формуле: `('Prod'+CONVERT(nvarchar(23),ProductID))`. Дополнительные сведения см. в разделе [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-5.  Выберите **Да** или **Нет** в раскрывающемся списке для дочернего свойства **Материализованный**, чтобы указать, следует ли сохранять данные.  
+5.  Выберите **Да** или **Нет** в раскрывающемся списке для дочернего свойства **Материализованный** , чтобы указать, следует ли сохранять данные.  
   
-6.  В меню **Файл** выберите пункт **Сохранить***table name*.  
+6.  В меню **Файл** выберите пункт **Сохранить***имя_таблицы*.  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>Добавление определения вычисляемого столбца к существующему столбцу  
   
@@ -143,4 +145,3 @@ ms.lasthandoff: 06/22/2017
      Дополнительные сведения см. в разделе [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a>  
-

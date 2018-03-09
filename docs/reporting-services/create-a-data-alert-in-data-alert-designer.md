@@ -1,27 +1,27 @@
 ---
-title: "Создание предупреждения данных в конструкторе предупреждений | Документы Microsoft"
+title: "Создание предупреждения данных в конструкторе предупреждений | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-caps.latest.revision: 13
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "13"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 54f1cd4f907de0cd3511f1aa25ed8d6e49e2b54b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: ad187b9fca63fa2f6833e28bad918a6c99581494
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Создание предупреждения данных в конструкторе предупреждений данных
 
@@ -30,9 +30,9 @@ ms.lasthandoff: 08/17/2017
 Создание определений предупреждений об изменении данных осуществляется в конструкторе предупреждений об изменении данных. После сохранения их можно открыть, изменить, а затем снова сохранить в конструкторе предупреждений об изменении данных. Дополнительные сведения об изменении определений предупреждений см. в разделах [Управление предупреждениями данных в диспетчере предупреждений данных](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) и [Изменение предупреждения данных в конструкторе предупреждений](../reporting-services/edit-a-data-alert-in-alert-designer.md).
 
 > [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
 
-## <a name="create-a-data-alert-definition"></a>Создать определение предупреждения об изменении данных
+## <a name="create-a-data-alert-definition"></a>Создание определения предупреждения об изменении данных
  
 1.  Найдите библиотеку SharePoint, содержащую отчет, для которого требуется создать определение предупреждения об изменении данных.  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/17/2017
   
      Меню **Действия** показано на следующем рисунке.  
   
-     ![Открытие конструктора предупреждений из библиотеки SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "открыть конструктор предупреждений из библиотеки SharePoint")  
+     ![Открытие конструктора предупреждений из библиотеки SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "Открытие конструктора предупреждений из библиотеки SharePoint")  
   
      Откроется конструктор предупреждений об изменении данных и отобразит первые 100 строк первого потока данных, создаваемого отчетом в таблице.  
   
@@ -121,17 +121,16 @@ ms.lasthandoff: 08/17/2017
   
 20. Дополнительно в текстовом поле **Тема** можно обновить строку «Тема» предупреждающего сообщения.  
   
-     По умолчанию используется тема **предупреждений об изменении данных для \<имя_предупреждения_данных >**.  
+     Темой по умолчанию является **Предупреждение данных для \<имя_предупреждения_данных>**.  
   
 21. При необходимости в текстовом поле **Описание** введите описание предупреждающего сообщения.  
   
 22. Нажмите кнопку **Сохранить**.  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Конструктор предупреждений об изменении данных](../reporting-services/data-alert-designer.md)   
 [Диспетчер предупреждений данных для оповещения администраторов](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

@@ -1,36 +1,37 @@
 ---
 title: "Защита темпоральных таблиц | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 02/21/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f73cdc0f3a240e3d4c795fd67c2913b99748de4a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 5c86f951c3e6f8d553ea61ed959cac6ade235b54
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="temporal-table-security"></a>Безопасность темпоральных таблиц
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Для понимания безопасности применительно к темпоральным таблицам важно понять принципы безопасности, касающиеся темпоральных таблиц. Изучив эти принципы безопасности, можно приступить к рассмотрению вопросов безопасности относительно инструкций **CREATE TABLE**, **ALTER TABLE**и **SELECT** .  
   
 ## <a name="security-principles"></a>Принципы безопасности  
  В следующей таблице описаны принципы безопасности, применимые к темпоральным таблицам.  
   
-|Принцип|Описание|  
+|Принцип|Description|  
 |---------------|-----------------|  
 |Включение и отключение системного управления версиями требует наивысших прав на затронутые объекты|Для включения и отключения SYSTEM_VERSIONING необходимо разрешение CONTROL как для текущей, так и для прежней таблицы|  
 |Данные за прошедший период нельзя изменить напрямую|Если параметр SYSTEM_VERSIONING включен (ON), пользователи не могут изменять данные за прошедший период независимо от своих фактических разрешений для текущей или прежней таблицы. Это относится к изменениям как данных, так и схемы.|  
@@ -88,4 +89,3 @@ ms.lasthandoff: 06/22/2017
  [Представления и функции метаданных для временной таблицы](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

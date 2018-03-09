@@ -1,12 +1,14 @@
 ---
 title: "Импорт данных с помощью собственного запроса (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
-ms.date: 10/26/2017
-ms.prod: sql-server-2017
+ms.date: 02/20/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
@@ -14,17 +16,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: be1de1271558dd840f12214b8986be85572ebe6d
+ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
 ms.translationtype: MT
-ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
-ms.openlocfilehash: 8888951d9fca0013015105998200b3ee9364855d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/11/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="import-data-by-using-a-native-query"></a>Импорт данных при помощи собственного запроса
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 Для табличных моделей 1400 новые возможности получения данных в проектах Visual Studio Analysis Services обеспечивает огромную гибкость в том, как можно объединять данные во время импорта. Эта статья описывает создание подключения к источнику данных и последующего создания собственного SQL-запрос для задания импорта данных.
 
 Для выполнения задач, описанных в этой статье, убедитесь, что вы используете последнюю версию SSDT. Если вы используете Visual Studio 2017 г., убедитесь, что вы загрузили и установили сентября 2017 г. или более поздней версии Microsoft Analysis Services проекты VSIX.
@@ -69,4 +68,3 @@ ms.lasthandoff: 10/11/2017
  [Олицетворение](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
 
   
-

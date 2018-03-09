@@ -2,28 +2,27 @@
 title: "Создание системной роли (среда Management Studio) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.newsystemrole.f1
+f1_keywords: sql13.swb.reportserver.newsystemrole.f1
 ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
-caps.latest.revision: 28
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "28"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f4917fea7fbaa0f652287a08e0a3a5727feaad9e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fb7dc039f225328a96d135ff584c1d3a54b619da
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="new-system-role-management-studio"></a>Создание системной роли (среда Management Studio)
   Используйте эту страницу, чтобы создать определение роли на уровне системы. Определение системной роли указывает набор задач на системном уровне, применимых к серверу отчетов в целом.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
  " /  
   
- **Description**  
+ **Описание**  
  Введите описание, объясняющее, как использовать роль, и перечисляющее функции, которые поддерживаются ролью.  
   
  **Задача**  
@@ -48,9 +47,8 @@ ms.lasthandoff: 08/09/2017
  **Описание задачи**  
  Описание задачи с указанием поддерживаемых ею операций и разрешений.  
   
-## <a name="see-also"></a>См. также  
- [Сервер отчетов в Справка F1 среды Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Определения ролей](../../reporting-services/security/role-definitions.md)  
+## <a name="see-also"></a>См. также:  
+ [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Определение ролей](../../reporting-services/security/role-definitions.md)  
   
   
-

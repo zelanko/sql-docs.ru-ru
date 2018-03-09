@@ -2,9 +2,12 @@
 title: "Управление отслеживанием изменений (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,19 +18,19 @@ helpviewer_keywords:
 - change tracking [SQL Server]
 - change tracking [SQL Server], managing
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
-caps.latest.revision: 9
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e6a29f384995058da7b4beef3edc3dac37e3e616
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 76ab7f38d33ca8940eb9f0c82a7e1279f552364d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="manage-change-tracking-sql-server"></a>Управление отслеживанием изменений (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   В этом разделе описывается процесс управления отслеживанием изменений. А также процесс настройки безопасности и определение влияния отслеживания изменений на хранение данных и производительность.  
   
@@ -43,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
  Кроме того, представление каталога [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) отражает внутренние таблицы, созданные при включении отслеживания изменений для пользовательской таблицы.  
   
-### <a name="security"></a>Безопасность  
+### <a name="security"></a>безопасность  
  Для доступа к данным отслеживания изменений с помощью [функций отслеживания изменений](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)участник должен иметь следующие разрешения.  
   
 -   Разрешение SELECT как минимум для первичных ключевых столбцов отслеживаемой таблицы, для которой выполняется запрос.  
@@ -102,7 +105,7 @@ ms.lasthandoff: 06/22/2017
   
  Как для других внутренних таблиц, место, занимаемое таблицами отслеживания изменений, можно определить с помощью хранимой процедуры [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) . Названия внутренних таблиц можно определить с помощью представления каталога [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) , как показано в следующем примере.  
   
-```tsql  
+```sql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  
@@ -119,4 +122,3 @@ sp_spaceused 'sys.syscommittab'
  [Работа с информацией об изменениях (SQL Server)](../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
   
-

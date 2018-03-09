@@ -3,7 +3,7 @@ title: "Интерфейс ADORecordConstruction | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordConstruction interface [ADO]
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7bfe02588a73f6c896b8947298483766c6a8a01e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3966038215e1d26828d60b739ac6060859eabd67
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adorecordconstruction-interface"></a>Интерфейс ADORecordConstruction
 **ADORecordConstruction**интерфейса используется для создания объекта ADO **запись** объектов из поставщика OLE DB **строки** объекта в приложении C/C++.  
@@ -40,7 +39,7 @@ ms.lasthandoff: 09/09/2017
 |||  
 |-|-|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Доступный только на запись.<br />Задает контейнер OLE DB **строки** объект на этом ADO **записи** объекта.|  
-|[Строки](../../../ado/reference/ado-api/row-property-ado.md)|Чтение и запись.<br />Получает или задает поставщика OLE DB **строки** объекта из/в этом ADO **записи** объекта.|  
+|[Row](../../../ado/reference/ado-api/row-property-ado.md)|Чтение и запись.<br />Получает или задает поставщика OLE DB **строки** объекта из/в этом ADO **записи** объекта.|  
   
 ## <a name="methods"></a>Методы  
  Нет.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="events"></a>События  
  Нет.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Получает OLE DB **строки** объекта (`pRow`), построении ADO **записи** объекта (`adoR`), сумм следующие три основные операции:  
   
 1.  Создание объекта ADO **записи** объекта:  
@@ -84,4 +83,3 @@ ms.lasthandoff: 09/09/2017
  **Библиотека:** msado15.dll  
   
  **UUID:** 00000567-0000-0010-8000-00AA006D2EA4
-

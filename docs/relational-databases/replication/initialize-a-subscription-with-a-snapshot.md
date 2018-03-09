@@ -2,30 +2,32 @@
 title: "Инициализация подписки с помощью моментального снимка | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - snapshots [SQL Server replication], initializing subscriptions
 - initializing subscriptions [SQL Server replication], snapshots
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
-caps.latest.revision: 32
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85768c39b282ccfda1df1e68d42a1f6b3985bc46
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "32"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 6655989242beb16950da560df85c4955b4b0f41c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>Инициализация подписки с помощью моментального снимка
-  После того как публикация создана, обычно создается и копируется в папку моментальных снимков исходный моментальный снимок (это происходит по умолчанию для публикаций слиянием, созданных с помощью мастера создания публикаций). Затем, при начальной синхронизации подписки, снимок применяется к подписчику агентом распространителя (для публикаций транзакций и публикаций моментальных снимков) или агентом слияния (для публикаций слиянием). Процесс создания моментального снимка зависит от типа публикации:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] После создания публикации обычно создается и копируется в папку моментальных снимков исходный моментальный снимок (это происходит по умолчанию для публикаций слиянием, созданных с помощью мастера создания публикаций). Затем, при начальной синхронизации подписки, снимок применяется к подписчику агентом распространителя (для публикаций транзакций и публикаций моментальных снимков) или агентом слияния (для публикаций слиянием). Процесс создания моментального снимка зависит от типа публикации:  
   
 -   Если моментальный снимок предназначен для публикации моментальных снимков, публикации транзакций или публикации слиянием, не использующей параметризованных фильтров, снимок содержит схему и данные в файлах программы массового копирования (bcp), а также ограничения, расширенные свойства, индексы, триггеры и системные таблицы, необходимые для репликации. Дополнительные сведения о создании и применении моментального снимка см. в [этой статье](../../relational-databases/replication/create-and-apply-the-snapshot.md).  
   

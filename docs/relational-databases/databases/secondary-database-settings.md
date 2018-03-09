@@ -2,29 +2,30 @@
 title: "Настройки базы данных-получателя | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.databaseproperties.logshipping.settings.dest.f1
+f1_keywords: sql13.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
-caps.latest.revision: 32
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7ec30a94c58a94d2afad050eab06ecc60432c7b1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "32"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 16e7f118afae0ca2f33ca8852ee4ac71e156fe52
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secondary-database-settings"></a>Настройки базы данных-получателя
-  При помощи этого диалогового окна можно настроить и изменить свойства базы данных-получателя в конфигурации доставки журналов.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью этого диалогового окна можно настроить и изменить свойства базы данных-получателя в конфигурации доставки журналов.  
   
  Основные сведения о доставке журналов изложены в статье [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
@@ -35,7 +36,7 @@ ms.lasthandoff: 06/22/2017
  **База данных-получатель**  
  Отображает имя базы данных-получателя для конфигурации доставки журналов. При добавлении в конфигурацию доставки журналов новой базы данных-получателя можно выбрать эту базу из списка или ввести ее имя в текстовое поле. При вводе имени новой базы данных необходимо выбрать параметр на вкладке **Инициализация** , который произведет восстановление полной копии базы данных-источника в базу данных-получатель. Новая база данных создается как часть операции восстановления.  
   
- **Connect**  
+ **Подключить**  
  Подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для его использования в конфигурации доставки журналов в качестве сервера-получателя. Учетная запись, использованная для подключения, должна быть экземпляром предопределенной роли сервера sysadmin на экземпляре сервера-получателя.  
   
  **Вкладка «Инициализация базы данных»**  

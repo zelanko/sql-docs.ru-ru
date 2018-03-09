@@ -1,27 +1,27 @@
 ---
-title: "Построитель отчетов (SSRS) среды разработки | Документы Microsoft"
+title: "Среда разработки построителя отчетов (службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 03a8fc7800821a235076b5652506c2247db1226f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 46f75cd92e385c6992678444f68e9e7c1f2e2d8d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>Среда разработки построителя отчетов (службы SSRS)
   Построитель отчетов [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] — изолированная среда разработки для создания отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы вне Visual Studio. При создании отчета задается, откуда брать данные, какие данные брать и как их отображать. При запуске отчета обработчик получает все указанные сведения, извлекает данные и объединяет их с макетом отчета, чтобы создать отчет. Его можно установить с веб-портала [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или из Центра загрузки Майкрософт.  
@@ -51,11 +51,10 @@ ms.lasthandoff: 08/09/2017
   
  У построителя отчетов и конструктора отчетов много общего. Подробнее см. в разделе [Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)   
- [Настройка доступа к построителю отчетов](../../reporting-services/report-server/configure-report-builder-access.md)   
- [Средства служб отчетов](../../reporting-services/tools/reporting-services-tools.md)   
- [Разработка отчетов с использованием конструктора отчетов &#40; Службы SSRS &#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
+ [настроить доступ к построителю отчетов](../../reporting-services/report-server/configure-report-builder-access.md)   
+ [Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
+ [Разработка отчетов с использованием конструктора отчетов (SSRS)](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
   
-

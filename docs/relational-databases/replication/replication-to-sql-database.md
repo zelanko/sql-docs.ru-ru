@@ -1,33 +1,33 @@
 ---
 title: "Репликация в базу данных SQL | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL Database replication
 - replication, SQL Database
 ms.assetid: e8484da7-495f-4dac-b38e-bcdc4691f9fa
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "15"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: c06ca9a84504ca2ce9958e39e352a7ad93c9a56d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 72ae10ca4b2977d50a883507e2658abcf50e6579
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-to-sql-database"></a>Репликация в базу данных SQL
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   <a name="includessnoversionincludesssnoversion-mdmd-replication-can-be-configured-to-includesssdsfullincludessssdsfull-mdmd"></a>Репликацию[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно настроить в [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
  -  
@@ -155,9 +155,8 @@ ms.lasthandoff: 09/27/2017
  --   [Создайте принудительную подписку](../../relational-databases/replication/create-a-push-subscription.md), указав имя логического сервера [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] в качестве подписчика (например, **N'azuresqldbdns.database.windows.net'**) и имя [!INCLUDE[ssSDS](../../includes/sssds-md.md)] в качестве целевой базы данных (например, **AdventureWorks**).  
  -  
  -## См. также  
- - [Создание публикации](../../relational-databases/replication/publish/create-a-publication.md)   
+ - [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  - [Создание принудительной подписки](../../relational-databases/replication/create-a-push-subscription.md)   
  - [Типы репликации](../../relational-databases/replication/types-of-replication.md)   
  - [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication.md)   
  - [Инициализация подписки](../../relational-databases/replication/initialize-a-subscription.md)  
-

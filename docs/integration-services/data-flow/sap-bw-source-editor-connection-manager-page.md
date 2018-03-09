@@ -1,10 +1,13 @@
 ---
-title: "Редактор источников SAP BW (страница «Диспетчер соединений») | Документы Microsoft"
+title: "Редактор источника SAP BW (страница \"Диспетчер соединений\")"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sapbwsource.connection.f1
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6f82377abc5fcbbcabed270e8181b1e7bae7b062
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0373c0142f2b466b12dd6c2ff1619f09b2b8b26f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Редактор источников SAP BW (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор источника SAP BW** , чтобы выбрать диспетчер соединений SAP BW для источника SAP BW. На этой странице можно также выбрать режим выполнения и параметры для извлечения данных из источника данных системы SAP Netweaver BW.  
@@ -95,7 +97,7 @@ ms.lasthandoff: 08/03/2017
  **ID программы**  
  Введите идентификатор программы, связанный с назначением RFC.  
   
- **Поиск**  
+ **Найти**  
  Выполните поиск назначения RFC с помощью диалогового окна **Поиск назначения RFC** . Дополнительные сведения об этом диалоговом окне см. в разделе [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md).  
   
 #### <a name="process-chain-options"></a>Параметры обработки цепочек  
@@ -104,7 +106,7 @@ ms.lasthandoff: 08/03/2017
  **Цепочка процесса**  
  Введите имя процесса цепочки, которое будет вызвано источником.  
   
- **Поиск**  
+ **Найти**  
  Выполните поиск цепочки процесса при помощи диалогового окна **Найти цепочку процесса** . Дополнительные сведения об этом диалоговом окне см. в разделе [Look Up Process Chain](../../integration-services/data-flow/look-up-process-chain.md).  
   
 ### <a name="execution-mode--w---wait-for-notify"></a>Режим выполнения — W = Ожидать уведомления  
@@ -121,18 +123,17 @@ ms.lasthandoff: 08/03/2017
  **ID программы**  
  Введите идентификатор программы, связанный с назначением RFC.  
   
- **Поиск**  
+ **Найти**  
  Выполните поиск назначения RFC с помощью диалогового окна **Поиск назначения RFC** . Дополнительные сведения об этом диалоговом окне см. в разделе [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md).  
   
 ### <a name="execution-mode--e---extract-only"></a>Режим выполнения = E — только извлечение  
  **Идентификатор запроса**  
  Введите идентификатор запроса, связанный с извлечением.  
   
-## <a name="see-also"></a>См. также  
- [Редактор источников SAP BW &#40; Страница «столбцы» &#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
- [Редактор источников SAP BW &#40; Страница «Вывод ошибок» &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
- [Редактор источников SAP BW &#40; Страница "Дополнительно" &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+## <a name="see-also"></a>См. также:  
+ [Редактор источника SAP BW (страница "Столбцы")](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
+ [Редактор источника SAP BW (страница "Вывод ошибок")](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
+ [Редактор источника SAP BW (страница "Дополнительно")](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Справка F1 по соединителю с SAP BW (Microsoft)](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

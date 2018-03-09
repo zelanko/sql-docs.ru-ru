@@ -2,40 +2,35 @@
 title: "Группирует элемент (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Groups Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Groups Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Groups
-helpviewer_keywords:
-- Groups element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Groups
+helpviewer_keywords: Groups element
 ms.assetid: 62196435-83a8-4a0a-8be1-7dfc986dc6c5
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0ccfbd9a1cf28125e026a6ead5f75080e59059f8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ec1af07e39807cbb64473b2229c0798bd5b7219f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="groups-element-assl"></a>Элемент Groups (ASSL)
-  Содержит коллекцию групп элементов, привязанных к атрибуту.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит коллекцию групп элементов, привязанных к атрибуту.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,7 +47,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -65,7 +60,7 @@ ms.lasthandoff: 09/01/2017
 |Родительские элементы|[Привязка](../../../analysis-services/scripting/data-type/binding-data-type-assl.md) типа [UserDefinedGroupBinding](../../../analysis-services/scripting/data-type/userdefinedgroupbinding-data-type-assl.md)|  
 |Дочерние элементы|[Группирование](../../../analysis-services/scripting/objects/group-element-assl.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.GroupCollection>.  
   
 ## <a name="see-also"></a>См. также:  
@@ -73,4 +68,3 @@ ms.lasthandoff: 09/01/2017
  [Коллекции &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   
-

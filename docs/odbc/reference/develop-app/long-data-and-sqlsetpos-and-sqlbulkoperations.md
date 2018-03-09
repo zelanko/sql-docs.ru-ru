@@ -3,10 +3,12 @@ title: "Большие объемы данных и SQLSetPos и SQLBulkOperatio
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - updating data [ODBC], long data
 - SQLBulkOperations function [ODBC], long data
 ms.assetid: e2fdf842-5e4c-46ca-bb21-4625c3324f28
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7684c15df244828211c2b87acd7314a7e05bea5e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 308e1ad6f2d99a0a6b7e73d8a82ac62362fea9a2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Большие объемы данных и SQLSetPos и SQLBulkOperations
 Как и в случае с параметрами в инструкции SQL, большие объемы данных могут отправляться при обновлении строки со **SQLBulkOperations** или **SQLSetPos** или при вставке строк с **SQLBulkOperations**. Данные отправляются в частях с несколькими вызовами в **SQLPutData**. Столбцы, для которых данные передаются во время выполнения, называются *столбцов данных времени выполнения*.  
@@ -51,4 +52,3 @@ ms.lasthandoff: 09/09/2017
 6.  Вызовы **SQLParamData** еще раз, чтобы указать, что он отправил всех данных для столбца. Если имеются какие-либо столбцы данных времени выполнения, для которых не были отправлены данные, драйвер возвращает SQL_NEED_DATA и уникальное значение для следующего столбца данных во время выполнения; приложение возвращается к шагу 5. Если отправки данных для всех столбцов данных времени выполнения данные для строки отправляется к источнику данных. **SQLParamData** возвращает SQL_SUCCESS или SQL_SUCCESS_WITH_INFO и может возвращать любой SQLSTATE **SQLBulkOperations** или **SQLSetPos** может возвращать.  
   
  После **SQLBulkOperations** или **SQLSetPos** возвращает SQL_NEED_DATA и перед данных полностью отправлен для последнего столбца данных во время выполнения, инструкция находится в состоянии необходимые данные. В этом состоянии, приложение может вызвать только **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, или **SQLGetDiagRec**; все остальные функции возвращают SQLSTATE HY010 (функция ошибка последовательности). Вызов **SQLCancel** отменяет выполнение инструкции и возвращает его предыдущее состояние. Дополнительные сведения см. в разделе [приложение б: ODBC состояния перехода таблицы](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).
-

@@ -2,29 +2,30 @@
 title: "Функции RevoScaleR для работы с данными SQL Server | Документы Microsoft"
 ms.custom: 
 ms.date: 08/20/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
 ms.assetid: 5f3c9864-9c75-4688-947d-0940045b2671
-caps.latest.revision: 9
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: b1567bd6e4a419b293a963a7b3afe96c24409bcc
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c93fc378a7255c5a4f4b8f4833794cc0817c9996
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="revoscaler-functions-for-working-with-sql-server-data"></a>Функции RevoScaleR для работы с данными SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Здесь представлен обзор основных функций, предоставляемых в RevoScaleR для работы с данными SQL Server.
 
@@ -75,4 +76,3 @@ ms.lasthandoff: 09/01/2017
 + [rxReadXdf](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxreadxdf) -считывает данные из XDF-файла в кадре данных.
 
 Дополнительные сведения о работе с этими функциями, включая использование данных источников, отличные от [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], в разделе [Howto служит для анализа данных в Microsoft R](https://docs.microsoft.com/r-server/r/how-to-introduction).
-

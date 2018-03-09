@@ -3,10 +3,12 @@ title: "Создание запросов на обновление (визуа�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - Update query
 - updating tables
 ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 27a23579d2396b2008587cafcaeb1cf6adf0f9ee
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3a1ab04017c98ae58defd97d681a8caabe8eb19c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-update-queries-visual-database-tools"></a>Создание запросов на обновление (визуальные инструменты для баз данных)
-Запрос UPDATE позволяет изменить содержимое нескольких строк одной операцией. Например, в таблице `titles` можно с помощью запроса UPDATE увеличить цену всех книг определенного издателя на 10%.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Запрос UPDATE позволяет изменить содержимое нескольких строк одной операцией. Например, в таблице `titles` можно с помощью запроса UPDATE увеличить цену всех книг определенного издателя на 10%.  
   
 При создании запроса UPDATE нужно указать:  
   
@@ -81,4 +82,3 @@ WHERE (pub_id = '0766')
 [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Выполнение основных операций с запросами (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

@@ -3,8 +3,11 @@ title: "Предикаты | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - predicates [full-text search]
 - expressions [SQL Server], predicates
 ms.assetid: ddbc530c-f44d-4551-9ca3-3430258eb6c0
-caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ff30f8b970c56b2ca8094aa5b3f0aea28458db5c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 598e7c6cfe94f8f74f65257c2a0a0aebf701a7cf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="predicates"></a>Предикаты
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Любое выражение, результатом которого являются значения TRUE, FALSE или UNKNOWN. Предикаты используются в условиях поиска [ГДЕ](../../t-sql/queries/where-transact-sql.md) предложений и [HAVING](../../t-sql/queries/select-having-transact-sql.md) предложений, в условиях соединения [FROM](../../t-sql/queries/from-transact-sql.md) предложений и других конструкциях, где — логическое значение Обязательно.  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 09/01/2017
 |[FREETEXT](../../t-sql/queries/freetext-transact-sql.md)|  
 |[— &#91; НЕ &#93; ЗНАЧЕНИЕ NULL](../../t-sql/queries/is-null-transact-sql.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [МЕЖДУ &#40; Transact-SQL &#41;](../../t-sql/language-elements/between-transact-sql.md)   
  [СУЩЕСТВУЕТ &#40; Transact-SQL &#41;](../../t-sql/language-elements/exists-transact-sql.md)   
  [ИН &#40; Transact-SQL &#41;](../../t-sql/language-elements/in-transact-sql.md)   
@@ -55,4 +57,3 @@ ms.lasthandoff: 09/01/2017
  [Условие поиска &#40; Transact-SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md)  
   
   
-

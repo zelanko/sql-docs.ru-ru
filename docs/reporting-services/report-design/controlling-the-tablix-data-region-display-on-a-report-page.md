@@ -1,27 +1,27 @@
 ---
-title: "Управление отображением области данных Табликса на странице отчета | Документы Microsoft"
+title: "Управление отображением области данных табликса на странице отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 27f2dab25bd2c5e956b847666836de8757a65911
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3a175f5a33591459b302919a2f8af72dee945551
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>Управление отображением области данных табликса на странице отчетов
 Ознакомьтесь со свойствами, которые можно задать в отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы для таблицы, матрицы или области данных списка, чтобы изменить отображение этих компонентов в отчете.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Управление положением области данных табликса относительно других элементов отчета**. В области конструктора отчетов область данных табликса можно разместить над другими элементами отчета, рядом с ними или под этими элементами. Во время выполнения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] при необходимости расширяют область данных табликса, чтобы туда помещались данные, получаемые для связанного набора данных. При этом одноранговые элементы отчета сдвигаются в сторону. Чтобы закрепить табликс рядом с другим элементом отчета, нужно сделать эти элементы отчета одноранговыми и скорректировать их относительные позиции. Дополнительные сведения см. в разделе [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
--   **Изменение направления расширения**. Управлять тем, в каком направлении область данных табликса будет расширяться на странице — слева направо (LTR) или справа налево (RTL) — можно с помощью свойства Direction, доступного в окне "Свойства". Дополнительные сведения см. в разделе [Подготовка к просмотру областей данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-data-regions-report-builder-and-ssrs.md).  
+-   **Изменение направления расширения**. Управлять тем, в каком направлении область данных табликса будет расширяться на странице — слева направо (LTR) или справа налево (RTL) — можно с помощью свойства Direction, доступного в окне "Свойства". Дополнительные сведения см. в разделе [Подготовка к просмотру областей данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-data-regions-report-builder-and-ssrs.md).  
   
 ## <a name="controlling-how-a-tablix-data-region-renders-on-a-page"></a>Управление подготовкой к просмотру области данных табликса на странице  
  Следующий список содержит методы, с помощью которых можно управлять отображением области данных табликса в отчете:  
@@ -75,15 +75,14 @@ ms.lasthandoff: 08/09/2017
  Дополнительные сведения о том, как изменяется представление области данных табликса на странице при экспорте отчета в других форматах, см. в разделе [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Связывание нескольких областей данных к тому же набору данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Вложенные области данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Область выражения для итогов, статистические выражения и встроенных коллекций &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [Управление разрывы страниц, заголовками, столбцов и строк &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
- [Область данных Табликса &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Tables &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Связывание нескольких областей данных с одним набором данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [Вложенные области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [Управление разрывами страниц, заголовками, столбцами и строками (построитель отчетов и службы SSRS)](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Область данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [Таблицы &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Создание матрицы](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Создание счета и форм со списками](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Создание счета-фактуры и форм со списками](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Свойство CursorType (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - CursorType property [ADO]
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6b2123fe185bd52947812bea251c7af4b46989a9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b7031dc9b7acd89eea8491837ec4a550f34dc1ef
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursortype-property-ado"></a>Свойство CursorType (ADO)
 Указывает тип курсора, используемого в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) значение. Значение по умолчанию — **adOpenForwardOnly**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **CursorType** свойство, чтобы указать тип курсора, который должен использоваться при открытии **записей** объекта.  
   
  Только если параметр **adOpenStatic** поддерживается, если [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойству **adUseClient**. Если задано недопустимое значение, ошибка не приведет к; ближайшее поддерживается **CursorType** вместо него будет использоваться.  
@@ -61,10 +60,9 @@ ms.lasthandoff: 09/09/2017
 >  **Удаленное использование службы данных** при использовании на стороне клиента **записей** объекта, **CursorType** может быть задано только в **adOpenStatic**.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CursorType LockType и пример EditMode свойства (Visual Basic)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
  [CursorType LockType и пример использования свойств EditMode (VC ++)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
- [Поддерживает метод](../../../ado/reference/ado-api/supports-method.md)
-
+ [Метод Supports](../../../ado/reference/ado-api/supports-method.md)

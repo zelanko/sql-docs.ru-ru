@@ -1,43 +1,43 @@
 ---
-title: "Сбор данных в 2016 элемента управления ReportViewer | Документы Microsoft"
+title: "Сбор данных в элементе управления ReportViewer 2016 | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/06/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: application-integration
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
-caps.latest.revision: 2
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "2"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4e8b0226c27380bd2089acf8d2d6c8d7b27c7c5b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: adc70b015a9691061f3e33ecb9889b2b4789690b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>Интеграция служб Reporting Services с помощью элементов управления ReportViewer — сбор данных
-По умолчанию элемент управления ReportViewer собирает сведения об использовании в порядке корпорации Майкрософт, чтобы лучше понять, каким образом customers, производимых использование элемента управления. Создавая лучшего понимания того, как развертывание и использование средства просмотра элемента управления клиентов, будущих разработок может иметь фокус на усовершенствований, которые обеспечивают наиболее клиентам.
+# <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>Интеграция служб Reporting Services с помощью элементов управления ReportViewer — сбор данных
+По умолчанию элемент управления ReportViewer собирает анонимные сведения об использовании, на основании которых корпорация Майкрософт может лучше понять, каким образом клиенты используют элемент управления. Нужные сведения о развертывании и использовании элемента управления просмотра помогут сконцентрироваться на внесении улучшений для повышения эффективности работы пользователей.
 
 Описание методик сбора и использования данных в выпусках Microsoft SQL Server 2016, а также в других продуктах и службах см. в [заявлении о конфиденциальности компании Майкрософт](https://www.microsoft.com/EN-US/privacystatement/SQLServer/Default.aspx).
 
 ## <a name="opting-out-of-telemetry"></a>Отказ от телеметрии
 
-Данные телеметрии можно отключить программно с помощью «EnableTelemetry». Это можно сделать, изменив страницу ASPX, размещение элемента управления
+Телеметрию можно отключить программным способом с помощью "EnableTelemetry". Это можно сделать, изменив страницу ASPX, где находится элемент управления.
 
 ```
 \<rsweb:ReportViewer ID="ReportViewer1" runat="server" EnableTelemetry="false">
 \</rsweb:ReportViewer>
 ```
 
-Кроме того, pragmatically прежде, чем элемент управления отрисовывается, например как при вызове Page_Load размещения страницы.
+Или можно воспользоваться программным способом до отрисовки элемента управления, например при вызове Page_Load страницы размещения.
     
 ```
 protected void Page_Load(object sender, EventArgs e)
@@ -45,11 +45,10 @@ protected void Page_Load(object sender, EventArgs e)
     ReportViewer1.EnableTelemetry = false;
 }
 ```
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Использование элемента управления WebForms ReportViewer](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)  
 [Интеграция служб Reporting Services с помощью элементов управления ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md) 
-
 
 
 

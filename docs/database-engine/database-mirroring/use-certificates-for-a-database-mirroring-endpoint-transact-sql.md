@@ -2,11 +2,13 @@
 title: "Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - authentication [SQL Server], database mirroring
 - database mirroring [SQL Server], security
 ms.assetid: f7c23cc2-48dc-4b78-b441-89ca29a0bd9e
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e834a18fd0bc91be36a6e6c9b9bcd3a0901aa2e8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5ece75ebe6293747d9ac677a4913bc7323615c8f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-certificates-for-a-database-mirroring-endpoint-transact-sql"></a>Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)
-  Для обеспечения возможности выполнения проверки подлинности при помощи сертификата при зеркальном отображении базы данных на данном экземпляре сервера, системный администратор должен настроить каждый экземпляр сервера для использования сертификатов, как для входящих, так и для исходящих соединений. Вначале должны быть настроены исходящие соединения.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Для обеспечения возможности выполнения проверки подлинности с помощью сертификата при зеркальном отображении базы данных на данном экземпляре сервера системный администратор должен настроить каждый экземпляр сервера для использования сертификатов, как для входящих, так и для исходящих соединений. Вначале должны быть настроены исходящие соединения.  
   
 > [!NOTE]  
 >  Все соединения зеркального отображения экземпляра сервера используют одну и ту же конечную точку зеркального отображения базы данных, и при ее создании необходимо задать метод проверки подлинности экземпляра сервера. Таким образом, экземпляр сервера может использовать только одну форму проверки подлинности при зеркальном отображении базы данных.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 08/02/2017
   
  Дополнительные сведения см. в разделе [Включение использования сертификатов для входящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md).  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
  За исключением случаев, когда сеть гарантированно защищена, рекомендуется для соединений зеркального отображения базы данных применять шифрование. Дополнительные сведения см. в разделе [Конечная точка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
   
  При копировании сертификата на другую систему используйте безопасный метод копирования. Отнеситесь с особым вниманием к хранению сертификатов в безопасном месте.  
@@ -78,4 +79,3 @@ ms.lasthandoff: 08/02/2017
  [Конечная точка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   
-

@@ -3,29 +3,30 @@ title: "PDW_SHOWPARTITIONSTATS DBCC (Transact-SQL) | Документы Microsof
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|database-console-commands
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - TSQL
-caps.latest.revision: 10
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9d1a4659deeab00589a09e66d885d7f7005f7a43
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: fa9c4e335fddbe4851562f4aada8d55011d99b98
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>PDW_SHOWPARTITIONSTATS DBCC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Отображает размер и число строк для каждой секции таблицы в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] базы данных.
   
@@ -40,16 +41,16 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ *имя_базы_данных* . [ *schema_name* ]. | *schema_name* . ] *имя_таблицы*  
+ [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
  Одно-, двух или трех частей имя таблицы для отображения.  Для двух или трех частей таблицы имен, имя необходимо заключать в двойные кавычки (»»). Использование в кавычки имя одной части таблицы является необязательным.  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Разрешения
 Требуется **VIEW SERVER STATE** разрешение.
   
 ## <a name="result-sets"></a>Результирующие наборы  
 Это результаты для команды DBCC PDW_SHOWPARTITIONSTATS.
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |partition_number|int|Номер секции.|  
 |used_page_count|bigint|Количество страниц, используемых для данных.|  
@@ -71,4 +72,3 @@ DBCC PDW_SHOWPARTITIONSTATS (FactInternetSales);
 [: DBCC PDW_SHOWEXECUTIONPLAN &#40; Transact-SQL &#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
 [DBCC PDW_SHOWSPACEUSED &#40; Transact-SQL &#41;](dbcc-pdw-showspaceused-transact-sql.md)  
   
-

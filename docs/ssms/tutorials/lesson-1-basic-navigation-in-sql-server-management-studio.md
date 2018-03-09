@@ -3,26 +3,28 @@ title: "Занятие 1. Основы работы в SQL Server Management 
 ms.custom: 
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cab5279-86fd-482d-a690-de24bbc25299
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: e06efb71bc6d888fbad143d73019525f9529e97e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
-ms.sourcegitcommit: 5aa858aff03e93db9db36b8caa710cc3a3b874ca
-ms.openlocfilehash: 28a91a6c2e41a7c360c484d8c34e5ee52761e865
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Занятие 1. Основные возможности перемещения в среде SQL Server Management Studio
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) — это мощное и гибкое средство. На этом занятии предстоит изучить, как взаимодействие окон образует область конструктора, которая облегчает выполнение задач. В конце занятия описано, как убирать ненужные окна, быстро открывать окна с требуемыми сведениями и задавать настройки по умолчанию таким образом, чтобы на экране отображались наиболее часто используемые в работе элементы.  
   
 Это занятие содержит следующие разделы:  
@@ -50,5 +52,4 @@ ms.lasthandoff: 08/31/2017
   
   
   
-
 

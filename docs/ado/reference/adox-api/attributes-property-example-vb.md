@@ -3,7 +3,7 @@ title: "Атрибуты примера свойства (Visual Basic) | Док
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Attributes property [ADOX], Visual Basic example
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 736d3c89b24a4a7da05aa4e754f1776ffff53c92
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7b4c9ab7e776e67fb9920691912cf8caaf0fd62d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="attributes-property-example-vb"></a>Пример свойства атрибутов (Visual Basic)
 В этом примере демонстрируется [атрибуты](../../../ado/reference/adox-api/attributes-property-adox.md) свойство [столбца](../../../ado/reference/adox-api/column-object-adox.md). Значения этого свойства **adColNullable** позволяет пользователю задать значение [записей](../../../ado/reference/ado-api/recordset-object-ado.md) [поле](../../../ado/reference/ado-api/field-object.md) на пустую строку. В этом случае пользователь может различать записи, когда данные не известен и записи, где данные не применяется.  
@@ -133,8 +132,7 @@ End Sub
 ' EndAttributesVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойства атрибутов (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
  [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Объект столбца (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
-
+ [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

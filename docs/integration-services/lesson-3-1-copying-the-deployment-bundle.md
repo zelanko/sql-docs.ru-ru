@@ -1,10 +1,13 @@
 ---
-title: "Шаг 1: Копирование пакета развертывания | Документы Microsoft"
+title: "Шаг 1. Копирование пакета развертывания | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
-caps.latest.revision: 18
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: af7cbc058ac548c4fb86d70518ca2366f6fffd57
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 3ed5c0c0f01a550794c29465b041b000f38965a4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-3-1---copying-the-deployment-bundle"></a>Занятие 3-1-копирование пакета развертывания
+# <a name="lesson-3-1---copying-the-deployment-bundle"></a>Занятие 3–1. Копирование пакета развертывания
 В этой задаче требуется скопировать пакет развертывания на целевой компьютер.  
   
 Самый простой способ скопировать пакет развертывания на целевой компьютер включает создание общей папки на целевом компьютере, сопоставление соответствующего сетевого диска и копирование комплекта развертывания в эту общую папку. Если сведения о создании и настройке общих папок или сопоставлении сетевых дисков отсутствуют, обратитесь к документации по операционной системе Windows.  
@@ -44,4 +46,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

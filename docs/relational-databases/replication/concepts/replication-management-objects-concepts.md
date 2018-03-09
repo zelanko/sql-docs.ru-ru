@@ -1,16 +1,17 @@
 ---
 title: "Основные понятия объектов RMO | Документация Майкрософт"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 11/08/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -22,19 +23,19 @@ helpviewer_keywords:
 - Replication Management Objects
 - programming [SQL Server replication], RMO
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
-caps.latest.revision: 61
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "61"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: ad05dda9ba5ae8ac81416c87b6538525fa53352e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e940ba8880aa2d1c4e4677c779b6984b2e6d4dde
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Объекты RMO представляют собой сборку управляемого кода, которая инкапсулирует функциональные средства репликации для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Объекты RMO реализованы в пространстве имен <xref:Microsoft.SqlServer.Replication>.  
   
@@ -187,14 +188,17 @@ ms.lasthandoff: 08/03/2017
   
 > [!IMPORTANT]  
 >  Безусловно, класс <xref:Microsoft.SqlServer.Management.Common.ServerConnection> поддерживает объявление явных транзакций при задании свойств, но такие транзакции могут препятствовать выполнению внутренних транзакций и вырабатывать непредвиденные результаты, поэтому не должны использоваться с объектами RMO.  
-  
+
+### <a name="enabling-tls-12-support-for-rmo-components"></a>Включение поддержки TLS 1.2 для компонентов RMO 
+ Поддержку TLS1.2 для компонентов RMO в Windows 2012 и более ранних версиях можно включить, установив обновление [KB 3140245](http://support.microsoft.com/help/3140245) и создав разделы реестра, описанные в статье. В Windows 2012 R2 и более поздних версиях требуется создать только разделы реестра, приведенные в статье выше.
+ 
 ## <a name="example"></a>Пример  
  В этом примере демонстрируется кэширование изменений свойств. Изменения, внесенные в атрибуты публикации транзакций, кэшируются до тех пор, пока не происходит их явная отправка на сервер.  
   
  [!code-cs[HowTo#rmo_ChangeTranPub_cached](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changetranpub_cached)]  
   
 ## <a name="see-also"></a>См. также:  
- [Основные понятия системных хранимых процедур репликации](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Основные понятия программирования репликации](../../../relational-databases/replication/concepts/replication-programming-concepts.md)  
   
   

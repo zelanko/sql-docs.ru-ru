@@ -3,7 +3,7 @@ title: "MoveFirst, MoveLast, MoveNext и MovePrevious методов (ADO) | Д�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -28,17 +28,16 @@ helpviewer_keywords:
 - MoveFirst method [ADO]
 - MovePrevious method [ADO]
 ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: e6f36322b7e966d48d8ebd7094154646ee51eb20
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cda6c82147648f35adb80012d0810d514d08de86
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>MoveFirst, MoveLast, MoveNext и MovePrevious методов (ADO)
 Переходит к первой, последней, следующей или предыдущей записи в указанном [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта и делает этот запись текущей записи.  
@@ -50,7 +49,7 @@ ms.lasthandoff: 09/09/2017
 recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **MoveFirst** метод для перемещения положения текущей записи к первой записи в **записей**.  
   
  Используйте **MoveLast** метод для перемещения положения текущей записи к последней записи в **записей**. **Записей** объект должен поддерживать закладки или перемещение назад курсора; в противном случае вызов метода приведет к ошибке.  
@@ -66,13 +65,12 @@ recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  Если **записей** только вперед, и вы хотите поддерживают прокрутку вперед и назад, можно использовать [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) свойства для создания записи кэша, которое будет поддерживать перемещение назад курсора через [переместить](../../../ado/reference/ado-api/move-method-ado.md) метод. Так как кэшированные записи загружаются в память, следует кэширование больше записей, чем необходимо. Можно вызвать **MoveFirst** метода последовательным **записей** объекта; это может привести к поставщику для повторного выполнения команды, создавшего **записей** объекта .  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [MoveFirst, MoveLast, MoveNext и MovePrevious методы пример (Visual Basic)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md)   
  [MoveFirst, MoveLast, MoveNext и MovePrevious методы примере (VBScript)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)   
  [MoveFirst, MoveLast, MoveNext и MovePrevious примере методы (VC ++)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)   
  [Move-метод (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [MoveFirst, MoveLast, MoveNext и MovePrevious методов (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)   
  [Метод MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
-

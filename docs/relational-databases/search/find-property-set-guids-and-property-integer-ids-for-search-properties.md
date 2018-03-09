@@ -2,9 +2,12 @@
 title: "Поиск идентификаторов GUID для наборов свойств и целочисленных идентификаторов свойств для свойств поиска | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -13,19 +16,20 @@ helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
-caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d234dc5d1d44c11c50483505898586ab5e845a77
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: a36b99483ece6d73dd94e9f5d218fdcf8ce4c743
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Поиск идентификаторов GUID наборов свойств и целочисленных идентификаторов свойств для свойств поиска
-  В этом разделе описывается получение значений, которые необходимы для добавления свойства в список свойств поиска и включения свойства для полнотекстового поиска. К таким значениям относится идентификатор GUID набора свойств и целочисленный идентификатор свойства документа.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+В этом разделе описывается получение значений, которые необходимы для добавления свойства в список свойств поиска и включения свойства для полнотекстового поиска. К таким значениям относится идентификатор GUID набора свойств и целочисленный идентификатор свойства документа.  
   
  Свойства документа, извлекаемые фильтрами IFilter из двоичных данных, то есть данных, которые хранятся в столбцах с типом данных **varbinary**, **varbinary(max)** (в том числе **FILESTREAM**) или **image** , можно сделать доступными для полнотекстового поиска. Чтобы сделать извлеченное свойство доступным для поиска, его необходимо вручную добавить в список свойств поиска. Список свойств поиска необходимо также связать с одним или несколькими полнотекстовыми индексами. Дополнительные сведения см. в статье [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
@@ -42,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="wellknown"></a> Поиск сведений о широко используемых и известных свойствах Майкрософт  
  Корпорация Майкрософт определяет несколько сотен свойств документа, которые используются во множестве контекстов, однако для каждого формата файла используется только малая часть доступных свойств. К часто используемым свойствам Windows относится небольшой набор универсальных свойств. Некоторые примеры известных универсальных свойств показаны в следующей таблице. В таблице приводится известное имя, каноническое имя Windows (из описания свойства, опубликованного корпорацией Майкрософт), идентификатор GUID набора свойств, целочисленный идентификатор свойства и краткое описание.  
   
-|Известное имя|Каноническое имя Windows|Идентификатор GUID набора свойств|Целочисленный идентификатор|Описание|  
+|Известное имя|Каноническое имя Windows|Идентификатор GUID набора свойств|Целочисленный идентификатор|Description|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Авторы|**System.Author**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|Автор или авторы данного элемента.|  
 |Теги|**System.Keywords**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Набор ключевых слов (тегов), назначенных элементу.|  
@@ -107,6 +111,6 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
- [Настройка и управление фильтрами для поиска](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
+ [Настройка поисковых фильтров и управление ими](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   
   

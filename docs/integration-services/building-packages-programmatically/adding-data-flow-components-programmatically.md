@@ -1,12 +1,14 @@
 ---
-title: "Добавление компонентов потока данных программным образом | Документы Microsoft"
+title: "Добавление компонентов потока данных программным образом | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: building-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -19,30 +21,29 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
-caps.latest.revision: 61
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 8bd642d31e0a6a813b239935f3fb091003b682fc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a8d8daada2aebcf1b2ef650cf9409c73ad6d1084
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="adding-data-flow-components-programmatically"></a>Добавление компонентов потока данных программным образом
-  Построение потока данных начинается с добавления компонентов. Затем необходимо настроить эти компоненты и соединить их друг с другом, чтобы образовался поток данных времени выполнения. В этом разделе описывается добавление компонента в задачу потока данных, создание экземпляра компонента времени разработки и последующая настройка компонента. Сведения о соединении компонентов см. в разделе [подключение данных потока компонентов программным образом](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
+  Построение потока данных начинается с добавления компонентов. Затем необходимо настроить эти компоненты и соединить их друг с другом, чтобы образовался поток данных времени выполнения. В этом разделе описывается добавление компонента в задачу потока данных, создание экземпляра компонента времени разработки и последующая настройка компонента. Дополнительные сведения о соединении компонентов см. в статье [Программное соединение компонентов потока данных](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
   
 ## <a name="adding-a-component"></a>Добавление компонента  
  Вызовите метод <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaDataCollection100.New%2A> коллекции <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.ComponentMetaDataCollection%2A>, чтобы создать новый компонент и добавить его в задачу потока данных. Этот метод возвращает интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> компонента. Однако на этом этапе интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> не содержит сведений, относящихся к какому-либо определенному компоненту. Задайте свойство <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A>, чтобы определить тип компонента. Задача потока данных использует значение этого свойства для создания экземпляра компонента во время выполнения.  
   
- Значение, указанное в свойстве <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A>, может обозначать идентификатор CLSID, PROGID или свойство <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo.CreationName%2A> компонента. Идентификатор CLSID обычно отображается в окне «Свойства» как значение свойства <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> компонента. Сведения о получении этого свойства и других свойств доступных компонентов см. в разделе [обнаружения данных потока компонентов программным образом](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md).  
+ Значение, указанное в свойстве <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A>, может обозначать идентификатор CLSID, PROGID или свойство <xref:Microsoft.SqlServer.Dts.Runtime.PipelineComponentInfo.CreationName%2A> компонента. Идентификатор CLSID обычно отображается в окне «Свойства» как значение свойства <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ComponentClassID%2A> компонента. Сведения о получении значений этого свойства и других свойств доступных компонентов см. в разделе [Программный поиск компонентов потока данных](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md).  
   
 ## <a name="adding-a-managed-component"></a>Добавление управляемого компонента  
- Использовать идентификаторы CLSID или PROGID для добавления управляемых компонентов потока данных в поток данных нельзя, поскольку эти значения указывают на оболочку, а не на сам компонент. Вместо этого можно использовать **CreationName** свойство или **AssemblyQualifiedName** свойства, как показано в следующем примере.  
+ Использовать идентификаторы CLSID или PROGID для добавления управляемых компонентов потока данных в поток данных нельзя, поскольку эти значения указывают на оболочку, а не на сам компонент. Вместо этого можно использовать свойство **CreationName** или свойство **AssemblyQualifiedName**, как показано в следующем примере.  
   
- Если вы планируете использовать **AssemblyQualifiedName** свойство, то необходимо добавить ссылку в вашей [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] проекта на сборку, содержащую управляемый компонент. Эти сборки не указываются на вкладке .NET **добавить ссылку** диалоговое окно. Обычно требуется перейти к сборке в **C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** папки.  
+ Если требуется использовать свойство **AssemblyQualifiedName**, следует добавить в проект [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ссылку на сборку, содержащую управляемый компонент. Эти сборки отсутствуют в списке на вкладке ".NET" диалогового окна **Добавление ссылки**. В общем случае сборка находится в папке **C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents**.  
   
  В число встроенных управляемых компонентов потока данных входят:  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 08/03/2017
   
 -   назначение DataReader  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Compact назначения  
+-   Назначение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact  
   
 -   Компонент скрипта  
   
@@ -142,7 +143,7 @@ End Module
  При возможности для изменения компонента следует использовать методы экземпляра времени разработки, а не изменять непосредственно метаданные компонента. Хотя некоторые элементы метаданных, например соединения, необходимо задавать непосредственно, обычно не рекомендуется изменять метаданные непосредственно, поскольку при этом не задействуются возможности компонента по отслеживанию и проверке изменений.  
   
 ## <a name="assigning-connections"></a>Назначение соединений  
- Для некоторых компонентов, например, компонента «Источник OLE DB», требуется соединение с внешним источником данных. Для этой цели используется существующий в пакете объект <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>. Значение свойства <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnectionCollection100.Count%2A> коллекции <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> указывает на число объектов <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>, необходимых для компонента. Если это число больше нуля, для компонента требуется соединение. Назначьте для компонента диспетчер соединений из пакета, указав свойства <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.ConnectionManager%2A> и <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.Name%2A> первого соединения в коллекции <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>. Обратите внимание, что имя диспетчера соединений в коллекции соединения времени выполнения должно соответствовать имя managerreferenced соединений из пакета.  
+ Для некоторых компонентов, например, компонента «Источник OLE DB», требуется соединение с внешним источником данных. Для этой цели используется существующий в пакете объект <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>. Значение свойства <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnectionCollection100.Count%2A> коллекции <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> указывает на число объектов <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>, необходимых для компонента. Если это число больше нуля, для компонента требуется соединение. Назначьте для компонента диспетчер соединений из пакета, указав свойства <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.ConnectionManager%2A> и <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100.Name%2A> первого соединения в коллекции <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>. Обратите внимание на то, что имя диспетчера подключений в коллекции подключений времени выполнения должно совпадать с именем диспетчера подключений, на который ссылается пакет.  
   
 ## <a name="setting-the-values-of-custom-properties"></a>Задание значений пользовательских свойств  
  После создания экземпляра компонента времени разработки, вызовите метод <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ProvideComponentProperties%2A>. Этот метод подобен конструктору, поскольку он инициализирует только что созданный компонент, создавая его пользовательские свойства, а также объекты входа и выхода. Нельзя вызывать метод <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ProvideComponentProperties%2A> более одного раза для компонента, поскольку при этом могут быть сброшены настройки компонента и потеряны все изменения, ранее внесенные в его метаданные.  
@@ -155,7 +156,7 @@ End Module
  Вызовите метод <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReinitializeMetaData%2A>, чтобы инициализировать столбцы на выходах компонента-источника. Так как компоненты не соединяются автоматически с внешними источниками данных, необходимо вызвать метод <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.AcquireConnections%2A> перед вызовом метода <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReinitializeMetaData%2A>, чтобы обеспечить компоненту доступ к его внешнему источнику данных и возможность заполнить метаданными соответствующий столбец. Наконец, следует вызвать метод <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReleaseConnections%2A>, чтобы освободить соединение.  
   
 ## <a name="next-step"></a>Следующий шаг  
- После добавления и настройки компонента, следующим шагом является создание путей между компонентами, которые рассматриваются в разделе, [Создание пути между двумя компонентами](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
+ После добавления и настройки компонента следующим шагом является создание путей между компонентами, которое рассматривается в разделе [Создание пути между двумя компонентами](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
   
 ## <a name="sample"></a>Образец  
  В следующем образце кода компонент «Источник OLE DB» добавляется в задачу потока данных, создается экземпляр компонента времени разработки и выполняется настройка свойств компонента. Для этого образца необходима дополнительная ссылка на сборку Microsoft.SqlServer.DTSRuntimeWrap.  
@@ -287,10 +288,9 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- Запись в блоге [EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), на сайте blogs.msdn.com.  
+ Запись в блоге [EzAPI — обновление для SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223) на сайте blogs.msdn.com.  
 
 ## <a name="see-also"></a>См. также:  
  [Программное соединение компонентов потока данных](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
   
   
-

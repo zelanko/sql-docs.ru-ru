@@ -2,29 +2,30 @@
 title: "Свойства базы данных (страница \"Хранилище запросов\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 11/09/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.databaseproperties.querystore.f1
+f1_keywords: sql13.swb.databaseproperties.querystore.f1
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
-caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 89d782e0fa62c2b4b4332e9818b93f87f797710f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "10"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 903eb21e82dc2b5e3a04f0b48b4f17365a0eac99
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-query-store-page"></a>Свойства базы данных (страница хранилища запросов)
-  Откройте эту страницу из основной базы данных и используйте ее для настройки и изменения свойств хранилища запросов базы данных. Эти параметры можно также настроить с помощью [параметров ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md). Дополнительные сведения о хранилище запросов см. в разделе [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Откройте эту страницу из основной базы данных и используйте ее для настройки и изменения свойств хранилища запросов базы данных. Эти параметры можно также настроить с помощью [параметров ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md). Дополнительные сведения о хранилище запросов см. в разделе [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
 ||  
 |-|  
@@ -67,7 +68,7 @@ ms.lasthandoff: 06/22/2017
   
  На схеме справа показана часть квоты хранилища запросов, которая сейчас занята. Обратите внимание, что на левой схеме квота не показана. Квота может превышать текущий размер базы данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Хранилище запросов предоставляет DBA подробные сведения о выборе и производительности плана запросов. Оно упрощает устранение неполадок с производительностью, позволяя быстро находить разницу в производительности, вызванную изменениями в планах запросов. Функция автоматически записывает журнал запросов, планы и статистику выполнения и сохраняет их для просмотра. Она разделяет данные по временным окнам, позволяя просмотреть шаблоны использования и понять, когда изменения плана запросов произошли на сервере. Хранилище запросов можно настроить на странице свойств базы данных хранилища запросов или с помощью параметра [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . Сведения в хранилище запросов представлены в диалоговом окне [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Дополнительные сведения о хранилище запросов см. в разделе [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
 ## <a name="see-also"></a>См. также:  
@@ -75,4 +76,3 @@ ms.lasthandoff: 06/22/2017
  [Представления каталога хранилища запросов (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
-

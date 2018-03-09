@@ -2,27 +2,31 @@
 title: "Сравнение вариантов хранения больших двоичных объектов (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
-caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 98538bd77f81cd6a1f16857b70a866ee3f6d171a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 5b32325de1691fae92ff7bcecfeeda305df98d31
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Сравнение параметров для хранения больших двоичных объектов (SQL Server)
-  Рассматриваются и сравниваются параметры, доступные для хранения файлов и документов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Рассматриваются и сравниваются параметры, доступные для хранения файлов и документов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="Expectations"></a> Хранение файлов в базе данных — преимущества и ожидания  
  Большая часть корпоративных данных является по своей природе неструктурированной и обычно хранится в виде файлов и документов в файловой системе. Большая часть этих данных производится, управляется и используется приложениями, осуществляющими доступ к файлам через API-интерфейсы Windows. Обычно компании хранят эти данные в файловой системе, а метаданные для них — в реляционной базе данных.  
@@ -51,13 +55,13 @@ ms.lasthandoff: 06/22/2017
   
 |Компонент|Файловый сервер и решение для базы данных|Решение FILESTREAM|Решение FileTable|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**Одно решение для задач управления**|Нет|Да|**Да**|  
-|**Один набор служб**: поиск, отчеты, запросы и т. д.|Нет|Да|**Да**|  
-|**Интегрированная модель безопасности**|Нет|Да|**Да**|  
-|**Обновление на месте для данных FILESTREAM**|Да|Нет|**Да**|  
-|**Иерархия каталогов и файлов сохраняется в базе данных**|Нет|Нет|**Да**|  
-|**Совместимость с приложениями Windows**|Да|Нет|**Да**|  
-|**Реляционный доступ к атрибутам файлов**|Нет|Нет|**Да**|  
+|**Одно решение для задач управления**|нет|Да|**Да**|  
+|**Один набор служб**: поиск, отчеты, запросы и т. д.|нет|Да|**Да**|  
+|**Интегрированная модель безопасности**|нет|Да|**Да**|  
+|**Обновление на месте для данных FILESTREAM**|Да|нет|**Да**|  
+|**Иерархия каталогов и файлов сохраняется в базе данных**|нет|нет|**Да**|  
+|**Совместимость с приложениями Windows**|Да|нет|**Да**|  
+|**Реляционный доступ к атрибутам файлов**|нет|нет|**Да**|  
   
 ##  <a name="CompareRBS"></a> Сравнение FILESTREAM и удаленного хранилища больших двоичных объектов (RBS)  
  Сравнение этих двух средств см. в статье в блоге группы RBS: [SQL Server Remote BLOB Store and FILESTREAM feature comparison](http://go.microsoft.com/fwlink/?LinkId=210317).  

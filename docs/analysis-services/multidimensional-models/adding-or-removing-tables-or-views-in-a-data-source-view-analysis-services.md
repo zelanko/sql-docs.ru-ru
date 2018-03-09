@@ -2,17 +2,16 @@
 title: "Добавление или удаление таблиц или представлений в данных источника (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.dsvdesigner.tablespane.f1
+f1_keywords: sql13.asvs.dsvdesigner.tablespane.f1
 helpviewer_keywords:
 - deleting tables
 - tables [Analysis Services]
@@ -21,20 +20,19 @@ helpviewer_keywords:
 - data source views [Analysis Services], tables
 - tables [Analysis Services], data source views
 ms.assetid: 98307d04-6548-4d7d-9244-2371dd165249
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fe054e5e7378c7b779164961aaa46f1c4e6377d5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b2f865766530f174cc3affe410679f1880e9813
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services"></a>Добавление или удаление таблиц или представлений в представлении источника данных (службы Analysis Services)
-  После создания представления источников данных (DSV) в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]можно изменить его в конструкторе представлений источников данных, добавляя или удаляя таблицы и столбцы, в том числе из других источников данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]После создания представления источника данных (DSV) в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], может изменить его в конструкторе представлений источников данных, добавив или удалив таблицы и столбцы, включая таблицы и столбцы из другого источника данных.  
   
  Чтобы открыть представление источника данных (DSV) в конструкторе представлений источников данных, дважды щелкните DSV в обозревателе решений. После открытия представления источников данных для его изменения или расширения можно использовать команду **Добавить или удалить таблицы** на панели кнопок или в меню. Также можно использовать объекты диаграммы. Например, можно выбрать объект и нажать клавишу «Delete» на клавиатуре для удаления объекта.  
   
@@ -51,9 +49,8 @@ ms.lasthandoff: 09/01/2017
 > [!NOTE]  
 >  Добавление или удаление объектов в представлении источника данных не влияет на базовый источник данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления источников данных в многомерных моделях](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Работа с диаграммами в конструкторе представлений источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   
-

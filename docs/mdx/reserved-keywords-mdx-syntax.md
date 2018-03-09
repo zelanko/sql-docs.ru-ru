@@ -2,34 +2,34 @@
 title: "Зарезервированные ключевые слова (синтаксис многомерных Выражений) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - reserved words [MDX]
 - Multidimensional Expressions [Analysis Services], reserved words
 - MDX [Analysis Services], reserved words
 ms.assetid: 0baab5fb-bd04-4ab3-b99a-9f91f3470fbb
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 0fed4b46d2ed14a45073d7c25ace252c427fba3d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: fe6d331df302b14d46ed643adaee879b2a0f4dd1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>Зарезервированные ключевые слова (синтаксис многомерных выражений)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] резервируют определенные ключевые слова для эксклюзивного использования. Список зарезервированных ключевых слов см. в разделе [зарезервированные слова многомерных Выражений](../mdx/mdx-reserved-words.md).  
   
@@ -45,4 +45,3 @@ ms.lasthandoff: 08/02/2017
  [Элементы синтаксиса многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   
-

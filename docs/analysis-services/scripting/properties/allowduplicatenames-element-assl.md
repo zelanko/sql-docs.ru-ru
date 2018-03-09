@@ -2,40 +2,35 @@
 title: "Элемент AllowDuplicateNames (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- AllowDuplicateNames Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: AllowDuplicateNames Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- AllowDuplicateNames
-helpviewer_keywords:
-- AllowDuplicateNames element
+applies_to: SQL Server 2016 Preview
+f1_keywords: AllowDuplicateNames
+helpviewer_keywords: AllowDuplicateNames element
 ms.assetid: d0a80040-115f-4490-926f-4d64d8977e67
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 30f5b3a7020772d3d9c0e1dbef2c40dc5114cc7d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 117ef9ba47fe131fc4d370954106bdb5b5250dae
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="allowduplicatenames-element-assl"></a>Элемент AllowDuplicateNames (ASSL)
-  Определяет, допустимы ли повторяющиеся имена в [иерархии](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет, допустимы ли повторяющиеся имена в [иерархии](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,11 +45,11 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
-|Тип данных и длина|Boolean|  
+|Тип данных и длина|Логическое значение|  
 |Значение по умолчанию|**True**|  
-|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
+|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -63,11 +58,10 @@ ms.lasthandoff: 09/01/2017
 |Родительский элемент|[Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Элемент, соответствующий родителю параметра **AllowDuplicateNames** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Hierarchy>.  
   
 ## <a name="see-also"></a>См. также:  
  [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

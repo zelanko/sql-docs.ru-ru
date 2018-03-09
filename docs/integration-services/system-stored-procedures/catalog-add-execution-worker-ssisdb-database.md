@@ -1,31 +1,33 @@
 ---
-title: "Catalog.add_execution_worker (база данных SSISDB) | Документы Microsoft"
+title: "catalog.add_execution_worker (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
-caps.latest.revision: 4
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8ce83f2678a1f3dcae6539f33beb33070b8e771b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 42d1332c727f26b6850c7fd7227c3a124ebc50a9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogaddexecutionworker-ssisdb-database"></a>Catalog.add_execution_worker (база данных SSISDB)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+# <a name="catalogaddexecutionworker-ssisdb-database"></a>catalog.add_execution_worker (база данных SSISDB)
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Добавляет [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] шкалы ожидания рабочий процесс, для экземпляра выполнения в масштабное развертывание.
+Добавляет рабочую роль [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out в экземпляр выполнения в Scale Out.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,26 +36,26 @@ catalog.add_execution_worker [@execution_id = ] execution_id, [@workeragent_id =
 ```
 
 ## <a name="arguments"></a>Аргументы
-[ @execution_id =] *execution_id*  
- Уникальный идентификатор для экземпляра выполнения. *Execution_id* — **bigint**.  
+[ @execution_id = ] *execution_id*  
+ Уникальный идентификатор для экземпляра выполнения. Параметр *execution_id* имеет тип **bigint**.  
  
-[@workeragent_id =] *workeragent_id*  
-Идентификатор агента работника работника Out шкалы. *Workeragent_id* — **uniqueIdentifier**.
+[@workeragent_id = ] *workeragent_id*  
+Идентификатор агента рабочей роли для рабочей роли Scale Out. Параметр *workeragent_id* имеет тип **uniqueIdentifier**.
 
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
 
 ## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   разрешения READ и MODIFY на экземпляр выполнения  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
  
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
  Следующий список содержит описания некоторых условий, которые могут вызвать ошибку или предупреждение.  
@@ -62,11 +64,10 @@ catalog.add_execution_worker [@execution_id = ] execution_id, [@workeragent_id =
 
 - Недопустимый идентификатор выполнения.
 
-- Недопустимый идентификатор агента работника.
+- Недопустимый идентификатор агента рабочей роли.
 
-- Выполнение не находится в масштабное развертывание.
+- Выполнение не относится к Scale Out.
 
 ## <a name="see-also"></a>См. также:
-[Выполнение пакетов в масштабное развертывание](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).
-
+[Выполнение пакетов в масштабном развертывании](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).
 

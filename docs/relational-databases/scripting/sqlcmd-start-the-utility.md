@@ -2,28 +2,30 @@
 title: "Запуск программы sqlcmd | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
-caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: mightypen
+ms.author: genemi
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9f213219f9d9fd65af0fee8544f64e61fc1151a3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f7e35bb04d5ff169800d837b05a63320640adeff
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlcmd---start-the-utility"></a>sqlcmd — запуск служебной программы
-  Программа [sqlcmd](../../tools/sqlcmd-utility.md) позволяет вводить инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , системные процедуры и файлы скриптов из командной строки в редактор запросов в режиме SQLCMD, в файл скрипта Windows или шаг задания операционной системы (Cmd.exe) задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [Программа sqlcmd](../../tools/sqlcmd-utility.md) позволяет вводить инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], системные процедуры и файлы скриптов из командной строки в редактор запросов в режиме SQLCMD, в файл скрипта Windows или шаг задания операционной системы (Cmd.exe) задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 > [!NOTE]  
 >  По умолчанию в программе **sqlcmd**используется проверка подлинности Windows. Для использования проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется указать имя пользователя и пароль, применяя параметры **-U** и **-P** .  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="start-the-sqlcmd-utility-and-connect-to-a-named-instance-of-sql-server"></a>Запуск служебной программы sqlcmd и подключение к именованному экземпляру SQL Server  
   
-1.  Откройте окно командной строки и введите **sqlcmd -S***мойСервер\имяЭкземпляра*. Замените *мойСервер\имяЭкземпляра* именем компьютера и экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , с которым нужно соединиться.  
+1.  Откройте окно командной строки и введите команду **sqlcmd -S***мойСервер\имяЭкземпляра*. Замените *мойСервер\имяЭкземпляра* именем компьютера и экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , с которым нужно соединиться.  
   
 2.  Нажмите клавишу ВВОД.  
   
@@ -59,4 +61,3 @@ ms.lasthandoff: 06/22/2017
  [Выполнение файлов скрипта Transact-SQL с использованием программы sqlcmd](../../relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)  
   
   
-

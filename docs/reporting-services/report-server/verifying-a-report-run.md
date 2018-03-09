@@ -1,13 +1,14 @@
 ---
-title: "Проверка запуска отчета | Документы Microsoft"
+title: "Проверка запуска отчета | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +20,16 @@ helpviewer_keywords:
 - report processing [Reporting Services], verifying execution
 - checking report execution
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
-caps.latest.revision: 37
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "37"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 97015ca82fd8a58c3c5cd351b2f7379711d65aa1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: bf36b3817f4d3c1c86212e1436ca93a0ae9a2710
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="verifying-a-report-run"></a>Проверка запуска отчета
   Чтобы просмотреть информацию о состоянии обработки отчета, можно использовать файлы журнала или просмотреть информацию о состоянии, отображаемую вместе с отчетом в диспетчере отчетов.  
@@ -46,14 +46,13 @@ ms.lasthandoff: 08/09/2017
   
 |Для отчета этого типа|Местонахождение сведений о дате и времени|Для просмотра информации сделайте следующее|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|Отчет, который выполняется как моментальный снимок отчета.|На странице «Содержание». Дополнительные сведения см. в разделе [страницы содержимого &#40; Диспетчер отчетов &#41; ](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378).|1. Определите расположение папки, которая содержит отчет.<br /><br /> 2. Укажите папку в представлении "Подробности".<br /><br /> 3. Обратите внимание на дату и время в столбце **Время запуска** .|  
-|Моментальный снимок журнала отчета.|На странице «Свойства журнала». Дополнительные сведения см. в разделе [страницы свойства параметров моментального снимка &#40; Диспетчер отчетов &#41; ](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).|1. Откройте отчет.<br /><br /> 2. Перейдите на страницу **Свойства** .<br /><br /> 3. Перейдите на вкладку **Журнал** .<br /><br /> 4. Обратите внимание на дату и время в столбце **Время запуска** .|  
+|Отчет, который выполняется как моментальный снимок отчета.|На странице «Содержание». Дополнительные сведения см. в разделе [Страница "Содержимое" (диспетчер отчетов)](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378).|1. Определите расположение папки, которая содержит отчет.<br /><br /> 2. Укажите папку в представлении "Подробности".<br /><br /> 3. Обратите внимание на дату и время в столбце **Время запуска** .|  
+|Моментальный снимок журнала отчета.|На странице «Свойства журнала». Дополнительные сведения см. в разделе [Страница "Свойства параметров моментального снимка" (диспетчер отчетов)](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).|1. Откройте отчет.<br /><br /> 2. Перейдите на страницу **Свойства** .<br /><br /> 3. Перейдите на вкладку **Журнал** .<br /><br /> 4. Обратите внимание на дату и время в столбце **Время запуска** .|  
 |Кэшируемый отчет.|В расписании, используемом для создания и обновления кэшируемого отчета.|1. Откройте отчет.<br /><br /> 2. Перейдите на страницу **Свойства** .<br /><br /> 3. Перейдите на вкладку **Выполнение** .<br /><br /> 4. Откройте расписание.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Установка свойств обработки отчетов](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Диспетчер отчетов &#40; Собственный режим служб SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Диспетчер отчетов (службы SSRS в собственном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   
-

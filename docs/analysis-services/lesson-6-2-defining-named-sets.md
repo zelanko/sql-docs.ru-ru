@@ -2,29 +2,32 @@
 title: "Определение именованных наборов | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
-caps.latest.revision: 14
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: e81b2dda4ddf65105da50dede9b3a82a5436dcec
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f06975fb10ab27d6087b1f46a543034aa01ca308
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>Урок 6-2 - определении именованных наборов
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Именованный набор представляет собой многомерное выражение, возвращающее набор (множество) элементов измерения. Можно определять именованные наборы и сохранять их как часть определения куба, а также создавать именованные наборы в клиентских приложениях. Для создания именованных наборов используется сочетание данных куба, арифметических операторов, чисел и функций. Именованные наборы могут применяться пользователями в запросах многомерных выражений в клиентских приложениях, а также для определения наборов во вложенных кубах. Вложенный куб представляет собой коллекцию перекрестно соединенных наборов, ограничивающую для последующих инструкций пространство куба заданным подпространством. Определение ограниченного пространства куба является базовой концепцией в построении сценариев многомерных выражений.  
   
 Именованные наборы упрощают запросы многомерных выражений и служат удобными псевдонимами для сложных регулярно используемых выражений наборов. Например, можно определить именованный набор с именем «Крупные торговые посредники», содержащий набор элементов измерения «Торговые посредники», у которых имеется наибольшее число служащих. Тогда конечные пользователи смогут использовать именованный набор «Крупные торговые посредники» в запросах, а вы сможете использовать его, чтобы определить набор во вложенном кубе. Определения именованных наборов хранятся в кубах, но их значения существуют только в памяти. Чтобы создать именованный набор, можно воспользоваться командой **Создать именованный набор** на вкладке **Вычисления** конструктора кубов. Дополнительные сведения см. в разделе [Вычисления](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [Создание именованных наборов](../analysis-services/multidimensional-models/create-named-sets.md).  
@@ -139,12 +142,11 @@ ms.lasthandoff: 09/01/2017
     ![Задает область фильтра, содержащий два именованных](../analysis-services/media/l6-named-set-05.gif "задает содержащий два с именем «фильтр»")  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 7. Определение ключевых показателей эффективности](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[Занятие 7: Определение ключевых показателей эффективности &#40; Ключевые показатели эффективности &#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Вычисления](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
 [Создание именованных наборов](../analysis-services/multidimensional-models/create-named-sets.md)  
   
   
   
-

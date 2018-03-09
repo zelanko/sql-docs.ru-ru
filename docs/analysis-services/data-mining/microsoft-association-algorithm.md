@@ -2,12 +2,13 @@
 title: "Алгоритм взаимосвязей Майкрософт | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -31,20 +32,20 @@ helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE
 - MaximumItemsetSize property
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
-caps.latest.revision: 55
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2deac725bc544b305f9207e2538981bfdea3df46
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 24dda88f2855c4b5a83814203092e12d645a1e84
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-association-algorithm"></a>Алгоритм взаимосвязей (Майкрософт)
-  Алгоритм взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] часто используется для механизмов выработки рекомендаций. Механизм рекомендаций рекомендует продукты пользователям на основе элементов, которые они уже купили или к которым проявили интерес. Алгоритм взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] удобно использовать для анализа потребительской корзины.   
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Алгоритм взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] часто используется для механизмов выработки рекомендаций. Механизм рекомендаций рекомендует продукты пользователям на основе элементов, которые они уже купили или к которым проявили интерес. Алгоритм взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] удобно использовать для анализа потребительской корзины.   
   
  Модели взаимосвязей построены на наборах данных, содержащих идентификаторы для отдельных вариантов и элементов этих вариантов. Группа элементов в варианте называется *набор элементов*. Модель взаимосвязей состоит из рядов наборов элементов и правил, описывающих, как эти элементы группируются в вариантах. Правила, определяемые алгоритмом, могут использоваться для прогнозирования вероятных будущих покупок покупателей на основе элементов, уже имеющихся в корзине покупателя. На следующей диаграмме представлен ряд правил в наборе элементов.  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="viewing-an-association-model"></a>Просмотр модели взаимосвязей  
  Чтобы исследовать модель, можно использовать **Средство просмотра взаимосвязей (Майкрософт)**. При просмотре модели взаимосвязей в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] представлены корреляции под различными углами зрения, что позволяет лучше понять связи и правила, обнаруживаемые в данных. На панели **Набор элементов** средства просмотра предоставлена подробная классификация наиболее часто встречающихся сочетаний или наборов элементов. На панели **Правила** представлен список правил, которые были выведены на основании данных, дополнительно приведены результаты вычисления вероятностей, а сами правила ранжированы по относительной важности. Средство просмотра сети зависимостей позволяет исследовать визуально, как связаны отдельные элементы. Дополнительные сведения см. в разделе [Просмотр модели с помощью средства просмотра кластеров (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md).  
   
- Более подробные сведения о любом из наборов элементов и правил можно найти, открыв модель в [средстве просмотра деревьев содержимого общего вида (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). С моделью связано хранимое содержимое, которое включает несущее множество для каждого набора элементов, оценку для каждого правила и другие статистические данные. Дополнительные сведения см. в разделе [Содержимое моделей интеллектуального анализа данных для моделей взаимосвязей (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md).  
+ Более подробные сведения о любом из наборов элементов и правил можно найти, открыв модель в [средстве просмотра деревьев содержимого общего вида (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). С моделью связано хранимое содержимое, которое включает несущее множество для каждого набора элементов, оценку для каждого правила и другие статистические данные. Дополнительные сведения см. в разделе [Mining Model Content for Association Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md).  
   
 ## <a name="creating-predictions"></a>Создание прогнозов  
  После обработки модели полученные правила и наборы элементов можно использовать для прогнозов. Прогнозы, выполняемые с помощью модели взаимосвязей, позволяют определить, какой элемент, скорее всего, обнаружится, если имеются сведения о присутствии указанного элемента, а сам прогноз может включать такую информацию, как вероятность, несущее множество или важность. Примеры создания запросов применительно к модели взаимосвязей см. в разделе [Примеры запросов моделей взаимосвязей](../../analysis-services/data-mining/association-model-query-examples.md).  
@@ -103,11 +104,10 @@ ms.lasthandoff: 09/01/2017
 -   Поддерживается создание измерений интеллектуального анализа данных.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Алгоритмы интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Просмотр модели с помощью средства просмотра правил взаимосвязи (Microsoft)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
  [Содержимое модели интеллектуального анализа данных для моделей взаимосвязей &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Технический справочник по алгоритму взаимосвязей (Майкрософт)](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
- [Примеры запросов моделей взаимосвязей](../../analysis-services/data-mining/association-model-query-examples.md)  
+ [Примеры запросов к модели взаимосвязей](../../analysis-services/data-mining/association-model-query-examples.md)  
   
   
-

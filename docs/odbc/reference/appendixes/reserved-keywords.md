@@ -3,27 +3,28 @@ title: "Зарезервированные ключевые слова | Док�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 54df53e2ff5f095a0404719d6e1219013d90d47f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9d829e53d2ab774ce248d0c89ef6267111c66334
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reserved-keywords"></a>Зарезервированные слова
 Следующие слова зарезервированы для использования в вызовах функций ODBC. Эти слова не ограничивают минимальную грамматику SQL; Тем не менее чтобы обеспечить совместимость с драйверами, поддерживающими базовую грамматику SQL, приложения не следует использовать эти ключевые слова. #**Определить** значение SQL_ODBC_KEYWORDS содержит список разделенных запятыми из этих ключевых слов.  
@@ -83,7 +84,7 @@ ms.lasthandoff: 09/09/2017
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|REAL|  
+|CURSOR|real|  
 |DATE|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -93,7 +94,7 @@ ms.lasthandoff: 09/09/2017
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|DELETE|SECOND|  
+|Delete|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  
@@ -110,7 +111,7 @@ ms.lasthandoff: 09/09/2017
 |EXCEPT|SQLSTATE|  
 |EXCEPTION|SQLWARNING|  
 |EXEC|SUBSTRING|  
-|Выполните|SUM|  
+|EXECUTE|SUM|  
 |EXISTS|SYSTEM_USER|  
 |EXTERNAL|TABLE|  
 |EXTRACT|TEMPORARY|  
@@ -148,4 +149,3 @@ ms.lasthandoff: 09/09/2017
 |INTERSECT|YEAR|  
 |INTERVAL|ZONE|  
 |INTO||
-

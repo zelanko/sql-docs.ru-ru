@@ -2,30 +2,30 @@
 title: "Журнал зеркального отображения базы данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dbmmonitor.databasemirroringhistory.f1
+f1_keywords: sql13.swb.dbmmonitor.databasemirroringhistory.f1
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3e3bf2700f9570a41f07d18d376332080daa99cd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 24f7e8d76bc04e82c4403139c575c6c736648c48
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-history"></a>Журнал зеркального отображения базы данных
-  Это диалоговое окно используется для просмотра журнала о состоянии зеркального отображения для зеркально отображаемой базы данных на указанном экземпляре сервера.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Это диалоговое окно используется для просмотра журнала состояния зеркального отображения для зеркально отображаемой базы данных в указанном экземпляре сервера.  
   
  **Наблюдение за зеркальным отображением базы данных с помощью среды SQL Server Management Studio**  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 08/02/2017
  **Журнал**  
  Отображает список журнала. Щелкните заголовок столбца для сортировки сетки по этому столбцу. Список содержит следующие столбцы.  
   
-|Имя столбца|Описание|  
+|Имя столбца|Description|  
 |-----------------|-----------------|  
 |**Время записи**|Отметка времени строки журнала.|  
 |**Роль**|Текущая роль в зеркальном отображении, выполняемая экземпляром сервера применительно к этой базе данных, либо «Основной», либо «Зеркальный».|  
@@ -92,4 +92,3 @@ ms.lasthandoff: 08/02/2017
  [Запуск мастера настройки безопасности зеркального отображения баз данных (среда SQL Server Management Studio)](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   
-

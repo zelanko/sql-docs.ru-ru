@@ -2,30 +2,30 @@
 title: "Приступая к работе с разрешениями ядра СУБД | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords:
-- permissions [SQL Server], getting started
+helpviewer_keywords: permissions [SQL Server], getting started
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 6234975f35a30fc956f4e8735771d09cea2d1e2e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: 376e591e28bbdddbd635392b24c3d6652f3bd94d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Приступая к работе с разрешениями Database Engine
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Управление разрешениями в [!INCLUDE[ssDE](../../../includes/ssde-md.md)] осуществляется на уровне сервера с помощью имен входа и ролей сервера и на уровне базы данных с помощью пользователей и ролей базы данных. Модель для [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] предоставляет ту же систему в каждой базе данных, однако разрешения на уровне сервера недоступны. В этом разделе рассматриваются некоторые основные понятия безопасности, а затем описывается типичная реализация разрешений.  
   
@@ -193,7 +193,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
   
  Чтобы получить список явных разрешений, предоставленных или отклоненных в базе данных ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), выполните приведенную ниже инструкцию в базе данных.  
   
-```tsql  
+```sql  
 SELECT   
     perms.state_desc AS State,   
     permission_name AS [Permission],   
@@ -208,7 +208,7 @@ JOIN sys.objects AS obj
   
  Чтобы получить список членов ролей сервера (только[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), выполните приведенную ниже инструкцию.  
   
-```tsql  
+```sql  
 SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  
 FROM sys.server_role_members AS sRo  
 JOIN sys.server_principals AS sPrinc  
@@ -220,7 +220,7 @@ JOIN sys.server_principals AS sRole
  
  Чтобы получить список членов ролей базы данных ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), выполните приведенную ниже инструкцию в базе данных.  
   
-```tsql  
+```sql  
 SELECT dRole.name AS [Database Role Name], dPrinc.name AS [Members]  
 FROM sys.database_role_members AS dRo  
 JOIN sys.database_principals AS dPrinc  
@@ -229,7 +229,7 @@ JOIN sys.database_principals AS dRole
     ON dRo.role_principal_id = dRole.principal_id;  
 ```  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  Другие разделы, посвященные началу работы:  
   
 -   [Учебник. Приступая к работе с компонентом Database Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Создание базы данных (учебник)](../../../t-sql/lesson-1-1-creating-a-database.md)  
@@ -247,4 +247,3 @@ JOIN sys.database_principals AS dRole
  [Определение действующих разрешений для ядра СУБД](../../../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md)
   
   
-

@@ -3,7 +3,7 @@ title: "Ключ объекта (ADOX) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - Key object [ADOX]
 ms.assetid: 55f116fe-4d56-4892-bffe-0cdd6fc727c9
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9a1f971c07571c54cc74e4a750fde505e60af2f2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7d05a52614694bc9464c609ab4f4ed0965f3b81e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="key-object-adox"></a>Объект ключа (ADOX)
 Представляет внешний, первичный или уникальный ключевое поле из таблицы базы данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Следующий код создает новый **ключ**:  
   
 ```  
@@ -54,10 +53,9 @@ Dim obj As New Key
   
  Этот раздел содержит следующий раздел.  
   
--   [Ключевой объект свойства, методы и события](../../../ado/reference/adox-api/key-object-properties-methods-and-events.md)  
+-   [Свойства, методы и события объекта Key](../../../ado/reference/adox-api/key-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ключи добавить метод, тип ключа, RelatedColumn, RelatedTable и UpdateRule-пример свойства (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Коллекция столбцов (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Коллекция ключей (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)
-
+ [Коллекция Keys (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)

@@ -3,7 +3,7 @@ title: "Примеры кода ADO в Visual Basic | Документы Microso
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - ADO code examples, Visual Basic
 ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 490b15408b3fc1864ac3f953e71f98aa27e9bd79
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c62113096ccc6737acd04b444d307658f3bf08f2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>Примеры кода ADO в Visual Basic
 Используйте в следующих примерах кода, чтобы узнать, как использовать ADO методы, свойства и события при записи в Visual Basic.  
@@ -163,8 +162,7 @@ ms.lasthandoff: 09/09/2017
   
 -   [Пример свойства версии](../../../ado/reference/ado-api/version-property-example-vb.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [VBScript примеры кода ADO](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Примеры кода ADO в Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [Приложение г. Примеры ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
-
+ [Приложение Г. Образцы объектов ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

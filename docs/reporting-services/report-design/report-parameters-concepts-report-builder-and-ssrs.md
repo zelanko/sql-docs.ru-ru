@@ -1,26 +1,27 @@
 ---
-title: "Основные понятия параметров (построитель отчетов и службы SSRS) отчетов | Документы Microsoft"
+title: "Понятия параметров отчета (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: da71167a095c0be75cb172e15fe856818163dc44
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cb4044deed8935af354e1c6f15ace89f0b3e5010
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-parameters-concepts-report-builder-and-ssrs"></a>Понятия параметров отчета (построитель отчетов и службы SSRS)
   Можно добавлять в отчет параметры, чтобы добавлять ссылки на связанные отчеты, управлять видом отчета, фильтровать данные отчета или ограничить область отчета определенными пользователями или расположениями.  
@@ -48,9 +49,9 @@ ms.lasthandoff: 08/09/2017
   
  Для создания моментальных снимков отчета, журналов или подписок на опубликованный отчет необходимо понимать, как параметры отчета влияют на требования по разработке отчета.  
   
-## <a name="see-also"></a>См. также  
- [Отчет разработки концепции &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
- [Отчет внедренные наборы данных и общие наборы данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Учебник: Добавление параметра к отчету &#40; Построитель отчетов &#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
+## <a name="see-also"></a>См. также:  
+ [Основные понятия разработки отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Учебник. Добавление параметра к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
   

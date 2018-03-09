@@ -2,30 +2,31 @@
 title: "SQL и R данных типов и объектов данных (R в быстрый запуск SQL Server) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
 ms.assetid: 1a17fc5b-b8c5-498f-b8b1-3b7b43a567e1
-caps.latest.revision: 8
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: b0b0f8bd5502dfd70c690dc64d1881c057a97962
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e71e4a5d6fc6a88d0482ecd10d4238c12cd5ceaa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-and-sql-data-types-and-data-objects-r-in-sql-quickstart"></a>SQL и R данных типов и объектов данных (R в быстрый запуск SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 На этом шаге вы узнаете о некоторых распространенных проблем, возникающих при перемещении данных между R и SQL Server:
 
@@ -75,6 +76,7 @@ EXECUTE sp_execute_external_script
 EXECUTE sp_execute_external_script
         @language = N'R'
       , @script = N' mytextvariable <- c("hello", " ", "world");
+      OutputDataSet <- as.data.frame(mytextvariable);
       str(OutputDataSet);'
       , @input_data_1 = N'  '
 ;
@@ -86,7 +88,7 @@ EXECUTE sp_execute_external_script
 EXECUTE sp_execute_external_script
   @language = N'R', 
   @script = N' OutputDataSet <- data.frame(c("hello"), " ", c("world"));
-    str(OutputDataSet)' , 
+    str(OutputDataSet);' , 
   @input_data_1 = N'  ';
 ```
 
@@ -282,5 +284,4 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 
 На следующем шаге вы узнаете о том, как применять функции R к данным SQL Server.
 
-[С помощью функций R с данными SQL Server](../../advanced-analytics/tutorials/rtsql-using-r-functions-with-sql-server-data.md)
-
+[Использование функций R с данными SQL Server](../../advanced-analytics/tutorials/rtsql-using-r-functions-with-sql-server-data.md)

@@ -2,32 +2,29 @@
 title: "Резервное копирование команды (TMSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: fae1b267-0750-4dc5-9bf0-80ac4d8487a3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 50e6f8e6f5b01fce2eb0bb6a5dbcd84dd631d994
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e8c0e31a8ad1269e6b6d93463f99d39490e6f52b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="backup-command-tmsl"></a>Команды резервного копирования (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Создает резервную копию базы данных служб Analysis Services для резервного копирования ABF-файле.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Создает резервную копию базы данных служб Analysis Services для резервного копирования ABF-файле.  
   
 ## <a name="request"></a>Запрос  
   
@@ -59,8 +56,8 @@ ms.lasthandoff: 09/01/2017
   
 ||||  
 |-|-|-|  
-|**Свойство**|**Default**|**Description**|  
-|базой данных|[Обязательно]|Имя объекта базы данных для резервного копирования.|  
+|**Свойство**|**Default**|**Описание**|  
+|База данных|[Обязательно]|Имя объекта базы данных для резервного копирования.|  
 |файл|[Обязательно]|Имя и путь к файлу резервной копии.|  
 |password|Пустой|Пароль, используемый для шифрования файла резервной копии.|  
 |allowOverwrite|False|Логическое значение, если значение равно true, указывает, где уже существует файл резервной копии будет перезаписан. в противном случае — значение false.|  
@@ -100,4 +97,3 @@ ms.lasthandoff: 09/01/2017
  [Создание и восстановление резервных копий баз данных служб Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   
-

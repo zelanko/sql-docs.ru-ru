@@ -3,7 +3,7 @@ title: "Индекс объекта (ADOX) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - Index object [ADOX]
 ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: bb35b814dbd06136c9ce0a47a82e5956e98b6945
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2fe0916836a44ecb61d1d606a9c894ac22342d57
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="index-object-adox"></a>Объект индекса (ADOX)
 Представляет индекс из таблицы базы данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Следующий код создает новый **индекс**:  
   
 ```  
@@ -67,14 +66,13 @@ Dim obj As New Index
   
  Этот раздел содержит следующий раздел.  
   
--   [Индекс объекта свойства, методы и события](../../../ado/reference/adox-api/index-object-properties-methods-and-events.md)  
+-   [Свойства, методы и события объекта Index](../../../ado/reference/adox-api/index-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Индексы Append пример метода (Visual Basic)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Пример свойства IndexNulls (Visual Basic)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)   
  [PrimaryKey и пример уникальные свойства (Visual Basic)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
  [Пример свойства SortOrder (Visual Basic)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Коллекция столбцов (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Коллекция индексов (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)   
- [Коллекция свойств (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

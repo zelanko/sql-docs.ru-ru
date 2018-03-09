@@ -2,31 +2,32 @@
 title: "SQL Server, объект транзакции | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:Transactions
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "29"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 642a22206b25ec2963fae4fa04e6b10a5329f0e6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 757b2b72fe2066f452e53087e2ae73ea67d45aa8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, объект Transactions
-  Объект **Transactions** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики для мониторинга количества активных транзакций в экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)]и влияния этих транзакций на ресурсы, такие как хранилище версий строк изоляции моментальных снимков **tempdb**. Транзакции представляют собой логические блоки проделанной работы — наборы операций, которые должны либо все завершиться успешно, либо быть стертыми из базы данных, чтобы соблюсти логическую целостность данных. Все изменения данных в базах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляются в транзакциях.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект **Transactions** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики для мониторинга количества активных транзакций в экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)] и влияния этих транзакций на ресурсы, такие как хранилище версий строк изоляции моментальных снимков **tempdb**. Транзакции представляют собой логические блоки проделанной работы — наборы операций, которые должны либо все завершиться успешно, либо быть стертыми из базы данных, чтобы соблюсти логическую целостность данных. Все изменения данных в базах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляются в транзакциях.  
   
  Если база данных допускает уровень изоляции моментальных снимков, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен поддерживать записи об изменениях всех строк в базе данных. Каждый раз при изменении строки копия строки в состоянии, предшествующем изменению, записывается в хранилище версий строк в базе данных **tempdb**. Многие счетчики в объекте **Transaction** также можно применять для мониторинга размера и скорости роста хранилища версий строк в базе данных **tempdb**.  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
  В этой таблице перечислены счетчики **SQLServer:Transactions** .  
   
-|Счетчики Transactions в SQL Server|Описание|  
+|Счетчики Transactions в SQL Server|Description|  
 |--------------------------------------|-----------------|  
 |**Свободное пространство в базе данных tempdb (КБ)**|Объем (в КБ) свободного пространства в базе данных **tempdb**. Должно быть достаточно свободного места для того, чтобы вместить и хранилище версий уровня изоляции моментальных снимков, и все новые временные объекты, создаваемые в данном экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |**Наиболее продолжительное время выполнения транзакции**|Время (в секундах) с момента запуска транзакции, которая оставалась активной дольше любой другой текущей транзакции. Этот счетчик показывает только действия, произошедшие при базе данных на уровне изоляции зафиксированной операции чтения с моментальным снимком. Он не регистрирует других действий, если база данных находится в другом уровне изоляции.|  
@@ -55,4 +56,3 @@ ms.lasthandoff: 06/22/2017
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

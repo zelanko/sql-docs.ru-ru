@@ -3,30 +3,31 @@ title: "Настройка (страница \"Панели инструмент
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.customize.toolbars
 - sql13.swb.vs.customizetool.f1
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b9d5148aa90988ddfe763a26c1534eb7fd73640f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a9aaa2f4f281a4e41dd90e336c4dd4e39024bb20
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="customize-toolbars-page"></a>Настройка (страница «Панели инструментов»)
-Вкладка **Панели инструментов** позволяет создавать, переименовывать, удалять и сбрасывать панели инструментов. Эту вкладку можно вызвать, выбрав пункт **Настройка** в меню **Сервис** , а затем выбрать вкладку **Панели инструментов**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Вкладка **Панели инструментов** позволяет создавать, переименовывать, удалять и сбрасывать панели инструментов. Эту вкладку можно вызвать, выбрав пункт **Настройка** в меню **Сервис** , а затем выбрать вкладку **Панели инструментов**.  
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
 **Панели инструментов**  
@@ -41,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 **Rename**  
 Позволяет отобразить диалоговое окно **Переименование панели инструментов** , позволяющее изменить имя только пользовательской панели инструментов.  
   
-**Delete**  
+**Удаление**  
 Позволяет удалить пользовательскую панель инструментов, выделенную в списке **Панели инструментов** .  
   
 **Сброс**  
@@ -59,4 +60,3 @@ ms.lasthandoff: 06/22/2017
 **Клавиатура**  
 Позволяет отобразить панель **Клавиатура** диалогового окна **Параметры** , позволяющую изменить и определить сочетания клавиш для команд.  
   
-

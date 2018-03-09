@@ -3,8 +3,11 @@ title: "Макс. функция (XQuery) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ helpviewer_keywords:
 - max function [XQuery]
 - fn:max function
 ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
-caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a182af7c1a3bce843df67246c7180d012e0402e3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1c3a2ac9b8831fa97843f8de69efca887a2f8437
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="aggregate-functions---max"></a>Агрегатные функции - max
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Возвращает из последовательности атомарных значений *$arg*, один элемент, значение которого больше всех остальных.  
   
@@ -45,7 +47,7 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  Последовательность атомарных значений, из которой требуется вернуть максимальное значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Все типы атомарных значений, передаваемые **max()** должны быть подтипами одного базового типа. Базовые типы, которые принимаются — типы, поддерживающие **gt** операции. Эти типы включают в себя три встроенных базовых численных типа, базовые типы даты-времени, а также xs:string, xs:boolean, xdt:untypedAtomic. Значения типа xdt:untypedAtomic приводятся к типу xs:double. Если имеется смесь этих типов или передаются значения других других типов, возникает статическая ошибка.  
   
  Результат **max()** Получает базовый тип переданных типов, например xs: double в случае использования xdt: untypedAtomic. Если вход статически пуст, подразумевается пустое значение, и формируется статическая ошибка.  
@@ -69,8 +71,7 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
 -   Синтаксический параметр для указания параметров сортировки не поддерживается.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции XQuery для типа данных XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   
-

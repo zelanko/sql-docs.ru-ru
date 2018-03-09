@@ -2,11 +2,13 @@
 title: "SQL Server, объект Databases | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,25 +17,25 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-caps.latest.revision: 40
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1b2355b85d82050496d1df27480723a0831e3a60
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "40"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: c92dc55eedaf801ad283ecb18bb55a25ba49f4b1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, объект Databases
-  Объект **SQLServer:Databases** в SQL Server содержит счетчики для контроля и отслеживания операций массового копирования, пропускной способности создания и восстановления резервных копий, а также действий, связанных с журналом транзакций. Контроль и отслеживание транзакций и журнала транзакций позволяют определить, насколько интенсивна деятельность пользователей в базе данных, и как быстро заполняется журнал транзакций. Уровень активности пользователей определяет производительность базы данных и влияет на размеры журналов, блокировку и репликацию. Отслеживание низкоуровневых операций в журнале для оценки активности пользователей и использования ресурсов помогает определить критические факторы производительности.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект **SQLServer:Databases** в SQL Server содержит счетчики для контроля и отслеживания операций массового копирования, пропускной способности создания и восстановления резервных копий, а также действий, связанных с журналом транзакций. Контроль и отслеживание транзакций и журнала транзакций позволяют определить, насколько интенсивна деятельность пользователей в базе данных, и как быстро заполняется журнал транзакций. Уровень активности пользователей определяет производительность базы данных и влияет на размеры журналов, блокировку и репликацию. Отслеживание низкоуровневых операций в журнале для оценки активности пользователей и использования ресурсов помогает определить критические факторы производительности.  
   
  Одновременно можно отслеживать несколько экземпляров объекта **Databases** , каждый из которых представляет отдельную базу данных.  
   
  Эта таблица описывает счетчики объекта **Databases** SQL Server.  
   
-|Счетчики объекта Databases SQL Server|Описание|  
+|Счетчики объекта Databases SQL Server|Description|  
 |-----------------------------------|-----------------|  
 |**Активные транзакции**|Количество активных транзакций в базе данных.|  
 |**Среднее расстояние от конца журнала на запрос к пулу журналов**|Среднее расстояние в байтах от конца журнала на запрос к пулу журналов (указывается для запросов в последнем виртуальном файле журнала).| 

@@ -2,31 +2,31 @@
 title: "Свойства базы данных распространителя | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.configdistwizard.distdbproperties.f1
-helpviewer_keywords:
-- Distribution Database Properties dialog box
+f1_keywords: sql13.rep.configdistwizard.distdbproperties.f1
+helpviewer_keywords: Distribution Database Properties dialog box
 ms.assetid: 0f404ab9-1237-4936-8df5-888baab6a245
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7e086caef0d106066a3f8a9f42d1bbd51d473826
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "23"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 4c33a5730c910c0225a11a24b49313bc57d64e29
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distribution-database-properties"></a>Свойства базы данных распространителя
-  Диалоговое окно **Свойства базы данных распространителя** позволяет просмотреть набор свойств и задать срок хранения транзакций и журналов для текущей базы данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Диалоговое окно **Свойства базы данных распространителя** позволяет просмотреть набор свойств и задать срок хранения транзакций и журналов для текущей базы данных.  
   
 ## <a name="options"></a>Параметры  
  **Название**  
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
  Расположение файла базы данных и файла журнала (только для чтения).  
   
  **Срок хранения транзакций**  
- Также называется сроком хранения распространения. Время, в течение которого транзакции сохраняются для репликации транзакций. Дополнительные сведения см. в статье [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
+ Также называется сроком хранения распространения. Время, в течение которого транзакции сохраняются для репликации транзакций. Дополнительные сведения см. в разделе [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
  **Срок хранения журнала**  
  Время, в течение которого метаданные журнала сохраняются для всех типов репликации.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также:  
  [Настройка распространения](../../relational-databases/replication/configure-distribution.md)   
- [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Просмотр и изменение свойств издателя и распространителя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)  
   

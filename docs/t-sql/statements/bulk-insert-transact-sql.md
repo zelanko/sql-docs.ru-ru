@@ -3,8 +3,11 @@ title: "Инструкции BULK INSERT (Transact-SQL) | Документы Mic
 ms.custom: 
 ms.date: 01/04/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,20 +29,19 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
-caps.latest.revision: 153
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 80b16fd446ff72c6a673a576d9a8deb9514be8b2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ec29eaa73339980516f4a3de4b67fa195953d80a
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Выполняет импорт файла данных в таблицу или представление базы данных в формате, указанном пользователем, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -334,8 +336,8 @@ GO
   
  Дополнительные сведения об этом и других вопросах безопасности при помощи инструкции BULK INSERT см. в разделе [массовый импорт данных с помощью инструкции BULK INSERT или OPENROWSET &#40; BULK... &#41; &#40; SQL Server &#41; ](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
-### <a name="permissions"></a>Permissions  
- Требует разрешений INSERT и ADMINISTER BULK OPERATIONS. Кроме того, необходимо разрешение ALTER TABLE, если выполняется одно из следующих условий.  
+### <a name="permissions"></a>Разрешения  
+ Требует разрешений INSERT и ADMINISTER BULK OPERATIONS. В базе данных SQL Azure требуются разрешения INSERT и ADMINISTER BULK OPERATIONS базы данных. Кроме того, необходимо разрешение ALTER TABLE, если выполняется одно из следующих условий.  
   
 -   Существуют ограничения, и параметр CHECK_CONSTRAINTS не указан.  
   
@@ -415,7 +417,7 @@ WITH (FORMAT = 'CSV');
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>Е. Импорт данных из файла в хранилище больших двоичных объектов   
 В следующем примере показано, как загрузить данные из CSV-файла в месте хранения BLOB-объектов Azure, которая была настроена в качестве внешнего источника данных. Это требуются учетные данные уровня базы данных с помощью подписанного URL-адреса.    
 
-```tsql
+```sql
 BULK INSERT Sales.Invoices
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
@@ -451,7 +453,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
   
 ## <a name="see-also"></a>См. также:  
  [Массовый импорт и экспорт данных (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Программа bcp](../../tools/bcp-utility.md)   
  [Файлы форматирования для импорта или экспорта данных &#40; SQL Server &#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
@@ -459,4 +461,3 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
  [sp_tableoption &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
   
   
-

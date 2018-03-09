@@ -1,27 +1,27 @@
 ---
-title: "Общие наборы данных (SSRS) в кэше | Документы Microsoft"
+title: "Общие наборы данных в кэше (службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 698548e71d8d346d04f0aa93eef8b8074a2417c0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e9da23f9036255a3b12bbb9af3a09c981f76b3de
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Общий набор данных в кэше (служба SSRS)
   Результаты запроса для общего набора данных могут быть скопированы в кэш, чтобы предоставить согласованные данные для нескольких отчетов и улучшить время ответа для запроса к набору данных. Как и отчеты, общие наборы данных можно настраивать как подлежащие кэшированию при первом использовании или согласно расписанию.  
@@ -101,8 +101,7 @@ ms.lasthandoff: 06/22/2017
   
  Внесение изменений в планы обновления кэша для общих наборов данных не затрагивает отчеты, которые уже обрабатываются. Изменение плана обновления кэша затрагивает только будущие запуски отчетов, которые ссылаются на рассматриваемый общий набор данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление общими наборами данных](../../reporting-services/report-data/manage-shared-datasets.md)  
   
   
-

@@ -3,8 +3,11 @@ title: "IsValidDetailed (тип данных geography) | Документы Mic
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - IsValidDetailed geography
 ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
-caps.latest.revision: 8
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: abe552b7afda98443decf0b66e81ae74f8a32b00
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: bc133d5df578c87379695ba0696a75fe99bcf8b0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed (тип данных geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Возвращает сообщение, позволяющее выявить проблемы с пространственным объектом, который не является допустимым. Если объект не является допустимым, возвращается только первая ошибка. Если объект является допустимым, возвращается значение 24400.  
   
@@ -46,10 +48,10 @@ ms.lasthandoff: 09/01/2017
   
  Возвращаемый тип CLR: **строка**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Возможные возвращаемые значения содержатся в следующей таблице:  
   
-|Возвращаемое значение|Description|  
+|Возвращаемое значение|Описание|  
 |------------------|-----------------|  
 |24400|Допустимо|  
 |24401|Не является допустимым, причины неизвестны.|  
@@ -72,14 +74,13 @@ ms.lasthandoff: 09/01/2017
 ## <a name="examples"></a>Примеры  
  Следующий пример недопустимого пространственного объекта иллюстрирует как **IsValidDetailed()** методы.  
   
-```tsql  
+```sql  
 DECLARE @p GEOGRAPHY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  
 SELECT @p.IsValidDetailed()  
 --Returns: 24409: Not valid because some portion of polygon ring (1) lies in the interior of a polygon.  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Расширенные методы в экземплярах географических объектов](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
+## <a name="see-also"></a>См. также  
+ [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   
-

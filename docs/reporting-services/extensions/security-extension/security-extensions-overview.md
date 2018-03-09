@@ -1,38 +1,36 @@
 ---
-title: "Общие сведения о модулях безопасности | Документы Microsoft"
+title: "Общие сведения о модулях безопасности | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- security [Reporting Services], extensions
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: security [Reporting Services], extensions
 ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
-caps.latest.revision: 22
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "22"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: f7e8c95a478e733722d3c80da4b5e12e992ef4da
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: e07a4bbc62bf15d03887b12912fea2e216ad28ef
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="security-extensions-overview"></a>Общие сведения о модулях безопасности
   Модуль безопасности служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяет проводить проверку подлинности и авторизацию пользователей и групп, то есть этот модуль позволяет пользователям входить на сервер отчетов и в соответствии с их удостоверениями выполнять различные задачи и операции. По умолчанию службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] используют модуль проверки подлинности Windows, который в свою очередь использует протоколы учетных записей Windows для проверки удостоверений пользователей, которые заявляют, что имеют учетные записи в системе. Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] используют систему безопасности на основе ролей для авторизации пользователей. Модель безопасности служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] на основе ролей похожа на модели безопасности на основе ролей других технологий.  
   
  Поскольку модули безопасности основываются на открытом и дополняемом API-интерфейсе, в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] можно создавать новые модули проверки подлинности и авторизации. Ниже проводится пример реализации типичного модуля безопасности, использующего проверку подлинности и авторизацию на основе форм:  
   
- ![Процесс расширения безопасности служб Reporting](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "процесс расширения безопасности служб Reporting Services")  
+ ![Процесс расширения безопасности служб Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Процесс расширения безопасности служб Reporting Services")  
   
  Как показано на иллюстрации, проверка подлинности и авторизация происходит следующим образом.  
   
@@ -71,7 +69,6 @@ ms.lasthandoff: 08/12/2017
   
 ## <a name="see-also"></a>См. также:  
  [Реализация модуля безопасности](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
- [Настройка диспетчера отчетов для передачи файлов cookie нестандартной проверки подлинности](https://msdn.microsoft.com/library/ms345241(v=sql.110).aspx)  
+ [Настройка передачи файлов cookie для пользовательской проверки подлинности в диспетчере отчетов](https://msdn.microsoft.com/library/ms345241(v=sql.110).aspx)  
   
   
-

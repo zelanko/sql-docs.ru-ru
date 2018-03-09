@@ -2,29 +2,30 @@
 title: "Диалоговое окно \"Выполнение политик\", страница \"Результаты выполнения\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dmf.evalpoliciesresults.f1
+f1_keywords: sql13.swb.dmf.evalpoliciesresults.f1
 ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
-caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3801000fb37d133ca0bf7c5197c939188e4e59a4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "16"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: bc11b243f15c6046a342aec2279a86cd1ec2c69c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Диалоговое окно «Выполнение политик», страница «Результаты выполнения»
-  С помощью этого диалогового окна можно просмотреть результаты оценки политики и применить политики управления на основе политик к набору целей, которые не соответствуют этим политикам.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью этого диалогового окна можно просмотреть результаты оценки политики и применить политики управления на основе политик к набору целевых объектов, которые не соответствуют этим политикам.  
   
 ## <a name="options"></a>Параметры  
  **Результаты: политики**  

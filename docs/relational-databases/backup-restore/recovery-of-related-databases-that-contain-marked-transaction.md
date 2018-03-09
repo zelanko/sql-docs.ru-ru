@@ -2,9 +2,12 @@
 title: "Восстановление связанных баз данных, которые содержат помеченную транзакцию | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-backup-restore
 ms.tgt_pltfrm: 
@@ -22,21 +25,22 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8848fbbe73b377a329c8b3af29c8a6a32881f50b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 35cef9e6a0576780aa802d891f9ea43cc21bc15a
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Восстановление связанных баз данных, которые содержат помеченную транзакцию
-  Этот раздел относится только к базам данных, содержащим помеченные транзакции и использующим полную модель восстановления или модель восстановления с неполным протоколированием.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Этот раздел относится только к базам данных, содержащим помеченные транзакции и использующим полную модель восстановления или модель восстановления с неполным протоколированием.  
   
- Дополнительные сведения о требованиях к восстановлению до указанной точки восстановления см. в статье [Восстановление базы данных SQL Server до определенного момента времени (модель полного восстановления)](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+ Дополнительные сведения о требованиях к восстановлению до указанной точки восстановления см. в статье [Restore a SQL Server Database to a Point in Time &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает вставку именованных меток в журнал транзакций, чтобы обеспечить возможность восстановления до определенной метки. Метки журнала являются специальным средством транзакции и вставляются только в случае, если связанная с ними транзакция зафиксирована. В итоге, метки могут быть привязаны к конкретной работе, и можно выполнить восстановление до точки, которая включает или не включает эту работу.  
   

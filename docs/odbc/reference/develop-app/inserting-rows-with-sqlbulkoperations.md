@@ -3,10 +3,12 @@ title: "Вставка строк с SQLBulkOperations | Документы Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - data updates [ODBC], SQLBulkOperations
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: ed585ea7-4d56-4df9-8dc3-53ca82382450
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 14a6ed5b77f5fb24555aa82d0527b8d49da89f69
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bd79255e4cda68d1fd4d425544702e589f44336b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inserting-rows-with-sqlbulkoperations"></a>Вставка строк с SQLBulkOperations
 Вставка данных с **SQLBulkOperations** похож на обновление данных с **SQLBulkOperations** , так как он использует данные из привязанного приложения буферов.  
@@ -40,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 3.  Вызовы **SQLBulkOperations** с *операции* аргументу присвоено SQL_ADD.  
   
  После **SQLBulkOperations** возвращает текущую строку без изменений. Если связанное закладки столбца (0) **SQLBulkOperations** возвращает закладки вставляемых строк в буфере строк привязан к этому столбцу.
-

@@ -3,7 +3,7 @@ title: "Пример CubeDef (VBScript) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - ADO MD code examples [ADO MD], VBScript
 ms.assetid: 4d72a912-ef53-4989-9fca-214937574116
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5401176afab91f911147f23dbece9b33da2d4f31
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bf2ebf51c9dc0789d24a9455d3647a3202827412
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cubedef-example-vbscript"></a>Пример CubeDef (VBScript)
 Этот пример отображает метаданные куба на веб-странице.  
@@ -202,4 +201,3 @@ Response.Write "<OL TYPE='i'>"
 </body>  
 </html>  
 ```
-

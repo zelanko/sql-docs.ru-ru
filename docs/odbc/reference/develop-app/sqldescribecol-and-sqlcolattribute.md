@@ -3,10 +3,12 @@ title: "SQLDescribeCol и SQLColAttribute | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - retrieving result set meta data [ODBC]
 - metadata [ODBC], result set
 ms.assetid: c2ca442c-03a8-4e0f-9e67-b300bb15962f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a79fa6a02a5c17be0180b0593e28c7827e751bd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9a80ccf6ed695433a109770a567f50d100fd3a33
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol и SQLColAttribute
 **SQLDescribeCol** и **SQLColAttribute** получаются метаданные результирующего набора. Различие между этими двумя функциями состоит в том **SQLDescribeCol** всегда возвращает же пять (столбца имя, тип данных, точность, масштаб и допустимость значений NULL), при **SQLColAttribute** возвращает одну часть сведений, запрошенный приложением. Тем не менее **SQLColAttribute** может возвращать гораздо более эффективные средства выбора метаданных, включая учет регистра символов для столбца, отображения размера, возможность обновления и возможность поиска.  
@@ -36,4 +37,3 @@ ms.lasthandoff: 09/09/2017
  Приложение может получить метаданные результирующего набора в любое время после инструкции подготовки или выполнения, и до курсора результирующим набор не будет закрыт. Только некоторые приложения требуют метаданные результирующего набора после подготовки инструкции и перед его выполнением. Если это возможно приложения будет ожидать получения метаданных до, после выполнения инструкции, так как некоторые источники данных не может возвращать метаданные для подготовленных инструкций, имитируя этой возможности в драйвере часто медленно процесс. Например, драйвер может создать ноль строк результирующего набора, заменив **ГДЕ** предложения **ВЫБЕРИТЕ** инструкция с предложением **WHERE 1 = 2** и выполнения Результирующая инструкция.  
   
  Метаданные часто ресурсоемкость извлечения из источника данных. По этой причине драйверы следует кэшировать все метаданные, они извлечь с сервера и оставить его для при условии, что курсор результирующим открыт. Кроме того приложения должны запрашивать только метаданные, которые абсолютно необходимы.
-

@@ -2,29 +2,31 @@
 title: "Использование SELECT и JOIN в системных представлениях для расширенных событий в SQL Server | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9a3f027fddc3ab7094b2ca82ae1f9ad3190a886
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8e257fc470b6988141b5581650285d69c09b1f2a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Использование SELECT и JOIN в системных представлениях для расширенных событий в SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 В этой статье описывается два набора системных представлений, имеющих отношение к расширенным событиям в Microsoft SQL Server и в облачной службе базы данных SQL Azure. В статье рассматриваются следующие вопросы:
@@ -78,7 +80,7 @@ ms.lasthandoff: 06/22/2017
 
 <a name="section_B_catalog_views"></a>
 
-## <a name="b-catalog-views"></a>Б. представлений каталога;
+## <a name="b-catalog-views"></a>Б. Представления каталога
 
 
 В этом разделе сопоставляются три разных технологических подхода для одного и того же определенного сеанса событий. Сеанс был определен и отображается в **обозревателе объектов** среды SQL Server Management Studio (SSMS.exe), но сеанс в данный момент не запущен.
@@ -119,12 +121,12 @@ ms.lasthandoff: 06/22/2017
 
 В среде SSMS в **обозревателе объектов**откройте диалоговое окно **Новый сеанс** , развернув узлы **Управление** > **Расширенные события**и щелкнув правой кнопкой мыши **Сеансы** > **Создать сеанс**.
 
-В большом диалоговом окне **Новый сеанс** в его первом разделе **Общие** был выбран параметр **Запускать сеанс событий при запуске сервера**.
+В большом диалоговом окне **Новый сеанс** в его первом разделе **Общие**был выбран параметр **Запускать сеанс событий при запуске сервера**.
 
 ![Новый сеанс > Общие, Запускать сеанс событий при запуске сервера.](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
 
-Далее в разделе **События** видно, что было выбрано событие **lock_deadlock**. Для этого события были выбраны три **действия** . Это означает, что была нажата кнопка **Настроить**, которая становится серой после нажатия.
+Далее в разделе **События** видно, что было выбрано событие **lock_deadlock**. Для этого события были выбраны три **действия** . Это означает, что была нажата кнопка **Настроить** , которая становится серой после нажатия.
 
 ![Новый сеанс > События, Глобальные поля (действия)](../../relational-databases/extended-events/media/xevents-ssms-ac110-actions-global.png)
 
@@ -163,7 +165,7 @@ ms.lasthandoff: 06/22/2017
 В результате реконструирования с помощью среды был создан следующий скрипт T-SQL. Затем он был вручную доработан с использованием только пробелов.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [event_session_test3]
     ON SERVER  -- Or, if on Azure SQL Database, ON DATABASE.
 
@@ -217,7 +219,7 @@ CREATE EVENT SESSION [event_session_test3]
 Не пугайтесь! Следующая инструкция T-SQL SELECT слишком длинна только потому, что она объединяет (UNION) несколько небольших инструкций SELECT. Любая из этих небольших инструкций SELECT может выполняться самостоятельно. Небольшие инструкции SELECT демонстрируют варианты присоединения (JOIN) различных системных представлений каталогизации.
 
 
-```tsql
+```sql
 SELECT
         s.name        AS [Session-Name],
         '1_EVENT'     AS [Clause-Type],
@@ -412,7 +414,7 @@ event_session_test3   7_WITH_STARTUP_STATE   startup_state                   1
 Все объекты, которые можно использовать в области расширенных событий, взяты из пакетов, которые загружены в систему. В этом разделе перечислены все пакеты и даны их описания.
 
 
-```tsql
+```sql
 SELECT  --C.1
         p.name         AS [Package],
         p.description  AS [Package-Description]
@@ -468,7 +470,7 @@ XtpRuntime     Extended events for the XTP Runtime
 Здесь содержатся сведения о типах объектов, содержащихся в пакетах событий. Отображается полный список всех типов объектов, которые находятся в *sys.dm\_xe\_objects*, а также количество по каждому типу.
 
 
-```tsql
+```sql
 SELECT  --C.2
         Count(*)  AS [Count-of-Type],
         o.object_type
@@ -512,7 +514,7 @@ Count-of-Type   object_type
 
 
 
-```tsql
+```sql
 SELECT  --C.3
         o.object_type  AS [Type-of-Item],
         p.name         AS [Package],
@@ -581,7 +583,7 @@ type           package0       xml                           Well formed XML frag
 - Кроме того, потребуется изменить значение предложения WHERE для *o.name =*.
 
 
-```tsql
+```sql
 SELECT  -- C.4
         p.name         AS [Package],
         c.object_name  AS [Event],
@@ -659,7 +661,7 @@ sqlserver   lock_deadlock   transaction_id
 - для фильтрации вхождений событий, которые будут отправляться из целевого объекта или оставаться в нем.
 
 
-```tsql
+```sql
 SELECT  --C.5
         dp.name         AS [Package],
         do.name         AS [Object],
@@ -734,7 +736,7 @@ you could put:
 - Кроме того, потребуется изменить значение предложения WHERE для *o.name =*.
 
 
-```tsql
+```sql
 SELECT  --C.6
         p.name        AS [Package],
         o.name        AS [Target],
@@ -799,7 +801,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 - Потребуется изменить значение предложения WHERE для *s.name =*.
 
 
-```tsql
+```sql
 SELECT  --C.7
         s.name,
         t.target_name,
@@ -867,7 +869,7 @@ checkpoint_session_ring_buffer2   ring_buffer   <RingBufferTarget truncated="0" 
     - Не обращайте внимание на дополнительные цифры, которые система SQL будет внедрять в реальные имена XEL-файлов при каждом перезапуске сеанса. Просто укажите обычное корневое имя и расширение.
 
 
-```tsql
+```sql
 SELECT  --C.8
         f.module_guid,
         f.package_guid,
@@ -921,6 +923,5 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   ch
   </action>
 </event>
 ```
-
 
 

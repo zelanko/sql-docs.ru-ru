@@ -1,27 +1,27 @@
 ---
-title: "Устранение неполадок отчетов служб Reporting Services проблемах обработки | Документы Microsoft"
+title: "Устранение неполадок при подготовке отчетов служб Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 02/27/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
-caps.latest.revision: 4
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "4"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 91629c6d86f1616b19026cbc0e670fff51553dda
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e95e444172974de41cfea15bc651ddfae9a5cabb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Устранение неполадок при подготовке отчетов служб Reporting Services
 После объединения данных и макета отчета скомпилированный отчет отправляется в средство подготовки отчета к просмотру. Например, при локальном просмотре отчета используется средство подготовки данных к просмотру в HTML-формате для просмотра скомпилированных отчетов. Материал этого раздела используется для устранения проблем, связанных с подготовкой отчета к просмотру.   
@@ -70,9 +70,9 @@ ms.lasthandoff: 08/09/2017
   
 **Эта проблема возникает** в браузерах, в которых настроен запрос учетных данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Справочник по ошибкам и событиям (службы Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-[Устранение неполадок при извлечении данных с помощью отчетов служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
+[Устранение неполадок с извлечением данных с помощью отчетов служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Устранение неполадок, связанных с подписками и доставкой служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
   
@@ -80,5 +80,4 @@ ms.lasthandoff: 08/09/2017
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

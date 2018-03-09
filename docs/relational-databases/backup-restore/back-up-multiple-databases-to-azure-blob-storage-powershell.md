@@ -2,27 +2,29 @@
 title: "Резервное копирование нескольких баз данных в службу хранилища BLOB-объектов Azure с использованием PowerShell | Документация Майкрософт"
 ms.custom: 
 ms.date: 05/20/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
-caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cda33e54db6382eaee5d4e5343fc2d1873600c8c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "13"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 28c5b537cfaf991b5067142e79d4857e002452e8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Резервное копирование нескольких баз данных в службу хранилища BLOB-объектов Azure с использованием PowerShell
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе приведены образцы скриптов, которые можно использовать для автоматизации резервного копирования в службу хранилища больших двоичных объектов Windows Azure с помощью командлетов PowerShell.  
   
@@ -275,4 +277,3 @@ Backup-SqlDatabase -Database $s -BackupContainer $backupUrlContainer -SqlCredent
  [Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   
-

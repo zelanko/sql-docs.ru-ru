@@ -2,9 +2,12 @@
 title: "Класс событий Lock:Deadlock | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,35 +15,36 @@ ms.topic: article
 helpviewer_keywords:
 - Deadlock event class
 ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
-caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f9ed4f5c5303034a6b3f312a5884e184b0d3b345
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 7b4cd55a7d886e6d3eb6f979898cbf7f85d0e9a6
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="lockdeadlock-event-class"></a>Класс событий Lock:Deadlock
-  События класса Lock:Deadlock создаются при отмене попытки получить блокировку, приводящую к взаимоблокировке и выбранную сервером в качестве жертвы.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+События класса Lock:Deadlock создаются при отмене попытки получить блокировку, приводящую к взаимоблокировке и выбранную сервером в качестве жертвы.  
   
  Класс событий Lock:Deadlock предназначен для отслеживания возникновения взаимоблокировок и объектов, которые в них участвуют. Эти сведения предназначены для определения степени влияния взаимоблокировок на производительность приложения. Они позволяют просмотреть код приложения и изменить его так, чтобы минимизировать взаимоблокировки.  
   
 ## <a name="lockdeadlock-event-class-data-columns"></a>Столбцы данных класса событий Lock:Deadlock  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |BinaryData|**image**|Идентификатор ресурса блокировки.|2|Да|  
 |ClientProcessID|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент вводит идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|**int**|Идентификатор базы данных, в которой запрашивается блокировка. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных ServerName захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |DatabaseName|**nvarchar**|Имя базы данных, в которой запрашивается блокировка.|35|Да|  
-|Длительность|**bigint**|Время (в микросекундах) с момента выдачи запроса на блокировку до момента возникновения взаимоблокировки.|13|Да|  
+|Duration|**bigint**|Время (в микросекундах) с момента выдачи запроса на блокировку до момента возникновения взаимоблокировки.|13|Да|  
 |EndTime|**datetime**|Время окончания взаимоблокировки.|15|Да|  
-|EventClass|**int**|Тип события = 25.|27|Нет|  
-|EventSequence|**int**|Порядковый номер данного события в запросе.|51|Нет|  
+|EventClass|**int**|Тип события = 25.|27|нет|  
+|EventSequence|**int**|Порядковый номер данного события в запросе.|51|нет|  
 |GroupID|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IntegerData|**int**|Номер взаимоблокировки. Номера назначаются начиная от 0 с момента запуска сервера и для каждой взаимоблокировки увеличиваются на единицу.|25|Да|  
@@ -55,7 +59,7 @@ ms.lasthandoff: 06/22/2017
 |ObjectID2|**bigint**|Идентификатор связанного объекта или сущности, если он доступен и применим.|56|Да|  
 |OwnerID|**int**|1 = TRANSACTION<br /><br /> 2 = CURSOR<br /><br /> 3 = SESSION<br /><br /> 4 = SHARED_TRANSACTION_WORKSPACE<br /><br /> 5 = EXCLUSIVE_TRANSACTION_WORKSPACE|58|Да|  
 |RequestID|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
+|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|нет|  
 |SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|**datetime**|Время начала события, если оно доступно.|14|Да|  

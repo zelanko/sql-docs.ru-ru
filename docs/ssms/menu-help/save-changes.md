@@ -3,32 +3,32 @@ title: "Диалоговое окно \"Сохранить изменения\" 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.file.close.f1
 - VS.SaveChangesDlg
-helpviewer_keywords:
-- Save Changes dialog box
+helpviewer_keywords: Save Changes dialog box
 ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f1f2f0c5925c46db4216e665abecd051e7596f2b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8913eedde43e2e59dbae1230480bca10fe84219a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="save-changes"></a>Сохранить изменения
-Выдается предостережение, что изменения перечисленных элементов не будут сохранены, пока не нажать **Да**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Выдается предостережение, что изменения перечисленных элементов не будут сохранены, пока не нажать **Да**.  
   
 Это диалоговое окно может появиться при закрытии решений, планов обслуживания или других открытых файлов.  
   
@@ -45,4 +45,3 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 > При сохранении задайте только имя объекта, а не схему и имя объекта.  
   
-

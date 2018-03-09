@@ -2,30 +2,33 @@
 title: "Предоставление разрешений на обработку базы данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 69ba952e-09ae-49a9-9297-00e32e8e89a8
-caps.latest.revision: 17
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f7a6e9524efcebab174073290983a20f7f242d81
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c741d808288dbead490c48e569ad55e9b6895d78
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-10---granting-process-database-permissions"></a>Занятие 10 — Предоставление разрешений на обработку базы данных
-После установки экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]все члены роли администратора сервера [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в этом экземпляре получают разрешения уровня сервера для выполнения любых задач в пределах этого экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. По умолчанию другие пользователи не имеют разрешения на администрирование или просмотр объектов данного экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+После установки экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] все члены роли администратора сервера [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в этом экземпляре получают разрешения уровня сервера для выполнения любых задач в пределах этого экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. По умолчанию другие пользователи не имеют разрешения на администрирование или просмотр объектов данного экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 Член роли администратора сервера может предоставлять пользователям административный доступ на уровне сервера, включая их в эту роль. Член роли администратора сервера имеет ограниченные права, но также может открывать пользователям доступ, предоставляя им ограниченный или полный набор разрешений на администрирование или доступ на уровне базы данных. Ограниченные права на администрирование включают в себя разрешения на обработку или определение чтения на уровне базы данных, куба или измерения.  
   
@@ -63,8 +66,7 @@ ms.lasthandoff: 09/01/2017
 > Завершенный проект десятого занятия доступен для загрузки и установки образцов. Дополнительные сведения см. в статье [Установка образцов данных и проектов для учебника по многомерному моделированию в службах Analysis Services](../analysis-services/install-sample-data-and-projects.md).  
   
 ## <a name="see-also"></a>См. также:  
-[Роли и разрешения (службы Analysis Services)](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+[Роли и разрешения &#40; Службы Analysis Services &#41;](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   
   
-

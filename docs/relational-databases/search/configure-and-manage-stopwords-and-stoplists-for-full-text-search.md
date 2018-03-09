@@ -2,9 +2,12 @@
 title: "Настройка стоп-слов и списков стоп-слов для полнотекстового поиска и управление ими | Документация Майкрософт"
 ms.custom: 
 ms.date: 02/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -17,20 +20,20 @@ helpviewer_keywords:
 - full-text search [SQL Server], stopwords
 - stopwords [full-text search]
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
-caps.latest.revision: 81
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4a16a24b197a9fd6a2d1c89f3af8a19b2d2d308d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: df60c8809510a17664f5a5a541cd2c497782c750
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Настройка и управление стоп-словами и списками стоп-слов для полнотекстового поиска
-  Чтобы предотвратить чрезмерное увеличение полнотекстового индекса, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реализован механизм, отбрасывающий часто встречающиеся строки, не повышающие эффективность поиска. Эти отброшенные строки называются *стоп-словами*. Во время создания индекса средство полнотекстового поиска не включает стоп-слова в полнотекстовый индекс. Это значит, что полнотекстовые запросы не будут выполнять поиск по стоп-словам.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Чтобы предотвратить чрезмерное увеличение полнотекстового индекса, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реализован механизм, отбрасывающий часто встречающиеся строки, не повышающие эффективность поиска. Эти отброшенные строки называются *стоп-словами*. Во время создания индекса средство полнотекстового поиска не включает стоп-слова в полнотекстовый индекс. Это значит, что полнотекстовые запросы не будут выполнять поиск по стоп-словам.  
    
 **Стоп-слова**. Стоп-слово может быть словом конкретного языка. Например, в английском языке такие слова, как «a», «and», «is» и «the», не включаются в полнотекстовый индекс, потому что при поиске они бесполезны. Стоп-слово может также быть *токеном*, не имеющим лингвистического значения.  
 
@@ -144,4 +147,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

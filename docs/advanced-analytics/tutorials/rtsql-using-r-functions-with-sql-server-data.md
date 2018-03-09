@@ -2,30 +2,31 @@
 title: "С помощью функций R с данными SQL Server (R в быстрый запуск SQL Server) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
 ms.assetid: e2fe5d90-eee9-4daf-9eae-21d17b3ef320
-caps.latest.revision: 8
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 93fb7d90ab6d1f387fe50dd63a29eda7a2ecc764
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: db97b781e0206144e94a9ca22030c47bc2f7a7b8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-r-functions-with-sql-server-data-r-in-sql-quickstart"></a>С помощью функций R с данными SQL Server (R в быстрый запуск SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Теперь, когда вы знакомы с базовыми операциями, пришло время поработать с расширенными функциями R. Например, многие дополнительные статистические функции сложно реализовать с помощью T-SQL, а при использовании R для них требуется только одна строка кода.  Службы R упрощают внедрение служебных скриптов R в хранимую процедуру.
 
@@ -114,5 +115,4 @@ WITH RESULT SETS (([Col1] int not null));
 
 Далее вы создадите модель прогнозирования с помощью R в SQL Server.
 
-[Создать прогнозную модель](../tutorials/rtsql-create-a-predictive-model-r.md)
-
+[Создание модели прогнозирования](../tutorials/rtsql-create-a-predictive-model-r.md)

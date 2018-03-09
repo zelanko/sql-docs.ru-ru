@@ -3,7 +3,7 @@ title: "DateCreated и DateModified-пример свойства (Visual Basic)
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - DateCreated property [ADOX], Visual Basic example
 - DateModified property [ADOX], Visual Basic example
 ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6ca73e36516f1f3a94e6c06e3be45bd89c9a58b8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0761c9f334d9e347185e8c87dbf88c6d32767615
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated и DateModified-пример свойства (Visual Basic)
 В этом примере демонстрируется [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) и [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) свойства путем добавления нового [столбца](../../../ado/reference/adox-api/column-object-adox.md) к существующему [таблицы](../../../ado/reference/adox-api/table-object-adox.md) и с помощью Создание нового **таблицы**. Процедура DateOutput является обязательным для выполнения этого примера.  
@@ -102,11 +101,10 @@ End Sub
 ' EndDateCreatedVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство DateCreated (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
  [Свойство DateModified (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
  [Объект процедуры (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Коллекция процедур (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
  [Объект представления (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Коллекции представлений (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
-
+ [Коллекция Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

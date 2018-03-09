@@ -2,12 +2,13 @@
 title: "Технический справочник по алгоритму нейронной сети Майкрософт | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,20 +30,20 @@ helpviewer_keywords:
 - coding [Data Mining]
 - HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
-caps.latest.revision: 26
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ceac69e8f44885b16983b1354acea23f43b5b594
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d29618af2bb8ffe0a7e809388f32ed5987b67aea
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Технический справочник по алгоритму нейронной сети (Майкрософт)
-  Алгоритм нейронной сети ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) использует сеть в виде *многослойного перцептрона* , также известного под названием *сеть дельта-правила с обратным распространением*, в состав которой может входить до трех слоев нейронов, или *перцептронов*. Такими слоями являются входной слой, необязательный скрытый слой и выходной слой.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Алгоритм нейронной сети ([!INCLUDE[msCoName](../../includes/msconame-md.md)]) использует сеть в виде *многослойного перцептрона*, также известного под названием *сеть дельта-правила с обратным распространением*, в состав которой может входить до трех слоев нейронов, или *перцептронов*. Такими слоями являются входной слой, необязательный скрытый слой и выходной слой.  
   
  В задачи настоящей документации не входит подробное рассмотрение таких нейронных сетей, как многослойные перцептроны. В данном разделе содержится описание базовой реализации алгоритма, в том числе метода, используемого для нормализации входных и выходных значений. Приводится также описание методов выбора компонентов, которые применяются для снижения количества элементов атрибута. В данном разделе описываются параметры и другие настройки, с помощью которых можно управлять поведением алгоритма. Приводятся также ссылки на дополнительную информацию о запросах к модели.  
   
@@ -207,9 +208,8 @@ ms.lasthandoff: 09/01/2017
 >  Типы содержимого Cyclical и Ordered поддерживаются, но алгоритм обрабатывает их как дискретные величины и не производит их особой обработки.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритм нейронной сети (Майкрософт)](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Алгоритм нейронной сети Майкрософт](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Содержимое модели интеллектуального анализа данных для модели нейронной сети &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Примеры запросов к модели нейронной сети](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   
-

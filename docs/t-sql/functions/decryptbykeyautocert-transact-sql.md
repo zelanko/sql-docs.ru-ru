@@ -3,8 +3,11 @@ title: "DECRYPTBYKEYAUTOCERT (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 09/09/2015
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,26 +20,25 @@ dev_langs:
 helpviewer_keywords:
 - DECRYPTBYKEYAUTOCERT function
 ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
-caps.latest.revision: 26
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0842000cd08e3ca82dab181f32ae96f4a0280d5d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 9aca90f988ae2d12d9a7c26f01673530b1a07f4b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
-# DECRYPTBYKEYAUTOCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Расшифровка с помощью симметричного ключа, который автоматически расшифровывается с помощью сертификата.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -46,7 +48,7 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
   [ , { authenticator | @authenticator } ] ] )  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  *cert_ID*  
  Идентификатор сертификата, используемого для защиты симметричного ключа. *cert_ID* — **int**.  
   
@@ -71,16 +73,16 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
  @authenticator  
  Переменная, содержащая сведения, из которых формируются данные для проверки подлинности. Значение аргумента должно совпадать со значением, заданным функции EncryptByKey.  
   
-## Типы возвращаемых значений  
+## <a name="return-types"></a>Типы возвращаемых значений  
  **varbinary** с максимальным размером 8 000 байт.  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  Функция DecryptByKeyAutoCert объединяет функциональность OPEN SYMMETRIC KEY и DecryptByKey. В отдельной операции она расшифровывает симметричный ключ и использует его для расшифровки текста.  
   
-## Permissions  
+## <a name="permissions"></a>Permissions  
  Необходимо разрешение VIEW DEFINITION на симметричный ключ и разрешение CONTROL на сертификат.  
   
-## Примеры  
+## <a name="examples"></a>Примеры  
  В следующем примере показано, как с помощью функции `DecryptByKeyAutoCert` можно упростить код, отвечающий за расшифровку. Этот код должен быть выполнен в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], для которой еще не задан главный ключ базы данных.  
   
 ```  
@@ -130,11 +132,10 @@ SELECT NationalIDNumber, EncryptedNationalIDNumber
     FROM HumanResources.Employee;  
 ```  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [OPEN SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
  [ENCRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [DECRYPTBYKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
-

@@ -3,8 +3,11 @@ title: "ALTER DATABASE SET HADR (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], Transact-SQL statements
 - Availability Groups [SQL Server], databases
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
-caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3799bc24ab3cfa9f0d65c961f69b72210c6cccef
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a601a5f93f7a922228232c8ef4a91b5775eded91
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>SET HADR ALTER DATABASE (Transact-SQL) 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе приведен синтаксис инструкции ALTER DATABASE для параметра [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] параметры базы данных-получателя. Может только один параметр SET HADR инструкции ALTER DATABASE. Эти параметры поддерживаются только во вторичных репликах.  
   
@@ -62,10 +64,10 @@ ALTER DATABASE database_name
  SET HADR  
  Выполняет указанную команду [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] в указанной базе данных.  
   
- {ГРУППА ДОСТУПНОСТИ  **=**  *имя_группы* | {OFF}  
+ {ГРУППЫ ДОСТУПНОСТИ **= *** имя_группы* | {OFF}  
  Присоединяет базу данных доступности к указанной группе доступности или исключает ее из группы, как показано ниже.  
   
- *имя_группы*  
+ *group_name*  
  Присоединяет указанную базу данных на вторичной реплике, размещенной на экземпляре сервера, на котором выполнена команда, к группе доступности, задаваемой параметром group_name.  
   
  Необходимые условия для выполнения этой операции следующие:  
@@ -81,7 +83,7 @@ ALTER DATABASE database_name
     > [!NOTE]  
     >  Добавление базы данных к группе доступности, подключитесь к экземпляру сервера, на котором размещена первичная реплика и использовать [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*имя_группы* Добавления базы данных *имя_базы_данных*  инструкции.  
   
- Дополнительные сведения см. в статье [Присоединение базы данных-получателя к группе доступности (SQL Server)](../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
+ Дополнительные сведения см. в статье [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
  OFF  
  Удаляет указанную базу данных-получатель из группы доступности.  
@@ -146,11 +148,10 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
 > [!NOTE]  
 >  Пример использования инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] в контексте см. в статье [Создание группы доступности (Transact-SQL)](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [Создание группы ДОСТУПНОСТИ &#40; Transact-SQL &#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [Обзор групп доступности AlwaysOn &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [Диагностика конфигурации групп доступности AlwaysOn &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
   
-

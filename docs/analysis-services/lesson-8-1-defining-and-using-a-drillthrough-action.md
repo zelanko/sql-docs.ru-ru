@@ -2,29 +2,32 @@
 title: "Определение и использование действия детализации | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
-caps.latest.revision: 16
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: d15da8a4d463cbe2e8b0b05abf163400dc354749
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d1b944214f1ad9b20f344f2d90ecbeb8996153bf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>Занятие 8-1-Определение и использование действия детализации
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Распределение данных фактов по измерениям фактов без верной фильтрации данных, возвращаемых запросом, может привести к снижению его производительности. Чтобы избежать этого, можно определить действие детализации, которое ограничит общее число возвращаемых строк. Это позволит значительно повысить производительность выполнения запросов.  
   
 В задачах этого раздела предстоит создать действие детализации, возвращающее пользователям через Интернет подробные сведения о заказе на продажу.  
@@ -150,9 +153,9 @@ ms.lasthandoff: 09/01/2017
     ![Заказы, доставленные Адаму Пауэлу](../analysis-services/media/l8-action8.gif "заказы доставленные Адаму Пауэлу")  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 9. Определение перспектив и переводов](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+[Занятие 9: Определение перспектив и переводов](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Действия (службы Analysis Services — многомерные данные)](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
 [Действия в многомерных моделях](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
 [Связи измерений](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
@@ -161,4 +164,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

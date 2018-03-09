@@ -3,10 +3,12 @@ title: "Типы параллелизма | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - optimistic concurrency [ODBC]
 - read-only concurrency control [ODBC]
 ms.assetid: 46762ae5-17dd-4777-968e-58156f470fe1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8f911bf93a0a61e911ef0795059fbbaadd2cfff7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 737fadc881109457051cf30bfce9b493bd164f1c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-types"></a>Типы параллелизма
 Для решения проблемы снижения параллелизма курсоров ODBC предоставляет четыре различных типа параллелизм курсоров:  
@@ -38,4 +39,3 @@ ms.lasthandoff: 09/09/2017
 -   **Оптимистичного параллелизма при помощи версий строк и оптимистический параллелизм, используя значения** курсор использует оптимистический параллелизм: он обновляет или удаляет строки только в том случае, если они не были изменены, так как они были последнего чтения. Для обнаружения изменений, он сравнивает версии строк или значений. Нет никакой гарантии, курсор будет иметь возможность обновить или удалить строку, что значительно больше, чем при использовании блокировки параллелизма. Дополнительные сведения в следующем разделе, [оптимистичного параллелизма](../../../odbc/reference/develop-app/optimistic-concurrency.md).  
   
  Приложение указывает, какой тип параллелизма ему курсор для использования с помощью атрибута инструкции SQL_ATTR_CONCURRENCY. Чтобы определить, какие типы поддерживаются, он вызывает **SQLGetInfo** с параметром SQL_SCROLL_CONCURRENCY.
-

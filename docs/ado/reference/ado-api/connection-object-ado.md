@@ -3,7 +3,7 @@ title: "Объект соединения (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - Connection object [ADO]
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 7beb64b0620b1a5b603c02cb36904e3a42f5b3f7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: be2ba43e34c56e19dcb6eee03368ab1b3bc442a1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connection-object-ado"></a>Объект соединения (ADO)
 Представляет открытое соединение с источником данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Объект **подключения** представляет уникальный сеанс с источником данных. В системе клиента и сервера базы данных может быть эквивалентно действительное сетевое подключение к серверу. В зависимости от функциональных возможностей, поддерживаемых поставщика, некоторые коллекции, методы или свойства **подключения** могут оказаться недоступными.  
   
  С коллекциями, методы и свойства **подключения** объекта, можно сделать следующее:  
@@ -102,10 +101,9 @@ cnn. "parameter"
   
 -   [Свойства объекта соединения, методы и события](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект команды (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Коллекция ошибок (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Коллекция свойств (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Поставщики приложение A:](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -1,26 +1,28 @@
 ---
-title: "Назначение SAP BW | Документы Microsoft"
+title: "Назначение SAP BW | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 28d86db3fac9d5230fa554369bccd7a23304d63c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 47b31595b327e762f4710ffbfd85f1c3ccf894c9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-destination"></a>Назначение SAP BW
   Назначение SAP BW — компонент назначения [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW. Таким образом, назначение SAP BW загружает данные из потока данных в пакете служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в систему SAP Netweaver BW версии 7.  
@@ -93,23 +95,23 @@ ms.lasthandoff: 08/03/2017
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>Использование конструктора служб SSIS для настройки целевого объекта  
  Дополнительные сведения о свойствах целевого объекта SAP BW, который можно задать в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в одном из следующих разделов.  
   
--   [Редактор назначений SAP BW &#40; Страницы диспетчера соединений &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
+-   [Редактор назначений SAP BW (страница "Диспетчер подключений")](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [Редактор назначений SAP BW &#40; Страница «сопоставления» &#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [Редактор назначений SAP BW (страница "Сопоставления")](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
   
--   [Редактор назначений SAP BW &#40; Страница «Вывод ошибок» &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
+-   [Редактор назначений SAP BW (страница "Вывод ошибок")](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [Редактор назначений SAP BW &#40; Страница "Дополнительно" &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [Редактор назначений SAP BW (страница "Дополнительно")](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
   
  При настройке целевого объекта SAP BW можно также использовать другие диалоговые окна для уточняющих запросов или создать объекты SAP Netweaver BW. Дополнительные сведения об этих диалоговых окнах см. в следующих разделах.  
   
--   [Поиск Infopackage](../../integration-services/data-flow/look-up-infopackage.md)  
+-   [Поиск InfoPackage](../../integration-services/data-flow/look-up-infopackage.md)  
   
--   [Создание нового InfoObject](../../integration-services/data-flow/create-new-infoobject.md)  
+-   [Создание InfoObject](../../integration-services/data-flow/create-new-infoobject.md)  
   
 -   [Создание InfoCube для данных транзакции](../../integration-services/data-flow/create-infocube-for-transaction-data.md)  
   
--   [Поиск infoObject](../../integration-services/data-flow/look-up-infoobject.md)  
+-   [Поиск InfoObject](../../integration-services/data-flow/look-up-infoobject.md)  
   
 -   [Создание InfoSource](../../integration-services/data-flow/create-infosource.md)  
   
@@ -119,8 +121,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [Создать InfoPackage](../../integration-services/data-flow/create-infopackage.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Компоненты Microsoft Connector для SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   
-

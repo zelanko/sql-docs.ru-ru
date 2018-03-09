@@ -2,28 +2,31 @@
 title: "Свойства SQL Server (вход в систему) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8e12e87d3135f88e04dc159e7433ade959625daf
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4dde3f4735a42553155d7f58a310963ad599c374
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sql-server-properties-log-on-tab"></a>Свойства SQL Server (вкладка «Вход в систему»)
-  Используйте вкладку **Вход** в диалоговом окне **Свойства SQL Server** для указания учетной записи, используемой службой сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы изменить пароль учетной записи и запустить или остановить службу. Изменение пароля учетной записи вступает в силу немедленно.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Используйте вкладку **Вход** в диалоговом окне **Свойства SQL Server** для указания учетной записи, используемой службой сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы изменить пароль учетной записи и запустить или остановить службу. Изменение пароля учетной записи вступает в силу немедленно.  
   
 > [!NOTE]  
 >  При изменении имени учетной записи, используемой службой в кластеризованном экземпляре, новая учетная запись должна быть членом группы домена, заданной во время установки изменяемой службы, или же текущий пользователь должен иметь разрешение на добавление членов в эту группу. Если нет разрешения на изменение состава группы, свяжитесь с администратором домена.  
@@ -72,4 +75,3 @@ ms.lasthandoff: 08/02/2017
 >  При запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ошибка инструментария WMI, содержащая фразу «не реализовано [0x80004001]», может указывать на то, что на целевом компьютере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не установлен.  
   
   
-

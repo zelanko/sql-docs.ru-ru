@@ -3,10 +3,12 @@ title: "Выборка строк с SQLBulkOperations | Документы Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 0efee2d6-ce94-411e-9976-97ba28b8da37
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5b3af3d83d9d0dab4735842621bbcb49fab69a4c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f0e3f46b5dd742ff1e77c87a8486038c41839764
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>Выборка строк с SQLBulkOperations
 Данные можно refetched в набор строк с помощью закладок с помощью вызова **SQLBulkOperations.** Строки, которые должны быть извлечены идентифицируются по закладки в столбце привязанного закладки. Не выбраны столбцы со значением SQL_COLUMN_IGNORE.  
@@ -43,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 4.  Вызовы **SQLBulkOperations** с *операции* SQL_FETCH_BY_BOOKMARK значение аргумента.  
   
  Нет необходимости для приложения с помощью массива операций строк Запретить операцию для выполнения на определенные столбцы. Приложение выбирает строки, которые необходимо извлечь, скопировав закладки только для тех строк, в массиве привязанных закладки.
-

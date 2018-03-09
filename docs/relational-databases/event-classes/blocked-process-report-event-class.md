@@ -2,9 +2,12 @@
 title: "Класс событий Blocked Process Report | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,19 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - Blocked Process Report event class
 ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
-caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5820b84962025063d1e33fba5954a76ec909ed58
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 36d8b302c134bdb18e55f69eeeb7bb916d825929
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report, класс событий
-  Класс событий **Blocked Process Report** показывает, что задача была заблокирована на период времени больше указанного. К данному классу событий не относятся системные задачи или задачи, ожидающие ресурсов, для которых взаимоблокировку обнаружить нельзя.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Класс событий **Blocked Process Report** показывает, что задача была заблокирована на период времени больше указанного. К данному классу событий не относятся системные задачи или задачи, ожидающие ресурсов, для которых взаимоблокировку обнаружить нельзя.  
   
  Пороговое значение и частота создания отчетов в параметре **blocked process threshold** настраиваются с помощью хранимой процедуры **sp_configure** ; значение параметра может задаваться в секундах. По умолчанию отчеты о заблокированных процессах не создаются. Дополнительные сведения о настройке параметра **blocked process threshold** см. в разделе [Параметр конфигурации сервера "blocked process threshold"](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md).  
   
@@ -32,13 +36,13 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="blocked-process-report-event-class-data-columns"></a>Столбцы класса событий Blocked Process Report  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|Идентификатор базы данных, в которой запрашивается блокировка. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |**Длительность**|**bigint**|Время (в миллисекундах), в течение которого процесс был заблокирован.|13|Да|  
 |**EndTime**|**datetime**|Время окончания события. Этот столбец не заполняется для классов событий запуска, таких как **SQL:BatchStarting** или **SP:Starting**.|15|Да|  
-|**EventClass**|**int**|Тип события = 137.|27|Нет|  
-|**EventSequence**|**int**|Порядковый номер данного события в запросе.|51|Нет|  
+|**EventClass**|**int**|Тип события = 137.|27|нет|  
+|**EventSequence**|**int**|Порядковый номер данного события в запросе.|51|нет|  
 |**IndexID**|**int**|Идентификатор индекса объекта, связанного с событием. Чтобы определить идентификатор индекса для объекта, используйте столбец **indid** в системной таблице **sysindexes** .|24|Да|  
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
 |**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Системный поток всегда передает отчет об этом событии. IsSystem = 1; SID = sa.|41|Да|  

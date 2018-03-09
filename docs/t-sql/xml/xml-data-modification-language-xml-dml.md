@@ -3,8 +3,11 @@ title: "Язык модификации XML-данных (XML DML) | Докум�
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,28 +24,27 @@ helpviewer_keywords:
 - XQuery, XML DML
 - xml data type [SQL Server], XML DML
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 18fb5825297754c59f2824b6f05150ddaed7bb9c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 74f591801b50df0bacf3c873f73d6cc9ee28f4d8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>Язык модификации XML-данных (XML DML)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Язык модификации XML-данных (XML DML) является расширением языка XQuery. Как определено консорциумом W3C, в языке XQuery отсутствует часть, касающаяся манипулирования данными (DML). XML DML, представленный в этом разделе, а также язык XQuery обеспечивает полнофункциональный запросов и языка модификации данных, который можно использовать для **xml** тип данных.  
   
  В язык XML DML добавлены следующие ключевые слова с учетом регистра, которые отсутствуют в языке XQuery:  
   
--   **Вставка**  
+-   **insert**  
   
--   **удалить**  
+-   **delete**  
   
 -   **Замените значение**  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 09/01/2017
   
  При модификации экземпляра типизированного xml конечный формат должен являться допустимым экземпляром типа, иначе возвращается ошибка проверки.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Добавить &#40; Язык XML DML &#41;](../../t-sql/xml/insert-xml-dml.md)   
  [Удалить &#40; Язык XML DML &#41;](../../t-sql/xml/delete-xml-dml.md)   
  [Замените значение &#40; Язык XML DML &#41;](../../t-sql/xml/replace-value-of-xml-dml.md)   
@@ -77,4 +79,3 @@ ms.lasthandoff: 09/01/2017
  [Методы для типа данных XML](../../t-sql/xml/xml-data-type-methods.md)  
   
   
-

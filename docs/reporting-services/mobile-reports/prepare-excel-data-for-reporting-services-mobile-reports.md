@@ -1,27 +1,27 @@
 ---
-title: "Подготовка данных в Excel для мобильных отчетов Reporting Services | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Подготовка данных Excel для мобильных отчетов служб Reporting Services | Документы Майкрософт"
+ms.custom: 
 ms.date: 02/08/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c057de4b56529de08385a1e13e1a119550632eda
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b9f739a009fe8b80ce5005e8145b3fd95648e6f9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Подготовка данных в Excel для мобильных отчетов службы отчетов
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 08/09/2017
   
     2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
   
-После преобразования ячейки нужно отформатировать как даты. Для этого выделите все ячейки или весь столбец, а затем откройте **контекстное меню** > **Формат ячеек** > **Дата** в списке **Категория**. Также можно использовать мастер преобразования текста Excel, который преобразует ячейки с текстом в правильно отформатированные даты.  
+После преобразования ячейки нужно отформатировать как даты. Для этого выделите все ячейки или весь столбец, а затем откройте **контекстное меню** и выберите **Формат ячеек** > **Дата** в списке **Категория**. Также можно использовать мастер преобразования текста Excel, который преобразует ячейки с текстом в правильно отформатированные даты.  
   
 ## <a name="unsupported"></a>Не поддерживается  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 08/09/2017
   
 Пользовательские объекты, в том числе сводные таблицы, представления и изображения, не импортируются из листов Excel в [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)].  
   
-### <a name="see-also"></a>См. также:  
+### <a name="see-also"></a>См. также раздел  
 - [Prepare data for Reporting Services mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
 - [Создание и публикация мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  См. статью [Просмотр мобильных отчетов SQL Server и ключевых показателей эффективности в приложении для iPad](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI для iOS).  
@@ -103,5 +103,4 @@ ms.lasthandoff: 08/09/2017
   
   
   
-
 

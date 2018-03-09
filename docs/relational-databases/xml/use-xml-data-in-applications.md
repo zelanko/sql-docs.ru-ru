@@ -2,9 +2,12 @@
 title: "Использование данных XML в приложениях | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -25,20 +28,20 @@ helpviewer_keywords:
 - xml data type [SQL Server], ADO.NET
 - XML [SQL Server], SQL Server Native Client
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
-caps.latest.revision: 26
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2ae4b7e7ed2efc44ce1b432313d56288a66e778c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0422e858859ee86c460a875b11b97c4f348efa94
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-xml-data-in-applications"></a>Использование XML-данных в приложениях
-  В этом подразделе описываются параметры, доступные при работе с типом данных **xml** в приложениях. Он содержит следующие сведения:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+В этом подразделе описываются параметры, доступные при работе с типом данных **xml** в приложениях. Он содержит следующие сведения:  
   
 -   Обработка XML в столбцах типа **xml** с помощью ADO и собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -163,4 +166,3 @@ Row 2
  [Данные XML (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)  
   
   
-

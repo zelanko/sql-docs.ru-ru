@@ -1,11 +1,13 @@
 ---
 title: "Что нового в SQL Server 2016"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - server-general
 ms.tgt_pltfrm: 
@@ -18,24 +20,24 @@ helpviewer_keywords:
 - SQL Server 2008 what's new
 - what's new [SQL Server]
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
-caps.latest.revision: 224
+caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 075ad5ecefdef03acb8428cc199c35f6116c442b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 2ef79a82259dee5a8767b382ca5ddaa0795dab7e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Что нового в SQL Server 2016
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
  Благодаря SQL Server 2016 вы сможете создавать важные аналитические приложения с помощью масштабируемой гибридной платформы баз данных, в которую уже встроено все необходимое — от возможностей эффективной обработки в памяти и повышенной безопасности до функций аналитики в базе данных. В выпуске SQL Server 2016 добавлены новые средства безопасности, возможности выполнения запросов, интеграции Hadoop, облачной интеграции, аналитики R, а также множество других усовершенствований. 
 
 На этой странице представлен краткий обзор новых возможностей и ссылки на подробные сведения о них для каждого компонента SQL Server 2016. 
 
-![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
+![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
 
  **Оцените SQL Server уже сегодня!** 
 - Скачайте **бесплатный** [**выпуск SQL Server 2016 Developer Edition**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers).
@@ -113,4 +115,3 @@ ms.lasthandoff: 09/27/2017
 - [New SQL PowerShell module](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

@@ -3,7 +3,7 @@ title: "Метод SaveToFile | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - SaveToFile method [ADO]
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 64fa2093400ac9c003397659be3d9d6f4251eee2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2326257da632839c9b60d630f25adb604018272d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="savetofile-method"></a>Метод SaveToFile
 Сохраняет двоичное содержимое [поток](../../../ado/reference/ado-api/stream-object-ado.md) в файл.  
@@ -51,7 +50,7 @@ Stream.SaveToFile FileName, SaveOptions
 > [!NOTE]
 >  Если перезаписать существующий файл (если **adSaveCreateOverwrite** имеет значение), **SaveToFile** усекает все байты из существующего исходного файла, выполните новый [электрической ПЕРЕГРУЗКИ](../../../ado/reference/ado-api/eos-property.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **SaveToFile** может использоваться для копирования содержимого **поток** объекта в локальный файл. Нет изменений в содержимое или свойства **поток** объекта. **Поток** объект должен быть открыт перед вызовом метода **SaveToFile**.  
   
  Этот метод не изменяет связь **поток** объекта его источнику. **Поток** объект по-прежнему будут связаны с исходный URL-адрес или **записи** был при открытии источника.  
@@ -59,9 +58,8 @@ Stream.SaveToFile FileName, SaveOptions
  После **SaveToFile** операции, текущая позиция ([позиции](../../../ado/reference/ado-api/position-property-ado.md)) в потоке равно начала потока (0).  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект потока (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод Open (поток ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Save-метод](../../../ado/reference/ado-api/save-method.md)
-
+ [Метод Save](../../../ado/reference/ado-api/save-method.md)

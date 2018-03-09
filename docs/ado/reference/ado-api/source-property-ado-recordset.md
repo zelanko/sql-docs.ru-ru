@@ -3,7 +3,7 @@ title: "Исходное свойство (набора записей ADO) | Д
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -24,17 +24,16 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Recordset]
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 543299eb14a06ebdbb7e9b09fe89f28e9cbeee6e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ea45eae107fa55355adeb195e7e4fc5cf0a3c762
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="source-property-ado-recordset"></a>Свойство Source (набора записей ADO)
 Указывает источник данных для [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Наборы **строка** значение или [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта ссылки; возвращает только **строка** значение, указывающее источник **записей**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **источника** свойство, чтобы указать источник данных для **записей** с помощью одного из следующих действий: **команда** объекта переменной, инструкции SQL, хранимая процедура, или имя таблицы.  
   
  Если задать **источника** свойства **команды** объекта, [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) свойство **записей** объект будет наследовать значение **ActiveConnection** свойства для указанного **команда** объекта. Тем не менее, чтении **источника** свойство не возвращает **команда** объекта; вместо этого он возвращает [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) свойство **команда** объект, который позволяет определить **источника** свойство.  
@@ -52,10 +51,9 @@ ms.lasthandoff: 09/09/2017
  **Источника** свойство является чтение и запись для закрытия **записей** объектов и только для чтения для открытия **записей** объектов.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства источника (Visual Basic)](../../../ado/reference/ado-api/source-property-example-vb.md)   
  [Свойство Source (ошибка)](../../../ado/reference/ado-api/source-property-ado-error.md)   
- [Свойство Source (ADO запись)](../../../ado/reference/ado-api/source-property-ado-record.md)
-
+ [Свойство Source (объект Record ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)

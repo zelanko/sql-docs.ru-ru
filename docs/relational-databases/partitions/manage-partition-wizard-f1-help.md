@@ -2,11 +2,13 @@
 title: "Справка F1 мастера управления секциями | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: partitions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-partition
+ms.suite: sql
+ms.technology: dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,23 +22,21 @@ f1_keywords:
 - sql13.swb.managepartition.partitionaction.f1
 - sql13.swb.managepartition.summary.f1
 - sql13.swb.managepartition.selectoutput.f1
-helpviewer_keywords:
-- wizards [SQL Server Management Studio] See Manage Partition Wizard
+helpviewer_keywords: wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
-caps.latest.revision: 12
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "12"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b784bf0926f887baddf94594641ce0c1d35c69d3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: edef05d3a9cd1ae3a363a4cdead10130ee42459f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Справка F1 мастера управления секциями
-  **Мастер управления секциями** используется для управления и изменения существующих секционированных таблиц с помощью переключения секций или реализации сценария скользящего окна. Этот мастер облегчает управление секциями и упрощает регулярный перенос данных в таблицы и из них.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **Мастер управления секциями** используется для изменения существующих секционированных таблиц и управления ими с помощью переключения секций или реализации сценария скользящего окна. Этот мастер облегчает управление секциями и упрощает регулярный перенос данных в таблицы и из них.  
   
 ### <a name="to-start-the-manage-partition-wizard"></a>Запуск мастера управления секциями  
   
@@ -192,7 +192,7 @@ ms.lasthandoff: 06/22/2017
  **Тип расписания**  
  Выбор типа расписания.  
   
- **Включено**  
+ **Enabled**  
  Включение или отключение расписания.  
   
 ### <a name="recurring-schedule-types-options"></a>Параметры повторяющихся расписаний  
@@ -311,4 +311,3 @@ ms.lasthandoff: 06/22/2017
  [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   
-

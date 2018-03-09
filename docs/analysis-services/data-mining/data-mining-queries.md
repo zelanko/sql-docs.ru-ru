@@ -2,12 +2,13 @@
 title: "Запросы интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +18,20 @@ helpviewer_keywords:
 - Prediction Query Builder
 - mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
-caps.latest.revision: 44
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 260a6d48b6da55f65098790df73b01a10e35e126
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1994ebc359ca23eee9ae76112d9ceebd1970debb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-queries"></a>Запросы интеллектуального анализа данных
-  Запросы интеллектуального анализа Возможные действия:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Запросы интеллектуального анализа Возможные действия:  
   
 -   Применить модели к новым данным, чтобы сделать один или несколько прогнозов. Входные значения можно предоставить в качестве параметров или в одном пакете.  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_Understand"></a> Общие сведения о запросах интеллектуального анализа данных  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает запросы следующих типов:  
   
--   [Прогнозирующие запросы (интеллектуальный анализ данных)](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+-   [Прогнозирующие запросы &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
      запросы, которые делают выводы на основе имеющихся в модели шаблонов и входных данных;  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 09/01/2017
   
      запросы, возвращающие метаданные, статистические данные и другие сведения о самой модели;  
   
--   [Запросы детализации (интеллектуальный анализ данных)](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+-   [Запросы детализации &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
      запросы, которые могут получать базовые данные варианта для модели или даже данные из структуры, которая в модели не использовалась;  
   
@@ -117,7 +118,7 @@ ms.lasthandoff: 09/01/2017
     |[Примеры запросов моделей взаимосвязей](../../analysis-services/data-mining/association-model-query-examples.md)|[Упрощенный алгоритм Байеса (Майкрософт)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)|  
     |[Примеры запросов к модели кластеризации](../../analysis-services/data-mining/clustering-model-query-examples.md)|[Примеры запросов к модели нейронной сети](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
     |[Примеры запросов к модели дерева принятия решений](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|[Примеры запросов к модели кластеризации последовательностей](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
-    |[Примеры запросов модели линейной регрессии](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|[Примеры запросов моделей временных рядов](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
+    |[Примеры запросов модели линейной регрессии](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|[Примеры запросов для модели временных рядов](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
     |[Примеры запросов модели логистической регрессии](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)||  
   
      Можно также пользоваться функциями VBA или создать свои собственные. Дополнительные сведения см. в разделе [Функции (расширения интеллектуального анализа данных)](../../dmx/functions-dmx.md).  
@@ -148,13 +149,13 @@ ms.lasthandoff: 09/01/2017
 ## <a name="in-this-section"></a>В этом разделе  
  В этом разделе подробно представлены все типы запросов интеллектуального анализа данных, а также ссылки на детальные примеры создания запросов к моделям интеллектуального анализа данных.  
   
- [Прогнозирующие запросы (интеллектуальный анализ данных)](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [Прогнозирующие запросы &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
  [Запросы содержимого (интеллектуальный анализ данных)](../../analysis-services/data-mining/content-queries-data-mining.md)  
   
  [Запросы детализации (интеллектуальный анализ данных)](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
- [Запросы, определяющие данные (интеллектуальный анализ данных)](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [Запросы определений данных &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
  [Средства запросов интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
@@ -164,17 +165,16 @@ ms.lasthandoff: 09/01/2017
 |Задания|Ссылки|  
 |-----------|-----------|  
 |Просмотрите учебники и пошаговые руководства по запросам интеллектуального анализа данных|[Занятие 6. Создание прогнозов и работа с ними (учебник по интеллектуальному анализу данных — начальный уровень)](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)<br /><br /> [Учебник по расширениям интеллектуального анализа данных для прогнозирования временных рядов](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)|  
-|Использование инструментов для создания запросов интеллектуального анализа данных в среде SQL Server Management Studio и [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[Создание DMX-запроса в среде SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [Применение функций прогнозирования к модели](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [Изменение прогнозирующего запроса вручную](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
+|Использование инструментов для создания запросов интеллектуального анализа данных в среде SQL Server Management Studio и [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[Создать запрос расширений интеллектуального анализа данных в SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [Применение функций прогнозирования к модели](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [Изменение прогнозирующего запроса вручную](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
 |Работа с внешними данными, используемыми в прогнозирующих запросах|[Выбор и сопоставление входных данных для прогнозирующего запроса](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [Выбор и сопоставление входных данных для прогнозирующего запроса](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)|  
 |Использование результатов запросов|[Просмотр и сохранение результатов прогнозирующего запроса](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)|  
-|Использование шаблонов запросов на языках DMX и XMLA в среде Management Studio|[создать одноэлементный прогнозирующий запрос из шаблона](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [Создание запроса интеллектуального анализа данных с помощью XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [Использование шаблонов служб Analysis Services в среде SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
-|Дополнительные сведения о запросах содержимого и примеры|[Создание запроса содержимого к модели интеллектуального анализа данных](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)<br /><br /> [запросить параметры, используемые для создания модели интеллектуального анализа данных](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [Запросы содержимого (интеллектуальный анализ данных)](../../analysis-services/data-mining/content-queries-data-mining.md)|  
-|Настройка параметров запроса и устранение проблем с разрешением запроса|[изменить значение времени ожидания для запросов интеллектуального анализа данных](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
+|Использование шаблонов запросов на языках DMX и XMLA в среде Management Studio|[Создание одноэлементного прогнозирующего запроса из шаблона](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [Создание запроса интеллектуального анализа данных с помощью XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [Использование шаблонов служб Analysis Services в среде SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|Дополнительные сведения о запросах содержимого и примеры|[Создание запроса содержимого модели интеллектуального анализа данных](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)<br /><br /> [запросить параметры, используемые для создания модели интеллектуального анализа данных](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [Запросы содержимого (интеллектуальный анализ данных)](../../analysis-services/data-mining/content-queries-data-mining.md)|  
+|Настройка параметров запроса и устранение проблем с разрешением запроса|[Изменить значение времени ожидания для запросов интеллектуального анализа данных](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
 |Использование компонентов интеллектуального анализа данных из служб Integration Services|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
-## <a name="see-also"></a>См. также раздел  
- [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+## <a name="see-also"></a>См. также  
+ [Алгоритмы интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   
   
-

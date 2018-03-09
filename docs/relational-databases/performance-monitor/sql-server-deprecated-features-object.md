@@ -2,11 +2,13 @@
 title: "SQL Server, объект Deprecated Features | Документация Майкрософт"
 ms.custom: 
 ms.date: 05/03/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +17,19 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 61
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1cbdf2dde41142d1b674e71df3a34756e8fcce99
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "61"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 336fea7b5f3ea9fec4dc559933477086f4cca5ed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, объект Deprecated Features
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Объект SQLServer:Deprecated Features в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчик для наблюдения за функциями, обозначенными как устаревшие. В каждом случае этот счетчик использования подсчитывает, сколько раз обнаружены устаревшие функции с момента последнего запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -96,7 +98,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |EXT_soap_endpoints|Обнаружено sys.soap_endpoints. Собственные XML-веб-службы устарели. Вместо этого следует использовать технологию WCF (Windows Communications Foundation) или ASP.NET.|  
 |EXTPROP_LEVEL0TYPE|Обнаружено значение TYPE параметра level0type. Используйте SCHEMA как level0type и TYPE как level1type. Происходит один раз для каждого запроса.|  
 |EXTPROP_LEVEL0USER|При level1type указано также level0type USER. Используйте USER только как level0type для расширенных свойств непосредственно в пользователе. Происходит один раз для каждого запроса.|  
-|FASTFIRSTROW|Обнаружен синтаксис FASTFIRSTROW. Перепишите инструкции так, чтобы в них использовался синтаксис OPTION (FAST *n*). Происходит один раз на каждую компиляцию.|  
+|FASTFIRSTROW|Обнаружен синтаксис FASTFIRSTROW. Перепишите инструкции, чтобы они использовали синтаксис OPTION (FAST *n*). Происходит один раз на каждую компиляцию.|  
 |FILE_ID|Обнаружен синтаксис FILE_ID. Перепишите инструкции для использования FILE_IDEX. Происходит один раз на каждую компиляцию.|  
 |fn_get_sql|Скомпилирована функция fn_get_sql. Вместо нее используйте sys.dm_exec_sql_text. Происходит один раз на каждую компиляцию.|  
 |fn_servershareddrives|Скомпилирована функция fn_servershareddrives. Вместо нее используйте sys.dm_io_cluster_shared_drives. Происходит один раз на каждую компиляцию.|  
@@ -114,7 +116,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Hindi|Событие происходит один раз на каждый запуск базы данных и один раз на каждое применение этого параметра сортировки. Запланируйте изменение приложений, использующих этот параметр сортировки. Вместо него используется Indic_General_90.|  
 |Табличное указание HOLDLOCK без скобок||  
 |IDENTITYCOL|Обнаружен синтаксис INDENTITYCOL. Перепишите инструкции для использования синтаксиса $identity. Происходит один раз на каждую компиляцию.|  
-|Список выбора индексированного представления без COUNT_BIG(*)|Список выбора статистического индексированного представления должен содержать функцию COUNT_BIG (*).|  
+|Список выбора индексированного представления без COUNT_BIG(\*)|Список выбора статистического индексированного представления должен содержать функцию COUNT_BIG (\*).|  
 |INDEX_OPTION|Обнаружен синтаксис CREATE TABLE, ALTER TABLE или CREATE INDEX с параметрами, не заключенными в скобки. Перепишите инструкции для использования текущего синтаксиса. Происходит один раз для каждого запроса.|  
 |INDEXKEY_PROPERTY|Обнаружен синтаксис INDEXKEY_PROPERTY. Перепишите инструкции, чтобы запрашивать sys.index_columns. Происходит один раз на каждую компиляцию.|  
 |Косвенные подсказки возвращающих табличное значение функций.|Косвенное применение через представление табличных подсказок для вызова многооператорных возвращающих табличное значение функций будет исключено из будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -271,7 +273,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Параметр таблицы «text in row»|Обнаружены ссылки на параметр таблицы «text in row». Вместо этого используйте параметр хранимой процедуры sp_tableoption «large value types out of row». Происходит один раз для каждого запроса.|  
 |TEXTPTR|Обнаружены ссылки на функцию TEXTPTR. Перепишите приложения, чтобы использовался тип данных **varchar(max)** , и удалите типы данных **text**, **ntext**и **image** . Происходит один раз для каждого запроса.|  
 |TEXTVALID|Обнаружены ссылки на функцию TEXTVALID. Перепишите приложения, чтобы использовался тип данных **varchar(max)** , и удалите типы данных **text**, **ntext**и **image** . Происходит один раз для каждого запроса.|  
-|TIMESTAMP|Общее число вхождений нерекомендуемого типа данных **timestamp** , обнаруженных в инструкции DDL. Используйте вместо него тип данных **rowversion** .|  
+|timestamp|Общее число вхождений нерекомендуемого типа данных **timestamp** , обнаруженных в инструкции DDL. Используйте вместо него тип данных **rowversion** .|  
 |UPDATETEXT или WRITETEXT|Обнаружена инструкция UPDATETEXT или WRITETEXT. Перепишите приложения, чтобы использовался тип данных **varchar(max)** , и удалите типы данных **text**, **ntext**и **image** . Происходит один раз для каждого запроса.|  
 |USER_ID|Обнаружены ссылки на функцию USER_ID. Вместо этого используйте функцию DATABASE_PRINCIPAL_ID. Происходит один раз на каждую компиляцию.|  
 |Использование OLEDB для связанных серверов||  
@@ -292,4 +294,3 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [Использование объектов SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   
-

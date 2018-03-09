@@ -2,9 +2,12 @@
 title: "Автоматическое сопоставление синтаксических пар | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -13,20 +16,19 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], delimiter highlighting
 - IntelliSense [SQL Server], syntax pair matching
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a86f4ede8645a7346234ab1bbfd3a45e3d01393a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c92287748c6724f10c5b89cf82ca7ff3be8a39bd
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Автоматическое сопоставление синтаксических пар
-  Автоматическая проверка соответствия синтаксических пар позволяет немедленно убедиться в том, что парные элементы синтаксиса в коде правильно объединены в пары. В редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] такая проверка называется «соответствием разделителей», в редакторе запросов XMLA служб Analysis Services — «соответствием фигурных скобок», а в редакторах многомерных выражений и расширений интеллектуального анализа данных — «соответствием круглых скобок».  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Автоматическая проверка соответствия синтаксических пар позволяет немедленно убедиться в том, что элементы синтаксиса в коде правильно объединены в пары. В редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] такая проверка называется «соответствием разделителей», в редакторе запросов XMLA служб Analysis Services — «соответствием фигурных скобок», а в редакторах многомерных выражений и расширений интеллектуального анализа данных — «соответствием круглых скобок».  
   
 ## <a name="database-engine-query-editor-delimiter-matching"></a>Проверка соответствия разделителей в редакторе запросов к компоненту Database Engine  
  Редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] проверяет соответствие разделителей, обозначающих границы блоков кода. Проверка соответствия осуществляется двумя способами.  
@@ -77,4 +79,3 @@ ms.lasthandoff: 06/22/2017
  Редакторы многомерных выражений и выражений интеллектуального анализа данных автоматически выполняют проверку соответствия пар круглых скобок в функциях.  
   
   
-

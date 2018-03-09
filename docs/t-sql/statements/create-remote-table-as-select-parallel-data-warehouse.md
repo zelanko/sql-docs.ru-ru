@@ -3,28 +3,29 @@ title: "Создание УДАЛЕННОГО TABLE AS SELECT (Parallel Data War
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: 
+ms.prod_service: pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
-caps.latest.revision: 9
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a0318d108d6dfaaa374af9a1ab8a148ff960dfcd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 1a44f5f46a60959b38b3e8121847e0c80c1ba82b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>Создание УДАЛЕННОГО TABLE AS SELECT (параллельное хранилище данных)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Выбирает данные из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] базы данных и копирует их в новую таблицу в SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных на удаленном сервере. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]использует устройство, со всеми преимуществами MPP обработки запросов, чтобы выбрать данные для удаленной копии. Использовать в сценариях, требующих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функциональные возможности.  
   
@@ -61,7 +62,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
   
  Удаленная таблица создается как кучи. Он не имеет ограничений проверки или триггеров. Параметры сортировки удаленных столбцов таблицы совпадает с параметрами сортировки столбцы исходной таблицы. Это относится к столбцам типа **char**, **nchar**, **varchar**, и **nvarchar**.  
   
- *строка_соединения*  
+ *connection_string*  
  Строка символов, указывающая `Data Source`, `User ID`, и `Password` параметры для подключения к удаленному серверу и базе данных.  
   
  Строка подключения является разделенный точками с запятой список пар "ключ-значение". Ключевые слова не учитывают регистр. Пробелы между парами «ключ-значение» учитываются. Однако значения могут быть с учетом регистра, в зависимости от источника данных.  
@@ -78,10 +79,10 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
 > [!NOTE]  
 >  Корпорация Майкрософт рекомендует подключение к удаленному серверу с использованием IP-адрес. В зависимости от конфигурации сети подключение по имени компьютера могут потребовать дополнительных шагов для использования не является специализированным DNS-сервера для разрешения имени к правильному серверу. Этот шаг необязателен, при соединении с IP-адрес. Дополнительные сведения см. в разделе «Использовать DNS-сервер пересылки для DNS-устройство без разрешения имен (Analytics Platform System)» в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- *имя_пользователя*  
+ *user_name*  
  Является допустимым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа для проверки подлинности. Максимальное количество символов — 128.  
   
- *пароль*  
+ *password*  
  Пароль имени входа. Максимальное количество символов — 128.  
   
  *batch_size*  
@@ -92,7 +93,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
   
  ВЫБЕРИТЕ \<select_criteria > запрос предикат, который указывает, какие данные будут заполнять новые удаленной таблицы. Сведения об инструкции SELECT см. в разделе [ВЫБЕРИТЕ &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется:  
   
 -   Разрешение SELECT для каждого объекта в предложении SELECT.  
@@ -170,5 +171,4 @@ AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )
 ```  
   
   
-
 

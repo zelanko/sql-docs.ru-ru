@@ -3,27 +3,28 @@ title: "Изменить сопоставление типа (SybaseToSQL) | Д�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 513f071a-d5e6-4ed5-acca-269bf76323c5
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 66112b05311328105937c4d90eb78d12ea8ccbe1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6d013e80b5c6ac4c6e7b74edce576442d732f54e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>Изменить сопоставление типа (SybaseToSQL)
 **Изменение сопоставления типа** диалоговое окно позволяет указать, как типы сопоставляются между объектами базы данных источника и назначения.  
@@ -56,4 +57,3 @@ ms.lasthandoff: 08/02/2017
 **Replace with**  
 Укажите целевую длину для данного сопоставления. Например, для **nvarchar** тип данных, можно ввести 20, чтобы указать, что тип данных указанного источника должны быть сопоставлены с **nvarchar(20)**.  
   
-

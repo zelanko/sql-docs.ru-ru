@@ -2,32 +2,31 @@
 title: "Повторная инициализация подписок — все подписки | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.reinit.all.f1
-helpviewer_keywords:
-- Reinitialize Subscription(s) dialog box
+f1_keywords: sql13.rep.reinit.all.f1
+helpviewer_keywords: Reinitialize Subscription(s) dialog box
 ms.assetid: e1122018-9f74-43e3-8489-7eae33ff23d9
-caps.latest.revision: 11
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "11"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c59e203ad41b511bb82c066d11575006711965d9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a0556ec4bd0cfdb40bb5db48b871731b6ebc37dd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="reinitialize-subscriptions---all-subscriptions"></a>Повторная инициализация подписок — все подписки
-  Диалоговое окно **Повторная инициализация подписок** позволяет пометить все подписки публикации для повторной инициализации. Повторная инициализация заключается в том, что к каждому подписчику применяется моментальный снимок; эта задача выполняется агентом распространителя для подписок на публикации транзакций и агентом слияния для подписок на публикации слиянием.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Диалоговое окно **Повторная инициализация подписок** позволяет пометить все подписки на публикацию для повторной инициализации. Повторная инициализация заключается в том, что к каждому подписчику применяется моментальный снимок; эта задача выполняется агентом распространителя для подписок на публикации транзакций и агентом слияния для подписок на публикации слиянием.  
   
 ## <a name="options"></a>Параметры  
  **Использовать текущий моментальный снимок**  
@@ -50,4 +49,3 @@ ms.lasthandoff: 06/22/2017
  [Повторная инициализация подписок](../../relational-databases/replication/reinitialize-subscriptions.md)  
   
   
-

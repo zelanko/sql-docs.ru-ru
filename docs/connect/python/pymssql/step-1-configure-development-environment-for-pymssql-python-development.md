@@ -3,24 +3,25 @@ title: "Шаг 1: Настройка среды разработки Python pyms
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: python
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 91916f56a4bbdad46c7fc391257c4575886c28dc
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0a1932b41ada3469deed6d36a3c68c3827687cc5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>Шаг 1: Настройка среды разработки для pymssql разработки Python
 Необходимо будет настроить среду разработки с необходимых компонентов для разработки приложений с помощью драйвера Python для SQL Server.    
@@ -87,4 +88,3 @@ ms.lasthandoff: 09/09/2017
 ```  
 > sudo -H pip install pymssql  
 ```
-

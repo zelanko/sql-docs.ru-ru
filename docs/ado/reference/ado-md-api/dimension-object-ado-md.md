@@ -3,7 +3,7 @@ title: "Измерение объекта (ADO MD) | Документы Microsof
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - Dimension object [ADO MD]
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9a222c6495302f06e5fa2b8dd0e0d355869e3d40
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ad282fee080d57546335029eceff5475fe6aecc1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dimension-object-ado-md"></a>Объект измерения (ADO MD)
 Представляет одно из измерений многомерного куба, содержащего иерархии на один или несколько элементов.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  С коллекциями и свойствами **измерения** объекта, можно сделать следующее:  
   
 -   Определить **измерения** с [имя](../../../ado/reference/ado-md-api/name-property-ado-md.md) и [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) свойства.  
@@ -46,12 +45,12 @@ ms.lasthandoff: 09/09/2017
   
  **Свойства** коллекция содержит указанный поставщик свойства. В следующей таблице перечислены свойства, которые могут быть доступны. Фактическое свойство списка могут различаться в зависимости от реализации поставщика. См. в документации для поставщика более полный список доступных свойств.  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |CatalogName|Имя каталога, к которому принадлежит этот куб.|  
-|Имя куба|Имя куба.|  
+|CubeName|Имя куба.|  
 |DefaultHierarchy|Уникальное имя иерархии по умолчанию.|  
-|Description|Понятное описание куба.|  
+|Описание|Понятное описание куба.|  
 |DimensionCaption|Метка или заголовок, связанный с выбранным измерением.|  
 |DimensionCardinality|Количество элементов в измерении.|  
 |DimensionGUID|Идентификатор GUID для измерения.|  
@@ -65,10 +64,9 @@ ms.lasthandoff: 09/09/2017
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/dimension-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример CubeDef (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [Объект CubeDef (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
  [Коллекции измерений (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
  [Коллекция hierarchies (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
- [Коллекция свойств (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

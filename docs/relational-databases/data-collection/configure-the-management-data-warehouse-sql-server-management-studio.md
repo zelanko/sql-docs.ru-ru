@@ -2,9 +2,12 @@
 title: "Настройка хранилища данных управления (среда SQL Server Management Studio) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,20 @@ helpviewer_keywords:
 - Configure Management Data Warehouse Wizard
 - management data warehouse, configuring
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
-caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: da6483877cf2f69a3aa638f635366f91b9f7352a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0be7c28ff6d9359ae858902f7b2d07cee6f353f6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Настройка хранилища данных управления (среда SQL Server Management Studio)
-  В этом разделе описано, как настроить склад данных управления для поддержки хранилища данных управления на одном интерфейсе или на нескольких экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , использующих сборщик данных. Эти экземпляры могут быть на одном или на разных серверах. Здесь также приведены описания пользовательского интерфейса диалогового окна [мастера настройки хранилища данных управления](#Wizard) . Сведения о настройке сборщика данных см. в разделе [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+В этом разделе описано, как настроить склад данных управления для поддержки хранилища данных управления на одном интерфейсе или на нескольких экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , использующих сборщик данных. Эти экземпляры могут быть на одном или на разных серверах. Здесь также приведены описания пользовательского интерфейса диалогового окна [мастера настройки хранилища данных управления](#Wizard) . Сведения о настройке сборщика данных см. в разделе [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md).  
   
 > [!NOTE]  
 >  Если агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для работы под одной из системных учетных записей (Local System, Network Service или Local Service), а хранилище данных управления создано на другом (нежели сборщик данных) экземпляре, то необходимо настроить наборы элементов сбора на использование учетной записи-посредника для передачи данных в хранилище данных управления.  
@@ -145,4 +148,3 @@ ms.lasthandoff: 08/18/2017
  [Управление сбором данных](../../relational-databases/data-collection/manage-data-collection.md)  
   
   
-

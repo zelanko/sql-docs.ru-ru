@@ -3,7 +3,7 @@ title: "Метод stat | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Stat method [ADO]
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2ad80d2f42e11834b0872f581913ad64939d25af
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c19b5bed54d4bbb27a5aeb235b0e4ab529b9c836
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="stat-method"></a>Stat-метод
 Извлекает сведения о [поток](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
@@ -55,7 +54,7 @@ Long stream.Stat(StatStg, StatFlag)
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Версия Stat метода, реализованного в объекте ADO Stream заполняет структуры STATSTG следующие поля:  
   
  *pwcsName*  
@@ -67,7 +66,7 @@ Long stream.Stat(StatStg, StatFlag)
  *mtime*  
  Указывает время последнего изменения для этого хранилища, потока или массива байтов.  
   
- *CTime*  
+ *ctime*  
  Указывает время создания для этого хранилища, потока или массива байтов.  
   
  *atime*  
@@ -78,5 +77,4 @@ Long stream.Stat(StatStg, StatFlag)
  Если STATFLAG_NONAME не указан в параметре StatFlag отсутствует имя для текущего потока, это значение будет E_NOTIMPL.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект потока (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
-
+ [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

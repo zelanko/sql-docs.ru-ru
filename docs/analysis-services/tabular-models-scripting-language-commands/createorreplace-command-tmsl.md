@@ -2,32 +2,29 @@
 title: "Команду CreateOrReplace (TMSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: f77a0e04-461a-4fa8-b997-78057e410d56
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d658378bde1e3a58f36b1137328f723ad3d380d5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 62d90be2b4fe8aea96534c7c4d8b2b4617ac1ea1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="createorreplace-command-tmsl"></a>Команду CreateOrReplace (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Создает или заменяет указанный объект и все дочерние объекты, которые указаны. Создаются объекты не существует. Существующие объекты заменяются с новым определением.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Создает или заменяет указанный объект и все дочерние объекты, которые указаны. Создаются объекты не существует. Существующие объекты заменяются с новым определением.  
   
  При задании свойства чтения и записи, убедитесь, что все они входят. Пропуск чтения записи объекта считается удаления.  
   
@@ -530,4 +527,3 @@ ms.lasthandoff: 09/01/2017
  [Справочник по языку TMSL (Tabular Model Scripting Language)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

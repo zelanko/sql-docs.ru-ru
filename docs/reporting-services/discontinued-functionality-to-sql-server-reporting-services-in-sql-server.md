@@ -1,12 +1,14 @@
 ---
-title: "Неподдерживаемые функции служб SQL Server Reporting Services в SQL Server 2016 | Документы Microsoft"
+title: "Неподдерживаемые возможности в SQL Server Reporting Services в SQL Server 2016 | Документы Майкрософт"
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.custom: 
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,39 +17,37 @@ helpviewer_keywords:
 - Rsactivate.exe
 - unsupported features [Reporting Services]
 ms.assetid: d529cc96-3483-480b-9bfc-bd28b1d0ef52
-caps.latest.revision: 54
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "54"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 937a22d56d2c290fb87d963ef3fd54d53c34f5fb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1dc7d8fb5028b0814c0b015a469065e1ce901939
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="discontinued-functionality-to-sql-server-reporting-services-in-sql-server-2016"></a>Неподдерживаемые возможности в службах SQL Server Reporting Services в версии SQL Server 2016
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-В этом разделе описаны возможности SQL Server Reporting Services, которые больше не доступны в SQL Server 2016. Он не включает объявления о прекращении поддержки для конкретных версий операционной системы или Microsoft Internet Information Services (IIS). Дополнительные сведения об этих системных требованиях см. в разделе [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+В этом разделе описаны возможности SQL Server Reporting Services, которые больше не доступны в SQL Server 2016. Сюда не входят объявления о прекращении поддержки определенных версий операционных систем или служб Microsoft IIS. Дополнительные сведения об этих системных требованиях см. в разделе [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
 *Неподдерживаемой* называется функция, которая больше не поддерживается. Она может быть также физически удалена из продукта. Следующие функции больше не поддерживаются.
 
 |Компонент|Замена или решение|
 |-|-|
-|Передавать модели отчетов, веб-портале|Это все еще можно сделать с помощью SOAP API.|
-|Управление моделями отчетов, веб-портале|Это все еще можно сделать с помощью SOAP API.|
+|Отправка моделей отчетов через веб-портал|Это все еще можно сделать с помощью SOAP API.|
+|Управление моделями отчетов через веб-портал|Это все еще можно сделать с помощью SOAP API.|
+|Настройка таблицы стилей для средства просмотра HTML-страниц и диспетчера отчетов|Можно выполнить [брендовое оформление веб-портала](branding-the-web-portal.md).|
 
 ## <a name="next-steps"></a>Следующие шаги
 
 [Новые возможности служб Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
-[Изменения в SQL Server Reporting Services в SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
+[Изменения в работе служб SQL Server Reporting Services в SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
 [Нерекомендуемые функции служб SQL Server Reporting Services в SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

@@ -1,27 +1,27 @@
 ---
-title: "Интерактивная сортировка (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Интерактивная сортировка (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8b5a259bbe965efc86a9f11ad377525455bdfbd5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4574f1f77dacff636af04a955bfb9f94bd6a7441
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Интерактивная сортировка (построитель отчетов и службы SSRS)
   Чтобы пользователи могли менять порядок сортировки строк в таблице либо строк и столбцов в матрице с возрастающего на убывающий и обратно, можно добавить кнопки интерактивной сортировки. Чаще всего используемый метод интерактивной сортировки состоит в добавлении кнопки сортировки в заголовок каждого столбца. Затем пользователь может выбрать столбец, по которому будет выполнена сортировка.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 08/09/2017
 |Сортировка групп высшего уровня для матрицы|Группы|Заголовок столбца|Выражение группирования для родительской группы|Область данных|  
 |Сортировка строк с подробными сведениями для дочерней группы в таблице|Сведения|Строка заголовка дочерней группы|Поле набора данных, по которому выполняется сортировка|Дочерняя группа|  
 |Сортировка строк для групп из нескольких строк и строк с подробными сведениями в таблице|Группы, но необходимо переопределить выражение группирования|Заголовок столбца|Значение поля набора данных, по которому выполняется сортировка|Область данных|  
-|Синхронизация порядка сортировки для нескольких областей данных|Группы|Обычно заголовок столбца|Выражение группы|Набор данных|  
+|Синхронизация порядка сортировки для нескольких областей данных|Группы|Обычно заголовок столбца|Выражение группы|Dataset|  
   
  Обработчик отчетов выполняет операцию интерактивной сортировки после применения выражений сортировки для всех областей данных и групп. Дополнительные сведения см. в разделе [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
@@ -62,10 +62,9 @@ ms.lasthandoff: 08/09/2017
   
  Для предоставления пользователю такой возможности нужно перепроектировать таблицу с тем, чтобы группирование осуществлялось на основе выражения, объединяющего несколько полей. Так, если в исходной таблице с набором данных о количестве запасов группирование осуществлялось по размерам, а затем по цветам, можно задать единую группу с выражением группы, представляющим собой сочетание размеров и цветов. Дополнительные сведения см. в разделе [Добавление интерактивной сортировки в таблицу или матрицу (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Сортировка данных в области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Фильтр, группы и сортировка данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Добавление интерактивной сортировки в таблицу или матрицу (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Выполнение хранимой процедуры | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
 ms.tgt_pltfrm: 
@@ -19,19 +22,19 @@ helpviewer_keywords:
 - stored procedures [SQL Server], executing
 - user-defined stored procedures [SQL Server]
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
-caps.latest.revision: 38
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: 75e4f9647c7d19c82fd74caa15775fc3d8a97b12
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: c4052a34b4365de0382e7a8118f743231b8f4873
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="execute-a-stored-procedure"></a>Выполнение хранимой процедуры
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
  > Материалы по предыдущим версиям SQL Server см. в разделе [Выполнение хранимой процедуры](https://msdn.microsoft.com/en-US/library/ms189915(SQL.120).aspx).
 
   В этом разделе описывается, как выполнить хранимую процедуру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -40,13 +43,13 @@ ms.lasthandoff: 06/22/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
      [Рекомендации](#Recommendations)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Для выполнения хранимой процедуры используется:**  
   
@@ -60,7 +63,7 @@ ms.lasthandoff: 06/22/2017
   
 -   При сопоставлении имен системных процедур используются параметры сортировки вызывающей базы данных. Таким образом, в вызове процедур следует всегда использовать точный регистр имен системных процедур. Например, этот код завершится с ошибкой при выполнении в контексте базы данных, в параметрах сортировки которой учитывается регистр:  
   
-    ```tsql  
+    ```sql  
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
     ```  
   
@@ -74,7 +77,7 @@ ms.lasthandoff: 06/22/2017
   
      Имена системных процедур начинаются с префикса **sp_**. Поскольку они логически отображаются во всех базах данных, определяемых и пользователем и системой, то они могут выполняться из любой базы данных без полного указания имени процедуры. Однако рекомендуется уточнять имена всех системных процедур указанием схемы **sys** во избежание конфликтов имен. В следующем примере демонстрируется рекомендуемый метод вызова системной процедуры.  
   
-    ```tsql  
+    ```sql  
     EXEC sys.sp_who;  
     ```  
   
@@ -84,7 +87,7 @@ ms.lasthandoff: 06/22/2017
   
      В следующем примере демонстрируется рекомендуемый метод выполнения определяемой пользователем процедуры. Обратите внимание, что процедура принимает один входной параметр. Сведения об указании входных и выходных параметров см. в статье [Указание параметров](../../relational-databases/stored-procedures/specify-parameters.md).  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
@@ -92,7 +95,7 @@ ms.lasthandoff: 06/22/2017
   
      -Или-  
   
-    ```tsql  
+    ```sql  
     EXEC AdventureWorks2012.dbo.uspGetEmployeeManagers 50;  
     GO  
     ```  
@@ -126,10 +129,10 @@ ms.lasthandoff: 06/22/2017
   
     2.  отменить выполнение процедуры при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
  Дополнительные сведения см. в статьях [EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-transact-sql.md) и [EXECUTE AS Clause (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Дополнительные сведения см. в разделе "Разрешения" статьи [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md).  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -156,7 +159,7 @@ ms.lasthandoff: 06/22/2017
      **Передать значение NULL**  
      Передать значение NULL в качестве значения параметра.  
   
-     **Значение**  
+     **Value**  
      Введите значение параметра, передаваемое ему при вызове процедуры.  
   
 5.  Чтобы выполнить хранимую процедуру, нажмите кнопку **ОК**.  
@@ -171,7 +174,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано, как выполнить хранимую процедуру, которая принимает один параметр. В примере выполняется хранимая процедура `uspGetEmployeeManagers` со значением  `6` , указанным в параметре `@EmployeeID` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC dbo.uspGetEmployeeManagers 6;  
@@ -186,7 +189,7 @@ GO
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано, как использовать процедуру [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) , чтобы задать автоматическое выполнение процедуры.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
@@ -202,14 +205,14 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано, как использовать процедуру [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) , чтобы отменить автоматическое выполнение процедуры.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
     , @OptionValue = 'off';  
 ```  
   
-###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
+###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
   
 ## <a name="see-also"></a>См. также:  
  [Указание параметров](../../relational-databases/stored-procedures/specify-parameters.md)   

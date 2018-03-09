@@ -3,7 +3,7 @@ title: "Использование ADO с языками сценариев | Д
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 804365750839fd3b9830a9573ab2cf397b529187
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a0f909233d29c84e1c64ca19f100fdd1eabf4d61
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-ado-with-scripting-languages"></a>Использование ADO с языки сценариев
 В среде скриптов ADO позволяет предоставлять данные посредством скриптов на стороне сервера. В этом случае ADO базового поставщика OLE DB, он использует, и другие компоненты, необходимые для ссылки на хранилище данных установлены на сервере под управлением служб Internet Information Services (IIS). С помощью Active Server Pages (ASP), ADO — это компонент, на которые ссылается скрипт, который можно создать HTML, например. Это содержимое HTML могут передаваться через протокол HTTP для веб-браузер клиента. С помощью скриптов, веб-страницы могут отправлять действия обратно серверных скриптов, позволяя обновить, проходят через или просматривать определенные данные.  
@@ -36,17 +35,17 @@ ms.lasthandoff: 09/09/2017
 |Объект|Безопасно для создания сценариев?|  
 |------------|-------------------------|  
 |Соединение ADO|Да|  
-|Команды ADO|Нет|  
-|Параметр ADO|Нет|  
+|Команды ADO|нет|  
+|Параметр ADO|нет|  
 |Набор записей ADO|Да|  
 |Записей ADO|Да|  
 |Поток ADO|Да|  
-|Ошибка ADO|Нет|  
-|Каталог ADOX|Нет|  
-|Набор ячеек ADOX|Нет|  
+|Ошибка ADO|нет|  
+|Каталог ADOX|нет|  
+|Набор ячеек ADOX|нет|  
 |DataControl служб удаленных рабочих СТОЛОВ|Да|  
 |Пространство данных служб удаленных рабочих СТОЛОВ|Да|  
-|DataFactory служб удаленных рабочих СТОЛОВ|Нет|  
+|DataFactory служб удаленных рабочих СТОЛОВ|нет|  
   
  В следующей таблице перечислены поставщики, включенные с Windows DAC или MDAC и указывает, является ли они безопасные для использования.  
   
@@ -55,8 +54,8 @@ ms.lasthandoff: 09/09/2017
 |Фигурная|Да|  
 |Сохранение|Да|  
 |Remote|Да|  
-|Поставщик OLE DB для SQL Server (SQLOLEDB)|Нет|  
-|Поставщик OLE DB для ODBC (MSDASQL)|Нет|  
+|Поставщик OLE DB для SQL Server (SQLOLEDB)|нет|  
+|Поставщик OLE DB для ODBC (MSDASQL)|нет|  
   
 ## <a name="odbc-data-sources"></a>Источники данных ODBC  
  Примечательным отличием между кодом ADO, сценариев и не сценариев является источник данных ODBC, если. Для приложений, отличных от сценариев можно создать пользовательское имя DSN в администраторе источников данных ODBC. Для сценариев, выполняющихся в службах IIS необходимо создать системный DSN; в противном случае скрипты не распознает созданный источник данных. Это относится к любой сценариев приложения ADO, используя поставщик Microsoft OLE DB для ODBC через Microsoft IIS.  
@@ -69,12 +68,11 @@ ms.lasthandoff: 09/09/2017
   
  Следующие разделы содержат более подробные сведения об использовании ADO с языки сценариев:  
   
--   [Программирование ADO VBScript](../../../ado/guide/appendixes/vbscript-ado-programming.md)  
+-   [Программирование объектов ADO с использованием VBScript](../../../ado/guide/appendixes/vbscript-ado-programming.md)  
   
--   [Программирование ADO JScript](../../../ado/guide/appendixes/jscript-ado-programming.md)  
+-   [Программирование объектов ADO с использованием JScript](../../../ado/guide/appendixes/jscript-ado-programming.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объекты данных Microsoft ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Использование ADO с помощью Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [Использование ADO с Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
-
+ [Использование объектов ADO с Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   

@@ -1,29 +1,28 @@
 ---
-title: "Области данных и карты (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Области данных и карты (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data regions
+helpviewer_keywords: data regions
 ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fe5be4e624ef5a5bc956731819f2b4636dc39799
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a2609574eeb2c41bb4eeab2c85bebd483867ee16
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>Области данных и карты (построитель отчетов и службы SSRS)
   Область данных — это объект отчета, в котором отображаются данные из набора данных отчета. Данные отчета могут выводиться в виде чисел и текста в таблице, матрице или списка, а также представляться графически на диаграмме или на датчике либо в географическом контексте на карте. Таблицы, матрицы и списки основаны на области данных *табликса* , которая разворачивается так, чтобы отобразить все данные из набора данных. Область данных табликса поддерживает несколько групп статических и динамических строк и столбцов. На диаграмме показано несколько рядов и групп категорий в разнообразных форматах диаграммы. На датчике выводится единичное или сводное значение для набора данных. На карте пространственные данные отображаются как различные элементы карты, внешний вид которых может различаться в зависимости от сводных данных набора данных.  
@@ -33,8 +32,8 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="table"></a>Таблица  
- Таблица — это область данных, в которой данные представлены построчно. Столбцы таблицы являются статическими: количество столбцов определяется во время проектирования отчета. Строки таблицы являются динамическими: при заполнении данными они расширяются вниз. К таблицам могут быть добавлены группы, которые упорядочивают данные в соответствии с указанными полями или выражениями. Сведения о добавлении таблицы в отчет см. в разделе [Tables &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
+## <a name="table"></a>Table  
+ Таблица — это область данных, в которой данные представлены построчно. Столбцы таблицы являются статическими: количество столбцов определяется во время проектирования отчета. Строки таблицы являются динамическими: при заполнении данными они расширяются вниз. К таблицам могут быть добавлены группы, которые упорядочивают данные в соответствии с указанными полями или выражениями. Дополнительные сведения о добавлении таблицы в отчет см. в разделе [Таблицы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
 ## <a name="matrix"></a>Матрица  
  Матрица также называется перекрестной таблицей. Матричная область данных содержит динамические столбцы и строки, расширяющиеся при поступлении данных. Матрица может иметь как динамические, так и статические столбцы и строки. В столбцах и строках могут содержаться другие столбцы или строки, а также они могут использоваться для группирования данных. Вы можете ознакомиться со сведениями о [добавлении матрицы в отчет](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md).  
@@ -72,9 +71,8 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>См. также:  
  [Основные понятия разработки отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Отчеты, элементы отчетов и определения отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Макет страницы и визуализации &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
+ [Макет страницы и отрисовка (построитель отчетов и службы SSRS)](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [Учебники по построителю отчетов](../../reporting-services/report-builder-tutorials.md)   
  [Учебники по службам Reporting Services (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   
   
-

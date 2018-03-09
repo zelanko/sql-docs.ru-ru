@@ -1,31 +1,29 @@
 ---
-title: "Части отчетов в конструкторе отчетов (SSRS) | Документы Microsoft"
+title: "Части отчетов в конструкторе отчетов (SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rtp.rptdesigner.components.f1
+f1_keywords: sql13.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 66d5312047b516176e8aa1b331b36745bcdb20d9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8b47556b43940c363d8eac0a53d63db601bcd8ae
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="report-parts-in-report-designer-ssrs"></a>Части отчетов в конструкторе отчетов (SSRS)
 
   В конструкторе отчетов можно создавать таблицы, графики и другие элементы отчетов с разбиением на страницы в проекте, а также публиковать их в виде *элементов отчета* на сервере отчетов или сайте SharePoint, интегрированном с сервером отчетов, для дальнейшего использования в других отчетах.  
@@ -82,7 +80,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Разверните отчет.  
   
- Во время развертывания отчета элемент отчета публикуется на сайте SharePoint или сервере отчетов, поэтому другие пользователи смогут его повторно использовать. Чтобы опубликовать элемент отчета, необходимо иметь соединение и достаточные разрешения на сервере отчетов при развертывании отчета.  
+ Во время развертывания отчета элемент отчета публикуется на сайте SharePoint или сервере отчетов, поэтому другие пользователи смогут его повторно использовать. Чтобы опубликовать элемент отчета, следует установить соединение с сервером отчетов и иметь на нем достаточные разрешения в момент развертывания отчета.  
   
   
 ##  <a name="SearchReuseComponents"></a> Повторное использование элементов отчета  
@@ -101,5 +99,4 @@ ms.lasthandoff: 08/09/2017
 
 [Управление элементами отчета](../../reporting-services/report-design/managing-report-parts.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

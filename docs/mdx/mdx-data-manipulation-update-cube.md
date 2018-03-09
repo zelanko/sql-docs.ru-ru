@@ -2,11 +2,13 @@
 title: "Инструкция UPDATE CUBE (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,28 +16,26 @@ f1_keywords:
 - UPDATE CUBE
 - UPDATE_CUBE
 - UPDATE
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - updating cubes
 - cubes [Analysis Services], modifying
 - modifying cubes
 - UPDATE CUBE statement
 ms.assetid: 6c8f23bb-401b-49de-843a-5324ac977239
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 77ca2c4e3a63db80ff21a91309f5fc531e5ba3ca
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0be79c064b4c4f7044b495056295420094aa13e8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>Управление данными MDX - UPDATE CUBE
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Инструкция UPDATE CUBE используется для обратной записи данных в любую ячейку куба, которая суммируется с родительским элементом с помощью агрегатного выражения SUM. Дополнительные сведения и пример см. в разделе «Общие сведения о приложениях» в этой записи блога: [Создание приложения обратной записи со службами Analysis Services (блог)](http://go.microsoft.com/fwlink/?LinkId=394977).  
   
@@ -71,7 +71,7 @@ UPDATE [ CUBE ] Cube_Name
  *Weight_Expression*  
  Допустимое числовое многомерное выражение, возвращающее десятичное значение от 0 до 1.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Можно обновить значение указанной конечной или неконечной ячейки куба, по желанию размещая значение для указанной неконечной ячейки в зависимых конечных ячейках. Ячейка, указанная кортежным выражением, может представлять любую ячейку многомерного пространства (другими словами, ячейка необязательно должна быть конечной). Тем не менее, ячейки должны быть собраны с [сумма](../mdx/sum-mdx.md) агрегатной функции и не должны содержать вычисляемый элемент в кортеж, который используется для идентификации ячейки.  
   
  Может быть полезным подумать об **UPDATE CUBE** инструкцию как подпрограмму, которая автоматически создаст серию отдельных операций обратной записи в конечные и неконечные ячейки, сводимые в указанную сумму.  
@@ -130,4 +130,3 @@ Weight_Expression = <leaf cell value> / <existing value>
  [Инструкции для манипулирования данными многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   
-

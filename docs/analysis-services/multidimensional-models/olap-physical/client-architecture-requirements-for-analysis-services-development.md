@@ -2,12 +2,13 @@
 title: "Разработка служб требования к архитектуре клиента для анализа | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,20 +21,20 @@ helpviewer_keywords:
 - client architecture [Analysis Services]
 - local cubes [Analysis Services]
 ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
-caps.latest.revision: 37
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5fa4192b9852d88100c1520a8c274dac199e1f48
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4bf626021f48834b9c7e3711ffcf5f31639591fc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Требования к архитектуре клиента для разработки служб Analysis Services
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] поддерживает архитектуры тонкого клиента. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Вычислительное ядро полностью серверных, поэтому все запросы разрешаются на сервере. В результате для каждого запроса требуется только одно перемещение данных от клиента к серверу и обратно, что позволяет масштабировать производительность по мере роста сложности запросов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] поддерживает архитектуры тонкого клиента. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Вычислительное ядро полностью серверных, поэтому все запросы разрешаются на сервере. В результате для каждого запроса требуется только одно перемещение данных от клиента к серверу и обратно, что позволяет масштабировать производительность по мере роста сложности запросов.  
   
  Собственный протокол [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] — это XML для аналитики (XML/A). [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] содержит несколько интерфейсов доступа для клиентских приложений, но все эти компоненты взаимодействуют с экземпляром [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] с использованием XML для аналитики.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 09/01/2017
 |Языки платформы .NET|ADO MD.NET|  
 |Любой язык с поддержкой SOAP|XML для аналитики|  
   
- Службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] отличаются веб-архитектурой с полностью масштабируемым средним уровнем для развертывания как в больших, так и в малых организациях. Службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] предоставляют широкий спектр средств поддержки среднего уровня для веб-служб. Приложения ASP поддерживаются в OLE DB для OLAP и ADO MD, приложения ASP.NET поддерживаются ADOMD.NET. Средний уровень, проиллюстрированный на приведенном ниже рисунке, масштабируется для одновременной поддержки большого количества пользователей.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] содержит веб-архитектурой с полностью масштабируемым промежуточным уровнем для развертывания в больших и малых организациях. Службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] предоставляют широкий спектр средств поддержки среднего уровня для веб-служб. Приложения ASP поддерживаются в OLE DB для OLAP и ADO MD, приложения ASP.NET поддерживаются ADOMD.NET. Средний уровень, проиллюстрированный на приведенном ниже рисунке, масштабируется для одновременной поддержки большого количества пользователей.  
   
  ![Логическая диаграмма архитектуры среднего уровня](../../../analysis-services/multidimensional-models/olap-physical/media/as-midtierarch9.gif "Логическая диаграмма архитектуры среднего уровня")  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>Службы Analysis Services в табличном режиме или режиме интеграции с SharePoint.  
  В [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], сервер может быть запущен в режиме подсистемы vertipaq аналитики в памяти xVelocity для табличных баз данных, а также для [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] книг, которые были опубликованы на сайте SharePoint.  
   
- [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] и [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] — единственные клиентские среды, которые поддерживаются при создании размещенных в памяти баз данных, использующих режим SharePoint или табличный режим соответственно. Встроенный [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] база данных, создаваемая с помощью Excel и [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] средства содержится в книге Excel и сохраняется как часть Excel XLSX-файл.  
+ [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] и [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] — единственные клиентские среды, которые поддерживаются для создания и выполнения запросов в памяти баз данных, использующих SharePoint или Табличный режим соответственно. Встроенный [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] база данных, создаваемая с помощью Excel и [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] средства содержится в книге Excel и сохраняется как часть Excel XLSX-файл.  
   
  Однако в книге [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] могут использоваться данные, которые хранятся в традиционном кубе, если данные куба импортированы в книгу. Кроме того, можно импортировать данные из другой книги [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)], если она была опубликована на сайте SharePoint.  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 09/01/2017
  Дополнительные сведения об использовании куба служб SSAS в качестве источника данных см. в разделе [Power Pivot для Excel](http://go.microsoft.com/fwlink/?LinkId=164234).  
   
 ### <a name="interfaces-for-power-pivot-client"></a>Интерфейсы для клиента Power Pivot  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]взаимодействует с подсистемой хранилища подсистемы vertipaq аналитики в памяти xVelocity в книге с помощью общепринятых интерфейсов и языков для служб Analysis Services: объекты AMO и ADOMD.NET и многомерных Выражений и XML для Аналитики. В надстройке меры определяются с помощью языка формул, аналогичного языку формул Excel и DAX (выражения анализа данных). Выражения анализа данных внедряются в сообщения XMLA, отправляемые внутрипроцессному серверу.  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] взаимодействует с подсистемой хранилища подсистемы vertipaq аналитики в памяти xVelocity в книге с помощью общепринятых интерфейсов и языков для служб Analysis Services: объекты AMO и ADOMD.NET и многомерных Выражений и XML для Аналитики. В надстройке меры определяются с помощью языка формул, аналогичного языку формул Excel и DAX (выражения анализа данных). Выражения анализа данных внедряются в сообщения XMLA, отправляемые внутрипроцессному серверу.  
   
 ### <a name="providers"></a>Поставщики  
  Обмен данными между [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] и Excel используется поставщик MSOLAP OLEDB (версия 11.0). В поставщике MSOLAP имеется четыре модуля (также называемых транспортами), которые можно использовать для пересылки сообщений между клиентом и сервером.  
@@ -84,8 +85,7 @@ ms.lasthandoff: 09/01/2017
   
  **КАНАЛ** зарезервировано для связи с [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] системной службы в ферме SharePoint.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Серверные компоненты ядра OLAP](../../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)  
   
   
-

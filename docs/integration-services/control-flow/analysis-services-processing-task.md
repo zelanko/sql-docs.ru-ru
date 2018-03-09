@@ -1,10 +1,13 @@
 ---
-title: "Задача обработки служб аналитики | Документы Microsoft"
+title: "Задача \"Обработка средствами Analysis Services\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -17,17 +20,16 @@ helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-caps.latest.revision: 52
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 1a5107d988014807892ec405dadf61656c7606a5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: cad0ce4adcf182892b62473aacb9e1c8d310f6c4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="analysis-services-processing-task"></a>задача «Обработка средствами Analysis Services»
   Задача «Обработка службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] » обрабатывает объекты [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , такие как табличные модели, кубы, измерения и модели интеллектуального анализа данных.  
@@ -73,7 +75,7 @@ ms.lasthandoff: 08/11/2017
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующем разделе:  
   
--   [Страница "Выражения"](../../integration-services/expressions/expressions-page.md)  
+-   [Страница «Выражения»](../../integration-services/expressions/expressions-page.md)  
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
@@ -94,7 +96,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Description**  
+ **Описание**  
  Введите описание задачи «Обработка средствами Analysis Services».  
   
 ## <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Редактор задачи «Обработка средствами Analysis Services» (страница «Средства Analysis Services»)
@@ -152,4 +154,3 @@ ms.lasthandoff: 08/11/2017
   
  **См. также:** [Диалоговое окно "Изменение настроек" (службы Analysis Services — многомерные данные)](http://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
   
-

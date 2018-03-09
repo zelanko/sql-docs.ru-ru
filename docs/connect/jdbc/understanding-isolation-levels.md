@@ -3,24 +3,25 @@ title: "Основные сведения об уровнях изоляции |
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 5acd91539652aefd7eee0049bb2e1ccc277c16a0
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8d04a199f44d5a4781ce1bc7b877b4a63d614671
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="understanding-isolation-levels"></a>Основные сведения об уровнях изоляции
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -79,7 +80,6 @@ con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);
  Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] уровни изоляции, в разделе «уровни изоляции в [!INCLUDE[ssDE](../../includes/ssde_md.md)]» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] электронной документации.  
   
 ## <a name="see-also"></a>См. также:  
- [Выполнение транзакций с драйвером JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
+ [Выполнение транзакций с помощью драйвера JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
   
   
-

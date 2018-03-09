@@ -1,12 +1,14 @@
 ---
-title: "Отладка сценария, установив точки останова в задаче «скрипт» и компоненте скрипта | Документы Microsoft"
+title: "Отладка скрипта с помощью точек останова в задаче и компоненте \"Скрипт\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -15,25 +17,24 @@ helpviewer_keywords:
 - breakpoints [Integration Services]
 - scripts [Integration Services], breakpoints
 ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 96815b337311c4ba8d16e10c25891c728e7a0c74
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 854e1e9c66dc0515ec3e14852c184e3a08cb058c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>Отладка скрипта с помощью точек останова в задаче и компоненте «Скрипт»
   Эта процедура описывает способ создания точки останова в скриптах, используемых задачей «Скрипт» и компонентом «Скрипт».  
   
- После задания точек останова в скрипте, **установка точек останова — \<имя объекта >** диалоговом окне приводится список точек останова вместе со встроенными точками.  
+ После задания точек останова в скрипте в диалоговом окне **Установка точек останова — \<имя объекта>** будет приведен список этих точек останова вместе со встроенными точками останова.  
   
 > [!IMPORTANT]  
->  В некоторых случаях точки останова из задачи «Скрипт» и компонента скрипта пропускаются. Дополнительные сведения см. в разделе **отладка задачи «скрипт»** статьи [кодировании и отладке задачи «скрипт»](../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md) и **отладка компонента скрипта** статьи [кодировании и отладке компонента скрипта](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).  
+>  В некоторых случаях точки останова из задачи «Скрипт» и компонента скрипта пропускаются. Дополнительные сведения об отладке задачи и компонента "Скрипт" см. в пунктах **Отладка задачи "Скрипт"** раздела [Кодирование и отладка задачи "Скрипт"](../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md), а также **Отладка компонента скрипта** раздела [Кодирование и отладка компонента скрипта](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).  
   
 ### <a name="to-set-a-breakpoint-in-script"></a>Задание точки останова в скрипте  
   
@@ -41,13 +42,13 @@ ms.lasthandoff: 08/03/2017
   
 2.  Дважды щелкните пакет, содержащий скрипт, в котором нужно создать точки останова.  
   
-3.  Чтобы открыть задачу «скрипт», щелкните **поток управления** вкладку, а затем дважды щелкните задачу «скрипт».  
+3.  Чтобы открыть задачу "Скрипт", следует перейти на вкладку **Поток управления** и дважды щелкнуть задачу "Скрипт".  
   
-4.  Чтобы открыть компонент скрипта, щелкните **потока данных** вкладку, а затем дважды щелкните компонент скрипта.  
+4.  Чтобы открыть компонент "Скрипт", следует перейти на вкладку **Поток данных** и дважды щелкнуть компонент "Скрипт".  
   
-5.  Нажмите кнопку **сценарий** и нажмите кнопку **изменить скрипт**.  
+5.  Щелкните **Скрипт**, затем нажмите кнопку **Изменить скрипт**.  
   
-6.  В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] средств для приложений (VSTA), найдите строку скрипта, на котором требуется установить точку останова, щелкните эту строку правой кнопкой мыши **останова**, а затем нажмите кнопку **вставить точку останова**.  
+6.  В среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] набор средств Visual Studio Tools для работы с приложениями (VSTA) найдите строку скрипта, на которой следует установить точку останова, щелкните правой кнопкой мыши, выберите **Точка останова**, а затем **Вставить точку останова**.  
   
      Значок точки останова появится на строке с кодом.  
   
@@ -58,4 +59,3 @@ ms.lasthandoff: 08/03/2017
 9. Чтобы сохранить пакеты, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
   
-

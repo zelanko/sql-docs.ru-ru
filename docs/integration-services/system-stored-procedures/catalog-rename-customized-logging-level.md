@@ -1,31 +1,33 @@
 ---
-title: "Catalog.rename_customized_logging_level | Документы Microsoft"
+title: "catalog.rename_customized_logging_level | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 00c2cd8fa5f8423a7791d663d02aecbf27b8ab41
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a0cfd15570162feb603fe987a135b0d77da4df60
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogrenamecustomizedlogginglevel"></a>Catalog.rename_customized_logging_level
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="catalogrenamecustomizedlogginglevel"></a>catalog.rename_customized_logging_level
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Переименовывает существующий пользовательский уровень ведения журнала. Дополнительные сведения о пользовательских уровней ведения журнала см. в разделе [службы Integration Services &#40; Службы SSIS &#41; Ведение журнала](../../integration-services/performance/integration-services-ssis-logging.md).  
+  Изменяет название существующего настроенного уровня ведения журнала. Дополнительные сведения о настроенных уровнях ведения журналов см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,17 +37,17 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @old_name =] *старое_имя*  
- Имя существующего пользовательский уровень ведения журнала для переименования.  
+ [ @old_name = ] *old_name*  
+ Название существующего настроенного уровня ведения журнала.  
   
- *Старое_имя* — **nvarchar(128)**.  
+ Параметр *old_name* имеет тип **nvarchar(128)**.  
   
- [ @new_name =] *новое_имя*  
- Новое имя для указанного пользовательский уровень ведения журнала.  
+ [ @new_name = ] *new_name*  
+ Новое название указанного настроенного уровня ведения журнала.  
   
- *Новое_имя* — **nvarchar(128)**.  
+ Параметр *new_name* имеет тип **nvarchar(128)**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="return-codes"></a>Коды возврата  
  0 (успешное завершение)  
@@ -53,9 +55,9 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
  В случае отказа хранимой процедуры выдается ошибка.  
   
 ## <a name="result-set"></a>Результирующий набор  
- Нет  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   Членство в роли базы данных **ssis_admin**  
@@ -65,7 +67,6 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
  В следующем списке описываются условия, приводящие к сбою хранимой процедуры.  
   
--   Пользователь не имеет необходимых разрешений.  
+-   У пользователя отсутствуют необходимые разрешения.  
   
   
-

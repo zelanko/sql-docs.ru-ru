@@ -3,10 +3,12 @@ title: "Драйверы Юникода | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 195dc99394d8708e4895fce746ca13bbf724782c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 52afd6864229173b699df74410349b0cac482c98
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unicode-drivers"></a>Драйверы Юникода
 Следует ли драйвер драйвер Юникода или драйвера ANSI полностью зависит от природы источника данных. Если источник данных поддерживает данные в Юникоде, драйвер должно быть драйвер Юникода. Если источник данных поддерживает только данных ANSI, драйвер должны оставаться драйвер с ANSI.  
@@ -37,4 +38,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  При определении типа драйверов, диспетчер драйверов вызывает **SQLSetConnectAttr** и присвойте атрибуту SQL_ATTR_ANSI_APP во время соединения. Если приложение использует API-интерфейсы ANSI, SQL_ATTR_ANSI_APP будет присвоено SQL_AA_TRUE и при использовании Юникода, он будет присвоено значение SQL_AA_FALSE. Этот атрибут используется, чтобы драйвер может работать иначе в зависимости от типа приложения. Атрибут не может задавать приложением напрямую, а не поддерживается **SQLGetConnectAttr**. Если драйвер видно, аналогичное поведение для ANSI и Юникод приложений, она возвращает значение SQL_ERROR для этого атрибута. Если драйвер возвращает SQL_SUCCESS, диспетчер драйверов будет разделить соединения ANSI или Юникод, при использовании пула соединений.
-

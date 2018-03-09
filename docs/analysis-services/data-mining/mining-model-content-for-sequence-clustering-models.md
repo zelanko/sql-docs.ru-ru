@@ -2,32 +2,33 @@
 title: "Модель интеллектуального анализа данных для моделей кластеризации последовательностей | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - mining model content, sequence clustering models
 - sequence clustering algorithms [Analysis Services]
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
-caps.latest.revision: 23
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5fefc08fae0dbb06692a914e72ce29f684db2161
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c14ab5147125207eb63ad9e97ba2a94876d4ddce
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>Содержимое моделей интеллектуального анализа данных для моделей кластеризации последовательностей
-  В этом разделе приведено описание содержимого модели интеллектуального анализа данных, характерного для моделей, в которых используется алгоритм кластеризации последовательностей (Майкрософт). Описание общей и статистической терминологии, связанной с содержимым модели интеллектуального анализа данных, областью применения которого являются модели всех типов, см. в статье [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В этом разделе приведено описание содержимого модели интеллектуального анализа данных, характерного для моделей, в которых используется алгоритм кластеризации последовательностей (Майкрософт). Описание общей и статистической терминологии, связанной с содержимым модели интеллектуального анализа данных, областью применения которого являются модели всех типов, см. в статье [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-sequence-clustering-model"></a>Основные сведения о структуре модели кластеризации последовательностей  
  Модель кластеризации последовательностей содержит один родительский узел (NODE_TYPE = 1), представляющий модель и ее метаданные. С родительским узлом, помеченным **(Все)**, связан узел последовательности (NODE_TYPE = 13), в котором перечислены все переходы, обнаруженные в обучающих данных.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 09/01/2017
  Всегда пусто.  
   
  NODE_NAME  
- Тип узла. В настоящий момент значение совпадает с NODE_UNIQUE_NAME.  
+ Имя узла. В настоящий момент значение совпадает с NODE_UNIQUE_NAME.  
   
  NODE_UNIQUE_NAME  
  Уникальное имя узла.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 09/01/2017
  NODE_TYPE  
  Выходными данными модели кластеризации последовательностей являются узлы следующих типов.  
   
-|Идентификатор типа узла|Description|  
+|Идентификатор типа узла|Описание|  
 |------------------|-----------------|  
 |1 (модель)|Корневой узел для модели|  
 |5 (кластер)|Содержит число переходов в кластере, список атрибутов и статистику, которая описывает значения в кластере.|  
@@ -267,9 +268,8 @@ ORDER BY Count(*) DESC
  Сведения о том, как получить список наблюдаемых путей с помощью запроса содержимого модели, а также другие примеры запросов, основанных на модели кластеризации последовательностей, см. в разделе [Примеры запросов к модели кластеризации последовательностей](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md).  
   
 ## <a name="see-also"></a>См. также  
- [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Содержимое модели интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Алгоритм кластеризации последовательностей (Майкрософт)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [Примеры запросов к модели кластеризации последовательностей](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   
-

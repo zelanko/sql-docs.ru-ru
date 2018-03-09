@@ -3,30 +3,31 @@ title: "Переименование запросов (визуальные ин
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - renaming queries
 - queries [SQL Server], names
 ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3648fff573d8f687f7d91a99bd58a7c7525a76bf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 84829e727653973598485a88c4a6806c75330c8b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="rename-queries-visual-database-tools"></a>Переименование запросов (визуальные инструменты для баз данных)
-Можно переименовать любой запрос, не являющийся в настоящий момент открытым для редактирования. Нижеследующая процедура предполагает, что запрос, который необходимо переименовать, закрыт.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Можно переименовать любой запрос, не являющийся в настоящий момент открытым для редактирования. Нижеследующая процедура предполагает, что запрос, который необходимо переименовать, закрыт.  
   
 ### <a name="to-rename-a-query"></a>Переименование запроса  
   
@@ -40,4 +41,3 @@ ms.lasthandoff: 08/18/2017
 [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Выполнение основных операций с запросами (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

@@ -2,28 +2,29 @@
 title: "Создание кластеризованного DTC для группы доступности AlwaysOn | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/30/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a6d456f5197522bdd9f936f468645f1cbd9bc377
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8bcb2add3c031a774ad768ee9540cc940d82e5be
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Создание кластеризованного DTC для группы доступности AlwaysOn
-В этом разделе рассматривается полная конфигурация кластеризованного ресурса DTC для группы доступности AlwaysOn SQL Server. Выполнение полной конфигурации может занять до одного часа. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе рассматривается полная конфигурация кластеризованного ресурса DTC для группы доступности AlwaysOn SQL Server. Выполнение полной конфигурации может занять до одного часа. 
 
 В рамках этого пошагового руководства создается кластеризованный ресурс DTC и группы доступности SQL Server в соответствии с требованиями из раздела [Кластеризация DTC для групп доступности SQL Server](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md).
 
@@ -119,7 +120,7 @@ foreach ($node in $nodes) {
 ## <a name="3--configure-in-doubt-xact-resolution"></a>3.  Настройка **in-doubt xact resolution** 
 Этот скрипт настроит параметр конфигурации сервера **in-doubt xact resolution**, чтобы предположить фиксацию для сомнительных транзакций.  Запустите следующий скрипт T-SQL в SQL Server Management Studio (SSMS) для `SQLNODE1` в **режиме SQLCMD**.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -160,7 +161,7 @@ GO
 ## <a name="4-create-test-databases"></a>4. Создание баз данных проверки
 Скрипт создаст базу данных с именем `AG1` на `SQLNODE1` и базу данных с именем `dtcDemoAG1` на `SQLNODE2`.  Запустите следующий скрипт T-SQL в SSMS для `SQLNODE1` в **режиме SQLCMD**.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -218,7 +219,7 @@ GO
 ## <a name="5---create-endpoints"></a>5.   Создание конечных точек
 Этот скрипт создаст конечную точку с именем `AG1_endpoint`, которая прослушивает TCP-порт `5022`.  Запустите следующий скрипт T-SQL в SSMS для `SQLNODE1` в **режиме SQLCMD**.
 
-```tsql  
+```sql  
 /**********************************************
 Execute on SQLNODE1 in SQLCMD mode
 **********************************************/
@@ -251,7 +252,7 @@ GO
 ## <a name="6---prepare-databases-for-availability-group"></a>6.   Подготовка баз данных для групп доступности
 Скрипт выполнит резервное копирование `AG1` на `SQLNODE1` и восстановить ее в `SQLNODE2`.  Запустите следующий скрипт T-SQL в SSMS для `SQLNODE1` в **режиме SQLCMD**.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -284,7 +285,7 @@ GO
 ## <a name="7---create-availability-group"></a>7.   Создание группы доступности
 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] необходимо создать с помощью команды **CREATE AVAILABILITY GROUP** и предложения **WITH DTC_SUPPORT = PER_DB**.  Сейчас невозможно изменить существующую группу доступности.  Мастер создания групп доступности не позволяет включить поддержку DTC для новой группы доступности.  Следующий скрипт создаст группу доступности и присоединит базу данных-получатель.  Запустите следующий скрипт T-SQL в SSMS для `SQLNODE1` в **режиме SQLCMD**.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -487,7 +488,7 @@ $nodes = (Get-ClusterNode).Name;
 В первый раз, когда службе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] потребуется распределенная транзакция, она будет зарегистрирована в службе DTC. Служба SQL Server будет продолжать использовать эту службу DTC до ее перезапуска. Если доступна кластеризованная служба DTC, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] будет зарегистрирован в этой службе. Если кластеризованная служба DTC недоступна, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] будет зарегистрирован в локальной службе DTC. Чтобы проверить регистрацию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в кластеризованной службе DTC, остановите и перезапустите каждый экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
 
 Выполните действия, содержащиеся в приведенном ниже скрипте T-SQL:
-```tsql  
+```sql  
 /*
 Gracefully cycle the SQL Server service and failover the Availability Group
     a.  On SQLNODE2, cycle the SQL Server service from SQL Server Configuration Manger
@@ -548,7 +549,7 @@ END
 ### <a name="create-linked-servers"></a>Создание связанных серверов  
 Следующий скрипт создает два связанных сервера на `SQLNODE1`.  Запустите следующий скрипт T-SQL в SSMS для `SQLNODE1`.
 
-```tsql  
+```sql  
 -- SQLNODE1
 IF NOT EXISTS (SELECT * FROM sys.servers where name = N'SQLNODE1')
 BEGIN
@@ -564,7 +565,7 @@ END
 ### <a name="execute-a-distributed-transaction"></a>Выполнение распределенной транзакции
 Сначала этот скрипт возвращает текущую статистику по транзакции DTC.  Затем он выполняет распределенную транзакцию с использованием баз данных на `SQLNODE1` и `SQLNODE2`.  Потом скрипт снова возвращает статистику по транзакции DTC, где должен отображаться увеличенный счетчик.  Выполните физическое подключение к `SQLNODE1` и запустите следующий скрипт T-SQL в SSMS для `SQLNODE1` в **режиме SQLCMD**.
 
-```tsql  
+```sql  
 /*******************************************************************
     Execute script in its entirety on SQLNODE1 in SQLCMD mode
     Must be physically connected to SQLNODE1
@@ -589,4 +590,3 @@ GO
 
 > [!IMPORTANT]
 > Требуется выполнить инструкцию `USE AG1` , чтобы убедиться, что контекст базы данных имеет значение `AG1`.  В противном случае выводится следующее сообщение об ошибке: "Контекст транзакции используется другим сеансом".
-

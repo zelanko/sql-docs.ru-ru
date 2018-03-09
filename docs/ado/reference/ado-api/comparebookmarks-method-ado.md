@@ -3,7 +3,7 @@ title: "Метод CompareBookmarks (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - CompareBookmarks method [ADO]
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 431ffdb1a2be03404b4d0c3636f547b6c8cf8514
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f1e19f4800505e3ed481455bc349d65855c6b538
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="comparebookmarks-method-ado"></a>Метод CompareBookmarks (ADO)
 Сравнивает две закладки и возвращает сведения об их относительных значениях.  
@@ -46,13 +45,13 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  Возвращает [CompareEnum](../../../ado/reference/ado-api/compareenum.md) значение, указывающее позицию строки относительный две записи, представленный закладок.  
   
 #### <a name="parameters"></a>Параметры  
- *Закладке Bookmark1*  
+ *Bookmark1*  
  Закладка первой строки.  
   
- *Закладка Bookmark2*  
+ *Bookmark2*  
  Закладка, второй строки.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Закладки необходимо применить к тому же [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта, или **записей** объекта и его [клон](../../../ado/reference/ado-api/clone-method-ado.md). Не удается сравнить надежно закладки из различных **записей** объектов, даже если они были созданы из одного источника или команды. И не может сравнить закладок для **записей** объект, базовый поставщик не поддерживает сравнение.  
   
  Закладка уникально идентифицирует строки в **записей** объекта. Используйте [закладки](../../../ado/reference/ado-api/bookmark-property-ado.md) свойство текущей строки, чтобы получить его закладки.  
@@ -64,10 +63,9 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  Закладка, которая не является допустимым или неправильно сформирован приведет к ошибке.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода CompareBookmarks (Visual Basic)](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)   
  [Пример метода CompareBookmarks (VC ++)](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
- [Свойство закладка (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)
-
+ [Свойство Bookmark (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)

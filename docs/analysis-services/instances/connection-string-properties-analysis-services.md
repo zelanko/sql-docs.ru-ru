@@ -1,32 +1,31 @@
 ---
 title: "Свойства строки подключения (службы Analysis Services) | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: 18
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 3fa9fd8e7b7c4722e9acf41f0f7229ee0a1f3ef7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e939bafc911fd5d8b09b28754aeb6c8f028de6b2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connection-string-properties-analysis-services"></a>Свойства строки подключения (службы Analysis Services)
-  В этом разделе описываются свойства строки подключения, которые можно задать в конструкторе или одном из средств управления. Также эти свойства есть в строках подключения, созданных клиентскими приложениями, которые подключаются и запрашивают данные служб Analysis Services. Описывается только подмножество доступных свойств. Полный список содержит множество свойств сервера и базы данных, позволяющих настроить соединение для конкретного приложения независимо от того, как экземпляр или база данных настроены на сервере.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В этом разделе описываются свойства строки подключения, которые можно задать в конструкторе или одном из средств управления. Также эти свойства есть в строках подключения, созданных клиентскими приложениями, которые подключаются и запрашивают данные служб Analysis Services. Описывается только подмножество доступных свойств. Полный список содержит множество свойств сервера и базы данных, позволяющих настроить соединение для конкретного приложения независимо от того, как экземпляр или база данных настроены на сервере.  
   
  Разработчики, которые создают пользовательские строки подключения в коде приложений, могут найти более подробный список в документации по API-интерфейсам для клиента ADOMD.NET: <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
@@ -56,7 +55,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_common"></a> Часто применяемые параметры соединения  
  В следующей таблице приведены описания свойств, наиболее часто используемых при создании строки подключения.  
   
-|Свойство|Description|Пример|  
+|property|Описание|Пример|  
 |--------------|-----------------|-------------|  
 |**Data Source** или **DataSource**|Задает экземпляр сервера. Это свойство является обязательным для всех соединений. Допустимые значения — сетевое имя или IP-адрес сервера, local или localhost для локальных соединений, URL-адрес, если на сервере настроен доступ по протоколу HTTP или HTTPS, или имя файла для локального куба (CUB).|`Data source=AW-SRV01` — порт (TCP 2383) и экземпляр по умолчанию.<br /><br /> `Data source=AW-SRV01$Finance:8081` — фиксированный порт и именованный экземпляр ($Finance).<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` — полное доменное имя для экземпляра и порта по умолчанию.<br /><br /> `Data source=172.16.254.1` для IP-адреса сервера без уточняющегозапроса DNS, что удобно для устранения проблем с соединением.|  
 |**Initial Catalog** или **Catalog**|Определяет имя базы данных служб Analysis Services, к которой необходимо подключиться. База данных должна быть развернута на службах Analysis Services, и необходимо иметь разрешение на подключение к ней. Это свойство является необязательным для AMO-соединений, но необходимо для ADOMD.NET.|`Initial catalog=AdventureWorks2016`|  
@@ -68,7 +67,7 @@ ms.lasthandoff: 09/01/2017
   
  Свойства перечисляются в алфавитном порядке.  
   
-|Свойство|Description|  
+|property|Описание|  
 |--------------|-----------------|  
 |**EffectiveUserName**|Используется, когда идентификатор пользователя должен быть олицетворен на сервере. Укажите учетную запись в следующем формате: «домен\пользователь». Чтобы использовать это свойство, вызывающая сторона должна иметь разрешения системного администратора служб Analysis Services. Дополнительные сведения об использовании свойства этого свойства в книге Excel из SharePoint см. в разделе [Использование свойства EffectiveUserName служб Analysis Services в SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkId=311905). Примеры использования этого свойства со службами Reporting Services см. в разделе [Использование EffectiveUserName для олицетворения в SSAS](http://go.microsoft.com/fwlink/?LinkId=301385).<br /><br /> **EffectiveUserName** используется при установке [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint для сбора данных об использовании. Удостоверение пользователя предоставляется серверу, чтобы события или ошибки, включающие удостоверение пользователя, могли быть записаны в файлах журналов. В случае с [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]это свойство не используется при проверке подлинности.|  
 |**Encrypt Password**|Указывает, применяется ли для шифрования локальных кубов локальный пароль. Допустимые значения — True и False. Значение по умолчанию — False.|  
@@ -88,7 +87,7 @@ ms.lasthandoff: 09/01/2017
   
  Свойства перечисляются в алфавитном порядке.  
   
-|Свойство|Description|  
+|property|Описание|  
 |--------------|-----------------|  
 |**Application Name**|Задает имя приложения, связанного с соединением. Это значение может быть полезно для мониторинга событий трассировки, особенно при наличии нескольких приложений, обращающихся к одним и тем же базам данных. Например, добавление «Application Name=’test’» к строке подключения приводит к тому, что «test» появляется в трассировках приложения SQL Server Profiler, как показано на следующем снимке экрана.<br /><br /> ![SSAS_AppNameExcample](../../analysis-services/instances/media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> Псевдонимы для этого свойства: **sspropinitAppName**и **AppName**. Дополнительные сведения см. разделе [Использование параметра Application Name при соединении с SQL Server](http://go.microsoft.com/fwlink/?LinkId=301699).|  
 |**AutoSyncPeriod**|Задает частоту (в миллисекундах) синхронизации кэша клиента и сервера. ADOMD.NET предоставляет механизм кэширования клиента для часто используемых объектов, имеющий минимальные издержки на использование памяти. Это способствует сокращению циклов приема-передачи данных с сервера и на сервер. Значение по умолчанию равно 10000 миллисекунд (10 секундам). Если задано значение NULL или 0, то автоматическая синхронизация отключена.|  
@@ -196,7 +195,7 @@ ms.lasthandoff: 09/01/2017
   
  Чтобы зашифровать и защитить данные строки подключения, службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют API-интерфейс защиты данных.  
   
- Службы[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют отдельный ключ шифрования для шифрования данных строки подключения каждой из баз данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создают этот ключ при создании базы данных и шифруют данные из строки соединения на основании стартовой учетной записи входа служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . При запуске служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] зашифрованный ключ для каждой из баз данных считывается, расшифровывается и сохраняется. Затем службы[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют соответствующий расшифрованный ключ для расшифровки строки подключения к источнику данных, когда службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо подключиться к источнику данных.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют отдельный ключ шифрования для шифрования данных строки подключения каждой из баз данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создают этот ключ при создании базы данных и шифруют данные из строки соединения на основании стартовой учетной записи входа служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . При запуске служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] зашифрованный ключ для каждой из баз данных считывается, расшифровывается и сохраняется. Затем службы[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют соответствующий расшифрованный ключ для расшифровки строки подключения к источнику данных, когда службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо подключиться к источнику данных.  
   
 ## <a name="see-also"></a>См. также  
  [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
@@ -205,4 +204,3 @@ ms.lasthandoff: 09/01/2017
  [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   
-

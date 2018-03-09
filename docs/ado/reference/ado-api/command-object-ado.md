@@ -3,7 +3,7 @@ title: "Команды объекта (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - Command object [ADO]
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
-caps.latest.revision: 7
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 652b43d112d1a8ffb0741310f0af324d345b183f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 863c922dce68f5e3108136baf90ebc5a3d0b697a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="command-object-ado"></a>Объект команды (ADO)
 Определяет той или иной команды, которую планируется выполнить в источнике данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **команда** для запросов к базе данных и возвращать записи в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта, для выполнения операции массового или для работы со структурой базы данных. В зависимости от функции поставщика, некоторые **команда** коллекции, методы или свойства может привести к ошибке, если они ссылаются.  
   
  С коллекциями, методы и свойства **команда** объекта, можно сделать следующее:  
@@ -84,9 +83,8 @@ objCmd(0)
   
 -   [Свойства объекта команды, методы и события](../../../ado/reference/ado-api/command-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Коллекция параметров (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Коллекция свойств (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Поставщики приложение A:](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

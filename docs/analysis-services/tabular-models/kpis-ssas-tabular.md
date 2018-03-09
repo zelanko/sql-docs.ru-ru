@@ -1,31 +1,31 @@
 ---
-title: "Ключевые показатели эффективности (табличные службы SSAS) | Документы Microsoft"
+title: "Ключевые показатели эффективности | Документы Microsoft"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a38d562df467f020db529fde8633acaa081d045c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f4755d0271523b65073b72c6b06f6dec8cfcb90a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="kpis"></a>Ключевые показатели эффективности
-  Термин *KPI* (ключевой показатель эффективности) в табличной модели используется для оценки производительности значения, определенного *базовой* мерой, относительно *целевого* значения, также определенного мерой или абсолютным значением. В этом разделе автор табличной модели может почерпнуть основные сведения о ключевых показателях эффективности в табличной модели.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Термин *KPI* (ключевой показатель эффективности) в табличной модели используется для оценки производительности значения, определенного *базовой* мерой, относительно *целевого* значения, также определенного мерой или абсолютным значением. Эта статья содержит табличной модели может почерпнуть основные сведения о ключевых показателей эффективности в табличной модели.  
   
 ##  <a name="bkmk_benefits"></a> Преимущества  
  Употребляемый в деловой лексике термин «ключевой показатель эффективности» (KPI) означает количественно исчислимую меру задач бизнеса. Для оценки ключевого показателя эффективности часто используется определенный интервал времени. Например, отдел продаж компании может использовать KPI для сравнения месячной валовой прибыли с запланированной валовой прибылью. Отдел бухгалтерского учета может сравнивать месячные расходы с прибылью для оценки издержек, а отдел кадров может измерить данные о текучести кадров за месяц. И то и другое будет примером ключевого показателя эффективности. Бизнесмены часто пользуются ключевыми показателями эффективности, представленными в виде сводки, чтобы получить быстрое и точное представление о развитии предприятия во временном контексте или для определения тенденций.  
@@ -78,13 +78,12 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 ##  <a name="bkmk_related_tasks"></a> Связанные задачи  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
-|[Создание и управление ими ключевые показатели эффективности](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|Описывает, как создавать KPI с базовыми мерами, целевыми мерами и порогами состояния.|  
+|[Создание ключевых показателей эффективности и управление ими](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|Описывает, как создавать KPI с базовыми мерами, целевыми мерами и порогами состояния.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Меры](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Перспективы](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   
   
-

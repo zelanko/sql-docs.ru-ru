@@ -3,8 +3,11 @@ title: "Выражения (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - simple expressions [SQL Server]
 - complex expressions [SQL Server]
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 826d1ab9f4a0a68d692551ae58a529ab8b7ebfae
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 49efa9c940ff4428747942c88259bdd58b96a658
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="expressions-transact-sql"></a>Выражения (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Сочетание символов и операторов, используемое компонентом [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] для вычисления одиночного значения данных. Отдельные константы, переменные, столбцы и скалярные функции являются примерами простых выражений. Для соединения двух и более простых выражений в одно сложное можно использовать операторы.  
   
@@ -89,10 +91,10 @@ ms.lasthandoff: 09/01/2017
 |----------|----------------|  
 |*Константа*|Символ, представляющий одно конкретное значение данных. Дополнительные сведения см. в разделе [константы &#40; Transact-SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).|  
 |*scalar_function*|— Это единица [!INCLUDE[tsql](../../includes/tsql-md.md)] синтаксис, который предоставляет определенную службу и возвращает одиночное значение. *scalar_function* может быть встроенной скалярной функцией, таких как SUM, GETDATE или CAST или скалярные определяемые пользователем функции.|  
-|[ *table_name***.** ]|Имя или псевдоним таблицы.|  
-|*столбец*|Имя столбца. Только имя столбца используется в выражении.|  
+|[ *table_name ***.* * ]|Имя или псевдоним таблицы.|  
+|*column*|Имя столбца. Только имя столбца используется в выражении.|  
 |*переменная*|Имя переменной или параметр. Дополнительные сведения см. в статье [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
-|**(** *выражение***)** |Любое допустимое выражение из определенных в этом разделе. Скобки являются операторами группировки, гарантирующими, что все операторы выражения внутри скобок будут выполнены, прежде чем результирующее выражение будет объединено с другим.|  
+|**(** *expression*  **)**|Любое допустимое выражение из определенных в этом разделе. Скобки являются операторами группировки, гарантирующими, что все операторы выражения внутри скобок будут выполнены, прежде чем результирующее выражение будет объединено с другим.|  
 |**(** *scalar_subquery* **)**|Вложенный запрос, возвращающий одиночное значение. Например:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|Унарные операторы можно применять только к выражениям, выполняемым с любыми типами данных из категории числовых типов данных. Оператор, имеющий только один числовой операнд:<br /><br /> + обозначает положительное число.<br /><br /> - обозначает отрицательное число.<br /><br /> ~ обозначает оператор дополнения.|  
 |{ *binary_operator* }|Этот оператор указывает, как объединяются два выражения для получения единого результата. *binary_operator* может быть арифметический оператор, оператор присваивания (=), побитовый оператор, оператор сравнения, логический оператор, оператор объединения строк (+) или унарный оператор. Дополнительные сведения об операторах см. в разделе [операторами &#40; Transact-SQL &#41; ](../../t-sql/language-elements/operators-transact-sql.md).|  
@@ -108,7 +110,7 @@ ms.lasthandoff: 09/01/2017
   
  Сложные выражения, составленные из нескольких символов и операторов, вычисляются в одиночные результаты. Тип данных, параметры сортировки, точность и значение результирующего выражения определяются объединением составляющих выражений (по два за один раз) до тех пор, пока не будет получен конечный результат. Последовательность, в которой эти выражения объединяются, зависит от приоритета операторов в выражении.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Два выражения можно объединить каким-либо оператором, если оба они относятся к типам данных, поддерживаемым оператором, и выполняется хотя бы одно из следующих условий.  
   
 -   Выражения относятся к одному типу данных.  
@@ -133,7 +135,7 @@ GO
   
  Выражение `1+2` дает результат `3` в каждой строке результирующего набора. Несмотря на то, что выражение `ProductID` формирует уникальное значение для каждой строки в результирующем наборе, в каждой строке содержится только одно значение для `ProductID`.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [В ЧАСОВОМ ПОЯСЕ &#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [РЕГИСТР &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [CAST и CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
@@ -148,4 +150,3 @@ GO
  [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-

@@ -2,27 +2,27 @@
 title: "Создание связанного домена | Microsoft Docs"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.kb.linkeddomain.f1
+f1_keywords: sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "20"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 30f25b5b1c71f6a84bdd114173c8fc04c0b3902d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14b11ae1442a695e683aafc60da424cc6c9f9497
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-linked-domain"></a>Создание связанного домена
   В этом разделе описывается, как создать связанный домен в базе знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Связанный домен создается из другого, существующего ранее домена и наследует все значения, правила и свойства из домена, с которым он связан, за исключением имени и описания. Набором связанных доменов вы можете управлять как одним доменом. Связывая один домен с другим, вы создаете домен, который наследует содержание другого домена.  
@@ -43,16 +43,16 @@ ms.lasthandoff: 09/09/2017
 ###  <a name="Prerequisites"></a> Предварительные требования  
  Необходимое условие создания связанного домена — наличие базы знаний и домена, с которым нужно установить связь.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Для создания связанного домена необходимо быть членом роли dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
 ##  <a name="Create"></a> Создание связанного домена  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  На главном экране клиента [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] откройте или создайте базу знаний. Выберите операцию **Управление доменами** , а затем нажмите кнопку **Открыть** или **Создать**. Дополнительные сведения см. в разделе [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) или [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+2.  На главном экране клиента [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] откройте или создайте базу знаний. Выберите операцию **Управление доменами** , а затем нажмите кнопку **Открыть** или **Создать**. Дополнительные сведения см. в разделе [Создание базы знаний](../data-quality-services/create-a-knowledge-base.md) или [Открытие базы знаний](../data-quality-services/open-a-knowledge-base.md).  
   
 3.  В **Списке доменов** на странице **Управление доменами** щелкните правой кнопкой мыши домен, с которым нужно связать новый домен, и выберите **Создать связанный домен**.  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 09/09/2017
   
 6.  При необходимости вы можете изменить имя или описание связанного домена на вкладке «Свойства домена».  
   
-7.  Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+7.  Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [Завершение операции по управлению доменами](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="Map"></a> Map two fields to linked domains  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Вы можете изменить имя и описание связанного домена.  
   
--   Чтобы изменить свойства домена **Тип данных**, **Использование ведущих значений**или **Формат вывода** , выберите домен, с которым установлена связь, и измените эти параметры на вкладке **Свойства домена** для этого домена. Нельзя изменить эти параметры в свойствах связанного домена. Дополнительные сведения см. в статье [Create a Domain](../data-quality-services/create-a-domain.md).  
+-   Чтобы изменить свойства домена **Тип данных**, **Использование ведущих значений**или **Формат вывода** , выберите домен, с которым установлена связь, и измените эти параметры на вкладке **Свойства домена** для этого домена. Нельзя изменить эти параметры в свойствах связанного домена. Дополнительные сведения см. в статье [Создание домена](../data-quality-services/create-a-domain.md).  
   
 -   Параметры на вкладках **Ссылочные данные**, **Правила домена**, **Значения домена**и **Связи на основе термина** страницы «Управление доменами» можно изменить для связанного домена или для домена, с которым он связан, и изменения будут унаследованы другим доменом.  
   
@@ -104,4 +104,3 @@ ms.lasthandoff: 09/09/2017
 -   При двойном щелчке связанного домена на любой вкладке «Управление доменами» домен открывается для изменения, а в его строке имени есть отметка, что домен является связанным.  
   
   
-

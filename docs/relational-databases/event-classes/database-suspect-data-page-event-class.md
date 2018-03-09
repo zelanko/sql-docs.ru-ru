@@ -2,9 +2,12 @@
 title: "Класс событий Database Suspect Data Page | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,19 +18,20 @@ helpviewer_keywords:
 - database mirroring [SQL Server], event notifications
 - Database Suspect Data Page event class
 ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
-caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 404b8a88ae9523573df9eab15f27357a0a494027
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: eb75bd05b77432f1ca68294bca96e79820f7642e
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page, класс событий
-  Класс событий **Database Suspect Data Page** регистрирует добавление страниц в таблицу [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) базы данных [msdb](../../relational-databases/databases/msdb-database.md). Он включается в трассировки для отслеживания появления подозрительных страниц.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Класс событий **Database Suspect Data Page** регистрирует добавление страниц в таблицу [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) базы данных [msdb](../../relational-databases/databases/msdb-database.md). Он включается в трассировки для отслеживания появления подозрительных страниц.  
   
 > [!NOTE]  
 >  Данное событие возникает асинхронно по отношению к вставке соответствующей строки в таблицу **suspect_pages** . Таким образом, прослушивающее это событие задание даже может не сразу обнаружить соответствующую запись в таблице **suspect_pages** .  
@@ -36,11 +40,11 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="database-suspect-data-page-event-class-data-columns"></a>Столбцы данных класса событий Database Suspect Data Page  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|Идентификатор базы данных, для которой возникло событие подозрительной страницы. Это то же самое, что столбец **database_id** таблицы **suspect_pages** .|3|Да|  
-|**EventClass**|**int**|Событие имеет тип 213.|27|Нет|  
-|**EventSequence**|**int**|Порядковый номер класса событий в пакете.|51|Нет|  
+|**EventClass**|**int**|Событие имеет тип 213.|27|нет|  
+|**EventSequence**|**int**|Порядковый номер класса событий в пакете.|51|нет|  
 |**SPID**|**int**|Идентификатор задачи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , при выполнении которой возникла подозрительная страница.|12|Да|  
 |**StartTime**|**datetime**|Время возникновения события.|14|Да|  
 |**ObjectID**|**int**|Идентификатор файла базы данных, содержащего подозрительную страницу. Это то же самое, что столбец **file_id** таблицы **suspect_pages** .|22|Да|  

@@ -1,29 +1,30 @@
 ---
 title: "Свойство URL-адреса (RDS) | Документы Microsoft"
-ms.prod: sql-non-specified
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
 helpviewer_keywords:
 - URL property [ADO]
 ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0f050d414dce5afcdfff8457e93505068cb7d8d9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: feda106c2ce5450fa86550dbc83fd40c928c1510
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="url-property-rds"></a>Свойство URL-адреса (RDS)
 Указывает строку, содержащую относительный или абсолютный URL-адрес.  
@@ -48,16 +49,15 @@ Run time: DataControl.URL="Server"
  *DataControl*  
  Объектную переменную, которая представляет **DataControl** объекта.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Как правило, URL-адрес указывает файл Active Server Page (.asp), который может создавать и возвращать [записей](../../../ado/reference/ado-api/recordset-object-ado.md). Таким образом, пользователь может получить **записей** без вызова сервере [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) программы пользовательский бизнес-объект, или объект.  
   
  Если **URL-адрес** задал свойство [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) будет передать изменения в расположении, указанном в URL-адресе.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также:  
- [Пример свойства URL-адреса (VBScript)](../../../ado/reference/rds-api/url-property-example-vbscript.md)
-
+## <a name="see-also"></a>См. также  
+ [Пример свойства URL (VBScript)](../../../ado/reference/rds-api/url-property-example-vbscript.md)
 
 

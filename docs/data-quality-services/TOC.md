@@ -1,5 +1,5 @@
 # [Обзор](data-quality-services.md)  
-# [Новые и недавно обновленные статьи](new-updated-data-quality-services.md)
+# [Новые и обновленные Статьи](new-updated-data-quality-services.md)
 
 # Понятия и возможности
 ## [Общие сведения о службах Data Quality Services](introduction-to-data-quality-services.md)  

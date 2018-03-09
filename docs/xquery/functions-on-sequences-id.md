@@ -3,8 +3,11 @@ title: "Функция ID (XQuery) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ helpviewer_keywords:
 - fn:id function
 - id function
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
-caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 341693aa368bc92e5176570711541ab6c217cb88
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 963e5eb2c2b0ddaec5674f2f7c5f930ed6c34806
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="functions-on-sequences---id"></a>Функции над последовательностями - идентификатор
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Возвращает последовательность узлов элемента со значениями xs: ID, которые совпадают со значениями из одного или нескольких значений xs: IDREF, предоставленное в *$arg*.  
   
@@ -45,7 +47,7 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  Одно или несколько значений xs:IDREF.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Результатом функции является последовательность элементов в экземпляре XML, в порядке документов, имеющих значение xs:ID, равное одному или нескольким значениям xs:IDREF в списке кандидатов xs:IDREF.  
   
  Если значение xs:IDREF не совпадает ни с одним элементом, функция возвращает пустую последовательность.  
@@ -183,12 +185,11 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>Ограничения реализации  
  Существуют следующие ограничения:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]не поддерживает версии с двумя аргументами **id()**.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не поддерживает версии с двумя аргументами **id()**.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Аргумент типа требуется **id()** быть подтипом xs:IDREF*.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Аргумент типа требуется **id()** быть подтипом xs:IDREF*.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции над последовательностями](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
   
   
-

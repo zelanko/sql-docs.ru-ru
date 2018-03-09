@@ -3,29 +3,29 @@ title: "Сохранение выбранных таблиц в диаграмм
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- saving tables
+helpviewer_keywords: saving tables
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 88c9d4b8fc33bcbd7666c09505be752f4c762718
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8aeb2b008412f8e9f40ba1879047c5f0e0b280b9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>Сохранение выбранных таблиц в диаграмме (визуальные инструменты для баз данных)
-Если нет необходимости сохранять все изменения, внесенные в диаграмму базы данных, можно сохранить определенную таблицу или набор таблиц.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Если нет необходимости сохранять все изменения, внесенные в диаграмму базы данных, можно сохранить определенную таблицу или набор таблиц.  
   
 ### <a name="to-save-selected-tables"></a>Сохранение выбранных таблиц  
   
@@ -45,4 +45,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
 [Работа с диаграммами баз данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
-

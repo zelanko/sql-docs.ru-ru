@@ -1,10 +1,13 @@
 ---
-title: "«Веб-служба» | Документы Microsoft"
+title: "Задача \"Веб-служба\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -17,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-caps.latest.revision: 57
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: d8ebe6e3486cb13440a66383c518c9d306f2984f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 4cadb534bd6ddfca7df61e316c6d6cabc669a9c1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="web-service-task"></a>Задача «Веб-служба»
   Задача «Веб-служба» выполняет метод веб-службы. Возможно использование задачи «Веб-служба» в следующих целях:  
@@ -72,7 +74,7 @@ ms.lasthandoff: 08/11/2017
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующем разделе:  
   
--   [Страница "Выражения"](../../integration-services/expressions/expressions-page.md)  
+-   [Страница «Выражения»](../../integration-services/expressions/expressions-page.md)  
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
@@ -88,7 +90,7 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Параметры  
  **HTTPConnection**  
- Выберите диспетчер соединений из списка или нажмите кнопку \< **новое подключение...** > для создания нового соединения диспетчера.  
+ Выберите диспетчер соединений из списка или щелкните \<**Создать соединение…**>, чтобы создать его.  
   
 > [!IMPORTANT]  
 >  Диспетчер HTTP-соединений поддерживает только анонимную проверку подлинности и обычную проверку подлинности. Проверка подлинности Windows не поддерживается.  
@@ -122,7 +124,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Description**  
+ **Описание**  
  Введите описание задачи веб-службы.  
   
  **Загрузить язык WSDL**  
@@ -155,7 +157,7 @@ ms.lasthandoff: 08/11/2017
  **Переменная**  
  Установите флажки, чтобы использовать переменные для входных данных.  
   
- **Значение**  
+ **Value**  
  Если установлены флажки «Переменная», выберите переменные из списка для входных данных; в противном случае введите значения входных данных вручную.  
   
 ## <a name="web-service-task-editor-output-page"></a>Редактор задачи «Веб-служба» (страница «Вывод»)
@@ -174,16 +176,15 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="outputtype--file-connection"></a>OutputType = Соединение с файлом  
  **Файл**  
- Выберите из списка диспетчер подключения файлов или нажмите кнопку \< **новое подключение...** > для создания нового соединения диспетчера.  
+ Выберите диспетчер подключений файлов из списка или щелкните \<**Создать соединение…**>, чтобы создать его.  
   
  **См. также:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = Переменная  
  **Переменная**  
- Выберите переменную из списка или нажмите кнопку \< **создать переменную...** > для создания новой переменной.  
+ Выберите переменную из списка или нажмите кнопку \<**Создать переменную…**>, чтобы создать переменную.  
   
- **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **См. также**: [Переменные в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>См. также  
  Видео [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=259642)(Как вызвать веб-службы с помощью задачи "Веб-служба" — видеоматериал SQL Server) на technet.microsoft.com.  
-

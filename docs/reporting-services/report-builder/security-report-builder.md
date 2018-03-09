@@ -2,26 +2,26 @@
 title: "Безопасность (построитель отчетов) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7e6f09ff050246777e307f73280c764dd6da3ad7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fc8d7563067160dd011835cf201ff6e5eec8ec83
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="security-report-builder"></a>Безопасность (построитель отчетов)
   Построитель отчетов — это клиентское приложение для создания отчетов, предназначенное для работы с сервером отчетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Сервер отчетов может быть настроен для работы в собственном режиме как автономный сервер или для работы в режиме интеграции с SharePoint для поддержки отчетов на сайте SharePoint.  
@@ -121,9 +121,8 @@ ms.lasthandoff: 08/09/2017
  После публикации элементов на сервере отчетов администратор сервера отчетов может помочь настроить для них безопасность, установив безопасность на основе ролей или безопасность на уровне папок и элементов. Дополнительные сведения см. в разделе [Защищенные отчеты и ресурсы](../../reporting-services/security/secure-reports-and-resources.md) документации к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка и удаление построителя отчетов](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   
-

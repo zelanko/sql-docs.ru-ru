@@ -1,29 +1,30 @@
 ---
 title: "Изменение данных в темпоральной таблице с системным управлением версиями | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/28/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b3f59affdbe29e3dddf777b22322a5503e69caa1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 9a9e18a7fb99785077d48df26f7ee40c19d45842
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>Изменение данных в темпоральной таблице с системным управлением версиями
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Данные в темпоральной таблице с системным управлением версиями изменяются с помощью инструкций DML. Но нужно помнить об одном важном отличии: данные в столбце периода нельзя изменять напрямую. Когда данные изменяются, они версионируются (предыдущая версия каждой измененной строки добавляется в таблицу журнала). При удалении данных используется логическое удаление — из текущей таблицы строка перемещается в таблицу журнала (строка не удаляется безвозвратно).  
   
@@ -201,4 +202,3 @@ WHEN NOT MATCHED THEN
  [Остановка системного управления версиями в темпоральной таблице с системным управлением версиями](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
-

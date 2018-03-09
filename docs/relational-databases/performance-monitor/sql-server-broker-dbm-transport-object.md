@@ -2,32 +2,34 @@
 title: "Брокер SQL Server, объект DBM Transport | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Broker / DBM Transport object
 - SQLServer:Broker/DBM Transport
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
-caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0bad82d13370dfba9e1067986d1f1789ecf006ec
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "34"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 2939dbbd505021da7a8623c5671ad7bd3063cc7a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>Брокер SQL Server, объект DBM Transport
-  В объекте производительности **Broker/DBM Transport** содержатся счетчики производительности, сообщающие сведении о работе в сети служб Service Broker и зеркального отображения баз данных. В следующей таблице перечислены счетчики этого объекта.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект производительности **Broker/DBM Transport** содержит счетчики производительности, сообщающие сведении о работе в сети компонента Service Broker и зеркального отображения баз данных. В следующей таблице перечислены счетчики этого объекта.  
   
-|Счетчик «SQL Server: Service Broker / транспорт зеркального отображения баз данных»|Описание|  
+|Счетчик «SQL Server: Service Broker / транспорт зеркального отображения баз данных»|Description|  
 |------------------------------------------------|-----------------|  
 |**Текущее число полученных байт**|Этот счетчик сообщает количество байт, считанных текущими запущенными транспортными операциями приема.|  
 |**Текущее число отправленных байт**|Этот счетчик сообщает количество байт во фрагментах сообщений, которые в текущей момент посылаются по сети.|  

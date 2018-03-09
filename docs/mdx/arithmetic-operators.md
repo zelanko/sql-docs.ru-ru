@@ -2,32 +2,31 @@
 title: "Арифметические операторы | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- arithmetic operators
+dev_langs: kbMDX
+helpviewer_keywords: arithmetic operators
 ms.assetid: 1dff3e20-fe9d-4155-bf06-27d6458188e9
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 6e835905fb1d51d4918c3d382ad6268925d469e4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bc3adf599f92a74dd996a0ef090f6f42ab1fba0d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="arithmetic-operators"></a>Арифметические операторы
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Арифметические операторы в многомерных выражениях можно использовать для любых арифметических вычислений, в том числе сложения, вычитания, умножения и деления.  
   
@@ -35,10 +34,10 @@ ms.lasthandoff: 08/02/2017
   
 |Оператор|Description|  
 |--------------|-----------------|  
-|[+ (Сложение)](../mdx/add-mdx.md)|складывает два числа.|  
+|[+ (сложение)](../mdx/add-mdx.md)|складывает два числа.|  
 |[/ (Деление)](../mdx/divide-mdx-operator-reference.md)|Делит одно число на другое.|  
-|[* (Умножение)](../mdx/multiply-mdx.md)|Перемножает два числа.|  
-|[-(Вычитание)](../mdx/subtract-mdx.md)|Выполняет вычитание двух чисел.|  
+|[* (умножение)](../mdx/multiply-mdx.md)|Перемножает два числа.|  
+|[- (вычитание)](../mdx/subtract-mdx.md)|Выполняет вычитание двух чисел.|  
 |^ (возведение в степень)|Возводит одно число в степень, указанную другим числом.|  
   
 > [!NOTE]  
@@ -58,4 +57,3 @@ ms.lasthandoff: 08/02/2017
  [Операторы &#40; Синтаксис многомерных Выражений &#41;](../mdx/operators-mdx-syntax.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Настройка сервера для выполнения политики \"Отключено по умолчанию\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-query-tuning
 ms.tgt_pltfrm: 
@@ -12,19 +15,19 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 41c3022d-ab13-443e-ac64-ba1d64584f79
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: efc87d23faa17dca299560764b0e26bdbb05ff9a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b92cd0c1cebaacca432cb45422682f12423f67ea
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-1-2---configure-a-server-to-run-the-off-by-default-policy"></a>Занятие 1.2. Настройка сервера для выполнения политики "Отключено по умолчанию"
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Теперь есть политика с именем «Отключено по умолчанию». В этой задаче производится проверка сервера на соответствие требованиям политики «Отключено по умолчанию».  
   
 ### <a name="to-run-the-off-by-default-policy"></a>Запуск политики «Отключено по умолчанию»  
@@ -54,4 +57,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

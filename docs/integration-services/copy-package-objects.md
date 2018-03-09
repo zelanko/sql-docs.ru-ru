@@ -1,10 +1,13 @@
 ---
-title: "Копирование объектов пакета | Документы Microsoft"
+title: "Копирование объектов пакета | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ helpviewer_keywords:
 - data flow [Integration Services], copying objects
 - connection managers [Integration Services], copying
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
-caps.latest.revision: 14
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 61e0e7c321323bba74e05afe4d28ce7f525843af
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 853125dfe07491f361086e1bdf3b536cf86a7274
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="copy-package-objects"></a>Копирование объектов пакета
   В этом разделе описано, как копировать элементы потока управления, потока данных и диспетчеров соединения внутри пакета или между пакетами.  
@@ -66,11 +68,10 @@ ms.lasthandoff: 08/03/2017
   
 6.  Щелкните правой кнопкой мыши **Диспетчеры соединений** и выберите **Вставить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поток управления](../integration-services/control-flow/control-flow.md)   
  [Поток данных](../integration-services/data-flow/data-flow.md)   
- [Службы Integration Services &#40; Службы SSIS &#41; Подключения](../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Соединения в службах Integration Services (SSIS)](../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [Копирование элементов проекта](http://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   
   
-

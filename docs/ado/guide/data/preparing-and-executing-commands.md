@@ -3,7 +3,7 @@ title: "Для подготовки и выполнения команд | До�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Command object [ADO], preparing and executing commands
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e9c8bce6735f6fb7db1f0c279514aca3420d3ba1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f566d3fb0c639e5f7cb7214d8cf467312ae7f28d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="preparing-and-executing-commands"></a>Для подготовки и выполнения команд
 Команды, инструкции для поставщика для выполнения некоторых операций, выполняемых в источнике данных. Инструкция SQL, например, — команда поставщика данных Microsoft SQL. В ADO, обычно представлены команды **команда** объектов, несмотря на то, что простых команд могут выдаваться через **подключения** или **записей** объектов.  
@@ -45,11 +44,10 @@ ms.lasthandoff: 09/09/2017
   
 -   [Параметры объекта Command](../../../ado/guide/data/command-object-parameters.md)  
   
--   [Вызов хранимой процедуры с помощью команды](../../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)  
+-   [Вызов хранимой процедуры с использованием команды](../../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)  
   
 -   [Вызов хранимой процедуры в качестве метода объекта подключения](../../../ado/guide/data/calling-a-stored-procedure-as-a-method-on-a-connection-object.md)  
   
 -   [Именованные команды](../../../ado/guide/data/named-commands.md)  
   
--   [Передача параметров в именованную команду](../../../ado/guide/data/passing-parameters-to-a-named-command.md)
-
+-   [Передача параметров именованной команде](../../../ado/guide/data/passing-parameters-to-a-named-command.md)

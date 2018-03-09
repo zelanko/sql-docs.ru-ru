@@ -3,7 +3,7 @@ title: "Пример набора ячеек (VB) | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Cellset object [ADO MD], Visual Basic example
 ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 42b76d40fe98b142e85ee70a5e902397e58a4dab
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ac5cf860d4bacb10e79de25304e950849ff30093
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cellset-example-vb"></a>Пример набора ячеек (Visual Basic)
 Этот проект Visual Basic демонстрирует основные принципы использования ADO MD для доступа к данным куба. Он отображает заголовки для заголовков столбцов и строк, а затем отображаются в формате значений, определенных ячеек в наборе ячеек.  
@@ -122,4 +121,3 @@ Error_cmdCellSettoDebugWindow_Click:
    Exit Sub  
 End Sub  
 ```
-

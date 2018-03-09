@@ -2,28 +2,29 @@
 title: "Расширение буферного пула | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
-caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "23"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: e1d856188d2266ebb7321c0f0e75ee7f23950dff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0b4c2b33ef0dcdee0ac79340760790ba8938b431
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="buffer-pool-extension"></a>Расширение буферного пула
-  Расширение буферного пула, появившееся в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], обеспечивает сквозную интеграцию твердотельных накопителей (SSD) в качестве расширения ОЗУ (NvRAM) для буферного пула компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и позволяет значительно повысить пропускную способность ввода-вывода. Расширение буферного пула доступно не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+# <a name="buffer-pool-extension"></a>Buffer Pool Extension
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Расширение буферного пула, появившееся в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], обеспечивает сквозную интеграцию твердотельных накопителей (SSD) в качестве расширения ОЗУ (NvRAM) для буферного пула компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и позволяет значительно повысить пропускную способность ввода-вывода. Расширение буферного пула доступно не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## <a name="benefits-of-the-buffer-pool-extension"></a>Преимущества расширения буферного пула  
  Главное назначение базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — хранение и поиск данных, поэтому интенсивное использование операций дискового ввода-вывода — это основное свойство компонента Database Engine. Так как дисковые операции ввода-вывода могут потреблять много ресурсов и требовать относительно длительного времени для выполнения, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] особое внимание уделено рациональному использованию операций ввода-вывода. Буферный пул служит основным источником размещения памяти [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Управление буфером — это ключевой компонент в достижении этой рациональности. Компонент управления буферами состоит из двух механизмов: диспетчера буферов для доступа к страницам баз данных и их обновления и буферного пула для сокращения операций файлового ввода-вывода базы данных.  
@@ -92,14 +93,14 @@ ms.lasthandoff: 08/02/2017
   
  Доступны следующие события Xevent.  
   
-|XEvent|Описание|Параметры|  
+|XEvent|Description|Параметры|  
 |------------|-----------------|----------------|  
 |sqlserver.buffer_pool_extension_pages_written|Срабатывает, когда страница или группа страниц извлекаются из буферного пула и записываются в файл расширения буферного пула.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_extension_pages_read|Возникает при считывании страницы из файла расширения буферного пула в буферный пул.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_extension_pages_evicted|Возникает, когда страница извлекается из файла расширения буферного пула.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_eviction_thresholds_recalculated|Возникает при вычислении порогового значения вытеснения.|*warm_threshold*<br /><br /> *cold_threshold*<br /><br /> *pages_bypassed_eviction*<br /><br /> *eviction_bypass_reason*<br /><br /> *eviction_bypass_reason_description*|  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
@@ -110,4 +111,3 @@ ms.lasthandoff: 08/02/2017
 |Наблюдение за расширением буферного пула|[sys.dm_os_buffer_descriptors (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)<br /><br /> [Счетчики производительности](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|  
   
   
-

@@ -3,8 +3,11 @@ title: "TRY_PARSE (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - TRY_PARSE function
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
-caps.latest.revision: 16
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 735d1e38b81a08da50cba340b0e5663d6e6d5755
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 0b26f46431909dd4fbfaa820db8c3869333f555d
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="tryparse-transact-sql"></a>TRY_PARSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Возвращает результат выражения, преобразованный в запрошенный тип данных, или значение NULL, если привести тип в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не удается. Используйте инструкцию TRY_PARSE только для преобразования данных из строкового типа в типы даты или времени и числовые типы.  
   
@@ -123,7 +125,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |eesti|Эстонский|1061|Et-EE|  
 |latviešu|Латышский|1062|lv-LV|  
 |lietuvių|Литовский|1063|lt-LT|  
-|Português (Brasil)|Бразильский|1046|pt-BR|  
+|Português (Brasil)|Бразильский португальский|1046|pt-BR|  
 |繁體中文|Китайский (традиционный)|1028|zh-TW|  
 |한국어|Корейский|1042|Ko-KR|  
 |简体中文|Китайский (упрощенный)|2052|zh-CN|  
@@ -194,4 +196,3 @@ False
  [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   
-

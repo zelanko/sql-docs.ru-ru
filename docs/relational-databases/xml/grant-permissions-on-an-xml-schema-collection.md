@@ -2,9 +2,12 @@
 title: "Предоставление разрешений на коллекцию схем XML | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -13,19 +16,20 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-caps.latest.revision: 32
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7c89c6a8322e8922a7d0a2d59ea686a2d703947a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 686fe65b9749fbafd2052d7a531f11aae44c6b65
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Предоставление разрешений на коллекции схем XML
-  На создание коллекции схем XML, а также на объекты коллекции схем XML можно предоставлять разрешения.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+На создание коллекции схем XML, а также на объекты коллекции схем XML можно предоставлять разрешения.  
   
 ## <a name="granting-permission-to-create-an-xml-schema-collection"></a>Предоставление разрешений на создание коллекции XML-схем  
  Для создания коллекции XML-схем требуются следующие разрешения.  

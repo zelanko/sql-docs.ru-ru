@@ -2,13 +2,13 @@
 title: "Синхронизация баз данных Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +17,19 @@ helpviewer_keywords:
 - Synchronize Database Wizard
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
-caps.latest.revision: 40
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 3bb86dbcb264f7073847cce62dc9c3e200208821
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ad1667e587056d10fd1b30b0b804366dbd5dfa14
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="synchronize-analysis-services-databases"></a>Синхронизация баз данных служб Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] имеют функцию синхронизации баз данных, которая делает две базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] идентичными, копируя данные и метаданные из базы данных на исходном сервере в базу данных на целевом сервере. Используйте функцию синхронизации баз данных для выполнения следующих задач:  
   
 -   Развертывание базы данных с промежуточного сервера на рабочий.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 09/01/2017
 > [!NOTE]  
 >  Следующие технические документы, написанные для предыдущих версий служб Analysis Services, продолжают действовать в отношении масштабируемых многомерных решений, построенных с помощью SQL Server 2012. Дополнительные сведения см. в разделах [Горизонтальное масштабирование запросов для служб Analysis Services](http://go.microsoft.com/fwlink/?LinkId=253136) и [Горизонтальное масштабирование запросов для баз данных только для чтения в службах Analysis Services](http://go.microsoft.com/fwlink/?LinkId=253137.).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  На сервере назначения (или целевом сервере), с которого инициируется синхронизация баз данных, необходимо быть членом роли администратора сервера служб Analysis Services. На исходном сервере учетная запись пользователя Windows должна иметь разрешения на полный доступ в базе данных-источнике. При синхронизации базы данных в интерактивном режиме помните, что синхронизация выполняется в контексте безопасности удостоверения пользователя Windows. Если у учетной записи нет доступа к отдельным объектам, эти объекты будут исключены из операции. Дополнительные сведения о требуемых ролях администратора сервера и разрешениях базы данных см. в разделах [Предоставление прав администратора сервера для экземпляра служб Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) и [Предоставление разрешений базы данных (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md).  
   
  Чтобы разрешить удаленные соединения между двумя экземплярами по умолчанию, TCP-порт 2383 должен быть открыт на обоих серверах. Дополнительные сведения о создании исключения в брандмауэре Windows см. в разделе [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
@@ -195,8 +195,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>См. также  
  [Элемент Synchronize (XMLA)](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
- [Развертывание решений модели с помощью XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
- [Развертывание решений модели с использованием мастера развертывания](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [Развертывание решений модели с использованием XML для Аналитики](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
+ [Развертывание решений модели с помощью мастера развертывания](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   
-

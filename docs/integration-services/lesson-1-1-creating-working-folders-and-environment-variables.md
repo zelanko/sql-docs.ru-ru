@@ -1,10 +1,13 @@
 ---
-title: "Шаг 1: Создание рабочих папок и переменных среды | Документы Microsoft"
+title: "Шаг 1. Создание рабочих папок и переменных среды | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: de69cfa9d63daa6cd5638774aba2540fd2ffdbaa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 06b762b3411f13eff291746467d9217487e94655
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Урок 1-1-Создание рабочих папок и переменных среды
+# <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Занятие 1–1. Создание рабочих папок и переменных среды
 В этой задаче предстоит создать рабочую папку (C:\DeploymentTutorial) и новые системные переменные среды (`DataTransfer` и `LoadXMLData`), которые будут использоваться в последующих задачах учебника.  
   
 Рабочая папка является корневой папкой диска C. Если необходимо, используйте другой диск или расположение. Однако необходимо обратить внимание на это расположение и использовать его в дальнейшем всегда, когда в учебнике встречается ссылка на рабочую папку DeploymentTutorial.  
@@ -94,4 +96,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

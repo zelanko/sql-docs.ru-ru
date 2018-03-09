@@ -2,29 +2,30 @@
 title: "Настройка топологии (одноранговая репликация) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.p2pwizard.peers.f1
+f1_keywords: sql13.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9a41d0a93fcee491dad6bc2b310720e65f9ee607
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "29"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: ba3f308aaa3e5eea99a7cae23630c8462414a1fb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Настройка топологии (одноранговая репликация)
-  Для выполнения таких наиболее типичных задач конфигурации, как добавление и удаление узлов, а также добавления новых соединений между существующими узлами, служит страница **Настройка топологии** . Узел, выбранный на странице **Публикация** этого мастера, отображается в области конструктора. Чтобы задать параметры конфигурации, щелкните правой кнопкой мыши узел, соединение или область конструктора.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Для выполнения таких наиболее типичных задач конфигурации, как добавление и удаление узлов, а также добавления новых соединений между существующими узлами служит страница **Настройка топологии**. Узел, выбранный на странице **Публикация** этого мастера, отображается в области конструктора. Чтобы задать параметры конфигурации, щелкните правой кнопкой мыши узел, соединение или область конструктора.  
   
 > [!NOTE]  
 >  Мастер настройки одноранговой топологии запрашивает сведения о топологии при закрытии этого мастера. Если этот мастер был закрыт и вновь открыт до того, как все узлы ответили на запрос на информацию, мастер, возможно, отобразит лишь часть сети.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="options"></a>Параметры  
  Страница **Настройка топологии** содержит элементы интерфейса и параметры, доступные при щелчке правой кнопкой мыши. В следующей таблице содержатся описания всех элементов интерфейса.  
   
-|Элемент интерфейса|Описание|  
+|Элемент интерфейса|Description|  
 |-----------------------|-----------------|  
 |Область конструктора|Отображает другие элементы интерфейса. Для добавления элементов щелкните правой кнопкой область конструктора.|  
 |![Первый узел в топологии](../../relational-databases/replication/media/p2pwizard-firstnode.gif "Первый узел в топологии")|Исходный узел в топологии. Новые узлы инициализируются с помощью копии базы данных публикации исходного узла.|  
@@ -87,6 +88,6 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Администрирование одноранговой топологии (программирование репликации на языке Transact-SQL)](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Одноранговая репликация транзакций](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

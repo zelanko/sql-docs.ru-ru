@@ -2,34 +2,32 @@
 title: "YTD (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- YTD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Ytd function
+f1_keywords: YTD
+dev_langs: kbMDX
+helpviewer_keywords: Ytd function
 ms.assetid: b77fdba2-d4a9-4271-8c21-c1f12eba526d
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 8f9d95aca057801c924ceec962f818c7e6f27869
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 99600f9684215a1147b5372c3e912040fb9f122f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="ytd-mdx"></a>Ytd (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает набор из одноуровневых элементов того же уровня, что и данный элемент, начиная с первого такого элемента и заканчивая данным элементом, в соответствии с ограничениями *год* уровня в измерении времени.  
   
@@ -44,7 +42,7 @@ Ytd( [ Member_Expression ] )
  *Member_Expression.*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если выражение элемента не указано, по умолчанию используется текущий элемент первой иерархии с уровнем типа *лет* в первом измерении типа *время* в группе мер.  
   
  **Ytd** функция — это функция ярлык для [PeriodsToDate](../mdx/periodstodate-mdx.md) функция которых равно свойство Type атрибута иерархии, на котором основан уровень *лет*. Таким образом, вызов `Ytd(Member_Expression)` эквивалентен вызову `PeriodsToDate(Year_Level_Expression,Member_Expression)`. Обратите внимание, что эта функция не будет работать, если свойство Type имеет значение *FiscalYears*.  
@@ -82,4 +80,3 @@ WHERE
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

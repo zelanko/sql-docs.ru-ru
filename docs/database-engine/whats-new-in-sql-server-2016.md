@@ -1,34 +1,33 @@
 ---
 title: "Новые возможности в ядре СУБД SQL Server 2016 | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
-- SQL2016_rc1
+ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-engine
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
 - Database Engine [SQL Server], what's new
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
-caps.latest.revision: 431
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "431"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 0e5018b6b111790d2ff0415180e0608798da44ac
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 687bddd3ce51c60e286cfa0e2634790a8a492500
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Новые возможности в ядре СУБД SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 В этом разделе описаны усовершенствования, представленные в выпуске [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  В этом выпуске появились новые средства и усовершенствования, которые расширяют возможности и повышают производительность архитекторов, разработчиков и администраторов, занимающихся проектированием, созданием и обслуживанием систем хранения данных.
 
@@ -137,7 +136,7 @@ ms.lasthandoff: 10/18/2017
 
 
 
-##### <a name="statistics"></a>Statistics
+##### <a name="statistics"></a>Статистика
 
 [Статистика для таблиц, оптимизированных для памяти,](../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md) теперь обновляется автоматически. Кроме того, выборка теперь является поддерживаемым методом сбора статистики, который позволяет избежать более затратного метода полного сканирования.
 
@@ -182,7 +181,7 @@ ms.lasthandoff: 10/18/2017
 
 Общие сведения см. в следующих разделах:
 
-- [Конструкции языка Transact-SQL, не поддерживаемые в выполняющейся в памяти OLTP](../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)
+- [Конструкции языка Transact-SQL, неподдерживаемые в In-Memory OLTP](../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)
 - [Неподдерживаемые функции SQL Server для выполняющейся в памяти OLTP](~/relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)
 
 
@@ -453,13 +452,12 @@ SQL Server 2016 Upgrade Advisor Preview — это автономное сред
 
  Вы можете скачать Upgrade Advisor Preview [здесь](https://www.microsoft.com/en-us/download/details.aspx?id=48119) или установить его с помощью установщика веб-платформы.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 [Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
  
-[Заметки о выпуске для SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
+[Заметки о выпуске SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
  
 [Установка средств управления SQL Server со средой SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
-
 
 
 

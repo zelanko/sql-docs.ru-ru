@@ -3,27 +3,28 @@ title: "SQLSetDescField и SQLSetDescRec (библиотека курсоров)
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLSetDescField function [ODBC], Cursor Library
 - SQLSetDescRec function [ODBC], Cursor Library
 ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0a2270562c702ab309f505f37de91aeef24518c9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ba3d5db821bbbfa287efb811db0ca616b01df244
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField и SQLSetDescRec (библиотека курсоров)
 > [!IMPORTANT]  
@@ -70,4 +71,3 @@ ms.lasthandoff: 09/09/2017
  Библиотека курсоров не поддерживает изменения поле SQL_DESC_BIND_TYPE в APD или Отменить при открытом курсоре. Поле SQL_DESC_BIND_TYPE можно изменить только в том случае, если курсор закрыт, и перед открытием нового курсора. Только поля дескриптора, что библиотека курсоров поддерживает изменения, когда курсор открыт, SQL_DESC_ARRAY_STATUS_PTR, SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR и SQL_DESC_ROWS_PROCESSED_ PTR.  
   
  Библиотека курсоров не поддерживает изменение поля SQL_DESC_COUNT Отменить после **SQLExtendedFetch** или **SQLFetchScroll** был вызван до закрытия курсора.
-

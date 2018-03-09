@@ -3,10 +3,12 @@ title: "SQL битом C: | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - bit data type [ODBC]
 - data conversions from SQL to C types [ODBC], bit
 ms.assetid: 0eeaab8b-ad82-4a36-b464-9a1211d5f72c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3b0cb6f2dacadde22ee78b6cbb4b9acc3e824630
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5432e5f4a47dde5b3ad64059a8f2eb1de9ba1691
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-to-c-bit"></a>SQL битом C:
 Идентификатор для типа данных bit ODBC SQL является:  
@@ -45,4 +46,3 @@ ms.lasthandoff: 09/09/2017
  [b] это размер соответствующие типы данных C.  
   
  При преобразовании в символьный C бит данных SQL возможными значениями являются «0» и «1».
-

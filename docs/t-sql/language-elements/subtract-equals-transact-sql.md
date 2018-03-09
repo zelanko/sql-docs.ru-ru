@@ -1,10 +1,13 @@
 ---
-title: "-= (Вычесть равно) (Transact-SQL) | Документы Microsoft"
+title: "-= (Назначение вычитания) (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,21 +19,23 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - compound operators, -=
+- assignment operators, -=
+- augmented operators, -=
 - -= (subtract equals)
+- -= (subtraction assignment)
 ms.assetid: 2a2056b5-1dfa-4ea8-8cfc-6331a2f94da9
-caps.latest.revision: 11
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d90b7030c76bae406ec2d764bf19c96202be9d86
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: e42283367d3035ce4d7fcaecb4f7c96bcb7fed68
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="--subtract-equals-transact-sql"></a>-= (ВЫЧЕСТЬ РАВНО) (Transact-SQL)
+# <a name="--subtraction-assignment-transact-sql"></a>-= (Назначение вычитания) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Вычитаются два числа, и задается значение для результата операции. Например, если переменная @x равно 35, @x -= 2 принимает исходное значение @x, вычитает 2 и задает @x новое значение (33).  
@@ -48,13 +53,12 @@ expression -= expression
 ## <a name="result-types"></a>Типы результата  
  Возвращает результат типа данных аргумента с более высоким приоритетом. Дополнительные сведения см. в разделе [Приоритет типов данных (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Дополнительные сведения см. в разделе [-&#40; Вычитание &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/subtract-transact-sql.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Составные операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
-

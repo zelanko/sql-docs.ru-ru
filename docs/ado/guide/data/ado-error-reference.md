@@ -3,7 +3,7 @@ title: "Справочник ошибок ADO | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - errors [ADO], ErrorValueEnum
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-caps.latest.revision: 4
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a25f9697d00a234bb98fe65eaaa2cd85520b45db
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2604f09ecffab3e0f5519731acffa00111af9677
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-errors"></a>Ошибок ADO
 **ErrorValueEnum** константа описывает значения ошибок ADO. Полный список этих перечислимых констант, включая значения, в разделе [ошибок ADO приложение б:](../../../ado/guide/appendixes/appendix-b-ado-errors.md). В этом разделе будет изучить некоторые из наиболее интересных ошибок с описаниями некоторых определенных ситуациях, которые могут вызывать их или решений для устранения проблемы. Оба **ErrorValueEnum** перечислены константы и короткий положительное десятичное число.
@@ -88,4 +87,3 @@ ms.lasthandoff: 09/09/2017
 |**3749**|**adErrFieldsUpdateFailed**|Не удалось обновить поля. Для получения дополнительных сведений проверьте **состояние** свойство объектов отдельного поля. Эта ошибка может возникать в двух случаях: при изменении **поле** значения объекта в процессе изменения или добавления записи в базе данных; и при изменении свойства **поле** сам объект.<br /><br /> **Запись** или **записей** не удалось выполнить обновление из-за проблемы с одним из полей в текущей записи. Перечисление **поля** коллекции и проверьте **состояние** свойства каждого поля, чтобы определить причину проблемы.|
 |**3750**|**adErrDenyNotSupported**|Поставщик не поддерживает ограничения управления доступом. Была предпринята попытка ограничить общий доступ к файлам и ваш поставщик не поддерживает концепцию.|
 |**3751**|**adErrDenyTypeNotSupported**|Поставщик не поддерживает запрошенный тип ограниченного использования программ для управления доступом. Была предпринята попытка установить общий доступ к файлам определенного типа ограничение, которое не поддерживается поставщиком. См. документацию поставщика, чтобы определить, поддерживаются ограничения доступа к файлам.|
-

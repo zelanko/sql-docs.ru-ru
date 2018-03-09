@@ -2,32 +2,30 @@
 title: "Использование агрегатных функций | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- aggregate functions [Analysis Services]
+helpviewer_keywords: aggregate functions [Analysis Services]
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: b22f964bbc9659187cf67320951b75d93cb89331
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 62fb5170cb4d1ea3b33e5bb080f56860d610a531
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="use-aggregate-functions"></a>Использование агрегатных функций
-  Если измерение используется для создания среза меры, то производится суммирование меры по иерархиям, содержащимся в этом измерении. Характер суммирования зависит от агрегатной функции, заданной для меры. Для большинства мер, содержащих числовые данные, агрегатная функция — **Sum**. Значение меры будет равно различным суммам в зависимости от того, какой уровень иерархии является активным.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Если измерение используется для создания среза меры, то производится суммирование меры по иерархиям, содержащимся в этом измерении. Характер суммирования зависит от агрегатной функции, заданной для меры. Для большинства мер, содержащих числовые данные, агрегатная функция — **Sum**. Значение меры будет равно различным суммам в зависимости от того, какой уровень иерархии является активным.  
   
  В службах Analysis Services каждая созданная мера поддерживается функцией агрегирования, определяющей операцию меры. Предопределенные типы агрегирования включают **Sum**, **Min**, **Max**, **Count**, **Distinct Count**и некоторые другие более специализированные функции. Кроме того, если необходимы агрегаты на основании сложных или пользовательских формул, можно создавать вычисления многомерных выражений вместо готовых функций агрегирования. Например, для определения меры для процентного значения следует использовать многомерное выражение с вычисляемой мерой. См. статью [Инструкция CREATE MEMBER (многомерные выражения)](../../mdx/mdx-data-definition-create-member.md).  
   
@@ -56,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 |**Min**|Полуаддитивная|Получает самое низкое значение для всех дочерних элементов.|  
 |**Max**|Полуаддитивная|Получает самое высокое значение для всех дочерних элементов.|  
 |**DistinctCount**|Неаддитивная|Получает количество всех уникальных дочерних элементов. Дополнительные сведения см. в подразделе [About Distinct Count Measures](../../analysis-services/multidimensional-models/use-aggregate-functions.md#bkmk_distinct) следующего раздела.|  
-|**Нет**|Неаддитивная|Статистическое вычисление не выполняется, и все значения для конечных и неконечных элементов в измерении получаются непосредственно из таблицы фактов для группы мер, содержащей эту меру. Если из таблицы фактов невозможно считать значение для элемента, то значение для этого элемента устанавливается равным NULL.|  
+|**None**|Неаддитивная|Статистическое вычисление не выполняется, и все значения для конечных и неконечных элементов в измерении получаются непосредственно из таблицы фактов для группы мер, содержащей эту меру. Если из таблицы фактов невозможно считать значение для элемента, то значение для этого элемента устанавливается равным NULL.|  
 |**ByAccount**|Полуаддитивная|Вычисляет агрегат в соответствии со статистической функцией, присвоенной типу счета для элемента измерения счетов. Если в группе мер не существует измерения типа счета, то обрабатывается так же, как статистическая функция **None** .<br /><br /> Дополнительные сведения об измерениях счетов см. в разделе [Создание учетной записи Finance с измерением типа "родитель-потомок"](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).|  
 |**AverageOfChildren**|Полуаддитивная|Вычисляет среднее значений всех непустых дочерних элементов.|  
 |**FirstChild**|Полуаддитивная|Получает значение первого дочернего элемента.|  
@@ -76,7 +74,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>См. также:  
  [Меры и их группы](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../../mdx/mdx-function-reference-mdx.md)   
- [Определить полуаддитивный режим](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
+ [Определение полуаддитивного режима](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   
-

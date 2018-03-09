@@ -1,31 +1,33 @@
 ---
-title: "Catalog.delete_customized_logging_level | Документы Microsoft"
+title: "catalog.delete_customized_logging_level | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 0aec1e34-f30b-4e5f-bba1-c26665cf2da6
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a2c53009bfbd2f0876d4cf0a01cf8fa2b5bc738e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e0247caaf6a2a14fc2d3742edbc3c8bae5a3270c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="catalogdeletecustomizedlogginglevel"></a>Catalog.delete_customized_logging_level
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="catalogdeletecustomizedlogginglevel"></a>catalog.delete_customized_logging_level
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Удаляет существующий пользовательский уровень ведения журнала. Дополнительные сведения о пользовательских уровней ведения журнала см. в разделе [службы Integration Services &#40; Службы SSIS &#41; Ведение журнала](../../integration-services/performance/integration-services-ssis-logging.md).  
+  Удаляет существующий настроенный уровень ведения журнала. Дополнительные сведения о настроенных уровнях ведения журналов см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -35,12 +37,12 @@ delete_customized_logging_level [ @level_name = ] level_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @level_name =] *level_name*  
- Имя существующего пользовательский уровень ведения журнала для удаления.  
+ [ @level_name = ] *level_name*  
+ Название существующего настроенного уровня ведения журнала, который нужно удалить.  
   
- *Level_name* — **nvarchar(128)**.  
+ Параметр *level_name* имеет тип **nvarchar(128)**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="return-codes"></a>Коды возврата  
  0 (успешное завершение)  
@@ -48,9 +50,9 @@ delete_customized_logging_level [ @level_name = ] level_name
  В случае отказа хранимой процедуры выдается ошибка.  
   
 ## <a name="result-set"></a>Результирующий набор  
- Нет  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   Членство в роли базы данных **ssis_admin**  
@@ -60,7 +62,6 @@ delete_customized_logging_level [ @level_name = ] level_name
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
  В следующем списке описываются условия, приводящие к сбою хранимой процедуры.  
   
--   Пользователь не имеет необходимых разрешений.  
+-   У пользователя отсутствуют необходимые разрешения.  
   
   
-

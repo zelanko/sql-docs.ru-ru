@@ -2,13 +2,13 @@
 title: "Создание многомерных моделей с помощью SQL Server Data Tools (SSDT) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - projects [Analysis Services]
 - solutions [Analysis Services]
 ms.assetid: 132ed779-3ec8-4734-9698-802116d1b017
-caps.latest.revision: 63
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 805970696879c47c203deb3dc423300f5274aa1d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3f6516c119723c537d64481d17692d504df7f651
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>Создание многомерных моделей с помощью SQL Server Data Tools (SSDT)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предусмотрены две различные среды для построения и развертывания решений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , а также для управления ими: [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Обе эти среды реализуют систему проектов. Дополнительные сведения о проектах Visual Studio см. в разделе [Проекты как контейнеры](http://go.microsoft.com/fwlink/?LinkId=63960) в библиотеке сети MSDN.  
   
--   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] является средой разработки на базе среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2010, используемой для создания и изменения решений бизнес-аналитики. При помощи среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]можно создавать проекты служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , содержащие определения объектов (кубов, измерений и т. д.) служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , которые хранятся в XML-файлах, содержащих элементы языка сценариев служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ASSL). Эти проекты содержатся в решениях, где также содержатся проекты из других компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , включая службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]можно разрабатывать проекты служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] как часть решения, которое не зависит от какого-либо конкретного экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Во время разработки объекты могут быть развернуты на экземпляре на тестовом сервере с целью проверки, после чего этот же проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может быть использован для развертывания объектов в экземплярах на одном или нескольких промежуточных или рабочих серверах. Проекты и элементы в решении, которое включает в себя службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , могут интегрироваться с системой управления версиями исходного кода, например [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual SourceSafe. Дополнительные сведения о создании проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] с использованием служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]см. в разделе [Создание проекта служб Analysis Services (среда SSDT)](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md). Средой [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] можно также воспользоваться, чтобы напрямую подсоединиться к существующему экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для создания и изменения объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , без работы с проектом и без хранения определений объекта в XML-файлах. Дополнительные сведения см. в разделах [Базы данных многомерных моделей (службы SSAS)](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)и [Подключение в режиме "в сети" к базе данных служб Analysis Services](../../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md).  
+-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] является средой разработки на базе среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2010, используемой для создания и изменения решений бизнес-аналитики. При помощи среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]можно создавать проекты служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , содержащие определения объектов (кубов, измерений и т. д.) служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , которые хранятся в XML-файлах, содержащих элементы языка сценариев служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ASSL). Эти проекты содержатся в решениях, где также содержатся проекты из других компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , включая службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]можно разрабатывать проекты служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] как часть решения, которое не зависит от какого-либо конкретного экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Во время разработки объекты могут быть развернуты на экземпляре на тестовом сервере с целью проверки, после чего этот же проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может быть использован для развертывания объектов в экземплярах на одном или нескольких промежуточных или рабочих серверах. Проекты и элементы в решении, которое включает в себя службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , могут интегрироваться с системой управления версиями исходного кода, например [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual SourceSafe. Дополнительные сведения о создании проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] с использованием служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]см. в разделе [Создание проекта служб Analysis Services (среда SSDT)](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md). Средой [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] можно также воспользоваться, чтобы напрямую подсоединиться к существующему экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для создания и изменения объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , без работы с проектом и без хранения определений объекта в XML-файлах. Дополнительные сведения см. в разделе [многомерных баз данных модели ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md), и [Connect in Online Mode to базы данных служб Analysis Services](../../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md).  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] представляет собой среду управления и администрирования, которая используется главным образом для администрирования экземпляров служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]позволяет управлять объектами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (создавать резервные копии, выполнять обработку и т. д.), а также создавать новые объекты напрямую в существующем экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью скриптов XMLA. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предоставляет проект скриптов сервера анализа данных, в котором можно выполнять разработку и сохранение скриптов, созданных с использованием многомерных выражений (MDX), расширений интеллектуального анализа данных (DMX) и XML для аналитики (XMLA). Обычно проекты скриптов сервера анализа данных используются для выполнения задач по управлению или для повторного создания объектов, например баз данных или кубов, в экземплярах служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Подобные проекты могут сохраняться как часть решения и интегрироваться с контролем исходного кода. Дополнительные сведения о создании проекта скриптов сервера анализа данных в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] с помощью [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]см. в разделе [Проект скриптов служб Analysis Services в среде SQL Server Management Studio](../../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md).  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 09/01/2017
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] содержит следующие проекты в типе «Проекты бизнес-аналитики».  
   
-|Проект|Description|  
+|Проект|Описание|  
 |-------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Проект|Содержит определения объектов для одиночной базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Дополнительные сведения о создании проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см. в разделе [Создание проекта служб Analysis Services (среда SSDT)](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md).|  
 |Импорт базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 2008|Предоставляет мастер, который можно использовать для создания нового проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] путем импортирования определений объектов из существующей базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
@@ -53,7 +53,7 @@ ms.lasthandoff: 09/01/2017
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] также содержит несколько типов проектов, предназначенных для различных типов запросов или скриптов, как показано в следующей таблице.  
   
-|Проект|Description|  
+|Проект|Описание|  
 |-------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Сценарии|Содержит скрипты расширений интеллектуального анализа данных, многомерных выражений и XML для аналитики для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], а также соединения с экземплярами служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , в которых эти скрипты могут выполняться. Дополнительные сведения см. в разделе [Проект скриптов служб Analysis Services в среде SQL Server Management Studio](../../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md).|  
 |Скрипты SQL Server Compact|Содержит скрипты SQL для SQL Server Compact, а также соединения с экземплярами SQL Server Compact, в которых могут выполняться эти скрипты.|  
@@ -78,7 +78,7 @@ ms.lasthandoff: 09/01/2017
   
 -   [Настройка свойств проекта служб Analysis Services (среда SSDT)](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   
--   [Построение проектов служб Analysis Services (среда SSDT)](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)  
+-   [Построение проектов служб Analysis Services &#40; SSDT &#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)  
   
 -   [Развертывание проектов служб Analysis Services (среда SSDT)](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
@@ -89,7 +89,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>См. также  
  [Создание проекта служб Analysis Services (среда SSDT)](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)   
  [Проекта скриптов служб Analysis Services в SQL Server Management Studio](../../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md)   
- [Базы данных многомерных моделей (службы SSAS)](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Многомерный шаблон баз данных ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   
-

@@ -2,29 +2,30 @@
 title: "Проблемы в статьях | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.articleissues.f1
+f1_keywords: sql13.rep.newpubwizard.articleissues.f1
 ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc0f9e7a746fa35b773cd3cd2d5daafb77cfa3e3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "23"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 4935f6e607270401c095f78bd6142828e8581071
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="article-issues"></a>Проблемы в статьях
-  На странице **Проблемы в статьях** перечисляются условия, определенные для статей, а также изменения, проведение которых необходимо при этих условиях. В следующей таблице перечисляются возможные проблемы и действия, необходимые для гарантированного корректного выполнения репликации и существующих приложений.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] На странице **Проблемы в статьях** перечисляются условия, определенные для статей, а также изменения, внесение которых необходимо при этих условиях. В следующей таблице перечисляются возможные проблемы и действия, необходимые для гарантированного корректного выполнения репликации и существующих приложений.  
   
 |Проблемы, связанные со статьями|Сведения|Необходимые действия|  
 |-------------------|-------------|---------------------|  
@@ -36,6 +37,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также:  
  [Публикация данных и объектов базы данных](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Создание публикации](../../relational-databases/replication/publish/create-a-publication.md)  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)  
   
   

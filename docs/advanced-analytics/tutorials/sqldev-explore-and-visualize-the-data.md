@@ -2,32 +2,33 @@
 title: "Занятие 3: Анализ и визуализация данных | Документы Microsoft"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 - TSQL
 ms.assetid: 7fe670f3-5e62-43ef-97eb-b9af54df9128
-caps.latest.revision: 11
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 7d0d272c2623d2a23a8e486f15c320d40cba6bf5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: db0b4def85eb08c193ece45b89e3773419b4feda
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Занятие 3: Анализ и визуализация данных
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье является частью учебника для разработчиков SQL по использованию R в SQL Server.
 
@@ -131,7 +132,7 @@ ms.lasthandoff: 09/01/2017
   
     **Результаты**
     
-    *построения*
+    *plot*
     *0xFFD8FFE000104A4649...*
   
 2.  Откройте окно командной строки PowerShell и выполните следующую команду, указав в качестве аргументов соответствующие имя экземпляра, имя базы данных, имя пользователя и учетные данные:
@@ -295,4 +296,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="previous-lesson"></a>Предыдущее занятие
 
 [Занятие 2: Импорт данных в SQL Server с помощью PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
-

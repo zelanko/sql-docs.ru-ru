@@ -3,27 +3,28 @@ title: "Типы Прокручиваемый курсор | Документы 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 85de42e271f937c7a3de1aacba918bb43ea463d4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 234da7bb8519149c78779f7920333338737b394b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scrollable-cursor-types"></a>Типы Прокручиваемый курсор
 Существует четыре типа прокрутки курсоров статические, динамические, управляемые набором ключей и смешанного. Статические курсоры обнаружение незначительных изменений, но недорогих относительно реализации. Динамические курсоры обнаруживают все изменения, но высокая стоимость реализации. Курсоры, управляемые набором ключей и смешанного находиться, обнаруживая большинство изменений, но с меньшими затратами, чем динамические курсоры.  
@@ -44,11 +45,10 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующие подразделы.  
   
--   [Статические курсоры ODBC](../../../odbc/reference/develop-app/odbc-static-cursors.md)  
+-   [Статические курсоры (ODBC)](../../../odbc/reference/develop-app/odbc-static-cursors.md)  
   
 -   [Динамические курсоры ODBC](../../../odbc/reference/develop-app/odbc-dynamic-cursors.md)  
   
--   [Управляемые набором ключей курсоры](../../../odbc/reference/develop-app/keyset-driven-cursors.md)  
+-   [Управляемые ключевым набором курсоры](../../../odbc/reference/develop-app/keyset-driven-cursors.md)  
   
--   [Смешанный курсоров](../../../odbc/reference/develop-app/mixed-cursors.md)
-
+-   [Смешанные курсоры](../../../odbc/reference/develop-app/mixed-cursors.md)

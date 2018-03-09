@@ -3,7 +3,7 @@ title: "ADO для индекса в Visual C++ синтаксис с #import | 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8829dcf3f55d7281ee2db8f3f09b474e95bc26a7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 911abc9ecb9cd17f4f69479a2de9fa7f498303e5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO для индекса в Visual C++ синтаксис с #import
 Этот индекс лучше перекрестной ссылки на Справочник по языку ADO, исходя из Microsoft Visual C++ и **#import** директивы.  
@@ -41,7 +40,7 @@ ms.lasthandoff: 09/09/2017
   
  Синтаксис методов и свойств в Visual C++ с **#import** директива указана для следующих элементов:  
   
--   [ADO коллекций](../../../ado/reference/ado-api/collections-visual-c-syntax-index-with-sharpimport.md)  
+-   [Коллекции ADO](../../../ado/reference/ado-api/collections-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Объект команды](../../../ado/reference/ado-api/command-visual-c-syntax-index-with-sharpimport.md)  
   
@@ -49,9 +48,9 @@ ms.lasthandoff: 09/09/2017
   
 -   [Объект Error](../../../ado/reference/ado-api/error-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Объект field](../../../ado/reference/ado-api/field-visual-c-syntax-index-with-sharpimport.md)  
+-   [Объект Field](../../../ado/reference/ado-api/field-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Объект параметра](../../../ado/reference/ado-api/parameter-visual-c-syntax-index-with-sharpimport.md)  
+-   [Объект Parameter](../../../ado/reference/ado-api/parameter-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Свойства объекта](../../../ado/reference/ado-api/property-visual-c-syntax-index-with-sharpimport.md)  
   
@@ -65,6 +64,5 @@ ms.lasthandoff: 09/09/2017
   
 -   [Набор записей событий](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   
-## <a name="see-also"></a>См. также:  
- [ADO для индекса синтаксис Visual C++ для модели COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)
-
+## <a name="see-also"></a>См. также  
+ [Индекс синтаксиса ADO для Visual C++ для модели COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)

@@ -2,32 +2,31 @@
 title: "Задача \"Очистка после обслуживания\" (план обслуживания) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.maint.cleanup.f1
-helpviewer_keywords:
-- Maintenance Cleanup Task dialog box
+f1_keywords: sql13.swb.maint.cleanup.f1
+helpviewer_keywords: Maintenance Cleanup Task dialog box
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
-caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "26"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 47b569e7d8c486de044d9784af2cb6adbab50b4f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d083329514a3e8a12362bc7277ee50bd34add7d3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Задача «Очистка после обслуживания» (план обслуживания)
-  С помощью диалогового окна **Задача «Очистка после обслуживания»** можно удалить старые файлы, связанные с планами обслуживания, включая текстовые отчеты, созданные планами обслуживания, и файлы резервных копий базы данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью диалогового окна **Задача "Очистка после обслуживания"** можно удалить старые файлы, связанные с планами обслуживания, включая текстовые отчеты, созданные планами обслуживания, и файлы резервных копий базы данных.  
   
 > [!NOTE]  
 >  Задача «Очистка после обслуживания» автоматически не удаляет файлы во вложенных папках указанного каталога. Это снижает вероятность того, что злоумышленник сможет удалить файлы с помощью задачи «Очистка после обслуживания». Если нужно удалять файлы во вложенных папках первого уровня, установите флажок **Включить вложенные папки первого уровня**.  
@@ -94,7 +93,7 @@ ms.lasthandoff: 06/22/2017
  **Использовать указанные имя пользователя и пароль**  
  Подключение к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] с использованием проверки подлинности SQL Server. Этот параметр недоступен.  
   
- **Имя пользователя**  
+ **User name**  
  Укажите имя входа, используемое при проверке подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
   
  **Пароль**  
@@ -104,4 +103,3 @@ ms.lasthandoff: 06/22/2017
  [Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   
-

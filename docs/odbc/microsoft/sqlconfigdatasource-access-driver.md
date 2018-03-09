@@ -3,27 +3,28 @@ title: "SQLConfigDataSource (драйвер доступа) | Документы
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], Access Driver
 - Access driver [ODBC], SQLConfigDataSource
 ms.assetid: 1b152fb7-fa12-46b9-b168-006bb1355e77
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 27658fe72c79409a32435971bfac8d10ce92cded
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 24154cb8cf4f07699385f773608b929a9a4ed4a3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlconfigdatasource-access-driver"></a>SQLConfigDataSource (драйвер доступа)
 > [!NOTE]  
@@ -55,4 +56,3 @@ ms.lasthandoff: 09/09/2017
 |ПОТОКИ|Число фоновых потоков, используемых механизмом. Это значение по умолчанию — 3, но могут быть изменены.<br /><br /> Таким образом задается один и тот же параметр как **потоков** в диалоговом окне программы установки.|  
 |UID|Для драйвера Microsoft Access имя идентификатора пользователя, используемый для входа.|  
 |USERCOMMITSYNC|Определяет, является ли драйвером Microsoft Access выполнения пользовательские транзакции асинхронно. Это значение изначально установлено значение «Да», это означает, что драйвер Microsoft Access будет ожидать передачи в пользовательской транзакции должны завершаться.<br /><br /> Значение этого параметра не должны изменяться без тщательного анализа последствий. Дополнительные сведения об этом параметре см. в разделе *Microsoft Jet базы данных подсистемы Руководство программиста*.<br /><br /> Таким образом задается один и тот же параметр как **UserCommitSync** в диалоговом окне программы установки.|
-

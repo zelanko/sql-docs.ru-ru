@@ -2,36 +2,33 @@
 title: "Набор строк MDSCHEMA_MEMBERS | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_MEMBERS
+apiname: MDSCHEMA_MEMBERS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_MEMBERS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_MEMBERS rowset
 ms.assetid: 0b1aada0-67f8-4ef6-81b2-0100b65e0c2f
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8ee6e7231d4a3a3696de68e3c22b8cad7eb05a92
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d1402e80fc0746407e4057916adebd0cc373577b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemamembers-rowset"></a>Набор строк MDSCHEMA_MEMBERS
-  Описывает элементы в базе данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Описывает элементы в базе данных.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **MDSCHEMA_MEMBERS** набор строк содержит следующие столбцы.  
@@ -70,22 +67,21 @@ ms.lasthandoff: 09/01/2017
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**LEVEL_NUMBER**|**DBTYPE_UI4**|Необязательно.|  
-|**MEMBER_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**MEMBER_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**MEMBER_CAPTION**|**DBTYPE_WSTR**|Необязательно.|  
-|**MEMBER_TYPE**|**DBTYPE_I4**|Необязательно.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**LEVEL_NUMBER**|**DBTYPE_UI4**|Необязательный параметр.|  
+|**MEMBER_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**MEMBER_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**MEMBER_CAPTION**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**MEMBER_TYPE**|**DBTYPE_I4**|Необязательный параметр.|  
 |**TREE_OP**|**DBTYPE_I4**|Применяется только к единственному элементу (необязательно):<br /><br /> **MDTREEOP_ANCESTORS** (**0x20**) возвращает всех предков.<br /><br /> **MDTREEOP_CHILDREN** (**0x01**) возвращает только непосредственные дочерние элементы.<br /><br /> **MDTREEOP_SIBLINGS** (**0x02**) возвращает элементы на том же уровне.<br /><br /> **MDTREEOP_PARENT** (**0x04**) возвращает только непосредственного родителя.<br /><br /> **MDTREEOP_SELF** (**0x08**) возвращает себя в списке возвращенных строк.<br /><br /> **MDTREEOP_DESCENDANTS** (**0x10**) возвращает всех потомков.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Необязательно) Ограничение по умолчанию имеет значение 1. Битовая карта с одним из следующих допустимых значений:<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION|  
   
 ## <a name="see-also"></a>См. также:  
- [OLE DB для OLAP наборы строк схемы](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [Наборы строк схемы OLE DB для OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

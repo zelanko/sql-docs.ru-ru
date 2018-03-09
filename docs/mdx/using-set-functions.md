@@ -2,32 +2,31 @@
 title: "Функции наборов | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- set functions [MDX]
+dev_langs: kbMDX
+helpviewer_keywords: set functions [MDX]
 ms.assetid: b08ddc9d-38f8-41aa-b791-b5352f1a8783
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: c0afa99103cbb10c29c66bc375dc10d206560fd8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5478e5eacc6f99fc2dba889ce5bc189e1a9d63b4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-set-functions"></a>Функции наборов
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Функции наборов извлекают наборы из измерений, иерархий и уровней, либо путем обхода абсолютных и относительных мест расположения элементов в этих объектах, формируя набор различными способами.  
   
@@ -228,7 +227,6 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>См. также:  
  [Функции &#40; Синтаксис многомерных Выражений &#41;](../mdx/functions-mdx-syntax.md)   
  [С помощью функции-члены](../mdx/using-member-functions.md)   
- [Функции кортежей](../mdx/using-tuple-functions.md)  
+ [Использование функций кортежей](../mdx/using-tuple-functions.md)  
   
   
-

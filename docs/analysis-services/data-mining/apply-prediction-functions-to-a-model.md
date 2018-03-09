@@ -2,31 +2,30 @@
 title: "Применение функций прогнозирования к модели | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Mining Model Prediction [Analysis Services], selecting mining models
+helpviewer_keywords: Mining Model Prediction [Analysis Services], selecting mining models
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ea29a1f9406014bf684d4c573ed2640bb7d0cf96
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0634ebe36d956f356d13384159eb1171d4fc2ea4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Применение функций прогнозирования к модели
-  Чтобы создать прогнозирующий запрос в службах интеллектуального анализа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо сначала выбрать модель интеллектуального анализа данных, на которой будет основан этот запрос. Можно выбрать любую модель интеллектуального анализа данных, существующую в текущем проекте.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Создание прогнозирующего запроса в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интеллектуального анализа данных, необходимо сначала выбрать модель интеллектуального анализа данных, на котором будет основан это запрос. Можно выбрать любую модель интеллектуального анализа данных, существующую в текущем проекте.  
   
  Выбрав модель, добавьте в запрос *прогнозирующую функцию* . Её можно использовать для получения прогноза. Кроме того, в запросы можно добавлять прогнозирующие функции, которые возвращают соответствующие статистические данные, например вероятность получения прогнозируемого значения, или информацию, на основе которой быть составлен прогноз.  
   
@@ -124,14 +123,13 @@ ms.lasthandoff: 09/01/2017
   
      В следующей таблице показаны ожидаемые результаты.  
   
-    |Bike Buyer|$Cluster|Псевдоним|CEILING|  
+    |Покупатель велосипеда|$Cluster|Псевдоним|CEILING|  
     |----------------|--------------|-------------|-------------|  
     |0|Кластер 8|954|953.948638926372|  
   
  Если нужно добавить другие предложения в каком-то месте инструкции (например, предложение WHERE), сделать это с помощью сетки невозможно. Необходимо сначала перейти в представление DMX.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md)  
   
   
-

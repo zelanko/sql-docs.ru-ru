@@ -1,27 +1,29 @@
 ---
-title: "Урок 6: Добавление группирования и итогов (службы Reporting Services) | Документы Microsoft"
+title: "Занятие 6. Добавление группирования и итогов (службы Reporting Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/23/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-caps.latest.revision: 56
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Active
+ms.openlocfilehash: 2949110180da3c51a0bb536279cc9003d60be947
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e20b99d995151c14e6c334a647da14d3ff8f365
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 На этом занятии вы добавите группирование и итоги к отчету [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для организации и суммирования данных.  
@@ -37,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
     Обратите внимание на то, что теперь на маркере строк отображается квадратная скобка, указывающая на наличие группы. Теперь в таблице имеются два столбца «Дата», по одному с двух сторон от вертикальной пунктирной линии.  
   
-    ![даты группы добавлены](../reporting-services/media/rs-basictablegroups1design.png "даты группы добавлены")  
+    ![группа дат добавлена](../reporting-services/media/rs-basictablegroups1design.png "группа дат добавлена")  
   
 4.  Из области **Данные отчета** перетащите поле **Order** на панель **Группы строк** . Поместите это поле под обозначением "Дата" и над обозначением **(Сведения)**.
 
@@ -47,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
 5.  Удалите исходные столбцы **Дата** и **Заказ** **справа** от двойной линии. Это приведет к удалению соответствующих отдельных значений записи, чтобы отображалось только значение группы. Выберите маркеры двух столбцов, щелкните правой кнопкой мыши и выберите пункт **Удалить столбцы**.  
   
-    ![Выберите столбцы для удаления](../reporting-services/media/rs-basictablegroupsdeletecols.gif "выберите столбцы для удаления")  
+    ![Выберите столбцы для удаления](../reporting-services/media/rs-basictablegroupsdeletecols.gif "Выберите столбцы для удаления")  
   
 6.  Чтобы отформатировать новый столбец дат, щелкните правой кнопкой мыши ячейку с выражением для поля `[Date]` , а затем выберите пункт **Свойства текстового поля**.  
   
@@ -55,7 +57,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  В поле **Тип** введите **31 января 2000 года**.  
   
-9.  [!INCLUDE[clickOK](../includes/clickok-md.md)].  
+9.  [!INCLUDE[clickOK](../includes/clickok-md.md)], и делает это по-другому.  
   
 10.  Откройте вкладку **Просмотр** для просмотра отчета. Он должен выглядеть примерно так, как на следующей иллюстрации:  
     ![rs_BasicTableGroupsPreview](../reporting-services/media/rs-basictablegroupspreview.png) 
@@ -78,7 +80,7 @@ ms.lasthandoff: 08/09/2017
   
 6.  В меню **Формат** щелкните элемент **Цвет фона**, а затем щелкните элемент **Светло-серый**и нажмите кнопку **ОК**.  
   
-    ![Представление конструктора: базовая таблица с итоговой суммой заказов](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "представление конструктора: базовая таблица с итоговой суммой заказов")  
+    ![Режим конструктора: базовая таблица с итоговой суммой заказов](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "Режим конструктора: базовая таблица с итоговой суммой заказов")  
   
 ## <a name="bkmk_adddailytotal"></a>Добавление ежедневного итога к отчету  
   
@@ -106,13 +108,13 @@ ms.lasthandoff: 08/09/2017
   
 4.  В меню **Формат** щелкните элемент **Цвет фона**, а затем щелкните элемент **Светло-синий**и нажмите кнопку **ОК**.  
   
-    ![Представление конструктора: общий итог в обычной таблице](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "режим разработки: Создание общего итога в базовой таблице")  
+    ![Режим конструктора: итоговое значение в базовой таблице](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "Режим конструктора: итоговое значение в базовой таблице")  
   
 5.  Нажмите кнопку **Предварительный просмотр**.  
   
     Последняя страница должна выглядеть примерно так, как на рисунке ниже. На панели инструментов нажмите кнопку "Последняя страница". ![ssrs_ssdt_viewertoolbar_lastpage](../reporting-services/media/ssrs-ssdt-viewertoolbar-lastpage.png).   
   
-    ![Предварительный просмотр: Базовая таблица с итоговым значением](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "предварительной версии: базовая таблица с итоговым значением")  
+    ![Предварительный просмотр: базовая таблица с итоговым значением](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "Предварительный просмотр: базовая таблица с итоговым значением")  
   
 ## <a name="bkmk_publishreport"></a>Публикация отчета на сервере отчетов (не обязательно)  
   
@@ -150,7 +152,7 @@ ms.lasthandoff: 08/09/2017
 7.  Перейдите на веб-портал с правами администратора. Например, щелкните значок Internet Explorer правой кнопкой мыши и выберите пункт **Запуск от имени администратора**.  
   
     Перейдите по URL-адресу веб-портала [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
-    **Примечание** . URL-адресом *портала* является "Reports", но URL-адресом *сервера* отчетов не является "Reportserver".  Например:   
+    **Примечание** . URL-адресом *портала* является "Reports", но URL-адресом *сервера* отчетов не является "Reportserver".  Пример:   
     - `http://<server name>/reports`.  
      - `http://localhost/reports` работает, если отчет создается на сервере отчетов.  
   
@@ -159,12 +161,11 @@ ms.lasthandoff: 08/09/2017
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-** Успешно завершил создание простого табличного отчета tutorial.* *  
+** Учебник по созданию базового табличного отчета успешно освоен.**  
   
 ## <a name="see-also"></a>См. также:  
 [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
   
-
 

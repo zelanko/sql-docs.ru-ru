@@ -3,7 +3,7 @@ title: "Свойство AbsolutePage (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - AbsolutePage property [ADO]
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 677b512a88fe3b6e695bd460cb0d4dea00ed673d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 54d429f0920da7f68bcea54b72077b96d6d198f7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="absolutepage-property-ado"></a>Свойство AbsolutePage (ADO)
 Указывает, на какой странице находится текущая запись.  
@@ -38,7 +37,7 @@ ms.lasthandoff: 09/09/2017
   
  Для 64-разрядного кода используйте тип данных, который обеспечивает хранение 64-разрядное значение. Например, можно использовать либо **длинные** или другое значение, которое может иметь длину 64-разрядной, например DBORDINAL. Не используйте **PositionEnum** значения, поскольку они ограничены длиной 32 бит.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Это свойство может использоваться для идентификации номер страницы, на котором расположена текущая запись. Она использует [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) свойство для логического разделения строк общее число **записей** объекта на последовательность страниц, каждая из которых имеет количество записей равно **PageSize** (за исключением последней страницы, которые могут иметь менее записей). Поставщик должен поддерживать соответствующие функциональные возможности для этого свойства доступно.  
   
 -   При получении или установке **AbsolutePage** свойство, ADO использует [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) свойство и [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) свойство друг с другом, как показано ниже:  
@@ -50,12 +49,11 @@ ms.lasthandoff: 09/09/2017
  Как **AbsolutePosition** свойства **AbsolutePage** начинается с 1 и имеет значение 1, если текущая запись является первой записью в **записей**. Задайте это свойство, чтобы перейти к первой записи определенной страницы. Получить общее число страниц из **PageCount** свойство.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [AbsolutePage, PageCount и пример свойства PageSize (Visual Basic)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
  [AbsolutePage, PageCount и пример свойства PageSize (VC ++)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
  [Свойство AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
  [Свойство PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
- [Свойства PageSize (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)
-
+ [Свойство PageSize (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)

@@ -2,13 +2,13 @@
 title: "Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - Windows Firewall [Analysis Services]
 - firewall systems [Analysis Services]
 ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
-caps.latest.revision: 47
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: 0cb0930e6fd3faf0b44c5b8ac46359ec959b85c9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4fd0a5f94c049cac32b7396e212d3da387f98f5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services
-  Важный первый шаг предоставления доступа к [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] по сети состоит в определении того, требуется ли разблокировать порты брандмауэра. Для большинства установок необходимо создать по крайней мере одно правило брандмауэра для входящих подключений, которое разрешает подключаться к службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Важный первый шаг предоставления доступа к [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] по сети состоит в определении того, требуется ли разблокировать порты брандмауэра. Для большинства установок необходимо создать по крайней мере одно правило брандмауэра для входящих подключений, которое разрешает подключаться к службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  Требования к конфигурации брандмауэра зависят от того, как был установлен компонент служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -239,9 +239,8 @@ ms.lasthandoff: 09/01/2017
  При использовании SharePoint 2010 открывать порты в брандмауэре Windows не нужно. SharePoint открывает необходимые порты и такие надстройки, как [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint, которые работают в пределах среды SharePoint. В установке [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2010 системная служба [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] имеет монопольное право на использование локального экземпляра служб SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]), установленного на том же компьютере. Используются локальные, но не сетевые подключения для доступа к локальному модулю служб Analysis Services, который загружает данные, выполняет запросы и обрабатывает данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на сервере SharePoint. Для получения данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] из клиентских приложений запросы направляются через порты, открытые программой установки SharePoint (в частности, определяются правила для входящих подключений при доступе к SharePoint — 80, центру администрирования SharePoint версии 4, веб-службам SharePoint и SPUserCodeV4). Веб-службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] выполняются в пределах фермы SharePoint, поэтому правил брандмауэра SharePoint достаточно для удаленного доступа к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме SharePoint.  
   
 ## <a name="see-also"></a>См. также  
- [Служба обозревателя SQL Server (компонент Database Engine и SSAS)](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
- [Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
+ [Служба обозревателя SQL Server (ядро СУБД и SSAS)](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
+ [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
   
-

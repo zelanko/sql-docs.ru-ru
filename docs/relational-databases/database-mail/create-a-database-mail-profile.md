@@ -2,9 +2,12 @@
 title: "Создание профиля компонента Database Mail | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,20 @@ helpviewer_keywords:
 - profiles [SQL Server], Database Mail
 - public profiles [Database Mail]
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
-caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3dfeb39ffa1bba82e4f5782ef30621c8e57529de
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a30265b02ca821a3d787162b60847e71e7260fa1
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-a-database-mail-profile"></a>Создание профиля компонента Database Mail
-  Открытые и закрытые профили компонента Database Mail можно создать с помощью **мастера настройки компонента Database Mail** или [!INCLUDE[tsql](../../includes/tsql-md.md)] . Дополнительные сведения о профилях электронной почты см. в разделе [Профиль компонента Database Mail](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2).
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Открытые и закрытые профили компонента Database Mail можно создать с помощью **мастера настройки компонента Database Mail** или [!INCLUDE[tsql](../../includes/tsql-md.md)] . Дополнительные сведения о профилях электронной почты см. в разделе [Профиль компонента Database Mail](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2).
   
 -   **Перед началом работы** [необходимые компоненты](#Prerequisites), [безопасность](#Security)  
   
@@ -43,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="Security"></a> безопасность  
  Открытый профиль дает возможность всем пользователям получать доступ к базе данных **msdb** , отправив туда почтовое сообщение из этого профиля. Персональный профиль может использоваться как пользователем, так и ролью. Предоставление роли доступа к профилю создает более простую обслуживаемую архитектуру. Для отправки почты пользователь должен быть членом роли **DatabaseMailUserRole** в базе данных **msdb** , а также иметь доступ как минимум к одному профилю Database Mail.  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Пользователь, создающий учетные записи профилей и выполняющий хранимые процедуры, должен быть членом предопределенной роли сервера sysadmin.  
   
 ##  <a name="SSMSProcedure"></a> Использование мастера настройки компонента Database Mail  
@@ -230,4 +233,3 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
 ```  
   
   
-

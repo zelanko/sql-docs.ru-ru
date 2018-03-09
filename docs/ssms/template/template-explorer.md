@@ -3,10 +3,12 @@ title: "Обозреватель шаблонов | Документация М�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-templates
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,19 +21,19 @@ helpviewer_keywords:
 - templates [Transact-SQL]
 - templates [SQL Server], Template Explorer
 ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e0d0525a7da87f0c2f2363d641fcb07bcd5262ad
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 567be902918060203407ec70229aa66c01ae6baa
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="template-explorer"></a>Template Explorer
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] предоставляет целый ряд шаблонов. Шаблоны — это файлы со стандартным текстом, содержащие скрипты SQL, которые помогают создавать объекты в базе данных. После первого открытия обозревателя шаблонов копия шаблонов помещается в папку пользователя "AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates" в "C:\Users".  
   
 Предусмотрена возможность просматривать доступные шаблоны в обозревателе шаблонов, затем открывать шаблон для включения его кода в окно редактора кода. Можно также создавать пользовательские шаблоны.  
@@ -45,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
 Кроме того, редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)] позволяет вставить фрагменты кода в скрипт, для чего достаточно щелкнуть правой кнопкой мыши в нужном месте скрипта.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
 Используйте следующие разделы, чтобы приступить к работе с шаблонами  
   
 |**Description**|**Раздел**|  
@@ -53,4 +55,3 @@ ms.lasthandoff: 06/22/2017
 |Описано, как включить код из шаблона в окно редактора кода.|[Открытие шаблона](../../ssms/template/open-a-template.md)|  
 |Описано, как заменить значения параметров шаблона после открытия шаблона в редакторе кода.|[Замена параметров шаблона](../../ssms/template/replace-template-parameters.md)|  
   
-

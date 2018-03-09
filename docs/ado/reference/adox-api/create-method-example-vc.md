@@ -3,7 +3,7 @@ title: "Создайте пример метода (VC ++) | Документы 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Create method [ADOX], VC++ example
 ms.assetid: 57fcb0eb-5d40-4ad4-996d-380732de8a3d
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7e2549cce0c33891e78b94e33af97ca972551388
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ecbbc0188c71a696e08be138b4ce2d901f0d7634
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-method-example-vc"></a>Создайте пример метода (VC ++)
 Ниже показано, как создать новую базу данных Microsoft Jet с [создать](../../../ado/reference/adox-api/create-method-adox.md) метод.  
@@ -83,6 +82,5 @@ void CreateDatabaseX() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [CREATE-метод (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
-
+## <a name="see-also"></a>См. также  
+ [Метод Create (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)

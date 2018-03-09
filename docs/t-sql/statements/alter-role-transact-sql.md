@@ -3,8 +3,11 @@ title: "РОЛИ ALTER (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - database roles [SQL Server], modifying
 - names [SQL Server], database roles
 ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
-caps.latest.revision: 64
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3eaee2d346eda964545caa60cd7168b531f47ad9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 897e8017965e71f345a93550e9af0c138d80b3b7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Добавляет или удаляет членов из роли базы данных или изменяет имя роли базы данных, определяемых пользователем.  
   
@@ -98,7 +100,7 @@ NAME = *новое_имя*
   
  Изменение имени роли базы данных не изменяет идентификационный номер, владельца или разрешения роли.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для выполнения этой команды необходимо одно или несколько из этих разрешений или членства:  
   
 -   **ALTER** разрешение для роли  
@@ -126,7 +128,7 @@ NAME = *новое_имя*
   
  В следующем примере изменяется имя роли `buyers` на `purchasing`. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
-```tsql  
+```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
 ```  
   
@@ -135,7 +137,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
   
  Этот пример создает роль базы данных с именем `Sales`. Добавляет пользователя базы данных с именем Барри членство и демонстрируется удаление члена Барри. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
   
-```tsql  
+```sql  
 CREATE ROLE Sales;  
 ALTER ROLE Sales ADD MEMBER Barry;  
 ALTER ROLE Sales DROP MEMBER Barry;  
@@ -150,4 +152,3 @@ ALTER ROLE Sales DROP MEMBER Barry;
  [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   
   
-

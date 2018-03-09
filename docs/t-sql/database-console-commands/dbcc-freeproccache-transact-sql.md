@@ -3,8 +3,11 @@ title: "Инструкция DBCC FREEPROCCACHE (Transact-SQL) | Докумен�
 ms.custom: 
 ms.date: 10/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw, sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - procedure cache [SQL Server]
 - clearing procedure cache
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
-caps.latest.revision: 61
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
-ms.openlocfilehash: 58eed9c590594f8c2cff402418aa2ebebd0c65db
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/16/2017
-
+ms.openlocfilehash: b5fd65fa2a764d87d2c5481a7c20560551ca3311
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
 Удаляет все элементы из кэша планов, удаляет заданный план из кэша планов с помощью указания дескриптора плана или дескриптора SQL либо удаляет все записи кэша, связанные с указанным пулом ресурсов.
 
@@ -92,7 +94,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 > [!NOTE]
 > Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` очистить кэш процедур (план) для базы данных в области.
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Инструкция DBCC FREEPROCCACHE используется для аккуратной очистки кэша планов. Удаление процедуры (план) кэша приводит все планы вытеснения и входящих запросов выполнений компилируется новый план, вместо повторного использования любой ранее кэшированного плана. 
 
 Это может привести к непредвиденному временному снижению производительности запросов как новый компиляций увеличения числа. Для каждого очищенного хранилища кэша в кэше планов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журнал ошибок содержит следующее информационное сообщение: «[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил %d экземпляров, сброшенных на диск хранилищ кэша для хранилища кэша «%s» (части кэша планов) из-за "DBCC FREEPROCCACHE' или 'DBCC FREESYSTEMCACHE' операции.» Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.
@@ -118,7 +120,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ## <a name="result-sets"></a>Результирующие наборы  
 Если предложение WITH NO_INFOMSGS не указано, инструкция DBCC FREEPROCCACHE возвращает: «выполнение инструкции DBCC завершено. Если инструкция DBCC выдает сообщения об ошибках, обратитесь к системному администратору».
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Применяется к: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 - Требует разрешения ALTER SERVER STATE на сервере.  
 
@@ -218,10 +220,9 @@ GRANT ALTER SERVER STATE TO David;
 GO
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)  
-[ALTER DATABASE SCOPED CONFIGURATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
+[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
   
   
-

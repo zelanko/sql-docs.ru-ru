@@ -2,9 +2,12 @@
 title: "Восстановление до регистрационного номера транзакции в журнале (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-backup-restore
 ms.tgt_pltfrm: 
@@ -21,19 +24,20 @@ helpviewer_keywords:
 - database recovery [SQL Server]
 - database restores [SQL Server], point in time
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
-caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ef9f98df730801b692eace924e094caa6b078ac6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: eb43b2630d4eebe0c101f616e7da71908c031ac7
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Восстановление до номера LSN (SQL Server)
-  Этот раздел относится только к тем базам данных, которые используют модель полного восстановления или модель восстановления с неполным протоколированием.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Этот раздел относится только к тем базам данных, которые используют модель полного восстановления или модель восстановления с неполным протоколированием.  
   
  Можно в качестве точки восстановления во время операции восстановления использовать номер LSN. Однако эта специальная возможность предназначена для средств поставщика, и представляется сомнительным, чтобы она могла оказаться в целом полезной.  
   
@@ -67,11 +71,11 @@ ms.lasthandoff: 06/22/2017
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Синтаксис языка Transact-SQL при восстановлении до номера LSN  
  Инструкция [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) позволяет остановить восстановление на транзакции по номеру LSN или непосредственно перед ней следующим образом:  
   
--   Используйте предложение WITH STOPATMARK **='**lsn:*<lsn_number>***'**, где lsn:*\<lsnNumber>* — это строка, указывающая, что точкой восстановления является запись в журнале, которая содержит указанный номер LSN.  
+-   Используйте предложение WITH STOPATMARK **='**lsn:*<lsn_number>***'**, где lsn:*\<lsnNumber>* — это строка, указывающая, что точкой восстановления является запись в журнале, которая содержит указанный номер LSN.  
   
      Предложение STOPATMARK выполняет накат до номера LSN, включая указанную запись журнала.  
   
--   Используйте предложение WITH STOPBEFOREMARK **='**lsn:*<lsn_number>***'**, где lsn:*\<lsnNumber>* — это строка, указывающая, что запись журнала, стоящая непосредственно перед записью журнала, содержащей номер LSN, является точкой восстановления.  
+-   Используйте предложение WITH STOPBEFOREMARK **='**lsn:*<lsn_number>***'**, где lsn:*\<lsnNumber>* — это строка, указывающая, что запись журнала, стоящая непосредственно перед записью журнала, содержащей номер LSN, является точкой восстановления.  
   
      Параметр STOPBEFOREMARK выполняет накат до номера LSN, не включая в него указанную запись журнала.  
   

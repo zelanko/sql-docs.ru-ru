@@ -3,8 +3,11 @@ title: "СОЗДАТЬ СХЕМУ СЕКЦИОНИРОВАНИЯ (Transact-SQL) 
 ms.custom: 
 ms.date: 04/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,23 +31,25 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], filegroups
 - mapping partitions [SQL Server]
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
-caps.latest.revision: 39
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 13bd8b623604f8bfe93dcf4483c65be14f43f003
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 98abb06746c88d7876505033f5b209c30812fc5d
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Создает схему в текущей базе данных, которая сопоставляет секции секционированной таблицы или индекса с файловыми группами. Количество и домен секций секционированной таблицы или индекса определяются в функции секционирования. Функции секционирования, сначала должна быть создана в [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) инструкцию перед созданием схемы секционирования.  
-  
+
+>[!NOTE]
+>В базе данных SQL Azure, поддерживаются только первичную файловую группу.  
+
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -187,4 +192,3 @@ ALL TO ( [PRIMARY] );
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   
   
-

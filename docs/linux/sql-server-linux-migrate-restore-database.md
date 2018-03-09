@@ -3,23 +3,27 @@ title: "Миграция базы данных SQL Server с Windows и Linux | 
 description: "Этот учебник демонстрирует создайте резервную копию базы данных SQL Server в Windows и восстановите ее на компьютер Linux под управлением 2017 г. SQL Server."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/16/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.workload: On Demand
+ms.openlocfilehash: f68f5aae50460dc1e39a24ac1213ac477c96d552
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: a6d84942bfd13d672b3c59416cb64d2ae41ee10f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Миграция базы данных SQL Server с Windows и Linux с помощью резервного копирования и восстановления
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server резервного копирования, и функция восстановления рекомендуется использовать для миграции базы данных из SQL Server в Windows 2017 г. SQL Server в Linux. В этом учебнике поможет выполнить шаги, необходимые для перемещения базы данных Linux с помощью резервного копирования и восстановления методы.
 
@@ -30,7 +34,9 @@ SQL Server резервного копирования, и функция вос
 > * Восстановление резервной копии файла в Linux с помощью Transact-SQL
 > * Выполните запрос, чтобы проверка миграции
 
-## <a name="prerequisites"></a>Предварительные требования
+Можно также создать SQL Server группы доступности AlwaysOn для переноса базы данных SQL Server из Windows и Linux. В разделе [sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md).
+
+## <a name="prerequisites"></a>предварительные требования
 
 С этим учебником требуются следующие необходимые компоненты:
 
@@ -82,7 +88,7 @@ SQL Server резервного копирования, и функция вос
 
 1. Откройте сеанс Bash в Windows.
 
-## <a id="scp"></a>Скопируйте файл резервной копии в Linux
+## <a id="scp"></a> Скопируйте файл резервной копии в Linux
 
 1. В сеансе Bash перейдите в каталог, содержащий файл архива. Например:
 
@@ -191,9 +197,9 @@ SQL Server резервного копирования, и функция вос
 > * Переместить файл резервной копии для подготовки к восстановлению
 > * Используйте **sqlcmd** для выполнения команд Transact-SQL
 > * Восстановите резервную копию базы данных с **RESTORE DATABASE** команды 
+> * Выполните запрос, чтобы проверка миграции
 
 Затем исследовать другие сценарии миграции для SQL Server в Linux. 
 
 > [!div class="nextstepaction"]
 >[Перенос баз данных в SQL Server в Linux](sql-server-linux-migrate-overview.md)
-

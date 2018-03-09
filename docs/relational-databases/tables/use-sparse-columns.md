@@ -2,11 +2,13 @@
 title: "Использование разреженных столбцов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/22/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +16,19 @@ helpviewer_keywords:
 - null columns
 - sparse columns
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
-caps.latest.revision: 47
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 73aa2beab814a8cc36400ddd384bb7f5de3b9d5d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "47"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 7e5f2e347053a5814bc1e00365f97c2d305cc064
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-sparse-columns"></a>Использование разреженных столбцов
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Разреженные столбцы — это обычные столбцы, имеющие оптимизированное хранилище для значений NULL. Разреженные столбцы уменьшают пространство, необходимое для хранения значений NULL, однако увеличивается стоимость получения значений, отличных от NULL. Разреженные столбцы следует использовать только в том случае, если экономится не менее чем от 20 до 40 процентов места. Наборы столбцов и разреженные столбцы определяются с помощью инструкций [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) и [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) .  
   
@@ -174,11 +176,11 @@ ms.lasthandoff: 06/22/2017
   
      Репликация слиянием не поддерживает разреженные столбцы и наборы столбцов.  
   
--   Отслеживание изменений  
+-   отслеживание изменений  
   
      Отслеживание изменений поддерживает разреженные столбцы и наборы столбцов. Если в таблице обновляется набор столбцов, система отслеживания изменений считает это обновлением целой строки. Более подробное отслеживание изменений для определения точного набора разреженных столбцов, который был изменен в ходе операции обновления набора столбцов, не осуществляется. Если разреженные столбцы обновляются явно с помощью инструкции DML, система отслеживания изменений обрабатывает их обычным образом и можно идентифицировать точный набор измененных столбцов.  
   
--   Система отслеживания измененных данных  
+-   система отслеживания измененных данных  
   
      Система отслеживания измененных данных поддерживает разреженные столбцы, но не поддерживает наборы столбцов.  
   
@@ -246,4 +248,3 @@ WHERE ProductionSpecification IS NOT NULL ;
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   
   
-

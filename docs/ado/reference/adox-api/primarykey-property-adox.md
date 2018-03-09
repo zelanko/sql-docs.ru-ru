@@ -3,7 +3,7 @@ title: "Свойство PrimaryKey (ADOX) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - PrimaryKey property [ADOX]
 ms.assetid: 30185312-5e09-4804-852d-e505d660113a
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b2b40b25a9bdf53aadc9f68f1950fbad5785fa1f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d8fe6b21d9b6de12e503086917edbb72b1c62ae8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="primarykey-property-adox"></a>Свойство PrimaryKey (ADOX)
 Указывает, представляет ли индекс первичного ключа в таблице.  
@@ -40,15 +39,14 @@ ms.lasthandoff: 09/09/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает **логическое** значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Значение по умолчанию равно **False**.  
   
  Это свойство доступно только для чтения на [индекс](../../../ado/reference/adox-api/index-object-adox.md) объектов уже добавлен в коллекцию.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект индекса (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+ [Объект Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [PrimaryKey и пример уникальные свойства (Visual Basic)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
- [Объект индекса (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
-
+ [Объект Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

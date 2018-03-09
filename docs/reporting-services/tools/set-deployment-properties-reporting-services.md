@@ -2,12 +2,13 @@
 title: "Задание свойства развертывания (службы Reporting Services) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +17,16 @@ helpviewer_keywords:
 - properties [Reporting Services], deployment
 - deploying reports [Reporting Services]
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
-caps.latest.revision: 44
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 30d542287f81032aa1bc2540d461a8f8c163b2f9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 618bdebcd05306a94a661ef4001d446b509e18dd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Задание свойства развертывания (службы Reporting Services)
   В[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]необходимо задать сервер отчетов. Можно также указать папки для отчетов и общие источники данных, что позволит публиковать элементы в проекте "Сервер отчетов" на сервере отчетов. Свойства и значения, необходимые среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для построения, предварительного просмотра и развертывания отчетов, хранятся в конфигурациях проектов в проекте "Сервер отчетов". Можно создать несколько именованных наборов для этих свойств проекта, чтобы можно было просто переключаться с одного набора свойств на другой. Каждый набор свойств представляет собой конфигурацию. Например, может существовать одна конфигурация для публикации отчетов на тестовом сервере и другая конфигурация для публикации отчетов на рабочем сервере.  
@@ -69,7 +69,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  На сервере отчетов, работающем в собственном режиме, необходимо иметь разрешение **Публикация** для целевой папки, чтобы публиковать в ней отчеты. Разрешения на публикацию предоставляются через назначение ролей, которая сопоставляет текущую учетную запись с ролью, которая включает операции публикации. Дополнительные сведения см. в разделе [Создание назначений ролей и управление ими](../../reporting-services/security/create-and-manage-role-assignments.md). На сервере отчетов, работающем в режиме интеграции с SharePoint, необходимо иметь разрешение **Член** или **Владелец** на сайте SharePoint. Дополнительные сведения см. в разделе [Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
-10. В текстовое поле **TargetServerURL** введите URL-адрес целевого сервера отчетов. Перед публикацией отчета необходимо задать в этом свойстве правильный URL-адрес сервера отчетов. При публикации на сервере отчетов, работающем в собственном режиме, используйте URL-адрес виртуального каталога сервера отчетов (например, http: *//сервер/сервер_отчетов* или https:/ */сервер/сервер_отчетов)*. Это виртуальный каталог сервера отчетов, а не диспетчера отчетов.  
+10. В текстовое поле **TargetServerURL** введите URL-адрес целевого сервера отчетов. Перед публикацией отчета необходимо задать в этом свойстве правильный URL-адрес сервера отчетов. При публикации на сервере отчетов, работающем в собственном режиме, используйте URL-адрес виртуального каталога сервера отчетов (например, http:*//сервер/сервер_отчетов* или https:*//сервер/сервер_отчетов*). Это виртуальный каталог сервера отчетов, а не диспетчера отчетов.  
   
      При публикации на сервере отчетов, работающем в режиме интеграции с SharePoint, указывайте URL-адрес сайта SharePoint верхнего уровня или соответствующего подсайта. Если сайт не указан, используется сайт верхнего уровня по умолчанию (например, http://*имя_сервера*, http://*имя_сервера*/*сайт* или http://*имя_сервера*/*сайт*/*вложенный_сайт*).  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  Если установлен флажок **Создать** , конструктор отчетов создает проект отчета и осуществляет его проверку перед предварительным просмотром или публикацией на сервере отчетов. Если установлен флажок **Развернуть** , конструктор отчетов публикует отчет на сервере отчетов согласно свойствам развертывания. Если флажок **Развернуть** не установлен, конструктор отчетов отображает отчет, указанный в свойстве **StartItem** в локальном окне предварительного просмотра.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Публикация источников данных и отчетов](../../reporting-services/reports/publishing-data-sources-and-reports.md)   
  [Предварительный просмотр отчетов](../../reporting-services/reports/previewing-reports.md)   
  [Справка F1 конструктора отчетов](../../reporting-services/tools/report-designer-f1-help.md)   
@@ -95,4 +95,3 @@ ms.lasthandoff: 08/09/2017
  [Публикация отчетов на сервере отчетов](../../reporting-services/reports/publishing-reports-to-a-report-server.md)  
   
   
-

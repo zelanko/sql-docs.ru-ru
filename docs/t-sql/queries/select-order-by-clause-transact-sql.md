@@ -1,10 +1,13 @@
 ---
 title: "ORDER BY, предложение (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 08/11/2017
+ms.date: 12/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -38,20 +41,19 @@ helpviewer_keywords:
 - sort orders [SQL Server], ORDER BY clause
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-caps.latest.revision: 68
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3fa84841e573d9bd1a285d24548c2f57ab5b9235
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 08805ce7f01b11d9b87c587e543f5dae91734e68
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---order-by-clause-transact-sql"></a>ВЫБЕРИТЕ - ORDER BY, предложение (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Сортирует данные, возвращенные запросом в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это предложение используется для следующих целей:  
   
@@ -61,9 +63,12 @@ ms.lasthandoff: 09/01/2017
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
+> [!NOTE]  
+>  ORDER BY не поддерживается в инструкции SELECT / в или инструкции СОЗДАНИЯ таблицы AS ВЫБЕРИТЕ (CTAS) в [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+
 ## <a name="syntax"></a>Синтаксис  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  
@@ -93,7 +98,7 @@ ORDER BY order_by_expression
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *выражении order_by_expression*  
+ *order_by_expression*  
  Указывает столбец или выражение, по которому производится сортировка результирующего набора запроса. Столбец сортировки может быть указан с помощью имени или псевдонима столбца или неотрицательного целого числа, представляющего позицию столбца в списке выбора.  
   
  Можно указать несколько столбцов сортировки. Имена столбцов должны быть уникальными. Последовательность столбцов сортировки в предложении ORDER BY определяет организацию упорядоченного результирующего набора. Иными словами, результирующий набор сортируется по первому столбцу, затем упорядоченный список сортируется по второму и т. д.  
@@ -131,7 +136,7 @@ ORDER BY order_by_expression
  В плане выполнения запроса значение смещения строки отображается в **строк** или **верхней** оператора запроса TOP.  
   
 ## <a name="best-practices"></a>Рекомендации  
- Избегайте указания столбцов в предложении ORDER BY по их порядковому номеру в списке выбора. Например, хотя инструкция `SELECT ProductID, Name FROM Production.Production ORDER BY 2` верна, она будет не очень понятна другим пользователям по сравнению с тем случаем, когда столбцы указаны по именам. Кроме того, если список выбора изменится, в частности изменится порядок столбца или будут добавлены новые столбцы, то это потребует изменения предложения ORDER BY во избежание непредвиденных результатов.  
+ Избегайте указания столбцов в предложении ORDER BY по их порядковому номеру в списке выбора. Например, хотя инструкция `SELECT ProductID, Name FROM Production.Production ORDER BY 2` верна, она будет не очень понятна другим пользователям по сравнению с тем случаем, когда столбцы указаны по именам. Кроме того изменений в списке выбора, например, изменение порядка столбцов или добавления новых столбцов, требует изменения предложения ORDER BY во избежание непредвиденных результатов.  
   
  В SELECT TOP (*N*) инструкции, всегда используйте предложение ORDER BY. Это единственный способ предсказуемым образом отметить строки, которые были обработаны предложением TOP. Дополнительные сведения см. в разделе [в начало &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
   
@@ -159,9 +164,9 @@ ORDER BY order_by_expression
   
 -   SELECT DISTINCT  
   
- Кроме того, если в инструкцию входит оператор UNION, EXCEPT или INTERSECT, то имена и псевдонимы столбцов должны быть указаны в списке выбора первого (слева) запроса.  
+ Кроме того, если инструкцию входит оператор UNION, EXCEPT или INTERSECT оператора, имена столбцов или псевдонимы столбцов должен быть указан в списке выбора первого (слева) запроса.  
   
- В запросе, содержащем оператор UNION, EXCEPT или INTERSECT, предложение ORDER BY допускается только в конце инструкции. Это ограничение применяется только при использовании операторов UNION, EXCEPT и INTERSECT в запросах верхнего уровня, но не во вложенных запросах. См подраздел «Примеры» ниже.  
+ В запросе, содержащем оператор UNION, EXCEPT или INTERSECT, предложение ORDER BY допускается только в конце инструкции. Это ограничение применяется только при операторов UNION, EXCEPT и INTERSECT в запросах верхнего уровня, но не во вложенном запросе. См подраздел «Примеры» ниже.  
   
  Предложение ORDER BY недопустимо в представлениях, встроенных функциях, производных таблицах и вложенных запросах, если также не указаны предложения TOP либо OFFSET и FETCH. В этих объектах предложение ORDER BY используется только для определения строк, возвращаемых предложением TOP или OFFSET и FETCH. Предложение ORDER BY не гарантирует упорядочивания результатов при запросе этих конструкций, если оно не указано в самом запросе.  
   
@@ -267,8 +272,8 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### <a name="b-specifying-a-ascending-order"></a>Б. Указание порядка по возрастанию  
- В следующем примере производится упорядочение результирующего набора по столбцу `Name` в возрастающем порядке. Обратите внимание, что символьные значения сортируются в алфавитном порядке, а не в числовом. Иными словами, отсортированное значение 10 находится перед 2.  
+#### <a name="b-specifying-an-ascending-order"></a>Б. Задать порядок по возрастанию  
+ В следующем примере производится упорядочение результирующего набора по столбцу `Name` в возрастающем порядке. Эти символы сортируются в алфавитном порядке, а не в числовом виде. Иными словами, отсортированное значение 10 находится перед 2.  
   
 ```  
 USE AdventureWorks2012;  
@@ -313,7 +318,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ```  
   
 ###  <a name="Case"></a>Указание условного порядка  
- В следующем примере выражение CASE используется в предложении ORDER BY, чтобы условно определить порядок сортировки строк на основе значения заданного столбца таблицы. В первом примере вычисляется значение столбца `SalariedFlag` таблицы `HumanResources.Employee`. Сотрудники, для которых столбец `SalariedFlag` имеет значение 1, возвращаются в порядке `BusinessEntityID` (по убыванию). Сотрудники, для которых столбец `SalariedFlag` имеет значение 0, возвращаются в порядке `BusinessEntityID` (по возрастанию). Во втором примере результирующий набор упорядочивается по столбцу `TerritoryName`, если столбец `CountryRegionName` содержит значение «United States», и по столбцу `CountryRegionName` в остальных строках.  
+ В следующих примерах используется выражение CASE в предложении ORDER BY условно определить порядок сортировки строк на основании значения заданного столбца таблицы. В первом примере вычисляется значение столбца `SalariedFlag` таблицы `HumanResources.Employee`. Сотрудники, для которых столбец `SalariedFlag` имеет значение 1, возвращаются в порядке `BusinessEntityID` (по убыванию). Сотрудники, для которых столбец `SalariedFlag` имеет значение 0, возвращаются в порядке `BusinessEntityID` (по возрастанию). Во втором примере результирующий набор упорядочивается по столбцу `TerritoryName`, если столбец `CountryRegionName` содержит значение «United States», и по столбцу `CountryRegionName` в остальных строках.  
   
 ```  
 SELECT BusinessEntityID, SalariedFlag  
@@ -484,7 +489,25 @@ GO
   
 ```  
   
-### <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+###  <a name="Union"></a>Использование предложений ORDER BY с UNION, EXCEPT и INTERSECT  
+ Если запрос содержит оператор UNION, EXCEPT или INTERSECT, предложение ORDER BY должно быть указано в конце инструкции, а результаты объединенного запроса должны быть отсортированы. В следующем примере возвращаются все продукты желтого или красного цвета, отсортированные в общем списке по столбцу `ListPrice`.  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+SELECT Name, Color, ListPrice  
+FROM Production.Product  
+WHERE Color = 'Red'  
+-- ORDER BY cannot be specified here.  
+UNION ALL  
+SELECT Name, Color, ListPrice  
+FROM Production.Product  
+WHERE Color = 'Yellow'  
+ORDER BY ListPrice ASC;  
+  
+```  
+  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  В следующем примере демонстрируется упорядочивание результирующего набора по числовому `EmployeeKey` столбца по возрастанию.  
   
 ```  
@@ -525,25 +548,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName, FirstName;  
 ```  
   
-###  <a name="Union"></a>Использование предложений ORDER BY с UNION, EXCEPT и INTERSECT  
- Если запрос содержит оператор UNION, EXCEPT или INTERSECT, предложение ORDER BY должно быть указано в конце инструкции, а результаты объединенного запроса должны быть отсортированы. В следующем примере возвращаются все продукты желтого или красного цвета, отсортированные в общем списке по столбцу `ListPrice`.  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-SELECT Name, Color, ListPrice  
-FROM Production.Product  
-WHERE Color = 'Red'  
--- ORDER BY cannot be specified here.  
-UNION ALL  
-SELECT Name, Color, ListPrice  
-FROM Production.Product  
-WHERE Color = 'Yellow'  
-ORDER BY ListPrice ASC;  
-  
-```  
-  
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
@@ -555,5 +560,4 @@ ORDER BY ListPrice ASC;
  [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
   
   
-
 

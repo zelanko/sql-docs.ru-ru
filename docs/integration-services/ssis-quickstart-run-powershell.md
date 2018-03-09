@@ -1,29 +1,32 @@
 ---
-title: "Выполнить пакет служб SSIS с помощью PowerShell | Документы Microsoft"
+title: "Выполнение пакета служб SSIS с помощью PowerShell | Документы Майкрософт"
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-server-2017
-ms.technology:
-- integration-services
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: quick-start
+ms.suite: sql
+ms.custom: 
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: d392ac49442ef0f04961908fff7acf553fa1aa57
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/22/2017
-
+ms.openlocfilehash: e8dc5d5ef9aaebced036db796e1518bcf929dfef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="run-an-ssis-package-with-powershell"></a>Выполнить пакет служб SSIS с помощью PowerShell
-Этого краткого руководства показано, как использовать сценарий PowerShell для подключения к серверу базы данных и выполнения пакета служб SSIS.
+# <a name="run-an-ssis-package-with-powershell"></a>Выполнение пакета служб SSIS с помощью PowerShell
+В этом кратком руководстве описывается применение скрипта PowerShell для подключения к серверу базы данных и выполнения пакета служб SSIS.
 
-## <a name="powershell-script"></a>Сценарий PowerShell
-Предоставьте соответствующие значения для переменных в верхней части следующий скрипт, а затем выполните скрипт, чтобы запустить пакет служб SSIS.
+## <a name="powershell-script"></a>Скрипт PowerShell
+Предоставьте соответствующие значения для переменных в начале следующего скрипта, а затем выполните скрипт, чтобы запустить пакет служб SSIS.
 
 > [!NOTE]
-> Следующий пример использует проверку подлинности Windows. Чтобы использовать проверку подлинности SQL Server, замените `Integrated Security=SSPI;` аргумент с `User ID=<user name>;Password=<password>;`.
+> В следующем примере используется проверка подлинности Windows. Чтобы использовать проверку подлинности SQL Server, замените аргумент `Integrated Security=SSPI;` на `User ID=<user name>;Password=<password>;`.
 
 ```powershell
 # Variables
@@ -65,10 +68,9 @@ Write-Host "Done."
 ```
 
 ## <a name="next-steps"></a>Следующие шаги
-- Рассмотрите другие возможности для выполнения пакета.
-    - [Запустить пакет служб SSIS с помощью SSMS](./ssis-quickstart-run-ssms.md)
-    - [Запустить пакет служб SSIS с помощью Transact-SQL (среда SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [Запустить пакет служб SSIS с помощью Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
-    - [Выполните пакет служб SSIS из командной строки](./ssis-quickstart-run-cmdline.md)
-    - [Запустить пакет служб SSIS с помощью C#](./ssis-quickstart-run-dotnet.md) 
-
+- Рассмотрите другие варианты выполнения пакета.
+    - [Выполнение пакета служб SSIS с помощью SSMS](./ssis-quickstart-run-ssms.md)
+    - [Выполнение пакета служб SSIS с помощью Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
+    - [Выполнение пакета служб SSIS с помощью Transact-SQL (Visual Studio Code)](ssis-quickstart-run-tsql-vscode.md)
+    - [Выполнение пакета служб SSIS из командной строки](./ssis-quickstart-run-cmdline.md)
+    - [Выполнение пакета служб SSIS с помощью C#](./ssis-quickstart-run-dotnet.md) 

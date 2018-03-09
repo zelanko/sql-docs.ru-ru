@@ -1,39 +1,36 @@
 ---
 title: "Центр обеспечения безопасности для базы данных Azure SQL и ядра СУБД SQL Server | Документация Майкрософт"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 09/27/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.component: security
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- Security [SQL Server]
+f1_keywords: Security [SQL Server]
 helpviewer_keywords:
 - SQL Server, security
 - security [SQL Server]
 - database security [SQL Server]
 - databases [SQL Server], security
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 7e08477e178143b8d37a55c3e01cfc3a0c5145fe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
-ms.openlocfilehash: ec39e8b4a49d0a452a4030a18f7b7a4c7a5d9922
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   На этой странице представлены ссылки, помогающие найти сведения, касающиеся безопасности и защиты в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
@@ -103,4 +100,3 @@ ms.lasthandoff: 09/27/2017
  [Функции и задачи компонента Database Engine](http://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)  
  [Защита интеллектуальной собственности SQL Server](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
   
-

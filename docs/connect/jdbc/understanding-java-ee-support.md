@@ -1,26 +1,28 @@
 ---
 title: "Основные сведения о поддержке Java EE | Документы Microsoft"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
-caps.latest.revision: 26
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cb98529d22b17ad21bfcab786064a8c8882f3b5b
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b878069cb0ddf04d4c8c743795f876b00fef23dc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="understanding-java-ee-support"></a>Основные сведения о поддержке Java EE
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,7 +32,7 @@ ms.lasthandoff: 09/09/2017
  Сначала убедитесь, что среда JAVA (JDK, JRE) включает пакет javax.sql. Это обязательный пакет для любого приложения JDBC, которое использует дополнительный API-интерфейс. JDK 1.5 и более поздние версии уже содержат этот пакет, поэтому нет необходимости устанавливать его отдельно.  
   
 ## <a name="driver-name"></a>Имя драйвера  
- Имя класса драйвера ― **com.microsoft.sqlserver.jdbc.SQLServerDriver**. Для драйверов JDBC 4.0, 4.1, 6.0 и 4.2 драйвер содержится в файле sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar или sqljdbc42.jar. Для 6.2 драйвера JDBC драйвер содержится в mssql jdbc-6.2.1.jre7.jar или mssql jdbc-6.2.1.jre8.jar.
+ Имя класса драйвера ― **com.microsoft.sqlserver.jdbc.SQLServerDriver**. Для JDBC Driver 4.1 4.2 и 6.0, драйвер содержится в файле sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar или sqljdbc42.jar. Для 6.2 драйвера JDBC драйвер содержится в mssql jdbc-6.2.1.jre7.jar или mssql jdbc-6.2.1.jre8.jar. Для 6.4 драйвера JDBC драйвер содержится в mssql jdbc-6.4.0.jre7.jar mssql jdbc-6.4.0.jre8.jar и mssql jdbc-6.4.0.jre9.jar.
   
  Имя класса используется каждый раз при загрузке драйвера с помощью класса JDBC DriverManager. Оно также используется всегда, когда нужно указать имя класса драйвера в любой конфигурации драйвера. Например, для настройки источника данных на сервере приложений Java EE требуется имя класса драйвера.  
   
@@ -67,8 +69,7 @@ Connection c = ds.getConnection("user", "pwd");
   
  Дополнительные сведения о свойствах источника данных см. в разделе [настройки свойств источника данных](../../connect/jdbc/setting-the-data-source-properties.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

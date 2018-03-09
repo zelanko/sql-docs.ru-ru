@@ -2,9 +2,12 @@
 title: "Окно \"Точки останова\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ f1_keywords:
 helpviewer_keywords:
 - Breakpoints Window [Transact-SQL]
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
-caps.latest.revision: 11
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d2a6741dead3853b1102514f7be8ea23c42243a1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e65aa2535f4c0f1aebb9723edf29c041a9c74fed
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Отладчик Transact-SQL, окно точек останова
-  В окне **Точки останова** перечисляются все точки останова, которые заданы в текущем редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Чтобы управлять точками останова, используйте панель инструментов в окне **Точки останова** . Точки останова представляют собой точки кода, где выполнение в режиме отладке приостанавливается, чтобы можно было просматривать отладочные данные.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В окне **Точки останова** перечислены все точки останова, которые заданы в текущем редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Чтобы управлять точками останова, используйте панель инструментов в окне **Точки останова** . Точки останова представляют собой точки кода, где выполнение в режиме отладке приостанавливается, чтобы можно было просматривать отладочные данные.  
   
 ## <a name="task-list"></a>Список задач  
  **Доступ к окну «Точки останова»**  
@@ -48,7 +50,7 @@ ms.lasthandoff: 06/22/2017
   
  Можно добавлять и удалять следующие столбцы, выбирая их в списке **Столбцы** .  
   
- **Фильтр**  
+ **Filter**  
  Отображает **(нет)**. Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] не поддерживает задание фильтров для точек останова.  
   
  **При попадании**  
@@ -57,7 +59,7 @@ ms.lasthandoff: 06/22/2017
  **Язык**  
  Отображает значение **Transact-SQL** для [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **Функция**  
+ **Компонент**  
  Отображается номер строки, на которой задана точка останова.  
   
  **Файл**  
@@ -72,7 +74,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="breakpoints-window-toolbar"></a>Панель инструментов окна «Точки останова»  
  Если в текущем окне редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] имеются активные точки останова, то в окне **Точки останова** отображается панель инструментов, с помощью которой можно управлять точками останова.  
   
- **Delete**  
+ **Удаление**  
  Удаляет выбранную точку останова.  
   
  **Удалить все точки останова**  
@@ -94,4 +96,3 @@ ms.lasthandoff: 06/22/2017
  [Отладчик Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)  
   
   
-

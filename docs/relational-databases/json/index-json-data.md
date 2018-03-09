@@ -1,11 +1,12 @@
 ---
 title: "Индексирование данных JSON | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.component: json
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-json
 ms.tgt_pltfrm: 
@@ -14,22 +15,21 @@ helpviewer_keywords:
 - JSON, indexing JSON data
 - indexing JSON data
 ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
-caps.latest.revision: 9
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0b6df549ab64edfcc766b4839cf17cc1814efa36
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 2d618b486f61f2e25a221517eb0efdaed70f582d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="index-json-data"></a>Индексирование данных JSON
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-JSON не является встроенным типом данных в SQL Server 2016, а SQL Server не имеет пользовательских индексов JSON. Запросы к документам JSON можно оптимизировать с помощью обычных индексов. 
+JSON не является встроенным типом данных в SQL Server и базе данных SQL, а SQL Server не имеет пользовательских индексов JSON. Запросы к документам JSON можно оптимизировать с помощью обычных индексов. 
 
 Индексы баз данных делают операции фильтрации и сортировки более эффективными. Без индексов SQL Server пришлось бы сканировать всю таблицу при каждом запросе данных.  
   
@@ -70,7 +70,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
   
 Вычисляемый столбец необходимо создавать с тем же выражением, которое вы планируете использовать в запросах — в данном случае выражение `JSON_VALUE(Info, '$.Customer.Name')`.  
   
-Запросы переписывать не нужно. Если выражения используются с функцией `JSON_VALUE`, как показано в приведенном выше примере запроса, SQL Server определяет наличие эквивалентного вычисляемого столбца с тем же выражением и по возможности применяет индекс.
+Запросы переписывать не нужно. Если выражения используются с функцией `JSON_VALUE`, как показано в предыдущем примере запроса, SQL Server определяет наличие эквивалентного вычисляемого столбца с тем же выражением и по возможности применяет индекс.
 
 ### <a name="execution-plan-for-this-example"></a>План выполнения для этого примера
 Вот план выполнения запроса в этом примере:  
@@ -80,7 +80,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
 Вместо полного табличного сканирования SQL Server применяет оператор Index Seek к некластеризованному индексу и выявляет строки, отвечающие указанным условиям. Затем он выполняет поиск ключей по таблице `SalesOrderHeader`, чтобы получить другие указанные в запросе столбцы — в этом примере это столбцы `SalesOrderNumber` и `OrderDate`.  
  
 ### <a name="optimize-the-index-further-with-included-columns"></a>Дополнительная оптимизация индекса с включенными столбцами
-При добавлении требуемых столбцов в индекс такого дополнительного поиска по таблице можно избежать. Эти столбцы можно добавить как стандартные включенные столбцы, как показано в следующем примере, дополнив представленный выше пример `CREATE INDEX`.  
+При добавлении требуемых столбцов в индекс такого дополнительного поиска по таблице можно избежать. Эти столбцы можно добавить как стандартные включенные столбцы, как показано в следующем примере, дополняющем предыдущий пример `CREATE INDEX`.  
   
 ```sql  
 CREATE INDEX idx_soh_json_CustomerName
@@ -88,12 +88,12 @@ ON Sales.SalesOrderHeader(vCustomerName)
 INCLUDE(SalesOrderNumber,OrderDate)
 ```  
   
-В данном случае SQL Server не считывает дополнительные данные из таблицы `SalesOrderHeader`, так как все необходимое уже включено в некластеризованный индекс JSON. Это хороший способ объединения данных JSON и столбцов в запросах и создания оптимальных индексов для вашей рабочей нагрузки.  
+В данном случае SQL Server не считывает дополнительные данные из таблицы `SalesOrderHeader`, так как все необходимое уже включено в некластеризованный индекс JSON. Этот тип индекса является хорошим способом объединения данных JSON и столбцов в запросах и создания оптимальных индексов для вашей рабочей нагрузки.  
   
 ## <a name="json-indexes-are-collation-aware-indexes"></a>Индексы JSON — это индексы с учетом сортировки  
 Важной особенностью индексов на основе JSON является то, что эти индексы учитывают параметры сортировки. Результатом выполнения функции `JSON_VALUE`, которая применяется при создании вычисляемого столбца, является текстовое значение, которое наследует параметры сортировки из входного выражения. Таким образом, значения в индексе упорядочиваются согласно правилам сортировки, определенным в исходных столбцах.  
   
-Чтобы это продемонстрировать, в следующем примере создается простая таблица коллекций с первичным ключом и данными в формате JSON.  
+Чтобы продемонстрировать, что индексы учитывают параметры сортировки, в следующем примере создается простая таблица коллекций с первичным ключом и данными в формате JSON.  
   
 ```sql  
 CREATE TABLE JsonCollection
@@ -153,6 +153,18 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  Поскольку порядок значений в индексе не соответствует правилам сортировки для французского языка, SQL Server не может использовать этот индекс для упорядочивания результатов. В связи с этим он добавляет оператор Sort, который сортирует результаты по правилам сортировки для французского языка.  
  
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Дополнительные сведения о встроенной поддержке JSON в SQL Server  
-Много определенных решений, варианты использования и рекомендации см. в [записях блога о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) (категории SQL Server и Azure SQL Database (База данных SQL Azure), автор — руководитель программ корпорации Майкрософт Йован Попович (Jovan Popovic)).
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Дополнительные сведения о JSON в SQL Server и базе данных SQL Azure  
+  
+### <a name="microsoft-blog-posts"></a>Публикации блога Майкрософт  
+  
+Конкретные решения, варианты использования и рекомендации см. в [записях блога](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) о встроенной поддержке JSON в SQL Server и базе данных SQL Azure.  
 
+### <a name="microsoft-videos"></a>Видео Майкрософт
+
+Наглядные инструкции по встроенной поддержке JSON в SQL Server и базе данных SQL Azure см. в следующих видео.
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support) (SQL Server 2016 и поддержка JSON)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database) (Использование JSON в SQL Server 2016 и базе данных SQL Azure)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds) (JSON как мост между NoSQL и реляционными решениями)

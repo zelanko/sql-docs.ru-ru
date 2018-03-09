@@ -3,7 +3,7 @@ title: "Append-метод (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADO]
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
-caps.latest.revision: 18
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 9a192286d39660580968305d16cb159480b6a09a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: db5dc5c8b6d40873ce333aa2987d04c046c222b1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="append-method-ado"></a>Append-метод (ADO)
 Добавляет объект в коллекцию. Если коллекция [поля](../../../ado/reference/ado-api/fields-collection-ado.md), новый [поле](../../../ado/reference/ado-api/field-object.md) объект может быть создан, перед добавлением в коллекцию.  
@@ -66,7 +65,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *FieldValue*  
  Необязательно. Объект **Variant** , представляющий значение для нового поля. Если не указан, поле добавляется со значением null.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="parameters-collection"></a>Коллекция Parameters  
  Необходимо задать [тип](../../../ado/reference/ado-api/type-property-ado.md) свойство [параметр](../../../ado/reference/ado-api/parameter-object.md) объекта перед его добавлением [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекции. Если выбран тип данных переменной длины, необходимо также задать [размер](../../../ado/reference/ado-api/size-property-ado-parameter.md) значение больше нуля.  
@@ -96,14 +95,13 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
 ## <a name="applies-to"></a>Объект применения  
   
 - [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
-- [Коллекция параметров (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+- [Коллекция Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Добавление и пример CreateParameter методы (Visual Basic)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
  [Добавление и пример методы CreateParameter (VC ++)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
  [Метод CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Метод Delete (ADO поля коллекции)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
  [Удаление метода (коллекция параметров ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [Удаление метода (набора записей ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
- [Метод обновления](../../../ado/reference/ado-api/update-method.md)
-
+ [Метод Update](../../../ado/reference/ado-api/update-method.md)

@@ -1,41 +1,40 @@
 ---
-title: "Реализация модуля доставки | Документы Microsoft"
+title: "Реализация модуля доставки | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - delivery [Reporting Services]
 - custom delivery extensions [Reporting Services]
 - extensions [Reporting Services], delivery
 - delivery extensions [Reporting Services]
 ms.assetid: 600cd229-efcd-480e-8c95-3c3c39ff4e7a
-caps.latest.revision: 32
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "32"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 5db9bf52437c018bc1dcb40e7fa8a8ce2824fa12
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: b34cb389c2bbc8a2aaabe81a38e1c3048f2b2b91
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="implementing-a-delivery-extension"></a>Реализация модуля доставки
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяет пользователям создавать и публиковать отчеты, которые, после создания и публикации, могут доставляться в различные места. Кроме того, службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] содержат несколько модулей доставки и API-интерфейс доставки, который позволяет разработчикам создавать дополнительные модули доставки, расширяя возможности доставки в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  Службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяют пользователям создавать и публиковать отчеты, которые затем могут доставляться в различные места. Кроме того, службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] содержат несколько модулей доставки и API-интерфейс доставки, который позволяет разработчикам создавать дополнительные модули доставки, расширяя возможности доставки в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
- Образец реализации модуля доставки в разделе [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Образец реализации модуля доставки см. в разделе [Образцы продуктов служб SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Общие сведения о модулях доставки](../../../reporting-services/extensions/delivery-extension/delivery-extensions-overview.md)  
  Введение в процесс написания пользовательского модуля доставки для служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
@@ -49,19 +48,19 @@ ms.lasthandoff: 08/12/2017
  Описывает атрибуты модуля доставки и процесс реализации собственного класса модуля доставки.  
   
  [Использование класса Notification для модуля доставки](../../../reporting-services/extensions/delivery-extension/using-a-notification-class-for-a-delivery-extension.md)  
- Описывает атрибуты **уведомления** класс и способ его использования в реализации модуля доставки.  
+ Описывает атрибуты класса **Notification** и способ его использования в реализации модуля доставки.  
   
  [Использование класса Setting для модуля доставки](../../../reporting-services/extensions/delivery-extension/using-the-setting-class-for-a-delivery-extension.md)  
- Описывает атрибуты **параметр** класс и способ его использования в реализации модуля доставки.  
+ Описывает атрибуты класса **Setting** и способ его использования в реализации модуля доставки.  
   
- [Использование интерфейса IDeliveryReportServerInformation в модуле доставки](../../../reporting-services/extensions/delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
- Описывает атрибуты **IDeliveryReportServerInformation** интерфейс и способ его использования в реализации модуля доставки.  
+ [Использование интерфейса IDeliveryReportServerInformation для модуля доставки](../../../reporting-services/extensions/delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
+ Описывает атрибуты интерфейса **IDeliveryReportServerInformation** и способ его использования в реализации модуля доставки.  
   
- [Использование класса Report в модуле доставки](../../../reporting-services/extensions/delivery-extension/using-the-report-class-for-a-delivery-extension.md)  
- Описывает атрибуты **отчетов** класс и способ его использования в реализации модуля доставки.  
+ [Использование класса Report для модуля доставки](../../../reporting-services/extensions/delivery-extension/using-the-report-class-for-a-delivery-extension.md)  
+ Описывает атрибуты класса **Report** и способ его использования в реализации модуля доставки.  
   
  [Использование класса RenderedOutputFile для модуля доставки](../../../reporting-services/extensions/delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
- Описывает атрибуты **RenderedOutputFile** класс и способ его использования в реализации модуля доставки.  
+ Описывает атрибуты класса **RenderedOutputFile** и способ его использования в реализации модуля доставки.  
   
  [Реализация интерфейса ISubscriptionBaseUIUserControl для модуля доставки](../../../reporting-services/extensions/delivery-extension/implementing-the-isubscriptionbaseuiusercontrol-interface.md)  
  Описывает атрибуты управления пользователями модуля доставки и способ реализации собственного пользовательского интерфейса для подписки.  
@@ -72,12 +71,11 @@ ms.lasthandoff: 08/12/2017
  [Отладка кода модулей доставки](../../../reporting-services/extensions/delivery-extension/debugging-delivery-extension-code.md)  
  Описывается процесс отладки кода модулей доставки.  
   
- [При удалении модуля доставок](../../../reporting-services/extensions/delivery-extension/removing-a-delivery-extension.md)  
+ [Удаление модуля доставки](../../../reporting-services/extensions/delivery-extension/removing-a-delivery-extension.md)  
  Описывается процесс удаления модуля доставки с сервера отчетов.  
   
 ## <a name="see-also"></a>См. также:  
  [Модули служб Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Библиотека служб Reporting Services расширения](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Библиотека модулей Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

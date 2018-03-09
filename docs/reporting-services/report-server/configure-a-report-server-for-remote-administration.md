@@ -1,12 +1,14 @@
 ---
-title: "Настройка сервера отчетов для удаленного администрирования | Документы Microsoft"
+title: "Настройка сервера отчетов для удаленного администрирования | Документы Майкрософт"
 ms.date: 09/14/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.custom: 
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +18,16 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 - remote server administration [Reporting Services]
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
-caps.latest.revision: 11
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 77dfb20f08e02c035cc4898fa9a5157dadd03f41
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69e4b50bdfd9dcffd285dbd7a37e095efdca621c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>настроить сервер отчетов для удаленного администрирования
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]экземпляры сервера отчетов можно настраивать локально или удаленно. Чтобы настроить удаленный экземпляр сервера отчетов, можно использовать программу настройки служб Reporting Services. Также можно написать пользовательский код, который будет использовать поставщик инструментария управления Windows (WMI) служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Программа настройки служб Reporting Services предоставляет графический интерфейс поставщика WMI, поэтому такая настройка сервера отчетов не требует написания кода. При запуске программы можно указать, к какому удаленному серверу необходимо подключаться.  
@@ -38,7 +40,7 @@ ms.lasthandoff: 08/09/2017
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Чтобы изменить настройки брандмауэра, нужно войти в систему локально и быть членом локальной группы «Администраторы». Через удаленное соединение невозможно изменить настройки брандмауэра Windows на удаленном компьютере.  
   
  Чтобы включить возможности удаленного администрирования для пользователя, не обладающего правами администратора, учетной записи необходимо предоставить права удаленной активации с помощью распределенной модели объектов (DCOM). В этом разделе предоставлены инструкции по настройке сервера для доступа пользователя, не обладающего правами администратора.  
@@ -50,7 +52,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="tasks"></a>Задания  
  Для включения возможности удаленной настройки выполняются следующие задачи.  
   
--   Включение портов в брандмауэре Windows и разрешение запросов на портах, используемых сервером отчетов и экземпляром компонента SQL Server Database Engine.  См. в разделах [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) и [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
+-   Включение портов в брандмауэре Windows и разрешение запросов на портах, используемых сервером отчетов и экземпляром компонента SQL Server Database Engine.  См. в разделах [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) и [Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 -   Включение удаленных соединений с экземпляром компонента Database Engine, хранящего базу данных сервера отчетов. Удаленное соединение необходимо для настройки подключения к базе данных сервера отчетов и управления ключами шифрования.  
   
@@ -114,7 +116,7 @@ ms.lasthandoff: 08/09/2017
   
 9. Введите имя учетной записи пользователя и нажмите кнопку **ОК**.  
   
-10. В **разрешения для \<пользователь или группа >**в **Разрешить** выберите **удаленный запуск** и **Удаленная активация**и нажмите кнопку **ОК**.  
+10. В разделе **Разрешения для \<пользователь или группа>** в столбце **Разрешить** выберите **Удаленный запуск** и **Удаленная активация**, а затем нажмите кнопку **OК**.  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>Настройка разрешений пространства имен WMI сервера отчетов для пользователей, не обладающих правами администратора  
   
@@ -144,8 +146,7 @@ ms.lasthandoff: 08/09/2017
   
 13. В столбце **Разрешить** установите флажки **Включить учетную запись**, **Включить удаленно**и **Прочесть безопасность**, затем нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
- [Службы Reporting Services Configuration Manager &#40; Основной режим &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+## <a name="see-also"></a>См. также:  
+ [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   
-

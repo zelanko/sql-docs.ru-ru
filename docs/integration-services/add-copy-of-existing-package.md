@@ -1,10 +1,13 @@
 ---
-title: "Добавление копии существующего пакета | Документы Microsoft"
+title: "Добавление копии существующего пакета | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Add Copy of Existing Package dialog box
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
-caps.latest.revision: 13
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 95cf1faebe886981c272a71d54d84bc42b2a66f9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c81b378a82156493fd88119f83ef814350cf091f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-copy-of-existing-package"></a>Добавление копии существующего пакета
   Используйте диалоговое окно **Добавление копии существующего пакета** для добавления копии пакета из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], файловой системы или хранилища пакетов служб SSIS к проекту служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -39,7 +41,7 @@ ms.lasthandoff: 09/26/2017
  **Тип проверки подлинности**  
  При копировании из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]выберите тип проверки подлинности.  
   
- **Имя пользователя**  
+ **User name**  
  При использовании проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] укажите имя пользователя.  
   
  **Пароль**  
@@ -48,10 +50,9 @@ ms.lasthandoff: 09/26/2017
  **Путь пакета**  
  Укажите путь к пакету или нажмите кнопку обзора **(…)** и укажите копируемый пакет.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сохранение копии пакета](http://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
  [Сохранение пакетов](../integration-services/save-packages.md)   
  [Службы Integration Services (службы SSIS)](../integration-services/service/integration-services-service-ssis-service.md)
   
   
-

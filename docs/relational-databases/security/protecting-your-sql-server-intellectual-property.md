@@ -3,30 +3,31 @@ title: "Защита интеллектуальной собственности
 ms.custom: 
 ms.date: 01/31/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - protecting intellectual property
 - intellectual property
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a7839940c07b1322cf00d357055caf83ad30daca
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 36377fe5db9440651b4e63a2c848efc290470d3e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>Защита интеллектуальной собственности SQL Server
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Разработчики программного обеспечения часто спрашивают, каким образом можно распространить приложение данных [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] среди заказчиков и при этом предотвратить возможность его анализа и разборки. Ключевым аргументом в данном случае является защита интеллектуальной собственности, которая обеспечивается лицензионным соглашением. Когда [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] устанавливается на компьютер, доступ к которому имеется у других администраторов, вы теряете некоторый контроль над этой собственностью. 
 
@@ -46,5 +47,4 @@ ms.lasthandoff: 08/28/2017
 
 [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 [Обеспечение безопасности SQL Server](../../relational-databases/security/securing-sql-server.md)  
-
 

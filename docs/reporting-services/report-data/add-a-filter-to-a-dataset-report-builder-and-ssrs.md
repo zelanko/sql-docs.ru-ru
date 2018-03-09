@@ -1,26 +1,27 @@
 ---
-title: "Добавление фильтра к набору данных (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Добавление фильтра к набору данных (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
-caps.latest.revision: 8
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "8"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: fe9dcb6eb8401348212fbaaae7c5f57aa4fccc99
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 68838748a77567747cd7f44f7924738d87b68450
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>Добавление фильтра к набору данных (построитель отчетов и службы SSRS)
   Добавление фильтра к набору данных ограничивает данные в отчете после извлечения данных из внешнего источника данных. При добавлении фильтра к набору данных все элементы отчета или области данных используют только данные, соответствующие условиям фильтра.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  В поле **Значение** введите выражение или значение, с которым фильтр будет сравнивать значение в поле **Выражение**.  
   
-     Дополнительные сведения об уравнениях фильтра см. в разделе [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
+     Примеры уравнений фильтра см. в разделе [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -72,13 +73,13 @@ ms.lasthandoff: 08/09/2017
   
 8.  В поле **Значение** введите выражение или значение, с которым фильтр будет сравнивать значение в поле **Выражение**.  
   
-     Дополнительные сведения об уравнениях фильтра см. в разделе [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
+     Примеры уравнений фильтра см. в разделе [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
- [Добавление фильтров набора данных, фильтров области данных и фильтры групп &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Примеры выражений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Добавить фильтр &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md)  
+ [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Добавление фильтра (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md)  
   
   

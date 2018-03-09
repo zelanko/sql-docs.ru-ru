@@ -2,39 +2,37 @@
 title: "Объект источника данных (TMSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 1357ae7e-30a4-481a-831c-7b046fe15aa4
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 13f647affa03844562f479223df57e1f8a2102f8
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ca3adb3a174338a193e7fd96865d295dc1844b03
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="datasources-object-tmsl"></a>Объект источника данных (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Определяет соединение с источником данных, используемых в модели, либо при импорте, чтобы добавлять данные к модели, в запросы к серверу через режим DirectQuery.  В режиме DirectQuery модель может иметь только один **DataSource** объекта.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Определяет соединение с источником данных, используемых в модели, либо при импорте, чтобы добавлять данные к модели, в запросы к серверу через режим DirectQuery.  В режиме DirectQuery модель может иметь только один **DataSource** объекта.  
   
  Если вы создаете, заменив, или изменение сам объект источника данных, любой источник данных, на которые ссылается сценарий (например, в сценарий секционирования) должен быть существующим **DataSource** объектов в модели.  
   
 ## <a name="object-definition"></a>Определение объекта  
  Все объекты имеют общий набор свойств, включая имя, тип, описание, коллекцию свойств и заметки. **Источник данных** объекты также имеют следующие свойства.  
   
- Тип  
+ type  
  Тип источника данных. В настоящее единственным допустимым значением является поставщиком (1) - обычная строка подключения.  
   
  connectionString  
@@ -188,10 +186,9 @@ ms.lasthandoff: 09/01/2017
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по языку TMSL (Tabular Model Scripting Language)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [Режим DirectQuery (табличные службы SSAS)](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [Режим DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
+ [Настройка HTTP-доступа к службам Analysis Services в службах IIS &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   
-

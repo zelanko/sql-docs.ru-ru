@@ -1,34 +1,34 @@
 ---
-title: "Отчет программирования веб-части средства просмотра в режиме интеграции с SharePoint | Документы Microsoft"
+title: "Использование программирования веб-части обозревателя в режиме интеграции с SharePoint | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
-caps.latest.revision: 8
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "8"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: ded31cca0464d16657d095b6f3fac5344cbd33c0
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 9339b0f383efd757e9be49271f4a5bdd2d7a4d4f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>Использование программирования веб-части обозревателя в интеграции с SharePoint
-  Веб-часть средства просмотра отчетов — серверный элемент управления, который содержит набор открытых приложений, программные интерфейсы (API), позволяя разработчикам создавать пользовательские приложения SharePoint. Пользователь может создавать веб-части, предоставляющие путь к отчету и параметры для веб-части средства просмотра отчетов с помощью соединений веб-частей. Также можно внедрить веб-часть в пользовательскую страницу веб-части SharePoint и модифицировать ее с помощью открытого API-интерфейса.  
+  Веб-часть средства просмотра отчетов ― это серверный элемент управления, который содержит набор открытых API, позволяющих разработчикам создавать пользовательские приложения SharePoint. Пользователь может создавать веб-части, предоставляющие путь к отчету и параметры для веб-части средства просмотра отчетов с помощью соединений веб-частей. Также можно внедрить веб-часть в пользовательскую страницу веб-части SharePoint и модифицировать ее с помощью открытого API-интерфейса.  
   
 ## <a name="connecting-to-report-viewer-web-part-with-custom-web-parts"></a>Соединение с веб-частью средства просмотра отчетов с пользовательскими веб-частями  
- Веб-части средства просмотра отчетов ― это потребитель соединения для веб-части SharePoint, который реализует <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> или T:Microsoft.SharePoint.WebPartPages.IFilterValues. <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Веб-часть, таких как **документов** веб-часть можно предоставить путь отчета для просмотра веб-части отчетов при размещении на одной странице веб-частей с веб-части средства просмотра отчетов. Аналогичным образом, T:Microsoft.SharePoint.WebPartPages.IFilterValues веб-часть, таких как **фильтрации** или **Фильтр выбора**, можно указать параметр отчета для просмотра веб-части отчетов при размещении на одной странице веб-частей с веб-части средства просмотра отчетов.  
+ Веб-часть средства просмотра отчетов ― это потребитель соединения с веб-частями SharePoint, реализующими интерфейс <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> или T:Microsoft.SharePoint.WebPartPages.IFilterValues. Веб-часть <xref:System.Web.UI.WebControls.WebParts.IWebPartRow>, например веб-часть **Документы**, может предоставлять веб-части средства просмотра отчетов путь к отчету, если она помещается на той же странице веб-части, что и веб-часть средства просмотра отчетов. Аналогично, веб-часть T:Microsoft.SharePoint.WebPartPages.IFilterValues, например **Текстовый фильтр** или **Фильтр выбора**, может предоставлять параметр отчета для веб-части средства просмотра отчетов, если ее поместить на ту же страницу веб-части, где располагается веб-часть средства просмотра отчетов.  
   
 ### <a name="implementing-a-report-path-provider-with-iwebpartrow"></a>Реализация поставщика путей отчетов с интерфейсом IWebPartRow  
  Чтобы указать путь к отчету для веб-части средства просмотра отчетов через соединения веб-части, выполните следующие действия.  
@@ -40,9 +40,9 @@ ms.lasthandoff: 08/12/2017
 3.  Подключите веб-часть к веб-части средства просмотра отчетов в пользовательском интерфейсе проектирования веб-частей.  
   
     > [!NOTE]  
-    >  Можно подключить только одну <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> веб-части веб-части средства просмотра отчетов на время и нельзя подключить одновременно <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> веб-части и веб-части T:Microsoft.SharePoint.WebPartPages.IFilterValues веб-части средства просмотра отчетов, в то же время.  
+    >  Можно подключить только одну веб-часть <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> к веб-части средства просмотра отчетов одновременно, и нельзя подключить одновременно веб-часть <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> и веб-часть T:Microsoft.SharePoint.WebPartPages.IFilterValues к веб-части средства просмотра отчетов.  
   
- Для вашего <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> веб-части для работы с T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart, необходимо выполнить следующие <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A> метод:  
+ Для правильной работы веб-части <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> с T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart необходимо выполнить следующие действия в методе <xref:System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData%2A>:  
   
 -   Вызовите метод обратного вызова при помощи объекта <xref:System.Data.DataRowView> в качестве параметра входа.  
   
@@ -52,17 +52,17 @@ ms.lasthandoff: 08/12/2017
     >  Веб-часть средства просмотра отчетов в надстройке для [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2010 также поддерживает получение сведений о пути к отчету через столбец «FileRef».  
   
 ### <a name="implementing-a-report-parameter-provider-with-ifiltervalues"></a>Реализация поставщика параметров отчета с интерфейсом IFilterValues  
- Веб-части, который реализует T:Microsoft.SharePoint.WebPartPages.IFilterValues может предоставлять одно значение параметра веб-части средства просмотра отчетов. Значение параметра, отправляемое веб-части средства просмотра отчетов, попадает под действие тех же ограничений, которые применяются к параметрам отчета в соответствии с определением отчета, включая тип данных, допустимые значения и т. п.  
+ Веб-часть, реализующая интерфейс T:Microsoft.SharePoint.WebPartPages.IFilterValues, может предоставлять одно значение параметра веб-части средства просмотра отчетов. Значение параметра, отправляемое веб-части средства просмотра отчетов, попадает под действие тех же ограничений, которые применяются к параметрам отчета в соответствии с определением отчета, включая тип данных, допустимые значения и т. п.  
   
  Чтобы указать параметр отчета для веб-части средства просмотра отчетов, выполните следующие действия.  
   
-1.  Создание веб-части, который реализует интерфейс T:Microsoft.SharePoint.WebPartPages.IFilterValues.  
+1.  Создайте веб-часть, которая реализует интерфейс T:Microsoft.SharePoint.WebPartPages.IFilterValues.  
   
-2.  Добавьте веб-часть на ту же страницу T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart.  
+2.  Добавьте веб-часть на ту же страницу, где находится T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart.  
   
-3.  Веб-части T:Microsoft.SharePoint.WebPartPages.IFilterValues подключиться к веб-части средства просмотра отчетов в пользовательском интерфейсе проектирования веб сервера веб-части.  
+3.  Подключите веб-часть T:Microsoft.SharePoint.WebPartPages.IFilterValues к веб-части средства просмотра отчетов в пользовательском интерфейсе проектирования веб-частей.  
   
     > [!NOTE]  
-    >  Одновременно можно подключиться нескольких T:Microsoft.SharePoint.WebPartPages.IFilterValues веб-частей для веб-части средства просмотра отчетов. Тем не менее, нельзя одновременно подключить <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> веб-части и веб-части T:Microsoft.SharePoint.WebPartPages.IFilterValues веб-части средства просмотра отчетов, в то же время.  
+    >  К веб-части средства просмотра можно подключить несколько веб-частей T:Microsoft.SharePoint.WebPartPages.IFilterValues одновременно. Однако к веб-части средства просмотра нельзя подключить сразу и веб-часть <xref:System.Web.UI.WebControls.WebParts.IWebPartRow>, и веб-часть T:Microsoft.SharePoint.WebPartPages.IFilterValues.  
   
   

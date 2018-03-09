@@ -1,29 +1,31 @@
 ---
-title: "Catalog.start_execution (база данных SSISDB) | Документы Microsoft"
+title: "catalog.start_execution (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
-caps.latest.revision: 14
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 8edb51596198f27f00c1b78ddc8b3075ad035143
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 33f50d558073a82985ef225288471489d220e2c8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution (база данных SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Запускает экземпляр выполнения в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -35,16 +37,16 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
   
 ## <a name="arguments"></a>Аргументы  
  [@execution_id =] *execution_id*  
- Уникальный идентификатор для экземпляра выполнения. *Execution_id* — **bigint**.
+ Уникальный идентификатор для экземпляра выполнения. Параметр *execution_id* имеет тип **bigint**.
  
- [@retry_count =] *число_повторов*  
- Число повторных попыток в случае, если происходит сбой выполнения. Она вступает в силу только при выполнении в масштабное развертывание. Этот параметр является необязательным. Если не указан, его значение равно 0. *Число_повторов* — **int**.
+ [@retry_count =] *retry_count*  
+ Число повторных попыток при сбое выполнения. Применяется только при выполнении в Scale Out. Этот параметр является необязательным. Если параметр не задан, используется значение 0. Параметр *retry_count* имеет тип **int**.
   
-## <a name="remarks"></a>Замечания  
- Выполнение применяется для указания значений параметров, используемых пакетом во время один экземпляр выполнения пакета. После создания экземпляра исполнения и до его начала соответствующий проект должен быть повторно развернут. В этом случае экземпляр выполнения ссылается на проект, который является устаревшим. Это недопустимая ссылка приводит к сбою хранимой процедуры.  
+## <a name="remarks"></a>Remarks  
+ Выполнение применяется для задания значений параметров, которые используются пакетом в течение одного экземпляра выполнения пакета. После создания экземпляра исполнения и до его начала соответствующий проект должен быть повторно развернут. В этом случае экземпляр исполнения ссылается на устаревший проект. Эта недопустимая ссылка приводит к сбою хранимой процедуры.  
   
 > [!NOTE]  
->  Исполнения можно начинать только один раз. Запустить экземпляр выполнения, он должен быть создан (значение `1` в **состояние** столбец [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) представления).  
+>  Исполнения можно начинать только один раз. Чтобы запустить экземпляр выполнения, он должен быть создан (значение `1` в столбце **status** представления [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)).  
   
 ## <a name="example"></a>Пример  
  В следующем примере выполняется вызов catalog.create_execution для создания экземпляра выполнения пакета Child1.dtsx. Проект Project1 служб Integration Services содержит пакет. В этом примере выполняется вызов catalog.set_execution_parameter_value для задания значений для параметров Parameter1, Parameter2 и LOGGING_LEVEL. В этом примере выполняется вызов catalog.start_execution для запуска экземпляра выполнения.  
@@ -67,16 +69,16 @@ GO
  0 (успешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   Разрешения READ и MODIFY на экземпляр выполнения, разрешения READ и EXECUTE на проект и, при необходимости, разрешения READ на среду, указанную в ссылке  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
  Следующий список содержит описания некоторых условий, которые могут вызвать ошибку или предупреждение.  
@@ -94,4 +96,3 @@ GO
 -   Версия проекта, связанная с экземпляром исполнения, устарела; может быть исполнена только последняя версия проекта  
   
   
-

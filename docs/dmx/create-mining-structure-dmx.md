@@ -2,38 +2,37 @@
 title: "СОЗДАНИЕ СТРУКТУРЫ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ (DMX) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE_MINING_STRUCTURE
 - CREATE MINING STRUCTURE
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - CREATE MINING STRUCTURE statement
 - mining structures [DMX], creating
 - RELATED TO column
 ms.assetid: c0dec39c-e90f-4afd-aeaf-a9c3e1d1a5e0
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e7c12fe48c10b0fac4a89e2aa9a8e2b2ea0dce2f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cb0b52cf7ac2b866119ff75bbd0d7e8da8cbac84
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Создает в базе данных новую структуру интеллектуального анализа данных и при необходимости определяет обучающую и проверочную секции. После создания структуры интеллектуального анализа данных можно использовать [ALTER MINING STRUCTURE &#40; расширений интеллектуального анализа данных &#41;](../dmx/alter-mining-structure-dmx.md) инструкции для добавления моделей к структуре интеллектуального анализа данных.  
   
@@ -78,7 +77,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  По умолчанию: REPEATABLE(0)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Пользователь определяет структуру интеллектуального анализа данных, указывая список столбцов, при необходимости задавая иерархические связи между столбцами, а также при необходимости выполняя секционирование структуры интеллектуального анализа данных на обучающий и проверочный наборы данных.  
   
  Необязательное ключевое слово SESSION показывает, что структура является временной и ее можно использовать только в течение текущего сеанса. После завершения сеанса структура и любые модели на ее основе удаляются. Для создания временных структур и моделей, необходимо сначала установить AllowSessionMiningModels, свойство базы данных. Дополнительные сведения см. в статье [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
@@ -197,7 +196,6 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ## <a name="see-also"></a>См. также:  
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции управления данными](../dmx/dmx-statements-data-manipulation.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

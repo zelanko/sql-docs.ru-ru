@@ -1,26 +1,27 @@
 ---
-title: "Создание макета отчета мобильных служб Reporting Services для телефон или планшет | Документы Microsoft"
+title: "Создание макета мобильного отчета служб Reporting Services для телефона или планшета | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f8632816-068f-4a87-b15a-779387f3d3a3
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 283c93958b4cb8bedc890e8af942db3bc3c13a41
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1d5b0d607f3e111c5cc2e05f303d43d236c76b50
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>Создание макета мобильного отчета служб Reporting Services для телефона или планшета
 После [создания мобильного отчета служб Reporting Services](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) в [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)]можно скомпоновать его версию для телефона и планшета.  
@@ -44,8 +45,7 @@ ms.lasthandoff: 08/09/2017
   
    ![SSMRP_PhonePreview](../../reporting-services/mobile-reports/media/ssmrp-phonepreview.png)  
   
-### <a name="see-also"></a>См. также:  
+### <a name="see-also"></a>См. также раздел  
 - [Создание и публикация мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   
-

@@ -1,13 +1,14 @@
 ---
 title: "Программирование объектов AMO дополнительных классов и методов | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -22,17 +23,16 @@ helpviewer_keywords:
 - traces [AMO]
 - backups [AMO]
 ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
-caps.latest.revision: 22
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ea3f2a07cc5d6e39bec7db5faf333986a56062f9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 19ae651e2a1e43c5b8dc116a1d6f64c012ca0e2c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="programming-amo-complementary-classes-and-methods"></a>Программирование дополнительных классов и методов объектов AMO
   Этот раздел состоит из следующих подразделов.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 09/01/2017
   
 -   [Класс CaptureLog и атрибут CaptureXML](#CL)  
   
-##  <a name="Assembly"></a>Класс сборки  
+##  <a name="Assembly">Класс сборки</a>  
  Сборки позволяют пользователю расширять функциональные возможности [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] путем добавления новых хранимых процедур или функций многомерных выражений (MDX). Дополнительные сведения см. в разделе [AMO другие классы и методы](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md).  
   
  Добавление и удаление сборок является простой операцией, и ее можно выполнить в режиме в сети. Чтобы добавить сборку в базу данных, пользователь должен быть либо администратором базы данных, либо администратором сервера (чтобы иметь возможность добавить сборку к объекту сервера).  
@@ -79,7 +79,7 @@ static public void CreateStoredProcedures(Database db)
   
 ```  
   
-##  <a name="BU"></a>Методы BACKUP и Restore  
+##  <a name="BU"></a> Методы BACKUP и Restore  
  Методы Backup и Restore позволяют администраторам создавать резервные копии базы данных и производить ее восстановление.  
   
  В следующем образце создаются резервные копии всех баз данных на указанном сервере. Если файл резервной копии уже существует, то он будет перезаписан. Файлы резервных копий сохраняются в папке BackUp, которая вложена в папку данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -106,7 +106,7 @@ static public void RestoreAdventureWorks(Server svr)
 }  
 ```  
   
-##  <a name="TRC"></a>Trace-класс  
+##  <a name="TRC">Trace-класс</a>  
  Для наблюдения за работой сервера необходимы два вида трассировок: трассировки сеансов и трассировки сервера. Трассировка сервера позволяет узнать ход выполнения текущей задачи на сервере (трассировки сеанса); трассировки также могут показать общую активность сервера в целом, при этом соединение с сервером даже не требуется (трассировки сервера).  
   
  При трассировке текущих действий (трассировки сеанса) сервер отправляет текущему приложению уведомления о происходящих на нем событиях, вызванных этим приложением. В текущем приложении события захватываются с помощью обработчиков событий. Сначала объекту <xref:Microsoft.AnalysisServices.SessionTrace> назначаются процедуры обработки событий, а затем запускается трассировка сеанса.  
@@ -239,7 +239,7 @@ static public void TestServerTraces(Server svr)
 }  
 ```  
   
-##  <a name="CL"></a>Атрибуты CaptureLog и CaptureXml  
+##  <a name="CL"></a> Атрибуты CaptureLog и CaptureXml  
  Атрибут CaptureLog позволяет создавать пакетные файлы XML для аналитики, содержащие операции AMO. Атрибут CaptureLog позволяет описывать в скрипте объекты сервера как базы данных, кубов, измерений, структур интеллектуального анализа и др.  
   
  Создание атрибута CaptureLog включает следующие шаги.  
@@ -283,7 +283,7 @@ static public string TestCaptureLog(Server svr)
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices>   
  [Знакомство с классами объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [Объекты AMO другие классы и методы](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)   
@@ -292,4 +292,3 @@ static public string TestCaptureLog(Server svr)
  [Обработка многомерной модели &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   
-

@@ -1,35 +1,34 @@
 ---
-title: "Общие сведения о модулях доставки | Документы Microsoft"
+title: "Общие сведения о модулях доставки | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - subscriptions [Reporting Services], delivery extensions
 - delivery extensions [Reporting Services], about extensions
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
-caps.latest.revision: 37
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "37"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 79894381bf493132c1f73d711ecd6d1ba282401e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 1a93b20878414182a98b4994984b1633ab6a9497
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="delivery-extensions-overview"></a>Общие сведения о модулях доставки
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяет пользователям создавать и публиковать отчеты, которые, после создания и публикации, могут доставляться в различные места. Кроме того, службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] содержат несколько модулей доставки и API-интерфейс доставки, который позволяет разработчикам создавать дополнительные модули доставки, расширяя возможности доставки в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+  Службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяют пользователям создавать и публиковать отчеты, которые затем могут доставляться в различные места. Кроме того, службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] содержат несколько модулей доставки и API-интерфейс доставки, который позволяет разработчикам создавать дополнительные модули доставки, расширяя возможности доставки в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  В следующей таблице перечислены модули доставки, входящие в состав служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
@@ -38,7 +37,7 @@ ms.lasthandoff: 08/12/2017
 |Электронная почта сервера отчетов|Отправляет отчеты отдельным пользователям или группам пользователей по электронной почте через SMTP-сервер.|  
 |Общая папка сервера отчетов|Используется для распространения отчетов по организации с использованием сетевых общих папок. Дает возможность автоматически копировать отчет в общую папку по заданному расписанию.|  
   
- ![Архитектура модуля доставки служб Reporting](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "архитектура модуля доставки служб Reporting Services")  
+ ![Архитектура модуля доставки служб Reporting Services](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Архитектура модуля доставки служб Reporting Services")  
 Архитектура модуля доставки служб Reporting Services  
   
  Подпискам ставятся в соответствие модули доставки. При создании подписки, чтобы определить порядок доставки отчета, пользователь может выбрать один из доступных модулей доставки. В службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] подписки располагаются в базе данных сервера отчетов. Когда происходит событие, службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] проверяет событие по подпискам, содержащимся в базе данных сервера отчетов. Для каждой подписки, сопоставленной с событием, сервер отчетов создает уведомление. Для управляемых данными подписок уведомление создается для каждого получателя. После создания уведомления сервер отчетов вызывает определенный модуль доставки и передает для параметров модуля значения, указанные в уведомлении. Модуль доставки отправляет уведомление пользователю, как указано в выбранном модуле доставки.  
@@ -55,17 +54,16 @@ ms.lasthandoff: 08/12/2017
   
 -   компьютер для развертывания с установленным сервером отчетов;  
   
--   С компьютера разработчика [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) установлен.  
+-   компьютер для разработки с установленной средой [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] или пакетом средств разработки программного обеспечения (пакетом SDK) для платформы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)];  
   
 -   основные сведения о функциях и возможностях служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], в особенности относящихся к подписке и доставке;  
   
 -   основные сведения о [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] и веб-элементах управления, если планируется реализация собственного пользовательского интерфейса подписки для диспетчера отчетов;  
   
--   Процесс разработки в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] язык, такой как [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
+-   Опыт разработки на языке [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], например [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
 ## <a name="see-also"></a>См. также:  
  [Реализация модуля доставки](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
- [Библиотека служб Reporting Services расширения](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Библиотека модулей Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

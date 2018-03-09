@@ -2,11 +2,13 @@
 title: "Оптимизация трассировки SQL | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - traces [SQL Server], performance
 - performance [SQL Server], trace
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
-caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "25"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2eb701bd4ade246ebaf7b796a49c207b0f89e5e0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 04c90ac8025d4939c6c9606d63c5d35c5d68aabe
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="optimize-sql-trace"></a>Оптимизация трассировки SQL
-  Выполнение трассировки SQL негативно сказывается на производительности, поскольку этот процесс использует системные ресурсы для сбора данных, однако существует несколько способов минимизировать потери производительности. Чтобы минимизировать потери производительности, вызванные трассировкой:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Выполнение трассировки SQL негативно сказывается на производительности, так как этот процесс использует системные ресурсы для сбора данных, однако существует множество способов минимизировать потери производительности. Чтобы минимизировать потери производительности, вызванные трассировкой:  
   
 -   Рассмотрите возможность использования командной строки для запуска трассировок. Использование графического пользовательского интерфейса уменьшает производительность. Дополнительные сведения см. в разделе [sp_trace_create (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).  
   
@@ -52,4 +53,3 @@ ms.lasthandoff: 06/22/2017
  [Фильтрация трассировки](../../relational-databases/sql-trace/filter-a-trace.md)  
   
   
-

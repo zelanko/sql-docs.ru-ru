@@ -2,32 +2,33 @@
 title: "Присоединение базы данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 10/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.attachdatabase.f1
+f1_keywords: sql13.swb.attachdatabase.f1
 helpviewer_keywords:
 - database attaching [SQL Server]
 - attaching databases [SQL Server]
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
-caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 50e55a131e303a5303059a51797730f8bfab2581
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "52"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 04d101550bb7a1215c261419e42820af45ab5098
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="attach-a-database"></a>Присоединение базы данных
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описывается присоединение базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Эту функцию можно использовать для копирования, перемещения или обновления базы данных SQL Server.  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 06/22/2017
  
 Мы не рекомендуем использовать отсоединение и присоединение для резервного копирования и восстановления, так как резервные копии журналов транзакций отсутствуют, а файлы могут быть случайно удалены.
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
  Разрешения на доступ к файлам устанавливаются во время выполнения определенных операций с базами данных, включая отсоединение и присоединение баз данных. Дополнительные сведения о разрешениях на доступ к файлам, настраиваемых при отсоединении и присоединении базы данных см. в разделе [Защита данных и файлов журналов](http://technet.microsoft.com/library/ms189128.aspx) электронной документации по [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (документация актуальна). 
   
  Не рекомендуется подключать или восстанавливать базы данных, полученные из неизвестных или ненадежных источников. В этих базах данных может содержаться вредоносный код, вызывающий выполнение непредусмотренных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или появление ошибок из-за изменения схемы или физической структуры базы данных. Перед тем как использовать базу данных, полученную из неизвестного или ненадежного источника, выполните на тестовом сервере инструкцию [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) для этой базы данных, а также изучите исходный код в базе данных, например хранимые процедуры и другой пользовательский код. Дополнительные сведения о присоединении баз данных и сведения об изменениях, вносимых при присоединении баз данных в метаданные, см. в статье [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
@@ -90,13 +91,13 @@ ms.lasthandoff: 06/22/2017
      **Состояние**  
      Отображается состояние базы данных в соответствии со следующей таблицей.  
   
-    |Значок|Текст состояния|Описание|  
+    |Значок|Текст состояния|Description|  
     |----------|-----------------|-----------------|  
     |(Нет значка)|(Нет текста)|Операция присоединения не была запущена или находится в режиме ожидания для этого объекта. Это состояние по умолчанию при открытии диалогового окна.|  
     |Зеленый, указывающий направо треугольник|Выполняется|Операция присоединения была запущена, но не завершена.|  
     |Зеленый флажок|Успешно|Объект успешно присоединен.|  
     |Красный кружок с белым крестом внутри|Ошибка|При выполнении операции присоединения возникла ошибка, и операция не была успешно завершена.|  
-    |Кружок с двумя черными квадратами (слева и справа) и двумя белыми квадратами (сверху и снизу)|Остановлено|Операция присоединения не была успешно завершена, т.к. пользователь остановил операцию.|  
+    |Кружок с двумя черными квадратами (слева и справа) и двумя белыми квадратами (сверху и снизу)|Остановлена|Операция присоединения не была успешно завершена, т.к. пользователь остановил операцию.|  
     |Кружок, содержащий изогнутую стрелку, указывающую в направлении против часовой стрелки|Выполнен откат|Операция присоединения была успешной, но был выполнен ее откат из-за ошибки, возникшей при вложении другого объекта.|  
   
      **Сообщение**  
@@ -166,4 +167,3 @@ ms.lasthandoff: 06/22/2017
  [Отсоединение базы данных](../../relational-databases/databases/detach-a-database.md)  
   
   
-

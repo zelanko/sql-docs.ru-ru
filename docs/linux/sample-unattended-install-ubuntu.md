@@ -2,39 +2,43 @@
 title: "Автоматическая установка SQL Server на Ubuntu | Документы Microsoft"
 description: "Пример сценария SQL Server — автоматическая установка на Ubuntu"
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: f6df20d942331b6361651ade82b6158b2c6798de
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 9ab85f20c1bc8660c54d8d1a2ec946a2121f59f9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Пример: Сценарий установки автоматической установки SQL Server для Ubuntu
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Этот пример скрипта Bash устанавливает 2017 г. SQL Server на Ubuntu 16.04 без интерактивного ввода данных. Он предоставляет примеры установке ядра СУБД, средства командной строки SQL Server, агент SQL Server и выполняет шаги после установки. При необходимости можно установить компонент full-text search и создать пользователя с правами администратора.
 
 > [!TIP]
-> Если не требуется использовать сценарий автоматической установки, то самый быстрый способ установки SQL Server является выполните [краткого руководства по Ubuntu](quickstart-install-connect-ubuntu.md). Другие сведения о настройке в разделе [руководство по установке для SQL Server в Linux](sql-server-linux-setup.md).
+> Если не требуется использовать сценарий автоматической установки, то самый быстрый способ установки SQL Server является выполните [краткое руководство для Ubuntu](quickstart-install-connect-ubuntu.md). Другие сведения о настройке в разделе [руководство по установке для SQL Server в Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
-- Необходимо по крайней мере 3,25 ГБ памяти для запуска SQL Server в Linux.
+- Необходимо по крайней мере 2 ГБ памяти для запуска SQL Server в Linux.
 - Файловая система должна быть **XFS** или **EXT4**. Других файловых систем, таких как **BTRFS**, не поддерживаются.
 - Другие требования к системе см. в разделе [требования к системе для SQL Server в Linux](sql-server-linux-setup.md#system).
 
 ## <a name="sample-script"></a>Пример сценария
 
 ```bash
-#!/bin/bash
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 
@@ -224,4 +228,3 @@ export SQL_INSTALL_AGENT='y'
 ```
 
 Дополнительные сведения о SQL Server в Linux см. в разделе [Linux Обзор SQL Server на](sql-server-linux-overview.md).
-

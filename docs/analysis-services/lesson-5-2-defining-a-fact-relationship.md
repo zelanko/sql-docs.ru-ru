@@ -2,29 +2,32 @@
 title: "Определение связи фактов | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
-caps.latest.revision: 19
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5ffe10857e0111735cd92fefdae106641ad2954e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c36c15a75929b0c758ab32fdf952c1e0aa034508
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Занятие 5-2-Определение связи фактов
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Иногда пользователи хотят иметь возможность вводить для мер измерения, которые образуются из элементов данных таблицы фактов, или создавать запросы к таблице фактов для получения специальных дополнительных сведений, таких как номера счетов или номера заказов на покупку, относящихся к конкретным фактам продаж. При определении измерения, основанного на подобных элементах таблиц фактов, оно называется *измерением фактов*. Измерения фактов также называют вырожденными измерениями. Измерения фактов полезны для группирования строк таблицы фактов, например для выбора всех строк, относящихся к определенному номеру счета. Хотя можно поместить эти сведения в отдельную таблицу измерения в реляционной базе данных, создание такой таблицы измерения не принесет пользы, потому что таблица измерения станет расти так же быстро, как и таблица фактов, что будет лишь порождать дублирование и приведет к необоснованной сложности таблицы.  
   
 Службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]позволяют указать, следует данные измерения фактов повторить в MOLAP-структуре измерения (это повышает производительность обработки запросов) или же определить измерение фактов как измерение ROLAP, чтобы сохранить место в хранилище за счет снижения производительности обработки запросов. При хранении измерения в режиме хранения MOLAP все элементы измерения, помимо хранения в секциях группы мер, хранятся в экземпляре служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в крайне сжатой структуре MOLAP. При хранении измерения в режиме хранения ROLAP только определение измерения хранится в структуре MOLAP, сами же элементы измерения запрашиваются из соответствующей реляционной таблицы фактов во время обработки запроса. Выбор подходящего режима хранения зависит от того, как часто обращаются с запросами к измерению фактов, сколько строк возвращает типичный запрос, каковы производительность обработки запроса и стоимость обработки. Определение измерения как ROLAP не требует, чтобы все кубы, использующие это измерение, также хранились в режиме ROLAP. Режимы хранения для каждого измерения можно настраивать независимо.  
@@ -127,10 +130,9 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Определение связи «многие ко многим»](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
   
-## <a name="see-also"></a>См. также:  
-[Связи измерений](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
+## <a name="see-also"></a>См. также  
+[Связей измерений](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [Определение связей фактов и свойств связей фактов](../analysis-services/multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   
   
-

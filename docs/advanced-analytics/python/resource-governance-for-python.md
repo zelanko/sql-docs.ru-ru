@@ -2,25 +2,26 @@
 title: "Управление ресурсами для Python | Документы Microsoft"
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 8accb9b8e050340ff980a1b5d9f1faf9283d8b89
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4f83d62804803b2b9f3f028c48a7ec23d3f8d910
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="resource-governance-for-python"></a>Управление ресурсами для Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Так как Python обеспечивается с помощью же архитектуру расширяемости, которая была реализована для языка R в SQL Server 2016, существующие средства используются в SQL Server, такие как регулятор ресурсов, динамических административных представлений и расширенных событий, чтобы отследить ход выполнения Python сценарии SQL Server.
 
@@ -82,8 +83,7 @@ ms.lasthandoff: 09/01/2017
 
 В случае неконтролируемый скриптов можно отключить выполнение всех сценариев. Просто отменить этот процесс и задайте для свойства `external scripts enabled` FALSE или 0 на экземпляре. Немедленно будут отключены все выполнении внешних скриптов. Этот параметр для проблем безопасности или ситуации, в которых для администратор должен немедленно устранить проблемы ресурса необходимо зарезервировать.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Пул ресурсов регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
-
 

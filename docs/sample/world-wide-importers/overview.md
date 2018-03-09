@@ -1,30 +1,31 @@
 ---
 title: "Обзор | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: samples
+ms.technology: samples
 ms.custom: 
 ms.date: 01/30/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d4dcb00-b93e-44db-9d67-061702bba41a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
+ms.openlocfilehash: 658c1b3ffd44cd2194c75d6ad45888e24e0772c1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e5a3dd9c765c347b7516706d6e157a47f3c9bd03
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wide-world-importers-overview"></a>Общие сведения о широких World Importers
-Это Обзор вымышленной компании Wide World Importers и рабочие процессы, которые описываются в образцы баз данных WideWorldImporters для SQL Server и базы данных SQL Azure.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Это Обзор вымышленной компании Wide World Importers и рабочие процессы, которые описываются в образцы баз данных WideWorldImporters для SQL Server и базы данных SQL Azure.  
 
 Широкий World Importers (WWI) — это импортера оптовые нестандартные товаров и работы в области Сан-Франциско отсека распространителя.
 
@@ -71,4 +72,3 @@ SQL Server Analysis Services используется для создания а
 Лицензия для образца базы данных и в образце кода описывается в следующей статье: [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
 Образец базы данных включает общих данных, который был загружен из data.gov и естественным EarthData. Условия использования находятся здесь: [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)
-

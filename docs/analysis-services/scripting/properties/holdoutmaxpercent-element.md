@@ -2,36 +2,33 @@
 title: "Элемент HoldoutMaxPercent | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- HoldoutMaxPercent
-helpviewer_keywords:
-- HoldoutMaxPercent element
+applies_to: SQL Server 2016 Preview
+f1_keywords: HoldoutMaxPercent
+helpviewer_keywords: HoldoutMaxPercent element
 ms.assetid: e375cc51-5f9d-4252-98a1-326ca0dbbf83
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5282451ccad6f4cd8f3deb80542f5b2d72e3e05d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1d032bc80b0b96b693c2abee89a87a4747eb234e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="holdoutmaxpercent-element"></a>Элемент HoldoutMaxPercent
-  Указывает максимальный процент вариантов в источнике данных, который будет использоваться для контрольной секции, содержащей проверочный набор элемента [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) элемента. Оставшиеся варианты используются для обучения. Значение 0 указывает на то, что количество вариантов, которые можно контролировать как проверочные наборы, не ограничено.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Указывает максимальный процент вариантов в источнике данных, который будет использоваться для контрольной секции, содержащей проверочный набор элемента [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) элемента. Оставшиеся варианты используются для обучения. Значение 0 указывает на то, что количество вариантов, которые можно контролировать как проверочные наборы, не ограничено.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,7 +43,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|Целое число от 0 до 99.|  
 |Значение по умолчанию|30|  
@@ -59,7 +56,7 @@ ms.lasthandoff: 09/01/2017
 |Родительский элемент|[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если указать значения для **HoldoutMaxPercent** и **HoldoutMaxCases**, алгоритм ограничивает проверочный набор до меньшего из двух значений.  
   
  Если элементу **HoldoutMaxCases** присвоено значение по умолчанию 0, а элементу **HoldoutMaxPercent**значение не присвоено, алгоритм использует для обучения весь набор данных.  
@@ -78,4 +75,3 @@ ms.lasthandoff: 09/01/2017
  [Элемент HoldoutActualSize](../../../analysis-services/scripting/properties/holdoutactualsize-element.md)  
   
   
-

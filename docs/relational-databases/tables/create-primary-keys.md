@@ -2,48 +2,34 @@
 title: "Создание первичных ключей | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- primary keys [SQL Server], creating
+helpviewer_keywords: primary keys [SQL Server], creating
 ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "18"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: 182d85111f05cf2162084fade0a5a86078efbad5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: cbd22a0b9fdd7b33ff7d4ccf9999d7142acf4fb7
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-primary-keys"></a>Создание первичных ключей
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
  > Материалы по предыдущим версиям SQL Server см. в разделе [Создание первичных ключей](https://msdn.microsoft.com/en-US/library/ms189039(SQL.120).aspx).
 
-  Определить первичный ключ в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Создание первичного ключа автоматически приводит к созданию соответствующего уникального кластеризованного или некластеризованного индекса.  
-  
- **В этом разделе**  
-  
--   **Перед началом работы выполните следующие действия.**  
-  
-     [Ограничения](#Restrictions)  
-  
-     [Безопасность](#Security)  
-  
--   **Создание первичного ключа с помощью:**  
-  
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
+  Определить первичный ключ в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Создание первичного ключа автоматически приводит к созданию соответствующего уникального кластеризованного индекса (или некластеризованного при наличии такого указания).  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -53,9 +39,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Все столбцы с ограничением PRIMARY KEY должны иметь признак NOT NULL. Если допустимость значения NULL не указана, то для всех столбцов c ограничением PRIMARY KEY устанавливается признак NOT NULL.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Создание новой таблицы с первичным ключом требует разрешения CREATE TABLE в базе данных и разрешения ALTER на схему, в которой создается таблица.  
   
  Создание первичного ключа в существующей таблице требует разрешения ALTER на таблицу.  
@@ -80,8 +66,8 @@ ms.lasthandoff: 06/22/2017
  При определении составного ключа порядок столбцов в первичном ключе совпадает с порядком столбцов, показанным в таблице. Однако после создания первичного ключа порядок столбцов можно изменить. Дополнительные сведения см. в разделе [Изменение первичных ключей](../../relational-databases/tables/modify-primary-keys.md).  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
-  
-#### <a name="to-create-a-primary-key-in-an-existing-table"></a>Создание первичного ключа в существующей таблице  
+
+### <a name="to-create-a-primary-key-in-an-existing-table"></a>Создание первичного ключа в существующей таблице  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -89,16 +75,15 @@ ms.lasthandoff: 06/22/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере создается первичный ключ в столбце `TransactionID`.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     ALTER TABLE Production.TransactionHistoryArchive   
     ADD CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY CLUSTERED (TransactionID);  
     GO  
-  
     ```  
   
-#### <a name="to-create-a-primary-key-in-a-new-table"></a>Создание первичного ключа в новой таблице  
+### <a name="to-create-a-primary-key-in-a-new-table"></a>Создание первичного ключа в новой таблице  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -106,19 +91,42 @@ ms.lasthandoff: 06/22/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере создается таблица и определяется первичный ключ для столбца `TransactionID`.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     CREATE TABLE Production.TransactionHistoryArchive1  
     (  
-       TransactionID int NOT NULL,  
+       TransactionID int IDENTITY (1,1) NOT NULL,  
        CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY CLUSTERED (TransactionID)  
     );  
     GO  
-  
     ```  
-  
-     Дополнительные сведения см. в разделах [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) и [table_constraint (Transact-SQL)](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).  
-  
-###  <a name="TsqlExample"></a>  
 
+### <a name="to-create-a-primary-key-with-nonclustered-index-in-a-new-table"></a>Создание первичного ключа с некластеризованным индексом в новой таблице  
+  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+2.  На стандартной панели выберите пункт **Создать запрос**.  
+  
+3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере создается таблица и определяется первичный ключ для столбца `CustomerID` и кластеризованный индекс для `TransactionID`.  
+  
+    ```sql  
+    USE AdventureWorks2012;  
+    GO  
+    CREATE TABLE Production.TransactionHistoryArchive1  
+    (  
+       CustomerID uniqueidentifier DEFAULT NEWSEQUENTIALID(),
+       TransactionID int IDENTITY (1,1) NOT NULL,  
+       CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY NONCLUSTERED (uniqueidentifier)  
+    );  
+    GO  
+
+    -- Now add the clustered index
+    CREATE CLUSTERED INDEX CIX_TransactionID ON Production.TransactionHistoryArchive1 (TransactionID);
+    GO
+    ```  
+
+## <a name="see-also"></a>См. также:    
+[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)    
+[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)     
+[table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)    

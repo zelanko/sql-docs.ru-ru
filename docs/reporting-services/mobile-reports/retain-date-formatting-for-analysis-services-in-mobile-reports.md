@@ -1,26 +1,27 @@
 ---
-title: "Сохранить формат дат для служб Analysis Services в мобильных отчетах | Службы Reporting Services | Документы Microsoft"
+title: "Сохранение форматирования дат для служб Analysis Services в мобильных отчетах | Службы Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a4da31bb1ed09024c6278193e8011b5c7981922
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a20327b51bd4fa05baa140bd8958dd9ff5486291
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>Сохранение форматирования дат для служб Analysis Services в мобильных отчетах
 Для того чтобы даты в источниках данных [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] сохраняли свой тип данных в [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)], добавьте меру в общий набор данных в построителе отчетов.
@@ -33,7 +34,7 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="create-a-measure-to-retain-a-date-field-data-type"></a>Создание меры для сохранения тип данных в столбце дат
 
-1. Создайте меру для сохранения значения в соответствующем поле даты, выбрав иерархию или уровень этой даты в поле выражения и добавив **.CurrentMember.MemberValue**. Например:
+1. Создайте меру для сохранения значения в соответствующем поле даты, выбрав иерархию или уровень этой даты в поле выражения и добавив **.CurrentMember.MemberValue**. Пример:
  
    [Продажи через Интернет].[Дата отгрузки].CurrentMember.MemberValue
    
@@ -43,8 +44,7 @@ ms.lasthandoff: 08/09/2017
 
    ![ssas-query-designer-calculated-member-report-builder](../../reporting-services/mobile-reports/media/ssas-query-designer-calculated-member-report-builder.png) 
    
-### <a name="see-also"></a>См. также:
+### <a name="see-also"></a>См. также раздел
 
--  [Данные для мобильных отчетов служб Reporting Services](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
--  [Prepare data for Reporting Services mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)
-
+-  [Data for Reporting Services mobile reports](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
+-  [Подготовка данных для мобильных отчетов Reporting Services](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)

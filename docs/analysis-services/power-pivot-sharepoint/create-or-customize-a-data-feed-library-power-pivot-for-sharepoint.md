@@ -2,33 +2,33 @@
 title: "Создание или Настройка библиотеки веб-каналов данных (Power Pivot для SharePoint) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data feed library
 - data feeds [Analysis Services with SharePoint]
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
-caps.latest.revision: 22
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9f536c0956cec0be863b099b2c0540ccf7ac3da2
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 55a0d510b8d80ca4c3752194b4c9c488ac4d787b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>Создание или настройка библиотеки веб-каналов данных (PowerPivot для SharePoint)
-  *Библиотека каналов данных* — это специализированная библиотека SharePoint, которая позволяет регистрировать сервисные документы данных Atom (ATOMSVC) и предоставлять к ним общий доступ. Эти документы предоставляют потоки XML-данных для книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или других клиентских приложений, поддерживающих формат веб-каналов данных Atom. Библиотека веб-каналов данных отличается от других библиотек SharePoint, поскольку она позволяет выполнять следующее:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+*Библиотека каналов данных* — это специализированная библиотека SharePoint, которая позволяет регистрировать сервисные документы данных Atom (ATOMSVC) и предоставлять к ним общий доступ. Эти документы предоставляют потоки XML-данных для книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или других клиентских приложений, поддерживающих формат веб-каналов данных Atom. Библиотека веб-каналов данных отличается от других библиотек SharePoint, поскольку она позволяет выполнять следующее:  
   
 -   Создавать и изменять *сервисные документы данных*, используемые для указания HTTP-соединения с определенным каналом.  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 09/01/2017
  [Добавление типа содержимого потока данных в любую библиотеку](#addtolib)  
   
 ##  <a name="prereq"></a> Предварительные требования  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Если шаблон библиотеки потоков данных недоступен, то это предварительное условие, вероятнее всего, не было выполнено. Дополнительные сведения см. в статье [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Если шаблон библиотеки потоков данных недоступен, то это предварительное условие, вероятнее всего, не было выполнено. Дополнительные сведения см. в статье [Включение интеграции функций PowerPivot для семейств веб-сайтов в центре администрирования](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
  Создавать библиотеку на сайте может только его владелец.  
   
@@ -122,4 +122,3 @@ ms.lasthandoff: 09/01/2017
  [Веб-каналы данных Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   
   
-

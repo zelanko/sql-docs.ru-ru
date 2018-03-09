@@ -3,10 +3,12 @@ title: "Подключение с использованием файловых 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], file data sources
 - file data sources [ODBC]
 ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d64a08cc8e748efe984c8aa5acd7deac743c2ed3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5f8a5d949127e7ad87866a0272fbd285fe12ceed
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-using-file-data-sources"></a>Подключение с использованием файловых источников данных
 Сведения о соединении для источника данных хранятся в файле DSN с. В результате строки подключения можно использовать несколько раз одним пользователем или совместно несколькими пользователями, у них установлены соответствующие драйверы. Файл содержит имя драйвера (или другое имя источника данных в случае такие источники данных) и при необходимости строка подключения, который может использоваться с **SQLDriverConnect**. Диспетчер драйверов формирует строку подключения для вызова **SQLDriverConnect** из ключевых слов в файле DSN с.  
@@ -60,4 +61,3 @@ DSN = MyDataSource
   
 ## <a name="see-also"></a>См. также:  
  [http://support.Microsoft.com/kb/165866](http://support.microsoft.com/kb/165866)
-

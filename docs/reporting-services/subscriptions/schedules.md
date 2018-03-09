@@ -1,13 +1,14 @@
 ---
-title: "Расписания | Документы Microsoft"
+title: "Расписания | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/01/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +19,16 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], scheduling
 - automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
-caps.latest.revision: 51
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "51"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a49274f347768a1a213c9a0010917e9e1d1376a5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d148c29185b72fe433a34034993342afa61970be
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="schedules"></a>Расписания
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют **общие расписания** и **расписания отчетов** , что позволяет управлять обработкой и распространением отчетов. Различие между двумя типами расписаний состоит в том, как они определяются, хранятся и управляются. Внутреннее строение обоих типов расписаний одинаково. В каждом расписании указывается тип повторения: ежемесячно, еженедельно или ежедневно. В пределах одного типа повторений можно указать интервалы и диапазон, определяющий частоту повторения события. Шаблон типа повторения и способ его задания одинаков при создании как общих расписаний, так и расписаний для отчетов.
@@ -96,7 +96,7 @@ ms.lasthandoff: 08/09/2017
 |Создать, изменить или удалить расписание отчета в пользовательской подписке|Управление отдельными подписками|браузер, построитель отчетов, «Мои отчеты», диспетчер содержимого|Посетители, участники|  
 |Создать, изменить или удалить расписание отчета для всех остальных отложенных операций|Управление журналом отчета, управление всеми подписками, управление отчетами|Диспетчер содержимого|Владельцы|  
   
- Дополнительные сведения о безопасности в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]в основном режиме см. в разделах [Стандартные роли](../../reporting-services/security/role-definitions-predefined-roles.md), [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) и [Задачи и разрешения](../../reporting-services/security/tasks-and-permissions.md). Описание режима интеграции с SharePoint см. в разделе [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ Дополнительные сведения о безопасности в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]в основном режиме см. в разделах [Стандартные роли](../../reporting-services/security/role-definitions-predefined-roles.md), [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) и [Задачи и разрешения](../../reporting-services/security/tasks-and-permissions.md). Описание режима интеграции с SharePoint см. в разделе [Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
 ##  <a name="bkmk_how_scheduling_works"></a> Принцип работы обработчика планирования и доставки  
  Обработчик планирования и доставки выполняет следующие функции.  
@@ -138,13 +138,12 @@ ms.lasthandoff: 08/09/2017
 ###  <a name="bkmk_stoppingservice"></a> Последствия остановки службы сервера отчетов  
  При остановке службы сервера отчетов агент SQL Server продолжает добавлять запросы на обработку отчета в очередь. Сведения о состоянии от агента SQL Server указывают на то, что задание успешно завершилось. Однако из-за того, что служба сервера отчетов была остановлена, фактически обработка отчета не выполнялась. Запросы будут накапливаться в очереди до тех пор, пока служба сервера отчетов не будет перезапущена. Как только служба сервера отчетов будет перезапущена, все запросы на обработку отчета, находящиеся в очереди, начнут обрабатываться по очереди.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание, изменение и удаление моментальных снимков в журнале отчетов](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
- [&#40; подписки и доставки Службы Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Подписки, управляемые данными](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Кэширование отчетов &#40; Службы SSRS &#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Управление содержимым сервера отчетов &#40; Собственный режим служб SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Кэширование отчетов (службы SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Общие наборы данных в кэше (службы SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   
   
-

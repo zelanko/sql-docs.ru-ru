@@ -3,8 +3,11 @@ title: "Табличные указания (Transact-SQL) | Документы 
 ms.custom: 
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,20 +39,19 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: 174
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c87922c612c4da8b1ca6841b0d7ff7c3f191eb50
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ea3f60e74aeb855a0d168646c341a1f6a8d7104c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hints-transact-sql---table"></a>Указания (Transact-SQL) - таблица
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Табличные подсказки переопределяют поведение оптимизатора запросов по умолчанию на время выполнения инструкции языка обработки данных (DML) указанием способа блокировки, одного или более индексов, операции обработки запроса, например просмотра таблицы или поиска в индексе, или других параметров. Табличные указания задаются в предложении FROM инструкции DML и относятся только к таблицам и представлениям, на которые ссылается это предложение.  
   
@@ -66,7 +68,7 @@ ms.lasthandoff: 09/01/2017
   
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- [СЛИЯНИЕ](../../t-sql/statements/merge-transact-sql.md)  
+ [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -153,7 +155,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  NOEXPAND  
  Указывает, что при обработке запроса оптимизатором запросов никакие индексированные представления не расширяются для доступа к базовым таблицам. Оптимизатор запросов обрабатывает представление так же, как и таблицу с кластеризованным индексом. Аргумент NOEXPAND применяется только для индексированных представлений. Дополнительные сведения см. в подразделе «Примечания».  
   
- Индекс **(***index_value* [**,**... *n* ] ) | Индекс = ( *index_value***)**  
+ INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
  Синтаксис INDEX() указывает имя или идентификатор одного или более индексов, используемых при обработке инструкции оптимизатором запросов. Альтернативный синтаксис «INDEX =» позволяет задать отдельное значение индекса. Для каждой таблицы можно задать только одно указание индекса.  
   
  Если имеется кластеризованный индекс, аргумент INDEX(0) приводит к просмотру кластеризованного индекса, а INDEX(1) — к просмотру или поиску по кластеризованному индексу. Если кластеризованного индекса нет, аргумент INDEX(0) приводит к просмотру таблицы, а INDEX(1) интерпретируется как ошибка.  
@@ -184,7 +186,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  Пример использования данного указания в инструкции INSERT… ВЫБЕРИТЕ * из инструкции OPENROWSET(BULK...), в разделе [сохранение значений NULL или использование по умолчанию значения во время массового импорта &#40; SQL Server &#41; ](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
- FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
+ FORCESEEK [**(***index_value***(*** index_column_name* [ **,**... *n* ] **))** ]  
  Указывает, что в качестве пути доступа к данным таблиц или представлений оптимизатор запросов использует только операцию поиска в индексе. Начиная с SQL Server 2008 R2 с пакетом обновления 1 (SP1) также могут указываться параметры индекса. В таком случае оптимизатор запросов будет использовать при выполнении операций поиска в индексе по указанному индексу как минимум все указанные столбцы индекса.  
   
  *index_value*  
@@ -195,7 +197,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  Подсказка FORCESEEK может быть указана следующим образом.  
   
-|Синтаксис|Пример|Description|  
+|Синтаксис|Пример|Описание|  
 |------------|-------------|-----------------|  
 |Без указания INDEX или индекса|`FROM dbo.MyTable WITH (FORCESEEK)`|Оптимизатор запросов использует только операции поиска в индексе для доступа к таблицам или представлениям через любой подходящий индекс.|  
 |В сочетании с подсказкой INDEX|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|Оптимизатор запросов будет использовать при доступе к таблице или представлению через указанный индекс только операции поиска по индексу.|  
@@ -383,7 +385,7 @@ LEFT JOIN dbo.[Order History] AS oh
  XLOCK  
  Указывает, что монопольные блокировки применяются и удерживаются до завершения транзакции. Если при этом указан аргумент ROWLOCK, PAGLOCK или TABLOCK, монопольная блокировка применяется к соответствующему уровню гранулярности.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Табличные указания пропускаются, если доступ к таблице не предусмотрен планом запроса. Это может быть вызвано тем, что оптимизатор вообще отказался от доступа к таблице или вместо этого получает доступ к индексированному представлению. В последнем случае доступ к индексированному представлению можно предотвратить с помощью подсказки в запросе OPTION (EXPAND VIEWS).  
   
  Все подсказки блокировки распространяются на все таблицы и представления, к которым имеет доступ данный план запроса, в том числе в таблицы и представления, на которые ссылается данное представление. Кроме того, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет соответствующие проверки согласованности блокировок.  
@@ -442,7 +444,7 @@ GO
 ## <a name="using-a-table-hint-as-a-query-hint"></a>Использование табличного указания в качестве указания запроса  
  *Табличные подсказки* также можно указать в качестве указаний запроса с помощью предложения OPTION (TABLE HINT). Мы рекомендуем использовать табличную подсказку в качестве указания запроса только в контексте [плана](../../relational-databases/performance/plan-guides.md). Для нерегламентированных запросов эти указания следует задавать как табличные указания. Дополнительные сведения см. в разделе [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для указаний KEEPIDENTITY, IGNORE_CONSTRAINTS и IGNORE_TRIGGERS требуются разрешения ALTER на таблицу.  
   
 ## <a name="examples"></a>Примеры  
@@ -450,7 +452,7 @@ GO
 ### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>A. Использование подсказки TABLOCK для указания метода блокировки  
  В следующем примере показано, как на таблицу `Production.Product` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] накладывается совмещаемая блокировка, удерживаемая до завершения инструкции UPDATE.  
   
-```tsql  
+```sql  
 UPDATE Production.Product  
 WITH (TABLOCK)  
 SET ListPrice = ListPrice * 1.10  
@@ -474,7 +476,7 @@ GO
   
  В следующем примере указание FORCESEEK с индексом предписывает оптимизатору запросов выполнить операцию поиска по указанному индексу и столбцу индекса.  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   
@@ -489,7 +491,7 @@ GO
 ### <a name="c-using-the-forcescan-hint-to-specify-an-index-scan-operation"></a>В. Использование указания FORCESCAN для назначения операции просмотра индекса  
  В следующем примере показано использование указания FORCESCAN, предписывающего оптимизатору запросов принудительно выполнить операцию просмотра в таблице `Sales.SalesOrderDetail` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   
@@ -499,10 +501,9 @@ WHERE h.TotalDue > 100
 AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
  [Указания &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
  [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)  
   
   
-

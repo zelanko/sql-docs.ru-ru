@@ -3,7 +3,7 @@ title: "Коллекции ADOX | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - ADOX, collections
 - collections [ADOX]
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1d1b195719f08308838e7c7b3ce1320485c1c89c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fb9f0e683dcdded14920be8104efcde355be0ce2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-collections"></a>Коллекции ADOX
 |||  
@@ -40,9 +39,8 @@ ms.lasthandoff: 09/09/2017
 |[Пользователи](../../../ado/reference/adox-api/users-collection-adox.md)|Содержит все хранящиеся **пользователя** объекты каталога или группы.|  
 |[Представления](../../../ado/reference/adox-api/views-collection-adox.md)|Содержит все **представление** объектов каталога.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Объектная модель ADOX](../../../ado/reference/adox-api/adox-object-model.md)   
  [Объекты ADOX](../../../ado/reference/adox-api/adox-objects.md)   
  [Расширения ADO для языка описания данных и безопасности (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
-

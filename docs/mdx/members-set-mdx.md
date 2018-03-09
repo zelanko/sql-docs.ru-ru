@@ -2,34 +2,32 @@
 title: "Members (Set) (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- Members
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Members function
+f1_keywords: Members
+dev_langs: kbMDX
+helpviewer_keywords: Members function
 ms.assetid: 0c4d5bb9-500b-47ce-b7fc-f5a10e2400e0
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: f600fa5163131d797c8ea0146c1a4e02e172381d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4430d24665eb791b8567fa83e7793c64727fd88f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="members-set-mdx"></a>Members (набор) (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает набор элементов в измерении, уровне или иерархии.  
   
@@ -51,7 +49,7 @@ Level_Expression.Members
  *Level_Expression*  
  Допустимое многомерное выражение, возвращающее уровень.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если указано выражение иерархии, **Members (Set)** функция возвращает набор всех элементов указанной иерархии, не включая вычисляемые элементы. Чтобы получить набор всех элементов, вычисляемых или в противном случае в иерархии, используйте [AllMembers &#40; Многомерные Выражения &#41; ](../mdx/allmembers-mdx.md) функции  
   
  Если выражение уровня указано, **Members (Set)** функция возвращает набор всех элементов указанного уровня.  
@@ -87,4 +85,3 @@ WHERE
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

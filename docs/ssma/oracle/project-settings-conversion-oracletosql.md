@@ -1,28 +1,28 @@
 ---
 title: "Параметры (преобразование) (OracleToSQL) проекта | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: a98a5e07-eb5e-47b9-a6f2-e2cb3a18309c
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 62451526ad29a0aaf2d2cc92e3e439223e6c32d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: afd652370653f4642162fb596bdab88313366354
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-conversion-oracletosql"></a>Параметры проекта (преобразование) (OracleToSQL)
 На странице преобразования **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA преобразует синтаксис Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] синтаксиса.  
@@ -93,4 +93,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>См. также:  
 [Справочник по пользовательскому интерфейсу &#40; OracleToSQL &#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   
-

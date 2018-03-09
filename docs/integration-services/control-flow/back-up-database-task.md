@@ -1,10 +1,13 @@
 ---
-title: "Создайте резервную копию базы данных задач | Документы Microsoft"
+title: "Задача \"Резервное копирование базы данных\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -18,17 +21,16 @@ helpviewer_keywords:
 - transaction log backups [Integration Services]
 - backing up transaction logs [Integration Services]
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
-caps.latest.revision: 46
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a71821c8fc7710d86d819d65ef35878a2594f997
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a78526022b2d3cc16adb8f4706d30a8f430da8f1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="back-up-database-task"></a>Задача «Создание резервной копии базы данных»
   Задача «Резервное копирование базы данных» выполняет различные типы резервного копирования базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
@@ -38,10 +40,10 @@ ms.lasthandoff: 08/03/2017
 ## <a name="supported-recover-models-and-backup-types"></a>Поддерживаемые модели восстановления и типы резервного копирования  
  В следующей таблице перечисляются модели восстановления и типы резервных копий, поддерживаемые задачей «Создание резервной копии базы данных».  
   
-|Модель восстановления|База данных|Разностное копирование базы данных|Журнал транзакций|Файл или разностное копирование файлов|  
+|Модель восстановления|база данных|Разностное копирование базы данных|Журнал транзакций|Файл или разностное копирование файлов|  
 |--------------------|--------------|---------------------------|---------------------|-------------------------------|  
 |Простой|Обязательно|Необязательно|Не поддерживается|Не поддерживается|  
-|Полный|Обязательно|Необязательно|Обязательно|Необязательно|  
+|Полное|Обязательно|Необязательно|Обязательно|Необязательно|  
 |С массовой регистрацией|Обязательно|Необязательно|Обязательно|Необязательно|  
   
  Задача «Создание резервной копии базы данных» содержит инструкцию BACKUP языка Transact-SQL. Дополнительные сведения см. в разделе [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md).  
@@ -58,4 +60,3 @@ ms.lasthandoff: 08/03/2017
 -   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
   
-

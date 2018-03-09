@@ -2,11 +2,13 @@
 title: "Запуск и использование помощника по настройке ядра СУБД | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,22 +18,21 @@ f1_keywords:
 - sql13.dta.tuningoptions.f1
 - sql13.dta.progress.f1
 - sql13.dta.options.f1
-helpviewer_keywords:
-- Database Engine Tuning Advisor [SQL Server], starting
+helpviewer_keywords: Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3bb44cd4e105c09fc84822cb75222a14ce39af5f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "33"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: c827fd810238c823cd40ab11b47109876234b646
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Запуск и использование помощника по настройке ядра СУБД
-  В этом разделе описано, как запускать и использовать помощник по настройке ядра СУБД в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения о просмотре и работе с результатами после настройки базы данных см. в статье [Просмотр и работа с выходными данными помощника по настройке ядра СУБД](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описано, как запускать и использовать помощник по настройке ядра СУБД в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения о просмотре и работе с результатами после настройки базы данных см. в статье [Просмотр и работа с выходными данными помощника по настройке ядра СУБД](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="Initialize"></a> Инициализация помощника по настройке ядра СУБД  
  При первом использовании помощника по настройке ядра СУБД его должен инициализировать пользователь, имеющий предопределенную роль сервера **sysadmin** . Это связано с тем, что для поддержки операций настройки в базе данных **msdb** необходимо создать несколько системных таблиц. Инициализация также помогает пользователям, являющимся членами предопределенной роли базы данных **db_owner** , настраивать рабочие нагрузки для таблиц в принадлежащих им базах данных.  
@@ -426,7 +427,7 @@ database_name.owner_name.table_name
  **Определить размер места для рекомендаций (МБ)**  
  Укажите рекомендованный помощником по настройке ядра СУБД максимальный объем пространства, которое будет использовано структурами физического проектирования.  
   
- Если здесь не будет указано какое-либо значение, помощник по настройке ядра СУБД выберет наименьший из указанных ниже объемов пространства.  
+ Если здесь не будет указано какое-либо значение, помощник по настройке Database Engine выберет наименьший из указанных ниже объемов пространства.  
   
 -   троекратный текущий размер необработанных данных, включая общий размер куч и кластеризованных индексов в таблицах базы данных;  
   
@@ -524,4 +525,3 @@ database_name.owner_name.table_name
  [dta Utility](../../tools/dta/dta-utility.md)  
   
   
-

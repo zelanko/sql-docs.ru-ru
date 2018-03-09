@@ -2,35 +2,32 @@
 title: "TopCount (расширения интеллектуального анализа данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- TOPCOUNT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- TopCount function
+f1_keywords: TOPCOUNT
+dev_langs: DMX
+helpviewer_keywords: TopCount function
 ms.assetid: cbe031c9-4ff0-45df-9810-ebaebacf161d
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 412c741e3f48c23f65eafa2a998a257f07034dd9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6b1625dea46a9be122f5fec6d10a0ebfab26ba89
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="topcount-dmx"></a>TopCount (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает заданное в инструкции количество верхних строк в порядке убывания их ранга как указано в выражении.  
   
@@ -47,7 +44,7 @@ TopCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  \<Таблица выражения >  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Значение, которое предоставляется свойством \<ранжирования выражение > аргумент определяет порядок убывания ранга строк, полученных из \<таблицы выражение > аргумента и количество верхних строк, которые указаны в \<count > возвращается аргумент.  
   
  Функция TopCount первоначально предназначалась для проведения ассоциативных прогнозов и правило, она возвращает те же результаты, как инструкция, включающая **выбрать первые** и **ORDER BY** предложения. При использовании получат более высокую производительность ассоциативного прогнозирования **прогнозирования (расширения интеллектуального анализа данных)** функции, которая поддерживает Указание количества возвращаемых прогнозов.  
@@ -132,4 +129,3 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
  [TopSum &#40; расширений интеллектуального анализа данных &#41;](../dmx/topsum-dmx.md)  
   
   
-

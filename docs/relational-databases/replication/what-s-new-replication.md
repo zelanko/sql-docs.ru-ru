@@ -1,31 +1,33 @@
 ---
 title: "Новые возможности репликации | Документация Майкрософт"
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.custom: 
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - replication [SQL Server], what's new
 - what's new [SQL Server replication]
 ms.assetid: 130a760a-4162-4d7d-b266-453eb5759d7a
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "39"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f7bfad1dfb32198ef23cd98a1df22deb71fa3e3d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c33f2ea82e7f280624a90e4a45873932a70c963b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="what39s-new-replication"></a>Новые возможности репликации
-  Репликация в[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] не содержит существенных новых функций по сравнению с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Репликация в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] не содержит существенных новых функций по сравнению с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] не поддерживает репликацию данных с клиента или на [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
@@ -33,4 +35,3 @@ ms.lasthandoff: 06/22/2017
  [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
   
   
-

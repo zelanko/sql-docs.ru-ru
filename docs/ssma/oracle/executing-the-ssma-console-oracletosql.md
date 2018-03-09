@@ -1,32 +1,32 @@
 ---
 title: "Выполнение консоли SSMA (OracleToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Oracle SSMA Console
 - Script File Commands, Script Generation Commands,Manageability Commands
 - Script File Commands,Project Commands
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 9c0109ed3c675b140cbce6d780c24256c0eb2bc9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
-ms.openlocfilehash: 4ca3c3557b7f57b93dc41b23232754c5df046bdb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/20/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>Выполнение консоли SSMA (OracleToSQL)
 Корпорация Майкрософт предоставляет широкий набор сценариев файл команд для выполнения и контроля над SSMA действий. В консольном приложении используется определенных команд файла стандартный сценарий как перечисленные в этом разделе.  
@@ -167,7 +167,7 @@ Force нагрузки-/ target-базы данных источника
   
   metabase="<source/target>"/>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <force-load>  
@@ -280,7 +280,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <generate-assessment-report  
@@ -354,7 +354,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <convert-schema  
@@ -422,7 +422,7 @@ Force нагрузки-/ target-базы данных источника
   
 </migrate-data>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <migrate-data  
@@ -511,7 +511,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <synchronize-target  
@@ -520,7 +520,7 @@ Force нагрузки-/ target-базы данных источника
   
    object-type="<object-category>"/>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <synchronize-target>  
@@ -576,7 +576,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <refresh-from-database  
@@ -585,7 +585,7 @@ Force нагрузки-/ target-базы данных источника
   
    object-type="<object-category>"/>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <refresh-from-database>  
@@ -635,7 +635,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <save-as-script  
@@ -711,7 +711,7 @@ Force нагрузки-/ target-базы данных источника
   
 </convert-sql-statement>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```  
 <convert-sql-statement  
@@ -734,7 +734,7 @@ Force нагрузки-/ target-базы данных источника
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```  
 <convert-sql-statement  
@@ -761,4 +761,3 @@ Force нагрузки-/ target-базы данных источника
   
 -   Для устранения неполадок в консоли, в разделе [Устранение неполадок &#40; OracleToSQL &#41;](../../ssma/oracle/troubleshooting-oracletosql.md).  
   
-

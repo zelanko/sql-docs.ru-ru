@@ -1,26 +1,27 @@
 ---
 title: "Изменить сопоставление типа (OracleToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7078b4ed-c779-4bf3-8db8-f9dcb3edd50f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: b737d23608fa538019d55cc4825a29001238ee1e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e4f90a6658f18d4cee35f33e118b309b0d99da6f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="edit-type-mapping-oracletosql"></a>Изменить сопоставление типа (OracleToSQL)
 **Изменение сопоставления типа** диалоговое окно позволяет указать, как типы сопоставляются между объектами базы данных источника и назначения.  
@@ -53,4 +54,3 @@ ms.lasthandoff: 08/02/2017
 **Replace with**  
 Укажите целевую длину для данного сопоставления. Например, для **nvarchar** тип данных, можно ввести 20, чтобы указать, что тип данных указанного источника должны быть сопоставлены с **nvarchar(20)**.  
   
-

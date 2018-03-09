@@ -3,8 +3,11 @@ title: "SUBSTRING (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 10/21/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - expressions [SQL Server], part returned
 - characters [SQL Server], returning part of
 ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
-caps.latest.revision: 65
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7f36ec82c65e5d52c2186c67033adddbf1700c4d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 2c78c77953dc60bdcd73ec29ba542a12478783fb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает часть символьного, двоичного, текстового или графического выражения в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -52,10 +54,10 @@ SUBSTRING ( expression ,start , length )
  *expression*  
  — **Символ**, **двоичных**, **текст**, **ntext**, или **изображения**[выражение](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- *Запуск*  
+ *start*  
  Должно быть целым числом или **bigint** выражение, которое указывает, где начала возвращаемых символов. (Нумерация достигается, когда 1 на основе, что первый символ в выражении равен 1). Если *запустить* меньше 1, возвращаемое выражение начинается с первого символа, который указан в *выражение*. В этом случае количество возвращаемых символов является наибольшим значением либо суммы *запустить* + *длина*- 1 или 0. Если *запустить* больше, чем количество символов в выражении значения, возвращается выражение нулевой длины.  
   
- *length*  
+ *длина*  
  Положительное целое число или **bigint** выражение, которое указывает, сколько символов *выражение* будут возвращены. Если *длина* имеет отрицательное значение, выводится сообщение об ошибке и выполнение инструкции прервано. Если сумма *запустить* и *длина* больше, чем количество символов в *выражение*, всего значения выражения, начиная с *запустить*возвращается.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
@@ -63,11 +65,11 @@ SUBSTRING ( expression ,start , length )
   
 |Заданное выражение|Возвращаемый тип|  
 |--------------------------|-----------------|  
-|**char**/**varchar**/**текста**|**varchar**|  
+|**char**/**varchar**/**text**|**varchar**|  
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
 |**двоичный**/**varbinary**/**изображения**|**varbinary**|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Значения для *запустить* и *длина* должен быть указан в символах для **ntext**, **char**, или **varchar**  и байтов для типов данных **текст**, **изображения**, **двоичных**, или **varbinary** типов данных.  
   
  *Выражение* должно быть **varchar(max)** или **varbinary(max)** при *запустить* или *длина* содержит значение размером более 2147483647.  
@@ -91,7 +93,7 @@ WHERE database_id < 5;
 
 |имя |Initial |ThirdAndFourthCharacters|
 |---|--|--|
-|master  |m  |ST |
+|master  |m  |st |
 |tempdb  |t  |пакет управления |
 |model   |m  |de |
 |msdb    |m  |DB |
@@ -221,10 +223,15 @@ x
 bcd
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
+ [Левый &#40; Transact-SQL &#41;](../../t-sql/functions/left-transact-sql.md)  
+ [Функция LTRIM &#40; Transact-SQL &#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [ПРАВО &#40; Transact-SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40; Transact-SQL &#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT &#40; Transact-SQL &#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [Функция TRIM &#40; Transact-SQL &#41;](../../t-sql/functions/trim-transact-sql.md)  
  [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
-
 
 

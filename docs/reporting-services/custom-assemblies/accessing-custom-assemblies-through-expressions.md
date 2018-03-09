@@ -2,16 +2,16 @@
 title: "Доступ к пользовательским сборкам с использованием выражений | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: custom-assemblies
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - expressions [Reporting Services], custom assemblies
 - static member calls
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - calling class members
 - custom assemblies [Reporting Services], expressions
 ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
-caps.latest.revision: 32
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "32"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: 4fbeded846679fc6925175f7c833e8c9b0c55e8c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 01eb198f668834c9c8cc6782f8352465cbc1eec2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>Доступ к пользовательским сборкам посредством выражений
   После того как пользовательская сборка была создана, сделана доступной для конструктора отчетов или сервера отчетов, добавлена к подходящей политике безопасности, а также после того, как в определение отчета была добавлена ссылка на данную пользовательскую сборку, появится возможность доступа к членам классов сборки посредством выражений отчетов. Для ссылки в выражении на пользовательский код следует вызвать элемент класса этой сборки. Способ создания ссылки зависит от того, является ли метод статическим или основывается на экземпляре.  

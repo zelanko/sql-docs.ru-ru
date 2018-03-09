@@ -2,28 +2,31 @@
 title: "Создание псевдонима (вкладка «псевдоним») | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 785eb6fb-f67e-449d-b1c8-c38dfbb95ef6
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8a39d7940814839dcda00d45b7dd325a887a3d7b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 988ee74394f53d5275a8b8e1cc3772702792a4f3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="new-alias-alias-tab"></a>Создание псевдонима (вкладка «Псевдоним»)
-  Псевдоним является альтернативным именем, которое можно использовать для создания соединения. Псевдоним инкапсулирует необходимые элементы строки соединения и представляет их с помощью имени, выбранного пользователем. Используйте страницу **Псевдоним** в диалоговом окне **Псевдоним — новый**, чтобы задать элементы строки подключения для псевдонима. Сведения об изменении строки подключения существующего псевдонима см. в разделе [Свойства &#60;Псевдоним&#62; (вкладка "Псевдоним")](../../tools/configuration-manager/alias-properties-alias-tab.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Псевдоним является альтернативным именем, которое можно использовать для создания соединения. Псевдоним инкапсулирует необходимые элементы строки соединения и представляет их с помощью имени, выбранного пользователем. Используйте страницу **Псевдоним** в диалоговом окне **Псевдоним — новый**, чтобы задать элементы строки подключения для псевдонима. Сведения об изменении строки подключения существующего псевдонима см. в разделе [Свойства &#60;Псевдоним&#62; (вкладка "Псевдоним")](../../tools/configuration-manager/alias-properties-alias-tab.md).  
   
  Необязательно заполнять все значения в сетке **Свойства** . Допустимые сочетания значений зависят от выбранного протокола. Примеры допустимых сочетаний см. в разделах, приведенных ниже.  
   
@@ -44,7 +47,7 @@ ms.lasthandoff: 08/02/2017
   
 ### <a name="examples"></a>Примеры  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не прослушивает установленный по умолчанию порт TCP/IP под номером 1433, поэтому необходимо использовать строку соединения с другим номером порта.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не прослушивает установленный по умолчанию порт TCP/IP под номером 1433, поэтому необходимо использовать строку подключения с другим номером порта.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не прослушивает именованный канал по умолчанию, поэтому необходимо использовать строку соединения с другим именем канала.  
   
@@ -60,4 +63,3 @@ ms.lasthandoff: 08/02/2017
 -   [Создание допустимой строки соединения с использованием именованных каналов](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   
-

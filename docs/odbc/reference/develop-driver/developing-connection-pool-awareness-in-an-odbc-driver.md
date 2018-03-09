@@ -3,24 +3,25 @@ title: "Разработка драйвера ODBC, поддерживающие
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b96e4ef1e53fec8361bd96dee81206efdf138538
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7b7b550bd24788f30926aaee5ae42a8de79a59c9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Разработка драйвера ODBC, поддерживающие пула соединений
 В этом разделе приведены подробные сведения о разработке драйвер ODBC, который содержит сведения о драйвере следует служб пулов подключений.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 09/09/2017
   
  Драйвер также должен реализовывать следующие существующие функции так, чтобы включить пул учетом драйвера:  
   
-|Функция|Дополнительные возможности|  
+|Компонент|Дополнительные возможности|  
 |--------------|-------------------------|  
 |[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|Поддерживает новый тип дескриптора: SQL_HANDLE_DBC_INFO_TOKEN (см. описание ниже).|  
 |[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|Поддерживает новый атрибут соединения только для набора: SQL_ATTR_DBC_INFO_TOKEN для сброса соединения (см. описание ниже).|  
@@ -153,4 +154,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>См. также:  
  [Организация пулов соединений с учетом драйвера](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Справочник по интерфейсу службы доступа (SPI) ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)
-

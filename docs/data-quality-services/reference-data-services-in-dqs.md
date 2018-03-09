@@ -2,25 +2,26 @@
 title: "Службы эталонных данных в DQS | Microsoft Docs"
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
-caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "22"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c8ff28a3194600f1783158deb5e56d96b036963
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 201f30b4b5fd5ff6de06274a83fa62967498db2e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="reference-data-services-in-dqs"></a>Службы эталонных данных в DQS
   Эталонными данными называется точный и полный набор взаимосвязанных или категорированных глобальных данных (выходящих за пределы предприятия), доступных в доверенных общедоступных доменах или у поставщиков дополнительного коммерческого содержания.  
@@ -70,7 +71,7 @@ ms.lasthandoff: 09/09/2017
   
 3.  **Использование сопоставленных доменов для операции очистки в проекте качества данных**. При создании проекта качества данных для операции **Очистка** выберите базу знаний, которая содержит домены/составные домены, сопоставленные со службами ссылочных данных в шаге 2, и выполните операцию очистки.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
@@ -79,4 +80,3 @@ ms.lasthandoff: 09/09/2017
 |Описывает очистку данных с использованием службы эталонных данных.|[Очистка данных с использованием набора знаний об эталонных данных &#40;внешних&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
   
   
-

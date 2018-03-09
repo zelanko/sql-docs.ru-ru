@@ -1,10 +1,13 @@
 ---
-title: "Расширенный редактор | Документы Microsoft"
+title: "Расширенный редактор | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -16,24 +19,23 @@ f1_keywords:
 - sql13.dts.designer.advancededitor.connections.f1
 - sql13.dts.designer.advancededitor.columnmappings.f1
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a19014f742ea4be55028bd93d07b0c388159e0a0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e6c929bf7a8aa3525049e295e83541547fa420f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="advanced-editor"></a>Расширенный редактор
   Используйте диалоговое окно **Расширенный редактор** для настройки свойств компонентов для выбранного объекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  **Расширенный редактор** доступен для большинства объектов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] с настраиваемыми свойствами. Это единственный редактор, доступный для объектов, не показывающих настраиваемый пользовательский интерфейс.  
   
- Объекты потока данных служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] обладают свойствами, которые могут быть заданы на уровне компонентов, на уровне ввода и вывода и на уровне входных и выходных столбцов. **Расширенный редактор** перечисляет все общие и пользовательские свойства выбранного объекта и показывает их на одной-четырех вкладках из пяти следующих вкладок:  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] обладают свойствами, которые могут быть заданы на уровне компонентов, на уровне ввода и вывода и на уровне входных и выходных столбцов. **Расширенный редактор** перечисляет все общие и пользовательские свойства выбранного объекта и показывает их на одной-четырех вкладках из пяти следующих вкладок:  
   
 -   **Диспетчеры соединений** — эта вкладка используется для настройки свойств подключения.  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 08/03/2017
   
  Отображаемые свойства зависят от компонента. Дополнительные сведения о свойствах, которые могут отображаться в компоненте **Расширенный редактор**, см. в следующих разделах:  
   
--   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства преобразований](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -57,8 +59,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [Преобразования служб Integration Services](../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
-## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../integration-services/integration-services-error-and-message-reference.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по сообщениям об ошибках служб Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
   
   
-

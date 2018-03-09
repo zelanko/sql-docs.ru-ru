@@ -2,34 +2,32 @@
 title: "LookupCube (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- LOOKUPCUBE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- LookupCube function
+f1_keywords: LOOKUPCUBE
+dev_langs: kbMDX
+helpviewer_keywords: LookupCube function
 ms.assetid: 243fa101-328a-4016-86e0-d8b5977e15a9
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: a2b5e06839166528482a52fffc594d933a30ee57
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 41aed2def9e470d39f006b314f51dbb61bf63b47
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lookupcube-mdx"></a>LookupCube (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает значение многомерных выражений, вычисленное для другого указанного куба в той же базе данных.  
   
@@ -54,7 +52,7 @@ LookupCube(Cube_Name, String_Expression )
  *String_Expression*  
  Допустимое строковое выражение (обычно многомерное выражение над координатами ячейки), возвращающее строку.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если числовое выражение указано, **LookupCube** функция вычисляет указанное числовое выражение в заданном кубе и возвращает числовое значение.  
   
  Если строковое выражение указано, **LookupCube** функция вычисляет указанного строкового выражения в заданном кубе и возвращает строковое значение.  
@@ -81,4 +79,3 @@ LookupCube(Cube_Name, String_Expression )
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

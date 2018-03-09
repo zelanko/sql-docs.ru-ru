@@ -3,7 +3,7 @@ title: "Таблица объектов (ADOX) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - Table object [ADOX]
 ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: da9c76799df8983b50298ee7005f5a357905e4d7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 198b59d624b2daa2e2451b8dbb61ae5868f7eb7d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="table-object-adox"></a>Объект таблицы (ADOX)
 Представляет таблицу базы данных, включая столбцы, индексы и ключи.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Следующий код создает новый **таблицы**:  
   
 ```  
@@ -65,9 +64,9 @@ Dim obj As New Table
   
  Этот раздел содержит следующий раздел.  
   
--   [Свойства объекта таблицы, методы и события](../../../ado/reference/adox-api/table-object-properties-methods-and-events.md)  
+-   [Свойства, методы и события объекта Table](../../../ado/reference/adox-api/table-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства ActiveConnection каталога (Visual Basic)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [Столбцы и таблицы добавьте методы примера имя свойства (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Подключение метода закрытия, пример свойство типа таблицы (Visual Basic)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
@@ -77,5 +76,4 @@ Dim obj As New Table
  [Коллекция индексов (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)   
  [Коллекция ключей (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
  [Коллекция свойств (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Коллекция таблиц (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)
-
+ [Коллекция Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)

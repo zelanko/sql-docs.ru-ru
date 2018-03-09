@@ -1,10 +1,13 @@
 ---
-title: "Одна форма быстрого профиля таблицы («профилирование данных») | Документы Microsoft"
+title: "Форма быстрого профиля одной таблицы (задача \"Профилирование данных\") | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 76de0987bec5d7886b41d2d415af2bd00e187f87
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dc9d58ae7577204988fefcf0364c48a8a2695201
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>Форма быстрого профиля одной таблицы (задача «Профилирование данных»)
   Воспользуйтесь **Формой быстрого профиля одной таблицы** , чтобы настроить задачу «Профилирование данных» для проведения быстрого профилирования одной таблицы или представления с параметрами по умолчанию.  
@@ -56,9 +58,8 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Профиль включения значений недоступен из **Формы быстрого профиля одной таблицы**.  
   
-## <a name="see-also"></a>См. также  
- [Данные профилирования редактор задач &#40; Страница "Общие" &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Данные профилирования редактор задач &#40; Страница «запросы профиля» &#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
+## <a name="see-also"></a>См. также:  
+ [Редактор задачи "Профилирование данных" (страница "Общие")](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Редактор задачи "Профилирование данных" (страница "Запросы профиля")](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Раздел данных | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - data section [ADO]
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8da8004ffc31efb53db196e37f48ae0942a872f6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 62eb026fac4588cc159afec1714a6aa51903aa8a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="data-section"></a>Раздел данных
 Раздел данных определяет данные набора строк, а также все ожидающие обновления, вставки или удаления. Раздел данных может содержать ноль или более строк. Он может содержать только данные из одного набора строк, где строка определяется схемой. Кроме того как было отмечено ранее, столбцы без данных может быть опущено. Если атрибут или дочерний элемент используется в секции данных и конструкции не был определен в разделе Схема, он просто игнорируется.  
@@ -92,6 +91,5 @@ ms.lasthandoff: 09/09/2017
   
  Обновление всегда содержит всей исходной строки данных, а затем измененные строки данных. Измененная строка может содержать все столбцы или только те столбцы, которые действительно были изменены. В предыдущем примере строку Shipper 2 не изменяется, и только в столбце Phone были изменены значения Shipper 3 и поэтому единственный столбец, включенный в измененной строке. Вставка строк для «поставщики», 12, 13 и 14 — это пакетные вместе в одном rs: Вставка тега. Обратите внимание, что удаленные строки могут также быть объединены, несмотря на то, что это не показано в предыдущем примере.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сохранение записей в формате XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
-

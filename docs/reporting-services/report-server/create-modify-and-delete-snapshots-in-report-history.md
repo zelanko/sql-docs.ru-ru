@@ -1,30 +1,30 @@
 ---
-title: "Создание, изменение и удаление моментальных снимков в журнале отчета | Документы Microsoft"
+title: "Создание, изменение и удаление моментальных снимков в журнале отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - snapshots [Reporting Services]
 - report snapshots [Reporting Services]
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
-caps.latest.revision: 40
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "40"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c3d0de81994b5a234ead420277718c760f9ddb3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d3f31eeab1cd9bf01b3d0525a1599678c7912ac7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Создание, изменение и удаление моментальных снимков в журнале отчетов
   Журнал отчета — это коллекция моментальных снимков отчета. Журнал отчета можно изменять, добавляя и удаляя моментальные снимки или редактируя свойства, от которых зависит его сохранение. Журнал отчета может быть создан вручную или по расписанию.  
@@ -65,12 +65,11 @@ ms.lasthandoff: 08/09/2017
   
  Но весь журнал целиком удаляется при удалении отчета. Например, при удалении месячного отчета по продажам по причине замещения его более новой версией, весь связанный с отчетом журнал будет утрачен. Однако при перемещении отчета весь журнал перемещается вместе с ним.  
   
-## <a name="see-also"></a>См. также  
- [Создать журнал отчета &#40; Службы Reporting Services в SharePoint интегрированная режим &#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [Диспетчер отчетов &#40; Собственный режим служб SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Управление содержимым сервера отчетов &#40; Собственный режим служб SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Добавить моментальный снимок для отчета, истории &#40; Диспетчер отчетов &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Ограничение размеров журнала отчета &#40; Диспетчер отчетов &#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание журнала отчета (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Добавление моментального снимка к журналу отчета (диспетчер отчетов)](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Ограничение размеров журнала отчета (диспетчер отчетов)](../../reporting-services/reports/limit-report-history-report-manager.md)  
   
   
-

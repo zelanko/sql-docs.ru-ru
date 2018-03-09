@@ -2,11 +2,13 @@
 title: "Настройка брандмауэра Windows для доступа к компоненту Database Engine | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - firewall systems, [Database Engine]
 - security [SQL Server], firewalls
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
-caps.latest.revision: 57
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "57"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 49a59b9225ffff183e537025de7f503ba58429d6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7d79f9d00344dceb2559d66f7f6f4450597c79f7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Настройка брандмауэра Windows для доступа к компоненту Database Engine
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Материалы по предыдущим версиям SQL Server см. в разделе [Настройка брандмауэра Windows для доступа к компоненту Database Engine](https://msdn.microsoft.com/en-US/library/ms175043(SQL.120).aspx).
 
 
@@ -51,9 +52,9 @@ ms.lasthandoff: 08/02/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Настройка брандмауэра Windows для доступа к компоненту Database Engine с помощью:**  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="before-you-begin"></a>Перед началом  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
  Открытие портов на брандмауэре может привести к незащищенности сервера от вредоносных атак. Перед открытием портов убедитесь в том, что знаете принципы работы брандмауэров. Дополнительные сведения см. в разделе [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
 ##  <a name="SSMSProcedure"></a> Использование диспетчера конфигурации SQL Server  
@@ -105,4 +106,3 @@ ms.lasthandoff: 08/02/2017
  [Практическое руководство. Настройка параметров брандмауэра для базы данных SQL с помощью портала Azure](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   
-

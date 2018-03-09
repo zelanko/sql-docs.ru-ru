@@ -2,30 +2,32 @@
 title: "Требования к безопасности ролей для обслуживания репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - security [SQL Server replication], roles
 - roles [SQL Server], replication
 ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
-caps.latest.revision: 35
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6aa58b21c372c2575e5d152fe56c07a00ae3dfe6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "35"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: cf0a2ab236eca599756a6cd8b983ad4e94fa115b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="security-role-requirements-for-replication"></a>Требования к безопасности ролей для репликации
-  Репликация накладывает ограничения на специфические действия, которые пользователь может выполнить в зависимости от роли, соответствующей имени входа пользователя. Репликация предоставляет определенные разрешения предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** и именам входа в списке доступа к публикации (PAL).  
+# <a name="security-role-requirements-for-replication"></a>Security Role Requirements for Replication
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Репликация накладывает ограничения на действия, которые пользователь может выполнить, в зависимости от роли, соответствующей имени входа пользователя. Репликация предоставляет определенные разрешения предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** и именам входа в списке доступа к публикации (PAL).  
   
 ## <a name="security-role-requirements-for-replication-setup"></a>Требования к безопасности ролей для настройки репликации  
  В следующей таблице перечислены уровни проверки подлинности, необходимые для стандартных задач настройки репликации:  

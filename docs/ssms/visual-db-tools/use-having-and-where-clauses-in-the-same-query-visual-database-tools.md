@@ -3,10 +3,12 @@ title: "Использование предложения HAVING и WHERE в о�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +22,19 @@ helpviewer_keywords:
 - WHERE clause, search criteria
 - excluding rows
 ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: ab0f50e4144fa734290adf39d3de11c709208ddc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7a08a632df3d4f6b054f4b60cae2d4befc8c8745
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Использование предложения HAVING и WHERE в одном запросе (визуальные инструменты для баз данных)
-В некоторых экземплярах может понадобиться исключить отдельные строки из групп (с использованием предложения WHERE) до того, как применять условие к группе как к целому (с использованием предложения HAVING).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В некоторых экземплярах может понадобиться исключить отдельные строки из групп (с использованием предложения WHERE) до того, как применять условие к группе как к целому (с использованием предложения HAVING).  
   
 Предложение HAVING подобно предложению WHERE, но применимо только к целым группам (то есть к строкам в результирующем наборе, представляющим собой группы), тогда как предложение WHERE применимо к отдельным строкам. В запросе могут содержаться оба предложения: WHERE и HAVING. В этом случае:  
   
@@ -97,4 +98,3 @@ HAVING AVG(price) > 10
 [Результаты запросов сортировки и группирования (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
 [Резюмирование результатов запросов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   
-

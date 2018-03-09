@@ -2,11 +2,13 @@
 title: "Удаление зеркального отображения базы данных (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - stopping database mirroring [SQL Server]
 - removing database mirroring [SQL Server]
 ms.assetid: 40c72091-8f03-4037-8b55-5e95309fe145
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: dcfb8099213533ca37c467a758d63f456d993a67
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6bd2dd9e264437e8d40d2fe66a1394c468e99c59
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="removing-database-mirroring-sql-server"></a>Удаление зеркального отображения базы данных (SQL Server)
-  Владелец базы данных может в любое время и на любом из участников вручную остановить сеанс зеркального отображения базы данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Владелец базы данных может в любое время и на любом из участников вручную остановить сеанс зеркального отображения базы данных.  
   
 ## <a name="impact-of-removing-mirroring"></a>Последствия удаления зеркального отображения  
  При удалении зеркального отображения происходит следующее:  
@@ -36,7 +37,7 @@ ms.lasthandoff: 08/02/2017
   
      Если участники в момент остановки сеанса обмениваются данными друг с другом, их связь немедленно обрывается на обоих компьютерах. Если участники не обмениваются данными (база данных во время остановки находится в состоянии DISCONNECTED), связь немедленно обрывается на участнике, с которого останавливается зеркальное отображение. Когда другой участник пытается восстановить соединение, он обнаруживает, что сеанс зеркального отображения завершен.  
   
--   Удаляются сведения о сеансе зеркального отображения (в этом заключается отличие от приостановки сеанса). Зеркальное отображение удаляется и на основной, и на зеркальной базе данных. В представлении **sys.databases** столбец **mirroring_state** и все остальные столбцы зеркального отображения получают значение NULL. Дополнительные сведения см. в статье [sys.database_mirroring (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
+-   Удаляются сведения о сеансе зеркального отображения (в этом заключается отличие от приостановки сеанса). Зеркальное отображение удаляется и на основной, и на зеркальной базе данных. В представлении **sys.databases** столбец **mirroring_state** и все остальные столбцы зеркального отображения получают значение NULL. Дополнительные сведения см. в разделе [sys.database_mirroring (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
   
 -   На каждом из экземпляров серверов-партнеров остается собственная копия базы данных.  
   
@@ -64,4 +65,3 @@ ms.lasthandoff: 08/02/2017
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   
   
-

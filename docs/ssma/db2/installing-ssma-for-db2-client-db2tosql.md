@@ -1,29 +1,30 @@
 ---
 title: "Установка SSMA для DB2 клиента (DB2ToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cddb418e373c5ac61d2788f7e8a41d51c5976b6b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4e003c72b6fea28c3048384701f3dc8839faacce
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>Установка SSMA для DB2 клиента (DB2ToSQL)
 SSMA клиента состоит из файлов программы, которые выполняют следующие задачи:  
@@ -40,7 +41,7 @@ SSMA клиента состоит из файлов программы, кот�
   
 Этот раздел содержит необходимые условия для установки и инструкции по установке SSMA.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
 SSMA предназначен для работы с DB2 для z/OS версии 9.0 и 10.0 или DB2 для LUW версии 9.8 и 10,1 или более поздней версии и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 г.  
   
 Прежде чем устанавливать SSMA, убедитесь в том, что компьютер соответствует следующим требованиям:  
@@ -87,4 +88,3 @@ SSMA можно загрузить из Интернета. Загрузить �
 [Установка компонентов SSMA на SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
 [Миграция баз данных DB2 в SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
-

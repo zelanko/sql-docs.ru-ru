@@ -3,8 +3,11 @@ title: "UPDATETEXT (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - data updates [SQL Server], UPDATETEXT statement
 - UPDATETEXT statement
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 49bd324f97f6ba1d2e8a8120bb502199b4ca0f06
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c4d7c7a51daeba116e695ba9cae797f0d69c70cf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Обновляет существующий **текст**, **ntext**, или **изображения** поля. Используйте UPDATETEXT для изменения только часть **текст**, **ntext**, или **изображения** столбца на месте. Используйте WRITETEXT для обновления и замены всего **текст**, **ntext**, или **изображения** поля.  
   
@@ -61,7 +63,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!IMPORTANT]  
 >  Рекомендуется не использовать параметр BULK в приложениях с поддержкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот параметр может быть изменен или удален в следующих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *имя_таблицы* **.** *dest_column_name*  
+ *table_name* **.** *dest_column_name*  
  Имя таблицы и **текст**, **ntext**, или **изображения** обновляемого столбца. Имена таблиц и имена столбцов должны соответствовать правилам для [идентификаторы](../../relational-databases/databases/database-identifiers.md). Указание имени базы данных и владельца необязательно.  
   
  *dest_text_ptr*  
@@ -79,7 +81,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  *inserted_data*  
  Данные должны быть вставлены в существующих **текст**, **ntext**, или **изображения** столбец на *insert_offset* расположение. Это один **char**, **nchar**, **varchar**, **nvarchar**, **двоичных**,  **varbinary**, **текст**, **ntext**, или **изображения** значение. *inserted_data* может быть литералом или переменной.  
   
- *TABLE_NAME.src_column_name*  
+ *table_name.src_column_name*  
  Имя таблицы и **текст**, **ntext**, или **изображения** столбец, используемый в качестве источника вставляемых данных. Имена таблиц и имена столбцов должны соответствовать правилам для идентификаторов.  
   
  *src_text_ptr*  
@@ -88,7 +90,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!NOTE]  
 >  *scr_text_ptr* значение не должно быть таким же, как *dest_text_ptr*значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Вставленные данные могут представлять собой одно *inserted_data* константа, имя таблицы, имя столбца или текстовый указатель.  
   
 |Операция обновления|Параметры UPDATETEXT|  
@@ -103,7 +105,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
   
  Для инициализации **текст** столбцам значения NULL, используйте функцию WRITETEXT. UPDATETEXT присваивает **текст** столбцов на пустую строку.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение UPDATE на указанную таблицу.  
   
 ## <a name="examples"></a>Примеры  
@@ -128,10 +130,9 @@ ALTER DATABASE pubs SET RECOVERY FULL;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [READTEXT &#40; Transact-SQL &#41;](../../t-sql/queries/readtext-transact-sql.md)   
  [TEXTPTR &#40; Transact-SQL &#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Создание моментального снимка базы данных (Transact-SQL) | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,19 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - database snapshots [SQL Server], creating
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
-caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b3f980ff1cdf0dd08b0970887988eafa245e9622
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 57985ae3903c8c27b702818897e9889ecc0c01bf
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>создать моментальный снимок базы данных (Transact-SQL)
-  Единственный способ создания моментального снимка базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] состоит в использовании [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не поддерживает создание моментальных снимков базы данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Единственный способ создания моментального снимка базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] состоит в использовании [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не поддерживает создание моментальных снимков базы данных.  
   
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
@@ -90,7 +94,7 @@ AdventureWorks_snapshot_evening
   
 
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Любой пользователь, который может создать базу данных, может создать и моментальный снимок базы данных. Однако для создания моментального снимка зеркальной базы данных необходимо быть членом предопределенной роли сервера **sysadmin** .  
   
 ##  <a name="TsqlProcedure"></a> Как создать моментальный снимок базы данных (с использованием языка Transact-SQL)  
@@ -118,7 +122,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     где *имя_**исходной_базы_данных* — это исходная база данных, *логическое_имя_файла*— это логическое имя, используемое в SQL Server при ссылке на файл, *имя_файла_ОС* — это путь и имя файла, используемые операционной системой при создании файла, а *имя_снимка_базы данных* — это имя снимка, на основе которого требуется восстановить базу данных. Полное описание этого синтаксиса см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+     Здесь *имя_**исходной_базы_данных* — это исходная база данных, *логическое_имя_файла* — это логическое имя, используемое в SQL Server при ссылке на файл, *имя_файла_ОС* — это путь и имя файла, используемые операционной системой при создании файла, а *имя_снимка_базы данных* — это имя снимка, на основе которого требуется восстановить базу данных. Полное описание этого синтаксиса см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
     > [!NOTE]  
     >  При создании моментального снимка базы данных файлы журнала файлы в режиме вне сети, восстанавливаемые из копии файлы и нефункционирующие файлы являются недопустимыми в инструкции CREATE DATABASE.  
@@ -181,5 +185,4 @@ GO
  [Моментальные снимки базы данных (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   
-
 

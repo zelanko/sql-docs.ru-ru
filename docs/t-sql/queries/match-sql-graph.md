@@ -2,9 +2,12 @@
 title: "СООТВЕТСТВИЕ (SQL граф) | Документы Microsoft"
 ms.custom: 
 ms.date: 05/05/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,21 +21,19 @@ helpviewer_keywords:
 - MATCH statement [SQL Server], SQL graph
 - SQL graph, MATCH statement
 ms.assetid: 
-caps.latest.revision: 1
+caps.latest.revision: 
 author: shkale-msft
 ms.author: shkale
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: db211fa0988f2dbe6a72291f898d670d44d3f215
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: cbfa524cb9957ba557cfd239dae16a93aed919bf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-
 # <a name="match-transact-sql"></a>СООТВЕТСТВИЕ (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
   Указывает условие поиска для графа. СООТВЕТСТВИЕ может использоваться только с graph узла и границей таблицы в инструкции SELECT как часть предложения WHERE. 
   
@@ -71,7 +72,7 @@ MATCH (<graph_search_pattern>)
 Имя или псевдоним в предложении FROM краевую таблицу.
 
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Имена узлов в СООТВЕТСТВИЕ может повторяться.  Другими словами, узел может быть обход произвольное число раз в одном запросе.  
 Имя край не может повторяться внутри СОВПАДЕНИЯ.  
 Граница может указывать в любом направлении, но он должен иметь явные направления.  
@@ -151,8 +152,7 @@ AND Person1.name = 'Alice';
  ```
  
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [СОЗДАТЬ ТАБЛИЦУ &#40; Граф SQL &#41;](../../t-sql/statements/create-table-sql-graph.md)   
  [INSERT (SQL граф)](../../t-sql/statements/insert-sql-graph.md)]  
  [График обработка с помощью SQL Server 2017 г.](../../relational-databases/graphs/sql-graph-overview.md)  
-

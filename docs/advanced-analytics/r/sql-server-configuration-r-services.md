@@ -2,27 +2,28 @@
 title: "Конфигурации SQL Server для служб R | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
-caps.latest.revision: 13
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 5716fced7dd2be49c580222b9ae155451cf8f426
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: dbd29457adf7a3dd05211c2dc0688d45a54e405e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Конфигурация SQL Server для использования с помощью R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Эта статья является второго ряда, которое описывает оптимизации производительности для служб R, основанных на два исследований.  В этой статье приведены рекомендации по конфигурации оборудования и сети компьютера, который используется для запуска SQL Server R Services. Он также содержит сведения о способах настройки экземпляра SQL Server, базы данных или таблиц, используемых в решении. Так как использование NUMA в SQL Server размывает линии между оптимизации оборудования и базы данных, третий раздел описывает ЦП сопоставить и управление ресурсами подробно.
 
@@ -72,7 +73,7 @@ ms.lasthandoff: 09/27/2017
 
 Скорость диска, на котором хранится файл подкачки, также влияет на производительность. Вы можете улучшить ее, если сохраните файл подкачки на диске SSD или если будете использовать файлы подкачки на нескольких дисках SSD.
 
-Сведения об изменении размера файла подкачки см. в разделе [способ определения соответствующего файла подкачки для 64-разрядных версий Windows](https://support.microsoft.com/en-us/kb/2860880).
+Сведения об изменении размера файла подкачки см. в разделе [способ определения соответствующего файла подкачки для 64-разрядных версий Windows](https://support.microsoft.com/kb/2860880).
 
 ## <a name="optimizations-at-instance-or-database-level"></a>Оптимизация на уровне экземпляра или базы данных
 
@@ -169,7 +170,7 @@ FROM sys.dm_os_memory_clerks
 
 **Другие ресурсы:**
 
-+ [Программная архитектура NUMA в SQL Server](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Программная архитектура NUMA в SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     Как соответствия программной архитектуры NUMA нескольким процессорам
 
@@ -243,4 +244,3 @@ FROM sys.dm_os_memory_clerks
 [Настройка производительности для R - R оптимизации кода и данных](../r/r-and-data-optimization-r-services.md)
 
 [Помощник по настройке производительности - пример использования результатов](../r/performance-case-study-r-services.md)
-

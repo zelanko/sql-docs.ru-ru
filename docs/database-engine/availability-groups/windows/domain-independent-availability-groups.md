@@ -2,9 +2,12 @@
 title: "Группы доступности, независимые от домена (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-high-availability
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ ms.assetid:
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 950e7cb62718b2c1fedfc5415544f21f85205cf6
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: b6953bbfb9af88bb0d6c4bb575feb97557c43ea2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/19/2018
 ---
-
 # <a name="domain-independent-availability-groups"></a>Группы доступности, независимые от домена
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Группы доступности AlwaysOn должны находиться в отказоустойчивом кластере Windows Server (WSFC). Развертывание WSFC с помощью Windows Server 2012 R2 всегда требует, чтобы серверы, участвующие в WSFC (также называются узлами), были присоединены к одному и тому же домену. Дополнительные сведения о доменных службах Active Directory (AD DS) см. [здесь](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
 
@@ -85,69 +87,87 @@ ms.lasthandoff: 09/27/2017
 1. [С помощью инструкций, указанных по этой ссылке](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/), разверните кластер рабочей группы, состоящий из всех серверов, которые будут участвовать в группе доступности. Перед настройкой кластера рабочей группы убедитесь, что общий DNS-суффикс уже настроен.
 2. [Включите функцию "Группы доступности AlwaysOn"](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) на каждом экземпляре, который будет участвовать в группе доступности. Для этого каждый экземпляр SQL Server нужно будет перезапустить.
 3. Каждому экземпляру, где будет размещаться первичная реплика, требуется главный ключ базы данных. Если главный ключ еще не существует, выполните следующую команду:
-```
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Strong Password';
+   GO
+   ```
+
 4. На том экземпляре, где будет размещаться первичная реплика, создайте сертификат, который будет использоваться как для входящих подключений во вторичных репликах, так и для защиты конечной точки в первичной реплике.
-```
-CREATE CERTIFICATE InstanceA_Cert 
-WITH SUBJECT = 'InstanceA Certificate';
-GO
-``` 
+
+   ```sql
+   CREATE CERTIFICATE InstanceA_Cert 
+   WITH SUBJECT = 'InstanceA Certificate';
+   GO
+   ``` 
+
 5. Создайте резервную копию сертификата. При желании защиту можно укрепить с помощью закрытого ключа. В этом примере закрытый ключ не используется.
-```
-BACKUP CERTIFICATE InstanceA_Cert 
-TO FILE = 'Backup_path\InstanceA_Cert.cer';
-GO
-```
+
+   ```sql
+   BACKUP CERTIFICATE InstanceA_Cert 
+   TO FILE = 'Backup_path\InstanceA_Cert.cer';
+   GO
+   ```
+
 6. Повторите шаги 4 и 5, чтобы создать сертификаты и их резервные копии для каждой вторичной реплики, указав для сертификатов соответствующие имена, например InstanceB_Cert.
 7. В первичной реплике необходимо создать имя входа для каждой вторичной реплики группы доступности. Этому имени входа будут предоставлены разрешения для подключения к конечной точке, используемой группой доступности, независимой от домена. В этом примере для реплики с именем InstanceB:
-```
-CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceB_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 8. В каждой вторичной реплике создайте имя входа для первичной реплики. Этому имени входа будут предоставлены разрешения для подключения к конечной точке. В этом примере в реплике с именем InstanceB:
-```
-CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
-GO
-```
+
+   ```sql
+   CREATE LOGIN InstanceA_Login WITH PASSWORD = 'Strong Password';
+   GO
+   ```
+
 9. На всех экземплярах создайте пользователя для каждого созданного имени входа. Он будет использоваться при восстановлении сертификатов. Например, чтобы создать пользователя для первичной реплики, выполните следующие действия:
-```
-CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
-GO
-```
+
+   ```sql
+   CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
+   GO
+   ```
+
 10. Для любой реплики, которая может быть основной, создайте имя входа и пользователя во всех соответствующих вторичных репликах.
-11. На каждом экземпляре восстановите сертификаты для других экземпляров, в которых вы создали имя входа и пользователя. В первичной реплике восстановите все сертификаты вторичных реплик. В каждой вторичной реплике восстановите сертификат первичной реплики, а также выполните это действие в любой другой реплике, которая может служить первичной. Например:
-```
-CREATE CERTIFICATE [InstanceB_Cert]
-AUTHORIZATION InstanceB_User
-FROM FILE = 'Restore_path\InstanceB_Cert.cer'
-```
+11. На каждом экземпляре восстановите сертификаты для других экземпляров, в которых вы создали имя входа и пользователя. В первичной реплике восстановите все сертификаты вторичных реплик. В каждой вторичной реплике восстановите сертификат первичной реплики, а также выполните это действие в любой другой реплике, которая может служить первичной. Пример:
+
+   ```sql
+   CREATE CERTIFICATE [InstanceB_Cert]
+   AUTHORIZATION InstanceB_User
+   FROM FILE = 'Restore_path\InstanceB_Cert.cer'
+   ```
+
 12. Создайте конечную точку, которая будет использоваться группой доступности в каждом экземпляре, выступающем в качестве реплики. Для групп доступности конечная точка должна иметь тип DATABASE_MIRRORING. Конечная точка использует для проверки подлинности сертификат, созданный для этого экземпляра при выполнении шага 4. Ниже представлен синтаксис для создания конечной точки с применением сертификата. Выберите соответствующий метод шифрования и другие параметры, относящиеся к вашей среде. Дополнительные сведения о доступных параметрах см. в статье [СОЗДАНИЕ КОНЕЧНОЙ ТОЧКИ (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md).
-```
-CREATE ENDPOINT DIAG_EP
-STATE = STARTED
-AS TCP (
+
+   ```sql
+   CREATE ENDPOINT DIAG_EP
+   STATE = STARTED
+   AS TCP (   
     LISTENER_PORT = 5022,
     LISTENER_IP = ALL
-)
-FOR DATABASE_MIRRORING (
+         )
+   FOR DATABASE_MIRRORING (
     AUTHENTICATION = CERTIFICATE InstanceX_Cert,
     ROLE = ALL
-)
-```
+         )
+   ```
+
 13. Назначьте каждому пользователю, созданному в этом экземпляре при выполнении шага 9, права, необходимые для подключения к конечной точке. 
-```
-GRANT CONNECT ON ENDPOINT::DIAG_EP TO 'InstanceX_User';
-GO
-```
+
+   ```sql
+   GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_User];
+   GO
+   ```
+
 14. После настройки базовых сертификатов и защиты конечной точки создайте группу доступности любым удобным способом. Рекомендуем создать резервную копию, скопировать ее и применить для инициализации вторичной реплики вручную либо воспользоваться [автоматическим заполнением](automatically-initialize-always-on-availability-group.md). Инициализация вторичных реплик с помощью мастера предполагает обращение к файлам SMB, что может не сработать при использовании кластера рабочей группы, не присоединенного к домену.
 15. При создании прослушивателя убедитесь, что его имя и IP-адрес зарегистрированы в DNS.
 
 ### <a name="next-steps"></a>Следующие шаги 
 
-- [Использование мастера групп доступности (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
+- [Использование мастера добавления базы данных в группу доступности (среда SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
 
 - [Использование диалогового окна "Создание группы доступности" (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
@@ -158,4 +178,3 @@ GO
 [2]: ./media/diag-workgroup-cluster-two-nodes-joined.png
 [3]: ./media/diag-high-level-view-ag-standard-edition.png
 [4]: ./media/diag-successful-dns-suffix.png
-

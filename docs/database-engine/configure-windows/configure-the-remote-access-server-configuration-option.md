@@ -2,30 +2,30 @@
 title: "Настройка параметра конфигурации сервера \"remote access\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/11/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- remote servers [SQL Server], stored procedure execution
+helpviewer_keywords: remote servers [SQL Server], stored procedure execution
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "31"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 45fc01fd25218d47bc110acd659ca27480d195a6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 3fb74c78868691c1a59a132eb637dedbfebec41e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>Настройка параметра конфигурации сервера remote access
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Эта статья посвящена компоненту "Удаленный доступ". Этот параметр конфигурации является довольно запутанной и устаревшей возможностью взаимодействия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с другим [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и пользоваться ей совершенно незачем. Если вы попали на эту страницу, пытаясь устранить неполадки с подключением к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], рекомендуем изучить какую-нибудь из следующих статей:  
   
@@ -60,11 +60,11 @@ ms.lasthandoff: 09/27/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Настройка параметра remote access с помощью**  
   
@@ -80,9 +80,9 @@ ms.lasthandoff: 09/27/2017
   
 -   Параметр **remote access** применим только к серверам, добавленным при помощи хранимой процедуры [sp_addserver](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md), и включен только в целях обратной совместимости.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Разрешения на выполнение хранимой процедуры **sp_configure** без параметров или только с первым параметром по умолчанию предоставляются всем пользователям. Для выполнения процедуры **sp_configure** с обоими параметрами для изменения параметра конфигурации или запуска инструкции RECONFIGURE необходимо иметь разрешение ALTER SETTINGS на уровне сервера. Разрешение ALTER SETTINGS неявным образом предоставлено предопределенным ролям сервера **sysadmin** и **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -105,7 +105,7 @@ ms.lasthandoff: 09/27/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере описывается использование процедуры [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) для задания значения параметра `remote access` равным `0`.  
   
-```tsql  
+```sql  
 EXEC sp_configure 'remote access', 0 ;  
 GO  
 RECONFIGURE ;  
@@ -113,7 +113,7 @@ GO
   
 ```  
   
- Дополнительные сведения см. в статье [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра remote access  
  Этот параметр вступит в силу после перезапуска SQL Server.  
@@ -124,4 +124,3 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
-

@@ -1,10 +1,13 @@
 ---
-title: "ВЕРСИЯ (Transact-SQL) | Документы Microsoft"
+title: "VERSION (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
-caps.latest.revision: 7
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1905ef3b0f31e91d6cec00c0314770b7686e8c51
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 8ba4237f9a43a525571a2d25f95acb0a31d4a5cb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="version---transact-sql-metadata-functions"></a>Версия - Transact SQL метаданных функции
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="version---transact-sql-metadata-functions"></a>Version - Transact SQL метаданных функции
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
  Возвращает версию [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW_md](../../includes/sspdw-md.md)] запущена на устройстве.  
   
@@ -50,9 +52,8 @@ VERSION ( )
 SELECT VERSION();  
 ```  
   
-## <a name="see-also"></a>См. также: 
+## <a name="see-also"></a>См. также 
 [SESSION_ID (Transact-SQL)](../../t-sql/functions/session-id-transact-sql.md)  
-[Db_name &#40; Transact-SQL &#41;](../../t-sql/functions/db-name-transact-sql.md)  
+[DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)  
   
   
-

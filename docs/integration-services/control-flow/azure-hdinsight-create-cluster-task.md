@@ -1,11 +1,13 @@
 ---
-title: "Azure HDInsight задача создания кластера | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Задача создания кластера Azure HDInsight | Документы Майкрософт"
+ms.custom: 
 ms.date: 02/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,42 +16,41 @@ f1_keywords:
 - sql13.dts.designer.afpcreatecltask.f1
 - sql14.dts.designer.afpcreatecltask.f1
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 71a24dc15253916c32b07e6024e2ab32514c9d39
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 1ebb5a3dc59784ecf19a16f541539250fd975f75
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Задача создания кластера Azure HDInsight
-**Задача создания кластера Azure HDInsight** позволяет пакету служб SSIS для создания кластера Azure HDInsight в указанной Azure группы ресурса и подписки.
+**Задача создания кластера Azure HDInsight** позволяет пакету служб SSIS создать кластер Azure HDInsight в указанной подписке и группе ресурсов Azure.
   
-**Задача создания кластера Azure HDInsight** — это компонент [пакет дополнительных компонентов SQL Server Integration Services (SSIS) для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
+**Задача создания кластера Azure HDInsight** входит в состав [пакета дополнительных компонентов SQL Server Integration Services (SSIS) для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
   
 > [!NOTE]  
-> - Создание нового кластера HDInsight может занять 10 ~ 20 минут.  
-> - Нет затраты, связанные с созданием и под управлением кластера Azure HDInsight. В разделе [цены на HDInsight](http://azure.microsoft.com/en-us/pricing/details/hdinsight/) подробные сведения.  
+> - Создание кластера HDInsight может занимать от 10 до 20 минут.  
+> - Создание кластера Azure HDInsight и управление им сопряжено с определенными затратами. Дополнительные сведения см. в статье [Цены на HDInsight](http://azure.microsoft.com/pricing/details/hdinsight/).  
   
 Чтобы добавить **задачу создания кластера Azure HDInsight**, перетащите ее в конструктор служб SSIS и дважды щелкните или щелкните правой кнопкой мыши и выберите пункт **Изменить** , чтобы вызвать диалоговое окно **Azure HDInsight Create Cluster Task Editor** (Редактор задач создания кластера Azure HDInsight).  
   
-Ниже приводится описание полей в этом окне.  
+Следующая таблица содержит описание полей этого диалогового окна.  
   
 |||  
 |-|-|  
-|**Поле**|**Description**|  
-|AzureResourceManagerConnection|Выберите существующий диспетчер соединений диспетчер ресурсов Azure или создайте новый, который будет использоваться для создания кластера HDInsight.|  
+|**Поле**|**Описание**|  
+|AzureResourceManagerConnection|Выберите существующий или создайте новый диспетчер подключений Azure Resource Manager, который будет использоваться для создания кластера HDInsight.|  
 |AzureStorageConnection|Выберите существующий диспетчер подключений службы хранилища Azure или создайте диспетчер подключений, который ссылается на учетную запись хранения Azure, которая будет связана с кластером HDInsight.|
-|Идентификатор подписки|Укажите идентификатор подписки, в которой будет создан кластер HDInsight.|
-|Группа ресурсов|Укажите, будет создан в кластер HDInsight группы ресурсов Azure.|
-|Местоположение|Определите расположение кластера HDInsight. Кластера должны создаваться в том же расположении, что указанную учетную запись хранения Azure.|  
+|SubscriptionId|Укажите идентификатор подписки, где будет создан кластер HDInsight.|
+|ResourceGroup|Укажите группу ресурсов Azure, где будет создан кластер HDInsight.|
+|Местоположение|Определите расположение кластера HDInsight. Кластер нужно создавать в том же расположении, где находится указанная учетная запись службы хранилища Azure.|  
 |ClusterName|Укажите имя для создаваемого кластера HDInsight.|  
-|ClusterSize|Укажите количество узлов для создания кластера.|  
-|BlobContainer|Укажите имя контейнера хранилища по умолчанию, следует связать с кластером HDInsight.|  
+|ClusterSize|Укажите число узлов, которые нужно создать в кластере.|  
+|BlobContainer|Укажите имя контейнера хранилища по умолчанию, связываемого с кластером HDInsight.|  
 |UserName|Укажите имя пользователя, используемое для подключения к кластеру HDInsight.|  
 |Пароль|Укажите пароль, используемый для подключения к кластеру HDInsight.|
 |SshUserName|Укажите имя пользователя, используемое для удаленного доступа к кластеру HDInsight с помощью SSH.|
@@ -57,5 +58,4 @@ ms.lasthandoff: 09/26/2017
 |FailIfExists|Укажите, следует ли завершать задачу сбоем, если кластер уже существует.|  
   
 > [!NOTE]  
-> Расположение кластера HDInsight и учетной записи хранилища Azure должны быть одинаковыми.
-
+> Расположения кластера HDInsight и учетной записи службы хранилища Azure должны совпадать.

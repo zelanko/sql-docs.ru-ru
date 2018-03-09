@@ -2,30 +2,30 @@
 title: "Столбцы данных о событиях сеанса | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- Session Events event category
+helpviewer_keywords: Session Events event category
 ms.assetid: 35853451-6768-4a02-8b8f-81a8ae37a333
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2a11895ad8a966a95b9ea4b78fa78236bc3d88d9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cb85851bd0c05de09120fa2403c1e47bf0da9a75
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="session-events-data-columns"></a>Столбцы данных о событиях сеанса
-  Категория событий сеанса содержит следующие классы событий:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Категория событий «события сеанса» содержит следующие классы событий:  
   
 |**Идентификатор события**|**Имя события**|**Описание события**|  
 |------------------|--------------------|---------------------------|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 09/01/2017
 |---------------------|-------------------|---------------------|----------------------------|  
 |CurrentTime|2|5|Время начала события, если оно доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |StartTime|3|5|Время начала события, если оно доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
-|Длительность|5|2|Длительность события (в миллисекундах).|  
+|Duration|5|2|Длительность события (в миллисекундах).|  
 |CPUTime|6|2|Объем времени ЦП (в миллисекундах), использованного событием.|  
 |ConnectionID|25|1|Уникальный идентификатор соединения.|  
 |DatabaseName|28|8|Имя базы данных, в которой выполняется инструкция пользователя.|  
@@ -91,8 +91,7 @@ ms.lasthandoff: 09/01/2017
 |ServerName|43|8|Имя сервера, формирующего событие.|  
 |RequestProperties|45|9|Свойства запроса XMLA.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Категория событий «Аудит безопасности»](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   
-

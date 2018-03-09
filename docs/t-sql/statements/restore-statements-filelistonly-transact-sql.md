@@ -3,8 +3,11 @@ title: "RESTORE FILELISTONLY (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - RESTORE FILELISTONLY statement
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
-caps.latest.revision: 83
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bdae49bd22b5398d120530db150bc9628e34d92a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: e6776115033e6e7222abc610673dd8b0aaff81dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>Инструкции - RESTORE FILELISTONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает результирующий набор со списком файлов журнала и базы данных, содержащихся в резервном наборе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -86,7 +88,7 @@ FROM <backup_device>
 ## <a name="result-sets"></a>Результирующие наборы  
  Клиент может использовать RESTORE FILELISTONLY для получения списка файлов, содержащихся в резервном наборе данных. Эти данные возвращаются как результирующий набор, содержащий одну строку для каждого файла.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|Логическое имя файла.|  
 |PhysicalName|**nvarchar(260)**|Физическое имя или имя файла в операционной системе.|  
@@ -106,8 +108,8 @@ FROM <backup_device>
 |LogGroupGUID|**uniqueidentifier NULL**|NULL.|  
 |DifferentialBaseLSN|**numeric(25,0)** значение NULL|Для разностных резервных копий изменения номера LSN больше или равно **DifferentialBaseLSN** включаются в разностную резервную копию.<br /><br /> Для других типов резервных копий установлено значение NULL.|  
 |DifferentialBaseGUID|**uniqueidentifier**|Для разностных резервных копий — уникальный идентификатор базовой копии для разностного копирования.<br /><br /> Для других типов резервных копий установлено значение NULL.|  
-|IsReadOnly|**bit**|**1** = файл доступен только для чтения.|  
-|IsPresent|**bit**|**1** = файл присутствует в резервной копии.|  
+|IsReadOnly|**бит**|**1** = файл доступен только для чтения.|  
+|IsPresent|**бит**|**1** = файл присутствует в резервной копии.|  
 |TDEThumbprint|**varbinary(32)**|Показывает отпечаток ключа шифрования базы данных. Отпечатком шифратора является хэш SHA-1 сертификата, с которым шифруется ключ. Сведения о шифровании базы данных см. в разделе [прозрачное шифрование данных &#40; Прозрачное шифрование данных &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
 |SnapshotURL|**nvarchar(360)**|URL-адрес для файла базы данных, содержащихся в резервном FILE_SNAPSHOT Azure моментального снимка. Возвращает значение NULL, если резервное копирование не FILE_SNAPSHOT.|  
   
@@ -117,7 +119,7 @@ FROM <backup_device>
 > [!IMPORTANT]  
 >  Данный пароль не обеспечивает надежную защиту. Он предназначен для предотвращения неверного восстановления при использовании средств [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] авторизованными или неавторизованными пользователями. При этом остается возможным чтение данных резервных копий с помощью других средств или замена пароля. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Рекомендуемым способом защиты резервных копий является хранение лент с резервными копиями в безопасном месте или создание резервных копий на диске в виде файлов, защищенных соответствующими списками управления доступом (ACL). Списки ACL должны располагаться в корневом каталоге, в котором создаются резервные копии.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Разрешения  
  В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях, чтобы получить сведения о резервном наборе данных или устройстве резервного копирования, необходимо разрешение CREATE DATABASE. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений для базы данных (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
@@ -129,7 +131,7 @@ RESTORE FILELISTONLY FROM AdventureWorksBackups
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [RESTORE REWINDONLY (Transact-SQL)](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
@@ -138,4 +140,3 @@ GO
  [Журнал и сведения о заголовке резервной копии (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   
-

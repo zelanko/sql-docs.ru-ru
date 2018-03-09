@@ -2,27 +2,27 @@
 title: "Урок 4: Пометить как таблицу дат | Документы Microsoft"
 ms.custom: 
 ms.date: 03/27/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: c32cc336-b7d8-4122-9d62-4936344d2315
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: e463f148b07d8fbe7061dca0eed66bba1b0fee94
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5bef08da2c79aa1b17241300d1b9b31e7b977781
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-3-mark-as-date-table"></a>Занятие 3: Пометить как таблицу дат
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 09/01/2017
   
 Предполагаемое время выполнения данного занятия: **3 минуты**  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
 Этот раздел является частью учебника по табличному моделированию, который необходимо изучать по порядку. Перед выполнением задач этого занятия, необходимо завершить предыдущее занятие: [Lesson 2: Добавление данных](../analysis-services/lesson-2-add-data.md). 
 
 ### <a name="to-rename-the-fulldatealternatekey-column"></a>Переименование столбца FullDateAlternateKey
@@ -61,4 +61,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="whats-next"></a>Дальнейшие действия
 Перейдите к следующему занятию: [занятия 4: Создание связей](../analysis-services/lesson-4-create-relationships.md).
   
-

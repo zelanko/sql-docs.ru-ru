@@ -1,147 +1,67 @@
 ---
 title: "Подготовьте виртуальную машину для машинного обучения в Azure | Документы Microsoft"
 ms.custom: 
-ms.date: 10/16/2017
-ms.prod: r-server
+ms.date: 10/31/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
-caps.latest.revision: 12
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: 62e1c347a3c5ee110e6865cd8c13ade76ba62b80
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
-ms.openlocfilehash: 7cb9e069fc3b537f8aab9d048a152435ad0cc6ac
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>Подготовьте виртуальную машину для машинного обучения в Azure
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Виртуальные машины в Azure — это возможность быстро настроить полный серверной среде для машинного обучения решения. В этой статье перечислены некоторые образы виртуальных машин, которые содержат R Server, машины обучения Server или SQL Server с помощью машинного обучения.
+Виртуальные машины в Azure — это возможность быстро настроить полный серверной среде для машинного обучения решения.
 
-Этот список не является полноту, но предоставляет только имена изображений, которые связаны с машины обучения Server или SQL Server машины обучения, чтобы облегчить поиск.
+В этой статье перечислены образы виртуальных машин, которые содержат SQL Server с помощью машинного обучения, а также некоторые связанные виртуальные машины.
 
-> [!TIP]
-> Мы рекомендуем использовать новую версию портала Azure и Azure Marketplace. Некоторые рисунки недоступны при просмотре коллекции на классическом портале Azure.
+Также ответы на часто задаваемые вопросы об изменении или обновлении существующего экземпляра SQL Server на виртуальной машине.
 
-## <a name="how-to-provision-a-virtual-machine"></a>Подготовка виртуальной машины
++ [Список текущего виртуальных машин](#bkmk_list)
+
+## <a name="provision-a-virtual-machine-with-sql-server-and-machine-learning"></a>Подготовьте виртуальную машину с SQL Server и машинное обучение
 
 Если вы не знакомы с помощью виртуальных машинах Azure, мы рекомендуем, отображается в следующих статьях, Дополнительные сведения об использовании портала и настройка виртуальной машины.
 
 + [Виртуальные машины — приступая к работе](https://azure.microsoft.com/documentation/learning-paths/virtual-machines/)
 + [Приступая к работе с виртуальными машинами Windows](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-hero-tutorial/)
 
-## <a name="find-a-machine-learning-image"></a>Найти образ машины обучения
+Убедитесь, что для использования новой версии портала Azure или Azure Marketplace. Некоторые рисунки недоступны при просмотре коллекции на классическом портале Azure.
 
-1. На портале Azure (portal.azure.com), нажмите кнопку **виртуальные машины**, или нажмите кнопку **New**.
+**Создание виртуальной машины**
 
-2. Найдите поле поиска в верхней части страницы, который можно использовать для фильтрации результатов по имени. 
+1. Откройте портал Azure: [portal.azure.com](https:portal.azure.com).
 
-3. Введите «R Server» (или «ML Server») в **фильтра** управления, чтобы просмотреть список связанных ресурсов. Нажмите кнопку **поиска в Marketplace** для просмотра виртуальных машин.
+2. Нажмите кнопку **виртуальные машины**, или нажмите кнопку **New**.
 
-    > [!TIP]
-    > 
-    > Другие возможные строки для элемента управления фильтра являются «обработки и анализа данных» и «машинное обучение».
-    > 
-    > Используйте `%` подстановочный знак в поиск, чтобы найти имена виртуальных машин. Например, можно ввести `"`% % Юлия` or `%R % ".
+3. Нажмите кнопку **Добавить**.
 
-4. Чтобы получить R Server для Windows, выберите **R Server только SQL Server 2016 Enterprise**.
-  
-    [R Server](https://msdn.microsoft.com/microsoft-r/rserver-whats-new) лицензируется как компонент SQL Server Enterprise Edition, но версии 9.1 установлен как автономный сервер и обрабатывается в соответствии с политикой поддержки современных жизненного цикла.
+4. В поле поиска в верхней части страницы введите «Server машины обучения» или «SQL Server» для просмотра списка связанных виртуальных машин.
 
-    > [!NOTE] 
-    > 
-    > Это входит в диапазон, просмотрите для выпуска новой виртуальной машины, который включает 2017 г. SQL Server и 9.2.1 выпуска машины Server обучения.
-    > До этого времени может обновить версию SQL Server установлен на этой виртуальной машине, используя Центр установки SQL Server и выборе режима обновления. Дополнительные сведения см. в разделе [обновление SQL Server с помощью мастера установки](https://docs.microsoft.com/sql/database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup).
+5. Ознакомьтесь с требованиями и нажмите кнопку **создать** Чтобы приступить к работе.
 
-5. Виртуальная машина будет создана и запущена, нажмите кнопку **Connect** кнопку, чтобы открыть соединение и войдите в систему на новом компьютере.
+6. Виртуальная машина будет создана и запущена, нажмите кнопку **Connect** кнопку, чтобы открыть соединение и войдите в систему на новом компьютере.
 
-5. После подключения можно установить дополнительный пакет R или средстве разработки предпочтительным.
+5. После подключения можно установить дополнительные пакеты R или Python, или настроить средстве предпочтительный разработки.
 
-### <a name="install-additional-r-tools"></a>Установка дополнительных средств R
+### <a name="connect-to-the-virtual-machine"></a>Подключитесь к виртуальной машине
 
-По умолчанию Microsoft R Server включает все средства R, устанавливаемые при базовой установке R, включая RTerm и RGui. Ярлык для RGui также были добавлены к рабочему столу.
+Способ, когда клиент подключается к SQL Server, работающий на виртуальной машине зависит от расположения клиента и конфигурации сети.
 
-Тем не менее может потребоваться установить дополнительные средства R, например RStudio, средства R для Visual Studio (RTVS) или Microsoft R клиента. Ниже приведены ссылки на расположения скачивания и инструкции:
-
-+ [Средства R для Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation)
-+ [Microsoft R Client](https://msdn.microsoft.com/microsoft-r/install-r-client-windows)
-+ [RStudio для Windows](https://www.rstudio.com/products/rstudio/download/)
-
-После завершения установки измените расположения по умолчанию среды выполнения R, чтобы все средства разработки R использовали библиотеки R Server.
-
-### <a name="configure-r-server-to-support-web-services"></a>Настроить сервер R для поддержки веб-служб
-
-Использование развертывания веб-службы, удаленного выполнения или для возможности использования R Server в качестве сервера развертывания в вашей организации требуется дополнительная настройка. Инструкции см. в разделе [Настройка R Server для ввода в эксплуатацию analytics](https://docs.microsoft.com/machine-learning-server/install/operationalize-r-server-one-box-config).
-
-> [!NOTE]
-> Если требуется использовать пакеты, такие как RevoScaleR или MicrosoftML не требуется дополнительная настройка.
-
-## <a name="other-virtual-machines"></a>Другие виртуальные машины
-
-Следующие изображения доступны из Azure Marketplace и включают полностью настроенный машинного обучения средства, но не обязательно должны включать SQL Server.
-
-### <a name="data-science-virtual-machine"></a>Виртуальная машина анализа данных
-
-Этот образ предварительно настроен с Microsoft R Server, а также Python (дистрибутив Anaconda), Блокнота jupyter, выпуск Visual Studio Community, Power BI Desktop, пакет SDK Azure и SQL Server Express edition.
-
-Версия Windows выполняется в Windows Server 2012, а также содержит специальные инструменты для моделирования и анализа, включая [CNTK](https://www.microsoft.com/cognitive-toolkit/), [mxNet](https://mxnet.incubator.apache.org/), и популярные R пакеты, такие как **xgboost**.
-
-Выпуски Linux предоставляются для Ubuntu Centos и Centos CSP и содержать много популярных средств для операций обработки и анализа и разработки данных.
-
-Дополнительные сведения см. в разделе [введение в Azure виртуальная машина анализа данных для Linux и Windows](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm).
-
-Этот образ недавно был обновлен для включения: 
-
-+ Поддержка Юлия языка обработки и анализа данных масштабируемых, мощные будущего 
-+ JupyterHub является полезным для запуска учебный курс и хотите всех студентов, совместно использовать тот же сервер, но использовать отдельный записных книжек и каталоги.
-
-Дополнительные сведения о поддерживаемых средствах и обучения платформы компьютера в разделе [познакомиться виртуальная машина анализа данных](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/dsvm-tools-overview)
-
-### <a name="r-server-virtual-machines"></a>R Server виртуальные машины
-
-В дополнение к **R Server только SQL Server 2016 Enterprise** изображения, можно получить автономных виртуальных машин, которые содержат R Server. Для версии Linux CentOS 7.2, версии Linux RedHat 7.2 и Ubuntu версии 16.04 доступны изображения.
-
-Дополнительные сведения см. в разделе [сервер обучения машины в облаке](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-in-the-cloud)
-
- > [!NOTE]
- > Эти виртуальные машины заменяют **виртуальную машину RRE для Windows**, которая была доступна в Azure Marketplace ранее.
-
-### <a name="sql-server-virtual-machines"></a>Виртуальные машины SQL Server
-
-Существует два варианта использования машинного самообучения в Azure, SQL Server:
-
-+ Получение одного из образов виртуальной машины, которая включает предварительно установить SQL Server R Services.
-+ Создание виртуальной машины Azure и установка SQL Server Enterprise или Developer edition, с помощью лицензионный ключ. 
-  
-    Запустите программу установки еще раз, чтобы добавить и включить службу машинного обучения, как описано здесь: [Установка служб SQL Server R на виртуальной машине Azure](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
-+ Создание базы данных SQL Azure с помощью уровня службы, которые поддерживают машинного обучения и в настоящее время используют новый компонент служб R в режиме предварительного просмотра. Дополнительные сведения см. в разделе [базу данных SQL Azure](../r/using-r-in-azure-sql-database.md).
-
-> [!NOTE]
-> В настоящее время службы обучения машины SQL Server не поддерживается на виртуальных машинах Linux для 2017 г. SQL Server. Тем не менее можно выполнить оценки на обученной модели с помощью функции ПРОГНОЗИРОВАНИЯ T-SQL. Дополнительные сведения см. в разделе [собственного оценки в SQl Server](../sql-native-scoring.md). 
-
-### <a name="virtual-machines-for-deep-learning"></a>Виртуальные машины для углубленного обучения 
-
-Ранее Корпорация Майкрософт предоставляет глубокой Toolkit обучения для виртуальная машина анализа данных, который можно добавить в существующий виртуальная машина анализа данных. Этот набор средств теперь заменяется глубокой обучения виртуальной машине, который содержит средства популярных углубленного обучения:
-
-+ Выпуски GPU углубленного обучения платформ, таких как Когнитивных набор средств Майкрософт, TensorFlow, Keras и Caffe
-+ Встроенные драйверы GPU
-+ Набор средств для обработки текста и изображений
-+ Enterprise инструментами разработки, например Microsoft R Server Developer Edition Anaconda Python, записные книжки Jupyter Python и R
-+ Средства разработки для Python, R, SQL Server и многое другое
-+ Образцы конца в конец понимание текст и изображения
-
-Глубокие обучения виртуальной машины доступен на Windows 2016 или платформы Ubuntu Linux. Дополнительные сведения см. в разделе [углубленного обучения и AI платформы](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/dsvm-deep-learning-ai-frameworks).
-
-> [!IMPORTANT]
-> 
-> Для развертывания этой виртуальной машины требуется образы виртуальных машин серии Azure GPU NC, доступные в ограниченной регионах Azure. Сведения о доступности см. в разделе [продукты, доступные по регионам](https://azure.microsoft.com/en-us/regions/services/). При подготовке виртуальной машины, обязательно используйте **HDD** как тип диска не **SSD**.
+Дополнительные сведения см. в разделе [подключение к виртуальной машине SQL Server в Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-connect).
 
 ## <a name="frequently-asked-questions"></a>Часто задаваемые вопросы
 
@@ -149,10 +69,38 @@ ms.lasthandoff: 10/17/2017
 
 ### <a name="can-i-install-a-virtual-machine-with-sql-server-2017"></a>Можно установить виртуальную машину с SQL Server 2017 г.
 
-Виртуальную машину под управлением Windows для SQL Server 2017 г Enterprise Edition, включающий службы обучения машины скоро будет доступна. Найдите объявления на этих узлах блоги:
+Виртуальную машину под управлением Windows для SQL Server 2017 г Enterprise Edition, включающий службы обучения машины доступен, начиная с ноября 2017 г. 
+
+Для объявления о новых виртуальных машин обработки и анализа данных просмотрите эти сайты блога:
 
 + [Cortana аналитики и машинное обучение](https://blogs.technet.microsoft.com/machinelearning/)
 + [Инсайдера разработки платформы данных](https://blogs.technet.microsoft.com/dataplatforminsider/)
+
+### <a name="adding-sql-server-to-an-existing-virtual-machine"></a>Добавление существующей виртуальной машины SQL Server
+
+Помимо создания виртуальной машины с помощью образа, уже существует на компьютере с SQL Server обучения, можно установить SQL Server на основе существующей виртуальной машины и включение машинного обучения функции. Рекомендуется использовать выпуск Enterprise или Developer, чтобы избежать ограничения ресурсов. Также необходимо использовать лицензионный ключ.
+
+При запуске программы установки, не забудьте установить машинного обучения компонентов и хотя бы один язык (R или Python). Некоторые дополнительные действия, необходимые для включения службы обучения машины, для взаимодействия с SQL Server, а также включение сети на виртуальной машине.
+
+Дополнительные сведения см. в разделе [Установка служб SQL Server R на виртуальной машине Azure](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
+
+### <a name="using-machine-learning-in-azure-sql-database"></a>С помощью машинного обучения в базе данных Azure SQL
+
+В настоящее время для текущих разработках приостанавливается на предварительную версию поддержки R в Azure SQL. Дополнительные сведения см. в разделе [базу данных SQL Azure](../r/using-r-in-azure-sql-database.md).
+
+### <a name="can-i-upgrade-the-sql-server-version-on-a-virtual-machine"></a>Можно обновить версии SQL Server на виртуальной машине?
+
+Несмотря на то, что образы SQL Server 2016 поддерживает R, если вы хотите использовать Python, можно обновить до SQL Server 2017 г., который также обновляет других машинного обучения компонентов.
+
+Чтобы обновить версию SQL Server, установленный, откройте Центр установки SQL Server на виртуальной машине и выберите **обновление** параметр. В зависимости от виртуальной машины был создан, лицензии могут быть необходимы.
+
+Дополнительные сведения см. в разделе [обновление SQL Server с помощью мастера установки](https://docs.microsoft.com/sql/database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup).
+
+### <a name="can-i-upgrade-just-the-machine-learning-components"></a>Можно обновить только машинного обучения компоненты?
+
+При публикации новых обновлений для RevoScaleR, MicrosoftML или revoscalepy, можно обновить машинного обучения компонентов, используемых SQL Server, с помощью процесса, известного как _привязки_. При этом не меняется вашей версии SQL Server, но это приводит к изменению политика поддержки для экземпляра.
+
+Дополнительные сведения см. в разделе [SqlBindR используется для обновления компонентов обучения машины на сервере SQL Server](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 ### <a name="how-do-i-access-data-in-an-azure-storage-account"></a>Как получить доступ к данным в учетной записи хранения Azure?
 
@@ -160,11 +108,45 @@ ms.lasthandoff: 10/17/2017
 
 + Скопируйте данные из вашей учетной записи хранения в локальную файловую систему с помощью служебной программы, например [AzCopy](https://azure.microsoft.com/documentation/articles/storage-use-azcopy/#copy-files-in-azure-file-storage-with-azcopy-preview-version-only). 
 
-+ Добавьте файлы в общую папку в вашей учетной записи хранения и затем подключите ее как сетевой диск в виртуальной машине.  Дополнительные сведения см. в разделе [Mounting Azure files](https://azure.microsoft.com/documentation/articles/storage-dotnet-how-to-use-files/)(Подключение файлов Azure). 
++ Добавьте файлы в общую папку в вашей учетной записи хранения и затем подключите ее как сетевой диск в виртуальной машине. Дополнительные сведения см. в разделе [Mounting Azure files](https://azure.microsoft.com/documentation/articles/storage-dotnet-how-to-use-files/)(Подключение файлов Azure). 
 
 ### <a name="how-do-i-use-data-from-azure-data-lake-storage-adls"></a>Как использовать данные из хранилища Azure Data Lake (ADLS)?
 
-Может считывать данные из хранилища ADLS, с помощью RevoScaleR, при ссылке таким же образом HDFS файловой системы, с помощью webHDFS учетной записи хранилища.  Дополнительные сведения см. в разделе этой статьи: [с помощью R для выполнения операций файловой системы в хранилище Озера данных Azure](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2017/03/14/using-r-to-perform-filesystem-operations-on-azure-data-lake-store/).
+Можно считывать данные из хранилища ADLS, с помощью RevoScaleR, с помощью webHDFS для ссылки на учетную запись хранения, таким же образом HDFS файловой системы. Дополнительные сведения см. в разделе этой статьи: [с помощью R для выполнения операций файловой системы в хранилище Озера данных Azure](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2017/03/14/using-r-to-perform-filesystem-operations-on-azure-data-lake-store/).
 
+### <a name="i-cant-find-the-rre-virtual-machine"></a>Не удается найти RRE виртуальной машины
 
+«RRE для виртуальной машины Windows», существовавшей ранее в Azure Marketplace будет заменен изображения «Машины обучения сервера для Windows».
 
+Образов сервера обучения компьютера также доступны для версии Linux CentOS 7.2, версии Linux RedHat 7.2 и Ubuntu версии 16.04.
+
+Дополнительные сведения см. в разделе [сервер обучения машины в облаке](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-in-the-cloud)
+
+### <a name="configuring-machine-learning-server-or-r-server-to-support-web-services"></a>Настройка машины обучения сервера или R Server для поддержки веб-служб
+
+При использовании виртуальной машины, которая включает сервер обучения машины Дополнительные настройки может потребоваться использовать развертывание веб-служб, удаленное выполнение, или использовать виртуальную машину в качестве сервера развертывания в вашей организации.
+
+Инструкции см. в разделе [Настройка машины обучения сервера для эксплуатации analytics](https://docs.microsoft.com/machine-learning-server/operationalize/configure-machine-learning-server-one-box).
+
+Если требуется использовать пакеты, такие как RevoScaleR или MicrosoftML не требуется дополнительная настройка.
+
+## <a name="bkmk_list"></a>Список виртуальных машин
+
+В настоящее время для машинного обучения с помощью SQL Server доступны следующие виртуальные машины.
+
+|Название| Комментарии|
+|----|----|----|
+| **SQL Server 2016**| ***  |
+|SQL Server 2016 Enterprise с пакетом обновления 1 для Windows|Службы R для интеграции расширенной аналитики.|
+|BYOL SQL Server 2016 SP1 Enterprise на Windows Server |Службы R для интеграции расширенной аналитики. |
+|Бесплатная лицензия: SQL Server 2016 Developer с пакетом обновления 1 на Windows Server 2016 |Службы R для интеграции расширенной аналитики. |
+| Виртуальная машина анализа данных — Windows 2012|Содержит популярных средств для обработки и анализа данных, включая Microsoft R Server Developer Edition, SQL Server 2016 Developer edition, распространения Anaconda Python, Юлия профессионального выпуска developer и записные книжки Jupyter для R.| 
+| Виртуальная машина анализа данных — Windows 2016|Включает SQL Server 2016 Developer Edition с поддержкой аналитика R в базе данных.|
+|**SQL Server 2017**| ***   |
+|SQL Server 2017 г предприятия Windows Server 2016| Службы обучения компьютера с поддержкой языка Python и R.|
+|BYOL SQL Server 2017 г предприятия Windows Server 2016|Службы обучения компьютера с поддержкой языка Python и R.|
+| Лицензия свободного SQL Server: SQL Server 2017 г Developer на Windows Server|Службы обучения компьютера с поддержкой языка Python и R.|
+| **Другое**| *** |
+| Машинного обучения сервера только SQL Server 2017 г Enterprise|Аналогично образа SQL Server 2016 Enterprise, но содержит автономной версии сервера Machine обучения и имеет ядро ScaleR, и функциональные возможности ввода в эксплуатацию оптимизирован для Windows сред.|
+| Сервер машинного обучения для Windows|Содержит автономной версии сервера Machine обучения, с функциями ввода в эксплуатацию, оптимизированный для среды Windows.|
+|Виртуальная машина анализа данных |Выпуски Linux, включающие R Server. Виртуальные машины Linux, которые включают 2017 г. SQL Server не могут выполнять код R или Python в SQL Server. Тем не менее можно выполнить оценки на обученной модели с помощью функции ПРОГНОЗИРОВАНИЯ T-SQL. Дополнительные сведения см. в разделе [собственного оценки в SQl Server](../sql-native-scoring.md).|

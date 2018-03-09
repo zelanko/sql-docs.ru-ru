@@ -3,22 +3,26 @@ title: "Восстановление базы данных SQL Server в Docker 
 description: "Этот учебник показывает способ восстановления резервной копии базы данных SQL Server в новый контейнер Linux Docker."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: ea1aa01f3917c0d6ee4423861a3bf4fb985f53fa
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
-ms.openlocfilehash: 1f3cc214be4eaac2199c17c3bea1da7fd02956f1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/14/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Восстановление базы данных SQL Server в контейнер Linux Docker
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Этот учебник посвящен перемещения и восстановления файла резервной копии SQL Server в Linux 2017 г. SQL Server образ контейнера, запущенного на Docker.
 
@@ -29,15 +33,12 @@ ms.lasthandoff: 10/14/2017
 > * Выполните инструкции Transact-SQL для просмотра и изменения базы данных.
 > * Создайте резервную копию базы данных.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 * Подсистема docker 1.8 + для какого-либо поддерживается дистрибутив Linux или Docker для Mac и Windows. Дополнительные сведения см. в разделе [установить Docker](https://docs.docker.com/engine/installation/).
-* Менее 4 ГБ места на диске
-* Не менее 4 ГБ ОЗУ
+* Минимум 2 ГБ места на диске
+* Минимум 2 ГБ ОЗУ
 * [Требования к системе для SQL Server в Linux](sql-server-linux-setup.md#system).
-
-> [!IMPORTANT]
-> По умолчанию в Docker для Mac и Docker для Windows является 2 ГБ для виртуальной Машины Moby, поэтому следует изменить его до 4 ГБ. Если на компьютере Mac или Windows увеличить параметры памяти, с помощью [инструкциям Краткого руководства Docker](quickstart-install-connect-docker.md).
 
 ## <a name="pull-and-run-the-container-image"></a>По запросу, а затем запускать образ контейнера
 
@@ -406,4 +407,3 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 > [!div class="nextstepaction"]
 >[Руководство по конфигурации для SQL Server 2017 г. для Docker](sql-server-linux-configure-docker.md)
-

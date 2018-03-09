@@ -3,7 +3,7 @@ title: "Свойство ActiveConnection (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADO]
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2bbd6ba28209df50d8956c784d0ef25f9ac73728
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 431438fa61750ca2f8eaee3362f94188e5985523
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activeconnection-property-ado"></a>Свойство ActiveConnection (ADO)
 Указывает, к которому [подключения](../../../ado/reference/ado-api/connection-object-ado.md) указанного объекта [команда](../../../ado/reference/ado-api/command-object-ado.md), [записей](../../../ado/reference/ado-api/recordset-object-ado.md), или [записи](../../../ado/reference/ado-api/record-object-ado.md) принадлежит объект.  
@@ -38,7 +37,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **строка** значение, которое содержит определение для подключения, если подключение закрыто, или **Variant** содержащая текущие **подключения** объекта, если соединение будет открыт. Значение по умолчанию — пустая ссылка на объект. В разделе [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойство.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **ActiveConnection** свойства, чтобы определить **подключения** объекта, для которого указанный **команда** объект будет выполняться или только указанные  **Набор записей** будет открыт.  
   
 ## <a name="command"></a>Command  
@@ -79,12 +78,11 @@ ms.lasthandoff: 09/09/2017
   
 ||||  
 |-|-|-|  
-|[Объект команды (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Объект записи (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
+|[Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ActiveConnection CommandText, CommandTimeout, CommandType, размер и направление-пример свойства (Visual Basic)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection CommandText, CommandTimeout, CommandType, размер и направление примере свойства (VC ++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [ActiveConnection, CommandText, CommandTimeout, CommandType, размер и направление-пример свойства (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
  [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Свойство ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)
-

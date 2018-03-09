@@ -1,10 +1,13 @@
 ---
 title: "СОЗДАЙТЕ ВНЕШНЮЮ ТАБЛИЦУ (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 11/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - External, table create
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-caps.latest.revision: 30
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: e9ee131e1c4bb09ae19c90d84b78a7d6fc662ae8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e9abb5affb76f0caac24e973928561939280ba40
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-external-table-transact-sql"></a>СОЗДАЙТЕ ВНЕШНЮЮ ТАБЛИЦУ (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Создает внешнюю таблицу PolyBase, которая ссылается на данные, хранящиеся в кластер Hadoop или хранилище больших двоичных объектов. Также можно использовать для создания внешней таблицы для [запроса эластичной базы данных](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
   
@@ -135,38 +137,42 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *database_name* . [schema_name]. | schema_name. ] *имя_таблицы*  
+ *database_name* . [ schema_name ] . | schema_name. ] *table_name*  
  Одно для трех - часть имя создаваемой таблицы. Для внешней таблицы только метаданные таблицы хранятся в SQL вместе с базовую статистику о файл или папку, указанную в хранилище больших двоичных объектов Azure или Hadoop. Никакие данные перемещается или хранящихся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- \<column_definition > [,... *n*  ] Одно или несколько определений столбца позволяет создать ВНЕШНЮЮ ТАБЛИЦУ. CREATE EXTERNAL TABLE и CREATE TABLE используется тот же синтаксис для определения столбца. Исключение, нельзя использовать ограничение по умолчанию во внешних таблицах. Подробная информация о определения столбцов и их типы данных, в разделе [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) и [создание таблицы в базе данных Azure SQL](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
+ \<column_definition > [,...  *n*  ] Одно или несколько определений столбца позволяет создать ВНЕШНЮЮ ТАБЛИЦУ. CREATE EXTERNAL TABLE и CREATE TABLE используется тот же синтаксис для определения столбца. Исключение, нельзя использовать ограничение по умолчанию во внешних таблицах. Подробная информация о определения столбцов и их типы данных, в разделе [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) и [создание таблицы в базе данных Azure SQL](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
  Определения столбцов, включая типы данных и количество столбцов должны соответствовать данным во внешних файлах. В случае несоответствия при запросе фактические данные будут отклонены строки файла.  
   
- Определения столбцов и тип для внешних таблиц, на которые ссылаются файлы во внешних источниках данных, необходимо сопоставить точное схемы внешнего файла. При определении типов данных, которые ссылаются на данные, хранящиеся в Hadoop или Hive, используйте следующие сопоставления типов данных SQL и Hive и приведение типа в тип данных SQL, при выборе из него. Типы включают все версии Hive, если не указано иное.  
-  
+ Определения столбцов и тип для внешних таблиц, на которые ссылаются файлы во внешних источниках данных, необходимо сопоставить точное схемы внешнего файла. При определении типов данных, которые ссылаются на данные, хранящиеся в Hadoop или Hive, используйте следующие сопоставления типов данных SQL и Hive и приведение типа в тип данных SQL, при выборе из него. Типы включают все версии Hive, если не указано иное.
+
+> [!NOTE]  
+>  SQL Server не поддерживает куст _бесконечность_ значения данных во время преобразования. PolyBase, будут завершаться ошибку преобразования типов данных.
+
+
 |Тип данных SQL|Тип данных .NET|Тип данных Hive|Hadoop типа данных|Комментарии|  
 |-------------------|--------------------|--------------------|----------------------------|--------------|  
 |tinyint|Byte|tinyint|ByteWritable|Для чисел без знака только.|  
 |smallint|Int16|smallint|ShortWritable||  
 |int|Int32|int|IntWritable||  
 |bigint|Int64|bigint|LongWritable||  
-|bit|Логическое значение|boolean|BooleanWritable||  
+|bit|Boolean|boolean|BooleanWritable||  
 |float|Double|double|DoubleWritable||  
 |real|Один|float|FloatWritable||  
 |money|Decimal|double|DoubleWritable||  
 |smallmoney|Decimal|double|DoubleWritable||  
-|nchar|Строковые значения<br /><br /> Char]|строка|text||  
+|NCHAR|Строковые значения<br /><br /> Char]|строка|text||  
 |nvarchar|Строковые значения<br /><br /> Char]|строка|Текст||  
-|char|Строковые значения<br /><br /> Char]|строка|Текст||  
+|char;|Строковые значения<br /><br /> Char]|строка|Текст||  
 |varchar|Строковые значения<br /><br /> Char]|строка|Текст||  
-|binary|Byte[]|binary|BytesWritable|Применяется к Hive 0,8 и более поздней версии.|  
-|varbinary|Byte[]|binary|BytesWritable|Применяется к Hive 0,8 и более поздней версии.|  
-|date|DateTime|timestamp|TimestampWritable||  
-|smalldatetime|DateTime|timestamp|TimestampWritable||  
-|datetime2|DateTime|timestamp|TimestampWritable||  
-|datetime|DateTime|timestamp|TimestampWritable||  
-|time|TimeSpan|timestamp|TimestampWritable||  
-|decimal|Decimal|decimal|BigDecimalWritable|Применяется к Hive0.11 и более поздней версии.|  
+|BINARY|Byte[]|BINARY|BytesWritable|Применяется к Hive 0,8 и более поздней версии.|  
+|varbinary|Byte[]|BINARY|BytesWritable|Применяется к Hive 0,8 и более поздней версии.|  
+|date|DateTime|TIMESTAMP|TimestampWritable||  
+|smalldatetime|DateTime|TIMESTAMP|TimestampWritable||  
+|datetime2|DateTime|TIMESTAMP|TimestampWritable||  
+|datetime|DateTime|TIMESTAMP|TimestampWritable||  
+|time|TimeSpan|TIMESTAMP|TimestampWritable||  
+|Decimal|Decimal|Decimal|BigDecimalWritable|Применяется к Hive0.11 и более поздней версии.|  
   
  РАСПОЛОЖЕНИЕ = "*folder_or_filepath*"  
  Указывает папки или путь к файлу и имя файла для фактических данных в хранилище больших двоичных объектов Azure или Hadoop. Расположение начинается с корневой папки; Корневая папка — расположение данных, указанные в источнике внешних данных.  
@@ -179,7 +185,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  Чтобы изменить только на чтение и по умолчанию в корневой папке, задайте для атрибута \<polybase.recursive.traversal > значение «false» в файле core-site.xml конфигурации. Этот файл находится в папке `<SqlBinRoot>\Polybase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Например, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.  
   
- Источник_данных = *external_data_source_name*  
+ DATA_SOURCE = *external_data_source_name*  
  Задает имя внешнего источника данных, содержащий расположение внешних данных. Это расположение, хранилище больших двоичных объектов Azure или Hadoop. Для создания внешнего источника данных, используйте [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
  FILE_FORMAT = *external_file_format_name*  
@@ -235,7 +241,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  Параметры сегментированных внешней таблицы  
  Указывает внешний источник данных (источник данных SQL Server) и способ распространения [запроса эластичной базы данных](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
   
- ИСТОЧНИК_ДАННЫХ  
+ DATA_SOURCE  
  Источника внешних данных, таких как данные, хранящиеся в файловой системе Hadoop хранилище больших двоичных объектов или [диспетчера карты сегментов](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/).  
   
  SCHEMA_NAME  
@@ -247,7 +253,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  РАСПРОСТРАНЕНИЯ  
  Необязательно. Это только является обязательным только для баз данных SHARD_MAP_MANAGER типа. Это свойство задает обработку таблицы как сегментированной таблице или реплицируемой таблицы. С **SHARDED** (*имя столбца*) таблицы, данные из различных таблиц не перекрываются. **РЕПЛИКАЦИЯ** указывает, что таблицы имеют те же данные на каждый сегмент. **ROUND_ROBIN** указывает, что метод конкретного приложения используется для распределения данных.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуются следующие разрешения пользователя.  
   
 -   **CREATE TABLE**  
@@ -291,6 +297,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 -   CREATE TABLE и DROP TABLE  
   
 -   CREATE STATISTICS и DROP STATISTICS  
+Примечание: Создание и DROP STATISTICS во внешних таблицах не поддерживаются в базе данных SQL Azure. 
   
 -   Создание ПРЕДСТАВЛЕНИЯ и DROP VIEW  
   
@@ -361,7 +368,7 @@ WITH (
   
 CREATE EXTERNAL FILE FORMAT myfileformat_rc  
 WITH (  
-    FORMAT = RCFILE,  
+    FORMAT_TYPE = RCFILE,  
     SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'  
 )  
 ;  
@@ -469,102 +476,7 @@ WITH
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="h-create-an-external-table-with-data-in-text-delimited-format"></a>З. Создайте внешнюю таблицу с данными в формате, разделенных текстом.  
- В этом примере показаны все действия, необходимые для создания внешнюю таблицу, которая содержит данные, форматированные в файлы с разбивкой текста. Он определяет mydatasource источника внешних данных и myfileformat формата внешнего файла. В инструкции CREATE EXTERNAL TABLE, затем ссылаться на эти объекты уровня сервера. Дополнительные сведения см. в разделе [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md) и [ФОРМАТА ВНЕШНЕГО файла CREATE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-file-format-transact-sql.md).  
-  
-```  
-  
-CREATE EXTERNAL DATA SOURCE mydatasource  
-WITH (  
-    TYPE = HADOOP,  
-    LOCATION = 'hdfs://xxx.xxx.xxx.xxx:8020'  
-)  
-  
-CREATE EXTERNAL FILE FORMAT myfileformat  
-WITH (  
-    FORMAT_TYPE = DELIMITEDTEXT,   
-    FORMAT_OPTIONS (FIELD_TERMINATOR ='|')  
-);  
-  
-CREATE EXTERNAL TABLE ClickStream (   
-    url varchar(50),  
-    event_date date,  
-    user_IP varchar(50)  
-)  
-WITH (  
-        LOCATION='/webdata/employee.tbl',  
-        DATA_SOURCE = mydatasource,  
-        FILE_FORMAT = myfileformat  
-    )  
-;  
-  
-```  
-  
-### <a name="i-create-an-external-table-with-data-in-rcfile-format"></a>И. Создайте внешнюю таблицу с данными в формате RCFile.  
- В этом примере показаны все действия, необходимые для создания внешнюю таблицу, которая содержит данные в формате RCFiles. Он определяет mydatasource_rc источника внешних данных и myfileformat_rc формата внешнего файла. В инструкции CREATE EXTERNAL TABLE, затем ссылаться на эти объекты уровня сервера. Дополнительные сведения см. в разделе [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md) и [ФОРМАТА ВНЕШНЕГО файла CREATE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-file-format-transact-sql.md).  
-  
-```  
-  
-CREATE EXTERNAL DATA SOURCE mydatasource_rc  
-WITH (  
-    TYPE = HADOOP,  
-    LOCATION = 'hdfs://xxx.xxx.xxx.xxx:8020'  
-)  
-  
-CREATE EXTERNAL FILE FORMAT myfileformat_rc  
-WITH (  
-    FORMAT = RCFILE,  
-    SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'  
-)  
-;  
-  
-CREATE EXTERNAL TABLE ClickStream_rc (   
-    url varchar(50),  
-    event_date date,  
-    user_ip varchar(50)  
-)  
-WITH (  
-        LOCATION='/webdata/employee_rc.tbl',  
-        DATA_SOURCE = mydatasource_rc,  
-        FILE_FORMAT = myfileformat_rc  
-    )  
-;  
-  
-```  
-  
-### <a name="j-create-an-external-table-with-data-in-orc-format"></a>К. Создайте внешнюю таблицу с данными в формате ORC.  
- В этом примере показаны все действия, необходимые для создания внешнюю таблицу, которая имеет данных, отформатированных в виде файлов ORC. Он определяет mydatasource_orc источника внешних данных и myfileformat_orc формата внешнего файла. В инструкции CREATE EXTERNAL TABLE, затем ссылаться на эти объекты уровня сервера. Дополнительные сведения см. в разделе [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md) и [ФОРМАТА ВНЕШНЕГО файла CREATE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-file-format-transact-sql.md).  
-  
-```  
-  
-CREATE EXTERNAL DATA SOURCE mydatasource_orc  
-WITH (  
-    TYPE = HADOOP,  
-    LOCATION = 'hdfs://xxx.xxx.xxx.xxx:8020'  
-)  
-  
-CREATE EXTERNAL FILE FORMAT myfileformat_orc  
-WITH (  
-    FORMAT = ORC,  
-    COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
-)  
-;  
-  
-CREATE EXTERNAL TABLE ClickStream_orc (   
-    url varchar(50),  
-    event_date date,  
-    user_ip varchar(50)  
-)  
-WITH (  
-        LOCATION='/webdata/',  
-        DATA_SOURCE = mydatasource_orc,  
-        FILE_FORMAT = myfileformat_orc  
-    )  
-;  
-  
-```  
-  
-### <a name="k-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>Л. Импорт данных из ADLS в Azure[!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
+### <a name="h-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>З. Импорт данных из ADLS в Azure[!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
  
   
 ```  
@@ -610,7 +522,7 @@ AS SELECT * FROM
      
 ```  
   
-### <a name="l-join-external-tables"></a>М. Соединение внешних таблиц  
+### <a name="i-join-external-tables"></a>И. Соединение внешних таблиц  
   
 ```  
 SELECT url.description  
@@ -620,7 +532,7 @@ WHERE cs.url = 'msdn.microsoft.com'
 ;  
 ```  
   
-### <a name="m-join-hdfs-data-with-pdw-data"></a>Н. Объединение данных HDFS с данными PDW  
+### <a name="j-join-hdfs-data-with-pdw-data"></a>К. Объединение данных HDFS с данными PDW  
   
 ```  
 SELECT cs.user_ip FROM ClickStream cs  
@@ -630,7 +542,7 @@ WHERE cs.url = 'www.microsoft.com'
   
 ```  
   
-### <a name="n-import-row-data-from-hdfs-into-a-distributed-pdw-table"></a>О. Импорт строк данных из HDFS в таблицу распределенных PDW  
+### <a name="k-import-row-data-from-hdfs-into-a-distributed-pdw-table"></a>Л. Импорт строк данных из HDFS в таблицу распределенных PDW  
   
 ```  
 CREATE TABLE ClickStream_PDW  
@@ -639,7 +551,7 @@ AS SELECT url, event_date, user_ip FROM ClickStream
 ;  
 ```  
   
-### <a name="o-import-row-data-from-hdfs-into-a-replicated-pdw-table"></a>П. Импорт строк данных из HDFS в реплицируемой таблицы PDW  
+### <a name="l-import-row-data-from-hdfs-into-a-replicated-pdw-table"></a>М. Импорт строк данных из HDFS в реплицируемой таблицы PDW  
   
 ```  
 CREATE TABLE ClickStream_PDW  
@@ -649,7 +561,7 @@ FROM ClickStream
 ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие примеры запросов метаданных (SQL Server PDW)](http://msdn.microsoft.com/en-us/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
  [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md)   
@@ -657,7 +569,6 @@ FROM ClickStream
  [CREATE TABLE AS SELECT #40; Хранилище данных Azure SQL &#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
   
   
-
 
 
 

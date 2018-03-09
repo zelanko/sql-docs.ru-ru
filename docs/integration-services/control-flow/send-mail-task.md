@@ -1,10 +1,13 @@
 ---
-title: "Отправить задачи почты | Документы Microsoft"
+title: "Задача \"Отправка почты\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -20,17 +23,16 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-caps.latest.revision: 51
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: cf06b8fdc020b9c2012d5d710427b64043898e84
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 6d3cacac1c13700c1416b6365ec6bb03f650fa31
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="send-mail-task"></a>Задача «Отправка почты»
   Задача «Отправка почты» производит отправку сообщения электронной почты. Эта задача позволяет пакету отправлять сообщения при успешном или неуспешном завершении задач в рабочем процессе пакета либо в ответ на события, инициируемые при выполнении пакета. Например, задача может уведомить администратора базы данных об успешном или неуспешном завершении задачи резервного копирования базы данных.  
@@ -76,13 +78,13 @@ ms.lasthandoff: 08/11/2017
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Страница "Выражения"](../../integration-services/expressions/expressions-page.md)  
+-   [Страница «Выражения»](../../integration-services/expressions/expressions-page.md)  
   
  Сведения о задании этих свойств программными средствами см. в следующем разделе:  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask>  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Дополнительные сведения о настройке свойств этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## <a name="related-content"></a>См. также  
@@ -98,7 +100,7 @@ ms.lasthandoff: 08/11/2017
   
  **Примечание.** Имена задач должны быть уникальными в пределах пакета.  
   
- **Description**  
+ **Описание**  
  Введите описание задачи «Отправка почты».  
   
 ## <a name="send-mail-task-editor-mail-page"></a>Редактор задачи «Отправка почты» (страница «Почта»)
@@ -106,7 +108,7 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Параметры  
  **SMTPConnection**  
- Выберите диспетчер подключений SMTP из списка или нажмите кнопку  **\<создать соединение... >** для создания нового соединения диспетчера.  
+ Выберите диспетчер подключений SMTP из списка или щелкните **\<Создать соединение…>**, чтобы создать его.  
   
 > [!IMPORTANT]  
 >  Диспетчер SMTP-соединений поддерживает только анонимную проверку подлинности и проверку подлинности Windows. Обычная проверка подлинности не поддерживается.  
@@ -154,13 +156,13 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Соединение с файлом  
  **MessageSource**  
- Выберите из списка диспетчер подключения файлов или нажмите кнопку \< **новое подключение...** > для создания нового соединения диспетчера.  
+ Выберите диспетчер подключений файлов из списка или щелкните \<**Создать соединение…**>, чтобы создать его.  
   
  **См. также:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = Переменная  
  **MessageSource**  
- Выберите переменную из списка или нажмите кнопку \< **создать переменную...** > для создания новой переменной.  
+ Выберите переменную из списка или нажмите кнопку \<**Создать переменную…**>, чтобы создать переменную.  
   
  **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -169,4 +171,3 @@ ms.lasthandoff: 08/11/2017
  [Поток управления](../../integration-services/control-flow/control-flow.md)  
   
   
-

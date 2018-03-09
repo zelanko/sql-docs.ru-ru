@@ -3,7 +3,7 @@ title: "Свойство точности (ADOX) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - Precision property [ADOX]
 ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b27fa294315704dc0f7f7b86db061f1094491412
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8c94776e31edda153e8f779425ac8eaef2db58ab
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="precision-property-adox"></a>Свойство точности (ADOX)
 Указывает, максимальная точность значений данных в [столбца](../../../ado/reference/adox-api/column-object-adox.md).  
@@ -40,16 +39,15 @@ ms.lasthandoff: 09/09/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает **длинные** значение, максимальная точность значений данных в столбце при [тип](../../../ado/reference/adox-api/type-property-column-adox.md) свойство имеет числовой тип. **Точность** игнорируется для всех других типов данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Значение по умолчанию равно нулю (**0**).  
   
  Это свойство доступно только для чтения для [столбца](../../../ado/reference/adox-api/column-object-adox.md) объектов уже добавлен в коллекцию.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект столбца (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+ [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ADOX кода примерах: NumericScale и точности свойства (Visual Basic)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
  [Свойство Type (столбец) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
- [Объект столбца (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
-
+ [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

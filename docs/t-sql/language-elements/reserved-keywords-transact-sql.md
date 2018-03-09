@@ -3,8 +3,11 @@ title: "Зарезервированные ключевые слова (Transact
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,19 +20,18 @@ helpviewer_keywords:
 - reserved words [SQL Server]
 - keywords [SQL Server]
 ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
-caps.latest.revision: 53
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: efaa21099f422ae812168561351a359fc89f8e0d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 65ef776b119b40bbeb4bbdddcfe0a4a99379a833
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="reserved-keywords-transact-sql"></a>Зарезервированные ключевые слова Transact-SQL
+# <a name="reserved-keywords-transact-sql"></a>Зарезервированные ключевые слова (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует зарезервированные ключевые слова для определения, манипулирования и доступа к базам данных. Зарезервированные ключевые слова являются частью грамматики языка [!INCLUDE[tsql](../../includes/tsql-md.md)], которые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует для синтаксического анализа инструкций и пакетов языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Хотя синтаксис скриптов языка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет использовать зарезервированные слова [!INCLUDE[tsql](../../includes/tsql-md.md)] в качестве идентификаторов и имен объектов, это можно сделать только при помощи идентификаторов с разделителями.  
@@ -97,7 +99,7 @@ ms.lasthandoff: 09/01/2017
 |ESCAPE|PIVOT|WHERE|  
 |EXCEPT|PLAN|WHILE|  
 |EXEC|PRECISION|на|  
-|Выполните|PRIMARY|WITHIN GROUP|  
+|EXECUTE|PRIMARY|WITHIN GROUP|  
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||  
   
@@ -116,83 +118,83 @@ ms.lasthandoff: 09/01/2017
 ||||  
 |-|-|-|  
 |**АБСОЛЮТНЫЙ**|**EXEC**|**ОПЕРАТОР OVERLAPS**|  
-|**ДЕЙСТВИЕ**|**EXECUTE**|**ПАНЕЛЬ**|  
-|**ADA**|**СУЩЕСТВУЕТ**|**ЧАСТИЧНОЕ**|  
-|**ДОБАВИТЬ**|**EXTERNAL**|**PASCAL**|  
-|**ALL**|**ИЗВЛЕЧЕНИЕ**|**ПОЛОЖЕНИЕ**|  
+|**ДЕЙСТВИЕ**|**EXECUTE**|**PAD**|  
+|**ADA**|**EXISTS**|**ЧАСТИЧНОЕ**|  
+|**ADD**|**EXTERNAL**|**PASCAL**|  
+|**ALL**|**EXTRACT**|**ПОЛОЖЕНИЕ**|  
 |**ВЫДЕЛИТЬ**|**ЗНАЧЕНИЕ FALSE**|**ТОЧНОСТЬ**|  
-|**ALTER**|**ВЫБОРКИ**|**ПОДГОТОВКА**|  
-|**AND**|**ПЕРВЫЙ**|**СОХРАНИТЬ**|  
-|**ЛЮБОЙ**|**ЧИСЛО С ПЛАВАЮЩЕЙ ЗАПЯТОЙ**|**PRIMARY**|  
-|**—**|**ДЛЯ**|**ПЕРЕД**|  
-|**Службы Analysis Services**|**ВНЕШНИЙ**|**ПРИВИЛЕГИИ**|  
-|**ASC**|**FORTRAN**|**ПРОЦЕДУРА**|  
+|**ALTER**|**FETCH**|**ПОДГОТОВКА**|  
+|**AND**|**FIRST**|**СОХРАНИТЬ**|  
+|**ANY**|**FLOAT**|**PRIMARY**|  
+|**—**|**FOR**|**ПЕРЕД**|  
+|**Службы Analysis Services**|**ВНЕШНИЙ**|**PRIVILEGES**|  
+|**ASC**|**FORTRAN**|**PROCEDURE**|  
 |**УТВЕРЖДЕНИЕ**|**НАЙТИ**|**PUBLIC**|  
-|**AT**|**FROM**|**ЧТЕНИЕ**|  
-|**АВТОРИЗАЦИЯ**|**ПОЛНОЕ**|**REAL**|  
-|**СР.**|**ПОЛУЧИТЬ**|**ССЫЛКИ**|  
-|**BEGIN**|**ГЛОБАЛЬНЫЕ**|**ОТНОСИТЕЛЬНЫЙ**|  
-|**BETWEEN**|**ПЕРЕЙТИ**|**ОГРАНИЧЕНИЯ**|  
-|**БИТ**|**ОПЕРАТОР GOTO**|**REVOKE**|  
+|**AT**|**FROM**|**READ**|  
+|**AUTHORIZATION**|**ПОЛНОЕ**|**REAL**|  
+|**AVG**|**GET**|**ССЫЛКИ**|  
+|**BEGIN**|**GLOBAL**|**ОТНОСИТЕЛЬНЫЙ**|  
+|**BETWEEN**|**GO**|**ОГРАНИЧЕНИЯ**|  
+|**BIT**|**GOTO**|**REVOKE**|  
 |**BIT_LENGTH**|**GRANT**|**RIGHT**|  
-|**ОБА**|**ГРУППЫ**|**ОТКАТ**|  
-|**ПО**|**НАЛИЧИЕ**|**СТРОКИ**|  
-|**CASCADE**|**ЧАС**|**СХЕМЫ**|  
-|**КАСКАДОМ**|**УДОСТОВЕРЕНИЕ**|**ПРОКРУТКИ**|  
-|**РЕГИСТР**|**НЕМЕДЛЕННО**|**ВТОРОЙ**|  
-|**ПРИВЕДЕНИЕ ТИПОВ**|**IN**|**РАЗДЕЛ**|  
+|**BOTH**|**GROUP**|**ROLLBACK**|  
+|**BY**|**НАЛИЧИЕ**|**ROWS**|  
+|**CASCADE**|**HOUR**|**SCHEMA**|  
+|**CASCADED**|**УДОСТОВЕРЕНИЕ**|**SCROLL**|  
+|**CASE**|**НЕМЕДЛЕННО**|**SECOND**|  
+|**CAST**|**IN**|**РАЗДЕЛ**|  
 |**КАТАЛОГ**|**ВКЛЮЧИТЬ**|**SELECT**|  
-|**CHAR**|**ИНДЕКС**|**СЕАНС**|  
-|**CHAR_LENGTH**|**ИНДИКАТОР**|**ФУНКЦИЯ SESSION_USER**|  
-|**СИМВОЛ**|**ИЗНАЧАЛЬНО**|**НАБОР**|  
+|**CHAR**|**INDEX**|**СЕАНС**|  
+|**CHAR_LENGTH**|**ИНДИКАТОР**|**SESSION_USER**|  
+|**СИМВОЛ**|**ИЗНАЧАЛЬНО**|**SET**|  
 |**CHARACTER_LENGTH**|**ВНУТРЕННЕЕ**|**РАЗМЕР**|  
-|**ФЛАЖОК**|**ВХОДНЫЕ ДАННЫЕ**|**SMALLINT**|  
-|**ЗАКРЫТЬ**|**БЕЗ УЧЕТА**|**НЕКОТОРЫЕ**|  
-|**ФУНКЦИЯ ОБЪЕДИНЕНИЯ**|**INSERT**|**ПРОБЕЛ**|  
+|**ФЛАЖОК**|**INPUT**|**SMALLINT**|  
+|**CLOSE**|**БЕЗ УЧЕТА**|**SOME**|  
+|**COALESCE**|**INSERT**|**SPACE**|  
 |**РАЗБОР ПО КОПИЯМ**|**INT**|**SQL**|  
 |**ПАРАМЕТРЫ СОРТИРОВКИ**|**ЦЕЛОЕ ЧИСЛО СО ЗНАКОМ**|**SQLCA**|  
-|**СТОЛБЕЦ**|**INTERSECT**|**SQLCODE**|  
-|**ФИКСАЦИЯ**|**ИНТЕРВАЛ**|**SQLERROR**|  
-|**ПОДКЛЮЧЕНИЕ**|**В**|**SQLSTATE**|  
-|**ПОДКЛЮЧЕНИЕ**|**IS**|**SQLWARNING**|  
+|**COLUMN**|**INTERSECT**|**SQLCODE**|  
+|**COMMIT**|**ИНТЕРВАЛ**|**SQLERROR**|  
+|**CONNECT**|**В**|**SQLSTATE**|  
+|**ПОДКЛЮЧЕНИЕ**|**—**|**SQLWARNING**|  
 |**ОГРАНИЧЕНИЯ**|**ИЗОЛЯЦИЯ**|**SUBSTRING**|  
-|**ОГРАНИЧЕНИЯ**|**ПРИСОЕДИНЕНИЕ**|**СУММА**|  
-|**ПРОДОЛЖИТЬ**|**КЛЮЧ**|**ФУНКЦИЯ SYSTEM_USER**|  
-|**ПРЕОБРАЗОВАНИЕ**|**LANGUAGE**|**ТАБЛИЦА**|  
-|**СООТВЕТСТВУЮЩИЙ**|**ПОСЛЕДНИЙ**|**ВРЕМЕННЫЕ**|  
-|**СЧЕТЧИК**|**НАЧАЛЬНЫЕ**|**ЗАТЕМ**|  
+|**ОГРАНИЧЕНИЯ**|**JOIN**|**SUM**|  
+|**CONTINUE**|**KEY**|**SYSTEM_USER**|  
+|**ПРЕОБРАЗОВАНИЕ**|**LANGUAGE**|**TABLE**|  
+|**СООТВЕТСТВУЮЩИЙ**|**LAST**|**ВРЕМЕННЫЕ**|  
+|**COUNT**|**НАЧАЛЬНЫЕ**|**ЗАТЕМ**|  
 |**СОЗДАНИЕ**|**LEFT**|**ВРЕМЯ**|  
-|**КРОСС-**|**УРОВЕНЬ**|**ОТМЕТКА ВРЕМЕНИ**|  
+|**CROSS**|**УРОВЕНЬ**|**ОТМЕТКА ВРЕМЕНИ**|  
 |**ТЕКУЩИЙ**|**LIKE**|**TIMEZONE_HOUR**|  
 |**CURRENT_DATE**|**ЛОКАЛЬНЫЕ**|**TIMEZONE_MINUTE**|  
-|**CURRENT_TIME**|**НИЖЕ**|**КОМУ**|  
+|**CURRENT_TIME**|**LOWER**|**Кому**|  
 |**CURRENT_TIMESTAMP**|**MATCH**|**В КОНЦЕ**|  
-|**ФУНКЦИЯ CURRENT_USER**|**MAX**|**ТРАНЗАКЦИИ**|  
-|**КУРСОР**|**МИН.**|**ПЕРЕВЕСТИ**|  
+|**CURRENT_USER**|**MAX**|**ТРАНЗАКЦИИ**|  
+|**CURSOR**|**MIN**|**TRANSLATE**|  
 |**ДАТА**|**МИНУТЫ**|**ПЕРЕВОД**|  
-|**ДЕНЬ**|**МОДУЛЬ**|**ФУНКЦИЯ TRIM**|  
-|**DEALLOCATE**|**МЕСЯЦ**|**ЗНАЧЕНИЕ TRUE**|  
-|**DEC**|**ИМЕНА**|**ОБЪЕДИНЕНИЕ**|  
-|**ДЕСЯТИЧНОЕ ЧИСЛО**|**НАЦИОНАЛЬНЫЙ**|**УНИКАЛЬНЫЙ**|  
-|**ОБЪЯВЛЕНИЯ**|**ЕСТЕСТВЕННОЕ**|**НЕИЗВЕСТНЫЙ**|  
-|**ПО УМОЛЧАНИЮ**|**NCHAR**|**UPDATE**|  
-|**ДОПУСКАЮЩЕЕ ЗАДЕРЖКУ**|**ДАЛЕЕ**|**ВЕРХНИЙ**|  
-|**ОТЛОЖЕНО**|**НЕТ**|**ИСПОЛЬЗОВАНИЕ**|  
-|**DELETE**|**NONE**|**ПОЛЬЗОВАТЕЛЬ**|  
+|**DAY**|**МОДУЛЬ**|**TRIM**|  
+|**DEALLOCATE**|**MONTH**|**ЗНАЧЕНИЕ TRUE**|  
+|**DEC**|**ИМЕНА**|**UNION**|  
+|**ДЕСЯТИЧНОЕ ЧИСЛО**|**НАЦИОНАЛЬНЫЙ**|**UNIQUE**|  
+|**ОБЪЯВЛЕНИЯ**|**ЕСТЕСТВЕННОЕ**|**UNKNOWN**|  
+|**DEFAULT**|**NCHAR**|**UPDATE**|  
+|**ДОПУСКАЮЩЕЕ ЗАДЕРЖКУ**|**NEXT**|**UPPER**|  
+|**DEFERRED**|**НЕТ**|**ИСПОЛЬЗОВАНИЕ**|  
+|**DELETE**|**NONE**|**USER**|  
 |**DESC**|**NOT**|**С ПОМОЩЬЮ**|  
-|**ОПИСАНИЯ**|**NULL**|**VALUE**|  
-|**ДЕСКРИПТОР**|**ФУНКЦИЯ NULLIF**|**ЗНАЧЕНИЯ**|  
-|**ДИАГНОСТИКА**|**ЧИСЛОВОЙ**|**VARCHAR**|  
-|**ОТКЛЮЧЕНИЕ**|**OCTET_LENGTH**|**ПЕРЕМЕННОЙ**|  
-|**DISTINCT**|**ИЗ**|**ПРЕДСТАВЛЕНИЕ**|  
-|**ДОМЕН**|**ON**|**КОГДА**|  
+|**DESCRIBE**|**NULL**|**VALUE**|  
+|**ДЕСКРИПТОР**|**NULLIF**|**ЗНАЧЕНИЯ**|  
+|**DIAGNOSTICS**|**ЧИСЛОВОЙ**|**VARCHAR**|  
+|**DISCONNECT**|**OCTET_LENGTH**|**ПЕРЕМЕННОЙ**|  
+|**DISTINCT**|**OF**|**VIEW**|  
+|**DOMAIN**|**ON**|**КОГДА**|  
 |**DOUBLE**|**ТОЛЬКО**|**КАЖДЫЙ РАЗ, КОГДА**|  
-|**DROP**|**ОТКРЫТЬ**|**WHERE**|  
-|**ELSE**|**ПАРАМЕТР**|**С ПОМОЩЬЮ**|  
-|**END**|**OR**|**РАБОТЫ**|  
+|**DROP**|**OPEN**|**WHERE**|  
+|**ELSE**|**ПАРАМЕТР**|**WITH**|  
+|**END**|**или**|**WORK**|  
 |**END-EXEC**|**ПОРЯДОК**|**ЗАПИСИ**|  
-|**ESCAPE-**|**ВНЕШНЕЕ**|**ГОД**|  
-|**ЗА ИСКЛЮЧЕНИЕМ**|**ВЫХОДНЫЕ ДАННЫЕ**|**ЗОНЫ**|  
+|**ESCAPE-**|**ВНЕШНЕЕ**|**YEAR**|  
+|**EXCEPT**|**OUTPUT**|**ЗОНЫ**|  
 |**ИСКЛЮЧЕНИЕ**|||  
   
 ## <a name="future-keywords"></a>Будущие ключевые слова  
@@ -244,7 +246,7 @@ ms.lasthandoff: 09/01/2017
 |COVAR_POP|NATURAL|TERMINATE|  
 |COVAR_SAMP|NCHAR|THAN|  
 |CUBE|NCLOB|TIME|  
-|CUME_DIST|NEW|timestamp|  
+|CUME_DIST|NEW|TIMESTAMP|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
 |CURRENT_DEFAULT_TRANSFORM_GROUP|Нет|TIMEZONE_MINUTE|  
 |CURRENT_PATH|None|TRAILING|  
@@ -258,7 +260,7 @@ ms.lasthandoff: 09/01/2017
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|Value|  
+|DEFERRED|OUTPUT|VALUE|  
 |DEPTH|PAD|VAR_POP|  
 |DEREF|Параметр|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
@@ -292,9 +294,8 @@ ms.lasthandoff: 09/01/2017
 |GROUPING|REGR_SXY|YEAR|  
 |HOLD|REGR_SYY|ZONE|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SET QUOTED_IDENTIFIER &#40; Transact-SQL &#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [Уровень совместимости инструкции ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   
-

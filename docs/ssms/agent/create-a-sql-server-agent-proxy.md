@@ -3,35 +3,35 @@ title: "Создание учетной записи-посредника аге
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- proxies [SQL Server Agent], creating
+helpviewer_keywords: proxies [SQL Server Agent], creating
 ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 7324511079eacd48c36309b287253f1d17fd9e9d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
-ms.openlocfilehash: 2853583d3902f9b0da32e2b0e1c5a55b696d34e0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>Создание учетной записи-посредника агента SQL Server
-В этом разделе описано, как создать учетную запись-посредник агента SQL Server в [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] или [!INCLUDE[tsql](../../includes/tsql_md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описано, как создать учетную запись-посредник агента SQL Server в [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] или [!INCLUDE[tsql](../../includes/tsql_md.md)].  
   
 Учетная запись-посредник агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] определяет контекст безопасности, в котором может выполняться шаг задания. Каждой учетной записи-посреднику соответствует учетная запись системы безопасности. Чтобы установить разрешения для определенного шага задания, создайте учетную запись-посредник, которая имеет необходимые разрешения для подсистемы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , и затем назначьте эту учетную запись-посредник шагу задания.  
   
 **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
     [Ограничения](#Restrictions)  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 07/31/2017
   
 -   Перед созданием учетной записи-посредника необходимо создать учетные данные, если они еще не созданы.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] используют учетные данные для хранения сведений об учетных записях пользователей Windows. Пользователь, указанный в учетных данных, должен иметь разрешение "Доступ к этому компьютеру из сети" (SeNetworkLogonRight) на компьютере, где выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   Учетные записи-посредники агента[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] используют учетные данные для хранения сведений об учетных записях пользователей Windows. Пользователь, указанный в учетных данных, должен иметь разрешение "Доступ к этому компьютеру из сети" (SeNetworkLogonRight) на компьютере, где выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] проверяет действительность доступа к подсистеме учетной записи-посредника и предоставляет ей доступ при каждом выполнении шага задания. Если учетная запись-посредник больше не имеет доступа к подсистеме, шаг задания завершается ошибкой. В противном случае агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] олицетворяет пользователя, указанного в учетной записи-посреднике, и запускает шаг задания.  
   
@@ -128,4 +128,3 @@ ms.lasthandoff: 07/31/2017
   
 -   [sp_grant_proxy_to_subsystem (Transact-SQL)](http://msdn.microsoft.com/en-us/866aaa27-a1e0-453a-9b1b-af39431ad9c2)  
   
-

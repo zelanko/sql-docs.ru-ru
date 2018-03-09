@@ -3,7 +3,7 @@ title: "Удаление метода (ADOX коллекций) | Докумен
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -33,17 +33,16 @@ f1_keywords:
 helpviewer_keywords:
 - delete method [ADOX]
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4efe8d4528d0085d2bef7f97bf9b1958be208547
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 72dd3f6d514b20bb28f9daee6fc16c5c7c346095
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="delete-method-adox-collections"></a>Удаление метода (ADOX коллекций)
 Удаляет объект из коллекции.  
@@ -59,7 +58,7 @@ Collection.Delete Name
  *Название*  
  Объект **Variant** , указывающий имя или порядковый номер (индекс) удаляемого объекта.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если произойдет ошибка *имя* не существует в коллекции.  
   
  Для [таблиц](../../../ado/reference/adox-api/tables-collection-adox.md) и [пользователей](../../../ado/reference/adox-api/users-collection-adox.md) коллекций, ошибка возникает, если поставщик не поддерживает удаление таблиц или пользователей, соответственно. Для [процедуры](../../../ado/reference/adox-api/procedures-collection-adox.md) и [представления](../../../ado/reference/adox-api/views-collection-adox.md) коллекций, **удалить** завершится ошибкой, если поставщик не поддерживает сохранение команды.  
@@ -68,11 +67,10 @@ Collection.Delete Name
   
 ||||  
 |-|-|-|  
-|[Коллекция столбцов (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)|[Коллекция групп (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[Коллекция индексов (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[Коллекция ключей (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Коллекция процедур (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|[Коллекция таблиц (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|  
-|[Коллекции пользователей (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|[Коллекции представлений (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)||  
+|[Коллекция Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)|[Коллекция Groups (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[Коллекция Indexes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
+|[Коллекция Keys (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Коллекция Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|[Коллекция Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|  
+|[Коллекция Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|[Коллекция Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)||  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Процедуры удаления пример метода (Visual Basic)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [Представления удаления пример метода (Visual Basic)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)
-
+ [Пример метода Delete коллекции Views (Visual Basic)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)

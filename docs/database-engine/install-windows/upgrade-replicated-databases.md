@@ -2,11 +2,12 @@
 title: "Обновление реплицируемых баз данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2016
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
@@ -18,19 +19,21 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], upgrading databases
 - upgrading replicated databases
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-caps.latest.revision: 74
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: 372c5003b349984098a8d02e6655659e6af3ef58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 36886a9e4abd9eced97d4baf7d5e96d8aaf2d5d7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-replicated-databases"></a>Обновление реплицируемых баз данных
-  [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] поддерживает обновление реплицируемых баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предыдущих версий, при этом на время обновления узла прекращать работу с другими узлами не требуется. Соблюдайте следующие правила, определяющие допустимые версии объектов репликации.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+  [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] поддерживает обновление реплицируемых баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]предыдущих версий, при этом на время обновления узла прекращать работу с другими узлами не требуется. Соблюдайте следующие правила, определяющие допустимые версии объектов репликации.  
   
 -   Версия распространителя не должна быть ниже версии издателя (во многих случаях распространителем и издателем является один и тот же экземпляр).  
   
@@ -43,7 +46,7 @@ ms.lasthandoff: 08/02/2017
     -   Версия подписчика на публикацию слиянием не должна превышать версию издателя.  
   
 > [!NOTE]  
->  Этот раздел доступен в справочной документации по программе установки, а также в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ссылки на разделы, выделенные полужирным шрифтом в справке по установке, относятся к разделам, доступным только в электронной документации. **Можно разработать стратегию обновления для издателей, подписчиков и распространителей, используя возможности, описанные в этой [статье](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
+>  Эта статья доступна в справочной документации по программе установки, а также в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ссылки на статьи, выделенные полужирным шрифтом в справке по установке, относятся к статьям, доступным только в электронной документации. **Можно разработать стратегию обновления для издателей, подписчиков и распространителей, используя возможности, описанные в этой [статье](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
   
 ## <a name="run-the-log-reader-agent-for-transactional-replication-before-upgrade"></a>Запуск агента чтения журнала для репликации транзакций перед обновлением  
  Перед обновлением [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] необходимо убедиться, что все зафиксированные транзакции из опубликованных таблиц были обработаны агентом чтения журнала. Чтобы это обеспечить, для каждой базы данных, содержащей публикации транзакций, необходимо выполнить следующие шаги.  
@@ -67,7 +70,7 @@ ms.lasthandoff: 08/02/2017
   
  Механизм репликации слиянием хранит метаданные публикации и подписки в нескольких системных таблицах баз данных публикации и подписки. При запуске агента моментальных снимков обновляются метаданные публикации, а при запуске агента слияния — метаданные подписки. Пользователь должен только сформировать моментальный снимок публикации. Если при публикации слиянием используются параметризованные фильтры, каждой секции также соответствует моментальный снимок. Обновлять эти секционированные снимки не требуется.  
   
- Для выполнения агентов можно использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], монитор репликации и окно командной строки. Дополнительные сведения о выполнении агента моментальных снимков см. в следующих разделах.  
+ Для выполнения агентов можно использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], монитор репликации и окно командной строки. Дополнительные сведения о выполнении агента моментальных снимков см. в следующих статьях:  
   
 -   [Создание и применение исходного моментального снимка](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
@@ -77,7 +80,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [Основные понятия исполняемых файлов агента репликации](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
- Дополнительные сведения о выполнении агента слияния см. в следующих разделах.  
+ Дополнительные сведения о выполнении агента слияния см. в следующих статьях:  
   
 -   [Синхронизация подписки по запросу](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
   
@@ -102,4 +105,3 @@ ms.lasthandoff: 08/02/2017
  [Обновление SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   
-

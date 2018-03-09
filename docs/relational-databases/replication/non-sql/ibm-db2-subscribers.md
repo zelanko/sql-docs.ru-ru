@@ -2,11 +2,13 @@
 title: "Подписчики IBM DB2 | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +18,19 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
-caps.latest.revision: 74
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6fa91235b6de818646673afd4e637083c5a6660c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "74"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 402675d8725ca5e571261e700b9eb8ec2a035a90
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="ibm-db2-subscribers"></a>подписчики IBM DB2
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает принудительные подписки на IBM DB2/AS 400, DB2/MVS и DB2/Universal Database через поставщики OLE DB, включенные в состав [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server.  
   
@@ -62,7 +64,7 @@ ms.lasthandoff: 06/22/2017
   
      Большинство параметров в строке уникальны для настраиваемого сервера DB2, но для параметров `Process Binary as Character` и `Derive Parameters` всегда должно быть задано значение `False`. Параметр `Initial Catalog` должен иметь значение для идентификации базы данных подписки. Если создается подписка, строка соединения вводится в мастер создания подписки.  
   
-3.  Создайте публикацию моментальных снимков или публикацию транзакций, активируйте ее для подписчиков, отличных от[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , а затем создайте принудительную подписку для подписчика. Дополнительные сведения см. в статье [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+3.  Создайте публикацию моментальных снимков или публикацию транзакций, активируйте ее для подписчиков, отличных от[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , а затем создайте принудительную подписку для подписчика. Дополнительные сведения см. в статье [Создание подписки для подписчика, отличного от подписчика SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 4.  При желании можно указать пользовательский скрипт создания для одной или более статей. После публикации таблицы для нее создается скрипт `CREATE TABLE`. Для подписчиков, отличных от[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , скрипт создается на разновидности языка [!INCLUDE[tsql](../../../includes/tsql-md.md)] , а затем перед применением к подписчику преобразуется агентом распространителя в более универсальную разновидность SQL. Чтобы указать пользовательский скрипт создания, измените существующий скрипт [!INCLUDE[tsql](../../../includes/tsql-md.md)] или создайте полный скрипт, который использует разновидность языка DB2 SQL. Если создается скрипт DB2, используйте директиву **bypass_translation** , чтобы агент распространителя применил скрипт к подписчику без трансляции.  
   
@@ -113,7 +115,7 @@ ms.lasthandoff: 06/22/2017
 |**char(1-254)**|CHAR(1-254)|  
 |**char(255-8000)**|VARCHAR(255-8000)|  
 |**date**|DATE|  
-|**datetime**|TIMESTAMP|  
+|**datetime**|timestamp|  
 |**datetime2(0-7)**|VARCHAR(27)|  
 |**datetimeoffset(0-7)**|VARCHAR(34)|  
 |**decimal(1-31, 0-31)**|DECIMAL(1-31, 0-31)|  
@@ -132,8 +134,8 @@ ms.lasthandoff: 06/22/2017
 |**numeric(32-38, 0-38)**|VARCHAR(41)|  
 |**nvarchar(1-4000)**|VARCHAR(1-4000)|  
 |**nvarchar(max)**|VARCHAR(0)*|  
-|**real**|REAL|  
-|**smalldatetime**|TIMESTAMP|  
+|**real**|real|  
+|**smalldatetime**|timestamp|  
 |**smallint**|SMALLINT|  
 |**smallmoney**|DECIMAL(10,4)|  
 |**sql_variant**|Недоступно|  
@@ -176,4 +178,3 @@ ms.lasthandoff: 06/22/2017
  [Подписка на публикации](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

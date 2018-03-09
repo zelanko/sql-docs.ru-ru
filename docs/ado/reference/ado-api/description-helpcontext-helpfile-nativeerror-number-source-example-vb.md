@@ -3,7 +3,7 @@ title: "Пример свойства объекта ошибки (VB) | Док�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - SQLState property [ADO], Visual Basic example
 - HelpContext property [ADO], Visual Basic example
 ms.assetid: 5c728458-d85c-497c-afcf-2cfa36c3342a
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 17e1e7dae01b057e787c846e9a6b250b940ca976
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 43385a04975c36109c420d3137c205bd184b121f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vb"></a>Описание, HelpContext, файл справки, NativeError, номер, источника и пример свойства SQLState (Visual Basic)
 Этот пример вызывает ошибку, он перехватывает и отображает [описание](../../../ado/reference/ado-api/description-property.md), [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md), [ Номер](../../../ado/reference/ado-api/number-property-ado.md), [источника](../../../ado/reference/ado-api/source-property-ado-error.md), и [SQLState](../../../ado/reference/ado-api/sqlstate-property.md) свойства результирующего [ошибка](../../../ado/reference/ado-api/error-object.md) объекта.  
@@ -82,7 +81,7 @@ End Sub
 'EndDescriptionVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство Description](../../../ado/reference/ado-api/description-property.md)   
  [Объект Error](../../../ado/reference/ado-api/error-object.md)   
  [HelpContext HelpFile свойства](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
@@ -91,4 +90,3 @@ End Sub
  [Свойство номера (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
  [Свойство Source (ошибка)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Свойство SQLState](../../../ado/reference/ado-api/sqlstate-property.md)
-

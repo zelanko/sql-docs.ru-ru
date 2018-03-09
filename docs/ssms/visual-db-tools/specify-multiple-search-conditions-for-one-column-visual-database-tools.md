@@ -3,10 +3,12 @@ title: "Определение нескольких условий поиска 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - OR operator
 - AND, Criteria pane
 ms.assetid: 2c006e36-56b1-4992-89b4-c6c0b19808f3
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cd90bbb2b7a07ae4cf2c8224a8b299cec7774593
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a7b140acf1b00f31df0d8c948cdeca8ff6703726
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>Указание нескольких условий поиска для одного столбца (визуальные инструменты для баз данных)
-Иногда может понадобиться сочетание нескольких условий поиска для одного столбца. Например, может понадобиться:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Иногда может понадобиться сочетание нескольких условий поиска для одного столбца. Например, может понадобиться:  
   
 -   Найти несколько разных имен сотрудников в таблице `employee` , находящихся в разных группах по уровню зарплаты. Такой тип поиска требует использования условия OR (или).  
   
@@ -91,4 +92,3 @@ WHERE (title LIKE '%Cook%') AND
 [Обозначения для условий комбинированного поиска на панели критериев (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
 [Определение критериев поиска (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
-

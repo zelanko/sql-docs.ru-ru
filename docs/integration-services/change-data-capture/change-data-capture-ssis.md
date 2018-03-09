@@ -1,10 +1,13 @@
 ---
-title: "Системы отслеживания измененных данных (службы SSIS) | Документы Microsoft"
+title: "Система отслеживания измененных данных (SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-caps.latest.revision: 38
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b9c01b948f5510a01c778648c23324155471b8ac
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d4b1a7480113be51245c8c01a087a65ce616cb2c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="change-data-capture-ssis"></a>Система отслеживания измененных данных (SSIS)
   В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]система отслеживания измененных данных предоставляет эффективное решение для проблемы проведения добавочных загрузок из исходных таблиц в киоски и хранилища данных.  
@@ -41,7 +43,7 @@ ms.lasthandoff: 09/26/2017
   
  После того, как администратор включил систему отслеживания измененных данных в соответствующей базе данных, можно создать пакет, выполняющий добавочную загрузку измененных данных. На следующей диаграмме показаны шаги по созданию такого пакета, который выполняет добавочную загрузку измененных данных из одной таблицы.  
   
- ![Изменить шаги создания пакета системы отслеживания измененных данных](../../integration-services/change-data-capture/media/cdc-package-creation.gif "изменить шаги создания пакета системы отслеживания измененных данных")  
+ ![Шаги создания пакета отслеживания измененных данных](../../integration-services/change-data-capture/media/cdc-package-creation.gif "Шаги создания пакета отслеживания измененных данных")  
   
  Как показано в предыдущей диаграмме, процесс создания пакета, выполняющего добавочную загрузку измененных данных, состоит из следующих шагов.  
   
@@ -104,17 +106,17 @@ ms.lasthandoff: 09/26/2017
   
 -   [Файл Readme. Образец пакета для отслеживания измененных данных с момента последнего запроса](http://go.microsoft.com/fwlink/?LinkId=133508)  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Задание интервала для информации об изменениях данных](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)  
   
 -   [Определение готовности информации об изменениях данных](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
--   [Подготовка к запросу информации об изменениях](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
+-   [Подготовка к запросу информации об изменениях данных](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
--   [Создание функции для получения информации об изменениях](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
+-   [Создание функции для получения информации об изменениях данных](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
   
--   [Получение и интерпретация измененных данных](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
+-   [Получение и интерпретация информации об изменениях данных](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
 -   [Обработка операций вставки, обновления и удаления](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
   
@@ -126,4 +128,3 @@ ms.lasthandoff: 09/26/2017
  Запись блога [SSIS Design Pattern — Incremental Load](http://go.microsoft.com/fwlink/?LinkId=217679)(на английском языке) на сайте sqlblog.com  
   
   
-

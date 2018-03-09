@@ -2,32 +2,34 @@
 title: "Форматы представления подписки (Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
-caps.latest.revision: 9
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7f5d996cc9ccbf7f131056e7b02a7f756d048e02
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 770c479f7a4361a6c792e7c299181751ca20072b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Форматы представления подписки (Master Data Services)
   На основании выбранной сущности или производной иерархии для представления подписки будут доступны следующие форматы.  
   
 ## <a name="subscription-view-formats"></a>Форматы представлений подписки  
   
-|Название|Description|  
+|Имя|Description|  
 |----------|-----------------|  
 |**Конечные элементы**|Содержит конечные элементы и значения связанных с ними атрибутов.|  
 |**Журнал конечных элементов**|Содержит данные журнала о конечных элементах и значениях связанных с ними атрибутов. Формат представления соответствует стилю медленно изменяющегося измерения типа 4.|  
@@ -49,4 +51,3 @@ ms.lasthandoff: 09/07/2017
  [Создание представления подписки для экспорта данных (службы Master Data Services)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   
   
-

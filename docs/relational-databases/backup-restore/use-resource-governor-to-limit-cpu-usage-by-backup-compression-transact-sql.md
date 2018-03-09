@@ -2,11 +2,13 @@
 title: "Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (компонент Transact-SQL) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +18,19 @@ helpviewer_keywords:
 - backups [SQL Server], compression
 - Resource Governor, backup compression
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
-caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c981e6d71307a314f39a44e8fc180f77426f1477
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "25"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 3a5cd10ed1fc52431898748772038883b3bc4851
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (компонент Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   По умолчанию резервное копирование с использованием сжатия существенно увеличивает загрузку ЦП, а дополнительная загрузка ЦП процессом сжатия может неблагоприятно повлиять на параллельные операции. Поэтому может понадобиться создать низкоприоритетную сжатую резервную копию в сеансе, загрузка ЦП в котором ограничивается[Resource Governor](../../relational-databases/resource-governor/resource-governor.md) в случае конфликта ЦП. В этом разделе представлен сценарий, классифицирующий сеансы отдельного пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] путем сопоставления их с той или иной группой рабочей нагрузки регулятора ресурсов, которая в таких случаях ограничивает загрузку ЦП.  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
      **Создание имени входа**  
   
-    -   [Создание имени входа](../../relational-databases/security/authentication-access/create-a-login.md)  
+    -   [Создание имени для входа](../../relational-databases/security/authentication-access/create-a-login.md)  
   
     -   [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 06/22/2017
   
  В этом примере создается имя для входа для учетной записи Windows *имя_домена*`\MAX_CPU` , а затем этому имени для входа предоставляется разрешение VIEW SERVER STATE. Это разрешение позволяет проверить классификацию сеансов имени входа в регуляторе ресурсов. Затем для имени *имя_домена*`\MAX_CPU` создается пользователь и добавляется к предопределенной роли db_backupoperator для образца базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Это имя пользователя будет использоваться функцией-классификатором в регуляторе ресурсов.  
   
-```tsql  
+```sql  
 -- Create a SQL Server login for low-priority operations  
 USE master;  
 CREATE LOGIN [domain_name\MAX_CPU] FROM WINDOWS;  
@@ -205,7 +207,7 @@ GO
 > [!IMPORTANT]  
 >  В приведенном ниже примере используется образец имени пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , созданный в разделе "Пример А. Настройка имени входа и пользователя (Transact-SQL)", *имя_домена*`\MAX_CPU`. Замените его именем пользователя, соответствующего имени входа, которое планируется использовать для создания низкоприоритетных сжатых резервных копий.  
   
-```tsql  
+```sql  
 -- Configure Resource Governor.  
 BEGIN TRAN  
 USE master;  
@@ -247,7 +249,7 @@ GO
 ##  <a name="verifying"></a> Проверка классификации текущего сеанса (Transact-SQL)  
  При необходимости войдите в систему как пользователь, указанный в функции-классификаторе, и проверьте классификацию сеанса, выполнив следующую инструкцию [SELECT](../../t-sql/queries/select-transact-sql.md) в обозревателе объектов:  
   
-```tsql  
+```sql  
 USE master;  
 SELECT sess.session_id, sess.login_name, sess.group_id, grps.name   
 FROM sys.dm_exec_sessions AS sess   
@@ -270,7 +272,7 @@ GO
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Пример В. Создание сжатой резервной копии (Transact-SQL)  
  В следующем примере [BACKUP](../../t-sql/statements/backup-transact-sql.md) создается сжатая полная резервная копия базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] в чистом форматированном файле резервной копии `Z:\SQLServerBackups\AdvWorksData.bak`.  
   
-```tsql  
+```sql  
 --Run backup statement in the gBackup session.  
 BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
 WITH   

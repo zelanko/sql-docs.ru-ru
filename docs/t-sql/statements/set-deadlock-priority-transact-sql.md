@@ -3,8 +3,11 @@ title: "SET DEADLOCK_PRIORITY (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - priority deadlock settings [SQL Server]
 - SET DEADLOCK_PRIORITY statement
 ms.assetid: 810a3a8e-3da3-4bf9-bb15-7b069685a1b6
-caps.latest.revision: 35
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 12be78ffb2e899170095415a03dccc69511f7424
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: b80f18cb5440560b34924cad619af1f195f49a47
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Определяет относительную важность продолжения обработки текущего сеанса, если произошла взаимоблокировка с другим сеансом.  
   
@@ -70,18 +72,18 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  **@***deadlock_intvar*  
  Целочисленная переменная, указывающая приоритет взаимоблокировки. Переменной должно быть назначено целочисленное значение в диапазоне от -10 до 10.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Взаимоблокировки возникают, когда два сеанса ожидают доступа к ресурсу, занятому другим сеансом. Когда экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаруживает, что два сеанса взаимоблокированы, для разрешения конфликта один из сеансов назначается в качестве жертвы. Выполняется откат текущей транзакции жертвы, и клиенту возвращается сообщение об ошибке взаимоблокировки 1205. В результате снимаются все блокировки этого сеанса, и другой сеанс получает возможность продолжить работу.  
   
  Выбор сеанса в качестве жертвы зависит от приоритета взаимоблокировки:  
   
--   Если у обоих сеансов одинаковый приоритет взаимоблокировки, то экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выбирает сеанс, откат которого как откат жертвы связан с меньшими затратами ресурсов. Например, если оба сеанса имеют приоритет взаимоблокировки HIGH, то экземпляр выберет в качестве жертвы сеанс, откат которого предположительно связан с меньшими затратами ресурсов.  
+-   Если у обоих сеансов одинаковый приоритет взаимоблокировки, то экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выбирает сеанс, откат которого как откат жертвы связан с меньшими затратами ресурсов. Например, если оба сеанса имеют приоритет взаимоблокировки HIGH, то экземпляр выберет в качестве жертвы сеанс, откат которого предположительно связан с меньшими затратами ресурсов. Стоимость определяется сравнением число байт журнала, записанных в эту точку в каждой транзакции. (Вы увидите это значение как «журнал» используется в графе взаимоблокировки).
   
 -   Если приоритеты взаимоблокировки сеансов различны, то в качестве жертвы выбирается сеанс с более низким приоритетом взаимоблокировки.  
   
  Значение SET DEADLOCK_PRIORITY задается на этапе выполнения или запуска, но не на этапе синтаксического анализа.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public** .  
   
 ## <a name="examples"></a>Примеры  
@@ -108,4 +110,3 @@ GO
  [Значение LOCK_TIMEOUT &#40; Transact-SQL &#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
   
   
-

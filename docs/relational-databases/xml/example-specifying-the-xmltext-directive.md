@@ -2,9 +2,12 @@
 title: "Пример. Указание директивы XMLTEXT | Документация Майкрософт"
 ms.custom: 
 ms.date: 04/05/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 54ada9bad44e2cd8410fe3a70fd022769febc960
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e71a67f991291f1426fbf3a583169b339f69c110
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Пример. Указание директивы XMLTEXT
-  Этот пример иллюстрирует, как обращение к данным переполненного столбца осуществляется при помощи директивы **XMLTEXT** в инструкции `SELECT` , использующей режим EXPLICIT.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Этот пример иллюстрирует, как обращение к данным переполненного столбца осуществляется при помощи директивы **XMLTEXT** в инструкции `SELECT` , использующей режим EXPLICIT.  
   
  Рассмотрим таблицу `Person` . В этой таблице имеется столбец `Overflow` , в котором хранится неиспользуемая часть XML-документа.  
   
@@ -156,7 +159,7 @@ FOR XML EXPLICIT;
  </Parent>
  ```  
   
- Если в данных столбца `XMLTEXT` содержатся атрибуты корневого элемента, эти атрибуты не показываются в XML-схеме данных, а средство синтаксического анализа MSXML не проверяет результирующий фрагмент XML-документа. Например:  
+ Если в данных столбца `XMLTEXT` содержатся атрибуты корневого элемента, эти атрибуты не показываются в XML-схеме данных, а средство синтаксического анализа MSXML не проверяет результирующий фрагмент XML-документа. Пример:  
   
 ```  
 SELECT 1 AS Tag,  
@@ -182,4 +185,3 @@ FOR XML EXPLICIT, xmldata;
  [Использование режима EXPLICIT совместно с предложением FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   
-

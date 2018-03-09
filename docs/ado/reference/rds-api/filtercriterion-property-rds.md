@@ -3,7 +3,7 @@ title: "Свойство FilterCriterion (RDS) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - FilterCriterion property [RDS]
 ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
-caps.latest.revision: 17
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8221e70c15c4c7eda5404d0bb56a40a856964baa
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3b30e26e6584e6895185eb67ceb7824ae7323cea
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="filtercriterion-property-rds"></a>Свойство FilterCriterion (RDS)
 Указывает оператор вычисления использовать значения фильтра.  
@@ -48,7 +47,7 @@ DataControl.FilterCriterion = String
  *Строковые значения*  
  Объект **строка** значение, которое указывает оператор оценки [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md) записей. Может принимать любое из следующих действий: <, \<=, >, > =, =, или <>.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), **FilterCriterion**, и [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)свойства предоставляют сортировки и фильтрации функциональность на стороне клиента кэша. Функциональные возможности сортировки упорядочивает записи по значения из одного столбца. Функцию фильтра отображает подмножество записей на основе критериев поиска, при полной [записей](../../../ado/reference/ado-api/recordset-object-ado.md) сохраняется в кэше. [Сброс](../../../ado/reference/rds-api/reset-method-rds.md) метод будет выполнять критерии и заменить текущую **записей** с обновляемым **записей**.  
   
  «! =» Недопустимый оператор для **FilterCriterion**; вместо этого используйте «<>».  
@@ -56,14 +55,13 @@ DataControl.FilterCriterion = String
  Если заданы свойства фильтра и сортировки, и вызывается **Сброс** метод, сначала фильтруется набор строк и затем он сортируется. Для Сортировка по возрастанию значения null отображаются сверху; для Сортировка по убыванию значения null являются внизу (по возрастанию — поведение по умолчанию).  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [FilterColumn, FilterCriterion, FilterValue, SortColumn, направления сортировки, свойства и пример метода сброса (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [Свойство FilterColumn (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
  [Свойство FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   
  [Свойство SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
- [Свойство SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
-
+ [Свойство SortDirection (служба удаленных рабочих столов)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
 
 

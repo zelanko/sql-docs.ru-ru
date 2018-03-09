@@ -2,29 +2,30 @@
 title: "Формулы перекрестной проверки | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
-caps.latest.revision: 9
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2d472fce002938f8305d0429937482181cee990d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9ae8b6960e04fbbe04a7a536cc75c361d36c907f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="cross-validation-formulas"></a>Формулы перекрестной проверки
-  Если создается отчет перекрестной проверки, он содержит меры точности для каждой модели, которые зависят от типа модели интеллектуального анализа данных (т. е. алгоритма, который использовался для ее создания), типа данных прогнозируемого атрибута и значения прогнозируемого атрибута (если есть).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Если создается отчет перекрестной проверки, он содержит меры точности для каждой модели, которые зависят от типа модели интеллектуального анализа данных (т. е. алгоритма, который использовался для ее создания), типа данных прогнозируемого атрибута и значения прогнозируемого атрибута (если есть).  
   
  В этом разделе указаны меры, используемые в отчете перекрестной проверки, и способ их вычисления.  
   
@@ -51,8 +52,7 @@ ms.lasthandoff: 09/01/2017
 |**Среднеквадратичное отклонение**|Дискретный атрибут, цель не указана.|Квадратный корень из среднего значения квадратов дополнений к оценке вероятности, деленный на число случаев в секции, исключая случаи с отсутствующими значениями целевого атрибута.|  
   
 ## <a name="see-also"></a>См. также  
- [Тестирование и проверка (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
- [Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
+ [Тестирование и проверка &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
+ [Перекрестная проверка &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
   
   
-

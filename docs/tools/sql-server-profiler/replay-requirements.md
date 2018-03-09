@@ -2,11 +2,13 @@
 title: "Требования к воспроизведению | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - replaying traces
 - TSQL_Replay template [SQL Server]
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
-caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "18"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: fe999b92d34b9070a1c461340919c839468c02c9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ff145164aac36b5047a9c3ea7f380800ef9a6b63
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="replay-requirements"></a>Требования к воспроизведению
-  Для воспроизведения данных трассировки с помощью [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] или программы распределенного воспроизведения в трассировке должен быть записан определенный набор классов событий и столбцов. Если для настройки трассировки, которая в дальнейшем будет использоваться для воспроизведения, применяется шаблон трассировки **TSQL_Replay** , то по умолчанию эти параметры включены. В этом разделе приводится описание этих параметров и других требований к воспроизведению.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Для воспроизведения данных трассировки с [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] или программы распределенного воспроизведения, определенный набор классов событий и столбцов должен быть записан в трассировке. Если для настройки трассировки, которая в дальнейшем будет использоваться для воспроизведения, применяется шаблон трассировки **TSQL_Replay** , то по умолчанию эти параметры включены. В этом разделе приводится описание этих параметров и других требований к воспроизведению.  
   
 > [!NOTE]  
 >  Для воспроизведения ресурсоемких приложений OLTP (с множеством одновременных активных соединений или высокой пропускной способностью) рекомендуется пользоваться программой распределенного воспроизведения. Программа распределенного воспроизведения воспроизводит данные трассировки с нескольких компьютеров и лучше имитирует важную рабочую нагрузку. Дополнительные сведения см. в статье [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
@@ -135,4 +136,3 @@ ms.lasthandoff: 08/02/2017
  [Распределенное воспроизведение SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)  
   
   
-

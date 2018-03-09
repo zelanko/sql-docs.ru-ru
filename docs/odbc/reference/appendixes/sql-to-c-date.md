@@ -3,10 +3,12 @@ title: "SQL, чтобы дата C: | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - date data type [ODBC]
 - data conversions from SQL to C types [ODBC], date
 ms.assetid: 703c7960-9cf4-4d7a-9920-53b29c184f97
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 87a62501d4d03073d8c43b2f791ceffeec9b0b30
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 667ed133862e0ea67f4f995520ead7b372fae74e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-to-c-date"></a>SQL, чтобы дата C:
 Идентификатор для типа данных ODBC SQL дата является:  
@@ -48,4 +49,3 @@ ms.lasthandoff: 09/09/2017
  [c] это размер соответствующие типы данных C.  
   
  При преобразовании в символьный C Дата данных SQL результирующая строка находится в «*гггг*-*мм*-*дд*» формата. Этот формат не влияют настройки Windows® страны.
-

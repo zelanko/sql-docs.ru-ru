@@ -1,27 +1,27 @@
 ---
-title: "Передать документы в библиотеку SharePoint (службы Reporting Services в режиме интеграции с SharePoint) | Документы Microsoft"
+title: "Отправка документов в библиотеку SharePoint (службы Reporting Services в режиме интеграции с SharePoint) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: d938f068ecf2d0c2a2b920fda9f7c414649f069d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: abb1ef1edc25cd97a112dd5d9138af2a6ada3a95
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Передать документы в библиотеку SharePoint (службы Reporting Services в режиме интеграции с SharePoint)
+# <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Отправка документов в библиотеку SharePoint (службы Reporting Services в режиме интеграции с SharePoint)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -30,12 +30,12 @@ ms.lasthandoff: 10/06/2017
 Можно передать определения отчета и модели отчета в библиотеку SharePoint. При передаче элемента сервера отчетов необходимо выбрать библиотеку или папку внутри библиотеки. Невозможно передать элемент сервера отчетов в список или на страницу.  
 
 > [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
 
  Передача RDS-файла источника данных невозможна. Однако можно опубликовать RDS-файлы с помощью средства проектирования, такого как конструктор отчетов, для включения в библиотеку SharePoint. Во время публикации новый RSDS-файл создается из исходного RDS-файла в решении. Можно также создать новый RSDS-файл в библиотеке SharePoint, а потом установить свойства соединения с источником данных в передаваемых отчетах и моделях, чтобы использовать новое соединение.  
   
 > [!NOTE]  
->  Сервер отчетов должен быть настроен в режиме SharePoint, а экземпляр продукта SharePoint должен иметь надстройку служб Reporting Services и предоставляет файлы программ для хранения и доступа к элементам сервера отчетов с сайта SharePoint.  
+>  Сервер отчетов необходимо настроить для работы в режиме интеграции с SharePoint, а экземпляр продукта SharePoint должен иметь надстройку служб Reporting Services, которая предоставляет программные файлы для хранения и доступа к элементам сервера отчетов с сайта SharePoint.  
   
  Чтобы передать документ в библиотеку, необходимо обладать разрешением на добавление элементов на уровне веб-сайта. При использовании настроек безопасности по умолчанию это разрешение предоставляется членам группы **Владельцы** , которые обладают разрешением уровня «Полный контроль» и группе **Члены** , которая обладает разрешением уровня «Участие».  
   
@@ -49,17 +49,16 @@ ms.lasthandoff: 10/06/2017
   
      Если определение отчета использует файл общего источника данных (RSDS) для хранения сведений о соединении с внешним источником данных, можно одновременно передать и RDL-файл, и RSDS-файл. Для этого выберите **Передать несколько документов**, укажите оба файла и нажмите кнопку **ОК**.  
   
- При передаче отчета, который содержит ссылки на общие источники данных, модели отчетов или вложенные отчеты, ссылки будут потеряны при передаче файлов. Дополнительные сведения о сбросе ссылки см. в разделе [Создание и управление общие источники данных &#40; Службы Reporting Services в SharePoint интегрированная режим &#41; ](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ При передаче отчета, который содержит ссылки на общие источники данных, модели отчетов или вложенные отчеты, ссылки будут потеряны при передаче файлов. Дополнительные сведения о сбросе ссылок см. в разделе [Создание общих источников данных и управление ими (службы Reporting Services в режиме интеграции с SharePoint)](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
- При передаче отчет выполняется по запросу при его открытии, при этом из источника данных извлекаются активные данные. Можно настроить отчет на получение данных по расписанию или на использование кэшированных данных. Дополнительные сведения см. в разделе [задание параметров обработки &#40; Службы Reporting Services в SharePoint интегрированная режим &#41; ](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+ При передаче отчет выполняется по запросу при его открытии, при этом из источника данных извлекаются активные данные. Можно настроить отчет на получение данных по расписанию или на использование кэшированных данных. Дополнительные сведения см. в разделе [Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
- Отчет может содержать параметры, поэтому пользователи могут фильтровать данные. Можно настроить параметры на использование конкретных значений или изменить способ их представления для пользователя. Дополнительные сведения см. в разделе [Установка параметров для опубликованного отчета &#40; Службы Reporting Services в SharePoint интегрированная режим &#41; ](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
+ Отчет может содержать параметры, поэтому пользователи могут фильтровать данные. Можно настроить параметры на использование конкретных значений или изменить способ их представления для пользователя. Дополнительные сведения см. в разделе [Настройка параметров опубликованного отчета (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
  [опубликовать отчет в библиотеке SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
- [Опубликовать общий источник данных в библиотеке SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [Публикация общего источника данных в библиотеку SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

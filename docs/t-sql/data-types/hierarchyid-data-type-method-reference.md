@@ -3,8 +3,11 @@ title: "HierarchyID (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +21,19 @@ helpviewer_keywords:
 - Hierarchy data type
 - hierarchyid data type
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
-caps.latest.revision: 29
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 44299e7ddb90bdd52e2638dd859993513bd6f966
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 8f69a5bae73c7c1b6ab868bc008c98a652900ae6
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>Справочник по методам типа данных HierarchyID
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 **Hierarchyid** имеет тип данных переменной длины, системный тип данных. Используйте **hierarchyid** для представления позицию в иерархии. Столбец типа **hierarchyid** не принимает древовидную структуру автоматически. Приложение должно создать и назначить значения **hierarchyid** таким образом, чтобы они отражали требуемые связи между строками.
   
@@ -100,4 +102,3 @@ ms.lasthandoff: 09/01/2017
 [Справочник по методам типа данных hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   
   
-

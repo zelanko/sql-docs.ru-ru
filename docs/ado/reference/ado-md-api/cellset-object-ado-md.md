@@ -3,7 +3,7 @@ title: "Объект набора ячеек (ADO MD) | Документы Micro
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,29 +18,28 @@ f1_keywords:
 helpviewer_keywords:
 - Cellset object [ADO MD]
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d4b4fd5399fc595055f473f30fa97f9f73921f8a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f53e9ec68a4375a9c8d07dc3937750c2e7ba3d46
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cellset-object-ado-md"></a>Объект набора ячеек (ADO MD)
 Представляет результаты многомерного запроса. Представляет коллекцию ячеек, выбранных из кубов или других наборов ячеек.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Данные в **ячеек** получаются с помощью прямого доступа-массив. Вы можете выполнить детализацию до конкретный элемент, чтобы получить данные о таких членов. Например, следующий код возвращает заголовок первого элемента в первой позиции на первой оси набора ячеек с именем `cst`:  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Нет отсутствует понятие текущей ячейки в наборе ячеек. Вместо этого [элемент](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) свойство извлекает определенный [ячейки](../../../ado/reference/ado-md-api/cell-object-ado-md.md) объект из набора ячеек. Аргументы **элемент** определения свойства ячейки, которая извлекается. Можно указать уникальный порядковый номер ячейки. Можно также получить ячейки с помощью их положение номера каждой оси набора ячеек. Дополнительные сведения о получении ячеек см. в разделе [элемент](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) свойство.  
   
  С коллекциями, методы и свойства **ячеек** объекта, можно сделать следующее:  
@@ -67,10 +66,9 @@ cst.Axes(0).Positions(0).Members(0).Caption
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/cellset-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример набора ячеек (Visual Basic)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Коллекция axes (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
  [Объект ячейки (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Коллекция свойств (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

@@ -3,10 +3,12 @@ title: "Размер набора строк | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0eb3e03c3fd2cad60b8f4a0e6c65aaaebbda03bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b7d3abee6c42fe95205bbb74edc671d8dc02bf87
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rowset-size"></a>Размер набора строк
 Размер набора строк зависит от приложения. На экране приложений часто выполните одно из двух стратегий. Первой задачей является установить размер набора строк на число строк, отображаемых на экране; Если пользователь изменяет размер экрана, приложение соответственным образом изменяет размер набора строк. Второй — для установки размера набора строк больше, например 100, что уменьшает количество вызовов к источнику данных. Приложение локально прокручивается в наборе строк, если это возможно и извлекает новых строк только в том случае, когда он выполняет прокрутку вне набора строк.  
@@ -40,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 -   **SQLSetPos** использует размер набора строк, которая действует на предшествующий ему вызов **SQLFetch** или **SQLFetchScroll**, так как **SQLSetPos** работает на набор строк, которое уже было задано. **SQLSetPos** также получают новый размер набора строк при **SQLBulkOperations** был вызван после изменения размера набора строк.  
   
 -   **SQLBulkOperations** использует размер набора строк в силе во время вызова, так как он выполняет операции с таблицей, независимо от любого извлеченных строк.
-

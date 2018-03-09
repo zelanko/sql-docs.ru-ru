@@ -1,13 +1,14 @@
 ---
-title: "Кэшировать отчет (диспетчер отчетов) | Документы Microsoft"
+title: "Кэширование отчета (диспетчер отчетов) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +18,16 @@ helpviewer_keywords:
 - schedules [Reporting Services], report expiration
 - expiration [Reporting Services]
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
-caps.latest.revision: 42
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "42"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: af00978c2afb28937a008f22eebe76f1a3f78eb1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: df14dfdb363b4c1dc1836d073f6c1ae05edc703c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cache-a-report-report-manager"></a>кэшировать отчет (диспетчер отчетов)
   Один из способов повышения производительности состоит в настройке свойств кэширования для отчета. При кэшировании отчета копия отчета, подготовленного для хранения, сохраняется на короткий промежуток времени. Первый пользователь, запросивший этот отчет, должен ожидать, пока не закончится вся обработка, прежде чем сможет просмотреть отчет. Последующие пользователи, запрашивающие тот же отчет в пределах времени кэширования, могут сразу же просмотреть его, поскольку обработка уже выполнена.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-schedule-the-expiration-of-a-cached-report"></a>Назначение момента для истечения срока действия кэшированного отчета  
   
-1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  В диспетчере отчетов перейдите на страницу **Содержимое** . Перейдите к отчету, для которого необходимо задать свойства кэширования, подведите к нему курсор и щелкните стрелку раскрывающегося списка.  
   
@@ -48,9 +48,9 @@ ms.lasthandoff: 08/09/2017
   
 6.  Выберите один из режимов кэширования и настройте истечение срока действия:  
   
-    -   Чтобы срок действия кэшированной копии истек через определенное время, щелкните **Кэшировать временную копию отчета. Срок действия копии отчета через несколько минут**. Введите срок действия отчета (в минутах).  
+    -   Чтобы срок действия кэшированной копии истек через определенное время, щелкните **Кэшировать временную копию отчета. Срок действия копии отчета заканчивается через несколько минут**. Введите срок действия отчета (в минутах).  
   
-    -   Кэшированные копии истекает по расписанию, щелкните **Кэшировать временную копию отчета. Срок действия копии отчета истекает в соответствии со следующим расписанием.** Щелкните **Настроить**или выберите общее расписание для управления истечением срока действия отчета.  
+    -   Чтобы срок действия кэшированной копии истек в соответствии с расписанием, выберите **Кэшировать временную копию отчета. Срок действия копии отчета истекает в соответствии со следующим расписанием.** Щелкните **Настроить**или выберите общее расписание для управления истечением срока действия отчета.  
   
 7.  Нажмите кнопку **Применить**.  
   
@@ -59,4 +59,3 @@ ms.lasthandoff: 08/09/2017
  [Кэширование отчетов (службы SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)  
   
   
-

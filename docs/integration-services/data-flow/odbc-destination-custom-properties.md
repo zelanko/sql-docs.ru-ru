@@ -1,26 +1,28 @@
 ---
-title: "Пользовательские свойства назначений ODBC | Документы Microsoft"
+title: "Пользовательские свойства назначения ODBC | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20a4e0f425cbd5d4d7fe7c3da4a17c2efe59d9e4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dfeeaa38de94dfe2f1d716cda8eee0e5e5faf6f4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-destination-custom-properties"></a>Пользовательские свойства назначений ODBC
   В следующей таблице описаны пользовательские свойства назначения ODBC. Все свойства могут быть заданы на основе выражений свойств служб SSIS.  
@@ -34,9 +36,8 @@ ms.lasthandoff: 08/03/2017
 |DefaultCodePage|Целочисленный|Кодовая страница, применяемая для строковых столбцов.<br /><br /> **Примечание.**Это свойство недоступно в **редакторе назначений ODBC**, но может быть задано при использовании **расширенного редактора**.|  
 |InsertMethod|Integer (перечисление)|Метод, который служит для вставки данных. Возможными значениями являются Row by row (0) и Batch (1). По умолчанию применяется значение Batch (1).<br /><br /> Дополнительные сведения об этих параметрах см. в разделе «Параметры загрузки» в [ODBC Destination](../../integration-services/data-flow/odbc-destination.md).|  
 |StatementTimeout|Целочисленный|Количество секунд, в течение которых должно происходить ожидание выполнения инструкции SQL, прежде чем будет выполнен возврат с ошибкой в приложение. Значение по умолчанию — 120.|  
-|TableName|Строковые значения|Имя целевой таблицы, в которую происходит вставка данных.|  
+|TableName|String|Имя целевой таблицы, в которую происходит вставка данных.|  
 |TransactionSize|Целочисленный|Количество операций вставки в одной транзакции. Значением по умолчанию является 0, а это означает, что назначение ODBC действует в режиме автофиксации.<br /><br /> Диспетчер соединений ODBC не поддерживает распределенные транзакции, поэтому можно задать это свойство со значением, отличным от 0. Но если свойство **RetainSameConnection** диспетчера соединений задано равным **true** , то данному свойству необходимо присвоить значение 0.<br /><br /> **Примечание.**Это свойство недоступно в **редакторе назначений ODBC**, но может быть задано при использовании **расширенного редактора**.|  
 |LobChunkSize|Целочисленный|Распределение размера фрагментов данных для столбцов LOB.|  
   
   
-

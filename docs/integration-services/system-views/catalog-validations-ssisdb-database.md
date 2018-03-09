@@ -1,29 +1,31 @@
 ---
-title: "Catalog.validations (база данных SSISDB) | Документы Microsoft"
+title: "catalog.validations (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-views
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
-caps.latest.revision: 18
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2d799fd23c2adef75e3dcf4543e9e0ee6271c9b5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 8c5a94903b6cac800063e9c6c437dc1926385976
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (база данных SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Отображает сведения о проверке правильности всех проектов и пакетов в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -32,8 +34,8 @@ ms.lasthandoff: 09/26/2017
 |validation_id|**bigint**|Уникальный идентификатор (ID) проверки.|  
 |environment_scope|**Char(1)**|Указывает ссылки на среду, которые учитываются при проверке. Если это значение равно `A`, то в проверку включены все ссылки на среду, связанные с проектом. Если это значение равно `S`, то включена лишь единственная ссылка на среду. Если это значение равно `D`, то никакие ссылки на среду не включены и каждый параметр, чтобы пройти проверку, должен иметь литеральное значение по умолчанию.|  
 |validate_type|**Char(1)**|Тип выполняемой проверки. Можно выполнить проверку зависимости (`D`) или полную проверку (`F`). Пакеты всегда подвергаются полной проверке.|  
-|имя_папки|**nvarchar(128)**|Имя папки, в которой содержится соответствующий проект.|  
-|имя_проекта|**nvarchar(128)**|Имя проекта.|  
+|folder_name|**nvarchar(128)**|Имя папки, в которой содержится соответствующий проект.|  
+|project_name|**nvarchar(128)**|Имя проекта.|  
 |project_lsn|**bigint**|Версия проекта, проверка соответствия которой проводится.|  
 |use32bitruntime|**bit**|Указывает, используется ли 32-разрядная среда выполнения для запуска пакета в 64-разрядной операционной системе. Если значение равно `1`, то выполнение осуществляется в 32-разрядной среде выполнения. Если значение равно `0`, то выполнение осуществляется в 64-разрядной среде выполнения.|  
 |reference_id|**bigint**|Уникальный идентификатор ссылки на проект-среду, по которой проект обращается к среде.|  
@@ -41,7 +43,7 @@ ms.lasthandoff: 09/26/2017
 |object_name|**nvarhcar(260)**|Имя объекта.|  
 |object_type|**smallint**|Тип объекта. Объект может быть проектом (`20`) или пакетом (`30`).|  
 |object_id|**bigint**|Идентификатор объекта, затронутого операцией.|  
-|start_time|**DateTimeOffset(7)**|Время начала операции.|  
+|start_time|**datetimeoffset(7)**|Время начала операции.|  
 |end_time|**datetimeoffsset(7)**|Время окончания операции.|  
 |status|**int**|Состояние операции. Возможными значениями являются: создана (`1`), запущена (`2`), отменена (`3`), завершена неуспешно (`4`), ожидает (`5`), завершена непредвиденно (`6`), выполнена успешно (`7`), остановлена (`8`) и завершена (`9`).|  
 |caller_sid|**varbinary(85)**|Идентификатор безопасности (SID) пользователя, если для входа в систему использовалась проверка подлинности Windows.|  
@@ -53,20 +55,19 @@ ms.lasthandoff: 09/26/2017
 |machine_name|**nvarchar(128)**|Имя компьютера, на котором запущен экземпляр сервера.|  
 |dump_id|**uniqueidentifier**|Идентификатор дампа выполнения.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В этом представлении отображается одна строка для каждой проверки в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Это представление требует применения одного из следующих разрешений:  
   
 -   Разрешение READ на соответствующую операцию  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 > [!NOTE]  
 >  Наличие разрешения на выполнение операции на сервере подразумевает наличие разрешения на просмотр сведений об этой операции. Действует защита на уровне строки. Отображаются только строки, на которые у вас имеется разрешение.  
   
   
-

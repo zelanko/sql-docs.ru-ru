@@ -2,11 +2,13 @@
 title: "Фильтрация трассировки | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - filters [SQL Server], traces
 - traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
-caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "28"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6315705010a41afb985682e63338cc95237b5e78
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a53a67bdd997f3daa8168f445ce8eada527b5608
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filter-a-trace"></a>Фильтрация трассировки
-  Фильтры ограничивают накопление событий в трассировке. Если фильтр не установлен, то на выход трассировки возвращаются все события выбранных классов событий. Например, ограничение в трассировке по отслеживанию только имен определенных пользователей Windows сокращает объем выходных данных до объема данных только для этих пользователей.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Фильтры ограничивают сбор событий в трассировке. Если фильтр не установлен, то на выход трассировки возвращаются все события выбранных классов событий. Например, ограничение в трассировке по отслеживанию только имен определенных пользователей Windows сокращает объем выходных данных до объема данных только для этих пользователей.  
   
  Установка фильтра трассировки необязательна. Однако фильтр уменьшает дополнительную нагрузку, возникающую при трассировке. Фильтр возвращает конкретные данные, тем самым упрощая аудит и анализ производительности.  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 06/22/2017
   
  Доступность фильтра зависит от столбца данных. По некоторым столбцам данных нельзя проводить фильтрацию. Для столбцов данных, по которым можно проводить фильтрацию, она возможна только с помощью специальных реляционных операторов, как показано в следующей таблице.  
   
-|Реляционный оператор|Символ оператора|Описание|  
+|Реляционный оператор|Символ оператора|Description|  
 |-------------------------|---------------------|-----------------|  
 |Похоже|Похоже|Определяет, что данные событий трассировки должны быть похожи на введенный текст. Допускает множественные значения.|  
 |Не похоже|Не похоже|Определяет то, что данные событий трассировки не должны быть похожи на введенный текст. Допускает множественные значения.|  
@@ -187,4 +188,3 @@ ms.lasthandoff: 06/22/2017
  [sp_setapprole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)  
   
   
-

@@ -2,36 +2,33 @@
 title: "Набор строк MDSCHEMA_LEVELS | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_LEVELS
+apiname: MDSCHEMA_LEVELS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_LEVELS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_LEVELS rowset
 ms.assetid: 4313e268-33f4-4e99-96d7-2ec26775c580
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7eb78b431b77dadfe216db5e30e77e9d5722b2a8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8d9a56387365489615b6b7665dedb3edc7f367f6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemalevels-rowset"></a>Набор строк MDSCHEMA_LEVELS
-  Описывает каждый уровень в конкретной иерархии.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Описывает каждый уровень в иерархии.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **MDSCHEMA_LEVELS** набор строк содержит следующие столбцы.  
@@ -71,19 +68,18 @@ ms.lasthandoff: 09/01/2017
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**LEVEL_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**LEVEL_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
 |**LEVEL_ORIGIN**|**DBTYPE_UI2**|(Необязательно) Ограничение по умолчанию действует на **MD_USER_DEFINED** и **MD_SYSTEM_ENABLED**|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Необязательно) Ограничение по умолчанию имеет значение 1. Битовая карта с одним из следующих допустимых значений:<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION|  
 |**LEVEL_VISIBILITY**|**DBTYPE_UI2**|(Необязательно) Ограничение по умолчанию имеет значение 1. Битовая карта с одним из следующих значений:<br /><br /> 1 Отображается<br /><br /> 2 Не отображается|  
   
 ## <a name="see-also"></a>См. также:  
- [OLE DB для OLAP наборы строк схемы](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [Наборы строк схемы OLE DB для OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

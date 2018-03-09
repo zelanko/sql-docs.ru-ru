@@ -2,29 +2,30 @@
 title: "Формирование фильтров | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.generatefilters.f1
+f1_keywords: sql13.rep.newpubwizard.generatefilters.f1
 ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
-caps.latest.revision: 26
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb5b6b1e20308a8a249e12437cdfee573899fbac
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "26"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: caab625c0f783290f1206c832a3243d498eae349
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="generate-filters"></a>Формирование фильтров
-  Диалоговое окно **Формирование фильтров** позволяет определить фильтр строк на одной таблице в публикации слиянием. Далее репликация автоматически распространяет фильтр на другие таблицы, связанные через связи внешних ключей. Например, если фильтр определяется на таблице заказчика таким образом, чтобы в результате фильтрации оставались только данные о французских заказчиках, репликация распространяет этот фильтр таким образом, что соответствующие заказы и таблицы с подробностями заказов будут содержать только данные, относящиеся к французским заказчикам.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Диалоговое окно **Формирование фильтров** позволяет определить фильтр строк для одной таблицы в публикации слиянием. Далее репликация автоматически распространяет фильтр на другие таблицы, связанные по внешним ключам. Например, если фильтр определяется на таблице заказчика таким образом, чтобы в результате фильтрации оставались только данные о французских заказчиках, репликация распространяет этот фильтр таким образом, что соответствующие заказы и таблицы с подробностями заказов будут содержать только данные, относящиеся к французским заказчикам.  
   
 ## <a name="options"></a>Параметры  
  В этом диалоговом окне используется трехступенчатый процесс создания фильтра строк на таблице. Затем фильтр распространяется на таблицы, связанные с фильтруемой таблицей связями первичного и внешнего ключей. Допустим, имеются три таблицы: **Customer**, **SalesOrderHeader**и **SalesOrderDetail**. Допустим, имеются связи между таблицами **Customer** и **SalesOrderHeader**, а также между **SalesOrderHeader** и **SalesOrderDetail**. Тогда, если фильтр строк применяется к таблице **Customer**, репликация распространяет этот фильтр на таблицы **SalesOrderHeader** и **SalesOrderDetail**.  
@@ -56,7 +57,7 @@ ms.lasthandoff: 06/22/2017
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Просмотр и изменение свойств публикации](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Фильтрация опубликованных данных](../../relational-databases/replication/publish/filter-published-data.md)   
- [Фильтры соединения](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Публикация данных и объектов базы данных](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

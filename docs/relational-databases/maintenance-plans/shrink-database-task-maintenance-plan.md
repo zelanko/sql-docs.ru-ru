@@ -2,34 +2,34 @@
 title: "Задача \"Сжатие базы данных\" (план обслуживания) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - Shrink Database Task
 - Shrink Database(s) Task
 - sql13.swb.maint.shrink.f1
-helpviewer_keywords:
-- Shrink Database Task dialog box
+helpviewer_keywords: Shrink Database Task dialog box
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
-caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "28"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e067169014c05c90b04d9f757fcae397cb1834b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0b71a3f5cf438b4ac5f3cce071329a81cff88d25
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>Задача «Сжатие базы данных» (план обслуживания)
-  Диалоговое окно **Задача «Сжатие базы данных»** используется для создания задачи, которая пытается уменьшить размер выбранных баз данных. Перечисленные ниже параметры используются для определения количества неиспользуемого пространства, которое должно остаться в базе данных после сжатия (чем больше процент, тем меньше сжимается база данных). Это значение определяется долей фактических данных в базе данных. Например: 100-мегабайтная база данных, содержащая 60 МБ данных и 40 МБ свободного пространства с заданным значением свободного пространства, равным 50 процентам, будет содержать 60 МБ данных и 30 МБ свободного пространства (поскольку 50 процентов от 60 МБ равно 30 МБ). Удаляется только лишнее пространство в базе данных. Допустимые значения: от 0 до 100.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Диалоговое окно **Задача "Сжатие базы данных"** используется для создания задачи, которая пытается уменьшить размер выбранных баз данных. Перечисленные ниже параметры используются для определения количества неиспользуемого пространства, которое должно остаться в базе данных после сжатия (чем больше процент, тем меньше сжимается база данных). Это значение определяется долей фактических данных в базе данных. Например: 100-мегабайтная база данных, содержащая 60 МБ данных и 40 МБ свободного пространства с заданным значением свободного пространства, равным 50 процентам, будет содержать 60 МБ данных и 30 МБ свободного пространства (поскольку 50 процентов от 60 МБ равно 30 МБ). Удаляется только лишнее пространство в базе данных. Допустимые значения: от 0 до 100.  
   
  Сжатие файлов данных позволяет освободить неиспользуемое пространство путем перемещения страниц данных с конца файла в незанятое пространство ближе к началу файла. Когда в конце файла образуется достаточно свободного места, страницы данных в конце файла могут быть освобождены и возвращены в файловую систему.  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 06/22/2017
  **Использовать указанные имя пользователя и пароль**  
  Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
   
- **Имя пользователя**  
+ **User name**  
  Укажите имя входа, используемое при проверке подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
   
  **Пароль**  
@@ -108,4 +108,3 @@ ms.lasthandoff: 06/22/2017
  [DBCC SHRINKDATABASE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  
   
   
-

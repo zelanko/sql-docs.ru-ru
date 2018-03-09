@@ -2,9 +2,12 @@
 title: "Создание ссылки на встроенную коллекцию схем XML (sys) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -16,20 +19,20 @@ helpviewer_keywords:
 - XML schema collections [SQL Server], predefined
 - built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fa2b103a4c846e52c9af999980bb3c8080a4f6d5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f8140cdb2a53142fd48765bd4747fe3aa25244fd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>Создание ссылки на встроенную коллекцию XML-схем (sys)
-  Любая созданная база данных содержит предопределенную коллекцию XML-схем **sys** в реляционной схеме **sys** . Она содержит эти предопределенные схемы, к которым можно получить доступ из любой другой созданной пользователем коллекции XML-схем. В языке XQuery имеют значение префиксы, используемые для предопределенных схем. К зарезервированным относится только префикс **xml** .  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Любая созданная база данных содержит предопределенную коллекцию XML-схем **sys** в реляционной схеме **sys** . Она содержит эти предопределенные схемы, к которым можно получить доступ из любой другой созданной пользователем коллекции XML-схем. В языке XQuery имеют значение префиксы, используемые для предопределенных схем. К зарезервированным относится только префикс **xml** .  
   
 ```  
 xml = http://www.w3.org/XML/1998/namespace  
@@ -158,4 +161,3 @@ GO
  [Коллекции XML-схем (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   
-

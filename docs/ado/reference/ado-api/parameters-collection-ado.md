@@ -3,7 +3,7 @@ title: "Коллекция параметров (ADO) | Документы Micro
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,22 +20,21 @@ f1_keywords:
 helpviewer_keywords:
 - Parameters collection [ADO]
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
-caps.latest.revision: 20
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 96d30086b4c05455ef7d4fd5fdd82674979c205d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9dcfec51eb94eb1ca290ebb3323012e2aaa558b5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameters-collection-ado"></a>Коллекция параметров (ADO)
 Содержит все [параметр](../../../ado/reference/ado-api/parameter-object.md) объектов [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Объект **команда** объект имеет **параметры** коллекцию, состоящую из **параметр** объектов.  
   
  С помощью [обновление](../../../ado/reference/ado-api/refresh-method-ado.md) метод **команда** объекта **параметры** коллекции получает сведения о параметрах поставщика для хранимой процедуры или параметризованного запроса указанный в **команда** объекта. Некоторые поставщики не поддерживают вызовы хранимой процедуры или параметризованные запросы; вызов **обновление** метод **параметры** коллекции при использовании такой поставщик возвратит ошибку.  
@@ -92,8 +91,7 @@ ms.lasthandoff: 09/09/2017
   
 -   [Свойства коллекции параметров, методы и события](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Append-метод (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Метод CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Объект параметра](../../../ado/reference/ado-api/parameter-object.md)
-
+ [Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)

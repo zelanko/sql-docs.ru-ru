@@ -3,10 +3,12 @@ title: "Диспетчер драйверов | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - driver manager [ODBC], about driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 559e4de1-16c9-4998-94f5-6431122040cd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6bd1a9c9f164c1a745e3ec9baf40a7184600a4b1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c66acd08644176170c56700720a438aa8ffcdb1b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="the-driver-manager"></a>Диспетчер драйверов
 *Диспетчера драйверов* — библиотека, которая управляет связью между приложениями и драйверы. Например для платформ Microsoft® Windows® диспетчера драйверов является библиотеки динамической компоновки (DLL), которые записываются корпорации Майкрософт и могут распространять пользователей распространяемого пакета SDK MDAC 2.8 с пакетом обновления 1.  
@@ -41,4 +42,3 @@ ms.lasthandoff: 09/09/2017
  Окончательный важной роли диспетчера драйверов Загрузка и выгрузка драйверов. Приложение загружает и выгружает только диспетчера драйверов. Когда он хочет использовать конкретный драйвер, вызывается функция подключения (**SQLConnect**, **SQLDriverConnect**, или **SQLBrowseConnect**) диспетчера драйверов и указывает имя конкретного источника данных или драйвера, например, «Бухгалтерия» или «SQL Server». Используя это имя, диспетчер драйверов поиск источника данных для имени файла драйвера, например Sqlsrvr.dll. Затем он будет загружен драйвер (при условии, что он еще не загружен), хранится адрес каждой функции в драйвере и вызывает функцию подключения в драйвере, который инициализирует себя и подключается к источнику данных.  
   
  Когда приложение выполняется с помощью драйвера, он вызывает **SQLDisconnect** диспетчера драйверов. Диспетчер драйверов вызывает эту функцию в драйвере, отключается от источника данных. Тем не менее диспетчер драйверов сохраняет драйвер в памяти в случае, если приложение подключается к нему. Только в том случае, когда приложение освобождает соединение, драйвер использует или использует соединение для другого драйвера, а другие соединения не использовать драйвер выгружается драйвер. Полное описание роли диспетчера драйверов в Загрузка и выгрузка драйверов см. в разделе [роли диспетчера драйверов в процесс подключения](../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).
-

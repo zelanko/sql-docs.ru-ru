@@ -1,30 +1,30 @@
 ---
-title: "Отчеты, элементы отчета и определений (отчетов построитель отчетов и службы SSRS) отчетов | Документы Microsoft"
+title: "Отчеты, элементы отчетов и определения отчетов (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - report definitions
 - reports
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 4f8368ff8e8b2ce8674a7d74b973474c758717bd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 9f0429e82811f1acc05d50f579f9b8d46e975246
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Отчеты, элементы отчетов и определения отчетов (построитель отчетов и службы SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] использует различные термины, описывающие отчеты с разбиением на страницы в разных состояниях, применяемые в том числе для отчета во время начального определения, для опубликованного отчета и отчета, просматриваемого пользователем.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 09/27/2017
  Безопасность опубликованного отчета обеспечивается через назначение ролей при использовании модели безопасности служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на основе ролей. Опубликованные отчеты доступны по URL-адресам, через веб-части SharePoint или на веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Также можно перейти к этим отчетам и открыть их в построителе отчетов.  
   
 ### <a name="report-snapshots"></a>Моментальные снимки отчета  
- Отчет можно также опубликовать в виде моментального снимка, содержащего как сведения о макете, так и данные на время запуска отчета. Моментальные снимки отчета не сохраняются в каком-то определенном формате отображения, а преобразуются в него (например, в HTML) только при запросе пользователя или приложения. Дополнительные сведения см. в разделе [поиск и просмотр отчетов в диспетчере отчетов &#40; Построитель отчетов и службы SSRS &#41; ](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
+ Отчет можно также опубликовать в виде моментального снимка, содержащего как сведения о макете, так и данные на время запуска отчета. Моментальные снимки отчета не сохраняются в каком-то определенном формате отображения, а преобразуются в него (например, в HTML) только при запросе пользователя или приложения. Дополнительные сведения см. в разделе [Поиск и просмотр отчетов в диспетчере отчетов (построитель отчетов и службы SSRS)](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md).  
   
 ## <a name="rendered-reports"></a>Подготовленные отчеты  
  Подготовленный отчет — это полностью обработанный отчет, содержащий как данные, так и сведения о форматировании отчета в формате, позволяющем его просматривать (например HTML). Пока отчет не преобразован в выходной формат, просмотреть его нельзя. Подготовить отчет можно одним из следующих способов:  
@@ -70,11 +70,10 @@ ms.lasthandoff: 09/27/2017
   
  Подпишитесь на отчет, который доставляется в папку «Входящие» электронной почты или в указанную общую папку в выбранном формате. HTML 4.0 является форматом подготовки к просмотру отчета по умолчанию. Помимо HTML, отчеты можно подготавливать к просмотру и во многих других форматах, например в форматах Excel, Word, XML, PDF, TIFF и CSV. Как и опубликованные отчеты, отчеты, готовые для просмотра, нельзя отредактировать и снова сохранить на сервере отчетов. Дополнительные сведения см. в разделах [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные понятия разработки отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Построитель отчетов в SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   
-

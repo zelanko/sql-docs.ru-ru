@@ -1,13 +1,14 @@
 ---
-title: "Установка свойств обработки отчетов | Документы Microsoft"
+title: "Установка свойств обработки отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,22 +19,21 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], running reports from
 - report execution snapshots [Reporting Services]
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
-caps.latest.revision: 43
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "43"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f2c66ebf45916b6e820a5599b4b90416703b377e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d7d276a8cd67bf9917386d8cbd68b91c07777f01
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-report-processing-properties"></a>Установка свойств обработки отчетов
   Свойства выполнения отчета определяют, как отчет обрабатывается. Свойства выполнения должны быть установлены для каждого отчета отдельно.  
   
- Чтобы настроить свойства выполнения отчета, откройте отчет в диспетчере отчетов, а затем перейдите к странице свойств «Выполнение». Дополнительные сведения см. в разделе [обработки страницы свойств Параметры &#40; Диспетчер отчетов &#41; ](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0). Можно также задавать свойства с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; в разделе [обработки страницы свойств Параметры &#40; Диспетчер отчетов &#41; ](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
+ Чтобы настроить свойства выполнения отчета, откройте отчет в диспетчере отчетов, а затем перейдите к странице свойств «Выполнение». Дополнительные сведения см. в статье [Страница "Обработка свойств параметров" (диспетчер отчетов)](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0). Установить свойства можно также с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], см. статью [Страница "Свойства параметров обработки" (диспетчер отчетов)](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
   
 ## <a name="report-execution-modes"></a>Режимы выполнения отчета  
  Отчет можно запустить либо по требованию, либо как моментальный снимок. Далее описываются оба этих подхода.  
@@ -59,14 +59,13 @@ ms.lasthandoff: 08/09/2017
   
 -   Существующие подписки настроены так, что используют значения параметров, отличные от заданного для моментального снимка значения параметра по умолчанию.  
   
- Если выполняется это условие, сервер отчетов отключит подписку в следующий раз, когда она должна выполняться по расписанию. Для повторного включения подписки откройте, а затем сохраните ее. При открытии подписки сервер отчетов обновляет значения параметров подписки теми, что указаны для моментального снимка. Дополнительные сведения о подписках см. в разделе [&#40; подписки и доставки Службы Reporting Services &#41; ](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
+ Если выполняется это условие, сервер отчетов отключит подписку в следующий раз, когда она должна выполняться по расписанию. Для повторного включения подписки откройте, а затем сохраните ее. При открытии подписки сервер отчетов обновляет значения параметров подписки теми, что указаны для моментального снимка. Дополнительные сведения о подписках см. в разделе [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Настройка свойств выполнения для отчета (диспетчер отчетов)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Службы Reporting Services Concepts &#40; Службы SSRS &#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Способ: добавить моментальный снимок к журналу отчета](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Основные понятия служб Reporting Services (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [Добавление моментального снимка в журнал отчета](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Определение учетных данных и сведениях о подключении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
-

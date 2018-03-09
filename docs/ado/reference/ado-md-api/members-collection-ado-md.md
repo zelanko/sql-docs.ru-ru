@@ -3,7 +3,7 @@ title: "Члены коллекции (ADO MD) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,25 +20,24 @@ f1_keywords:
 helpviewer_keywords:
 - Members collection [ADO MD]
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 087809ddb783b323a094a509aedd4c5b88005764
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d72b7b87507e13ae4aa103a6333e7e2caaf581ae
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="members-collection-ado-md"></a>Члены коллекции (ADO MD)
 Содержит [член](../../../ado/reference/ado-md-api/member-object-ado-md.md) объекты уровня или положение вдоль оси.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Объект **члены** коллекции служит для хранения следующих типов элементов:  
   
--   Элементы, которые составляют уровень в кубе. Они содержатся в **элементы** коллекцию [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md) объекта. Например, с помощью образца из [Общие сведения о многомерных схемы и данные](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md), четыре элемента уровня странах, Канада, США, Великобритания и Германии.  
+-   Элементы, которые составляют уровень в кубе. Они содержатся в **элементы** коллекцию [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md) объекта. Например, с помощью образца из [Общие сведения о многомерных схемы и данные](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md), четыре элемента уровня странах, Канада, США, Соединенное Королевство и Германии.  
   
 -   Элементы, являющиеся дочерними для элемента в иерархии. Эти члены возвращаются [дочерних](../../../ado/reference/ado-md-api/children-property-ado-md.md) свойство родительского объекта **член** объекта. Например два дочерних элемента Канада снова с помощью тех же, являются Востоке Канады и Западная Канады.  
   
@@ -56,7 +55,6 @@ ms.lasthandoff: 09/09/2017
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/members-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
- [Объект члена (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)
-
+ [Объект Member (многомерные объекты ADO)](../../../ado/reference/ado-md-api/member-object-ado-md.md)

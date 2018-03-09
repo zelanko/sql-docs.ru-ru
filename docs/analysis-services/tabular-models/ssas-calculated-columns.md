@@ -1,31 +1,31 @@
 ---
-title: "Вычисляемые столбцы (табличные службы SSAS) | Документы Microsoft"
+title: "Вычисляемые столбцы | Документы Microsoft"
 ms.custom: 
 ms.date: 10/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: f749ff3dc18d381985a38ebf0f2867aa073d2fef
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: 3c36cd3b55617c7ca6c20c244a9488227a2f6ff5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="calculated-columns"></a>Вычисляемые столбцы
-  Вычисляемые столбцы в табличной модели позволяют добавлять новые данные в модель. Вместо вставки или импорта значений в столбец создается формула DAX, которая определяет значения уровня строк для столбца. Вычисляемый столбец впоследствии может использоваться в отчете, сводной таблице или сводной диаграмме, как и любой другой столбец.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Вычисляемые столбцы в табличной модели позволяют добавлять новые данные в модель. Вместо вставки или импорта значений в столбец создается формула DAX, которая определяет значения уровня строк для столбца. Вычисляемый столбец впоследствии может использоваться в отчете, сводной таблице или сводной диаграмме, как и любой другой столбец.  
  
   
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 10/04/2017
   
 ##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Создание вычисляемого столбца](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)|Задачи в данном разделе описывают добавление нового вычисляемого столбца в таблицу.|  
   
@@ -85,4 +85,3 @@ ms.lasthandoff: 10/04/2017
  [Вычисления](../../analysis-services/tabular-models/calculations-ssas-tabular.md)  
   
   
-

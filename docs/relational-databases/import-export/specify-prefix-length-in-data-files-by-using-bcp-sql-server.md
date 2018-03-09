@@ -2,9 +2,12 @@
 title: "Определение длины префикса в файлах данных с помощью программы bcp (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/28/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -15,19 +18,20 @@ helpviewer_keywords:
 - lengths [SQL Server], prefix characters
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
-caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 62007ed26bf44480b40af09b40dbb8636de4a242
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: cf8736be942f9edd7c23da9f7acf6191b6eab625
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Определение длины префикса в файлах данных с помощью программы bcp (SQL Server)
-  Для наиболее компактного хранения файлов при массовом экспорте данных собственного формата в файл данных команда **bcp** ставит перед каждым полем один или несколько знаков, которые указывают длину этого поля. Эти символы называются *символами префикса длины*.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Для наиболее компактного хранения файлов при массовом экспорте данных собственного формата в файл данных команда **bcp** ставит перед каждым полем один или несколько знаков, которые указывают длину этого поля. Эти символы называются *символами префикса длины*.  
   
 ## <a name="the-bcp-prompt-for-prefix-length"></a>Запрос длины префикса программой bcp  
  Если интерактивная команда **bcp** содержит параметр **in** или **out** без параметра файла форматирования (**-f**) или параметра формата данных (**-n**, **-c**, **-w**или **-N**), то команда запрашивает длину префикса каждого поля данных следующим образом:  
@@ -102,4 +106,3 @@ ms.lasthandoff: 06/22/2017
  [Указание типа файлового хранилища с помощью программы bcp (SQL Server)](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   
-

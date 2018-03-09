@@ -2,42 +2,38 @@
 title: "Тип данных Rowset (XML для Аналитики) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Rowset Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Rowset Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Rowset
 - http://schemas.microsoft.com/analysisservices/2003/engine#Rowset
 - Rowset
-helpviewer_keywords:
-- Rowset data type
+helpviewer_keywords: Rowset data type
 ms.assetid: a3e6e227-2d53-4530-b369-afa8b4df0a40
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 885910e506995f6aef382d95eb24320749b682eb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 352dc0e626e3214b37f5047957f8fa1f68aace55
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rowset-data-type-xmla"></a>Тип данных Rowset (XML для аналитики)
-  Определяет производный тип данных, представляющий [корневой](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) элемент, который возвращает табличные данные из [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) или [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) вызова метода.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Определяет производный тип данных, представляющий [корневой](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) элемент, который возвращает табличные данные из [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) или [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) вызова метода.  
   
  **Пространство имен** urn: schemas-microsoft-com: XML-analysis: rowset  
   
@@ -54,7 +50,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="data-type-characteristics"></a>Характеристики типа данных  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Базовые типы данных|[Результирующий набор](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
 |Производные типы данных|None|  
@@ -67,7 +63,7 @@ ms.lasthandoff: 09/01/2017
 |Дочерние элементы|[строки](../../../analysis-services/xmla/xml-elements-properties/row-element-xmla.md)|  
 |Производные элементы|[корень](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В XML нельзя использовать определенные символы в качестве имен элементов и атрибутов. Чтобы устранить это ограничение по именованию, XML для аналитики (XMLA) поддерживает кодировку в соответствии с определением [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Для имен столбцов, содержащих XML-символы, недопустимые в соответствии со спецификацией XML 1.0 XML для Аналитики использует соответствующие шестнадцатеричные значения для преобразования символов Юникода, которые являются недопустимыми. Шестнадцатеричные значения экранируются как _x*HHHH*\_, где *HHHH* означает четырехзначный шестнадцатеричный код UCS-2 для символа в первый заказ старший значащий бит. Например, в XML для аналитики имя «Order Details» будет закодировано как Order_x0020_Details, где символ пробела заменен на соответствующий шестнадцатеричный код.  
   
  Кодирование может усложнить XSL-преобразования. Для поддержки уточняющих запросов для действительных незакодированных имен столбцов, добавьте **SQL: field**атрибут схемы набора строк XML для каждого столбца, как показано в следующем примере:  
@@ -236,4 +232,3 @@ ms.lasthandoff: 09/01/2017
  [Типы данных XML &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   
-

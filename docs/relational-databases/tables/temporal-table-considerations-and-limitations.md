@@ -1,30 +1,30 @@
 ---
 title: "Рекомендации и ограничения для темпоральной таблицы | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/22/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 8054b3c0e9f37805e013621f0696b963d8913249
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
-ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
-ms.openlocfilehash: 5ee3aa9223ae8ab832eff23a1da1755278e86d0b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Рекомендации и ограничения для темпоральной таблицы
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Из-за характера системного управления версиями существуют некоторые рекомендации и ограничения, которые следует учитывать при работе с темпоральными таблицами.  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 07/31/2017
   
     -   Индексы  
   
-    -   Statistics  
+    -   Статистика  
   
     -   Проверочные ограничения  
   
@@ -115,4 +115,3 @@ ms.lasthandoff: 07/31/2017
  [Представления и функции метаданных для временной таблицы](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

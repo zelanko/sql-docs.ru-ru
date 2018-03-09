@@ -2,32 +2,31 @@
 title: "Изучение текущей структуры таблицы сотрудников | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- examining the current structure of the employee
+applies_to: SQL Server 2016
+helpviewer_keywords: examining the current structure of the employee
 ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "15"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e4f881ca9ee3cf85edbbb4d474406e94fe1658ef
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: dac77c64b9ebb2c47fcaf399e6366964bfcee50c
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-1---examining-the-current-structure-of-the-employee-table"></a>Занятие 1.1. Изучение текущей структуры таблицы сотрудников
-Образец базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] содержит таблицу **Employee** в схеме **HumanResources** . Чтобы не изменять исходную таблицу, на этом шаге создается копия таблицы **Employee** , называющаяся **EmployeeDemo**. Для упрощения этого примера копируется только пять столбцов из исходной таблицы. Затем выполняется запрос к таблице **HumanResources.EmployeeDemo** , позволяющий просмотреть структуру данных в таблице без использования типа данных **hierarchyid** .  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Образец базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] содержит таблицу **Employee** в схеме **HumanResources**. Чтобы не изменять исходную таблицу, на этом шаге создается копия таблицы **Employee** , называющаяся **EmployeeDemo**. Для упрощения этого примера копируется только пять столбцов из исходной таблицы. Затем выполняется запрос к таблице **HumanResources.EmployeeDemo** , позволяющий просмотреть структуру данных в таблице без использования типа данных **hierarchyid** .  
   
 ### <a name="to-copy-the-employee-table"></a>Копирование таблицы Employee  
   
@@ -84,4 +83,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

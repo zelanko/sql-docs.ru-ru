@@ -2,9 +2,12 @@
 title: "Класс событий Audit Server Operation | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,29 +15,30 @@ ms.topic: article
 helpviewer_keywords:
 - Audit Server Operation event class
 ms.assetid: 6cc3dbb9-817e-4329-9f45-c3adcff3b511
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 06ef5ac90c85f1e245efe743ae166228697a5bcf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 8f6567c8549f69fbef32dd2fdebf4c02c82fda5c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="audit-server-operation-event-class"></a>Audit Server Operation, класс событий
-  Класс событий **Audit Server Operation** возникает при выполнении таких операций аудита безопасности, как настройка параметров, ресурсов, доступа к внешним ресурсам или авторизации.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Класс событий **Audit Server Operation** возникает при выполнении таких операций аудита безопасности, как настройка параметров, ресурсов, доступа к внешним ресурсам или авторизации.  
   
 ## <a name="audit-server-operation-event-class-data-columns"></a>Столбцы данных класса событий Audit Server Operation  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |**DatabaseID**|**int**|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database* не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |**DatabaseName**|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
 |**DBUserName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|40|Да|  
-|**EventSequence**|**int**|Последовательность данного события в запросе.|51|Нет|  
+|**EventSequence**|**int**|Последовательность данного события в запросе.|51|нет|  
 |**EventSubClass**|**int**|Тип подкласса события.<br /><br /> 1=Administer Bulk Operations<br /><br /> 2=Alter Settings<br /><br /> 3=Alter Resources<br /><br /> 4=Authenticate<br /><br /> 5=External Access<br /><br /> 6=Alter Server State<br /><br /> 7=Unsafe Assembly<br /><br /> 8=Alter Connection<br /><br /> 9=Alter Resource Governor<br /><br /> 10=Use Any Workload Group<br /><br /> 11=View Server State|21|Да|  
 |**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
@@ -46,11 +50,11 @@ ms.lasthandoff: 06/22/2017
 |**ObjectType**|**int**|Значение, представляющее тип объекта, связанного с событием. Это значение соответствует столбцу типа в представлении каталога **sys.objects** . Значения см. в разделе [Столбец события ObjectType Trace](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Да|  
 |**OwnerName**|**nvarchar**|Имя пользователя базы данных, владеющего объектом.|37|Да|  
 |**RequestID**|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
-|**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени Имя_входа1 и при выполнении инструкции под именем Имя_входа2 **SessionLoginName** содержит значение «Имя_входа1», а **LoginName** содержит значение «Имя_входа2». В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
+|**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|нет|  
+|**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени "Имя_входа1" и при выполнении инструкции под именем "Имя_входа2" **SessionLoginName** содержит значение "Имя_входа1", а **LoginName** — значение "Имя_входа2". В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |**SPID**|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если оно известно.|14|Да|  
-|**Успешно**|**int**|1 = успешное завершение. 0 = неуспешное завершение. Например, значение, равное 1, означает успешную проверку разрешений, а значение, равное 0, означает, что эта проверка завершена с ошибкой.|23|Да|  
+|**Успешно**|**int**|1 = успешное завершение. 0 = неуспешное завершение. Например, значение, равное 1, означает успешную проверку разрешений, а значение, равное 0, означает, что эта проверка завершена с ошибкой. |23|Да|  
 |**TextData**|**ntext**|Текстовое значение, зависящее от класса событий, фиксируемых при трассировке.|1|Да|  
 |**TransactionID**|**bigint**|Назначенный системой идентификатор транзакции.|4|Да|  
 |**XactSequence**|**bigint**|Токен, используемый для описания текущей транзакции.|50|Да|  

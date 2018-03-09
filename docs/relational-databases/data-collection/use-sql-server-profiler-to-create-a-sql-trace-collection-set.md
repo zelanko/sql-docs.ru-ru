@@ -2,9 +2,12 @@
 title: "Использование приложения SQL Server Profiler для создания набора элементов сбора трассировки SQL | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - SQL Trace collector set
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
-caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3c9a1505c7ca5e228459d1fbc590d9a60cb52e79
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a45938e5b0c204a59d512d4b4f994832293fa120
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>использование приложения SQL Server Profiler для создания набора сбора трассировки SQL
-  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно использовать возможности серверной трассировки приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , чтобы экспортировать определение трассировки для создания набора элементов сбора, использующего общий тип сборщика трассировки SQL. Этот процесс состоит из двух частей.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно использовать возможности серверной трассировки приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , чтобы экспортировать определение трассировки для создания набора элементов сбора, использующего общий тип сборщика трассировки SQL. Этот процесс состоит из двух частей.  
   
 1.  Создание и экспорт трассировки приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
   
@@ -210,4 +213,3 @@ GO
 ```  
   
   
-

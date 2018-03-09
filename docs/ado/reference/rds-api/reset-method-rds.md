@@ -1,29 +1,30 @@
 ---
 title: "Reset-метод (RDS) | Документы Microsoft"
-ms.prod: sql-non-specified
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
 helpviewer_keywords:
 - Reset method [ADO]
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f95d5bf30a0646d3e67ae366e29794018095706a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 753a34ee7600ace3c5236df2c206a60255cc1a6f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="reset-method-rds"></a>Метод Reset (RDS)
 Выполняет сортировки или фильтрации на стороне клиента **записей** на основе указанного свойств сортировки и фильтрации.  
@@ -45,7 +46,7 @@ DataControl.Reset(value)
  *value*  
  Необязательно. Объект **логическое** значение, равное **True** (по умолчанию), если нужно выполнить фильтрацию в текущем наборе строк «фильтрация». **False** указывает, что отфильтровать на первоначальный набор строк, удаляя все предыдущие параметры фильтра.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), и [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)свойства предоставляют сортировки и фильтрации функциональность на стороне клиента кэша. Функциональные возможности сортировки упорядочивает записи по значения из одного столбца. Функцию фильтра отображает подмножество записей на основе критерия поиска, при полной [записей](../../../ado/reference/ado-api/recordset-object-ado.md) сохраняется в кэше. **Сброс** метод будет выполнять критерии и заменить текущую **записей** с обновляемым **записей**.  
   
  При внесении изменений в исходных данных, которые не были отправлены, **Сброс** метод завершится с ошибкой. Во-первых, используйте [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) метод, чтобы сохранить изменения в чтение и запись **записей**и затем использовать **Сброс** метод сортировки и фильтрации записей.  
@@ -76,12 +77,11 @@ ADC.Reset(FALSE)   ' Rowset now has all Last Names > "T".
 ```  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [FilterColumn, FilterCriterion, FilterValue, SortColumn, направления сортировки, свойства и пример метода сброса (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
- [Метод SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
+ [Метод SubmitChanges (служба удаленных рабочих столов)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
 
 

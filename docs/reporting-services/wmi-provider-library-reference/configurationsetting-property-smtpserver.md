@@ -1,36 +1,33 @@
 ---
-title: "Свойство SMTPServer (WMI MSReportServer_ConfigurationSetting) | Документы Microsoft"
+title: "Свойство SMTPServer (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SMTPServer
-apilocation:
-- reportingservices.mof
+apiname: SMTPServer
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SMTPServer property
+helpviewer_keywords: SMTPServer property
 ms.assetid: 8bcceeba-e1a0-44ef-bda1-600c6925e1db
-caps.latest.revision: 18
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "18"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 9034d6214aa4dfb15c9111393ca57fffcf7b1d8f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1b1b0961535b3d504f10c450f3a9be857c23ceb2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configurationsetting-property---smtpserver"></a>Свойство ConfigurationSetting - SMTPServer
+# <a name="configurationsetting-property---smtpserver"></a>Свойство ConfigurationSetting — SMTPServer
   Возвращает свойство SMTP-сервера из файла конфигурации сервера отчетов. Только для чтения.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -52,8 +49,7 @@ public string SMTPServer;
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

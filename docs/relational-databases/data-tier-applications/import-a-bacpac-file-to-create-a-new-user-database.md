@@ -2,11 +2,13 @@
 title: "Импорт файла BACPAC для создания новой пользовательской базы данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.suite: sql
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,19 +28,19 @@ helpviewer_keywords:
 - Migrate database
 - DAC
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
-caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4226b33bd805aca7e38781d5a55eb990f61e4e69
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "25"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: d92da3c51843ee10b0c781bb400109abf04fefab
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Импорт файла BACPAC для создания новой пользовательской базы данных
-  Импортируйте файл приложения уровня данных (DAC), файл .bacpac, для создания копии исходной базы данных с данными в новом экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)] или в компоненте [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Операции экспорта-импорта могут быть совмещены для переноса приложения уровня данных или базы данных из одного экземпляра в другой или для создания логического резервного копирования, например создания находящейся на предприятии копии базы данных, развернутой в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Импортируйте файл приложения уровня данных (DAC) (файл BACPAC) для создания копии исходной базы данных с данными в новом экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)] или компоненте [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Операции экспорта-импорта могут быть совмещены для переноса приложения уровня данных или базы данных из одного экземпляра в другой или для создания логического резервного копирования, например создания находящейся на предприятии копии базы данных, развернутой в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## <a name="before-you-begin"></a>Перед началом  
  Процедура импорта создает новое приложение уровня данных в два этапа.  
@@ -50,18 +52,18 @@ ms.lasthandoff: 06/22/2017
 ## <a name="sql-server-utility"></a>Служебная программа SQL Server  
  При импорте приложения уровня данных в управляемый экземпляр компонента Database Engine импортированное приложение уровня данных будет включено в служебную программу SQL Server при следующей отправке набора элементов сбора программы из экземпляра в точке управления служебной программой. После этого приложение уровня данных появится в узле **Развернутые приложения уровня данных** в окне [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Обозреватель программ** , а соответствующие сведения будут отображаться на странице сведений **Развернутые приложения уровня данных** .  
   
-## <a name="database-options-and-settings"></a>Настройка параметров баз данных  
+## <a name="database-options-and-settings"></a>настройка параметров баз данных  
  По умолчанию база данных, создаваемая в процессе импорта, будет иметь все стандартные настройки инструкции CREATE DATABASE за исключением того, что параметры сортировки и уровень совместимости базы данных будут установлены в соответствии со значениями, заданными в приложении уровня данных. Экспортный файл приложения уровня данных использует значения этой исходной базы данных.  
   
  Некоторые параметры баз данных, например TRUSTWORTHY, DB_CHAINING и HONOR_BROKER_PRIORITY, нельзя изменять в рамках процедуры импорта. Физические свойства, например количество файловых групп или количество и размер файлов, нельзя изменять в рамках процедуры импорта. После завершения импорта вы можете настроить базу данных с помощью инструкции ALTER DATABASE, среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]или программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в статье [Databases](../../relational-databases/databases/databases.md).  
   
-## <a name="limitations-and-restrictions"></a>Ограничения  
+## <a name="limitations-and-restrictions"></a>ограничения  
  Импорт приложения уровня данных можно выполнить в среду [!INCLUDE[ssSDS](../../includes/sssds-md.md)]или в экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , запущенный в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 4 (SP4) или более поздней версии. После экспорта приложения уровня данных из более поздней версии приложение может содержать объекты, не поддерживаемые [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Невозможно развернуть данные приложения уровня данных для экземпляров [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Рекомендуется не выполнять импорт файла экспорта приложения уровня данных, полученного из неизвестных или ненадежных источников. В данных файлах может содержаться вредоносный код Transact-SQL, вызывающий выполнение непредусмотренных инструкций или появление ошибок из-за изменения схемы. Перед тем как использовать файл экспорта из неизвестного или ненадежного источника, распакуйте его и изучите код, например хранимые процедуры или другой пользовательский код. Дополнительные сведения о том, как выполнить эти проверки, см. в разделе [Validate a DAC Package](https://msdn.microsoft.com/library/ee633948(SQL.130).aspx).  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
  Для повышения безопасности имена входа в SQL Server хранятся в файле экспорта приложения уровня данных без пароля. При импорте файла имя входа создается как отключенное имя входа с созданным паролем. Чтобы включить имена входа, войдите в систему под учетной записью, имеющей разрешение ALTER ANY LOGIN и с помощью команды ALTER LOGIN включите имя входа и присвойте ему новый пароль, который можно передать пользователю. Это не требуется для имен входа, использующих проверку подлинности Windows, поскольку SQL Server не управляет их паролями.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -152,4 +154,3 @@ ms.lasthandoff: 06/22/2017
  [Экспорт приложения уровня данных](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
   
   
-

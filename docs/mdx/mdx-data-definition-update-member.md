@@ -2,11 +2,13 @@
 title: "Инструкция UPDATE MEMBER (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -18,20 +20,19 @@ helpviewer_keywords:
 - calculated members [MDX]
 - UPDATE MEMBER statement
 ms.assetid: 07ab708d-d165-4fb1-a9f9-fb8197ff0dab
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e126f34be1f1cecd1a793b71ff4b64069c1802c3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c1f8cea1bd0bf2e93fa52072676fccc972ad2076
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---update-member"></a>Определение данных MDX - UPDATE MEMBER
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Обновляет существующий вычисляемый элемент.  
   
@@ -61,7 +62,7 @@ UPDATE MEMBER Cube_Name.Member_Name
  *Property_Value*  
  Допустимое скалярное выражение, содержащее значение свойства вычисляемого элемента.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Инструкция UPDATE MEMBER обновляет существующие вычисляемые элементы, сохраняя относительную очередность элемента по отношению к другим вычислениям. Поэтому использовать инструкцию UPDATE MEMBER для изменения элемента SOLVEORDER нельзя.  
   
  Инструкцию UPDATE MEMBER нельзя указать в скрипте многомерных выражений для куба.  
@@ -88,4 +89,3 @@ UPDATE MEMBER Cube_Name.Member_Name
  [Инструкции определения данных &#40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
-

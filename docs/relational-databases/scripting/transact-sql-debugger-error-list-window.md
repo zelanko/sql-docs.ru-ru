@@ -2,9 +2,12 @@
 title: "Окно \"Список ошибок\" (среда Management Studio) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ helpviewer_keywords:
 - error list window
 - SQL Server Management Studio [SQL Server], error list window
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
-caps.latest.revision: 24
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aa7ebae3445240303352026f7cdb99a06b2d61ca
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 76956dec2a0ad41263329dde8028b78b23bbdd87
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Отладчик Transact-SQL, окно списка ошибок
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **среды** отображает синтаксические и семантические ошибки, сформированные из кода технологии IntelliSense в редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **Список ошибок** среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] отображает синтаксические и семантические ошибки, полученные из кода технологии IntelliSense в редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="features-of-the-error-list"></a>Функции списка ошибок  
  **Список ошибок** обеспечивает следующую функциональность.  
@@ -96,4 +98,3 @@ ms.lasthandoff: 06/22/2017
  Отображает имя проекта, в который входит файл скрипта.  
   
   
-

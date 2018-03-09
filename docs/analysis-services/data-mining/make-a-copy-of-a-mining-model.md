@@ -2,12 +2,13 @@
 title: "Создать копию модели интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], how-to topics
 - copying mining models
 ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
-caps.latest.revision: 12
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e8646d2de65b9dd2bd9fa0272a33b2cd4a5f0737
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aaa773a470cb0c2fea7929e3e6b331cfb0e7ed31
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>создать копию модели интеллектуального анализа данных
-  Создание копии модели интеллектуального анализа полезно, если необходимо быстро создать несколько моделей интеллектуального анализа данных на основе одних и тех же данных. После копирования модели новую копию можно редактировать путем изменения параметров или добавления фильтра.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Создание копии модели интеллектуального анализа полезно, если необходимо быстро создать несколько моделей интеллектуального анализа данных на основе одних и тех же данных. После копирования модели новую копию можно редактировать путем изменения параметров или добавления фильтра.  
   
  Например, если существующая таблица Customers связана с таблицей данных о покупках, сделанных клиентами, можно создать отдельные модели интеллектуального анализа данных для каждого демографического показателя клиентов, такого как возраст или область.  
   
@@ -64,9 +65,8 @@ ms.lasthandoff: 09/01/2017
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [Задачи и инструкции по модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [удалить фильтр из модели интеллектуального анализа данных](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
+ [Фильтры для моделей интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [Задачи модели интеллектуального анализа данных и инструкции](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Удалить фильтр из модели интеллектуального анализа данных](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: "Сопоставление типов данных для издателей Oracle | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +16,19 @@ helpviewer_keywords:
 - data types [SQL Server replication], Oracle publishing
 - mapping data types [SQL Server replication]
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
-caps.latest.revision: 47
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6eb74ce4647046c91fa199c260abeb1ae1845f66
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "47"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 4078e78f9f1e8879d709ef154a11e44055e2dcd5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="data-type-mapping-for-oracle-publishers"></a>Сопоставление типов данных для издателей Oracle
-  Типы данных Oracle и типы данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не всегда полностью совпадают. Там, где это возможно, выбор подходящего типа данных при публикации таблицы Oracle осуществляется автоматически. В случаях, когда выбор однозначного соответствия типов данных не очевиден, предлагаются альтернативные сопоставления типов данных. Сведения о выборе альтернативных соответствий типов данных см. ниже в разделе «Указание альтернативных сопоставлений типов данных».  
+# <a name="data-type-mapping-for-oracle-publishers"></a>Data Type Mapping for Oracle Publishers
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Типы данных Oracle и типы данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не всегда полностью совпадают. Там, где это возможно, выбор подходящего типа данных при публикации таблицы Oracle осуществляется автоматически. В случаях, когда выбор однозначного соответствия типов данных не очевиден, предлагаются альтернативные сопоставления типов данных. Сведения о выборе альтернативных соответствий типов данных см. ниже в разделе «Указание альтернативных сопоставлений типов данных».  
   
  Следующая таблица показывает, как по умолчанию осуществляется преобразование типов данных между Oracle и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , когда данные передаются издателем Oracle распространителю [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . В столбце «Альтернатива» показано, допустимы ли альтернативные соответствия.  
   
@@ -37,30 +39,30 @@ ms.lasthandoff: 06/22/2017
 |CHAR([1-2000])|CHAR([1-2000])|Да|  
 |CLOB|VARCHAR(MAX)|Да|  
 |DATE|DATETIME|Да|  
-|FLOAT|FLOAT|Нет|  
-|FLOAT([1-53])|FLOAT([1-53])|Нет|  
-|FLOAT([54-126])|FLOAT|Нет|  
+|FLOAT|FLOAT|нет|  
+|FLOAT([1-53])|FLOAT([1-53])|нет|  
+|FLOAT([54-126])|FLOAT|нет|  
 |INT|NUMERIC(38)|Да|  
 |INTERVAL|DATETIME|Да|  
 |LONG|VARCHAR(MAX)|Да|  
 |LONG RAW|IMAGE|Да|  
-|NCHAR([1-1000])|NCHAR([1-1000])|Нет|  
+|NCHAR([1-1000])|NCHAR([1-1000])|нет|  
 |NCLOB|NVARCHAR(MAX)|Да|  
 |NUMBER|FLOAT|Да|  
-|NUMBER([1-38])|NUMERIC([1-38])|Нет|  
+|NUMBER([1-38])|NUMERIC([1-38])|нет|  
 |NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Да|  
-|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|Нет|  
-|RAW([1-2000])|VARBINARY([1-2000])|Нет|  
-|REAL|FLOAT|Нет|  
-|ROWID|CHAR(18)|Нет|  
+|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|нет|  
+|RAW([1-2000])|VARBINARY([1-2000])|нет|  
+|real|FLOAT|нет|  
+|ROWID|CHAR(18)|нет|  
 |TIMESTAMP|DATETIME|Да|  
 |TIMESTAMP(0-7)|DATETIME|Да|  
 |TIMESTAMP(8-9)|DATETIME|Да|  
 |TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|Да|  
-|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|Нет|  
+|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|нет|  
 |TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|Да|  
-|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|Нет|  
-|UROWID|CHAR(18)|Нет|  
+|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|нет|  
+|UROWID|CHAR(18)|нет|  
 |VARCHAR2([1-4000])|VARCHAR([1-4000])|Да|  
   
 ## <a name="considerations-for-data-type-mapping"></a>Вопросы сопоставления типов данных  
@@ -111,6 +113,6 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
  [Настройка издателя Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Рекомендации по структуре и ограничения для издателей Oracle](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Обзор публикации Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

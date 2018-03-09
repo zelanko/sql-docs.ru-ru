@@ -2,29 +2,32 @@
 title: "Определение и поиск ключевых показателей эффективности | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
-caps.latest.revision: 17
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 304f42d1e177e25a0aa44c071af27c4723647802
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 22e04c21256b7c21c31c87557b201fc802ca3847
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-7-1---defining-and-browsing-kpis"></a>Занятие 7-1-Определение и поиск ключевых показателей эффективности
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Чтобы определить ключевые показатели эффективности, сначала задается имя показателя и группа мер, с которой он будет связан. Ключевой показатель эффективности может быть связан со всеми группами мер или с одной из них. Затем предстоит определить следующие элементы ключевого показателя эффективности:  
   
 -   Выражение значения  
@@ -275,6 +278,5 @@ ms.lasthandoff: 09/01/2017
     Выводится коэффициент валовой прибыли для продажи велосипедов через посредников в Северной Америке для Q3 CY 2007.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 8. Определение действий](../analysis-services/lesson-8-defining-actions.md)  
+[Занятие 8: Определение действий](../analysis-services/lesson-8-defining-actions.md)  
   
-

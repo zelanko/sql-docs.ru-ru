@@ -1,27 +1,27 @@
 ---
-title: "Общее представление конструктора наборов данных (построитель отчетов) | Документы Microsoft"
+title: "Представление конструктора общих наборов данных (построитель отчетов) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e658d85131921354443cfc80e0c41b0aee3ecac8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e1301fbcb05441ea09d6eb6e7450ce0d050aaa65
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Представление конструктора общих наборов данных (построитель отчетов)
   Набор данных в отчете представляет данные отчета, возвращаемые из запроса к внешнему источнику данных. Общие наборы данных публикуются на сервере отчетов и могут использоваться в нескольких отчетах. Можно создавать наборы данных для совместного использования с другими пользователями. В окне создания общего набора данных можно выбрать общий источник данных, указать свойства для общего набора данных и создать запрос в конструкторе запросов.  
@@ -37,11 +37,11 @@ ms.lasthandoff: 08/09/2017
  Используйте кнопку **Выбрать** в группе «Соединение» для выбора общего источника данных в отчете или нахождения общего источника данных на сервере отчетов.  
   
 > [!NOTE]  
->  Общий набор данных должен быть основан на общем источнике данных. Если необходимый источник данных недоступен, его необходимо создать на сервере отчетов. Дополнительные сведения см. в разделе [создание, изменение и удаление общих источников данных &#40; Службы SSRS &#41; ](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) .  
+>  Общий набор данных должен быть основан на общем источнике данных. Если необходимый источник данных недоступен, его необходимо создать на сервере отчетов. Дополнительные сведения см. в статье [Создание, изменение и удаление общих источников данных (службы SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
  Дополнительные сведения см. в разделе [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
-### <a name="dataset"></a>Набор данных  
+### <a name="dataset"></a>Dataset  
  Кнопка **Параметры набора** служит для изменения свойств общего набора данных, следующие основные параметры.  
   
 -   Поля. В коллекции полей можно добавлять или изменять поля.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
  Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
- Дополнительные сведения о планах обновления кэша см. в разделе [кэша общие наборы данных &#40; Службы SSRS &#41; ](../../reporting-services/report-server/cache-shared-datasets-ssrs.md).  
+ Дополнительные сведения о планах обновления кэша см. в разделе [Общие наборы данных в кэше (службы SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md).  
   
 ### <a name="query-designer"></a>Конструктор запросов  
  С помощью панели инструментов конструктора запросов создаются запросы, указывающие, какие данные следует извлечь с помощью подключения к данным. Отображаемая панель инструментов зависит от конструктора запросов, который связан с типом источника данных из подключения к данным.  
@@ -97,10 +97,9 @@ ms.lasthandoff: 08/09/2017
  Чтобы сохранить созданный запрос, на кнопке **Построитель отчетов** щелкните **Сохранить** или **Сохранить как**. Перейдите в соответствующую папку на сервере отчетов и сохраните определение общего набора данных. Общий набор данных будет доступен для других пользователей только после его сохранения на сервере отчетов.  
   
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Фильтр, группы и сортировка данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Параметры отчета &#40; Построитель отчетов и конструктор отчетов &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   
-

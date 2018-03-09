@@ -2,11 +2,13 @@
 title: "Создание резервной копии журнала транзакций (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 02/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - backing up transaction logs [SQL Server], SQL Server Management Studio
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
-caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "49"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: ae61a557b0496ac191c079e2419e948a8ed045bc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 41831fe1852600666f5f3cf370cbab675e723cca
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>Создание резервной копии журнала транзакций (SQL Server)
-  В этом разделе описано, как создать резервную копию журнала транзакций в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или PowerShell.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описано, как создать резервную копию журнала транзакций в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] или PowerShell.  
   
    
 ##  <a name="Restrictions"></a> Ограничения  
@@ -41,7 +42,7 @@ ms.lasthandoff: 09/27/2017
 -   По умолчанию каждая успешная операция резервного копирования добавляет запись в журнал ошибок служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и в журнал системных событий. Если создание резервной копии журналов производится очень часто, сообщения об успешном завершении накапливаются очень быстро. Это приводит к увеличению журналов ошибок, затрудняя поиск других сообщений. Если работа существующих скриптов не зависит от этих записей, то их можно отключить с помощью флага трассировки 3226. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
   
-##  <a name="Permissions"></a> Разрешения  
+##  <a name="Permissions"></a> Permissions  
 **Перед началом убедитесь в наличии необходимых разрешений!** 
 
 Нужные разрешения BACKUP DATABASE и BACKUP LOG назначаются по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator** .  
@@ -115,7 +116,7 @@ ms.lasthandoff: 09/27/2017
   
          Резервное копирование заключительного фрагмента журнала выполняется после сбоя, чтобы предотвратить потерю сделанной работы. Резервное копирование активного журнала (резервное копирование заключительного фрагмента журнала) следует выполнять как после сбоя, так и перед началом восстановления базы данных, а также при сбое базы данных-получателя. Выбор этого параметра равносилен применению параметра NORECOVERY в инструкции BACKUP LOG языка Transact-SQL. Дополнительные сведения о резервных копиях заключительного фрагмента журнала см. в разделе [Резервные копии заключительного фрагмента журнала (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
-16. При резервном копировании на накопитель на магнитной ленте (как указано в разделе **Назначение** страницы **Общие**) активен параметр **Выгрузить ленту после резервного копирования**. Щелкните этот параметр, чтобы активировать параметр **Перемотать ленту перед выгрузкой** .  
+16. При резервном копировании на накопитель на магнитной ленте (как указано в разделе **Назначение** страницы **Общие** ) активен параметр **Выгрузить ленту после резервного копирования** . Щелкните этот параметр, чтобы активировать параметр **Перемотать ленту перед выгрузкой** .  
   
 17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] и более поздние версии поддерживают [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). По умолчанию сжатие резервных копий зависит от значения параметра конфигурации сервера **backup-compression default** . Однако независимо от текущего значения по умолчанию на уровне сервера можно сжать резервные копии, установив параметр **Сжимать резервные копии**, или отказаться от сжатия резервных копий, установив параметр **Не сжимать резервные копии**.  
   
@@ -144,13 +145,13 @@ ms.lasthandoff: 09/27/2017
   
     -   Устройство резервного копирования, на которое записывается резервная копия журнала транзакций.  
   
-###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
+###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
   
 > **ВАЖНО!** В этом примере используется база данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , которая опирается на простую модель восстановления. Чтобы разрешить создание резервных копий журналов, перед созданием полной резервной копии база данных должна быть настроена на использование модели полного восстановления. Дополнительные сведения см. в разделе [Просмотр или изменение модели восстановления базы данных (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
  В этом примере создается резервная копия журнала транзакций для базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на созданном ранее устройстве резервного копирования, имеющая имя `MyAdvWorks_FullRM_log1`.  
   
-```tsql  
+```sql  
 BACKUP LOG AdventureWorks2012  
    TO MyAdvWorks_FullRM_log1;  
 GO  
@@ -186,4 +187,3 @@ GO
  [Полные резервные копии файлов (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md)  
   
   
-

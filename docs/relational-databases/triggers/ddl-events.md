@@ -2,9 +2,12 @@
 title: "DDL-события | Документация Майкрософт"
 ms.custom: 
 ms.date: 11/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-ddl
 ms.tgt_pltfrm: 
@@ -14,19 +17,20 @@ helpviewer_keywords:
 - DDL triggers, events
 - events [SQL Server], DDL
 ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 411eb6c824b073818fbda216ba801d34ee5bcf0b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 9ab16db537c4033f0dd68ddd457e9e1a341a7449
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ddl-events"></a>DDL-события
-  В следующих таблицах перечислены DDL-события, которые могут быть использованы для срабатывания триггера DDL или уведомления о событиях. Обратите внимание, что каждое событие соответствует инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] или хранимой процедуре, причем синтаксис инструкции при этом включает в себя символ подчеркивания (_) между ключевыми словами.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+В следующих таблицах перечислены DDL-события, которые могут быть использованы для срабатывания триггера DDL или уведомления о событиях. Обратите внимание, что каждое событие соответствует инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] или хранимой процедуре, причем синтаксис инструкции при этом включает в себя символ подчеркивания (_) между ключевыми словами.  
   
 > [!IMPORTANT]  
 >  Системные хранимые процедуры, выполняющие операции, подобные операциям DDL, также запускают триггеры DDL и уведомления о событиях. Проверьте имеющиеся триггеры DDL и уведомления о событии, чтобы определить их ответы на выполняемые системные хранимые процедуры. Например, как инструкция CREATE TYPE, так и хранимая процедура **sp_addtype** приведут к инициации триггера DDL или уведомления о событии, создаваемом при наступлении события CREATE_TYPE.  
@@ -116,10 +120,9 @@ ms.lasthandoff: 06/22/2017
 |CREATE_SERVER_AUDIT_SPECIFICATION|ALTER_SERVER_AUDIT_SPECIFICATION|DROP_SERVER_AUDIT_SPECIFICATION|  
 |CREATE_WORKLOAD_GROUP|ALTER_WORKLOAD_GROUP|DROP_WORKLOAD_GROUP|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Триггеры DDL](../../relational-databases/triggers/ddl-triggers.md)   
  [Уведомления о событиях](../../relational-databases/service-broker/event-notifications.md)   
  [Группы DDL-событий](../../relational-databases/triggers/ddl-event-groups.md)  
   
   
-

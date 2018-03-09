@@ -2,11 +2,12 @@
 title: "Оценка размера кластеризованного индекса | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: SQL
+ms.prod_service: database-engine, sql-database
+ms.component: indexes
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,18 +23,21 @@ helpviewer_keywords:
 - designing databases [SQL Server], estimating size
 - calculating table size
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
-caps.latest.revision: 49
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ecae889b68740652ab237201bfad2cde58dd39b5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "49"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: af9ddff95b36fadee6dcd25d864ae77128fb6676
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Оценка размера кластеризованного индекса
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   Для оценки места, необходимого для хранения данных в кластеризованном индексе, можно использовать следующие шаги:  
   
 1.  Рассчитайте пространство, используемое для хранения данных на конечном уровне кластеризованного индекса.  
@@ -46,7 +50,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Укажите количество строк в новой таблице:  
   
-     ***Num_Rows***  = количество строк в таблице  
+     ***Num_Rows***  = число строк в таблице  
   
 2.  Укажите количество столбцов с фиксированной и изменяемой длиной, а также рассчитайте необходимый размер места для их хранения.  
   
@@ -89,7 +93,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Можно сочетать столбцы **varchar**, **nvarchar**, **varbinary**или **sql_variant** , в результате чего общая ширина определенной таблицы превысит 8 060 байт. Длина каждого из этих столбцов должна быть в пределах 8 000 байт для столбцов типа **varchar**, **varbinary**или **sql_variant** и 4 000 байт для столбцов типа **nvarchar** . Тем не менее их общая ширина в таблице может превышать предел в 8 060 байт.  
   
-     Если в таблице нет столбцов переменной длины, присвойте параметру ***Variable_Data_Size*** значение 0.  
+     Если в таблице нет столбцов переменной ширины, присвойте параметру ***Variable_Data_Size*** значение 0.  
   
 6.  Вычислите общий размер строк:  
   

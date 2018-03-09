@@ -2,11 +2,13 @@
 title: "Экземпляры зеркального отображения баз данных и отказоустойчивых кластеров (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - database mirroring [SQL Server], failover
 - high-availability mode [SQL Server]
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: e1ae46bb5ff40113cb61d27882c86f84c87ef546
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d918c018425f0778b729a2a348400b7fbeaa07e7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Экземпляры зеркального отображения баз данных и отказоустойчивых кластеров (SQL Server)
-  Отказоустойчивый кластер представляет собой сочетание одного или нескольких физических дисков в группе кластеров службы кластеров [!INCLUDE[msCoName](../../includes/msconame-md.md)] , называемой группой ресурсов, которые являются узлами-участниками кластера. Группа ресурсов настраивается как экземпляр кластера отработки отказа, на котором запускается экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Экземпляр кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистрируется в сети как одиночный компьютер, при этом он обладает функциональными возможностями, обеспечивающими отработку отказа с одного узла на другой, если один из узлов становится недоступным. Дополнительные сведения см. в разделе [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Отказоустойчивый кластер представляет собой сочетание одного или нескольких физических дисков в группе кластеров службы кластеров [!INCLUDE[msCoName](../../includes/msconame-md.md)], называемой группой ресурсов, которые являются узлами-участниками кластера. Группа ресурсов настраивается как экземпляр кластера отработки отказа, на котором запускается экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Экземпляр кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистрируется в сети как одиночный компьютер, при этом он обладает функциональными возможностями, обеспечивающими отработку отказа с одного узла на другой, если один из узлов становится недоступным. Дополнительные сведения см. в разделе [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
  Отказоустойчивые кластеры обеспечивают поддержку высокого уровня доступности для всего экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в противовес зеркальному отображению базы данных, которое обеспечивает поддержку высокого уровня доступности для отдельной базы данных. Зеркальное отображение базы данных может работать между отказоустойчивыми кластерами, а также между отказоустойчивым кластером и некластеризованным узлом.  
   
@@ -71,7 +72,6 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>См. также:  
  [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Режимы работы зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
- [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
+ [Экземпляры отказоустойчивого кластера AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
   
-

@@ -1,13 +1,14 @@
 ---
 title: "Установка безопасных соединений в ADOMD.NET | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -16,17 +17,16 @@ helpviewer_keywords:
 - connections [ADOMD.NET]
 - security [ADOMD.NET]
 ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
-caps.latest.revision: 42
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6916e57fc0135fc5688c6569eaeb8341caa23b82
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d2cf974a0cc74127203b24b2e94acabec1e4339a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connections-in-adomdnet---establishing-secure-connections"></a>Connections in ADOMD.NET - установка безопасных соединений
   При использовании соединения в ADOMD.NET метод безопасности, используемый для соединения зависит от значения **ProtectionLevel** свойстве строки соединения, используемый при вызове <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> метод <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
@@ -80,9 +80,9 @@ ms.lasthandoff: 09/01/2017
   
 |Значение ProtectionLevel|Использование с протоколом HTTP или HTTPS|  
 |---------------------------|----------------------------|  
-|**None**|Нет|  
+|**None**|нет|  
 |**Соединить**|HTTP|  
-|**Целостность Pkt** или **PktIntegrity**|Нет|  
+|**Целостность Pkt** или **PktIntegrity**|нет|  
 |**Pkt Privacy** или **PktPrivacy**|HTTPS|  
   
 ### <a name="opening-a-secure-http-connection"></a>Открытие безопасного HTTP-соединения  
@@ -120,8 +120,7 @@ End Function
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Установление соединений в ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Промежуточные ВЫЧИСЛИТЕЛЬНЫЕ предложе
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - COMPUTE clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: a576bf81-8f3c-4ba1-817b-87e89a8da684
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9604b599bb7ce50bb0160553a38f0c002f5e611b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8f96448c095c9b2e818e413bcd131d11fa464782
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="intervening-shape-compute-clauses"></a>Промежуточные ВЫЧИСЛИТЕЛЬНЫЕ предложения фигуры
 Он допустим для внедрения одного или нескольких предложений COMPUTE между родительским и дочерним в команде параметризованные фигуры, как показано в следующем примере:  
@@ -43,8 +42,7 @@ SHAPE {select au_lname, state from authors} APPEND
 RELATE state TO PARAMETER 0)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример формирования данных](../../../ado/guide/data/data-shaping-example.md)   
  [Грамматика формальных фигуры](../../../ado/guide/data/formal-shape-grammar.md)   
- [Команды фигуры в целом](../../../ado/guide/data/shape-commands-in-general.md)
-
+ [Общие сведения о командах формирования данных](../../../ado/guide/data/shape-commands-in-general.md)

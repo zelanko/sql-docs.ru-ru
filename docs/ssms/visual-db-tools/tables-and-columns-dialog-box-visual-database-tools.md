@@ -3,29 +3,29 @@ title: "Диалоговое окно \"Таблицы и столбцы\" (ви
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vdt.dlgbox.tablesandcolumns
+f1_keywords: vdt.dlgbox.tablesandcolumns
 ms.assetid: 8cf27be1-e66d-4735-a428-9ab4b33af4f5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 34307dfeb1d1670ced8011d8f541143b1c1de42b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0be03d94210fc596bb0902ea130af731b1dadf92
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>Диалоговое окно «Таблицы и столбцы» (визуальные инструменты для баз данных)
-Это диалоговое окно используется для сопоставления первичного ключа одной таблицы с внешним ключом другой. Для доступа к этому диалоговому окну из меню **Конструктор таблиц** щелкните **Связи**. В диалоговом окне **Связи по внешнему ключу** щелкните поле **Спецификация таблиц и столбцов** , а затем щелкните многоточие **(…)** справа от свойства.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Это диалоговое окно используется для сопоставления первичного ключа одной таблицы с внешним ключом другой. Для доступа к этому диалоговому окну из меню **Конструктор таблиц** щелкните **Связи**. В диалоговом окне **Связи по внешнему ключу** щелкните поле **Спецификация таблиц и столбцов** , а затем щелкните многоточие **(…)** справа от свойства.  
   
 > [!NOTE]  
 > Если таблица опубликована для репликации, то изменения схемы следует проводить при помощи инструкции языка Transact-SQL [ALTER TABLE](http://msdn.microsoft.com/en-us/f1745145-182d-4301-a334-18f799d361d1) или объектов SMO. При изменении схемы с помощью конструктора таблиц или конструктора диаграмм баз данных конструктор пытается удалить и затем вновь создать таблицу. Но поскольку удалять опубликованные объекты нельзя, изменения схемы не будут применены.  
@@ -52,4 +52,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
 [Практическое руководство. Создание связи между таблицами (визуальные инструменты для баз данных)](http://msdn.microsoft.com/en-us/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
   
-

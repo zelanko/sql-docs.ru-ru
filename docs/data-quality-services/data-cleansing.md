@@ -2,27 +2,28 @@
 title: "Очистка данных | Microsoft Docs"
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "31"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: a20f02bf8c2e0c39c15e3b8209c43673fe697f28
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a7b606256ca38ee3dab0754904b365120de6a236
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="data-cleansing"></a>Очистка данных
+# <a name="data-cleansing"></a>Data Cleansing
   Очистка данных — это процесс анализа качества данных в источнике данных с выполняемым вручную утверждением или отклонением рекомендаций, даваемых системой, и внесением изменений в данные. Очистка данных в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) состоит из автоматического процесса, анализирующего соответствие данных знаниям из базы знаний, и интерактивного процесса, позволяющего диспетчеру данных проверять и изменять результаты автоматического процесса, чтобы обеспечить надлежащий результат очистки данных.  
   
  Диспетчер данных также может выполнять очистку данных в процессе обработки пакетов служб Integration Services. В этом случае диспетчер данных должен использовать компонент [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)], который автоматически выполняет очистку данных на основе существующей базы знаний. Дополнительные сведения см. в разделе [Преобразование "Очистка DQS"](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md).  
@@ -59,9 +60,9 @@ ms.lasthandoff: 09/09/2017
   
  В автоматическом процессе сведения о качестве данных отображаются в клиенте [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , который будет использоваться в интерактивном процессе очистки. Помимо поиска несоответствия синтаксическим правилам, службы DQS также используют эталонные данные и дополнительные алгоритмы для разделения данных по категориям в соответствии с *уровнем достоверности*. Уровень достоверности определяет экстент уверенности DQS в исправлении данных или создаваемых рекомендациях. Уровень достоверности зависит от следующих пороговых значений.  
   
--   Пороговое значение *автоматического исправления* , при превышении которого DQS предлагает изменение и вносит его, если диспетчер данных не отклонит изменение. Пороговое значение автоматического исправления вы можете задать на вкладке **Общие параметры** экрана **Конфигурация** . Дополнительные сведения см. в разделе [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   Пороговое значение *автоматического исправления* , при превышении которого DQS предлагает изменение и вносит его, если диспетчер данных не отклонит изменение. Пороговое значение автоматического исправления вы можете задать на вкладке **Общие параметры** экрана **Конфигурация** . Дополнительные сведения см. в статье [Настройка пороговых значений для очистки и сопоставления](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   Пороговое значение *автоматической рекомендации* , которое ниже порогового значения автоматического исправления. При его превышении DQS предлагает изменение и вносит его, если диспетчер утвердит изменение. Пороговое значение автоматической рекомендации вы можете задать на вкладке **Общие параметры** экрана **Конфигурация** . Дополнительные сведения см. в разделе [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   Пороговое значение *автоматической рекомендации* , которое ниже порогового значения автоматического исправления. При его превышении DQS предлагает изменение и вносит его, если диспетчер утвердит изменение. Пороговое значение автоматической рекомендации вы можете задать на вкладке **Общие параметры** экрана **Конфигурация** . Дополнительные сведения см. в статье [Настройка пороговых значений для очистки и сопоставления](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
  Любое значение с уровнем достоверности ниже порогового значения автоматической рекомендации оставляется DQS без изменений, если диспетчер данных не указывает изменение.  
   
@@ -113,4 +114,3 @@ ms.lasthandoff: 09/09/2017
  [Сопоставление данных](../data-quality-services/data-matching.md)  
   
   
-

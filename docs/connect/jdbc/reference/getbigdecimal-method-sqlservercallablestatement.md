@@ -3,29 +3,28 @@ title: "Метод getBigDecimal (SQLServerCallableStatement) | Документ
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerCallableStatement.getBigDecimal
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerCallableStatement.getBigDecimal
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: bc81b9a3-96ae-4c9c-b6c4-abd7b83175e9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ddce953aefd462a0b67124e751f5c32722a5dd64
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5829722520386fe246b1313c8f88cfb34f121b39
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getbigdecimal-method-sqlservercallablestatement"></a>Метод getBigDecimal (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,4 +45,3 @@ ms.lasthandoff: 09/09/2017
  [Класс SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   
-

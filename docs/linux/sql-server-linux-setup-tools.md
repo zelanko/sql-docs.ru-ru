@@ -1,25 +1,29 @@
 ---
 title: "Установка средств командной строки SQL Server в Linux | Документы Microsoft"
-description: "В этом разделе описывается установка средства SQL Server в Linux."
+description: "В этой статье описывается установка средства SQL Server в Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
+ms.openlocfilehash: 92b04366f3dbcba517c5c82b0e7d65e862890cc3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 130da2409070f0acfda0bf78fcf2c4326bbeec92
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Установите sqlcmd и bcp средства командной строки SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Следующие шаги установки программы командной строки, драйверы Microsoft ODBC и их зависимости. **Mssql средства** пакет содержит:
 
@@ -34,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 - [macOS](#macos)
 - [Docker](#docker)
 
-В этом разделе описывается установка средств командной строки. Если вам нужны дополнительные примеры использования **sqlcmd** или **bcp**, в разделе [ссылки](#next-steps) в конце этого раздела.
+В этой статье описывается установка средства командной строки. Если вам нужны дополнительные примеры использования **sqlcmd** или **bcp**, в разделе [ссылки](#next-steps) в конце этого раздела.
 
 ## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>Установить средства на RHEL 7
 
@@ -176,15 +180,18 @@ ms.lasthandoff: 08/02/2017
    source ~/.bashrc
    ```
 
-## <a id="macos"></a>Установить средства на macOS
+## <a id="macos"></a> Установить средства на macOS
 
 Предварительный просмотр **sqlcmd** и **bcp** теперь доступен на macOS. Дополнительные сведения см. в разделе [объявления](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/).
+
+*Установка [Homebrew](https://brew.sh) при отсутствии уже:*
+
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 Чтобы установить средства для Mac El Capitan и Сьерра, используйте следующие команды:
 
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-#brew untap microsoft/mssql-preview if you installed the preview version 
+# brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
 brew install --no-sandbox mssql-tools
@@ -192,7 +199,7 @@ brew install --no-sandbox mssql-tools
 #ACCEPT_EULA=y brew install --no-sandbox mssql-tools
 ```
 
-## <a id="docker"></a>Docker
+## <a id="docker"></a> Docker
 
 Начиная с SQL Server 2017 г CTP 2.0, средства командной строки SQL Server включаются в образе Docker. При присоединении к образу с интерактивной командной строки средства можно выполнять локально.
 
@@ -257,7 +264,7 @@ brew install --no-sandbox mssql-tools
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Пример использования **sqlcmd** для подключения к SQL Server и создать базу данных, см. один из следующих быстрого запуска учебники:
+Пример использования **sqlcmd** для подключения к SQL Server и создать базу данных, см. следующие примеры использования:
 
 - [Установите на Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Установите на SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
@@ -265,4 +272,3 @@ brew install --no-sandbox mssql-tools
 - [Запустите на Docker](quickstart-install-connect-ubuntu.md)
 
 Пример использования **bcp** для массового импорта и экспорта данных, в разделе [массового копирования данных в SQL Server в Linux](sql-server-linux-migrate-bcp.md).
-

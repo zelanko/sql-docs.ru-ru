@@ -3,10 +3,12 @@ title: "Подраздел ODBC | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - subkeys [ODBC], ODBC subkey
 - ODBC subkey [ODBC]
 ms.assetid: f9534144-8f42-4946-b0fb-638e9dcde9c8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bf33666d0bf8c02b91b26d94f72ec2883e4cba9d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c90ca7ef439d1f12df7ddb18e95dea883b7142af
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-subkey"></a>Подраздел ODBC
 Параметры трассировки ODBC определенные значения в подразделе ODBC. Эти параметры задаются через «трассировка» диалогового окна Администратор источников данных ODBC, отображаемого элементом **SQLManageDataSources**. Подраздел ODBC является необязательным. Формат этих значений является, как показано в следующей таблице.  
@@ -48,4 +49,3 @@ Trace : REG_SZ : 1
 TraceFile : REG_SZ : C:\ODBC.LOG  
   
 ```
-

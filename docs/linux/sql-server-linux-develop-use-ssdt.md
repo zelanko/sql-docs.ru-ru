@@ -6,23 +6,26 @@ ms.author: erickang
 manager: jroth
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.custom: H1Hack27Feb2017
+ms.custom: sql-linux
 ms.workload: On Demand
+ms.openlocfilehash: 0ff7526517be55100400da6ac84b6f7c927fb50e
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 9a639559de35573c7fb6dfdcc98c9d9680312659
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Используйте Visual Studio для создания баз данных для SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server Data Tools (SSDT) примет мощные среды разработки и база данных жизненного цикла управление Жизненным Visual Studio для SQL Server в Linux. Можно разрабатывать, создания, тестирования и публикации базы данных из проекта системы управления версиями, так же, как разрабатывать код вашего приложения.
+SQL Server Data Tools (SSDT) примет мощные среды разработки и база данных жизненного цикла управление Жизненным Visual Studio для SQL Server в Linux. Можно разрабатывать, создания, тестирования и публикации базы данных из проекта, контролируемого системой управления версиями, так же, как разрабатывать код вашего приложения.
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Установите Visual Studio и SQL Server Data Tools
 
@@ -100,11 +103,11 @@ SQL Server Data Tools (SSDT) примет мощные среды разрабо
 
 5. Проверьте состояние публикации **операции Data Tools** окна.
 
-6. Нажмите кнопку **Reulst представление** или **просмотреть сценарий** для получения подробных сведений о databsae публикации результат на сервере SQL Server в Linux.
+6. Нажмите кнопку **Reulst представление** или **просмотреть сценарий** для получения подробных сведений о базе данных публикации результат на сервере SQL Server в Linux.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
-Успешно создана новая база данных на экземпляре SQL Server в Linux и знакомства с основами разработки базы данных с проектом базы данных системы управления версиями.
+Успешно создана новая база данных на экземпляре SQL Server в Linux и знакомства с основами разработки базы данных с проектом базы данных, контролируемого системой управления версиями.
 
 ## <a name="next-steps"></a>Следующие шаги
 
@@ -117,4 +120,3 @@ SQL Server Data Tools (SSDT) примет мощные среды разрабо
 [документы MSDN по SSDT]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
 [учебника: написание инструкций Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
 [Справочник по Transact-SQL (компонент Database Engine)]:https://msdn.microsoft.com/library/bb510741.aspx
-

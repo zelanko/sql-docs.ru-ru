@@ -2,17 +2,16 @@
 title: "Предоставление разрешений структурам интеллектуального анализа данных и модели (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.miningmodels.f1
+f1_keywords: sql13.asvs.roledesignerdialog.miningmodels.f1
 helpviewer_keywords:
 - data mining [Analysis Services], security
 - permissions [Analysis Services], mining models
@@ -22,20 +21,19 @@ helpviewer_keywords:
 - user access rights [Analysis Services], mining structures
 - user access rights [Analysis Services], mining models
 ms.assetid: a0008004-e2b7-47db-acad-5fe7e12b130f
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d94d769d1eb7434a918950e2c56c87f7241d77d9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 12b69f08e0c56b614c2e181ca3cb62a24496e2b9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>Предоставление разрешений структурам интеллектуального анализа данных и моделям интеллектуального анализа данных (службы Analysis Services)
-  По умолчанию, только администратор сервера службы Analysis Services обладает разрешениями на просмотр интеллектуального анализа данных или моделей интеллектуального анализа данных в базе данных. Следуйте инструкциям, приведенным ниже, для предоставления разрешений пользователям без прав администратора.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]По умолчанию только администратор сервера служб Analysis Services имеет разрешения на просмотр интеллектуального анализа данных или моделей интеллектуального анализа данных в базе данных. Следуйте инструкциям, приведенным ниже, для предоставления разрешений пользователям без прав администратора.  
   
 ## <a name="set-permissions-to-access-a-mining-structure"></a>Установка разрешений для доступа к интеллектуальному анализу данных  
   
@@ -73,11 +71,10 @@ ms.lasthandoff: 09/01/2017
 > [!NOTE]  
 >  По умолчанию выдача запросов расширений интеллектуального анализа данных с использованием OPENROWSET отключена.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Предоставление прав администратора сервера для экземпляра служб Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Предоставление разрешений кубу или модели (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
  [Предоставление настраиваемого доступа к измерению данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
  [Предоставление настраиваемого доступа к данным ячейки (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   
-

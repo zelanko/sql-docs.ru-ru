@@ -2,42 +2,38 @@
 title: "Элемент CellInfo (XML для Аналитики) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- CellInfo Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: CellInfo Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.cellinfo
 - http://schemas.microsoft.com/analysisservices/2003/engine#CellInfo
 - urn:schemas-microsoft-com:xml-analysis#CellInfo
-helpviewer_keywords:
-- CellInfo element
+helpviewer_keywords: CellInfo element
 ms.assetid: 8b6420f1-e9a7-4975-b580-1439fa11f5ca
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b2e26f0b4adb6872fed90fcab1a84b2ff83c90a1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3a7b38201d5ba5c051cfacfb139ea52a6b93fb09
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cellinfo-element-xmla"></a>Элемент CellInfo (XML для аналитики)
-  Представляет метаданные ячейки, содержащиеся в родительском [OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Представляет метаданные ячейки, содержащиеся в родительском [OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,7 +50,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -67,7 +63,7 @@ ms.lasthandoff: 09/01/2017
 |Родительские элементы|[OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)|  
 |Дочерние элементы|Одно или несколько определений свойств ячейки|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **CellInfo** элемент содержит коллекцию свойств ячейки для ячеек, включенных в многомерный набор данных, возвращаемый **корневой** элемента с помощью **MDDataSet**тип данных. Каждое свойство ячейки в **CellInfo** отдельным элементом XML, каждый из которых определяется элемент **имя** атрибута и **тип** атрибута. **Имя** свойства ячейки соответствует атрибуту имя OLE DB для OLAP свойства ячейки, представленного элементом XML и **тип** атрибут представляет тип данных XML, ячейки свойство. Имя XML-элемента используется для идентификации значения свойства ячейки у ячеек, содержащихся в **CellData** элемент **корневой** элемента.  
   
  Следующий синтаксис описывает определение свойства ячейки:  
@@ -98,4 +94,3 @@ ms.lasthandoff: 09/01/2017
  [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

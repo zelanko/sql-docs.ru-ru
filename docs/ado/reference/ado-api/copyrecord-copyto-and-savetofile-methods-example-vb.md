@@ -3,7 +3,7 @@ title: "CopyRecord CopyTo и пример SaveToFile методы (Visual Basic)
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - SaveToFile method [ADO], Visual Basic example
 - CopyTo method [ADO], Visual Basic example
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 624484f7783449fa0793ee934217a3ae76dba865
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f7e0bdba854ce12456b80a7f42b29f0b6889e9d2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord CopyTo и пример SaveToFile методы (Visual Basic)
 В этом примере демонстрируется создание копии файла с помощью [поток](../../../ado/reference/ado-api/stream-object-ado.md) или [записи](../../../ado/reference/ado-api/record-object-ado.md) объектов. Одной копии веб-папку для публикации в Интернете. Включить других свойств и методов, показанных [тип потока](../../../ado/reference/ado-api/type-property-ado-stream.md), **откройте**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), и [откройте запись](../../../ado/reference/ado-api/open-method-ado-record.md).  
@@ -132,7 +131,7 @@ End Sub
 'EndCopyRecordVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод CopyRecord (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)   
  [CopyTo-метод (ADO)](../../../ado/reference/ado-api/copyto-method-ado.md)   
  [Loadfromfile-метод (ADO)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)   
@@ -141,5 +140,4 @@ End Sub
  [Объект записи (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Метод SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)   
  [Объект потока (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
- [Свойство Type (поток ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)
-
+ [Свойство Type (объект Stream ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)

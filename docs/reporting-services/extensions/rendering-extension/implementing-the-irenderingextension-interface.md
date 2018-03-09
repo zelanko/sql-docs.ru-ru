@@ -1,32 +1,31 @@
 ---
-title: "Реализация интерфейса IRenderingExtension | Документы Microsoft"
+title: "Реализация интерфейса IRenderingExtension | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - IRenderingExtension interface
 - rendering extensions [Reporting Services], IRenderingExtension interface
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
-caps.latest.revision: 43
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "43"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 60eac755180faaba012c7fbd14001fcb66a37975
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: cfb664412f4879ba692aa9b4c1ddd24090e39eae
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>Реализация интерфейса IRenderingExtension
   Модуль подготовки отчетов извлекает результаты из определения отчета, объединенного с реальными данными, и преобразует результирующие данные в формат, готовый к применению. Преобразование объединенных данных и форматирование осуществляется при помощи класса среды CLR, который реализует интерфейс <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>. Модель объекта преобразуется в формат вывода, который предназначен для средства просмотра, принтера или другого приложения вывода.  
@@ -44,20 +43,20 @@ ms.lasthandoff: 08/12/2017
 ## <a name="render-method"></a>Метод Render  
  Метод <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A> содержит аргументы, представляющие следующие объекты.  
   
--   *Отчетов* , которую требуется отобразить. Данный объект содержит свойства, данные и сведения о макете отчета. Report — это корневой узел дерева модели объектов отчета.  
+-   *report* — отчет, который необходимо подготовить. Данный объект содержит свойства, данные и сведения о макете отчета. Report — это корневой узел дерева модели объектов отчета.  
   
--   *ServerParameters* , содержит объект словаря строк с параметрами для сервера отчетов, если таковые имеются.  
+-   Параметр *ServerParameters* одержит объект словаря строк с параметрами сервера отчетов (если такие существуют).  
   
--   *DeviceInfo* параметр, который содержит настройки устройств. Дополнительные сведения см. в разделе [передача настроек сведений об устройстве модулям подготовки отчетов](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
+-   Параметр *deviceInfo* содержит параметры устройства. Дополнительные сведения см. разделе [Передача параметров сведений об устройстве модулям подготовки отчетов](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
--   *ClientCapabilities* параметра, который содержит <xref:System.Collections.Specialized.NameValueCollection> объект словаря, который содержит сведения о клиенте, к которому выполняется подготовка к просмотру.  
+-   Параметр *clientCapabilities* содержит объект словаря <xref:System.Collections.Specialized.NameValueCollection> со сведениями о клиенте, для которого выполняется отрисовка.  
   
--   *RenderProperties* , содержащий сведения о результате подготовки к просмотру.  
+-   Параметр *RenderProperties* содержит сведения о результате отрисовки.  
   
--   *CreateAndRegisterStream* является функция-делегат, вызываемый для получения потока для подготовки к просмотру в.  
+-   Параметр *createAndRegisterStream* — это функция-делегат, которую можно вызвать для получения потока, в который будет осуществляться отрисовка.  
   
 ### <a name="deviceinfo-parameter"></a>Параметр deviceInfo  
- *DeviceInfo* параметром подготовки к просмотру, не параметры отчета. Данные параметры передаются модулю подготовки отчетов. *DeviceInfo* значения преобразуются в <xref:System.Collections.Specialized.NameValueCollection> объекта на сервере отчетов. Элементы в *deviceInfo* рассматриваются как значения без учета регистра. Если запрос отрисовки пришел через URL-адрес доступ, параметры URL-адреса в форме `rc:key=value` преобразуются в пары "ключ значение" *deviceInfo* объект словаря. Код обнаружения браузера также поставляет следующие элементы в *clientCapabilities* словарь: EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, тип и AcceptLanguage. Любое имя и значение в *deviceInfo* пропущен параметр, который не опознается модулем подготовки отчетов. В следующем образце кода показывается образец метода <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>, возвращающего значки:  
+ Параметр *deviceInfo* содержит параметры отрисовки, а не параметры отчета. Данные параметры передаются модулю подготовки отчетов. Значения *deviceInfo* преобразуются сервером отчетов в объект <xref:System.Collections.Specialized.NameValueCollection>. Элементы в параметре *deviceInfo* рассматриваются как значения без учета регистра. Если запрос на отрисовку поступил в результате доступа по URL-адресу, то параметры URL-адреса в формате `rc:key=value` преобразовываются в пары "ключ-значение" в объекте словаря *deviceInfo*. Код обнаружения браузера также предоставляет следующие элементы в словаре *clientCapabilities*: EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, Type и AcceptLanguage. Любая пара "имя-значение" в параметре *deviceInfo*, которую не удается распознать модулю подготовки отчетов, не учитывается. В следующем образце кода показывается образец метода <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>, возвращающего значки:  
   
 ```csharp  
 public void GetRenderingResource (CreateStream createStreamCallback, NameValueCollection deviceInfo)  
@@ -80,11 +79,10 @@ public void GetRenderingResource (CreateStream createStreamCallback, NameValueCo
  Метод <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.RenderStream%2A> подготавливает к просмотру определенный поток из отчета. Все потоки создаются при начальном вызове метода <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A>, однако изначально потоки не возвращаются клиенту. Данный метод используется для вторичных потоков (например, при подготовке отчетов в формате HTML) или дополнительных страниц многостраничного модуля подготовки отчетов (например, модуль подготовки изображений или модуль подготовки EMF).  
   
 ## <a name="getrenderingresource-method"></a>Метод GetRenderingResource  
- Метод <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> получает данные, не выполняя полную подготовку отчета. В некоторых случаях отчету необходимы данные, которые не требуют подготовки отчета. Например, если нужно получить значок, связанный с модулем подготовки отчетов, используйте *deviceInfo* параметр, содержащий единственный тег  **\<значок >**. В подобных случаях можно использовать метод <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>.  
+ Метод <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> получает данные, не выполняя полную подготовку отчета. В некоторых случаях отчету необходимы данные, которые не требуют подготовки отчета. Например, если нужно получить значок, связанный с модулем подготовки отчетов, следует использовать параметр *deviceInfo*, содержащий единственный тег **\<Icon>**. В подобных случаях можно использовать метод <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>.  
   
 ## <a name="see-also"></a>См. также:  
  [Реализация модуля подготовки отчетов](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
  [Общие сведения о модулях подготовки отчетов](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)  
   
   
-

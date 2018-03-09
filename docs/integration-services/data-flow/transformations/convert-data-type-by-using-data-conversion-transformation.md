@@ -1,10 +1,13 @@
 ---
-title: "Преобразовать тип данных с помощью преобразования «Конвертация данных» | Документы Microsoft"
+title: "Преобразование типа данных с помощью преобразования \"Конвертация данных\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,19 +17,18 @@ helpviewer_keywords:
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 3a6de227fc2fd0e93abfc9e8ac5300dbf0a137ac
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ebd3fc40649e77cfb42b291132f6e1168381c427
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="convert-data-type-by-using-data-conversion-transformation"></a>Преобразовать тип данных с помощью преобразования «Конвертация данных»
+# <a name="convert-data-type-by-using-data-conversion-transformation"></a>Преобразование типа данных с помощью преобразования "Конвертация данных"
   Чтобы добавить и настроить преобразование «Конвертация данных», пакет должен обладать как минимум одной задачей потока данных и одним источником.  
   
 ### <a name="to-convert-data-to-a-different-data-type"></a>Произведение конвертации данных в другой тип данных  
@@ -58,12 +60,11 @@ ms.lasthandoff: 08/03/2017
   
 12. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также  
- [Преобразование «Конвертация данных»](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)   
+## <a name="see-also"></a>См. также:  
+ [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Пути служб Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
  [Типы данных служб Integration Services](../../../integration-services/data-flow/integration-services-data-types.md)   
  [Задача потока данных](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

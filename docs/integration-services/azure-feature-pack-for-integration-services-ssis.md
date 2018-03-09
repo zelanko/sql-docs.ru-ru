@@ -1,11 +1,13 @@
 ---
-title: "Пакет дополнительных компонентов Azure для служб Integration Services (SSIS) | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Пакет дополнительных компонентов Azure для служб Integration Services (SSIS) | Документы Майкрософт"
+ms.custom: 
 ms.date: 08/22/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,29 +16,28 @@ f1_keywords:
 - SQL13.SSIS.AZURE.F1
 - SQL14.SSIS.AZURE.F1
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
-ms.openlocfilehash: d4204ba56e515025bed3ae3bf8e7a77d6da471be
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: b05c3b5f768abc35f7a374376a5cb89012f68337
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Пакет дополнительных компонентов Azure для служб Integration Services (SSIS)
-Пакет дополнительных компонентов SQL Server Integration Services (SSIS) для Azure — это расширение, предоставляет компоненты, перечисленные на этой странице для служб SSIS для подключения к службам Azure, передачи данных между Azure и локальными источниками данных и обработки данных, хранящихся в Azure.
+Пакет дополнительных компонентов Azure для служб SQL Server Integration Services (SSIS) — это дополнение, которое предоставляет перечисленные на этой странице компоненты для подключения служб SSIS к Azure, передачи данных между Azure и локальными источниками данных и обработки данных, хранящихся в Azure.
 
-[![Загрузите пакет компонентов служб SSIS для Azure](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=54798) **загрузки**
+[![Скачать пакет дополнительных компонентов служб SSIS для Azure](../analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798) **Скачать**
 
-- Для SQL Server 2017 г - [Microsoft SQL Server 2017 г Integration Services пакета дополнительных компонентов для Azure](https://www.microsoft.com/download/details.aspx?id=54798)
-- Для SQL Server 2016 — [Microsoft SQL Server 2016 Integration Services пакета дополнительных компонентов для Azure](https://www.microsoft.com/download/details.aspx?id=49492)
-- Для SQL Server 2014 — [Microsoft SQL Server 2014 Integration Services пакета дополнительных компонентов для Azure](https://www.microsoft.com/en-us/download/details.aspx?id=47366)
-- Для SQL Server 2012 — [Microsoft SQL Server 2012 Integration Services пакета дополнительных компонентов для Azure](https://www.microsoft.com/en-us/download/details.aspx?id=47367)
+- Для SQL Server 2017: [Пакет дополнительных компонентов служб Microsoft SQL Server Integration Services 2017 для Azure](https://www.microsoft.com/download/details.aspx?id=54798)
+- Для SQL Server 2016: [Пакет дополнительных компонентов служб Microsoft SQL Server Integration Services 2016 для Azure](https://www.microsoft.com/download/details.aspx?id=49492)
+- Для SQL Server 2014: [Пакет дополнительных компонентов служб Microsoft SQL Server Integration Services 2014 для Azure](https://www.microsoft.com/download/details.aspx?id=47366)
+- Для SQL Server 2012: [Пакет дополнительных компонентов служб Microsoft SQL Server Integration Services 2012 для Azure](https://www.microsoft.com/download/details.aspx?id=47367)
 
-## <a name="components-in-the-feature-pack"></a>Компоненты в пакете дополнительных компонентов
+## <a name="components-in-the-feature-pack"></a>Компоненты в составе пакета дополнительных компонентов
 -   Диспетчеры соединений
 
     -   [Диспетчер подключений службы хранилища Azure](../integration-services/connection-manager/azure-storage-connection-manager.md)
@@ -45,7 +46,7 @@ ms.lasthandoff: 08/30/2017
     
     -   [Диспетчер подключений Azure Data Lake Store](../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
     
-    -   [Диспетчер соединений диспетчер ресурсов Azure](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
+    -   [Диспетчер подключений Azure Resource Manager](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
     
     -   [Диспетчер подключений Azure HDInsight](../integration-services/connection-manager/azure-hdinsight-connection-manager.md)
 
@@ -65,7 +66,7 @@ ms.lasthandoff: 08/30/2017
     
     -   [Задача отправки в хранилище данных Azure SQL](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
-    -   [Задача файловой системы для хранилища Озера данных Azure](../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
+    -   [Задача «Файловая система» для Azure Data Lake](../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
 
 -   Компоненты потока данных
 
@@ -77,15 +78,15 @@ ms.lasthandoff: 08/30/2017
     
     -   [Цель Azure Data Lake Store](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   BLOB-объектов Azure & ADLS файл перечислителя. В разделе [контейнер цикла Foreach](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
+-   Перечислитель BLOB-объектов Azure и файлов ADLS. См. раздел [Контейнер "цикл по каждому элементу"](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296).
 
 ## <a name="download-the-feature-pack"></a>Скачивание пакета дополнительных компонентов
- Загрузите SQL Server Integration Services (SSIS) пакете дополнительных компонентов для Azure.
+ Скачайте пакет дополнительных компонентов SQL Server Integration Services (SSIS) для Azure.
  
-- [Службы SSIS пакет дополнительных компонентов для Azure](http://go.microsoft.com/fwlink/?LinkID=626967) для SQL Server 2016
-- [Службы SSIS пакет дополнительных компонентов для Azure](https://www.microsoft.com/en-us/download/details.aspx?id=54798) для[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+- [Пакет дополнительных компонентов SSIS для Azure](http://go.microsoft.com/fwlink/?LinkID=626967) для SQL Server 2016
+- [Пакет дополнительных компонентов SSIS для Azure](https://www.microsoft.com/download/details.aspx?id=54798) для [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
  Перед установкой этого пакета необходимо установить следующие компоненты:
 
 -   службы SQL Server Integration Services
@@ -117,4 +118,3 @@ ms.lasthandoff: 08/30/2017
 
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
   
-

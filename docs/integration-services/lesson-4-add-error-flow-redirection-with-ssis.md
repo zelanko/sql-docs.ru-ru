@@ -1,10 +1,13 @@
 ---
-title: "Занятие 4: Добавление перенаправления потока ошибок с помощью служб SSIS | Документы Microsoft"
+title: "Занятие 4. Добавление перенаправления потока ошибок с помощью служб SSIS | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cfe3634566a7ede28e3c1f5640cfe6e4caa1c351
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 48ed42543041f88519f106d8d9e3dcf50392799b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Занятие 4. Добавление перенаправления потока ошибок с помощью служб SSIS
 Для обработки ошибок, которые могут возникать в процессе преобразования, в службах [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] можно указать, как должны обрабатываться данные отдельных компонентов и столбцов, недоступные для преобразования. Можно проигнорировать ошибки в определенных столбцах, перенаправить всю строку с ошибкой или просто завершить работу компонента с ошибкой. По умолчанию для всех компонентов в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] указано завершение работы при возникновении ошибки. Завершение работы компонента с ошибкой, в свою очередь, приводит к сбою в работе пакета и остановке дальнейшей обработки.  
@@ -41,19 +43,18 @@ ms.lasthandoff: 08/03/2017
 ## <a name="tasks-in-lesson"></a>Задачи занятия  
 Это занятие содержит следующие задачи.  
   
--   [Шаг 1: Копирование пакета занятия 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
+-   [Шаг 1. Копирование пакета занятия 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
--   [Шаг 2: Создание поврежденного файла](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
+-   [Этап 2. Создание поврежденного файла](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   
--   [Шаг 3: Добавление перенаправления потока ошибок](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
+-   [Шаг 3. Добавление перенаправления потока ошибок](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
--   [Шаг 4: Добавление назначения «неструктурированный файл»](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
+-   [Шаг 4. Добавление назначения «Неструктурированный файл»](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
   
--   [Шаг 5: Проверка учебного пакета занятия 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+-   [Шаг 5. Проверка учебного пакета, созданного на занятии 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Начало занятия  
-[Шаг 1: Копирование пакета занятия 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
+[Шаг 1. Копирование пакета занятия 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
   
   
-

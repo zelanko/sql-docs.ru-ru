@@ -1,10 +1,13 @@
 ---
-title: "Шаг 5: Добавление и настройка неструктурированного файла источника | Документы Microsoft"
+title: "Шаг 5. Добавление и настройка источника неструктурированных файлов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2c56b634f36e69e06e03e0206cd70d841f4682ea
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d8f12346caf8cee8dfbcdb6f20d4f4afa00dfd7d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-5---adding-and-configuring-the-flat-file-source"></a>Занятие 1-5-Добавление и настройка источника неструктурированных файлов
+# <a name="lesson-1-5---adding-and-configuring-the-flat-file-source"></a>Занятие 1–5. Добавление и настройка источника неструктурированных файлов
 В этой задаче рассматривается добавление к пакету и настройка источника неструктурированных файлов. Источник неструктурированных файлов представляет собой компонент потока данных, использующий метаданные, определенные диспетчером соединений с  неструктурированными файлами для описания формата и структуры данных, извлекаемых из неструктурированного файла в процессе преобразования. Источник неструктурированных файлов можно настроить для получения данных из единичного неструктурированного файла путем определения формата этого файла, который предоставляется диспетчером соединений с неструктурированными файлами.  
   
 В этом учебнике будет настроен источник неструктурированных файлов, пользующийся ранее созданным диспетчером соединения **Образец данных источника неструктурированного файла** .  
@@ -58,4 +60,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

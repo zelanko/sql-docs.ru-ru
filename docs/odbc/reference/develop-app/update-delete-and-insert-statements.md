@@ -3,8 +3,11 @@ title: "UPDATE, DELETE и INSERT инструкции | Документы Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -16,17 +19,16 @@ helpviewer_keywords:
 - INSERT [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 592d135ccf66f8a9fde2cc064a51dc25617cf127
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b150288c113b1aebf92abedbd6f7eabd0b4b7d24
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE, DELETE и инструкций INSERT
 Приложения на основе SQL внесения изменений в таблицы, выполнив **обновление**, **удаление**, и **вставить** инструкции. Эти инструкции являются частью уровень соответствия грамматики минимальную SQL и должны поддерживаться все драйверы и источники данных.  
@@ -43,9 +45,9 @@ ms.lasthandoff: 09/09/2017
   
  **УДАЛИТЬ из** *имя таблицы*[**ГДЕ** *условие поиска*]  
   
- **INSERT INTO** *имя таблицы*[**(***идентификатор столбца* [**,** *столбецидентификаторов*] ... **)**]  
+ **INSERT INTO** *имя таблицы*[**(*** идентификатор столбца* [**,** *идентификатор столбца*]... **)**]  
   
- {*спецификация запроса* &#124; **Значения (***вставки значение* [**,** *вставки значение*]... **)**}  
+ {*спецификация запроса* &#124;  **Значения (*** вставки значение* [**,** *вставки значение*]... **)**}  
   
  Обратите внимание, что *спецификация запроса* элемент действителен только в основные и расширенные SQL грамматики и что *выражение* и *условие поиска* элементы становятся более сложные в основные и расширенные SQL грамматики.  
   
@@ -56,4 +58,3 @@ INSERT INTO Orders (PartID, Description, Price) VALUES (?, ?, ?)
 ```  
   
  Такая эффективность можно увеличить путем передачи массивов, значений параметров. Дополнительные сведения о параметрах инструкции и массивы значений параметров см. в разделе [параметров инструкции](../../../odbc/reference/develop-app/statement-parameters.md).
-

@@ -2,30 +2,30 @@
 title: "Пространство куба | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
-caps.latest.revision: 6
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 316809a9fa0b00a04dd6cee85eceb3d9a0349801
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 16c39c5d1699c69e7f2dc119e90ff975b637d74f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="cube-space"></a>Пространство куба
-  Пространство куба — это совокупность элементов иерархий атрибутов куба с мерами куба. Поэтому пространство куба определяется комбинаторным сочетанием всех элементов иерархии атрибута в кубе и мер куба и определяет максимальный размер куба. Важно иметь ввиду, что это пространство включает все возможные сочетания элементов иерархии атрибута, даже сочетания, которые могут показаться невозможными в реальном мире, например сочетания, где городом является Париж, а странами — Англия, Испания, Япония или Индия, и т. д.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Пространство куба — это совокупность элементов иерархий атрибутов куба с мерами куба. Поэтому пространство куба определяется комбинаторным сочетанием всех элементов иерархии атрибута в кубе и мер куба и определяет максимальный размер куба. Важно иметь ввиду, что это пространство включает все возможные сочетания элементов иерархии атрибута, даже сочетания, которые могут показаться невозможными в реальном мире, например сочетания, где городом является Париж, а странами — Соединенное Королевство, Испания, Япония или Индия, и т. д.  
   
 ## <a name="autoexists-and-cube-space"></a>Автоматическая проверка существования и пространство куба  
  Понятие *автоматическая проверка существования* ограничивает пространство куба ячейками, которые действительно существуют. Элементы иерархии атрибута в измерении могут не существовать с элементами другой иерархии атрибута в том же измерении.  
@@ -62,7 +62,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Обратите внимание, что 0 используется для обозначения оси столбцов, это сокращение для оси(0), являющейся осью столбцов.  
   
- В предыдущем запросе возвращаются только ячейки для элементов каждой иерархии атрибута в запросе, которые существуют друг с другом. Предыдущий запрос можно записать, используя новую версию функции — [* (Crossjoin) (многомерные выражения)](../../../mdx/crossjoin-mdx-operator-reference.md) .  
+ В предыдущем запросе возвращаются только ячейки для элементов каждой иерархии атрибута в запросе, которые существуют друг с другом. Предыдущий запрос можно записать, используя новую версию \* функции — [* (Crossjoin) (многомерные выражения)](../../../mdx/crossjoin-mdx-operator-reference.md) .  
   
 ```  
 SELECT   
@@ -136,13 +136,12 @@ FROM [Adventure Works]
 ## <a name="calculation-context"></a>Контекст вычисления  
   
 ## <a name="see-also"></a>См. также  
- [Основные понятия многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Ключевые понятия многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Кортежи](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [Автоматическая проверка существования](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [Работа с элементами, кортежами и наборами (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [Работа с членами, кортежей и наборов &#40; Многомерные Выражения &#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [Визуальные и невизуальные итоги](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
- [Справочник по языку многомерных выражений (многомерные выражения)](../../../mdx/mdx-language-reference-mdx.md)   
- [Справочник по многомерным выражениям (многомерные выражения)](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [Справочник по языку многомерных Выражений &#40; Многомерные Выражения &#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [Многомерные выражения &#40; Многомерные Выражения &#41; Ссылка](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   
-

@@ -2,31 +2,32 @@
 title: "Обзор интерфейса монитора репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Replication Monitor
 - Replication Monitor, about Replication Monitor
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
-caps.latest.revision: 41
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "41"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85b3b97fa9dc219012727b01a0d8013e0481a85c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: dedf784414d1eda02bd650bd46051950f22629ad
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Обзор интерфейса монитора репликации
-  Монитор репликации[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обеспечивает представление всех операций репликации в окне, состоящем из двух панелей, со стороны издателя и со стороны распространителя. При добавлении издателя в монитор на левую панель, на правой панели монитора отображается информация об этом издателе, его публикациях, подписках на эти публикации и различных агентах репликации. Помимо представления информации о топологии репликации, монитор репликации позволяет выполнять некоторые задачи, например пуск и остановку агентов, а также проверку данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Монитор репликации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обеспечивает представление всех операций репликации в окне, состоящем из двух панелей, со стороны издателя и со стороны распространителя. При добавлении издателя в монитор на левую панель, на правой панели монитора отображается информация об этом издателе, его публикациях, подписках на эти публикации и различных агентах репликации. Помимо представления информации о топологии репликации, монитор репликации позволяет выполнять некоторые задачи, например пуск и остановку агентов, а также проверку данных.  
   
 ## <a name="viewing-information-for-the-entire-topology"></a>Просмотр информации обо всей топологии  
  На левой панели монитора репликации отображаются:  
@@ -242,4 +243,3 @@ ms.lasthandoff: 06/22/2017
  [Наблюдение за репликацией](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   
-

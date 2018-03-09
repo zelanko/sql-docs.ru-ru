@@ -1,29 +1,30 @@
 ---
 title: "Отчет о миграции данных (DB2ToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 46ebada7-db36-4ae9-b7ae-baa4b854b237
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7402f6bbe57393afb4c5ea7395c29ae423377540
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8927f66ee160103bcf4f62b52767e6489749f2d9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-migration-report-db2tosql"></a>Отчет о миграции данных (DB2ToSQL)
 **Отчет о миграции данных** диалоговое окно после переноса данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -53,4 +54,3 @@ ms.lasthandoff: 08/02/2017
 **Сохранение отчета**  
 Сохраняет отчет. CSV (значения, разделенные запятыми) файл, который может быть проанализирована с помощью Microsoft Excel.  
   
-

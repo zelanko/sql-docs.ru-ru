@@ -3,24 +3,25 @@ title: "Разработчик данных SQL | Документы Microsoft"
 ms.custom: 
 ms.date: 03/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: connect
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssma
+ms.suite: sql
+ms.technology: tools-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 9f772b9f79697001bbfaa191ec84bc077de415c8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0b68e218e549ee6bccc716d6f3430774065f9390
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-data-developer"></a>Разработчик данных SQL
 Используйте Microsoft платформы данных SQL для создания решений, основанных на данных через мобильных устройств и настольных компьютеров, для веб-серверы, серверы предприятия и облаком.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 09/27/2017
 * [SQLXML 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): использование SQLXML 4.0 экспорте реляционных данных в формат XML.
 
 ## <a name="data-collection-processing-and-visualization"></a>Сбор данных, обработки и визуализации
-* [службы Analysis Services](../analysis-services/analysis-services-developer-documentation.md);
+* [службы Analysis Services](../analysis-services/analysis-services-developer-documentation.md)
 * [Службы интеграции](../integration-services/integration-services-developer-documentation.md)  
 * [Службы Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)
 * [Службы репликации](../relational-databases/replication/concepts/replication-developer-documentation.md)
@@ -54,4 +55,3 @@ ms.lasthandoff: 09/27/2017
 
 
  
-

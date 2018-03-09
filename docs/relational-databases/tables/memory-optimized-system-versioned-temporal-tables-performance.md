@@ -1,29 +1,30 @@
 ---
 title: "Вопросы производительности оптимизированных для памяти темпоральных таблиц с системным управлением версиями | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/28/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2e110984-7703-4806-a24b-b41e8c3018c6
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d67b2ac2eb3f10bd5ecbf973ec97d12566973738
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 0cc7a8ac4a47a479e87702ddd429a95ca00b8336
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>Вопросы производительности оптимизированных для памяти темпоральных таблиц с системным управлением версиями
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе рассматриваются некоторые вопросы производительности при использовании темпоральных таблиц с системным управлением версиями, оптимизированных для памяти.  
   
@@ -53,4 +54,3 @@ ms.lasthandoff: 06/22/2017
  [Представления и функции метаданных для временной таблицы](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

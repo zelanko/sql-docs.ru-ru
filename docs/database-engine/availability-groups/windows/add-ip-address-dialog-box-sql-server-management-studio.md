@@ -2,32 +2,32 @@
 title: "Диалоговое окно \"Добавление IP-адреса\" (среда SQL Server Management Studio) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.availabilitygrouplistener.addipaddress.f1
+f1_keywords: sql13.swb.availabilitygrouplistener.addipaddress.f1
 ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0aa89a5d92d7a20bbc7e4daf732f8f5ce2b09f47
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d9083c4b210b5de01a7a15b2c7f438a57199e707
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>Диалоговое окно «Добавление IP-адреса» (SQL Server Management Studio)
-  В этом разделе справки F1 описываются параметры диалогового окна **Добавление IP-адреса** . Это диалоговое окно открывается из диалогового окна **Создание прослушивателя группы доступности** и из вкладки **Прослушиватель** на странице **Выбор реплик** в [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] или [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе справки F1 описываются параметры диалогового окна **Добавление IP-адреса**. Это диалоговое окно открывается из диалогового окна **Создание прослушивателя группы доступности** и из вкладки **Прослушиватель** на странице **Выбор реплик** в [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] или [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Прежде чем начинать добавлять подсети в прослушиватель группы доступности, убедитесь, что вы знаете IP-адрес для каждой подсети, а для IPv4-адреса — маску подсети.  
   
 ##  <a name="PageOptions"></a> Варианты добавления IP-адреса  
@@ -71,4 +71,3 @@ ms.lasthandoff: 08/02/2017
  [Подключение клиента AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)  
   
   
-

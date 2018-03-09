@@ -2,27 +2,28 @@
 title: "Создание настраиваемого рабочего процесса (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: develop
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
-caps.latest.revision: 8
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c7b982bce7e48811dbfa9874fba2a3084374ff5e
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 290f862bc9e0295d940a832e07415831bab060bb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Создание настраиваемого рабочего процесса (службы Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] использует бизнес-правила для создания таких базовых решений рабочего процесса, как автоматическое обновление и проверка данных, а также отправка уведомлений по электронной почте с учетом заданных условий. Когда требуется более сложная обработка, чем та, которую обеспечивают действия встроенного рабочего процесса, используйте пользовательский рабочий процесс. Пользовательский рабочий процесс ― это создаваемая вами сборка .NET. При вызове вашей сборки рабочего процесса код может выполнять любые действия, которые требуются в данной ситуации. Если рабочему процессу требуется сложная обработка событий, например многоуровневые утверждения или сложные деревья принятия решений, можно настроить [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] на запуск пользовательского рабочего процесса, который анализирует данные и определяет, куда их отправить для утверждения.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 09/07/2017
   
 1.  Веб-приложение [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] используется для проверки сущности, которая запускает рабочий процесс.  
   
-2.  Веб-приложение [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] отправляет элементы, которые удовлетворяют условиям бизнес-правила, в очередь компонента Service Broker в базе данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+2.  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] отправляет элементы, которые удовлетворяют условиям бизнес-правила, в очередь компонента Service Broker в базе данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 3.  Служба SQL Server MDS Workflow Integration Service через регулярные интервалы обращается к хранимой процедуре в базе данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
@@ -86,7 +87,7 @@ ms.lasthandoff: 09/07/2017
     </setting>  
     ```  
   
-3.  Под параметром «ConnectionString» добавьте параметр «WorkflowTypeExtenders», чтобы связать имя тега с используемой сборкой обработчика рабочих процессов. Например:  
+3.  Под параметром «ConnectionString» добавьте параметр «WorkflowTypeExtenders», чтобы связать имя тега с используемой сборкой обработчика рабочих процессов. Пример:  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -160,4 +161,3 @@ ms.lasthandoff: 09/07/2017
  [Описание XML настраиваемого рабочего процесса (службы Master Data Services)](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
   
   
-

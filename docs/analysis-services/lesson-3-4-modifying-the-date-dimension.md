@@ -2,33 +2,36 @@
 title: "Изменение измерения «Дата» | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
-caps.latest.revision: 19
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 2241d24c13fa2d31a6789387f165d8285903fa0b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c514356aeabd59525fdab80e6e1c03f93d9ae34f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>Занятие 3-4-изменение измерения «Дата»
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 В ходе выполнения задач этого раздела мы создадим определяемую пользователем иерархию и изменим имена элементов, отображаемых для атрибутов «Дата», «Месяц», «Календарный квартал» и «Календарное полугодие». Также мы определим составные ключи для атрибутов, настроим порядок сортировки элементов измерения и зададим связи атрибутов.  
   
 ## <a name="adding-a-named-calculation"></a>Добавление именованного вычисления  
-К таблице в представлении источника данных можно добавить именованное вычисление, которое является выражением SQL и представляет собой вычисляемый столбец, Это выражение имеет вид и функции столбца таблицы. Именованные вычисления позволяют расширять реляционную схему таблиц, существующих в представлении источника данных, не изменяя таблицы в базовом источнике данных. Дополнительные сведения см. в разделе [Определение именованных вычислений в представлении источника данных (службы Analysis Services)](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
+К таблице в представлении источника данных можно добавить именованное вычисление, которое является выражением SQL и представляет собой вычисляемый столбец, Это выражение имеет вид и функции столбца таблицы. Именованные вычисления позволяют расширять реляционную схему таблиц, существующих в представлении источника данных, не изменяя таблицы в базовом источнике данных. Дополнительные сведения см. в разделе [Определение именованных вычислений в представлении источника данных (службы Analysis Services)](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
 #### <a name="to-add-a-named-calculation"></a>Добавление именованного вычисления  
   
@@ -215,7 +218,7 @@ ms.lasthandoff: 09/01/2017
   
 2.  В окне **Свойства** щелкните в поле **KeyColumns** и нажмите кнопку обзора (**...**).  
   
-3.  В диалоговом окне **Ключевые столбцы** выберите из списка **Доступные столбцы** столбец **CalendarYear**, а затем нажмите кнопку **>** .  
+3.  В диалоговом окне **Ключевые столбцы** выберите из списка **Доступные столбцы** столбец **CalendarYear**, а затем нажмите кнопку **>**.  
   
     Столбцы **CalendarQuarter** и **CalendarYear** отображаются в списке **Ключевые столбцы** .  
   
@@ -306,7 +309,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Просмотр развернутого куба](../analysis-services/lesson-3-5-browsing-the-deployed-cube.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Измерения в многомерных моделях](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
-

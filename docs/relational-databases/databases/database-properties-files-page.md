@@ -2,29 +2,30 @@
 title: "Свойства базы данных (страница \"Файлы\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.databaseproperties.files.f1
+f1_keywords: sql13.swb.databaseproperties.files.f1
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
-caps.latest.revision: 42
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 96e789d47140459475bdd3b6f36500d0d24492ce
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "42"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 2d68409591b5243ecf56b8c5707c61a5a7c33493
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-files-page"></a>Свойства базы данных (страница «Файлы»)
-  Данная страница используется для создания новой базы данных или просмотра и изменения свойств выбранной базы данных. Данный раздел относится к странице **Свойства базы данных (страница "Файлы")** для существующих баз данных и к странице **Создание базы данных (страница "Общие")**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Эта страница используется для создания базы данных или просмотра и изменения свойств выбранной базы данных. Данный раздел относится к странице **Свойства базы данных (страница "Файлы")** для существующих баз данных и к странице **Создание базы данных (страница "Общие")**.  
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
  **Имя базы данных**  

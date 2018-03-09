@@ -2,11 +2,13 @@
 title: "Настройка параметра конфигурации сервера user options | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - users [SQL Server], global defaults
 - user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "25"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 7cd2202d31fdb2b68b25bbe2214df156e38b9ce7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a801f77059d2aa6bacd89901c63f80dcc91bf84a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Настройка параметра конфигурации сервера user options
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описано, как настроить параметр конфигурации сервера **user options** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **user options** задает глобальные параметры по умолчанию для всех пользователей. Список параметров обработки запросов по умолчанию создается на время сеанса работы пользователя. Параметр **user options** позволяет изменить значения по умолчанию параметров инструкции SET (в случае если настройки сервера по умолчанию не подходят).  
   
@@ -35,11 +36,11 @@ ms.lasthandoff: 08/02/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Рекомендации](#Recommendations)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Настройка параметра конфигурации user options с помощью:**  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 08/02/2017
   
 -   В следующей таблице перечислены и описаны значения параметра **user options**. Не все значения конфигурации совместимы друг с другом. Например, параметры ANSI_NULL_DFLT_ON и ANSI_NULL_DFLT_OFF не могут быть установлены одновременно.  
   
-    |Значение|Конфигурация|Описание|  
+    |Значение|Конфигурация|Description|  
     |-----------|-------------------|-----------------|  
     |1|DISABLE_DEF_CNST_CHK|Управляет промежуточной или отложенной проверкой ограничений.|  
     |2|IMPLICIT_TRANSACTIONS|Для соединений сетевой библиотеки dblib управляет неявным запуском транзакции при выполнении инструкции. Установка IMPLICIT_TRANSACTIONS не влияет на соединения через ODBC или OLEDB.|  
@@ -75,9 +76,9 @@ ms.lasthandoff: 08/02/2017
   
 -   Битовые позиции в параметре **user options** совпадают с позициями в функции @@OPTIONS. Каждому соединению соответствует своя собственная функция @@OPTIONS, которая представляет собой окружение конфигурации. При входе в экземпляр \ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]пользователь получает окружение по умолчанию, где параметру **user options** присваивается значение функции @@OPTIONS. При выполнении инструкции SET для параметра **user options** изменяется соответствующее значение функции @@OPTIONS для сеанса. Все соединения, установленные после изменения этой установки, принимают новое значение.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Разрешения на выполнение хранимой процедуры **sp_configure** без параметров или только с первым параметром по умолчанию предоставляются всем пользователям. Для выполнения процедуры **sp_configure** с обоими параметрами для изменения параметра конфигурации или запуска инструкции RECONFIGURE необходимо иметь разрешение ALTER SETTINGS на уровне сервера. Разрешение ALTER SETTINGS неявным образом предоставлено предопределенным ролям сервера **sysadmin** и **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -102,7 +103,7 @@ ms.lasthandoff: 08/02/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано, как с помощью хранимой процедуры [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) настроить значение параметра `user options` , чтобы изменить значение параметра сервера ANSI_WARNINGS.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'user options', 8 ;  
@@ -122,4 +123,3 @@ GO
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)  
   
   
-

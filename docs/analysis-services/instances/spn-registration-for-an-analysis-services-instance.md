@@ -2,30 +2,30 @@
 title: "Регистрация имени участника-службы для экземпляра служб Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
-caps.latest.revision: 16
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ecb1a5b33ede8c99150fd8b3ce1cf9babdb1f519
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d0d90aea6725bd45cded022791699cf910b7bdd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>Регистрация имени участника-службы для экземпляра служб Analysis Services
-  Имя участника-службы (SPN) однозначно идентифицирует экземпляр службы в домене Active Directory, если протокол Kerberos используется для взаимной проверки подлинности идентификаторов клиента и службы. Имя участника-службы сопоставляется с учетной записью входа, от имени которой выполняется экземпляр службы.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Имя участника-службы (SPN) однозначно идентифицирует экземпляр службы в домене Active Directory, если протокол Kerberos используется для взаимной проверки подлинности идентификаторов клиента и службы. Имя участника-службы сопоставляется с учетной записью входа, от имени которой выполняется экземпляр службы.  
   
  Для клиентских приложений при подключении к службам Analysis Services через протокол проверки подлинности Kerberos клиентские библиотеки Analysis services формируют имя участника-службы, используя имя узла из строки подключения и других известных переменных, например класс службы, зафиксированных в любой конкретной версии служб Analysis Services.  
   
@@ -100,7 +100,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **Пример синтаксиса для именованного экземпляра, запущенного как NT Service\MSOLAP$\<имя экземпляра >**  
   
- Этот пример демонстрирует синтаксис **setspn** для именованного экземпляра служб Analysis Services, запущенного под стандартной виртуальной учетной записью. В этом примере имя узла — **AW-SRV02**, а имя экземпляра — **AW-FINANCE**. Опять же, это учетная запись, указанный для имени участника-службы, а не виртуальной учетной записи **NT Service\MSOLAP$**\<имя экземпляра >.  
+ Этот пример демонстрирует синтаксис **setspn** для именованного экземпляра служб Analysis Services, запущенного под стандартной виртуальной учетной записью. В этом примере имя узла — **AW-SRV02**, а имя экземпляра — **AW-FINANCE**. Опять же, это учетная запись, указанный для имени участника-службы, а не виртуальной учетной записи **NT Service\MSOLAP$**\<имя экземпляра >.  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  
@@ -172,15 +172,14 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
 ## <a name="see-also"></a>См. также  
  [Проверка подлинности для бизнес-аналитики Майкрософт и делегирование удостоверений](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [Взаимная проверка подлинности с помощью Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
- [Настройка SQL Server 2008 Analysis Services и SQL Server 2005 Analysis Services на использование проверки подлинности Kerberos](http://support.microsoft.com/kb/917409)   
- [Имен субъектов-служб (SPN) синтаксис команды SetSPN (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
- [Какое имя участника-службы требуется использовать и как поставить его существует?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [Настройка служб SQL Server 2008 Analysis Services и SQL Server 2005 Analysis Services на использование проверки подлинности Kerberos](http://support.microsoft.com/kb/917409)   
+ [Синтаксис имен субъектов-служб (SPN) SetSPN (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [Какое имя субъекта-службы требуется использовать и как поставить его на место?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
  [Пошаговое руководство по учетным записям служб](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
- [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Как использовать имена участников-служб при настройке веб-приложений, размещенных в службах IIS](http://support.microsoft.com/kb/929650)   
+ [Настройка учетных записей служб Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
+ [Использование имен субъектов-служб при настройке веб-приложений, размещенных в службах IIS](http://support.microsoft.com/kb/929650)   
  [новые возможности учетных записей служб](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
  [Настройка проверки подлинности Kerberos для продуктов SharePoint 2010 (технический документ)](http://technet.microsoft.com/library/ff829837.aspx)  
   
   
-

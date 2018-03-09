@@ -1,29 +1,29 @@
 ---
-title: "Примеры URL-адресов для элементов на сервере отчетов — в режиме интеграции с SharePoint | Документы Microsoft"
+title: "Примеры URL-адресов для элементов на сервере отчетов в режиме интеграции с SharePoint | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-caps.latest.revision: 5
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "5"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 53c07f85e9ec0bfca627b8ff941eddfde03336df
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d102444b30ad5ddadcd6dcfe8fe25b072f230a63
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Примеры URL-адресов для элементов на сервере отчетов — в режиме интеграции с SharePoint
+# <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Примеры URL-адресов для элементов на сервере отчетов в режиме интеграции с SharePoint
   Чтобы опубликовать отчеты и связанные с ними элементы в библиотеке SharePoint, можно опубликовать содержимое с помощью таких средств разработки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , как конструктор отчетов, или передать содержимое средствами сайта SharePoint.  
   
  Сайты SharePoint используют веб-адреса, отличные от адресов сервера отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме. Веб-иерархия сайта SharePoint включает веб-приложение SharePoint, сайт верхнего уровня, необязательные вложенные сайты и библиотеки. Необходимо знать правила создания URL-адреса, определяющего сервер SharePoint и расположение объектов иерархии сайта SharePoint, на котором будет опубликован отчет или связанные с ним элементы.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/09/2017
   
  Для доступа к содержимому сервера отчетов и его защите могут быть использованы следующие элементы веб-иерархии. Прочие объекты (списки, страницы и т. д.) не используются для доступа к содержимому сервера отчетов и в данной таблице не описаны.  
   
-|Объект|Description|  
+|Object|Description|  
 |------------|-----------------|  
 |Веб-приложение SharePoint|Веб-приложение SharePoint может быть установлено как на изолированном сервере, так и в составе фермы, содержащей коллекцию виртуальных серверов. Веб-приложение имеет URL-адрес (например, `http:*//servername*`) и может содержать несколько сайтов.|  
 |Сайт|Сайт является либо родительским сайтом для веб-приложения, либо вложенным сайтом.|  
@@ -50,26 +50,26 @@ ms.lasthandoff: 08/09/2017
 ### <a name="url-for-a-sharepoint-server"></a>URL-адрес сервера SharePoint  
  URL-адрес сервера SharePoint указывается при развертывании на сервере отчетов проекта сервера отчетов или модели отчетов из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
- Чтобы узнать имя сервера, откройте браузер и найдите библиотеку SharePoint, в которой необходимо опубликовать отчет. Имя сервера указывается сразу после префикса протокола, например, `http:*//servername*`.  
+ Чтобы узнать имя сервера, откройте браузер и найдите библиотеку SharePoint, в которой необходимо опубликовать отчет. Имя сервера указывается сразу после префикса протокола, например `http:*//servername*`.  
   
- Конечная точка-посредник для URL-адреса служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не поддерживается. Конечная точка прокси включает номер порта, например, `http:*//servername:8080/reportserver*`.  
+ Конечная точка-посредник для URL-адреса служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не поддерживается. Конечная точка прокси включает номер порта, например `http:*//servername:8080/reportserver*`.  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL-адрес сайта или дочернего сайта SharePoint  
- При развертывании отчета или источника данных необходимо указывать URL-адрес сайта и вложенного сайта SharePoint, если он есть. В URL-адрес, имя сайта находится сразу после имени сервера., например, `http://*servername/site*` или `http://*servername/site/subsite*`.  
+ При развертывании отчета или источника данных необходимо указывать URL-адрес сайта и вложенного сайта SharePoint, если он есть. В URL-адресе имя сайта находится сразу после имени сервера, например `http://*servername/site*` или `http://*servername/site/subsite*`.  
   
  В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 или веб-приложении [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] сайт и дочерний сайт часто соответствуют вкладкам на основном сайте. Чтобы узнать имя сайта, выберите **Корневая папка**, а затем **Все содержимое сайта**. Прокрутите страницу до конца и найдите раздел **Сайты и рабочие области**. В этом разделе отображается список сайтов.  
   
 ### <a name="url-for-a-sharepoint-library"></a>URL-адрес библиотеки SharePoint  
  При развертывании отчета или связанного элемента в библиотеке SharePoint необходимо указывать URL-адрес этой библиотеки. Точная структура URL-адреса для библиотеки зависит от версии SharePoint.  
   
- На [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 или [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], библиотека указывается после имени сервера, например, `http://*servername/*Shared Documents`.  
+ В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 и [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] библиотека указывается сразу после имени сервера, например `http://*servername/*Shared Documents`.  
   
  В [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 или [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]библиотека указывается после имени сайта и дочернего сайта. Например, `http://*servername/site/*Documents`.  
   
  Чтобы узнать путь к новой библиотеке SharePoint или к незнакомому сайту, откройте браузер и найдите библиотеку SharePoint, в которой должен быть опубликован отчет. Если библиотека пуста, передайте в нее любой файл. Чтобы открыть окно **Свойства** , щелкните правой кнопкой мыши этот файл и выберите пункт **Свойства** . Адрес файла содержит URL-адрес, который необходим для публикации.  
   
 ### <a name="fully-qualified-urls-for-items-on-a-sharepoint-site"></a>Полные URL-адреса для элементов сайта SharePoint  
- Элементы, хранящиеся в библиотеке SharePoint, всегда указываются полный URL-адрес, начинающийся с веб-приложения (`http://*server*`) в качестве корневого узла и заканчивающиеся именем файла, который указывает ссылка.  
+ К элементам, которые хранятся в библиотеке SharePoint, необходимо обращаться по полным URL-адресам, которые начинаются с веб-приложения (`http://*server*`) как корневого узла и заканчиваются именем файла, к которому вы обращаетесь.  
   
  Имя файла, указанное в URL-адресе, должно включать расширение.  
   
@@ -140,10 +140,9 @@ ms.lasthandoff: 08/09/2017
   
  Когда сервер отчетов работает в режиме интеграции с SharePoint, для ресурса используется более узкое определение. Сервер отчетов поддерживает ресурсы для хранимых отчетов, ссылающихся на внешние изображения. Это относится к отчетам, которые являются моментальными снимками или копиями, сохраняемыми для внутреннего использования.  
   
-## <a name="see-also"></a>См. также  
- [Публикация отчета в библиотеку SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
- [Опубликовать общий источник данных в библиотеке SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+## <a name="see-also"></a>См. также:  
+ [опубликовать отчет в библиотеке SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
+ [Публикация общего источника данных в библиотеку SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Диалоговое окно страниц свойств проекта](../../reporting-services/tools/project-property-pages-dialog-box.md)  
   
   
-

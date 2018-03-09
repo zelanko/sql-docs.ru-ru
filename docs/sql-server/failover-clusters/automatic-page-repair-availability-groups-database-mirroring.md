@@ -2,11 +2,13 @@
 title: "Автоматическое восстановление страниц (группы доступности: зеркальное отображение базы данных) | Документация Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +17,19 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ffb0714b75265db7e2188a39d1e8ada568ef3160
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b1f5007a8c6b8f222d0708692ecc802f6409738d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Автоматическое восстановление страниц (группы доступности: зеркальное отображение базы данных)
-  Автоматическое восстановление страниц поддерживается за счет зеркального отображения баз данных и с помощью [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. После повреждения страниц вследствие ошибок определенных типов, после чего страницы становятся нечитаемыми, база данных, участвующая в зеркальном отображении (главная или зеркало), либо реплика доступности (основная или вторичная) выполняет попытку автоматического восстановления страницы. Участник или реплика, для которой считывание страницы невозможно, запрашивает новую копию у другого участника или реплики. Если этот запрос завершается успешно, нечитаемая страница заменяется читаемой копией, что обычно устраняет ошибку.  
+# <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Автоматическое восстановление страниц (группы доступности: зеркальное отображение баз данных)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Автоматическое восстановление страниц поддерживается за счет зеркального отображения баз данных и с помощью [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. После повреждения страниц вследствие ошибок определенных типов, после чего страницы становятся нечитаемыми, база данных, участвующая в зеркальном отображении (главная или зеркало), либо реплика доступности (основная или вторичная) выполняет попытку автоматического восстановления страницы. Участник или реплика, для которой считывание страницы невозможно, запрашивает новую копию у другого участника или реплики. Если этот запрос завершается успешно, нечитаемая страница заменяется читаемой копией, что обычно устраняет ошибку.  
   
  В целом зеркальное отображение базы данных и [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] обрабатывают ошибки ввода-вывода сходным образом. В этом разделе описываются немногие из отличий.  
   
@@ -120,6 +122,5 @@ ms.lasthandoff: 06/22/2017
  [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   
-
 
 

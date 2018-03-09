@@ -3,7 +3,7 @@ title: "Уровень объекта (ADO MD) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - Level object [ADO MD]
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f690e2efc97b4da9ea588e5028055fb758b93a48
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 73258b69ee6a341098365443f388c6944eb2dd51
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="level-object-ado-md"></a>Объект уровня (ADO MD)
 Содержит набор элементов, каждый из которых имеет один и тот же ранг в иерархии.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  С коллекциями и свойствами **уровень** объекта, можно сделать следующее:  
   
 -   Определить **уровень** с [имя](../../../ado/reference/ado-md-api/name-property-ado-md.md) и [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) свойства.  
@@ -50,11 +49,11 @@ ms.lasthandoff: 09/09/2017
   
  **Свойства** коллекция содержит указанный поставщик свойства. В следующей таблице перечислены свойства, которые могут быть доступны. Фактическое свойство списка могут различаться в зависимости от реализации поставщика. См. в документации для поставщика более полный список доступных свойств.  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |CatalogName|Имя каталога, к которому принадлежит этот куб.|  
-|Имя куба|Имя куба.|  
-|Description|Понятное описание уровня.|  
+|CubeName|Имя куба.|  
+|Описание|Понятное описание уровня.|  
 |DimensionUniqueName|Однозначная имя [измерения](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
 |HierarchyUniqueName|Однозначная имя иерархии.|  
 |LevelCaption|Метка или заголовок, связанный с уровнем.|  
@@ -70,10 +69,9 @@ ms.lasthandoff: 09/09/2017
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/level-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример CubeDef (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [Объект иерархии (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)   
  [Коллекция уровней (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
  [Члены коллекции (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
- [Коллекция свойств (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

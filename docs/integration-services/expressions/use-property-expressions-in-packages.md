@@ -1,10 +1,13 @@
 ---
-title: "Использование выражений свойств в пакетах | Документы Microsoft"
+title: "Использование выражений свойств в пакетах | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -19,17 +22,16 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-caps.latest.revision: 69
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f1a931e20a1ab0bafae0e014b174cf718e9a69f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: df3d79297b56c02f4aff107349cb8dce5c75d4da
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-property-expressions-in-packages"></a>Использование выражений свойств в пакетах
   Выражение свойства — это выражение, связанное со свойством для обеспечения динамического обновления во время выполнения. Например, выражение свойства может обновить строку «Кому», в которую задача «Отправка почты» вставляет хранящийся в переменной адрес электронной почты.  
@@ -72,7 +74,7 @@ ms.lasthandoff: 08/03/2017
   
  На следующей диаграмме показан интерфейс пользователя, который используется для добавления, изменения и удаления выражений свойств.  
   
- ![Пользовательский интерфейс для выражений свойств](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "пользовательский интерфейс для выражений свойств")  
+ ![Пользовательский интерфейс для выражений свойств](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "Пользовательский интерфейс для выражений свойств")  
   
  В окне **Свойства** на странице **Выражения** нажмите кнопку обзора **(…)** на уровне коллекции **Выражения** для открытия диалогового окна **Редактор выражений свойств** . Редактор выражений свойств позволяет сопоставлять свойства с выражением и вводить выражения свойств. Если нужно использовать графические средства построения выражений для создания и проверки выражения, нажмите кнопку обзора **(…)** на уровне выражения для открытия диалогового окна **Построитель выражений** , создайте или внесите изменения и при желании проверьте выражение.  
   
@@ -176,8 +178,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Техническая статья [Примеры выражений служб SSIS](http://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование переменных в пакетах](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   
-

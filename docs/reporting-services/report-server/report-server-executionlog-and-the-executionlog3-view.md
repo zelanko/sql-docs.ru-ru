@@ -1,35 +1,35 @@
 ---
-title: "Журнал выполнения сервера и представление ExecutionLog3 отчетов | Документы Microsoft"
+title: "Журнал выполнения сервера отчетов и представление ExecutionLog3 | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-caps.latest.revision: 41
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "41"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f54e9b1c9aa0a17634048f91932c4aad2d69888b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1177b4cf7db3d55e839608f45fb036ae95e7baf5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Журнал выполнения сервера отчетов и представление ExecutionLog3
   Журнал выполнения для сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]содержит сведения об отчетах, которые создаются на одном или нескольких серверах в масштабном развертывании в собственном режиме или в ферме SharePoint. Журнал выполнения отчетов можно использовать для изучения частоты, с которой запрашивается отчет, частоты использования различных форматов вывода и времени обработки в миллисекундах, занимаемого каждой фазой обработки. Журнал содержит сведения о продолжительности времени, затраченного на выполнение запроса набора данных отчета, и времени, затраченного на обработку данных. Администраторы сервера отчетов могут просматривать информацию журнала, выявлять задачи, выполняющиеся продолжительное время, и вносить предложения для разработчиков отчетов в тех областях организации отчета (набор данных или обработка), в которых они могут проводить улучшения.  
   
- На серверах отчетов, настроенных для режима SharePoint, можно также использовать журналы ULS SharePoint. Дополнительные сведения см. в разделе [Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md).  
+ На серверах отчетов, настроенных для режима SharePoint, можно также использовать журналы ULS SharePoint. Дополнительные сведения см. в разделе [Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ##  <a name="bkmk_top"></a> Просмотр данных журнала  
  Сервер отчетов записывает данные о выполнении отчетов во внутреннюю таблицу базы данных. Сведения, содержащиеся в этой таблице, могут быть получены из представлений SQL Server.  
@@ -114,7 +114,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  В следующей таблице описаны данные, которые перехватываются в журнале выполнения отчетов  
   
-|Столбец|Description|  
+|столбцом|Description|  
 |------------|-----------------|  
 |InstanceName|Имя экземпляра сервера отчетов, обработавшего запрос. Если в применяемой среде имеется больше одного сервера отчетов, можно анализировать распределение InstanceName для контроля и определения того, распределяет ли программа уравновешивания сетевой нагрузки запросы по серверам отчетов в соответствии с ожидаемым.|  
 |ItemPath|Путь, по которому сохраняется отчет или элемент отчета.|  
@@ -123,7 +123,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |RequestType|Возможные значения:<br /><br /> Интерактивно<br /><br /> Подписка<br /><br /> <br /><br /> Анализ данных журнала, отфильтрованных по значению RequestType=Subscription и отсортированных по значению TimeStart, может показать периоды интенсивной нагрузки на подписку, и может потребоваться изменить параметры некоторых подписок на отчет для другого вызова.|  
 |Формат|Формат подготовки к просмотру.|  
 |Параметры|Значения параметров, используемых при выполнении отчета.|  
-|ItemAction|Возможные значения:<br /><br /> Render<br /><br /> Сортировка<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
+|ItemAction|Возможные значения:<br /><br /> Render<br /><br /> Sort<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
 |TimeStart|Время начала и завершения обработки отчета, указывающее на его продолжительность.|  
 |TimeEnd||  
 |TimeDataRetrieval|Количество миллисекунд, затраченных на выборку данных.|  
@@ -329,7 +329,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  В следующей таблице описаны данные, которые перехватываются в журнале выполнения отчетов  
   
-|Столбец|Description|  
+|столбцом|Description|  
 |------------|-----------------|  
 |InstanceName|Имя экземпляра сервера отчетов, обработавшего запрос.|  
 |ReportPath|Структура пути к отчету.  Например, отчет с именем «test», который находится в корневом каталоге в диспетчере отчетов, будет иметь значение ReportPath, равное «/test».<br /><br /> Отчет с именем «test», который сохранен в папке «samples» в диспетчере отчетов, будет иметь значение ReportPath, равное «/Samples/test/».|  
@@ -361,7 +361,7 @@ select * from ExecutionLog order by TimeStart DESC
   
  В следующей таблице описаны данные, которые перехватываются в журнале выполнения отчетов  
   
-|Столбец|Description|  
+|столбцом|Description|  
 |------------|-----------------|  
 |InstanceName|Имя экземпляра сервера отчетов, обработавшего запрос.|  
 |ReportID|Идентификатор отчета.|  
@@ -379,10 +379,9 @@ select * from ExecutionLog order by TimeStart DESC
 |ByteCount|Размер отчетов, готовых для просмотра (в байтах).|  
 |RowCount|Количество возвращенных по запросам строк.|  
   
-## <a name="see-also"></a>См. также  
- [Включение событий служб Reporting Services для журнала трассировки SharePoint &#40; ULS &#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
- [Службы Reporting Services файлы и источники журналов](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Ошибки и ссылок на события &#40; Службы Reporting Services &#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
+ [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+ [Справочник по ошибкам и событиям (службы Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   
-

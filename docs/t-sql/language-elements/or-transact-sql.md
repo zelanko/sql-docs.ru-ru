@@ -3,8 +3,11 @@ title: "ИЛИ (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - combining conditions
 - OR operator
 ms.assetid: b730a256-4a63-4880-9906-65b05cd9caf2
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 590410dd84275f63bc610ac436410c7d323eb8e3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 32e93a12ed79b6cbb2f2796e6362ba97f69abc21
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="or-transact-sql"></a>OR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Объединяет два условия. Если в инструкции используется более одного логического оператора, то операторы OR вычисляются после операторов AND. Однако порядок выполнения можно изменить с помощью скобок.  
   
@@ -54,14 +56,14 @@ boolean_expression OR boolean_expression
 ## <a name="result-value"></a>Значение результата  
  Оператор OR возвращает значение TRUE, если любое из условий равно значению TRUE.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В следующей таблице показан результат выполнения оператора OR.  
   
 ||TRUE|FALSE|UNKNOWN|  
 |------|----------|-----------|-------------|  
 |**ЗНАЧЕНИЕ TRUE**|TRUE|TRUE|TRUE|  
 |**ЗНАЧЕНИЕ FALSE**|TRUE|FALSE|UNKNOWN|  
-|**НЕИЗВЕСТНЫЙ**|TRUE|UNKNOWN|UNKNOWN|  
+|**UNKNOWN**|TRUE|UNKNOWN|UNKNOWN|  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере представление `vEmployeeDepartmentHistory` используется для извлечения имен персонала `Quality Assurance`, работающего либо в вечернюю, либо в ночную смену. Если скобки не указаны, запрос возвращает сотрудников фирмы `Quality Assurance`, работающих в вечернюю смену, и всех сотрудников, работающих в ночную смену.  
@@ -95,7 +97,7 @@ FROM DimEmployee
 WHERE BaseRate < 10 OR HireDate >= '2001-01-01';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
  [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
@@ -103,6 +105,5 @@ WHERE BaseRate < 10 OR HireDate >= '2001-01-01';
  [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-
 
 

@@ -3,30 +3,31 @@ title: "Изменение расположения по умолчанию дл
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - projects [SQL Server Management Studio], default locations
 - default project locations
 ms.assetid: 3b8af28d-3095-40aa-b7db-636f2852d483
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3dea02fc6b59e18af358170956d088283911ebc0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 65b4cb1e088e0dfad5ed622d18e6eaf95d1df10d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="change-the-default-location-for-projects"></a>Изменение местоположения проектов по умолчанию
-По умолчанию файлы и проекты размещаются во вложенной папке Projects папки «Мои документы» среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] По умолчанию файлы и проекты размещаются во вложенной папке [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] Projects папки "Мои документы".  
   
 ### <a name="to-change-the-default-location-for-projects"></a>Изменение расположения проектов по умолчанию  
   
@@ -35,4 +36,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
 [Обозреватель решений](../../ssms/solution/solution-explorer.md)  
   
-

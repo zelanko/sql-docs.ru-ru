@@ -3,7 +3,7 @@ title: "Столбцы и таблицы методы добавления, вв
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Name property [ADOX], VC++ example
 - Append method [ADOX], VC++ example
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c76a4633df33b051598332411eb90b6e2fbd7248
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4c57894545ce19cb7e85043a1f5969c980df5146
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Столбцы и таблицы добавьте методы примера имя свойства (VC ++)
 Следующий код демонстрирует создание новой таблицы.  
@@ -89,8 +88,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Append-метод (ADOX столбцы)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append-метод (ADOX таблицы)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Свойство Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)
-

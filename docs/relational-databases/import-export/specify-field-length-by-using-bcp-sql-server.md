@@ -2,9 +2,12 @@
 title: "Указание длины поля с помощью программы bcp (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -16,26 +19,27 @@ helpviewer_keywords:
 - data formats [SQL Server], field length
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
-caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 772ed44be6795e676b18fcfc915f851e4ce24e97
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: ad5143f4bc309f4156ebc4ea174ac11f4b9246fb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Указание длины поля с помощью программы bcp (SQL Server)
-  Длина поля указывает максимальное количество символов, необходимых для представления данных в символьном формате. Длина поля известна заранее, если данные хранятся в собственном формате, например значение типа **int** занимает 4 байта. Если в качестве длины префикса указано значение 0, то командная строка **bcp** выводит запрос на указание длины поля и длины поля по умолчанию, а также на то, как должно отразиться значение длины поля на хранении данных в файлах данных, которые содержат данные **char** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Длина поля указывает максимальное количество символов, необходимых для представления данных в символьном формате. Длина поля известна заранее, если данные хранятся в собственном формате, например значение типа **int** занимает 4 байта. Если в качестве длины префикса указано значение 0, то командная строка **bcp** выводит запрос на указание длины поля и длины поля по умолчанию, а также на то, как должно отразиться значение длины поля на хранении данных в файлах данных, которые содержат данные **char** .  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>Запрос командой bcp значения длины поля  
- Если интерактивная команда **bcp** содержит параметр **in** или **out** без параметра файла форматирования (**-f**) либо параметра формата данных (**-n**, **-c**, **-w** или **-N**), то команда запрашивает длину каждого поля данных следующим образом:  
+ Если интерактивная команда **bcp** содержит параметр **in** или **out** без параметра файла форматирования (**-f**) либо параметра формата данных (**-n**, **-c**, **-w**или **-N**), то команда запрашивает длину каждого поля данных следующим образом:  
   
  `Enter length of field <field_name> [<default>]:`  
   
- Пример этого запроса в контексте см. в разделе [Указание форматов данных для совместимости с помощью программы bcp (SQL Server)](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
+ Пример с описанием данного запроса см. в разделе [Указание форматов данных для совместимости с помощью программы bcp (SQL Server)](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
 > [!NOTE]  
 >  После интерактивного заполнения всех полей в команде **bcp** появится запрос на сохранение введенных ответов для каждого поля в файле форматирования в формате, отличном от XML. Дополнительные сведения о файлах форматирования в формате, отличном от XML, см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  

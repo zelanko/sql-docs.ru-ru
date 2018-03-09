@@ -2,29 +2,32 @@
 title: "Определение неизвестного элемента и свойств обработки значений Null | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
-caps.latest.revision: 18
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 7fca2e2c4920130ba3387d7881c63fdefa6ed4eb
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6a5d1d6dd514d346f4a24783307b27b86e777be1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Занятие 4-7-Определение неизвестного элемента и свойств обработки значений Null
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 В процессе обработки измерения службами [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] его атрибуты заполняются всеми уникальными значениями, полученными из базовых столбцов представлений и таблиц в представлении источника данных. Если при обработке службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] обнаруживают значение NULL, по умолчанию оно преобразуется в нулевое значение для числовых столбцов или в пустую строку — для строковых. Можно изменить значения по умолчанию или преобразовывать значения NULL в процессе извлечения, преобразования или загрузки данных (если они выполняются) из базового реляционного хранилища данных. Кроме того, службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] можно настроить для преобразования значения NULL в указанное значение настройкой трех свойств: **UnknownMember** и **UnknownMemberName** для измерения и **NullProcessing** для ключевого атрибута измерения.  
   
 Мастер измерений и мастер кубов включают эти свойства в том случае, если ключевой атрибут измерения допускает значения NULL или корневой атрибут измерения, связанного по схеме «снежинка», основан на столбце, который допускает значения NULL. В этих случаях свойству **NullProcessing** ключевого атрибута будет присвоено значение **UnknownMember** , а свойству **UnknownMember** — значение **Visible**.  
@@ -185,8 +188,7 @@ ms.lasthandoff: 09/01/2017
     ![Уровню имени товара компонентами сборки](../analysis-services/media/l4-assemblycomponents-1.gif "уровень название продукта, компонентами сборки")  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 5. Определение связей между измерениями и группами мер](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[Занятие 5: Определение связей между измерениями и группами мер](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   
   
-

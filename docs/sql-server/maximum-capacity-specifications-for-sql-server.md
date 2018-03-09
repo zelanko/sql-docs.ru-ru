@@ -1,11 +1,14 @@
 ---
 title: "Спецификации максимально допустимых параметров SQL Server | Документация Майкрософт"
-ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.date: 11/6/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.custom: 
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 88
+caps.latest.revision: "88"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 9ec628362449c449d26005797e806e47b4614a79
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: 8558691157d6a4f2fe705df236c0701f8bc1bf6c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Задание максимальной вместимости SQL Server
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Материалы по предыдущим версиям SQL Server см. в статье [Спецификации максимально допустимых параметров SQL Server](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx).
 
   В следующих таблицах приведены максимальные размеры и количество для различных объектов, определяемых в компонентах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Чтобы перейти к таблице, относящейся к технологии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , щелкните ссылку на нее:  
@@ -81,12 +83,12 @@ ms.lasthandoff: 08/11/2017
 |Файлов на одну базу данных||32 767||  
 |Размер файла (данные)||16 ТБ||  
 |Размер файла (журнал)||2 ТБ||  
-|Файлы данных для оптимизированных для памяти данных на одну базу данных||4096||  
+|Файлы данных для оптимизированных для памяти данных на одну базу данных||4 096 в [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)]. Более поздние версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не налагают подобное строгое ограничение.||  
 |Разностный файл на файл данных для данных, оптимизированных для памяти||1||  
 |Ссылок на таблицы внешнего ключа для таблицы||Исходящие = 253. Входящие = 10 000.|Ограничения см. в разделе [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md).|  
 |Длина идентификатора (в символах)||128||  
 |Экземпляров на один компьютер||50 экземпляров на отдельном сервере.<br /><br /> 25 экземпляров в отказоустойчивом кластере при использовании общего диска кластера в качестве места хранения для кластерной установки. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживает 50 экземпляров в отказоустойчивом кластере, если выбрать общие папки SMB в качестве места хранения для кластерной установки.||  
-|Индексы на оптимизированную для памяти таблицу||8||  
+|Индексы на оптимизированную для памяти таблицу||999 начиная с [!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] и в [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)]<br/>8 в [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] и [!INCLUDE[ssSQL15](../includes/ssSQL15-md.md)]||  
 |Длина строки, содержащей инструкции SQL (размер пакета)||65 536 * размер сетевого пакета|Размер сетевого пакета — это размер пакетов потока табличных данных (TDS), которые используются для связи между приложениями и компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)]. По умолчанию размер пакета равен 4 КБ, а его настройка осуществляется с помощью параметра конфигурации network packet size.|  
 |Блокировок на соединение||Максимальное число блокировок на сервер||  
 |Блокировок на экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Ограничено только объемом памяти|Это значение относится только к статическим блокировкам. Количество динамических блокировок ограничивается только объемом памяти.|  
@@ -159,4 +161,3 @@ ms.lasthandoff: 08/11/2017
  [Функции и задачи служебной программы SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   
-

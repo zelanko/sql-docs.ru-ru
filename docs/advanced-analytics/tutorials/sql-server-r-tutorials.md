@@ -3,30 +3,31 @@ title: "Учебники по SQL Server R | Документы Microsoft"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/29/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-caps.latest.revision: 1
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: a2fd60a40950710972c6e9507b3c9545e86840ff
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a313a6f26283b96d138671991438197ae0cc0332
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="sql-server-r-tutorials"></a>Учебники по SQL Server R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье список учебники и образцы, демонстрирующие использование R с SQL Server 2016 или 2017 г. SQL Server. Эти образцы и демонстрационные материалы Вы узнаете:
 
@@ -80,7 +81,7 @@ ms.lasthandoff: 09/01/2017
 
   Демонстрирует процесс обработки и анализа данных от начала до конца, в процессе получения данных и сохранить его в SQL Server, анализ данных с помощью R и построения диаграмм.
 
-  Вы узнаете, как переместить графики между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и R и сравнить конструируются в T-SQL с функциями r.. Наконец, вы узнаете, как использовать прогнозной модели в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для массовой оценки и оценки одной строки.
+  Вы узнаете, как переместить графики между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и R и сравнить конструируются в T-SQL с функциями r. Наконец, вы узнаете, как использовать прогнозной модели в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для массовой оценки и оценки одной строки.
 
   **Аудитория:** для тех, кто уже знаком с R и средств разработчика, например SQL Server Management Studio.
 
@@ -118,4 +119,3 @@ ms.lasthandoff: 09/01/2017
 + Убедитесь в наличии необходимых разрешений для подключения к серверу для чтения данных, а также для создания объектов базы данных, необходимые для образца вашей учетной записи пользователя Windows или имя входа SQL
 
 Если возникли трудности, см. статью для некоторых распространенных проблем: [Устранение неполадок службы машины обучения](../machine-learning-troubleshooting-faq.md)
-

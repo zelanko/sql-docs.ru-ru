@@ -1,10 +1,13 @@
 ---
-title: "Диспетчер FTP-соединений | Документы Microsoft"
+title: "Диспетчер FTP-соединений | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -16,16 +19,16 @@ helpviewer_keywords:
 - connections [Integration Services], FTP
 - connection managers [Integration Services], FTP
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 051dc7db2ef8aa475fa8739b097edd93d8286524
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 25fa55ddb7dc23df266460732e78712551230b26
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ftp-connection-manager"></a>диспетчер FTP-соединений
   Диспетчер FTP-соединений позволяет пакету подключаться к серверу, использующему протокол передачи файлов (FTP). Задача «FTP», включенная в комплект служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , использует этот диспетчер соединений.  
@@ -78,7 +81,7 @@ ms.lasthandoff: 08/09/2017
  **Порт сервера**  
  Позволяет задать номер порта, используемый для соединения с FTP-сервером. Значение по умолчанию этого свойства равно **21**.  
   
- **Имя пользователя**  
+ **User name**  
  Позволяет задать имя пользователя для доступа к FTP-серверу. Значение этого свойства по умолчанию равно **anonymous**.  
   
  **Пароль**  
@@ -101,6 +104,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также:  
  [Задача «FTP»](../../integration-services/control-flow/ftp-task.md)   
- [Службы Integration Services &#40; Службы SSIS &#41; Подключения](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

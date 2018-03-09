@@ -3,7 +3,7 @@ title: "Вызов хранимой процедуры с помощью ком�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 613c9d2e018360798eb71748473750712dec461e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 22af55f599bc6adafe6d1c6ea0dcb409033feeb0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>Вызов хранимой процедуры с помощью команды
 Команду можно использовать для вызова хранимой процедуры. Пример кода в конце этого раздела ссылается на хранимую процедуру в базе данных Northwind, вызывается CustOrdersOrders, которая определяется следующим образом.  
@@ -140,6 +139,5 @@ End Function
 'EndNewConnection  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Статья базы знаний 117500](http://go.microsoft.com/fwlink/?LinkId=117500)
-

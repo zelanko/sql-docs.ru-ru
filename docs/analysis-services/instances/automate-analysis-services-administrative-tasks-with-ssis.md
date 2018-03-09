@@ -2,33 +2,33 @@
 title: "Автоматизация административных задач служб Analysis Services с помощью служб SSIS | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Execute DDL Task [Analysis Services]
 - Analysis Services Processing task
 ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
-caps.latest.revision: 29
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 308c7910d408fcb29689484eb71726a669ed6d98
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 549a7813e4f4454eff3141a984b0eb1d0c157e7f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>Автоматизация административных задач служб Analysis Services с помощью служб SSIS
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] позволяют автоматизировать выполнение скриптов DDL, задач по обработке кубов и моделей интеллектуального анализа данных, а также задач запросов интеллектуального анализа данных. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно рассматривать как набор задач потока управления и задач по обслуживанию, которые можно соединять, образуя последовательные и параллельные задания по обработке данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] позволяет автоматизировать выполнение скриптов DDL, куба и обработку задач и задач запросов интеллектуального анализа данных модели интеллектуального анализа данных. Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно рассматривать как набор задач потока управления и задач по обслуживанию, которые можно соединять, образуя последовательные и параллельные задания по обработке данных.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предназначены для выполнения операций очистки данных во время выполнения задач обработки данных и для объединения данных из различных источников данных. При работе с кубами и моделями интеллектуального анализа данных службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] могут преобразовывать нечисловые данные в числовые и могут гарантировать, что значения типа данных содержатся в ожидаемых пределах, тем самым создавая достоверные данные, которыми производится заполнение таблиц фактов и измерений.  
   
@@ -51,4 +51,3 @@ ms.lasthandoff: 09/01/2017
  [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
   
   
-

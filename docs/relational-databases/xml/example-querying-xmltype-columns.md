@@ -2,9 +2,12 @@
 title: "Пример. Запросы к столбцам XMLType | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - RAW mode, querying XML example
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
-caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c4b6c214f3097fce58d3f2ac131642503c62641
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6b6c9252d91320b5aece66a4352a74324d04b917
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-querying-xmltype-columns"></a>Пример. Запросы к столбцам XMLType
-  В следующий запрос включены столбцы типа **xml** . Запрос возвращает идентификатор модели продукта, имя и шаги производства в первом месте из столбца `Instructions` типа **xml** .  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+В следующий запрос включены столбцы типа **xml** . Запрос возвращает идентификатор модели продукта, имя и шаги производства в первом месте из столбца `Instructions` типа **xml** .  
   
 ## <a name="example"></a>Пример  
   
@@ -122,4 +125,3 @@ go
  [Использование с RAW Mode для FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   
-

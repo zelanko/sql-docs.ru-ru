@@ -1,31 +1,32 @@
 ---
-title: "Экспорт в файл PDF (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Экспорт в PDF-файл (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 10/21/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 1cd71e9803dce9b7f0739bc93a849a2aa08c4547
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 69c8be9ba7c2994928a992325e565f1af802b852
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Экспорт в PDF-файл (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов в формате PDF создает отчеты [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы в виде файлов, которые можно открывать в Adobe Acrobat и других сторонних средствах просмотра PDF-файлов с поддержкой версии 1.3. Хотя версия 1.3 совместима с Adobe Acrobat 4.0 и более поздними версиями, службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживают Adobe Acrobat 11.0 и более поздние версии. Модуль подготовки отчетов не требует программного обеспечения Adobe для создания отчета. Однако средства просмотра PDF, например Adobe Acrobat, необходимы для просмотра или печати отчетов в формате PDF.  
   
- Модуль подготовки отчетов PDF поддерживает символы ANSI и с некоторыми ограничениями может преобразовать символы Юникода из написаний на японском, корейском, китайском — традиционное письмо, китайском — упрощенное письмо, кириллице, иврите, арабском. Дополнительные сведения об ограничениях см. в разделе [экспортировать отчеты &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+ Модуль подготовки отчетов PDF поддерживает символы ANSI и с некоторыми ограничениями может преобразовать символы Юникода из написаний на японском, корейском, китайском — традиционное письмо, китайском — упрощенное письмо, кириллице, иврите, арабском. Дополнительные сведения см. в разделе [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
  Модуль подготовки отчетов PDF — это модуль подготовки отчетов с физическими страницами, поэтому разбиение на страницы в нем отличается от других модулей подготовки отчетов, например HTML и Excel. В этом разделе приведены сведения по каждому модулю подготовки отчетов PDF, а также исключения из правил.  
   
@@ -108,12 +109,11 @@ ms.lasthandoff: 08/09/2017
  Некоторые параметры по умолчанию для этого модуля подготовки отчетов можно изменить через настройку сведений об устройстве. Дополнительные сведения см. в разделе [PDF Device Information Settings](../../reporting-services/pdf-device-information-settings.md).  
   
   
-## <a name="see-also"></a>См. также  
- [Разбиение на страницы в службах Reporting Services &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Поведение отрисовки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Интерактивные возможности различных подготовки отчетов к просмотру расширения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Подготовка к просмотру элементов отчета &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>См. также:  
+ [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

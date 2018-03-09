@@ -3,7 +3,7 @@ title: "Общие сведения о многомерных схем и дан
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - multidimensional schemas and data
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 518cb68ec75fb998ee2a53500db0dc096a38d678
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cf3e8d6bebd5860df9f52236eecf4d1f287a8f9d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Общие сведения о многомерных схем и данных
 ## <a name="understanding-multidimensional-schemas"></a>Основные сведения о схемах многомерные  
@@ -91,10 +90,9 @@ Hamburg, Munich, Stuttgart}
   
  Этот пример также демонстрирует других характеристик: некоторые элементы уровня Week неделя года иерархии не отображаются на любом уровне иерархии квартал года. Таким образом в иерархии не нужно указывать все элементы измерения.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объектная модель ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO (многомерные данные) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [Программирование с использованием ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [Использование ADO с ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
  [Работа с многомерными данными](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
-

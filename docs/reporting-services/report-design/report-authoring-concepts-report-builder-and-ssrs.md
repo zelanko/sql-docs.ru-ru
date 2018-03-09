@@ -1,30 +1,30 @@
 ---
-title: "Основные понятия (построитель отчетов и службы SSRS) создания отчетов | Документы Microsoft"
+title: "Основные понятия разработки отчетов (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: f063c61d46765587cb4b298544d5aa51960efd2e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 5ecffefd9ca76d03fb51f7335bc68f211f95246d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Основные понятия разработки отчетов (построитель отчетов и службы SSRS)
   В этом разделе кратко определены некоторые основные понятия, используемые в документации по построителю отчетов и конструктору отчетов для описания отчетов с разбиением на страницы. Определения отдельных слов и терминов см. в разделе [Глоссарий (построитель отчетов)](../../reporting-services/report-builder/glossary-report-builder.md).  
@@ -32,7 +32,7 @@ ms.lasthandoff: 09/27/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Отчеты, элементы отчетов и определения отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  Описывает различные термины, используемые для описания отчетов в разных состояниях, в том числе для отчета во время начального определения, для опубликованного отчета и для отчета, просматриваемого пользователем.  
   
@@ -42,11 +42,10 @@ ms.lasthandoff: 09/27/2017
  [Области данных и карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  Описывает типы областей данных, которые можно добавить в макет отчета. Области данных определяют внешний вид отчета: таблица, матрица, список или диаграмма.  
   
- [Концепция параметров отчета (построитель отчетов и службы SSRS)](report-parameters-concepts-report-builder-and-ssrs.md)  
+ [Понятия параметров отчета (построитель отчетов и службы SSRS)](report-parameters-concepts-report-builder-and-ssrs.md)  
  Описывает способы определения и использования параметров отчета, а также порядок независимого управления параметрами отчета из определения отчета на сервере отчетов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Построитель отчетов в SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
   
-

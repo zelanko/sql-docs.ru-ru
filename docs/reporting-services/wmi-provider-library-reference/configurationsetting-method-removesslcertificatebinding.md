@@ -1,31 +1,30 @@
 ---
-title: "Метод RemoveSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting) | Документы Microsoft"
+title: "Метод RemoveSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RemoveSSLCertificateBindings method
+helpviewer_keywords: RemoveSSLCertificateBindings method
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
-caps.latest.revision: 12
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "12"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2a4c9fe3ff515e9c6dce2986d19b75a61ac0b548
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 16d9205b7eea945bc08176174a8e1c2ee7dc441b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configurationsetting-method---removesslcertificatebinding"></a>Метод ConfigurationSetting - RemoveSSLCertificateBinding
+# <a name="configurationsetting-method---removesslcertificatebinding"></a>Метод ConfigurationSetting — RemoveSSLCertificateBinding
   Удаляет привязку к SSL-сертификату.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -68,14 +67,13 @@ public void RemoveSSLCertificateBindings(string Application,
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение *HRESULT* , являющееся признаком успешного или неуспешного завершение вызова метода. Значение 0 означает, что вызов метода завершился успешно; код ошибки означает, что произошла ошибка.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При помощи этого метода выполняется удаление конкретной привязки, заданной в файле rsreportserver.config и, при указании дополнительных параметров, в файле HTTP.SYS.  
   
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

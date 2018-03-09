@@ -3,31 +3,32 @@ title: "С помощью кода R в Transact-SQL (R в быстрый зап
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/20/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 ms.assetid: 4e6fe30d-a105-4d5b-bc05-5e5204753847
-caps.latest.revision: 36
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Active
+ms.openlocfilehash: d4810554e5ed40a300a902b96ca568f799c63899
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c023af0a3a9b9c53cb2b6adf7298c18657a60803
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>С помощью кода R в Transact-SQL (R в быстрый запуск SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом руководстве описаны основные принципы вызова скрипта R из хранимой процедуры T-SQL.
 
@@ -42,7 +43,7 @@ ms.lasthandoff: 09/01/2017
 
 На прохождение этого руководства требуется 30 минут, не считая установки.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Необходимо иметь доступ к экземпляру SQL Server с одним из уже установлены следующие компоненты:
 
@@ -53,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 
 Для выполнения запросов SQL, включающие скрипты R, можно использовать любое приложение, можно подключиться к базе данных и выполнить код T-SQL. Специалисты SQL можно использовать Visual Studio или SQL Server Management Studio (SSMS).
 
-Для этого учебника, чтобы показать, как просто можно запускать в SQL Server, мы используем новый **mssql расширения для Visual Studio Code**. VS Code является бесплатной среды разработки, можно запустить в Windows, Linux или macOS. **Mssql*** расширения представляют собой упрощенные расширение SLq запросов. Инструкции по ее установке см. в статье [Use Visual Studio Code to create and run Transact-SQL scripts for SQL Server](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode) (Использование Visual Studio Code для создания и выполнения скрипта Transact-SQL для SQL Server).
+Для этого учебника, чтобы показать, как просто можно запускать в SQL Server, мы используем новый **mssql расширения для Visual Studio Code**. VS Code является бесплатной среды разработки, можно запустить в Windows, Linux или macOS. **Mssql** расширения представляют собой упрощенные расширение выполнение запросов T-SQL. Инструкции по ее установке см. в статье [Use Visual Studio Code to create and run Transact-SQL scripts for SQL Server](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode) (Использование Visual Studio Code для создания и выполнения скрипта Transact-SQL для SQL Server).
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>Подключение к базе данных и выполнение тестового скрипта Hello World
 
@@ -102,4 +103,3 @@ ms.lasthandoff: 09/01/2017
 Урок 4. [создать прогнозную модель](rtsql-create-a-predictive-model-r.md)
 
 Занятие 5. [Predict и построения из модели](rtsql-predict-and-plot-from-model.md)
-

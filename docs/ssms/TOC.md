@@ -1,12 +1,10 @@
-# [Скачивание SSMS](download-sql-server-management-studio-ssms.md)
 # [Что такое SSMS?](sql-server-management-studio-ssms.md)
-
-# What's New
+# [Скачивание SSMS](download-sql-server-management-studio-ssms.md)
 ## [Журнал изменений и предыдущие выпуски SSMS](sql-server-management-studio-changelog-ssms.md)
 ## [Заметки о выпуске](download-sql-server-management-studio-ssms.md#release-notes)
-## [Новые и недавно обновленные статьи](new-updated-ssms.md)
-
-# [Загрузите модуль PowerShell для SQL Server](download-sql-server-ps-module.md)
+## [Установка SSMS не на английском языке](install-other-languages.md)
+## [Новые и обновленные Статьи](new-updated-ssms.md)
+# [Установка модуля SQL Server PowerShell](../powershell/download-sql-server-ps-module.md?toc=/sql/ssms/toc.json)
 
 # [Агент SQL Server +](../ssms/agent/sql-server-agent.md)
 # [Справка F1 +](../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md)
@@ -23,7 +21,7 @@
 # [Окна инструментов SSMS](tool-windows-in-sql-server-management-studio.md)
 # [Создание проектов баз данных с помощью среды SSMS](build-database-projects-by-using-sql-server-management-studio.md)
 # [Управление окнами SSMS](understand-sql-server-management-studio-windows-management.md)
-# [Диалоговое окно "Внешние средства"](external-tools-dialog-box.md)
+# [Диалоговое окно «Внешние средства»](external-tools-dialog-box.md)
 
 # [Диалоговое окно "Аргументы"](arguments-dialog-box.md)
 # [Администрирование серверов с помощью SSMS](administer-servers-with-sql-server-management-studio.md)

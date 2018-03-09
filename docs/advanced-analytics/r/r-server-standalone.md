@@ -3,28 +3,29 @@ title: "R Server (изолированная версия) | Документа�
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 06/22/2017
-ms.prod: r-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+vms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
 ms.assetid: ca9e48f1-67b8-4905-9b78-56752d7a4e81
-caps.latest.revision: 22
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: 3f0c567463c25a54829a988516890bead171f5ec
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1812dc6b60e5f5ee4547810a591b37643be17096
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-server-standalone"></a>R Server (Standalone)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В SQL Server 2016. Корпорация Майкрософт выпустила **R Server (изолированный)**, в состав платформы для поддержки аналитики корпоративного уровня.  Microsoft R Server обеспечивает масштабируемость и безопасность для языка R и обходит ограничения в памяти с открытым кодом R. Как SQL Server R Services Microsoft R Server (изолированный) предоставляет параллельной и фрагментированной обработки данных, позволяя пользователям использовать намного больше, чем может поместиться в памяти данных R.
 
@@ -102,8 +103,7 @@ ms.lasthandoff: 09/01/2017
 
 Примеры, учебники и Дополнительные сведения о сервере Microsoft R см. в разделе [продукты Microsoft R](https://msdn.microsoft.com/microsoft-r/microsoft-r-getting-started).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
  [Службы R SQL Server](../../advanced-analytics/r/sql-server-r-services.md)
-
 

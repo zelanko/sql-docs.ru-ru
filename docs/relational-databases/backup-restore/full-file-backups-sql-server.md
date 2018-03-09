@@ -2,11 +2,13 @@
 title: "Полные резервные копии файлов (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +21,19 @@ helpviewer_keywords:
 - filegroups [SQL Server], backing up
 - file backups [SQL Server]
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
-caps.latest.revision: 62
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 10cdcff6b30fc1c71943cca5c0675473ea81d0ae
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "62"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 4caf6c242eabb3f3be393c896723314beff5c8ef
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="full-file-backups-sql-server"></a>полные резервные копии файлов (SQL Server)
-  Сведения, приведенные в этом разделе, относятся только к тем базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые содержат несколько файлов или файловых групп.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Сведения, приведенные в этом разделе, относятся только к тем базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые содержат несколько файлов или файловых групп.  
   
  Резервные копии файлов базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно создавать и восстанавливать по отдельности. Кроме того, можно указать всю файловую группу, а не каждый файл по отдельности. Обратите внимание, что если какой-либо файл файловой группы находится в режиме «вне сети» (например во время его восстановления), то вся файловая группа переводится в режим «вне сети», и создать ее резервную копию будет невозможно.  
   
@@ -93,7 +95,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="RelatedTasks"></a> Связанные задачи  
  **Создание резервных копий файла или файловой группы**  
   
--   [Создание резервных копий файлов и файловых групп (SQL Server)](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  
+-   [Резервное копирование файлов и файловых групп (SQL Server)](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A> (SMO)  
   

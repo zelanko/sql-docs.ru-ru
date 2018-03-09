@@ -3,7 +3,7 @@ title: "CommandTypeEnum | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,24 +18,23 @@ f1_keywords:
 helpviewer_keywords:
 - CommandTypeEnum enumeration [ADO]
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 11150cb69914cf5438d46cc15238b38465ddfa30
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bc2cd3acc56c11bdab98d58c1adc76d98eb1579d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Указывает, как следует интерпретировать аргумент команды.  
   
  Важно проверить предоставленные пользователем *CommandString* значения, чтобы избежать предоставления приложения пользователям возможность внедрить потенциально опасные команды для ADO для выполнения.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|Не указан аргумент типа команды.|  
 |**adCmdText**|1|Результатом является [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) как текстовое определение команда или хранимая процедура вызова.|  
@@ -62,7 +61,6 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[Свойство CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)|[Выполнить метод (команда ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
-|[Выполнить метод (соединение ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|[Метод Open (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[Requery-метод](../../../ado/reference/ado-api/requery-method.md)||
-
+|[Свойство CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)|[Метод Execute (объект Command ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
+|[Метод Execute (объект Connection ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|[Метод Open (объект Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
+|[Метод Requery](../../../ado/reference/ado-api/requery-method.md)||

@@ -3,7 +3,7 @@ title: "Свойства ADOX | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,26 +16,25 @@ helpviewer_keywords:
 - properties [ADOX]
 - ADOX, properties
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 779d8fe872fe5db8d36b7dc7feb2f0e4742595be
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 28a29504793d2b4144fa6c01f2f80e486d0f2b90
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-properties"></a>Свойства ADOX
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Указывает ADO **подключения** объекта, которому принадлежит каталога.|  
 |[Атрибуты](../../../ado/reference/adox-api/attributes-property-adox.md)|Описывает характеристики столбца.|  
-|[Кластер](../../../ado/reference/adox-api/clustered-property-adox.md)|Указывает, является ли индекс кластеризованным.|  
+|[Кластеризованный](../../../ado/reference/adox-api/clustered-property-adox.md)|Указывает, является ли индекс кластеризованным.|  
 |[Command](../../../ado/reference/adox-api/command-property-adox.md)|Указывает ADO **команда** объект, который может использоваться для создания или выполнения процедуры.|  
-|[Счетчик](../../../ado/reference/ado-api/count-property-ado.md)|Указывает количество объектов в коллекции.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Указывает количество объектов в коллекции.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Указывает дату создания объекта.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Указывает дату последнего изменения объекта.|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Указывает, указанных выше максимальный размер столбца.|  
@@ -56,7 +55,6 @@ ms.lasthandoff: 09/09/2017
 |[Уникальный](../../../ado/reference/adox-api/unique-property-adox.md)|Указывает, должны ли быть уникальными ключей индекса.|  
 |[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)|Указывает действия, выполняемого при обновлении первичного ключа.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Расширения ADO для языка описания данных и безопасности (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
-

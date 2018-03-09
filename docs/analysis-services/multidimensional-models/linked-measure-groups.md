@@ -2,13 +2,13 @@
 title: "Связанные группы мер | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - measure groups [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
-caps.latest.revision: 41
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a5139e2e9e9d5bb06d594f9463f6632b6ee9fb78
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 390e596ce08f5956f65cc106b50af7b68c4d2da4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="linked-measure-groups"></a>Связанные группы мер
-  Связанная группа мер основана на другой группе мер в другом кубе в той же или другой базе данных служб Analysis Services. Можно использовать связанную группу мер, если требуется повторно использовать набор мер и соответствующие значения данных в нескольких кубах.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Связанная группа мер основана на другой группе мер в другом кубе в той же или другой базе данных служб Analysis Services. Можно использовать связанную группу мер, если требуется повторно использовать набор мер и соответствующие значения данных в нескольких кубах.  
   
  Корпорация Майкрософт рекомендует, чтобы исходные и связанные группы мер находились в решениях, которые выполняются на том же сервере. Связывание с группой мер на удаленном сервере планируется отменить в будущих версиях (см. раздел [Нерекомендуемые функции служб Analysis Services в SQL Server 2016](../../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)).  
   
@@ -77,8 +77,7 @@ ms.lasthandoff: 09/01/2017
   
  Чтобы определить или использовать связанную группу мер, учетная запись службы Windows для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] должна принадлежать к роли базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], имеющей права доступа **ReadDefinition** и **Read** в исходном экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на исходный куб и группу мер, или к роли "Администраторы" служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для исходного экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
  [Определите связанные измерения](../../analysis-services/multidimensional-models/define-linked-dimensions.md)  
   
   
-

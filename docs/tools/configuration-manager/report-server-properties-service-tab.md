@@ -2,28 +2,31 @@
 title: "Свойства сервера (вкладка «службы») отчета | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b55a991a48bcae34cea1bfbc834d7a6e6891c786
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 37d55395dbd3692c4853f5620360a65bf987b69c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="report-server-properties-service-tab"></a>Свойства сервера отчетов (вкладка «Службы»)
-  Это служба сервера отчетов [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Значения свойств, выделенные светло-серым цветом, с помощью этого приложения изменить нельзя.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Это служба сервера отчетов [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Значения свойств, выделенные светло-серым цветом, с помощью этого приложения изменить нельзя.  
   
 ## <a name="options"></a>Параметры  
  **Путь к двоичным файлам**  
@@ -63,4 +66,3 @@ ms.lasthandoff: 08/02/2017
  [Службы SQL Server](../../tools/configuration-manager/sql-server-services.md)  
   
   
-

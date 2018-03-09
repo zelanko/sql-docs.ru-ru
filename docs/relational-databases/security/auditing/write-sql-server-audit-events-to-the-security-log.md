@@ -2,11 +2,13 @@
 title: "Запись событий подсистемы аудита SQL Server в журнал безопасности | Документация Майкрософт"
 ms.custom: 
 ms.date: 09/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,21 +17,19 @@ helpviewer_keywords:
 - audits [SQL Server], writing to Security Log
 - security logs [SQL Server]
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 81487f57c0addf8f6e703a22e14bfe7e305a8fc6
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 990b47afdf34cc16f15a658f5a69f840d44a27fe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
-
----  
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
+---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Запись событий подсистемы аудита SQL Server в журнал безопасности  
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В среде с повышенной безопасностью подходящим местом для записи событий доступа к объектам является журнал безопасности Windows. Другие местонахождения аудита поддерживаются, но они более уязвимы для вторжения злоумышленников.  
   
@@ -113,4 +113,3 @@ ms.lasthandoff: 09/21/2017
  [Подсистема аудита SQL Server (компонент Database Engine)](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   
-

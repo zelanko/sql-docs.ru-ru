@@ -3,7 +3,7 @@ title: "Пример метода CreateRecordset (VB) | Документы Micr
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - CreateRecordset method [RDS], Visual Basic example
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: aab6469e8b8352ed1981831509469323f803599a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9014696c4d13cb9bcecb3f244d01fe24f2869b9c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createrecordset-method-example-vb"></a>Пример метода CreateRecordset (Visual Basic)
 Можно создать [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и укажите сведения о столбце. Затем можно вставить данные в **записей** объект; базового буферы строк операции вставки.  
@@ -157,4 +156,3 @@ ErrorHandler:
 End Sub  
 'EndRsDefineShapeVB  
 ```
-

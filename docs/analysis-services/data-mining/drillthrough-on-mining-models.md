@@ -2,28 +2,29 @@
 title: "Детализация моделей интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cc94d0226262eb6c40fce83370774e9fed08a8ab
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5c725d6035300f168f6388d484f1e3b9ba2f0428
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="drillthrough-on-mining-models"></a>Детализация моделей интеллектуального анализа данных
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   *Детализация* — это возможность выполнять запросы к модели или структуре интеллектуального анализа данных и получать подробные данные, не представленные в модели.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] обеспечивает два различных варианта для детализации данных вариантов. Можно детализировать варианты, которые были использованы для построения данных, либо варианты в структуре интеллектуального анализа данных.  
@@ -63,8 +64,8 @@ ms.lasthandoff: 09/01/2017
 |Задания|Ссылки|  
 |-----------|-----------|  
 |Использование детализации в средствах просмотра моделей интеллектуального анализа данных|[Использование детализации из средств просмотра моделей](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
-|Извлечение данных варианта для модели с помощью детализации|[выполнить детализацию до данных вариантов из модели интеллектуального анализа данных](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
-|Включение детализации для существующей модели интеллектуального анализа данных|[включить детализацию для модели интеллектуального анализа данных](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
+|Извлечение данных варианта для модели с помощью детализации|[Детализация данных вариантов из модели интеллектуального анализа данных](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
+|Включение детализации для существующей модели интеллектуального анализа данных|[Включить детализацию для модели интеллектуального анализа данных](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
 |См. примеры запросов детализации для конкретных типов моделей.|[Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md)|  
 |Включение детализации в мастере моделей интеллектуального анализа данных|[Завершение работы мастера (мастер интеллектуального анализа данных)](http://msdn.microsoft.com/library/6aef1548-35eb-42fd-ae87-63650a79eda1).|  
   
@@ -72,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [Детализация структур интеллектуального анализа данных](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   
   
-

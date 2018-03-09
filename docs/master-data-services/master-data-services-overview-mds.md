@@ -1,11 +1,13 @@
 ---
 title: "Общие сведения о службах Master Data Services (MDS) | Документы Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 02/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
@@ -16,22 +18,21 @@ helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-caps.latest.revision: 28
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: a60fddbc00fa808590a06bc3263dfe6bc966f18b
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 09064a57e9a55ec5bf868b839be6444d0de853be
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="master-data-services-overview-mds"></a>Общие сведения о службах Master Data Services (MDS)
   В этом разделе описаны ключевые функции организации данных и управления ими с помощью [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
- [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] позволяют управлять основным набором данных в вашей организации. Можно организовывать данные в модели, создавать правила для обновления данных и контролировать тех, кто обновляет данные. Excel позволяет использовать основной набор данных совместно с другими людьми в вашей организации. 
+ [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] позволяет управлять основным набором данных в вашей организации. Можно организовывать данные в модели, создавать правила для обновления данных и контролировать тех, кто обновляет данные. Excel позволяет использовать основной набор данных совместно с другими людьми в вашей организации. 
   
  >  Описание архитектуры [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] см. в статье [Master Data Services — основы](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) на сайте simple-talk.com. Сведения о новых функциях [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] см. на странице [Новые возможности Master Data Services (MDS)](../master-data-services/what-s-new-in-master-data-services-mds.md).  
    **Инструкции по установке [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], настройке базы данных и веб-сайта и развертыванию образцов моделей см. в статье** [Установка и конфигурация служб Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md).  
@@ -80,5 +81,4 @@ ms.lasthandoff: 09/07/2017
  По окончании можно развернуть модель в рабочей среде с данными или без них. Дополнительные сведения см. в разделе [Развертывание моделей (службы Master Data Services)](../master-data-services/deploying-models-master-data-services.md).  
   
   
-
 

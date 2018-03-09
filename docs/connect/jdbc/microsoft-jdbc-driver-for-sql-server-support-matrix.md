@@ -1,26 +1,28 @@
 ---
 title: "Драйвер Microsoft JDBC для SQL Server Support Matrix | Документы Microsoft"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 30e750a2f69b52c04907c91aa0d47f2a3a60be91
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 35747cff6a18c79a828e5269d7085c710338bf18
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Матрица поддержки драйвера Microsoft JDBC Driver for SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,7 +30,7 @@ ms.lasthandoff: 09/09/2017
   В этой статье приведены матрица и политика жизненного цикла поддержки для драйвера Microsoft JDBC Driver for SQL Server.  
   
 ## <a name="microsoft-jdbc-driver-support-lifecycle-matrix-and-policy"></a>Матрица и политика жизненного цикла поддержки для драйвера Microsoft JDBC  
- Политика жизненного цикла поддержки Майкрософт (MSL) предоставляет понятную и предсказуемую информацию о жизненном цикле поддержки продуктов Майкрософт. Основная фаза поддержки драйверов JDBC версий 3.0 и 4.x длится пять лет с даты выпуска соответствующей версии. Основная фаза поддержки определена на веб-сайте жизненного цикла поддержки Майкрософт.  
+ Политика жизненного цикла поддержки Майкрософт (MSL) предоставляет понятную и предсказуемую информацию о жизненном цикле поддержки продуктов Майкрософт. Драйвер JDBC версий 3.0, 4.x и 6.x длится пять лет поддерживается в драйвере Дата выпуска. Основная фаза поддержки определена на веб-сайте жизненного цикла поддержки Майкрософт.  
   
  Возможность расширенной или настраиваемой поддержки драйвера JDBC не предусмотрена.  
     
@@ -36,39 +38,41 @@ ms.lasthandoff: 09/09/2017
   
 |Имя драйвера|Версия пакета драйверов|Применимые JAR(s)|Конец Основная фаза поддержки|
 |-|-|-|-|  
-|6.2 драйвер Microsoft JDBC для SQL Server|6.2|MSSQL jdbc-6.2.1.jre8.jar<br> MSSQL jdbc-6.2.1.jre7.jar|30 июня 2022|    
-|Microsoft JDBC Driver 6.0 для SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|14 июля 2021|    
+|Драйвер Microsoft JDBC 6.4 для SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|22 января 2023 гг.|    
+|Microsoft JDBC Driver 6.2 для SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|30 июня 2022|    
+|Драйвер Microsoft JDBC Driver 6.0 для SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|14 июля 2021|    
 |Microsoft JDBC Driver 4.2 for SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|24 августа 2020 г.|  
-|Microsoft JDBC Driver 4.1 for SQL Server|4.1|sqljdbc41.jar|12 декабря 2019 г.|  
+|Microsoft JDBC Driver 4.1 for SQL Server|4.1|sqljdbc41.jar|12 декабря 2019 г.|  
   
  Следующие драйверы Microsoft JDBC больше не поддерживаются.  
  
 |Имя драйвера|Версия пакета драйверов|Конец Основная фаза поддержки|  
 |-|-|-|
-|Microsoft JDBC Driver 4.0 for SQL Server|4.0|6 марта 2017 г.|  
+|Microsoft JDBC Driver 4.0 for SQL Server|4.0|6 марта 2017 г.|  
 |Драйвер JDBC 3.0 для Microsoft SQL Server|3.0|23 апреля 2015 г.|  
 |Драйвер JDBC 2.0 для Microsoft SQL Server|2.0|31 декабря 2012 г.|  
 |Драйвер JDBC 1.2 для Microsoft SQL Server 2005|1.2|25 июня 2011 г.|  
 |Драйвер JDBC 1.1 для Microsoft SQL Server 2005|1.1|25 июня 2011 г.|  
-|Драйвер JDBC 1.0 для Microsoft SQL Server 2005|1.0|25 июня 2011 г.|  
+|Драйвер JDBC 1.0 для Microsoft SQL Server 2005|1.0|25 июня 2011 г.|  
 |Драйвер JDBC для Microsoft SQL Server 2000|2000|9 июля 2010 г.|  
   
 ## <a name="sql-version-compatibility"></a>Совместимость с версиями SQL  
   
-|Версия драйвера|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|База данных SQL Azure|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|  
-|-|-|-|-|-|-|-|-| 
-|6.2|Да|Да|Да|Да|Да|Да|Да|  
-|6.1|Да|Да|Да|Да|Да|Да|Да|  
-|6.0|Да|Да|Да|Да|Да|Да|Да|  
-|4.2|Да|Да|Да|Да|Да|Да|Да|  
-|4.1|Да|Да|Да|Да|Да|Да|Да|  
-|4.0|Да|Да|Да|Да|Да|Да|Да|  
-|3.0|Да|Да|Y<sup>1</sup>|Y<sup>2</sup>|Нет|Y<sup>5</sup>|Нет|  
-|2.0|Y<sup>3</sup>|Y<sup>3</sup>|Нет|Нет|Нет|Нет|Нет|  
-|1.2|Y<sup>3</sup>|Нет|Нет|Нет|Нет|Нет|Нет|  
-|1.1|Нет|Нет|Нет|Нет|Нет|Нет|Нет|  
-|1.0|Нет|Нет|Нет|Нет|Нет|Нет|Нет|  
-|2000|Нет|Нет|Нет|Нет|Нет|Нет|Нет|  
+|Версия драйвера|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL управляемый экземпляр (Extended личной предварительной версии)|  
+|-|-|-|-|-|-|-|-|-|-|
+|6.4|Нет|Да|Да|Да|Да|Да|Да|Да|Да|  
+|6.2|Да|Да|Да|Да|Да|Да|Да|Да|Нет|
+|6.1|Да|Да|Да|Да|Да|Да|Да|Нет|Нет|
+|6.0|Да|Да|Да|Да|Да|Да|Да|Нет|Нет|
+|4.2|Да|Да|Да|Да|Да|Да|Да|Нет|Нет|
+|4.1|Да|Да|Да|Да|Да|Да|Да|Нет|Нет|
+|4.0|Да|Да|Да|Да|Да|Да|Да|Нет|Нет|
+|3.0|Да|Да|Y<sup>1</sup>|Y<sup>2</sup>|Нет|Y<sup>5</sup>|Нет|Нет|Нет|
+|2.0|Y<sup>3</sup>|Y<sup>3</sup>|Нет|Нет|Нет|Нет|Нет|Нет|Нет|
+|1.2|Y<sup>3</sup>|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|
+|1.1|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|  
+|1.0|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|  
+|2000|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|  
   
  <sup>1</sup>драйвера JDBC версии 3.0 для Microsoft SQL Server можно подключиться к SQL Server 2012 в качестве клиента нижнего уровня.  
   
@@ -84,6 +88,7 @@ ms.lasthandoff: 09/09/2017
   
 |Версия драйвера JDBC|Версия JRE|Версия API JDBC| 
 |-|-|-|  
+|6.4|1.7, 1.8, 1.9|4.1, 4.2, 4.3 (частично)|  
 |6.2|1.7, 1.8|4.1, 4.2|  
 |6.1|1.7, 1.8|4.1, 4.2|  
 |6.0|1.7, 1.8|4.1, 4.2|  
@@ -106,4 +111,3 @@ ms.lasthandoff: 09/09/2017
  Драйвер Microsoft JDBC Driver for SQL Server тестируется на совместимость с различными серверами приложений.  Обратитесь к поставщику вашего сервера приложений, чтобы узнать, какая версия драйвера совместима с их продуктом.  
   
   
-

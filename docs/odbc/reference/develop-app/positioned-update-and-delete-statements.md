@@ -3,8 +3,11 @@ title: "Располагается в инструкции Update и Delete | Д
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0c39c0081ee0cd671ee31bd7e11c02a72adc7558
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 45bb604f0226ac05eab0fd99bdbef41704cc8de8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="positioned-update-and-delete-statements"></a>Позиционированное обновление и удаление операторов
 Приложения могут обновить или удалить текущую строку в результирующем наборе с позиционированного обновления или инструкция delete. Располагается update и delete операторы поддерживаются некоторые источники данных, но не все из них. Чтобы определить, является ли поддерживает источник данных расположен инструкции update и delete, приложение вызывает **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ ATTRIBUTES1 или SQL_STATIC_CURSOR_ATTRIBUTES1 *свойство* (в зависимости от типа курсора). Обратите внимание, что библиотека курсоров ODBC имитирует располагается инструкции update и delete.  
@@ -34,7 +36,7 @@ ms.lasthandoff: 09/09/2017
   
  **ВЫБЕРИТЕ** [**все** &#124; **DISTINCT**] *список выбора*  
   
- **ИЗ** *список таблиц ссылка*  
+ **FROM** *table-reference-list*  
   
  [**ГДЕ** *условие поиска*]  
   
@@ -156,4 +158,3 @@ while (GetAction(&Action, &RowNum)) {
 // Close the cursor.  
 SQLCloseCursor(hstmtCust);  
 ```
-

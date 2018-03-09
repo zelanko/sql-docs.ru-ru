@@ -2,31 +2,32 @@
 title: "Зеркальное отображение баз данных и доставка журналов (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - log shipping [SQL Server], database mirroring
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 092a000b7b942a3b26a7bafedcc65ed2b19944f7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d043699e20a674009268ee168b457322fd0591ee
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Зеркальное отображение баз данных и доставка журналов (SQL Server)
-  Для каждой базы данных может быть создано зеркальное отображение и доставка журналов; они также могут существовать одновременно. При выборе подхода примите во внимание следующее.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Для каждой базы данных может быть создано зеркальное отображение и доставка журналов; они также могут существовать одновременно. При выборе подхода примите во внимание следующее.  
   
 -   Сколько требуется целевых серверов?  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 08/02/2017
   
  ![Доставка журналов и зеркальное отображение баз данных](../../database-engine/database-mirroring/media/logshipping-and-dbm-automatic-failover.gif "Доставка журналов и зеркальное отображение баз данных")  
   
- После отработки отказа с переходом на зеркальный сервер имя сервера-источника, определенное на серверах-получателях, не меняется. .  
+ После отработки отказа с переходом на зеркальный сервер имя сервера-источника, определенное на серверах-получателях, не меняется. , и делает это по-другому.  
   
 ## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>Влияние зеркального отображения базы данных на удаленный экземпляр сервера мониторинга  
  При использовании удаленного экземпляра сервера мониторинга сочетание доставки журналов и зеркального отображения баз данных влияет на информацию, хранящуюся в таблицах монитора. Информация о сервере-источнике представляет собой комбинацию данных об основном сервере-источнике и мониторах, настроенных на каждом сервере-получателе.  
@@ -80,7 +81,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="setting-up-mirroring-and-log-shipping-together"></a>Совместная настройка зеркального отображения и доставки журналов  
  Чтобы совместно настроить зеркальное отображение и доставку журналов, выполните следующие шаги:  
   
-1.  Восстановите резервные копии основной базы данных-источника с параметром NORECOVERY на другой экземпляр сервера, который затем будет использоваться как зеркальная база данных основной базы данных-источника. Дополнительные сведения см. в статье [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+1.  Восстановите резервные копии основной базы данных-источника с параметром NORECOVERY на другой экземпляр сервера, который затем будет использоваться как зеркальная база данных основной базы данных-источника. Дополнительные сведения см. в разделе [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 2.  Настройте зеркальное отображение базы данных. Дополнительные сведения см. в статьях [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md) и [Настройка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 08/02/2017
   
      Создайте общий ресурс для каталога резервных копий (ресурс резервных копий). Это гарантирует, что после переключения ролей между основным и зеркальным серверами задания резервного копирования будут продолжать вести запись в тот же каталог, что и ранее. Рекомендуется также убедиться, что этот ресурс находится на физическом сервере, отличном от тех серверов, на которых находятся серверы баз данных, участвующие в зеркальном отображении и доставке журналов.  
   
-     Дополнительные сведения см. в статьях [Настройка доставки журналов (SQL Server)](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
+     Дополнительные сведения см. в разделе [Настройка доставки журналов (SQL Server)](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
   
 5.  Отработка отказа вручную при сбое с основного сервера на зеркальный.  
   
@@ -112,4 +113,3 @@ ms.lasthandoff: 08/02/2017
 7.  При необходимости можно вручную выполнить отработку отказа, чтобы вернуться к исходному участнику.  
   
   
-

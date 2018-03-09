@@ -3,10 +3,12 @@ title: "Диалоговое окно \"Определения запроса р
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,20 +16,19 @@ f1_keywords:
 - vdtsql.chm:69640
 - vdt.dlgbox.querydefinitionsdiffer
 ms.assetid: 90383473-2922-40e5-9682-3850849aa856
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2b97f208930bda676bcb97f3d54e5020d1c30983
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 630593a904b4fb28e39e94a81e02481c0e6a8e1d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>Диалоговое окно «Определения запроса различаются» (визуальные инструменты для баз данных)
-Это диалоговое окно уведомляет о том, что данный запрос не может быть графически представлен на панелях «Диаграмма» и «Критерии» и его можно редактировать только на панели SQL.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Это диалоговое окно уведомляет о том, что данный запрос не может быть графически представлен на панелях "Диаграмма" и "Критерии" и его можно редактировать только на панели SQL.  
   
 Это диалоговое окно может появляться при вводе или редактировании инструкции SQL на панели SQL, при переходе на другую панель, при подтверждении запроса или при попытке выполнить запрос в следующих случаях:  
   
@@ -58,4 +59,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>См. также:  
 [Инструменты конструктора запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)  
   
-

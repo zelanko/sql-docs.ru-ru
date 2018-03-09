@@ -3,8 +3,11 @@ title: "_ (Шаблон — совпадение одного символа) (T
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - wildcard characters [SQL Server]
 - _ (wildcard - match one character)
 ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
-caps.latest.revision: 33
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: a8992de1c0eadc11902bae537b97100a4b3cda55
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 01bc0c4c006ae55395d752a0377575fa680dffaa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (шаблон — совпадение одного символа) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Используйте символы подчеркивания в соответствии с любым символом в операции сравнения строк, который использует сопоставление с шаблоном, такой как `LIKE` и `PATINDEX`.  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 10/24/2017
 
 В следующем примере возвращаются все базы данных, имена которых начинаются с буквы `m` и иметь буквы `d` как третья буква. Символ подчеркивания указывает, что второй символ в имени может быть любая буква. `model` И `msdb` базы данных соответствуют этому критерию. `master` Не поддерживает базы данных.
 
-```tsql
+```sql
 SELECT name FROM sys.databases
 WHERE name LIKE 'm_d%';
 ```   
@@ -65,7 +67,7 @@ msdb
 ### <a name="b-more-complex-example"></a>Б. более сложный пример
  В следующем примере оператор _ для поиска всех людей в `Person` таблицы, имеющая трехбуквенное имя первого, который заканчивается на `an`.  
   
-```tsql  
+```sql  
 -- USE AdventureWorks2012
   
 SELECT FirstName, LastName  
@@ -76,14 +78,14 @@ ORDER BY FirstName;
 ## <a name="c-escaping-the-underscore-character"></a>C: Экранирование символа подчеркивания   
 Следующий пример возвращает имена предопределенных ролей базы данных как `db_owner` и `db_ddladmin`, но она возвращает `dbo` пользователя. 
 
-```tsql
+```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db_%';
 ```
 
 Рассматривается как подстановочный знак подчеркивания в третьей позиции символа и не выполняет фильтрацию для участников, начиная с буквы `db_`. В escape-символ подчеркивания заключить его в квадратные скобки `[_]`. 
 
-```tsql
+```sql
 SELECT name FROM sys.database_principals
 WHERE name LIKE 'db[_]%';
 ```   
@@ -99,11 +101,10 @@ db_securityadmin
 ```
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [КАК &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [Функция PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
   [% (Шаблон — символ(ы) для сопоставления)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
   [&#91; &#93; (Шаблон — символ(ы) для сопоставления)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
  [&#91; ^ &#93; (Шаблон — символ(ы) должны совпасть)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
   
-

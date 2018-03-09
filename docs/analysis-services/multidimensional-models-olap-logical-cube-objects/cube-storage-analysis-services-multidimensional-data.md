@@ -2,12 +2,13 @@
 title: "Куб хранения данных (службы Analysis Services — многомерные данные) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,20 +21,20 @@ helpviewer_keywords:
 - partitions [Analysis Services], cubes
 - storage [Analysis Services], cubes
 ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
-caps.latest.revision: 41
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bf2333da378e88992b54db5169a2cf8fedc5ec9c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 27b0e9be1051b6abab2e0be7b0e521e9a5b54567
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Хранилище кубов (службы Analysis Services — многомерные данные)
-  В хранилище могут содержаться либо только метаданные куба, либо все исходные данные из таблицы фактов и все агрегаты, определенные связанными с группой мер измерениями. Объем хранимых данных зависит от выбранного режима хранения и количества агрегатов. Объем сохраняемых данных непосредственно влияет на производительность запросов. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют несколько методов минимизации дискового пространства, необходимого для хранения данных и агрегатов куба:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В хранилище могут содержаться либо только метаданные куба, либо все исходные данные из таблицы фактов и все агрегаты, определенные связанными с группой мер измерениями. Объем хранимых данных зависит от выбранного режима хранения и количества агрегатов. Объем сохраняемых данных непосредственно влияет на производительность запросов. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют несколько методов минимизации дискового пространства, необходимого для хранения данных и агрегатов куба.  
   
 -   Параметры хранилища позволяют выбрать режим хранения и наиболее подходящее место хранения данных куба.  
   
@@ -55,8 +56,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="linked-measure-groups"></a>Связанные группы мер  
  Хранение нескольких копий куба на различных экземплярах служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может потребовать довольно много места на диске, но можно этого избежать, заменив копии группы мер связанными группами мер. Связанная группа мер основан на группу мер в кубе в другом [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных на том же или другом экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Связанная группа мер может также использоваться со связанными измерениями из того же исходного куба. Связанные измерения и группы мер используют агрегаты исходного куба и не требуют дополнительного пространства. Таким образом, помещение исходных группы мер и измерений в одну базу данных и создание связанных групп мер и измерений в кубе другой базы данных позволяет сэкономить место на диске. Дополнительные сведения см. в разделе [связанные группы мер](../../analysis-services/multidimensional-models/linked-measure-groups.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Агрегаты и статистические схемы](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Пример метода NextRecordset (VC ++) | Документы Mic
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - NextRecordset method [ADO], VC++ example
 ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ed08a46b937015b489c423d6f832d5caf767e1a1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2267d05f16baa2a592be067bad1b1476035bedfa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="nextrecordset-method-example-vc"></a>Пример метода NextRecordset (VC ++)
 В этом примере используется [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) метод для просмотра данных в наборе записей, который использует оператор комплексной команда состоит из трех отдельных **ВЫБЕРИТЕ** инструкции.  
@@ -146,6 +145,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод NextRecordset (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)
-

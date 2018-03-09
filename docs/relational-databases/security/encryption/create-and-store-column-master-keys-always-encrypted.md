@@ -2,28 +2,30 @@
 title: "Создание и хранение главных ключей столбцов (постоянное шифрование) | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
-caps.latest.revision: 26
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 578d41ef39b11825a175d27dfcf9af08c658ad85
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 9c4dfd2aa4f511e9ef7615dccf05ed46757f1e0c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Создание и хранение главных ключей столбцов (постоянное шифрование)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 *Главные ключи столбцов* являются защищающими ключами, которые используются в режиме постоянного шифрования для кодирования ключей шифрования столбцов. Главные ключи столбцов должны храниться в надежном хранилище ключей и быть доступны для приложений, которым необходимо зашифровать или расшифровать данные, а также для средств для настройки постоянного шифрования и управления ключами постоянного шифрования.
 
@@ -231,11 +233,11 @@ CSP должен поддерживать алгоритм RSA, использу
 Сведения о настройке CSP на компьютере и предоставлении приложениям и пользователям доступа к HSM см. в документации по HSM и CSP.
  
  
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
 - [Настройка ключей постоянного шифрования с помощью PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
 - [Смена ключей постоянного шифрования с помощью PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [Configure Always Encrypted using SQL Server Management Studio (Настройка постоянного шифрования с помощью среды SQL Server Management Studio)](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
+- [Настройка функции Always Encrypted с помощью SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 
   
 ## <a name="additional-resources"></a>Дополнительные ресурсы  
@@ -245,5 +247,4 @@ CSP должен поддерживать алгоритм RSA, использу
 - [Develop Applications using Always Encrypted with the .NET Framework Data Provider for SQL Server (Разработка приложений с помощью постоянного шифрования и поставщика данных .NET Framework для SQL Server)](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [Блог о постоянном шифровании](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
     
-
 

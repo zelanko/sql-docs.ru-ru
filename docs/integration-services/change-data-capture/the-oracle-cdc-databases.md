@@ -1,26 +1,28 @@
 ---
-title: "Баз данных Oracle CDC | Документы Microsoft"
+title: "Базы данных CDC Oracle | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: 17
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de8243fb726a9154222f240c5b032291d454befb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 54eb41670979c83b200060128da8564b765bcd5d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="the-oracle-cdc-databases"></a>Базы данных CDC Oracle
   Экземпляр CDC Oracle связан с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тем же именем на целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта база данных называется базой данных Oracle (или базой данных CDC).  
@@ -50,7 +52,7 @@ ms.lasthandoff: 08/03/2017
  При создании базы данных CDC и настройке исходных таблиц CDC в Oracle владелец базы данных CDC может предоставить разрешение SELECT для зеркальных таблиц и определить шлюзовые роли CDC SQL Server, что позволяет управлять доступом к информации об изменениях.  
   
 ## <a name="mirror-tables"></a>Зеркальные таблицы  
- Для каждой записи таблицы \<имя схемы >.\< Имя таблицы >, базы данных-источника Oracle, аналогичная пустая таблица создается в базе данных CDC, с тем же именем схемы и таблицы. Исходные таблицы Oracle с именем схемы `cdc` (регистр не учитывается) отслеживаться не могут, поскольку в `cdc` схема [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зарезервирована для CDC SQL Server.  
+ Для каждой отслеживаемой таблицы в базе данных-источнике Oracle создается аналогичная пустая таблица в базе данных CDC, имеющая ту же схему и имя таблицы: \<имя-схемы>.\<<имя-таблицы>. Исходные таблицы Oracle с именем схемы `cdc` (регистр не учитывается) отслеживаться не могут, поскольку в `cdc` схема [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зарезервирована для CDC SQL Server.  
   
  Зеркальные таблицы пусты, в них нет никаких данных. Они служат для поддержки стандартной инфраструктуры CDC SQL Server, которая используется экземпляром CDC Oracle. Чтобы данные не вставлялись в зеркальные таблицы и не обновлялись в них, все операции UPDATE, DELETE и INSERT запрещены для PUBLIC. Это гарантирует, что они не будут изменены.  
   
@@ -81,7 +83,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="BKMK_Change_Tables_CT"></a> Таблицы изменений (_CT)  
  Таблицы изменений создаются на основе зеркальных таблиц. Они содержат информацию об изменениях, которые отслеживаются в базе данных Oracle. Имена этих таблиц формируются в соответствии со следующим соглашением:  
   
- **[cdc]. [\<экземпляр отслеживания > _CT]**  
+ **[cdc].[\<экземпляр_отслеживания>_CT]**  
   
  При включении отслеживания для таблицы `<schema-name>.<table-name>`экземпляр отслеживания по умолчанию получит имя `<schema-name>_<table-name>`. Например, имя экземпляра отслеживания по умолчанию для таблицы Oracle HR.EMPLOYEES будет HR_EMPLOYEES, а имя связанной таблицы изменений ― [cdc]. [HR_EMPLOYEES_CT].  
   
@@ -112,7 +114,7 @@ ms.lasthandoff: 08/03/2017
   
  В следующей таблице содержится описание доступных параметров.  
   
-|Название|По умолчанию|Min|Max|Статические|Description|  
+|Имя|Default|Min|Max|Статические|Description|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |трассировка|False|-|-|False|Возможные значения:<br /><br /> True<br /><br /> False<br /><br /> on<br /><br /> off|  
 |cdc_update_state_interval|10|1|120|False|Размер (в килобайтах) фрагментов памяти, выделяемых для транзакции (транзакции может быть выделено несколько фрагментов). См. столбец memory_limit в таблице [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) .|  
@@ -149,7 +151,7 @@ ms.lasthandoff: 08/03/2017
 |active|Логическое значение, которое может быть.<br /><br /> **0**: процесс экземпляра CDC Oracle неактивен.<br /><br /> **1**: процесс экземпляра CDC Oracle активен.|  
 |ошибка|Логическое значение, которое может быть.<br /><br /> **0**: процесс экземпляра CDC Oracle находится не в состоянии ошибки.<br /><br /> **1**: процесс экземпляра CDC Oracle находится в состоянии ошибки.|  
 |status_message|Строка, содержащая описание ошибки или состояния.|  
-|timestamp|Отметка времени в формате (UTC), когда состояние отслеживания обновлялось в последний раз.|  
+|TIMESTAMP|Отметка времени в формате (UTC), когда состояние отслеживания обновлялось в последний раз.|  
 |active_capture_node|Имя компьютера (это может быть узел кластера), на котором в данный момент работает служба CDC Oracle и экземпляр CDC Oracle (обрабатывающий журналы транзакций Oracle).|  
 |last_transaction_timestamp|Отметка времени в формате (UTC), когда в таблицы изменений была записана последняя транзакция.|  
 |last_change_timestamp|Отметка времени в формате (UTC), когда последняя запись об изменении была считана из исходного журнала транзакций Oracle. Эта отметка времени помогает определить текущую задержку процесса CDC.|  
@@ -169,7 +171,7 @@ ms.lasthandoff: 08/03/2017
   
 |Элемент|Description|  
 |----------|-----------------|  
-|timestamp|Точная отметка времени в формате UTC, когда была создана запись трассировки.|  
+|TIMESTAMP|Точная отметка времени в формате UTC, когда была создана запись трассировки.|  
 |type|Содержит одно из следующих значений:<br /><br /> ошибка<br /><br /> INFO<br /><br /> трассировка|  
 |node|Имя узла, на котором была создана запись.|  
 |status|Код состояния, который используется в таблице состояний.|  
@@ -194,4 +196,3 @@ ms.lasthandoff: 08/03/2017
  [Конструктор системы отслеживания измененных данных для Oracle компании Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
   
   
-

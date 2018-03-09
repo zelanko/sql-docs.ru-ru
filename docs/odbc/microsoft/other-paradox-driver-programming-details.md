@@ -3,10 +3,12 @@ title: "Подробные сведения о других Paradox драйве
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Paradox driver
 - Jet-based ODBC drivers [ODBC], Paradox driver
 ms.assetid: 0a723323-b2a6-4ac3-81d0-6ed66ec08ab8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 49bfc5214626141386189156e900e04af26efe7c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b52a9cf8fd5069a19fe1d5488a3bcf428d201633
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="other-paradox-driver-programming-details"></a>Подробные сведения о других Paradox программировании драйвера
 > [!NOTE]  
@@ -32,27 +33,26 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующие подразделы.  
   
--   [SQLColAttributes (драйвер Paradox)](../../odbc/microsoft/sqlcolattributes-paradox-driver.md)  
+-   [SQLColAttributes (драйвер для Paradox)](../../odbc/microsoft/sqlcolattributes-paradox-driver.md)  
   
--   [SQLColumns (драйвер Paradox)](../../odbc/microsoft/sqlcolumns-paradox-driver.md)  
+-   [SQLColumns (драйвер для Paradox)](../../odbc/microsoft/sqlcolumns-paradox-driver.md)  
   
--   [SQLConfigDataSource (драйвер Paradox)](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)  
+-   [SQLConfigDataSource (драйвер для Paradox)](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)  
   
--   [SQLDriverConnect (драйвер Paradox)](../../odbc/microsoft/sqldriverconnect-paradox-driver.md)  
+-   [SQLDriverConnect (драйвер для Paradox)](../../odbc/microsoft/sqldriverconnect-paradox-driver.md)  
   
--   [SQLGetInfo (драйвер Paradox)](../../odbc/microsoft/sqlgetinfo-paradox-driver.md)  
+-   [SQLGetInfo (драйвер для Paradox)](../../odbc/microsoft/sqlgetinfo-paradox-driver.md)  
   
--   [SQLGetTypeInfo (драйвер Paradox)](../../odbc/microsoft/sqlgettypeinfo-paradox-driver.md)  
+-   [SQLGetTypeInfo (драйвер для Paradox)](../../odbc/microsoft/sqlgettypeinfo-paradox-driver.md)  
   
--   [SQLSetConnectOption (драйвер Paradox)](../../odbc/microsoft/sqlsetconnectoption-paradox-driver.md)  
+-   [SQLSetConnectOption (драйвер для Paradox)](../../odbc/microsoft/sqlsetconnectoption-paradox-driver.md)  
   
--   [SQLStatistics (драйвер Paradox)](../../odbc/microsoft/sqlstatistics-paradox-driver.md)  
+-   [SQLStatistics (драйвер для Paradox)](../../odbc/microsoft/sqlstatistics-paradox-driver.md)  
   
--   [SQLTables (драйвер Paradox)](../../odbc/microsoft/sqltables-paradox-driver.md)  
+-   [SQLTables (драйвер для Paradox)](../../odbc/microsoft/sqltables-paradox-driver.md)  
   
--   [SQLTransact (драйвер Paradox)](../../odbc/microsoft/sqltransact-paradox-driver.md)  
+-   [SQLTransact (драйвер для Paradox)](../../odbc/microsoft/sqltransact-paradox-driver.md)  
   
--   [СОЗДАТЬ индекс для Paradox](../../odbc/microsoft/create-index-for-paradox.md)  
+-   [CREATE INDEX для Paradox](../../odbc/microsoft/create-index-for-paradox.md)  
   
--   [Несколько hstmts (драйвер Paradox)](../../odbc/microsoft/multiple-hstmts-paradox-driver.md)
-
+-   [Несколько hstmts (драйвер для Paradox)](../../odbc/microsoft/multiple-hstmts-paradox-driver.md)

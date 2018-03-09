@@ -1,26 +1,27 @@
 ---
 title: "Резервное копирование в SQL Server по URL-адресу | Документация Майкрософт"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 11/17/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 913ba155344eb6265789eb6947967eee42e34470
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: d0fea4f1ffe507d0b410a16a668a138a7f0dee2e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-backup-to-url"></a>Резервное копирование в SQL Server по URL-адресу
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -113,12 +114,12 @@ ms.lasthandoff: 09/27/2017
   
 |Инструкции BACKUP и RESTORE|Поддерживается|Исключения|Комментарии|
 |-|-|-|-|
-|BACKUP|√|BLOCKSIZE и MAXTRANSFERSIZE поддерживаются для блочных BLOB-объектов. Они не поддерживаются для страничных BLOB-объектов. | Для резервного копирования в блочный BLOB-объект требуется сохранить подписанный URL-адрес в учетных данных SQL Server. Для резервного копирования в страничный BLOB-объект требуется сохранить ключ учетной записи хранения в учетных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указать аргумент WITH CREDENTIAL.|  
-|RESTORE|√||Необходимо определять учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указывать аргумент WITH CREDENTIAL, если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с помощью ключа учетной записи хранения в качестве секрета.|  
-|RESTORE FILELISTONLY|√||Необходимо определять учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указывать аргумент WITH CREDENTIAL, если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с помощью ключа учетной записи хранения в качестве секрета.|  
-|инструкция RESTORE HEADERONLY|√||Необходимо определять учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указывать аргумент WITH CREDENTIAL, если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с помощью ключа учетной записи хранения в качестве секрета.|  
-|RESTORE LABELONLY|√||Необходимо определять учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указывать аргумент WITH CREDENTIAL, если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с помощью ключа учетной записи хранения в качестве секрета.|  
-|RESTORE VERIFYONLY|√||Необходимо определять учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указывать аргумент WITH CREDENTIAL, если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с помощью ключа учетной записи хранения в качестве секрета.|  
+|BACKUP|Да|BLOCKSIZE и MAXTRANSFERSIZE поддерживаются для блочных BLOB-объектов. Они не поддерживаются для страничных BLOB-объектов. | Для резервного копирования в блочный BLOB-объект требуется сохранить подписанный URL-адрес в учетных данных SQL Server. Для резервного копирования в страничный BLOB-объект требуется сохранить ключ учетной записи хранения в учетных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указать аргумент WITH CREDENTIAL.|  
+|RESTORE|Да||Необходимо определять учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указывать аргумент WITH CREDENTIAL, если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с помощью ключа учетной записи хранения в качестве секрета.|  
+|RESTORE FILELISTONLY|Да||Необходимо определять учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указывать аргумент WITH CREDENTIAL, если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с помощью ключа учетной записи хранения в качестве секрета.|  
+|инструкция RESTORE HEADERONLY|Да||Необходимо определять учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указывать аргумент WITH CREDENTIAL, если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с помощью ключа учетной записи хранения в качестве секрета.|  
+|RESTORE LABELONLY|Да||Необходимо определять учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указывать аргумент WITH CREDENTIAL, если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с помощью ключа учетной записи хранения в качестве секрета.|  
+|RESTORE VERIFYONLY|Да||Необходимо определять учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указывать аргумент WITH CREDENTIAL, если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с помощью ключа учетной записи хранения в качестве секрета.|  
 |RESTORE REWINDONLY|−|||  
   
  Общую информацию и синтаксис инструкций резервного копирования см. в разделе [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md).  
@@ -129,36 +130,36 @@ ms.lasthandoff: 09/27/2017
 
 |Аргумент|Поддерживается|Исключение|Комментарии|  
 |-|-|-|-|  
-|DATABASE|√|||  
-|LOG|√|||  
+|DATABASE|Да|||  
+|LOG|Да|||  
 ||  
-|TO (URL)|√|В отличие от DISK и TAPE URL-адрес не поддерживает функцию указания или создания логического имени.|Этот аргумент используется, чтобы указать URL-адрес для файла резервной копии.|  
-|MIRROR TO|√|||  
+|TO (URL)|Да|В отличие от DISK и TAPE URL-адрес не поддерживает функцию указания или создания логического имени.|Этот аргумент используется, чтобы указать URL-адрес для файла резервной копии.|  
+|MIRROR TO|Да|||  
 |**WITH OPTIONS:**||||  
-|CREDENTIAL|√||WITH CREDENTIAL поддерживается только при использовании параметра BACKUP TO URL для резервного копирования в службу хранилища больших двоичных объектов Microsoft Azure и только если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с использованием ключа учетной записи хранения в качестве секрета.|  
-|FILE_SNAPSHOT|√|||  
-|ENCRYPTION|√||Если аргумент **WITH ENCRYPTION** указан, резервное копирование моментальных снимков файлов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перед созданием резервной копии проверяет, была ли вся база данных зашифрована с помощью прозрачного шифрования данных, и если да, то шифрует ли файл резервной копии моментальных снимков файлов с помощью алгоритма, указанного для прозрачного шифрования данных в базе данных. Если все данные во всей базе данных не зашифрованы, произойдет сбой резервного копирования (например, когда процесс шифрования еще не завершен).|  
-|DIFFERENTIAL (разностная)|√|||  
-|COPY_ONLY|√|||  
-|COMPRESSION&#124;NO_COMPRESSION|√|Не поддерживается для резервного копирования моментальных снимков файлов.||  
-|DESCRIPTION|√|||  
-|NAME|√|||  
+|CREDENTIAL|Да||WITH CREDENTIAL поддерживается только при использовании параметра BACKUP TO URL для резервного копирования в службу хранилища больших двоичных объектов Microsoft Azure и только если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с использованием ключа учетной записи хранения в качестве секрета.|  
+|FILE_SNAPSHOT|Да|||  
+|ENCRYPTION|Да||Если аргумент **WITH ENCRYPTION** указан, резервное копирование моментальных снимков файлов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перед созданием резервной копии проверяет, была ли вся база данных зашифрована с помощью прозрачного шифрования данных, и если да, то шифрует ли файл резервной копии моментальных снимков файлов с помощью алгоритма, указанного для прозрачного шифрования данных в базе данных. Если все данные во всей базе данных не зашифрованы, произойдет сбой резервного копирования (например, когда процесс шифрования еще не завершен).|  
+|DIFFERENTIAL (разностная)|Да|||  
+|COPY_ONLY|Да|||  
+|COMPRESSION&#124;NO_COMPRESSION|Да|Не поддерживается для резервного копирования моментальных снимков файлов.||  
+|DESCRIPTION|Да|||  
+|NAME|Да|||  
 |EXPIREDATE &#124; RETAINDAYS|−|||  
 |NOINIT &#124; INIT|−||Добавление к большим двоичным объектам невозможно. Для перезаписи резервной копии используйте аргумент **WITH FORMAT** . Однако при использовании резервных копий моментальных снимков файлов (с помощью аргумента **WITH FILE_SNAPSHOT** ) аргумент **WITH FORMAT** не разрешен, чтобы избежать появления потерянных моментальных снимков файлов, которые были созданы во время первоначального резервного копирования.|  
 |NOSKIP &#124; SKIP|−|||  
-|NOFORMAT &#124; FORMAT|√||Создание резервных копий в существующем большом двоичном объекте завершается ошибкой, если не указан аргумент **WITH FORMAT** . Если аргумент **WITH FORMAT** указан, существующий большой двоичный объект будет перезаписан. Однако при использовании резервных копий моментальных снимков файлов (с помощью аргумента **WITH FILE_SNAPSHOT** ) аргумент FORMAT не разрешен, чтобы избежать появления потерянных моментальных снимков файлов, которые были созданы во время первоначального резервного копирования снимков файлов. Однако при использовании резервных копий моментальных снимков файлов (с помощью аргумента **WITH FILE_SNAPSHOT** ) аргумент **WITH FORMAT** не разрешен, чтобы избежать появления потерянных моментальных снимков файлов, которые были созданы во время первоначального резервного копирования.|  
-|MEDIADESCRIPTION|√|||  
-|MEDIANAME|√|||  
-|BLOCKSIZE|√|Не поддерживается для страничных BLOB-объектов. Поддерживается для блочных BLOB-объектов.| Для оптимизации использования 50 000 блоков, допустимых в блочном BLOB-объекте, рекомендуемый размер блока BLOCKSIZE составляет 65 536 байт. |  
-|BUFFERCOUNT|√|||  
-|MAXTRANSFERSIZE|√|Не поддерживается для страничных BLOB-объектов. Поддерживается для блочных BLOB-объектов.| Значение по умолчанию составляет 1 048 576 байт. Значение может изменяться в диапазоне до 4 МБ с шагом в 65 536 байт.</br> Для оптимизации использования 50 000 блоков, допустимых в блочном BLOB-объекте, рекомендуемый размер функции MAXTRANSFERSIZE составляет 4 194 304 байт. |  
-|NO_CHECKSUM &#124; CHECKSUM|√|||  
-|STOP_ON_ERROR | CONTINUE_AFTER_ERROR|√|||  
-|STATS|√|||  
+|NOFORMAT &#124; FORMAT|Да||Создание резервных копий в существующем большом двоичном объекте завершается ошибкой, если не указан аргумент **WITH FORMAT** . Если аргумент **WITH FORMAT** указан, существующий большой двоичный объект будет перезаписан. Однако при использовании резервных копий моментальных снимков файлов (с помощью аргумента **WITH FILE_SNAPSHOT** ) аргумент FORMAT не разрешен, чтобы избежать появления потерянных моментальных снимков файлов, которые были созданы во время первоначального резервного копирования снимков файлов. Однако при использовании резервных копий моментальных снимков файлов (с помощью аргумента **WITH FILE_SNAPSHOT** ) аргумент **WITH FORMAT** не разрешен, чтобы избежать появления потерянных моментальных снимков файлов, которые были созданы во время первоначального резервного копирования.|  
+|MEDIADESCRIPTION|Да|||  
+|MEDIANAME|Да|||  
+|BLOCKSIZE|Да|Не поддерживается для страничных BLOB-объектов. Поддерживается для блочных BLOB-объектов.| Для оптимизации использования 50 000 блоков, допустимых в блочном BLOB-объекте, рекомендуемый размер блока BLOCKSIZE составляет 65 536 байт. |  
+|BUFFERCOUNT|Да|||  
+|MAXTRANSFERSIZE|Да|Не поддерживается для страничных BLOB-объектов. Поддерживается для блочных BLOB-объектов.| Значение по умолчанию составляет 1 048 576 байт. Значение может изменяться в диапазоне до 4 МБ с шагом в 65 536 байт.</br> Для оптимизации использования 50 000 блоков, допустимых в блочном BLOB-объекте, рекомендуемый размер функции MAXTRANSFERSIZE составляет 4 194 304 байт. |  
+|NO_CHECKSUM &#124; CHECKSUM|Да|||  
+|STOP_ON_ERROR | CONTINUE_AFTER_ERROR|Да|||  
+|STATS|Да|||  
 |REWIND &#124; NOREWIND|−|||  
 |UNLOAD &#124; NOUNLOAD|−|||  
-|NORECOVERY &#124; STANDBY|√|||  
-|NO_TRUNCATE|√|||  
+|NORECOVERY &#124; STANDBY|Да|||  
+|NO_TRUNCATE|Да|||  
   
  Дополнительные сведения об аргументах резервного копирования см. в разделе [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md).  
   
@@ -166,35 +167,35 @@ ms.lasthandoff: 09/27/2017
   
 |Аргумент|Поддерживается|Исключения|Комментарии|  
 |-|-|-|-|  
-|DATABASE|√|||  
-|LOG|√|||  
-|FROM (URL)|√||Аргумент FROM URL используется, чтобы указать URL-адрес для файла резервной копии.|  
+|DATABASE|Да|||  
+|LOG|Да|||  
+|FROM (URL)|Да||Аргумент FROM URL используется, чтобы указать URL-адрес для файла резервной копии.|  
 |**WITH Options:**||||  
-|CREDENTIAL|√||WITH CREDENTIAL поддерживается только при использовании параметра RESTORE FROM URL для восстановления из службы хранилища больших двоичных объектов Microsoft Azure.|  
-|PARTIAL|√|||  
-|RECOVERY &#124; NORECOVERY &#124; STANDBY|√|||  
-|LOADHISTORY|√|||  
-|MOVE|√|||  
-|REPLACE|√|||  
-|RESTART|√|||  
-|RESTRICTED_USER|√|||  
+|CREDENTIAL|Да||WITH CREDENTIAL поддерживается только при использовании параметра RESTORE FROM URL для восстановления из службы хранилища больших двоичных объектов Microsoft Azure.|  
+|PARTIAL|Да|||  
+|RECOVERY &#124; NORECOVERY &#124; STANDBY|Да|||  
+|LOADHISTORY|Да|||  
+|MOVE|Да|||  
+|REPLACE|Да|||  
+|RESTART|Да|||  
+|RESTRICTED_USER|Да|||  
 |FILE|−|||  
-|PASSWORD|√|||  
-|MEDIANAME|√|||  
-|MEDIAPASSWORD|√|||  
-|BLOCKSIZE|√|||  
+|PASSWORD|Да|||  
+|MEDIANAME|Да|||  
+|MEDIAPASSWORD|Да|||  
+|BLOCKSIZE|Да|||  
 |BUFFERCOUNT|−|||  
 |MAXTRANSFERSIZE|−|||  
-|CHECKSUM &#124; NO_CHECKSUM|√|||  
-|STOP_ON_ERROR | CONTINUE_AFTER_ERROR|√|||  
-|FILESTREAM|√|Не поддерживается для резервного копирования моментальных снимков.||  
-|STATS|√|||  
+|CHECKSUM &#124; NO_CHECKSUM|Да|||  
+|STOP_ON_ERROR | CONTINUE_AFTER_ERROR|Да|||  
+|FILESTREAM|Да|Не поддерживается для резервного копирования моментальных снимков.||  
+|STATS|Да|||  
 |REWIND &#124; NOREWIND|−|||  
 |UNLOAD &#124; NOUNLOAD|−|||  
-|KEEP_REPLICATION|√|||  
-|KEEP_CDC|√|||  
-|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|√|||  
-|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|√|||  
+|KEEP_REPLICATION|Да|||  
+|KEEP_CDC|Да|||  
+|ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|Да|||  
+|STOPAT &#124; STOPATMARK &#124; STOPBEFOREMARK|Да|||  
   
  Дополнительные сведения об аргументах восстановления см. в разделе [Аргументы инструкции RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
@@ -277,10 +278,12 @@ ms.lasthandoff: 09/27/2017
 >  Руководство по использованию SQL Server 2016 со службой хранилища BLOB-объектов Microsoft Azure см. в статье [Учебник. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)(Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases).  
   
 ###  <a name="SAS"></a> Создание подписанного URL-адреса  
- В следующих примерах создаются подписанные URL-адреса, которые можно использовать для создания учетных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в только что созданном контейнере. Этот скрипт создает подписанный URL-адрес, связанный с хранимой политикой доступа. Дополнительные сведения см. в статье [Подписанные URL-адреса. Часть 1. Общие сведения о модели SAS](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)(Shared Access Signatures, Part 1: Understanding the SAS Model). Для этого примера требуется Microsoft Azure PowerShell. Сведения об установке и использовании Azure PowerShell см. в разделе [Установка и настройка Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+ В следующих примерах создаются подписанные URL-адреса, которые можно использовать для создания учетных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в только что созданном контейнере. Этот скрипт создает подписанный URL-адрес, связанный с хранимой политикой доступа. Дополнительные сведения см. в статье [Подписанные URL-адреса. Часть 1. Общие сведения о модели SAS](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)(Shared Access Signatures, Part 1: Understanding the SAS Model). Кроме того, скрипт записывает команду T-SQL, необходимую для создания учетных данных в SQL Server. 
 
 > [!NOTE] 
->  Эти сценарии были написаны с помощью Azure PowerShell 5.0.10586.
+> Для этого примера требуется Microsoft Azure PowerShell. Сведения об установке и использовании Azure PowerShell см. в разделе [Установка и настройка Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+> Эти скрипты были проверены с помощью Azure PowerShell 5.1.15063. 
+
 
 **Подписанный URL-адрес, связанный с хранимой политикой доступа**  
   
@@ -313,21 +316,16 @@ New-AzureRmStorageAccount -Name $storageAccountName -ResourceGroupName $resource
 $accountKeys = Get-AzureRmStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
 
 # Create a new storage account context using an ARM storage account  
-$storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Key1 
+$storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].value 
 
 # Creates a new container in blob storage  
 $container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
 $cbc = $container.CloudBlobContainer  
 
 # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
-$permissions = $cbc.GetPermissions();  
-$policyName = $policyName  
-$policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
-$policy.SharedAccessStartTime = $(Get-Date).ToUniversalTime().AddMinutes(-5)  
-$policy.SharedAccessExpiryTime = $(Get-Date).ToUniversalTime().AddYears(10)  
-$policy.Permissions = "Read,Write,List,Delete"  
-$permissions.SharedAccessPolicies.Add($policyName, $policy)  
-$cbc.SetPermissions($permissions);  
+$policy = New-AzureStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission "rwld"
+$sas = New-AzureStorageContainerSASToken -Policy $policyName -Context $storageContext -Container $containerName
+
 
 # Gets the Shared Access Signature for the policy  
 $policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
@@ -340,51 +338,59 @@ $tSql = "CREATE CREDENTIAL [{0}] WITH IDENTITY='Shared Access Signature', SECRET
 $tSql | clip  
 Write-Host $tSql  
 ```  
-  
+
+После успешного выполнения скрипта скопируйте команду `CREATE CREDENTIAL` в средство запросов, подключитесь к экземпляру SQL Server и выполните команду, чтобы создать учетные данные с подписанным URL-адресом. 
+
 ###  <a name="credential"></a> Создание учетных данных  
- В следующих примерах создаются учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для проверки подлинности в службе хранилища больших двоичных объектов Microsoft Azure.  
+ В следующих примерах создаются учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для проверки подлинности в службе хранилища больших двоичных объектов Microsoft Azure. Выполните одно из следующих действий. 
   
-1.  **Использование удостоверения учетной записи хранения и ключа доступа**  
+1.  **Использование подписанного URL-адреса**  
+
+   Если вы выполнили скрипт для создания подписанного URL-адреса, как описано выше, скопируйте `CREATE CREDENTIAL` в редактор запросов, подключенный к вашему экземпляру SQL Server, и выполните команду. 
+
+   Ниже приведен пример кода T-SQL для создания учетных данных, использующих подписанный URL-адрес. 
+
+   ```sql  
+   IF NOT EXISTS  
+   (SELECT * FROM sys.credentials   
+   WHERE name = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>')  
+   CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] 
+      WITH IDENTITY = 'SHARED ACCESS SIGNATURE',  
+      SECRET = '<SAS_TOKEN>';  
+   ```  
   
-    ```Transact-sql  
-    IF NOT EXISTS  
-    (SELECT * FROM sys.credentials   
-    WHERE name = '<mycredentialname>')  
-    CREATE CREDENTIAL [<mycredentialname>] WITH IDENTITY = '<mystorageaccountname>'  
-    ,SECRET = '<mystorageaccountaccesskey>';  
-    ```  
+2.  **Использование удостоверения учетной записи хранения и ключа доступа**  
   
-2.  **Использование подписанного URL-адреса**  
-  
-    ```Transact-sql  
-    IF NOT EXISTS  
-    (SELECT * FROM sys.credentials   
-    WHERE name = 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>')  
-    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] WITH IDENTITY = 'SHARED ACCESS SIGNATURE'  
-    ,SECRET = '<SAS_TOKEN>';  
-    ```  
+   ```sql 
+   IF NOT EXISTS  
+   (SELECT * FROM sys.credentials   
+   WHERE name = '<mycredentialname>')  
+   CREATE CREDENTIAL [<mycredentialname>] WITH IDENTITY = '<mystorageaccountname>'  
+   ,SECRET = '<mystorageaccountaccesskey>';  
+   ```  
   
 ###  <a name="complete"></a> Выполнение полного резервного копирования базы данных  
- В следующих примерах выполняется полное резервное копирование базы данных AdventureWorks2016 в службу хранилища больших двоичных объектов Microsoft Azure.  
+ В следующих примерах выполняется полное резервное копирование базы данных AdventureWorks2016 в службу хранилища больших двоичных объектов Microsoft Azure. Выполните одно из следующих действий.   
   
-1.  **На URL-адрес с использованием удостоверения учетной записи хранения и ключа доступа**  
-  
-    ```Transact-SQL
-    BACKUP DATABASE AdventureWorks2016  
-    TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak'   
-          WITH CREDENTIAL = '<mycredentialname>'   
-         ,COMPRESSION  
-         ,STATS = 5;  
-    GO   
-    ```  
   
 2.  **На URL-адрес с использованием подписанного URL-адреса**  
   
-    ```Transact-SQL  
-    BACKUP DATABASE AdventureWorks2016   
-    TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak';  
-    GO   
-    ```  
+   ```sql  
+   BACKUP DATABASE AdventureWorks2016   
+   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak';  
+   GO   
+   ```  
+
+1.  **На URL-адрес с использованием удостоверения учетной записи хранения и ключа доступа**  
+  
+   ```sql
+   BACKUP DATABASE AdventureWorks2016  
+   TO URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016.bak'   
+         WITH CREDENTIAL = '<mycredentialname>'   
+        ,COMPRESSION  
+        ,STATS = 5;  
+   GO   
+   ```  
   
 
   
@@ -394,21 +400,21 @@ Write-Host $tSql
   
 1.  **С URL-адреса с использованием подписанного URL-адреса**  
   
-    ```Transact-SQL
-    RESTORE DATABASE AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_16_00_00.bak'   
-    WITH MOVE 'AdventureWorks2016_data' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.mdf'  
-    ,MOVE 'AdventureWorks2016_log' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.ldf'  
-    ,NORECOVERY  
-    ,REPLACE  
-    ,STATS = 5;  
-    GO   
+   ```sql
+   RESTORE DATABASE AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_16_00_00.bak'   
+   WITH MOVE 'AdventureWorks2016_data' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.mdf'  
+   ,MOVE 'AdventureWorks2016_log' to 'C:\Program Files\Microsoft SQL Server\<myinstancename>\MSSQL\DATA\AdventureWorks2016.ldf'  
+   ,NORECOVERY  
+   ,REPLACE  
+   ,STATS = 5;  
+   GO   
   
-    RESTORE LOG AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_18_00_00.trn'   
-    WITH   
-    RECOVERY   
-    ,STOPAT = 'May 18, 2015 5:35 PM'   
-    GO  
-    ```  
+   RESTORE LOG AdventureWorks2016 FROM URL = 'https://<mystorageaccountname>.blob.core.windows.net/<mycontainername>/AdventureWorks2016_2015_05_18_18_00_00.trn'   
+   WITH   
+   RECOVERY   
+   ,STOPAT = 'May 18, 2015 5:35 PM'   
+   GO  
+   ```  
   
 ## <a name="see-also"></a>См. также:  
  [Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
@@ -416,4 +422,3 @@ Write-Host $tSql
  [Учебник. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   
-

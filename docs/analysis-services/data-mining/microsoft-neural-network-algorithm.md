@@ -2,12 +2,13 @@
 title: "Алгоритм нейронной сети Майкрософт | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,20 +25,20 @@ helpviewer_keywords:
 - input neurons [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
-caps.latest.revision: 46
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8af39f31c569beb4df25d8da1dd933c902d3b4f6
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 53869c8e03d3b4c289872351e59579d49aa193e2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Алгоритм нейронной сети (Майкрософт)
-  Алгоритм нейронной сети [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой реализацию архитектуры распространенной и адаптируемой нейронной сети для машинного обучения.  Алгоритм работает путем тестирования каждого возможного состояния входного атрибута с каждым возможным состоянием прогнозируемого атрибута и использует обучающие данные для вычисления вероятностей каждого сочетания. Эти вероятности можно использовать для задач классификации или регрессии, а также для прогнозирования исхода на основе входных атрибутов. Нейронную сеть можно также использовать для анализа взаимосвязей.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Алгоритм нейронной сети [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой реализацию архитектуры распространенной и адаптируемой нейронной сети для машинного обучения.  Алгоритм работает путем тестирования каждого возможного состояния входного атрибута с каждым возможным состоянием прогнозируемого атрибута и использует обучающие данные для вычисления вероятностей каждого сочетания. Эти вероятности можно использовать для задач классификации или регрессии, а также для прогнозирования исхода на основе входных атрибутов. Нейронную сеть можно также использовать для анализа взаимосвязей.  
   
  При создании модели интеллектуального анализа данных с помощью алгоритма нейронной сети [!INCLUDE[msCoName](../../includes/msconame-md.md)] можно включить несколько выходных данных, а алгоритм создаст несколько сетей. Количество сетей, содержащихся в одной модели интеллектуального анализа данных, зависит от числа состояний (или значений атрибута) во входных столбцах, а также от числа прогнозируемых столбцов, используемых в модели интеллектуального анализа данных, и числа состояний в этих столбцах.  
   
@@ -95,10 +96,9 @@ ms.lasthandoff: 09/01/2017
 -   Не поддерживается создание измерений интеллектуального анализа данных.  
   
 ## <a name="see-also"></a>См. также  
- [Технический справочник по алгоритму нейронной сети (Майкрософт)](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Технический справочник по алгоритму нейронной сети Майкрософт](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [Содержимое модели интеллектуального анализа данных для модели нейронной сети &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Примеры запросов к модели нейронной сети](../../analysis-services/data-mining/neural-network-model-query-examples.md)   
- [Алгоритм логистической регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)  
+ [Алгоритм логистической регрессии Майкрософт](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)  
   
   
-

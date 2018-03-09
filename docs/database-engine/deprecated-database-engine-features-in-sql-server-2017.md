@@ -1,13 +1,14 @@
 ---
 title: "Нерекомендуемые функции ядра СУБД в SQL Server 2017 | Документы Майкрософт"
-ms.custom:
-- SQL2017_New_Updated
+ms.custom: 
 ms.date: 06/09/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-engine
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,18 @@ helpviewer_keywords:
 - deprecation [SQL Server], feature list
 ms.assetid: 
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: ee8ea46df926675535f1ed685c7df464af7d893f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e52b9300c764e99fb3f4bd54ed5b50f9f3ba686f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Нерекомендуемые функции ядра СУБД в SQL Server 2017
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описаны устаревшие функции компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] , которые по-прежнему доступны в [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  
   
@@ -58,7 +58,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Удаленные серверы|SET REMOTE_PROC_TRANSACTIONS|Замените удаленные серверы связанными серверами.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Задание параметров|**SET ROWCOUNT** для инструкций **INSERT**, **UPDATE**и **DELETE** .|Ключевое слово TOP|SET ROWCOUNT|109|  
 |Табличные указания|Табличная подсказка HOLDLOCK без скобок.|Используйте HOLDLOCK со скобками.|Табличная подсказка HOLDLOCK без скобок.|167|  
-|Средства|Программа sqlmaint|Использование функции планов обслуживания [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|None|None|  
+|Инструменты|sqlmaint, программа|Использование функции планов обслуживания [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|None|None|  
   
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>Функции, не поддерживаемые в будущей версии SQL Server  
  Поддержка приведенных ниже функций компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] в следующей версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]будет сохранена, однако будет удалена в более поздней версии. (с какой именно версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , пока не определено).  
@@ -69,7 +69,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Уровни совместимости|Уровень совместимости базы данных 110 и 120|Запланируйте обновление базы данных и приложения для следующего выпуска.|Уровень совместимости базы данных 110<br /><br /> Уровень совместимости базы данных 120||  
 |XML|Создание встроенных схем XDR|Директива XMLDATA для параметра XML FOR является устаревшей. В режимах RAW и AUTO следует использовать создание XSD-схем. В режиме EXPLICT для директивы XMLDATA замены нет.|XMLDATA|181|  
 |Резервное копирование и восстановление|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE или LOG TO TAPE|235|  
-|Резервное копирование и восстановление|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  
+|Резервное копирование и восстановление|sp_addumpdevice '**tape**'|sp_addumpdevice '**disk**'|ADDING TAPE DEVICE|236|  
 |Резервное копирование и восстановление|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
 |Параметры сортировки|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|Нет. Эти параметры сортировки существуют в [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], но их нельзя увидеть с помощью функции fn_helpcollations.|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|191<br /><br /> 192<br /><br /> 194|  
 |Параметры сортировки|Hindi<br /><br /> Macedonian|Эти параметры сортировки существуют в [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] и более поздних версий, но их нельзя увидеть с помощью функции fn_helpcollations. Вместо них следует использовать Macedonian_FYROM_90 и Indic_General_90.|Hindi<br /><br /> Macedonian|190<br /><br /> 193|  
@@ -82,7 +82,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Типы данных|Типы данных:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Используйте типы данных **varchar(max)**, **nvarchar(max)**и **varbinary(max)** .|Типы данных: **text**, **ntext** или **image**|4|  
 |Управление базами данных|sp_attach_db<br /><br /> sp_attach_single_file_db|Инструкция CREATE DATABASE с параметром FOR ATTACH. Чтобы перестроить несколько файлов журнала, если один или более файлов изменили расположение, используйте параметр FOR ATTACH_REBUILD_LOG.|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |Объекты базы данных|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> хранимая процедура sp_unbindefault|Ключевое слово DEFAULT в инструкциях CREATE TABLE и ALTER TABLE.|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> хранимая процедура sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
-|Объекты базы данных|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|Ключевое слово CHECK в инструкциях CREATE TABLE и ALTER TABLE.|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  
+|Объекты базы данных.|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|Ключевое слово CHECK в инструкциях CREATE TABLE и ALTER TABLE.|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  
 |Объекты базы данных|sp_change_users_login, хранимая процедура|Используйте команду ALTER USER.|sp_change_users_login, хранимая процедура|231|  
 |Объекты базы данных|процедура sp_depends|Представления sys.dm_sql_referencing_entities и sys.dm_sql_referenced_entities.|процедура sp_depends|19|  
 |Объекты базы данных|sp_renamedb|Параметр MODIFY NAME в инструкции ALTER DATABASE.|sp_renamedb|79|  
@@ -113,27 +113,28 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Собственные веб-службы с поддержкой XML|Инструкция CREATE ENDPOINT или ALTER ENDPOINT с параметром FOR SOAP.<br /><br /> sys.endpoint_webmethods<br /><br /> sys.soap_endpoints|Вместо этого следует использовать технологию WCF (Windows Communications Foundation) или ASP.NET.|CREATE/ALTER ENDPOINT<br /><br /> sys.endpoint_webmethods<br /><br /> EXT_soap_endpoints<br /><br /> sys.soap_endpoints|21<br /><br /> 22<br /><br /> 23|  
 |Удаляемые базы данных|sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable|74<br /><br /> 75|  
 |Удаляемые базы данных|sp_dbremove|DROP DATABASE|sp_dbremove|76|  
-|Безопасность|Синтаксис ALTER LOGIN WITH SET CREDENTIAL|Заменен новым синтаксисом ALTER LOGIN ADD и DROP CREDENTIAL|ALTER LOGIN WITH SET CREDENTIAL|230|  
-|Безопасность|sp_addapprole, хранимая процедура<br /><br /> sp_dropapprole, хранимая процедура|CREATE APPLICATION ROLE<br /><br /> DROP APPLICATION ROLE|sp_addapprole, хранимая процедура<br /><br /> sp_dropapprole, хранимая процедура|53<br /><br /> 54|  
-|Безопасность|sp_addlogin<br /><br /> sp_droplogin|CREATE LOGIN<br /><br /> DROP LOGIN|sp_addlogin<br /><br /> sp_droplogin|39<br /><br /> 40|  
-|Безопасность|sp_adduser<br /><br /> sp_dropuser|CREATE USER<br /><br /> DROP USER|sp_adduser<br /><br /> sp_dropuser|49<br /><br /> 50|  
-|Безопасность|sp_grantdbaccess<br /><br /> sp_revokedbaccess|CREATE USER<br /><br /> DROP USER|sp_grantdbaccess<br /><br /> sp_revokedbaccess|51<br /><br /> 52|  
-|Безопасность|хранимая процедура sp_addrole<br /><br /> sp_droprole|CREATE ROLE<br /><br /> DROP ROLE|хранимая процедура sp_addrole<br /><br /> sp_droprole|56<br /><br /> 57|  
-|Безопасность|sp_approlepassword<br /><br /> sp_password|ALTER APPLICATION ROLE<br /><br /> ALTER LOGIN|sp_approlepassword<br /><br /> sp_password|55<br /><br /> 46|  
-|Безопасность|sp_changeobjectowner|ALTER SCHEMA или ALTER AUTHORIZATION|sp_changeobjectowner|58|  
-|Безопасность|sp_control_dbmasterkey_password|Необходим главный ключ и правильный пароль.|sp_control_dbmasterkey_password|274|  
-|Безопасность|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
-|Безопасность|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
-|Безопасность|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
-|Безопасность|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|Эти хранимые процедуры возвращают данные, которые были правильными в [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. Выходные данные не отражают изменений в иерархии разрешений, реализованной в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Дополнительные сведения см. в разделе [Разрешения предопределенных ролей сервера](http://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
-|Безопасность|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|Специальные разрешения GRANT, DENY и REVOKE.|Разрешение ALL.|35|  
-|Безопасность|Внутренняя функция PERMISSIONS.|Запросите sys.fn_my_permissions.|PERMISSIONS|170|  
-|Безопасность|SETUSER|EXECUTE AS|SETUSER|165|  
-|Безопасность|Алгоритмы шифрования RC4 и DESX|Используйте другой алгоритм, например AES.|Алгоритм DESX|238|  
+|безопасность|Синтаксис ALTER LOGIN WITH SET CREDENTIAL|Заменен новым синтаксисом ALTER LOGIN ADD и DROP CREDENTIAL|ALTER LOGIN WITH SET CREDENTIAL|230|  
+|безопасность|sp_addapprole, хранимая процедура<br /><br /> sp_dropapprole, хранимая процедура|CREATE APPLICATION ROLE<br /><br /> DROP APPLICATION ROLE|sp_addapprole, хранимая процедура<br /><br /> sp_dropapprole, хранимая процедура|53<br /><br /> 54|  
+|безопасность|sp_addlogin<br /><br /> sp_droplogin|CREATE LOGIN<br /><br /> DROP LOGIN|sp_addlogin<br /><br /> sp_droplogin|39<br /><br /> 40|  
+|безопасность|sp_adduser<br /><br /> sp_dropuser|CREATE USER<br /><br /> DROP USER|sp_adduser<br /><br /> sp_dropuser|49<br /><br /> 50|  
+|безопасность|sp_grantdbaccess<br /><br /> sp_revokedbaccess|CREATE USER<br /><br /> DROP USER|sp_grantdbaccess<br /><br /> sp_revokedbaccess|51<br /><br /> 52|  
+|безопасность|хранимая процедура sp_addrole<br /><br /> sp_droprole|CREATE ROLE<br /><br /> DROP ROLE|хранимая процедура sp_addrole<br /><br /> sp_droprole|56<br /><br /> 57|  
+|безопасность|sp_approlepassword<br /><br /> sp_password|ALTER APPLICATION ROLE<br /><br /> ALTER LOGIN|sp_approlepassword<br /><br /> sp_password|55<br /><br /> 46|  
+|безопасность|sp_changeobjectowner|ALTER SCHEMA или ALTER AUTHORIZATION|sp_changeobjectowner|58|  
+|безопасность|sp_control_dbmasterkey_password|Необходим главный ключ и правильный пароль.|sp_control_dbmasterkey_password|274|  
+|безопасность|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
+|безопасность|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
+|безопасность|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
+|безопасность|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|Эти хранимые процедуры возвращают данные, которые были правильными в [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. Выходные данные не отражают изменений в иерархии разрешений, реализованной в [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Дополнительные сведения см. в разделе [Разрешения предопределенных ролей сервера](http://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
+|безопасность|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|Специальные разрешения GRANT, DENY и REVOKE.|Разрешение ALL.|35|  
+|безопасность|Внутренняя функция PERMISSIONS.|Запросите sys.fn_my_permissions.|PERMISSIONS|170|  
+|безопасность|SETUSER|EXECUTE AS|SETUSER|165|  
+|безопасность|Алгоритмы шифрования RC4 и DESX|Используйте другой алгоритм, например AES.|Алгоритм DESX|238|  
 |Задание параметров|SET FMTONLY|[sys.dm_exec_describe_first_result_set (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set (Transact-SQL)](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) и [sp_describe_undeclared_parameters (Transact-SQL)](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md).|SET FMTONLY|250|  
 |Параметры конфигурации сервера|Параметр c2 audit<br /><br /> default trace enabled, параметр|[Параметр конфигурации сервера common criteria compliance enabled](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Расширенные события](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
-|Классы модели объектов SMO|**Microsoft.SQLServer. Класс Management.Smo.Information**<br /><br /> **Microsoft.SQLServer. Класс Management.Smo.Settings**<br /><br /> **Microsoft.SQLServer.Management. Класс Smo.DatabaseOptions**<br /><br /> **Microsoft.SqlServer.Management.Smo. Свойство DatabaseDdlTrigger.NotForReplication**|**Microsoft.SqlServer.  Класс Management.Smo.Server**<br /><br /> **Microsoft.SqlServer.  Класс Management.Smo.Server**<br /><br /> **Microsoft.SqlServer. Класс Management.Smo.Database**<br /><br /> Нет|None|None|  
-|SQL Server, агент|уведомление**net send** .<br /><br /> Уведомление по пейджеру|Уведомление по электронной почте.<br /><br /> Уведомление по электронной почте. |None|None|  
+|Классы модели объектов SMO|**Microsoft.SQLServer. Класс Management.Smo.Information**<br /><br /> **Microsoft.SQLServer. Класс Management.Smo.Settings**<br /><br /> **Microsoft.SQLServer.Management. Класс Smo.DatabaseOptions**<br /><br /> **Microsoft.SqlServer.Management.Smo. Свойство DatabaseDdlTrigger.NotForReplication**|**Microsoft.SqlServer.  Класс Management.Smo.Server**<br /><br /> **Microsoft.SqlServer.  Класс Management.Smo.Server**<br /><br /> **Microsoft.SqlServer. Класс Management.Smo.Database**<br /><br /> None|None|None|  
+|Агент SQL Server
+|уведомление**net send** .<br /><br /> Уведомление по пейджеру|Уведомление по электронной почте.<br /><br /> Уведомление по электронной почте. |None|None|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Интеграция обозревателя решений в среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||None|None|  
 |Системные хранимые процедуры|sp_db_increased_partitions|Нет. Поддержка увеличенных секций в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]доступна по умолчанию|sp_db_increased_partitions|253|  
 |Системные таблицы|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|Представления совместимости. Дополнительные сведения см. в разделе [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md).<br /><br /> **\*\* Важно! \*\*** Представления совместимости не предоставляют доступ к метаданным для функций, которые использовались в [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. Рекомендуется обновить приложения, чтобы они использовали представления каталога. Дополнительные сведения см. в разделе [Представления каталога (Transact-SQL)](../relational-databases/system-catalog-views/catalog-views-transact-sql.md).|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> None<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
@@ -165,8 +166,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Косвенное применение табличных указаний для вызова функций с несколькими инструкциями, возвращающих табличное значение (TVF), через представление.|Нет.|Косвенные подсказки возвращающих табличное значение функций.|7|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Синтаксис ALTER DATABASE:<br /><br /> MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READ_ONLY<br /><br /> MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|195<br /><br /> 196|  
 |Другое|DB-Library<br /><br /> Embedded SQL для языка C.|Хотя компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] до сих пор поддерживает соединения из существующих приложений, использующих API DB-Library и Embedded SQL, файлы или документация, необходимые для разработки приложений с помощью этих API, не предоставляются. В следующей версии компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] не будут поддерживаться соединения приложений DB-Library или Embedded SQL. Не используйте DB-Library или Embedded SQL для разработки новых приложений. Удалите все зависимости от DB-Library или Embedded SQL при изменении существующих приложений. Вместо этих API используйте пространство имен SQLClient или такой API, как ODBC. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] не включает DB-Library DLL, необходимую для выполнения этих приложений. Для запуска приложений DB-Library или Embedded SQL необходимо иметь доступ к DLL-библиотеке DB-Library для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 6.5, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0 или [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)].|None|None|  
-|Средства|Приложение SQL Server Profiler для перехвата трассировки|Использование профилировщика расширенных событий, встроенного в среду SQL Server Management Studio.|Приложение SQL Server Profiler|None|  
-|Средства|Воспроизведение трассировки с помощью приложения SQL Server Profiler|[Распределенное воспроизведение SQL Server](../tools/distributed-replay/sql-server-distributed-replay.md)|Приложение SQL Server Profiler|None|  
+|Инструменты|Приложение SQL Server Profiler для перехвата трассировки|Использование профилировщика расширенных событий, встроенного в среду SQL Server Management Studio.|Приложение SQL Server Profiler|None|  
+|Инструменты|Воспроизведение трассировки с помощью приложения SQL Server Profiler|[Распределенное воспроизведение SQL Server](../tools/distributed-replay/sql-server-distributed-replay.md)|Приложение SQL Server Profiler|None|  
 |Объекты TMO|Пространство имен Microsoft.SqlServer.Management.Trace (содержит API для объектов Trace и Replay в SQL Server)|Настройка трассировки: <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> Чтение трассировки: <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> Воспроизведение трассировки: отсутствует|||  
 |Хранимые процедуры, функции и представления каталогов трассировки SQL|хранимая процедура sp_trace_create<br /><br /> sp_trace_setevent, хранимая процедура<br /><br /> sp_trace_setfilter, хранимая процедура<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[Расширенные события](../relational-databases/extended-events/extended-events.md)|хранимая процедура sp_trace_create<br /><br /> sp_trace_setevent, хранимая процедура<br /><br /> sp_trace_setfilter, хранимая процедура<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|  
   
@@ -177,5 +178,4 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [Неподдерживаемые функции ядра СУБД в SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
   
-
 

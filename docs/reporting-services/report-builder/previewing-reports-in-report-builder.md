@@ -1,26 +1,27 @@
 ---
-title: "Предварительный просмотр отчетов в построителе отчетов | Документы Microsoft"
+title: "Предварительный просмотр отчетов в построителе отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: a9e34b37436a71d34def9aaae26c38866098a5b7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1635c00223ae559c703a56e528f8e4f74f5a67ef
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="previewing-reports-in-report-builder"></a>Предварительный просмотр отчетов в построителе отчетов
   При создании отчета [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы полезно часто осуществлять предварительный просмотр, чтобы убедиться, что отчет отображает то, что нужно. Нажмите кнопку **Выполнить**для предварительного просмотра отчета. Отчет подготавливается к просмотру в режиме предварительного просмотра.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 08/09/2017
  Другие преимущества сеансов изменения заключаются в возможности редактировать отчет, использующий внедренные источники данных, или ссылаться на такие элементы, как картинки или вложенные отчеты, хранимые на сервере отчетов.  
   
 > [!NOTE]  
-> Существуют некоторые различия между Предварительный просмотр в построителе отчетов и просмотр в браузере. Например элемент управления "Календарь", который добавляется в отчет, при указании параметра типа даты и времени, отличается в построителе отчетов и в браузере. 
+> Между предварительным просмотром в построителе отчетов и просмотром в браузере существует ряд различий. Например, элемент управления "Календарь", который добавляется в отчет при указании параметра типа даты и времени, разный в построителе отчетов и в браузере. 
   
 ## <a name="improving-preview-performance"></a>Повышение производительности предварительного просмотра  
  Как создание и изменение отчетов влияет на скорость подготовки отчета к предварительному просмотру. При первом предварительном просмотре отчета, ссылающегося на сервер, создается сеанс изменения, и данные, используемые при запуске отчета, добавляются в кэш данных, хранимый на сервере отчетов. При внесении в отчет изменений, не затрагивающих данные, отчет использует кэшированную копию данных. Это значит, что изменения данных не будут видны при каждом предварительном просмотре отчета. Если требуется просмотреть новые данные, нажмите кнопку **Обновить** на ленте.  
@@ -80,13 +81,12 @@ ms.lasthandoff: 08/09/2017
   
  Если вложенный отчет, используемый отчетом, был изменен после создания сеанса изменения, отчет не будет подготовлен к просмотру. Чтобы успешно осуществить предварительный просмотр отчета, следует сохранить отчет или щелкнуть **Обновить** , чтобы получить новые данные.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Форматирование элементов отчета &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Сохранение отчетов &#40; Построитель отчетов &#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
+ [Форматирование элементов отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Сохранение отчетов (построитель отчетов)](../../reporting-services/report-builder/saving-reports-report-builder.md)  
   
   
-

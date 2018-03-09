@@ -1,26 +1,27 @@
 ---
 title: "Работа с SSMA для консоли Oracle (OracleToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4e47bb04-cf9b-41a0-923e-bdab9ba0c51d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 57e366ff233e744f4689cd5f3ce5ba8275692aa4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4bb8091460427468705575dd00b8f41138ac3134
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>Работа с SSMA для консоли Oracle (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Выпуск миграции Assistant (SSMA) для Oracle теперь доступен с помощью консольного приложения командной строки. Файлы скриптов образуют входных данных для приложения, для выполнения команд. В консольном приложении SSMA включает взаимодействия на уровне сценария, уменьшает цикл миграции и масштабирует усилий миграции.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 08/02/2017
   
 |||  
 |-|-|  
-|**Разделы**|**Description**|  
+|**Разделы**|**Описание**|  
 |[Начало работы с SSMA для консоли Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|Описание процедуры для выполнения консольного приложения.|  
 |[Параметры командной строки в консоли SSMA &#40; OracleToSQL &#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|Описывает параметры командной строки и параметры для работы приложения консоли SSMA.|  
 |[Создание файлов скриптов &#40; OracleToSQL &#41;](../../ssma/oracle/creating-script-files-oracletosql.md)|Объясняется, как создать файл скрипта.|  
@@ -46,4 +47,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>См. также:  
 [Начало работы с SSMA для консоли Oracle](http://msdn.microsoft.com/en-us/667a5e4a-6848-4973-a72d-1287f64718ac)  
   
-

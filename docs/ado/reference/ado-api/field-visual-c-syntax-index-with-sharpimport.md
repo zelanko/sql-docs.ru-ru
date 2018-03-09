@@ -3,7 +3,7 @@ title: "Поля (Visual C++ синтаксис индекс с #import) | До�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - 'Field collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 90cb636a-9416-48a4-b4eb-bb11bbd40950
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 18a567d5379b64c4c400370bdae0a69529aba704
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1a0b4a4f36775e21001aac6f1faf494a66675b07
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="field-visual-c-syntax-index-with-import"></a>Поля (Visual C++ синтаксис индекс с #import)
 ## <a name="methods"></a>Методы  
@@ -87,6 +86,5 @@ void PutValue( const _variant_t & pvar );
 __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект field](../../../ado/reference/ado-api/field-object.md)
-
+## <a name="see-also"></a>См. также  
+ [Объект Field](../../../ado/reference/ado-api/field-object.md)

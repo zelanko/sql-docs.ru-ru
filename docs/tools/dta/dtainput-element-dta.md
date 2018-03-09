@@ -2,32 +2,31 @@
 title: "Элемент DTAInput (DTA) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- DTAInput element
+dev_langs: XML
+helpviewer_keywords: DTAInput element
 ms.assetid: 40c19abf-ded5-43de-be96-5b43b1b81b03
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "15"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2ac4b1252abed4d02100e3891cdc2a22e4c3854e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 22a7b07a5dee4e826d2b438d384d44796ca23480
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dtainput-element-dta"></a>Элемент DTAInput (DTA)
-  Содержит определение входных XML-данных для помощника по настройке ядра СУБД.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Содержит определение входных XML-данных для ядра СУБД.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,4 +63,3 @@ ms.lasthandoff: 08/02/2017
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

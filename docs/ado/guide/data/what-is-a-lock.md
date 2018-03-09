@@ -3,7 +3,7 @@ title: "Что такое блокировки? | Документы Майкр�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - cursors [ADO], locking
 - locks [ADO], about locking
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 945416224804a6e3b384981912d2375351012a8c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f4975dd903c6d012976f9288b9758e1acab52f1f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="what-is-a-lock"></a>Что такое блокировки?
 Блокировка — это процесс, с помощью которого СУБД ограничивает доступ к строке в многопользовательской среде. При режиме монопольной блокировки строки или столбца, другим пользователям не разрешается доступ к заблокированным данным, пока блокировка снимается. Это гарантирует, что два пользователя не может одновременно обновить же столбец в строке.  
@@ -45,5 +44,4 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующие подразделы.  
   
--   [Типы блокировки](../../../ado/guide/data/types-of-locks.md)
-
+-   [Типы блокировок](../../../ado/guide/data/types-of-locks.md)

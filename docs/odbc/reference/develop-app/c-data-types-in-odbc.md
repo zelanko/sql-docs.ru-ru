@@ -3,10 +3,12 @@ title: "Типы данных C в ODBC | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - C data types [ODBC], about C data types
 - C data types [ODBC]
 ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 713b9448ecb70b57f0aace7f05aa9b977511323b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 65a5bd882462dbd72c39c751dcfed52c61ab194c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-data-types-in-odbc"></a>Типы данных C в ODBC
 ODBC определяет типы данных C, которые используются переменные приложения и их соответствующие идентификаторы типа. Эти значения используются буферами, которые привязаны к столбцам результирующего набора и параметров инструкции. Например предположим, что приложение хочет получить данные из столбцов результирующего набора в символьном формате. Он объявляется переменная с SQLCHAR * тип данных, а затем связывает столбец результирующего набора с идентификатором типа SQL_C_CHAR этой переменной. Полный список типов данных C и идентификаторы типов см. в разделе [типы данных приложение D:](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
@@ -56,5 +57,4 @@ ODBC определяет типы данных C, которые использ
  Дополнительные сведения об ODBC 3.8 см. в разделе [новые возможности ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Типы данных C](../../../odbc/reference/appendixes/c-data-types.md)
-
+ [Типы данных C](../../../odbc/reference/appendixes/c-data-types.md)

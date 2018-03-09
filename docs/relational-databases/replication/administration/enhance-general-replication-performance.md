@@ -2,11 +2,13 @@
 title: "Повышение общей производительности репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,20 +23,19 @@ helpviewer_keywords:
 - performance [SQL Server replication], general considerations
 - transactional replication, performance
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
-caps.latest.revision: 45
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "45"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 02f3e2ad2af0d11f5842bacc01ecb8cdf771bd56
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 72c807961694b90e0a987385c5a0fad4a38bd184
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-general-replication-performance"></a>Повышение общей производительности репликации
-  Используя рекомендации, приведенные в этом разделе, можно повысить общую производительность всех типов репликации, выполняющихся в приложении и сети.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Используя рекомендации, приведенные в этом разделе, можно повысить общую производительность всех типов репликации, выполняющихся в приложении и сети.  
   
 ## <a name="server-and-network"></a>Сервер и сеть  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 06/22/2017
     SET READ_COMMITTED_SNAPSHOT ON  
     ```  
   
-     Дополнительные сведения см. в статье [ALTER DATABASE (Transact-SQL)](../../../t-sql/statements/alter-database-transact-sql.md).  
+     Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../../t-sql/statements/alter-database-transact-sql.md).  
   
 -   Осмотрительно используйте логику приложения в триггерах.  
   
@@ -101,7 +102,7 @@ ms.lasthandoff: 06/22/2017
   
      Изменения могут секционироваться путем публикации подмножеств данных на каждом подписчике или посредством прямого внесения приложением изменений заданной строки на указанном узле.  
   
-    -   Репликация слиянием поддерживает публикацию подмножеств данных с помощью параметризованных фильтров с одиночной публикацией. Дополнительные сведения см. в статье [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+    -   Репликация слиянием поддерживает публикацию подмножеств данных с помощью параметризованных фильтров с одиночной публикацией. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
     -   Репликация транзакций поддерживает публикацию подмножеств данных с помощью статических фильтров с несколькими публикациями. Дополнительные сведения см. в статье [Фильтрация опубликованных данных](../../../relational-databases/replication/publish/filter-published-data.md).  
   
@@ -167,9 +168,8 @@ ms.lasthandoff: 06/22/2017
   
 -   [Работа с профилями агента репликации](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
--   [Просмотр и изменение параметров командной строки агента репликации (SQL Server Management Studio)](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+-   [Просмотр и изменение параметров командной строки агента репликации (среда SQL Server Management Studio)](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
 -   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
   
-

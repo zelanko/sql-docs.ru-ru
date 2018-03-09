@@ -3,10 +3,12 @@ title: "Параметры (\"Среда\" — \"Общие\") | Докумен
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,20 +16,19 @@ f1_keywords:
 - VS.ToolsOptionsPages.Environment.SQLEnvironmentOptions
 - DevLang-TSQL
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 18ee84388c584423bc7f5b416d1540d1a287a0ba
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5ebd40ed9900768c2f239319f0b2874cc49c99de
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="options-environment---general-page"></a>Параметры ("Среда" — "Общие")
-Диалоговое окно **Параметры** используется для настройки действий среды [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] при запуске, общих параметров управления окнами и других общих настроек. В меню **Сервис** выберите пункт **Параметры**, откройте папку **Среда** и выберите пункт **Общие**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Диалоговое окно **Параметры** используется для настройки действий среды [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] при запуске, общих параметров управления окнами и других общих настроек. В меню **Сервис** выберите пункт **Параметры**, откройте папку **Среда** и выберите пункт **Общие**.  
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
 **При запуске**  
@@ -64,4 +65,3 @@ ms.lasthandoff: 06/22/2017
 **Включать в список недавно использованных файлов n элементов**  
 Задает число недавно открывавшихся проектов и недавно использованных файлов, которые отображаются в меню **Файл** . Введите число от 1 до 24. Значение по умолчанию — 4. Это удобный способ получения недавно использованных проектов скриптов и проектов файлов и скриптов.  
   
-

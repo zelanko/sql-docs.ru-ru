@@ -3,27 +3,28 @@ title: "Дескрипторы соединений | Документы Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - connection handles [ODBC]
 - handles [ODBC], connection
 ms.assetid: 12222653-f04d-46d6-bdee-61348f5d550f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ecfcfd0322e9bd158a7bbe92bdcc4bd63dad1eb5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ba20d3fcb6d943f4669774013dcb62c8ad896d8d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-handles"></a>Дескрипторы соединений
 Объект *подключения* состоит из драйвера и источником данных. Дескриптор подключения определяет каждое соединение. Дескриптор подключения определяет не только какой драйвер следует использовать, но источник данных, который следует использовать с этого драйвера. В сегмент кода, реализующего ODBC (диспетчера драйверов или драйвер) дескриптор подключения определяет структуру, содержащую сведения о соединении, например следующие:  
@@ -41,4 +42,3 @@ ms.lasthandoff: 09/09/2017
  При подключении к источнику данных в основном используются дескрипторов соединений (**SQLConnect**, **SQLDriverConnect**, или **SQLBrowseConnect**), выполняется отключение от данных источник (**SQLDisconnect**), получение сведений об источнике драйвера и данные (**SQLGetInfo**), получение диагностики (**SQLGetDiagField** и **SQLGetDiagRec**) и выполнение транзакций (**SQLEndTran**). Они также используются при установке и получении атрибуты соединения (**SQLSetConnectAttr** и **SQLGetConnectAttr**) и при получении инструкции SQL в собственном формате (**SQLNativeSql** ).  
   
  Дескрипторы соединений выделяются с **SQLAllocHandle** и освобождается с помощью **SQLFreeHandle**.
-

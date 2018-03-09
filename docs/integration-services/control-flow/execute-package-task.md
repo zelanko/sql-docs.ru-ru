@@ -1,10 +1,13 @@
 ---
-title: "Задача «Выполнение пакета» | Документы Microsoft"
+title: "Задача \"Выполнение пакета\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -19,17 +22,16 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-caps.latest.revision: 63
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 70b2679a86d46c731617d7f607541f60886afb40
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 703f8c2dbcc954c4603ec0ff73b0928c6afaf70c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-package-task"></a>Задача «Выполнение пакета»
   Задача «Выполнение пакета» расширяет возможности служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в рамках организации, позволяя одним пакетам выполнять другие пакеты как часть рабочего процесса.  
@@ -52,7 +54,7 @@ ms.lasthandoff: 08/11/2017
  Задача «Выполнение пакета» может запускать дочерние пакеты, которые содержатся в одном проекте с родительским пакетом. Чтобы выбрать дочерний пакет из проекта, необходимо задать свойству **Тип ссылки** значение **Ссылка на проект**, а затем установить свойство **PackageNameFromProjectReference** .  
   
 > [!NOTE]  
->  Если проект, в котором содержится пакет, не был преобразован в модель развертывания проекта, то параметр **Тип ссылки** доступен только для чтения и принимает значение **Внешняя ссылка** . [Развертывание служб Integration Services (SSIS) проектов и пакетов](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+>  Если проект, в котором содержится пакет, не был преобразован в модель развертывания проекта, то параметр **Тип ссылки** доступен только для чтения и принимает значение **Внешняя ссылка** . [Развертывание проектов и пакетов служб Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  Задача "Выполнение пакета" может также запускать пакеты, хранящиеся в базе данных msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и пакеты, хранящиеся в файловой системе. Эта задача использует диспетчер соединений OLE DB для соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или диспетчер соединения файлов для доступа к файловой системе. Дополнительные сведения см. в разделах [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) и [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
@@ -114,7 +116,7 @@ ms.lasthandoff: 08/11/2017
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующем разделе:  
   
--   [Страница "Выражения"](../../integration-services/expressions/expressions-page.md)  
+-   [Страница «Выражения»](../../integration-services/expressions/expressions-page.md)  
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
@@ -151,7 +153,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Description**  
+ **Описание**  
  Введите описание для задачи «Выполнение пакета».  
   
 ###  <a name="package"></a> Задание параметров на странице «Пакет»  
@@ -159,7 +161,7 @@ ms.lasthandoff: 08/11/2017
  Выберите пункт меню **Ссылка на проект** для дочерних пакетов, содержащихся в проекте. Выберите пункт меню **Внешняя ссылка** для дочерних пакетов, расположенных вне проекта.  
   
 > [!NOTE]  
->  Если проект, в котором содержится пакет, не был преобразован в модель развертывания проекта, то параметр **Тип ссылки** доступен только для чтения и принимает значение **Внешняя ссылка** . [Развертывание служб Integration Services (SSIS) проектов и пакетов](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+>  Если проект, в котором содержится пакет, не был преобразован в модель развертывания проекта, то параметр **Тип ссылки** доступен только для чтения и принимает значение **Внешняя ссылка** . [Развертывание проектов и пакетов служб Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Пароль**  
  Если дочерний пакет защищен паролем, введите пароль для него или нажмите кнопку с многоточием (...) и создайте новый пароль для данного дочернего пакета.  
@@ -192,16 +194,16 @@ ms.lasthandoff: 08/11/2017
   
 ##### <a name="location--sql-server"></a>Местонахождение = SQL Server  
  **Соединение**  
- Выберите диспетчер соединений OLE DB из списка или нажмите кнопку \< **новое подключение...** > для создания нового соединения диспетчера.  
+ Выберите диспетчер подключений OLE DB в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
   
- **См. также:** [диспетчера соединений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ **См. также:** [Диспетчер подключений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **PackageName**  
  Введите имя дочернего пакета или нажмите кнопку с многоточием (...) и определите местоположение пакета.  
   
 ##### <a name="location--file-system"></a>Местоположение = файловая система  
  **Соединение**  
- Выберите из списка диспетчер подключения файлов или нажмите кнопку \< **новое подключение...** > для создания нового соединения диспетчера.  
+ Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
   
  **См. также:** [Диспетчер соединения файлов](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -211,7 +213,7 @@ ms.lasthandoff: 08/11/2017
 ###  <a name="parameter"></a> Задание параметров на странице «Привязки параметров»  
  Из родительского пакета или проекта можно передавать значения в дочерний пакет. Проект должен использовать модель развертывания проекта, а дочерний пакет должен содержаться в одном проекте с родительским пакетом.  
   
- Сведения о преобразовании проектов в модель развертывания проекта см. в разделе [развертывания Integration Services (SSIS) проектов и пакетов](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+ Сведения о преобразовании проектов в модель развертывания проектов см. в разделе [Развертывание проектов и пакетов служб Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Параметр дочернего проекта**  
  Введите или выберите имя параметра дочернего пакета.  
@@ -226,4 +228,3 @@ ms.lasthandoff: 08/11/2017
  Нажмите, чтобы удалить сопоставление параметра или переменной с параметром дочернего пакета.  
   
   
-

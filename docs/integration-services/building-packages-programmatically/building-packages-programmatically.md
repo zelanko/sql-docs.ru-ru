@@ -1,28 +1,29 @@
 ---
-title: "Программное построение пакетов | Документы Microsoft"
+title: "Программное построение пакетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: building-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: b80495b726ac6fdac713ba028629633bf84cc004
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a048e8bef9eeb64288f83f17f0ba9b3f3544a66b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="building-packages-programmatically"></a>Программное построение пакетов
   Если необходимо динамическое создание пакетов или управление и выполнение пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] вне среды разработки, то можно управлять пакетами программно. Этот подход предлагает следующий набор вариантов.  
@@ -35,14 +36,14 @@ ms.lasthandoff: 08/03/2017
   
  Можно использовать модель объектов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], чтобы написать код, который создает, настраивает и выполняет пакеты на любом языке программирования управляемого кода. Например, может потребоваться создать управляемые метаданными пакеты, которые настраивают свои соединения или свои источники данных, преобразования и назначения на основании выбранного источника данных и его таблиц и столбцов.  
   
- В этом разделе описывается и демонстрируется пошаговое создание и настройка пакета программным способом. Менее сложные конце диапазона набора вариантов программирования пакетов, можно просто загрузить и запуска существующего пакета без изменений, как описано в [выполняется» и «управление пакетами программно](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md).  
+ В этом разделе описывается и демонстрируется пошаговое создание и настройка пакета программным способом. Используя наименее сложный вариант из набора вариантов программирования пакетов, можно просто загрузить и выполнить существующий пакет, не внося в него изменения, как описано в разделе [Выполнение пакетов и управление пакетами программным образом](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md).  
   
  В качестве промежуточного, не описываемого здесь варианта, может быть предложен вариант загрузки существующего пакета в виде шаблона, его перенастройки (например, для другого источника данных) и выполнения. Сведения данного раздела можно использовать для изменения существующих объектов в пакете.  
   
 > [!NOTE]  
 >  При использовании существующего пакета в качестве шаблона и при изменении существующих столбцов в потоке данных, может понадобиться удалить существующие столбцы и вызывать метод <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> затронутых компонентов.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Создание пакета программным способом](../../integration-services/building-packages-programmatically/creating-a-package-programmatically.md)  
  Описывает создание пакета программным образом.  
   
@@ -61,29 +62,29 @@ ms.lasthandoff: 08/03/2017
  [Программная обработка событий](../../integration-services/building-packages-programmatically/handling-events-programmatically.md)  
  Описывает обработку событий пакета и задачи.  
   
- [Программное Включение ведения журнала](../../integration-services/building-packages-programmatically/enabling-logging-programmatically.md)  
+ [Программное включение ведения журнала](../../integration-services/building-packages-programmatically/enabling-logging-programmatically.md)  
  Описывает включение ведения журнала для пакета или задачи и применение пользовательских фильтров для записи в журнал событий.  
   
- [Добавление задачи потока данных программными средствами](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
+ [Добавление задачи потока данных программным образом](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
  Описывает добавление и настройку задачи потока данных и ее компонентов.  
   
- [Поиск компонентов потока данных программными средствами](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)  
+ [Программный поиск компонентов потока данных](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)  
  Описывает обнаружение компонентов, установленных на локальном компьютере.  
   
- [Добавление компонентов потока данных программными средствами](../../integration-services/building-packages-programmatically/adding-data-flow-components-programmatically.md)  
+ [Добавление компонентов потока данных программным образом](../../integration-services/building-packages-programmatically/adding-data-flow-components-programmatically.md)  
  Описывает добавление компонента в задачу потока данных.  
   
- [Соединение компонентов потока данных программными средствами](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
+ [Программное соединение компонентов потока данных](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
  Описывает соединение двух компонентов потока данных.  
   
- [Выбор входных столбцов программным способом](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
+ [Выбор входных столбцов программным образом](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
  Описывает выбор входных столбцов из столбцов, предоставленных компоненту вышестоящими компонентами потока данных.  
   
- [Сохранение пакета программным способом](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
+ [Сохранение пакета программным образом](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
  Описывает сохранение пакета программным образом.  
   
 ## <a name="reference"></a>Справочник  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../integration-services/integration-services-error-and-message-reference.md)  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
  Содержится список стандартных кодов ошибок служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с символическими именами и описаниями.  
   
 ## <a name="related-sections"></a>См. также  
@@ -93,7 +94,7 @@ ms.lasthandoff: 08/03/2017
  [Расширение пакетов с помощью пользовательских объектов](../../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
  Описываются вопросы программирования пользовательских задач, компонентов потока данных и других объектов пакета, используемых в нескольких пакетах.  
   
- [Запуск и управление пакетами программным образом](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
+ [Выполнение пакетов и управление пакетами программным образом](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
  Рассматривается перечисление, выполнение и управление пакетами и папками, в которых они хранятся.  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
@@ -103,7 +104,6 @@ ms.lasthandoff: 08/03/2017
 -   Запись в блоге [Профилирование производительности пользовательских расширений](http://go.microsoft.com/fwlink/?LinkId=238831)на сайте blogs.msdn.com.  
 
 ## <a name="see-also"></a>См. также:  
- [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
+ [службы SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

@@ -3,27 +3,28 @@ title: "Параметры (GUI) (SybaseToSQL) проекта | Документ
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: cbd6ddc9-8abd-4fa9-bffd-631e54894ce8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 476fd7243dbba4e17fcc77ece24b21a59c10f5d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6f560bd2106a243752ac424f2e7737579a2a1b76
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-gui-sybasetosql"></a>Параметры проекта (GUI) (SybaseToSQL)
 Параметры проекта графического пользовательского интерфейса позволяют настроить способ отображения данных на **данные** вкладку и необходимость отображения отчета оценки после преобразования, или нет.  
@@ -50,4 +51,3 @@ ms.lasthandoff: 08/02/2017
   
 **По умолчанию**: False  
   
-

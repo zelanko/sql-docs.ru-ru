@@ -2,33 +2,32 @@
 title: "После установки конфигурации (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining - "setup-install"
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
-- setup-install
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 92eb00cbcfbc07ebb8b55445a246c1df04c06feb
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e172989400466a7ab78e3a2ff24022651524bd0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="post-install-configuration-analysis-services"></a>Настройка после установки (службы Analysis Services)
-  После установки служб Analysis Services требуется дополнительная настройка, чтобы обеспечить полноценное функционирование сервера и сделать его доступным для типового пользования. В этом разделе представлены дополнительные задачи, завершающие установку. В зависимости от требований соединения можно также настроить проверку подлинности (см. раздел [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+После установки служб Analysis Services требуется дополнительная настройка, чтобы обеспечить полноценное функционирование сервера и сделать его доступным для типового пользования. В этом разделе представлены дополнительные задачи, завершающие установку. В зависимости от требований соединения можно также настроить проверку подлинности (см. раздел [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)).  
   
- Впоследствии потребуется дополнительная работа, когда появятся базы данных, готовые к развертыванию. А именно, требуется настроить членство в роли базы данных, чтобы предоставить пользователю доступ к данным, разработать стратегию резервного копирования и восстановления баз данных, а также решить, нужна ли запланированная рабочая нагрузка по обработке для обновления данных через регулярные промежутки времени. Дополнительные сведения о развертывании и администрировании базы данных можно найти по следующим ссылкам: [Базы данных многомерной модели (службы SSAS)](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) и [Базы данных табличной модели (табличные службы SSAS)](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
+ Впоследствии потребуется дополнительная работа, когда появятся базы данных, готовые к развертыванию. А именно, требуется настроить членство в роли базы данных, чтобы предоставить пользователю доступ к данным, разработать стратегию резервного копирования и восстановления баз данных, а также решить, нужна ли запланированная рабочая нагрузка по обработке для обновления данных через регулярные промежутки времени. Дополнительные сведения о развертывании базы данных и администрирования можно найти по следующим ссылкам: [многомерных баз данных модели ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) и [базам данных табличных моделей](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
   
 ## <a name="instance-configuration"></a>Конфигурация экземпляра  
  Analysis Services — реплицируемая служба, то есть можно установить несколько экземпляров служб на одиночном сервере. Каждый дополнительный экземпляр устанавливается отдельно как именованный экземпляр с помощью программы установки SQL Server и настраивается независимо в соответствии с запланированным применением. Например, сервер разработки может выполнять «черный ящик» или использовать значения по умолчанию для хранения данных, которые иначе могли быть изменены на серверах, выполняющих рабочие нагрузки. Другой пример, в котором полезна корректировка системной конфигурации, — установка экземпляра служб Analysis Services на оборудовании, совместно используемом другими службами. Если выполняется размещение нескольких ресурсоемких приложений на одном и том же оборудовании, можно настроить свойства сервера так, чтобы уменьшить порог памяти для оптимизации доступных ресурсов для всех приложений.  
@@ -55,4 +54,3 @@ ms.lasthandoff: 09/01/2017
  [Установка служб Analysis Services в режиме Power Pivot](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   
-

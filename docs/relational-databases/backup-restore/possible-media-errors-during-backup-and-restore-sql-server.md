@@ -2,11 +2,13 @@
 title: "Возможные ошибки носителей во время резервного копирования и восстановления (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,22 +25,22 @@ helpviewer_keywords:
 - NO_CHECKSUM option
 - checksums [SQL Server]
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
-caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 750aa24dcfae82a4e44a32de345299a964df0de8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "37"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 7422aabdffd7985332c669964f0eb518a210ec07
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Возможные ошибки носителей во время резервного копирования и восстановления (SQL Server)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] позволяет восстанавливать базу данных, несмотря на обнаруженные ошибки. Новый важный механизм обнаружения ошибок состоит в возможном создании контрольной суммы резервной копии, которую можно создать операцией резервного копирования и проверить операцией восстановления. Можно управлять тем, будет ли операция проверять наличие ошибок и будет ли она останавливаться или продолжаться при обнаружении ошибки. Если резервная копия содержит контрольную сумму, инструкции RESTORE и RESTORE VERIFYONLY могут выполнять проверку на наличие ошибок.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] позволяет восстанавливать базу данных, несмотря на обнаруженные ошибки. Новый важный механизм обнаружения ошибок состоит в возможном создании контрольной суммы резервной копии, которую можно создать операцией резервного копирования и проверить операцией восстановления. Можно управлять тем, будет ли операция проверять наличие ошибок и будет ли она останавливаться или продолжаться при обнаружении ошибки. Если резервная копия содержит контрольную сумму, инструкции RESTORE и RESTORE VERIFYONLY могут выполнять проверку на наличие ошибок.  
   
 > [!NOTE]  
->  Зеркальные резервные копии могут содержать до четырех копий (зеркал) наборов носителей, предоставляя другие копии для исправления ошибок, вызванных повреждением носителей. Дополнительные сведения см. в разделе [Зеркальные наборы носителей резервных копий (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
+>  Зеркальные резервные копии могут содержать до четырех копий (зеркал) наборов носителей, предоставляя другие копии для исправления ошибок, вызванных повреждением носителей. Дополнительные сведения см. в подразделе [Зеркальные наборы носителей резервных копий (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
   
   
 ##  <a name="BckChecksums"></a> Контрольные суммы резервных копий  

@@ -3,7 +3,7 @@ title: "Запись объекта (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - Record object [ADO]
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: aa00ab893549eee36bc1d1b0e858c7bc326fb83b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 26840ff89f61bc3c37cee2fd88c1f53e393528bf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="record-object-ado"></a>Объект записи (ADO)
 Представляет строку из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) или поставщик данных или объект, возвращенный поставщиком частично структурированными данными, таких как файл или каталог.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Объект **запись** представляет одну строку данных и имеет некоторые общие сходства с одной строки **записей**. В зависимости от возможностей вашего поставщика **запись** объектов могут быть возвращены непосредственно от поставщика, а не одной строки **записей**, — например, когда SQL-запрос, который выбирает только одну строку выполнена. Или **запись** объекта можно получить непосредственно из **записей** объекта. Или **записи** могут быть возвращены непосредственно от поставщика в частично структурированные данные, такие как Microsoft Exchange поставщика OLE DB.  
   
  Можно просмотреть поля, связанные с **запись** объекта посредством [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекции на **записи** объекта. ADO позволяет столбцов, возвращающих табличные значения объекта и включая **записей**, **SafeArray**и скалярных значений в **поля** коллекцию **записи** объекты.  
@@ -87,11 +86,10 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующий раздел.  
   
--   [Записать объект свойства, методы и события](../../../ado/reference/ado-api/record-object-properties-methods-and-events.md)  
+-   [Свойства, методы и события объекта Record](../../../ado/reference/ado-api/record-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Коллекция свойств (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Записи и потоки](../../../ado/guide/data/records-and-streams.md)   
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

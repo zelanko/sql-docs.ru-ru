@@ -3,27 +3,28 @@ title: "Обновления программного обеспечения Ora
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], Oraclesoftware patches
 - Oracle software patches [ODBC]
 ms.assetid: 1275157b-f4e1-4c24-b273-c02555e261c2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 469bd41600c23058366ba37cec8413dd66306e71
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bab4a7bed2fdc63224fd7a2f86757d11375f2cd2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="oracle-software-patches"></a>Обновления программного обеспечения Oracle
 > [!IMPORTANT]  
@@ -48,4 +49,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Поскольку Oracle устраняет ошибки в текущей версии и затем retrofits их на более ранние версии, с помощью обновления программного обеспечения, рекомендуется загрузить последние исправление. Это особенно верно для компонентов сервера клиента Oracle. Если у вас есть вопросы об установке этих исправлений, обратитесь в службу поддержки Oracle.
-

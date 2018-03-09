@@ -1,13 +1,14 @@
 ---
-title: "Отчеты с дополнительной информацией (SSRS) | Документы Microsoft"
+title: "Отчеты с дополнительной информацией (службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +16,16 @@ helpviewer_keywords:
 - customizing clickthrough reports
 - clickthrough reports, customizing
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
-caps.latest.revision: 28
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "28"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 55d22d2fd64faef6e913bf226c831546d71665ca
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ff805dbe62b75603d90dead84c4e25ca08c08236
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="clickthrough-reports-ssrs"></a>Отчеты с дополнительной информацией (SSRS)
   Отчетом с дополнительной информацией называется отчет, в котором есть подробные сведения о данных, содержащихся в основном отчете. Отчет с дополнительной информацией выводится, когда пользователь щелкает интерактивные данные в основном отчете. Такие отчеты автоматически создаются сервером отчетов. Конструктор моделей определяет, что должно отображаться в отчетах с дополнительной информацией, устанавливая свойства **DefaultDetailAttribute** и **DefaultAggregateAttribute** сущности в модели отчета.  
@@ -39,12 +39,12 @@ ms.lasthandoff: 08/09/2017
 #### <a name="single-instance-templates"></a>Шаблоны одного экземпляра  
  Шаблон одного экземпляра отображает все атрибуты целевой сущности и все статистические атрибуты по умолчанию, заданные для связанных сущностей, которые имеют связь «один ко многим» с целевой сущностью. Шаблон одного экземпляра имеет вид, показанный на следующем изображении.  
   
- ![Многие 1 отчет с дополнительной информацией. ] (../../reporting-services/reports/media/manytooneclickthrough.gif "Многие 1 отчет с дополнительной информацией.")  
+ ![Отчет с дополнительной информацией и переходами типа "многие к одному".](../../reporting-services/reports/media/manytooneclickthrough.gif "Отчет с дополнительной информацией и переходами типа "многие к одному".")  
   
 #### <a name="multiple-instance-templates"></a>Шаблоны нескольких экземпляров  
  Шаблон нескольких экземпляров отображает только атрибуты детализации целевой сущности по умолчанию и все статистические атрибуты по умолчанию, заданные для связанных сущностей, которые имеют связь «один ко многим» с целевой сущностью. Шаблон нескольких экземпляров имеет вид, показанный на следующем изображении.  
   
- ![Многие 1 отчет с дополнительной информацией. ] (../../reporting-services/reports/media/onetomanyclickthrough.gif "Многие 1 отчет с дополнительной информацией.")  
+ ![Отчет с дополнительной информацией и переходами типа "многие к одному".](../../reporting-services/reports/media/onetomanyclickthrough.gif "Отчет с дополнительной информацией и переходами типа "многие к одному".")  
   
 ## <a name="customizing-clickthrough-reports"></a>настройка отчетов с дополнительной информацией  
  Вместо того чтобы использовать шаблоны по умолчанию, созданные сервером отчетов, в построителе отчетов можно создать отдельный отчет, который будет использоваться в качестве пользовательского отчета с дополнительной информацией. Затем можно связать отчет с моделью в качестве детализированного отчета в диспетчере отчетов.  
@@ -54,8 +54,7 @@ ms.lasthandoff: 08/09/2017
 > [!IMPORTANT]  
 >  Первичная (или базовая) сущность, использующаяся в отчете, должна быть той же самой, с которой связывается отчет.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Связывание отчета с моделью в качестве отчета с дополнительной информацией](http://msdn.microsoft.com/library/3af42de3-67ef-41c2-bc8a-7045baec6f63)  
   
   
-

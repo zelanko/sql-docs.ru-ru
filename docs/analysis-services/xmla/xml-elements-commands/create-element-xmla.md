@@ -2,42 +2,38 @@
 title: "Создать элемент (XMLA) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Create Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Create Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Create
 - urn:schemas-microsoft-com:xml-analysis#Create
 - microsoft.xml.analysis.create
-helpviewer_keywords:
-- Create command (XMLA)
+helpviewer_keywords: Create command (XMLA)
 ms.assetid: a623d362-a1ac-40e4-8816-65fac89cb391
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f3e568fb190940822a6c6ef5cb65cf6b9476f4b1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a5420a85c65a29a09da519207206d3406c4cd384
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-element-xmla"></a>Элемент Create (XML для аналитики)
-  Содержит элементы языка сценариев служб Analysis Services (ASSL), используемые методом **Execute** метод для создания объектов в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит элементы языка сценариев служб Analysis Services (ASSL), используемые методом **Execute** метод для создания объектов в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,7 +49,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -68,12 +64,12 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="attributes"></a>Атрибуты  
   
-|Attribute|Описание|  
+|attribute|Description|  
 |---------------|-----------------|  
 |AllowOverwrite|Необязательный атрибут типа **Boolean** . Если задано значение True, объекты, определенные в **ObjectDefinition** элемент можно заменять существующие объекты в [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра. Если этот атрибут пропущен или имеет значение False, то при наличии существующего объекта возникает ошибка.|  
 |Область действия|Необязательный атрибут типа **Enum** . Определяет срок жизни объектов, определенных в элементе **ObjectDefinition** . Если этот атрибут опускается, объекты, определенные в **ObjectDefinition** , сохраняются в [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра. Доступен следующий параметр:<br /><br /> *Сеанс*: объекты, определенные в **ObjectDefinition** элемент существует только в течение XML для аналитики (XMLA) сеанса.<br />                  Обратите внимание, что при использовании *сеанса* параметр **ObjectDefinition** элемент может содержать только [измерения](../../../analysis-services/scripting/objects/dimension-element-assl.md), [куба](../../../analysis-services/scripting/objects/cube-element-assl.md), или [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) элементы языка ASSL.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Каждая операция **Create** создает для родительского объекта, указанного в элементе **ParentObject** , один главный объект. Если родительский элемент пропущен, предполагается, что им является целевой экземпляр служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Если родитель главного объекта не является целевым экземпляром, возникает ошибка.  
   
 ## <a name="example"></a>Пример  
@@ -95,4 +91,3 @@ ms.lasthandoff: 09/01/2017
  [Команды &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   
-

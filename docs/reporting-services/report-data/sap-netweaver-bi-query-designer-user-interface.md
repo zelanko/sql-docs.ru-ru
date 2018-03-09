@@ -1,13 +1,14 @@
 ---
-title: "SAP NetWeaver BI пользовательский интерфейс конструктора запросов | Документы Microsoft"
+title: "Пользовательский интерфейс конструктора запросов SAP NetWeaver BI (построитель отчетов) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,20 +19,19 @@ helpviewer_keywords:
 - SAP NetWeaver Business Intelligence [Reporting Services], query designer
 - query designers [Reporting Services]
 ms.assetid: 102da66e-ca31-41aa-ab4b-c9b5ab752a72
-caps.latest.revision: 38
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "38"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0617201275bec8a2ff254d328f8105f18d6a35b7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c965dc09098b955fde99748258202d23f6cf3519
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов BI SAP NetWeaver
-  Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графический конструктор запросов, предназначенный для построения запросов многомерных выражений к источнику данных SAP NetWeaver® Business Intelligence. Графический конструктор запросов многомерных выражений имеет два режима: режим конструктора и режим запросов. В каждом режиме имеется панель «Метаданные», из которой можно перетащить элементы из InfoCube, MultiProvider или запроса с поддержкой веб-доступа, определенного на источнике данных, для построения запроса многомерных выражений, получающего данные при обработке отчета.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графический конструктор запросов, предназначенный для построения запросов многомерных выражений к источнику данных SAP NetWeaver® Business Intelligence. Графический конструктор запросов многомерных выражений имеет два режима: режим конструктора и режим запросов. В каждом режиме имеется панель «Метаданные», из которой можно перетащить элементы из InfoCube, MultiProvider или запроса с поддержкой веб-доступа, определенного на источнике данных, для построения запроса многомерных выражений, получающего данные при обработке отчета.  
   
 > [!IMPORTANT]  
 >  При создании и выполнении запросов пользователи получают доступ к источникам данных. Следует предоставить минимальные разрешения на источники данных, например разрешение только на чтение.  
@@ -43,11 +43,11 @@ ms.lasthandoff: 08/09/2017
 ## <a name="graphical-query-designer-in-design-mode"></a>Графический конструктор запросов в режиме конструктора  
  При изменении запроса набора данных, в котором используется источник данных [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] , графический конструктор запросов открывается в режиме конструктора. На следующем рисунке отмечены панели в режиме конструктора.  
   
- ![Конструктор запросов с использованием многомерных Выражений в режиме конструктора](../../reporting-services/report-data/media/rsqd-dssapbw-mdx-designmode.gif "конструктор запросов с использованием многомерных Выражений в режиме конструктора")  
+ ![Конструктор запросов с использованием многомерных выражений в режиме конструктора](../../reporting-services/report-data/media/rsqd-dssapbw-mdx-designmode.gif "Конструктор запросов с использованием многомерных выражений в режиме конструктора")  
   
  В следующей таблице приводится список панелей в этом режиме.  
   
-|Панель|Функция|  
+|Панель|Компонент|  
 |----------|--------------|  
 |Кнопка «Выбрать куб»|Отображается текущий выбранный InfoCube, MultiProvider или запрос с поддержкой веб-доступа.|  
 |Панель «Метаданные»|Отображается иерархический список InfoCube, MultiProvider и запросов. Запросы, созданные в источнике данных, появляются под соответствующим кубом.|  
@@ -63,26 +63,26 @@ ms.lasthandoff: 08/09/2017
 |------------|-----------------|  
 |**Редактировать как текст**|Переключиться из текстового конструктора запросов в графический и обратно. Недоступен для этого типа источника данных.|  
 |**Импорт**|Импортировать существующий запрос из файла определения отчета (RDL), расположенного в файловой системе. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Обновление полей набора данных](../../reporting-services/report-data/media/rsqdicon-refreshfields.gif "обновление полей набора данных")|Обновление метаданных из источника данных.|  
+|![Обновление полей набора данных](../../reporting-services/report-data/media/rsqdicon-refreshfields.gif "Обновление полей набора данных")|Обновление метаданных из источника данных.|  
 |![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Отображение диалогового окна **Построитель вычисляемых элементов** .|  
-|![Переключение для отображения пустых ячеек](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "переключателя для отображения пустых ячеек")|Переключение между режимами отображения и скрытия пустых ячеек в панели «Данные». (Это эквивалентно использованию предложения NON EMPTY в многомерном выражении).|  
-|![Автоматическое выполнение запроса](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "автоматическое выполнение запроса")|Автоматическое выполнение запроса и вывод результатов после каждого изменения, например после удаления столбца на панели «Данные». Результаты отображаются в панели «Данные».|  
+|![Переключатель для просмотра пустых ячеек](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Переключатель для просмотра пустых ячеек")|Переключение между режимами отображения и скрытия пустых ячеек в панели «Данные». (Это эквивалентно использованию предложения NON EMPTY в многомерном выражении).|  
+|![Автоматическое выполнение запроса](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "Автоматическое выполнение запроса")|Автоматическое выполнение запроса и вывод результатов после каждого изменения, например после удаления столбца на панели «Данные». Результаты отображаются в панели «Данные».|  
 |![Удалить](../../reporting-services/report-data/media/rsqdicon-delete.gif "Удалить")|Удалить выбранный на панель «Данные» столбец из запроса.|  
-|![Значок диалогового окна параметров запроса](../../reporting-services/report-data/media/iconqueryparameter.gif "значок диалоговое окно «Параметры запроса»")|Отобразить диалоговое окно **Переменные** . Эта кнопка включена, только если выбранный куб является кубом запроса (так как переменные поддерживаются только в кубах запросов). При присвоении переменной значения по умолчанию создается соответствующий параметр в отчете.|  
+|![Значок диалогового окна "Параметры запроса"](../../reporting-services/report-data/media/iconqueryparameter.gif "Значок диалогового окна "Параметры запроса"")|Отобразить диалоговое окно **Переменные** . Эта кнопка включена, только если выбранный куб является кубом запроса (так как переменные поддерживаются только в кубах запросов). При присвоении переменной значения по умолчанию создается соответствующий параметр в отчете.|  
 |![Выполнить запрос](../../reporting-services/report-data/media/rsqdicon-run.gif "Выполнить запрос")|Выполнить запрос и показать результаты на панели «Данные».|  
-|![Отмена запроса](../../reporting-services/report-data/media/rsqdicon-cancel.gif "отменить запрос")|Отмена запроса.|  
-|![Переключиться в режим конструктора](../../reporting-services/media/rsqdicon-designmode.gif "переключиться в режим конструктора")|Переключение между режимом конструктора и режимом запросов.|  
+|![Отмена запроса](../../reporting-services/report-data/media/rsqdicon-cancel.gif "Отмена запроса")|Отмена запроса.|  
+|![Переключение в режим конструктора](../../reporting-services/media/rsqdicon-designmode.gif "Переключение в режим конструктора")|Переключение между режимом конструктора и режимом запросов.|  
   
 ## <a name="graphical-query-designer-in-query-mode"></a>Графический конструктор запросов в режиме запросов  
  Для переключения графического конструктора запросов в режим запросов щелкните переключатель **Режим конструктора** на панели инструментов.  
   
  На следующем рисунке показаны части конструктора запросов в режиме запросов.  
   
- ![Конструктор запросов многомерных Выражений SAP BW в режиме запроса](../../reporting-services/report-data/media/rsqd-dssapbw-mdx-querymode.gif "конструктор запросов многомерных Выражений SAP BW в режиме запроса")  
+ ![Конструктор запросов многомерных выражений SAP BW в режиме запроса](../../reporting-services/report-data/media/rsqd-dssapbw-mdx-querymode.gif "Конструктор запросов многомерных выражений SAP BW в режиме запроса")  
   
  В следующей таблице описываются функции каждой панели.  
   
-|Панель|Функция|  
+|Панель|Компонент|  
 |----------|--------------|  
 |Кнопка «Выбрать куб»|Отображает текущий выбранный InfoCube, MultiProvider или другой куб.|  
 |Панель «Метаданные/Функции»|Отображает окно с вкладками, содержащее список доступных метаданных и функций, которые можно использовать при создании текста запроса.|  
@@ -103,15 +103,14 @@ ms.lasthandoff: 08/09/2017
   
 -   **Добавить вычисляемый элемент** (![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
--   **Показывать пустые ячейки** (![переключателя для отображения пустых ячеек](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "переключателя для отображения пустых ячеек"))  
+-   **Показывать пустые ячейки** (![Переключатель для просмотра пустых ячеек](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Переключатель для просмотра пустых ячеек"))  
   
--   **Автоматическое выполнение** (![автоматическое выполнение запроса](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "автоматическое выполнение запроса"))  
+-   **Автоматическое выполнение** (![Автоматическое выполнение запроса](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "Автоматическое выполнение запроса"))  
   
 -   **Удалить** (![Удалить](../../reporting-services/report-data/media/rsqdicon-delete.gif "Удалить"))  
   
-## <a name="see-also"></a>См. также  
- [Создание общего набора данных или внедренный набор данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Файл конфигурации RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   
   
-

@@ -2,28 +2,30 @@
 title: "Введение в таблицы, оптимизированные для памяти | Документация Майкрософт"
 ms.custom: 
 ms.date: 12/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
-caps.latest.revision: 22
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 50e7a92d87b806a0eb26481cca92b89f932dfa9d
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: f0ebadeaa959c6eb148cdd9a9d6e0a1019d858ab
-ms.openlocfilehash: d657ed0f95a167c8589551078302fac9aa8d462f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Введение в таблицы, оптимизированные для памяти
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Оптимизированные для памяти таблицы создаются с помощью инструкции [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
@@ -64,7 +66,7 @@ ms.lasthandoff: 07/27/2017
 |Компонент|Доступ с помощью хранимой процедуры, скомпилированной в собственном коде|Интерпретируемый доступ [!INCLUDE[tsql](../../includes/tsql-md.md)]|Доступ по CLR-адресу|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |Таблица, оптимизированная для памяти|Да|Да|Нет*|  
-|Табличный тип, оптимизированный для памяти|Да|Да|Нет|  
+|Табличный тип, оптимизированный для памяти|Да|Да|нет|  
 |Хранимая процедура, скомпилированная в собственном коде|Вложение скомпилированных в собственном коде хранимых процедур поддерживается. Синтаксис EXECUTE можно использовать внутри хранимых процедур при условии, что соответствующие процедуры также скомпилированы в собственном коде.|Да|Нет*|  
   
  * Нельзя получить доступ к оптимизированной для памяти таблице или хранимой процедуре, скомпилированной в собственном коде, из контекстного соединения (соединения из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при выполнении модуля CLR). Однако можно создать и открыть другое соединение, из которого можно получить доступ к оптимизированным для памяти таблицам и хранимым процедурам, скомпилированным в собственном коде.  
@@ -108,9 +110,8 @@ ms.lasthandoff: 07/27/2017
 
 Краткое описание типичных сценариев, в которых [!INCLUDE[hek_1](../../includes/hek-1-md.md)] может улучшить производительность, см. в разделе [Выполняющаяся в памяти OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
-

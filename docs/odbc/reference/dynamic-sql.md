@@ -3,10 +3,12 @@ title: "Динамический SQL | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - SQL [ODBC], dynamic SQL
 - embedded SQL [ODBC]
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: a2378a7e84b62102666985f3166bd9c8586837e3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4c24d1dbab68a1e47b5dfe7b48dc3df86fb9f692
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dynamic-sql"></a>Динамические инструкции SQL
 Несмотря на то, что статический SQL работает также во многих случаях, имеется класс приложений, в которых доступ к данным не удается определить заранее. Например предположим, что электронной таблицы позволяет пользователю ввести запрос, который электронную таблицу отправляет СУБД для получения данных. Содержимое этого запроса очевидно, что не может быть известен программисту при записи электронными таблицами.  
@@ -45,4 +46,3 @@ ms.lasthandoff: 09/09/2017
 3.  Программа может использовать инструкцию EXECUTE, предоставляя различные значения параметра каждый раз, когда выполняется динамической инструкции.  
   
  Подготовленное выполнение по-прежнему не является таким же, как статический SQL. В статических SQL первые четыре шага обработки инструкции SQL выполняются во время компиляции. В подготовленное выполнение эти действия по-прежнему выполняются во время выполнения, но они выполняются только один раз; выполнение плана происходит только во время вызова EXECUTE. Это позволяет исключить некоторые недостатки производительности, присущие архитектуре динамического SQL. Следующий рисунок показывает различия между статическим SQL, динамического SQL и немедленное выполнение и динамического SQL и подготовленное выполнение.
-

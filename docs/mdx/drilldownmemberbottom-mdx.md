@@ -2,34 +2,32 @@
 title: "DrilldownMemberBottom (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- DRILLDOWNMEMBERBOTTOM
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- DrilldownMemberBottom function
+f1_keywords: DRILLDOWNMEMBERBOTTOM
+dev_langs: kbMDX
+helpviewer_keywords: DrilldownMemberBottom function
 ms.assetid: 603927ba-68f6-4e7a-b17f-44cad33bdfb0
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: aa91524e15441d2e11945dcda798d86aa16b0945
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d66f9aeb97a5219f85a33acfedb710f980b63401
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drilldownmemberbottom-mdx"></a>DrilldownMemberBottom (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Детализирует углублением элементы указанного набора, присутствующие во втором указанном наборе, ограничивая результирующий набор заданным количеством элементов. Кроме того, эта функция детализирует углублением наборы кортежей, используя первую иерархию кортежей или указанную иерархию.  
   
@@ -47,13 +45,13 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  *Set_Expression2*  
  Допустимое многомерное выражение, возвращающее набор.  
   
- *Count*  
+ *Счетчик*  
  Допустимое числовое выражение, указывающее количество возвращаемых кортежей.  
   
  *Numeric_Expression*  
  Допустимое числовое выражение (обычно многомерное выражение координат ячейки), возвращающее число.  
   
- *Иерархия*  
+ *Hierarchy*  
  Допустимое многомерное выражение, возвращающее иерархию.  
   
  *Рекурсивные*  
@@ -62,7 +60,7 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  *Include_Calc_Members*  
  Ключевое слово, позволяющее включать вычисляемые элементы в результаты углубленной детализации.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если числовое выражение указано, **DrilldownMemberBottom** функция сортирует в порядке возрастания, потомки каждого элемента в первом наборе согласно значению числового выражения, вычисленного над набором дочерних элементов. Если числовое выражение не указано, функция сортирует потомков каждого элемента в первом наборе в порядке возрастания согласно значениям ячеек, представленных набором дочерних элементов, как определено контекстом запроса. Это поведение аналогично функциям многомерных выражений BottomCount и Tail, которые возвращают набор элементов в естественном порядке без какой-либо сортировки.  
   
  После сортировки **DrilldownMemberBottom** функция возвращает набор, содержащий родительские элементы и количество дочерних элементов, указанные в *Count,* с наименьшее значение и содержащихся в обоих наборах.  
@@ -79,4 +77,3 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

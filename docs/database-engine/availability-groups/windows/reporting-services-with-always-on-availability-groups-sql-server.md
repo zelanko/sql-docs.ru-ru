@@ -2,33 +2,32 @@
 title: "Службы Reporting Services с группами доступности AlwaysOn (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: eec3793f658bf1194787c0f3e2391903308d3ea6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 34063117645178c5e8326c3245d6368baa8480e5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Службы Reporting Services с группами доступности AlwaysOn (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе содержатся сведения о настройке компонента [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] для работы с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (группами доступности) в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Существует три варианта использования служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] : базы данных для источников данных отчетов, базы данных сервера отчетов и конструирование отчетов. Поддерживаемые функции и необходимая конфигурация для разных вариантов использования будут различными.  
   
@@ -206,5 +205,4 @@ ms.lasthandoff: 08/02/2017
  [Сведения о доступе клиентского подключения к репликам доступности (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
   
-
 

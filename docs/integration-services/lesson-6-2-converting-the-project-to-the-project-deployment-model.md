@@ -1,10 +1,13 @@
 ---
-title: "Шаг 2: Преобразование проекта в модель развертывания проекта | Документы Microsoft"
+title: "Шаг 2. Преобразование проекта в модель развертывания проекта | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
-caps.latest.revision: 4
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 49fac3d56083932db49125ea4660e89d9808f187
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e7a4b8892be5ea6a606c1ef28d37cf0902d78f56
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-6-2---converting-the-project-to-the-project-deployment-model"></a>Урок 6-2-преобразование проекта в модель развертывания проекта
+# <a name="lesson-6-2---converting-the-project-to-the-project-deployment-model"></a>Занятие 6–2. Преобразование проекта в модель развертывания проекта
 В этой задаче будет использоваться мастер преобразования проекта служб Integration Services для преобразования проекта в модель развертывания проекта.  
   
 ### <a name="converting-the-project-to-the-project-deployment-model"></a>Преобразование проекта в модель развертывания проекта  
@@ -62,4 +64,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

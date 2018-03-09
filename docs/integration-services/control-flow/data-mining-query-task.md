@@ -1,10 +1,13 @@
 ---
-title: "Задачи запроса интеллектуального анализа данных | Документы Microsoft"
+title: "Задача \"Запрос интеллектуального анализа данных\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -18,17 +21,16 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-caps.latest.revision: 45
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: efffacb30616a880c628894dac2f49201c2b8e24
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: c8ffadcd36d1df013d8e5a9a9aeb3f85d4056c27
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-mining-query-task"></a>Задача «Запрос интеллектуального анализа данных»
   Задача «Запрос интеллектуального анализа данных» запускает прогнозирующие запросы, основанных на моделях интеллектуального анализа данных, встроенных в службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Прогнозирующий запрос создает прогноз для новых данных с использованием моделей интеллектуального анализа данных. Например, прогнозирующий запрос может предсказать, сколько яхт может быть продано в летние месяцы, или сформировать список предполагаемых клиентов, которые могут купить яхту.  
@@ -185,4 +187,3 @@ ms.lasthandoff: 08/11/2017
  **Удалить и повторно создать выходную таблицу**  
  Укажите, должен ли прогнозирующий запрос перезаписывать содержимое целевой таблицы путем ее удаления и повторного создания.  
   
-

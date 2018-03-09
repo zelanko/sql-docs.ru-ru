@@ -2,29 +2,32 @@
 title: "Просмотр развернутого куба | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
-caps.latest.revision: 24
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8ddbefdcbc54c076c801e5f4d83e107e48ac5ba9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 45dd013c1d208f42b1cf1d4cff1f0493d904e153
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-3-5---browsing-the-deployed-cube"></a>Занятие 3-5-Просмотр развернутого куба
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 В этой задаче будет проводиться просмотр куба [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Так как при проведении анализа сравниваются несколько измерений, для просмотра данных воспользуемся сводной таблицей Excel. Разместим в сводной таблице информацию о клиенте, дате и продукте на разных осях, чтобы было видно, как изменяются продажи через Интернет в различные периоды времени, для различных групп клиентов и продуктовых линий.  
   
 ### <a name="to-browse-the-deployed-cube"></a>Просмотр развернутого куба  
@@ -52,8 +55,7 @@ ms.lasthandoff: 09/01/2017
     ![Продажи через Интернет по регионам и сериям продуктов](../analysis-services/media/l3-cube-browser-finish.gif "продажи через Интернет по регионам и сериям продуктов")  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Урок 4. Определение расширенных свойств атрибутов и измерений](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+[Урок 4: Определение расширенных атрибутов и свойств измерений](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   
   
-

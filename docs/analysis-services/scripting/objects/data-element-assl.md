@@ -2,40 +2,35 @@
 title: "Элемент данных (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Data Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Data Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Data
-helpviewer_keywords:
-- Data element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Data
+helpviewer_keywords: Data element
 ms.assetid: e52b1961-7e11-4029-8ab1-84d275845067
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bde76b59dbe8a81c631264095d701d8d1cf40268
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 998978dfbed910b59f9e781c3ec6e9cf60e5e1f3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-element-assl"></a>Элемент Data (ASSL)
-  Содержит (в коллекцию дочерних [блока &#40; ASSL &#41; ](../../../analysis-services/scripting/objects/block-element-assl.md) элементы) двоичное содержимое [ClrAssemblyFile](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит (в коллекцию дочерних [блока &#40; ASSL &#41; ](../../../analysis-services/scripting/objects/block-element-assl.md) элементы) двоичное содержимое [ClrAssemblyFile](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,7 +45,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|[DataBlock](../../../analysis-services/scripting/data-type/datablock-data-type-assl.md)|  
 |Значение по умолчанию|None|  
@@ -63,7 +58,7 @@ ms.lasthandoff: 09/01/2017
 |Родительские элементы|[Файл](../../../analysis-services/scripting/objects/file-element-assl.md) типа [ClrAssemblyFile](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Элемент, соответствующий родителю параметра **данные** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
   
 ## <a name="see-also"></a>См. также:  
@@ -74,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Объекты &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

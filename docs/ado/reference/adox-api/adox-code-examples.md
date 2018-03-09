@@ -3,7 +3,7 @@ title: "Примеры кода ADOX | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - ADOX code examples
 ms.assetid: 438e4369-f7e8-4dca-a709-dd501a3ca83f
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d0da086c625fcb54c2fbb62bc528d1dcf8f00d76
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aae22d4169b93fa3f3526007a20abaf8cb28f652
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-code-examples"></a>Примеры кода ADOX
 Позволяет в следующих примерах кода демонстрируется использование ADOX объекты, методы, свойства и события.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 09/09/2017
   
 -   [Примеры кода ADOX в Microsoft Visual C++](../../../ado/reference/adox-api/adox-code-examples-in-microsoft-visual-c.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства ActiveConnection каталога (Visual Basic)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [Столбцы и таблицы добавьте методы примера имя свойства (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Команда и пример свойства CommandText (Visual Basic)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
@@ -55,5 +54,4 @@ ms.lasthandoff: 09/09/2017
  [Представления Append пример метода (Visual Basic)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [Коллекция представлений, пример свойства CommandText (Visual Basic)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
  [Представления удаления пример метода (Visual Basic)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
- [Представления обновить пример метода (Visual Basic)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)
-
+ [Пример метода Refresh коллекции Views (Visual Basic)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)

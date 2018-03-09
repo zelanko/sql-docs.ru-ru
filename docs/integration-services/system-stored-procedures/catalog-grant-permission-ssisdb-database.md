@@ -1,10 +1,13 @@
 ---
-title: "Catalog.grant_permission (база данных SSISDB) | Документы Microsoft"
+title: "catalog.grant_permission (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,20 +16,19 @@ helpviewer_keywords:
 - grant_permission stored procedure [Integration Services]
 - catalog.grant_permission stored procedure [Integration Services]
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: 5f9bb38521631bcc60d39fba747f17b86183545d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/13/2017
-
+ms.openlocfilehash: c7c079453409e0af538aaeb2c82f6596e05b7d49
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission (база данных SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Предоставляет разрешение на защищаемый объект в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -40,53 +42,53 @@ catalog.grant_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @object_type =] *object_type*  
- Тип защищаемого объекта. Типы защищаемых объектов включают папку (`1`), проект (`2`), среду (`3`) и операции (`4`). *Object_type* — **smallint***.*  
+ [ @object_type = ] *object_type*  
+ Тип защищаемого объекта. Типы защищаемых объектов включают папку (`1`), проект (`2`), среду (`3`) и операцию (`4`). Параметр *object_type* имеет тип **smallint***.*  
   
- [ @object_id =] *object_id*  
- Уникальный идентификатор (ID) защищаемого объекта. *Object_id* — **bigint**.  
+ [ @object_id = ] *object_id*  
+ Уникальный идентификатор (ID) защищаемого объекта. Параметр *object_id* имеет тип **bigint**.  
   
- [ @principal_id =] *principal_id*  
- Идентификатор участника, которому должно быть предоставлено разрешение. *Principal_id* — **int**.  
+ [ @principal_id = ] *principal_id*  
+ Идентификатор участника, которому должно быть предоставлено разрешение. Параметр *principal_id* имеет тип **int**.  
   
- [ @permission_type =] *permission_type*  
- Тип предоставляемого разрешения. *Permission_type* — **smallint**.  
+ [ @permission_type = ] *permission_type*  
+ Тип предоставляемого разрешения. Параметр *permission_type* имеет тип **smallint**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение)  
   
- 1 (object_class недопустимое)  
+ 1 (object_class недопустим)  
   
  2 (object_id не существует)  
   
- 3 (участник не существует)  
+ 3 (субъект не существует)  
   
- 4 (разрешение недопустимое)  
+ 4 (недопустимое разрешение)  
   
  5 (другая ошибка)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   Разрешения ASSIGN_PERMISSIONS на объект  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
 
-Эта процедура может вызываться из имен входа, которые прошли проверку подлинности в SQL Server. Он не может быть вызван имени входа sa.
+Эту процедуру не могут вызывать имена входа, которые прошли проверку подлинности в SQL Server. Ее невозможно вызвать с помощью имени входа SA.
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В следующей таблице описаны хранимые процедуры, используемые для предоставления типов разрешений.  
   
 |Значение permission_type|Имя разрешения|Описание разрешения|Применимые типы объектов|  
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|Разрешает участнику читать сведения, рассматриваемые как часть объекта, например свойства. Тем самым участнику не разрешается перечислять или читать содержимое других объектов, содержащихся в этом объекте.|Папка, проект, среда, операция|  
 |`2`|MODIFY|Разрешает участнику изменять сведения, рассматриваемые как часть объекта, например свойства. Тем самым участнику не разрешается изменять другие объекты, содержащиеся в этом объекте.|Папка, проект, среда, операция|  
-|`3`|Выполните|Разрешает участнику выполнять все пакеты в проекте.|Проект|  
+|`3`|EXECUTE|Разрешает участнику выполнять все пакеты в проекте.|Проект|  
 |`4`|MANAGE_PERMISSIONS|Разрешает участнику назначать разрешения на объекты.|Папка, проект, среда, операция|  
 |`100`|CREATE_OBJECTS|Разрешает участнику создавать объекты в папке.|Папка|  
 |`101`|READ_OBJECTS|Разрешает участнику читать все объекты в папке.|Папка|  
@@ -98,4 +100,3 @@ catalog.grant_permission [ @object_type = ] object_type
  Информацию по наиболее значимым ошибкам и сообщениям см. в разделе «Значения кодов возврата».  
   
   
-

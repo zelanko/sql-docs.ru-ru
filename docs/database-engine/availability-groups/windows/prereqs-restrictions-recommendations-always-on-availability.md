@@ -2,11 +2,13 @@
 title: "Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - Availability Groups [SQL Server]
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
-caps.latest.revision: 151
+caps.latest.revision: "151"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: d127b3479e6bb38483d39556884d1498d9c662c2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5186cc2ea4ed54335c537fc3c0094c38b2c4a80f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе приводятся рекомендации по развертыванию [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], в т. ч. предварительные условия, ограничения и рекомендации в отношении компьютеров, отказоустойчивых кластеров Windows Server (WSFC), экземпляров сервера и групп доступности. Для каждого из этих компонентов описываются имеющиеся вопросы безопасности и необходимые разрешения.  
   
@@ -187,7 +188,7 @@ ms.lasthandoff: 08/02/2017
   
 |Задача|Необходимые разрешения|  
 |----------|--------------------------|  
-|Создание конечной точки зеркального отображения базы данных|Требуется разрешение CREATE ENDPOINT или членство в предопределенной роли сервера **sysadmin** .  Также требуется разрешение CONTROL ON ENDPOINT. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на конечные точки (Transact-SQL)](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).|  
+|Создание конечной точки зеркального отображения базы данных|Требуется разрешение CREATE ENDPOINT или членство в предопределенной роли сервера **sysadmin** .  Также требуется разрешение CONTROL ON ENDPOINT. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений конечной точке (Transact-SQL)](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).|  
 |Включение [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]|Требуется членство в группе **Администратор** на локальном компьютере и полный контроль над кластером WSFC.|  
   
 ###  <a name="RelatedTasksSI"></a> Связанные задачи (экземпляр сервера)  
@@ -280,7 +281,7 @@ ms.lasthandoff: 08/02/2017
   
 -   **Не используйте диспетчер отказоустойчивости кластеров для управления группами доступности.**  
   
-     Например:  
+     Пример:  
   
     -   Не изменяйте свойства групп доступности, такие как список возможных владельцев.  
   
@@ -313,7 +314,7 @@ ms.lasthandoff: 08/02/2017
   
 |Задача|Необходимые разрешения|  
 |----------|--------------------------|  
-|Создание группы доступности|Требуется членство в предопределенной роли сервера **sysadmin** и разрешение сервера CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.|  
+|Создание группы доступности|Требуется членство в фиксированной роли сервера **sysadmin** и одно из разрешений: CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.|  
 |Изменение группы доступности.|Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.<br /><br /> Кроме того, для присоединения базы данных к группе доступности требуется членство в предопределенной роли базы данных **db_owner** .|  
 |Удаление группы доступности|Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER. Для удаления группы доступности, которая не размещена в локальной реплике, необходимо разрешение CONTROL SERVER или разрешение CONTROL на эту группу доступности.|  
   
@@ -406,5 +407,4 @@ ms.lasthandoff: 08/02/2017
     
   
 --------------------------------------------------  
-
 

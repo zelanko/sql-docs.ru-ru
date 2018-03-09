@@ -2,29 +2,30 @@
 title: "Диалоговое окно \"Выбор источника\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dmf.selectsource.f1
+f1_keywords: sql13.swb.dmf.selectsource.f1
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
-caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a8ffe2ca7e33b741309b594c0a351825fee59b07
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "16"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 9bd5115125244859cb147dbc4a5028f87111aaed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="select-source-dialog-box"></a>Диалоговое окно «Выбор источника»
-  Это диалоговое окно позволяет выбрать источник политик, которые будут запущены. Чтобы выбрать один или несколько XML-файлов, содержащих политики, выберите **Файлы**. Чтобы запустить политики, найденные в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выберите **Сервер**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Это диалоговое окно позволяет выбрать источник политик, которые будут запущены. Чтобы выбрать один или несколько XML-файлов, содержащих политики, выберите **Файлы**. Чтобы запустить политики, найденные в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выберите **Сервер**.  
   
  Это диалоговое окно можно открыть несколькими способами.  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 06/22/2017
 > [!IMPORTANT]  
 >  По возможности используйте аутентификацию Windows.  
   
- **Имя пользователя**  
+ **User name**  
  Введите имя пользователя для соединения. Этот параметр доступен только при соединении с использованием метода проверки подлинности Windows.  
   
  **Имя входа**  

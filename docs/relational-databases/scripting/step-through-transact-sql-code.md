@@ -2,9 +2,12 @@
 title: "Пошаговая отладка кода Transact-SQL | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - Transact-SQL debugger, step out
 - Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
-caps.latest.revision: 19
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 68bc53fbfbe4db76e44042936642ad8541784b36
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 978f53bf3d04afd9c42b23af63675b65bf905a04
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="step-through-transact-sql-code"></a>Пошаговая отладка кода Transact-SQL
-  Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет выбирать инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые будут выполняться в окне редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Отладчик можно останавливать на отдельных инструкциях, а затем просматривать состояние элементов кода в этой точке.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет выбирать инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], которые будут выполняться в окне редактора запросов [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Отладчик можно останавливать на отдельных инструкциях, а затем просматривать состояние элементов кода в этой точке.  
   
 ## <a name="breakpoints"></a>Точки останова  
  Точка останова указывает отладчику приостановку выполнения на определенной инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] . Дополнительные сведения о точках останова см. в статье [Точки останова Transact-SQL](../../relational-databases/scripting/transact-sql-breakpoints.md).  
@@ -66,4 +68,3 @@ ms.lasthandoff: 06/22/2017
  [Сведения отладчика Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)  
   
   
-

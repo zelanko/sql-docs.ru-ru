@@ -1,10 +1,13 @@
 ---
-title: "Разбиение набора данных с помощью преобразования «Условное разбиение» | Документы Microsoft"
+title: "Разбиение набора данных с помощью преобразования \"Условное разбиение\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ helpviewer_keywords:
 - splitting dataset
 - datasets [Integration Services], splitting
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
-caps.latest.revision: 40
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 8248e068541c6bd72b21f78d121811f4851850bb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1dfc5673dca0a8109e02b76107ad85e8e19324cb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>Разбиение набора данных с помощью преобразования «Условное разбиение»
   Чтобы добавить и настроить преобразование «Условное разбиение», пакет должен содержать по крайней мере одну задачу потока данных и один источник.  
@@ -64,13 +66,12 @@ ms.lasthandoff: 08/03/2017
   
 12. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также раздел  
- [Преобразование «Условное разбиение»](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
+## <a name="see-also"></a>См. также:  
+ [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Пути служб Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
  [Типы данных служб Integration Services](../../../integration-services/data-flow/integration-services-data-types.md)   
  [Задача потока данных](../../../integration-services/control-flow/data-flow-task.md)   
- [Службы Integration Services &#40; Службы SSIS &#41; Выражения](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Выражения служб Integration Services (SSIS)](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   
-

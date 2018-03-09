@@ -1,10 +1,13 @@
 ---
 title: "SET ARITHIGNORE (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,20 +25,19 @@ helpviewer_keywords:
 - ARITHIGNORE option
 - divide-by-zero errors
 ms.assetid: 71b2c2a5-c83a-4dfe-8469-237987a6e503
-caps.latest.revision: 40
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 779510e1a7a302fc4bfd4a730b88db9c4b4a4b1b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 8229ccdae1e3074bf8f726a9dfdfcc4e52b8df5e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-arithignore-transact-sql"></a>SET ARITHIGNORE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Осуществляет контроль возврата сообщения об ошибке при переполнении или делении на ноль во время выполнения запроса.  
   
@@ -44,19 +46,17 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-    
-SET ARITHIGNORE { ON | OFF }  
-[ ; ]  
-```  
-  
-```  
+-- Syntax for SQL Server and Azure SQL Database
+
+SET ARITHIGNORE { ON | OFF }
+```
+
+```
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ARITHIGNORE OFF   
-[ ; ]  
-```  
-  
+
+SET ARITHIGNORE OFF
+```
+
 ## <a name="remarks"></a>Замечания  
  От параметра SET ARITHIGNORE зависит только то, будет ли возвращаться сообщение об ошибке. При возникновении переполнения или при попытке деления на ноль [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает значение NULL вне зависимости от данной настройки. Настройка SET ARITHABORT может использоваться для определения прекращения выполнения запроса. Эта настройка не влияет на ошибки, возникающие во время выполнения инструкций INSERT, UPDATE, и DELETE.  
   
@@ -121,5 +121,4 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
  [SET ARITHABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
   
   
-
 

@@ -1,10 +1,13 @@
 ---
-title: "Шаг 4: Проверка учебного пакета занятия 2 | Документы Microsoft"
+title: "Шаг 4. Проверка учебного пакета, созданного на занятии 2 | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
-caps.latest.revision: 31
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b767baea5d3979763b2e7bfb741cb1fd6589ebfd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 98f4b32fd8575a33f2b7a074ab3fe04e043d7777
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>Занятие 2-4-Проверка учебного пакета занятия 2
+# <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>Занятие 2–4. Проверка учебного пакета, созданного на занятии 2
 Используя настроенный контейнер «цикл по каждому элементу» и диспетчер соединений с неструктурированными файлами, можно в пакете, созданном на занятии 2, поочередно обрабатывать коллекцию из 14 неструктурированных файлов в папке образцов данных. Каждый раз при обнаружении имени файла, отвечающего указанным критериям имен файлов, в контейнере «цикл по каждому элементу» это имя подставляется в определенную пользователем переменную. В переменной, в свою очередь, обновляется свойство ConnectionString диспетчера соединений с неструктурированными файлами, после чего выполняется соединение с новым неструктурированным файлом. Затем в контейнере «цикл по каждому элементу» выполняется задача неизмененного потока данных по данным нового неструктурированного файла, после чего устанавливается соединение со следующим файлом в папке.  
   
 Для проверки новой функциональности циклов, которая была добавлена в пакет, используйте следующую процедуру.  
@@ -37,11 +39,11 @@ ms.lasthandoff: 09/26/2017
   
 **Поток управления**  
   
-![Поток в пакете управления](../integration-services/media/task4lesson2control.gif "поток в пакете управления")  
+![Поток управления в пакете](../integration-services/media/task4lesson2control.gif "Поток управления в пакете")  
   
 **Поток данных**  
   
-![Поток данных в пакете](../integration-services/media/task9lesson1data.gif "потока данных в пакете")  
+![Поток данных в пакете](../integration-services/media/task9lesson1data.gif "Поток данных в пакете")  
   
 ### <a name="to-test-the-lesson-2-tutorial-package"></a>Тестирование пакета учебника занятия 2  
   
@@ -59,5 +61,4 @@ ms.lasthandoff: 09/26/2017
   
   
   
-
 

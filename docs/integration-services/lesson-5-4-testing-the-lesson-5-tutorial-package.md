@@ -1,10 +1,13 @@
 ---
-title: "Шаг 4: Проверка учебного пакета занятия 5 | Документы Microsoft"
+title: "Шаг 4. Проверка учебного пакета, созданного на занятии 5 | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dd1b78e3c7d1e3d9324987a292220adf03f1100b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 600fa07aaffe0612cd87bcf33436c01481658782
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>Занятие 5-4-Проверка учебного пакета занятия 5
+# <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>Занятие 5–4. Проверка учебного пакета, созданного на занятии 5
 В ходе выполнения пакету будет присвоено значение свойства **Directory** из переменной, обновленной во время выполнения, а не имя исходного каталога, которое было указано при создании пакета. Значение этой переменной заполняется из файла SSISTutorial.dtsConfig.  
   
 Чтобы убедиться, что пакет обновляет свойство Directory новым значением во время выполнения, выполните пакет. Поскольку в новый каталог были скопированы только три файла образцов данных, поток данных будет запущен только три раза, а не 14 раз в соответствии с количеством файлов в исходном каталоге.  
@@ -34,11 +36,11 @@ ms.lasthandoff: 09/26/2017
   
 **Поток управления**  
   
-![Поток в пакете управления](../integration-services/media/task4lesson2control.gif "поток в пакете управления")  
+![Поток управления в пакете](../integration-services/media/task4lesson2control.gif "Поток управления в пакете")  
   
 **Поток данных**  
   
-![Поток данных в пакете](../integration-services/media/task9lesson1data.gif "потока данных в пакете")  
+![Поток данных в пакете](../integration-services/media/task9lesson1data.gif "Поток данных в пакете")  
   
 ### <a name="to-test-the-lesson-5-tutorial-package"></a>Проверка пакета занятия 5 учебника  
   
@@ -51,4 +53,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

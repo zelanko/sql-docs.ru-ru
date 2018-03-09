@@ -1,26 +1,28 @@
 ---
 title: "Использование базовых типов данных | Документы Microsoft"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
-caps.latest.revision: 73
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 66da5301a12427ed50a212abf74a0700d89e8668
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e7333b711d828981a93c51b98b7e84fb62a7749b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="using-basic-data-types"></a>Использование базовых типов данных
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -33,25 +35,25 @@ ms.lasthandoff: 09/09/2017
 |Типы SQL Server|Типы JDBC (java.sql.Types)|Типы языка Java|  
 |----------------------|-----------------------------------|-------------------------|  
 |bigint|bigint|long|  
-|binary|BINARY|byte[]|  
+|BINARY|BINARY|byte[]|  
 |bit|BIT|boolean|  
-|char|CHAR|Строковые значения|  
+|char;|CHAR|Строковые значения|  
 |date|DATE|java.sql.Date|  
-|datetime|timestamp|java.sql.Timestamp|  
-|datetime2|timestamp|java.sql.Timestamp|  
+|datetime|TIMESTAMP|java.sql.Timestamp|  
+|datetime2|TIMESTAMP|java.sql.Timestamp|  
 |datetimeoffset (2)|microsoft.sql.Types.DATETIMEOFFSET|microsoft.sql.DateTimeOffset|  
-|decimal|DECIMAL|java.math.BigDecimal|  
+|Decimal|DECIMAL|java.math.BigDecimal|  
 |float|DOUBLE|double|  
 |image|LONGVARBINARY|byte[]|  
 |int|INTEGER|int|  
 |money|DECIMAL|java.math.BigDecimal|  
-|nchar|CHAR<br /><br /> NCHAR (Java SE 6.0)|Строковые значения|  
+|NCHAR|CHAR<br /><br /> NCHAR (Java SE 6.0)|Строковые значения|  
 |ntext|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|Строковые значения|  
 |numeric|NUMERIC|java.math.BigDecimal|  
 |nvarchar|VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)|Строковые значения|  
 |nvarchar(max)|VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)|Строковые значения|  
 |real|REAL|float|  
-|smalldatetime|timestamp|java.sql.Timestamp|  
+|smalldatetime|TIMESTAMP|java.sql.Timestamp|  
 |smallint|SMALLINT|short|  
 |smallmoney|DECIMAL|java.math.BigDecimal|  
 |text|LONGVARCHAR|Строковые значения|  
@@ -65,12 +67,11 @@ ms.lasthandoff: 09/09/2017
 |varchar|VARCHAR|Строковые значения|  
 |varchar(max)|VARCHAR|Строковые значения|  
 |xml|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|Строковые значения<br /><br /> SQLXML|  
+|SQLVARIANT|SQLVARIANT|Объект|  
   
  (1) чтобы использовать java.sql.Time с временем [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типа, необходимо задать **sendTimeAsDatetime** свойства соединения значение false.  
   
  (2) доступны программным образом значения **datetimeoffset** с [класс DateTimeOffset](../../connect/jdbc/reference/datetimeoffset-class.md).  
-  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Тип данных sqlvariant в настоящее время не поддерживается драйвером JDBC. Если использовался запрос на извлечение данных из таблицы, содержащей столбец типа данных sqlvariant, то возникнет исключение.  
   
  В следующих разделах приводятся примеры использования драйвера JDBC и базовых типов данных. Более подробный пример использования базовых типов данных в приложении Java см. в разделе [базовые типы данных, образцы](../../connect/jdbc/basic-data-types-sample.md).  
   
@@ -122,8 +123,7 @@ ms.lasthandoff: 09/09/2017
   
  Дополнительные сведения об использовании драйвера JDBC с хранимыми процедурами и выходными параметрами см. в разделе [с помощью хранимой процедуры с выходными параметрами](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные сведения о типах данных драйвера JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   
-

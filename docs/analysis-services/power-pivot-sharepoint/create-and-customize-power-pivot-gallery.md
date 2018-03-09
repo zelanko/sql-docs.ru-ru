@@ -2,29 +2,29 @@
 title: "Создание и настройка коллекции Power Pivot | Документы Microsoft"
 ms.custom: 
 ms.date: 08/31/2015
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
-caps.latest.revision: 17
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 11a372ebe9e40bc5800b8a38a35575aa66095dc7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9e98f38071c044aab967690ffafffa6ada634141
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="create-and-customize-power-pivot-gallery"></a>Создание и настройка коллекции Power Pivot
+# <a name="create-and-customize-power-pivot-gallery"></a>Create and Customize Power Pivot Gallery
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Коллекция — это специальный тип библиотеки документов SharePoint. Она предлагает широкие возможности для просмотра опубликованных книг Excel и отчетов служб Reporting Services, содержащих данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , и управления ими.  
   
 ##  <a name="bkmk_top"></a> В этом разделе  
@@ -139,7 +139,7 @@ ms.lasthandoff: 09/01/2017
   
  В следующей таблице описываются различные макеты для представления эскизов миниатюр каждой просматриваемой страницы.  
   
-|Просмотр|Description|  
+|Просмотр|Описание|  
 |----------|-----------------|  
 |Режим галереи (по умолчанию)|Галерея является представлением по умолчанию для галереи [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Область просмотра отображается слева. Миниатюры меньшего размера всех листов последовательно отображаются рядом с областью просмотра слева направо.|  
 |Все документы|Это стандартный макет всех библиотек документов. Можно выбрать этот режим для управления отдельными документами или просмотра содержимого библиотеки в формате списка.<br /><br /> Это представление служит для изменения свойств, удаления или перемещения отдельных документов.<br /><br /> При включении управления версиями необходимо использовать это представление при добавлении и извлечении документов из библиотеки.|  
@@ -160,4 +160,3 @@ ms.lasthandoff: 09/01/2017
  [Удаление коллекции Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)  
   
   
-

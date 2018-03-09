@@ -3,7 +3,7 @@ title: "Методы ADOX | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - methods [ADOX]
 - ADOX, methods
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 73fcca57a0cb497694bf843f1569a51868282a89
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fcd840f212ce73a0c059c74c5710cce9366126a3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-methods"></a>Методы ADOX
 |||  
@@ -39,7 +38,7 @@ ms.lasthandoff: 09/09/2017
 |[Append (таблицы)](../../../ado/reference/adox-api/append-method-adox-tables.md)|Добавляет новый **таблицы** объект **таблиц** коллекции.|  
 |[Append (пользователей)](../../../ado/reference/adox-api/append-method-adox-users.md)|Добавляет новый **пользователя** объект **пользователей** коллекции.|  
 |[Append (представления)](../../../ado/reference/adox-api/append-method-adox-views.md)|Добавляет новый **представление** объект **представления** коллекции.|  
-|[Изменение пароля](../../../ado/reference/adox-api/changepassword-method-adox.md)|Изменяет пароль для учетной записи пользователя.|  
+|[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|Изменяет пароль для учетной записи пользователя.|  
 |[Создание](../../../ado/reference/adox-api/create-method-adox.md)|Создает новый каталог.|  
 |[Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Удаляет объект из коллекции.|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Возвращает владельца объекта в каталоге.|  
@@ -47,7 +46,6 @@ ms.lasthandoff: 09/09/2017
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|Задает владельца объекта в каталоге.|  
 |[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)|Задает разрешения для группы или пользователя на объект.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Расширения ADO для языка описания данных и безопасности (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
-

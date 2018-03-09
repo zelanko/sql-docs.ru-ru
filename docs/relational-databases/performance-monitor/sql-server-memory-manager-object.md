@@ -2,30 +2,32 @@
 title: "Объект диспетчера памяти (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:Memory Manager
 - Memory Manager object
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 884e6d05db70f9978b84a3423bdfad748f50b29c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "29"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 3e385362666a573b97579a3f0e99924152b1bcdd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server, объект Memory Manager
-  Объект **Диспетчер памяти** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает счетчики для контроля использования памяти всего сервера. Контроль над использованием памяти всего сервера для оценки действий пользователя и использования ресурсов может помочь идентифицировать нехватку производительности. Контроль над памятью, используемый экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , может помочь определить:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект **Диспетчер памяти** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики для контроля общего использования памяти на сервере. Контроль над использованием памяти всего сервера для оценки действий пользователя и использования ресурсов может помочь идентифицировать нехватку производительности. Контроль над памятью, используемый экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , может помочь определить:  
   
 -   существуют ли нехватки в недостаточной физической памяти для хранения в кэше часто используемых данных. Если памяти недостаточно, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен получить данные с диска;  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="memory-manager-counters"></a>Счетчики диспетчера памяти  
  Данная таблица описывает счетчики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Диспетчер памяти** .  
   
-|SQL Server, счетчики диспетчера памяти|Описание|  
+|SQL Server, счетчики диспетчера памяти|Description|  
 |----------------------------------------|-----------------|  
 |**Память соединения (КБ)**|Указывает общий объем динамической памяти, которую использует сервер для обслуживания соединений.|  
 |**Кэш-память базы данных (КБ)**|Указывает объем памяти, который используется в настоящий момент сервером для кэша страниц базы данных.|  

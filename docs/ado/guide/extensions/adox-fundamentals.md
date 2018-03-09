@@ -3,7 +3,7 @@ title: "Принципы работы ADOX | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - ADOX, fundamentals
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 69b460a0d18501f89f8d9f7ab4b83b5251bf38e9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dbc8d415e4dfcaeb4bf7e6a489bd407e87335874
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adox-fundamentals"></a>Принципы работы ADOX
 Модули Microsoft® ActiveX® данных объекты для языка определения данных и безопасности (ADOX) — это расширение объектов ADO и модель программирования. ADOX включает объекты для создания схем и изменения, а также безопасности. Поскольку объектно ориентированный подход для операций со схемой, можно написать код, который будет работать с различными данными источников независимо от различий в их собственном синтаксисов.  
@@ -50,7 +49,7 @@ ms.lasthandoff: 09/09/2017
   
 -   [Примеры ADOX](../../../ado/reference/adox-api/adox-code-examples.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Примеры кода ADOX](../../../ado/reference/adox-api/adox-code-examples.md)   
  [Коллекции ADOX](../../../ado/reference/adox-api/adox-collections.md)   
@@ -60,5 +59,4 @@ ms.lasthandoff: 09/09/2017
  [Объекты ADOX](../../../ado/reference/adox-api/adox-objects.md)   
  [Свойства ADOX](../../../ado/reference/adox-api/adox-properties.md)   
  [ADO (многомерные данные) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [Руководство программиста ADO](../../../ado/guide/ado-programmer-s-guide.md)
-
+ [Руководство по программированию объектов ADO](../../../ado/guide/ado-programmer-s-guide.md)

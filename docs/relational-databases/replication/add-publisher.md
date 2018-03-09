@@ -2,31 +2,31 @@
 title: "Добавление издателя | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.monitor.addpublisher.f1
-helpviewer_keywords:
-- Add Publisher dialog box
+f1_keywords: sql13.rep.monitor.addpublisher.f1
+helpviewer_keywords: Add Publisher dialog box
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 86d2654bba26b7bcd1a5c758b8d609d6e2df0286
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "23"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 5c506f5e41f4a4bb88712d1e6dcb1d1b0ee62253
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-publisher"></a>Добавление издателя
-  Диалоговое окно **Добавление издателя** позволяет добавить одного или несколько издателей в левую панель монитора репликации. После добавления издателя в правой панели отображаются сведения об издателе, выбранном в левой панели.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Диалоговое окно **Добавление издателя** позволяет добавить одного или несколько издателей в левую область монитора репликации. После добавления издателя в правой панели отображаются сведения об издателе, выбранном в левой панели.  
   
 ## <a name="options"></a>Параметры  
  **Добавить**  

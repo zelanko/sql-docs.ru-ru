@@ -3,10 +3,12 @@ title: "Преобразование данных из C в типы данны�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +22,16 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC]
 - C data types [ODBC], converting to SQL types
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bb1d1c07f1453886fd91159eabad97dc90b9b191
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c8f3f8c3c62c7a4d4c6765d52c48d592ff92a21e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Преобразование данных из C в типы данных SQL
 Если приложение вызывает **SQLExecute** или **SQLExecDirect**, драйвер получает данные для любой параметры связаны с **SQLBindParameter** из места хранения в приложение. Если приложение вызывает **SQLSetPos**, драйвер извлекает данные для обновления или операции добавления столбцов, привязанных с **SQLBindCol**. Для параметров данных во время выполнения приложение отправляет данные параметра с **SQLPutData**. Если необходимо, драйвер преобразует данные из типа данных, указанного *ValueType* аргумент в **SQLBindParameter** тип данных, указанный в *ParameterType*аргумент в **SQLBindParameter**, а затем отправляет данные в источник данных.  
@@ -62,25 +63,24 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующие подразделы.  
   
--   [C в SQL: символ](../../../odbc/reference/appendixes/c-to-sql-character.md)  
+-   [Преобразование из C в SQL: символы](../../../odbc/reference/appendixes/c-to-sql-character.md)  
   
--   [C в SQL: числовые](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
+-   [Преобразование из C в SQL: числовые данные](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
   
--   [C в SQL: бит](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
+-   [Преобразование из C в SQL: битовые данные](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
   
--   [C в SQL: двоичный](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
+-   [Преобразование из C в SQL: двоичные данные](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
   
--   [C в SQL: дата](../../../odbc/reference/appendixes/c-to-sql-date.md)  
+-   [Преобразование из C в SQL: даты](../../../odbc/reference/appendixes/c-to-sql-date.md)  
   
--   [C в SQL: GUID](../../../odbc/reference/appendixes/c-to-sql-guid.md)  
+-   [Преобразование из C в SQL: GUID](../../../odbc/reference/appendixes/c-to-sql-guid.md)  
   
--   [C в SQL: время](../../../odbc/reference/appendixes/c-to-sql-time.md)  
+-   [Преобразование из C в SQL: время](../../../odbc/reference/appendixes/c-to-sql-time.md)  
   
--   [C в SQL: отметка времени](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
+-   [Преобразование из C в SQL: отметки времени](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
   
--   [C в SQL: интервалом месяц года](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
+-   [Преобразование из C в SQL: интервалы месяцев года](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
   
--   [C в SQL: интервалы времени дня](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
+-   [Преобразование из C в SQL: интервалы времени дня](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
   
--   [C, чтобы примеры преобразования данных SQL](../../../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md)
-
+-   [Примеры преобразования данных из C в SQL](../../../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md)

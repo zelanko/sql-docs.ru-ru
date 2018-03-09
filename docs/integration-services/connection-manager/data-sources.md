@@ -1,10 +1,13 @@
 ---
-title: "Источники данных | Документы Microsoft"
+title: "Источники данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/27/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,19 +15,18 @@ ms.topic: article
 helpviewer_keywords:
 - data sources [Integration Services], about data sources
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 77ca3b5849eb90d21da55989d2c9ec7ae94a53f6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: eccbd3683393dfd27665fe827af74100cef415db
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="data-sources"></a>Источники данных
+# <a name="data-sources"></a>обозревателе решений
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] входит объект времени разработки, который можно использовать в пакетах служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] : источник данных.  
   
  Объект источника данных представляет собой ссылку на подключение и содержит строку соединения и идентификатор источника данных. В нем также могут храниться дополнительные метаданные: описание, имя, имя пользователя и пароль.  
@@ -49,4 +51,3 @@ ms.lasthandoff: 09/27/2017
  Между источником данных и диспетчерами соединений, ссылающимися на него, нет зависимостей. Если источник данных больше не входит в проект, пакет по-прежнему остается правильным, так как информация об источнике данных, например тип и строка соединения, включается в определение пакета.  
   
   
-

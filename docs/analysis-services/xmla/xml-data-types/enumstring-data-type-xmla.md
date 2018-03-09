@@ -2,42 +2,38 @@
 title: "Тип данных EnumString (XML для Аналитики) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- EnumString Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: EnumString Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - EnumString
 - urn:schemas-microsoft-com:xml-analysis#EnumString
 - http://schemas.microsoft.com/analysisservices/2003/engine#EnumString
-helpviewer_keywords:
-- EnumString data type
+helpviewer_keywords: EnumString data type
 ms.assetid: 9214195e-4539-419b-95ec-b7aa75e033ab
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b00fa29ae9dc0bb4529e013f9767451c3d0f1720
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3209c6fd1546a4b1596eaaf6f4a19049bfc1fa92
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="enumstring-data-type-xmla"></a>Тип данных EnumString (XML для аналитики)
-  Определяет производный тип данных, представляющий набор именованных констант для данного перечислителя.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Определяет производный тип данных, представляющий набор именованных констант для данного перечислителя.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,7 +44,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="data-type-characteristics"></a>Характеристики типа данных  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Базовые типы данных|**строка**|  
 |Производные типы данных|None|  
@@ -59,14 +55,14 @@ ms.lasthandoff: 09/01/2017
 |------------------|-------------|  
 |Родительские элементы|None|  
 |Дочерние элементы|None|  
-|Производные элементы|Нет|  
+|Производные элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В XML для аналитики используются перечисления, позволяющие ограничить строковые значения набором параметров, которые можно проверить. **EnumString** использует стандартный тип данных XML **string** . Конкретные значения для каждой именованной константы указываются в определении перечислителя. Перечислители определяются путем добавления их в [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md) набора строк схемы и может быть получен с помощью [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) метод с DISCOVER_ENUMERATORS тип запроса.  
   
  В следующей таблице описаны перечислители, поддерживаемые экземпляром служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-|Перечислитель|Описание|  
+|Перечислитель|Description|  
 |----------------|-----------------|  
 |ProviderType|Поддерживает столбец ProviderType в [DISCOVER_DATASOURCES](../../../analysis-services/schema-rowsets/xml/discover-datasources-rowset.md) набора строк схемы, который определяет тип данных, который может быть возвращен [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра.<br /><br /> Данное перечисление также поддерживает свойство XMLA **ProviderType**, который определяет типы поставщиков, поддерживаемые [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляра. Данное перечисление также используется в наборе строк схемы DISCOVER_DATASOURCES.<br /><br /> Дополнительные сведения о **ProviderType**, в разделе [поддерживаемые свойства XMLA &#40; XML для Аналитики &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
 |AuthenticationMode|Поддерживает столбец AuthenticationMode в наборе строк схемы DISCOVER_DATASOURCES, в котором определяются учетные данные безопасности, необходимые для получения доступа к экземпляру служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
@@ -82,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  [Типы данных XML &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   
-

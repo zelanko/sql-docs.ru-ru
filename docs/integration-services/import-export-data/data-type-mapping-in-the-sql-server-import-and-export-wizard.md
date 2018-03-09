@@ -1,34 +1,36 @@
 ---
-title: "Сопоставление типов данных в мастере экспорта и импорта SQL Server | Документы Microsoft"
+title: "Сопоставление типов данных в мастере импорта и экспорта SQL Server | Документы Майкрософт"
 ms.custom: 
 ms.date: 01/11/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: import-export-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
-caps.latest.revision: 2
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4eca10e506087ee5d8106cb05c861c4efa49a65d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 1796ece3b0fb24b0fb5a4026ce12a085d4744a77
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Сопоставление типов данных в мастере импорта и экспорта SQL Server
  В мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно задать имя, тип данных и свойства типа данных для столбцов в новых целевых таблицах и файлах, но нельзя указать настраиваемые преобразования для значений столбцов. Поэтому важное значение имеет встроенное сопоставление типов данных из источника с типами данных в назначении.  
   
 ##  <a name="wizardMapping"></a> Каким образом мастер выполняет сопоставление типов данных источника и назначения?
 При сопоставлении типов данных из одной системы или версии базы данных с другой мастер использует файлы сопоставления, устанавливаемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Например, он может сопоставить типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с типами данных Oracle. По умолчанию файлы сопоставления в XML-формате устанавливаются в следующие папки.
--   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\**  (для 64-разрядная версия)
--   **\Microsoft SQL C:\Program файлы (x86) Server\130\DTSMappingFiles\**  (для 32-разрядная версия).  
+-   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\** (для 64-разрядной версии)
+-   **C:\Program Files (x86)\Microsoft SQL Server\130\DTSMappingFiles\** (для 32-разрядной версии).  
   
  Если существующий файл сопоставления был изменен или в папку был добавлен новый файл сопоставления, необходимо закрыть и заново открыть мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , чтобы загрузить новые или измененные файлы.  
  
@@ -82,5 +84,4 @@ ms.lasthandoff: 09/26/2017
 </dtm:DataTypeMappings>  
   
 ```  
-
 

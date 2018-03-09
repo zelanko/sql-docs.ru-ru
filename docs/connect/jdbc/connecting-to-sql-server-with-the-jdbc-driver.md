@@ -3,24 +3,25 @@ title: "Подключение к SQL Server с помощью драйвера 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 624a6874931cb8af32bb69ea3ac0f8b395ef8915
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1ebc9542e5683eb58c198745892916893f284822
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>Соединение с SQL Server с помощью драйвера JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,18 +40,17 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
   
 |Раздел|Description|  
 |-----------|-----------------|  
-|[Построение URL-адрес подключения](../../connect/jdbc/building-the-connection-url.md)|Описывает, как URL-адрес для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных. Также описывает подключение к именованным экземплярам [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных.|  
+|[Формирование URL-адреса соединения](../../connect/jdbc/building-the-connection-url.md)|Описывает, как URL-адрес для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных. Также описывает подключение к именованным экземплярам [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных.|  
 |[Задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md)|Описывает различные свойства соединения и как они могут использоваться при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных.|  
-|[Установка свойств источника данных](../../connect/jdbc/setting-the-data-source-properties.md)|Описывает, как использовать источники данных на платформе Java, в среде Enterprise Edition (Java EE).|  
+|[Задание свойств источника данных](../../connect/jdbc/setting-the-data-source-properties.md)|Описывает, как использовать источники данных на платформе Java, в среде Enterprise Edition (Java EE).|  
 |[Работа с соединением](../../connect/jdbc/working-with-a-connection.md)|Описывает различные способы создания экземпляра соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных.|  
 |[Использование пулов соединений](../../connect/jdbc/using-connection-pooling.md)|Описывает, как драйвер JDBC поддерживает использование пулов соединений.|  
 |[Использование зеркального отображения базы данных &#40; JDBC &#41;](../../connect/jdbc/using-database-mirroring-jdbc.md)|Описывает, как драйвер JDBC поддерживает использование зеркального отображения базы данных.|  
-|[Драйвер JDBC поддерживает высокий уровень доступности и аварийного восстановления](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|Описывает разработку приложения, устанавливающего соединения с группой доступности AlwaysOn.|  
-|[С помощью встроенной проверки подлинности Kerberos для подключения к SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Обсуждает реализацию на языке Java приложений для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных с помощью встроенной проверки подлинности Kerberos.|  
-|[Подключение к базе данных Azure SQL](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|Обсуждает вопросы подключения к базам данных в SQL Azure.|  
+|[Поддержка высокой доступности и аварийного восстановления в драйвере JDBC](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|Описывает разработку приложения, устанавливающего соединения с группой доступности AlwaysOn.|  
+|[Использование встроенной проверки подлинности Kerberos для соединения с SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Обсуждает реализацию на языке Java приложений для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных с помощью встроенной проверки подлинности Kerberos.|  
+|[Подключение к базе данных SQL Azure](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|Обсуждает вопросы подключения к базам данных в SQL Azure.|  
   
 ## <a name="see-also"></a>См. также:  
  [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

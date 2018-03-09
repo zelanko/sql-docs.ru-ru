@@ -2,11 +2,13 @@
 title: "Ограничение размеров файла и таблицы трассировки | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - file rollover option [SQL Server]
 - size [SQL Server], files
 ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
-caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "23"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 88ac44b6c82349c1c0294a512a24ffacd6002ad3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0a450e9f52065238bb2b3a91b5c52f4c4d8fba50
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>Ограничение размеров файла и таблицы трассировки
-  Результаты трассировки SQL могут иметь различный размер в зависимости от того, какие классы событий включены в трассировку и каким образом был использован компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Если производится трассировка часто происходящих классов событий, объем собираемых данных может быть уменьшен путем установки максимального размера файла или максимального числа строк. Указывая максимальный размер файла или максимальное число строк, можно гарантировать, что файл или таблица трассировки не превысят указанные размеры.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Результаты трассировки SQL могут иметь различный размер в зависимости от того, какие классы событий включены в трассировку и каким образом использовался компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Если производится трассировка часто происходящих классов событий, объем собираемых данных может быть уменьшен путем установки максимального размера файла или максимального числа строк. Указывая максимальный размер файла или максимальное число строк, можно гарантировать, что файл или таблица трассировки не превысят указанные размеры.  
   
 > [!NOTE]  
 >  Если данные трассировки сохраняются в уже существующем файле, можно добавить данные в файл или перезаписать файл. Если данные добавляются в файл, а файл трассировки уже имеет или превышает заданный максимальный размер, будет показано уведомление и будет предложено либо увеличить максимальный размер файла, либо выбрать новый файл. Это верно и для таблиц трассировки.  
@@ -62,4 +63,3 @@ ms.lasthandoff: 06/22/2017
  [Хранимая процедура sp_trace_create (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)  
   
   
-

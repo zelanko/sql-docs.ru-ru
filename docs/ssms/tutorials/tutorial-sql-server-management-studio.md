@@ -3,14 +3,15 @@ title: "Учебник: SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: 
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.tutorialstart.ssms.f1
+f1_keywords: sql13.tutorialstart.ssms.f1
 helpviewer_keywords:
 - projects [SQL Server Management Studio], tutorials
 - templates [SQL Server], SQL Server Management Studio
@@ -22,20 +23,19 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 5e6ca96ba58cb6f32cdceb4a310ba5b94ce290ef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
-ms.sourcegitcommit: 5aa858aff03e93db9db36b8caa710cc3a3b874ca
-ms.openlocfilehash: dde887f6e0999c5ebc107a300c33981a38ec7034
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tutorial-sql-server-management-studio"></a>Руководство: SQL Server Management Studio
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Учебник по SQL Server Management Studio (SSMS) познакомит вас с этой интегрированной средой для управления инфраструктурой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] представляет собой графический интерфейс для настройки экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], наблюдения за ними и управления ими. Среда также позволяет развертывать, отслеживать и обновлять компоненты уровня данных, используемые приложениями, например базами данных. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] также предоставляет редакторы [!INCLUDE[tsql](../../includes/tsql-md.md)], языка многомерных выражений, расширений интеллектуального анализа данных и XML для изменения и отладки скриптов.  
   
@@ -70,5 +70,4 @@ ms.lasthandoff: 08/31/2017
   
   
   
-
 

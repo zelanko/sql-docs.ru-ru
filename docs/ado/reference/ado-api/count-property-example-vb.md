@@ -3,7 +3,7 @@ title: "Пример свойства Count (VB) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Count property [ADO], Visual Basic example
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4ab29cd1d57ebdb721085c7f743d96b2c0052ea6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 20fdfff410f2b36e8974aa7073ad287e6f4a74d4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="count-property-example-vb"></a>Пример свойства Count (Visual Basic)
 В этом примере демонстрируется [число](../../../ado/reference/ado-api/count-property-ado.md) свойство с две коллекции в ***сотрудника*** базы данных. Это свойство получает количество объектов в каждой коллекции и определяет максимальное число циклов, которые перечисляют этих коллекций. Другой способ перечисления без использования этих коллекций **число** свойство будет использовать `For Each...Next` инструкции.  
@@ -104,6 +103,5 @@ End Sub
 'EndCountVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)
-

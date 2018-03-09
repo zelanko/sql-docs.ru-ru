@@ -3,29 +3,29 @@ title: "Диалоговое окно \"Расположение\" (визуал
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.getdirectoryname
+f1_keywords: vs.getdirectoryname
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c55d02a0ccdfd22d1d0b817e362e1faf661c4265
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b813bc94aa5afcd2cb537de0bfc8cba9d925d034
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Диалоговое окно «Расположение» (визуальные инструменты для баз данных)
-Используйте это диалоговое окно, чтобы найти и выбрать папку с нужными файлами. Это диалоговое окно возвращает вызывающему диалоговому окну путь выбранной папки. Доступ к этому диалоговому окну можно получить одним из следующих способов.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Используйте это диалоговое окно, чтобы найти и выбрать папку с нужными файлами. Это диалоговое окно возвращает вызывающему диалоговому окну путь выбранной папки. Доступ к этому диалоговому окну можно получить одним из следующих способов.  
   
 -   В меню **Файл** выберите пункт **Создать** и **Проект**. Когда появится диалоговое окно **Создание проекта** , выберите **Обзор**. Диалоговое окно **Расположение** откроется под заголовком **Расположение проекта**.  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 **Имя папки**  
 Отображает путь к выбранной папке.  
   
-**Открытие**  
+**Открыть**  
 Возвращает вызывающему диалоговому окну путь к папке, выбранной в поле **Имя папки** .  
   
 ## <a name="toolbar"></a>Панель инструментов  
@@ -56,10 +56,9 @@ ms.lasthandoff: 06/22/2017
 **На один уровень вверх**  
 Переводит пользователя к папке более высокого уровня в иерархии дерева.  
   
-**Delete**  
+**Удаление**  
 Удаляет выбранные файлы и папки из хранилища.  
   
 **Создание новой папки**  
 Отображает диалоговое окно **Создать папку** . Используйте этот параметр, чтобы создать новую вложенную папку в папке, выбранной в списке **Папка** .  
   
-

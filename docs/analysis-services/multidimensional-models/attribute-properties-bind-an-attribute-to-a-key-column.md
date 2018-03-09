@@ -2,13 +2,13 @@
 title: "Привязка атрибута к ключевому столбцу | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - renaming attributes
 - attributes [Analysis Services], renaming
 ms.assetid: c0b0abaa-5c9b-4182-9d5f-fc16cd941d54
-caps.latest.revision: 27
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 059527f4f36552b2247cb156458d3e839cc67e39
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 341d41fd9930562173fe56c343d3edeb7041b89a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-key-column"></a>Атрибут свойства - привязка атрибута к ключевому столбцу
-  Данная процедура описывает изменение настройки свойства **Name** для атрибута измерения.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Данная процедура описывает изменение настройки свойства **Name** для атрибута измерения.  
   
 ### <a name="to-bind-an-attribute-to-a-key-column"></a>Привязка атрибута к ключевому столбцу  
   
@@ -45,4 +45,3 @@ ms.lasthandoff: 09/01/2017
     >  Также можно установить свойство **Name** выбранного атрибута в окне **Свойства** среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
   
-

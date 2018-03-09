@@ -1,62 +1,68 @@
 ---
-title: "Создание новой таблицы SQL Server, с помощью rxDataStep | Документы Microsoft"
+title: "Создание новой таблицы SQL Server с помощью rxDataStep (SQL и R глубокое погружение) | Документы Microsoft"
 ms.custom: 
-ms.date: 05/18/2017
-ms.prod: sql-server-2016
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
+- SQL Server 2017
 dev_langs:
 - R
 ms.assetid: 98cead96-6de7-4edf-98b9-a1efb09297b9
-caps.latest.revision: 19
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: b64a62a9bc5e9b7c105bae1f6a8dda4a60e641c4
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4a5a8aaa8df1df4d34216f9d55806ccf5594292a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
-# <a name="create-new-sql-server-table-using-rxdatastep"></a>Создание таблицы SQL Server с помощью rxDataStep
+# <a name="create-new-sql-server-table-using-rxdatastep-sql-and-r-deep-dive"></a>Создание новой таблицы SQL Server с помощью rxDataStep (SQL и R глубокое погружение)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-На этом занятии вы узнаете, как перемещать данные между кадрами данных в памяти, контекстом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и локальными файлами.
+В этой статье является частью учебника по глубокое погружение обработки и анализа данных, о том, как использовать [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
 
-> [!NOTE]
-> В этом занятии будет использоваться другой набор данных. Набор данных задержки авиарейсов является открытый набор данных, широко используемый для эксперименты машинного обучения. Если вы только начинаете работу с R, этот набор данных удобен для тестирования, так как он используется в различных образцах продуктов для [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] , которые были опубликованы в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Необходимые для этого примера файлы данных доступны в том же каталоге, что и другие образцы продуктов.
-
-## <a name="create-sql-server-table-from-local-data"></a>Создание таблицы SQL Server на основе локальных данных
-
-В первой части этого учебника вы использовали **RxTextData** для импорта данных в R из текстового файла и затем использовать **RxDataStep** function для перемещения данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-
-На этом занятии вы будете использовать другой подход и получите данные из файла в [формате XDF](https://en.wikipedia.org/wiki/Extensible_Data_Format). Формат XDF — это стандарт XML, разработанный для многомерных данных. Это двоичный формат файла с интерфейсом R, который оптимизирует процессы обработки и анализа строк и столбцов.  Его можно использовать для хранения подмножеств данных в целях анализа.
-
-После ряда простых преобразований данных с помощью файла XDF вы сохраните их в новой таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+На этом занятии вы узнаете, как перемещение данных между кадрами данных в памяти [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] контекст и локальные файлы.
 
 > [!NOTE]
-> Для этого шага потребуются разрешения DDL.
+> На этом занятии рассматривается другой набор данных. Набор данных задержки авиарейсов является открытый набор данных, широко используемый для эксперименты машинного обучения. Файлы данных, используемые в этом примере доступны в том же каталоге, как другие образцы продуктов.
 
-1. Задайте в качестве контекста вычисления локальную рабочую станцию.
+## <a name="create-sql-server-table-from-local-data"></a>Создать таблицу SQL Server на основе локальных данных
+
+В первой половине этого учебника вы использовали **RxTextData** для импорта данных в R из текстового файла и затем использовать **RxDataStep** function для перемещения данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+На этом занятии использует другой подход, а использует данные из файла в [XDF формат](https://en.wikipedia.org/wiki/Extensible_Data_Format). После выполнения некоторых упрощенных преобразований XDF-файл с данными, сохраняющий преобразованные данные в новый [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы.
+
+**Что такое XDF.**
+
+Формат XDF — это стандарт XML, разработанных для многомерными данными и используется собственный формат [машины обучения Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Это двоичный формат файла с интерфейсом R, который оптимизирует процессы обработки и анализа строк и столбцов.  Его можно использовать для хранения подмножеств данных в целях анализа.
+
+1. Задайте в качестве контекста вычисления локальную рабочую станцию. **Для выполнения этого шага необходимы разрешения DDL.**
+
   
     ```R
     rxSetComputeContext("local")
     ```
   
-2. Определите новый объект источника данных с помощью функции **RxXdfData** . Для источника данных XDF просто укажите путь к файлу данных.  Можно указать путь к файлу, используя переменную текст, но в этом случае есть удобный ярлык, так как образец файла данных (AirlineDemoSmall.xdf) находится в каталоге, возвращенный функцией rxGetOption.
+2. Определите новый объект источника данных с помощью функции **RxXdfData** . Для определения источника данных XDF, укажите путь к файлу данных.  
+
+    Можно указать путь к файлу, используя переменную текста. Однако в этом случае есть удобный ярлык, который заключается в использовании **rxGetOption** функцией и получить файл (AirlineDemoSmall.xdf) из папки образцов данных.
   
     ```R
     xdfAirDemo <- RxXdfData(file.path(rxGetOption("sampleDataDir"),  "AirlineDemoSmall.xdf"))
     ```
 
-3. Вызовите rxGetVarInfo данных в памяти, чтобы просмотреть сводку набора данных.
+3. Вызовите функцию [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) для данных в памяти, чтобы просмотреть сводку по набору данных.
   
     ```R
     rxGetVarInfo(xdfAirDemo)
@@ -72,9 +78,9 @@ ms.lasthandoff: 09/01/2017
 
 > [!NOTE]
 > 
-> Вы заметили, не нужно вызывать другие функции для загрузки данных в XDF-файл и может вызвать rxGetVarInfo данных немедленно? Это связано с тем, что XDF является промежуточным методом хранения по умолчанию для RevoScaleR. Дополнительные сведения о XDF-файлов см. в разделе [создания XDF](https://msdn.microsoft.com/microsoft-r/scaler-data-xdf).
+> Вы заметили, что вам не пришлось вызывать другие функции для загрузки данных в файл XDF и вы смогли сразу же вызвать функцию **rxGetVarInfo** ? Это связано с тем, что XDF является промежуточным методом хранения по умолчанию для RevoScaleR. Помимо файлов XDF **rxGetVarInfo** функции теперь поддерживает несколько типов источников.
   
-4. Далее вы поместите эти данные в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , сохранив переменную _DayOfWeek_ как целочисленную со значениями от 1 до 7.
+4. Поместить эти данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы хранения _DayOfWeek_ является значением типа integer со значениями от 1 до 7.
   
     Для этого сначала определите источник данных SQL Server.
   
@@ -88,7 +94,7 @@ ms.lasthandoff: 09/01/2017
     if (rxSqlServerTableExists("AirDemoSmallTest",  connectionString = sqlConnString))  rxSqlServerDropTable("AirDemoSmallTest",  connectionString = sqlConnString)
     ```
   
-6. Создайте таблицу и загрузите данные с помощью функции **rxDataStep**. Эта функция перемещает данные между двумя уже определения источников данных и преобразовывать данные в процессе перемещения.
+6. Создайте таблицу и загрузите данные с помощью функции **rxDataStep**. Эта функция перемещает данные между двумя уже определения источников данных и при необходимости можно преобразовывать данные прохождения.
   
     ```R
     rxDataStep(inData = xdfAirDemo, outFile = sqlServerAirDemo,
@@ -97,7 +103,7 @@ ms.lasthandoff: 09/01/2017
             overwrite = TRUE )
     ```
   
-    Это довольно большая таблица, поэтому нужно немного подождать, пока отобразится итоговое сообщение о состоянии: *Rows Read: 200000, Total Rows Processed: 600000* (Прочитано 200 000 строк, обработано 600 000 строк).
+    Это довольно большой таблицы, поэтому Подождите, пока не появится сообщение конечного состояния, похожее на следующее: *чтения строки: 200000, Всего обработано строк: 600000*.
      
 7. Снова задайте сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве контекста вычисления.
 
@@ -105,7 +111,7 @@ ms.lasthandoff: 09/01/2017
     rxSetComputeContext(sqlCompute)
     ```
   
-8. Создайте новый источник данных SQL Server с помощью простого запроса SQL к новой таблице. Это определение добавляет уровни признаков для столбца *DayOfWeek*, используя аргумент *colInfo* для RxSqlServerData.
+8. Создайте новый источник данных SQL Server с помощью простого запроса SQL к новой таблице. Это определение добавляет уровни коэффициент для *DayOfWeek* столбца, с помощью *colInfo* аргумент **RxSqlServerData**.
   
     ```R
     SqlServerAirDemo <- RxSqlServerData(
@@ -115,7 +121,7 @@ ms.lasthandoff: 09/01/2017
         colInfo = list(DayOfWeek = list(type = "factor",  levels = as.character(1:7))))
     ```
   
-9. Вызов rxSummary еще раз, чтобы просмотреть сводку данных в запросе.
+9. Вызовите **rxSummary** еще раз, чтобы просмотреть сводку данных в запросе.
   
     ```R
     rxSummary(~., data = sqlServerAirDemo)
@@ -123,11 +129,8 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="next-step"></a>Следующий шаг
 
-[Выполнять анализ фрагментации, с помощью rxDataStep](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
+[Выполнение фрагментирующего анализа с помощью rxDataStep](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
 
 ## <a name="previous-step"></a>Предыдущий шаг
 
-[Загрузка данных в памяти с помощью rxImport](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)
-
-
-
+[Загрузка данных в память с помощью функции rxImport](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)

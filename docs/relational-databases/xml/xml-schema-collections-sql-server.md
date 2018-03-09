@@ -2,9 +2,12 @@
 title: "Коллекции схем XML (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -21,19 +24,20 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5368814b9cd123c0e968ecef14fa236d09b3c57d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: c8c7a11c64d487aa6f08d616d6bae70b24a742dc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="xml-schema-collections-sql-server"></a>Коллекции XML-схем (SQL Server)
-  Как указано в разделе [xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md), SQL Server естественным образом поддерживает**xml**. При помощи коллекции XML-схем можно связать с переменной или столбцом типа **xml** XSD-схемы. Коллекция XML-схем хранит импортированные XML-схемы и используется для решения следующих задач:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Как указано в разделе [xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md), SQL Server естественным образом поддерживает**xml**. При помощи коллекции XML-схем можно связать с переменной или столбцом типа **xml** XSD-схемы. Коллекция XML-схем хранит импортированные XML-схемы и используется для решения следующих задач:  
   
 -   проверка экземпляров XML;  
   
@@ -115,7 +119,7 @@ ms.lasthandoff: 06/22/2017
   
 -   MODELGROUP.  
   
- Например:  
+ Пример:  
   
 -   **SomeAttribute** является компонентом ATTRIBUTE.  
   
@@ -212,6 +216,6 @@ N'http://www.microsoft.com/books')
 ## <a name="see-also"></a>См. также:  
  [Просмотр хранимой коллекции схем XML](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)   
  [Предпроцессор схемы для слияния включаемых схем](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)   
- [Требования и ограничения для коллекций XML-схем на сервере](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Требования и ограничения для коллекций схем XML на сервере](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

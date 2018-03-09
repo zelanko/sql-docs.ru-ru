@@ -3,7 +3,7 @@ title: "Метод CreateParameter (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - CreateParameter method [RDS]
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: c293e3a6e337e3c0331884bf1ee1eed57ad36003
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7fc09313bffacefd2d9eff86c9176222c094ebe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="createparameter-method-ado"></a>Метод CreateParameter (ADO)
 Создает новый [параметр](../../../ado/reference/ado-api/parameter-object.md) объект с указанными свойствами.  
@@ -57,10 +56,10 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *Размер*  
  Необязательно. Объект **длинные** значение, которое указывает максимальную длину для значения параметра в символах или байтах.  
   
- *Значение*  
+ *Value*  
  Необязательно. Объект **Variant** , определяет значение для **параметр** объекта.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **CreateParameter** метод для создания нового **параметр** объект с указанным именем, тип, направление, размер и значение. Все значения, переданные аргументы записываются в соответствующий **параметр** свойства.  
   
  Этот метод не добавляет автоматически **параметр** объект **параметры** коллекцию [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта. Это позволяет задать дополнительные свойства которого ADO значения будет проверена при присоединении **параметр** в коллекцию.  
@@ -70,12 +69,11 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  При указании типа numeric (**adNumeric** или **adDecimal**) в *тип* аргумента, то необходимо также задать [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) и [Точности](../../../ado/reference/ado-api/precision-property-ado.md) свойства.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект команды (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+ [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Добавление и пример CreateParameter методы (Visual Basic)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
  [Добавление и пример методы CreateParameter (VC ++)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
  [Append-метод (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Объект параметра](../../../ado/reference/ado-api/parameter-object.md)   
- [Коллекция параметров (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)
-
+ [Коллекция Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

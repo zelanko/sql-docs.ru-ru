@@ -3,7 +3,7 @@ title: "KeyTypeEnum | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,27 +18,25 @@ f1_keywords:
 helpviewer_keywords:
 - KeyTypeEnum enumeration [ADOX]
 ms.assetid: 3e597c52-caf4-4341-8471-d1ade563dbf7
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: eedd59879418fe05668c13136aa5ccdf40aef220
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e0bfe35dc78ceaa2233f2b23978205ebabcb1729
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="keytypeenum"></a>KeyTypeEnum
 Указывает тип [ключ](../../../ado/reference/adox-api/key-object-adox.md): внешний, первичный или уникальный.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adKeyPrimary**|1|По умолчанию. Ключ является первичным ключом.|  
 |**adKeyForeign**|2|Ключ — внешний ключ.|  
 |**adKeyUnique**|3|Ключ является уникальным.|  
   
 ## <a name="applies-to"></a>Объект применения  
- [Свойство Type (ключ) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)
-
+ [Свойство Property (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)

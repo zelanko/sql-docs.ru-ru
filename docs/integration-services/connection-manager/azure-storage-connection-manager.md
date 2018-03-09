@@ -1,11 +1,13 @@
 ---
-title: "Диспетчер подключений службы хранилища Azure | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Диспетчер подключений службы хранилища Azure | Документы Майкрософт"
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,22 +16,21 @@ f1_keywords:
 - sql13.dts.designer.afpstorageconn.f1
 - sql14.dts.designer.afpstorageconn.f1
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
-caps.latest.revision: 13
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 848b0f0e3e639d31fa739e8d744fc4b80839a5fd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 09368733d9df6a7750c9b782ba45ae129b204b8b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="azure-storage-connection-manager"></a>Диспетчер подключений службы хранилища Azure
   **Диспетчер подключений службы хранилища Azure** позволяет использовать пакет SSIS для подключения к учетной записи хранения Azure с помощью указываемых значений свойств: имени учетной записи хранения и ключа учетной записи.  
    
- **Диспетчер подключений службы хранилища Azure** — это компонент [пакет дополнительных компонентов SQL Server Integration Services (SSIS) для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md). 
+ **Диспетчер подключений службы хранилища Azure** входит в состав пакета дополнительных компонентов [SQL Server Integration Services (SSIS) для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md). 
   
 1.  В диалоговом окне **Добавление диспетчера соединений со службами SSIS** выберите **AzureStorage**и щелкните **Добавить**.  
   
@@ -46,4 +47,3 @@ ms.lasthandoff: 08/03/2017
 5.  Свойства созданного диспетчера соединений можно просмотреть в окне **Свойства** .  
   
   
-

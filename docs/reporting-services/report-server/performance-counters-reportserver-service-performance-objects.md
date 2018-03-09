@@ -1,31 +1,30 @@
 ---
-title: "Счетчики производительности — служба ReportServer объекты производительности | Документы Microsoft"
+title: "Счетчики производительности для службы ReportServer, объекты производительности | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Report Server service, performance counters
+helpviewer_keywords: Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
-caps.latest.revision: 21
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "21"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 92bc628afcaed8a45652e58a6073bd5a53df4012
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4f956b1f0dc970529912844681af784e2b495a5e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="performance-counters---reportserver-service--performance-objects"></a>Счетчики производительности — служба ReportServer объектов производительности
+# <a name="performance-counters---reportserver-service--performance-objects"></a>Счетчики производительности для службы ReportServer, объекты производительности
   В этом разделе описываются счетчики производительности для объектов производительности **ReportServer:Service** и **ReportServerSharePoint:Service** , входящих в развертывание [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
   
 > [!NOTE]  
@@ -44,13 +43,13 @@ ms.lasthandoff: 08/09/2017
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ##  <a name="bkmk_ReportServer"></a> Счетчики производительности ReportServer:Service (сервер отчетов в собственном режиме)  
- Объект производительности **ReportServer:Service** включает коллекцию счетчиков для отслеживания связанных с HTTP и памятью событий для экземпляра сервера отчетов. Этот объект производительности отображается однократно для каждого экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на компьютере; счетчики объекта производительности можно добавлять или удалять для каждого экземпляра. Счетчики для экземпляра по умолчанию отображаются в формате **ReportServer:Service**. Счетчики для именованных экземпляров отображаются в формате **ReportServer$\<***имя_экземпляра***>: служба**.  
+ Объект производительности **ReportServer:Service** включает коллекцию счетчиков для отслеживания связанных с HTTP и памятью событий для экземпляра сервера отчетов. Этот объект производительности отображается однократно для каждого экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на компьютере; счетчики объекта производительности можно добавлять или удалять для каждого экземпляра. Счетчики для экземпляра по умолчанию отображаются в формате **ReportServer:Service**. Счетчики для именованных экземпляров отображаются в формате **ReportServer$\<***имя_экземпляра***>:Service**.  
   
  Объект производительности **ReportServer:Service** впервые появился в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Он предоставляет часть счетчиков, входивших в службы IIS и в [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] в предыдущих версиях служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Эти новые счетчики являются уникальными для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Они отслеживают связанные с HTTP события для сервера отчетов, такие как запросы, соединения и попытки входа. Кроме того, этот объект производительности включает счетчики для отслеживания событий управления памятью.  
   
  В следующей таблице перечислены счетчики, включенные в объект производительности **ReportServer:Service** .  
   
- ![Содержимое, связанное с PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "содержимое, связанное с PowerShell") следующий сценарий Windows PowerShell вернет список счетчиков производительности для CounterSetName  
+ ![Содержимое, связанное с PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Следующий скрипт Windows PowerShell вернет список счетчиков производительности для CounterSetName  
   
 ```  
 (get-counter -listset "ReportServer:Service").paths  
@@ -83,7 +82,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service (сервер отчетов в режиме SharePoint)  
  Объект производительности **ReportServerSharePoint:Service** был добавлен в службы [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- ![Содержимое, связанное с PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "содержимое, связанное с PowerShell") следующий сценарий Windows PowerShell вернет список счетчиков производительности для CounterSetName  
+ ![Содержимое, связанное с PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Следующий скрипт Windows PowerShell вернет список счетчиков производительности для CounterSetName  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
@@ -96,7 +95,7 @@ ms.lasthandoff: 08/09/2017
 |**Memory Shrink Notifications/Sec**||  
   
 ##  <a name="bkmk_powershell"></a> Использование командлетов PowerShell для возврата списков  
- ![Содержимое, связанное с PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "содержимое, связанное с PowerShell") следующий сценарий Windows PowerShell вернет список счетчиков производительности для CounterSetName «Reportserversharepoint: Service»:  
+ ![Содержимое, связанное с PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell") Следующий скрипт Windows PowerShell вернет список счетчиков производительности для CounterSetName "ReportServerSharePoint:Service":  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
@@ -104,8 +103,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также:  
  [Наблюдение за производительностью сервера отчетов](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [Счетчики производительности для веб-службы MSRS 2011 г. и объектов к производительности службы Windows MSRS 2011 г. &#40; Основной режим &#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 (собственный режим)](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 в режиме интеграции с SharePoint (режим интеграции с SharePoint)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
   
   
-

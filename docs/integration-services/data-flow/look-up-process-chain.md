@@ -1,26 +1,28 @@
 ---
-title: "Поиск цепочки процессов | Документы Microsoft"
+title: "Поиск цепочки процессов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: df521b8df1b4e211dda395099b2e2cf112aeafda
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 29791eaade29aa28089dfb579206c2dbddbed1ad
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="look-up-process-chain"></a>Поиск цепочки процессов
   Используйте диалоговое окно **Поиск цепочки процессов** для поиска цепочки процессов, определенной в системе SAP Netweaver BW. После отображения списка доступных цепочек процесса выберите необходимую цепочку, и источник заполнит связанные параметры необходимыми значениями.  
@@ -48,7 +50,7 @@ ms.lasthandoff: 08/03/2017
  **Process chain**  
  Введите имя цепочки процессов для поиска или введите часть имени с символом-шаблоном звездочки (*). Также можно использовать только символ-шаблон звездочки для включения всех цепочек процессов.  
   
- **Поиск**  
+ **Найти**  
  Выполните поиск соответствующих цепочек процессов, определенных в системе SAP Netweaver BW.  
   
 ## <a name="lookup-results"></a>Результаты поиска  
@@ -57,14 +59,13 @@ ms.lasthandoff: 08/03/2017
  **Цепочка процессов**  
  Отображается имя цепочки процессов, определенной в системе SAP Netweaver BW.  
   
- **Description**  
+ **Описание**  
  Отображается описание цепочки процессов.  
   
  После отображения списка доступных цепочек процесса выберите необходимую цепочку, и источник заполнит связанные параметры необходимыми значениями.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор источника SAP BW (страница "Диспетчер подключений")](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
- [Справка F1 по Microsoft Connector для SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Справка F1 по соединителю с SAP BW (Microsoft)](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

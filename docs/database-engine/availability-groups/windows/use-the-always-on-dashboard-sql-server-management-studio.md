@@ -1,34 +1,34 @@
 ---
 title: "Использование панели мониторинга групп доступности AlwaysOn (среда SQL Server Management Studio) | Документы Майкрософт"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 10/30/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.agdashboard.f1
+f1_keywords: sql13.swb.agdashboard.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 - Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5aa07d7f0664e89aca776375d5a173ca93fd4624
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b17125da076312057366a5f2150d513072b074f2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Использование панели мониторинга групп доступности AlwaysOn (среда SQL Server Management Studio)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Администраторы баз данных используют панель мониторинга групп доступности AlwaysOn, чтобы быстро определять исправность группы доступности, а также ее реплик доступности и баз данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Далее приведены некоторые стандартные варианты использования панели мониторинга групп доступности.  
   
@@ -123,7 +123,10 @@ ms.lasthandoff: 08/02/2017
  Имя и состояние кластера, для которого экземпляр подключенного сервера и группа доступности являются узлом-участником.  
   
 ##  <a name="AvReplicaDetails"></a> Подробные сведения о реплике доступности  
- На панели **Реплика доступности** отображаются следующие столбцы.  
+
+При подключении к первичной реплике на экране **Подробные сведения о реплике доступности** отображаются сведения из всех реплик в группе доступности. При подключении ко вторичной реплике отображаются только сведения из подключенной реплики.  
+
+На панели **Реплика доступности** отображаются следующие столбцы.  
   
  **Название**  
  Отображает имя экземпляра сервера, на котором размещена реплика доступности. Этот столбец отображается по умолчанию.  
@@ -362,4 +365,3 @@ ms.lasthandoff: 08/02/2017
  [Отслеживание групп доступности (SQL Server)](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
-

@@ -1,53 +1,55 @@
 ---
-title: "Подключиться к хранилищу больших двоичных объектов (мастер экспорта и импорта SQL Server) | Документы Microsoft"
+title: "Подключение к хранилищу BLOB-объектов (мастер импорта и экспорта SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: import-export-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 36b992b5141799d4e168b2e990643e6a515a8d69
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5a31ba153a87eddb1e65daf0aebacc317e58a455
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Подключиться к хранилищу больших двоичных объектов (мастер экспорта и импорта SQL Server)
-В этом разделе показано, как подключиться к **хранилища больших двоичных объектов** из источника данных **выберите источник данных** или **Выбор назначения** страницы мастера экспорта и импорта SQL Server.
+# <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Подключение к хранилищу BLOB-объектов (мастер импорта и экспорта SQL Server)
+В этом разделе показано, как подключаться к источникам данных **хранилища BLOB-объектов Azure** со страницы **Выбор источника данных** или **Выбор назначения** в мастере импорта и экспорта SQL Server.
 
 >   [!NOTE]
-> Чтобы использовать Azure BLOB-объект источника или назначения, необходимо установить пакет дополнительных компонентов Azure для служб SQL Server Integration Services.
-> - Загрузить пакет дополнительных компонентов [Microsoft SQL Server 2016 Integration Services Feature Pack для Azure](https://www.microsoft.com/download/details.aspx?id=49492).
+> Чтобы использовать источник или назначение BLOB-объектов Azure, необходимо установить пакет дополнительных компонентов Azure для служб SQL Server Integration Services.
+> - Скачать [пакет дополнительных компонентов служб Microsoft SQL Server 2016 Integration Services для Azure](https://www.microsoft.com/download/details.aspx?id=49492).
 >
 > - Дополнительные сведения см. в статье [Пакет дополнительных компонентов Azure для служб Integration Services (SSIS)](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
-На следующем снимке экрана показаны параметры настройки для подключения к хранилищу больших двоичных объектов Azure.
+На следующем снимке экрана показаны параметры настройки для подключения к хранилищу BLOB-объектов Azure.
 
 ![Подключение хранилища BLOB-объектов Azure](../../integration-services/import-export-data/media/azure-blob-storage-connection.png)
 
-## <a name="options-to-specify"></a>Параметры для указания
+## <a name="options-to-specify"></a>Указываемые параметры
 
 > [!NOTE]
-> Параметры соединения для поставщика данных одинаковы независимо от источника или к назначению хранилища больших двоичных объектов. То есть варианты, вы увидите одинаковы на обоих **выберите источник данных** и **Выбор назначения** страницах мастера.
+> Параметры подключения для этого поставщика данных одинаковы независимо от того, является ли хранилище BLOB-объектов Azure источником или назначением. Таким образом, на страницах **Выбор источника данных** и **Выбор назначения** мастера отображаются одинаковые параметры.
 
  **Использовать учетную запись Azure**  
  Укажите, следует ли использовать сетевую учетную запись.
   
  **Имя учетной записи хранения**  
- Введите имя учетной записи хранилища Azure.  
+ Введите имя учетной записи хранения Azure.  
   
 **Ключ учетной записи**  
-Введите ключ для учетной записи хранилища Azure.  
+Введите ключ для учетной записи хранения Azure.  
   
  **Использовать HTTPS**  
  Укажите, какой протокол следует использовать для подключения к учетной записи хранения: HTTP или HTTPS.  
@@ -67,8 +69,7 @@ ms.lasthandoff: 08/03/2017
  **Использовать первую строку в качестве имен столбцов**  
  Укажите, содержит ли первая строка данных имена столбцов.  
 
-## <a name="see-also"></a>См. также:
-[Выберите источник данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
+## <a name="see-also"></a>См. также раздел
+[Выбор источника данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Выбор назначения](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
 

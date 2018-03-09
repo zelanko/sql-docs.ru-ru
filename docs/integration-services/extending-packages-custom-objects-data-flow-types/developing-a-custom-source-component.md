@@ -1,12 +1,14 @@
 ---
-title: "Разработка пользовательского компонента источника | Документы Microsoft"
+title: "Разработка пользовательского компонента источника | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -23,30 +25,29 @@ helpviewer_keywords:
 - custom sources [Integration Services]
 - source components [Integration Services]
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
-caps.latest.revision: 64
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 30e5320679193120148f714324da10d4d0c65506
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a0cd0b0e1ae14ffe7f068adb1b77482cc180d3c9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-custom-source-component"></a>Разработка пользовательского компонента источника
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] дает разработчикам возможность создавать компоненты источника, которые могут подключаться к пользовательским источникам данных и предоставления данных из этих источников другим компонентам в задаче потока данных. Возможность создавать пользовательские источники становится полезной, если возникает необходимость подключаться к источникам данных, доступ к которым нельзя получить с помощью одного из существующих источников служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  Службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют разработчикам возможность создавать компоненты источника, которые могут подключаться к пользовательским источникам данных и предоставлять данные из этих источников другим компонентам в задаче потока данных. Возможность создавать пользовательские источники становится полезной, если возникает необходимость подключаться к источникам данных, доступ к которым нельзя получить с помощью одного из существующих источников служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  Компоненты источника имеют один или несколько выходов и не имеют входов. Во время разработки компоненты источника используются для создания и настройки соединений, чтения метаданных столбца из внешнего источника данных и настройки выходных столбцов источника, исходя из внешнего источника данных. Во время выполнения они подключаются к внешнему источнику данных и добавляют строки в выходной буфер. Затем задача потока данных предоставляет этот буфер со строками данных для нижестоящих компонентов.  
   
- Общие сведения о разработке компонентов потока данных, в разделе [Разработка пользовательского компонента потока данных](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
+ Общие сведения о разработке компонентов потока данных см. в разделе [Разработка пользовательского компонента потока данных](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
 ## <a name="design-time"></a>Время разработки  
  Реализация функциональных возможностей времени разработки для компонента источника включает указание соединения с внешним источником данных, добавление и настройку выходных столбцов, которые отражают источник данных, а также проверку готовности компонента к выполнению. По определению, компонент источника не имеет входов и один или несколько асинхронных выходов.  
   
 ### <a name="creating-the-component"></a>Создание компонента  
- Компоненты источника подключаются к внешним источникам данных с помощью объектов <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>, определенных в пакете. Они указывают свои требования для диспетчера соединений, добавляя элемент к коллекции <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> свойства <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Эта коллекция предназначена для двух целей: хранение ссылок на диспетчеры соединений в пакете, используемом компонентом, и объявление необходимости диспетчера соединений для конструктора. Когда <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> будет добавлен в коллекцию **расширенный редактор** отображает **свойства соединения** вкладки, которая позволяет пользователям выбрать или создать соединение в пакете.  
+ Компоненты источника подключаются к внешним источникам данных с помощью объектов <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>, определенных в пакете. Они указывают свои требования для диспетчера соединений, добавляя элемент к коллекции <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> свойства <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Эта коллекция предназначена для двух целей: хранение ссылок на диспетчеры соединений в пакете, используемом компонентом, и объявление необходимости диспетчера соединений для конструктора. При добавлении объекта <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> к коллекции в окне **Расширенный редактор** отображается вкладка **Свойства соединения**, которая позволяет пользователям выбрать или создать соединение в пакете.  
   
  В следующем примере кода показана реализация метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A>, который добавляет выход, а также добавляет объект <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> к коллекции <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>.  
   
@@ -182,10 +183,10 @@ End Sub
 |DT_CY|0|0|0|0|  
 |DT_NUMERIC|0|Больше 0, меньше или равно 28 и меньше, чем точность.|Больше или равно 1 и меньше или равно 38.|0|  
 |DT_BYTES|Больше 0.|0|0|0|  
-|DT_STR|Больше 0 и меньше, чем 8000.|0|0|Не равно 0 и представляет допустимую кодовую страницу.|  
+|DT_STR|Больше 0 и меньше 8000.|0|0|Не равно 0 и представляет допустимую кодовую страницу.|  
 |DT_WSTR|Больше 0 и меньше 4 000.|0|0|0|  
   
- Поскольку ограничения свойств типа данных основаны на типе данных выходного столбца, во время работы с управляемыми типами необходимо выбрать правильный тип данных служб [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Базовый класс предоставляет три вспомогательных метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>, и <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>, чтобы помочь разработчикам управляемых компонентов Выбор [!INCLUDE[ssIS](../../includes/ssis-md.md)] тип данных, заданный управляемый тип. Эти методы преобразуют управляемые типы данных в типы данных служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] и обратно.  
+ Поскольку ограничения свойств типа данных основаны на типе данных выходного столбца, во время работы с управляемыми типами необходимо выбрать правильный тип данных служб [!INCLUDE[ssIS](../../includes/ssis-md.md)]. В базовом классе предусмотрены три вспомогательных метода: <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> и <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>, позволяющие разработчикам управляемых компонентов выбрать тип данных служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] с учетом управляемого типа. Эти методы преобразуют управляемые типы данных в типы данных служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] и обратно.  
   
  В следующем примере кода показано, как происходит заполнение коллекции выходных столбцов компонента на основе схемы таблицы. Вспомогательные методы базового класса используются для задания типа данных столбца, а зависимые свойства задаются с учетом типа данных.  
   
@@ -366,9 +367,9 @@ End Sub
 ```  
   
 ### <a name="validating-the-component"></a>Проверка компонента  
- Необходимо проверить компонент источника и убедиться, что столбцы, определенные в его коллекциях выходных столбцов, совпадают со столбцами во внешнем источнике данных. Иногда сверка выходных столбцов с внешним источником данных может оказаться невозможной, например, если имеет место отсоединенное состояние или желательно обойтись без применения продолжительных операций обмена данными с сервером. В этих ситуациях все равно может быть выполнена проверка столбцов в выходе с помощью коллекции <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExternalMetadataColumnCollection%2A> выходного объекта. Дополнительные сведения см. в разделе [проверка компоненте потока данных](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md).  
+ Необходимо проверить компонент источника и убедиться, что столбцы, определенные в его коллекциях выходных столбцов, совпадают со столбцами во внешнем источнике данных. Иногда сверка выходных столбцов с внешним источником данных может оказаться невозможной, например, если имеет место отсоединенное состояние или желательно обойтись без применения продолжительных операций обмена данными с сервером. В этих ситуациях все равно может быть выполнена проверка столбцов в выходе с помощью коллекции <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExternalMetadataColumnCollection%2A> выходного объекта. Дополнительные сведения см. в разделе [Проверка компонента потока данных](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md).  
   
- Эта коллекция существует и во входных, и в выходных объектах, и ее можно заполнить столбцами из внешнего источника данных. Эту коллекцию можно использовать для проверки выходных столбцов при [!INCLUDE[ssIS](../../includes/ssis-md.md)] конструктор находится в автономном режиме, когда компонент отключен, или когда <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> свойство **false**. Эту коллекцию необходимо вначале заполнить одновременно с созданием выходных столбцов. Добавление столбцов внешних метаданных к коллекции происходит относительно просто, поскольку столбец внешних метаданных должен с самого начала совпадать с выходным столбцом. Свойства типа данных столбца уже должны быть заданы правильно, поэтому эти свойства можно скопировать непосредственно в объект <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>.  
+ Эта коллекция существует и во входных, и в выходных объектах, и ее можно заполнить столбцами из внешнего источника данных. Эту коллекцию можно использовать для проверки выходных столбцов, если конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] находится в режиме вне сети, компонент отсоединен или свойство <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> имеет значение **false**. Эту коллекцию необходимо вначале заполнить одновременно с созданием выходных столбцов. Добавление столбцов внешних метаданных к коллекции происходит относительно просто, поскольку столбец внешних метаданных должен с самого начала совпадать с выходным столбцом. Свойства типа данных столбца уже должны быть заданы правильно, поэтому эти свойства можно скопировать непосредственно в объект <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>.  
   
  В следующем образце кода добавляется столбец внешних метаданных, который основан на вновь созданном выходном столбце. При этом подразумевается, что выходной столбец уже был создан.  
   
@@ -678,4 +679,3 @@ End Namespace
  [Создание источника с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
   
   
-

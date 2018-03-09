@@ -1,32 +1,31 @@
 ---
-title: "Функции, поддерживаемые различными выпусками SQL Server 2016 служб Reporting Services | Документы Microsoft"
+title: "Функции, поддерживаемые различными выпусками SQL Server 2016 служб Reporting Services | Документация Майкрософт"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 39f03d2d-6e48-4b34-a9d3-07f86313b937
-caps.latest.revision: 3
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "3"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ac4f1eeab19ac0a7468c62ac3fa8dfcc33b12f45
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ef2e6405ce01442ca8a9709db2f1aa61a4934dc3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>Возможности служб Reporting Services, поддерживаемые различными выпусками SQL Server 2016
 
-В этом разделе подробно описаны функции, поддерживаемые различными выпусками SQL Server 2016.  
+В этом разделе подробно описаны функции, поддерживаемые различными выпусками SQL Server 2016.  
   
  Выпуск SQL Server Evaluation доступен для ознакомления в течение 180 дней.  
   
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/09/2017
 
 ##  <a name="SSRS"></a> Службы Reporting Services  
   
-|Имя функции|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
+|Имя функции|Enterprise|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Мобильные отчеты и ключевые показатели эффективности|Да||||||Да|  
 |Поддерживаемый выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для базы данных каталога|Standard Edition или более многофункциональный|Standard Edition или более многофункциональный|Web Edition|Express|||Standard Edition или более многофункциональный|  
@@ -78,7 +77,7 @@ ms.lasthandoff: 08/09/2017
 |Предупреждения<sup>2</sup>|Да||||||Да|  
 |[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|Да||||||Да|  
   
- <sup>1</sup> Дополнительные сведения о поддерживаемых источниках данных в SQL Server 2016 Reporting Services (SSRS) см. в разделе [источники данных, поддерживаемые службой Reporting Services &#40; Службы SSRS &#41; ](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ <sup>1</sup> Дополнительные сведения о поддерживаемых источниках данных в службах Reporting Services SQL Server 2016 (SSRS) см. в разделе [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
  <sup>2</sup> требуется установка служб Reporting Services в режиме SharePoint. Дополнительные сведения см. в разделе [Установка служб Reporting Services в режиме SharePoint](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
@@ -88,7 +87,7 @@ ms.lasthandoff: 08/09/2017
 |Для данного выпуска службы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services|Используйте данный выпуск экземпляра компонента Database Engine для хранения базы данных|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
 |Enterprise|Выпуски Enterprise или Standard (локальные или удаленные)|  
-|Standard Edition|Выпуски Enterprise или Standard (локальные или удаленные)|  
+|Standard|Выпуски Enterprise или Standard (локальные или удаленные)|  
 |Web Edition|Выпуск Web edition (только локально)|  
 |Express с дополнительными службами|Express с дополнительными службами (только локальная версия).|  
 |Ознакомительная версия|Ознакомительная версия|  
@@ -96,7 +95,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="BIC"></a> Клиенты бизнес-аналитики  
  Следующие клиентские приложения доступны в центре загрузки Майкрософт и предоставляются с целью упростить создание документов бизнес-аналитики, запускаемых в экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . При размещении этих документов в серверной среде используйте выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , поддерживающий этот тип документов. В следующей таблице показано, какой выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] содержит компоненты сервера, необходимые для размещения документов, созданных в этих клиентских приложениях.  
   
-|Имя средства|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
+|Имя средства|Enterprise|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
 |---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] (.rdl и .rds)|Да|Да|||||Да|  
 |[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] (.rsmobile)|Да||||||Да|  
@@ -113,5 +112,4 @@ ms.lasthandoff: 08/09/2017
 [Спецификации SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
 [Установка SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md) 
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

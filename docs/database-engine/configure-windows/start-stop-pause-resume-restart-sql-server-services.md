@@ -1,11 +1,13 @@
 ---
 title: "Запуск, остановка, приостановка, возобновление, перезапуск служб SQL Server | Документы Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 02/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,31 +43,30 @@ helpviewer_keywords:
 - administering SQL Server, starting and stopping services
 - Management Studio [SQL Server], starting or stopping services
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 3671c010f2c17d4a7c0312a99312f6d0996e5735
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 40dd0c1438bb9102cfbc8d9daa9206f49b17b973
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Запуск, остановка, приостановка, возобновление, перезапуск служб SQL Server
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Материал по предыдущим версиям SQL Server см. в статье [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и службы браузера SQL Server](https://msdn.microsoft.com/en-US/library/hh403394(SQL.120).aspx).
 
   В этом разделе описаны запуск, остановка, возобновление и перезапуск [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или службы браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ,  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], команд **net** из командной строки, [!INCLUDE[tsql](../../includes/tsql-md.md)]или PowerShell.  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
     -   [Что это за службы?](#Services)  
   
     -   [Дополнительные сведения](#MoreInformation)  
   
-    -   [Безопасность](#Security)  
+    -   [безопасность](#Security)  
   
 -   **Инструкции по использованию:**  
   
@@ -121,9 +122,9 @@ ms.lasthandoff: 08/02/2017
   
 -   При эксплуатации на кластере службой [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] лучше всего управлять с помощью администратора кластера.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  По умолчанию только участники локальной группы «Администраторы» могут запускать, останавливать, приостанавливать, возобновлять или перезапускать службу. При необходимости предоставить возможность управления службой для пользователей, не обладающих правами администратора, см. раздел [Как предоставить пользователям права для управления службами в Windows Server 2003](http://support.microsoft.com/kb/325349). (Процесс такой же, как и в других версиях Windows.)  
   
  Остановка [!INCLUDE[ssDE](../../includes/ssde-md.md)] с помощью команды [!INCLUDE[tsql](../../includes/tsql-md.md)]**SHUTDOWN** требует членства в предопределенных ролях сервера **sysadmin** или **serveradmin** и не предназначена для передачи.  
@@ -194,7 +195,7 @@ ms.lasthandoff: 08/02/2017
 3.  При появлении запроса о необходимости выполнения действия нажмите кнопку **Да**.  
   
 ##  <a name="CommandPrompt"></a> В окне командной строки с помощью команд net  
- Службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно запустить, остановить или приостановить с помощью команд [!INCLUDE[msCoName](../../includes/msconame-md.md)] **net** Windows.  
+ Службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно запустить, остановить или приостановить с помощью команд **net** [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
 ###  <a name="dbDefault"></a> Запуск экземпляра сервера по умолчанию [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -276,13 +277,13 @@ ms.lasthandoff: 08/02/2017
   
 -   Чтобы дождаться завершения запущенных в настоящий момент инструкций и хранимых процедур [!INCLUDE[tsql](../../includes/tsql-md.md)] с последующей остановкой [!INCLUDE[ssDE](../../includes/ssde-md.md)], выполните следующую инструкцию.  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN;   
     ```  
   
 -   Чтобы остановить [!INCLUDE[ssDE](../../includes/ssde-md.md)] немедленно, выполните следующую инструкцию.  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN WITH NOWAIT;   
     ```  
   
@@ -368,5 +369,4 @@ ms.lasthandoff: 08/02/2017
  [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
   
   
-
 

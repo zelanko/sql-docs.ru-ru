@@ -1,10 +1,13 @@
 ---
 title: "DBCC PROCCACHE (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - displaying procedure cache information
 - DBCC PROCCACHE statement
 ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
-caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 97e617e7867c90bf1e66c5e64e37b9039087d463
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 27a247f0900ad39ef77d96a54d68c795dc8f6f07
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-proccache-transact-sql"></a>DBCC PROCCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Отображает сведения о кэше процедур в табличном формате.
   
@@ -53,7 +55,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
  NO_INFOMSGS  
  Подавляет все информационные сообщения с уровнями серьезности от 0 до 10.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Кэш процедур используется для кэширования скомпилированных и исполняемых планов для ускорения выполнения пакетов. Элементы кэша процедур находятся на уровне пакета. Кэш процедур включает следующие записи:
 -   Скомпилированные планы  
 -   Планы выполнения  
@@ -63,7 +65,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
 ## <a name="result-sets"></a>Результирующие наборы  
 В следующей таблице описаны столбцы в результирующем наборе.
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
 |**Процедура получения NUM**|Общее количество страниц, используемое всеми записями кэша процедур.|  
 |**NUM proc получения используется**|Общее число страниц, занятых всеми используемыми в данный момент записями.|  
@@ -72,11 +74,10 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
 |**использовать кэш процесса**|Общее число элементов, используемых в настоящий момент.|  
 |**Сброс кэша процедур active**|Только для обратной совместимости. Общее число элементов, используемых в настоящий момент.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Необходимо быть членом предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** .
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   
-

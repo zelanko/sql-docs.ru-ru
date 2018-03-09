@@ -2,13 +2,13 @@
 title: "Настройка свойств мер | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -43,20 +43,20 @@ helpviewer_keywords:
 - Type property
 - ProactiveCaching property
 ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
-caps.latest.revision: 50
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d448349dfa423810a6bdfd70a5d79a1dfd41f0b1
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 576efdd0bac4b8298e3d204b065bbbd55ba6fff3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-measure-properties"></a>Настройка свойств мер
-  Меры имеют свойства, позволяющие определять и управлять их работой и отображением для пользователей.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Меры имеют свойства, позволяющие определять и управлять их работой и отображением для пользователей.  
   
  Свойства в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] можно задать при создании или изменении куба или меры. Можно также задать их программным способом с помощью многомерных выражений или объектов AMO. Дополнительные сведения см. в разделах [Создание мер и групп мер в многомерных моделях](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md), [Инструкция CREATE MEMBER (многомерные выражения)](../../mdx/mdx-data-definition-create-member.md) и [Программирование основных объектов AMO OLAP](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md).  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 09/01/2017
 |Свойство|Определение|  
 |--------------|----------------|  
 |**AggregateFunction**|Обязательный. Определяет, как выполняется статистическое вычисление мер. **Sum** — это агрегирование по умолчанию. Описание каждой функции см. в разделе [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) .|  
-|**DataType**|Обязательный. Указывает тип данных столбца базовой таблицы фактов, к которым привязана мера. Это значение наследуется из исходного столбца по умолчанию.|  
+|**Тип данных**|Обязательный. Указывает тип данных столбца базовой таблицы фактов, к которым привязана мера. Это значение наследуется из исходного столбца по умолчанию.|  
 |**Description**|Содержит описание меры, которое может быть видно в клиентских приложениях.|  
 |**DisplayFolder**|Указывает папку отображения, в которой будет представлена мера при подключении пользователя к кубу. Если куб содержит множество мер, папки отображения позволяют разбить их по категориям мер, упростив доступ к ним.|  
 |**FormatString**|Можно выбрать формат, используемый для отображения значений меры пользователям, используя свойство **FormatString** меры.<br /><br /> Список форматов отображения представлен в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], но можно указать множество дополнительных форматов, не содержащихся в этом списке. Можно указать любой именованный или определенный пользователем формат, допустимый в языке Microsoft Visual Basic.|  
@@ -81,4 +81,3 @@ ms.lasthandoff: 09/01/2017
  [Изменение мер](../../analysis-services/lesson-3-1-modifying-measures.md)  
   
   
-

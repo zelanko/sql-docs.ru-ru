@@ -2,11 +2,13 @@
 title: "Сжатые моментальные снимки | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +16,19 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], compressed snapshots
 - compressed snapshots [SQL Server replication]
 ms.assetid: 979ffa7c-3a88-4e70-8cf2-b8d452fd7a7f
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fceb41e32cbc4a2dbf779cb95827fef639341bea
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "34"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 1cd65c06c8bc07a144f02cf0817302db1867b231
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="compressed-snapshots"></a>Сжатые моментальные снимки
-  Сжатие файлов моментальных снимков уместно при передаче моментальных снимков в медленной сети или когда требуется сохранить моментальный снимок на съемный носитель, а объем несжатого моментального снимка превышает свободное место на носителе. Сжатие файлов моментальных снимков полезно в таких случаях, однако сжатие увеличивает время создания и применения моментального снимка.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Сжатие файлов моментальных снимков уместно при передаче моментальных снимков в медленной сети или когда требуется сохранить моментальный снимок на съемный носитель, а объем несжатого моментального снимка превышает свободное место на носителе. Сжатие файлов моментальных снимков полезно в таких случаях, однако сжатие увеличивает время создания и применения моментального снимка.  
   
  Сжатые файлы моментальных снимков записываются в формате [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB, который позволяет сжимать файлы размером до 2 ГБ (если размер файлов моментальных снимков превышает 2 ГБ, их не удастся сжать). Для сжатия файлов их необходимо записать в альтернативную папку моментальных снимков (файлы, записанные в папку моментальных снимков по умолчанию, невозможно сжать). Дополнительные сведения об альтернативных папках моментальных снимков см. в статье [Альтернативные расположения папки моментальных снимков](../../relational-databases/replication/alternate-snapshot-folder-locations.md).  
   
@@ -43,6 +45,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также:  
  [Инициализация подписки с помощью моментального снимка](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [Snapshot Options](../../relational-databases/replication/snapshot-options.md)  
+ [Параметры моментального снимка](../../relational-databases/replication/snapshot-options.md)  
   
   

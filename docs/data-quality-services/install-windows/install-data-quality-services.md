@@ -2,31 +2,30 @@
 title: "Установка служб Data Quality Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/11/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "49"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
+ms.openlocfilehash: 35b865e4bcc27039a3591a8151335de8f663dbd6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: 6162b52153b29fbe1069f62361fa89eac234dc1c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="install-data-quality-services"></a>Установка служб Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) содержит два компонента: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** и **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**.  
   
-|Компонент DQS|Описание|  
+|Компонент DQS|Description|  
 |-------------------|-----------------|  
 |[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] устанавливается поверх компонента [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] Database Engine и включает три базы данных: DQS_MAIN, DQS_PROJECTS и DQS_STAGING_DATA. База данных DQS_MAIN содержит хранимые процедуры DQS, ядро DQS и опубликованные базы знаний. База данных DQS_PROJECTS содержит сведения о проекте служб DQS. DQS_STAGING_DATA представляет собой промежуточную область для копирования источника данных с целью выполнения операций DQS и последующего экспорта обработанных данных.|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] — это автономное приложение, которое позволяет подключаться к [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]и имеет наглядный графический пользовательский интерфейс, используемый в операциях обеспечения качества данных и выполнения других административных задач служб DQS.|  
@@ -105,7 +104,7 @@ ms.lasthandoff: 09/12/2017
   
     -   **dqs_kb_editor**  
   
-     По умолчанию, если учетная запись пользователя является членом предопределенной роли сервера sysadmin, этот пользователь может выполнять вход на [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] с помощью клиента [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] , даже если его учетной записи не назначена ни одна из ролей служб DQS. Дополнительные сведения о трех ролях служб DQS см. в разделе [Безопасность DQS](../../data-quality-services/dqs-security.md).  
+     По умолчанию, если учетная запись пользователя является членом предопределенной роли сервера sysadmin, этот пользователь может выполнять вход на [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] с помощью клиента [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] , даже если его учетной записи не назначена ни одна из ролей служб DQS. Дополнительные сведения о трех ролях служб DQS см. в разделе [DQS Security](../../data-quality-services/dqs-security.md).  
   
      Дополнительные сведения см. в статье [Предоставление ролей DQS пользователям](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md).  
   

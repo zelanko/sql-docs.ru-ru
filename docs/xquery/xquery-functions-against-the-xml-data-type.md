@@ -3,35 +3,34 @@ title: "Функции XQuery для типа данных xml | Докумен�
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server
-dev_langs:
-- XML
+applies_to: SQL Server
+dev_langs: XML
 helpviewer_keywords:
 - XQuery, functions
 - xml data type [SQL Server], XQuery
 - functions [SQL Server], XQuery
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6a9f6887894745f737cce1eb134b4076339861af
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f950e3bbeb239537bc606c38469b9fb79e36837b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>Функции XQuery для типа данных xml
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе и его подразделах описываются функции, которые можно использовать при указании запроса XQuery к **xml** тип данных. Спецификации W3C см [http://www.w3.org/TR/2004/WD-xpath-functions-20040723](http://go.microsoft.com/fwlink/?LinkId=4873).  
   
@@ -66,7 +65,7 @@ ms.lasthandoff: 09/01/2017
 ||[Сумма](../xquery/aggregate-functions-sum.md)|  
 |[Функции-конструкторы &#40; XQuery &#41;](../xquery/constructor-functions-xquery.md)|[Функции конструирования](../xquery/constructor-functions-xquery.md)|  
 |[Функции метода доступа к данным](../xquery/data-accessor-functions.md)|[строка](../xquery/data-accessor-functions-string-xquery.md)|  
-||[данные](../xquery/data-accessor-functions-data-xquery.md)|  
+||[data](../xquery/data-accessor-functions-data-xquery.md)|  
 |[Функции логического конструктора &#40; XQuery &#41;](http://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)|[значение true, функция (XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
 ||[Функция false (XQuery)](../xquery/boolean-constructor-functions-false-xquery.md)|  
 |[Функции, связанные с QNames &#40; XQuery &#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)|[expanded-QName (XQuery)](../xquery/functions-related-to-qnames-expanded-qname.md)|  
@@ -81,4 +80,3 @@ ms.lasthandoff: 09/01/2017
  [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)  
   
   
-

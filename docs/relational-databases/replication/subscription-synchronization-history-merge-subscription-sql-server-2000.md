@@ -2,29 +2,30 @@
 title: "Подписка, журнал синхронизации (подписка на публикацию слиянием, SQL Server 2000) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.monitor.subscription.downlevelsynchhistory.f1
+f1_keywords: sql13.rep.monitor.subscription.downlevelsynchhistory.f1
 ms.assetid: 0a0deab2-1c08-4371-9681-d9403e0236cc
-caps.latest.revision: 19
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 123e24637af841b90398d707d36abbbc457098d1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "19"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 0462e11db4e712fb9e0b5b37494dacc0924e60a1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2000"></a>Подписка, журнал синхронизации (подписка на публикацию слиянием, SQL Server 2000)
-  Вкладка **Журнал синхронизации** отображает подробные сведения об агенте слияния, включая состояние, журнал, информационные сообщения и все сообщения об ошибках.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Вкладка **Журнал синхронизации** содержит подробные сведения об агенте слияния, включая состояние, журнал, информационные сообщения и все сообщения об ошибках.  
   
 ## <a name="options"></a>Параметры  
  Выберите сеансы агента слияния для просмотра из меню **Вид** , а затем выберите конкретный сеанс в сетке с названием **Сеансы агента слияния**. Подробные сведения об этом сеансе отображаются в сетке, помеченной как **Действия в выбранном сеансе**. Если выбранный сеанс закончен с ошибкой, также выводится на экран текстовое поле, помеченное как **Описание ошибки или сообщение выбранного сеанса** .  
@@ -68,6 +69,6 @@ ms.lasthandoff: 06/22/2017
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
  [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Обзор агентов репликации](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

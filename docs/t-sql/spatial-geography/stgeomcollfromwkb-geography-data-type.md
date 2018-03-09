@@ -3,8 +3,11 @@ title: "STGeomCollFromWKB (тип данных geography) | Документы M
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - STMGeomCollFromWKB method
 ms.assetid: bbed028c-9cd6-4236-b5e5-8e914a21f2e4
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1f09f502625b555c59da3dbfce63049c9004fa51
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: b11823d7be29be6187b50d9806364bde0381d294
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stgeomcollfromwkb-geography-data-type"></a>STGeomCollFromWKB (географический тип данных)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Возвращает **GeometryCollection**экземпляр из представления Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
   
@@ -53,7 +55,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
  Возвращаемый тип CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Тип OGC **geography** присвоено экземпляр, возвращаемый STGeomCollFromWKB() **GeometryCollection**, **MultiPolygon**, **MultiLineString**, или **MultiPoint**, в зависимости от соответствующих входных данных WKB.  
   
  Этот метод создает исключение **FormatException** исключение, если входные данные имеют неверный формат.  
@@ -67,8 +69,7 @@ SET @g = geography::STGeomCollFromWKB(0x0107000000020000000101000000759318045696
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Статические географические методы OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   
-

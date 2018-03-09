@@ -3,8 +3,11 @@ title: "ALTER RESOURCE GOVERNOR (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - ALTER RESOURCE GOVERNOR
 - RECONFIGURE, ALTER RESOURCE GOVERNOR
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
-caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ac7ae791ec7867b13a8547ec60436f25536cd5b7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 7650a9eec60108a5dbd228b21a27573cc72ca4fc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Этот оператор используется для выполнения следующих действий регулятора ресурсов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -92,7 +94,7 @@ ALTER RESOURCE GOVERNOR
 > [!IMPORTANT]  
 >  Чтобы любые изменения конфигурации вступили в силу, необходимо вызвать инструкцию ALTER RESOURCE GOVERNOR RECONFIGURE.  
   
- CLASSIFIER_FUNCTION = { *имя_схемы***.** *имя_функции* | NULL}  
+ CLASSIFIER_FUNCTION = { *имя_схемы***.*** имя_функции* | NULL}  
  Регистрирует функцию классификации, указанную аргументом *schema_name.function_name*. Эта функция классифицирует каждый новый сеанс и назначает запросы сеанса в группу рабочей нагрузки. При использовании значения NULL новые сеансы автоматически назначаются в группу рабочей нагрузки по умолчанию.  
   
  RESET STATISTICS  
@@ -103,14 +105,14 @@ ALTER RESOURCE GOVERNOR
   
  Устанавливает максимальное число поставленных в очередь операций ввода-вывода для тома диска. Эти операции ввода-вывода могут быть операциями чтения или записи любого размера.  Максимальное значение для MAX_OUTSTANDING_IO_PER_VOLUME равно 100. Это значение не в процентах. Этот параметр предназначен для подстройки управление ресурсами ввода-вывода к характеристикам ввода-вывода дискового тома. Рекомендуется поэкспериментировать с различными значениями и рассмотрите возможность использования калибровочного средства наподобие IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223), или SQLIO (устарело), чтобы определить максимальное значение для имеющейся подсистемы хранения. Данный параметр предоставляет проверку безопасности на уровне системы, позволяющую SQL Server соответствовать минимальному числу операций ввода-вывода в секунда для пулов ресурсов, даже если в других пулах значение MAX_IOPS_PER_VOLUME неограниченно. Дополнительные сведения о параметре MAX_IOPS_PER_VOLUME см. в разделе [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  ALTER RESOURCE GOVERNOR DISABLE, ALTER RESOURCE GOVERNOR RECONFIGURE и ALTER RESOURCE GOVERNOR RESET STATISTICS не могут использоваться в пользовательской транзакции.  
   
  Параметр RECONFIGURE входит в состав синтаксиса регулятора ресурсов и их не следует путать с [ПЕРЕНАСТРОИТЬ](../../t-sql/language-elements/reconfigure-transact-sql.md), который представляет собой отдельную инструкцию DDL.  
   
  Рекомендуется ознакомиться с состояниями регулятора ресурсов, прежде чем приступить к выполнению инструкций DLL. Дополнительные сведения см. в разделе [регулятора ресурсов](../../relational-databases/resource-governor/resource-governor.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CONTROL SERVER.  
   
 ## <a name="examples"></a>Примеры  
@@ -191,19 +193,18 @@ ALTER RESOURCE GOVERNOR
 WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);   
 ```  
   
-## <a name="see-also"></a>См. также:  
- [CREATE RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-resource-pool-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [СОЗДАТЬ ПУЛ РЕСУРСОВ &#40; Transact-SQL и &#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [ALTER RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL (Transact-SQL)](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
  [CREATE EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-external-resource-pool-transact-sql.md)   
  [DROP EXTERNAL RESOURCE POOL (Transact-SQL)](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)   
  [ИЗМЕНИТЬ внешний ПУЛ РЕСУРСОВ &#40; Transact-SQL &#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
- [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)   
+ [СОЗДАНИЕ ГРУППЫ рабочей НАГРУЗКИ и &#40; Transact-SQL и &#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [ALTER WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/drop-workload-group-transact-sql.md)   
  [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
- [sys.dm_resource_governor_workload_groups &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [sys.dm_resource_governor_resource_pools &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)  
+ [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
+ [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)  
   
   
-

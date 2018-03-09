@@ -2,11 +2,13 @@
 title: "Создание скриптов репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +19,19 @@ helpviewer_keywords:
 - scripts [SQL Server replication]
 - transactional replication, scripting
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
-caps.latest.revision: 36
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "36"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a9889d43aeed7cf80f5b28b427787519ab06bd84
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8e4748752f96591ef331f3740d3b4529f5e1f456
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="scripting-replication"></a>Создание сценариев репликации
-  Все компоненты репликации в топологии должны использоваться в скриптах как часть плана аварийного восстановления, а скрипты могут также использоваться для автоматизации повторяющихся задач. Скрипт содержит системные хранимые процедуры Transact-SQL, необходимые для выполнения элементов скрипта репликации, таких как публикация или подписка. Скрипты могут быть созданы с помощью мастера (например, мастера создания публикаций) или в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] после создания компонента. Скрипт можно просмотреть, изменить и запустить с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или **sqlcmd**. Скрипты могут сохраняться с файлами резервных копий для использования в случае, если необходимо перенастроить топологию репликации.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Все компоненты репликации в топологии должны использоваться в скриптах как часть плана аварийного восстановления, а скрипты могут также использоваться для автоматизации повторяющихся задач. Скрипт содержит системные хранимые процедуры Transact-SQL, необходимые для выполнения элементов скрипта репликации, таких как публикация или подписка. Скрипты могут быть созданы с помощью мастера (например, мастера создания публикаций) или в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] после создания компонента. Скрипт можно просмотреть, изменить и запустить с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или **sqlcmd**. Скрипты могут сохраняться с файлами резервных копий для использования в случае, если необходимо перенастроить топологию репликации.  
   
  Компонент должен быть заново включен в сценарий при внесении изменений любого из его свойств. Если с репликацией транзакций используются специальные хранимые процедуры, копия каждой процедуры должна сохраняться со скриптами. Если процедура изменяется, ее копия должна обновляться (процедуры обычно обновляются в связи с изменениями схемы или изменениями требований приложения). Дополнительные сведения о хранимых процедурах см. в статье [Указание способа распространения изменений для статей транзакций](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -110,4 +111,3 @@ ms.lasthandoff: 06/22/2017
 6.  Нажмите кнопку **OK** , затем кнопку **Закрыть**.  
   
   
-

@@ -2,29 +2,30 @@
 title: "Мастер создания подписки (справочник по пользовательскому интерфейсу) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- New Subscription Wizard
+helpviewer_keywords: New Subscription Wizard
 ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1d33bcc230d395b405ce3a2daf72bac286c4bbb1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "18"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 3dfa511ecb0302be2417dbffb0c4b794261b4668
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>Мастер создания подписки (справочник пользовательского интерфейса)
-  Этот раздел предоставляет сведения о следующих страницах мастера создания подписки.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Этот раздел предоставляет сведения о следующих страницах мастера создания подписки:  
   
 -   [Расположение агента <имя_агента>](../../relational-databases/replication/agentname-agent-location.md)  
   
@@ -47,9 +48,9 @@ ms.lasthandoff: 06/22/2017
 -   [Значения функции HOST_NAME](../../relational-databases/replication/host-name-values.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Справочник по свойствам (репликация)](../../relational-databases/replication/properties-reference-replication.md)  
   
   

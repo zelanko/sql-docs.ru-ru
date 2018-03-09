@@ -2,28 +2,31 @@
 title: "Настройка Power Pivot и развертывание решений (SharePoint 2013) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - power-view
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
-caps.latest.revision: 14
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a815c21f442c615217fdc863448f18b49fdb3588
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 901098e2a656d178932b9b706b70d559bef4f215
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Настройка PowerPivot и развертывание решений (SharePoint 2013)
-  В этом разделе описаны развертывание и настройка расширений среднего уровня компонентов [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] , в том числе коллекции [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , расписания обновления данных, панели управления и поставщиков данных. Запустите инструмент **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для настройки SharePoint 2013** , чтобы выполнить следующее.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+В этом разделе описаны развертывание и настройка расширений среднего уровня компонентов [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] , в том числе коллекции [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , расписания обновления данных, панели управления и поставщиков данных. Запустите инструмент **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для настройки SharePoint 2013** , чтобы выполнить следующее.  
   
 -   Развертывание файлов решения SharePoint.  
   
@@ -32,18 +35,6 @@ ms.lasthandoff: 09/01/2017
 -   Настройка приложения служб Excel на использование сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Дополнительные сведения о серверных службах и установке сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме SharePoint см. в разделе [Установка служб Analysis Services в режиме Power Pivot](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
  Сведения об установке средства [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для настройки SharePoint 2013 см. в разделе [Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2013)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
-  
- Этот раздел состоит из следующих подразделов.  
-  
- [Запуск настройки PowerPivot для SharePoint 2013](#bkmk_run_configuration_tool)  
-  
- [Проверка конфигурации Power Pivot](#bkmk_verify_powerpivot)  
-  
- [Устранение неполадок](#bkmk_troubleshoot_issues)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Запуск настройки PowerPivot для SharePoint 2013  
  **Примечание.** Мастер программы установки [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] устанавливает два различных средства настройки для [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]. Каждый из них поддерживает разные версии SharePoint.  
@@ -148,4 +139,3 @@ ms.lasthandoff: 09/01/2017
  Дополнительные сведения о средстве настройки см. в разделе [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
   
-

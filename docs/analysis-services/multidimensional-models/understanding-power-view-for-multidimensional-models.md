@@ -2,30 +2,30 @@
 title: "Основные сведения о Power View для многомерных моделей | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
-caps.latest.revision: 15
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 103d42ffa1f2f4bc823c8b95327347323f0ccf86
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9536b3a2d178e7dea79bf7d9cf3482e423c078ed
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Основные сведения о Power View для многомерных моделей
-  В этой статье рассматривается функция Power View для многомерных моделей в SQL Server, а также предоставлены важные сведения для специалистов по бизнес-аналитике и администраторов, которые планируют внедрить Power View для многомерных моделей в своей организации.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В этой статье рассматривается функция Power View для многомерных моделей в SQL Server, а также предоставлены важные сведения для специалистов по бизнес-аналитике и администраторов, которые планируют внедрить Power View для многомерных моделей в своей организации.  
   
  Многомерные модели предоставляют ведущие в отрасли решения по моделированию данных OLAP, хранилищам и анализу. Многомерные модели в SQL Server поддерживают динамический анализ данных, просмотр и визуализацию с использованием Microsoft Power View.  
   
@@ -35,7 +35,7 @@ ms.lasthandoff: 09/01/2017
   
  ![Power View для архитектуры многомерных моделей](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "Power View для архитектуры многомерных моделей")  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  **Требования к серверу**  
   
 -   Cлужбы Microsoft SQL Server 2016 Analysis Services, работающие в многомерном режиме.  
@@ -62,11 +62,11 @@ ms.lasthandoff: 09/01/2017
   
 |Многомерный объект|Табличный объект|  
 |-----------------------------|--------------------|  
-|Куб|Модель|  
+|Cube|Модель|  
 |Измерение куба|Таблица|  
 |Атрибуты измерения (ключи, имя)|Столбец|  
 |Группа мер|Таблица|  
-|Мера|Мера|  
+|Measure|Measure|  
 |Мера без группы мер|В таблице с именем Measures|  
 |Связь измерений куба группы мер|Связь|  
 |Perspective|Perspective|  
@@ -224,7 +224,7 @@ ms.lasthandoff: 09/01/2017
   
  Запрос DISCOVER_CSDL_METADATA имеет следующие ограничения:  
   
-|Название|Обязательно|Description|  
+|Название|Обязательно|Описание|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Да|Имя каталога или базы данных.|  
 |PERSPECTIVE_NAME|Да, если куб содержит несколько перспектив. Необязательное, если имеется только один куб или перспектива по умолчанию.|Имя куба или имя перспективы в многомерной базе данных.|  
@@ -242,4 +242,3 @@ ms.lasthandoff: 09/01/2017
  [Изучение многомерной модели Adventure Works с использованием Power View](http://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
   
   
-

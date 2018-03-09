@@ -2,27 +2,28 @@
 title: "Совместимость R в службах R SQL Server | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0506b950-34b3-4f11-8e2f-d067a58015bd
-caps.latest.revision: 9
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 3dd916a0d91d5f237d7a60963c1b3fab1f90b5e9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b494e320bf52a98ea02cae6dc3c7feb41aea4217
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="r-interoperability-in-sql-server"></a>Взаимодействие R в SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом разделе основное внимание уделяется механизм для запуска для R в SQL Server и описываются различия между Microsoft R и открытым исходным кодом R.
 
@@ -32,11 +33,11 @@ ms.lasthandoff: 09/01/2017
 
 ### <a name="open-source-r-components"></a>Компоненты R с открытым кодом
 
-Службы [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] включают полный дистрибутив базовых пакетов и средств R. Дополнительные сведения о компонентах базового дистрибутива см. в документации, установленной во время установки в папке по умолчанию: `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
+[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] включает полный распространения базовых пакетов R и средств. Дополнительные сведения о компонентах базового дистрибутива см. в документации, установленной во время установки в папке по умолчанию: `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
 
 При установке [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] вы должны согласиться с условиями открытой лицензии GNU. После этого можно выполнять стандартные пакеты R без изменений так же, как и в других дистрибутивах R с открытым кодом.
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] не меняет среду выполнения R. Среда выполнения R выполняется за пределами процесса [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Ее можно выполнять независимо от [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Однако во избежание конфликта ресурсов мы не рекомендуем запускать эти средства, если [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] использует R.
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] не изменяет среду выполнения R, каким-либо образом. Среда выполнения R выполняется за пределами процесса [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Ее можно выполнять независимо от [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Однако во избежание конфликта ресурсов мы не рекомендуем запускать эти средства, если [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] использует R.
 
 Базовый дистрибутив пакета R, связанный с конкретным экземпляром [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], можно найти в связанной с ним папке. Например при установке служб R в экземпляре по умолчанию библиотек R, находятся в этой папке по умолчанию:
 
@@ -78,5 +79,4 @@ Microsoft R включает дистрибутив Intel Math Kernel Library, �
 [Компоненты SQL Server для поддержки R](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md)
 
 [Общие сведения о безопасности](../../advanced-analytics/r/security-overview-sql-server-r.md)
-
 

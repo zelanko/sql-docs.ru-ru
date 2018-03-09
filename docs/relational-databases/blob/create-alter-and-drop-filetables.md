@@ -2,9 +2,12 @@
 title: "Создание, изменение и удаление таблиц FileTable | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -14,20 +17,20 @@ helpviewer_keywords:
 - FileTables [SQL Server], dropping
 - FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0445d1e3f300031a0154e253009a516364cd4fc3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5e402ae5344d8dcae116954856644d206d62f0e5
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-alter-and-drop-filetables"></a>Создание, изменение и удаление таблиц FileTables
-  Описывает способы создания новых таблиц FileTable и изменения или удаления существующих таблиц FileTable.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Описывает способы создания новых таблиц FileTable и изменения или удаления существующих таблиц FileTable.  
   
 ##  <a name="BasicsCreate"></a> Создание таблицы FileTable  
  Таблица FileTable является специализированной пользовательской таблицей с заранее заданной и фиксированной схемой. Эта схема содержит данные FILESTREAM, сведения о файлах и каталогах и атрибуты файлов. Сведения о данном образце схемы см. в разделе [FileTable Schema](../../relational-databases/blob/filetable-schema.md).  
@@ -72,7 +75,7 @@ ms.lasthandoff: 06/22/2017
   
  В следующем примере рассмотрено создание новой таблицы FileTable с указанием значений, определяемых пользователем, для **FILETABLE_DIRECTORY** и **FILETABLE_COLLATE_FILENAME**.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable  
     WITH (   
           FileTable_Directory = 'DocumentTable',  
@@ -83,7 +86,7 @@ GO
   
  В следующем примере также создается новый FileTable. Определяемые пользователем значения не заданы, поэтому значение **FILETABLE_DIRECTORY** становится именем таблицы FileTable, значение **FILETABLE_COLLATE_FILENAME** становится равным database_default, а первичный ключ и ограничения уникальности принимают значения, сформированные системой.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable;  
 GO  
 ```  
@@ -118,7 +121,7 @@ GO
   
  **Пример**  
   
-```tsql  
+```sql  
 ALTER TABLE filetable_name  
     SET ( FILETABLE_DIRECTORY = N'directory_name' );  
 GO  
@@ -149,7 +152,7 @@ GO
 ##  <a name="BasicsOtherObjects"></a> другие объекты базы данных, создаваемые при создании таблицы FileTable  
  При создании новой таблицы FileTable также создаются некоторые системные индексы и ограничения. Эти объекты нельзя изменять или удалять, они исчезают только после удаления самой таблицы FileTable. Чтобы просмотреть список этих объектов, отправьте запрос представлению каталога [sys.filetable_system_defined_objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md).  
   
-```tsql  
+```sql  
 --View all objects for all filetables, unsorted  
 SELECT * FROM sys.filetable_system_defined_objects;  
 GO  
@@ -190,4 +193,3 @@ GO
  [Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md)  
   
   
-

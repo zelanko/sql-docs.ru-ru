@@ -2,30 +2,31 @@
 title: "Прогнозировать и построения из модели (R в быстрый запуск SQL Server) | Документы Microsoft"
 ms.custom: 
 ms.date: 08/20/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
 ms.assetid: 46babd8a-a331-44fc-bbd6-24daf58865e1
-caps.latest.revision: 15
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 835e7d4901fc3d58edfedaea4474e9b523b71620
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a84e702b364da8614dd21b8f6adb57e4f2bac487
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="predict-and-plot-from-model-r-in-sql-quickstart"></a>Прогнозировать и построения из модели (R в быстрый запуск SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Для выполнения _оценки_ с помощью новых данных, получении одного из обученных моделей из таблицы и затем вызвать новый набор данных, на которой будет производиться прогнозирование. Оценка — это термин, иногда используются в обработки и анализа данных означает создания прогнозов, вероятности и другие значения на основе новых данных, которые передавались в обученной модели.
 
@@ -184,4 +185,3 @@ WITH RESULT SETS (([new_speed] INT, [predicted_distance] INT))
 + [Приступая к работе с MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
 
     Дополнительные сведения о быстрой, масштабируемые алгоритмов машинного обучения из Microsoft Research.
-

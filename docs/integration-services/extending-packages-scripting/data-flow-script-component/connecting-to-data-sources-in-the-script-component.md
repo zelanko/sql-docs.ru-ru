@@ -1,12 +1,14 @@
 ---
-title: "Подключение к источникам данных в компоненте скрипта | Документы Microsoft"
+title: "Подключение к источникам данных в компоненте скрипта | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -14,33 +16,32 @@ applies_to:
 helpviewer_keywords:
 - Script component [Integration Services], connecting to data sources
 ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
-caps.latest.revision: 15
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e2accca553f1bd9c536076fd0bbcebbff0ff2c42
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 53bcc924f9aa71feb4233a9b189a62e30d7d3a51
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>Соединение с источниками данных в компоненте скрипта
   Диспетчер соединений — это удобный элемент, который инкапсулирует и сохраняет сведения, необходимые для соединения с источником данных определенного типа. Дополнительные сведения см. в разделе [Соединения в службах Integration Services (SSIS)](../../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
- Выполненные существующих диспетчеров соединений доступ для пользовательского скрипта в компоненте источника или назначения, нажав кнопку **добавить** и **удалить** кнопок, расположенных на **диспетчеры соединений** страница **редактор преобразования «скрипт»**. Однако необходимо написать собственный пользовательский код для загрузки и сохранения данных, а также, возможно, для открытия и закрытия соединения с источником данных. Дополнительные сведения о **диспетчеры соединений** страница **редактор преобразования «скрипт»**, в разделе [Настройка компонента скрипта в редакторе компонентов скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) и [редактор преобразования «скрипт» &#40; Страница «Диспетчеры соединений» &#41; ](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md).  
+ Можно сделать существующие диспетчеры подключений доступными для пользовательского скрипта в компоненте источника или назначения, нажимая кнопки **Добавить** и **Удалить** на странице **Диспетчеры подключений** в окне **Редактор преобразования "Скрипт"**. Однако необходимо написать собственный пользовательский код для загрузки и сохранения данных, а также, возможно, для открытия и закрытия соединения с источником данных. Дополнительные сведения о странице **Диспетчеры подключений** окна **Редактор преобразования "скрипт"** см. в разделах [Настройка компонента скрипта в редакторе компонента скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) и [Редактор преобразования "Скрипт" (страница "Диспетчеры подключений")](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md).  
   
- Компонент скрипта создает **подключений** класс коллекции в **ComponentWrapper** элемент проекта, который содержит строго типизированных методов доступа для каждого диспетчера соединений, который имеет имя, совпадающее с именем самого диспетчера соединений. Эта коллекция предоставляется через **подключений** свойство **ScriptMain** класса. Свойство метода доступа возвращает ссылку на диспетчер соединений как на экземпляр <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100>. Например, если добавить диспетчер соединений с именем `MyADONETConnection` на странице «Диспетчеры соединений» диалогового окна, можно получить ссылку на него в скрипте, добавив следующий код:  
+ Компонент скрипта создает класс коллекции **Connections** в элементе проекта **ComponentWrapper**, который содержит строго типизированный метод доступа для каждого диспетчера подключений, имя которого совпадает с именем самого диспетчера подключений. Эта коллекция доступна с помощью свойства **Connections** класса **ScriptMain**. Свойство метода доступа возвращает ссылку на диспетчер соединений как на экземпляр <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100>. Например, если добавить диспетчер соединений с именем `MyADONETConnection` на странице «Диспетчеры соединений» диалогового окна, можно получить ссылку на него в скрипте, добавив следующий код:  
   
  `Dim myADONETConnectionManager As IDTSConnectionManager100 = _`  
   
  `Me.Connections.MyADONETConnection`  
   
 > [!NOTE]  
->  Необходимо знать тип соединения, возвращаемого диспетчером соединений перед вызовом метода **AcquireConnection**. Поскольку в задаче «скрипт» **Option Strict** включен, необходимо привести соединение, которое возвращается в виде типа **объекта**, к подходящему типу соединения перед его использованием.  
+>  Прежде чем вызывать метод **AcquireConnection**, необходимо узнать тип подключения, возвращаемого диспетчером подключений. Поскольку в задачу "Скрипт" включен параметр **Option Strict**, перед использованием необходимо привести подключение, возвращаемое с типом **Object**, к подходящему типу подключения.  
   
- После этого нужно вызвать **AcquireConnection** метод в диспетчер подключения, чтобы получить Базовое соединение или сведения, необходимые для подключения к источнику данных. Например, можно получить ссылку на **System.Data.SqlConnection** оболочкой диспетчер соединений ADO.NET с помощью следующего кода:  
+ Далее необходимо вызвать метод **AcquireConnection** конкретного диспетчера подключений, чтобы получить базовое подключение либо сведения, необходимые для подключения к источнику данных. Например, с помощью следующего кода можно получить ссылку на подключение **System.Data.SqlConnection**, упакованное диспетчером подключений ADO.NET:  
   
  `Dim myADOConnection As SqlConnection = _`  
   
@@ -52,18 +53,17 @@ ms.lasthandoff: 08/03/2017
   
  `CType(MyFlatFileConnectionManager.AcquireConnection(Nothing), String)`  
   
- Затем необходимо предоставить этот путь и имя файла для **System.IO.StreamReader** или **Streamwriter** для чтения или записи данных в неструктурированном файле.  
+ Затем необходимо предоставить этот путь и имя файла модулю чтения **System.IO.StreamReader**, или модулю записи **Streamwriter** для чтения, или записи данных в неструктурированный файл.  
   
 > [!IMPORTANT]  
->  При написании управляемого кода в компоненте скрипта, невозможно вызвать метод AcquireConnection соединения диспетчеров, которые возвращают неуправляемые объекты, такие как диспетчер соединений OLE DB и диспетчер соединений Excel. Тем не менее, можно считать свойство ConnectionString этих диспетчеров соединений и подключиться к источнику данных непосредственно в коде с помощью строки подключения объекта OLEDB **подключения** из **System.Data.OleDb** пространства имен.  
+>  При написании управляемого кода в компоненте скрипта нельзя вызывать метод AcquireConnection диспетчеров подключений, возвращающий неуправляемые объекты, например диспетчера подключений OLE DB или диспетчера подключений Excel. Однако можно считать свойство ConnectionString этих диспетчеров подключений и подключиться к источнику данных непосредственно в коде с помощью строки подключения объекта OLEDB **connection** из пространства имен **System.Data.OleDb**.  
 >   
->  Если необходимо вызвать метод AcquireConnection диспетчера соединений, возвращающего неуправляемый объект, используют диспетчер соединений ADO.NET. При настройке диспетчера соединений ADO.NET для использования поставщика OLE DB он соединяется с помощью поставщика данных .NET Framework для OLE DB. В этом случае метод AcquireConnection возвращает **System.Data.OleDb.OleDbConnection** вместо неуправляемого объекта. Чтобы настроить диспетчер соединений ADO.NET для использования с источником данных Excel, выберите поставщик Microsoft OLE DB для Jet, укажите книгу Excel, а затем введите `Excel 8.0` (для Excel 97 и более поздних версий) в качестве значения **расширенные свойства** на **все** страница **диспетчера соединений** диалоговое окно.  
+>  Если необходимо вызвать метод AcquireConnection диспетчера подключений, возвращающего неуправляемый объект, используйте диспетчер подключений ADO.NET. При настройке диспетчера соединений ADO.NET для использования поставщика OLE DB он соединяется с помощью поставщика данных .NET Framework для OLE DB. В этом случае метод AcquireConnection возвращает **System.Data.OleDb.OleDbConnection** вместо неуправляемого объекта. Чтобы настроить диспетчер подключений ADO.NET для работы с источником данных Excel, выберите "Поставщик OLE DB для Jet (Майкрософт)", укажите книгу Excel, а затем введите `Excel 8.0` (для Excel 97 и более поздних версий) в качестве значения параметра **Расширенные свойства** на странице **Все** диалогового окна **Диспетчер подключений**.  
   
- Дополнительные сведения об использовании диспетчеров соединений в компоненте скрипта см. в разделе [Создание источника с помощью компонента скрипта](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md) и [Создание назначения с помощью компонента скрипта](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md).  
+ Дополнительные сведения об использовании диспетчеров подключений в компоненте скрипта см. в разделах [Создание источника с помощью компонента скрипта](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md) и [Создание назначения с помощью компонента скрипта](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Службы Integration Services &#40; Службы SSIS &#41; Подключения](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Соединения в службах Integration Services (SSIS)](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [Создание диспетчеров соединений](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   
   
-

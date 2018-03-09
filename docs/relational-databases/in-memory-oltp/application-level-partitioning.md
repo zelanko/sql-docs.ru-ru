@@ -2,28 +2,31 @@
 title: "Секционирование уровня приложения | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
-caps.latest.revision: 12
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f5e08e0a4d222cf98a7eb997019734d386f79fd4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b10dd4f325b79672d4b0c880186f9331bc71dc1b
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="application-level-partitioning"></a>Секционирование уровня приложения
-  Это приложение обрабатывает заказы. Большой объем обработки последних заказов. По старым заказам объем обработки меньше. Последние заказы находятся в оптимизированной для памяти таблице. Старые заказы размещены в таблице на диске. Все заказы с датой после *hotDate* размещены в оптимизированной для памяти таблице. Все заказы до *hotDate* находятся в таблице на диске. Предположим наличие предельной рабочей нагрузки OLTP с большим количеством параллельных транзакций. Это бизнес-правило (последние заказы находятся в оптимизированной для памяти таблице) необходимо обеспечить даже в том случае, когда несколько параллельных транзакций пытаются изменить *hotDate*.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Это приложение обрабатывает заказы. Большой объем обработки последних заказов. По старым заказам объем обработки меньше. Последние заказы находятся в оптимизированной для памяти таблице. Старые заказы размещены в таблице на диске. Все заказы с датой после *hotDate* размещены в оптимизированной для памяти таблице. Все заказы до *hotDate* находятся в таблице на диске. Предположим наличие предельной рабочей нагрузки OLTP с большим количеством параллельных транзакций. Это бизнес-правило (последние заказы находятся в оптимизированной для памяти таблице) необходимо обеспечить даже в том случае, когда несколько параллельных транзакций пытаются изменить *hotDate*.  
   
  Этот пример не использует секционированную таблицу для дисковых таблиц, но отслеживает точную точку разбиения между двумя таблицами с помощью третьей. Точку разбиения можно использовать для того, чтобы на основе даты вновь добавленные данные всегда вставлялись в подходящую таблицу. Он также может использоваться для определения местоположения, где следует искать данные. Поздно поступающие данные всегда направляются в соответствующую таблицу.  
   
@@ -31,7 +34,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="code-listing"></a>Листинг кода  
   
-```tsql  
+```sql  
 USE MASTER  
 GO  
 IF NOT EXISTS(SELECT name FROM sys.databases WHERE name = 'hkTest')  
@@ -223,4 +226,3 @@ select * from cold order by orderDate desc
  [Примеры кода In-Memory OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   
-

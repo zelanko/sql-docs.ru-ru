@@ -1,29 +1,28 @@
 ---
-title: "Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS) | Документы Microsoft"
+title: "Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS) | Документация Майкрософт"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-caps.latest.revision: 19
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "19"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 45d2f680e35666c9958665ac6c687725c6db0eb4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 89baca75b96115ac70e6f520cd2248f03497cbda
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS)
 
   Начиная с версии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]серверы служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint могут записывать события служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в журнал трассировки единой службы ведения журнала SharePoint. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] доступны на странице «Наблюдение» центра администрирования SharePoint.  
@@ -49,11 +48,11 @@ ms.lasthandoff: 08/09/2017
   
 |Категория|Level|Description|  
 |--------------|-----------|-----------------|  
-|База данных|Подробно|Регистрирует события, требующие доступа к базе данных.|  
-|Общие сведения|Подробно|Регистрирует события, требующие доступа к следующим элементам.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Обработчик HTTP-данных средства просмотра отчетов.<br /><br /> Доступ к отчету (RDL-файлы).<br /><br /> Источники данных (RSDS-файлы).<br /><br /> URL-адреса на сайте SharePoint (SMDL-файлы).|  
+|база данных|Подробный|Регистрирует события, требующие доступа к базе данных.|  
+|Общие|Подробный|Регистрирует события, требующие доступа к следующим элементам.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Обработчик HTTP-данных средства просмотра отчетов.<br /><br /> Доступ к отчету (RDL-файлы).<br /><br /> Источники данных (RSDS-файлы).<br /><br /> URL-адреса на сайте SharePoint (SMDL-файлы).|  
 |Office Server General|Exception|Регистрирует ошибки входа.|  
-|Топология|Подробно|Регистрирует текущую информацию пользователя.|  
-|веб-части|Подробно|Регистрирует события, для которых требуется доступ к веб-части средства просмотра отчетов.|  
+|Топология|Verbose|Регистрирует текущую информацию пользователя.|  
+|веб-части|Подробный|Регистрирует события, для которых требуется доступ к веб-части средства просмотра отчетов.|  
   
 ##  <a name="bkmk_turnon"></a> Включение и отключение событий служб Reporting Services в категории служб Reporting Services  
   
@@ -109,7 +108,7 @@ Get-SPDiagnosticConfig
 |Подготовка локального режима||  
 |Прокси-сервер клиента SOAP||  
 |Страницы пользовательского интерфейса||  
-|Power View|Записи журналов, занесенные в **LogClientTraceEvents** API. Источником этих записей являются клиентские приложения, в том числе Power View, компонент надстройки служб SQL Server Reporting Services.<br /><br /> Все записи журнала от API-интерфейса LogClientTraceEvents заносятся в **категорию** «Службы SQL Server Reporting Services» и в **область** «Power View».<br /><br /> Содержание записей, занесенных в область «Power View», определяется клиентским приложением.|  
+|Power View|Записи журналов, занесенные в **LogClientTraceEvents** API. Эти записи берутся из клиентских приложений, включая Power View, компонент надстройки SQL Server Reporting Services.<br /><br /> Все записи журнала от API-интерфейса LogClientTraceEvents заносятся в **категорию** «Службы SQL Server Reporting Services» и в **область** «Power View».<br /><br /> Содержание записей, занесенных в область «Power View», определяется клиентским приложением.|  
 |Среда выполнения системы предупреждений сервера отчетов||  
 |Диспетчер домена приложений сервера отчетов||  
 |Буферизованный ответ сервера отчетов||  
@@ -117,7 +116,7 @@ Get-SPDiagnosticConfig
 |Каталог сервера отчетов||  
 |Фрагмент данных сервера отчетов||  
 |Очистка данных сервера отчетов||  
-|Диспетчер конфигурации сервера отчетов|Образцы записей:<br /><br /> Внутренний URL-адрес сервера отчетов mediumusing ― `http://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing или недопустимый параметр ExtendedProtectionLevel|  
+|Диспетчер конфигурации сервера отчетов|Образцы записей:<br /><br /> Внутренний URL-адрес сервера отчетов MediumUsing `http://localhost:80/ReportServer`.<br /><br /> UnexpectedMissing или недопустимый параметр ExtendedProtectionLevel|  
 |Шифрование сервера отчетов||  
 |Модуль обработки данных сервера отчетов||  
 |Опрос базы данных сервера отчетов||  
@@ -147,13 +146,13 @@ Get-SPDiagnosticConfig
 |Общая служба|Образцы записей:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> Доступ MediumGranting к базам данных содержимого.<br /><br /> Экземпляры MediumProvisioning для ReportingWebServiceApplication<br /><br /> Изменение учетной записи службы MediumProcessing для ReportingWebServiceApplication<br /><br /> Разрешения базы данных MediumSetting.|  
   
 ##  <a name="bkmk_powershell"></a> Просмотр файла журнала с помощью PowerShell  
- ![Содержимое, связанное с PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "содержимое, связанное с PowerShell")PowerShell можно использовать для возвращения списка [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] связанных событий из файла журнала ULS. Введите следующую команду в консоли управления SharePoint 2010, чтобы получить из файла журнала ULS "UESQL11SPOINT-20110606-1530.log" отфильтрованный список строк, содержащих подстроку "**sql server reporting services**":  
+ ![Связанное содержимое PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Связанное содержимое PowerShell")PowerShell можно использовать для возвращения списка связанных событий служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из файла журнала ULS. Введите следующую команду в консоли управления SharePoint 2010, чтобы получить из файла журнала ULS "UESQL11SPOINT-20110606-1530.log" отфильтрованный список строк, содержащих подстроку "**sql server reporting services**":  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services”  
 ```  
   
- Также существует множество инструментов, доступных для загрузки, которые позволяют читать журналы ULS. Например, [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com/) или [SharePoint ULS Log Viewer](http://ulsviewer.codeplex.com/workitem/list/basic). Оба доступны в CodePlex.  
+ Также существуют средства, доступные для скачивания, которые позволяют читать журналы ULS. Например, это средство [SharePoint LogViewer](https://github.com/hasankhan/SharePointLogViewer), доступное в GitHub. 
   
  Дополнительные сведения о том, как использовать PowerShell для просмотра данных журнала, см. в разделе [Просмотр диагностического журнала (SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx).  
   
@@ -162,5 +161,4 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  Дополнительные сведения и шаги настройки диагностической регистрации на сервере SharePoint в центре администрирования SharePoint 2010 см. в разделе [Настройка диагностической регистрации (службы Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423).  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

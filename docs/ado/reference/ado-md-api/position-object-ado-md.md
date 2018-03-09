@@ -3,7 +3,7 @@ title: "Положение объекта (ADO MD) | Документы Microsof
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - Position object [ADO MD]
 ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6becc43857026e8ea74d13f7bb2ac5ad7dc0c251
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5c4b64e066a83673df845a3a43dff80fb2acc0e4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="position-object-ado-md"></a>Позиция объекта (ADO MD)
 Представляет набор один или несколько элементов из различных измерений, определяющую точку вдоль оси.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  С помощью свойств и коллекций **позиции** объекта, можно сделать следующее:  
   
 -   Используйте **порядковый номер** свойство для возврата порядковый номер **позиции** вдоль [оси](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  
@@ -44,10 +43,9 @@ ms.lasthandoff: 09/09/2017
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/position-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример оси (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Объект Axis (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [Объект ячейки (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Члены коллекции (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
- [Коллекция позиций (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)
-
+ [Коллекция Positions (многомерные объекты ADO)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)

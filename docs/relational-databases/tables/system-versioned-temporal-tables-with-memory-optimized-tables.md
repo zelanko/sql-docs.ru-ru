@@ -1,29 +1,30 @@
 ---
 title: "Темпоральные таблицы с системным управлением версиями и таблицы, оптимизированные для памяти | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-tables
+ms.suite: sql
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 82ca8698bdefad9764b03b19a885b098c8421400
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 66cf48a0435cdb14681ab996d7707cc4e082c0d9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Темпоральные таблицы с системным управлением версиями и таблицы, оптимизированные для памяти
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+# <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>темпоральные таблицы с системным управлением версиями и таблицы с оптимизацией памяти
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Темпоральные таблицы с системным управлением версиями для [таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) — это экономичное решение для сценариев, в которых требуется [аудит и анализ на момент времени данных](http://msdn.microsoft.com/library/mt631669.aspx) для данных, собранных из рабочих нагрузок In-Memory OLTP. Они обеспечивают высокую скорость обработки транзакций, параллелизм без блокировки и в то же время возможность хранения большого объема данных журнала, которые легко можно запросить.  
   
@@ -97,4 +98,3 @@ ms.lasthandoff: 06/22/2017
  [Представления и функции метаданных для временной таблицы](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

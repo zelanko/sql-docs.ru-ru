@@ -2,27 +2,28 @@
 title: "Производительность служб R - оптимизация данных | Документы Microsoft"
 ms.custom: 
 ms.date: 07/12/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
-caps.latest.revision: 13
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 0ca7a57b10787ca183c2979fe95a5e3fe446dc86
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: df91cedac15da65bee9c9aa38c3c747e04f6d60d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Производительность служб R - оптимизация данных
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Эта статья является третий ряда, которое описывает оптимизации производительности для служб R, основанных на два исследований. В этой статье описывается оптимизация производительности для R или Python сценариев, которые выполняются в SQL Server. Он также описывает методы, которые можно использовать для обновления кода R, чтобы избежать известных проблем и для повышения производительности.
 
@@ -193,4 +194,3 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 [Настройка производительности для R - R оптимизации кода и данных](r-and-data-optimization-r-services.md)
 
 [Помощник по настройке производительности - пример использования результатов](performance-case-study-r-services.md)
-

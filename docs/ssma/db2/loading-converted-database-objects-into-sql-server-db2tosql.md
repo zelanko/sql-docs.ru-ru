@@ -1,29 +1,30 @@
 ---
 title: "Загрузка преобразованных объектов базы данных, в SQL Server (DB2ToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d662bcab0fe8c804b75f7908ca6fc04f2e96a650
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f74e15c261041ae0a68152417955a81ed96994f8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Загрузка преобразованных объектов базы данных, в SQL Server (DB2ToSQL)
 После преобразования схемы DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], можно загрузить результирующие объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Можно иметь SSMA создания объектов, или можно внести в скрипт объекты и запускать скрипты самостоятельно. Кроме того, SSMA позволяет заменить метаданные целевой фактическое содержимое [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных.  
@@ -117,4 +118,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>См. также:  
 [Перенос данных DB2 в SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   
-

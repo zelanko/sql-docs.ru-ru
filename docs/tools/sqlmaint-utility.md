@@ -2,11 +2,13 @@
 title: "Программа sqlmaint | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sqlmaint
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +20,19 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "47"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5384932d020b62b3e88d28cc37e3155a4a72f6ee
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: fbc02b1b8d89972cfd25739f4055842e303450c1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="sqlmaint-utility"></a>Программа sqlmaint
-  Программа**sqlmaint** выполняет заданный набор операций обслуживания с одной или несколькими базами данных. Программа **sqlmaint** используется для выполнения проверок DBCC, создания резервных копий базы данных и ее журнала транзакций, обновления статистики и перестроения индексов. При всех действиях по обслуживанию базы данных формируется отчет, который можно записать в указанный текстовый файл, в HTML-файл или отправить по электронной почте. Программа**sqlmaint** выполняет планы обслуживания баз данных, созданные в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Для запуска планов обслуживания [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] из командной строки используйте программу [dtexec utility](../integration-services/packages/dtexec-utility.md).  
+# <a name="sqlmaint-utility"></a>sqlmaint, программа
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Sqlmaint** программа выполняет заданный набор операций обслуживания с одной или нескольких баз данных. Программа **sqlmaint** используется для выполнения проверок DBCC, создания резервных копий базы данных и ее журнала транзакций, обновления статистики и перестроения индексов. При всех действиях по обслуживанию базы данных формируется отчет, который можно записать в указанный текстовый файл, в HTML-файл или отправить по электронной почте. Программа**sqlmaint** выполняет планы обслуживания баз данных, созданные в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Для запуска планов обслуживания [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] из командной строки используйте программу [dtexec utility](../integration-services/packages/dtexec-utility.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)] Вместо этого используйте функцию плана обслуживания [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения о планах обслуживания см. в разделе [Планы обслуживания](../relational-databases/maintenance-plans/maintenance-plans.md).  
@@ -85,19 +86,19 @@ number[minutes | hours | days | weeks | months]
  Указывает, что должна быть возвращена диаграмма синтаксиса **sqlmaint** . При использовании этого параметра использование других параметров не допускается.  
   
  **-S** *server_name*[ **\\***instance_name*]  
- Указывает целевой экземпляр [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Укажите значение *server_name* , чтобы подключиться к экземпляру компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] по умолчанию на этом сервере. Укажите *server_name***\\***instance_name* , чтобы подключиться к именованному экземпляру компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] на этом сервере. Если сервер не указан, **sqlmaint** подключается к экземпляру [!INCLUDE[ssDE](../includes/ssde-md.md)] по умолчанию на локальном компьютере.  
+ Указывает целевой экземпляр [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Укажите значение *имя_сервера* , чтобы подключиться к экземпляру компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] по умолчанию на этом сервере. Укажите *имя_сервера***\\***имя_экземпляра* для подключения к именованному экземпляру [!INCLUDE[ssDE](../includes/ssde-md.md)] на этом сервере. Если сервер не указан, **sqlmaint** подключается к экземпляру [!INCLUDE[ssDE](../includes/ssde-md.md)] по умолчанию на локальном компьютере.  
   
  **-U** *login_id*  
  Указывает используемый идентификатор входа при соединении с сервером. Если этот параметр не указан, **sqlmaint** пытается использовать проверку подлинности [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Если аргумент *login_ID* содержит специальные символы, он должен быть заключен в двойные кавычки ("). В противном случае использование двойных кавычек необязательно.  
   
 > [!IMPORTANT]  
->  По возможности используйте аутентификацию Windows.  
+>  По возможности используйте проверку подлинности Windows.  
   
  **-P** *password*  
  Указывает пароль для идентификатора имени входа. Используется только вместе с параметром **-U** . Если аргумент *password* содержит специальные символы, он должен быть заключен в двойные кавычки. В противном случае использование двойных кавычек необязательно.  
   
 > [!IMPORTANT]  
->  Маскировка пароля не производится. По возможности используйте аутентификацию Windows.  
+>  Маскировка пароля не производится. По возможности используйте проверку подлинности Windows.  
   
  **-D** *database_name*  
  Указывает имя базы данных, с которой будут производиться операции обслуживания. Если аргумент *database_name* содержит специальные символы, он должен быть заключен в двойные кавычки. В противном случае использование двойных кавычек необязательно.  
@@ -134,7 +135,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  Когда *sqlmaint* обращается к удаленному серверу, в качестве аргумента **html_file** необходимо указывать полное UNC-имя файла.  
   
  **-DelHtmlRpt** \<*time_period*>  
- Указывает, что удалить любой HTML-отчета в каталоге отчетов, если интервал времени с момента создания файла отчета превысит \< *time_period*>. **-DelHtmlRpt** ищет файлы, имена которых соответствуют шаблону, сформированному на основе параметра *html_file* . Если *html_file* является c:\Program Files\Microsoft SQL server\mssql\backup\adventureworks2012_maint.htm», то **- DelHtmlRpt** вызывает **sqlmaint** удалить все файлы, имена которых соответствуют шаблону C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm и которые являются более старыми, чем заданный \< *time_period*>.  
+ Указывает, что удалить любой HTML-отчета в каталоге отчетов, если интервал времени с момента создания файла отчета превысит \< *time_period*>. **-DelHtmlRpt** ищет файлы, имена которых соответствуют шаблону, сформированному на основе параметра *html_file*. Если *html_file* является c:\Program Files\Microsoft SQL server\mssql\backup\adventureworks2012_maint.htm», то **- DelHtmlRpt** вызывает **sqlmaint** удалить все файлы, имена которых соответствуют шаблону C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm и которые являются более старыми, чем заданный \< *time_period*>.  
   
  **-RmUnusedSpace** *threshold_percent free_percent*  
  Указывает, что нужно удалить неиспользуемое пространство из базы данных, указанной в параметре **-D**. Этот параметр полезен только для тех баз данных, в которых задан автоматический рост. Аргумент*Threshold_percent* задает размер в мегабайтах, которого должна достичь база данных, прежде чем **sqlmaint** попытается удалить неиспользованное пространство данных. Если база данных меньше значения *threshold_percent*, никакие действия не выполняются. Значение*free_percent* задает размер сохраняемого неиспользуемого пространства в базе данных, указываемого в виде процента от конечного размера базы данных. Например, если база данных размером 200 MБ содержит 100 MБ данных, то указание значения 10 в качестве аргумента *free_percent* приводит к тому, что конечный размер базы данных будет составлять 110 MБ. Обратите внимание, что увеличения базы данных не происходит, если ее размер меньше суммы значения *free_percent* и объема данных в базе. Например, если база данных размером 108 MБ содержит данные размером 100 MБ, то указание 10 в качестве значения *free_percent* не приведет к увеличению базы данных до 110 MБ, ее размер останется равным 108 MБ.  
@@ -232,7 +233,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  Если указано только *number* , то используемой по умолчанию частью даты будут **недель**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Программа **sqlmaint** выполняет операции обслуживания с одной или несколькими базами данных. Если указан параметр **-D** , операции, заданные в остальных параметрах, выполняются только с указанной базой данных. Если указан параметр **-PlanName** или **-PlanID** , **sqlmaint** получает из указанного плана обслуживания только сведения о списке баз данных. Все операции, указанные в остальных параметрах **sqlmaint** , применяются ко всем базам данных, которые указаны в полученном из плана списке. Программа **sqlmaint** не выполняет операции обслуживания, определенные в самом плане.  
   
  В случае успешного выполнения **sqlmaint** возвращает 0, а в случае ошибки — 1. Сообщение об ошибке выводится:  
@@ -274,9 +275,8 @@ sqlmaint -S MyServer -PlanName MyUserDBPlan -BkUpDB -BkUpMedia DISK -UseDefDir -
 sqlmaint -S MyServer -BkUpDB -BkUpMedia DISK -UseDefDir  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BACKUP (Transact-SQL)](../t-sql/statements/backup-transact-sql.md)   
  [UPDATE STATISTICS (Transact-SQL)](../t-sql/statements/update-statistics-transact-sql.md)  
   
   
-

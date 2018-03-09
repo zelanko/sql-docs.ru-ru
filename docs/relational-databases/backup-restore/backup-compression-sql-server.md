@@ -2,11 +2,13 @@
 title: "Сжатие резервных копий (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +19,19 @@ helpviewer_keywords:
 - backing up [SQL Server], backup compression
 - backup compression [SQL Server]
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
-caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08936c44013d5494c72500f3230a1c90da1e4325
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "51"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 36e6a2f449d649da1137947b5255d025646f43b9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-compression-sql-server"></a>Сжатие резервных копий (SQL Server)
-  В этом разделе описывается сжатие резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в том числе ограничения, влияние сжатия резервных копий на производительность, настройка конфигурации сжатия резервных копий и коэффициент сжатия.  Сжатие резервной копии поддерживается в следующих выпусках [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] : Enterprise, Standard и Developer.  Сжатую резервную копию можно восстановить в любом выпуске [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздней версии. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается сжатие резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в том числе ограничения, влияние сжатия резервных копий на производительность, настройка конфигурации сжатия резервных копий и коэффициент сжатия.  Сжатие резервной копии поддерживается в следующих выпусках [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] : Enterprise, Standard и Developer.  Сжатую резервную копию можно восстановить в любом выпуске [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздней версии. 
  
   
 ##  <a name="Benefits"></a> Преимущества  
@@ -115,4 +117,3 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
  [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
   
-

@@ -2,28 +2,30 @@
 title: "Размер строк и таблицы для таблиц, оптимизированных для памяти | Документация Майкрософт"
 ms.custom: 
 ms.date: 06/19/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
-caps.latest.revision: 28
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 6f0bfa6d9cbbcfe33e1817c3c9df4b38b4f686f8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
-ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Размер строк и таблицы для таблиц, оптимизированных для памяти
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   До выхода [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] размер данных "в строке" для таблицы, оптимизированной для памяти, не мог превышать [8060 байт](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx). Но в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версиях, а также в базе данных SQL Azure появилась возможность создать таблицу, оптимизированную для памяти, с несколькими большими столбцами (например, несколькими столбцами varbinary(8000)) и столбцами LOB (т. е. varbinary(max), varchar(max) и nvarchar(max)), и выполнять с ними операции, используя типы таблиц и модули T-SQL, скомпилированные в собственном коде. 
   
@@ -105,14 +107,14 @@ ms.lasthandoff: 07/31/2017
   
  Для времени больше 200 таблица содержит следующие строки.  
   
-|Название|Город|  
+|Имя|Город|  
 |----------|----------|  
 |Джон|Пекин|  
 |Джейн|Прага|  
   
  Однако любая активная транзакция с начальным временем 100 увидит следующую версию таблицы.  
   
-|Название|Город|  
+|Имя|Город|  
 |----------|----------|  
 |Джон|Париж|  
 |Джейн|Прага|  
@@ -149,7 +151,7 @@ ms.lasthandoff: 07/31/2017
   
  Рассмотрим таблицу Orders со следующим определением:  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.Orders (  
      OrderID int NOT NULL   
            PRIMARY KEY NONCLUSTERED,  
@@ -231,7 +233,7 @@ GO
   
  Фактический размер памяти, выделяемый для данной таблицы и используемый ею и ее индексами, можно получить при помощи следующего запроса:  
   
-```tsql  
+```sql  
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  
@@ -251,4 +253,3 @@ where object_id = object_id('dbo.Orders')
  [Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
-

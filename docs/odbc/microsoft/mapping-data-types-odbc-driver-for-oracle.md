@@ -3,10 +3,12 @@ title: "Сопоставление типов данных (драйвер ODBC 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - data types [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], data types
 ms.assetid: a5d9ce12-19da-4943-8493-e3d56fa08348
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dc140e389f114b2ea67f8628b537ad603eb51d72
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b6384f81f03a20e46a1d2a6434063caf32577554
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-data-types-odbc-driver-for-oracle"></a>Сопоставление типов данных (драйвер ODBC для Oracle)
 > [!IMPORTANT]  
@@ -48,4 +49,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Дополнительные сведения о допустимый размер столбца VARCHAR см. в разделе [размер столбца VARCHAR](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) в данном руководстве.
-

@@ -2,9 +2,12 @@
 title: "Улучшение производительности полнотекстовых индексов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -17,19 +20,19 @@ helpviewer_keywords:
 - full-text search [SQL Server], performance
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-caps.latest.revision: 68
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 2ffe0f2aa4a462c211fcfc591b8d2577a2f451c7
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 43c8168aa5dc9cfb55c117f8a25ead5e8f2a9a4f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Улучшение производительности полнотекстовых индексов
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 В этой статье описываются некоторые из основных причин снижения производительности полнотекстовых индексов и запросов. Кроме того, тут представлены несколько предложений по устранению этих проблем и повышению производительности.
   
 ##  <a name="causes"></a> Common causes of performance issues
@@ -150,7 +153,7 @@ ms.lasthandoff: 08/18/2017
   
  `F = 8*10*8=640`  
   
- При следующем вычислении получается оптимальное значение **Макс. памяти сервера**—*M*. *О*бщий объем физической памяти, доступной в системе (в МБ) —*T*— равно `8192`.  
+ При следующем вычислении получается оптимальное значение **Макс. памяти сервера**—*M*. Общий объем физической памяти, доступной в системе (в МБ), —*T* — равен `8192`.  
   
  `M = 8192-640-500=7052`  
   
@@ -182,7 +185,7 @@ GO
   
      В следующей таблице описаны типы значений ожидания, представляющие интерес.  
   
-    |Тип ожидания|Описание|Возможное решение|  
+    |Тип ожидания|Description|Возможное решение|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX или _UP)|Это может свидетельствовать о наличии узкого места в подсистеме ввода-вывода. В этом случае средняя длина очереди диска обычно велика.|Перемещение полнотекстового индекса в другую файловую группу на другом диске может помочь снизить влияние узкого места в операциях ввода-вывода.|  
     |PAGELATCH_EX (или _UP)|Это может свидетельствовать о высокой конкуренции между потоками, которые пытаются выполнить запись в один и тот же файл базы данных.|Уровень конкуренции можно снизить, добавив файлы в файловую группу, в которой расположен полнотекстовый индекс.|  
@@ -222,4 +225,3 @@ GO
  [Устранение неполадок полнотекстового индексирования](../../relational-databases/search/troubleshoot-full-text-indexing.md)  
   
   
-

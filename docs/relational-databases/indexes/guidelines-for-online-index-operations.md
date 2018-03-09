@@ -15,23 +15,23 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], online operations
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: 64
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: "64"
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
-ms.suite: SQL
-ms.prod_service: database engine, sql database, sql data warehouse
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.service: 
 ms.component: indexes
 ms.workload: On Demand
+ms.openlocfilehash: 2c5e3f669cd2789676e334beedb4e8ee410c5cd6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
-ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>Руководящие принципы для операций с индексами
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   При выполнении операций с индексами в сети придерживайтесь следующих правил.  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 07/31/2017
 -   Неуникальные некластеризованные индексы могут создаваться в режиме в сети, если таблица содержит типы данных больших объектов (LOB), но при этом, ни один из этих столбцов не участвует в определении индекса, ни в качестве ключевого, ни в качестве неключевого столбца.  
   
 -   Индексы локальных временных таблиц не могут создаваться, перестраиваться и удаляться в режиме в сети. Это ограничение не относится к индексам глобальных временных таблиц.
-- Индексы можно возобновить с места остановки после непредвиденного сбоя, отработки отказа базы данных или команды **PAUSE**. См. раздел [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Этот компонент находится в общедоступной предварительной версии для SQL Server 2017 и базы данных SQL Azure.
+- Индексы можно возобновить с места остановки после непредвиденного сбоя, отработки отказа базы данных или команды **PAUSE**. См. раздел [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
 > [!NOTE]  
 >  Операции с индексами в сети доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список функций, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в [этой статье](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -95,20 +95,18 @@ ms.lasthandoff: 07/31/2017
 ## <a name="resumable-index-rebuild-considerations"></a>Вопросы перестроения возобновляемого индекса
 
 > [!NOTE]
-> См. раздел [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Этот компонент находится в общедоступной предварительной версии для SQL Server 2017 и базы данных SQL Azure.
->
+> Возобновляемый индекс применяется к SQL Server (начиная с SQL Server 2017) и базе данных SQL. См. раздел [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
 При перестраивании возобновляемого индекса в режиме "в сети" следует учитывать следующие рекомендации:
 -   Управление, планирование и разворачивание окна обслуживания индексов. Операцию перестраивания индексов в периоды обслуживания можно приостанавливать и снова запускать многократно.
 - Восстановление после сбоев при перестроении индекса (например, при переходе на другую базу данных или нехватке места на диске).
 - При приостановке операции с индексами исходный и вновь созданный индекс требуют места на диске и обновления во время операций DML.
 
-- Возможность усекать журналы усечений во время операции перестроения индекса (выполнение этой операции для регулярной операции с индексами в сети невозможно).
+- Возможность усекать журналы транзакций во время перестроения индекса (выполнение этой операции для регулярной операции с индексами в сети невозможно).
 - Параметр SORT_IN_TEMPDB = ON не поддерживается.
 
 > [!IMPORTANT]
-> Возобновляемые перестроения не требуют открытого долгосрочного усечения, что позволяет усекать журналы во время этой операции и управлять пространством в журнале более эффективно. Новая структура позволяет хранить необходимые данные в базе данных вместе со всеми ссылками, необходимыми для перезапуска возобновляемой операции.
->
+> Возобновляемые перестроения не требуют открытых долгосрочных транзакций, что позволяет усекать журналы во время этой операции и управлять пространством в журнале более эффективно. Новая структура позволяет хранить необходимые данные в базе данных вместе со всеми ссылками, необходимыми для перезапуска возобновляемой операции.
 
 Как правило, возобновляемые и невозобновляемые операции перестроения индекса в режиме "в сети" выполняются с одинаковой производительностью. Если возобновляемый индекс обновляется, пока операция перестроения индекса приостановлена:
 - Для рабочей нагрузки, связанной в основном с чтением, производительность существенно не снижается. 
@@ -121,9 +119,8 @@ ms.lasthandoff: 07/31/2017
   
  [Выполнение операции с индексами в сети](../../relational-databases/indexes/perform-index-operations-online.md)  
   
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
+ [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   
-

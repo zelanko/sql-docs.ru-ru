@@ -1,32 +1,35 @@
 ---
-title: "Сопоставление столбцов с составными доменами | Документы Microsoft"
+title: "Сопоставление столбцов с составными доменами | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8a8f24f9808d184229cb85be5ddc88d0102f2ee7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: f8fb2e38ea252928a84dfaa8404d1b29b0bb6f33
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="map-columns-to-composite-domains"></a>Сопоставление столбцов с составными доменами
   Составной домен состоит из нескольких одиночных доменов. Домену можно сопоставить несколько столбцов или один столбец с разделенными значениями.  
   
- При наличии нескольких столбцов столбец должен сопоставляться с каждым доменом из составного домена, чтобы применить правила составного домена к очистке данных. Отдельные домены, содержащиеся в составном домене, выбираются в клиенте DQS. Дополнительные сведения см. в разделе [Create a Composite Domain](../../../data-quality-services/create-a-composite-domain.md).  
+ При наличии нескольких столбцов столбец должен сопоставляться с каждым доменом из составного домена, чтобы применить правила составного домена к очистке данных. Отдельные домены, содержащиеся в составном домене, выбираются в клиенте DQS. Дополнительные сведения см. в статье [Создание составного домена](../../../data-quality-services/create-a-composite-domain.md).  
   
- При наличии одного столбца с разделенными значениями его необходимо сопоставить с составным доменом. Значение должны быть приведены в том же порядке, в котором отдельные домены находятся в составном домене. В источнике данных должен использоваться такой же разделитель, который используется для синтаксического анализа значений составного домена. Разделитель и другие свойства составного домена задаются в клиенте DQS. Дополнительные сведения см. в разделе [Create a Composite Domain](../../../data-quality-services/create-a-composite-domain.md).  
+ При наличии одного столбца с разделенными значениями его необходимо сопоставить с составным доменом. Значение должны быть приведены в том же порядке, в котором отдельные домены находятся в составном домене. В источнике данных должен использоваться такой же разделитель, который используется для синтаксического анализа значений составного домена. Разделитель и другие свойства составного домена задаются в клиенте DQS. Дополнительные сведения см. в статье [Создание составного домена](../../../data-quality-services/create-a-composite-domain.md).  
   
 ### <a name="to-map-multiple-columns-to-a-composite-domain"></a>Сопоставление нескольких столбцов с составным доменом  
   
@@ -56,7 +59,7 @@ ms.lasthandoff: 08/03/2017
   
 6.  Задайте необходимые свойства на вкладке **Дополнительно** . Дополнительные сведения об этих свойствах см. в разделе [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md).  
   
-## <a name="see-also"></a>См. также  
- [Преобразование очистки DQS](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
+## <a name="see-also"></a>См. также:  
+ [Преобразование "Очистка DQS"](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   
   

@@ -2,35 +2,35 @@
 title: "Создание схемы базы данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/05/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.schemas.general.f1
+f1_keywords: sql13.swb.schemas.general.f1
 helpviewer_keywords:
 - creating schemas with Management Studio
 - CREATE SCHEMA [Management Studio]
 - database schemas
 - schemas [SQL Server], creating
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 67fa7df893601b65f5c27d55c4007386672d9e17
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 3a224f5be40f6f7a68a28cb4c8f741c24527e8bd
-ms.openlocfilehash: b164e70bf4b1e7586d8e70ab8edb7baa1dfcaade
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-a-database-schema"></a>Создание схемы базы данных
-  В этом разделе описывается создание схемы в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этом разделе описывается создание схемы в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   
@@ -118,4 +118,3 @@ ms.lasthandoff: 07/31/2017
  Дополнительные сведения см. в разделе [CREATE SCHEMA (Transact-SQL)](../../../t-sql/statements/create-schema-transact-sql.md).  
   
   
-

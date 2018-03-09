@@ -2,27 +2,30 @@
 title: "Привязке базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
-caps.latest.revision: 24
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ca8ec6e27aebf60ba155580e505f0c338ff61348
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 1300401509e5f7ced67ba8c9dcb81f9b5d1ae77a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>привязать базу данных с таблицами, оптимизированными для памяти, к пулу ресурсов
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+# <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Пул ресурсов представляет подмножество физических ресурсов, доступных для управления. По умолчанию базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] привязываются к пулу и потребляют ресурсы пула по умолчанию. Чтобы защитить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от использования его ресурсов одной или несколькими оптимизированными для памяти таблицами, а также чтобы другие потребители не занимали память, необходимую таким таблицам, рекомендуется создать отдельный пул ресурсов для управления использованием памяти для базы данных с оптимизированными для памяти таблицами.  
   
@@ -60,7 +63,7 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="bkmk_CreateDatabase"></a> Создайте базу данных  
  Следующая инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] создает базу данных с именем IMOLTP_DB, которая будет содержать одну или несколько таблиц, оптимизированных для памяти. Путь \<driveAndPath> должен существовать до выполнения этой команды.  
   
-```tsql  
+```sql  
 CREATE DATABASE IMOLTP_DB  
 GO  
 ALTER DATABASE IMOLTP_DB ADD FILEGROUP IMOLTP_DB_fg CONTAINS MEMORY_OPTIMIZED_DATA  
@@ -94,7 +97,7 @@ GO
   
  Следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] создает пул ресурсов с именем Pool_IMOLTP, в котором для использования будет доступно 50 % памяти.  После создания пула регулятор ресурсов настраивается для включения Pool_IMOLTP.  
   
-```tsql  
+```sql  
 -- set MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to the same value  
 CREATE RESOURCE POOL Pool_IMOLTP   
   WITH   
@@ -111,7 +114,7 @@ GO
   
  Следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] определяет привязку базы данных IMOLTP_DB к пулу ресурсов Pool_IMOLTP. Привязка не вступит в силу до тех пор, пока база данных не будет переведена в режим запуска.  
   
-```tsql  
+```sql  
 EXEC sp_xtp_bind_db_resource_pool 'IMOLTP_DB', 'Pool_IMOLTP'  
 GO  
 ```  
@@ -121,7 +124,7 @@ GO
 ##  <a name="bkmk_ConfirmBinding"></a> Подтвердите привязку  
  Подтвердите привязку, указав идентификатор пула ресурсов для IMOLTP_DB. Он не должен принимать значение NULL.  
   
-```tsql  
+```sql  
 SELECT d.database_id, d.name, d.resource_pool_id  
 FROM sys.databases d  
 GO  
@@ -130,7 +133,7 @@ GO
 ##  <a name="bkmk_MakeBindingEffective"></a> Сделайте привязку эффективной  
  Необходимо вывести базу данных из сети, а затем снова вернуть в сеть после ее привязки к пулу ресурсов, чтобы привязка вступила в силу. Если база данных была ранее привязана к другому пулу, то перезапуск базы данных удаляет выделенную память из предыдущего пула ресурсов, после этого память будет выделяться для оптимизированных для памяти таблиц и индексов пула ресурсов, только что привязанного к базе данных.  
   
-```tsql  
+```sql  
 USE master  
 GO  
   
@@ -154,7 +157,7 @@ GO
   
  **Образец кода**  
   
-```tsql  
+```sql  
 ALTER RESOURCE POOL Pool_IMOLTP  
 WITH  
      ( MIN_MEMORY_PERCENT = 70,  
@@ -183,7 +186,7 @@ GO
   
  После привязки базы данных к указанному пулу ресурсов выполните следующий запрос, чтобы узнать объем выделенной памяти в разных пулах ресурсов.  
   
-```tsql  
+```sql  
 SELECT pool_id  
      , Name  
      , min_memory_percent  
@@ -214,11 +217,10 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
 ## <a name="see-also"></a>См. также:  
  [sys.sp_xtp_bind_db_resource_pool (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)   
- [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
+ [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
  [Пул ресурсов регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Создание пула ресурсов](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [Изменение параметров пула ресурсов](../../relational-databases/resource-governor/change-resource-pool-settings.md)   
  [Удаление пула ресурсов](../../relational-databases/resource-governor/delete-a-resource-pool.md)  
   
   
-

@@ -1,11 +1,13 @@
 ---
-title: "? : (Условный) (выражение служб SSIS) | Документы Microsoft"
-ms.custom:
-- ssisdev020617
+title: "? : (условный) (выражение служб SSIS) | Документы Майкрософт"
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-caps.latest.revision: 49
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 311168388a44f5a42118a7bd496ead4228338496
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e31c28e72bfcb23cc6f571ef38f85345c28e060e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="--conditional-ssis-expression"></a>? : (условный) (выражение служб SSIS)
   Возвращает одно из двух выражений на основе вычисления логического выражения. Если логическое выражение принимает значение TRUE, то возвращается результат вычисления первого выражения. Если логическое выражение принимает значение FALSE, возвращается результат вычисления второго выражения.  
@@ -50,7 +51,7 @@ boolean_expression?expression1:expression2
 ## <a name="result-types"></a>Типы результата  
  Тип данных *expression1* или *expression2*.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если выражение *boolean_expression* имеет значение NULL, результат тоже будет иметь значение NULL. Если выбранное выражение, будь то *expression1* или *expression2* , принимает значение NULL, результат также примет значение NULL. Если выбранное выражение не равно NULL, а невыбранное равно NULL, результатом будет значение выбранного выражения.  
   
  Если *expression1* и *expression2* имеют одинаковый тип данных, у результата тоже будет этот тип данных. Следующие дополнительные правила применяются к типам результатов:  
@@ -103,9 +104,8 @@ boolean_expression?expression1:expression2
 ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Приоритет и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Операторы &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>См. также:  
+ [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

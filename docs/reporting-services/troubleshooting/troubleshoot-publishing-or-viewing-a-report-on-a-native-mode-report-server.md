@@ -1,27 +1,27 @@
 ---
-title: "Устранение неполадок публикация или просмотр отчета на сервер отчетов в собственном режиме | Документы Microsoft"
+title: "Устранение неполадок с публикацией и просмотром отчетов на сервере отчетов, работающем в собственном режиме | Документы Майкрософт"
 ms.custom: 
 ms.date: 02/28/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c0c974553c7c05fdbf853be1a2028c30eaffc3b2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2e25f72eddf16b1cbb868f0e944a803df0f40340
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>Устранение неполадок с публикацией и просмотром отчетов на сервере отчетов, работающем в основном режиме
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 08/09/2017
  ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>Ничего не происходит при переключении элементов в опубликованном отчете  
   При просмотре отчета в локальном окне предварительного просмотра можно переключать элементы в отчете, отображать и скрывать эти элементы. А при просмотре того же отчета после его публикации на сервере отчетов переключаемые элементы больше не работают.   
   
-\<Имя сервера отчетов > содержит символ подчеркивания (_)  
+\<Имя сервера отчетов> содержит символ подчеркивания (_)  
   
 Если отчет выполняется без ошибок, но не работают переключаемые элементы (например, при щелчке значка развертывания (+) ничего не происходит), проверьте имя компьютера, на котором установлен сервер отчетов. Если имя компьютера содержит символ подчеркивания, переключаемые элементы работать не будут. Это известная проблема и решить ее невозможно.   
   
@@ -57,14 +57,13 @@ ms.lasthandoff: 08/09/2017
   
 Проверьте наличие разрешения на доступ к папкам, которые содержат кэшированные файлы.   
     
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Поддержка браузера для служб Reporting Services и Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Справочник по ошибкам и событиям (службы Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-[Устранение неполадок при извлечении данных с помощью отчетов служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
+[Устранение неполадок с извлечением данных с помощью отчетов служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Устранение неполадок, связанных с подписками и доставкой служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

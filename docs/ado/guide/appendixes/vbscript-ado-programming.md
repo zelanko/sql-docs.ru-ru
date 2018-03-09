@@ -3,7 +3,7 @@ title: "Программирование ADO VBScript | Документы Micro
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - ADO, VBScript
 - VBScript [ADO]
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: f725eec0027d1c06715b72785a1fe06a4fa4cedb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bc40ecab95aa419ac81ada509133de6dd108a823
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="vbscript-ado-programming"></a>Программирование ADO VBScript
 ## <a name="creating-an-ado-project"></a>Создание проекта ADO  
@@ -92,4 +91,3 @@ Response.Write("Success!")
 -   Нельзя использовать **на ошибки goto \<label >** в VBScript.  
   
 -   VBScript поддерживает некоторые встроенные функции Visual Basic, такие как **Msgbox**, **даты**, и **IsNumeric**. Тем не менее так как VBScript является подмножеством Visual Basic, поддерживаются не все встроенные функции. Например, VBScript не поддерживает **формат** функции и функций файлового ввода-вывода.
-

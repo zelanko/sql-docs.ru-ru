@@ -3,8 +3,11 @@ title: "СУЩЕСТВУЕТ (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - NOT EXISTS keyword
 - row existence testing [SQL Server]
 ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
-caps.latest.revision: 44
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c620baae23d9cab28142ee890ee103edbe2ee114
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 40abe8ec35a89a51ecfb3d2100ffb47a40c58f23
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="exists-transact-sql"></a>EXISTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Указывает вложенный запрос для проверки существования строк.  
   
@@ -50,7 +52,7 @@ EXISTS ( subquery )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *вложенный запрос*  
+ *subquery*  
  Ограниченная инструкция SELECT. Ключевое слово INTO не допускается. Дополнительные сведения см. в разделе о вложенных запросах в [ВЫБЕРИТЕ &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="result-types"></a>Типы результата  
@@ -330,12 +332,11 @@ WHERE NOT EXISTS
     WHERE (a.LastName = b.LastName) AND (a.BirthDate = b.BirthDate));  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
  [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-
 
 

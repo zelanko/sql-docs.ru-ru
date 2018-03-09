@@ -3,8 +3,11 @@ title: "DATEPART (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,20 +29,19 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-caps.latest.revision: 57
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 05547f2dd50d7f130438d6a07b6952b8c29ec816
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a972e0646d68620b915fe441e35ebfb617d06859
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Возвращает целое число, представляющее указанную *datepart* указанного *даты*.
   
@@ -134,7 +136,7 @@ DATEPART ( datepart , date )
 |Первый день недели|Содержание первой недели года|Двойное присвоение недель|Применяется в:|  
 |---|---|---|---|
 |Воскресенье|1 января,<br /><br /> Первая суббота,<br /><br /> 1–7 дней года|Да|United States|  
-|Понедельник|1 января,<br /><br /> Первое воскресенье,<br /><br /> 1–7 дней года|Да|Большинство стран Европы, а также Великобритания|  
+|Понедельник|1 января,<br /><br /> Первое воскресенье,<br /><br /> 1–7 дней года|Да|Большинство стран Европы, а также Соединенное Королевство|  
 |Понедельник|4 января<br /><br /> Первый четверг<br /><br /> 4 — 7 дней года|Нет|ISO 8601, Норвегия и Швеция|  
 |Понедельник|7 января<br /><br /> Первый понедельник<br /><br /> 7 дней года|Нет||  
 |Среда|1 января,<br /><br /> Первый вторник,<br /><br /> 1–7 дней года|Да||  
@@ -231,4 +233,3 @@ SELECT TOP(1) DATEPART (year,'12/20/1974') FROM dbo.DimCustomer;
 [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   
-

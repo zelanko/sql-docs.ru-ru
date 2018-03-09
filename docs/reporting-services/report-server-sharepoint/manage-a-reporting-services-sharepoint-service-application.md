@@ -1,38 +1,38 @@
 ---
-title: "Управление приложением SharePoint службы Reporting Services | Документы Microsoft"
+title: "Управление приложением службы SharePoint — Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: afd3ad49ecc3ff34938974a685a7695c09776762
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 9c73f9685bd5f340376d95191730fecaf7e54dbf
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="manage-a-reporting-services-sharepoint-service-application"></a>Управление приложением службы Reporting Services SharePoint
+# <a name="manage-a-reporting-services-sharepoint-service-application"></a>Управление приложением службы SharePoint — Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Управление приложениями службы из центра администрирования SharePoint. Страницы управления и свойств позволяют обновлять конфигурацию приложения службы, а также выполнять типовые административные задачи.  
+  Управление приложениями служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] осуществляется из центра администрирования SharePoint. Страницы управления и свойств позволяют обновлять конфигурацию приложения службы, а также выполнять типовые административные задачи.  
 
 > [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
 
-## <a name="open-service-application-properties-page"></a>Страницы свойств приложения откройте службы
+## <a name="open-service-application-properties-page"></a>Открытие страницы свойств приложения службы
 
  Чтобы открыть страницу свойств для приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , выполните следующие действия.  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 10/06/2017
   
  Дополнительную информацию относительно параметров служебных приложений смотрите в [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
-## <a name="open-service-application-management-pages"></a>Службы, откройте страницы управления приложением
+## <a name="open-service-application-management-pages"></a>Открытие страниц управления приложением службы
 
  Чтобы открыть страницы управления для приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , выполните следующие действия.  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 10/06/2017
   
 3.  Другой вариант: можно щелкнуть рядом с именем или в столбце **типа** для приложения службы, что приведет к выбору всей строки, затем щелкнуть **Управление** на ленте SharePoint.  
   
-## <a name="system-settings-page"></a>Страница параметров настройки системы
+## <a name="system-settings-page"></a>Страница параметров системы
 
  Страница системных настроек позволяет настраивать поведение и интерфейс приложения службы, включая различные виды времени ожидания.
   
@@ -75,11 +75,11 @@ ms.lasthandoff: 10/06/2017
 |Использование файлов cookie сеанса|Значение по умолчанию — TRUE.|  
 |Время ожидания отчета EDLX|По умолчанию — 1800 секунд.|  
   
-### <a name="system-settings-for-logging"></a>Системные параметры ведения журнала
+### <a name="system-settings-for-logging"></a>Параметры системы для ведения журналов
   
 |Настройка|Комментарии|  
 |-------------|--------------|  
-|Включение ведения журнала выполнения|Значение по умолчанию — TRUE.<br /><br /> задать, должны ли сервером отчетов создаваться журналы трассировки, а также задать число дней для хранения журнала. . Журналы сохраняются на компьютере сервера отчетов в папке \Microsoft SQL Server\MSSQL.n\ReportServer\Log. При каждом перезапуске службы начинается запись нового файла журнала. Дополнительные сведения о файлах журналов см. в разделе [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
+|Включение ведения журнала выполнения|Значение по умолчанию — TRUE.<br /><br /> задать, должны ли сервером отчетов создаваться журналы трассировки, а также задать число дней для хранения журнала. , и делает это по-другому. Журналы сохраняются на компьютере сервера отчетов в папке \Microsoft SQL Server\MSSQL.n\ReportServer\Log. При каждом перезапуске службы начинается запись нового файла журнала. Дополнительные сведения о файлах журналов см. в разделе [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |Дни хранения журнала выполнения|Значение по умолчанию — 60 суток.|  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживают ведение журнала SharePoint ULS.  Дополнительные сведения см. в разделе [Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
@@ -93,12 +93,12 @@ ms.lasthandoff: 10/06/2017
 |Включение отслеживание удаленных ошибок|По умолчанию значение — False|  
 |Включение подробных описаний ошибок тестового подключения|Значение по умолчанию — TRUE.|  
   
-### <a name="client-settings"></a>Параметры клиента
+### <a name="client-settings"></a>Параметры клиентов
   
 |Настройка|Комментарии|  
 |-------------|--------------|  
 |Включение загрузки построителя отчетов|Значение по умолчанию — TRUE.<br /><br /> Устанавливает, видят ли клиенты кнопку загрузки приложения построителя отчетов.|  
-|URL-адрес для запуска построителя отчетов|Если сервер отчетов не использует URL-адрес построителя отчетов по умолчанию, укажите пользовательский URL-адрес. Использовать не обязательно. Если значение не указано, будет использован URL-адрес по умолчанию, который запускает построитель отчетов. Чтобы запустить построитель отчетов 3.0 как щелчок-приложение, введите следующее значение: http://\<имя_компьютера > / ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
+|URL-адрес для запуска построителя отчетов|Если сервер отчетов не использует URL-адрес построителя отчетов по умолчанию, укажите пользовательский URL-адрес. Использовать не обязательно. Если значение не указано, будет использован URL-адрес по умолчанию, который запускает построитель отчетов. Чтобы запустить построитель отчетов 3.0 как приложение ClickOnce, введите следующее значение: http://\<имя_компьютера>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
 |Включение печати на стороне клиента|Значение по умолчанию — True.<br /><br /> Указывает, могут ли пользователи загружать стороне клиент элемента управления, который обеспечивает параметры печати.|  
 |Редактирование времени ожидания сеанса|По умолчанию — 7200 секунд.|  
 |Лимит кэша сеанса изменения|Значение по умолчанию — 5.|  
@@ -107,7 +107,7 @@ ms.lasthandoff: 10/06/2017
 
  Можно также просматривать и удалять работающие задания, например задания, созданные подписками на отчеты и подписками, управляемыми данными. Эта страница используется не для управления подписками, а для заданий, активируемых подпиской. Например, подписка, запланированная на выполнение один раз в час, каждый час формирует задание, которое появляется на странице **Управление заданиями** .  
   
- ![управлять выполнением заданий](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "управлять выполнением заданий")  
+ ![управление выполняющимися заданиями](../../reporting-services/report-server-sharepoint/media/ssrs-manage-jobs.gif "управление выполняющимися заданиями")  
   
 ## <a name="key-management"></a>Управление ключами
  В следующей таблице указаны страницы управления ключами  
@@ -136,7 +136,7 @@ ms.lasthandoff: 10/06/2017
 
  Можно использовать любую учетную запись пользователя Windows. Для получения наилучших результатов выберите учетную запись, имеющую разрешения на чтение и на вход в сеть, для поддержки соединений с другими компьютерами. Эта учетная запись должна обладать разрешениями на чтение для любого внешнего файла изображения или данных, который необходимо использовать в отчете. Не следует определять локальную учетную запись, если все источники данных и внешние изображения, предназначенные для отчета, не хранятся на компьютере сервера отчетов. Используйте эту учетную запись только для автоматической обработки отчетов.  
 
- ### <a name="powershell-command"></a>Команды PowerShell
+ ### <a name="powershell-command"></a>Команда PowerShell
 
  Следующий пример показывает, как команда PowerShell вернет список служебных приложений [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] со свойством UEAccount:  
 
@@ -152,7 +152,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  Выделите учетную запись.  
   
  **Учетная запись**  
- Введите учетную запись пользователя домена Windows Используйте следующий формат:  *\<домена >\\< учетной записи пользователя\>*.  
+ Введите учетную запись пользователя домена Windows в следующем формате: *\<домен>\\<учетная запись пользователя\>*.  
   
  **Пароль**  
  Задайте пароль.  
@@ -175,7 +175,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  **Адрес отправителя**  
  Указывает адрес электронной почты для поля «От» создаваемого сообщения. Необходимо указать учетную запись, имеющую разрешение на передачу почтовых сообщений из SMTP-сервера.  
 
-## <a name="provision-subscriptions-and-alerts"></a>Подготовка подписок и предупреждений
+## <a name="provision-subscriptions-and-alerts"></a>Подготовка подписок и оповещений
 
  Эту страницу можно использовать, чтобы убедиться, запущен ли агент SQL Server, а также чтобы предоставить для служб reporting services доступ к агенту SQL Server. Агент SQL Server необходим для подписок, расписаний и предупреждений об изменении данных в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [Подготовка подписок и предупреждений для приложений служб SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
 
@@ -194,4 +194,3 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 5.  Установите флажок для учетной записи-посредника и нажмите кнопку **ОК**.  
   
 Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

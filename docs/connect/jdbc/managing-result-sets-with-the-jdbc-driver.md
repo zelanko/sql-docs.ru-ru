@@ -3,24 +3,25 @@ title: "Управление результирующими наборами с 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ed5ad41-22e0-4e4a-8a79-10512db60d50
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5cf61ff8794270ca5706284118c41c224bd5518f
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e17e39f8a83313a60b269fed82631b80f07ffed5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="managing-result-sets-with-the-jdbc-driver"></a>Управление результирующими наборами с помощью драйвера JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,11 +41,10 @@ ms.lasthandoff: 09/09/2017
 |Раздел|Description|  
 |-----------|-----------------|  
 |[Основные сведения о типах курсоров](../../connect/jdbc/understanding-cursor-types.md)|Описывает различные типы курсоров, которые [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает.|  
-|[Основные сведения о управление параллелизмом](../../connect/jdbc/understanding-concurrency-control.md)|Описывает, как драйвер JDBC поддерживает управление параллелизмом.|  
+|[Общие сведения об управлении параллелизмом](../../connect/jdbc/understanding-concurrency-control.md)|Описывает, как драйвер JDBC поддерживает управление параллелизмом.|  
 |[Основные сведения о блокировке строк](../../connect/jdbc/understanding-row-locking.md)|Описывает, как драйвер JDBC поддерживает блокировку строк.|  
   
 ## <a name="see-also"></a>См. также:  
  [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

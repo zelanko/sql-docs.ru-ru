@@ -3,7 +3,7 @@ title: "Type-свойство (таблица) (ADOX) | Документы Micro
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADOX]
 ms.assetid: 7b6e14bb-fb69-4d74-aaca-f5d380f4d887
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4688b88d1bb4397c3e270d868fc0879ec56b5a2f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 926de41ebc897235f336eb00cf5754fb0a54e94b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="type-property-table-adox"></a>Свойство Type (таблица) (ADOX)
 Указывает тип таблицы.  
@@ -38,16 +37,15 @@ ms.lasthandoff: 09/09/2017
 ## <a name="return-values"></a>Возвращаемые значения  
  Возвращает **строка** значение, указывающее тип таблицы; например, «TABLE», «СИСТЕМНАЯ таблица» или «Глобальный ВРЕМЕННЫЙ».  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Это свойство предназначено только для чтения.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект таблицы (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+ [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства ActiveConnection каталога (Visual Basic)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [Подключение метода закрытия, пример свойство типа таблицы (Visual Basic)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
  [Свойство Type (столбец) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
  [Свойство Type (ключ) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
- [Объект таблицы (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
-
+ [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

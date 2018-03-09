@@ -2,9 +2,12 @@
 title: "Указание действия в точке останова | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,19 +18,19 @@ helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
 - Transact-SQL debugger, breakpoint when hit action
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
-caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1594f724e5020c1678812ff74c55bb1fefe5bf5e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 543b2919c801ed6af696a31114bf840eff9cae05
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="specify-a-breakpoint-action"></a>Задание действия в точке останова
-  Действие точки останова **При попадании** задает пользовательское действие, которое отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняет для точки останова. Если достигнуто указанное число попаданий или удовлетворяется любое из указанных условий для точки останова, то отладчик выполняет действие, заданное для точки останова.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Действие точки останова **При попадании** задает настраиваемую задачу, которую отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняет для точки останова. Если достигнуто указанное число попаданий или удовлетворяется любое из указанных условий для точки останова, то отладчик выполняет действие, заданное для точки останова.  
   
 ##  <a name="BKMK_ActionConsiderations"></a> Обзор действий  
  Действие для точки останова по умолчанию — прекращение выполнения, если достигнуто число попаданий и удовлетворяется условие для точки останова. А действие **При попадании** в отладчике [!INCLUDE[tsql](../../includes/tsql-md.md)] , напротив, главным образом используется для вывода информации в окне отладчика **Вывод** в виде сообщения.  
@@ -46,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
     4.  $FUNCTION возвращает имя хранимой процедуры или определяемой пользователем функции, для которой установлена точка останова. Если точка останова задана в окне редактора, $FUNCTION возвращает имя редактируемого файла скрипта.  
   
-    5.  $PID и $PNAME возвращают идентификатор и имя процесса операционной системы, выполняющего экземпляр ядра СУБД, где выполняется [!INCLUDE[tsql](../../includes/tsql-md.md)]. $PID возвращает такой же идентификатор, что и SERVERPROPERTY("ProcessID"), за исключением того, что $PID имеет шестнадцатеричное, а SERVERPROPERTY("ProcessID") — десятичное значение.  
+    5.  $PID и $PNAME возвращают идентификатор и имя процесса операционной системы, выполняющего экземпляр компонента Database Engine, где выполняется [!INCLUDE[tsql](../../includes/tsql-md.md)] . $PID возвращает такой же идентификатор, что и SERVERPROPERTY("ProcessID"), за исключением того, что $PID имеет шестнадцатеричное, а SERVERPROPERTY("ProcessID") — десятичное значение.  
   
     6.  $TID и $TNAME возвращают идентификатор и имя потока операционной системы, в котором выполняется пакет [!INCLUDE[tsql](../../includes/tsql-md.md)] . Этот поток связан с процессом, в котором выполняется экземпляр ядра СУБД. $TID возвращает такое же значение, как и инструкция SELECT kpid FROM sys.sysprocesses WHERE spid = @@SPID, за одним исключением: $TID содержит шестнадцатеричное значение, а kpid — десятичное.  
   

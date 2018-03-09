@@ -1,10 +1,13 @@
 ---
-title: "Шаг 8: Облегчение пакета занятия 1 | Документы Microsoft"
+title: "Шаг 8. Облегчение чтения пакета, созданного на занятии 1 | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,22 +15,21 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-caps.latest.revision: 18
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 55bd386054f3a7d066dc8c28c13e22ae82e9f0cb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a8a576339c4365a266439c4d70cf64ba49670204
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>Занятие 1-8. Облегчение пакета занятия 1
+# <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>Занятие 1–8. Облегчение чтения пакета, созданного на занятии 1
 После завершения настройки пакета, созданного на занятии 1, можно приступить к приведению его макета в порядок. Если фигуры в макетах элементов управления и потока данных имеют случайные размеры или если эти элементы не упорядочены или не сгруппированы, то функциональность пакета трудно понять.  
   
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools предоставляет средства, которые облегчают и ускоряют форматирование макета пакета. К функциям форматирования относится возможность создавать элементы одного размера, выравнивать их, а также управлять горизонтальным и вертикальным пространством между элементами.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools предоставляет средства, которые облегчают и ускоряют форматирование макета пакета. К функциям форматирования относится возможность создавать элементы одного размера, выравнивать их, а также управлять горизонтальным и вертикальным пространством между элементами.   
   
 Другим способом добиться лучшего понимания функциональности пакета является добавление заметок, описывающих функциональность пакета.  
   
@@ -57,9 +59,8 @@ ms.lasthandoff: 09/26/2017
   
     Если в окне заметки не введен никакой текст, то окно закрывается при щелчке за его пределами.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 [Шаг 9. Проверка учебного пакета, созданного на занятии 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   
   
-

@@ -3,8 +3,11 @@ title: "Каковы функции базы данных Microsoft SQL | Док
 ms.custom: 
 ms.date: 06/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - scalar functions
 - functions [SQL Server]
 ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
-caps.latest.revision: 38
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 53a2a1be1099b2224b14f8c8d856b7ae07d42ac6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: fa55a0b066db617ef0d6f2f0471ad6866cac2d73
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="what-are-the-sql-database-functions"></a>Каковы функции базы данных SQL
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
 Дополнительные сведения о категории встроенных функций, которые можно использовать с базами данных SQL. Можно использовать встроенные функции или создать собственные пользовательские функции.
   
@@ -88,4 +90,3 @@ ms.lasthandoff: 09/01/2017
  [С помощью хранимых процедур &#40; Многомерные Выражения &#41;](../../mdx/using-stored-procedures-mdx.md)  
   
   
-

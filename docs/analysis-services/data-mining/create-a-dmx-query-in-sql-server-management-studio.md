@@ -2,12 +2,13 @@
 title: "Создать запрос расширений интеллектуального анализа данных в SQL Server Management Studio | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - queries [DMX], prediction queries
 - mining models [Analysis Services], DMX
 ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
-caps.latest.revision: 43
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: edb3f0ab17369a4a1df4a69d80e07bfa1ff84012
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 51a8ea188eb54adf0ac208225dd7c5fda417178c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Создание DMX-запроса в среде SQL Server Management Studio
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет набор возможностей, упрощающих создание прогнозирующих запросов, запросов содержимого и запросов определения данных к моделям интеллектуального анализа данных и структурам интеллектуального анализа данных.  
   
 -   В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]доступен графический построитель прогнозирующих запросов, упрощающий написание прогнозирующих запросов и сопоставление наборов данных с моделью.  
@@ -86,13 +87,12 @@ ms.lasthandoff: 09/01/2017
   
  Примеры создания отдельных типов запросов из шаблонов см. в следующих разделах.  
   
- [создать одноэлементный прогнозирующий запрос из шаблона](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
+ [Создание одноэлементного прогнозирующего запроса из шаблона](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
   
- [Создание запроса содержимого к модели интеллектуального анализа данных](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
+ [Создание запроса содержимого модели интеллектуального анализа данных](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
   
 ## <a name="see-also"></a>См. также  
  [Средства запросов интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Ссылка](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   
-

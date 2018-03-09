@@ -1,10 +1,13 @@
 ---
-title: "Отладка потока данных | Документы Microsoft"
+title: "Отладка потока данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -16,17 +19,16 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-caps.latest.revision: 43
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 7502a4c00ff680dd372114debbfc4d8de4067da3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3491077486daf90c414a00eec3d382ae1537284a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="debugging-data-flow"></a>Отладка потока данных
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] содержат функции и средства, используемые для исправления ошибок в потоках данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -173,7 +175,7 @@ order by source_component_name desc
   
 4.  Щелкните правой кнопкой мыши компонент, столбцы вывода ошибок которого необходимо настроить, и выберите пункт **Показать расширенный редактор**.  
   
-5.  Нажмите кнопку **свойства входов и выходов** и разверните  **\<имя компонента > Выход ошибок** и разверните **выходные столбцы**.  
+5.  Откройте вкладку **Свойства входов и выходов** и разверните узлы **Вывод ошибок \<имя компонента>** и **Выходные столбцы**.  
   
 6.  Щелкните столбец и обновите его свойства.  
   
@@ -250,7 +252,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  Параметр dataflow_path_id_string хранимой процедуры add_data_tap соответствует свойству IdentificationString задания пути потока данных, к которому следует добавить отвод данных. Чтобы получить dataflow_path_id_string, щелкните по пути потока данных (стрелка между задачами в потоке данных) и отметьте значение свойства **IdentificationString** в окне свойств.  
   
- При выполнении скрипта выходной файл хранится в \<Program Files > \Microsoft SQL Server\110\DTS\DataDumps. Если уже существует файл с таким именем, будет создан новый файл с суффиксом (например, output[1].txt).  
+ При выполнении скрипта выходной файл сохраняется в папке \<Program Files>\Microsoft SQL Server\110\DTS\DataDumps. Если уже существует файл с таким именем, будет создан новый файл с суффиксом (например, output[1].txt).  
   
  Как упоминалось ранее, также вместо использования хранимой процедуры add_data_tap можно применить хранимую процедуру [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md). Эта хранимая процедура принимает в качестве параметра идентификатор задачи потока данных вместо task_package_path. Идентификатор этой задачи потока данных можно узнать в окне «Свойства» среды Visual Studio.  
   
@@ -280,4 +282,3 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md)  
   
   
-

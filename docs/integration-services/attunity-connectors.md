@@ -1,11 +1,14 @@
 ---
-title: "Microsoft Connectors for Oracle and Teradata компании attunity (службы SSIS) | Документы Microsoft"
+title: "Соединители Microsoft для Oracle и Teradata компании Attunity (службы SSIS) | Документы Майкрософт"
 ms.date: 05/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.custom: 
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
@@ -14,38 +17,36 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 926c0c51b5a55a2869b73666f5620fa56e139cca
-ms.openlocfilehash: fd8b0177227167f6caa3417029bb2acb974fe181
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0085e6bac892da01043e76843e51f43be3509cee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>Microsoft Connectors for Oracle and Teradata by Attunity для служб Integration Services (SSIS)
+# <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>Соединители Microsoft для Oracle и Teradata компании Attunity для служб Integration Services (SSIS)
 
-Вы можете загрузить соединители для служб Integration Services от Attunity, оптимизации производительности при загрузке данных из Oracle или Teradata и в пакете служб SSIS.
+Вы можете скачать соединители для служб Integration Services от Attunity, позволяющие оптимизировать производительность при загрузке данных из Oracle или Teradata и в эти системы в пакете служб SSIS.
 
-## <a name="download-the-latest-attunity-connectors"></a>Скачать последнюю соединители компании Attunity
+## <a name="download-the-latest-attunity-connectors"></a>Скачать последние версии соединителей компании Attunity
 
-Получение последней версии соединителей здесь:  
-[Соединители Microsoft версии 5.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=55179)
+Получить последнюю версию соединителей:  
+[Соединители Microsoft версии 5.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=55179)
 
-## <a name="issue---the-attunity-connectors-arent-visible-in-the-ssis-toolbox"></a>Проблема — Attunity соединителей не отображаются в области элементов служб SSIS
+## <a name="issue---the-attunity-connectors-arent-visible-in-the-ssis-toolbox"></a>Проблема. Соединители Attunity не отображаются в панели элементов служб SSIS
 
-Для просмотра Attunity соединителей в область элементов служб SSIS, всегда следует установить версию соединителей, что целевые объекты совпадает с версией сервера SQL Server версии из SQL Server Data Tools (SSDT) установлены на компьютере. (Также может иметь более ранних версий соединителей.) Это требование не зависит от версии SQL Server, вы будете работать в проекты служб SSIS и пакетов.
+Чтобы видеть соединители Attunity в панели элементов служб SSIS, необходимо всегда устанавливать версии соединителей, разработанные для той же версии SQL Server, что и версия SQL Server Data Tools (SSDT), установленная на вашем компьютере. (Также могут быть установлены более ранние версии соединителей.) Это требование не связано с версией SQL Server, на которую ориентированы ваши пакеты и проекты SSIS.
 
-Например при установке последней версии SSDT установлена версия 17 SSDT номером сборки, которая начинается с 14. Эта версия SSDT добавляет поддержку 2017 г. SQL Server. Чтобы видеть и использовать Attunity соединители служб SSIS пакет разработки — даже в том случае, если требуется более раннюю версию SQL Server — также необходимо установить последнюю версию соединителей Attunity версии 5.0. Эта версия соединителей также добавлена поддержка 2017 г. SQL Server.
+Например, если вы установили последнюю версию SSDT, у вас будет версия SSDT 17, номер сборки которой начинается с 14. В этой версии SSDT добавлена поддержка SQL Server 2017. Чтобы видеть и использовать соединители в пакете служб SSIS, даже если разработка осуществлялась для более ранней версии SQL Server, необходимо установить последнюю версию соединителей Attunity (5.0). В этой версии соединителей также добавлена поддержка SQL Server 2017.
 
-Проверьте установленную версию SSDT для Visual Studio из **справки** | **о Microsoft Visual Studio**, или в **программы и компоненты** на панели управления. Затем установите соответствующую версию соединители Attunity из следующей таблицы.
+Проверить установленную версию SSDT можно в Visual Studio в меню **Справка** | **О Microsoft Visual Studio** или в разделе **Программы и компоненты** панели управления. После этого установите соответствующую версию соединителей Attunity, руководствуясь следующей таблицей.
 
 |Версия SSDT|Номер сборки SSDT|Целевая версия SQL Server|Требуемая версия соединителей|
 |---------|---------|---------|---------|
-|17|Начинается с 14|SQL Server 2017|[Соединители Microsoft версии 5.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=55179)|
-|16|Начинается с 13|SQL Server 2016|[Соединители Microsoft версии 4.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=52950)|
+|17|Начинается с 14|SQL Server 2017|[Соединители Microsoft версии 5.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=55179)|
+|16|Начинается с 13|SQL Server 2016|[Соединители Microsoft версии 4.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=52950)|
 ||||
 
-## <a name="download-the-latest-sql-server-data-tools-ssdt"></a>Загрузить последние данные Tools (SSDT) SQL Server
+## <a name="download-the-latest-sql-server-data-tools-ssdt"></a>Скачать последнюю версию SQL Server Data Tools (SSDT)
 
-Получите последнюю версию SSDT здесь:  
+Получить последнюю версию SSDT:  
 [Скачать SQL Server Data Tools (SSDT)](..//ssdt/download-sql-server-data-tools-ssdt.md)
-

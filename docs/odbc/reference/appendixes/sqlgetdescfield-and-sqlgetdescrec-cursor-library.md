@@ -3,27 +3,28 @@ title: "Функция SQLGetDescField и SQLGetDescRec (библиотека к
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLGetDescField function [ODBC], Cursor Library
 - SQLGetDescRec function [ODBC], Cursor Library
 ms.assetid: 1a801f22-6fea-48aa-a723-3187a2ad852b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fcb3d3d3c961bb37dd2e6b2571821748d597a94f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ff32edcc14799980c1d8ec9e05bd27456d71a132
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetdescfield-and-sqlgetdescrec-cursor-library"></a>Функция SQLGetDescField и SQLGetDescRec (библиотека курсоров)
 > [!IMPORTANT]  
@@ -38,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  Библиотека курсоров выполняет **SQLGetDescField** при вызове для возврата значения поля SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE или SQL_DESC_ROW_STATUS_PTR. Эти поля могут быть возвращены для любой строки, не только строки закладки.  
   
  Если приложение вызывает **SQLGetDescField** для возврата всех полей, кроме упомянутых ранее, библиотеку курсоров передает этот вызов к драйверу.
-

@@ -1,29 +1,30 @@
 ---
 title: "Глобальные параметры (диалоговые окна) (MySQLToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 6df20fbb-e92d-475f-a94d-aaf70b06eb9b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d82e6356eca662a09c75f30e0d346a667d6d2343
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 50ed2ce28bcc12896d116c9b95d2481d91bc8838
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-dialogs-mysqltosql"></a>Глобальные параметры (диалоговые окна) (MySQLToSQL)
 Используйте диалоговые окна страницу **глобальные параметры** для указания действий пользователя по умолчанию и параметры предупреждения для SSMA.  
@@ -49,4 +50,3 @@ ms.lasthandoff: 08/02/2017
   
 -   При выборе **False**, SSMA не перезаписывает метаданные объекта во время преобразования.  
   
-

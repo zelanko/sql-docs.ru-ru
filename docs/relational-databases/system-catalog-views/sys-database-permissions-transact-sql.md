@@ -1,0 +1,180 @@
+---
+title: "sys.database_permissions (Transact-SQL) | Документы Microsoft"
+ms.custom: 
+ms.date: 08/11/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: system-catalog-views
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- database_permissions
+- sys.database_permissions_TSQL
+- database_permissions_TSQL
+- sys.database_permissions
+dev_langs: TSQL
+helpviewer_keywords: sys.database_permissions catalog view
+ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
+caps.latest.revision: "50"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: e499f4dbcda2415ee4631585be2de284721bc1ec
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
+---
+# <a name="sysdatabasepermissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  Возвращает по одной строке для каждого разрешения или разрешения-исключения уровня столбца в базе данных. Для столбцов в представлении каталога содержится по одной строке на каждое разрешение, которое отличается от соответствующего разрешения уровня объекта. Если разрешения столбца, которое совпадает со значением соответствующего разрешения объекта, нет строк для него и разрешение применения — имя объекта.  
+  
+> [!IMPORTANT]  
+>  Разрешения уровня столбца переопределяют разрешения уровня объекта на ту же сущность.  
+  
+|Имя столбца|Тип данных|Description|  
+|-----------------|---------------|-----------------|  
+|**класс**|**tinyint**|Указывает класс, на который существует разрешение.<br /><br /> 0 = база данных;<br />1 = объект или столбец<br />3 = схема<br />4 = Участник базы данных<br />5 = сборка — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />6 = Тип<br />10 = коллекция XML-схем — <br />                      **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />15 = Тип сообщения - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />16 = контракт службы - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />17 = Service - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />18 = Привязка удаленной службы - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />19 = маршрут - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />23 = полнотекстовый каталог - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />24 = симметричный ключ — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />25 = сертификата — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />26 = асимметричный ключ - **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**class_desc**|**nvarchar(60)**|Описание класса, на который существует разрешение.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
+|**major_id**|**int**|Идентификатор предмета, на который существует разрешение, интерпретируется в соответствии с классом. Как правило **major_id** просто вид идентификатора, который применяется к представляет класс. <br /><br /> 0 = база данных <br /><br /> > 0 = идентификаторов объектов для пользовательских объектов <br /><br /> \<0 = идентификаторов объектов для системных объектов |  
+|**то столбец minor_id**|**int**|Вторичный идентификатор предмета, на который существует разрешение, интерпретируется согласно классу. Часто **major_id** равен нулю, так как отсутствует не подкатегории для класса объектов. В противном случае — это идентификатор столбца таблицы.|  
+|**grantee_principal_id**|**int**|Идентификатор участника базы данных, которому предоставлено разрешение.|  
+|**grantor_principal_id**|**int**|Идентификатор участника базы данных, который предоставил данное разрешение.|  
+|**type**|**char(4)**|Тип разрешения в базе данных. Список типов разрешений см. в следующей таблице.|  
+|**permission_name**|**nvarchar(128)**|Имя разрешения.|  
+|**состояние**|**char(1)**|Состояние разрешения:<br /><br /> D = запретить<br /><br /> R = отменить<br /><br /> G = предоставить<br /><br /> W = параметр Grant With Grant|  
+|**state_desc**|**nvarchar(60)**|Описание состояния разрешения:<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
+
+## <a name="database-permissions"></a>Разрешения базы данных   
+Возможны следующие типы разрешений.
+  
+|Тип разрешения|Имя разрешения|Применяется к защищаемому объекту|  
+|---------------------|---------------------|--------------------------|  
+|AADS |ALTER ANY DATABASE EVENT SESSION |DATABASE |  
+|AAMK |ALTER ANY MASK |DATABASE |  
+|AEDS |ALTER ANY EXTERNAL DATA SOURCE |DATABASE |  
+|AEFF |ALTER ANY EXTERNAL FILE FORMAT |DATABASE |  
+|AL|ALTER|APPLICATION ROLE, ASSEMBLY, ASYMMETRIC KEY, CERTIFICATE, CONTRACT, DATABASE, FULLTEXT CATALOG, MESSAGE TYPE, OBJECT, REMOTE SERVICE BINDING, ROLE, ROUTE, SCHEMA, SERVICE, SYMMETRIC KEY, USER, XML SCHEMA COLLECTION|  
+|ALAK|ALTER ANY ASYMMETRIC KEY|DATABASE|  
+|ALAR|ALTER ANY APPLICATION ROLE|DATABASE|  
+|ALAS|ALTER ANY ASSEMBLY|DATABASE|  
+|ALCF|ALTER ANY CERTIFICATE|DATABASE|  
+|ALDS|ALTER ANY DATASPACE|DATABASE|  
+|ALED|ALTER ANY DATABASE EVENT NOTIFICATION|DATABASE|  
+|ALFT|ALTER ANY FULLTEXT CATALOG|DATABASE|  
+|ALMT|ALTER ANY MESSAGE TYPE|DATABASE|  
+|ALRL|ALTER ANY ROLE|DATABASE|  
+|ALRT|ALTER ANY ROUTE|DATABASE|  
+|ALSB|ALTER ANY REMOTE SERVICE BINDING|DATABASE|  
+|ALSC|ALTER ANY CONTRACT|DATABASE|  
+|ALSK|ALTER ANY SYMMETRIC KEY|DATABASE|  
+|ALSM|ALTER ANY SCHEMA|DATABASE|  
+|ALSV|ALTER ANY SERVICE|DATABASE|  
+|ALTG|ALTER ANY DATABASE DDL TRIGGER|DATABASE|  
+|ALUS|ALTER ANY USER|DATABASE|  
+|AUTH|AUTHENTICATE|DATABASE|  
+|BADB|BACKUP DATABASE|DATABASE|  
+|BALO|BACKUP LOG|DATABASE|  
+|CL|CONTROL|APPLICATION ROLE, ASSEMBLY, ASYMMETRIC KEY, CERTIFICATE, CONTRACT, DATABASE, FULLTEXT CATALOG, MESSAGE TYPE, OBJECT, REMOTE SERVICE BINDING, ROLE, ROUTE, SCHEMA, SERVICE, SYMMETRIC KEY, TYPE, USER, XML SCHEMA COLLECTION|  
+|CO|CONNECT|DATABASE|  
+|CORP|CONNECT REPLICATION|DATABASE|  
+|CP|CHECKPOINT|DATABASE|  
+|CRAG|CREATE AGGREGATE|DATABASE|  
+|CRAK|CREATE ASYMMETRIC KEY|DATABASE|  
+|CRAS|CREATE ASSEMBLY|DATABASE|  
+|CRCF|CREATE CERTIFICATE|DATABASE|  
+|CRDB|CREATE DATABASE|DATABASE|  
+|CRDF|CREATE DEFAULT|DATABASE|  
+|CRED|CREATE DATABASE DDL EVENT NOTIFICATION|DATABASE|  
+|CRFN|CREATE FUNCTION|DATABASE|  
+|CRFT|CREATE FULLTEXT CATALOG|DATABASE|  
+|CRMT|CREATE MESSAGE TYPE|DATABASE|  
+|CRPR|CREATE PROCEDURE|DATABASE|  
+|CRQU|CREATE QUEUE|DATABASE|  
+|CRRL|CREATE ROLE|DATABASE|  
+|CRRT|CREATE ROUTE|DATABASE|  
+|CRRU|CREATE RULE|DATABASE|  
+|CRSB|CREATE REMOTE SERVICE BINDING|DATABASE|  
+|CRSC|CREATE CONTRACT|DATABASE|  
+|CRSK|CREATE SYMMETRIC KEY|DATABASE|  
+|CRSM|CREATE SCHEMA|DATABASE|  
+|CRSN|CREATE SYNONYM|DATABASE|  
+|CRSO|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> CREATE SEQUENCE|DATABASE|  
+|CRSV|CREATE SERVICE|DATABASE|  
+|CRTB|CREATE TABLE|DATABASE|  
+|CRTY|CREATE TYPE|DATABASE|  
+|CRVW|CREATE VIEW|DATABASE|  
+|CRXS|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> CREATE XML SCHEMA COLLECTION|DATABASE|  
+|DABO |ADMINISTER DATABASE BULK OPERATIONS | DATABASE |
+|DL|DELETE|DATABASE, OBJECT, SCHEMA|  
+|EAES |EXECUTE ANY EXTERNAL SCRIPT |DATABASE |
+|EX|Выполните|ASSEMBLY, DATABASE, OBJECT, SCHEMA, TYPE, XML SCHEMA COLLECTION|  
+|IM|IMPERSONATE|Пользователь|  
+|IN|INSERT|DATABASE, OBJECT, SCHEMA|  
+|RC|RECEIVE|OBJECT|  
+|RF|REFERENCES|ASSEMBLY, ASYMMETRIC KEY, CERTIFICATE, CONTRACT, DATABASE, FULLTEXT CATALOG, MESSAGE TYPE, OBJECT, SCHEMA, SYMMETRIC KEY, TYPE, XML SCHEMA COLLECTION|  
+|SL|SELECT|DATABASE, OBJECT, SCHEMA|  
+|SN|SEND|SERVICE|  
+|SPLN|SHOWPLAN|DATABASE|  
+|SUQN|SUBSCRIBE QUERY NOTIFICATIONS|DATABASE|  
+|TO|TAKE OWNERSHIP|ASSEMBLY, ASYMMETRIC KEY, CERTIFICATE, CONTRACT, DATABASE, FULLTEXT CATALOG, MESSAGE TYPE, OBJECT, REMOTE SERVICE BINDING, ROLE, ROUTE, SCHEMA, SERVICE, SYMMETRIC KEY, TYPE, XML SCHEMA COLLECTION|  
+|UP|UPDATE|DATABASE, OBJECT, SCHEMA|  
+|VW|VIEW DEFINITION|APPLICATION ROLE, ASSEMBLY, ASYMMETRIC KEY, CERTIFICATE, CONTRACT, DATABASE, FULLTEXT CATALOG, MESSAGE TYPE, OBJECT, REMOTE SERVICE BINDING, ROLE, ROUTE, SCHEMA, SERVICE, SYMMETRIC KEY, TYPE, USER, XML SCHEMA COLLECTION|  
+|VWCK |VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|DATABASE |  
+|VWCM |VIEW ANY COLUMN MASTER KEY DEFINITION|DATABASE |  
+|VWCT|VIEW CHANGE TRACKING|TABLE, SCHEMA|  
+|VWDS|VIEW DATABASE STATE|DATABASE|  
+  
+## <a name="permissions"></a>Permissions  
+ Любой пользователь может видеть свои собственные разрешения. Для просмотра разрешений для другого пользователя необходимо иметь разрешение VIEW DEFINITION или ALTER ANY USER либо любое разрешение на доступ к данным пользователя. Для просмотра определяемых пользователем ролей необходимо иметь разрешение ALTER ANY ROLE или быть членом роли (например, public).  
+  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+  
+## <a name="examples"></a>Примеры  
+  
+### <a name="a-listing-all-the-permissions-of-database-principals"></a>А. Перечисление всех разрешений участников базы данных  
+ Следующий запрос перечисляет разрешения, явно предоставленные или отклоненные для участников базы данных.  
+  
+> [!IMPORTANT]  
+>  Разрешения предопределенных ролей базы данных не отображаются в sys.database_permissions. Поэтому участники базы данных могут иметь дополнительные разрешения, не перечисленные здесь.  
+  
+```  
+SELECT pr.principal_id, pr.name, pr.type_desc,   
+    pr.authentication_type_desc, pe.state_desc, pe.permission_name  
+FROM sys.database_principals AS pr  
+JOIN sys.database_permissions AS pe  
+    ON pe.grantee_principal_id = pr.principal_id;  
+```  
+  
+### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>Б. Листинг разрешений для объектов схемы в базе данных  
+ Следующий запрос объединяет sys.database_principals и sys.database_permissions с sys.objects и sys.schemas, чтобы перечислить разрешения, предоставленные или отклоненные для определенных объектов схемы.  
+  
+```  
+SELECT pr.principal_id, pr.name, pr.type_desc,   
+    pr.authentication_type_desc, pe.state_desc,   
+    pe.permission_name, s.name + '.' + o.name AS ObjectName  
+FROM sys.database_principals AS pr  
+JOIN sys.database_permissions AS pe  
+    ON pe.grantee_principal_id = pr.principal_id  
+JOIN sys.objects AS o  
+    ON pe.major_id = o.object_id  
+JOIN sys.schemas AS s  
+    ON o.schema_id = s.schema_id;  
+```  
+    
+  
+## <a name="see-also"></a>См. также:  
+ [Securables](../../relational-databases/security/securables.md)   
+ [Иерархия разрешений (ядро СУБД)](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
+  
+  
+
+

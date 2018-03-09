@@ -2,9 +2,12 @@
 title: "Редактор XML (среда SQL Server Management Studio) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,19 +20,19 @@ f1_keywords:
 helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-caps.latest.revision: 27
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b241ee1d04df5845899810d5f4e839e9f6d22860
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: f434c04ccf8d15d5bddd9c91ffe06bb9c6f69b40
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Редактор XML (среда SQL Server Management Studio)
-  Предоставляет набор визуальных средств для работы с XML-схемами, наборами данных ADO.NET и XML-документами. Конструктор XML поддерживает язык определения схем XML (XSD), определенный консорциумом World Wide Web (WC3). Этот конструктор не поддерживает определения DTD (определения типов файлов) или другие языки XML-схем, например XDR (XML-Data Reduced).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Предоставляет набор визуальных средств для работы с XML-схемами, наборами данных ADO.NET и XML-документами. Конструктор XML поддерживает язык определения схем XML (XSD), определенный консорциумом World Wide Web (WC3). Этот конструктор не поддерживает определения DTD (определения типов файлов) или другие языки XML-схем, например XDR (XML-Data Reduced).  
   
  Чтобы открыть конструктор, добавить набор данных, XML-схему или XML-файл к проекту или открыть любой файл одного из типов, перечисленных в следующей таблице.  
   
@@ -38,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
  Конструктор предоставляет следующие три представления (или режима) для работы с XML-файлами, XML-схемами и наборами данных.  
   
-|Просмотр|Описание|Поддерживаемые типы файлов|  
+|Просмотр|Description|Поддерживаемые типы файлов|  
 |----------|-----------------|--------------------------|  
 |**Схема**|Для визуального создания и изменения XML-схем и наборов данных ADO.NET.|.xsd|  
 |**Данные**|Для визуального изменения файлов XML-данных в структурированной сетке данных.|XML|  
@@ -111,4 +114,3 @@ ms.lasthandoff: 06/22/2017
  [Сохранение плана выполнения в формате XML](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
   
-

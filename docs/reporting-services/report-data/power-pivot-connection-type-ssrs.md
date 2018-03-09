@@ -1,34 +1,34 @@
 ---
-title: "Тип соединения PowerPivot (SSRS) Power | Документы Microsoft"
+title: "Тип подключения к Power Pivot (службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
-caps.latest.revision: 9
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "9"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 11e5762b794060577704a31cf59836839b464d76
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c9377c8a436f057a1b257af70c0c8d23ee52a8ae
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Тип соединения PowerPivot (SSRS)
   Для извлечения данных из книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , опубликованной в коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на сайте SharePoint, можно использовать модуль обработки данных служб SQL Server Analysis Services.  
   
  Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в разделе [Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Источник данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] должен быть опубликован в коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на сайте SharePoint.  
   
  Для подключения к книге [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] из построителя отчетов необходимо установить на рабочей станции библиотеку SQL Server 2008 R2 ADOMD.NET. Эта клиентская библиотека устанавливается вместе с [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel, но, если используется компьютер, на котором нет этого приложения, необходимо скачать и установить ADOMD.NET со страницы [Пакет дополнительных компонентов SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkId=192565).  
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/09/2017
  Используйте тип источника данных отчета **Microsoft SQL Server Analysis Services**.  
   
 ## <a name="connection-string"></a>Строка подключения  
- Строка подключения является URL-адрес [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книг, опубликованных на SharePoint в [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] коллекции или другой библиотеке, например, `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
+ Строкой подключения является URL-адрес для книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], опубликованной на сайте SharePoint в коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или другой библиотеке, например `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
   
 ## <a name="credentials"></a>Учетные данные  
  Укажите учетные данные, необходимые для доступа к книге [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и сайту SharePoint, например данные для проверки подлинности Windows (встроенная безопасность). Дополнительные сведения см. в разделах [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [Указание учетных данных в построителе отчетов](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
@@ -53,7 +53,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="parameters"></a>Параметры  
  На панели «Фильтры» установите параметр **Параметры** для фильтра, чтобы автоматически создавать параметр отчета с доступными значениями, соответствующими условиям фильтра.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При открытии построителя отчетов из книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] сводные таблицы, сводные диаграммы, срезы и другие функции макета и аналитические функции из книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в отчете повторно не создаются. Вместо этого пустой отчет включает предварительно настроенный источник данных, указывающий на данные в книге [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Конструирование отчетов с помощью книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] может потребовать много усилий и времени в зависимости от числа срезов, фильтров и таблиц или диаграмм, которые нужно повторно создавать в отчете. Удобнее создать представление данных, которое требуется использовать в отчете, независимо от проекта [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  Данные в книге [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] имеют высокую степень сжатия. Данные, извлекаемые из книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для отчета, не сжимаются. Используйте конструктор запросов, чтобы указать фильтры и параметры, ограничивающие объем данных в отчете.  
@@ -68,9 +68,8 @@ ms.lasthandoff: 08/09/2017
   
 -   Отчет содержит только данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] из источника данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services (построитель отчетов)](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
- [Выражения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

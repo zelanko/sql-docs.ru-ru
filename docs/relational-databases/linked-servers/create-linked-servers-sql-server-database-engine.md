@@ -1,11 +1,13 @@
 ---
 title: "Создание связанных серверов (компонент SQL Server Database Engine) | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/20/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linked-servers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +20,19 @@ f1_keywords:
 helpviewer_keywords:
 - linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: aef8e627adca014fbc9213f0a88f0588a950a4ef
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: ccd682b0f193628b900ca2b2baf32691582d993c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Создание связанных серверов (компонент SQL Server Database Engine)
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Материалы по предыдущим версиям SQL Server см. в разделе [Создание связанных серверов (ядро СУБД)](https://msdn.microsoft.com/en-US/library/ff772782(SQL.120).aspx).
 
   В этом разделе описано, как создать связанный сервер и производить доступ к данным из другого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Путем создания связанного сервера вы можете работать с данными из нескольких источников. Связанный сервер не обязательно должен быть другим экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], хотя такой вариант часто встречается.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 08/03/2017
   
  Возможности связанного сервера и необходимые аргументы могут сильно различаться. В примерах из этого раздела представлены типичные ситуации, но описаны не все параметры. Дополнительные сведения см. в статье [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
-##  <a name="Security"></a> Безопасность  
+##  <a name="Security"></a> безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  При использовании инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] требуется разрешение **ALTER ANY LINKED SERVER** на сервер или членство в предопределенной роли сервера **setupadmin** . Для работы с [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] требуется разрешение **CONTROL SERVER** или членство в предопределенной роли сервера **sysadmin** .  
@@ -208,7 +209,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  В редакторе запросов введите следующую команду [!INCLUDE[tsql](../../includes/tsql-md.md)] , чтобы установить связь с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с именем `SRVR002\ACCTG`:  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -220,7 +221,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  Выполните следующий код, чтобы настроить связанный сервер для использования учетных данных домена для имени входа, которое использует связанный сервер.  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -235,7 +236,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Выполните следующий код, чтобы проверить соединение со связанным сервером. Этот пример возвращает имена баз данных на связанном сервере.  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -245,7 +246,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Для ссылки на объект, расположенный на связанном сервере, используйте четырехкомпонентные имена. Выполните следующий код, чтобы получить список всех имен входа на локальном сервере и соответствующих имен входа на связанном сервере.  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  
@@ -261,4 +262,3 @@ ms.lasthandoff: 08/03/2017
  [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)  
   
   
-

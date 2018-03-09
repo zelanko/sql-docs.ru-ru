@@ -1,10 +1,13 @@
 ---
-title: "(Остаток от деления) (Выражение служб SSIS) | Документы Microsoft"
+title: "(Остаток от деления) (выражение служб SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ helpviewer_keywords:
 - remainder of division operation
 - modulo operator (%)
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
-caps.latest.revision: 34
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 135fbe7a231de0b77ba3637ef53a4fc785453c10
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2236fea4b5454f79427019e2d90633e98e77e89b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="modulo-ssis-expression"></a>(Остаток от деления) (выражение служб SSIS)
   Вычисляет целочисленный остаток после деления первого числового выражения на второе.  
@@ -47,7 +49,7 @@ dividend % divisor
 ## <a name="result-types"></a>Типы результата  
  Определяются типами данных обоих аргументов. Дополнительные сведения см. в разделе [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Оба выражения должны соответствовать целочисленному типу данных со знаком или без знака.  
   
  Если один из операндов равен NULL, то результатом является значение NULL.  
@@ -80,8 +82,7 @@ SalesQuota % 12
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Приоритет и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Операторы &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+ [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

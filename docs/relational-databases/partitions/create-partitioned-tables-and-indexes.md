@@ -2,11 +2,13 @@
 title: "Создание секционированных таблиц и индексов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: partitions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-partition
+ms.suite: sql
+ms.technology: dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -28,20 +30,19 @@ helpviewer_keywords:
 - partition functions [SQL Server]
 - partition schemes [SQL Server]
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
-caps.latest.revision: 35
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "35"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 453f7ed733752453c8de05053fb37527c75d6612
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: df57d6fa660d806b38deb6730dd2152099873f15
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Создание секционированных таблиц и индексов
-  Можно создать секционированную таблицу или индекс в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Данные в секционированной таблице и индексах горизонтально разделены на блоки, которые могут быть распределены между несколькими файловыми группами в базе данных. Секционирование может улучшить управляемость и масштабируемость больших таблиц и индексов.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Вы можете создать секционированную таблицу или индекс в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Данные в секционированной таблице и индексах горизонтально разделены на блоки, которые могут быть распределены между несколькими файловыми группами в базе данных. Секционирование может улучшить управляемость и масштабируемость больших таблиц и индексов.  
   
  Создание секционированной таблицы или индекса обычно включает четыре этапа:  
   
@@ -55,11 +56,11 @@ ms.lasthandoff: 06/22/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Создание секционированной таблицы или индекса с использованием следующих средств:**  
   
@@ -75,9 +76,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Если у каких-либо строк в функции секционирования имеются столбцы секционирования со значениями NULL, эти строки размещаются в крайней левой секции. Однако если значение NULL указано в качестве граничного значения и указан параметр RIGHT, крайняя левая секция остается пустой, а значения NULL располагаются во второй секции.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Для создания секционированной таблицы требуется разрешение CREATE TABLE в базе данных и разрешение ALTER для схемы, в которой создается таблица. Для создания секционированного индекса требуется разрешение ALTER на таблицу или представление, в которых создается индекс. Создание секционированной таблицы или индекса требует любого из следующих дополнительных разрешений:  
   
 -   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin** .  
@@ -423,4 +424,3 @@ ms.lasthandoff: 06/22/2017
 -   [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)  
   
   
-

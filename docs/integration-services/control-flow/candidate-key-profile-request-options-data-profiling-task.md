@@ -1,10 +1,13 @@
 ---
-title: "Параметры запроса профиля ключей кандидата («профилирование данных») | Документы Microsoft"
+title: "Параметры запроса профиля потенциальных ключей (задача \"Профилирование данных\") | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c2a94d4e37ee6d120b3a065052313d5a00f37059
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 38216b9ef1b8c8ccaa3ca7656747defe077ee690
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Параметры запроса профиля потенциальных ключей (задача «Профилирование данных»)
   Для установки параметров варианта **Запрос профиля потенциальных ключей** , выделенного на панели запросов, используется панель **Свойства запроса** страницы **Запросы профиля** . Профиль потенциальных ключей сообщает о том, является ли данный столбец или набор столбцов ключом либо приблизительным ключом для выделенной таблицы. Этот профиль также поможет выявить проблемы в данных, например повторяющиеся значения в потенциальном ключевом столбце.  
@@ -122,7 +124,7 @@ ms.lasthandoff: 08/03/2017
   
 |Значение|Description|  
 |-----------|-----------------|  
-|**Нет**|Пороговое значение не задано. Стойкость ключа указывается независимо от значения.|  
+|**None**|Пороговое значение не задано. Стойкость ключа указывается независимо от значения.|  
 |**Specified**|Пороговое значение указывается свойством **KeyStrengthThreshold**. Стойкость ключа указывается лишь в том случае, если она превышает пороговое значение.|  
 |**Exact**|Пороговое значение не задано. Стойкость ключа указывается лишь в том случае, если выделенные столбцы представляют собой точный ключ.|  
   
@@ -132,9 +134,8 @@ ms.lasthandoff: 08/03/2017
  **MaxNumberOfViolations**  
  Укажите максимальное число нарушений потенциальных ключей для сообщения в выводе. Значение по умолчанию этого свойства равно 100. Этот параметр будет выключен только в случае выбора для свойства **KeyStrengthThresholdSetting** значения **Точно**.  
   
-## <a name="see-also"></a>См. также  
- [Данные профилирования редактор задач &#40; Страница "Общие" &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Форма быстрого профиля одной таблицы &#40; данные профилирования задач &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>См. также:  
+ [Редактор задачи "Профилирование данных" (страница "Общие")](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

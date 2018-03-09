@@ -1,27 +1,28 @@
 ---
-title: "Урок 4: Добавление таблицы в отчет (службы Reporting Services) | Документы Microsoft"
+title: "Занятие 4. Добавление таблицы в отчет (службы Reporting Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/23/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: Active
+ms.openlocfilehash: 3f6b048b66f575746c47c1fc083ecc266305684c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 76224139b629d797735b88bfcc692a1e8abce336
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Занятие 4. Добавление таблицы в отчет (службы Reporting Services)
 После определения набора данных вы можете приступать к конструированию отчета. Макет отчета создается путем перетаскивания в область конструктора областей данных, текстовых полей, изображений и других элементов, которые необходимо включить в отчет.  
@@ -64,17 +65,16 @@ ms.lasthandoff: 08/09/2017
   
     Следующая диаграмма показывает часть отчета в представлении предварительного просмотра.  
   
-    ![Предварительный просмотр, строки детализации таблицы с 5 столбцами](../reporting-services/media/rs-basictabledetailspreview.png "Просмотр, строки детализации таблицы с 5 столбцами")  
+    ![Просмотр, строки детализации таблицы с 5 столбцами](../reporting-services/media/rs-basictabledetailspreview.png "Просмотр, строки детализации таблицы с 5 столбцами")  
   
     Обратите внимание, что валюта (в столбце Line Total) имеет шесть знаков после запятой, а дата содержит отметку времени. Данное форматирование будет исправлено в следующем занятии.  
   
 > [!NOTE]  
 > Чтобы сохранить отчет, в меню **Файл** выберите команду **Сохранить все** .  
   
-## <a name="next-steps"></a>Следующие шаги  
-Табличная область данных успешно добавлена в отчет, поля добавлены в область данных и отчет просмотрен. Далее форматируются заголовки столбцов и значения даты и валюты. В разделе [занятие 5: форматирование отчета &#40; Службы Reporting Services &#41; ](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
+## <a name="next-steps"></a>Next Steps  
+Табличная область данных успешно добавлена в отчет, поля добавлены в область данных и отчет просмотрен. Далее форматируются заголовки столбцов и значения даты и валюты. См. [Занятие 5. Форматирование отчета (службы Reporting Services)](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Таблицы (построитель отчетов и службы SSRS)](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  
 [Коллекция полей набора данных (построитель отчетов и службы SSRS)](../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
-

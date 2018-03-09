@@ -3,26 +3,26 @@ title: "Что такое ODBC? | Документы Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC [ODBC], about ODBC
+helpviewer_keywords: ODBC [ODBC], about ODBC
 ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f1cb1869039572d0d6da1302f66ce64abc3f2590
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5aaa2a57f9439eb1588a30c362118af9b5355a8d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what-is-odbc"></a>Что такое ODBC?
 Многие неверных предположений о ODBC существует в вычислительной среде. Для конечного пользователя это значок в панели управления Microsoft® Windows®. Для разработчиков приложений это библиотека, содержащая процедуры доступа к данных. Для многих других задач он представляет собой ответ, все проблем доступа к базе данных даже трудно себе представить.  
@@ -38,4 +38,3 @@ ms.lasthandoff: 09/09/2017
  Важно понимать, что ODBC предназначен для предоставления возможности баз данных, не дополнить их. Таким образом авторы приложений не должен ожидать, с использованием ODBC внезапно преобразует простой базы данных в полнофункциональной реляционной СУБД. Ни драйвер записи должны быть реализованы функции, не найден в базе данных. Исключением является то, что разработчики при написании драйверов, которые напрямую обращаются к данным файла (например, данные в файле Xbase) требуются для записи компонента database engine, который поддерживает по крайней мере минимальный набор функциональных возможностей SQL. Еще одно исключение —, компонент ODBC Windows SDK, ранее включенных в Microsoft данных Access Components (MDAC) пакета SDK, предоставляет библиотеку курсора, которая имитирует Прокручиваемые курсоры для драйверов, реализующие уровень функциональности.  
   
  Приложения, использующие ODBC, отвечает за функциональные возможности между базами данных. Например ODBC не входит разнородного ядра соединения, и его обработчика распределенных транзакций. Тем не менее поскольку он не зависит от СУБД, он может использоваться для построения таких средства между базами данных.
-

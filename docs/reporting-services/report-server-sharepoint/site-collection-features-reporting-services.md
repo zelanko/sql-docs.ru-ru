@@ -1,45 +1,45 @@
 ---
-title: "Возможности служб Reporting Services узла коллекции | Документы Microsoft"
+title: "Компоненты семейства веб-сайтов служб Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 7c86f9ecdbbf4955ba224e40c245fc412742fc30
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 2bf533a432526a99dfaca1b46caf95f274dd562b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="reporting-services-site-collection-features"></a>Возможности служб Reporting Services узла коллекции
+# <a name="reporting-services-site-collection-features"></a>Компоненты семейства веб-сайтов служб Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-Режим служб Reporting Services для SharePoint предоставляет три компонента коллекции сайтов SharePoint. Эти компоненты поддерживают общие режим SharePoint служб Reporting Services, reporting среды, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], компонент SQL Server 2016 Reporting Services надстройки, и операции управления для служб Reporting Services в центре администрирования SharePoint.
+Службы Reporting Services в режиме интеграции с SharePoint предоставляют три компонента семейства веб-сайтов SharePoint. Эти компоненты поддерживают среду создания отчетов служб Reporting Services в режиме интеграции с SharePoint, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], компонент надстройки служб SQL Server 2016 Reporting Services и операции управления для служб Reporting Services в центре администрирования SharePoint.
 
 > [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
   
-## <a name="site-collection-features"></a>Компоненты семейства сайтов
+## <a name="site-collection-features"></a>Компоненты семейства веб-сайтов
 
- Ниже перечислены компоненты семейства сайтов службы Reporting Services.  
+ В представленной ниже таблице описываются компоненты семейства веб-сайтов служб Reporting Services.  
   
 |Компонент|Description|  
 |-------------|-----------------|  
-|**Центр администрирования сервера отчетов**|Включает возможности для управления процессом интеграции с сервером отчетов служб Reporting Services. Этот компонент устанавливается и используется в семействе веб-сайтов центра администрирования SharePoint.<br /><br /> Компонент интеграции сервера отчетов автоматически активируется в семействе веб-сайтов центра администрирования SharePoint после установки надстройки служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] для продуктов SharePoint. В некоторых случаях необходимо вручную активировать компонент. Чтобы активировать компонент сервера отчетов, используйте страницы служб Reporting Services на странице параметров сайта центра администрирования SharePoint.<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Версии служб Reporting Services и более поздней версии надстройки для SharePoint продуктов Активируйте компонент интеграции сервера отчетов для всех существующих коллекциях сайтов при установке надстройки. Кроме того средство автоматически активироваться для новых семейств сайтов.|  
-|**Компонент интеграции сервера отчетов**|Обеспечивает широкие возможности отчетов с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] службы Reporting Services<br /><br /> Этот компонент активен по умолчанию.|  
+|**Центр администрирования сервера отчетов**|Включает возможности для управления интеграцией с сервером отчетов служб Reporting Services. Этот компонент устанавливается и используется в семействе веб-сайтов центра администрирования SharePoint.<br /><br /> Компонент интеграции сервера отчетов автоматически активируется в семействе веб-сайтов центра администрирования SharePoint после установки надстройки служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] для продуктов SharePoint. В некоторых ситуациях необходимо активировать этот компонент вручную. Чтобы активировать компонент сервера отчетов, используйте страницы служб Reporting Services на странице параметров сайта в центре администрирования SharePoint.<br /><br /> Версия служб [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Reporting Services и более поздние версии надстройки для продуктов SharePoint активируют функцию интеграции сервера отчетов для всех семейств веб-сайтов, существующих на момент установки надстройки. Кроме того, эта функция автоматически активируется для новых семейств веб-сайтов.|  
+|**Компонент интеграции сервера отчетов**|Обеспечивает создание улучшенных отчетов с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] Reporting Services.<br /><br /> Этот компонент активен по умолчанию.|  
 |**Компонент интеграции Power View**|Включает интерактивное исследование данных и визуальное представление для книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и табличных баз данных служб Analsysis Services.<br /><br /> Доступ к этому компоненту можно получить через контекстное меню следующих источников данных:<br /><br /> **RDLX;**<br /><br /> **RSDS**<br /><br /> файл соединения с**BISM** .<br /><br /> <br /><br /> Если [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] отсутствует в контекстном меню, убедитесь, что **интеграция Power View** включена.<br /><br /> По умолчанию эта функция отключена.|  
 
 ## <a name="next-steps"></a>Следующие шаги
@@ -49,4 +49,3 @@ ms.lasthandoff: 10/06/2017
 [активировать функции синхронизации файлов сервера отчетов в центре администрирования SharePoint](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

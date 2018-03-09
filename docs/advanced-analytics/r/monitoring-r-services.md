@@ -2,28 +2,30 @@
 title: "Мониторинг служб R | Документация Майкрософт"
 ms.custom: 
 ms.date: 11/29/2016
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ffbdb114-e7a5-4145-bb8f-2eb97720ea96
-caps.latest.revision: 13
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: ffbeefeea8fd1c90a9ea09c0094cd81877a797ea
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 17622e2c8f2d08fffd694761e04332997a26b3ae
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="monitoring-r-services"></a>Мониторинг служб R
-  Эта статья содержит сведения о типовых задачах мониторинга, выполняемых при использовании [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Эта статья содержит сведения о типовых задачах мониторинга, выполняемых при использовании [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]:  
   
 -   определение ресурсов сервера, используемых языком R;  
   
@@ -49,8 +51,7 @@ ms.lasthandoff: 09/01/2017
 
 [Мониторинг служб R с помощью настраиваемых отчетов в Management Studio](../../advanced-analytics/r-services/monitor-r-services-using-custom-reports-in-management-studio.md)
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление ресурсами для служб R](../../advanced-analytics/r-services/resource-governance-for-r-services.md)  
   
   
-

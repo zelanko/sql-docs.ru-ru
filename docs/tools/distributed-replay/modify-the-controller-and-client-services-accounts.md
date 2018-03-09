@@ -2,28 +2,29 @@
 title: "Изменение и контроллера учетных записей служб клиента | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- setup-install
+ms.suite: sql
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6b43b611e45de9da98954417d5e7a1bfad009eac
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 94a6df60ae3e1acebb9ff7d75cf65c7efb21d6db
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Изменение учетных записей служб клиента и контроллера
-  В этом разделе будет рассказано о том, как изменить учетные записи контроллера и клиента распределенного воспроизведения и повторно применить списки управления доступом (ACL).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]В этом разделе вы узнаете, как изменить учетные записи службы клиента и контроллера распределенного воспроизведения и повторно применить списки управления доступом (ACL).  
   
 ### <a name="to-start-or-stop-the-distributed-replay-services-using-computer-management"></a>Запуск и остановка служб распределенного воспроизведения из оснастки «Управление компьютером»  
   
@@ -86,4 +87,3 @@ ms.lasthandoff: 08/02/2017
 4.  Запустите службу клиента распределенного воспроизведения.  
   
   
-

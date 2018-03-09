@@ -1,1 +1,1 @@
- Службы Data Quality Services 
+ Data Quality Services 

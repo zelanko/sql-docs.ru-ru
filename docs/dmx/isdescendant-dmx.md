@@ -2,35 +2,32 @@
 title: "IsDescendant (расширения интеллектуального анализа данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- IsDescendant
-dev_langs:
-- DMX
-helpviewer_keywords:
-- IsDescendant function
+f1_keywords: IsDescendant
+dev_langs: DMX
+helpviewer_keywords: IsDescendant function
 ms.assetid: d9fe7446-edb5-487b-8ea6-c9efaccf6d90
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 179a9f3f04db55cffb74f6417c3339ceeb20aa11
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4a1e7959a303b768851784af0ab9c88abd257674
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="isdescendant-dmx"></a>IsDescendant (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Указывает, является ли текущий узел потомком заданного узла.  
   
@@ -44,7 +41,7 @@ IsDescendant(<NodeID>)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Тип Boolean.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **IsDescendant** используется только в [SELECT FROM &#60; модели &#62;. СОДЕРЖИМОЕ &#40; расширений интеллектуального анализа данных &#41; ](../dmx/select-from-model-content-dmx.md) и [SELECT FROM &#60; модели &#62;. DIMENSION_CONTENT &#40; расширений интеллектуального анализа данных &#41; ](../dmx/select-from-model-dimension-content-dmx.md) запросов.  
   
 ## <a name="examples"></a>Примеры  
@@ -61,4 +58,3 @@ WHERE IsDescendant('00000000100')
  [Общие функции прогнозирования &#40; расширений интеллектуального анализа данных &#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

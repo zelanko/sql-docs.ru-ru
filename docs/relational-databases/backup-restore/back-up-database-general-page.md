@@ -2,9 +2,12 @@
 title: "Резервное копирование базы данных (страница \"Общие\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-backup-restore
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 f1_keywords:
 - sql13.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
-caps.latest.revision: 64
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: acb78ba1abb462f76dd26cd87062732b386f547e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 038fa003ad819d89d8739f8cfaac53582f93932a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="back-up-database-general-page"></a>Резервное копирование базы данных (страница «Общие»)
-  Страница **Общие** диалогового окна **Резервное копирование базы данных** служит для просмотра и изменения параметров резервного копирования базы данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Страница **Общие** диалогового окна **Резервное копирование базы данных** служит для просмотра и изменения параметров резервного копирования базы данных.  
   
  Дополнительные сведения об основных понятиях резервного копирования см. в разделе [Общие сведения о резервном копировании (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
@@ -142,4 +145,3 @@ ms.lasthandoff: 08/03/2017
  [Модели восстановления (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
-

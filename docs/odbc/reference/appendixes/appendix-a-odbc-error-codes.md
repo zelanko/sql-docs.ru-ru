@@ -3,10 +3,12 @@ title: "Приложение а. коды ошибок ODBC | Документы
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - error codes [ODBC], SQLSTATE
 ms.assetid: c06902e4-721d-42e2-b818-05f0e18e4ce0
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: af6533afbeb3b47c548e5475604136ae5fdc894b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 725d16d6326d5fb99ce8d923bd35c64351b3e6cb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appendix-a-odbc-error-codes"></a>Приложение а. коды ошибок ODBC
 В этом разделе рассматриваются значениях SQLSTATE для ODBC 3. *x*. Дополнительные сведения о ODBC 3. *x* значения SQLSTATE. в разделе [сопоставления SQLSTATE](../../../odbc/reference/develop-app/sqlstate-mappings.md).  
@@ -155,4 +156,3 @@ ms.lasthandoff: 09/09/2017
 |IM013|Ошибка файла трассировки|Все функции ODBC.|  
 |IM014|Недопустимое имя файла источника данных|**SQLDriverConnect**|  
 |IM015|Поврежден файл источника данных|**SQLDriverConnect**|
-

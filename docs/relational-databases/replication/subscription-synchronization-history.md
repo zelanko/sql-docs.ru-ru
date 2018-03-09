@@ -2,29 +2,30 @@
 title: "Журнал синхронизации (подписки) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.monitor.subscription.synchhistory.f1
+f1_keywords: sql13.rep.monitor.subscription.synchhistory.f1
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4da555ce4d256a6f4990831c6c7f3a2c2db5997a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "20"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: ec6cfef6e74a1bf6479a78301f85c6d062992db3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-synchronization-history"></a>Журнал синхронизации (подписки)
-  На вкладке **Журнал синхронизации** отображаются подробные сведения об агенте слияния, включая состояние, статистику по статьям, данные журнала, информационные сообщения и все сообщения об ошибках.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] На вкладке **Журнал синхронизации** приводятся подробные сведения об агенте слияния, включая состояние, статистику по статьям, данные журнала, информационные сообщения и сообщения об ошибках.  
   
 ## <a name="options"></a>Параметры  
  Выберите сеансы агента слияния для просмотра из меню **Вид** , а затем выберите конкретный сеанс в сетке с названием **Сеансы агента слияния**. Подробные сведения об этом сеансе отображаются в сетке с названием **Статьи, обработанные в выбранном сеансе**.  
@@ -102,6 +103,6 @@ ms.lasthandoff: 06/22/2017
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
  [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Обзор агентов репликации](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

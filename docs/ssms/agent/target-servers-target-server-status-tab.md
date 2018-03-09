@@ -3,29 +3,29 @@ title: "Целевые серверы (вкладка \"Состояние це�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.target.status.f1
+f1_keywords: sql13.ag.target.status.f1
 ms.assetid: 010a4cab-d878-4889-8ac8-7d91db6345d6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0cbc0657c6ded692cff078c483e3578906fd8107
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c6395efb0dfcb041e9ae47329d348c617df499e4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="target-servers-target-server-status-tab"></a>Целевые серверы (вкладка «Состояние целевого сервера»)
-Эта страница позволяет просматривать состояние целевых серверов для данного главного сервера.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Эта страница позволяет просматривать состояние целевых серверов для данного главного сервера.  
   
 ## <a name="options"></a>Параметры  
 **Целевой сервер**  
@@ -61,4 +61,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
 [Автоматизация администрирования в масштабах предприятия](../../ssms/agent/automated-administration-across-an-enterprise.md)  
   
-

@@ -3,8 +3,11 @@ title: "Таблицы конструктор значений (Transact-SQL) | 
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ helpviewer_keywords:
 - row constructor [SQL Server]
 - table value constructor [SQL Server]
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d9920f0a7e6b466541dbd60257385b31ba04cdb5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 87fc6196f740c0bf3cfd9fa1f94f73872942fa1a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="table-value-constructor-transact-sql"></a>Конструктор табличных значений (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Задает набор выражений значений строк, которые будут использоваться для создания таблицы. Конструктор табличных значений [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет указать в одной инструкции DML несколько строк данных. Конструктор табличных значений могут быть указаны в предложении VALUES инструкции INSERT в использование \<исходной таблицы > Предложение инструкции MERGE и в определении производной таблицы в предложении FROM.  
   
@@ -186,10 +188,9 @@ GROUP BY Change;
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [СЛИТЬ &#40; Transact-SQL &#41;](../../t-sql/statements/merge-transact-sql.md)   
  [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)  
   
   
-

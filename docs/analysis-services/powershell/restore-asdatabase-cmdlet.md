@@ -2,31 +2,29 @@
 title: "Командлет RESTORE-ASDatabase | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 8ab7a2d0-679c-40e6-b9b9-042184b2dfc9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 86894e5f3c0d438a5a97c45e3927e3996ee6a6ab
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 96e61c207316b216a1706834188a4f6f235cb52e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="restore-asdatabase-cmdlet"></a>Командлет Restore-ASDatabase
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Восстанавливает многомерную или табличную базу данных из файла резервной копии служб Analysis Services (ABF-файла) в экземпляре служб Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Восстанавливает файл резервной копии (ABF) многомерной или табличной базы данных экземпляра служб Analysis Services.  
 
 >[!NOTE] 
 >В этой статье может содержать устаревшие сведения и примеры. С помощью командлета Get-Help для последней версии.
@@ -201,4 +199,3 @@ PS SQLSERVER:\SQLAS\localhost\default> restore-asdatabase –restorefile “\\my
   
  Эта команда восстанавливает зашифрованный файл резервной копии служб Analysis Services (testdb.abf) из удаленной папки резервных копий на удаленный экземпляр служб Analysis Services по умолчанию. Параметр —StorageLocation используется для помещения файлов базы данных в расположение, отличное от расположения по умолчанию, в данном случае — в общий файловый ресурс restoreDBfiles.  
   
-

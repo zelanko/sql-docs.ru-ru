@@ -2,28 +2,31 @@
 title: "NS$&lt;имя службы&gt; свойства (журнала на вкладке) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e6816ec-d4c5-4429-8033-b97427584890
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 512d1281ca516256631845d0283b50f8f58f82d5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 46e784c7a83044249dcaf9ddc696be51f5b383a0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>NS$&lt;имя службы&gt; свойства (на вкладка журнала)
-  Используйте вкладку **Вход** диалогового окна **Свойства служб Notification Services** для указания учетной записи, используемой службами [!INCLUDE[ssNS](../../includes/ssns-md.md)] , а также для запуска и остановки службы.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Используйте вкладку **Вход** диалогового окна **Свойства служб Notification Services** для указания учетной записи, используемой службами [!INCLUDE[ssNS](../../includes/ssns-md.md)] , а также для запуска и остановки службы.  
   
 ## <a name="options"></a>Параметры  
  **Локальная системная учетная запись**  
@@ -54,4 +57,3 @@ ms.lasthandoff: 08/02/2017
  Возобновить приостановленную работу службы.  
   
   
-

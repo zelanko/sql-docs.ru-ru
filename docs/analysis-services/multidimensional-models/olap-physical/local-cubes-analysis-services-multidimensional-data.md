@@ -2,33 +2,31 @@
 title: "Локальные кубы (службы Analysis Services — многомерные данные) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- cubes [Analysis Services], local
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: cubes [Analysis Services], local
 ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b9b84028e2561b5a0fc25c6866d86d667b8873f2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 849f17d47b443e992bd314d6ce2d2a04ec080cd6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>Локальные кубы (службы Analysis Services — многомерные данные)
-  Для создания, обновления или удаления локальных кубов разработайте и выполните скрипт ASSL или программу AMO.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Для создания, обновления или удаления локальных кубов, вы должны написать и выполнить скрипт ASSL или программу AMO.  
   
  Локальные кубы и локальные модели интеллектуального анализа данных позволяют выполнять анализ на клиентской рабочей станции даже когда она не подключена к сети. Например, клиентское приложение может вызывать поставщик OLE DB для OLAP 9.0 (MSOLAP.3), который загружает локальный механизм куба и выполняет запросы к локальным кубам, как показано на приведенной ниже иллюстрации:  
   
@@ -87,4 +85,3 @@ ms.lasthandoff: 09/01/2017
  [Инструкцию обновления КУБА &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-definition-refresh-cube.md)  
   
   
-

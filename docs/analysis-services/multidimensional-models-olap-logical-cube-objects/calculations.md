@@ -2,12 +2,13 @@
 title: "Вычисления | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -19,20 +20,20 @@ helpviewer_keywords:
 - calculations [Analysis Services], about calculations
 - cubes [Analysis Services], calculations
 ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
-caps.latest.revision: 35
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dd006ee1a6896e4b9bdd6264d16a8406786f8d39
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6fa38369b12c07a47a2501bc906535b0263db2e5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="calculations"></a>вычисления
-  Вычисление представляет собой выражение многомерных выражений (MDX) или сценарий, используемый для определения вычисляемого элемента, именованного набора или оценивающего назначения в кубе в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Вычисления позволяют добавлять объекты, определенные не данными куба, а выражениями, которые могут ссылаться на прочие части куба, другие кубы, или даже данные вне базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Вычисления позволяют расширить возможности куба, увеличивая гибкость и производительность приложений бизнес-аналитики. Дополнительные сведения о сценариях для вычислений см. в разделе [введение в сценарии многомерных Выражений в Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Дополнительные сведения о проблемах производительности, связанных с запросами и вычислениями MDX см. в разделе [SQL Server 2005 производительности руководства по Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Вычисление представляет собой выражение многомерных выражений (MDX) или сценарий, используемый для определения вычисляемого элемента, именованного набора или оценивающего назначения в кубе в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Вычисления позволяют добавлять объекты, определенные не данными куба, а выражениями, которые могут ссылаться на прочие части куба, другие кубы, или даже данные вне базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Вычисления позволяют расширить возможности куба, увеличивая гибкость и производительность приложений бизнес-аналитики. Дополнительные сведения о сценариях для вычислений см. в разделе [введение в сценарии многомерных Выражений в Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Дополнительные сведения о проблемах производительности, связанных с запросами и вычислениями MDX см. в разделе [SQL Server 2005 производительности руководства по Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## <a name="calculated-members"></a>Вычисляемые элементы  
  Вычисляемый элемент представляет собой элемент, значение которого вычисляется в процессе выполнения при помощи многомерного выражения, которое задается во время определения вычисляемого элемента. Вычисляемый элемент доступен для приложений бизнес-аналитики, равно как и любой другой. Вычисляемые элементы не увеличивают размер куба, потому что в кубе хранятся только определения; значения вычисляются в памяти, когда возникает необходимость ответить на запрос.  
@@ -62,8 +63,7 @@ ms.lasthandoff: 09/01/2017
   
  Например, можно использовать команду скрипта для распределения между сотрудниками квот на продажи по времени и территории продаж на основе взвешенных значений продаж за предыдущий период времени.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Вычисления в многомерных моделях](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   
-

@@ -3,10 +3,12 @@ title: "Создание приложений с возможностью вза
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - feature support in interoperable applications [ODBC]
 - feature variability in interoperable applications [ODBC]
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 151963c23abce0f737671dd73dec1d971998228e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bab5be84b66571f7ca361a3b158921330c00007f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-an-interoperable-application"></a>Создание приложений с возможностью взаимодействия
 Каждый раз, когда приложение использует один и тот же код с более чем один драйвер, этот код должен быть с возможностью взаимодействия между драйверы. В большинстве случаев это непростая задача. Например код для получения строк курсора однонаправленные одинаково для всех драйверов. В некоторых случаях это может быть более сложным. Например код для создания идентификаторов для использования в инструкциях SQL необходимо учитывать регистр идентификатора, заключения в кавычки и соглашения об именовании одного, двух частей и трех частей.  
@@ -40,7 +41,6 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующие подразделы.  
   
--   [Проверка поддержка функций и особенностей](../../../odbc/reference/develop-app/checking-feature-support-and-variability.md)  
+-   [Проверка поддержки и изменчивости функций](../../../odbc/reference/develop-app/checking-feature-support-and-variability.md)  
   
--   [Компоненты, которые должны ожидать](../../../odbc/reference/develop-app/features-to-watch-for.md)
-
+-   [Компоненты, которые требуется контролировать](../../../odbc/reference/develop-app/features-to-watch-for.md)

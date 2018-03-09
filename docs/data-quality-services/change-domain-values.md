@@ -2,27 +2,27 @@
 title: "Изменение значений домена | Microsoft Docs"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.values.f1
+f1_keywords: sql13.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "31"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 43d5425678270fb224b0a55e70c5f7928545ffaa
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3181deac2265f069531a37aebad7804a649310d9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="change-domain-values"></a>Изменение значений домена
   В этом разделе описывается, как изменить и дополнить метаданные в базе знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). После создания набора знаний путем обнаружения набора знаний, импорта знаний в базу знаний или домены или подготовки базы знаний на основе другой базы знаний можно интерактивно изменять значения данных. Создание базы знаний не является строго автоматическим процессом. Можно использовать собственные знания для проверки и изменения значений данных следующими способами.  
@@ -42,9 +42,9 @@ ms.lasthandoff: 09/09/2017
 ###  <a name="Prerequisites"></a> Предварительные требования  
  Чтобы изменить значение домена, необходима база знаний и домен, открытый в операции управления доменами.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Для изменения значений домена необходимо иметь роль dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
 ##  <a name="Change"></a> Изменение значений домена  
@@ -67,7 +67,7 @@ ms.lasthandoff: 09/09/2017
   
 3.  В области **Список доменов** страницы **Управление доменами** выберите домен, для которого необходимо изменить значения, или создайте новый домен. Если нужно создать новый домен, см. раздел [Создать домен](../data-quality-services/create-a-domain.md). Выберите вкладку **Значения домена** .  
   
-4.  Отобразите значения, которые нужно изменить в таблице **Значение** . Дополнительную информацию вы можете получить по ссылке [Как отобразить соответствующие значения](#Display) ниже.  
+4.  Отобразите значения, которые нужно изменить в таблице **Значение** . Дополнительную информацию вы можете получить по ссылке [How to Display the Appropriate Values](#Display) ниже.  
   
 5.  Чтобы изменить состояние значения, выполните следующие действия.  
   
@@ -121,7 +121,7 @@ ms.lasthandoff: 09/09/2017
   
  При интерактивной очистке данных на странице **Управление результатами и их просмотр** операции **Очистка** как недопустимые, так и ошибочные значения представлены на вкладке **Недопустимые** на странице **Управление результатами и их просмотр** .  
   
-##  <a name="Display"></a> Как отобразить соответствующие значения  
+##  <a name="Display"></a> How to Display the Appropriate Values  
  Вы можете изменять отображаемые сведения следующим образом.  
   
 -   **Фильтровать** результаты, которые нужно внести в таблицу, по их состоянию, выбирая состояние в раскрывающемся списке **Фильтр** .  
@@ -140,4 +140,3 @@ ms.lasthandoff: 09/09/2017
  Каждая таблица значений на вкладке **Значения домена** содержит значение DQS_NULL. Значение NULL в источнике данных будет отображаться как SQL_NULL в таблице значений. Вы можете задать одно или несколько значений, эквивалентных NULL, в качестве синонимов для DQS_NULL. После этого все значения NULL и значения, эквивалентные NULL, будут обрабатываться как DQS_NULL.  
   
   
-

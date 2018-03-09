@@ -2,31 +2,32 @@
 title: "Программа sqlps | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sqlps
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - sqlps utility
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
-caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "22"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: bd4e67397b52b3e7248ce061312517841eef38e5
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 730d20d8f3accf9a172553fdec5c46aa95530b15
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlps-utility"></a>программа sqlps
-  Служебная программа **sqlps** запускает сеанс Windows PowerShell с помощью поставщика [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell, а также загруженных и зарегистрированных командлетов. Можно вводить команды или скрипты PowerShell, в которых используются компоненты [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell для работы с экземплярами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и их объектами.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Sqlps** служебная программа запускает сеанс Windows PowerShell с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] командлеты и поставщика PowerShell загружена и зарегистрирована. Можно вводить команды или скрипты PowerShell, в которых используются компоненты [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell для работы с экземплярами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и их объектами.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]Используйте **sqlps** модуль PowerShell вместо него. Дополнительные сведения о модуле **sqlps** см. в разделе [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md).  
@@ -70,16 +71,16 @@ sqlps
  **-**  
  **-Command** — указывает, что служебная программа **sqlps** считывает входные данные с помощью стандартного ввода.  
   
- *блок_скрипта* [ **-args***массив_аргументов* ]  
+ *блок_скрипта* [**- args *** массив_аргументов* ]  
  Указывает блок команд PowerShell для выполнения, который должен быть заключен в фигурные скобки: {}. Параметр*блок_скрипта* можно указывать только в случае вызова служебной программы **sqlps** из **PowerShell** или другого сеанса служебной программы **sqlps** . Параметр *массив_аргументов* представляет собой массив переменных PowerShell, содержащий аргументы для команд PowerShell из параметра *блок_скрипта*.  
   
  *string* [ *параметры_команды* ]  
- Указывает строку, содержащую команды PowerShell для запуска. Используйте формат **"&{***команда***}"**. Кавычки определяют строку, а оператор вызова (&) предписывает служебной программе **sqlps** выполнить команду.  
+ Указывает строку, содержащую команды PowerShell для запуска. Используйте формат **«& {***команда***}»**. Кавычки определяют строку, а оператор вызова (&) предписывает служебной программе **sqlps** выполнить команду.  
   
  [ **-?** | **-Help** ]  
  Показывает синтаксис параметров служебной программы **sqlps** .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Программа **sqlps** запускает среду PowerShell (PowerShell.exe) и загружает модуль [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell. Модуль, также именуемый **sqlps**, загружает и регистрирует следующие оснастки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell:  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  
@@ -123,9 +124,8 @@ sqlps -Command "&{.\MyFolder.MyScript.ps1}"
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Включение или отключение сетевого протокола сервера](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)  
   
   
-

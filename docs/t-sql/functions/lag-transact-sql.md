@@ -1,10 +1,13 @@
 ---
 title: "LAG (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 10/20/2015
+ms.date: 11/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,22 +21,21 @@ helpviewer_keywords:
 - LAG function
 - analytic functions, LAG
 ms.assetid: a9a90bdb-3f80-4c97-baca-b7407bcdc7f0
-caps.latest.revision: 23
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 77598feb87f6766f6c24c454dace2c138315e69b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 5a6942ecfcf189716e0829eadcb0d94c6d731650
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="lag-transact-sql"></a>Предложение LAG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Обращается к данным из предыдущей строки того же результирующего набора без использования самосоединения в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Функция LAG обеспечивает доступ к строке с заданным физическим смещением перед началом текущей строки. Используйте данную аналитическую функцию в инструкции SELECT для сравнения значений текущей строки со значениями из предыдущей.  
+  Обращается к данным из предыдущей строки того же результирующего набора без использования самосоединения начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Функция LAG обеспечивает доступ к строке с заданным физическим смещением перед началом текущей строки. Используйте данную аналитическую функцию в инструкции SELECT для сравнения значений текущей строки со значениями из предыдущей.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "значок ссылки на раздел") [синтаксические обозначения Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,7 +70,7 @@ LAG (scalar_expression [,offset] [,default])
 ### <a name="a-compare-values-between-years"></a>A. Сравнение значений по годам  
  В следующем примере показано использование функции LAG для возврата разности в квотах продаж для указанного работника за предыдущие годы. Обратите внимание, что для первой строки возвращается значение, установленное по умолчанию, т. е. нуль (0), так как значение за предыдущие периоды для нее недоступно.  
   
-```  
+```sql   
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
@@ -79,8 +81,7 @@ WHERE BusinessEntityID = 275 and YEAR(QuotaDate) IN ('2005','2006');
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
-  
+```    
 BusinessEntityID SalesYear   CurrentQuota          PreviousQuota  
 ---------------- ----------- --------------------- ---------------------  
 275              2005        367000.00             0.00  
@@ -95,7 +96,7 @@ BusinessEntityID SalesYear   CurrentQuota          PreviousQuota
 ### <a name="b-compare-values-within-partitions"></a>Б. Сравнение значений внутри секций  
  В следующем примере используется функция LAG для сравнения количества продаж за текущий год между сотрудниками. Предложение PARTITION BY указывается для разделения строк результирующего набора по территориям продаж. Функция LAG применяется к каждой секции отдельно, а вычисление начинается заново для каждой секции. Предложение ORDER BY в предложении OVER упорядочивает строки в каждой секции. Предложение ORDER BY в инструкции SELECT сортирует сроки во всем результирующем наборе. Обратите внимание, что для первой строки возвращается значение, установленное по умолчанию, т. е. нуль (0), так как значение за предыдущий период для первой строки каждой секции недоступно.  
   
-```  
+```sql   
 USE AdventureWorks2012;  
 GO  
 SELECT TerritoryName, BusinessEntityID, SalesYTD,   
@@ -107,8 +108,7 @@ ORDER BY TerritoryName;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
-  
+```    
 TerritoryName            BusinessEntityID SalesYTD              PrevRepSales  
 -----------------------  ---------------- --------------------- ---------------------  
 Canada                   282              2604540.7172          0.00  
@@ -122,7 +122,7 @@ Northwest                280              1352577.1325          1573012.9383
 ### <a name="c-specifying-arbitrary-expressions"></a>В. Указание произвольных выражений  
  В следующем примере демонстрируется указание ряда произвольных выражений в синтаксисе функции LAG.  
   
-```  
+```sql   
 CREATE TABLE T (a int, b int, c int);   
 GO  
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
@@ -150,7 +150,7 @@ b           c           i
 ### <a name="d-compare-values-between-quarters"></a>D: сравнение значений кварталов  
  В следующем примере функция LAG. В запросе используется функция LAG для возврата разности в квотах продаж для указанного работника за предыдущие календарных кварталов. Обратите внимание, что для первой строки возвращается значение, установленное по умолчанию, т. е. нуль (0), так как значение за предыдущие периоды для нее недоступно.  
   
-```  
+```sql   
 -- Uses AdventureWorks  
   
 SELECT CalendarYear, CalendarQuarter, SalesAmountQuota AS SalesQuota,  
@@ -178,6 +178,5 @@ Year Quarter  SalesQuota  PrevQuota  Diff
  [РУКОВОДИТЕЛЬ &#40; Transact-SQL &#41;](../../t-sql/functions/lead-transact-sql.md)  
   
   
-
 
 

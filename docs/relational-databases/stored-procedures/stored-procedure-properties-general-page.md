@@ -2,9 +2,12 @@
 title: "Свойства хранимой процедуры (страница \"Общие\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
 ms.tgt_pltfrm: 
@@ -13,19 +16,20 @@ f1_keywords:
 - sql13.swb.spassistededitor.storedprocedure.f1
 - sql13.swb.spproperties.general.f1
 ms.assetid: 8ee433b6-3931-47e8-b1cf-332806f71161
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc478edecbc7f64655d9fefe0943e99080b3ebde
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 7132c45e5ea0fe66235b4c77de823b0fa3384319
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="stored-procedure-properties-general-page"></a>Свойства хранимой процедуры (страница «Общие»)
-  Отображает сведения о хранимой процедуре. Все сведения предназначены только для чтения.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Отображает сведения о хранимой процедуре. Все сведения предназначены только для чтения.  
   
 ## <a name="options"></a>Параметры  
  **База данных**  

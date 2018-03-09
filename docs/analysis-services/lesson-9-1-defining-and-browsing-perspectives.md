@@ -2,29 +2,32 @@
 title: "Определение и поиск перспектив | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
-caps.latest.revision: 14
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f9250e25f4e874c40ec9e400850707f30c8e1930
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1ad52f9a99b7f68e8d416c3df1dfa9690faa161d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Занятие 9-1-Определение и поиск перспектив
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Перспектива может упростить вид куба для определенных целей. По умолчанию пользователям доступны для просмотра все элементы куба, на которые они имеют разрешения. Все элементы, которые видит пользователь при просмотре всего куба служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , называются перспективой по умолчанию для куба. Представление полного куба может оказаться слишком сложным для перемещений, особенно для тех пользователей, которым для решения задач, связанных с бизнес-аналитикой и отчетностью, достаточно доступа лишь к малой его части.  
   
 Чтобы упростить излишне сложный куб, можно создать его отображаемые подмножества, называемые *перспективами*, которые отражают лишь небольшую часть групп мер, мер, измерений, атрибутов, иерархий, ключевых показателей эффективности, операций и вычисляемых элементов этого куба. Это может оказаться полезным для работы с клиентскими приложениями, написанных для предыдущей версии служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Эти клиенты не имеют концепции, например папок отображения или перспектив, но перспектива рассматривается клиентами прошлых версий как куб. Дополнительные сведения см. в разделах [Перспективы](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)и [Перспективы в многомерных моделях](../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md).  
@@ -198,12 +201,11 @@ ms.lasthandoff: 09/01/2017
     ![Меры Internet Sales и Reseller Sales](../analysis-services/media/l9-perspectives-4.gif "меры Internet Sales и Reseller Sales")  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
-[Определение и просмотр переводов](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
+[Определение и Просмотр переводов](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Perspectives](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)  
 [Перспективы в многомерных моделях](../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   
   
-

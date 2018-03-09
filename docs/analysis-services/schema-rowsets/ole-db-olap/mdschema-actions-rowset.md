@@ -2,36 +2,33 @@
 title: "Набор строк схемы MDSCHEMA_ACTIONS | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_ACTIONS
+apiname: MDSCHEMA_ACTIONS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_ACTIONS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_ACTIONS rowset
 ms.assetid: f73081f8-ac51-4286-b46e-2b34e792c3e0
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 214fb372b021e7cee9f11bb82cccdc65575a7929
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e9abd044460f463b952eb6fbd88cd7d7a4ea2821
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemaactions-rowset"></a>Набор строк MDSCHEMA_ACTIONS
-  Описывает действия, доступные для клиентского приложения.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Описывает действия, которые могут быть доступны клиентскому приложению.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **MDSCHEMA_ACTIONS** набор строк содержит следующие столбцы.  
@@ -76,7 +73,7 @@ ms.lasthandoff: 09/01/2017
   
  Клиентские приложения могут определить несколько **ACTION_TYPE** с помощью оператора OR.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В следующей таблице перечислены допустимые **КООРДИНАЦИИ** и **COORDINATE_TYPE** комбинации.  
   
 |Тип объекта COORDINATE|COORDINATE_TYPE|  
@@ -90,7 +87,6 @@ ms.lasthandoff: 09/01/2017
 |**ячейки**|**MDACTION_COORDINATE_CELL**|  
   
 ## <a name="see-also"></a>См. также:  
- [OLE DB для OLAP наборы строк схемы](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [Наборы строк схемы OLE DB для OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: "Выполнение скриптов до и после применения моментального снимка | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], scripts
 - scripts [SQL Server replication]
 ms.assetid: 9a6872c2-9bed-477f-9d2f-332d640edcf2
-caps.latest.revision: 35
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "35"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7780ddbbe3486c67535d27cc4c9bb9132274e04d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c9bc1f84cf007de680f8f2da80668aebe62f7d8e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="execute-scripts-before-and-after-the-snapshot-is-applied"></a>Выполнение скриптов до и после применения моментального снимка
-  Можно указать скрипты для выполнения на подписчике до и после применения моментального снимка. Скрипты могут использоваться по различным причинам, таким как создание учетных имен и схем (владельцы объекта) на каждом подписчике.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Вы можете указать скрипты для выполнения на подписчике до или после применения моментального снимка. Скрипты могут использоваться по различным причинам, таким как создание учетных имен и схем (владельцы объекта) на каждом подписчике.  
   
  Вы указываете размещение файла для каждого скрипта, и агент моментальных снимков копирует файлы скриптов в текущую папку моментальных снимков при каждой обработке моментального снимка. При применении моментального снимка агент распространителя или агент слияния запускает скрипт, предшествующий моментальному снимку, перед любым из скриптов реплицируемых объектов. Агент распространителя или агент слияния запускает скрипт, следующий за моментальным снимком, после применения всех других скриптов реплицируемых объектов и применения данных. После того как применение моментального снимка завершено и файлы скриптов успешно выполнены, файлы скриптов удаляются из рабочего каталога на подписчике.  
   
@@ -47,4 +48,3 @@ ms.lasthandoff: 08/03/2017
  [Параметры моментального снимка](../../relational-databases/replication/snapshot-options.md)  
   
   
-

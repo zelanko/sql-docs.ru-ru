@@ -1,11 +1,13 @@
 ---
 title: "Диагностическое соединение для администраторов баз данных | Документы Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 10/16/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,35 +23,33 @@ helpviewer_keywords:
 - ports [SQL Server]
 - dedicated administrator connections [SQL Server]
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
-caps.latest.revision: 65
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 7b2ada96d38f3653433aca10f15bfb0e87f165ed
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a8bc6b057722a9fd864225f74ac58739953b071a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Диагностическое соединение для администраторов баз данных
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет специальное диагностическое соединение для администраторов, когда стандартное соединение с сервером невозможно. Это диагностическое соединение позволяет администратору получить доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения диагностических запросов и устранения проблем, даже когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не отвечает на стандартные запросы на соединение.  
   
  Такое выделенное административное соединение (DAC) поддерживает шифрование и другие средства безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Выделенное административное соединение позволяет только изменять контекст пользователя на другого пользователя с правами администратора.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] делает все возможное для успешного установления выделенного административного соединения, но в чрезвычайных ситуациях это может не дать результата.  
   
-||  
-|-|  
-|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="connecting-with-dac"></a>Соединение с помощью выделенного административного соединения  
  По умолчанию, соединение разрешено только из клиента, запущенного на сервере. Сетевые подключения не разрешаются, пока они не настроены с помощью хранимой процедуры sp_configure с параметром [remote admin connections](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md).  
   
  Только члены роли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin могут подключаться с использованием выделенного административного соединения.  
   
- Выделенное административное соединение доступно и поддерживается через программу командной строки **sqlcmd** со специальным административным параметром (**-A**). Дополнительные сведения об использовании **sqlcmd** см. в разделе [Использование программы sqlcmd с переменными скрипта](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Можно также подключиться, добавив префикс **admin:** к имени экземпляра следующим образом: **sqlcmd -Sadmin:***<имя_экземпляра>.* Выделенное административное соединение можно также инициировать через редактор запросов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключившись к **admin:**\<*имя_экземпляра*>.  
+ Выделенное административное соединение доступно и поддерживается через программу командной строки **sqlcmd** со специальным административным параметром (**-A**). Дополнительные сведения об использовании **sqlcmd** см. в разделе [Использование программы sqlcmd с переменными скрипта](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Можно также подключиться, добавив префикс **admin:** к имени экземпляра следующим образом: **sqlcmd -S admin:<*имя_экземпляра*>**. Соединение DAC можно также инициировать через редактор запросов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключившись к **admin:\<*имя_экземпляра*>**.  
   
 ## <a name="restrictions"></a>Ограничения  
  Так как выделенное административное соединение существует только для диагностики проблем на сервере в редких обстоятельствах, у подключения есть некоторые ограничения.  
@@ -70,17 +70,17 @@ ms.lasthandoff: 08/02/2017
   
     -   BACKUP  
   
--   Через выделенное административное соединение гарантированно доступны только ограниченные ресурсы. Не используйте выделенное административное соединение для запуска ресурсоемких запросов (например, сложного соединения для большой таблицы) или запросов, которые могут блокироваться. Это позволяет обезопасить выделенное административное соединение от осложнения любыми существующими проблемами на сервере. Чтобы избежать сценариев, которые могут приводить к блокировке, следует при возможности запускать запросы, которые могут вызвать блокировку, на уровне изоляции моментального снимка. В противном случае следует установить уровень изоляции транзакций READ UNCOMMITTED и малое значение LOCK_TIMEOUT, например 2000 миллисекунд. Можно также использовать оба способа одновременно. Это позволит предотвратить блокировку сеанса выделенного административного соединения. Но в зависимости от состояния [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сеанс выделенного административного соединения может быть заблокирован с помощью кратковременной блокировки. Возможно, удастся прекратить сеанс выделенного административного соединения с помощью комбинации клавиш CTRL-C, но это не гарантируется. В таком случае единственным вариантом остается перезапуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Через выделенное административное соединение гарантированно доступны только ограниченные ресурсы. Не используйте выделенное административное соединение для запуска ресурсоемких запросов (например, сложного соединения для большой таблицы) или запросов, которые могут блокироваться. Это позволяет обезопасить выделенное административное соединение от осложнения любыми существующими проблемами на сервере. Чтобы избежать сценариев, которые могут приводить к блокировке, следует при возможности запускать запросы, которые могут вызвать блокировку, на уровне изоляции моментального снимка. В противном случае следует установить уровень изоляции транзакций READ UNCOMMITTED и малое значение LOCK_TIMEOUT, например 2000 миллисекунд. Можно также использовать оба способа одновременно. Это позволит предотвратить блокировку сеанса выделенного административного соединения. Но в зависимости от состояния [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сеанс выделенного административного соединения может быть заблокирован с помощью кратковременной блокировки. Возможно, удастся завершить сеанс DAC с помощью клавиш CTRL+C, но это не гарантируется. В таком случае единственным вариантом остается перезапуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Чтобы гарантировать соединение и устранение неполадок через выделенное административное соединение, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] резервирует ограниченные ресурсы для обработки команд, запущенных через него. Этих ресурсов обычно хватает только для простых диагностических функций и устранения неполадок, которые приведены ниже.  
   
  Теоретически можно запустить любую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] , которая не должна исполняться параллельно через выделенное административное соединение, но корпорация Майкрософт настоятельно рекомендует ограничиться применением следующих команд диагностики и устранения неполадок.  
   
--   Запрос таких динамических административных представлений (DMV) для базовой диагностики, как sys.dm_tran_locks для состояния блокировки, sys.dm_os_memory_cache_counters для проверки исправности кэша, а sys.dm_exec_requests и sys.dm_exec_sessions для активных сеансов и запросов. Старайтесь не использовать динамические административные представления DMV, потребляющие много ресурсов (например, представление sys.dm_tran_version_store полностью просматривает хранилище версий, что может привести к резкому увеличению объема ввода-вывода) или использующие сложные соединения. Сведения о влиянии на производительность см. в документации к конкретному [динамическому административному представлению](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+-   Запрос таких динамических административных представлений (DMV) для базовой диагностики, как [sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) для состояния блокировки, [sys.dm_os_memory_cache_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) для проверки работоспособности кэша, а [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) и [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) для активных сеансов и запросов. Старайтесь не использовать DMV, потребляющие много ресурсов (например, представление [sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md) полностью проверяет хранилище версий, что может привести к резкому увеличению объема операций ввода-вывода) или использующие сложные соединения. Сведения о влиянии на производительность см. в документации к конкретному [динамическому административному представлению](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 -   Запрос представлений каталога.  
   
--   Основные команды DBCC, например DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS**,** а также DBCC SQLPERF. Не выполняйте такие ресурсоемкие команды, как **DBCC** CHECKDB, DBCC DBREINDEX или DBCC SHRINKDATABASE.  
+-   Основные команды DBCC, например [DBCC FREEPROCCACHE](../..//t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md), [DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md), [DBCC DROPCLEANBUFFERS](../../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md), а также [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md). Не выполняйте такие ресурсоемкие команды, как [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md) или [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] Команда KILL*\<spid>*. В зависимости от состояния [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]команда KILL не всегда выполняется успешно. В этом случае единственным выходом остается перезапуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Рассмотрим несколько общих правил.  
   
@@ -99,11 +99,11 @@ ms.lasthandoff: 08/02/2017
   
  Порт выделенных административных соединений присваивается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] динамически во время запуска. При соединении с экземпляром по умолчанию DAC стремится не использовать запрос протокола разрешения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSRP) к службе обозревателя SQL Server. Сначала выполняется попытка подключиться через TCP-порт 1434. В случае ошибки следует вызов SSRP на получение порта. Если браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не ожидает запросов SSRP, запрос на подключение возвращает ошибку. Обратитесь к журналу ошибок, чтобы найти номер порта, на котором ожидается выделенное административное соединение. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для приема удаленных административных подключений, выделенное административное соединение должно быть инициировано с явно указанным номером порта:  
   
- **sqlcmd–Stcp:** *\<сервер>,\<порт>*  
+ **sqlcmd –S tcp:***\<сервер>,\<порт>*  
   
  Журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приводит номер порта для выделенного административного соединения; по умолчанию он равен 1434. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для приема только локальных выделенных административных соединений, подключайтесь через адаптер замыкания на себя с использованием следующей команды:  
   
- **sqlcmd–S127.0.0.1**,**1434**  
+ **sqlcmd –S 127.0.0.1,1434**  
   
 > [!TIP]  
 >  При подключении к [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] с помощью DAC необходимо указать в строке подключения имя базы данных, используя параметр -d.  
@@ -119,35 +119,20 @@ ms.lasthandoff: 08/02/2017
   
  `sqlcmd -S serverName.database.windows.net,1434 -U sa -P <xxx> -d AdventureWorks`  
   
-## <a name="related-tasks"></a>Связанные задачи  
-  
 ## <a name="related-content"></a>См. также  
  [Использование программы sqlcmd с переменными скрипта](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
-  
  [Программа sqlcmd](../../tools/sqlcmd-utility.md)  
-  
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  
-  
  [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
-  
  [sp_lock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)  
-  
  [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)  
-  
  [DBCC CHECKALLOC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)  
-  
  [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
-  
  [DBCC OPENTRAN (Transact-SQL)](../../t-sql/database-console-commands/dbcc-opentran-transact-sql.md)  
-  
  [DBCC INPUTBUFFER (Transact-SQL)](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)  
-  
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
-  
  [Динамические административные представления и функции, связанные с транзакциями (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
-  
  [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
   
-
 

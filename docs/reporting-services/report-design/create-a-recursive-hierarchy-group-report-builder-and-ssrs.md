@@ -1,27 +1,27 @@
 ---
-title: "Создание группы рекурсивной иерархии (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Создание группы рекурсивной иерархии (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2adde1d53084f92ee16822c5b6d04a886f31fe28
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 55996678941459c5f6797e02bfc30d82331a718f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Создание группы рекурсивной иерархии (построитель отчетов и службы SSRS)
 В отчетах с разбиением на страницы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] группа рекурсивной иерархии организует данные отдельного набора данных отчета, включающего несколько уровней иерархии, например структуру подчинения для иерархии связей "начальник-подчиненный" в организации.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  В списке **Группировать по** введите или выберите поле для группирования.  
   
-5.  Перейдите на вкладку **Дополнительно**.  
+5.  Щелкните **Дополнительно**.  
   
 6.  В поле **Рекурсивный родитель** введите или выберите поле для группирования.  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  Если панель "Свойства" не отображается, щелкните **Свойства** на вкладке **Вид** .  
   
-2.  В панели «Свойства» разверните **заполнение** узел, щелкните **влево**и в раскрывающемся списке выберите  **\<выражение... >**.  
+2.  В области "Свойства" разверните узел **Заполнение**, щелкните **Влево** и в раскрывающемся списке выберите **\<Выражение...>**.  
   
 3.  На панели «Выражение» введите следующее выражение:  
   
@@ -68,14 +68,13 @@ ms.lasthandoff: 08/09/2017
   
      Запустите отчет. Отчет выведет группированные данные в иерархическом представлении.  
   
-## <a name="see-also"></a>См. также  
- [Создание групп рекурсивной иерархии &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
- [Фильтр, группы и сортировка данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Справочник по агрегатным функциям &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Tables &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Матрицы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>См. также:  
+ [Создание групп рекурсивной иерархии (построитель отчетов и службы SSRS)](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Таблицы &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Матрицы &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [Списки &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

@@ -3,10 +3,12 @@ title: "Операторы | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,20 +25,19 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - alerts [SQL Server], operators
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b9c8caffe4e8172585c1e17fdf9368dbbb3c87d7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3e03cd3190e9705650199c35c18afb8c201eb100
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="operators"></a>Операторы
-Операторы — это псевдонимы людей или групп, которые могут получать электронные уведомления о завершении заданий или предупреждения. Служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обеспечивает уведомление администраторов через операторов. Операторы включают уведомления и мониторинг возможностей агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Операторы — это псевдонимы людей или групп, которые могут получать электронные уведомления о завершении заданий или предупреждения. Служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обеспечивает уведомление администраторов через операторов. Операторы включают уведомления и мониторинг возможностей агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
 ## <a name="operator-attributes-and-concepts"></a>Атрибуты и основные понятия, касающиеся операторов  
 Главные атрибуты оператора:  
@@ -118,7 +119,7 @@ ms.lasthandoff: 08/18/2017
   
 -   Для выполнения команды **net send**оператор должен быть зарегистрирован на указанном компьютере, а указанный компьютер должен принимать сообщения от Windows Messenger.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
@@ -129,4 +130,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>См. также:  
 [Database Mail](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
   
-

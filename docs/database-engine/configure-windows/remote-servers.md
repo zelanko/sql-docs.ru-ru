@@ -2,9 +2,12 @@
 title: "Удаленные серверы | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,20 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - remote access option
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
-caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: c3d9efd513db58e6c0e28060be339ee71ed1e2bd
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6221a1b271386b685d7b99baf5ebecc0a5e0b506
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="remote-servers"></a>Удаленные серверы
-  Удаленные серверы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаются лишь для обратной совместимости. Новые приложения должны использовать вместо них связанные серверы. Дополнительные сведения см. в разделе [Связанные серверы (компонент Database Engine)](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Удаленные серверы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаются лишь для обратной совместимости. Новые приложения должны использовать вместо них связанные серверы. Дополнительные сведения см. в разделе [Связанные серверы (компонент Database Engine)](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
  Настройка удаленного сервера позволяет клиенту, подключившемуся к одному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выполнить хранимую процедуру на другом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не устанавливая отдельное соединение. Вместо этого сервер, к которому подключен клиент, принимает запрос клиента и отправляет запрос удаленному серверу от имени клиента. Удаленный сервер обрабатывает запрос и возвращает результаты исходному серверу. Этот сервер, в свою очередь, передает результаты клиенту. При настройке удаленных серверов необходимо учитывать требования обеспечения безопасности.  
   
@@ -62,7 +65,7 @@ ms.lasthandoff: 08/02/2017
 >  По возможности используйте аутентификацию Windows.  
   
 ### <a name="remote-server-security-example"></a>Пример системы безопасности удаленного сервера  
- Проверьте следующие установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** и **serverReceive**. Метод**serverReceive** настраивается для сопоставления имени входа **serverSend**, поступающего от **serverSend**, с прошедшим проверку в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью **serverReceive**, поступающего от **Alice**. Другое входное имя входа из **serverSend**, с именем **Joe**, сопоставлено с именем входа, прошедшим проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в **serverReceive***,* с именем **Joe**.  
+ Проверьте следующие установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **serverSend** и **serverReceive**. Метод**serverReceive** настраивается для сопоставления имени входа **serverSend**, поступающего от **serverSend**, с прошедшим проверку в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью **serverReceive**, поступающего от **Alice**. Другое входное имя входа из **serverSend**, с именем **Joe**, сопоставлено с именем входа **Joe**, прошедшим проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в **serverReceive****.  
   
  В следующем примере кода Transact-SQL `serverSend` настраивается на выполнение вызовов RPC по отношению к `serverReceive`.  
   
@@ -100,7 +103,7 @@ GO
 ## <a name="viewing-local-or-remote-server-properties"></a>Просмотр свойств локального или удаленного сервера  
  Для просмотра атрибутов локальных и удаленных серверов можно использовать расширенную хранимую процедуру **xp_msver** . В список этих атрибутов входят: номер версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], тип и число процессоров компьютера и версия операционной системы. С локального сервера можно просматривать базы данных, файлы, имена входа и инструменты удаленного сервера. Дополнительные сведения см. в статье [xp_msver (Transact-SQL)](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Связанные серверы (компонент Database Engine)](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
   
 ## <a name="related-content"></a>См. также  
@@ -111,4 +114,3 @@ GO
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)  
   
   
-

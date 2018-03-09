@@ -3,8 +3,11 @@ title: "НАПРИМЕР (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,20 +33,19 @@ helpviewer_keywords:
 - matching patterns [SQL Server]
 - NOT LIKE keyword
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
-caps.latest.revision: 50
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 07a8bb8b08120f08cd54e42dcd332459544c206d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 4fa2299a1efade9f44de85d02c60286a25aad8d0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Определяет, совпадает ли указанная символьная строка с заданным шаблоном. Шаблон может включать обычные символы и символы-шаблоны. Во время сравнения с шаблоном необходимо, чтобы его обычные символы в точности совпадали с символами, указанными в строке. Символы-шаблоны могут совпадать с произвольными элементами символьной строки. Использование символов-шаблонов в отличие от использования операторов сравнения строки (= и !=) делает оператор LIKE более гибким. Если тип данных одного из аргументов не является символьной строкой, компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], если это возможно, преобразует его в тип данных символьной строки.  
   
@@ -67,10 +69,10 @@ match_expression [ NOT ] LIKE pattern
  *match_expression*  
  Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьного типа данных.  
   
- *шаблон*  
+ *pattern*  
  Конкретная строка символов для поиска в *match_expression*и могут включать следующие допустимые символы-шаблоны. *шаблон* не может превышать 8 000 байт.  
   
-|Символ-шаблон|Description|Пример|  
+|Символ-шаблон|Описание|Пример|  
 |------------------------|-----------------|-------------|  
 |%|Любая строка, содержащая ноль или более символов.|Инструкция WHERE Название LIKE '%компьютер%' выполняет поиск и выдает все названия книг, содержащие слово «компьютер».|  
 |_ (подчеркивание)|Любой одиночный символ.|Инструкция WHERE фамилия_автора LIKE '_етров' выполняет поиск и выдает все имена, состоящие из шести букв и заканчивающиеся сочетанием «етров» (Петров, Ветров и т.п.).|  
@@ -86,12 +88,12 @@ match_expression [ NOT ] LIKE pattern
 ## <a name="result-value"></a>Значение результата  
  КАК и возвращает TRUE, если *match_expression* соответствует указанному *шаблон*.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При использовании оператора LIKE для сравнения строк во внимание принимаются все символы строки-шаблона. Это касается начальных и конечных пробелов (« »). Если операция сравнения в запросе должна вернуть все строки, содержащие строки LIKE 'абв ' (с символом пробела на конце), то строка, содержащая «абв» (без пробела), не будет возвращена. Однако завершающие пробелы в выражении, с которым сравнивается шаблон, не учитываются. Если операция сравнения в запросе должна вернуть все строки, содержащие строки LIKE 'абв' (без знака пробела на конце), то будут возвращены все строки, содержащие «абв», как с завершающими пробелами, так и без них.  
   
  Сравнение строк, используя шаблон, который содержит **char** и **varchar** данных не может передать из-за хранение данных использования оператора LIKE. Необходимо знать методы хранения каждого типа данных, чтобы избежать некорректного использования оператора LIKE. В следующем примере передается локальный **char** переменной в хранимую процедуру и использует сопоставление шаблонов для поиска всех сотрудников, чьи фамилии начинаются с указанного набора символов.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName char(20)  
@@ -109,7 +111,7 @@ GO
   
  Однако следующий пример завершается успешно, поскольку конечные пробелы не добавляются в **varchar** переменной.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName varchar(20)  
@@ -137,7 +139,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
   
  Приведенные ниже примеры поясняют различия между результатами сравнения данных с шаблонами оператора LIKE, представленными в Юникоде и ASCII.  
   
-```tsql  
+```sql  
 -- ASCII pattern matching with char column  
 CREATE TABLE t (col1 char(30));  
 INSERT INTO t VALUES ('Robert King');  
@@ -168,7 +170,7 @@ WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row
   
  Например, при выполнении следующего примера отображаются все динамические административные представления базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], так как все они начинаются символами `dm`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT Name  
@@ -207,7 +209,7 @@ GO
 ### <a name="a-using-like-with-the--wildcard-character"></a>A. Применение оператора LIKE с символом-шаблоном %  
  В следующем примере в таблице `415` выполняется поиск всех телефонных номеров с кодом города `PersonPhone`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -241,7 +243,7 @@ GO
 ### <a name="b-using-not-like-with-the--wildcard-character"></a>Б. Применение оператора NOT LIKE с символом-шаблоном %  
  В следующем примере в таблице `PersonPhone` выполняется поиск всех телефонных номеров с региональным кодом, отличным от `415`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -272,7 +274,7 @@ Gail                  Westover             305-555-0100
 ### <a name="c-using-the-escape-clause"></a>В. Применение предложения ESCAPE  
  В следующем примере предложение `ESCAPE` и escape-символ используются для поиска символьной строки `10-15%` в столбце `c1` таблицы `mytbl2`.  
   
-```tsql
+```sql
 USE tempdb;  
 GO  
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES  
@@ -297,7 +299,7 @@ GO
 ### <a name="d-using-the---wildcard-characters"></a>Г. Использование символов-шаблонов [ ]  
  В следующем примере вычисляется сотрудников на `Person` таблицу с имя `Cheryl` или `Sheryl`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT BusinessEntityID, FirstName, LastName   
@@ -308,7 +310,7 @@ GO
   
  В следующем примере выполняется поиск строк в таблице `Person` для сотрудников с фамилией `Zheng` или `Zhang`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName  
@@ -323,7 +325,7 @@ GO
 ### <a name="e-using-like-with-the--wildcard-character"></a>Д. Применение оператора LIKE с символом-шаблоном %  
  В следующем примере вычисляется всех сотрудников в `DimEmployee` таблицы с помощью телефонных номеров, запускаемые с `612`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -335,7 +337,7 @@ ORDER by LastName;
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>Е. Применение оператора NOT LIKE с символом-шаблоном %  
  Следующий пример выполняется поиск всех телефонных номеров в `DimEmployee` таблицу, не ставьте `612`.  .  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -347,7 +349,7 @@ ORDER by LastName;
 ### <a name="g-using-like-with-the--wildcard-character"></a>Ж. Применение оператора LIKE с символом-шаблоном _  
  Следующий пример выполняет поиск всех телефонных номеров с кодом города, начиная с `6` и заканчиваются `2` в `DimEmployee` таблицы. Обратите внимание, что символом-шаблоном % также в конце шаблона поиска, так как код города — первая часть номера телефона и существуют дополнительные символы после значения столбца.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -356,10 +358,9 @@ WHERE phone LIKE '6_2%'
 ORDER by LastName;   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
  
-

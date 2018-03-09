@@ -5,31 +5,30 @@ keywords:
 services: sql-database
 documentationcenter: 
 author: becczhang
-manager: cguyer
-editor: 
-ms.assetid: 
+manager: craigg
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
+ms.custom: 
+ms.component: security
 ms.workload: Inactive
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
+ms.openlocfilehash: 30b08c760eff3bdeb6d264d1c9d79c375f0a09ec
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: 861a24ef2f0bc26adece27b2612d4bf2d4640a63
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-
-
 # <a name="remove-a-transparent-data-encryption-tde-protector-using-powershell"></a>Удаление средства защиты прозрачного шифрования данных (TDE) с помощью PowerShell
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
-
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 - Требуется подписка Azure и права администратора этой подписки.
 - Должна быть установлена и запущена служба Azure PowerShell версии 4.2.0 или более поздней. 
 - В этом практическом руководстве предполагается, что вы уже используете ключ из Azure Key Vault в качестве средства защиты TDE для базы данных или хранилища данных SQL Azure. Дополнительные сведения см. в статье [Transparent Data Encryption with BYOK Support](transparent-data-encryption-byok-azure-sql.md) (Прозрачное шифрование данных с поддержкой BYOK).
@@ -114,4 +113,3 @@ ms.lasthandoff: 09/05/2017
 - Узнайте, как заменить средство защиты TDE сервера в соответствии с требованиями безопасности: [Rotate the Transparent Data Encryption protector Using PowerShell](transparent-data-encryption-byok-azure-sql-key-rotation.md) (Смена средства защиты прозрачного шифрования данных с помощью PowerShell).
 
 - Начините использовать поддержку BYOK для TDE: [Turn on TDE using your own key from Key Vault using PowerShell](transparent-data-encryption-byok-azure-sql-configure.md) (Включение TDE с использованием собственного ключа из Key Vault с помощью PowerShell).
-

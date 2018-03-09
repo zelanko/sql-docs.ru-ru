@@ -1,32 +1,30 @@
 ---
 title: "Справочник по PowerShell | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/21/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 6c435e40-bfaf-4073-8cef-bc3260602246
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 9fbe93dba70125f12d20ee6ae2227d477b08ef19
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7999198236f93a1c64ea731659017bce4efd3e55
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="analysis-services-powershell-reference"></a>Справочник по компоненту Analysis Services PowerShell
-
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Командлеты PowerShell включены в [модуля SqlServer](https://www.powershellgallery.com/packages/SqlServer/21.0.17099). 
   
@@ -38,7 +36,7 @@ ms.lasthandoff: 09/01/2017
   
  Если PowerShell используется для выполнения задачи, отсутствующей в следующем списке (например, создание или синхронизация базы данных), для соответствующего действия можно написать скрипт TMSL или XMLA и выполнить его с помощью командлета **Invoke-ASCmd** .  
   
-|Командлет|Description|Эквивалентные методы AMO|  
+|Командлет|Описание|Эквивалентные методы AMO|  
 |------------|-----------------|----------------------------|  
 |[Командлет Add-RoleMember](../../analysis-services/powershell/add-rolemember-cmdlet.md)|Добавление члена к роли базы данных.|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Add%2A>|  
 |[Командлет Backup-ASDatabase](../../analysis-services/powershell/backup-asdatabase-cmdlet.md)|Резервное копирование базы данных служб Analysis Services.|[Database.Backup](https://msdn.microsoft.com/library/microsoft.analysisservices.database.backup.aspx)|  
@@ -57,4 +55,3 @@ ms.lasthandoff: 09/01/2017
 
   
   
-

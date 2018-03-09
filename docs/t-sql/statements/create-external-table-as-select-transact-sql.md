@@ -3,9 +3,11 @@ title: "Создание ВНЕШНЕГО TABLE AS SELECT (Transact-SQL) | До�
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +22,19 @@ helpviewer_keywords:
 - External, table create as select
 - PolyBase, create table as select
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
-caps.latest.revision: 16
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 716c0fdaa701865e8d35154cd19068051e0ab017
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f2ca379cf30fe2e7d359a294a18804f0b5e6faeb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>Создание ВНЕШНЕГО TABLE AS SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Создает внешнюю таблицу и затем, в параллельном режиме, результаты экспортируются [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции SELECT в BLOB-объекта хранилища Azure или Hadoop.  
   
@@ -78,7 +79,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [[ *имя_базы_данных* . [ *schema_name* ]. ] | *schema_name* . ] *имя_таблицы*  
+ [ [ *database_name* . [ *schema_name* ] . ] | *schema_name* . ] *table_name*  
  Одно для трех - частей имя таблицы для создания базы данных. Для внешней таблицы только метаданные таблицы хранятся в реляционной базе данных.  
   
  РАСПОЛОЖЕНИЕ = "*hdfs_folder*"  
@@ -86,7 +87,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  Внешние файлы записываются в *hdfs_folder* и именованные *Идзапроса_дата_время_ид.формат*, где *идентификатор* — это нарастающий идентификатор и *формат* — это формат экспортированных данных. Пример: QID776_20160130_182739_0.orc.  
   
- Источник_данных = *external_data_source_name*  
+ DATA_SOURCE = *external_data_source_name*  
  Задает имя объекта источника внешних данных, содержащий местоположение, где хранятся внешние данные, или будет сохранен. Расположение — кластер Hadoop или BLOB-объект хранилища Azure. Для создания внешнего источника данных, используйте [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
  FILE_FORMAT = *external_file_format_name*  
@@ -136,7 +137,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  ВЫБЕРИТЕ \<select_criteria > заполняет новую таблицу с результатами из инструкции SELECT. *select_criteria* текст инструкции SELECT, которое определяет, какие данные необходимо скопировать в новую таблицу. Сведения об инструкциях SELECT см. в разделе [ВЫБЕРИТЕ &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для выполнения этой команды **пользователя базы данных** должен все эти разрешения или членства:  
   
 -   **ALTER SCHEMA** разрешение на локальный схему, которой будет содержаться новая таблица или членство в роли **db_ddladmin** предопределенной роли базы данных.  
@@ -184,7 +185,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   Перемещение внешних секции  
   
- **ПРИМЕНЯЕТСЯ к:**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]как необходимый компонент для создания внешней таблицы, администратор приложения необходимо настроить подключения к hadoop.   Дополнительные сведения см. в разделе Настройка подключения к внешним данным (Analytics Platform System) в APS документации, который можно загрузить из [здесь](http://www.microsoft.com/download/details.aspx?id=48241).  
+ **ПРИМЕНЯЕТСЯ к:**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]как необходимый компонент для создания внешней таблицы, администратор приложения необходимо настроить подключения к hadoop. Дополнительные сведения см. в разделе Настройка подключения к внешним данным (Analytics Platform System) в APS документации, который можно загрузить из [здесь](http://www.microsoft.com/download/details.aspx?id=48241).  
   
 ## <a name="limitations-and-restrictions"></a>Ограничения  
  Поскольку данных внешней таблицы находится за пределами базы данных, резервного копирования и операциями восстановления будет работать только с данными, хранящимися в базе данных. Это означает, что только метаданные будут резервного копирования и восстановления.  
@@ -254,7 +255,7 @@ ON ( T1.CustomerKey = T2.CustomerKey )
 OPTION ( HASH JOIN );  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)   
@@ -264,6 +265,5 @@ OPTION ( HASH JOIN );
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
-
 
 

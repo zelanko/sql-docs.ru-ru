@@ -1,9 +1,13 @@
 ---
 title: "Руководство по PolyBase | Документация Майкрософт"
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-data-warehouse, pdw
+ms.service: 
+ms.component: polybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - database-engine-polybase
 ms.tgt_pltfrm: 
@@ -18,22 +22,20 @@ helpviewer_keywords:
 - Hadoop export
 - Hadoop export, PolyBase overview
 - Hadoop import, PolyBase overview
-caps.latest.revision: 26
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 13f4dc7e877341917ebf4f41694cb886c81c53f2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
-ms.openlocfilehash: f9fe99ddd630b8444819c94111f6a363e96105f5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-guide"></a>Руководство по PolyBase
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
-
-  PolyBase — это технология, которая обращается к данным за пределами базы данных с помощью языка t-sql.  В SQL Server 2016 она позволяет выполнять запросы к внешним данным в хранилище BLOB-объектов Azure или Hadoop, а также импортировать данные в такое хранилище и экспортировать их из него. Для включения вычислений для Hadoop запросы оптимизируются. В хранилище данных SQL Azure можно импортировать данные из хранилища BLOB-объектов Azure и Azure Data Lake Store и экспортировать данные.
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+PolyBase — это технология, которая обращается к данным за пределами базы данных с помощью языка t-sql.  В SQL Server 2016 она позволяет выполнять запросы к внешним данным в хранилище BLOB-объектов Azure или Hadoop, а также импортировать данные в такое хранилище и экспортировать их из него. Для включения вычислений для Hadoop запросы оптимизируются. В хранилище данных SQL Azure можно импортировать данные из хранилища BLOB-объектов Azure и Azure Data Lake Store и экспортировать данные.
   
   
  Инструкции по работе с PolyBase см. в статье [Приступая к работе с PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
@@ -55,11 +57,11 @@ ms.lasthandoff: 07/31/2017
 
 -   **Экспортировать данные в Hadoop, хранилище BLOB-объектов Azure или Azure Data Lake Store.** Архивация данных в Hadoop, хранилище BLOB-объектов Azure или Azure Data Lake Store позволяет создать экономичное хранилище и обеспечить его подключение к сети для удобного доступа к данным.  
   
--   **Интегрироваться со средствами бизнес-аналитики.** Можно использовать PolyBase со средствами бизнес-аналитики и стеком анализа Microsoft, а также применять любые сторонние инструменты, совместимые с SQL Server.  
+-   **Интегрироваться со средствами бизнес-аналитики.** Можно использовать PolyBase со средствами бизнес-аналитики и стеком анализа Майкрософт, а также применять любые сторонние средства, совместимые с SQL Server.  
   
 ## <a name="performance"></a>Производительность  
   
--   **Включение вычислений в Hadoop.**Оптимизатор запросов принимает решение о включении вычислений в Hadoop, если это улучшит производительность запросов.  Для принятия такого решения он использует статистику из внешних таблиц.   При включении вычислений создаются задания MapReduce и применяются распределенные вычислительные ресурсы Hadoop.  
+-   **Включение вычислений в Hadoop.**Оптимизатор запросов принимает решение о включении вычислений в Hadoop, если это улучшит производительность запросов.  Для принятия такого решения он использует статистику из внешних таблиц. При включении вычислений создаются задания MapReduce и применяются распределенные вычислительные ресурсы Hadoop.  
   
 -   **Масштабирование вычислительных ресурсов.** Для повышения производительности запросов можно использовать [группы горизонтального масштабирования PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md)в SQL Server. Это обеспечивает параллельную передачу данных между экземплярами SQL Server и узлами Hadoop, а также добавляет вычислительные ресурсы для работы с внешними данными.  
   
@@ -79,4 +81,3 @@ ms.lasthandoff: 07/31/2017
 |[Устранение неполадок c PolyBase](../../relational-databases/polybase/polybase-troubleshooting.md)|Методы управления запросами PolyBase. Используйте динамические административные представления (DMV) для отслеживания запросов PolyBase и узнайте, как считать план запросов PolyBase для поиска узких мест производительности.|  
   
   
-

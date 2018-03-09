@@ -3,7 +3,7 @@ title: "ResyncEnum | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - ResyncEnum enumeration [ADO]
 ms.assetid: d3df2c90-e570-4c40-a79a-25b3448a009c
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4aecc0ca8d53aa4eb1986b55c178943a3acf752f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5d7757a6db51b6d5d1d5f10f303cd0f614b0132a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="resyncenum"></a>ResyncEnum
 Указывает, перезаписываются ли базовые значения путем вызова [Resync](../../../ado/reference/ado-api/resync-method.md).  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adResyncAllValues**|2|По умолчанию. Данные будут утеряны и отложенные обновления будут отменены.|  
 |**adResyncUnderlyingValues**|1|Не приводит к перезаписи данных и отложенные обновления не будут отменены.|  
@@ -47,5 +46,4 @@ ms.lasthandoff: 09/09/2017
 |AdoEnums.Resync.UNDERLYINGVALUES|  
   
 ## <a name="applies-to"></a>Объект применения  
- [Метод повторной синхронизации](../../../ado/reference/ado-api/resync-method.md)
-
+ [Метод Resync](../../../ado/reference/ado-api/resync-method.md)

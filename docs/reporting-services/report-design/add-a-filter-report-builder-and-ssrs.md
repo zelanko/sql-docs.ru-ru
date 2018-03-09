@@ -1,26 +1,27 @@
 ---
-title: "Добавление фильтра (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Добавление фильтра (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 9802327aa4eedb46086927e67c4b6673963157c4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 088e219e120eeb6b4608db9379811caf1b5406cd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Добавление фильтра (построитель отчетов и службы SSRS)
   Добавьте фильтр к набору данных, области данных или группе, если нужно включить или исключить определенные значения из вычислений или отображения. Фильтры применяются во время выполнения вначале для набора данных, затем для области данных и группы в нисходящем порядке для иерархий групп. В таблице, матрице и списке фильтры для групп строк, групп столбцов и смежных групп применяются независимо друг от друга. В диаграмме фильтры для групп категорий и групп рядов применяются независимо друг от друга.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  Откройте отчет в режиме **конструктора** .  
   
-2.  Выберите область данных в область конструктора и щелкните правой кнопкой мыши  *\<область данных >***свойства**. Для датчика выберите пункт **Свойства панели датчиков**. *\<Область данных >***свойства** откроется диалоговое окно.  
+2.  Выделите область данных в области конструирования и щелкните правой кнопкой мыши пункт *Свойства***\<область данных>**. Для датчика выберите пункт **Свойства панели датчиков**. Откроется диалоговое окно *Свойства***\<область данных>**.  
   
     > [!NOTE]  
     >  В области данных табликса щелкните угловую ячейку, строку или дескриптор столбца правой кнопкой мыши, а затем выберите команду **Свойства табликса**.  
@@ -55,7 +56,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  В поле **Значение** введите выражение или значение, с которым фильтр будет сравнивать значение в поле **Выражение**.  
   
-     Дополнительные сведения об уравнениях фильтра см. в разделе [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
+     Примеры уравнений фильтра см. в разделе [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 08/09/2017
   
 9. В поле **Значение** введите выражение или значение, с которым фильтр будет сравнивать значение в поле **Выражение**.  
   
-     Дополнительные сведения об уравнениях фильтра см. в разделе [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
+     Примеры уравнений фильтра см. в разделе [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -103,7 +104,7 @@ ms.lasthandoff: 08/09/2017
   
 9. В поле **Значение** введите выражение или значение, с которым фильтр будет сравнивать значение в поле **Выражение**.  
   
-     Дополнительные сведения об уравнениях фильтра см. в разделе [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
+     Примеры уравнений фильтра см. в разделе [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -127,15 +128,15 @@ ms.lasthandoff: 08/09/2017
   
 9. В поле **Значение** введите выражение или значение, с которым фильтр будет сравнивать значение в поле **Выражение**.  
   
-     Дополнительные сведения об уравнениях фильтра см. в разделе [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
+     Примеры уравнений фильтра см. в разделе [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
- [Добавление фильтров набора данных, фильтров области данных и фильтры групп &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Примеры выражений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Датчики &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Датчики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

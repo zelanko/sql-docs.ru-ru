@@ -3,10 +3,12 @@ title: "Массив состояния строк | Документы Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - result sets [ODBC], block cursors
 - rowset status [ODBC]
 ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 35f61dfb550c54c47e821476687320125b60b7e1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 34fe599aee975dc0c01fc1fbc36f1bed6cab6b6b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="row-status-array"></a>Массив состояния строк
 В дополнение к данным **SQLFetch** и **SQLFetchScroll** может возвращать массив, который предоставляет состояние каждой строки в наборе строк. Этот массив указывается через атрибут значения SQL_ATTR_ROW_STATUS_PTR инструкции. Этот массив выделяется для приложения и должен иметь столько элементов, как указано в атрибуте SQL_ATTR_ROW_ARRAY_SIZE инструкции. Значения в массиве, задаваемыми **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, и **SQLSetPos.** Значения описаны состояния строки и изменилось ли состояния с момента последней загрузки.  
@@ -41,4 +42,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_ROW_DELETED|Строка была удалена с момента последней загрузки.|  
 |SQL_ROW_ADDED|Строка была вставлена **SQLBulkOperations**. Если строка выбирается заново или обновляется в соответствии с **SQLSetPos**, она находится в состоянии SQL_ROW_SUCCESS.<br /><br /> Это значение не задается **SQLFetch** или **SQLFetchScroll**.|  
 |SQL_ROW_NOROW|Набор строк перекрывающегося конца результирующего набора и строки не был возвращен, что значение соответствовало этот элемент массив состояния строк.|
-

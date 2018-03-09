@@ -2,31 +2,32 @@
 title: "Архивация базы данных (страница \"Параметры резервного копирования\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.backupdatabase.options.f1
 - swb.backupdatabase.options.f1
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
-caps.latest.revision: 62
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "62"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b476e0436b392d2b3c093a6a4424dc3445d8e27e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 593d725942bb3c049bb71a0a8f1ad8975863c3fb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-database-backup-options-page"></a>Резервное копирование базы данных (страница «Параметры резервного копирования»)
-  На странице  **Параметры резервного копирования** диалогового окна **Резервное копирование базы данных** можно просмотреть или изменить параметры резервного копирования базы данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] На странице **Параметры резервного копирования** диалогового окна **Резервное копирование базы данных** можно просмотреть или изменить параметры резервного копирования базы данных.  
   
  **Создание резервной копии с помощью среды SQL Server Management Studio**  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 08/03/2017
   
  Сведения о наборах резервных копий см. в разделе [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
- **Description**  
+ **Описание**  
  Введите описание резервного набора данных.  
   
  **Срок действия резервного набора данных истекает**  
@@ -98,4 +99,3 @@ ms.lasthandoff: 08/03/2017
  [Создание резервной копии журнала транзакций при повреждении базы данных (SQL Server)](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   
   
-

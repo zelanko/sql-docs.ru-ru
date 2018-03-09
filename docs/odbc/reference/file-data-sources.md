@@ -3,27 +3,28 @@ title: "Файловые источники данных | Документы Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC], file
 - file data sources [ODBC]
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1fa8f72d601130df15f73e856f676b07bf8f0e52
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4ddd3e0db3987ed14984a978c88befbd076562b5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-data-sources"></a>Файловые источники данных
 *Файловые источники данных* хранятся в файле и разрешить сведения о соединении для многократного использования одним пользователем или совместно несколькими пользователями. При использовании источника данных диспетчера драйверов устанавливает подключение к источнику данных, используя сведения в файле DSN с. Этот файл можно управлять как любой другой файл. Файл источника данных имеет имя источника данных, как не источник данных компьютера и не зарегистрирован для любого одного пользователя или компьютера.  
@@ -33,4 +34,3 @@ ms.lasthandoff: 09/09/2017
  Файл DSN с также может быть непригоден для совместного использования. Файл непригоден для совместного использования DSN с находится на одном компьютере и указывает на источник данных компьютера. Такие источники данных существуют главным образом, чтобы разрешить легко преобразования источников данных в файловых источников данных, приложение может быть сконструирован для работы исключительно с источниками данных файла. Когда диспетчер драйверов отправляются сведения в такие источники данных, он подключается при необходимости для источника данных, указывающий файл DSN с.  
   
  Дополнительные сведения о файловых источников данных см. в разделе [подключение источников данных с помощью файла](../../odbc/reference/develop-app/connecting-using-file-data-sources.md), или [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md) описание функции.
-

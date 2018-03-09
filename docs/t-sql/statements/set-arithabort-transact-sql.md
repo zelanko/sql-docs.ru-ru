@@ -1,10 +1,13 @@
 ---
 title: "SET ARITHABORT (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,20 +29,19 @@ helpviewer_keywords:
 - ending queries [SQL Server]
 - stopping queries
 ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
-caps.latest.revision: 46
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 97f65f734e68cc0a1ec4c019d50ce72b9c7e1bde
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 372e4ff2a6f1c89395f30a7e1d6a000ec5ebea7f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Завершает запрос, если во время выполнения запроса возникает ошибка переполнения или деления на нуль.  
   
@@ -47,19 +49,17 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
+```
+-- Syntax for SQL Server and Azure SQL Database
   
-SET ARITHABORT { ON | OFF }  
-[ ; ]  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-SET ARITHABORT ON   
-[ ; ]  
-```  
+SET ARITHABORT { ON | OFF }
+```
+
+```
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
+
+SET ARITHABORT ON
+```
   
 ## <a name="remarks"></a>Замечания  
  В сеансах входа в систему всегда необходимо устанавливать параметр ARITHABORT в значение ON. Значение параметра ARITHABORT УСТАНОВЛЕНО значение OFF, это может отрицательно повлиять на оптимизацию запросов вызывающие проблемы производительности.  
@@ -82,13 +82,13 @@ SET ARITHABORT ON
   
  Если один из параметров SET ARITHABORT или SET ARITHIGNORE установлен в значение OFF, а параметр SET ANSI_WARNINGS — в значение ON, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сообщение об ошибке при обнаружении ошибок деления на ноль или переполнения.  
   
- Если параметр SET ARITHABORT установлен в значение OFF и возникают аварийные ошибки во время вычисления логических условий в инструкции IF, то будет исполняться ветвь FALSE.  
+ Если параметр SET ARITHABORT установлен в OFF и возникает ошибка прерывания во время вычисления логических условий в инструкции IF, выполняется ветвь FALSE.
   
- Значение параметра SET ARITHABORT должно быть ON, если создаются или изменяются индексы на вычисляемых столбцах или индексированных представлениях. Если значение параметра SET ARITHABORT установлено в OFF, то действия инструкций CREATE, UPDATE, INSERT и DELETE на таблицах с индексами на вычисляемых столбцах или на индексированных представлениях будут завершаться ошибкой.  
+ Значение параметра SET ARITHABORT должно быть ON, если создаются или изменяются индексы на вычисляемых столбцах или индексированных представлениях. Если значение параметра SET ARITHABORT установлено в OFF, то действия инструкций CREATE, UPDATE, INSERT и DELETE на таблицах с индексами на вычисляемых столбцах или на индексированных представлениях будут завершаться ошибкой.
   
  Установка параметра SET ARITHABORT означает установку при запуске или во время выполнения, но не во время синтаксического анализа.  
   
- Чтобы просмотреть текущее значение параметра для этого параметра, выполните следующий запрос.  
+ Чтобы просмотреть текущую настройку этого параметра, выполните следующий запрос:
   
 ```  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  
@@ -202,4 +202,3 @@ GO
  [SESSIONPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   
-

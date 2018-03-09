@@ -3,10 +3,12 @@ title: "Поля соответствия дескриптора | Докуме�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,22 +17,21 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bd0e507985de3840d38e15753036cfd3899ebed3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 049208450144fdd1c1d3b902093517627486ccf9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="descriptor-field-conformance"></a>Дескриптор поля соответствия
 Следующая таблица указывает уровень соответствия для каждого ODBC поле заголовка дескриптора, где это является правильно определенным.  
   
-|Функция|Уровень соответствия|  
+|Компонент|Уровень соответствия|  
 |--------------|-----------------------|  
 |SQL_DESC_ALLOC_TYPE|Основные сведения|  
 |SQL_DESC_ARRAY_SIZE|Основные сведения|  
@@ -42,7 +43,7 @@ ms.lasthandoff: 09/09/2017
   
  Следующая таблица указывает уровень соответствия каждого ODBC дескриптор записи поля, где это является правильно определенным.  
   
-|Функция|Уровень соответствия|  
+|Компонент|Уровень соответствия|  
 |--------------|-----------------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|Уровень 2|  
 |SQL_DESC_BASE_COLUMN_NAME|Основные сведения|  
@@ -81,4 +82,3 @@ ms.lasthandoff: 09/09/2017
  [1] требуется поддержка этих полях записи только в том случае, если драйвер поддерживает применимые типы данных.  
   
  [2] на уровне ядра соответствие драйвер должен поддерживать SQL_PARAM_INPUT. Для соответствия интерфейс уровня 2 драйвер должен также поддерживать SQL_PARAM_INPUT_OUTPUT и SQL_PARAM_OUTPUT.
-

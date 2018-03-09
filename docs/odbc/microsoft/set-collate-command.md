@@ -3,26 +3,26 @@ title: "Команда SET COLLATE | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- set collate command [ODBC]
+helpviewer_keywords: set collate command [ODBC]
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 735e28da49e0c8a9dc3a12d9a29d107209ec99dd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dfd2225157c048840cd20bd140ed74ae31384b8a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-collate-command"></a>COLLATE команды SET
 Указывает порядок сортировки для символьных полей в последующих индексирования и операции сортировки.  
@@ -73,11 +73,10 @@ SET COLLATE TO "SWEFIN"
 SET COLLATE TO cSequenceName  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  ЗАДАТЬ COLLATE позволяет указать порядок таблиц, содержащих диакритические знаки для любой из поддерживаемых языков. Изменение параметра ЗАДАТЬ COLLATE не влияет на порядок сортировки, ранее открывавшихся индексов. Visual FoxPro автоматически сохраняет существующие индексы, предоставляя возможность создавать много различных типов индексов, даже для одного поля.  
   
  Например если индекс создается с ЗАДАТЬ COLLATE присвоено общие и ЗАДАТЬ COLLATE параметр изменяется после испанский язык, индекс сохраняет общие параметры сортировки.  
   
 ## <a name="see-also"></a>См. также:  
- [Диалоговое окно установки Visual FoxPro ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)
-
+ [Диалоговое окно настройки ODBC для Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

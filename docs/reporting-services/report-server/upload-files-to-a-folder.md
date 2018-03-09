@@ -1,13 +1,14 @@
 ---
-title: "Передача файлов в папку | Документы Microsoft"
+title: "Передача файлов в папку | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +20,16 @@ helpviewer_keywords:
 - files [Reporting Services]
 - folders [Reporting Services], uploading files to
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
-caps.latest.revision: 42
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "42"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4a7d4a5babf6789baa551f808b840c469dfa31a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4d095fa72856edf7d28f067620940fcafe824d6d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="upload-files-to-a-folder"></a>Передача файлов в папку
   Предусмотрена возможность передавать файлы из файловой системы и сохранять их в качестве управляемых элементов в базе данных сервера отчетов. Действия системы при передаче зависят от типа файла.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/09/2017
  ![Значок "Отчет"](../../reporting-services/report-server/media/hlp-16doc.gif "Значок "Отчет"")  
 значок отчета  
   
- ![Значок модели](../../reporting-services/report-server/media/model-icon.gif "значок модели")  
+ ![Значок модели](../../reporting-services/report-server/media/model-icon.gif "Значок модели")  
 значок модели отчета  
   
  ![Значок "Универсальный ресурс"](../../reporting-services/report-server/media/hlp-16file.gif "Значок "Универсальный ресурс"")  
@@ -64,11 +64,10 @@ ms.lasthandoff: 08/09/2017
 |Передача любого файла как двоичного объекта|Управление ресурсами|  
 |Просмотр содержимого папки|Просмотр ресурсов, просмотр отчетов|  
   
-## <a name="see-also"></a>См. также  
- [Диспетчер отчетов &#40; Собственный режим служб SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+## <a name="see-also"></a>См. также:  
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Задачи и разрешения](../../reporting-services/security/tasks-and-permissions.md)   
- [Передать файл или отчет &#40; Диспетчер отчетов &#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
+ [Передача файла или отчета (диспетчер отчетов)](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
   
   
-

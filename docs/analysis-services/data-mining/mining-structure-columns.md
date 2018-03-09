@@ -2,12 +2,13 @@
 title: "Столбцы структуры интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - data sources [Analysis Services], mining structure columns
 - columns [data mining], mining structure columns
 ms.assetid: 20cbf433-70d1-4b61-a462-41a8435b27b4
-caps.latest.revision: 41
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f87ea88579145b0220be7a047d230d2f3d8d9a1e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0bf7ffc6f8531385ef9100b3c104db887c2fb565
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-structure-columns"></a>Столбцы структуры интеллектуального анализа данных
-  Пользователь должен определить столбцы в структуре интеллектуального анализа во время ее создания, выбрав столбцы внешних данных и указав, как данные должны быть использованы для моделирования. Таким образом, столбцы структуры интеллектуального анализа данных — это не просто копии данных из источника данных. Они определяют, как данные из этого источника будут использованы в модели интеллектуального анализа данных. Можно определить свойства, которые определяют, каким образом дискретизируются данные, или свойства, описывающие способ распределения значений данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Пользователь должен определить столбцы в структуре интеллектуального анализа во время ее создания, выбрав столбцы внешних данных и указав, как данные должны быть использованы для моделирования. Таким образом, столбцы структуры интеллектуального анализа данных — это не просто копии данных из источника данных. Они определяют, как данные из этого источника будут использованы в модели интеллектуального анализа данных. Можно определить свойства, которые определяют, каким образом дискретизируются данные, или свойства, описывающие способ распределения значений данных.  
   
  Столбцы структуры интеллектуального анализа являются гибкими и расширяемыми, поскольку каждый алгоритм, который применяется для привязки модели интеллектуального анализа данных, может использовать различные столбцы этой структуры для интерпретации данных. Вместо одного набора данных для каждой модели можно использовать одну структуру интеллектуального анализа и столбцы для настройки данных под каждую модель.  
   
@@ -70,9 +71,8 @@ ms.lasthandoff: 09/01/2017
 |Содержит описание классификационных столбцов, являющихся особым типом столбцов, с помощью которых можно связать один столбец структуры интеллектуального анализа с другим.|[Классифицированные столбцы (интеллектуальный анализ данных)](../../analysis-services/data-mining/classified-columns-data-mining.md)|  
 |Добавление и изменение столбцов структуры интеллектуального анализа данных.|[Задачи и инструкции по структуре интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)|  
   
-## <a name="see-also"></a>См. также раздел  
- [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+## <a name="see-also"></a>См. также  
+ [Структуры интеллектуального анализа данных и &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Столбцы модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-columns.md)  
   
   
-

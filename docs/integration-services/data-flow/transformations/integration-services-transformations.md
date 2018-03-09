@@ -1,10 +1,13 @@
 ---
-title: "Преобразования служб Integration Services | Документы Microsoft"
+title: "Преобразования служб Integration Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -21,17 +24,16 @@ helpviewer_keywords:
 - row transformations [Integration Services]
 - rowset transformations [Integration Services]
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
-caps.latest.revision: 56
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85673091c2531821e62bf7cbeab2bbda6139b384
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c2e4f97d129840e2c045fe942996a5918163c137
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-transformations"></a>Преобразования служб Integration Services
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] являются компонентами потока данных пакета, которые выполняют статистическую обработку данных, а также соединяют, распространяют и изменяют данные. Преобразования могут также выполнять операции поиска и формировать образцы наборов данных. В этом разделе описываются преобразования, которые содержат службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , и поясняется работа этих преобразований.  
@@ -101,4 +103,3 @@ ms.lasthandoff: 08/03/2017
  Также можно создавать пользовательские преобразования. Дополнительные сведения см. в статьях [Разработка пользовательского компонента преобразования с синхронными выходами](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md) и [Разработка пользовательского компонента преобразования с асинхронными выходами](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md).  
   
   
-

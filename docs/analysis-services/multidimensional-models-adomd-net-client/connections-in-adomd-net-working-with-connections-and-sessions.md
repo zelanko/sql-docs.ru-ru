@@ -1,13 +1,14 @@
 ---
 title: "Работа с соединениями и сеансами в ADOMD.NET | Документы Microsoft"
 ms.custom: 
-ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -16,17 +17,16 @@ helpviewer_keywords:
 - sessions [ADOMD.NET]
 - connections [ADOMD.NET]
 ms.assetid: 72b43c06-f3e4-42c3-a696-4a3419c3b884
-caps.latest.revision: 35
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a4f51a9e0939612e490ed96c93c06a6931fa3f21
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6926a8cd71983a98d68f59e0dbe30a1b0e78ece8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connections-in-adomdnet---working-with-connections-and-sessions"></a>Connections in ADOMD.NET — работа с соединениями и сеансами
   В XML для аналитики (XMLA) сеансы обеспечивают поддержку операций с сохранением состояния при доступе к аналитическим данным. Сеансы образуют область и контекст команд и транзакций для источника аналитических данных. Используемые для управления сеансами элементы XMLA — [BeginSession](../../analysis-services/xmla/xml-elements-headers/beginsession-element-xmla.md), [Session](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)и [EndSession](../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md).  
@@ -110,8 +110,7 @@ static string CreateSession(string connectionString)
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Установление соединений в ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net.md)  
   
   
-

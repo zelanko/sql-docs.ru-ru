@@ -3,8 +3,11 @@ title: "Создание СЕАНСА СОБЫТИЙ (Transact-SQL) | Докум
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,20 +25,19 @@ helpviewer_keywords:
 - event sessions [SQL Server]
 - CREATE EVENT SESSION statement
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
-caps.latest.revision: 65
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aaee13bce387e36c1dcb7d26f2dd983b8d36a661
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ede0fb6715067bba3bafb1e77863483590d5f6a7
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Создает сеанс расширенных событий, который идентифицирует источник событий, цели и параметры сеанса событий.  
   
@@ -125,7 +127,7 @@ ON SERVER
   
  События отображаются в представлении sys.dm_xe_objects со значением object_type, равным «event».  
   
- ЗНАЧЕНИЕ { *event_customizable_attribute*= \<значение > [,...*n*] }  
+ ЗНАЧЕНИЕ { *event_customizable_attribute*= \<значение > [,... *n*] }  
  Позволяет установить настраиваемые атрибуты для события. Настраиваемые атрибуты отображаются в представлении sys.dm_xe_object_columns со значением column_type, равным «customizable» и object_name = *имя_события*.  
   
  ДЕЙСТВИЕ ({[*event_module_guid*]. *event_package_name*. *имя_действия* [ **,**... *n*] })  
@@ -177,13 +179,13 @@ ON SERVER
   
 -   *target_name* является целевым. Целевые объекты отображаются в представлении sys.dm_xe_objects со значением object_type, равным «target».  
   
- ЗНАЧЕНИЕ { *target_parameter_name*= \<значение > [,...*n*] }  
+ ЗНАЧЕНИЕ { *target_parameter_name*= \<значение > [,... *n*] }  
  Задает параметр цели. Целевые параметры отображаются в представлении sys.dm_xe_object_columns со значением column_type, равным «customizable» и object_name = *target_name*.  
   
 > [!IMPORTANT]  
 >  Если используется цель «Кольцевой буфер», рекомендуется установить параметр цели max_memory в значение 2048 килобайт (КБ), чтобы избежать возможного усечения выходных XML-данных. Дополнительные сведения об использовании разных типах целевых см. в разделе [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
- С помощью ( \<event_session_options > [,... *n* ]) Определяет параметры для сеанса событий.  
+ С помощью ( \<event_session_options > [,...  *n* ]) Определяет параметры для сеанса событий.  
   
  MAX_MEMORY =*размер* [КБ | **МБ** ]  
  Задает максимальный объем памяти, выделенной в сеансе для буферов событий. Значение по умолчанию — 4 МБ. *размер* является целым числом и может быть представлено значением в килобайтах (КБ) или значение мегабайт (МБ).  
@@ -273,5 +275,4 @@ GO
  [sys.dm_xe_object_columns (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)  
   
   
-
 

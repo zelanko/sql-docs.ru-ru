@@ -2,33 +2,33 @@
 title: "Определение содержимого оси среза (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - slicer axis
 - filtering data [MDX]
 ms.assetid: c56b0a70-cdec-427f-990e-425290344e7d
-caps.latest.revision: 33
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 3aaee6261a0209a2c6504c7b0809e2dc57c079d7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4a1b4ad6c837bb442af7f5bd5a98ab09527ef707
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>Многомерных Выражений оси запроса и среза - указания содержимого оси среза
-  Ось среза фильтрует данные, возвращаемые инструкцией многомерных выражений SELECT. При этом возвращаются только данные, пересекающиеся с заданными элементами. Может рассматриваться как дополнительная невидимая ось в запросе. Ось среза определяется в предложении WHERE инструкции многомерных выражений SELECT.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Ось среза фильтрует данные, возвращаемые инструкцией многомерных выражений SELECT. При этом возвращаются только данные, пересекающиеся с заданными элементами. Может рассматриваться как дополнительная невидимая ось в запросе. Ось среза определяется в предложении WHERE инструкции многомерных выражений SELECT.  
   
 ## <a name="slicer-axis-syntax"></a>Синтаксис определения оси среза  
  Для явного определения оси среза используется следующий синтаксис в инструкции многомерных выражений `<SELECT slicer axis clause>` .  
@@ -89,4 +89,3 @@ WHERE(
  Как упоминалось выше, при использовании набора в предложении WHERE значения для всех элементов набора будут агрегированы. В этом случае в каждой ячейке запроса будут показаны агрегированные значения для США и Великобритании.  
   
   
-

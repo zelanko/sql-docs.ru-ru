@@ -2,9 +2,12 @@
 title: "Поиск слов близких к другим с использованием оператора NEAR | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -20,19 +23,20 @@ helpviewer_keywords:
 - full-text queries [SQL Server], proximity
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-caps.latest.revision: 65
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aaff4768722fa830cccf9e2ee397945f0866ae07
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 74732252ddb62adc02b532a23fdfe588fbbed2b9
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Поиск слов близких к другим с использованием оператора NEAR
-  Выражение с *учетом расположения* **NEAR** может применяться в предикате [CONTAINS](../../t-sql/queries/contains-transact-sql.md) или функции [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) для поиска слов или фраз, расположенных рядом. 
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Выражение с *учетом расположения* **NEAR** может применяться в предикате [CONTAINS](../../t-sql/queries/contains-transact-sql.md) или функции [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) для поиска слов или фраз, расположенных рядом. 
   
 ##  <a name="Custom_NEAR"></a>Общие сведения о NEAR  
 **NEAR** обладает следующими функциями:  
@@ -78,7 +82,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="example-1"></a>Пример 1
  Например, можно искать слово «John», расположенное не далее двух слов от слова «Smith», следующим образом.  
   
-```tsql
+```sql
 ... CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 ```  
   
@@ -91,7 +95,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="example-2"></a>Пример 2
  В следующем примере в таблице `Production.Document` образца базы данных `AdventureWorks` выполняется поиск всех сводок по документам, где слово reflector содержится в одном документе со словом bracket.  
   
-```tsql
+```sql
 SELECT DocumentNode, Title, DocumentSummary  
 FROM Production.Document AS DocTable   
 INNER JOIN CONTAINSTABLE(Production.Document, Document,  
@@ -112,19 +116,19 @@ GO
  "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ## <a name="combine-near-with-other-terms"></a>Сочетание NEAR с другими выражениями  
- NEAR можно сочетать с некоторыми другими выражениями. Операторы AND (&), OR (|) и AND NOT (&!) позволяют сочетать настраиваемое выражение с учетом расположения с другим настраиваемым выражением с учетом расположения, простым выражением или префиксным выражением. Например:  
+ NEAR можно сочетать с некоторыми другими выражениями. Операторы AND (&), OR (|) и AND NOT (&!) позволяют сочетать настраиваемое выражение с учетом расположения с другим настраиваемым выражением с учетом расположения, простым выражением или префиксным выражением. Пример:  
   
--   CONTAINS('NEAR((*выражение1*,*выражение2*),5) AND *выражение3*')  
+-   CONTAINS('NEAR((*выражение1*, *выражение2*),5) AND *выражение3*')  
   
--   CONTAINS('NEAR((*выражение1*,*выражение2*),5) OR *выражение3*')  
+-   CONTAINS('NEAR((*выражение1*, *выражение2*),5) OR *выражение3*')  
   
--   CONTAINS('NEAR((*выражение1*,*выражение2*),5) AND NOT *выражение3*')  
+-   CONTAINS('NEAR((*выражение1*, *выражение2*),5) AND NOT *выражение3*')  
   
--   CONTAINS('NEAR((*выражение1*,*выражение2*),5) AND NEAR((*выражение3*,*выражение4*),2)')  
+-   CONTAINS('NEAR((*выражение1*, *выражение2*),5) AND NEAR((*выражение3*, *выражение4*),2)')  
   
--   CONTAINS('NEAR((*выражение1*,*выражение2*),5) OR NEAR((*выражение3*,*выражение4*),2, TRUE)')  
+-   CONTAINS('NEAR((*выражение1*, *выражение2*),5) OR NEAR((*выражение3*, *выражение4*),2, TRUE)')  
   
- Например:  
+ Например,  
   
 ```  
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
@@ -160,5 +164,4 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
 ## <a name="see-also"></a>См. также:  
  [CONTAINS (Transact-SQL)](../../t-sql/queries/contains-transact-sql.md)  
  [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [Запрос с полнотекстовым поиском](../../relational-databases/search/query-with-full-text-search.md)   
-
+ [Запросы с полнотекстовым поиском](../../relational-databases/search/query-with-full-text-search.md)   

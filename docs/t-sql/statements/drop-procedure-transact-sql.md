@@ -1,11 +1,13 @@
 ---
 title: "DROP PROCEDURE (Transact-SQL) | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,20 +27,19 @@ helpviewer_keywords:
 - stored procedures [SQL Server], removing
 - removing procedure groups
 ms.assetid: 1c2d7235-7b9b-4336-8f17-429e7d82c2c3
-caps.latest.revision: 51
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b386dfca28622eb95eec500d909aa7190d081493
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: aef67c09e34bf23fa1185cc10b12ff3fb88e6a6c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="drop-procedure-transact-sql"></a>DROP PROCEDURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Удаляет одну или несколько хранимых процедур или групп процедур из текущей базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -46,13 +47,13 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP { PROC | PROCEDURE } [ IF EXISTS ] { [ schema_name. ] procedure } [ ,...n ]  
 ```  
   
-```tsql  
+```sql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }  
@@ -78,7 +79,7 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
   
 ## <a name="security"></a>безопасность  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Разрешения  
  Требуется **УПРАВЛЕНИЯ** разрешение на выполнение процедуры или **ALTER** разрешений на схему, которой принадлежит процедура, либо членство в **db_ddladmin** предопределенной роли сервера .  
   
 ## <a name="examples"></a>Примеры  
@@ -111,6 +112,5 @@ GO
  [Удаление хранимой процедуры](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)  
   
   
-
 
 

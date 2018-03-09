@@ -1,10 +1,13 @@
 ---
-title: "Шаг 3: Добавление и настройка диспетчера соединений OLE DB | Документы Microsoft"
+title: "Шаг 3. Добавление и настройка диспетчера соединений OLE DB | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,19 +15,18 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 252ca86357f628b5b859c248bf13b1fea5bfcf75
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 86d3e42b79efd2f2541c575b2c860b0a5cb4f41b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-3---adding-and-configuring-an-ole-db-connection-manager"></a>Занятие 1-3-Добавление и настройка диспетчера соединений OLE DB
+# <a name="lesson-1-3---adding-and-configuring-an-ole-db-connection-manager"></a>Занятие 1–3. Добавление и настройка диспетчера соединений OLE DB
 После добавления диспетчера соединений с неструктурированными файлами для подключения к источникам данных предстоит добавить диспетчер соединений OLE DB для соединения с назначением. Диспетчер соединений OLE DB позволяет пакету получать данные из любого источника данных, совместимого с OLE DB, а также загружать данные в такой источник данных. Используя диспетчер соединений OLE DB, можно указать для соединения сервер, метод проверки подлинности и базу данных по умолчанию.  
   
 На этом занятии будет создан диспетчер соединений OLE DB, использующий проверку подлинности Windows для подключения к локальному экземпляру **AdventureWorksDB2012**. На создаваемый диспетчер соединений OLE DB также будут ссылаться другие компоненты, которые будут созданы позже в ходе работы с этим учебником, такие, как преобразование «Уточняющий запрос» и назначение OLE DB.  
@@ -59,4 +61,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="see-also"></a>См. также:  
 [Диспетчер соединений OLE DB](../integration-services/connection-manager/ole-db-connection-manager.md)  
   
-

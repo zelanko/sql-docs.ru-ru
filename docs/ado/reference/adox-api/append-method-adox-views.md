@@ -3,7 +3,7 @@ title: "Append-метод (ADOX представления) | Документы
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a5db1507f6574567cc6acd54e9ede053e36f1552
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 535f25f475f6357d467e2f7ac19a96ed6eea1605
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="append-method-adox-views"></a>Append-метод (ADOX представления)
 Создает новый [представление](../../../ado/reference/adox-api/view-object-adox.md) объекта и добавляет его к [представления](../../../ado/reference/adox-api/views-collection-adox.md) коллекции.  
@@ -48,7 +47,7 @@ Views.Append Name, Command
  *Command*  
  ADO [команда](../../../ado/reference/ado-api/command-object-ado.md) , отражающий представление для создания объекта.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Создает новое представление источника данных с именем и атрибутами, заданными в **команда** объекта.  
   
  Если текст команды, который пользователь указывает представляет процедуру, а не представление, поведение зависит от поставщика. **Добавление** завершится ошибкой, если поставщик не поддерживает сохранение команды.  
@@ -57,9 +56,9 @@ Views.Append Name, Command
 >  При использовании поставщика OLE DB для Microsoft Jet **представления** коллекции **Append** метод дает возможность указать **процедура** вместо **представление**  в *команда* параметра. **Процедура** и добавляются к источнику данных будут добавлены **представления** коллекции. После **Append**, если **процедуры** и **представления** обновляются коллекций, **процедура** больше не будет в **Представления** коллекции и будет отображаться в **процедуры** коллекции.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Коллекции представлений (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
+ [Коллекция Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления Append пример метода (Visual Basic)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [Append-метод (ADOX столбцы)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append-метод (ADOX группы)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
@@ -67,5 +66,4 @@ Views.Append Name, Command
  [Append-метод (ADOX ключи)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [Append-метод (ADOX процедур)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Append-метод (ADOX таблицы)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append-метод (ADOX пользователей)](../../../ado/reference/adox-api/append-method-adox-users.md)
-
+ [Метод Append (коллекция Users ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)

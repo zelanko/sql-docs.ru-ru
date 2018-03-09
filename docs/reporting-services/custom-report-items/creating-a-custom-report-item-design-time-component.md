@@ -1,31 +1,29 @@
 ---
-title: "Создание компонента пользовательского элемента отчета времени разработки | Документы Microsoft"
+title: "Создание компонента времени разработки для пользовательского элемента отчета | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: custom-report-items
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom report items, creating
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
-caps.latest.revision: 37
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "37"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 0b1f5649db2f99957ad3b2452b02d2f7b2db01cb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 45934b9f7de755cd62f1ddc10a672c66fdf33682
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Создание компонента времени разработки пользовательского элемента отчета
   Компонент времени разработки пользовательского элемента отчета ― это элемент управления, который может быть использован в конструкторе отчетов среды Visual Studio. Компонент времени разработки пользовательского элемента отчета предоставляет активную область конструктора, поддерживающую операции перетаскивания, интеграцию с браузером свойств среды [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] и возможность использования пользовательских редакторов свойств.  
@@ -35,12 +33,12 @@ ms.lasthandoff: 08/12/2017
  Свойства, заданные при помощи компонента времени разработки в среде разработки, сериализуются и десериализуются средой проектирования узла и сохраняются в виде элементов в файле на языке определения отчетов (RDL). При выполнении отчета обработчиком отчетов свойства, заданные при помощи компонента времени разработки, передаются компоненту времени выполнения пользовательского элемента отчета, который подготавливает к просмотру пользовательский элемент отчета и возвращает его обратно обработчику отчетов.  
   
 > [!NOTE]  
->  Реализован в виде компонента пользовательского элемента отчета времени разработки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] компонента. В этом документе приводится описание реализации, характерной для компонента времени разработки пользовательского элемента отчета. Дополнительные сведения о разработке компонентов с использованием [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], в разделе [компоненты в Visual Studio](http://go.microsoft.com/fwlink/?LinkId=116576) в библиотеке MSDN.  
+>  Компонент времени разработки для пользовательского элемента отчета реализуется в виде компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. В этом документе приводится описание реализации, характерной для компонента времени разработки пользовательского элемента отчета. Дополнительные сведения о разработке компонентов с использованием платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в разделе [Компоненты в Visual Studio](http://go.microsoft.com/fwlink/?LinkId=116576) библиотеки MSDN.  
   
- Образец полностью реализованного пользовательского элемента отчета см. в разделе [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Образец полностью реализованного пользовательского элемента отчета см. на странице [Образцы продуктов служб SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="implementing-a-design-time-component"></a>Реализация компонента времени разработки  
- Основной класс компонента пользовательского элемента отчета времени разработки наследуется от **Microsoft.ReportDesigner.CustomReportItemDesigner** класса. Помимо стандартных атрибутов, используемых для [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] управления, необходимо определить класс компонента **CustomReportItem** атрибута. Этот атрибут должен соответствовать имени пользовательского элемента отчета, определенному в файле reportserver.config. Список атрибутов [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в разделе «Атрибуты» документации по SDK [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ Основной класс компонента времени разработки для пользовательского элемента отчета наследуется от класса **Microsoft.ReportDesigner.CustomReportItemDesigner**. Помимо стандартных атрибутов, используемых для элемента управления [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], класс компонента также должен определять атрибут **CustomReportItem**. Этот атрибут должен соответствовать имени пользовательского элемента отчета, определенному в файле reportserver.config. Список атрибутов [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в разделе «Атрибуты» документации по SDK [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
  В следующем образце кода приводятся атрибуты, которые используются компонентом времени разработки пользовательского элемента отчета:  
   
@@ -58,9 +56,9 @@ namespace PolygonsCRI
 ```  
   
 ### <a name="initializing-the-component"></a>Инициализация компонента  
- Определяемые пользователем свойства передаются пользовательскому элементу отчета при помощи класса <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData>. Реализация **CustomReportItemDesigner** класс должен переопределять **InitializeNewComponent** метод для создания нового экземпляра компонента <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> класса и присвойте ему значение значения по умолчанию.  
+ Определяемые пользователем свойства передаются пользовательскому элементу отчета при помощи класса <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData>. Реализация класса **CustomReportItemDesigner** должна переопределять метод **InitializeNewComponent**, который создает экземпляр класса <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> компонента и присваивает ему значения по умолчанию.  
   
- В следующем примере кода показан пример пользовательского отчета элемента компонента времени разработки класс переопределения **CustomReportItemDesigner.InitializeNewComponent** метод для инициализации компонента <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> класса:  
+ В следующем образце кода показан класс компонента времени разработки для пользовательского элемента отчета, переопределяющий метод **CustomReportItemDesigner.InitializeNewComponent**, который инициализирует класс <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> компонента:  
   
 ```csharp  
 public override void InitializeNewComponent()  
@@ -94,9 +92,9 @@ public override void InitializeNewComponent()
 ```  
   
 ### <a name="modifying-component-properties"></a>Изменение свойств компонента  
- Вы можете изменить **CustomData** свойства в среде разработки несколькими способами. Любые свойства, предоставляемые компонентом времени разработки и отмеченные атрибутом <xref:System.ComponentModel.BrowsableAttribute>, можно изменить с помощью браузера свойств среды [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Кроме того, можно изменить свойства путем перетаскивания элементов в область конструирования пользовательского элемента отчета, или щелкните правой кнопкой мыши элемент управления в среде разработки и выбрав **свойства** контекстного меню для отображения окна с пользовательскими свойствами.  
+ Свойства **CustomData** в среде разработки можно изменить несколькими способами. Любые свойства, предоставляемые компонентом времени разработки и отмеченные атрибутом <xref:System.ComponentModel.BrowsableAttribute>, можно изменить с помощью браузера свойств среды [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Кроме того, свойства можно изменить, перетащив элементы в область конструктора пользовательского элемента отчета или щелкнув правой кнопкой мыши элемент управления в среде разработки и выбрав в контекстном меню пункт **Свойства** для отображения окна с пользовательскими свойствами.  
   
- В следующем примере кода показан **Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData** свойство, имеющее <xref:System.ComponentModel.BrowsableAttribute> применен атрибут:  
+ В следующем примере кода показано свойство **Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData** с примененным атрибутом <xref:System.ComponentModel.BrowsableAttribute>:  
   
 ```csharp  
 [Browsable(true), Category("Data")]  
@@ -160,7 +158,7 @@ private void EditableCombo_SelectedIndexChanged(object sender,
 ```  
   
 ### <a name="using-designer-verbs"></a>Использование команд конструктора  
- Команда конструктора ― это команда меню, связанная с обработчиком событий. Команды конструктора можно добавить в контекстное меню компонента во время использования элемента управления времени выполнения пользовательского элемента отчета в среде конструктора. Может возвращать список доступных команд конструктора из компонента времени выполнения с помощью **команд** свойство.  
+ Команда конструктора ― это команда меню, связанная с обработчиком событий. Команды конструктора можно добавить в контекстное меню компонента во время использования элемента управления времени выполнения пользовательского элемента отчета в среде конструктора. Список доступных команд конструктора возвращается из компонента времени выполнения с помощью свойства **Verbs**.  
   
  В следующем образце кода приводится команда конструктора с добавлением обработчика событий в коллекцию <xref:System.ComponentModel.Design.DesignerVerbCollection>, а также код самого обработчика событий:  
   
@@ -192,7 +190,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>Использование крайних элементов  
- Также можно реализовать классы пользовательского элемента отчета **Microsoft.ReportDesigner.Design.Adornment** класса. Крайний элемент позволяет элементу управления пользовательского элемента отчета иметь области за пределами основного прямоугольника области конструктора. Эти области могут обрабатывать события пользовательского интерфейса, такие как щелчки кнопкой мыши и операции перетаскивания. **Оформления** класс, который определен в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Microsoft.ReportDesigner** пространством имен является транзитной реализацией <xref:System.Windows.Forms.Design.Behavior.Adorner> найти класс в Windows Forms. Полную документацию по **графический элемент** см. в описании [Общие сведения о службе поведения](http://go.microsoft.com/fwlink/?LinkId=116673) в библиотеке MSDN. Пример кода, который реализует **Microsoft.ReportDesigner.Design.Adornment** см. в описании [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Классы пользовательского элемента отчета также могут реализовывать класс **Microsoft.ReportDesigner.Design.Adornment**. Крайний элемент позволяет элементу управления пользовательского элемента отчета иметь области за пределами основного прямоугольника области конструктора. Эти области могут обрабатывать события пользовательского интерфейса, такие как щелчки кнопкой мыши и операции перетаскивания. Класс **Adornment**, определенный в пространстве имен **Microsoft.ReportDesigner** служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], является транзитной реализацией класса <xref:System.Windows.Forms.Design.Behavior.Adorner>, используемого в Windows Forms. Полные сведения о классе **Adorner** см. в разделе [Общие сведения о службе расширения функциональности](http://go.microsoft.com/fwlink/?LinkId=116673) библиотеки MSDN. Образец кода, реализующего класс **Microsoft.ReportDesigner.Design.Adornment**, см. в разделе [Образцы продуктов служб SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
  Дополнительные сведения о программировании и использовании форм Windows Forms в среде [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] см. в следующих разделах библиотеки MSDN:  
   
@@ -200,13 +198,12 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   Компоненты в среде [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
--   Пошаговое руководство: Создание элемента управления Windows Forms, используются преимущества функций Visual Studio во время разработки  
+-   Пошаговое руководство. Создание элемента управления Windows Forms, использующего функции времени разработки среды Visual Studio  
   
 ## <a name="see-also"></a>См. также:  
- [Архитектура пользовательского элемента отчета](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
- [Создание компонента пользовательского элемента отчета времени выполнения](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
- [Библиотеки классов элемента пользовательского отчета](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
- [Как: развертывание пользовательского элемента отчета](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Архитектура пользовательских элементов отчета](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
+ [Создание компонента времени выполнения пользовательского элемента отчета](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
+ [Библиотеки классов пользовательских элементов отчета](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
+ [Развертывание пользовательского элемента отчета](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   
-

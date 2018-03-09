@@ -1,33 +1,33 @@
 ---
-title: "Работа с моментальными снимками (веб-портал) | Документы Microsoft"
+title: "Работа с моментальными снимками (веб-портал) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-non-specified
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 2bca4e3089bde763669c4fe518f509fbe94cb6eb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 51abaf6facdb6c9dbb9ed360d371057a0274de3f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="working-with-snapshots-web-portal"></a>Работа моментальными снимками (веб-портал)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Можно выбрать, если моментальные снимки создаются для отчета, выбрав **кнопку с многоточием (...)**  отчета, выбрав **управление** и выбрав **кэширование** или **моментальные снимки журнала**.  
+Вы можете управлять созданием моментальных снимков для отчета, нажав кнопку с многоточием **(...)** в отчете, выбрав **Управление** и **Кэширование** или **Моментальные снимки журнала**.  
   
 > [!NOTE]
 > Должна быть запущена служба агента SQL Server.  
@@ -81,8 +81,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>Следующие шаги
 
 [Веб-портал](../reporting-services/web-portal-ssrs-native-mode.md)  
-[Работа с разбиением на страницы](working-with-paginated-reports-web-portal.md)  
+[Работа с отчетами с разбиением на страницы](working-with-paginated-reports-web-portal.md)  
 [Работа с общими наборами данных](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

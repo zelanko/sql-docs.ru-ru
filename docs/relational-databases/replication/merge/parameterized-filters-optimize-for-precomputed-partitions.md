@@ -2,11 +2,13 @@
 title: "Оптимизация производительности параметризованного фильтра с помощью предварительно вычисляемых секций | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - merge replication precomputed partitions [SQL Server replication]
 - merge replication precomputed partitions [SQL Server replication], about precomputed partitions
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
-caps.latest.revision: 45
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "45"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 36f6331a6196e7c7c4bd9e476ae98c56418fad4f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c5e5341614b3da26ec21f84017b0e776000a3bb5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Параметризованные фильтры.Оптимизация предварительно вычисляемых секций
-  Предварительно вычисляемые секции — это способ оптимизации производительности, который может использоваться с фильтрованными публикациями слиянием. Предварительно вычисляемые секции необходимы также для использования логических записей в фильтрованных публикациях. Дополнительные сведения о логических записях см. в статье [Группирование изменений в связанных строках с помощью логических записей](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Предварительно вычисляемые секции — это способ оптимизации производительности, который может использоваться с фильтрованными публикациями слиянием. Предварительно вычисляемые секции необходимы также для использования логических записей в фильтрованных публикациях. Дополнительные сведения о логических записях см. в статье [Группирование изменений в связанных строках с помощью логических записей](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
  При синхронизации подписчика с издателем издатель должен оценить фильтры подписчика, чтобы определить, какие строки принадлежат секции подписчика или его набору данных. Процесс определения принадлежности изменений секциям на издателе для каждого подписчика, получающего набор фильтрованных данных, называется *оценкой секции*. Без использования предварительно вычисляемых секций оценка секции должна выполняться для каждого изменения, вносимого в отфильтрованный столбец на издателе с момента последнего запуска агента слияния для определенного подписчика, и этот процесс необходимо повторить для каждого подписчика, синхронизируемого с издателем.  
   
@@ -75,4 +76,3 @@ ms.lasthandoff: 06/22/2017
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   
-

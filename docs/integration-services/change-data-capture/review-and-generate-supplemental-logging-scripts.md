@@ -1,10 +1,13 @@
 ---
-title: "Обзор и создание скриптов дополнительного журналирования | Документы Microsoft"
+title: "Обзор и создание скриптов дополнительного журналирования | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - scripts
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
-caps.latest.revision: 6
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b3213f6e757e9fc3bcff63d0833d7f0c7fdee201
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e9b3f2ea4c6484544663cb00c15db662da56ee05
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>Обзор и создание скриптов дополнительного журналирования
   Вкладка **Скрипты** служит для запуска или повторного запуска скрипта в базе данных-источнике Oracle, для которой задано дополнительное журналирование.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  При выполнении скриптов дополнительного журналирования открывается диалоговое окно «Учетные данные Oracle для выполнения скриптов», в которое необходимо ввести допустимые имя пользователя Oracle и пароль. Сведения об указании надлежащих учетных данных Oracle см. в разделе [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md).  
   
- При необходимости скрипты также можно запускать вручную с помощью SQL*Plus.  
+ При необходимости скрипты также можно запускать вручную с помощью SQL\*Plus.  
   
 ### <a name="to-run-the-scripts-manually"></a>Запуск скрипта вручную  
   
@@ -58,9 +60,8 @@ ms.lasthandoff: 08/03/2017
   
 2.  Введите имя файла и нажмите кнопку **Сохранить** , чтобы сохранить файл.  
   
-## <a name="see-also"></a>См. также  
- [Изменение свойств экземпляра CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
+## <a name="see-also"></a>См. также:  
+ [Как изменить свойства экземпляра CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [Учетные данные Oracle для выполнения скрипта](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
   
-

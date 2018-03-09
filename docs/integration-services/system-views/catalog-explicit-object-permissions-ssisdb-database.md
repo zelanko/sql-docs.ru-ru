@@ -1,29 +1,31 @@
 ---
-title: "Catalog.explicit_object_permissions (база данных SSISDB) | Документы Microsoft"
+title: "catalog.explicit_object_permissions (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-views
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
-caps.latest.revision: 16
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ce92a61241cb70f5e1c6d1bab8db8264d6228bd2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e941a6a1f460039964579b1c58fe7011502eda5d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogexplicitobjectpermissions-ssisdb-database"></a>catalog.explicit_object_permissions (база данных SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Отображает только разрешения, которые были явно назначены пользователю.  
   
@@ -36,14 +38,14 @@ ms.lasthandoff: 09/26/2017
 |is_deny|**bit**|Указывает, отказано ли в разрешении или же оно предоставлено. Если значение равно `1`, то в разрешении отказано. Если значение равно `0`, то в разрешении не отказано (оно предоставлено).|  
 |grantor_id|**int**|Идентификатор участника, предоставившего разрешение.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Это представление отображает типы разрешений, перечисленные в следующей таблице.  
   
 |Значение permission_type|Имя разрешения|Описание разрешения|Применимые типы объектов|  
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|Разрешает участнику читать сведения, рассматриваемые как часть объекта, например свойства. Тем самым участнику не разрешается перечислять или читать содержимое других объектов, содержащихся в этом объекте.|Папка, проект, среда, операция|  
 |`2`|MODIFY|Разрешает участнику изменять сведения, рассматриваемые как часть объекта, например свойства. Тем самым участнику не разрешается изменять другие объекты, содержащиеся в этом объекте.|Папка, проект, среда, операция|  
-|`3`|Выполните|Разрешает участнику выполнять все пакеты в проекте.|Проект|  
+|`3`|EXECUTE|Разрешает участнику выполнять все пакеты в проекте.|Проект|  
 |`4`|MANAGE_PERMISSIONS|Разрешает участнику назначать разрешения на объекты.|Папка, проект, среда, операция|  
 |`100`|CREATE_OBJECTS|Разрешает участнику создавать объекты в папке.|Папка|  
 |`101`|READ_OBJECTS|Разрешает участнику читать все объекты в папке.|Папка|  
@@ -51,8 +53,7 @@ ms.lasthandoff: 09/26/2017
 |`103`|EXECUTE_OBJECTS|Разрешает участнику выполнять все пакеты из всех проектов в папке.|Папка|  
 |`104`|MANAGE_OBJECT_PERMISSIONS|Разрешает участнику управлять разрешениями на все объекты в папке.|Папка|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Это представление не содержит полного списка разрешений для текущего участника. Пользователь также должен проверить, не является ли участник членом ролей или групп с назначенными разрешениями.  
   
   
-

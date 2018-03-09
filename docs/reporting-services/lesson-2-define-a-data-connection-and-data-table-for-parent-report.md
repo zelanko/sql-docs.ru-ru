@@ -1,28 +1,28 @@
 ---
-title: "Занятие 2: Определение подключения к данным и таблицы данных для родительского отчета | Документы Microsoft"
+title: "Занятие 2. Определение подключения к данным и таблицы данных для родительского отчета | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/18/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
-caps.latest.revision: 8
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "8"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: adc2cc7d329586bae6fb85edb08d71fe51aaaef8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: aaa0c4a8bccf85ddb3e3d58322cd2617db715f03
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Занятие 2. Определение подключения к данным и таблицы данных для родительского отчета
 После создания нового проекта веб-сайта с использованием шаблона веб-сайта ASP.NET для Visual C# далее необходимо создать подключение к данным и таблицу данных для родительского отчета. В этом учебнике в качестве источника подключения к данным используется база данных AdventureWorks2014.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/09/2017
     SELECT ProductID, Name, ProductNumber, SafetyStockLevel, ReorderPoint FROM  Production.Product Order By ProductID  
     ```  
   
-    Для создания запроса также можно щелкнуть **Построитель запросов**, а затем проверить запрос, нажав кнопку **Выполнить запрос**. Если запрос не возвращает ожидаемые данные, возможно, используется более ранняя версия AdventureWorks. Дополнительные сведения о получении образца базы данных **AdventureWorks2014** см. на странице [Образцы баз данных Microsoft SQL Server](http://msftdbprodsamples.codeplex.com/).  
+    Для создания запроса также можно щелкнуть **Построитель запросов**, а затем проверить запрос, нажав кнопку **Выполнить запрос**. Если запрос не возвращает ожидаемые данные, возможно, используется более ранняя версия AdventureWorks. Дополнительные сведения о получении образца базы данных **AdventureWorks2014** см. на странице [Образцы баз данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
   
 11. На странице **Выбор методов для автоматического создания** снимите флажок **Создать методы для отправки обновлений непосредственно в базу данных (GenerateDBDirectMethods)**, а затем нажмите кнопку **Готово**.  
   
@@ -81,5 +81,4 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-task"></a>Следующая задача  
 Тем самым были успешно созданы подключение к данным и таблица данных для родительского отчета. Затем необходимо спроектировать родительский отчет с использованием мастера отчетов. См. [Занятие 3. Проектирование родительского отчета с использованием мастера отчетов](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md).  
   
-
 

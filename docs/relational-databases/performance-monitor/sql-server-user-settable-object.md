@@ -2,31 +2,32 @@
 title: "SQL Server, объект User Settable | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - User Settable object
 - SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "22"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0852dd58d7b89a9cf222c234a18bcecbad1cd943
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4d60d2059230ed74f72ef4e5ad7f32a3f91aa40b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, объект User Settable
-  В Microsoft **объект** User Settable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет создавать пользовательские экземпляры счетчиков, которые используются для контроля тех характеристик сервера, которые нельзя отследить при использовании существующих счетчиков, какими являются, например компоненты, уникальные для вашей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : число зарегистрированных заказов или опись продукции.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объект **User Settable** позволяет создавать пользовательские экземпляры счетчиков, которые используются для контроля тех характеристик сервера, которые нельзя отследить при использовании существующих счетчиков, какими являются, например компоненты, уникальные для вашей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : число зарегистрированных заказов или опись продукции.  
   
  В объекте **User Settable** содержится 10 экземпляров счетчиков запросов: с **User counter 1** по **User counter 10**. Этим счетчикам соответствуют хранимые процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от **sp_user_counter1** до **sp_user_counter10**. Поскольку эти хранимые процедуры выполняются пользовательскими приложениями, значения, получаемые в результате выполнения хранимых процедур, отображаются в системном мониторе. Счетчик может контролировать любое целочисленное значение (например, хранимая процедура может подсчитывать, сколько заказов конкретного продукта было совершено за один день).  
   
@@ -35,13 +36,13 @@ ms.lasthandoff: 06/22/2017
   
  В этой таблице приводится описание объекта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** .  
   
-|SQL Server, счетчики User Settable|Описание|  
+|SQL Server, счетчики User Settable|Description|  
 |---------------------------------------|-----------------|  
 |**Запрос**|Объект **User Settable** содержит счетчик запроса. Пользователи настраивают **User counters** в рамках объекта запроса.|  
   
  В данной таблице приводится описание **экземпляров** счетчика **Query** .  
   
-|Экземпляры счетчиков запросов|Описание|  
+|Экземпляры счетчиков запросов|Description|  
 |-----------------------------|-----------------|  
 |**User counter 1**|Определяется хранимой процедурой **sp_user_counter1**.|  
 |**User counter 2**|Определяется хранимой процедурой **sp_user_counter2**.|  
@@ -78,4 +79,3 @@ GO
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

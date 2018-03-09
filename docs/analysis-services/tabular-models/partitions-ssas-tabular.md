@@ -1,31 +1,31 @@
 ---
-title: "Секции (табличные службы SSAS) | Документы Microsoft"
+title: "Секции | Документы Microsoft"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
-caps.latest.revision: 20
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: b2130a0e6a8b6f734ec77564e7a41e3057e15572
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 729c24cf80e99f6f0e2596c51bfbc8bdf2490d0d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="partitions"></a>Секции
-  Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Секции, созданные с помощью диалогового окна «секции», в SSDT во время создания модели применяются к базе данных рабочей области модели. При развертывании модели секции, определенные для базы данных рабочей области модели, дублируются в развернутом шаблоне базы данных. После этого можно создать и управлять секции для развернутой модели базы данных с помощью диалогового окна «секции», в среде SSMS.  В этом разделе описываются секций, создаваемых во время создания модели с помощью диалогового окна диспетчера секций в SSDT. Сведения о создании и управлении секциями в развернутой модели см. в разделе [Создание и управление секций табличной модели](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Секции, созданные с помощью диалогового окна «секции», в SSDT во время создания модели применяются к базе данных рабочей области модели. При развертывании модели секции, определенные для базы данных рабочей области модели, дублируются в развернутом шаблоне базы данных. После этого можно создать и управлять секции для развернутой модели базы данных с помощью диалогового окна «секции», в среде SSMS.  В этом разделе описываются секций, создаваемых во время создания модели с помощью диалогового окна диспетчера секций в SSDT. Сведения о создании и управлении секциями в развернутой модели см. в разделе [Создание и управление секций табличной модели](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
 ##  <a name="bkmk_benefits"></a> Преимущества  
  Секции в табличной модели делят таблицу на объекты логических секций. Затем каждая секция может обрабатываться независимо от других секций. Например, таблица может включать определенные наборы строк, содержащих данные, которые редко изменяются, однако другие наборы строк могут содержать, напротив, часто изменяющиеся данные. В этом случае нет необходимости обрабатывать все данные, если на самом деле нужно обработать только их часть. Секции позволяют разделить данные, обрабатываемые часто, и данные, которые обрабатываются реже.  
@@ -45,11 +45,11 @@ ms.lasthandoff: 09/01/2017
 ### <a name="partitions-in-a-deployed-model-database"></a>Секции в развернутом шаблоне базы данных  
  При развертывании модели секции для развернутой модели базы данных будет отображаться как объекты базы данных в среде SSMS. Можно создать, изменить, слияния и удалять секции для развернутой модели с помощью диалогового окна «секции», в среде SSMS. Управление секциями в развернутой модели в среде SSMS выходит за рамки этой статьи. Дополнительные сведения об управлении разделов в SSMS см. в разделе [Создание и управление секций табличной модели](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
-##  <a name="bkmk_related_tasks"></a> Связанные задачи  
+##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
-|[Создание и управление секциями в базе данных рабочей области](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)|Описывает создание и управление секциями в базе данных рабочей области модели с помощью диспетчера секций в SSDT.|  
+|[Создание секций и управление ими в базе данных рабочей области](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)|Описывает создание и управление секциями в базе данных рабочей области модели с помощью диспетчера секций в SSDT.|  
 |[Обработка секций в базе данных рабочей области](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)|Описывает, как обрабатывать (обновлять) секции в базе данных рабочей области модели.|  
   
 ## <a name="see-also"></a>См. также:  
@@ -57,4 +57,3 @@ ms.lasthandoff: 09/01/2017
  [Обработка данных](../../analysis-services/tabular-models/process-data-ssas-tabular.md)  
   
   
-

@@ -3,10 +3,12 @@ title: "Роли диспетчера драйверов | Документы Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - driver manager [ODBC], error checking
 ms.assetid: 7b861c82-357e-4590-8074-45136e9ed15e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7718a3d514c6862807cc4b47ecca8729c4c3a162
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 70c6dba19353cc503dc42b33640c18c4ee72caa9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="role-of-the-driver-manager"></a>Роли диспетчера драйверов
 Диспетчер драйверов определяет окончательный порядок, в котором для возвращения состояния записи, которые создает. В частности он определяет, какая запись имеет наивысший ранг и возвращается сначала. Драйвер отвечает за упорядочения записей состояния, которые он создает. Если записи состояния учитываются, диспетчер драйверов и драйвер, диспетчер драйверов отвечает за их упорядочивание. Дополнительные сведения см. в разделе [последовательности записей состояния](../../../odbc/reference/develop-app/sequence-of-status-records.md).  
@@ -39,11 +40,10 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующие подразделы.  
   
--   [Проверяет значение аргумента](../../../odbc/reference/develop-app/argument-value-checks.md)  
+-   [Проверки значения аргумента](../../../odbc/reference/develop-app/argument-value-checks.md)  
   
--   [Смена состояния проверки](../../../odbc/reference/develop-app/state-transition-checks.md)  
+-   [Проверки переходов состояний](../../../odbc/reference/develop-app/state-transition-checks.md)  
   
--   [Общие ошибки проверки](../../../odbc/reference/develop-app/general-error-checks.md)  
+-   [Проверка общих ошибок](../../../odbc/reference/develop-app/general-error-checks.md)  
   
--   [Диспетчер драйверов ошибки и предупреждения проверки](../../../odbc/reference/develop-app/driver-manager-error-and-warning-checks.md)
-
+-   [Проверка ошибок и предупреждений диспетчера драйверов](../../../odbc/reference/develop-app/driver-manager-error-and-warning-checks.md)

@@ -1,30 +1,30 @@
 ---
-title: "Преобразование источников данных (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Преобразование источников данных (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data sources [Reporting Services], embedded
 - data sources [Reporting Services], shared
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
-caps.latest.revision: 16
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "16"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da3cd9531b90536283153b68642da9de01486a9b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b2bf27f67645387e78806cddf7fc195d0d4904ef
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="convert-data-sources-report-builder-and-ssrs"></a>Преобразование источников данных (построитель отчетов и службы SSRS)
   Каждый источник данных в области данных отчета является внедренным и привязанным к определенному отчету либо общим. В построителе отчетов общий источник данных указывает на опубликованный общий источник данных на сервере отчетов или сайте SharePoint. В конструкторе отчетов общий источник данных указывает на общий источник данных в папке **Общие источники данных** в обозревателе решений.  
@@ -67,9 +67,8 @@ ms.lasthandoff: 08/09/2017
   
      В области данных отчета значок источника данных сменится значком общего источника данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление источниками данных отчета](../../reporting-services/report-data/manage-report-data-sources.md)   
  [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   
-

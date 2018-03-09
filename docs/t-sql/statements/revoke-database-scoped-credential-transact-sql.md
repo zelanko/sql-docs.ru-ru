@@ -3,8 +3,11 @@ title: "В области базы данных REVOKE учетных данны
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +21,19 @@ helpviewer_keywords:
 - REVOKE statements, database scoped credentials
 - revoking permissions [SQL Server], database scoped credentials
 ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
-caps.latest.revision: 2
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d05f1829878d31593c56f65dd25660bec9dfa23e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 074fe713de6116e2ba07ee9c5fedf7e34789cf4b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="revoke-database-scoped-credential-transact-sql"></a>В области базы данных REVOKE учетных данных (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Отменяет разрешения на учетные данные уровня базы данных.  
   
@@ -128,4 +130,3 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
-

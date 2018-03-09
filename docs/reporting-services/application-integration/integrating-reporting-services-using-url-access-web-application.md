@@ -1,17 +1,17 @@
 ---
-title: "Использование доступа по URL-адрес в веб-приложении | Документы Microsoft"
+title: "Использование доступа по URL-адресу в веб-приложении | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: application-integration
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - links [Reporting Services], URL access
 - URL access [Reporting Services], Web applications
@@ -20,19 +20,18 @@ helpviewer_keywords:
 - Web applications [Reporting Services]
 - hyperlinks [Reporting Services]
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
-caps.latest.revision: 33
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "33"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: b8d7aff6c9afdfa6e6fb322d028b9bccf5cbaaf5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: b9937f5e81096cda3187f8c5eae408d89e0871a9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="integrating-reporting-services-using-url-access---web-application"></a>Интеграция службы Reporting Services с использованием URL - веб-приложения
+# <a name="integrating-reporting-services-using-url-access---web-application"></a>Интеграция службы Reporting Services с использованием URL-адресов — веб-приложения
   Доступ по URL-адресам в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] специально разработан таким образом, чтобы можно было получить доступ по сети к отдельным отчетам. Этот тип доступа наилучшим образом подходит для интеграции средств просмотра и навигации по отчетам в пользовательских веб-приложениях. Использовать доступ по URL-адресам в веб-приложениях можно следующим образом.  
   
 -   Задавать URL-адрес конкретного сервера отчетов на веб-сайте или портале.  
@@ -40,7 +39,7 @@ ms.lasthandoff: 08/12/2017
 -   Применять метод формы POST и передавать параметры строки запроса по URL-адресу сервера отчетов с использованием полей формы.  
   
 ## <a name="url-access-through-direct-addressing"></a>Доступ к URL-адресу с помощью прямой адресации  
- Для доступа к серверу отчетов или элементу базы данных сервера отчетов по URL-адресу достаточно просто указать этот URL-адрес в веб-браузере или приложении. Можно также предусмотреть использование в URL-адресе параметров, которые могут повлиять на отображение отчета или ресурса, к которому осуществляется доступ. URL-адрес можно серверу отчетов через адресной строке веб-браузера или URL-адрес может быть источником **IFrame** , являющийся частью крупных веб-приложений или портала. Гиперссылки на отчеты можно размещать на различных веб-страницах портала, а также указывать, в каком именно фрейме страницы должен быть выведен отчет, или открывать в процессе доступа к отчету новое окно браузера.  
+ Для доступа к серверу отчетов или элементу базы данных сервера отчетов по URL-адресу достаточно просто указать этот URL-адрес в веб-браузере или приложении. Можно также предусмотреть использование в URL-адресе параметров, которые могут повлиять на отображение отчета или ресурса, к которому осуществляется доступ. Конкретный сервер отчетов можно указать в URL-адресе с помощью адресной строки веб-браузера. URL-адрес можно также указать как источник объекта **IFrame**, входящего в состав более крупного веб-приложения или портала. Гиперссылки на отчеты можно размещать на различных веб-страницах портала, а также указывать, в каком именно фрейме страницы должен быть выведен отчет, или открывать в процессе доступа к отчету новое окно браузера.  
   
  В следующем примере гиперссылка указывает на фрейм с именем «main», который может отличаться от того фрейма, в котором находится гиперссылка. Гиперссылка может входить в состав веб-портала.  
   
@@ -51,9 +50,9 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main" target="main" >
 </a>  
 ```  
   
- В предыдущем примере, параметры сведений об устройствах **LinkTarget** передается со значением «main» в строке запроса URL-адреса. Это позволяет гарантировать, что любые детализирующие ссылки в отчете также будут указывать на фрейм с именем «main».  
+ В предыдущем примере параметр сведений об устройстве **LinkTarget** передается со значением "main" в строке запроса URL-адреса. Это позволяет гарантировать, что любые детализирующие ссылки в отчете также будут указывать на фрейм с именем «main».  
   
- Дополнительные сведения о настройки сведений об устройстве см. в разделе [передача настроек сведений об устройстве модулям подготовки отчетов](../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
+ Дополнительные сведения о параметрах сведений об устройстве см. в разделе [Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру](../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
  Следует отметить, что многие серверы и браузеры ограничивают допустимое число символов в URL-адресе. В некоторых случаях длина адреса ограничена 256 символами. Чтобы обойти это ограничение, необходимо использовать запросы POST с передачей форм.  
   
@@ -88,9 +87,8 @@ Drilldown&rs:Command=Render&rc:LinkTarget=main&rs:Format=HTML4.0
   
 ## <a name="see-also"></a>См. также:  
  [Интеграция служб Reporting Services в приложения](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [Интеграция служб Reporting Services с помощью URL-адресов](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
- [Использование доступа по URL-адрес в приложении Windows](../../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md)   
- [Доступ к URL-адрес &#40; Службы SSRS &#41;](../../reporting-services/url-access-ssrs.md)  
+ [Интеграция служб Reporting Services с помощью доступа по URL-адресу](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
+ [Использование доступа по URL-адресу в приложении Windows](../../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md)   
+ [Доступ по URL-адресу (службы SSRS)](../../reporting-services/url-access-ssrs.md)  
   
   
-

@@ -2,25 +2,26 @@
 title: "Библиотеки Python | Документы Microsoft"
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 6292b9139f4ad43a0bdd8de4b1d849cb0caaa627
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ec0e006a71bb8634b77b83551c9ad82bdb41b246
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="python-libraries-and-data-types"></a>Библиотеки Python и типы данных
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом разделе описываются библиотеки Python, которые входят в состав следующих продуктов:
 
@@ -49,7 +50,7 @@ Python поддерживает ограниченное число типов �
 |-|-|
 |**bigint**|`numeric`|
 |**binary**|`raw`|
-|**bit**|`bool`|
+|**бит**|`bool`|
 |**char**|`str`|
 |**float**|`float64`|
 |**int**|`int32`|
@@ -63,7 +64,6 @@ Python поддерживает ограниченное число типов �
 |**varbinary(max)**|`bytes`|
 |**varchar(n)**|`str`|
 |**varchar(max)**|`str`|
-
 
 
 

@@ -1,10 +1,13 @@
 ---
-title: "Сопоставление параметров запроса с переменными в компонентах потока данных | Документы Microsoft"
+title: "Сопоставления параметров запросов с переменными в компонентах потока данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ helpviewer_keywords:
 - mapping query parameters to variables [Integration Services]
 - variables [Integration Services], mapping parameters to
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
-caps.latest.revision: 34
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da9367a56cefbb37244d4a47543b93586e7e8870
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 306d22adf7e49ab9eb8ae2844ad0cc322c96479f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Сопоставления параметров запросов с переменными в компонентах потока данных
   При настройке конфигурации источника OLE DB для использования параметризованных запросов можно сопоставить параметры с переменными.  
@@ -48,7 +50,7 @@ ms.lasthandoff: 08/03/2017
   
 7.  Нажмите **Параметры**.  
   
-8.  В **Установка параметров запроса** диалоговое окно сопоставьте каждый параметр в **параметры** с переменной в **переменных** или создайте новую переменную, щелкнув  **\<создать переменную >**. Нажмите кнопку **ОК**.  
+8.  В диалоговом окне **Установка параметров запроса** сопоставьте каждый параметр в списке **Параметры** с переменной в списке **Переменные** или создайте переменную, щелкнув **\<Создать переменную>**. Нажмите кнопку **ОК**.  
   
     > [!NOTE]  
     >  Для сопоставления доступны только системные и пользовательские переменные, находящиеся в области видимости данного пакета, родительского контейнера, такого как «цикл по каждому элементу», или задачи потока данных, содержащей компоненты потока данных, доступные для сопоставления. Переменная должна иметь тип данных, совместимый со столбцом в предложении WHERE, которому назначен параметр.  
@@ -57,9 +59,8 @@ ms.lasthandoff: 08/03/2017
   
 10. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Источник OLE DB](../../integration-services/data-flow/ole-db-source.md)   
- [Преобразование «Уточняющий запрос»](../../integration-services/data-flow/transformations/lookup-transformation.md)  
+ [Преобразование "Уточняющий запрос"](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   
-

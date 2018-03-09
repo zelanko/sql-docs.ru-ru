@@ -1,27 +1,27 @@
 ---
-title: "Обновление учетных данных в источниках данных отчетов с сайта SharePoint | Документы Microsoft"
+title: "Обновление учетных данных в источниках данных отчетов с сайта SharePoint | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
-caps.latest.revision: 12
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "12"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85652be59a369ff3b571f8858a744962b5b3f619
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 57e4759e3e6a1e1992592f6e19a0f648970d3557
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>Обновление учетных данных в источниках данных отчетов с сайта SharePoint
   В этом разделе описывается процесс обновления источников данных, встроенных в отчеты, и совместно используемых источников данных, сохраненных в библиотеке документов SharePoint.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  Введите имя пользователя и пароль.  
   
-    -   Если учетная запись является учетной записью пользователя домена Windows, укажите его в следующем формате: \<домена >\\< учетная запись\>, а затем выберите **использовать учетные данные Windows при подключении к источнику данных**.  
+    -   Если это учетная запись пользователя домена Windows, она указывается в следующем формате: \<домен>\\<учетная_запись\>. Кроме того, необходимо установить флажок **Использовать учетные данные Windows при подключении к источнику данных**.  
   
     -   Если имя пользователя и пароль являются учетными данными базы данных, флажок **Использовать учетные данные Windows при соединении с источником данных**устанавливать не следует. Если сервер базы данных поддерживает олицетворение или делегирование, можно выбрать параметр **Выполнять в контексте этой учетной записи**.  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 08/09/2017
   
 5.  Введите имя пользователя и пароль.  
   
-    -   Если учетная запись является учетной записью пользователя домена Windows, укажите его в следующем формате: \<домена >\\< учетная запись\>, а затем выберите **использовать учетные данные Windows при подключении к источнику данных.**  
+    -   Если это учетная запись пользователя домена Windows, она указывается в следующем формате: \<домен>\\<учетная_запись\>. Кроме того, необходимо установить флажок **Использовать учетные данные Windows при подключении к источнику данных**.  
   
     -   Если имя пользователя и пароль являются учетными данными базы данных, флажок **Использовать учетные данные Windows при соединении с источником данных**устанавливать не следует. Если сервер базы данных поддерживает олицетворение или делегирование, можно выбрать параметр **Выполнять в контексте этой учетной записи**.  
   
@@ -90,8 +90,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Загрузка документов в библиотеку SharePoint (службы Reporting Services в режиме SharePoint)](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
   
-

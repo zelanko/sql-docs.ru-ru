@@ -3,7 +3,7 @@ title: "Использование служб удаленных рабочих 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - RDS [ADO]
 - remote data service [ADO]
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f4bf63dba64d4c30ca29629a1a385df45a9f79b1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d75e71f66415fa7bec3b0496064321da3f312e6e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-usage-and-security"></a>Использование служб удаленных рабочих СТОЛОВ и безопасности
 Используйте сведения в этом разделе, для настройки сервера и быстро использовать служб удаленных рабочих СТОЛОВ. Этот раздел включает шаги конкретной конфигурации, которые могут потребоваться при реализации служб удаленных рабочих СТОЛОВ, описываются некоторые ключевые связи между служб удаленных рабочих СТОЛОВ и другими технологиями, и помогает идентифицировать решения проблем, которые могут возникнуть при настройке Решение для служб удаленных рабочих СТОЛОВ.  
@@ -44,10 +43,9 @@ ms.lasthandoff: 09/09/2017
   
 -   [Устранение неполадок с RDS](../../../ado/guide/remote-data-service/troubleshooting-rds.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Принципы работы служб удаленных рабочих СТОЛОВ](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [Сценарии служб удаленных рабочих СТОЛОВ](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Учебник по RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
 
 

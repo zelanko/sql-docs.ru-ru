@@ -3,8 +3,11 @@ title: "(тип данных xml) метод exist() | Документы Micros
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - exist() method
 - exist method
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
-caps.latest.revision: 35
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e152abc34c459d82f451c5ded02d30f5fb76b23
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 74fc65730d0c46858c282b9625c86d1ab651ec49
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="exist-method-xml-data-type"></a>Метод exist() (тип данных xml)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает **бит** , представляющий один из следующих условий:  
   
@@ -49,7 +51,7 @@ exist (XQuery)
  XQuery  
  Выражение на языке XQuery, строковый литерал.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]  
 >  **Exist()** метод возвращает 1 для выражения XQuery, которое возвращает непустой результат. При указании **true()** или **false()** внутри **exist()** метода **exist()** метод возвращает 1, так как функции **true()** и **false()** возвращают логические значения True и False, соответственно. То есть они возвращают не пустой результат. Таким образом **exist()** возвращает значение 1 (True), как показано в следующем примере:  
@@ -158,7 +160,7 @@ WHERE CatalogDescription.exist('
     ) = 1;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Добавление пространств имен в запросы с WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Сравнение типизированного и нетипизированного XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Создание экземпляров XML-данных](../../relational-databases/xml/create-instances-of-xml-data.md)   
@@ -166,4 +168,3 @@ WHERE CatalogDescription.exist('
  [Язык модификации XML-данных &#40; Язык XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   
-

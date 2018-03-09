@@ -2,15 +2,16 @@
 title: "Восстановление страниц (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.restorepage.general.f1
+f1_keywords: sql13.swb.restorepage.general.f1
 helpviewer_keywords:
 - restoring pages [SQL Server]
 - pages [SQL Server], restoring
@@ -19,26 +20,25 @@ helpviewer_keywords:
 - pages [SQL Server], damaged
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-caps.latest.revision: 67
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "67"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 3e59972bf634c4326f14081d7909b0926161d90b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1cdf13c937ecdaa54c31831625dc6fc41b35be70
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-pages-sql-server"></a>Восстановление страниц (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описано, как восстанавливать страницы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Задачей восстановления страниц является восстановление одной или нескольких поврежденных страниц без восстановления всей базы данных. Обычно страницы, являющиеся кандидатами на восстановление, в результате ошибок доступа помечаются как «подозрительные». Информация об указанных подозрительных страницах хранится в таблице [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) базы данных **msdb** .  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Области использования функции восстановления страниц](#WhenUseful)  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/03/2017
   
      [Рекомендации](#Recommendations)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Восстановление страниц с помощью:**  
   
@@ -104,9 +104,9 @@ ms.lasthandoff: 08/03/2017
   
      При восстановлении последующих резервных копий журналов они применяются только к файлам базы данных, содержащим хотя бы одну восстанавливаемую страницу. Для перевода файловой группы в состояние, соответствующее текущему файлу журнала, необходимо применить непрерывную последовательность резервных копий журнала к последнему экземпляру, полученному в результате полного или разностного восстановления. Как и при восстановлении файлов, набор данных наката продвигается одним проходом повторения журнала. Для успешного выполнения операции восстановления состояние восстановленных страниц должно соответствовать состоянию базы данных.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Если восстанавливаемая база данных не существуют, для выполнения инструкции RESTORE у пользователя должны быть разрешения CREATE DATABASE. Если база данных существует, разрешения на выполнение инструкции RESTORE по умолчанию предоставлены членам предопределенных ролей сервера **sysadmin** и **dbcreator** , а также владельцу базы данных (**dbo**) (для параметра FROM DATABASE_SNAPSHOT база данных всегда существует).  
   
  Разрешения на выполнение инструкции RESTORE даются ролям, в которых данные о членстве всегда доступны серверу. Так как членство в предопределенной роли базы данных может быть проверено только тогда, когда база данных доступна и не повреждена, что не всегда имеет место при выполнении инструкции RESTORE, члены предопределенной роли базы данных **db_owner** не имеют разрешений RESTORE.  
@@ -208,10 +208,10 @@ ms.lasthandoff: 08/03/2017
     > [!NOTE]  
     >  Эта последовательность аналогична последовательности восстановления файла. Фактически восстановление страниц и восстановление файлов могут выполняться как части одной и той же последовательности.  
   
-###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
+###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере восстанавливаются четыре поврежденные страницы файла `B` в режиме `NORECOVERY`. Далее, после применения двух резервных копий журналов с параметром `NORECOVERY`, следует восстановление резервной копии заключительного фрагмента журнала с параметром `RECOVERY`. В этом примере выполняется восстановление в сети. В следующем примере идентификатором файла `B` является `1`, а идентификаторами поврежденных страниц — `57`, `202`, `916`и `1016`.  
   
-```tsql  
+```sql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
    FROM <file_backup_of_file_B>   
    WITH NORECOVERY;  
@@ -231,4 +231,3 @@ GO
  [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   
-

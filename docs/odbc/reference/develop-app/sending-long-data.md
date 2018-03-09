@@ -3,27 +3,28 @@ title: "Отправка данных Long | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - long data [ODBC]
 - sending long data [ODBC]
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e60a23396a725f449b3b5f37f70bcb28284071d8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f2fad149692bf76c118837daf05e0b77ebf4c38
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sending-long-data"></a>Отправка данных Long
 Определение СУБД *длинных данных* как любой символьных или двоичных данных через определенный размер, например 254 символов. Не может быть невозможно сохранить весь элемент больших объемов данных в памяти, например когда этот элемент представляет собой длинный текст документа или точечный рисунок. Поскольку такие данные не могут храниться в одиночный буфер, источник данных отправляет его драйвер в частях с **SQLPutData** при выполнении инструкции. Параметры, для которых данные передаются во время выполнения, называются *параметров данных времени выполнения*.  
@@ -50,4 +51,3 @@ ms.lasthandoff: 09/09/2017
  После **SQLExecute** или **SQLExecDirect** возвращает SQL_NEED_DATA и перед данных полностью отправлен для последнего параметра данных времени выполнения, инструкция находится в состоянии необходимые данные. Хотя инструкция находится в состоянии требуются данные, приложение может вызвать только **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, или **SQLGetDiagRec**; все остальные функции возвращают SQLSTATE HY010 (функция ошибка последовательности). Вызов **SQLCancel** отменяет выполнение инструкции и возвращает его предыдущее состояние. Дополнительные сведения см. в разделе [приложение б: ODBC состояния перехода таблицы](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Пример отправки данных во время выполнения см. в разделе [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md) описание функции.
-

@@ -2,12 +2,13 @@
 title: "Свойства (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -17,20 +18,20 @@ helpviewer_keywords:
 - Analysis Services Scripting Language, properties
 - ASSL, properties
 ms.assetid: 9a38cdc9-a210-421a-90e9-6391876765fa
-caps.latest.revision: 21
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1f616fb67d0e22bba33d22d0d59eb2ed19a4d88e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fee88a17655823ed00bbcb864dabcf1980663724
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="properties-assl"></a>Свойства (ASSL)
-  В этом разделе справки содержатся сведения о синтаксисе и использовании каждого элемента, выступающего в качестве свойства объекта в схеме языка ASSL.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+В этом разделе справки содержатся сведения о синтаксисе и использовании каждого элемента, выступающего в качестве свойства объекта в схеме языка ASSL.  
   
  Хотя в схеме языка ASSL содержатся только элементы XML, но, с точки зрения разработчика, элементы, которые описываются в этом разделе, соответствуют свойствам, описывающим объекты.  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[Элемент Access &#40; ASSL &#41;](../../../analysis-services/scripting/properties/access-element-assl.md)|Указывает уровень доступа для [CellPermission](../../../analysis-services/scripting/objects/cellpermission-element-assl.md) элемента.|  
 |[Элемент Account &#40; ImpersonationInfo &#41; &#40; ASSL &#41;](../../../analysis-services/scripting/properties/account-element-impersonationinfo-assl.md)|Содержит имя учетной записи пользователя для [ImpersonationInfo](../../../analysis-services/scripting/data-type/impersonationinfo-data-type-assl.md) тип данных.|  
@@ -73,7 +74,7 @@ ms.lasthandoff: 09/01/2017
 |[Элемент AttributeHierarchyOrdered &#40; ASSL &#41;](../../../analysis-services/scripting/properties/attributehierarchyordered-element-assl.md)|Определяет упорядоченность связанной иерархии атрибутов.|  
 |[Элемент AttributeHierarchyVisible &#40; ASSL &#41;](../../../analysis-services/scripting/properties/attributehierarchyvisible-element-assl.md)|Определяет, является ли иерархия атрибутов видимой для клиентских приложений.|  
 |[Элемент AttributeID &#40; ASSL &#41;](../../../analysis-services/scripting/properties/attributeid-element-assl.md)|Содержит идентификатор атрибута, связанного с родительским элементом.|  
-|[Элемент Audit &#40; ASSL &#41;](../../../analysis-services/scripting/properties/audit-element-assl.md)|Указывает, что [трассировки](../../../analysis-services/scripting/objects/trace-element-assl.md) элемент не может удалять любые события, даже если это приводит к снижению производительности сервера.|  
+|[Элемент Audit &#40; ASSL &#41;](../../../analysis-services/scripting/properties/audit-element-assl.md)|Указывает, что элемент [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) не может удалять какие-либо события, даже если это приводит к снижению производительности сервера.|  
 |[Элемент AutoRestart &#40; ASSL &#41;](../../../analysis-services/scripting/properties/autorestart-element-assl.md)|Определяет, является ли **трассировки** элемент должен автоматически перезапускаться в случае [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] остановки и перезапуска службы.|  
 |[Элемент BackColor &#40; ASSL &#41;](../../../analysis-services/scripting/properties/backcolor-element-assl.md)|Описывает связанные с цветом характеристики отображения родительского элемента.|  
 |[Элемент CacheMode &#40; ASSL &#41;](../../../analysis-services/scripting/properties/cachemode-element-assl.md)|Определяет механизм кэширования, который используется для обучающих данных, полученных при обработке структуры интеллектуального анализа данных.|  
@@ -102,7 +103,7 @@ ms.lasthandoff: 09/01/2017
 |[Элемент DataAggregation &#40; ASSL &#41;](../../../analysis-services/scripting/properties/dataaggregation-element-assl.md)|Определяет, является ли экземпляр выполнить статистическое вычисление сохраняемых или кэшированных данных для **MeasureGroup**.|  
 |[Элемент DatabaseID &#40; ASSL &#41;](../../../analysis-services/scripting/properties/databaseid-element-assl.md)|Идентифицирует **базы данных** элемента, связанного с вне строки **привязки** элемента.|  
 |[Элемент DataSize &#40; ASSL &#41;](../../../analysis-services/scripting/properties/datasize-element-assl.md)|Содержит размер в байтах [DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md) элемента.|  
-|[Элемент DataSourceID &#40; ASSL &#41;](../../../analysis-services/scripting/properties/datasourceid-element-assl.md)|Идентифицирует **DataSource** элемент, связанный с родительским элементом.|  
+|[Элемент DataSourceID &#40; ASSL &#41;](../../../analysis-services/scripting/properties/datasourceid-element-assl.md)|Обозначает элемент **DataSource** , связанный с родительским элементом.|  
 |[Элемент DataSourceImpersonationInfo &#40; ASSL &#41;](../../../analysis-services/scripting/properties/datasourceimpersonationinfo-element-assl.md)|Содержит сведения, используемые для задания режима олицетворения при подключении к источнику данных для **базы данных** элемента.|  
 |[Элемент DataSourceViewID &#40; ASSL &#41;](../../../analysis-services/scripting/properties/datasourceviewid-element-assl.md)|Идентифицирует [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md) элемента, связанного с **привязки** родительского элемента.|  
 |[Элемент DataType &#40; ASSL &#41;](../../../analysis-services/scripting/properties/datatype-element-assl.md)|Определяет тип данных связанного элемента.|  
@@ -135,7 +136,7 @@ ms.lasthandoff: 09/01/2017
 |[Элемент filter &#40; Трассировка &#41; &#40; ASSL &#41;](../../../analysis-services/scripting/properties/filter-element-trace-assl.md)|Содержит фрагмент XML-документа, который описывает **трассировки** фильтра.|  
 |[Элемент FirstDayOfWeek &#40; ASSL &#41;](../../../analysis-services/scripting/properties/firstdayofweek-element-assl.md)|Определяет первый день недели для **TimeBinding** элемента.|  
 |[Элемент FiscalFirstDayOfMonth &#40; ASSL &#41;](../../../analysis-services/scripting/properties/fiscalfirstdayofmonth-element-assl.md)|Определяет первый день финансового месяца для **TimeBinding** элемента.|  
-|[Элемент FiscalFirstMonth &#40; ASSL &#41;](../../../analysis-services/scripting/properties/fiscalfirstmonth-element-assl.md)|Определяет первый месяц финансового периода для **TimeBinding** элемента.|  
+|[Элемент FiscalFirstMonth &#40; ASSL &#41;](../../../analysis-services/scripting/properties/fiscalfirstmonth-element-assl.md)|Определяет первый месяц финансового периода для элемента **TimeBinding** .|  
 |[Элемент FiscalYearName &#40; ASSL &#41;](../../../analysis-services/scripting/properties/fiscalyearname-element-assl.md)|Определяет контекст именования для имени финансового года для **TimeBinding** элемента.|  
 |[Элемент FontFlags &#40; ASSL &#41;](../../../analysis-services/scripting/properties/fontflags-element-assl.md)|Описывает характеристики отображения шрифта **CalculationProperty** или **мер** родительского элемента.|  
 |[Элемент FontName &#40; ASSL &#41;](../../../analysis-services/scripting/properties/fontname-element-assl.md)|Описывает характеристики отображения шрифта **CalculationProperty** или **мер** родительского элемента.|  
@@ -158,7 +159,7 @@ ms.lasthandoff: 09/01/2017
 |[Элемент IntermediateCubeDimensionID &#40; ASSL &#41;](../../../analysis-services/scripting/properties/intermediatecubedimensionid-element-assl.md)|Содержит идентификатор измерения, который связывает ссылочное измерение с группой мер.|  
 |[Элемент IntermediateGranularityAttributeID &#40; ASSL &#41;](../../../analysis-services/scripting/properties/intermediategranularityattributeid-element-assl.md)|Содержит идентификатор атрибута гранулярности в промежуточном измерении куба, который связывает ссылочное измерение с промежуточным.|  
 |[Элемент InvalidXmlCharacters &#40; ASSL &#41;](../../../analysis-services/scripting/properties/invalidxmlcharacters-element-assl.md)|Определяет метод обработки неправильных символов XML в исходных данных.|  
-|[Элемент invocation &#40; ASSL &#41;](../../../analysis-services/scripting/properties/invocation-element-assl.md)|Указывает, каким образом **действия** должны вызываться.|  
+|[Элемент invocation &#40; ASSL &#41;](../../../analysis-services/scripting/properties/invocation-element-assl.md)|Задает способ вызова действия **Action** .|  
 |[Элемент IsAggregatable &#40; ASSL &#41;](../../../analysis-services/scripting/properties/isaggregatable-element-assl.md)|Указывает, является ли значения [DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md) элемент может быть статистически вычислена.|  
 |[Элемент IsKey &#40; ASSL &#41;](../../../analysis-services/scripting/properties/iskey-element-assl.md)|Указывает, предоставляет ли столбец ключ для варианта в **MiningStructure** элемента.|  
 |[Элемент isolation &#40; ASSL &#41;](../../../analysis-services/scripting/properties/isolation-element-assl.md)|Указывает уровень изоляции для элемента, который является производным от [DataSource](../../../analysis-services/scripting/data-type/datasource-data-type-assl.md) тип данных.|  
@@ -181,7 +182,7 @@ ms.lasthandoff: 09/01/2017
 |[Элемент LogFileSize &#40; ASSL &#41;](../../../analysis-services/scripting/properties/logfilesize-element-assl.md)|Определяет максимальный размер файла журнала в мегабайтах.|  
 |[Элемент ManagedProvider &#40; ASSL &#41;](../../../analysis-services/scripting/properties/managedprovider-element-assl.md)|Содержит имя управляемого поставщика, который используется элементом, производным от **DataSource** тип данных.|  
 |[Элемент ManufacturingExtraMonthQuarter &#40; ASSL &#41;](../../../analysis-services/scripting/properties/manufacturingextramonthquarter-element-assl.md)|Определяет месяц производственного периода, которому присваивается дополнительный месяц для **TimeBinding** элемента.|  
-|[Элемент ManufacturingFirstMonth &#40; ASSL &#41;](../../../analysis-services/scripting/properties/manufacturingfirstmonth-element-assl.md)|Определяет первый Производственный месяц для **TimeBinding** элемента.|  
+|[Элемент ManufacturingFirstMonth &#40; ASSL &#41;](../../../analysis-services/scripting/properties/manufacturingfirstmonth-element-assl.md)|Определяет первый производственный месяц для элемента **TimeBinding** .|  
 |[Элемент ManufacturingFirstWeekOfMonth &#40; ASSL &#41;](../../../analysis-services/scripting/properties/manufacturingfirstweekofmonth-element-assl.md)|Определяет первую неделю производственного месяца для **TimeBinding** элемента.|  
 |[Элемент MasterDatasourceID &#40; ASSL &#41;](../../../analysis-services/scripting/properties/masterdatasourceid-element-assl.md)|Содержит идентификатор источника данных master для **базы данных** элемента.|  
 |[Элемент Materialization &#40; ASSL &#41;](../../../analysis-services/scripting/properties/materialization-element-assl.md)|Указывает тип связи между группой мер и ссылочным измерением.|  
@@ -214,7 +215,7 @@ ms.lasthandoff: 09/01/2017
 |[Элемент PartitionID &#40; ASSL &#41;](../../../analysis-services/scripting/properties/partitionid-element-assl.md)|Связывает **секции** элемента с родительским элементом, привязка или привязка вне строки.|  
 |[Элемент Password &#40; ASSL &#41;](../../../analysis-services/scripting/properties/password-element-assl.md)|Содержит пароль учетной записи пользователя для **ImpersonationInfo** элемента.|  
 |[Путь к элементу &#40; ASSL &#41;](../../../analysis-services/scripting/properties/path-element-assl.md)|Содержит путь, предоставленный экземпляром служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], используемые отчета [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) элемента.|  
-|[Элемент PendingValue &#40; ASSL &#41;](../../../analysis-services/scripting/properties/pendingvalue-element-assl.md)|Содержит допускающее только чтение отложенное значение связанного **ServerProperty** элемента.|  
+|[Элемент PendingValue &#40; ASSL &#41;](../../../analysis-services/scripting/properties/pendingvalue-element-assl.md)|Содержит допускающее только чтение отложенное значение связанного элемента **ServerProperty** .|  
 |[Элемент PermissionSet &#40; ASSL &#41;](../../../analysis-services/scripting/properties/permissionset-element-assl.md)|Определяет набор разрешений, связанных с [!INCLUDE[msCoName](../../../includes/msconame-md.md)] сборки .NET Framework.|  
 |[Элемент Persistence &#40; ASSL &#41;](../../../analysis-services/scripting/properties/persistence-element-assl.md)|Определяет фрагменты связанного источника данных являются динамическими и проверяются на обновления с частотой, указанной в [RefreshPolicy](../../../analysis-services/scripting/properties/refreshpolicy-element-assl.md) элемента.|  
 |[Элемент Process &#40; ASSL &#41;](../../../analysis-services/scripting/properties/process-element-assl.md)|Определяет, может ли пользователь проводить обработку владельца родительского элемента.|  
@@ -224,11 +225,11 @@ ms.lasthandoff: 09/01/2017
 |[Элемент ProductName &#40; ASSL &#41;](../../../analysis-services/scripting/properties/productname-element-assl.md)|Содержит имя продукта только для чтения экземпляра [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , связанный с **сервера** элемента.|  
 |[Элемент Query &#40; ASSL &#41;](../../../analysis-services/scripting/properties/query-element-assl.md)|Содержит текст запроса, который следует выполнить для создания уведомления.|  
 |[Элемент QueryDefinition &#40; ASSL &#41;](../../../analysis-services/scripting/properties/querydefinition-element-assl.md)|Содержит непрозрачное выражение для запроса, связанного с **DataSource** элемент в [QueryBinding](../../../analysis-services/scripting/data-type/querybinding-data-type-assl.md) элемента.|  
-|[Элемент Read &#40; ASSL &#41;](../../../analysis-services/scripting/properties/read-element-assl.md)|Определяет, можно ли читать данные или метаданные для заданного [CubeDimensionPermission](../../../analysis-services/scripting/data-type/cubedimensionpermission-data-type-assl.md) или [разрешение](../../../analysis-services/scripting/data-type/permission-data-type-assl.md) элемента.|  
+|[Элемент Read &#40; ASSL &#41;](../../../analysis-services/scripting/properties/read-element-assl.md)|Определяет, можно ли читать данные или метаданные для указанного элемента [CubeDimensionPermission](../../../analysis-services/scripting/data-type/cubedimensionpermission-data-type-assl.md) или [Permission](../../../analysis-services/scripting/data-type/permission-data-type-assl.md) .|  
 |[Элемент ReadDefinition &#40; ASSL &#41;](../../../analysis-services/scripting/properties/readdefinition-element-assl.md)|Определяет, могут ли элементы читать определение базы данных или определение объектов в базе данных.|  
 |[Элемент ReadSourceData &#40; ASSL &#41;](../../../analysis-services/scripting/properties/readsourcedata-element-assl.md)|Определяет, каким образом уникальные имена формируются для иерархий, содержащихся в **CubePermission**.|  
 |[Элемент RefreshInterval &#40; ASSL &#41;](../../../analysis-services/scripting/properties/refreshinterval-element-assl.md)|Определяет интервал, с которым обновляются привязанные данные, связанные с родительским элементом.|  
-|[Элемент RefreshPolicy &#40; ASSL &#41;](../../../analysis-services/scripting/properties/refreshpolicy-element-assl.md)|Определяет, как часто в динамической части измерения или группы мер (как указано в [сохраняемости](../../../analysis-services/scripting/properties/persistence-element-assl.md) элемент) проверяется на изменения.|  
+|[Элемент RefreshPolicy &#40; ASSL &#41;](../../../analysis-services/scripting/properties/refreshpolicy-element-assl.md)|Определяет частоту проверки на наличие изменений в динамической части измерения или группе мер (как определено в элементе [Persistence](../../../analysis-services/scripting/properties/persistence-element-assl.md) ).|  
 |[Элемент RelationshipType &#40; ASSL &#41;](../../../analysis-services/scripting/properties/relationshiptype-element-assl.md)|Указывает, является ли связей элементов для **AttributeRelationship** можно изменить.|  
 |[Элемент RemoteDatasourceID &#40; ASSL &#41;](../../../analysis-services/scripting/properties/remotedatasourceid-element-assl.md)|Задает идентификатор источника данных OLAP, который указывает на экземпляр служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], хранящий удаленную секцию.|  
 |[Элемент ReportingFirstMonth &#40; ASSL &#41;](../../../analysis-services/scripting/properties/reportingfirstmonth-element-assl.md)|Определяет первый Отчетный месяц для **TimeBinding** элемента.|  
@@ -252,7 +253,7 @@ ms.lasthandoff: 09/01/2017
 |[Элемент SourceColumnID &#40; ASSL &#41;](../../../analysis-services/scripting/properties/sourcecolumnid-element-assl.md)|Содержит идентификатор исходного столбца структуры интеллектуального анализа данных в родительском элементе **MiningStructure** элемента.|  
 |[Элемент State &#40; ASSL &#41;](../../../analysis-services/scripting/properties/state-element-assl.md)|Содержит значение только для чтения, описывающее текущее состояние обработки родительского элемента.|  
 |[Элемент Status &#40; ASSL &#41;](../../../analysis-services/scripting/properties/status-element-assl.md)|Содержит Многомерное выражение, возвращающее Признак состояния **ключевого показателя эффективности** элемента.|  
-|[Элемент StatusGraphic &#40; ASSL &#41;](../../../analysis-services/scripting/properties/statusgraphic-element-assl.md)|Содержит рекомендованное графическое представление состояния **ключевого показателя эффективности** элемента.|  
+|[Элемент StatusGraphic &#40; ASSL &#41;](../../../analysis-services/scripting/properties/statusgraphic-element-assl.md)|Содержит рекомендованное графическое представление состояния элемента **Kpi** .|  
 |[Элемент StopTime &#40; ASSL &#41;](../../../analysis-services/scripting/properties/stoptime-element-assl.md)|Указывает дату и время, когда **трассировки** остановки элемента.|  
 |[Элемент StorageLocation &#40; ASSL &#41;](../../../analysis-services/scripting/properties/storagelocation-element-assl.md)|Содержит расположение места хранения в файловой системе для содержимого родительского элемента.|  
 |[Элемент StorageMode &#40; ASSL &#41;](../../../analysis-services/scripting/properties/storagemode-element-assl.md)|Определяет режим хранения для родительского элемента.|  
@@ -286,8 +287,7 @@ ms.lasthandoff: 09/01/2017
 |[Записать элемент &#40; ASSL &#41;](../../../analysis-services/scripting/properties/write-element-assl.md)|Определяет, можно ли запись данных или метаданных для данного **CubeDimensionPermission** или **разрешение** элемента.|  
 |[Элемент WriteEnabled &#40; ASSL &#41;](../../../analysis-services/scripting/properties/writeenabled-element-assl.md)|Показывает, доступна ли обратная запись в измерение (зависит от прав доступа).|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Службы Analysis Services Scripting иерархия элементов XML языка &#40; ASSL &#41;](../../../analysis-services/scripting/analysis-services-scripting-language-xml-element-hierarchy-assl.md)  
   
   
-

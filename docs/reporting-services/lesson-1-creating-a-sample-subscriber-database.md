@@ -1,35 +1,34 @@
 ---
-title: "Урок 1: Создание образца базы данных подписчика | Документы Microsoft"
+title: "Занятие 1. Создание образца базы данных подписчика | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
-caps.latest.revision: 45
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "45"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4d862dc34dcbb81ce8d50cfac53d81a80f47d29c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 472bedc3291af96ecec8cafae7c4b4462b578284
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Занятие 1. Создание образца базы данных подписчика
 
 На этом занятии учебника [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] создается небольшая база данных подписчика для хранения данных подписки, которые будут использоваться управляемой данными подпиской. После обработки подписки сервер отчетов получит эти данные и использует их для настройки выходных данных отчетов. Например, строки данных включают номера заказов, используемые для фильтров, и сведения о том, в каком формате будут создаваться отчеты.  
   
-На этом занятии предполагается, что [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] для создания базы данных SQL Server.  
+На этом занятии предполагается, что для создания базы данных SQL Server используется среда [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="to-create-a-sample-subscriber-database"></a>Создание образца базы данных подписчика  
   
@@ -69,7 +68,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  С помощью инструкции SELECT удостоверьтесь, что создано три строки данных. Например: `select * from OrderInfo`  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 + Успешно завершено создание данных подписки, которые будут управлять распространением отчетов и изменять выходные данные отчетов в соответствии с параметрами настройки для каждого из подписчиков. 
 + Далее предстоит изменить свойства источника данных отчета так, чтобы использовались хранимые учетные данные. 
 + Вы также измените конструкцию отчета, включив в нее параметр, который будет использоваться подпиской с данными подписчика. [Занятие 2. Изменение свойств источника данных отчета](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
@@ -80,5 +79,4 @@ ms.lasthandoff: 08/09/2017
 [Создание базы данных](../relational-databases/databases/create-a-database.md)  
 [Создание простого табличного отчета](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

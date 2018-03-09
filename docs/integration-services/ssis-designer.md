@@ -2,9 +2,12 @@
 title: "Конструктор служб SSIS | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -24,17 +27,16 @@ helpviewer_keywords:
 - SSIS Designer, about SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
-caps.latest.revision: 59
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/11/2017
-
+ms.openlocfilehash: 1ee578aff11c393694215b85f9c26d3c442e9aa7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ssis-designer"></a>конструктор служб SSIS
   [!INCLUDE[ssIS](../includes/ssis-md.md)] Конструктор служб — это графическое средство, с помощью которого можно создавать и обслуживать пакеты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] Конструктор служб доступен из среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] в составе проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -156,7 +158,7 @@ ms.lasthandoff: 10/11/2017
  **Обработчик событий**  
  Выберите тип обработчика события. Создайте обработчик события, перетащив элементы из **Области элементов**.  
   
- **Delete**  
+ **Удаление**  
  Выберите обработчик события и удалите его из пакета, нажав кнопку **Удалить**.  
   
  **Щелкните здесь, чтобы создать \<имя_обработчика_событий\> для исполняемого файла \<имя_исполняемого_файла\>**  
@@ -185,12 +187,11 @@ ms.lasthandoff: 10/11/2017
   
  Щелкните правой кнопкой мыши в этой области, затем из контекстного меню выберите нужную задачу.
  
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Создание пакетов в SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Пользовательский интерфейс служб Integration Services](../integration-services/integration-services-user-interface.md)  
   
   
-

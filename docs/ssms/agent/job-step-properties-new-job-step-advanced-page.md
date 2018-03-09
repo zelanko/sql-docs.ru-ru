@@ -3,29 +3,29 @@ title: "Свойства шага задания — создание шага 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.job.stepadvanced.f1
+f1_keywords: sql13.ag.job.stepadvanced.f1
 ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ea8ecf39a23a0db715c95bb4041c802a382822fa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 99d0e4a39d2a4c2e1bdada89142f1fee9b7cb78f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>Свойства шага задания — создание шага задания (страница "Дополнительно")
-Используйте эту страницу для просмотра и изменения свойств шага задания агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Используйте эту страницу для просмотра и изменения свойств шага задания агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 ## <a name="options"></a>Параметры  
 **Действие при успехе**  
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
 **...**  
 Перейдите к файлу, используемому для вывода из шага задания.  
   
-**Просмотр**  
+**Вид**  
 В сервере [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]эта кнопка отключена, и просмотр выходных файлов невозможен. Вместо этого для просмотра выходных файлов шага задания используйте приложение «Блокнот».  
   
 **Дописать выходные данные в существующий файл**  
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
 **Сохранять данные журнала в таблице**  
 Записывает выходные данные шага задания в таблицу **sysjobstepslogs** базы данных **msdb** .  
   
-**Просмотр**  
+**Вид**  
 После того как шаг задания выполнится хотя бы раз, нажмите кнопку **Просмотр** для просмотра его выходных данных в таблице.  
   
 **Дописать выходные данные в существующую запись в таблице**  
@@ -75,7 +75,7 @@ ms.lasthandoff: 06/22/2017
 **...**  
 Перейдите к файлу, используемому для вывода из шага задания.  
   
-**Просмотр**  
+**Вид**  
 В сервере [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]эта кнопка отключена, и просмотр выходных файлов невозможен. Вместо этого для просмотра выходных файлов шага задания используйте приложение «Блокнот».  
   
 **Дописать выходные данные в существующий файл**  
@@ -84,7 +84,7 @@ ms.lasthandoff: 06/22/2017
 **Сохранять данные журнала в таблице**  
 Записывает выходные данные шага задания в таблицу **sysjobstepslogs** базы данных **msdb** .  
   
-**Просмотр**  
+**Вид**  
 После того как шаг задания выполнится хотя бы раз, нажмите кнопку **Просмотр** для просмотра его выходных данных в таблице.  
   
 **Дописать выходные данные в существующую запись в таблице**  
@@ -100,7 +100,7 @@ ms.lasthandoff: 06/22/2017
 **...**  
 Перейдите к файлу, используемому для вывода из шага задания.  
   
-**Просмотр**  
+**Вид**  
 В сервере [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]эта кнопка отключена, и просмотр выходных файлов невозможен. Вместо этого для просмотра выходных файлов шага задания используйте приложение «Блокнот».  
   
 **Дописать выходные данные в существующий файл**  
@@ -109,7 +109,7 @@ ms.lasthandoff: 06/22/2017
 **Сохранять данные журнала в таблице**  
 Записывает выходные данные шага задания в таблицу **sysjobstepslogs** базы данных **msdb** .  
   
-**Просмотр**  
+**Вид**  
 После того как шаг задания выполнится хотя бы раз, нажмите кнопку **Просмотр** для просмотра его выходных данных в таблице.  
   
 **Дописать выходные данные в существующую запись в таблице**  
@@ -132,7 +132,7 @@ ms.lasthandoff: 06/22/2017
 **...**  
 Перейдите к файлу, используемому для вывода из шага задания.  
   
-**Просмотр**  
+**Вид**  
 В сервере [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]эта кнопка отключена, и просмотр выходных файлов невозможен. Вместо этого для просмотра выходных файлов шага задания используйте приложение «Блокнот».  
   
 **Дописать выходные данные в существующий файл**  
@@ -141,7 +141,7 @@ ms.lasthandoff: 06/22/2017
 **Сохранять данные журнала в таблице**  
 Записывает выходные данные шага задания в таблицу **sysjobstepslogs** базы данных **msdb** .  
   
-**Просмотр**  
+**Вид**  
 После того как шаг задания выполнится хотя бы раз, нажмите кнопку **Просмотр** для просмотра его выходных данных в таблице.  
   
 **Дописать выходные данные в существующую запись в таблице**  
@@ -153,4 +153,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
 [Управление шагами задания](../../ssms/agent/manage-job-steps.md)  
   
-

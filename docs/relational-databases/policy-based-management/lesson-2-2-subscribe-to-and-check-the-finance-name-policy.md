@@ -2,9 +2,12 @@
 title: "Подписка на политику имен базы данных Finance и проверка обновлений | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-query-tuning
 ms.tgt_pltfrm: 
@@ -12,19 +15,19 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
-caps.latest.revision: 24
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c8ead370baae4066fecdc6545636668958991adf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f710e15951dd357a3e635b4778c5f77b9455ed37
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-2---subscribe-to-and-check-the-finance-name-policy"></a>Урок 2.2. Подписка на политику имен базы данных Finance и проверка обновлений
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 В этой задаче будет произведена настройка по подписке базы данных Finance к категории политики финансов. Затем будет протестирована политика имен финансов.  
   
 ### <a name="to-subscribe-to-the-finance-policy-category"></a>Подписка на категорию политик «Finance»  
@@ -84,4 +87,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

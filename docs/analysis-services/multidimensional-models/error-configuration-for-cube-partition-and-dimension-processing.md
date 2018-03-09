@@ -2,13 +2,13 @@
 title: "Конфигурация ошибок при обработке измерения кубов, секции и | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,20 +16,20 @@ f1_keywords:
 - sql13.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1
 - sql13.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1
 ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
-caps.latest.revision: 18
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9dcbefced6fd34dd5fa69537733d7820b0130f4d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 83259b46fd10b45e25e032dfdb692fd654c67260
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Конфигурация ошибок для кубов, секций и обработка измерения
-  Свойства конфигурации ошибок для кубов, секций и объектов измерения определяют реакцию сервера на возникновение ошибок целостности данных во время обработки. Обычно такие ошибки вызваны повторяющимися или отсутствующими ключами и значения NULL в ключевом столбце. Хоть запись с ошибкой и не будет добавлена в базу данных, можно задать свойства, которые определят дальнейшую реакцию на ошибку. По умолчанию обработка останавливается. Однако во время разработки куба желательно продолжить обработку при возникновении ошибки для тестирования поведения куба с импортированным данными, даже если они не будут полными.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Свойства конфигурации ошибок для кубов, секций и объектов измерения определяют реакцию сервера на возникновение ошибок целостности данных во время обработки. Обычно такие ошибки вызваны повторяющимися или отсутствующими ключами и значения NULL в ключевом столбце. Хоть запись с ошибкой и не будет добавлена в базу данных, можно задать свойства, которые определят дальнейшую реакцию на ошибку. По умолчанию обработка останавливается. Однако во время разработки куба желательно продолжить обработку при возникновении ошибки для тестирования поведения куба с импортированным данными, даже если они не будут полными.  
   
  Этот раздел включает следующие подразделы:  
   
@@ -185,11 +185,10 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_next"></a> Следующий шаг  
  Определитесь, будут ошибки прерывать обработку или же пропускаться. Помните, что пропускается только сама ошибка. Запись, приведшая к ошибке, не пропускается; она отбрасывается либо преобразуется в неизвестный элемент. Записи, нарушающие правила целостности данных, никогда не добавляются в базу данных. По умолчанию обработка прерывается при возникновении первой ошибки, но это поведение можно изменить, увеличив предельное количество ошибок. При разработке кубов может быть полезно сделать правила конфигурации ошибок менее строгими, чтобы разрешить продолжение обработки и собрать данные для тестирования.  
   
- Определитесь, следует ли изменить стандартные правила обработки значений NULL. По умолчанию значения NULL в строковом столбце обрабатываются как пустые значения, а NULL в числовом столбце — как нуль. Инструкции по установке правил обработки значений NULL для атрибута см. в разделе [Определение свойств Unknown Member и Null Processing](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) .  
+ Определитесь, следует ли изменить стандартные правила обработки значений NULL. По умолчанию значения NULL в строковом столбце обрабатываются как пустые значения, а NULL в числовом столбце — как нуль. Инструкции по установке правил обработки значений NULL для атрибута см. в разделе [Определение свойств Unknown Member и Null Processing](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md).  
   
 ## <a name="see-also"></a>См. также  
  [Свойства журнала](../../analysis-services/server-properties/log-properties.md)   
  [Определение неизвестного элемента и свойств обработки значений Null](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
   
-

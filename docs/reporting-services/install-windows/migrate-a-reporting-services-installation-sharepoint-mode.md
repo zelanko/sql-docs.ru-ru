@@ -1,29 +1,28 @@
 ---
-title: "Перенос установки служб Reporting Services (режим SharePoint) | Документы Microsoft"
+title: "Перенос установки служб Reporting Services (режим интеграции с SharePoint) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
-caps.latest.revision: 23
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 75bce56e88ef80a33d13e188ad0ecbf3e8b453ec
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 627029330280cef882f631701d5ea9a0ed8a8791
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
-
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Перенос установки служб Reporting Services (режим интеграции с SharePoint)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
@@ -51,7 +50,7 @@ ms.lasthandoff: 08/17/2017
 -   [Перемещение баз данных содержимого в SharePoint 2013](http://technet.microsoft.com/library/cc262792.aspx).
   
 ##  <a name="bkmk_prior_versions"></a> Перенос из версий служб Reporting Services в режиме интеграции SharePoint, предшествующих SQL Server 2012  
- Архитектура служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint изменилась в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], включая схему базы данных приложения службы. Если вы хотите перенести [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] режиме интеграции с SharePoint с версий, предшествующих [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], сначала создайте новую среду SharePoint, установив режим SharePoint и SQL Server 2016 Reporting Services SharePoint. Дополнительные сведения см. в разделе [Установка служб Reporting Services в режиме SharePoint](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
+ Архитектура служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint изменилась в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], включая схему базы данных приложения службы. Если нужно перенести систему в [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] в режиме интеграции с SharePoint с версий, предшествующих [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], сначала создайте новую среду SharePoint, установив SharePoint и службы SQL Server 2016 Reporting Services в режиме интеграции с SharePoint. Дополнительные сведения см. в разделе [Установка служб Reporting Services в режиме SharePoint](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
  Как только новая среда SharePoint будет запущена, можно выбрать между переносом только содержимого и полным переносом на уровне баз данных, включая базы данных содержимого.  
   
@@ -63,30 +62,30 @@ ms.lasthandoff: 08/17/2017
 -   **Средство миграции служб Reporting Services** . Средство миграции может скопировать элементы отчета с сервера в основном режиме на сервер в режиме интеграции с SharePoint. Дополнительные сведения см. в документе [Средство миграции служб Reporting Services](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560).  
   
 ###  <a name="bkmk_full_migration"></a> Полный перенос  
- **Полная миграция** . При переносе в новую ферму баз данных содержимого SharePoint вместе с базами данных каталогов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно использовать серию параметров архивации и восстановления, представленных в данном разделе. В некоторых случаях на этапе восстановления необходимо использовать инструменты, отличные от инструментов, которые использовались при резервном копировании. Например можно использовать [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager для шифрования резервной копии ключей из предыдущей версии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , но необходимо использовать Центр администрирования SharePoint или PowerShell для восстановления ключей шифрования в режиме установку SQL Server 2016 Reporting Services SharePoint.  
+ **Полная миграция** . При переносе в новую ферму баз данных содержимого SharePoint вместе с базами данных каталогов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно использовать серию параметров архивации и восстановления, представленных в данном разделе. В некоторых случаях на этапе восстановления необходимо использовать инструменты, отличные от инструментов, которые использовались при резервном копировании. Например, диспетчер конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно использовать для резервного копирования ключей шифрования из предыдущей версии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Но для восстановления ключей шифрования в установку SQL Server 2016 Reporting Services в режиме интеграции с SharePoint необходимо использовать центр администрирования SharePoint или PowerShell.  
   
 ####  <a name="bkmk_databases"></a> Базы данных, доступные для просмотра после завершения миграции  
  В следующей таблице описаны базы данных SQL Server, которые связаны с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и доступны после успешного переноса установки SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-|База данных|Пример имени||  
+|база данных|Пример имени||  
 |--------------|------------------|-|  
-|База данных каталогов|ReportingService_ [идентификатор GUID приложения служб] **(\*)**|Пользователь выполняет перенос.|  
-|Временная база данных|ReportingService_ [идентификатор GUID приложения служб] TempDB **(\*)**|Пользователь выполняет перенос.|  
+|База данных каталогов|ReportingService_[идентификатор GUID приложения службы] **(\*)**|Пользователь выполняет перенос.|  
+|Временная база данных|ReportingService_[идентификатор GUID приложения службы]TempDB **(\*)**|Пользователь выполняет перенос.|  
 |База данных предупреждений|ReportingService_[идентификатор GUID приложения служб]_Alerting|Создается во время создания приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
   
- **(\*)** Показано в таблице примеры имен соглашению об именовании SSRS используют при создании нового приложения служб SSRS. При выполнении переноса с другого сервера используются имена для каталога и временных баз данных из исходной установки.  
+ **(\*)** Представленные в таблице примеры имен соответствуют соглашению об именовании SSRS, которое используется при создании нового приложения служб SSRS. При выполнении переноса с другого сервера используются имена для каталога и временных баз данных из исходной установки.  
   
 ####  <a name="bkmk_backup_operations"></a> Операции резервного копирования  
  В данном разделе описываются типы информации, которые необходимы для переноса, и инструменты или процессы, которые используются для резервного копирования.  
   
- ![Базовая диаграмма миграции служб SSRS SharePoint](../../reporting-services/install-windows/media/rs-sharepoint-migration.gif "базовая диаграмма миграции служб SSRS SharePoint")  
+ ![Базовая диаграмма миграции служб SSRS SharePoint](../../reporting-services/install-windows/media/rs-sharepoint-migration.gif "Базовая диаграмма миграции служб SSRS SharePoint")  
   
 ||Объекты|Метод|Примечания|  
 |-|-------------|------------|-----------|  
 |**1**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|**Rskeymgmt.exe** или диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . См. статью [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).|Указанные инструменты можно использовать для резервного копирования. Для восстановления используйте страницы управления приложением служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или PowerShell.|  
 |**2**|База данных содержимого SharePoint.||Создайте резервную копию базы данных и отсоедините базу данных.<br /><br /> Дополнительные сведения см. в подразделе об обновлении присоединения баз данных в разделе [Определение стратегии обновления до SharePoint 2010 (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx).|  
 |**3**|База данных SQL Server, которая используется в качестве базы данных каталогов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Резервное копирование и восстановление баз данных SQL Server<br /><br /> или диспетчер конфигурации служб<br /><br /> Присоединение и отсоединение баз данных SQL Server||  
-|**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Простая копия файла.|Если выполнена настройка файла, то необходимо скопировать только rsreportserver.config. Пример расположения файлов по умолчанию: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting\\*:<br /><br /> <br /><br /> Rsreportserver.config<br /><br /> Rssvrpolicy.config<br /><br /> Web.config для приложения ASP.NET сервера отчетов.<br /><br /> Machine.config для ASP.NET.|  
+|**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Простая копия файла.|Если выполнена настройка файла, то необходимо скопировать только rsreportserver.config. Пример расположения файлов по умолчанию: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting\\*:<br /><br /> <br /><br /> RSReportServer.config<br /><br /> Rssvrpolicy.config<br /><br /> Web.config для приложения ASP.NET сервера отчетов.<br /><br /> Machine.config для ASP.NET.|  
   
 ####  <a name="bkmk_restore_operations"></a> Операции восстановления  
  В данном разделе описываются типы информации, которые необходимы для переноса, и инструменты или процессы, которые используются для восстановления. Инструменты, которые используются для восстановления, могут отличаться от инструментов, используемых при резервном копировании.  
@@ -96,7 +95,7 @@ ms.lasthandoff: 08/17/2017
 ||Объекты|Метод|Примечания|  
 |-|-------------|------------|-----------|  
 |**1**|Восстановите базы данных содержимого SharePoint в новую ферму.|Метод «Обновление присоединения базы данных» SharePoint.|Основные шаги:<br /><br /> 1) Восстановите базу данных на новом сервере.<br /><br /> 2) Подключите базу данных содержимого к веб-приложению, указав URL-адрес.<br /><br /> 3) Используйте Get-SPWebapplication для вывода списка всех веб-приложений и URL-адресов.<br /><br /> <br /><br /> Дополнительные сведения см. в подразделе об обновлении присоединения баз данных в разделе [Определение стратегии обновления до SharePoint 2010 (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx)и в статье [Обновление баз данных контента до версии SharePoint 2010 (http://technet.microsoft.com/library/cc263299.aspx)](http://technet.microsoft.com/library/cc263299.aspx).|  
-|**2**|Восстановите базу данных SQL Server, которая является базой данных каталогов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (ReportServer).|Резервное копирование и восстановление баз данных SQL.<br /><br /> **или диспетчер конфигурации служб**<br /><br /> Присоединение и отсоединение баз данных SQL Server.|При первом использовании базы данных, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] обновляют схему базы данных, которая требуется для работы со средой SQL Server 2016.|  
+|**2**|Восстановите базу данных SQL Server, которая является базой данных каталогов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (ReportServer).|Резервное копирование и восстановление баз данных SQL.<br /><br /> **или диспетчер конфигурации служб**<br /><br /> Присоединение и отсоединение баз данных SQL Server.|При первом использовании базы данных службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] обновляют схему баз данных, которая требуется для работы со средой SQL Server 2016.|  
 |**3**|Создайте новое приложение службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Создайте новое приложение службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|При создании нового приложения службы настройте его для использования скопированной базы данных сервера отчетов.<br /><br /> Дополнительные сведения об использовании центра администрирования SharePoint см. в разделе "Шаг 3. Создание приложения служб Reporting Services" по ссылке [Install Reporting Services SharePoint Mode](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md).<br /><br /> Примеры использования PowerShell см. в разделе «Создание приложения службы Reporting Services с помощью PowerShell» в [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**4**|Восстановите файлы конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Простая копия файла.|Пример расположения файлов по умолчанию: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting\.|  
 |||||  
@@ -138,5 +137,4 @@ ms.lasthandoff: 08/17/2017
 [Обновление и перенос служб Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Перенос установки служб Reporting Services](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

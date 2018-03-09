@@ -3,10 +3,12 @@ title: "Приложение е. библиотека курсоров ODBC | Д
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - cursor library [ODBC], about cursor library
 - cursor library [ODBC]
 ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8aafc1a3ce481e4777ea216057ef2c0b7b24a2e8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f48f9e35793d197efc7a72600a122abc83484ed8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>Приложение е. библиотека курсоров ODBC
 > [!IMPORTANT]  
@@ -45,11 +46,10 @@ ms.lasthandoff: 09/09/2017
   
 -   [Использование библиотеки курсоров ODBC](../../../odbc/reference/appendixes/using-the-odbc-cursor-library.md)  
   
--   [Выполнение позиционированных обновлений и инструкций Delete](../../../odbc/reference/appendixes/executing-positioned-update-and-delete-statements.md)  
+-   [Выполнение инструкций позиционированного обновления и удаления](../../../odbc/reference/appendixes/executing-positioned-update-and-delete-statements.md)  
   
 -   [Пример кода библиотеки курсоров](../../../odbc/reference/appendixes/cursor-library-code-example.md)  
   
 -   [Примечания по реализации](../../../odbc/reference/appendixes/implementation-notes.md)  
   
--   [Коды ошибок библиотеки курсоров ODBC](../../../odbc/reference/appendixes/odbc-cursor-library-error-codes.md)
-
+-   [Коды ошибок для библиотеки курсоров ODBC](../../../odbc/reference/appendixes/odbc-cursor-library-error-codes.md)

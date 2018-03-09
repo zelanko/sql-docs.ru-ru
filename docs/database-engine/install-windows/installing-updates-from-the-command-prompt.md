@@ -2,28 +2,31 @@
 title: "Установка обновлений из командной строки | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/08/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
-caps.latest.revision: 18
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: ba512e9f78ab42ddcfd46d0945c4763e02e1f39e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: 1fe67da5b3be2804b802e68927a6e7b48090de7f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>Установка обновлений из командной строки
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 Проверьте скрипты установки и доработайте их в соответствии с задачами организации. 
  
 ## <a name="sample-syntax-for-installation"></a>Образец синтаксиса для программы установки 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/12/2017
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance
     ```
-    либо 
+    или диспетчер конфигурации служб 
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<Instance ID>. 
     ```
@@ -42,7 +45,7 @@ ms.lasthandoff: 09/12/2017
 - Программа установки может интегрировать последние обновления продукта в основную установку продукта, чтобы он и применимые обновления устанавливались одновременно. Можно подготовить установку экземпляра компонента Database Engine, включающую обновление продукта: 
 
     ```
-    setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateEnabled=True /UpdateSource=\<path where the update is downloaded> /INSTANCEID=\<Instance ID> /FEATURES=SQLEngine. 
+    setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateSource=\<path where the update is downloaded> /INSTANCEID=\<Instance ID> /FEATURES=SQLEngine. 
     ```
 
 - Обновление только общих компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], таких как службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и средства управления: 
@@ -77,7 +80,7 @@ ms.lasthandoff: 09/12/2017
 > [!IMPORTANT] 
 > При возможности указывайте учетные данные безопасности в среде выполнения. Если нужно хранить учетные данные в файле скрипта, для этого файла необходимо обеспечить защиту, чтобы исключить несанкционированный доступ. 
  
-|Параметр|Описание| 
+|Параметр|Description| 
 |------------|-----------------| 
 |**/?**|Отображает справку командной строки для автоматической установки| 
 |**/action=Patch или /action=RemovePatch**|Задает действие установки: Patch или RemovePatch.| 
@@ -91,7 +94,7 @@ ms.lasthandoff: 09/12/2017
  
  * Этот параметр нельзя указать для применения обновления к подготовленному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Вместо этого необходимо указать параметр /instanceID. 
  
-## <a name="see-also"></a>См. также: 
+## <a name="see-also"></a>См. также раздел 
  [Общие сведения об обслуживании установки SQL Server](http://msdn.microsoft.com/library/6a9fd19b-2367-4908-b638-363b1e929e1e) 
  
  

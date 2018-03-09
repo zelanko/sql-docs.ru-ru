@@ -1,10 +1,13 @@
 ---
-title: "Источник Excel | Документы Microsoft"
+title: "Источник Excel | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -18,17 +21,16 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: 60
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: e8b5878513b74faa8df5e7766762f2f7287ec7af
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 872ac8117bb87cb9f1709afedbacc32b2d1f1413
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="excel-source"></a>Источник Excel
   Источник Excel извлекает данные из листов или диапазонов в книгах [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -90,13 +92,13 @@ ms.lasthandoff: 08/17/2017
   
  Диалоговое окно **Расширенный редактор** содержит все свойства, которые могут устанавливаться программными средствами. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства Excel](../../integration-services/data-flow/excel-custom-properties.md)  
   
  Дополнительные сведения о переходе между файлами в группе файлов Excel см. в разделе [Просмотр файлов и таблиц Excel с помощью контейнера "Цикл по каждому элементу"](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Сопоставления параметров запросов с переменными в компонентах потока данных](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
@@ -104,7 +106,7 @@ ms.lasthandoff: 08/17/2017
   
 -   [Сортировка данных для преобразований «Слияние» и «Соединение слиянием»](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
--   [Цикл через Excel файлы и таблицы с помощью цикл](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+-   [Просмотр файлов и таблиц Excel с помощью контейнера «цикл по каждому элементу»](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
 ## <a name="excel-source-editor-connection-manager-page"></a>Редактор источника Excel (страница «Диспетчер соединений»)
   Используйте раздел **Диспетчер соединений** диалогового окна **Редактор источника «Excel»** , чтобы выбрать используемую рабочую книгу [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] . Источник Excel считывает данные из рабочего листа или из именованного диапазона в существующей рабочей книге.  
@@ -113,7 +115,7 @@ ms.lasthandoff: 08/17/2017
 >  Свойство **CommandTimeout** источника Excel недоступно в диалоговом окне **Редактор источника «Excel»**, но может быть задано с помощью диалогового окна **Расширенный редактор**. Дополнительные сведения о данном свойстве см. в подразделе «Источник Excel» раздела [Excel Custom Properties](../../integration-services/data-flow/excel-custom-properties.md).  
   
 ### <a name="static-options"></a>Статические параметры  
- **диспетчер соединений OLE DB**  
+ **Диспетчер соединений OLE DB**  
  Выберите из списка существующий диспетчер подключений к Excel или создайте новое соединение, нажав кнопку **Создать**.  
   
  **Создать**  
@@ -193,7 +195,7 @@ ms.lasthandoff: 08/17/2017
  **Усечение**  
  Укажите, что нужно сделать при усечении: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
- **Description**  
+ **Описание**  
  Просмотреть описание ошибки.  
   
  **Присвоить указанное значение выбранным ячейкам**  
@@ -213,4 +215,3 @@ ms.lasthandoff: 08/17/2017
 -   Запись в блоге [Excel в службах Integration Services, часть 3 из 3. Проблемы и альтернативы](http://go.microsoft.com/fwlink/?LinkId=217676)на сайте dougbert.com  
   
   
-

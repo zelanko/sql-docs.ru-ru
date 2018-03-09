@@ -2,11 +2,13 @@
 title: "Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +19,19 @@ helpviewer_keywords:
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: dd664120017d7e498fd2930281380c718e98aaa9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c1184d2ea29ccf64159df67950b5b078010e73a7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
    [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] — решение высокого уровня доступности и аварийного восстановления, появившееся в [!INCLUDE[sssql11](../../../includes/sssql11_md.md)]. Требует наличия отказоустойчивого кластера Windows Server (WSFC). Кроме того, хотя [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] не зависит от отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на экземпляре отказоустойчивого кластера (FCI) можно размещать реплику для группы доступности. При проектировании среды [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] важно знать роль каждой из технологий кластеризации, а также иметь представления о необходимых требованиях.  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 08/02/2017
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] использует кластер отказоустойчивой кластеризации Windows Server для наблюдения за текущими ролями реплик доступности, принадлежащих к данной группе доступности, и управления ими, а также для определения влияния отработки отказа на реплики доступности. Группа ресурсов WSFC создается для каждой создаваемой группы доступности. Кластер WSFC отслеживает данную группу ресурсов для оценки работоспособности первичной реплики.  
   
- Кворум для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] рассчитывается на всех узлах в кластере WSFC вне зависимости от того, хранится ли на данном узле кластера какая-либо реплика доступности. В отличие от процесса зеркального отображения базы данных, в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]нет роли следящего объекта.  
+ Кворум для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] рассчитывается на всех узлах в кластере WSFC вне зависимости от того, хранится ли на данном узле кластера какая-либо реплика доступности. В отличие от процесса зеркального отображения базы данных, в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] нет роли следящего объекта.  
   
  Общая исправность кластера WSFC определяется голосами на кворуме узлов в кластере. Если кластер WSFC перешел в режим «вне сети» в результате непредвиденной аварийной ситуации, постоянно возникающего сбоя в оборудовании или ошибки связи, то требуется вмешательство администратора. Администратор кластера Windows Server или WSFC должен будет создать принудительный кворум, а затем перевести работоспособные узлы кластера обратно в режим «в сети» в неотказоустойчивой конфигурации.  
   
@@ -77,7 +78,7 @@ ms.lasthandoff: 08/02/2017
 ||Узлы в FCI|Реплики в группе доступности|  
 |-|-------------------------|-------------------------------------------|  
 |**Используется кластер WSFC**|Да|Да|  
-|**Уровень защиты**|Экземпляр|База данных|  
+|**Уровень защиты**|Экземпляр|база данных|  
 |**Тип хранилища**|Shared|Не общее<br /><br /> Хотя реплики в группе доступности не используют общее хранилище, реплика, размещенная FCI, использует решение общего хранилища, в соответствии с требованиями этого FCI. Решение хранения данных совместно используется только узлами в FCI, но не между репликами группы доступности.|  
 |**Решения хранения данных**|Прямое подключение, SAN, точки подключения, SMB|Зависит от типа узла|  
 |**Доступные для чтения вторичные**|Нет*|Да|  
@@ -148,4 +149,3 @@ ms.lasthandoff: 08/02/2017
  [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
   
-

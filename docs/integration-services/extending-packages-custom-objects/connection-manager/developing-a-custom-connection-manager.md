@@ -1,12 +1,14 @@
 ---
-title: "Разработка пользовательского диспетчера соединений | Документы Microsoft"
+title: "Разработка пользовательского диспетчера соединений | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -20,17 +22,16 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connection managers
 - custom connection managers [Integration Services]
 ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1297f0123a896003e2dbca5f01a05fffbf18b23d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2aacdb7bf35b675cac2b94f9a3be532aa739c5c2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-custom-connection-manager"></a>Разработка пользовательского диспетчера соединений
   Службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] инкапсулируют сведения, необходимые для подключения к внешнему источнику данных, с помощью диспетчеров соединений. В службах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] имеются различные диспетчеры соединений, поддерживающие соединения с наиболее распространенными источниками данных, от корпоративных баз данных до текстовых файлов и книг Excel. Если набор диспетчеров соединений и внешних источников данных, поддерживаемых службами [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], не отвечает потребностям пользователя, можно создать пользовательский диспетчер соединений.  
@@ -40,13 +41,13 @@ ms.lasthandoff: 08/03/2017
 > [!IMPORTANT]  
 >  Большая часть задач, источников и назначений в службах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] работает только с определенными типами встроенных диспетчеров соединений. Прежде чем приступить к разработке пользовательского диспетчера соединений для использования со встроенными задачами и компонентами, необходимо выяснить, ограничивается ли список диспетчеров соединений, применимых для этих компонентов, каким-либо определенным типом. Если для решения необходим пользовательский диспетчер соединений, также может понадобиться разработать пользовательскую задачу, источник или назначение для работы с пользовательским диспетчером.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  В этом разделе описывается, как создавать, настраивать и кодировать пользовательский диспетчер соединений и, при необходимости, его пользовательский интерфейс. Фрагменты кода, приведенные в этом разделе, являются производными от образца пользовательского диспетчера соединений SQL Server.  
   
  [Создание пользовательского диспетчера соединений](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)  
  Описывает, как создать классы для проекта пользовательского диспетчера соединений.  
   
- [Кодирование пользовательского диспетчера соединений](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
+ [Написание кода пользовательского диспетчера соединений](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
  Описывает, как реализовать пользовательский диспетчер соединений путем переопределения методов и свойств базового класса.  
   
  [Разработка пользовательского интерфейса для пользовательского диспетчера соединений](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
@@ -75,10 +76,9 @@ ms.lasthandoff: 08/03/2017
  [Разработка пользовательского регистратора](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-custom-log-provider.md)  
  Описывает вопросы программирования пользовательских регистраторов.  
   
- [Разработка пользовательских перечислитель](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
+ [Разработка пользовательского перечислителя по каждому элементу](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
  Описывает вопросы программирования пользовательских перечислителей.  
   
  [Разработка пользовательского компонента потока данных](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  Описывает вопросы программирования пользовательских источников, преобразований и назначений потока данных.  
   
-

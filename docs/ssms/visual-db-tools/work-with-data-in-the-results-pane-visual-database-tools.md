@@ -3,10 +3,12 @@ title: "Работа с данными на панели результатов 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - queries [SQL Server], results
 - Results pane
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 506bb355413caeac330509853278f667bf73ee49
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 43805e99f16d522e7b9a82e1af4514ad3c8fa043
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Работа с данными на панели результатов (визуальные инструменты для баз данных)
-После запуска запроса или представления результаты отображаются на панели результатов. Теперь с этими результатами можно работать. Например, можно добавить и удалить строки, ввести или изменить данные и легко просмотреть большие наборы результатов.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] После запуска запроса или представления результаты отображаются на панели результатов. Теперь с этими результатами можно работать. Например, можно добавить и удалить строки, ввести или изменить данные и легко просмотреть большие наборы результатов.  
   
 Представленные ниже сведения позволят избежать проблем и обеспечить эффективность работы с результирующими наборами.  
   
@@ -128,4 +129,3 @@ ms.lasthandoff: 08/18/2017
 [Выполнение основных операций с запросами (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 [Определение критериев поиска (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
-

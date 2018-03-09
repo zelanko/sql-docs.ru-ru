@@ -3,8 +3,11 @@ title: "IsNull (тип данных geometry) | Документы Microsoft"
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,19 @@ dev_langs:
 helpviewer_keywords:
 - IsNull (geometry Data Type)
 ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: 5e213bd847f2d5836802d93ade5fa46f3dc3d1a9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/13/2017
-
+ms.openlocfilehash: e13c3df72687ccee0d684d97cebe41737fbecbbb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="isnull-geometry-data-type"></a>IsNull (тип данных geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Тип **geometry** экземпляр имеет значение null. Возвращает значение 0, если экземпляр отличен от NULL.
   
@@ -44,15 +46,14 @@ ms.lasthandoff: 09/13/2017
   
  Тип CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  `IsNull`можно использовать для тестирования ли **geometry** экземпляр имеет значение null. Это может привести к неочевидному результату, так как, если экземпляр имеет значение, отличное от NULL, возвращается значение 0, а если экземпляр имеет значение NULL, возвращается значение NULL.  
   
  Этот метод в основном используется инфраструктурой SQL Server; не рекомендуется использовать `IsNull` для проверки, имеет ли экземпляр значение NULL.  
   
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
-
 

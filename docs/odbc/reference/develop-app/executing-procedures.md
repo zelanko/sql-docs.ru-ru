@@ -3,27 +3,28 @@ title: "Выполнение процедур | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], executing
 ms.assetid: a75e497a-4661-438a-a10e-f598c65f81be
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5faf7f71d56ea6a1f6a8d4de436937dd96c03cec
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fa215150c483776f9188ed16044b59500cb257e7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-procedures"></a>Выполнение процедур
 ODBC определяет стандартные escape-последовательность выполнения процедур. Синтаксис этой последовательности и пример кода, который его использует, в разделе [вызовы процедур](../../../odbc/reference/develop-app/procedure-calls.md).  
@@ -41,4 +42,3 @@ ODBC определяет стандартные escape-последовател
     -   Вызывает процедуру в источнике данных и отправляет его значение преобразованного параметра. Как драйвер вызывает процедуру, относящиеся к драйверу. Например он может изменить инструкцию SQL, чтобы использовать источник данных грамматику SQL и отправить эту инструкцию для выполнения, или он может вызвать процедуру напрямую с помощью механизма удаленного вызова процедур (RPC), определенный в протоколе потока данных СУБД.  
   
     -   Возвращает значения ввода вывода или выходных параметров или возвращаемого значения процедуры, при условии, что процедура завершается успешно. Эти значения могут оказаться недоступными, пока после обработки всех других результатов (количество строк и результирующих наборов) сформированное такой процедурой. Если процедура завершается ошибкой, драйвер возвращает все ошибки.
-

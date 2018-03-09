@@ -2,9 +2,12 @@
 title: "Использование символьного формата для импорта или экспорта данных (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 09/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -13,19 +16,19 @@ helpviewer_keywords:
 - data formats [SQL Server], character
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
-caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: c3eff449d858ce95e1df141363571f73c0c5813d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: HT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: 927bc546612f0d56ce857a41fbb2ba49ca32d47e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Использование символьного формата для импорта и экспорта данных (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Символьный формат рекомендуется применять при выполнении массового экспорта данных в текстовый файл, который предназначен для использования в других программах, а также при выполнении массового импорта данных из текстового файла, созданного другими программами.  
 
 В символьном формате все столбцы представлены в формате символьных данных. Хранение данных в символьном формате удобно в том случае, когда данные используются в других программах (например электронных таблицах) или когда на экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо перенести данные из базы данных другого поставщика (например Oracle).  
@@ -46,7 +49,7 @@ ms.lasthandoff: 10/04/2017
 ## Замечания по использованию символьного формата<a name="considerations"></a>
 При использовании символьного формата имейте в виду следующее.  
   
--   По умолчанию [программа bcp](../../tools/bcp-utility.md) разделяет символьные поля данных символом табуляции, а записи — символом перевода строки.  Сведения о том, как указать другой признак конца поля, см. в статье [Определение признаков конца поля и строки (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
+-   По умолчанию [программа bcp](../../tools/bcp-utility.md) разделяет символьные поля данных символом табуляции, а записи — символом перевода строки.  Сведения о том, как указать другой признак конца поля, см. в статье [Определение признаков конца поля и строки (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
 -   По умолчанию перед выполнением массового импорта или экспорта символьных данных выполняются следующие преобразования.  
   
@@ -66,7 +69,7 @@ ms.lasthandoff: 10/04/2017
   
 Символьный формат поддерживается следующими параметрами командной строки:  
   
-|Command|Параметр|Описание|  
+|Command|Параметр|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|Предписывает служебной программе bcp использовать символьные данные. *|  
 |BULK INSERT|DATAFILETYPE **='char'**|Использует символьный формат при массовом импорте данных.|  
@@ -229,4 +232,3 @@ SELECT * FROM TestDatabase.dbo.myChar;
  [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
   
-

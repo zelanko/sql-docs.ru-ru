@@ -2,11 +2,13 @@
 title: "Наблюдение за агентами репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - agents [SQL Server replication], monitoring
 - Distribution Agent, monitoring
 ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "17"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4075c4e9ec834218d8fcfff6a4fbec6718b94bc6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 90cb8e5af3fa8e3e86639e7cffa3f9fb97368c45
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-replication-agents"></a>Наблюдение за агентами репликации
-  Монитор репликации[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет систематический обзор деятельности репликации, а также облегчает поиск сведений о конкретном агенте. В приведенном ниже списке перечислены все агенты, для которых существуют вкладки в мониторе репликации, а также дается ссылка на раздел, где описывается порядок доступа к этим вкладкам.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Монитор репликации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет систематический обзор действий репликации, а также облегчает поиск сведений о конкретном агенте. В приведенном ниже списке перечислены все агенты, для которых существуют вкладки в мониторе репликации, а также дается ссылка на раздел, где описывается порядок доступа к этим вкладкам.  
   
 -   С публикациями в мониторе репликации связаны следующие агенты.  
   
@@ -123,7 +124,6 @@ ms.lasthandoff: 08/18/2017
   
 ## <a name="see-also"></a>См. также:  
  [Наблюдение за репликацией](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Обзор агентов репликации](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   
-

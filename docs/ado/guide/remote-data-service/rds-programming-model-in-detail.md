@@ -3,7 +3,7 @@ title: "Модель программирования служб удаленн�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - RDS programming model [ADO], details
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5a2798c750ba20b03c9e423b5897575ce4d5d697
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: db8a1222c560b54629baa34da595e0f5c49835b0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-programming-model-in-detail"></a>Модель программирования служб удаленных рабочих СТОЛОВ, подробно
 Ниже приведены ключевые элементы модели программирования служб удаленных рабочих СТОЛОВ.  
@@ -78,7 +77,7 @@ ms.lasthandoff: 09/09/2017
 > [!NOTE]
 >  Microsoft Internet Explorer предоставляет два дополнительных событий для служб удаленных рабочих СТОЛОВ: **onDataSetChanged**, что означает, что **записей** работы, но по-прежнему извлечение строк, и  **onDataSetComplete**, что означает, что **записей** после получения строки.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Модель программирования служб удаленных рабочих СТОЛОВ с объектами](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   
  [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Объект DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
@@ -86,7 +85,6 @@ ms.lasthandoff: 09/09/2017
  [Сценарии служб удаленных рабочих СТОЛОВ](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Учебник служб удаленных рабочих СТОЛОВ](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Использование RDS и безопасность](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
 
 
 

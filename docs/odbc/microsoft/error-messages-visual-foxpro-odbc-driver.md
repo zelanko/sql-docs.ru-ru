@@ -3,10 +3,12 @@ title: "Сообщения об ошибках (драйвер ODBC для Visua
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - FoxPro ODBC driver [ODBC], error messages
 ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4ec1cbc18c952c4394f16123c76a32330116d5af
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e561aab3359acb1f236aea38e76da33289e630ef
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>Сообщения об ошибках (драйвер ODBC для Visual FoxPro)
 При возникновении ошибки в драйвере Visual FoxPro возвращает следующую информацию:  
@@ -51,7 +52,7 @@ ms.lasthandoff: 09/09/2017
   
  Префиксы в квадратные скобки ([]) определить источник ошибки, как определено в таблице ниже.  
   
-|Источник данных|Префикс|Значение|  
+|Источник данных|Prefix|Значение|  
 |-----------------|------------|-----------|  
 |Диспетчер драйверов|[поставщик]<br />[ODBC_component]<br />[источник_данных]|[Microsoft]<br />[Диспетчер драйверов ODBC]<br />Недоступно|  
 |Драйвер Visual FoxPro|Поставщик]<br />[ODBC_component]<br />[источник_данных]|[Microsoft]<br />[Драйвер ODBC Visual FoxPro]<br />Недоступно|  
@@ -59,4 +60,3 @@ ms.lasthandoff: 09/09/2017
  Например если драйвер ODBC для Visual FoxPro не удалось найти файл employee.dbf, могут возвращать сообщение об ошибке:  
   
  «[*Microsoft*] [*драйвера ODBC для Visual FoxPro*] файл «employee.dbf» не существует»
-

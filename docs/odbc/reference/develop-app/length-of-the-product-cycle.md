@@ -3,27 +3,28 @@ title: "Длина цикла продукта | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - interoperability [ODBC], product cycle
 - length of the product cycle [ODBC]
 ms.assetid: 4d08d886-6d8b-40fd-8544-13032f4bf6c7
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ddd48de7b988cf16fb8c3ce5d3bc33088f487308
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7c363ecd47545868e2d40afabdce9bbef6f78031
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="length-of-the-product-cycle"></a>Длина цикла продукта
 Последний вопрос о взаимодействии — время. Разработки приложения с возможностью взаимодействия обычно занимает больше времени, чем разработка noninteroperable один. Обусловлено тем, что приложение должно проверьте возможности СУБД, выполнять те же задачи по-разному для разных СУБД, обойти функциональных возможностей, поддерживаемых некоторые СУБД, но не другие и т. д.  
@@ -31,4 +32,3 @@ ms.lasthandoff: 09/09/2017
  В дополнение к времени разработки необходимо учитывать время существования продукта. Если приложение разработано для использования один раз, например приложение, передает данные при миграции из СУБД один в другой, нет смысла при выполнении с возможностью взаимодействия. Приложение будет использовать один раз и удалены.  
   
  Если приложение будет существовать в течение длительного времени, может быть проще для поддержки как приложение с возможностью взаимодействия. Это справедливо даже для пользовательских приложений, которые имеют один СУБД как целевой объект. Причина в том, что безопасная код использует ограниченный набор функций базы данных. Драйвер должен поддерживать эти функции доступны даже в случае изменения базовой СУБД. Таким образом код с возможностью взаимодействия, могут перейти нагрузку как учитывать изменения СУБД разработчика приложения разработчику драйвера.
-

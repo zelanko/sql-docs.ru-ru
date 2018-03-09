@@ -1,29 +1,30 @@
 ---
-title: "Файл конфигурации RSReportDesigner | Документы Microsoft"
+title: "Файл конфигурации RSReportDesigner | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
 - RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-caps.latest.revision: 47
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "47"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: fcc7025e74656da02806d81cef9fc26295bc3a1b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08eb8b5f2acf66f9c07c6cf6de647dbc02ce079b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner, файл конфигурации
   Файл конфигурации RSReportDesigner.config хранит параметры подготовки отчета и модулей обработки данных, доступных конструктору отчетов. Сведения о модуле обработки данных хранятся в элементе **Data** . Сведения о модуле обработки данных хранятся в элементе **Render** . Элемент **Designer** перечисляет построители запросов, используемые в конструкторе отчетов.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
  Для настройки параметров модуля подготовки отчетов доступны специальные инструкции по изменению файлов конфигурации. Дополнительные сведения см. в разделе [Настройка параметров модулей подготовки отчетов в RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md).  
   
- Общие инструкции по изменению файлов конфигурации см. в разделе [изменения файла конфигурации служб Reporting Services &#40; Файл RSreportserver.config &#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+ Общие инструкции по изменению файлов конфигурации см. в разделе [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="example-configuration-file"></a>Пример файла конфигурации  
  Следующий пример иллюстрирует формат файла RSReportDesigner.config.  
@@ -72,7 +73,7 @@ ms.lasthandoff: 08/09/2017
 |**Designer**|Перечисляет построители запросов, доступные конструктору отчетов. Построители запросов предоставляют пользовательский интерфейс для конструирования запросов, которые извлекают данные, используемые в отчетах. Построители запросов могут меняться для разных модулей обработки данных. По умолчанию службы Reporting Services предоставляют один пользовательский интерфейс для визуальных средств для всех включенных в продукт модулей обработки данных. Однако если происходит построение или использование модулей обработки данных, предоставленных сторонними поставщиками, может быть применен другой интерфейс построителя запросов.|  
 |**PreviewProcessingServiceStartupTimeoutSeconds**|Указывает длительность ожидания запуска службы обработки предварительного просмотра, по истечении которого отображается сообщение об ошибке. Значение по умолчанию составляет 15 секунд.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Файлы конфигурации служб Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Средства проектирования запросов (SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md)  
   

@@ -3,24 +3,25 @@ title: "Хранимые процедуры (драйвер ODBC для Oracle) 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: de0e1214-b9d8-4afc-8fc0-e8b9c4c648f6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ea89b9f3e9dafb5c961661be6ad8ef4267df55ab
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c52cadf60268dd7272377ad70ace6010381f1c38
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stored-procedures-odbc-driver-for-oracle"></a>Хранимые процедуры (драйвер ODBC для Oracle)
 > [!IMPORTANT]  
@@ -30,9 +31,8 @@ ms.lasthandoff: 09/09/2017
   
 -   [Ограничения параметров хранимой процедуры](../../odbc/microsoft/stored-procedure-parameter-limitations.md)  
   
--   [Использование синонимов, с помощью хранимых процедур](../../odbc/microsoft/using-synonyms-with-stored-procedures.md)  
+-   [Использование синонимов с хранимыми процедурами](../../odbc/microsoft/using-synonyms-with-stored-procedures.md)  
   
 -   [Отзыв и предоставление прав при использовании хранимых процедур](../../odbc/microsoft/revoking-and-granting-rights-when-using-stored-procedures.md)  
   
--   [Возврат массива параметров из хранимых процедур](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md)
-
+-   [Возврат параметров массива из хранимых процедур](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md)

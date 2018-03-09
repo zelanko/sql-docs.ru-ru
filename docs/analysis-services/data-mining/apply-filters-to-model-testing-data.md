@@ -2,12 +2,13 @@
 title: "Применение фильтров к модели проверочных данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +16,20 @@ helpviewer_keywords:
 - filtering input rows [Analysis Services]
 - Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
-caps.latest.revision: 44
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bb193bb9e90d1bd2b7773c2a1bd2f237e7fa0135
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ae4d7899d0b027f912b6320934ddefc2431a303a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Применение фильтров к данным проверки модели
-  Задавая внешний источник данных для использования при тестировании модели, можно при необходимости применить фильтр для ограничения входных данных. Например, необходимо проверить модель конкретно по прогнозам для клиентов с определенным уровнем дохода.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Задавая внешний источник данных для использования при тестировании модели, можно при необходимости применить фильтр для ограничения входных данных. Например, необходимо проверить модель конкретно по прогнозам для клиентов с определенным уровнем дохода.  
   
  Например, в сценарии целевой рассылки Adventure Works можно создать критерий фильтра, аналогичный приведенному ниже в ProspectiveBuyer, который является таблицей с проверочными данными, и ограничить проверочные варианты по уровню дохода:  
   
@@ -101,4 +102,3 @@ ms.lasthandoff: 09/01/2017
  [Выбор типа диаграммы точности и задание параметров диаграммы](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   
-

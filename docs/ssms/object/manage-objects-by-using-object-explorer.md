@@ -3,33 +3,33 @@ title: "Управление объектами с помощью обозрев
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.SWB.SQLSERVEROBJECTEXPLORER.DHELP
+f1_keywords: sql13.SWB.SQLSERVEROBJECTEXPLORER.DHELP
 helpviewer_keywords:
 - Object Explorer F1 Help
 - OE F1 Help
 - OE Help
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9ef28c37c3232ad747129925c6259975b4005a40
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0469b79c9e5f53fe4a11d3c54ad9f313307f303b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Управление объектами с помощью обозревателя объектов
-Обозреватель объектов можно использовать для управления объектами, такими как базы данных, таблицы и хранимые процедуры.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Обозреватель объектов можно использовать для управления объектами, такими как базы данных, таблицы и хранимые процедуры.  
   
 ## <a name="viewing-objects-in-object-explorer"></a>Просмотр объектов в обозревателе объектов  
 В обозревателе объектов для группирования сведений в папки используется древовидная структура. Для раскрытия папки щелкните знак «плюс» (+) или дважды щелкните папку. При раскрытии папок отображаются более подробные сведения. Для выполнения стандартных задач щелкните правой кнопкой мыши папку или объект. Для выполнения наиболее часто выполняемой задачи щелкните объект дважды.  
@@ -65,4 +65,3 @@ ms.lasthandoff: 06/22/2017
 [Область сведений обозревателя объектов](../../ssms/object/object-explorer-details-pane.md)  
 [Пользовательские отчеты в среде Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
   
-

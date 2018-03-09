@@ -2,27 +2,27 @@
 title: "Занятие 11: Создание секций | Документы Microsoft"
 ms.custom: 
 ms.date: 03/27/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 189782ffcec1c173f152146dc8f174a70c5b506d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 57ed4f364bcc7ca144c6e963c7b550a5dcc1831d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-10-create-partitions"></a>Занятие 10. Создание секций
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 09/01/2017
   
 Предполагаемое время выполнения этого занятия: **15 минут**  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
 Этот раздел является частью учебника по табличному моделированию, который необходимо изучать по порядку. Перед выполнением задач этого занятия, необходимо завершить предыдущее занятие: [занятии 9: создание иерархий](../analysis-services/lesson-9-create-hierarchies.md).  
   
 ## <a name="create-partitions"></a>Создание секций  
@@ -153,4 +153,3 @@ ms.lasthandoff: 09/01/2017
   
  ## <a name="whats-next"></a>Дальнейшие действия
 Перейдите к следующему занятию: [занятие 11: Создание ролей](../analysis-services/lesson-11-create-roles.md). 
-

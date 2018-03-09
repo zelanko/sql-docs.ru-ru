@@ -3,27 +3,28 @@ title: "Коды возврата ODBC | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - return codes [ODBC]
 - diagnostic information [ODBC], return codes
 ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9e5daaf1389631ac392fd487e99b28864b71efb8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b997bfd1cc338f9c7a9dbb4b1b5b1ce851e71072
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="return-codes-odbc"></a>Коды возврата ODBC
 Каждая функция в ODBC возвращает код, известный как его *возвращаемый код* указывающая общий успех или сбой функции. Программная логика обычно основана на кодах возврата.  
@@ -58,4 +59,3 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
 |ЗНАЧЕНИЕ SQL_NO_DATA|Больше нет данных была доступна. Приложение вызывает **SQLGetDiagRec** или **SQLGetDiagField** для получения дополнительных сведений. Один или несколько записей состояния, определяемым драйвером в 02xxx класса могут быть возвращены. **Примечание:** в ODBC 2. *x*, это возвращать код называется SQL_NO_DATA_FOUND.|  
 |SQL_NEED_DATA|Дополнительные сведения о соединениях необходим или необходимы дополнительные данные, например, когда параметр данные передаются во время выполнения. Приложение вызывает **SQLGetDiagRec** или **SQLGetDiagField** для получения дополнительных сведений в том случае, если таковые имеются.|  
 |SQL_STILL_EXECUTING|Функция, которая была запущена асинхронно все еще выполняется. Приложение вызывает **SQLGetDiagRec** или **SQLGetDiagField** для получения дополнительных сведений в том случае, если таковые имеются.|
-

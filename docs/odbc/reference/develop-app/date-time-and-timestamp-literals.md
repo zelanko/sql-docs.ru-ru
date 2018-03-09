@@ -3,26 +3,26 @@ title: "Даты, времени и отметок времени литерал
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- escape sequences [ODBC], literals
+helpviewer_keywords: escape sequences [ODBC], literals
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 132377c8578ae4a403753d71dc82cd12b8be3c80
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2af859a38f288507ad87564cfbbfffa2b8f6ecf8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="date-time-and-timestamp-literals"></a>Даты, времени и отметок времени литералы
 Escape-последовательность для литералов даты, времени и отметок времени  
@@ -94,4 +94,3 @@ SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_
  Чтобы определить, поддерживает ли драйвер escape-последовательности ODBC для литералов интервал, приложение вызывает **SQLGetTypeInfo**. Источник данных поддерживает тип интервала datetime, должно также поддерживать соответствующие escape-последовательность.  
   
  Источники данных также могут поддерживать литералами даты и времени, определенные в спецификации ANSI SQL-92, отличающихся от escape-последовательности ODBC для литералов даты и времени интервала. Чтобы определить, поддерживает ли источник данных ANSI литералы, приложение вызывает **SQLGetInfo** с параметром SQL_ANSI_SQL_DATETIME_LITERALS.
-

@@ -3,8 +3,11 @@ title: "GO (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - ending batches [SQL Server]
 - GO command
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 17b78d6ca719088ade9d54db73b8ee10ef8072a5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 63fe775455df2b9b25ec3abc8bb0208aa6b5dd0e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-utilities-statements---go"></a>Инструкции служебных программ SQL Server - GO
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]предоставляет команды, которые не являются [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций, но распознаются **sqlcmd** и **osql** служебных программ и [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] редактора кода. Эти команды используются для повышения удобочитаемости и упрощения выполнения пакетов и скриптов.  
   
@@ -53,7 +55,7 @@ GO [count]
  *count*  
  Целое положительное число. Пакет, предшествующий команде GO, будет выполняться заданное количество раз.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Ключевое слово GO является не [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции; оно команду распознается **sqlcmd** и **osql** служебные программы и [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] редактор кода.  
   
  Программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интерпретируют команду GO как сигнал о том, что им следует отправить текущий пакет инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Текущий пакет инструкций состоит из всех инструкций, введенных за время, прошедшее с момента обработки последней команды GO, или, если данная команда GO является первой, с момента начала нерегламентированного сеанса или скрипта.  
@@ -86,7 +88,7 @@ GO
   
  Не используйте точку с запятой в качестве признака конца инструкции после команды GO.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для выполнения команды GO не требуются какие-либо разрешения. Она может быть выполнена любым пользователем.  
   
 ```  
@@ -119,4 +121,3 @@ GO 2
 ```  
   
   
-

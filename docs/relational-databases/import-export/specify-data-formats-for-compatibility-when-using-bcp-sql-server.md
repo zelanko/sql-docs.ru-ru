@@ -2,9 +2,12 @@
 title: "Указание форматов данных для совместимости с помощью программы bcp (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -16,20 +19,20 @@ helpviewer_keywords:
 - data formats [SQL Server], compatibility
 - bcp utility [SQL Server], compatibility
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
-caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: af46687cb2c5d387063dc86fa0373b8262b74ca9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 56ca94eab2b7245d3d42c898fbf5d51c4c249026
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Указание форматов данных для совместимости с помощью программы bcp (SQL Server)
-  В этой статье описываются атрибуты формата данных, запросы командной строки для конкретных полей и хранение данных по полям в неформатированном файле формата, отличного от XML, в команде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**bcp** . Понимать эти возможности может быть полезно, если производится массовый экспорт данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для массового импорта например, в другую программу базы данных. Стандартные форматы данных в исходной таблице (native, character или Unicode) могут быть несовместимы с форматом данных, ожидаемым другой программой. Если несовместимость существует, когда вы экспортируете данные, необходимо описать формат данных.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+В этой статье описываются атрибуты формата данных, запросы командной строки для конкретных полей и хранение данных по полям в неформатированном файле формата, отличного от XML, в команде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**bcp** . Понимать эти возможности может быть полезно, если производится массовый экспорт данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для массового импорта например, в другую программу базы данных. Стандартные форматы данных в исходной таблице (native, character или Unicode) могут быть несовместимы с форматом данных, ожидаемым другой программой. Если несовместимость существует, когда вы экспортируете данные, необходимо описать формат данных.  
   
 > [!NOTE]  
 >  Описание форматов данных для импорта или экспорта см. в разделе [Форматы данных для массового экспорта или импорта (SQL Server)](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md).  
@@ -108,7 +111,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
 >  Для файла данных, использующего только один формат данных для типа файлового хранилища, например символьный или собственный, можно быстро создать файл форматирования без экспорта и импорта данных, воспользовавшись параметром **format** . Этот подход гораздо проще и позволяет создавать как XML-файлы форматирования, так и файлы форматирования в формате, отличном от XML. Дополнительные сведения см. в разделе [Создание файла форматирования (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md).  
   
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Указание типа файлового хранилища с помощью программы bcp (SQL Server)](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
@@ -128,4 +131,3 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
   
   
-

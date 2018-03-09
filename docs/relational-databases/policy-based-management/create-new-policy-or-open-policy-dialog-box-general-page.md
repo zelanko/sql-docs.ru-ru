@@ -2,11 +2,13 @@
 title: "Диалоговое окно \"Создание новой политики\" или \"Открытие политики\", страница \"Общие\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,20 +16,19 @@ f1_keywords:
 - sql13.swb.dmf.policy.filter.f1
 - sql13.swb.dmf.newgroup.f1
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
-caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "42"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 17c975de731604cb3bec9586735b344f532a50ab
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 028b2e39f916f29a4332f9a04b2d2af6fbcf2304
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>Диалоговое окно «Создание новой политики» или «Открытие политики», страница «Общие»
-  С помощью этого диалогового окна можно создать новую или изменить существующую политику управления на основе политик. Используя области **Применить к** и **Ограничение сервера** в качестве фильтра можно ограничить действие политик определенным подмножеством всех возможных целей. Условия, которые будут использованы в качестве фильтров целей, должны быть определены для физического аспекта и не должны содержать функций и оператор LIKE. Когда система вычисляет набор объектов для политики, системные объекты исключаются из него по умолчанию.  Например, если набор объектов для политики относится ко всем таблицам, политика будет неприменима к системным таблицам. Если пользователям требуется оценить политику, используя системные объекты, их можно явно добавить в набор объектов. Однако несмотря на то, что все политики поддерживаются режимом оценки **проверка по расписанию** , в режиме **проверка при внесении изменений** по соображениям производительности поддерживаются не все политики с обязательными наборами объектов. Дополнительные сведения см. в разделе [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью этого диалогового окна можно создать новую или изменить существующую политику управления на основе политик. Используя области **Применить к** и **Ограничение сервера** в качестве фильтра можно ограничить действие политик определенным подмножеством всех возможных целей. Условия, которые будут использованы в качестве фильтров целей, должны быть определены для физического аспекта и не должны содержать функций и оператор LIKE. Когда система вычисляет набор объектов для политики, системные объекты исключаются из него по умолчанию.  Например, если набор объектов для политики относится ко всем таблицам, политика будет неприменима к системным таблицам. Если пользователям требуется оценить политику, используя системные объекты, их можно явно добавить в набор объектов. Однако несмотря на то, что все политики поддерживаются режимом оценки **проверка по расписанию** , в режиме **проверка при внесении изменений** по соображениям производительности поддерживаются не все политики с обязательными наборами объектов. Дополнительные сведения см. в разделе [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="options"></a>Параметры  
  **Название**  
@@ -78,4 +79,3 @@ ms.lasthandoff: 06/22/2017
  [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
-

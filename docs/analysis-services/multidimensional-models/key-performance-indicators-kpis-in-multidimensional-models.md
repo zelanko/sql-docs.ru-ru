@@ -2,13 +2,13 @@
 title: "Ключевые показатели эффективности (KPI) в многомерных моделях | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - parent KPIs [Analysis Services]
 - child KPIs
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-caps.latest.revision: 43
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 396ac061fca578b06766830948001387c65b036e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2fb3d1fa6ae92ba6dd23f9295428d696834ee8d4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Ключевые показатели эффективности в многомерных моделях
-  Употребляемый в деловой лексике термин «ключевой показатель эффективности» (KPI) означает количественно исчислимую меру успешности бизнеса.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Употребляемый в деловой лексике термин «ключевой показатель эффективности» (KPI) означает количественно исчислимую меру успешности бизнеса.  
   
  В службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ключевой показатель эффективности представляет собой коллекцию вычислений, связанных с группой мер куба и используемых для оценки успешности бизнеса. Обычно такие вычисления являются сочетанием многомерных выражений или вычисляемых элементов. В состав ключевых показателей эффективности также входят метаданные, определяющие способ отражения клиентскими приложениями результатов вычислений ключевого показателя эффективности.  
   
@@ -78,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  Можно использовать функции многомерных выражений для извлечения таких отдельных частей ключевого показателя эффективности, как значение или цель для последующего использования в многомерных выражениях, инструкциях и скриптах.  
   
   
-

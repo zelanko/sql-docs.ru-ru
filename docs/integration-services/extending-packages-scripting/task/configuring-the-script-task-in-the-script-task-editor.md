@@ -1,10 +1,13 @@
 ---
-title: "Настройка задачи «скрипт» в редакторе задачи скрипта | Документы Microsoft"
+title: "Настройка задачи \"Скрипт\" в редакторе задачи \"Скрипт\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -18,56 +21,54 @@ helpviewer_keywords:
 - Script Task Editor
 - SSIS Script task, configuring
 ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
-caps.latest.revision: 35
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 182a7b8f04c2339a8f3d3b986c978a7998c8a9c3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 397d51942bb88a873f7881d7fc351aeb6eea3edb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>Настройка задачи «Скрипт» в редакторе задачи «Скрипт»
-  Прежде чем писать пользовательский код в задаче «скрипт», настройте ее основные свойства на трех страницах **редактор задачи «скрипт»**. Дополнительные свойства задачи, не уникальные для задачи «Скрипт», можно настроить в окне «Свойства».  
+  Прежде чем писать пользовательский код задачи "Скрипт", настройте ее основные свойства на трех страницах окна **Редактор задачи "Скрипт"**. Дополнительные свойства задачи, не уникальные для задачи «Скрипт», можно настроить в окне «Свойства».  
   
 > [!NOTE]  
 >  В отличие от предыдущих версий, где можно было указать, являются ли скрипты предварительно скомпилированными, начиная с версии [!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)] все скрипты компилируются заранее.  
   
 ## <a name="general-page-of-the-script-task-editor"></a>Страница «Общие свойства» окна «Редактор задачи "Скрипт"»  
- На **Общие** страница **редактор задачи «скрипт»**, присвоить уникальное имя и описание для задачи «скрипт».  
+ На странице **Общие** окна **Редактор задачи "Скрипт"** назначается уникальное имя и вводится описание задачи "Скрипт".  
   
 ## <a name="script-page-of-the-script-task-editor"></a>Страница «Скрипт» окна «Редактор задачи "Скрипт"»  
- **Сценарий** страница **редактор задачи «скрипт»** отображает пользовательские свойства задачи «скрипт».  
+ Страница **Скрипт** окна **Редактор задачи "Скрипт"** отображает пользовательские свойства задачи "Скрипт".  
   
 ### <a name="scriptlanguage-property"></a>Свойство ScriptLanguage  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Средств для приложений (VSTA) поддерживает [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] языки программирования Visual C#. После создания скрипта в задаче «скрипт», не удается изменить значение **ScriptLanguage** свойство.  
+ Среда набора средств [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools для работы с приложениями (VSTA) поддерживает языки программирования [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic и [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual С#. После создания скрипта в задаче "Скрипт" изменить значение свойства **ScriptLanguage** нельзя.  
   
- Чтобы задать язык сценариев по умолчанию для компонентов скрипта и задач, используйте **ScriptLanguage** свойство **Общие** страница **параметры** диалоговое окно. Дополнительные сведения см. в разделе [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx).  
+ Чтобы задать язык скриптов по умолчанию для компонентов скрипта и задач "Скрипт", воспользуйтесь свойством **ScriptLanguage** на странице **Общие** диалогового окна **Параметры**. Дополнительные сведения см. в разделе [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx).  
   
 ### <a name="entrypoint-property"></a>Свойство EntryPoint  
- **EntryPoint** свойство задает метод на **ScriptMain** класса в VSTA проектом, [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] вызывают во время выполнения как точку входа в код задачи скрипта. **ScriptMain** классом является класс по умолчанию, созданных шаблонами скриптов.  
+ Свойство **EntryPoint** определяет метод класса **ScriptMain** в проекте VSTA, который вызывается средой выполнения служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] в качестве точки входа в код задачи "Скрипт". Класс **ScriptMain** является классом по умолчанию, создаваемым шаблонами скриптов.  
   
  Для изменения имени метода в проекте VSTA следует поменять значение свойства **EntryPoint** .  
   
 ### <a name="readonlyvariables-and-readwritevariables-properties"></a>Свойства ReadOnlyVariables и ReadWriteVariables  
- В качестве значений этих свойств можно ввести разделенные запятыми списки существующих переменных, чтобы обеспечить доступ к ним в коде задачи «Скрипт» в режиме только для чтения или чтения и записи. Переменные обоих типов доступны в коде с помощью <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> свойство **Dts** объекта. Дополнительные сведения см. в статье [Using Variables in the Script Task](../../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md).  
+ В качестве значений этих свойств можно ввести разделенные запятыми списки существующих переменных, чтобы обеспечить доступ к ним в коде задачи «Скрипт» в режиме только для чтения или чтения и записи. Переменные обоих типов доступны в коде через свойство <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> объекта **Dts**. Дополнительные сведения см. в статье [Using Variables in the Script Task](../../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md).  
   
 > [!NOTE]  
 >  В именах переменных учитывается регистр букв.  
   
- Чтобы выбрать переменные, нажмите кнопку с многоточием (**...** ) рядом с полем свойства. Дополнительные сведения см. в разделе [Выбор переменных страницы](../../../integration-services/control-flow/select-variables-page.md).  
+ Для выбора переменных нажмите кнопку с многоточием (**…**) рядом с полем свойства. Дополнительные сведения см. в статье [Страница "Выбор переменных"](../../../integration-services/control-flow/select-variables-page.md).  
   
 ### <a name="edit-script-button"></a>Кнопка «Изменить скрипт»  
- **Изменить скрипт** кнопка запускает среду разработки VSTA, в котором можно написать пользовательский скрипт. Дополнительные сведения см. в разделе [кодировании и отладке задачи «скрипт»](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md).  
+ Кнопка **Изменить скрипт** запускает среду разработки VSTA, в которой и создается пользовательский скрипт. Дополнительные сведения см. в разделе [Написание кода и отладка задачи "Скрипт"](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md).  
   
 ## <a name="expressions-page-of-the-script-task-editor"></a>Страница «Выражения» окна «Редактор задачи "Скрипт"»  
- На **выражений** страница **редактор задачи «скрипт»**, можно использовать выражения для предоставления значений для свойств задачи «скрипт», перечисленных выше, а также для многих других свойств задач. Дополнительные сведения см. в разделе [Выражения служб Integration Services (SSIS)](../../../integration-services/expressions/integration-services-ssis-expressions.md).  
+ На странице **Выражения** окна **Редактор задачи "Скрипт"** можно с помощью выражений указать значения свойств задачи "Скрипт", перечисленных выше, а также многих других свойств задач. Дополнительные сведения см. в разделе [Выражения служб Integration Services (SSIS)](../../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Кодирование и отладка задачи «скрипт»](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  
+ [Написание кода и отладка задачи «Скрипт»](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  
   
   
-

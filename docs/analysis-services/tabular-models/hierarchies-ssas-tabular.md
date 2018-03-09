@@ -2,30 +2,29 @@
 title: "Иерархии | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e0a881f97fc071d0921a8829c8bb70d4f50197c2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5ce337737331ecf67332e4f012993a28d59715b0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="hierarchies"></a>Иерархии
-  В табличных моделях иерархии это метаданные, определяющие отношения между двумя или более столбцами в таблице. В списке полей клиентского средства создания отчетов иерархии могут отображаться отдельно от других столбцов, что упрощает переход по иерархиям и их включение в отчет для пользователей клиента.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В табличных моделях иерархии это метаданные, определяющие отношения между двумя или более столбцами в таблице. В списке полей клиентского средства создания отчетов иерархии могут отображаться отдельно от других столбцов, что упрощает переход по иерархиям и их включение в отчет для пользователей клиента.  
   
 ##  <a name="bkmk_benefits"></a> Преимущества  
  Таблица может содержать десятки и даже сотни столбцов, имеющих нестандартные имена и расположенных неупорядоченно. Из-за этого в списках полей клиентского средства создания отчетов данные могут отображаться неупорядоченно, что осложняет пользователю поиск нужных данных для включения в отчет. Иерархии предоставляют упрощенное и наглядное представление структуры данных, которая без их использования видится очень сложной.  
@@ -49,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
  После создания иерархии ее эффективность можно проверить с помощью функции «Анализировать в Excel». Дополнительные сведения см. в разделе [анализ в Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
   
-##  <a name="bkmk_related_tasks"></a> Связанные задачи  
+##  <a name="bkmk_related_tasks"></a> Related tasks  
   
 |Задача|Description|  
 |----------|-----------------|  
@@ -61,4 +60,3 @@ ms.lasthandoff: 09/01/2017
  [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
   
-

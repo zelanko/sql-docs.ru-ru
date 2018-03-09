@@ -1,10 +1,13 @@
 ---
-title: "~ (Побитовое не) (выражение служб SSIS) | Документы Microsoft"
+title: "~ (битовое НЕ) (выражение служб SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - bitwise NOT (~)
 - ~ (bitwise NOT)
 ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
-caps.latest.revision: 31
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 398f902d224f49e00b3fdc62bf39300ba180fda8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c1b209c8b8c224022b5cce905dbfea29fe81e269
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (битовое НЕ) (выражение служб SSIS)
   Выполняет битовую инверсию целого числа. Этот оператор может быть применен к целочисленному типу данных со знаком или без знака.  
@@ -43,8 +45,8 @@ ms.lasthandoff: 08/03/2017
 ## <a name="result-types"></a>Типы результата  
  Возвращает тип данных *integer_expression*.  
   
-## <a name="remarks"></a>Замечания  
- Нет  
+## <a name="remarks"></a>Remarks  
+ None  
   
 ## <a name="expression-examples"></a>Примеры выражений  
  Этот пример выполняет операцию битового ~ (NOT) над числом 170 (0000 0000 1010 1010). Число целого типа со знаком.  
@@ -62,9 +64,8 @@ ms.lasthandoff: 08/03/2017
   
  1111111101010101  
   
-## <a name="see-also"></a>См. также  
- [Приоритет и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Операторы &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>См. также:  
+ [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Планы обслуживания | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,19 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], database compatibility level displayed in designer
 - maintenance plans [SQL Server]
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
-caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b739e1421507dd0794b732dfc910e5ec3671c235
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 62c07a1aacaf0d2cc30808b41d0f58360144acff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="maintenance-plans"></a>Планы обслуживания
-  Планы обслуживания используются для создания рабочего процесса из задач, необходимых для гарантии оптимальной производительности базы данных, ее регулярного резервного копирования и отсутствия в ней несогласованностей. Для создания основных планов обслуживания также можно использовать мастер планов обслуживания, однако создание планов вручную более эффективно.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Планы обслуживания позволяют создать рабочий процесс из задач, обеспечивающих оптимизацию базы данных, регулярное ее резервное копирование и отсутствие в ней несогласованностей. Для создания основных планов обслуживания также можно использовать мастер планов обслуживания, однако создание планов вручную более эффективно.  
   
 ## <a name="benefits-of-maintenance-plans"></a>Преимущества планов обслуживания  
  В компоненте [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)]планы обслуживания создают пакет служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , выполняемый заданием агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Планы обслуживания можно запускать вручную или автоматически через заданные интервалы.  
@@ -47,7 +49,7 @@ ms.lasthandoff: 06/22/2017
 -   Поддержка проверки подлинности Windows и проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 ## <a name="maintenance-plan-functionality"></a>Функциональные возможности плана обслуживания  
- Можно создавать ﻿﻿планы обслуживания для выполнения следующих задач.  
+ Можно создавать ﻿﻿планы обслуживания для выполнения следующих задач:  
   
 -   Реорганизация данных на страницах данных и индексов путем перестроения индексов с новым коэффициентом заполнения. Перестроение индексов с новым коэффициентом заполнения обеспечивает одинаковое распределение объема данных и свободного пространства на страницах базы данных. Кроме того, при этом обеспечивается более быстрое увеличение размера в будущем. Дополнительные сведения см. в статье [Указание коэффициента заполнения для индекса](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
   
@@ -63,16 +65,15 @@ ms.lasthandoff: 06/22/2017
   
  Результаты, сформированные задачами обслуживания, могут записываться в виде отчета в текстовый файл или в таблицы плана обслуживания **sysmaintplan_log** и **sysmaintplan_logdetail**, которые находятся в базе **msdb**. Для просмотра результатов в средстве просмотра журнала щелкните правой кнопкой мыши пункт **Планы обслуживания** и выберите пункт **Просмотр журнала**.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Используйте следующие разделы для начала работы с планами обслуживания.  
   
 |||  
 |-|-|  
-|**Description**|**Раздел**|  
+|**Описание**|**Раздел**|  
 |Настройте параметр конфигурации сервера **Расширенные хранимые процедуры агента**, чтобы включить расширенные хранимые процедуры агента SQL Server.|[Параметр конфигурации сервера "Agent XP"](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |Описывает создание плана обслуживания с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].|[Создание плана обслуживания](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |Описывает создание плана обслуживания с помощью области конструктора плана обслуживания.|[Создание плана обслуживания (область конструктора планов обслуживания)](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
 |Содержит сведения о функциональных возможностях планов обслуживания, доступных в обозревателе объектов.|[Узел "Планы обслуживания" (обозреватель объектов)](../../relational-databases/maintenance-plans/maintenance-plans-node-object-explorer.md)|  
   
   
-

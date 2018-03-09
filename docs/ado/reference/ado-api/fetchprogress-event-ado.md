@@ -3,7 +3,7 @@ title: "Событие FetchProgress (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - FetchProgress event [ADO]
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3bd5284c35e51a8cc711fe7612d1176241c00ac7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 606e91ca69d981cf4c1396109f0114ce0244dc3b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="fetchprogress-event-ado"></a>Событие FetchProgress (ADO)
 **FetchProgress**событие вызывается периодически во время продолжительной операции асинхронного сообщить, сколько дополнительные строки в данный момент были получены в [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -54,13 +53,12 @@ FetchProgress Progress, MaxProgress, adStatus, pRecordset
  *pRecordset*  
  Объект **записей** объект, являющийся объектом, для которого извлекаются записи.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При использовании **FetchProgress** с дочерним **записей**, имейте в виду, *выполняется* и *MaxProgress* производных значений параметров из основного [службы курсора](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) набора строк. Возвращаемые значения представляют общее количество записей в базовом наборе строк, не только число записей в текущем.  
   
 > [!NOTE]
 >  Для использования **FetchProgress** с помощью Microsoft Visual Basic, Visual Basic 6.0 или более поздней версии не требуется.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример модели событий ADO (VC ++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Сводка обработчик событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)
-
+ [Общие сведения об обработчике событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)

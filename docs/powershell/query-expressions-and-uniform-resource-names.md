@@ -2,11 +2,13 @@
 title: "Выражения запросов и унифицированные имена ресурсов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: powershell
+ms.service: 
+ms.component: powershell
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,27 @@ helpviewer_keywords:
 - unique resource names
 - URN
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
-caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "14"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 87e90bc33f653b36eac95fd8f525d5eb235ed1ea
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 70426dcb9e6ca23d3e8de717fe7b9430155c7243
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Выражения запросов и универсальные имена ресурсов
-  В моделях объектов SMO [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и оснастках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell используется два типа строк выражений, которые похожи на выражения XPath. Выражения запроса — это строки, которые указывают набор условий, используемых для перечисления одного или нескольких объектов в иерархии объектной модели. Универсальное имя ресурса (URN) — это конкретный тип строки выражения запроса, который уникально определяет один объект.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+В моделях объектов SMO [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и оснастках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell используется два типа строк выражений, которые похожи на выражения XPath. Выражения запроса — это строки, которые указывают набор условий, используемых для перечисления одного или нескольких объектов в иерархии объектной модели. Универсальное имя ресурса (URN) — это конкретный тип строки выражения запроса, который уникально определяет один объект.  
+
+> [!NOTE]
+> Существует два модуля SQL Server PowerShell — **SqlServer** и **SQLPS**. Модуль **SQLPS** входит в состав установки SQL Server (для обеспечения обратной совместимости), но больше не обновляется. Самым актуальным модулем PowerShell является модуль **SqlServer**. Модуль **SqlServer** содержит обновленные версии командлетов в **SQLPS**, а также новые командлеты для поддержки последних функций SQL.  
+> Предыдущие версии модуля **SqlServer** *входили* в состав среды SQL Server Management Studio (SSMS), но только с SSMS версий 16.x. Для работы PowerShell с SSMS 17.0 и более поздних версий необходимо установить модуль **SqlServer** из коллекции PowerShell.
+> Сведения об установке модуля **SqlServer** см. в статье [Установка компонентов SQL Server PowerShell](download-sql-server-ps-module.md).
+
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -92,7 +101,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
 |||  
 |-|-|  
 |гггг|Год из четырех цифр.|  
-|мм|Месяц из двух цифр (от 01 до 12).|  
+|ММ|Месяц из двух цифр (от 01 до 12).|  
 |дд|День из двух цифр (от 01 до 31).|  
 |чч|Час из двух цифр в 24-часовом формате (от 01 до 23).|  
 |ми|Минута из двух цифр (от 01 до 59).|  
@@ -107,7 +116,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  not(\<*PropertyExpression*>)  
  Инвертирует значение вычисленного выражения *PropertyExpression*, перечисляя все объекты, не соответствующие условию, заданному в *PropertyExpression*. Например, выражение not(contains(@Name, 'xyz')) перечисляет все объекты, в именах которых нет строки xyz.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Выражения запроса — это строки, которые перечисляют узлы в иерархии моделей SMO. У каждого узла есть критерий фильтра, задающий условие для определения того, какие объекты в этом узле будут перечисляться. Выражения запроса моделируются на языке выражений XPath. Выражения запроса представляют собой небольшое подмножество выражений XPath, кроме того, в них есть некоторые выражения, которых нет в XPath. Выражения XPath — это строки, которые указывают набор критериев, используемых для перечисления одного или нескольких тегов в XML-документе. Дополнительные сведения об XPath см. в разделе [Язык W3C XPath](http://www.w3.org/TR/xpath20/).  
   
  Выражения запроса должны начинаться с абсолютной ссылки на объект сервера. Относительные выражения, начинающиеся с символа /, не допустимы. Последовательность объектов, указанных в выражении запроса, должна соответствовать иерархии коллекции объектов в связанной модели объекта. Например, выражение запроса, которое ссылается на объекты в пространстве имен Microsoft.SqlServer.Management.Smo, должно начинаться с узла сервера, за которым идет узел базы данных, и так далее.  
@@ -166,8 +175,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Invoke-PolicyEvaluation, командлет](../powershell/invoke-policyevaluation-cmdlet.md)   
+ [Invoke-PolicyEvaluation, командлет](invoke-policyevaluation-cmdlet.md)   
  [Подсистема аудита SQL Server (компонент Database Engine)](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: "Одноранговая репликация транзакций | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +18,19 @@ helpviewer_keywords:
 - transactional replication, peer-to-peer replication
 - peer-to-peer transactional replication
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
-caps.latest.revision: 71
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 73cba38d92983eb7e6650201a76c067e7f6de58f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "71"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: c7d2e0bedf8161b39323cf8260e154890032dfdb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Одноранговая репликация транзакций
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Одноранговая репликация поддерживает масштабируемые и отказоустойчивые решения, сохраняя копии данных на нескольких экземплярах сервера, которые также называются *узлами*. Одноранговая репликация, основанная на репликации транзакций, распространяет согласованные на уровне транзакций изменения почти в реальном времени. Это позволяет приложениям, для которых требуется масштабируемость операций чтения, распределять клиентские операции чтения на несколько узлов. Поскольку данные сохраняются на узлах почти в режиме реального времени, одноранговая репликация обеспечивает избыточность данных, что повышает доступность данных.  
   
@@ -188,4 +190,3 @@ ms.lasthandoff: 06/22/2017
  [Publication Types for Transactional Replication](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md) (Типы публикации для репликации транзакций)  
   
   
-

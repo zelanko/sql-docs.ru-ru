@@ -2,9 +2,12 @@
 title: "Требования к месту на диске для DDL-операций индекса | Документация Майкрософт"
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-indexes
 ms.tgt_pltfrm: 
@@ -16,20 +19,19 @@ helpviewer_keywords:
 - indexes [SQL Server], disk space requirements
 - temporary disk space [SQL Server]
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e719a7f09c1661573826bb59ccd86e2034bd3f0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c71784eb7a7a8e9ed2456cb7ae7718fafc9e1e6a
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
-# <a name="disk-space-requirements-for-index-ddl-operations"></a>Требования к месту на диске для DDL-операций индекса
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="disk-space-requirements-for-index-ddl-operations"></a>Disk Space Requirements for Index DDL Operations
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Наличие свободного места на диске имеет особое значение при создании, перестроении или удалении индексов. Недостаток места на диске может понизить производительность и даже вызвать ошибку операции с индексом. В этом разделе приведены общие сведения о том, как определить объем места на диске, необходимый для DDL-операций индекса.  
   
@@ -84,7 +86,7 @@ ms.lasthandoff: 06/22/2017
   
  Для действий с индексами в оперативном режиме применяется управление версиями строк, позволяющее изолировать действия с индексами от воздействия изменений, внесенных другими транзакциями. Это исключает необходимость запрашивать общую блокировку уже считанных записей. Для одновременных операций обновления и удаления, выполняемых пользователями во время операций с индексами в сети, требуется место в базе данных **tempdb**для сохранения записей версий. Дополнительные сведения см. в статье [Выполнение операции с индексами в сети](../../relational-databases/indexes/perform-index-operations-online.md) .  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Index Disk Space Example](../../relational-databases/indexes/index-disk-space-example.md)  
   
  [Место на диске журнала транзакций для операций обработки индекса](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
@@ -98,7 +100,7 @@ ms.lasthandoff: 06/22/2017
  [Оценка размера кучи](../../relational-databases/databases/estimate-the-size-of-a-heap.md)  
   
 ## <a name="related-content"></a>См. также  
- [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  
+ [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
   
@@ -109,4 +111,3 @@ ms.lasthandoff: 06/22/2017
  [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
   
   
-

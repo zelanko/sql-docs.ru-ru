@@ -3,7 +3,7 @@ title: "Коллекция параметров, пример команды с�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Parameters collection [ADOX], VC++ example
 - Command property [ADOX], VC++ example
 ms.assetid: 8636fa08-b3db-4e9a-a918-585e76dd59c8
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 674bf858215fc2d6f5b1c0384e368d2100ca1c25
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b8ceaf22ce401682f858019e42b77d710ac53fb0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameters-collection-command-property-example-vc"></a>Коллекция параметров, пример команды свойство (VC ++)
 Следующий код демонстрирует использование [команда](../../../ado/reference/adox-api/command-property-adox.md) свойство с [команда](../../../ado/reference/ado-api/command-object-ado.md) объект для получения значений параметров для процедуры.  
@@ -102,4 +101,3 @@ void ProcedureParametersX() {
     }  
 }  
 ```
-

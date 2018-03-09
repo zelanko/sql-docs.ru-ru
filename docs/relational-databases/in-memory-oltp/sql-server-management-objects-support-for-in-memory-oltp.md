@@ -3,28 +3,30 @@ title: "Поддержка управляющих объектов SQL Server д
 description: "В этой статье описаны элементы управляющих объектов SQL Server, которые поддерживают выполняющуюся в памяти OLTP."
 ms.custom: 
 ms.date: 08/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
-caps.latest.revision: 28
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 723de25c649545751bda5ddd79db47c5c367f478
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 249188036af10473b3a17eaeb2d0c47b80420f4a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/19/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>Поддержка управляющих объектов SQL Server SMO для In-Memory OLTP
-
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 В этом разделе описаны элементы управляющих объектов SQL Server, которые поддерживают выполняющуюся в памяти OLTP.  
 
 ## <a name="smo-types-and-members"></a>Типы и элементы управляющих объектов SQL Server
@@ -166,8 +168,7 @@ public class A {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
 
 - [Поддержка SQL Server для In-Memory OLTP](sql-server-support-for-in-memory-oltp.md)
 - [Общие сведения об управляющих объектах SQL Server](../server-management-objects-smo/overview-smo.md)
-

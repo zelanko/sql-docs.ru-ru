@@ -3,8 +3,11 @@ title: "СОЗДАЙТЕ имя входа (Transact-SQL) | Документы M
 ms.custom: 
 ms.date: 06/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,20 +29,19 @@ helpviewer_keywords:
 - re-hashing passwords
 - certificates [SQL Server], logins
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
-caps.latest.revision: 101
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: e0b84743a9c3c578954560613c69f2863af8aa01
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 2e94847ca10923bba05e228f36a25e5caa8c2027
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Создает имя входа компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -177,7 +179,7 @@ WINDOWS
   
  Имя асимметричного ключа, связываемого с данным именем входа. Этот ключ должен уже существовать в базе данных master.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В паролях учитывается регистр символов.  
   
  Предварительное хэширование паролей поддерживается только при создании имен входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -196,6 +198,8 @@ WINDOWS
  Скрипт для передачи имен входа см. в разделе [Способы передачи имен входа и паролей между экземплярами SQL Server 2005 и SQL Server 2008](http://support.microsoft.com/kb/918992).  
   
  При создании имени входа оно автоматически включается, и ему предоставляется разрешение **CONNECT SQL** уровня сервера.  
+ 
+ Сервер [режим проверки подлинности](../../relational-databases/security/choose-an-authentication-mode.md) должны совпадать тип имени входа, чтобы разрешить доступ.
   
  Сведения о проектировании системы разрешений см. в статье [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
@@ -212,14 +216,14 @@ WINDOWS
   
  Дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)] имена входа, в разделе [Управление базами данных и именами входа в базе данных SQL Windows Azure](http://msdn.microsoft.com/library/ee336235.aspx).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], требуется **ALTER ANY LOGIN** разрешение на сервер или членство в **securityadmin** предопределенной роли сервера.  
   
  В службах [!INCLUDE[ssSDS](../../includes/sssds-md.md)] создавать новые имена входа могут только имя входа участника уровня сервера (созданного процессом провизионирования) или члены роли `loginmanager` базы данных в базе данных master.  
   
  Если используется параметр **CREDENTIAL** , также необходимо разрешение **ALTER ANY CREDENTIAL** на сервере.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  После создания имени входа, имя входа подключается к [!INCLUDE[ssDE](../../includes/ssde-md.md)] или [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , но только разрешения, предоставленные **открытый** роли. Попробуйте выполнить некоторые из приведенных ниже действий.  
   
 -   Чтобы подключиться к базе данных, создайте пользователя базы данных для имени входа. Дополнительные сведения см. в разделе [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md).  
@@ -228,7 +232,7 @@ WINDOWS
   
 -   Используйте **sp_addsrvrolemember** Добавление имени входа к предопределенной роли сервера. Дополнительные сведения см. в разделе [роли уровня сервера](../../relational-databases/security/authentication-access/server-level-roles.md) и [sp_addsrvrolemember &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   
--   Используйте **GRANT** инструкции для предоставления разрешений уровня сервера с новым именем входа или роли, содержащей имя входа. Дополнительные сведения см. в разделе [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md).  
+-   Используйте **GRANT** инструкции для предоставления разрешений уровня сервера с новым именем входа или роли, содержащей имя входа. Дополнительные сведения см. в статье [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -314,7 +318,7 @@ GO
 ### <a name="g-creating-a-sql-server-authentication-login-with-a-password"></a>Ж. Создание имени входа для проверки подлинности SQL Server с паролем  
  В следующем примере создается имя входа `Mary7` с паролем `A2c3456`.  
   
-```tsql  
+```sql  
 CREATE LOGIN Mary7 WITH PASSWORD = 'A2c3456$#' ;  
 ```  
   
@@ -342,7 +346,6 @@ GO
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [DROP LOGIN &#40; Transact-SQL &#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
- [Создание имени входа](../../relational-databases/security/authentication-access/create-a-login.md)  
+ [Создание имени для входа](../../relational-databases/security/authentication-access/create-a-login.md)  
   
   
-

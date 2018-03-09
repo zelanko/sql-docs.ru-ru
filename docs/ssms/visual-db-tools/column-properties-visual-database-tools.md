@@ -3,10 +3,12 @@ title: "Свойства столбца (визуальные инструмен
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,20 +18,19 @@ f1_keywords:
 - vdt.designers.properties.Column.ColumnComputedColumnSpec
 - vdt.designers.properties.Column.ColumnFulltextSpec
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dfd26bcff6aa621967ab9295ac65a92718db9f8c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3605540ac694a2597e607428d5928d42f42ce14b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="column-properties-visual-database-tools"></a>Свойства столбца (визуальные инструменты для баз данных)
-Имеется два набора свойств столбцов: полный набор, который можно увидеть на вкладке **Свойства столбца[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в конструкторе таблиц (доступен только для баз данных**  [!INCLUDE[msCoName](../../includes/msconame_md.md)]), и сокращенный набор, который доступен в окне "Свойства" обозревателя серверов.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Имеется два набора свойств столбцов: полный набор, который можно увидеть на вкладке **Свойства столбца** в конструкторе таблиц (доступен только для баз данных [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]), и сокращенный набор, который доступен в окне "Свойства" обозревателя серверов.  
   
 > [!NOTE]  
 > Свойства в данном разделе сгруппированы по категориям, а не по алфавиту.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 06/22/2017
 **Категория «Идентификатор»**  
 При развертывании отображает свойства **Имя** и **База данных** .  
   
-**Имя**  
+**Название**  
 Отображает имя столбца.  
   
 **База данных**  
@@ -88,7 +89,7 @@ ms.lasthandoff: 06/22/2017
 **Общая категория**  
 Отображает свойства **Имя**, **Разрешить значения NULL**, **Тип данных**, **Значение по умолчанию или привязка**, **Длина**, **Точность**и **Масштаб**.  
   
-**Имя**  
+**Название**  
 Отображает имя столбца. Для изменения имени введите его в текстовом поле.  
   
 > [!CAUTION]  
@@ -130,7 +131,7 @@ ms.lasthandoff: 06/22/2017
 **Сжатый тип данных**  
 Отображает сведения о типе данных поля в том же формате, что и в инструкции SQL CREATE TABLE. Например, поле, содержащее строку переменной длины с максимальной длиной 20 символов, будет представлено как «varchar(20)». Чтобы изменить это свойство, введите значение непосредственно в поле.  
   
-**Description**  
+**Описание**  
 Отображает описание столбца. Для просмотра или изменения полного описания щелкните в поле "Описание", а затем нажмите кнопку с многоточием **(…)** справа от значения.  
   
 **Категория описания полнотекстового столбца**  
@@ -192,4 +193,3 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 > Длина типа данных **varchar(max)** различается для каждой строки. sp_help возвращает (-1) в качестве длины столбца **varchar(max)** . [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] отображает значение -1 как размер столбца.  
   
-

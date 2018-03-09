@@ -3,7 +3,7 @@ title: "Выполнение образца приложения адресно�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 24b1cac0950ec41087998edfe2c1393509cac8ab
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dca092267dfba700e1d079f8d2147c7f204e6e32
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="running-the-address-book-sample-application"></a>Выполнение образца приложения адресной книги
 > [!IMPORTANT]
@@ -43,15 +42,14 @@ ms.lasthandoff: 09/09/2017
   
 2.  В Microsoft Internet Explorer 4.0 или более поздней версии введите следующий адрес:  
   
-     **http://** *веб-сервере* **/RDS/AddressBook/AddrBook.asp**  
+     **http://** *webserver* **/RDS/AddressBook/AddrBook.asp**  
   
      где *веб-сервере* имя веб-сервера, где установлены серверные компоненты служб удаленных рабочих СТОЛОВ.  
   
 3.  Затем можно попробовать различные сценарии, в образце приложения, адресную книгу, такие как поиск пользователя по его или ее имя электронной почты, Листинг всех пользователей с заголовком «Руководитель», или редактирования существующих записей. Нажмите кнопку **найти** заполнение всех доступных имен сетки данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект привязки данных адресной книги](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)
-
 
 
 

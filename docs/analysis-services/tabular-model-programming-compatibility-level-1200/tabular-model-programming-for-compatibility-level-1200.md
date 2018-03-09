@@ -2,31 +2,29 @@
 title: "Программирование табличных моделей уровня совместимости 1200 | Документы Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d343f693-c800-42fe-bb4f-2c38a10919f1
-caps.latest.revision: 15
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: c7e1ec3e7ef85cb567d70e96d5c9f3bdd6655f3d
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4f4511a8c7cda17fbadba2df4b1ee16766790643
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>Табличные модели программирования для совместимости уровня 1200 и выше
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 Начиная с уровнем совместимости 1200, табличных метаданных используется для описания модели конструкций, заменив исторических многомерные метаданные как дескрипторы для табличной модели объектов. Метаданные для таблицы, столбцы и связи являются таблицы, столбца и связи, а не многомерные эквиваленты (измерений и атрибутов).  
   
 Можно создавать новые модели на уровне совместимости 1200 или выше с помощью API Microsoft.AnalysisServices.Tabular, последнюю версию из SQL Server Data Tools (SSDT), или путем изменения **CompatibilityLevel** существующих табличных модель для обновления (также выполняется в SSDT). Таким образом привязывает модель к более новым версиям сервера, средств и программных интерфейсов.   
@@ -57,11 +55,10 @@ ms.lasthandoff: 09/01/2017
 > [!NOTE]  
 >  Клиентские библиотеки табличной модели объектов (TOM), ADOMD.NET и объекты управления Analysis Services (AMO) теперь модуля выполнения .NET 4.0.   
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Документация для разработчика служб Analysis Services](../../analysis-services/analysis-services-developer-documentation.md)   
  [Программирование табличных моделей для обеспечения совместимости уровни 1050 до 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [Технический справочник по &#40; Службы SSAS &#41; ](../../analysis-services/powershell/technical-reference-ssas.md) [Обновление служб Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
+ [Технический справочник по ](../../analysis-services/powershell/technical-reference-ssas.md) [обновление служб Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
  [Уровни совместимости табличных моделей и баз данных](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
   
   
-

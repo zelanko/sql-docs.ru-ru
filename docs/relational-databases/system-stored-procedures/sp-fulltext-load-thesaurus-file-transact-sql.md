@@ -1,0 +1,102 @@
+---
+title: "sp_fulltext_load_thesaurus_file (Transact-SQL) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: system-stored-procedures
+ms.reviewer: 
+ms.suite: sql
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sp_fulltext_load_thesaurus_file
+- sp_fulltext_load_thesaurus_file_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_fulltext_load_thesaurus_file
+- full-text indexes [SQL Server], thesaurus files
+- thesaurus [full-text search], editing
+ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: de4468120488b4f7d8942ecf540c36370a36de7f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
+---
+# <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  Запускает на экземпляре сервера синтаксический анализ и загрузку данных из файла тезауруса, который соответствует языку с указанным кодом языка. Эту хранимую процедуру полезно использовать после обновления файла тезауруса. Выполнение **sp_fulltext_load_thesaurus_file** вызвала перекомпиляцию полнотекстовых запросов, использующих тезаурус указанного кода языка.  
+  
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Синтаксис  
+  
+```  
+  
+sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]   
+```  
+  
+## <a name="arguments"></a>Аргументы  
+ *lcid*  
+ Целое число, сопоставляющее идентификатор локали, для которого необходимо загрузить XML-определение тезауруса. Чтобы получить коды языков, которые доступны на экземпляре сервера, используйте [sys.fulltext_languages &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) представления каталога.  
+  
+ **@loadOnlyIfNotLoaded** = *действие*  
+ Указывает, нужно ли загружать файл тезауруса во внутренние таблицы тезауруса в случае, если он уже загружен. *Действие* является одним из:  
+  
+|Значение|Определение|  
+|-----------|----------------|  
+|**0**|Загружать файл тезауруса независимо от того, загружен ли он. Это поведение по умолчанию **sp_fulltext_load_thesaurus_file**.|  
+|1|Загружать файл тезауруса только в случае, если он еще не загружен.|  
+  
+## <a name="return-code-values"></a>Значения кода возврата  
+ Нет  
+  
+## <a name="result-sets"></a>Результирующие наборы  
+ Нет  
+  
+## <a name="remarks"></a>Remarks  
+ Файлы тезауруса загружаются автоматически полнотекстовыми запросами, использующими этот тезаурус. Чтобы избежать снижения производительности впервые полнотекстовых запросов, рекомендуется выполнять **sp_fulltext_load_thesaurus_file**.  
+  
+ Используйте [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)"**update_languages**" для обновления списка языков, зарегистрированных для полнотекстового поиска.  
+  
+## <a name="permissions"></a>Разрешения  
+ Только члены **sysadmin** предопределенной роли сервера или системный администратор может выполнять **sp_fulltext_load_thesaurus_file** хранимой процедуры.  
+  
+ Только системные администраторы имеют право обновлять, изменять и удалять файлы тезауруса.  
+  
+## <a name="examples"></a>Примеры  
+  
+### <a name="a-load-a-thesaurus-file-even-if-it-is-already-loaded"></a>A. Загрузка файла тезауруса даже в случае, если он уже загружен  
+ В следующем примере выполняется синтаксический анализ и загрузка файла тезауруса для английского языка.  
+  
+```  
+EXEC sys.sp_fulltext_load_thesaurus_file 1033;  
+GO  
+```  
+  
+### <a name="b-load-a-thesaurus-file-only-if-it-is-not-yet-loaded"></a>Б. Загрузка файла тезауруса только в случае, если он еще не загружен  
+ В следующем примере выполняется синтаксический анализ и загрузка файла тезауруса для арабского языка, если он еще не загружен.  
+  
+```  
+EXEC sys.sp_fulltext_load_thesaurus_file 1025, @loadOnlyIfNotLoaded = 1;  
+GO  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [FULLTEXTSERVICEPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Настройка и управление файлами тезауруса для полнотекстового поиска](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
+ [Настройка файлов тезауруса и управление ими для полнотекстового поиска](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)  
+  
+  

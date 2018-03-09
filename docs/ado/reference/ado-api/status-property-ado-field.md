@@ -3,7 +3,7 @@ title: "Свойство Status (поле ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Status property [ADO Field]
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cb695fae69ace4e65fea116ad125bb79f414a820
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 65acf492f0364b26fa6a12240fbbd49c7d1dfed3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="status-property-ado-field"></a>Свойство Status (ADO поле)
 Указывает состояние [поле](../../../ado/reference/ado-api/field-object.md) объекта.  
@@ -38,7 +37,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) значение. Значение по умолчанию — **adFieldOK**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="record-field-status"></a>Статус поля записи  
  Изменяет значение **поле** объекта в коллекции полей [запись](../../../ado/reference/ado-api/record-object-ado.md) объекта кэшируются до объекта [обновление](../../../ado/reference/ado-api/update-method.md) вызывается метод. В этот момент, если изменение значения поля вызвала ошибку, OLE DB вызывает ошибку **DB_E_ERRORSOCCURRED** (2147749409). Свойство Status любого **поле** объекты в **поля** коллекции, который вызвал ошибку будет находиться в диапазоне от [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) описывающая причину проблема.  
@@ -53,9 +52,8 @@ ms.lasthandoff: 09/09/2017
  Примет значение **поле** объекта в коллекции полей либо [записей](../../../ado/reference/ado-api/recordset-object-ado.md) кэшируются до объекта [обновление](../../../ado/reference/ado-api/update-method.md) вызывается метод. В этот момент, если изменение значения поля вызвала ошибку, OLE DB вызывает ошибку **DB_E_ERRORSOCCURRED** (2147749409). Свойство Status любого **поле** объекты в **поля** коллекции, который вызвал ошибку будет находиться в диапазоне от [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) описывающая причину проблема.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект field](../../../ado/reference/ado-api/field-object.md)  
+ [Объект Field](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства состояния (поле) (Visual Basic)](../../../ado/reference/ado-api/status-property-example-field-vb.md)   
- [Пример свойства состояния (VC ++)](../../../ado/reference/ado-api/status-property-example-vc.md)   
-
+ [Пример свойства Status (Visual C++)](../../../ado/reference/ado-api/status-property-example-vc.md)   

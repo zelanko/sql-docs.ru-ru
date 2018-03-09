@@ -3,8 +3,11 @@ title: "Данных SQL Azure ПРЕДОСТАВЛЕНИЯ, ЗАПРЕТА ОТ
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
-caps.latest.revision: 9
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3c4beb3881b983c0af3add7671dc4c7155649497
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c46d4df3d19b2c548b203f62a14ea4ebc0226296
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Разрешения: GRANT, DENY, REVOKE (хранилище данных SQL Azure, параллельное хранилище данных)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Используйте [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **GRANT** и **DENY** инструкции, чтобы предоставить или отменить разрешение (например, **обновления**) для защищаемого объекта (например, база данных, таблица, представление и т. д.) Чтобы субъект безопасности (имя входа, пользователь базы данных или роли базы данных). Используйте **ОТОЗВАТЬ** удаление grant или deny для разрешения.  
   
@@ -86,7 +88,7 @@ REVOKE
   
  ON [ \<class_type >::] *защищаемый объект* **ON** предложение описывает защищаемый объект параметра, для которого требуется предоставить, запретить или отменить разрешения.  
   
- \<class_type > тип класса защищаемого объекта. Это может быть **входа**, **базы данных**, **ОБЪЕКТА**, **СХЕМЫ**, **РОЛИ**, или **пользователя** . Может также иметь разрешения **сервера***class_type*, но **сервера** для этих разрешений не указан. **База данных** не указан, если разрешение включает слово **базы данных** (например **ALTER ANY DATABASE**). Если аргумент *class_type* указан и тип разрешения не ограничиваются сервера или базы данных класс, класс считается **ОБЪЕКТА**.  
+ \<class_type > тип класса защищаемого объекта. Это может быть **входа**, **базы данных**, **ОБЪЕКТА**, **СХЕМЫ**, **РОЛИ**, или **пользователя** . Может также иметь разрешения **SERVER *** class_type*, но **сервера** для этих разрешений не указан. **База данных** не указан, если разрешение включает слово **базы данных** (например **ALTER ANY DATABASE**). Если аргумент *class_type* указан и тип разрешения не ограничиваются сервера или базы данных класс, класс считается **ОБЪЕКТА**.  
   
  *защищаемый объект*  
  Имя входа, базы данных, таблицы, представления, схемы, процедуры, роли или пользователя, для которого требуется предоставить, запретить или отменить разрешения. Имя объекта можно указать правилам именования трех частей, которые описаны в [синтаксические обозначения Transact-SQL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
@@ -109,7 +111,7 @@ REVOKE
 > [!IMPORTANT]  
 >  Если участник имеет указанное разрешение без **GRANT** параметр, будет отменено само разрешение.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Чтобы предоставить разрешение, источник должен иметь либо само разрешение с **с ПРЕДОСТАВИТЬ параметр**, либо должен иметь разрешение более высокого уровня, которое включает в себя предоставленное разрешение.  Владельцы объектов могут предоставлять разрешения на объекты, которыми они владеют. Участники **УПРАВЛЕНИЯ** разрешение на защищаемый объект может предоставлять разрешение на этот защищаемый объект.  Члены **db_owner** и **db_securityadmin** фиксированных ролей базы данных могут предоставлять любые разрешения в базе данных.  
   
 ## <a name="general-remarks"></a>Общие замечания  
@@ -324,5 +326,4 @@ GRANT UPDATE ON dbo.StatusTable TO [Ted];
 ```  
   
   
-
 

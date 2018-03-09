@@ -2,9 +2,12 @@
 title: "Просмотр отчета о наборе элементов сбора (среда SQL Server Management Studio) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,19 +18,20 @@ helpviewer_keywords:
 - collection sets [SQL Server], viewing reports
 - reports [SQL Server], viewing collection set
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
-caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: accee6b8a77439781776f82d179a2260d3aa2895
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 537ccf1648d36229ead7680826f63d081663c998
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>Просмотр отчета о наборе элементов сбора (среда SQL Server Management Studio)
-  После настройки хранилища данных управления можно просмотреть отчет набора элементов сбора в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Для наборов сбора системных данных, устанавливаемых вместе с SQL Server, предоставляются отчеты. Содержимое этих отчетов:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+После настройки хранилища данных управления можно просмотреть отчет набора элементов сбора в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Для наборов сбора системных данных, устанавливаемых вместе с SQL Server, предоставляются отчеты. Содержимое этих отчетов:  
   
 -   Сводка по использованию дискового пространства.  
   

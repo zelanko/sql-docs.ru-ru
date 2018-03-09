@@ -3,7 +3,7 @@ title: "Пример свойства ParentCatalog (VB) | Документы Mi
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - ParentCatalog property [ADOX], Visual Basic example
 ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 017deaf81b79bac3bbf777aaf0bcb0757397b424
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8dc3ab11b1cb9b439fce517e7277c94b31d7f4ec
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parentcatalog-property-example-vb"></a>Пример свойства ParentCatalog (Visual Basic)
 Следующий код демонстрирует использование [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) свойство для доступа к специфическое для поставщика свойство до добавления таблицы в каталоге. Свойство **AutoIncrement**, которая создает поле AutoIncrement базы данных Microsoft Jet.  
@@ -91,7 +90,7 @@ End Sub
 ' EndCreateAutoIncrColumnVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Append-метод (ADOX столбцы)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append-метод (ADOX таблицы)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
@@ -100,5 +99,4 @@ End Sub
  [Свойство Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
  [Свойство ParentCatalog (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)   
  [Объект таблицы (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Свойство Type (столбец) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)
-
+ [Свойство Type (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)

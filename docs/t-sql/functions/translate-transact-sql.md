@@ -3,8 +3,11 @@ title: "ПЕРЕВОД (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ f1_keywords:
 helpviewer_keywords:
 - TRANSLATE function
 ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
-caps.latest.revision: 5
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 583c414206a0acc79d1abdfff34728c38711a855
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: e7ea679043b83d8cee26f431602450d023516647
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="translate-transact-sql"></a>ПЕРЕВОД (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Возвращает строку, предоставленных в качестве первого аргумента, после некоторых символов, указанных во втором аргументе преобразуются в целевой набор символов.
 
@@ -51,7 +53,7 @@ inputString
 ## <a name="return-types"></a>Типы возвращаемых значений   
 Возвращает символьное выражение того же типа, что `inputString` где символов из второй аргумент заменяются сопоставления символов из третьего аргумента.
 
-## <a name="remarks"></a>Замечания   
+## <a name="remarks"></a>Remarks   
 
 `TRANSLATE`функция возвращает ошибку, если имеют разные длины, символы и переводы. `TRANSLATE`функция должна возвращать входных данных без изменений, если значения null, представлены в виде символов или замены аргументов. Поведение `TRANSLATE` функции должен быть идентичен [заменить](../../t-sql/functions/replace-transact-sql.md) функции.   
 
@@ -77,7 +79,7 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 
 ###  <a name="b-convert-geojson-points-into-wkt"></a>Б. Преобразовать GeoJSON точки в формате WKT    
 GeoJSON — это формат для кодирования с различными структурами географические данные. С `TRANSLATE` функции, разработчики можно легко преобразовать GeoJSON точки в формате WKT и наоборот. Следующий запрос заменяет квадратные и фигурные скобки во входном файле регулярного фигурные скобки:   
-```tsql
+```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
 ```
@@ -90,9 +92,15 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 (137.4  72.3) |[137.4,72.3] |
 
 
-## <a name="see-also"></a>См. также:
-
-[Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
-[REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)   
-
+## <a name="see-also"></a>См. также
+ [CONCAT &#40; Transact-SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [Функция FORMATMESSAGE &#40; Transact-SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40; Transact-SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [Заменить &#40; Transact-SQL &#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [ОБРАТИТЬ &#40; Transact-SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40; Transact-SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40; Transact-SQL &#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
 

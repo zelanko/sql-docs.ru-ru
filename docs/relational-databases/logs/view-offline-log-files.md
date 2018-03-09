@@ -2,9 +2,12 @@
 title: "Просмотр файлов журнала в режиме \"вне сети\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - Log File Viewer, viewing offline logs
 - offline log files
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
-caps.latest.revision: 18
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 339787b7252b5604a08770d417fe39d5b63aca70
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0e87fd686f9962562af63a50f216254081a17581
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="view-offline-log-files"></a>просматривать файлы журнала в режиме «вне сети»
-  Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], появилась возможность просматривать файлы журнала [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на локальных и удаленных экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые находятся вне сети или не могут запуститься.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], появилась возможность просматривать файлы журнала [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на локальных и удаленных экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые находятся вне сети или не могут запуститься.  
   
  Получить доступ к файлам журналов вне сети можно в списке «Зарегистрированные серверы» или программным способом с помощью запросов WMI и WQL.  
   
@@ -79,7 +82,7 @@ ms.lasthandoff: 06/22/2017
   
     3.  Введите имя удаленного компьютера и нажмите кнопку **ОК**.  
   
-3.  Щелкните правой кнопкой мыши **Элемент управления WMI (локальный)** или **Элемент управления WMI (***ИмяУдаленногоКомпьютера***)**и выберите пункт **Свойства**.  
+3.  Щелкните правой кнопкой мыши **Элемент управления WMI (локальный)** или **Элемент управления WMI (***ИмяУдаленногоКомпьютера***)** и выберите пункт **Свойства**.  
   
 4.  В диалоговом окне **Свойства: элемент управления WMI** перейдите на вкладку **Безопасность** .  
   
@@ -127,4 +130,3 @@ ms.lasthandoff: 06/22/2017
  [Средство просмотра файлов журнала](../../relational-databases/logs/log-file-viewer.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Параметризованные команды с командами 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - APPEND clause [ADO]
 - COMPUTE command [ADO]
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 18bfbc4a2e18e0232380edf157410fbd4eb3b12c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8821ebd2fb20cf32c6b1921c36e45404421f415b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>Параметризованные команды с промежуточных ВЫЧИСЛЕНИЙ команд
 Типичный параметризованных фигуры команда APPEND имеет предложения, который создается родительским **записей** с помощью команды запроса и другое предложение, который создает дочерний **записей** с помощью команды параметризованного запроса — то есть, содержащий местозаполнитель параметра команды (вопросительный знак «?»). Итоговый были сформированы **записей** имеет два уровня, в которых родительского занимает верхнего уровня и дочерние занимает более низком уровне.  
@@ -37,6 +36,5 @@ ms.lasthandoff: 09/09/2017
   
  Типичное применение для этой функции заключается в вызове агрегатной функции и возможности группирования shapeCOMPUTE команд, чтобы создать промежуточные **записей** объектов, содержащих аналитические сведения о дочерних **набора записей** . Кроме того, поскольку фигуры параметризованные команды, каждый раз, столбец родительского осуществляется, новый дочерний **записей** могут быть получены. Поскольку промежуточных уровней являются производными от дочернего, они также вычисляется заново.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример формирования данных](../../../ado/guide/data/data-shaping-example.md)
-

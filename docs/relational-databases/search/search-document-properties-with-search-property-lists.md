@@ -2,9 +2,12 @@
 title: "Поиск свойств документа с помощью списков свойств поиска | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -18,19 +21,20 @@ helpviewer_keywords:
 - search property lists [SQL Server], about
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
-caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e408a414ec070cdef39b69bf535ceb0d45f73435
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 24c1ffc5cc5f68271343a078cd02296b9d6b42c3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Поиск свойств документа с использованием списков свойств поиска
-  Ранее содержимое свойств документа нельзя было отличить от содержимого текста документа. Это ограничивало полнотекстовые запросы, позволяя выполнять только поиск во всем документе. Теперь можно настроить полнотекстовый индекс для поддержки поиска по определенным свойствам, например Author и Title, для поддерживаемых типов документов в столбцах двоичных данных **varbinary**, **varbinary(max)** (включая **FILESTREAM**) или **image** . Такая форма поиска называется *поиск свойств*.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Ранее содержимое свойств документа нельзя было отличить от содержимого текста документа. Это ограничивало полнотекстовые запросы, позволяя выполнять только поиск во всем документе. Теперь можно настроить полнотекстовый индекс для поддержки поиска по определенным свойствам, например Author и Title, для поддерживаемых типов документов в столбцах двоичных данных **varbinary**, **varbinary(max)** (включая **FILESTREAM**) или **image** . Такая форма поиска называется *поиск свойств*.  
   
  Связанный [фильтр](../../relational-databases/search/configure-and-manage-filters-for-search.md) (IFilter) определяет возможность поиска свойств в заданном типе документа. Для некоторых типов документов связанный фильтр IFilter извлекает часть или все свойства, определенные для этого типа документа, а также содержимое текста документа. Можно настроить полнотекстовый индекс, чтобы разрешить поиск только в свойствах, которые извлекаются фильтром IFilter во время полнотекстового индексирования. К фильтрам IFilter, извлекающим ряд свойств документа, относятся фильтры IFilter для типов документов Microsoft Office 2007 (DOCX, XLSX, PPTX и др.). С другой стороны, фильтр IFilter XML не возвращает свойства.  
   
@@ -54,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
  ![Полнотекстовый индекс, который использует список свойств поиска](../../relational-databases/search/media/ifts-spl-and-fti.gif "Полнотекстовый индекс, который использует список свойств поиска")  
   
- Выражения поиска в свойстве Title — Favorite, Biking и Trails — связываются с внутренним идентификатором, назначенным свойству Title для этого индекса (он равен 1). Выражения поиска в свойстве Keywords — biking и mountain — связываются с внутренним идентификатором, назначенным свойству Tags для этого индекса (он равен 2). Для выражений поиска в свойстве Author — Jane и Doe, а также выражений поиска в тексте документа внутренний идентификатор свойства имеет значение 0. Заметьте, что выражение biking встречается в свойстве Title, в свойстве Keywords (Tags) и в тексте документа. Этот документ будет включаться в результаты поиска biking в свойствах Title и Keywords (Tags). Универсальный полнотекстовый запрос выражения biking также будет возвращать этот документ, как и в случае, когда индекс не настроен для поиска в свойствах. Поиск выражения biking в свойстве Author не возвратит этот документ.  
+ Выражения поиска в свойстве Title — Favorite, Biking и Trails — связываются с внутренним идентификатором, назначенным свойству Title для этого индекса (он равен 1). Выражения поиска в свойстве Keywords — biking и mountain — связываются с внутренним идентификатором, назначенным свойству Tags для этого индекса (он равен 2). Для выражений поиска в свойстве Author — Jane и Doe, а также выражений поиска в тексте документа внутренний идентификатор свойства имеет значение 0. Выражение biking встречается в свойстве Title, в свойстве Keywords (Tags) и в тексте документа. Этот документ будет включаться в результаты поиска biking в свойствах Title и Keywords (Tags). Универсальный полнотекстовый запрос выражения biking также будет возвращать этот документ, как и в случае, когда индекс не настроен для поиска в свойствах. Поиск выражения biking в свойстве Author не возвратит этот документ.  
   
  В полнотекстовом запросе по свойствам используются внутренние идентификаторы свойств, зарегистрированные в текущем списке свойств поиска для полнотекстового индекса.  
   
@@ -103,7 +107,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Целочисленный идентификатор свойства  
   
-     Каждое свойство поиска обладает идентификатором, который уникален в пределах набора свойств. Учтите, что для заданного свойства идентификатором может быть целое число или строка, однако для полнотекстового поиска поддерживаются только целочисленные идентификаторы.  
+     Каждое свойство поиска обладает идентификатором, который уникален в пределах набора свойств. Для заданного свойства идентификатором может быть целое число или строка, однако для полнотекстового поиска поддерживаются только целочисленные идентификаторы.  
   
 -   Имя свойства  
   
@@ -124,11 +128,11 @@ ms.lasthandoff: 06/22/2017
   
  **Получение значений для списка свойств поиска**  
   
- См. раздел [Поиск идентификаторов GUID для наборов свойств и целочисленных идентификаторов свойств для свойств поиска](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md).  
+ См. раздел [Find Property Set GUIDs and Property Integer IDs for Search Properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md).  
   
  **Добавление свойства в список свойств поиска с помощью Transact-SQL**  
   
- Используйте оператор [ALTER SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/alter-search-property-list-transact-sql.md) со значениями, полученными одним из способов, описанных в разделе [Поиск идентификаторов GUID наборов свойств и целочисленных идентификаторов свойств для свойств поиска](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md).  
+ Используйте инструкцию [ALTER SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/alter-search-property-list-transact-sql.md) со значениями, полученными одним из способов, описанных в статье [Поиск идентификаторов GUID наборов свойств и целочисленных идентификаторов свойств для свойств поиска](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md).  
   
  В следующем примере демонстрируется использование этих значений при добавлении свойства в список свойств поиска:  
   
@@ -161,7 +165,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
 ##  <a name="Ov_CONTAINS_using_PROPERTY"></a> Запрос свойств поиска с ключевым словом CONTAINS  
  Далее представлен базовый синтаксис [CONTAINS](../../t-sql/queries/contains-transact-sql.md) для полнотекстового запроса по свойствам:  
   
-```tsql  
+```sql  
 SELECT column_name FROM table_name  
   WHERE CONTAINS ( PROPERTY ( column_name, 'property_name' ), '<contains_search_condition>' )  
 ```  
@@ -199,7 +203,7 @@ GO
   
 6.  В диалоговом окне **Редактор списка свойств поиска** для добавления или удаления свойств поиска используйте сетку свойств:  
   
-    1.  Чтобы удалить свойство документа, щелкните заголовок строки слева от свойства и нажмите клавишу DEL.  
+    1.  Чтобы удалить свойство документа, щелкните заголовок строки слева от свойства и нажмите кнопку DEL.  
   
     2.  Чтобы добавить свойство документа, щелкните пустую строку в конце списка, справа от **\***, и введите значения для нового свойства.  
   
@@ -227,7 +231,7 @@ GO
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>См. также:  
- [Поиск идентификаторов GUID для наборов свойств и целочисленных идентификаторов свойств для свойств поиска](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
+ [Find Property Set GUIDs and Property Integer IDs for Search Properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [Настройка и управление фильтрами для поиска](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   
   

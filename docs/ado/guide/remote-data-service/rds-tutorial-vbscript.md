@@ -3,7 +3,7 @@ title: "Учебник служб удаленных рабочих СТОЛОВ
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - RDS tutorial [ADO], VBScript
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 70617ccbb2b0b874c68ea45cc72390bd98a52061
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6f339f4ce8ab4a0bc536960e63fd53ccbfe08d6b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-tutorial-vbscript"></a>Учебник служб удаленных рабочих СТОЛОВ (VBScript)
 Это учебник служб удаленных рабочих СТОЛОВ, написанных на Visual Basic Scripting Edition. Описание назначения этого учебника см. в разделе [учебника служб удаленных рабочих СТОЛОВ](../../../ado/guide/remote-data-service/rds-tutorial.md).  
@@ -146,6 +145,5 @@ End Sub
   
  **Это конец учебника.**  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Учебник по RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
-

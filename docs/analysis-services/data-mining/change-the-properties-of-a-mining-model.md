@@ -2,32 +2,33 @@
 title: "Изменение свойств модели интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - mining models [Analysis Services], properties
 - properties [data mining]
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
-caps.latest.revision: 38
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 84259428c78b013577d50b6f48818bb2cd0dc554
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d4319c2394df0e2edae0e037c14305dae09968fb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Изменение свойств модели интеллектуального анализа данных
-  Некоторые свойства моделей интеллектуального анализа данных могут применяться ко всей модели, другие действуют только на отдельные столбцы. Примеры свойств, которые применяются ко всей модели: свойство **Drillthrough** , задающее доступность данных вариантов для запросов, а также свойство **Description** . Свойства, действующие только на определенные столбцы: **Usage** и **ModelingFlags**, управляющие использованием данных в столбце внутри модели.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Некоторые свойства моделей интеллектуального анализа данных могут применяться ко всей модели, другие действуют только на отдельные столбцы. Примеры свойств, которые применяются ко всей модели: свойство **Drillthrough** , задающее доступность данных вариантов для запросов, а также свойство **Description** . Свойства, действующие только на определенные столбцы: **Usage** и **ModelingFlags**, управляющие использованием данных в столбце внутри модели.  
   
  Для следующих свойств модели предусмотрены расширенные редакторы, с помощью которых можно создавать выражения или настраивать сложные свойства моделей. Следующие свойства предоставляют:  
   
@@ -57,7 +58,6 @@ ms.lasthandoff: 09/01/2017
      Новое значение вступает в силу после выбора другого элемента в конструкторе.  
   
 ## <a name="see-also"></a>См. также  
- [Задачи и инструкции по модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Задачи модели интеллектуального анализа данных и инструкции](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   
-

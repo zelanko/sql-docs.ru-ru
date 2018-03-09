@@ -2,13 +2,13 @@
 title: "Настройка группы доступности для распределенных транзакций | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/19/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +18,18 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - troubleshooting [SQL Server], cross-database transactions
 ms.assetid: 
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: 9faba068fd3712b2ada9dbe3260795d4ecd19a6c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 523b46925b2ed32ab68840fcc76ddead5d613758
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Настройка группы доступности для распределенных транзакций
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] поддерживает все распределенные транзакции, включая базы данных в группе доступности. В этой статье рассказывается, как настроить группу доступности для распределенных транзакций.  
 
@@ -45,7 +44,7 @@ ms.lasthandoff: 08/02/2017
 
 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] не запрещает распределенные транзакции для баз данных в группе доступности, даже если эта группа доступности не настроена для распределенных транзакций. При этом в случае, если группа доступности не настроена для распределенных транзакций, отработка отказа может завершаться ошибкой. В частности, экземпляр новой первичной реплики [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] может не получить результат транзакции из DTC. Чтобы включить экземпляр [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] и получить результат сомнительной транзакции из DTC после отработки отказа, настройте группу доступности для распределенных транзакций. 
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Перед настройкой группы доступности для поддержки распределенных транзакций необходимо выполнить следующие предварительные требования:
 
@@ -87,7 +86,7 @@ CREATE AVAILABILITY GROUP MyAG
 
 ```transact-sql
 ALTER AVAILABILITY GROUP MyaAG
-   WITH (
+   SET (
       DTC_SUPPORT = PER_DB  
       );
 ```
@@ -188,7 +187,7 @@ following the guideline for Troubleshooting DTC Transactions.
 
 Дополнительные сведения об обработке сомнительных транзакций см. в статье [Обработка транзакций вручную](http://technet.microsoft.com/library/cc754134.aspx).
 
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 
 [Распределенные транзакции](http://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 

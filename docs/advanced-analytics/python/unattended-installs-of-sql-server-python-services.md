@@ -2,34 +2,35 @@
 title: "Автоматически устанавливать службы обучения машины Python (в базе данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/31/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: r-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77e92b2d-5777-4c31-bf02-f931ed54a247
-caps.latest.revision: 1
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 810adfeca86bc12bf05561eb50d555261579a1a5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9b9156a3dc9dec21187eec8dc0b5a44059fb5e31
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>Автоматически устанавливать службы обучения машины Python (в базе данных)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом разделе описывается использование аргументы командной строки в программе установки SQL Server 2017 г. Установка SQL Server database engine с использованием службы обучения машины и Python, в автоматическом режиме.
 
 > [!NOTE]
 > Не забудьте указать аргументы командной строки для соглашений о лицензировании, один для Python и один для SQL Server.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Прежде чем запустить процесс установки, выполните следующие требования:
 
@@ -74,4 +75,3 @@ ms.lasthandoff: 09/01/2017
 3.  Перезапустите службу SQL Server для экземпляра изменена конфигурация. При этом будет автоматически перезапущена связанный [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] также службы.
 
 3. Если вы используете пользовательскую конфигурацию безопасности или планируете использовать SQL Server для поддержки удаленных контекстов вычислений, могут потребоваться дополнительные действия. Дополнительные сведения см. в разделе [Устранение неполадок при установке обучения машины](../machine-learning-troubleshooting-faq.md).
-

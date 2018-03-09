@@ -3,8 +3,11 @@ title: "Разрешения GRANT службы Broker (Transact-SQL) | Доку
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - message types [Service Broker], permissions
 - contracts [Service Broker], permissions
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
-caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 185950b1872ca5f11663f3d5051d1a2303cce090
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 0383e0b5446537b77e02ce4b8e4d3e54c850bdd1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT, предоставление разрешения на компонент Service Broker (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Предоставляет разрешения на контракт, тип сообщений, удаленную привязку, маршрут или службу компонента Service Broker.  
   
@@ -60,19 +62,19 @@ GRANT permission  [ ,...n ] ON
  *разрешение*  
  Указывает разрешение, которое может быть предоставлено на защищаемый объект компонента Service Broker.  Перечислены ниже.  
   
- КОНТРАКТ **::***contract_name*  
+ CONTRACT **::***contract_name*  
  Указывает контракт, на который предоставляется разрешение. Квалификатор области «::» является обязательным.  
   
- Тип сообщения **::***message_type_name*  
+ MESSAGE TYPE **::***message_type_name*  
  Указывает тип сообщений, на которые предоставляется разрешение. Необходим квалификатор области «::».  
   
- REMOTE SERVICE BINDING **::***remote_binding_name*  
+ REMOTE SERVICE BINDING **:: *** remote_binding_name*  
  Указывает привязку удаленной службы, на которую предоставляется разрешение. Необходим квалификатор области «::».  
   
- МАРШРУТ **::***route_name*  
+ ROUTE **::***route_name*  
  Указывает маршрут, на который предоставляется разрешение. Необходим квалификатор области «::».  
   
- Служба **::***service_name*  
+ SERVICE **::***service_name*  
  Указывает службу, на которую предоставляется разрешение. Необходим квалификатор области «::».  
   
  *database_principal*  
@@ -116,7 +118,7 @@ GRANT permission  [ ,...n ] ON
   
 -   пользователь базы данных, не сопоставленный участнику [системы безопасности] на уровне сервера.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="service-broker-contracts"></a>Контракты компонента Service Broker  
  Контракт компонента Service Broker представляет собой защищаемый на уровне базы данных объект, входящий в родительскую по иерархии разрешений базу данных. Ниже перечислены наиболее специфичные и ограниченные разрешения (вместе с наиболее общими разрешениями, куда они неявно входят), которые могут предоставляться для контракта компонента Service Broker.  
@@ -171,7 +173,7 @@ GRANT permission  [ ,...n ] ON
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Объект, предоставляющий разрешение (или участник, указанный параметром AS), должен иметь либо само разрешение, выданное с помощью параметра GRANT OPTION, либо разрешение более высокого уровня, которое неявно включает предоставляемое.  
   
  Если используется параметр AS, налагаются следующие дополнительные требования.  
@@ -191,11 +193,10 @@ GRANT permission  [ ,...n ] ON
   
  Участники, заведующие выдачей разрешений CONTROL SERVER, такие как члены **sysadmin** фиксированной серверной роли, могут предоставлять любое разрешение на любой защищаемый объект сервера. Участник, получивший разрешение CONTROL на базу данных, такие как члены **db_owner** предопределенной роли базы данных, могут предоставлять любое разрешение на любой защищаемый объект в базе данных. Владельцы разрешения CONTROL, связанного со схемой, могут предоставлять любые разрешения на работу с любыми объектами, содержащимися в данной схеме.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
-

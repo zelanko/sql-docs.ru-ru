@@ -3,27 +3,28 @@ title: "Формат строки соединения и атрибуты | Д�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - connection strings [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], connection strings
 ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c3bc1fc7fcefb034b30c604c358b15ae1db6353e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 79d5cabb884262b052429da53cf19c360048dd21
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-string-format-and-attributes"></a>Формат строки соединения и атрибуты
 > [!IMPORTANT]  
@@ -44,7 +45,7 @@ ms.lasthandoff: 09/09/2017
   
  Атрибуты для строки подключения будет следующим:  
   
-|Attribute|Description|Значение по умолчанию|  
+|attribute|Description|Значение по умолчанию|  
 |---------------|-----------------|-------------------|  
 |DSN|Имя источника данных, указанных на вкладке драйверов из **администратор источников данных ODBC** диалоговое окно.|""|  
 |PWD|Пароль для сервера Oracle, необходимо получить доступ. Этот драйвер поддерживает ограничения, которые Oracle помещает пароли.|""|  
@@ -67,4 +68,3 @@ ms.lasthandoff: 09/09/2017
 ```  
 "DSN=MyOtherDataSource;UID=/;PWD=;SERVER=MyOtherOracleServer"  
 ```
-

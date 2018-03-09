@@ -3,7 +3,7 @@ title: "Ошибка объекта | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - error object [ADO]
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 00f04d9ccdfd4547e7d207edc21db44a4e04508b
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a283d7d40140e46668dc704196316a4a52c1fdbf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="error-object"></a>Объект Error
 Содержит сведения об ошибках доступа к данным, которые относятся к одной операции с участием поставщика.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Любая операция, включающее объекты ADO можно создать одну или несколько ошибок поставщика. Как возникли ошибки, один или несколько **ошибка** объекты размещаются в [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md) коллекцию [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Если другая операция ADO создает ошибку, **ошибки** коллекция очищается и новый набор **ошибка** объектов помещается в **ошибки** коллекции.  
   
 > [!NOTE]
@@ -62,12 +61,11 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующий раздел.  
   
--   [Ошибка объект свойства, методы и события](../../../ado/reference/ado-api/error-object-properties-methods-and-events.md)  
+-   [Свойства, методы и события объекта Error](../../../ado/reference/ado-api/error-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Описание, HelpContext, файл справки, NativeError, номер, источника и пример свойства SQLState (Visual Basic)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Описание, HelpContext, файл справки, NativeError, номер, источник и пример свойства SQLState (VC ++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Коллекция ошибок (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Поставщики приложение A:](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

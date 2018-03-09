@@ -2,9 +2,12 @@
 title: "Создание индексов с включенными столбцами | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-indexes
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - designing indexes [SQL Server], included columns
 - nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 815756ed3e14540705a1c2cdbab16d5648a6d2ec
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2cea0215d55b75807b735a7028a79aa52bbbe7e4
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-indexes-with-included-columns"></a>Создание индексов с включенными столбцами
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   В этой теме описывается добавление невключенных или неключевых столбцов, чтобы расширить функциональные возможности некластеризованных индексов в [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Добавление неключевых столбцов позволяет создавать некластеризованные индексы, покрывающие больше запросов. Это обусловлено следующими преимуществами неключевых столбцов.  
   
@@ -44,24 +46,8 @@ ms.lasthandoff: 06/22/2017
  Индекс с неключевыми столбцами может значительно повысить производительность запроса, когда все столбцы запроса включены в индекс как ключевые или неключевые. Производительность повышается благодаря тому, что оптимизатор запросов может найти все значения столбцов в этом индексе; при этом нет обращения к данным таблиц или кластеризованных индексов, что приводит к меньшему количеству дисковых операций ввода-вывода.  
   
 > [!NOTE]  
->  Если индекс содержит все столбцы, на которых в запросе имеются ссылки, это обычно называется *покрытием запроса*.  
-  
- **В этом разделе**  
-  
--   **Перед началом работы выполните следующие действия.**  
-  
-     [Рекомендации по проектированию](#DesignRecs)  
-  
-     [Ограничения](#Restrictions)  
-  
-     [Безопасность](#Security)  
-  
--   **Создание индекса с неключевыми столбцами с помощью различных средств.**  
-  
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
+> Если индекс содержит все столбцы, на которых в запросе имеются ссылки, это обычно называется *покрытием запроса*.  
+   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 ###  <a name="DesignRecs"></a> Рекомендации по проектированию  
@@ -88,10 +74,10 @@ ms.lasthandoff: 06/22/2017
   
     -   увеличение длины столбцов типов **varchar**, **nvarchar**и **varbinary** .  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
- Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner** .  
+####  <a name="Permissions"></a> Permissions  
+ Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner**.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
@@ -125,13 +111,13 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Создание индекса с неключевыми столбцами  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- Creates a nonclustered index on the Person.Address table with four included (nonkey) columns.   
@@ -142,8 +128,7 @@ ms.lasthandoff: 06/22/2017
     INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
     GO  
     ```  
-  
- Дополнительные сведения см. в разделе [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md).  
-  
-  
 
+## <a name="related-content"></a>См. также  
+[CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)    
+[Руководство по проектированию индексов SQL Server](../../relational-databases/sql-server-index-design-guide.md)   

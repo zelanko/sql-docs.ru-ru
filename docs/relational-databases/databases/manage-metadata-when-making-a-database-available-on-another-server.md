@@ -2,9 +2,12 @@
 title: "Управление метаданными при предоставлении доступа к базе данных на другом сервере | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,19 +37,20 @@ helpviewer_keywords:
 - credentials [SQL Server], metadata
 - copying databases
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-caps.latest.revision: 84
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4c895c6dc04db18f8360f72a714b6c91b9e502ef
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 9d46ba6ce2dfe1af2454b95d05bd82f3d8b1ce2f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Управление метаданными при предоставлении доступа к базе данных на другом сервере
-  Информация в этом разделе применима в следующих ситуациях:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Информация в этом разделе применима в следующих ситуациях:  
   
 -   Настройка реплик доступности группы готовности [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
   
@@ -99,7 +103,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Триггеры уровня сервера](#triggers)  
   
-##  <a name="server_configuration_settings"></a> Параметры конфигурации сервера  
+##  <a name="server_configuration_settings"></a> Server Configuration Settings  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздние версии позволяют выборочно устанавливать и запускать ключевые службы и компоненты. Это помогает сократить уязвимую контактную зону системы. В конфигурации по умолчанию для новых экземпляров многие из функций отключены. Если в базе данных имеется зависимость от какой-либо отключенной по умолчанию службы или свойства, то их необходимо включить на целевом экземпляре сервера.  
   
  Дополнительные сведения об этих параметрах и их включении и отключении см. в разделе [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
@@ -113,7 +117,7 @@ ms.lasthandoff: 06/22/2017
 > **ПРИМЕЧАНИЕ.** Учетные данные используются учетными записями-посредниками агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Получить идентификационный номер участника-посредника можно в системной таблице [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) .  
   
   
-##  <a name="cross_database_queries"></a> Межбазовые запросы  
+##  <a name="cross_database_queries"></a> Cross-Database Queries  
  Параметры базы данных DB_CHAINING и TRUSTWORTHY по умолчанию принимают значение OFF. Если в исходной базе данных какой-либо из этих параметров имеет значение ON, то может потребоваться его включение на целевом экземпляре сервера. Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
   
  Операции присоединения и отсоединения приводят к отмене межбазовых цепочек владения для базы данных. Сведения о том, как включить цепочки владения, см. в разделе [Параметр конфигурации сервера "cross db ownership chaining"](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
@@ -146,11 +150,11 @@ ms.lasthandoff: 06/22/2017
 -   [Создание идентичных симметричных ключей на двух серверах](../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   
-##  <a name="user_defined_error_messages"></a> Определяемые пользователем сообщения об ошибках  
+##  <a name="user_defined_error_messages"></a> User-defined Error Messages  
  Определяемые пользователем сообщения об ошибках настраиваются в представлении каталога [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) , которое хранится в базе данных **master**. Если приложение базы данных зависит от определяемых пользователем сообщений об ошибках и если эта база данных доступна на другом экземпляре сервера, то для добавления на целевой экземпляр сервера уже имеющихся определяемых пользователем сообщений об ошибках следует пользоваться хранимой процедурой [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) .  
 
   
-##  <a name="event_notif_and_wmi_events"></a> Уведомления о событиях и события инструментария управления Windows (WMI) на уровне сервера  
+##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
   
 ### <a name="server-level-event-notifications"></a>Уведомления о событии на уровне сервера  
  Уведомления о событиях уровня сервера хранятся в базе данных **msdb**. Поэтому, если приложение базы данных находится в зависимости от уведомления о событии уровня сервера, уведомления о событии необходимо создать и на целевом экземпляре сервера. Для просмотра уведомлений о событиях в экземпляре сервера используется представление каталога [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) . Дополнительные сведения см. в разделе [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
@@ -178,7 +182,7 @@ ms.lasthandoff: 06/22/2017
 -   Если вызывающая служба находится в зеркально отображенной базе данных, целевая служба должна иметь обратный, зеркально отображенный маршрут к вызывающей службе для доставки подтверждений и ответов. Однако вызывающая служба может иметь постоянный обратный маршрут к целевой службе.  
   
   
-##  <a name="extended_stored_procedures"></a> Расширенные хранимые процедуры  
+##  <a name="extended_stored_procedures"></a> Extended Stored Procedures  
   
 > **ВАЖНО!** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте вместо этого [интеграцию со средой CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
   
@@ -267,7 +271,7 @@ ms.lasthandoff: 06/22/2017
 > **ПРИМЕЧАНИЕ.** Сведения о настройке имен входа для зеркально отображаемой базы данных см. в разделах [Настройка учетных записей входа для зеркального отображения баз данных или групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) и [Управление именами входа и заданиями после переключения ролей &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
   
-##  <a name="permissions"></a> Разрешения  
+##  <a name="permissions"></a> разрешения  
  При открытии доступа к базе данных на другом экземпляре сервера могут быть применены следующие типы разрешений:  
   
 -   Разрешения GRANT, REVOKE или DENY на системные объекты.  
@@ -312,7 +316,7 @@ ms.lasthandoff: 06/22/2017
  Дополнительные сведения о сертификатах и асимметричных ключах см. в разделе [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md).  
   
   
-##  <a name="replication_settings"></a> Параметры репликации  
+##  <a name="replication_settings"></a> Replication Settings  
  Если восстановить резервную копию реплицированной базы данных на другом сервере или в другой базе данных, то станет невозможным сохранение настроек репликации. В этом случае после восстановления из резервной копии потребуется повторно создать все публикации и подписки. Для облегчения этого процесса можно создать скрипты для текущих настроек репликации, а также для разрешения и отключения репликации. Чтобы облегчить повторное создание всех настроек репликации, произведите копирование этих скриптов и измените в них имя сервера для работы с целевым экземпляром.  
   
  Дополнительные сведения см. в разделах [Создание резервных копий реплицируемых баз данных и восстановление из них](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md), [Зеркальное отображение и репликация баз данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md) и [Репликация и доставка журналов (SQL Server)](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
@@ -322,11 +326,11 @@ ms.lasthandoff: 06/22/2017
  Многие аспекты приложения компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] перемещаются вместе с базой данных. Однако некоторые из них в новом местоположении необходимо создать или настроить повторно.  
   
   
-##  <a name="startup_procedures"></a> Стартовые процедуры  
+##  <a name="startup_procedures"></a> Startup Procedures  
  Стартовыми являются хранимые процедуры, помеченные для автоматического выполнения и выполняемые каждый раз при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если в базе данных имеются зависимости от автоматически запускаемых процедур, их необходимо определить на целевом экземпляре сервера и сконфигурировать для автоматического выполнения при запуске.  
 
   
-##  <a name="triggers"></a> Триггеры (на уровне сервера)  
+##  <a name="triggers"></a> Triggers (at Server Level)  
  Триггеры DDL вызывают хранимые процедуры в ответ на ряд событий языка DDL. Эти события в основном соответствуют инструкциям языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , начинающимся ключевыми словами CREATE, ALTER или DROP. Системные хранимые процедуры, выполняющие операции, подобные операциям DDL, также могут запускать триггеры DDL.  
   
  Дополнительные сведения об этой возможности см. в разделе [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
@@ -343,4 +347,3 @@ ms.lasthandoff: 06/22/2017
  [Диагностика пользователей, утративших связь с учетной записью (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
   
   
-

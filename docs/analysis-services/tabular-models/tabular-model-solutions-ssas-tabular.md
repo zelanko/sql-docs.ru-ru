@@ -1,30 +1,31 @@
 ---
-title: "Решения табличных моделей (табличные службы SSAS) | Документы Microsoft"
+title: "Решения табличных моделей | Документы Microsoft"
 ms.date: 05/22/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.custom: 
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e9931ff-439e-4e1a-9ef2-5d3971187eb9
-caps.latest.revision: 19
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5b84ae0fa5911c0140213583462b20c9054f0f4b
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 31c6a32198c4a9aa417ec65fcf85a5455ea53c4a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="creating-tabular-models"></a>Создание табличных моделей
-  В этом разделе описывается процесс создания табличных моделей с помощью конструктора табличных моделей в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+В этом разделе описывается процесс создания табличных моделей с помощью конструктора табличных моделей в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Конструктор табличных моделей](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)  
@@ -63,9 +64,8 @@ ms.lasthandoff: 09/27/2017
   
  [Развертывание решений табличной модели](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Скачать SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)   
  [Средств и приложений, используемых в службах Analysis Services](../../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   
   
-

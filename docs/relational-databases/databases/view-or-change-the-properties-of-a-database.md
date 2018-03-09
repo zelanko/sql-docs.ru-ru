@@ -1,13 +1,14 @@
 ---
 title: "Просмотр или изменение свойств базы данных | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.custom: 
+ms.date: 01/05/2018
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,29 +17,29 @@ helpviewer_keywords:
 - databases [SQL Server], viewing
 - viewing databases
 ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
-caps.latest.revision: 42
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ead93afe9ce79d5cee37f190f5c2d2707f69b880
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "42"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 8e4fb0867c0950595c6d8460dfa2a53a7fa87db7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>Просмотр или изменение свойств базы данных
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   В этом разделе описывается просмотр и изменение свойств базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. После задания нового значения свойства базы данных изменение вступает в силу немедленно.  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Рекомендации](#Recommendations)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Просмотр или изменение свойств базы данных различными средствами**  
   
@@ -52,9 +53,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Если параметр AUTO_CLOSE имеет значение ON, некоторые столбцы в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) и функция DATABASEPROPERTYEX будут возвращать значение NULL, так как база данных будет недоступна для извлечения данных. Чтобы устранить эту проблему, откройте базу данных.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Для изменения свойств базы данных необходимо разрешение ALTER на базу данных. Для просмотра свойств базы данных требуется по крайней мере членство в роли базы данных public.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -78,7 +79,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере используется системная функция [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) , предназначенная для возвращения состояния параметра базы данных AUTO_SHRINK в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Возвращенное значение 1 означает, что этот параметр установлен в значение ON, а возвращенное значение 0, означает, что параметр имеет значение OFF.  
   
-    ```tsql  
+    ```sql  
     SELECT DATABASEPROPERTYEX('AdventureWorks2012', 'IsAutoShrink');  
     ```  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере выполняется опрос к представлению каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) для просмотра нескольких свойств базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . В этом примере возвращается идентификационный номер базы данных (`database_id`), вне зависимости от того, предназначена ли она только для чтения или для чтения и записи (`is_read_only`), параметры сортировки базы данных (`collation_name`) и уровень совместимости базы данных (`compatibility_level`).  
   
-    ```tsql  
+    ```sql  
     SELECT database_id, is_read_only, collation_name, compatibility_level  
     FROM sys.databases WHERE name = 'AdventureWorks2012';  
     ```  
@@ -103,7 +104,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере выполняется опрос к представлению каталога [sys.database_scoped_configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) запрашивается для просмотра нескольких свойств текущей базы данных.  
   
-    ```tsql  
+    ```sql  
     SELECT configuration_id, name, value, value_for_secondary  
     FROM sys.database_scoped_configurations;  
     ```  
@@ -134,8 +135,8 @@ ms.lasthandoff: 06/22/2017
   
 3.  Скопируйте и вставьте следующий пример в окно запроса. В следующем примере задается MAXDOP для базы данных-получателя в качестве значения для базы данных-источника.  
   
-    ```  
-    ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY   
+    ```sql  
+    ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY   
     ```  
   
 ## <a name="see-also"></a>См. также:  
@@ -148,4 +149,3 @@ ms.lasthandoff: 06/22/2017
 
   
   
-

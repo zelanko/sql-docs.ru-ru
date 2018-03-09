@@ -2,9 +2,12 @@
 title: "Репликация, отслеживание изменений, изменение данных в группах доступности AlwaysOn | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-high-availability
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
-caps.latest.revision: 37
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 4980545b408bde4c30047eae60e000f2518eb107
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a3949e1463888eee5040f88ac52c6903f44eea3a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Репликация, отслеживание изменений, изменение данных в группах доступности AlwaysOn
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Репликация, отслеживание измененных данных (CDC) и отслеживание изменений (CT) поддерживаются в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] помогает обеспечивать высокий уровень доступности и дополнительные возможности восстановления баз данных.  
   
@@ -195,7 +197,7 @@ ms.lasthandoff: 08/02/2017
 ##  <a name="Prereqs"></a> Условия, ограничения и вопросы использования репликации  
  В этом разделе описаны вопросы развертывания репликации при помощи [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], в том числе предварительные условия, ограничения и рекомендации.  
   
-### <a name="prerequisites"></a>Предварительные требования  
+### <a name="prerequisites"></a>предварительные требования  
   
 -   При использовании репликации транзакций и базы данных публикации в группе доступности издатель и распространитель должны иметь версию не ниже [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Подписчик может использовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]более низкого уровня.  
   
@@ -215,10 +217,10 @@ ms.lasthandoff: 08/02/2017
 |||||  
 |-|-|-|-|  
 ||**Издатель**|**Распространитель***\*|**Подписчик**|  
-|**Транзакционная**|Да<br /><br /> Примечание. Не включает поддержку двунаправленной и возвратной репликации транзакций.|Нет|Да|  
-|**P2P**|Нет|Нет|Нет|  
-|**Объединить**|Да|Нет|Да*|  
-|**Моментальный снимок**|Да|Нет|Да*|  
+|**Транзакционная**|Да<br /><br /> Примечание. Не включает поддержку двунаправленной и возвратной репликации транзакций.|нет|Да|  
+|**P2P**|нет|нет|нет|  
+|**Объединить**|Да|нет|Да*|  
+|**Моментальный снимок**|Да|нет|Да*|  
   
  *Переход на другой ресурс реплики базы данных выполняется вручную. Автоматический переход на другой ресурс не предоставляется.  
   
@@ -270,4 +272,3 @@ ms.lasthandoff: 08/02/2017
  [sys.sp_cdc_add_job (Transact-SQL)](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   
-

@@ -1,30 +1,31 @@
 ---
 title: "Создание и управление хранилищем для оптимизированных для памяти объектов | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
-caps.latest.revision: 64
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b955ffcf895f5356b77e0d772b3f1ac0cd9780e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 37aab4a523caee5ca5f4c3ebfc2482ca464dcf71
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>Создание и управление хранилищем для оптимизированных для памяти объектов
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Механизм [!INCLUDE[hek_2](../../includes/hek-2-md.md)] интегрирован в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], что позволяет использовать оптимизированные для памяти таблицы и (традиционные) таблицы на диске в одной базе данных. Тем не менее структуры хранилища оптимизированных для памяти таблиц и таблиц на диске отличаются.  
   
@@ -72,4 +73,3 @@ ms.lasthandoff: 06/22/2017
  [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
-

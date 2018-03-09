@@ -2,35 +2,36 @@
 title: "Свойства агента SQL Server (страница \"Дополнительно\") | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.serverproperties.advanced.f1
+f1_keywords: sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
-caps.latest.revision: 65
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "65"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: e6fdf75cd720e6463a41475212beb07ee4a79819
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38ea8eca9d8d71269f0e6095a949e1aa027ec484
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-properties---advanced-page"></a>Свойства сервера (страница "Дополнительно")
-  Используйте эту страницу, чтобы просмотреть или изменить расширенные настройки сервера.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Используйте эту страницу, чтобы просмотреть или изменить расширенные настройки сервера.  
   
  **Просмотр страниц свойств сервера**  
   
 -   [Просмотр или изменение свойств сервера (SQL Server)](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)  
   
-## <a name="containment"></a>Включение  
+## <a name="containment"></a>Containment  
  Включение автономных баз данных  
  Указывает, разрешает ли данный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автономные базы данных. Если значение равно **True**, то можно создать, восстановить или присоединить автономную базу данных. Если значение равно **False**, то автономную базу данных нельзя создать, восстановить или присоединить к данному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Изменение свойства включения может повлиять на безопасность базы данных. Включение автономных баз данных позволяет владельцам базы данных предоставить доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Отключение автономных баз данных может помешать пользователям установить соединение. Чтобы понять влияние свойства включения, см. разделы [Contained Databases](../../relational-databases/databases/contained-databases.md) и [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   

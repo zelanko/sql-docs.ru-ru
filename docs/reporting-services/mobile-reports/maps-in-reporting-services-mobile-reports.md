@@ -1,26 +1,27 @@
 ---
-title: "Карты в мобильные отчеты служб Reporting Services | Документы Microsoft"
+title: "Карты в мобильных отчетах служб Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: dcac784ffea9845be91f35f03fb45e2ca6a6e530
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 028a5103175b31e4928c474617f9c8199df0facc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Maps in Reporting Services mobile reports
 Карты — это отличный способ визуализировать географические данные. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] есть три разных типа визуализации карт, а также доступны встроенные карты континентов и некоторых отдельных странах. Вы также можете [передавать и использовать пользовательские карты](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   
@@ -63,7 +64,7 @@ ms.lasthandoff: 08/09/2017
   
 1. В левом верхнем углу выберите вкладку **Данные** .  
   
-2. Выберите **добавлять данные**, затем либо **локальный файл Excel** или **сервера SSRS**.  
+2. Выберите **Добавить данные**, а затем — **Локальный файл Excel** или **Сервер SSRS**.  
   
    > **Совет**. Убедитесь, что данные имеют [подходящий для мобильных отчетов формат](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
   
@@ -84,9 +85,8 @@ ms.lasthandoff: 08/09/2017
      
 8. В верхнем левом углу щелкните значок **Сохранить** , а затем выберите вариант **Сохранить локально** или **Сохранить на сервере**.  
   
-### <a name="see-also"></a>См. также:  
+### <a name="see-also"></a>См. также раздел  
 -  [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
 - [Создание и публикация мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   
-

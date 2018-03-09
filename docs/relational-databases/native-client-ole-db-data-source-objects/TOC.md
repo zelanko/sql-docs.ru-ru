@@ -2,6 +2,6 @@
 # [Свойства сведений об источнике данных](data-source-information-properties.md)
 # [Свойства источника данных (OLE DB)](data-source-properties-ole-db.md)
 # [Свойства инициализации и авторизации](initialization-and-authorization-properties.md)
-# [Материализованные данные исходного объекта](persisted-data-source-objects.md)
-# [Свойства сеанса — поставщик собственного клиента OLE DB SQL Server](session-properties-sql-server-native-client-ole-db-provider.md)
+# [Материализованные объекты источника данных](persisted-data-source-objects.md)
+# [Свойства сеанса — поставщик OLE DB для SQL Server Native Client](session-properties-sql-server-native-client-ole-db-provider.md)
 # [Сеансы](sessions.md)

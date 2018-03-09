@@ -3,10 +3,12 @@ title: "Правила для преобразования | Документы 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 441f65fabad5894d1277a9c42ecd6c4a6d9e5fff
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 06baaaff03f75cbf04da86527a25ea60755a473e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rules-for-conversions"></a>Правила для преобразования
 Правила в этом разделе, применяются для преобразования, включающие числовые литералы. Для выполнения этих правил определяются следующие термины:  
@@ -107,4 +108,3 @@ ms.lasthandoff: 09/09/2017
          (2) драйвер округляет строка по оси Y для подходящего масштаба, (который также может быть равен нулю) и записывает результат в компьютерной телефонии  
   
          (3) драйвер ни усекает ни округляет, но только копирует первые символы LT Y в компьютерной телефонии
-

@@ -2,30 +2,30 @@
 title: "Создание скриптов на основе шаблонов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: ed48014c-3fc9-48ff-8c0f-8d1822195f14
-caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "28"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: f1972bf4ce414c66a3a4f607af859502680730ea
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 827475f33c02147c2bf6d6b73263fc8aed7b6d47
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-3-1---create-scripts-using-templates"></a>Занятие 3–1. Создание скриптов на основе шаблонов
-Среда Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предлагает большое число шаблонов скриптов, содержащих инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , предназначенные для решения многих типовых задач. Эти шаблоны содержат параметры, значения которых вводятся пользователем, такие как имя таблицы. Используя эти параметры, можно ввести имя только один раз, а затем автоматически скопировать его во все требуемые позиции в скрипте. Можно создавать собственные пользовательские шаблоны для поддержки скриптов, которые приходится писать чаще всего. Кроме того, можно реорганизовать дерево шаблонов, перемещая шаблоны или создавая новые папки для их хранения. В следующей практической работе с помощью шаблона будет создана база данных с указанием шаблона параметров сортировки.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Среда Майкрософт [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предлагает большое число шаблонов скриптов, содержащих инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], предназначенные для решения многих типовых задач. Эти шаблоны содержат параметры, значения которых вводятся пользователем, такие как имя таблицы. Используя эти параметры, можно ввести имя только один раз, а затем автоматически скопировать его во все требуемые позиции в скрипте. Можно создавать собственные пользовательские шаблоны для поддержки скриптов, которые приходится писать чаще всего. Кроме того, можно реорганизовать дерево шаблонов, перемещая шаблоны или создавая новые папки для их хранения. В следующей практической работе с помощью шаблона будет создана база данных с указанием шаблона параметров сортировки.  
   
 ## <a name="using-templates"></a>Использование шаблонов  
   
@@ -46,4 +46,3 @@ ms.lasthandoff: 07/31/2017
   
   
   
-

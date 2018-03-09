@@ -3,7 +3,7 @@ title: "Обновление данных | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - data updates [ADO], about data updates
 - updating data [ADO], about updating data
 ms.assetid: 6508e4e9-e33a-4dad-b340-5d632fd78a91
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9d353f4305c91d7c7e84a0ccf9b22c3891e8c579
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c8138aeea7e5ea40e659a6fed5f5d5f551b1c69d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="updating-data"></a>Обновление данных
 Обновление поведения и функциональных возможностей во многом зависит от обновления режима (тип блокировки), тип курсора и положения курсора.  
@@ -39,9 +38,8 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующие подразделы.  
   
--   [Режима интерпретации](../../../ado/guide/data/immediate-mode.md)  
+-   [Режим интерпретации](../../../ado/guide/data/immediate-mode.md)  
   
 -   [Пакетный режим](../../../ado/guide/data/batch-mode.md)  
   
 -   [Обработка транзакций](../../../ado/guide/data/transaction-processing.md)
-

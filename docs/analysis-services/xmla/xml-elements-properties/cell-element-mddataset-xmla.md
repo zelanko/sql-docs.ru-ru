@@ -2,42 +2,38 @@
 title: "Ячейки элемент (MDDataSet) (XMLA) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Cell Element (MDDataSet)
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Cell Element (MDDataSet)
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.cell
 - http://schemas.microsoft.com/analysisservices/2003/engine#Cell
 - urn:schemas-microsoft-com:xml-analysis#Cell
-helpviewer_keywords:
-- Cell element
+helpviewer_keywords: Cell element
 ms.assetid: c4ea08a4-f653-4ade-be07-b91eb5b1ef32
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d6c59b1833e211e43c9429e6bf4aeb265325d76d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b4d8e85ec05fa6fd8b3c05ee0f27f46b0a28a867
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cell-element-mddataset-xmla"></a>Элемент Cell (MDDataSet) (XML для аналитики)
-  Содержит сведения об одной ячейке, содержащейся в родительском [CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит сведения об одной ячейке, содержащейся в родительском [CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,7 +50,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -69,11 +65,11 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="attributes"></a>Атрибуты  
   
-|Attribute|Описание|  
+|attribute|Description|  
 |---------------|-----------------|  
 |CellOrdinal|Требуется **unsignedInt** атрибута. Порядковый номер ячейки в многомерном наборе данных.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В родительском объекте **корневой** элемент, **осей** следуют элемент **CellData** элемент, набор **ячейки** элементов, содержащих значения свойств для каждой ячейки, возвращенной в многомерном наборе данных. **Ячейки** элемент содержит **CellOrdinal** атрибут, который указывает отсчитываемый от нуля порядковый номер ячейки в многомерном наборе данных и один элемент для каждого значения свойства ячейки связанное с ячейкой. Каждое значение свойства ячейки в **ячейки** элемент определяется отдельным элементом XML. Значение свойства ячейки имеет данные, содержащиеся в XML-элемента и имя свойства ячейки, как определено в **CellInfo** элемент родительского корневого элемента, соответствует имени XML-элемента.  
   
  Ниже представлен синтаксис записи значения свойства ячейки.  
@@ -109,7 +105,7 @@ ms.lasthandoff: 09/01/2017
 ||К2|18052|15332.02|38396.75|5915|  
 ||К3|18370|**15672.83**|**39394.05**|**6014**|  
 ||К4|21436|**18094.5**|**45201.84**|**7015**|  
-|Oregon|К1|19287|**16081.07**|**40170.29**|**6184**|  
+|Орегон|К1|19287|**16081.07**|**40170.29**|**6184**|  
 ||К2|15079|12678.96|31772.88|4799|  
 ||К3|16940|14273.78|35880.46|5432|  
 ||К4|16353|13738.68|34453.44|5196|  
@@ -150,4 +146,3 @@ ms.lasthandoff: 09/01/2017
  [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

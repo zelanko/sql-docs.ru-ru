@@ -2,9 +2,12 @@
 title: "Наборы носителей, семейства носителей и резервные наборы данных (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-backup-restore
 ms.tgt_pltfrm: 
@@ -23,24 +26,24 @@ helpviewer_keywords:
 - backups [SQL Server], backup sets
 - backup sets [SQL Server]
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
-caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 13405de028f7392c9ef384743a44db9fb49c627c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0b3e7aa7ca8af93ed67134fffb79bb59193a0aec
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **В настоящем разделе приведена основная терминология, касающаяся носителей резервных копий для резервного копирования и восстановления в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Он предназначен для читателей, впервые знакомящихся с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].** 
   
   В этом разделе приведено описание формата, используемого в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для носителей резервных копий, соответствия между носителями резервных копий и устройствами резервного копирования, организации резервных копий на носителях резервных копий, а также даны некоторые соображения, касающиеся наборов носителей и семейств носителей. Кроме того, в этом разделе описаны шаги инициализации или форматирования носителей резервных копий перед их использованием впервые или использованием для замены старого набора носителей новым набором носителей, а также показано, как перезаписать старые резервные наборы в наборе носителей и как добавить новые резервные наборы к набору носителей.  
   
->**ПРИМЕЧАНИЕ.** Дополнительные сведения о резервном копировании SQL Server в службу хранилища BLOB-объектов Windows Azure см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>**Примечание.** Дополнительные сведения о резервном копировании SQL Server в службу хранилища BLOB-объектов Windows Azure см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
    
 ##  <a name="TermsAndDefinitions"></a> Термины  
  **набор носителей**  
@@ -60,7 +63,7 @@ ms.lasthandoff: 07/31/2017
   
  Набор носителей создается на носителе резервной копии во время операции резервного копирования при форматировании носителя. Дополнительные сведения см. в подразделе [Создание нового набора носителей](#CreatingMediaSet)ниже в данном разделе. После форматирования каждый файл или лента содержат заголовок носителя и готовы к записи данных. После формирования заголовка операция резервного копирования продолжает создавать резервную копию указанных данных на все заданные устройства резервного копирования.  
   
-> **ПРИМЕЧАНИЕ.** Для предотвращения потери данных в случае повреждения носителя (ленты или файла на диске), наборы носителей можно сделать зеркальными. Дополнительные сведения см. в подразделе [Зеркальные наборы носителей резервных копий (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
+> **Примечание.** Для предотвращения потери данных в случае повреждения носителя (ленты или файла на диске), наборы носителей можно сделать зеркальными. Дополнительные сведения см. в подразделе [Зеркальные наборы носителей резервных копий (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
   
  Сжатые и несжатые резервные копии не могут совместно использоваться в одном наборе носителей. Считывание сжатых резервных копий возможно в любом выпуске [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версии. Дополнительные сведения см. в разделе [Сжатие резервных копий (SQL Server)](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
 
@@ -93,7 +96,7 @@ ms.lasthandoff: 07/31/2017
   
 -   Содержит ли описание этого носителя метку MTF или описание носителя.  
   
-    >**ПРИМЕЧАНИЕ.** Во всех носителях, использующихся для операций резервного копирования или восстановления, применяется стандартный формат резервных копий под названием [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format (MTF). MTF позволяет пользователям задавать метку ленты, которая содержит описание, характерное для MTF. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохраняет любую метку носителя MTF, записанную другим приложением, но не записывает метки носителей MTF.  
+    >**Примечание.** Во всех носителях, использующихся для операций резервного копирования или восстановления, применяется стандартный формат резервных копий под названием [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format (MTF). MTF позволяет пользователям задавать метку ленты, которая содержит описание, характерное для MTF. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохраняет любую метку носителя MTF, записанную другим приложением, но не записывает метки носителей MTF.  
   
 -   Метка носителя в формате [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format или описание носителя (в свободной форме).  
   
@@ -137,13 +140,13 @@ WITH
    DIFFERENTIAL  
 ```  
   
-> **ПРИМЕЧАНИЕ.** Параметр NOINIT используется по умолчанию, но включен для ясности.  
+> **Примечание.** Параметр NOINIT используется по умолчанию, но включен для ясности.  
   
  В случае успешного выполнения второй операции резервного копирования запись второго резервного набора данных на набор носителей производится со следующим распределением содержимого резервной копии.  
   
  ![Второй набор резервных копий, распределенный между 3 лентами набора носителей](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "Второй набор резервных копий, распределенный между 3 лентами набора носителей")  
   
- При восстановлении резервных копий можно использовать параметр FILE, чтобы указать, какие резервные копии использовать. В следующем примере показано, как использовать предложения FILE **=***номер_файла_резервного_набора* при восстановлении полной резервной копии базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , за которой следует разностная резервная копия на том же наборе носителей. Этот набор содержит три ленточных носителя, находящихся в накопителях на магнитной ленте `\\.\tape0`, `tape1`и `tape2`.  
+ При восстановлении резервных копий можно использовать параметр FILE, чтобы указать, какие резервные копии использовать. В следующем примере показано, как использовать предложения FILE **=***номер_файла_резервного_набора* при восстановлении полной резервной копии базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], за которой следует разностная резервная копия на том же наборе носителей. Этот набор содержит три ленточных носителя, находящихся в накопителях на магнитной ленте `\\.\tape0`, `tape1`и `tape2`.  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
@@ -297,7 +300,7 @@ GO
 -   [RESTORE LABELONLY (Transact-SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Возможные ошибки носителей во время резервного копирования и восстановления (SQL Server)](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
  [Журнал и сведения о заголовке резервной копии (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)   
@@ -308,4 +311,3 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
-

@@ -4,7 +4,7 @@
 # [Отсоединение от экземпляра SQL Server](disconnecting-from-an-instance-of-sql-server.md)
 # [Обработка событий SMO](handling-smo-events.md)
 # [Обработка исключений SMO](handling-smo-exceptions.md)
-# [Установка свойств - SMO](setting-properties-smo.md)
+# [Установка свойств в SMO](setting-properties-smo.md)
 # [Использование режима записи](using-capture-mode.md)
 # [Использование коллекций](using-collections.md)
 # [Использование транзакций](using-transactions.md)

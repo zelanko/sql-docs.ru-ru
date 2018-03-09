@@ -1,33 +1,35 @@
 ---
-title: "Службы Integration Services (SSIS) в кластере | Документы Microsoft"
+title: "Службы Integration Services (SSIS) в кластере | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: service
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e05af2e5e01c9a0d7970a03af1c5fc0e121ded0f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 15c927bf78faa7705a27dafce3517de7f05e50d4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Службы Integration Services (SSIS) в кластере
   Кластеризация служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не рекомендуется, так как службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не являются кластеризованными, не ориентируются на использование кластеров и не поддерживают отработку отказа между узлами кластера. Следовательно, в кластерной среде службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] должны быть установлены и запущены в качестве изолированной службы на каждом узле кластера.  
   
  Хотя служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и не является службой, поддерживающей работу в кластере, ее можно вручную настроить на работу в качестве ресурса кластера после того, как служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] будет отдельно установлена на каждом узле кластера.  
   
- Однако если целью постройки кластеризованной аппаратной среды является достижение высокого уровня доступности, то этой цели можно добиться и без настройки службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в качестве ресурса кластера.  Чтобы управлять пакетами, находящимися на любом узле кластера, с любого другого узла кластера, измените файл конфигурации для службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на каждом узле кластера. Необходимо так изменить эти файлы конфигурации, чтобы они указывали на все доступные экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на которых хранятся пакеты. Такое решение предоставляет высокий уровень доступности, необходимый для большинства клиентов, а также избегает потенциальных проблем, с которыми можно столкнуться при настройке службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в качестве ресурса кластера. Дополнительные сведения об изменении файла конфигурации см. в разделе [службы Integration Services &#40; Службы SSIS &#41; ](../../integration-services/service/integration-services-service-ssis-service.md).  
+ Однако если целью постройки кластеризованной аппаратной среды является достижение высокого уровня доступности, то этой цели можно добиться и без настройки службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в качестве ресурса кластера.  Чтобы управлять пакетами, находящимися на любом узле кластера, с любого другого узла кластера, измените файл конфигурации для службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на каждом узле кластера. Необходимо так изменить эти файлы конфигурации, чтобы они указывали на все доступные экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на которых хранятся пакеты. Такое решение предоставляет высокий уровень доступности, необходимый для большинства клиентов, а также избегает потенциальных проблем, с которыми можно столкнуться при настройке службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в качестве ресурса кластера. Дополнительные сведения об изменении этого файла конфигурации см. в разделе [Службы Integration Services (SSIS)](../../integration-services/service/integration-services-service-ssis-service.md).  
   
  Понимание роли службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] крайне важно для принятия компетентного решения относительно настройки службы в кластерной среде. Дополнительные сведения см. в разделе [Службы Integration Services (SSIS)](../../integration-services/service/integration-services-service-ssis-service.md).  
   
@@ -136,4 +138,3 @@ ms.lasthandoff: 09/26/2017
 -   В **Администраторе кластера**выберите службу [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , щелкните ее правой кнопкой мыши и выберите из контекстного меню пункт **Перевести в режим "в сети"** . Теперь служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] доступна как ресурс кластера.  
   
   
-

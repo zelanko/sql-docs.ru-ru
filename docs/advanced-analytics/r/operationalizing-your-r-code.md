@@ -3,27 +3,28 @@ title: "Ввода в эксплуатацию кода R (Machine Services об
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/26/2016
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f15696b1-2479-4e5f-ac5e-4beaf958a043
-caps.latest.revision: 11
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: c982c62fbe79fffc878465a48ca993b8b720dc41
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d858352ed7dc519dfde9f625ea24cea6a538be5b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="operationalize-r-code-machine-learning-services"></a>Ввода в эксплуатацию кода R (обучения Machine Services)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Разработчикам баз данных необходимо интегрировать несколько технологий и объединить результаты, чтобы их можно было совместно использовать на всем предприятии. Разработчик базы данных работает с разработчикам приложений, разработчиками SQL и специалистами по анализу данных для разработки и развертывания решений.
 
@@ -46,7 +47,7 @@ ms.lasthandoff: 09/01/2017
 
 Конечно преобразование кода R в SQL будет проще, если заранее выполняются некоторые оптимизации в коде R или Python. К ним относятся Предотвращение типы данных, вызывающие проблемы, как избежать ненужные преобразования данных и переработке кода R как один вызов функции, могут быть параметризованы легко. Дополнительные сведения см. в разделе:
 
-+ [R библиотек и типы данных](r-libraries-and-data-types.md)
++ [Библиотеки и типы данных R](r-libraries-and-data-types.md)
 
 + [Преобразование кода R для использования служб R](converting-r-code-for-use-in-sql-server.md)
 
@@ -102,5 +103,4 @@ ms.lasthandoff: 09/01/2017
 + [Вычисления с большими данными в R](https://docs.microsoft.com/r-server/r/tutorial-large-data-tips)
 
 + [Разработка собственных параллельных алгоритмов](https://docs.microsoft.com/r-server/r-reference/revopemar/pemar)
-
 

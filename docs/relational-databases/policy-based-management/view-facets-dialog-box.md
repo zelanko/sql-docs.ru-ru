@@ -2,30 +2,30 @@
 title: "Диалоговое окно \"Просмотр аспектов\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dmf.viewfacet.f1
+f1_keywords: sql13.swb.dmf.viewfacet.f1
 ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
-caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "15"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4238a58861b26cf1de340d4e06b0e61a667c0f27
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: abbe4aa8bc606437662fb92bb25f8d80002e70e8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-facets-dialog-box"></a>Диалоговое окно «Просмотр аспектов»
-  Это диалоговое окно предназначено для просмотра свойств аспекта управления на основе политик. Свойства аспекта определяются во время его создания и не могут быть изменены в этом диалоговом окне.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Это диалоговое окно предназначено для просмотра свойств аспекта управления на основе политик. Свойства аспекта определяются во время его создания и не могут быть изменены в этом диалоговом окне.  
   
 ## <a name="options"></a>Параметры  
  **Аспект**  
@@ -44,4 +44,3 @@ ms.lasthandoff: 06/22/2017
  [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
-

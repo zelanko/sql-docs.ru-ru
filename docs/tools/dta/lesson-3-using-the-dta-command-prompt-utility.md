@@ -2,32 +2,31 @@
 title: "Занятие 3: С помощью программы командной строки dta | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.suite: sql
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- Database Engine [SQL Server], tutorials
+applies_to: SQL Server 2016
+helpviewer_keywords: Database Engine [SQL Server], tutorials
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
-caps.latest.revision: 26
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "26"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 676d70c67a0be45b3362632c038d60e90448e90c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b33b5d2a64fc88cbd53d6c76fd73165ade697eac
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Занятие 3. Использование программы командной строки dta
-Программа командной строки **dta** расширяет функциональные возможности помощника по настройке ядра СУБД.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Dta** программа командной строки обеспечивает функциональность, предоставляемую помощником по настройке ядра СУБД.  
   
 Применяя XML-схему помощника по настройке ядра СУБД, пользователь может создавать входные файлы данной программы с помощью удобных для себя средств XML. Эта схема устанавливается вместе со службами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и находится по следующему адресу: C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd.  
   
@@ -50,4 +49,3 @@ XML-схема помощника по настройке ядра СУБД ра
   
   
   
-

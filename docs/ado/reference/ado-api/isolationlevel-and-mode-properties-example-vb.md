@@ -3,7 +3,7 @@ title: "IsolationLevel и пример свойства режима (Visual Bas
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Mode property [ADO], Visual Basic example
 - IsolationLevel property [ADO], Visual Basic example
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d59b27059ee4249bebbe3d35129a755e91544895
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: db959e87da2bb2c9cb8c9aaa4603c6aa865e3826
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel и пример свойства режима (Visual Basic)
 В этом примере используется [режим](../../../ado/reference/ado-api/mode-property-ado.md) свойства, чтобы открыть монопольное подключение и [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) свойства, чтобы открыть транзакцию, которая ведется изолированно от других транзакций.  
@@ -123,8 +122,7 @@ End Sub
 'EndIsolationLevelVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Свойство IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)   
- [Свойство режима (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)
-
+ [Свойство Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

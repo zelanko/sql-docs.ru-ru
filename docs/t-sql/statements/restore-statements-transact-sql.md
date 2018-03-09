@@ -3,8 +3,11 @@ title: "RESTORE (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,20 +42,19 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], RESTORE statement
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-caps.latest.revision: 248
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: e233de35336d5246c439c5dfb7b934cd2469b92c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: edafff7cc70224c67ef970ca4c13e47cce113f23
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements-transact-sql"></a>ВОССТАНОВЛЕНИЕ инструкции (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Восстанавливает резервные копии, выполненные при помощи команды BACKUP. Эта команда позволяет выполнить следующие сценарии восстановления.  
   
@@ -262,11 +264,11 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   Подготовка базы данных доступности для группы доступности Always On  
   
-     Дополнительные сведения см. в разделе [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
+     Дополнительные сведения см. в статье [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
 -   Подготовка зеркальной базы данных к зеркальному отображению  
   
-     Дополнительные сведения см. в статье [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+     Дополнительные сведения см. в разделе [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 -   Восстановление в сети  
   
@@ -404,7 +406,7 @@ Note: URL is the format used to specify the location and the file name for the W
 >   
 >  Сведения о резервном копировании SQL Server и восстановление с помощью хранилища больших двоичных объектов Windows Azure см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Разрешения  
  Если восстанавливаемая база данных не существуют, для выполнения инструкции RESTORE у пользователя должны быть разрешения CREATE DATABASE. Если база данных существует, разрешения на выполнение инструкции RESTORE по умолчанию предоставлены членам предопределенных ролей сервера **sysadmin** и **dbcreator** , а также владельцу базы данных (**dbo**) (для параметра FROM DATABASE_SNAPSHOT база данных всегда существует).  
   
  Разрешения на выполнение инструкции RESTORE даются ролям, в которых данные о членстве всегда доступны серверу. Так как членство в предопределенной роли базы данных может быть проверено только тогда, когда база данных доступна и не повреждена, что не всегда имеет место при выполнении инструкции RESTORE, члены предопределенной роли базы данных **db_owner** не имеют разрешений RESTORE.  
@@ -518,7 +520,7 @@ GO
  [&#91; Начало примеры &#93;](#examples)  
   
 ###  <a name="restoring_to_pit_using_STOPAT"></a> Е. Восстановление состояния на определенный момент времени с помощью STOPAT  
- В следующем примере база данных восстанавливается в состояние на `12:00 AM``April 15, 2020` и демонстрируется операция восстановления, использующая несколько резервных копий журналов. На устройстве резервного копирования `AdventureWorksBackups`полная резервная копия базы данных, подлежащей восстановлению, — это третий резервный набор данных на устройстве (`FILE = 3`), резервная копия первого журнала — это четвертый резервный набор (`FILE = 4`), резервная копия второго журнала — это пятый резервный набор (`FILE = 5`).  
+ В следующем примере база данных восстанавливается в состояние на `12:00 AM``April 15, 2020` и демонстрируется операция восстановления, использующая несколько резервных копий журналов. На устройстве резервного копирования `AdventureWorksBackups` полная резервная копия базы данных, подлежащей восстановлению, — это третий резервный набор данных на устройстве (`FILE = 3`), резервная копия первого журнала — это четвертый резервный набор (`FILE = 4`), резервная копия второго журнала — это пятый резервный набор (`FILE = 5`).  
   
 ```  
 RESTORE DATABASE AdventureWorks2012  
@@ -538,7 +540,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
   
  [&#91; Начало примеры &#93;](#examples)  
   
-###  <a name="restoring_transaction_log_to_mark"></a>Ж. Восстановление журнала транзакций до метки  
+###  <a name="restoring_transaction_log_to_mark"></a> G. Восстановление журнала транзакций до метки  
  В следующем примере журнал транзакций восстанавливается до метки в помеченной транзакции с именем `ListPriceUpdate`.  
   
 ```  
@@ -576,7 +578,7 @@ RESTORE LOG AdventureWorks2012
   
  [&#91; Начало примеры &#93;](#examples)  
   
-###  <a name="restoring_using_TAPE"></a>З. Восстановление с использованием синтаксиса TAPE  
+###  <a name="restoring_using_TAPE"></a> H. Восстановление с использованием синтаксиса TAPE  
  В следующем примере производится восстановление базы данных из полной резервной копии, находящейся на устройстве резервного копирования `TAPE`.  
   
 ```  
@@ -586,7 +588,7 @@ RESTORE DATABASE AdventureWorks2012
   
  [&#91; Начало примеры &#93;](#examples)  
   
-###  <a name="restoring_using_FILE_n_FG"></a>Я. Восстановление с использованием синтаксиса FILE и FILEGROUP  
+###  <a name="restoring_using_FILE_n_FG"></a> I. Восстановление с использованием синтаксиса FILE и FILEGROUP  
  В следующем примере производится восстановление базы данных `MyDatabase`, содержащей два файла, одну вторичную файловую группу и один журнал транзакций. Эта база данных использует модель полного восстановления.  
   
  Резервная копия базы данных представляет собой девятый резервный набор данных в наборе носителей на логическом устройстве резервного копирования с именем `MyDatabaseBackups`. Затем производится восстановление трех резервных копий журнала из следующих трех резервных наборов данных (`10`, `11` и `12`) на устройстве `MyDatabaseBackups` с помощью предложения `WITH NORECOVERY`. База данных будет восстановлена после восстановления последней резервной копии журналов.  
@@ -628,7 +630,7 @@ GO
   
  [&#91; Начало примеры &#93;](#examples)  
   
-###  <a name="reverting_from_db_snapshot"></a>ДЖ. Возврат из моментального снимка базы данных  
+###  <a name="reverting_from_db_snapshot"></a> J. Возврат из моментального снимка базы данных  
  В следующем примере производится восстановление базы данных к моментальному снимку базы данных. В этом примере предполагается, что в базе данных в настоящее время существует только один моментальный снимок. Пример создания этого моментального снимка базы данных см. в разделе [создать моментальный снимок базы данных &#40; Transact-SQL &#41; ](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 > **Примечание:** возврат к моментальному снимку удаляются все полнотекстовые каталоги.  
@@ -642,7 +644,7 @@ GO
 
  [&#91; Начало примеры &#93;](#examples)  
   
-###  <a name="Azure_Blob"></a>Л. Восстановление из службы хранилища больших двоичных объектов Microsoft Azure  
+###  <a name="Azure_Blob"></a> K. Восстановление из службы хранилища больших двоичных объектов Microsoft Azure  
 В следующих трех примера осуществляется с помощью службы хранилища Microsoft Azure.  Имя учетной записи хранилища — `mystorageaccount`.  Контейнер для файлов данных называется `myfirstcontainer`.  Контейнер для файлов резервных копий называется `mysecondcontainer`.  Политика доступа была создана с правами на чтение, запись, delete и список, для каждого контейнера.  Учетные данные SQL Server были созданы с помощью подписанные URL-адреса, которые связаны с хранимой политики доступа.  Сведения о резервном копировании SQL Server и восстановление с помощью хранилища больших двоичных объектов Microsoft Azure см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
 
 **K1.  Восстановление полной резервной копии с помощью службы хранилища Microsoft Azure**  
@@ -693,4 +695,3 @@ RESTORE DATABASE Sales
  - [Журнал и сведения о заголовке резервной копии (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Восстановление базы данных SQL Server до определенного момента времени (модель полного восстановления) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-backup-restore
 ms.tgt_pltfrm: 
@@ -14,30 +17,30 @@ helpviewer_keywords:
 - point in time recovery [SQL Server]
 - restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
-caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d20f1dbfd5cb21920ff323f8a09f33a9650c16a4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: d3a7afa6acf10d26f64198f7064c2ff66cfee17f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Восстановление базы данных SQL Server до определенного момента времени (модель полного восстановления)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В данном разделе содержатся инструкции по восстановлению базы данных на определенный момент времени в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Сведения в этом разделе относятся только к тем базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые используют полную модель восстановления или модель восстановления с неполным протоколированием.  
   
 > [!IMPORTANT]  
 >  Если в модели восстановления с неполным протоколированием резервная копия журнала содержит изменения с неполным протоколированием, то в пределах этой резервной копии восстановление до момента времени невозможно. База данных должна быть восстановлена к концу резервной копии журнала транзакций.  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Рекомендации](#Recommendations)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Восстановление базы данных SQL Server на определенный момент времени с помощью:**  
   
@@ -53,9 +56,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Задайте момент времени в начале последовательности восстановления  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Если восстанавливаемая база данных не существуют, для выполнения инструкции RESTORE у пользователя должны быть разрешения CREATE DATABASE. Если база данных существует, разрешения на выполнение инструкции RESTORE по умолчанию предоставлены членам предопределенных ролей сервера **sysadmin** и **dbcreator** , а также владельцу базы данных (**dbo**) (для параметра FROM DATABASE_SNAPSHOT база данных всегда существует).  
   
  Разрешения на выполнение инструкции RESTORE даются ролям, в которых данные о членстве всегда доступны серверу. Так как членство в предопределенной роли базы данных может быть проверено только тогда, когда база данных доступна и не повреждена, что не всегда имеет место при выполнении инструкции RESTORE, члены предопределенной роли базы данных **db_owner** не имеют разрешений RESTORE.  
@@ -163,7 +166,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Параметры RECOVERY и STOPAT. Если в резервной копии журнала транзакций не содержится требуемое время (например, если указанное время выходит за рамки времени, отраженного в журнале транзакций), создается предупреждение и база данных остается невосстановленной.  
   
-###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
+###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В следующем примере база данных восстанавливается в состояние на `12:00 AM``April 15, 2020` и демонстрируется операция восстановления, использующая несколько резервных копий журналов. На устройстве резервного копирования `AdventureWorksBackups` полная резервная копия базы данных, подлежащей восстановлению, — это третий резервный набор данных на устройстве (`FILE = 3`), резервная копия первого журнала — это четвертый резервный набор (`FILE = 4`), резервная копия второго журнала — это пятый резервный набор (`FILE = 5`).  
   
 > [!IMPORTANT]  

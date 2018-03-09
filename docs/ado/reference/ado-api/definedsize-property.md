@@ -3,7 +3,7 @@ title: "Свойство DefinedSize | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - DefinedSize property [ADO]
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 44c44b0dd7528634cc6db88b3d5bb04a8a1237e3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 650eb80c6d4301c1a5881b3348dc2bbef9269fb3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="definedsize-property"></a>Свойство DefinedSize
 Показывает объем данных [поле](../../../ado/reference/ado-api/field-object.md) объекта.  
@@ -44,16 +43,15 @@ ms.lasthandoff: 09/09/2017
   
 4.  Для типов данных, которые имеют длину, он равен ~ 0 (Побитовый оператор, значение не 0; все биты устанавливаются в 1).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **DefinedSize** свойства, чтобы определить объем данных **поле** объекта.  
   
  **DefinedSize** и [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) свойства отличаются. Например, рассмотрим **поле** объект с объявленным типом **adVarChar** и **DefinedSize** значение свойства 50, содержащей один символ. **ActualSize** он возвращает значение свойства — это длина в байтах один символ.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект field](../../../ado/reference/ado-api/field-object.md)  
+ [Объект Field](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ActualSize и DefinedSize-пример свойства (Visual Basic)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
  [ActualSize и пример свойства DefinedSize (VC ++)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
  [Свойство ActualSize (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)
-

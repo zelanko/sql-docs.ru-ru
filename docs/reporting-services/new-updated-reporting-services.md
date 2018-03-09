@@ -1,28 +1,22 @@
 ---
-title: "Обновлено - служб Reporting Services для SQL Server docs | Документы Microsoft"
-description: "Отображение фрагментов обновленное содержимое для последних измененных в документации для служб Reporting Services для Microsoft SQL Server."
-services: na
-documentationcenter: 
+title: "Обновленные документы по службам Reporting Services для SQL Server | Документы Майкрософт"
+description: "Отрывки из недавно обновленного содержимого в документации по службам Reporting Services для Microsoft SQL Server."
+manager: craigg
 author: MightyPen
-manager: jhubbard
-editor: 
-ms.service: na
-ms.topic: updart-autogen
-ms.technology: database-engine
-ms.custom: UpdArt.exe
-ms.tgt_pltfrm: na
-ms.devlang: na
-ms.date: 09/27/2017
 ms.author: genemi
-ms.workload: reporting-services
-ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: b4a8b5b8db36f4ae7418934311eb6706de0ea43a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.prod_service: sql-non-specified
+ms.component: ssrs
+ms.date: 02/03/2018
+ms.openlocfilehash: de86f1530aed78074c815ada55665897126ba6fa
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="new-and-recently-updated-reporting-services-for-sql-server"></a>Новые и недавно обновленные: службы Reporting Services для SQL Server
+# <a name="new-and-recently-updated-reporting-services-for-sql-server"></a>Новые и обновленные статьи по службам Reporting Services для SQL Server
 
 
 
@@ -34,8 +28,8 @@ ms.lasthandoff: 10/02/2017
 
 
 
-- *Диапазон обновлений дат:* &nbsp; **2017 г-09-11** &nbsp; - в - &nbsp; **2017 г-09-27**
-- *Предметной области:* &nbsp; **служб Reporting Services для SQL Server**.
+- *Диапазон дат обновлений:* &nbsp; **03.12.2017**&nbsp;–&nbsp;**03.02.2018**
+- *Предметная область:* &nbsp; **Службы Reporting Services для SQL Server**.
 
 
 
@@ -47,8 +41,7 @@ ms.lasthandoff: 10/02/2017
 Приведенные ниже ссылки указывают на новые статьи, которые добавлены недавно.
 
 
-1. [Добавление веб-части средства просмотра отчетов на страницу SharePoint](report-server-sharepoint/add-report-viewer-web-part-to-page.md)
-2. [Развертывание веб-части средства просмотра отчетов на сайте SharePoint](report-server-sharepoint/deploy-report-viewer-web-part.md)
+1. [Как найти ключ продукта для SQL Server Reporting Services 2017](install-windows/find-reporting-services-product-key-ssrs.md)
 
 
 
@@ -87,43 +80,45 @@ ms.lasthandoff: 10/02/2017
 
 
 
-## <a name="similar-articles"></a>Похожие статьи
-
-<!--  HOW TO:
-    Refresh this file's line items with the latest 'Count-in-Similars*' content.
-    Then run Run-533-*.BAT
--->
+## <a name="similar-articles-about-new-or-updated-articles"></a>Статьи, близкие к новым или измененным статьям
 
 Этот раздел содержит статьи, очень близкие к недавно измененным статьям из других предметных областей в общедоступном репозитории GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Предметные области, содержащие новые или недавно обновленные статьи
 
-- [Новый + обновленные (0 + 1): **Advanced Analytics для SQL** документы](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Новый + обновленные (0 + 1): **служб Analysis Services для SQL** документы](../analysis-services/new-updated-analysis-services.md)
-- [Новый + обновленные (4 + 1): **СУБД для SQL** документы](../database-engine/new-updated-database-engine.md)
-- [Новый + обновленные (17 + 0): **службы Integration Services для SQL** документы](../integration-services/new-updated-integration-services.md)
-- [Новый + обновленные (3 + 0): **Linux для SQL** документы](../linux/new-updated-linux.md)
-- [Новый + обновленные (1 + 1): **реляционных баз данных для SQL** документы](../relational-databases/new-updated-relational-databases.md)
-- [Новый + обновленные (2 + 0): **служб Reporting Services для SQL** документы](../reporting-services/new-updated-reporting-services.md)
-- [Новый + обновленные (0 + 1): **SQL Server Management Studio (SSMS)** документы](../ssms/new-updated-ssms.md)
-- [Новый + обновленные (0 + 1): **Transact-SQL** документы](../t-sql/new-updated-t-sql.md)
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Предметные области, *содержащие* новые или недавно обновленные статьи
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Предметные области, не содержащие новые или недавно обновленные статьи
 
+- [Новые + обновленные (1+3):&nbsp; **Углубленная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новые + обновленные (0+1):&nbsp; **Analytics Platform System для SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Новые + обновленные (0+1):&nbsp; **Подключение к SQL**](../connect/new-updated-connect.md)
+- [Новые + обновленные (0+1):&nbsp; **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
+- [Новые + обновленные (12+1): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
+- [Новые + обновленные (6+2):&nbsp; **Linux для SQL**](../linux/new-updated-linux.md)
+- [Новые + обновленные (15+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
+- [Новые + обновленные (2+9):&nbsp; **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Новые + обновленные (1+0):&nbsp; **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Новые + обновленные (1+1):&nbsp; **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Новые + обновленные(1+1):&nbsp; **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Новые + обновленные (0+1):&nbsp; **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Новые + обновленные (1+2):&nbsp; **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Новые + обновленные (0+2):&nbsp; **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Предметные области, *не* содержащие новые или недавно обновленные статьи
+
+
+- [Новые + обновленные (0+0): **Data Migration Assistant (DMA) для SQL**](../dma/new-updated-dma.md)
 - [Новые + обновленные (0+0): **объекты данных ActiveX (ADO) для SQL**](../ado/new-updated-ado.md)
-- [Новый + обновленные (0 + 0): **подключение к SQL** документы](../connect/new-updated-connect.md)
+- [Новые + обновленные (0+0): документация **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
 - [Новые + обновленные (0+0): **Data Quality Services для SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Новые + обновленные (0+0): **расширения интеллектуального анализа данных (DMX) для SQL**](../dmx/new-updated-dmx.md)
 - [Новые + обновленные (0+0): документация **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Новые + обновленные (0+0): **многомерные выражения (MDX) для SQL**](../mdx/new-updated-mdx.md)
 - [Новые + обновленные (0+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
-- [Новые + обновленные (0+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
 - [Новые + обновленные (0+0): **примеры для SQL**](../sample/new-updated-sample.md)
-- [Новый + обновленные (0 + 0): **Microsoft SQL Server** документы](../sql-server/new-updated-sql-server.md)
-- [Новые + обновленные (0+0): **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
 - [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
-- [Новый + обновленные (0 + 0): **средства для SQL** документы](../tools/new-updated-tools.md)
+- [Новые + обновленные (0+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 - [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)
-
 
 

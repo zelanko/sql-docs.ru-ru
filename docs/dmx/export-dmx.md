@@ -2,38 +2,36 @@
 title: "ЭКСПОРТ (ДАННЫХ DMX) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- EXPORT
-dev_langs:
-- DMX
+f1_keywords: EXPORT
+dev_langs: DMX
 helpviewer_keywords:
 - exporting mining models
 - exporting mining structures
 - mining structures [DMX], exporting
 - EXPORT statement
 ms.assetid: 97617071-e560-4080-81af-a80276fc0823
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: cc1b2baa40c0e8b6b40a5dddf2c336a4141b4810
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bfc3e8344d1c6967185979c0970be6d49b572500
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="export-dmx"></a>EXPORT (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Извлекает модель или объект структуры интеллектуального анализа данных из сервера в файл резервной копии служб Analysis Services (ABF).  
   
@@ -49,12 +47,12 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  Тип объекта для экспорта (модели интеллектуального анализа данных или структуры интеллектуального анализа данных) (необязательно).  
   
  *Имя объекта*  
- Необязательно. Имя экспортируемого объекта.  
+ Необязательный параметр. Имя экспортируемого объекта.  
   
  *Имя файла*  
  Имя и расположение файла для экспорта (аргумент типа string).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если инструкция указывает модель интеллектуального анализа данных, итоговый файл также содержит связанную структуру интеллектуального анализа данных. Если инструкция указывает **WITH DEPENDENCIES**, все объекты, необходимые для обработки объекта (например, источник данных и представление источника данных), включаются в ABF-файл.  
   
  Должна быть базой данных или администратора сервера для экспорта или импорта объектов из [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] базы данных.  
@@ -81,4 +79,3 @@ EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES
  [Экспорт и импорт объектов интеллектуального анализа данных](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
   
-

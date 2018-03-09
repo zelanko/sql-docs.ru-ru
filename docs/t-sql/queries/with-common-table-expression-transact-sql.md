@@ -3,8 +3,11 @@ title: "WITH обобщенное_табличное_выражение (Transac
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,20 +29,19 @@ helpviewer_keywords:
 - MAXRECURSION hint
 - clauses [SQL Server], WITH common_table_expression
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
-caps.latest.revision: 60
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a065ef1f5c21d0fb5a458d55108acd8a9fd0678e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 8c77e9c97fd3d31b63e6e3938cbdab134554dd1c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH обобщенное_табличное_выражение (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Задается временно именованный результирующий набор, называемый обобщенным табличным выражением (ОТВ). Он извлекается при выполнении простого запроса и определяется в области выполнения одиночной инструкции SELECT, INSERT, UPDATE или DELETE. Это предложение может использоваться также в инструкции CREATE VIEW как часть определяющей ее инструкции SELECT. Обобщенное табличное выражение может включать ссылки на само себя. Такое выражение называется рекурсивным обобщенным табличным выражением.  
   
@@ -63,12 +65,12 @@ ms.lasthandoff: 09/01/2017
  *column_name*  
  Задается имя столбца в обобщенном табличном выражении. Повторяющиеся имена в определении одного обобщенного табличного выражения не допускаются. Количество заданных имен столбцов должно соответствовать числу столбцов в результирующем наборе *определений запроса*. Список имен столбцов необязателен только в том случае, если всем результирующим столбцам в определении запроса присвоены уникальные имена.  
   
- *Определений запроса*  
+ *CTE_query_definition*  
  Задается инструкция SELECT, результирующий набор которой заполняет обобщенное табличное выражение. Инструкция SELECT для *определений запроса* должен соответствовать тем же требованиям, что и при создании представления, за исключением обобщенного табличного Выражения не может определять другое ОТВ. Дополнительные сведения см. в разделе «Примечания» и [CREATE VIEW &#40; Transact-SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
   
  Если несколько объектов *определений запроса* будет определено, определения запроса должны быть присоединены одним из следующих операторов работы с наборами: UNION ALL, UNION, EXCEPT или INTERSECT.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="guidelines-for-creating-and-using-common-table-expressions"></a>Рекомендации по созданию и использованию обобщенных табличных выражений  
  Следующие рекомендации относятся к нерекурсивным обобщенным табличным выражениям. Рекомендации, применимые к рекурсивным обобщенным табличным выражениям, см. в расположенном ниже разделе «Рекомендации по определению и использованию рекурсивных обобщенных табличных выражений».  
@@ -528,7 +530,7 @@ WHERE Generation.ID = Person.ID;
 GO  
 ```  
   
-###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a>Л. Использование аналитических функций в рекурсивном обобщенном табличном выражении  
+###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> K. Использование аналитических функций в рекурсивном обобщенном табличном выражении  
  Следующий пример демонстрирует проблему, которая может возникнуть при использовании аналитической или агрегатной функции в рекурсивной части обобщенного табличного выражения.  
   
 ```  
@@ -601,48 +603,7 @@ Lvl  N
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="l-creating-a-simple-common-table-expression"></a>М. Создание простого обобщенного табличного выражения  
- В следующем примере выводится общее количество заказов на продажу в год для каждого коммерческого представителя в [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
-  
-```  
--- Uses AdventureWorks  
-  
--- Define the CTE expression name and column list.  
-WITH Sales_CTE (SalesPersonID, SalesOrderID, SalesYear)  
-AS  
--- Define the CTE query.  
-(  
-    SELECT SalesPersonID, SalesOrderID, YEAR(OrderDate) AS SalesYear  
-    FROM Sales.SalesOrderHeader  
-    WHERE SalesPersonID IS NOT NULL  
-)  
--- Define the outer query referencing the CTE name.  
-SELECT SalesPersonID, COUNT(SalesOrderID) AS TotalSales, SalesYear  
-FROM Sales_CTE  
-GROUP BY SalesYear, SalesPersonID  
-ORDER BY SalesPersonID, SalesYear;  
-GO  
-  
-```  
-  
-### <a name="m-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>Н. Использование обобщенного табличного выражения для ограничения общего и среднего количества отчетов  
- В следующем примере выводится среднее количество заказов на продажу за все годы для коммерческих представителей.  
-  
-```  
-WITH Sales_CTE (SalesPersonID, NumberOfOrders)  
-AS  
-(  
-    SELECT SalesPersonID, COUNT(*)  
-    FROM Sales.SalesOrderHeader  
-    WHERE SalesPersonID IS NOT NULL  
-    GROUP BY SalesPersonID  
-)  
-SELECT AVG(NumberOfOrders) AS "Average Sales Per Person"  
-FROM Sales_CTE;  
-GO  
-```  
-  
-### <a name="n-using-a-common-table-expression-within-a-ctas-statement"></a>О. Использование обобщенного табличного выражения в операторе CTAS  
+### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>М. Использование обобщенного табличного выражения в операторе CTAS  
  Следующий пример создает новую таблицу, содержащую общее количество заказов на продажу в год для каждого торгового представителя в [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
 ```  
@@ -671,7 +632,7 @@ AS
 GO  
 ```  
   
-### <a name="o-using-a-common-table-expression-within-a-cetas-statement"></a>П. Использование обобщенного табличного выражения в операторе CETAS  
+### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>Н. Использование обобщенного табличного выражения в операторе CETAS  
  В следующем примере создается новый внешней таблицы, содержащего общее количество заказов на продажу в год для каждого торгового представителя в [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
 ```  
@@ -701,7 +662,7 @@ AS
 GO  
 ```  
   
-### <a name="p-using-multiple-comma-separated-ctes-in-a-statement"></a>Т. С помощью нескольких разделенный запятыми обобщенных табличных выражений в операторе  
+### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>О. С помощью нескольких разделенный запятыми обобщенных табличных выражений в операторе  
  В следующем примере показано, включая два обобщенных табличных выражений в одной инструкции. Обобщенных табличных выражений не могут быть вложенными (без рекурсии).  
   
 ```  
@@ -719,7 +680,7 @@ UNION ALL
 SELECT TableName, TotalAvg FROM CountCustomer;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)   
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
  [EXCEPT и INTERSECT &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
@@ -728,4 +689,3 @@ SELECT TableName, TotalAvg FROM CountCustomer;
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)  
   
   
-

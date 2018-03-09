@@ -2,29 +2,30 @@
 title: "Подписка, вкладка \"Журнал операций от издателя к распространителю\" (транзакционная подписка) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.monitor.subscription.pubtodist.tran.f1
+f1_keywords: sql13.rep.monitor.subscription.pubtodist.tran.f1
 ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2d6d5ad351cd6e89952f70b37d1a62fd3250127e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "20"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 61881b3a08d451a9df4a07d229de82badafb1339
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>Подписка, журнал издателя для распространителя (подписка на публикацию транзакций)
-  Вкладка **Журнал операций от издателя к распространителю** отображает подробные сведения об агенте чтения журнала, включая состояние, журнал, информационные сообщения и любые сообщения об ошибках.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Вкладка **Журнал операций от издателя к распространителю** содержит подробные сведения об агенте чтения журнала, включая состояние, данные журнала, информационные сообщения и сообщения об ошибках.  
   
 ## <a name="options"></a>Параметры  
  В меню **Вид** выберите сеансы какого агента чтения журнала необходимо просмотреть, а затем в сетке **Сеансы агента чтения журнала**выберите определенный сеанс. Подробные сведения об этом сеансе отображаются в сетке, помеченной как **Действия в выбранном сеансе**. Если выбранный сеанс закончен с ошибкой, также выводится на экран текстовое поле, помеченное как **Описание ошибки или сообщение выбранного сеанса** .  
@@ -68,6 +69,6 @@ ms.lasthandoff: 06/22/2017
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
  [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Обзор агентов репликации](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

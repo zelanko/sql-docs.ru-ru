@@ -3,10 +3,12 @@ title: "Управление файлами с помощью кодировок
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - encoding [SQL Server Management Studio]
 - files [SQL Server Management Studio], encoding
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: deb05c49ffac5ba69c1a7841d9f822270982f783
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 76e453879de3505e2a7234d8b6ae69b7627dda4e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="manage-files-with-encoding"></a>Управление файлами с помощью кодировок
-Для отображения кода на конкретном языке и на конкретной платформе можно связать файл с определенной кодировкой.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Для отображения кода на конкретном языке и на конкретной платформе можно связать файл с определенной кодировкой.  
   
 ## <a name="opening-files"></a>Открытие файлов  
 Можно выбрать редактор, используемый для изменения файла.  
@@ -70,4 +71,3 @@ ms.lasthandoff: 06/22/2017
 [Файлы для управления решениями и проектами](../../ssms/solution/files-that-manage-solutions-and-projects.md)  
 [Связывание расширений файлов с редактором кода](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
   
-

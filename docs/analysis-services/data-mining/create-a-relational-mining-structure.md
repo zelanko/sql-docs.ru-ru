@@ -2,12 +2,13 @@
 title: "Создание реляционной структуры | Документы Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +18,20 @@ helpviewer_keywords:
 - relational mining models [Analysis Services]
 - OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
-caps.latest.revision: 35
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6ea3691ad03e5133d14f6aa8f99324957eb0c2b4
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 82fa652f76c1818ef6538b379723e7f91c8482ab
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-a-relational-mining-structure"></a>Создание реляционной структуры интеллектуального анализа данных
-  Большинство моделей интеллектуального анализа данных основано на реляционных источниках данных. Преимуществом создания реляционной модели интеллектуального анализа данных является возможность собирать неорганизованные данные, а также проводить обучение и обновление модели, не решая сложную задачу построения куба.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Большинство моделей интеллектуального анализа данных основано на реляционных источниках данных. Преимуществом создания реляционной модели интеллектуального анализа данных является возможность собирать неорганизованные данные, а также проводить обучение и обновление модели, не решая сложную задачу построения куба.  
   
  Реляционная структура интеллектуального анализа данных может основываться на данных из разрозненных источников. Необработанные данные могут храниться в таблицах, файлах или системах реляционных баз данных при условии, что эти данные можно определить в составе представления источников данных. Например, реляционную структуру интеллектуального анализа данных следует использовать, если данные находятся в Excel, в хранилище данных SQL Server, в базе данных отчетов SQL Server или во внешних источниках, доступ к которым осуществляется посредством поставщиков OLE DB или ODBC.  
   
@@ -131,11 +132,10 @@ ms.lasthandoff: 09/01/2017
 >  Чтобы использовать детализацию, нужно включить ее при создании структуры интеллектуального анализа данных. Детализацию для моделей можно включить позднее, задав свойство модели, однако для структур интеллектуального анализа данных эту возможность следует задавать с самого начала. Дополнительные сведения см. в разделе [Запросы детализации (интеллектуальный анализ данных)](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 ## <a name="see-also"></a>См. также:  
- [конструктор интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-designer.md)   
+ [Конструктор интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-designer.md)   
  [Мастер интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [Свойства модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-properties.md)   
  [Свойства структуры интеллектуального анализа данных и столбцов](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
- [Задачи и инструкции по структуре интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Интеллектуального анализа данных структуры задачи и инструкции](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   
-

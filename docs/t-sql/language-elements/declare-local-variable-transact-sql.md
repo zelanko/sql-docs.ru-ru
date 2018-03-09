@@ -3,8 +3,11 @@ title: "ОБЪЯВИТЕ @local_variable (Transact-SQL) | Документы Mic
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - DECLARE statement
 - declaring variables
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
-caps.latest.revision: 76
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 70decceb0fb5bc34f5ac7a32c64ca80cb0977de2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 6e56a4895dc5ec1ba03489ffc60e9f9e7b441d18
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="declare-localvariable-transact-sql"></a>ОБЪЯВИТЕ @local_variable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Переменные объявляются в теле пакета или процедуры при помощи инструкции DECLARE, а значения им присваиваются при помощи инструкций SET или SELECT. При помощи этой инструкции можно объявлять переменные курсоров для использования в других инструкциях. После декларации все переменные инициализируются значением NULL, если иное значение не предоставляется как часть декларации.  
   
@@ -90,7 +92,7 @@ DECLARE
 @*local_variable*  
  Имя переменной. Имена переменных должны начинаться с символа @. Имена локальных переменных должны соответствовать правилам для [идентификаторы](../../relational-databases/databases/database-identifiers.md).  
   
-*Тип данных*  
+*data_type*  
  Любой системный тип данных, определяемый пользователем табличный тип среды CLR или псевдоним типа данных. Переменная не может быть **текст**, **ntext**, или **изображения** тип данных.  
   
  Дополнительные сведения о системных типах данных см. в разделе [типы данных &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-types-transact-sql.md). Дополнительные сведения об определяемых пользователем типов CLR и псевдонимов типов данных см. в разделе [CREATE TYPE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-type-transact-sql.md).  
@@ -138,7 +140,7 @@ CURSOR
  IDENTITY  
  Указывает, что новый столбец является столбцом идентификаторов. При добавлении в таблицу новой строки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует для столбца уникальное, последовательное значение. Столбцы идентификаторов наиболее часто используются в сочетании с ограничениями PRIMARY KEY для выполнения функции уникального идентификатора строки таблицы. Свойство IDENTITY может назначаться **tinyint**, **smallint**, **int**, **decimal(p,0)**, или **numeric(p,0)** столбцов. Для каждой таблицы можно создать только один столбец идентификаторов. Ограниченные значения по умолчанию и ограничения DEFAULT не могут использоваться в столбце идентификаторов. Необходимо указывать либо оба значения seed и increment, либо ни тот, ни другой. Если ничего не указано, применяется значение по умолчанию (1,1).  
   
- *Начальное значение*  
+ *seed*  
  Значение, используемое для самой первой строки, загружаемой в таблицу.  
   
  *приращение*  
@@ -159,10 +161,10 @@ CURSOR
  CHECK  
  Ограничение, обеспечивающее целостность домена путем ограничения возможных значений, которые могут быть введены в столбец или столбцы.  
   
- *Logical_Expression*  
+ *logical_expression*  
  Логическое выражение, возвращающее значения TRUE или FALSE.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Переменные часто используются в пакете или процедуре в качестве счетчиков для циклов WHILE, LOOP или в блоке IF…ELSE.  
   
  Переменные могут использоваться только в выражениях, но не вместо имен объектов или ключевых слов. Для построения динамических инструкций SQL используйте EXECUTE.  
@@ -317,7 +319,7 @@ FROM DimEmployee
 WHERE LastName LIKE @lastName AND FirstName LIKE @firstName;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
@@ -325,7 +327,6 @@ WHERE LastName LIKE @lastName AND FirstName LIKE @firstName;
  [Сравнение типизированного и нетипизированного XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)  
   
   
-
 
 
 

@@ -1,10 +1,13 @@
 ---
-title: "Преобразование «Условное разбиение» | Документы Microsoft"
+title: "Преобразование \"Условное разбиение\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -16,17 +19,16 @@ helpviewer_keywords:
 - Conditional Split transformation
 - route rows to different outputs [Integration Services]
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
-caps.latest.revision: 51
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 02909ff454816119e2dfbdfeb1090d0f7e9587be
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 751ca45d923265f7477aa7461cd24c87e3d0d41a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="conditional-split-transformation"></a>преобразование «Условное разбиение»
   Преобразование «Условное разбиение» может направлять строки данных в различные выходы в зависимости от содержимого данных. Применение преобразования «Условное разбиение» похоже на применение структур выбора CASE в языке программирования. Преобразование производит оценку выражений и на основе результатов направляет строку данных на указанный выход. Это преобразование также предоставляет выход по умолчанию, так что если строка не имеет совпадений, то она направляется в выход по умолчанию.  
@@ -66,12 +68,12 @@ ms.lasthandoff: 08/19/2017
   
  Дополнительные сведения о настройке свойств см. в следующих разделах.  
   
--   [Разбиение набора данных с помощью преобразования «Условное разбиение»](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+-   [Разбиение набора данных с помощью преобразования "Условное разбиение"](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
 -   [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="related-tasks"></a>Связанные задачи  
- [Разбиение набора данных с помощью преобразования «Условное разбиение»](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+## <a name="related-tasks"></a>Related Tasks  
+ [Разбиение набора данных с помощью преобразования "Условное разбиение"](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
 ## <a name="conditional-split-transformation-editor"></a>редактор преобразования «Условное разбиение»
   Диалоговое окно **Редактор преобразования «Условное разбиение»** используется для создания выражений, определения порядка, в котором производится вычисление выражений, а также для именования выходных данных условных разбиений. В этом диалоговом окне вызываются математические, строковые функции, функции даты и времени, а также операторы, которые можно использовать при построении выражений. Первое условие, значение которого вычисляется как TRUE, определяет вывод, на который направляется строка.  
@@ -104,4 +106,3 @@ ms.lasthandoff: 08/19/2017
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

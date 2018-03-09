@@ -1,11 +1,13 @@
 ---
-title: "Назначения потоковой передачи данных | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Назначение потоковой передачи данных | Документы Майкрософт"
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,23 +15,23 @@ ms.topic: article
 f1_keywords:
 - SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b2a918e3460d23f33f432ea0925d722f9aefde78
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: c010049c9a55427304357d06dc8fa9fd7b4400b0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-streaming-destination"></a>Назначение потоковой передачи данных
   **Назначение потоковой передачи данных** — это компонент назначения служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS), который позволяет **поставщику OLE DB для служб SSIS** использовать выходные данные пакета служб SSIS в качестве табличного результирующего набора. Можно создать связанный сервер, использующий поставщик OLE DB для служб SSIS, а затем выполнить SQL-запрос к связанному серверу, чтобы просмотреть данные, возвращаемые пакетом служб SSIS.  
   
  В приведенном ниже примере следующий запрос возвращает выходные данные из пакета Package.dtsx в проекте SSISPackagePublishing в папке Power BI каталога служб SSIS. Этот запрос использует связанный сервер с именем [Default Linked Server for Integration Services], который, в свою очередь, использует новый поставщик OLE DB для служб SSIS. Запрос содержит имя папки, имя проекта и имя пакета в каталоге служб SSIS. Поставщик OLE DB для служб SSIS запускает пакет, указанный в запросе, и возвращает табличный результирующий набор.  
   
-```  
+```sql
 SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Folder=Power BI;Project=SSISPackagePublishing;Package=Package.dtsx')  
   
 ```  
@@ -60,7 +62,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
  Подробное пошаговое руководство см. в разделе [Публикация пакетов служб SSIS в качестве источников веб-каналов OData](http://go.microsoft.com/fwlink/?LinkID=317367).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Пошаговое руководство. Публикация пакета служб SSIS в представлении SQL](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)  
   
@@ -74,7 +76,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
 |Поле|Description|  
 |-----------|-----------------|  
-|Название|Имя компонента назначения потоковой передачи данных в пакете.|  
+|Имя|Имя компонента назначения потоковой передачи данных в пакете.|  
 |ValidateExternalMetadata|Указывает, проверяется ли компонент во время разработки с использованием внешних источников данных. Если задано значение False, проверка с использованием внешних источников данных откладывается до времени выполнения.|  
 |IDColumnName|В представлении, созданном в мастере публикации веб-каналов данных, есть дополнительный столбец идентификатора. Столбец идентификатора выступает в качестве EntityKey для выходных данных из потока данных, если данные используются в качестве канала OData в других приложениях.<br /><br /> Имя по умолчанию для этого столбца — _ID. Однако можно указать и другое имя.|  
   

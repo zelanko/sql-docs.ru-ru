@@ -3,10 +3,12 @@ title: "Задание параметров пула соединений ODBC |
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - ODBC data source administrator [ODBC], connection pooling options
 - ODBC data source administrator [ODBC], performance monitoring
 ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 939ac623b62b4b079e81a5c3f12df804e0b6171c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6e22b3c2c09f4bc356b54ed2ecb73988f0de2764
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>Задание параметров пула соединений ODBC
 Организация пулов соединений позволяет приложению использовать соединение из пула подключений, которые не нужно повторно при каждом обращении. Можно использовать **организация пулов соединений** вкладке **администратор источников данных ODBC** диалоговое окно «» для включения и отключения наблюдения за производительностью. Дважды щелкните имя драйвера, чтобы задать время ожидания соединения.  
@@ -48,4 +49,3 @@ ms.lasthandoff: 09/09/2017
 |Пулы, созданные|Количество активных, включая активные и удалить пулы пулов. Этот счетчик был добавлен в Windows 8 для драйверов, управление соединениями в пуле соединений. Дополнительные сведения см. в разделе [Driver-Aware Connection Pooling](../../odbc/reference/develop-app/driver-aware-connection-pooling.md).|  
   
  Необходимо указать собственные параметры наблюдения. Образцы для наблюдения за производительностью была включена в данную версию ODBC.
-

@@ -2,35 +2,34 @@
 title: "(Примечание) (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- //
-dev_langs:
-- kbMDX
+f1_keywords: //
+dev_langs: kbMDX
 helpviewer_keywords:
 - commenting characters
 - // (comment)
 ms.assetid: 9a3ee822-4689-41a8-9997-8b307850cd68
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 35d02bc4e809048f80b90c2b11f0cf278c2f0c71
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ee635641e8d6ee4fb2542d106180d8107c79db28
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="comment-mdx-double-slash"></a>Двойная косая черта многомерных Выражений комментария
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Обозначает текст комментария пользователя.  
   
@@ -45,7 +44,7 @@ ms.lasthandoff: 08/02/2017
  *Comment_Text*  
  Строка, содержащая текст комментария.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Комментарии могут занимать отдельную строку, добавляться в конец строк скрипта многомерных выражений или входить в инструкцию многомерных выражений. Сервер не обрабатывает комментарий.  
   
  Символы // используются только для однострочных комментариев. Комментарии, вставленные с помощью символов //, разделяются символом новой строки.  
@@ -69,9 +68,8 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Комментарий &#40; Многомерные Выражения &#41;](../mdx/comment-mdx.md)   
+ [Комментарий (MDX)](../mdx/comment-mdx.md)   
  [--&#40; Комментарий &#41; &#40; Многомерные Выражения &#41;](../mdx/comment-mdx-operator-reference.md)   
  [Справочник по операторам Многомерных &#40; Многомерные Выражения &#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   
-

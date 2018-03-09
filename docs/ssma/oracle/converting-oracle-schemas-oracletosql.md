@@ -1,28 +1,28 @@
 ---
 title: "Преобразование схем Oracle (OracleToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Conversion Results
+helpviewer_keywords: Conversion Results
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
+ms.openlocfilehash: 208378f2be9ad4eea080df758616e554c1262905
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 50294e2048a3fb494e683cfdb20b5eecd8662ca4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Преобразование схем Oracle (OracleToSQL)
 После подключения к базе данных Oracle, подключен к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], и параметры сопоставления данных и набор проектов, можно преобразовать объекты базы данных Oracle для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] объектов базы данных.  
@@ -124,4 +124,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>См. также:  
 [Миграция баз данных Oracle в SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
-

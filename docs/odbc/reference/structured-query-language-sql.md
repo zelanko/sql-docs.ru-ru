@@ -3,10 +3,12 @@ title: "Язык структурированных запросов (SQL) | Д�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - SQL [ODBC], about SQL
 - ODBC [ODBC], SQL
 ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f51c5b639649a3d21ce515a1d4082e84be4f7329
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9a8464fb7ff4e971c1d67d270ffa021d0dca1910
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structured-query-language-sql"></a>язык SQL
 Типичные СУБД дает пользователям возможность хранения, доступ и изменение данных упорядоченную, эффективным способом. Первоначально пользователей СУБД были программистов. Доступ к сохраненных данных требуется написать программу на языке программирования, таких как COBOL. Хотя эти программы часто были написаны для создания понятного интерфейса нетехнический пользователю, доступ к данным самого обязательно служб опытных программистов. Несанкционированного доступа к данным не практические.  
@@ -54,7 +55,6 @@ ms.lasthandoff: 09/09/2017
   
 -   [Embedded SQL](../../odbc/reference/embedded-sql.md)  
   
--   [SQL модули](../../odbc/reference/sql-modules.md)  
+-   [Модули SQL](../../odbc/reference/sql-modules.md)  
   
 -   [Интерфейсы уровня вызова](../../odbc/reference/call-level-interfaces.md)
-

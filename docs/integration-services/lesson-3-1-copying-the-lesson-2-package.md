@@ -1,10 +1,13 @@
 ---
-title: "Шаг 1: Копирование пакета занятия 2 | Документы Microsoft"
+title: "Шаг 1. Копирование пакета, созданного на занятии 2 | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,30 +15,29 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
-caps.latest.revision: 29
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 827e86f490522ea9df0f53bbe55836f6ca3bc385
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6d805e07ffbdf1cf5685ebcf20dc63dae5652ca7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-3-1---copying-the-lesson-2-package"></a>Занятие 3-1-копирование пакета занятия 2
+# <a name="lesson-3-1---copying-the-lesson-2-package"></a>Занятие 3–1. Копирование пакета, созданного на занятии 2
 В этой задаче будет создана копия пакета Lesson 2.dtsx, созданного на занятии 2. Либо можно добавить пакет для занятия 2, прилагаемый к учебнику по проекту, и скопировать его. Полученная копия впоследствии будет использоваться на протяжении всего занятия 3.  
   
 ### <a name="to-create-the-lesson-3-package"></a>Создание пакета занятия 3  
   
-1.  Если средства [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools еще не открыты, нажмите кнопку **Пуск**, наведите указатель на пункт **Все программы**, затем на пункт **Microsoft SQL Server 2012**и выберите пункт **SQL Server Data Tools**.  
+1.  Если средства [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools еще не открыты, нажмите кнопку **Пуск**, наведите указатель на пункт **Все программы**, затем на пункт **Microsoft SQL Server 2012** и выберите пункт **SQL Server Data Tools**.  
   
 2.  В меню **Файл** последовательно выберите пункты **Открыть**, **Проект или решение**, **Учебник по службам SSIS** и нажмите кнопку **Открыть**, а затем дважды щелкните файл **SSIS Tutorial.sln**.  
   
 3.  В обозревателе решений правой кнопкой мыши щелкните **Lesson 2.dtsx**и выберите команду **Копировать**.  
   
-4.  В обозревателе решений правой кнопкой мыши щелкните элемент **Пакеты служб SSIS**и выберите команду **Вставить**.  
+4.  В обозревателе решений правой кнопкой мыши щелкните элемент **Пакеты служб SSIS** и выберите команду **Вставить**.  
   
     По умолчанию копируемому пакету присваивается имя Lesson 3.dtsx.  
   
@@ -70,4 +72,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Шаг 2. Добавление и настройка ведения журнала](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
   
-

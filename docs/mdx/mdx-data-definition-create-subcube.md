@@ -2,11 +2,13 @@
 title: "Инструкция CREATE SUBCUBE (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,26 +16,24 @@ f1_keywords:
 - CREATE SUBCUBE
 - CREATE
 - SUBCUBE
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - subcubes [MDX]
 - CREATE SUBCUBE statement
 ms.assetid: 15b6ac4c-b68a-4f9f-b33c-f5f7c4a74535
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: bf2b3d21aa2eac4bc982b75257f8c1e2d87ea46b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b7a444247915755ca1e9d002acf868a7d6eecc4f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Определения данных многомерных Выражений — Создание вложенного КУБА
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Переопределяет пространство заданного куба или вложенного куба на указанный вложенный куб. Изменяет видимое пространство куба для последующих операций.  
   
@@ -54,16 +54,16 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  В разделе [ВЫБЕРИТЕ оператор &#40; Многомерные Выражения &#41; ](../mdx/mdx-data-manipulation-select.md) для подробные сведения о синтаксисе инструкций Select и **НЕВИЗУАЛЬНЫЕ** предложения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если элементы по умолчанию исключаются из определения вложенного куба, то координаты изменяются соответствующим образом. Для атрибутов, которые могут быть статистически вычислены, элемент по умолчанию перемещается в элемент [Все]. Для атрибутов, которые не могут быть статистически вычислены, элемент по умолчанию перемещается в элемент, существующий во вложенном кубе. В следующей таблице приведен пример вложенного куба и комбинаций элемента по умолчанию.  
   
 |Исходный элемент по умолчанию|Статистически вычисляемый|Подзапрос выборки|Измененный элемент по умолчанию|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
 |Время.Год.Все|Да|{Время.Год.2003}|Изменений нет|  
 |Время.год. [1997]|Да|{Время.Год.2003}|Время.Год.Все|  
-|Время.год. [1997]|Нет|{Время.Год.2003}|Время.год. [2003]|  
+|Время.год. [1997]|нет|{Время.Год.2003}|Время.год. [2003]|  
 |Время.год. [1997]|Да|{Время.Год.2003, Время.Год.2004}|Время.Год.Все|  
-|Время.год. [1997]|Нет|{Время.Год.2003, Время.Год.2004}|Или Время.Год.[2003] или<br /><br /> Время.Год.[2004]|  
+|Время.год. [1997]|нет|{Время.Год.2003, Время.Год.2004}|Или Время.Год.[2003] или<br /><br /> Время.Год.[2004]|  
   
  Во вложенном кубе всегда существуют элементы [Все].  
   
@@ -108,7 +108,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
 |||||  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
+||Все продукты|Accessories|Clothing|  
 |All Resellers|$2,031,079.39|$ 506 172,45|$ 1 524 906,93|  
 |Value Added Reseller|$767,388.52|$ 175 002,81|$ 592 385,71|  
 |Warehouse|$1,263,690.86|$ 331 169,64|$ 932 521,23|  
@@ -137,9 +137,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
 |||||  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
-|All Resellers|$ 80 450 596,98|$ 571 297,93|$ 1 777 840,84|  
-|Value Added Reseller|$ 34 967 517,33|$ 175 002,81|$ 592 385,71|  
+||Все продукты|Accessories|Clothing|  
+|All Resellers|$ 80 450 596,98|$ 571 297,93|$ 1 777 840,84|  
+|Торговый посредник, создающий добавленную стоимость|$ 34 967 517,33|$ 175 002,81|$ 592 385,71|  
 |Warehouse|$ 38 726 913,48|$ 331 169,64|$ 932 521,23|  
   
  [All Products] и [All Resellers], столбец и строка соответственно, содержат итоги всех элементов, а не только тех, что видимы.  
@@ -151,4 +151,3 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  [Инструкция SELECT &#40; Многомерные Выражения &#41;](../mdx/mdx-data-manipulation-select.md)  
   
   
-

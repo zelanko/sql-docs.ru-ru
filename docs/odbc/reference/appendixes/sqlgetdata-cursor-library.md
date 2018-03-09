@@ -3,26 +3,26 @@ title: "SQLGetData (библиотека курсоров) | Документы 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLGetData function [ODBC], Cursor Library
+helpviewer_keywords: SQLGetData function [ODBC], Cursor Library
 ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: afb65143aa9da062ff405c01e4a7e438bcb42ef8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19aa94323ee9ad9655e374bd3fe466fcb78f3c48
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetdata-cursor-library"></a>SQLGetData (библиотека курсоров)
 > [!IMPORTANT]  
@@ -44,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 -   **SQLGetData** может вызываться только в том случае, если выполняются следующие условия: **ВЫБЕРИТЕ** создания результирующего набора инструкции; **ВЫБЕРИТЕ** инструкция не содержит соединение,  **ОБЪЕДИНЕНИЕ** предложение, или **GROUP BY** предложения; и любые столбцы, используемые псевдонимом или выражение в списке выбора не связанных с **SQLBindCol**.  
   
 -   Если драйвер поддерживает только одну активную инструкцию, библиотеку курсоров извлечет остальная часть результирующего набора до выполнения **ВЫБЕРИТЕ** инструкции и вызывая метод **SQLGetData**.
-

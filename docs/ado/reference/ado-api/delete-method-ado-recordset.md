@@ -3,7 +3,7 @@ title: "Удаление метода (набора записей ADO) | Док
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Delete method [ADO]
 ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 696262881c2a02ac67e6f38617d04833a6c88c7f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7555de66879f0caa75c72196c30c5a7ec3611249
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="delete-method-ado-recordset"></a>Удаление метода (набора записей ADO)
 Удаление текущей записи или группы записей.  
@@ -48,7 +47,7 @@ recordset.Delete AffectRecords
 > [!NOTE]
 >  **adAffectAll** и **adAffectAllChapters** не являются допустимыми аргументами для **удалить**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  С помощью **удаление** метод помечает текущей записи или группы записей в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект для удаления. Если **записей** объекта не допускает удаление записей происходит ошибка. Если вы находитесь в режим немедленного обновления, удаления происходит в базе данных немедленно. Если запись не может успешно удалены (из-за нарушения целостности базы данных, например), запись будет оставаться в режиме редактирования после вызова [обновление](../../../ado/reference/ado-api/update-method.md). Это означает, что необходимо отменить обновление с [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) перед перемещением текущей записи (например, с помощью [закрыть](../../../ado/reference/ado-api/close-method-ado.md), [переместить](../../../ado/reference/ado-api/move-method-ado.md), или [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
   
  При работе в пакетном режиме обновления записи, помечаются для удаления из кэша и фактическое удаление происходит при вызове [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) метод. Используйте [фильтра](../../../ado/reference/ado-api/filter-property.md) свойство, чтобы просмотреть список удаленных записей.  
@@ -62,13 +61,12 @@ recordset.Delete AffectRecords
  Если [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) динамическое свойство задано и **записей** является результатом выполнения операции СОЕДИНЕНИЯ на несколько таблиц, то **удалить** метод будет удален только строки из таблицы, указанной в [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) свойство.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Удаление примера метод (Visual Basic)](../../../ado/reference/ado-api/delete-method-example-vb.md)   
  [Удалить пример метода (VBScript)](../../../ado/reference/ado-api/delete-method-example-vbscript.md)   
  [Удалить пример метода (VC ++)](../../../ado/reference/ado-api/delete-method-example-vc.md)   
  [Метод Delete (ADO поля коллекции)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
  [Удаление метода (коллекция параметров ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
- [Метод макрокоманду УдалитьЗапись (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)
-
+ [Метод DeleteRecord (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)

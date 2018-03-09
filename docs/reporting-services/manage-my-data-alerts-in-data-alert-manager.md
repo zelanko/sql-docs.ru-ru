@@ -1,30 +1,30 @@
 ---
-title: "Управление предупреждениями данных в диспетчере предупреждений данных | Документы Microsoft"
+title: "Управление предупреждениями данных в диспетчере предупреждений данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
-caps.latest.revision: 13
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "13"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 84bd8143bbc487ad38416f7b4c7fed48ab0f0369
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: ecf8caf5631ac722ade6a9ce753c856cb341a765
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>Управление предупреждениями данных в диспетчере предупреждений данных
 
@@ -32,10 +32,10 @@ ms.lasthandoff: 08/17/2017
 
 Пользователи SharePoint могут просматривать список созданных ими предупреждений об изменении данных и сведения о них. Также вы можете удалять свои предупреждения, открывать определения предупреждений для их изменения в конструкторе предупреждений об изменении данных и запускать свои предупреждения. На следующем рисунке показаны функции, доступные пользователям в диспетчере предупреждений об изменении данных.
 
- ![Функции диспетчера предупреждений для пользователей SharePoint](../reporting-services/media/rs-alertmanageriw.gif "диспетчер предупреждений об изменении возможности для пользователей SharePoint")
+ ![Функции диспетчера предупреждений для пользователей SharePoint](../reporting-services/media/rs-alertmanageriw.gif "Функции диспетчера предупреждений для пользователей SharePoint")
 
 > [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
 
 ### <a name="to-view-a-list-of-your-alerts"></a>Просмотр списка своих предупреждений  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/17/2017
   
 2.  Щелкните значок, чтобы развернуть раскрывающееся меню для отчета, и выберите пункт **Управление предупреждениями об изменении данных**. Раскрывающееся меню показано на следующем рисунке.  
   
-     ![Открыть диспетчер предупреждений из контекстного меню отчета](../reporting-services/media/rs-openalertmanager.gif "открыть диспетчер предупреждений из контекстного меню отчета")  
+     ![Открытие диспетчера предупреждений из контекстного меню отчета](../reporting-services/media/rs-openalertmanager.gif "Открытие диспетчера предупреждений из контекстного меню отчета")  
   
      Откроется диспетчер предупреждений об изменении данных. По умолчанию в нем перечислены предупреждения для отчета, выбранного в библиотеке.  
   
@@ -78,10 +78,9 @@ ms.lasthandoff: 08/17/2017
   
      Вне зависимости от того, какие параметры расписания были заданы в диспетчере предупреждений об изменении данных, будет создан экземпляр предупреждения и будет немедленно отправлено предупреждающее сообщение. Например, предупреждение, настроенное на еженедельную отправку и только в случае изменения результатов.  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Диспетчер предупреждений данных для оповещения администраторов](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

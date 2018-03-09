@@ -2,29 +2,29 @@
 title: "Настройка и просмотр SharePoint и ведения журнала диагностики | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: ed3dbf6b45af894f4f2f841d7c8b3496a332028f
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5e94ef1aeee4d633353964a6398bd12b89ef86cf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Настройка и просмотр SharePoint и ведения журнала диагностики
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] регистрируются в файлах журнала SharePoint. Сведения, приведенные в этом разделе, помогут настроить уровни ведения журнала и просмотреть данные файла журнала. Можно выбирать, какие события сервера [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] заносятся в файл журнала. а также определять степень серьезности регистрируемых сообщений. Дополнительные сведения см. в разделе [Настройка сбора данных об использовании с PowerPivot для SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  В этом разделе:  
@@ -126,10 +126,10 @@ ms.lasthandoff: 09/01/2017
 |Процесс|Область|Категория|Level|Сообщение|Сведения|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Служба|Использование|Подробный|Отсутствует статистика по текущему запросу, данные не заносятся в журнал.|Отчеты службы с заранее определенными интервалами запрашивают статистику ответов в виде события использования, отправляемого в систему сбора данных об использовании. Данное сообщение показывает, что отсутствует статистика запросов для передачи.|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Служба|Клиентский веб-интерфейс|Подробно|Начинается поиск сервера приложений для источника данных =\<*путь*>|Когда служба [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] получает запрос на соединение, она определяет доступный [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] для обработки запроса. Если в ферму входит только один сервер, то локальный сервер принимает запрос во всех случаях.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Служба|Клиентский веб-интерфейс|Подробный|Начинается поиск сервера приложений для источника данных =\<*путь*>|Когда служба [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] получает запрос на соединение, она определяет доступный [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] для обработки запроса. Если в ферму входит только один сервер, то локальный сервер принимает запрос во всех случаях.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Служба|Клиентский веб-интерфейс|Подробный|Сервер приложений определен успешно.|Запрос передан в приложение службы [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Служба|Клиентский веб-интерфейс|Подробно|Перенаправление запроса для \< *источник PowerPivotdata*> для [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|Запрос перенаправлен на [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Служба|Обработка запросов|Подробно|Перенаправление запроса для UserName\<*пользователя SharePoint*> в базу данных|От имени пользователя SharePoint создано соединение с источником данных [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] путем олицетворения.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Служба|Клиентский веб-интерфейс|Подробный|Перенаправление запроса для \< *источник PowerPivotdata*> для [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|Запрос перенаправлен на [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Служба|Обработка запросов|Подробный|Перенаправление запроса для UserName\<*пользователя SharePoint*> в базу данных|От имени пользователя SharePoint создано соединение с источником данных [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] путем олицетворения.|  
   
 ## <a name="see-also"></a>См. также  
  [Сбор данных об использовании Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)   
@@ -137,4 +137,3 @@ ms.lasthandoff: 09/01/2017
  [Настройка сбора данных об использовании с PowerPivot для SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   
-

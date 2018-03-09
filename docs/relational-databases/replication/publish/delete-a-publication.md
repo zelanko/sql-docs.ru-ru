@@ -2,11 +2,13 @@
 title: "Удаление публикации| Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +17,19 @@ helpviewer_keywords:
 - articles [SQL Server replication], deleting
 - deleting publications
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
-caps.latest.revision: 35
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e63359b9005b1f2f2651699121c5a86c78be7a3e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "35"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 12b3d2fbee416c7368eaadfb0aeb8f8566916961
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-a-publication"></a>Удаление публикации
-  В данном разделе описывается удаление публикации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В данном разделе описывается удаление публикации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или объектов Replication Management Objects (RMO).  
   
  **В этом разделе**  
   
@@ -100,49 +102,49 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-remove-a-snapshot-or-transactional-publication"></a>Удаление публикации моментальных снимков или публикации транзакций  
   
-1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPublication>.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPublication> .  
   
-3.  Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>, а также укажите созданное на шаге 1 соединение в качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+3.  Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства.  
   
-4.  Чтобы убедиться в существовании публикации, проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A>. Если значение этого свойства равно **false**, то либо на шаге 3 были неверно определены свойства публикации, либо публикация не существует.  
+4.  Чтобы убедиться в существовании публикации, проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> . Если значение этого свойства равно **false**, то либо на шаге 3 были неверно определены свойства публикации, либо публикация не существует.  
   
-5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A>.  
+5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> .  
   
 6.  (Необязательно) Если в базе данных не существует других публикаций транзакций, базу данных можно отключить от публикации транзакций следующим образом.  
   
-    1.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationDatabase>. Задайте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> для экземпляра <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, созданного на шаге 1.  
+    1.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> . В качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите экземпляр соединения <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданный на шаге 1.  
   
-    2.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает значение **false**, убедитесь, что база данных существует.  
+    2.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение **false**, убедитесь, что база данных существует.  
   
-    3.  Для свойства <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> установите значение **false**.  
+    3.  Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> в значение **false**.  
   
-    4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
+    4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> .  
   
 7.  Закройте соединения.  
   
 #### <a name="to-remove-a-merge-publication"></a>Удаление публикации слиянием  
   
-1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication>.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication> .  
   
-3.  Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>, а также укажите созданное на шаге 1 соединение в качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+3.  Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> , а также установите созданное на шаге 1 соединение <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> в качестве значения для свойства.  
   
-4.  Чтобы убедиться в существовании публикации, проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A>. Если значение этого свойства равно **false**, то либо на шаге 3 были неверно определены свойства публикации, либо публикация не существует.  
+4.  Чтобы убедиться в существовании публикации, проверьте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> . Если значение этого свойства равно **false**, то либо на шаге 3 были неверно определены свойства публикации, либо публикация не существует.  
   
-5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A>.  
+5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> .  
   
 6.  (Необязательно) Если в базе данных не существует других публикаций слиянием, базу данных можно отключить от публикации слиянием следующим образом.  
   
-    1.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationDatabase>. Задайте свойство <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> для экземпляра <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, созданного на шаге 1.  
+    1.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> . Присвойте свойству <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> значение экземпляра <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1.  
   
-    2.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает значение **false**, проверьте, существует ли база данных.  
+    2.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение **false**, проверьте, существует ли база данных.  
   
-    3.  Для свойства <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> установите значение **false**.  
+    3.  Задайте для публикации свойства <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> в значение **false**.  
   
-    4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
+    4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> .  
   
 7.  Закройте соединения.  
   
@@ -160,7 +162,7 @@ ms.lasthandoff: 06/22/2017
  [!code-vb[HowTo#rmo_vb_DropMergePub](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_dropmergepub)]  
   
 ## <a name="see-also"></a>См. также:  
- [Основные понятия системных хранимых процедур репликации](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Публикация данных и объектов базы данных](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

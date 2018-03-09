@@ -2,11 +2,13 @@
 title: "Синхронизация данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,20 +23,19 @@ helpviewer_keywords:
 - replication [SQL Server], synchronization
 - scripts [SQL Server replication]
 ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
-caps.latest.revision: 36
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "36"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ccda32ba9e85f698a2a642d2dd52773e78ae6d06
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 38d3866d8bd2e1f08501530efecb6628f94f5c53
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="synchronize-data"></a>Синхронизация данных
-  Под синхронизацией данных подразумевается процесс распространения изменений данных и схем между издателем и подписчиками, после того как был применен исходный моментальный снимок на подписчике. Синхронизация может происходить:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Под синхронизацией данных подразумевается процесс распространения изменений данных и схем между издателем и подписчиками, после того как был применен исходный моментальный снимок на подписчике. Синхронизация может происходить:  
   
 -   Непрерывно, что типично для репликации транзакций.  
   
@@ -56,9 +57,9 @@ ms.lasthandoff: 06/22/2017
   
  Сведения о синхронизации принудительной подписки см. в разделе [синхронизации принудительной подписки](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
- Сведения о синхронизации подписки по запросу см. в разделе [синхронизации подписки по запросу](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+ Сведения о синхронизации подписки по запросу см. в разделе [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
- Чтобы настроить расписания синхронизации, см. раздел [укажите расписания синхронизации](../../relational-databases/replication/specify-synchronization-schedules.md).  
+ Чтобы настроить расписания синхронизации, см. раздел [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
  **Просмотр и разрешение конфликтов синхронизации**  
   
@@ -71,10 +72,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Выполнение скрипта по запросу поддерживается для репликации транзакций и репликации слиянием. С помощью выполнения скрипта по запросу можно указать, какой скрипт SQL будет выполняться во время синхронизации. скрипт копируется на подписчик и выполняется с помощью программы **sqlcmd** в начале процесса синхронизации. скрипт не имеет доступа к реплицированным изменениям, когда они применяются к подписчику. Дополнительные сведения см. в статье [Выполнение скриптов во время синхронизации (программирование репликации на языке Transact-SQL)](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
   
--   Обработчики бизнес-логики поддерживаются для репликации слиянием. С помощью платформы обработчиков бизнес-логики можно создать сборку управляемого кода, которая будет вызываться в процессе синхронизации слиянием. Сборка включает бизнес-логику, которая может учитывать ряд условий во время синхронизации: изменения данных, конфликты и ошибки. Дополнительные сведения см. в статье [Выполнение бизнес логики при синхронизации слиянием](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
+-   Обработчики бизнес-логики поддерживаются для репликации слиянием. С помощью платформы обработчиков бизнес-логики можно создать сборку управляемого кода, которая будет вызываться в процессе синхронизации слиянием. Сборка включает бизнес-логику, которая может учитывать ряд условий во время синхронизации: изменения данных, конфликты и ошибки. Дополнительные сведения см. в статье [Выполнение бизнес-логики при синхронизации слиянием](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Обнаружение и разрешение конфликтов репликации слиянием](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
   
   
-

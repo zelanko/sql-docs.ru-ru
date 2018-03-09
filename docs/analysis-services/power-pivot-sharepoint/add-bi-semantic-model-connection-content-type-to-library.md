@@ -2,30 +2,30 @@
 title: "Добавление типа содержимого соединения семантической модели бизнес-Аналитики в библиотеку | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 145505ed-50bc-4528-912b-2a5cd2566011
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4438608a9e2b5ed5e4e642afa239186db863f578
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3e62c235f06c85782f6bb0e3c66fa826dbe8f35d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="add-bi-semantic-model-connection-content-type-to-library"></a>Добавление типа содержимого соединения семантической модели бизнес-Аналитики в библиотеку
-  Соединение с семантической моделью бизнес-аналитики создается в SharePoint, что позволяет обеспечить перенаправление к данным семантической модели бизнес-аналитики в книге [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или в базе данных табличной модели служб Analysis Services, работающей на сетевом сервере. Прежде чем приступать к созданию соединения с семантической моделью бизнес-аналитики в SharePoint, необходимо расширить библиотеку документов для создания BISM-файла. Этот шаг должен выполняться только один раз для каждой библиотеки, однако его придется повторить для всех библиотек, из которых требуется создать файл BISM. Рекомендуется создать централизованную библиотеку для хранения файлов BISM, чтобы разрешениями можно было управлять в одном месте.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Соединение с семантической моделью бизнес-аналитики создается в SharePoint, что позволяет обеспечить перенаправление к данным семантической модели бизнес-аналитики в книге [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или в базе данных табличной модели служб Analysis Services, работающей на сетевом сервере. Прежде чем приступать к созданию соединения с семантической моделью бизнес-аналитики в SharePoint, необходимо расширить библиотеку документов для создания BISM-файла. Этот шаг должен выполняться только один раз для каждой библиотеки, однако его придется повторить для всех библиотек, из которых требуется создать файл BISM. Рекомендуется создать централизованную библиотеку для хранения файлов BISM, чтобы разрешениями можно было управлять в одном месте.  
   
 > [!NOTE]  
 >  Если библиотека подключения к данным SharePoint уже используется, то тип содержимого «Соединение семантической модели бизнес-аналитики» будет автоматически добавлен в шаблон этой библиотеки. Описанное в этом разделе действие можно пропустить, если используется библиотека подключения к данным, которая уже позволяет создавать новые документы соединений семантической модели бизнес-аналитики.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_addtype"></a> Добавление типа содержимого в библиотеку документов  
  Чтобы добавлять и настраивать тип содержимого, необходимо разрешение не ниже «Управление списками». Это разрешение встроено в разрешения уровня «Создание» и выше.  
   
- Веб-сайт, содержащий библиотеку документов, должен иметь активацию компонентов [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Дополнительные сведения см. в статье [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
+ Веб-сайт, содержащий библиотеку документов, должен иметь активацию компонентов [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Дополнительные сведения см. в статье [Включение интеграции функций PowerPivot для семейств веб-сайтов в центре администрирования](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 1.  Откройте библиотеку документов, для которой необходимо включить тип содержимого «Соединение семантической модели бизнес-аналитики».  
   
@@ -63,13 +63,12 @@ ms.lasthandoff: 09/01/2017
   
  После включения типа файла соединения семантической модели бизнес-аналитики в библиотеке можно будет создать соединение, которое будет перенаправлять подключение к данным семантической модели, и использовать его в отчетах Excel или [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] . Выберите одну из следующих ссылок, чтобы узнать подробнее о следующем шаге.  
   
- [Создание подключения между семантической моделью бизнес-аналитики и книгой PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
+ [Создание подключения между семантической моделью бизнес-аналитики и книгой Power Pivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
  [Создание соединения семантической модели бизнес-аналитики с табличным шаблоном базы данных](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
 ## <a name="see-also"></a>См. также  
  [Соединение семантической модели бизнес-аналитики PowerPivot (BISM-файлы)](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
- [Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
+ [Использовать соединение семантической модели бизнес-Аналитики в Excel или Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
   
-

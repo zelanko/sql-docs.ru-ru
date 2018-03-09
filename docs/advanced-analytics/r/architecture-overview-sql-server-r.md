@@ -2,27 +2,28 @@
 title: "Обзор архитектуры служб R SQL Server | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0
-caps.latest.revision: 9
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: d23b15bd823c9054d9ddc7f1077bda80614686bd
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 346dd5d2153a9a318e7bc68d73283278b3a13512
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>Общие сведения об архитектуре для R в SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом разделе Обзор архитектуры служб SQL Server 2016 R и служб SQL Server 2017 г машины обучения.
 
@@ -58,9 +59,8 @@ SQL Server перехватывает все запросы задания и з
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Компоненты, поддерживающие интеграцию R](new-components-in-sql-server-to-support-r.md)
+[Компоненты, обеспечивающие интеграцию R](new-components-in-sql-server-to-support-r.md)
 
-[Взаимодействие R](r-interoperability-in-sql-server.md)
+[Совместимость с R](r-interoperability-in-sql-server.md)
 
 [Общие сведения о безопасности](security-overview-sql-server-r.md)
-

@@ -3,8 +3,11 @@ title: "Инструкция DBCC OUTPUTBUFFER (Transact-SQL) | Документ
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - output buffers
 - current output buffer
 ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
-caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: de51ee1a87f37e8fcdf97e23be0d2fb9701e9433
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 836055f5a80a7f3768d1485a6c0514eafd6258aa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Возвращает текущий буфер вывода в шестнадцатеричном формате и формате ASCII для указанного *session_id*.
   
@@ -50,7 +52,7 @@ DBCC OUTPUTBUFFER ( session_id [ , request_id ])
  *session_id*  
  Идентификатор сеанса, связанный с каждым активным первичным соединением.  
   
- *идентификатор_запроса*  
+ *request_id*  
  Строгий (пакетный) запрос для поиска в текущем сеансе.  
  Следующий запрос возвращает *request_id*:  
   
@@ -66,7 +68,7 @@ WHERE session_id = @@spid;
  NO_INFOMSGS  
  Подавляет все информационные сообщения со степенями серьезности от 0 до 10.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 DBCC OUTPUTBUFFER выводит результаты, отправленные для указанного клиента (*session_id*). Для процессов, не содержащих выходных потоков, возвращается сообщение об ошибке.
   
 Для вывода выполненной инструкции, которая возвратила результаты, отображаемые инструкцией DBCC OUTPUTBUFFER, выполните инструкцию DBCC INPUTBUFFER.
@@ -88,7 +90,7 @@ Output Buffer
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Необходимо членство в предопределенной роли сервера **sysadmin** .
   
 ## <a name="examples"></a>Примеры  
@@ -98,10 +100,9 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 DBCC OUTPUTBUFFER (52);  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
 [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   
-

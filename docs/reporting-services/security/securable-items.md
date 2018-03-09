@@ -2,12 +2,13 @@
 title: "Защищаемые элементы | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +17,19 @@ helpviewer_keywords:
 - security [Reporting Services], securable items listed
 - role-based security [Reporting Services], securable items
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
-caps.latest.revision: 45
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "45"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b1c11b204b5a48e4324f49e05467cc3ac96e7fa4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5aa30529e45f4436d6e3d5b7a366993f5f9fa909
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="securable-items"></a>Защищаемые элементы
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]использует безопасность на основе ролей для управления доступом к элементам, хранящимся на сервере отчетов. Предоставление пользователю доступа к серверу отчетов обычно выполняется созданием пары назначений ролей:  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют безопасность на основе ролей для управления доступом к элементам, которые хранятся на сервере отчетов. Предоставление пользователю доступа к серверу отчетов обычно выполняется созданием пары назначений ролей:  
   
 -   на уровне сайта;  
   
@@ -65,11 +65,10 @@ ms.lasthandoff: 08/09/2017
 |Общие источники данных|Защита общих источников данных позволяет ограничить доступ к элементу и страницам его свойств. Дополнительные сведения см. в разделе [Защита совместно используемых элементов источника данных](../../reporting-services/security/secure-shared-data-source-items.md).|  
 |Общие наборы данных|Общие наборы данных могут быть защищены, чтобы управлять диапазоном действий, которые могут выполнять пользователи, таких как просмотр или смена определения или же изменение свойств данного общего набора данных.<br /><br /> Дополнительные сведения см. в разделе [Защита элементов общего набора данных](../../reporting-services/security/secure-shared-dataset-items.md).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Создать, удалить или изменить роль &#40; Среда Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Предоставление пользователям доступа к серверу отчетов &#40; Диспетчер отчетов &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Изменить или удалить назначение ролей &#40; Диспетчер отчетов &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
+ [Создание, удаление и изменение ролей (среда Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Изменение или удаление назначения ролей (диспетчер отчетов)](../../reporting-services/security/role-assignments-modify-or-delete.md)  
   
   
-

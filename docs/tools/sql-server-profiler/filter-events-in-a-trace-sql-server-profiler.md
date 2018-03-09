@@ -2,11 +2,13 @@
 title: "Фильтрация событий в трассировке (приложение SQL Server Profiler) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 - traces [SQL Server], events
 ms.assetid: 0fd63573-3b35-4f67-9e1e-ed9aabee11a8
-caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "26"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: e6d6716cfcdf8bd6ce495f8aefe0e0df34fddb1c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 327577ab8656b2af5894c38676c200ea4095edf4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>фильтровать события в трассировке (SQL Server Profiler)
-  Фильтры ограничивают накопление событий в трассировке. Если фильтр не установлен, то на выход трассировки возвращаются все события выбранных классов событий. Установка фильтра трассировки необязательна. Однако фильтр минимизирует затраты ресурсов при трассировке.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Фильтры ограничивают сбор событий в трассировке. Если фильтр не установлен, то на выход трассировки возвращаются все события выбранных классов событий. Установка фильтра трассировки необязательна. Однако фильтр минимизирует затраты ресурсов при трассировке.  
   
  Фильтры для определений трассировки добавляются на вкладке **Выбор событий** в диалоговом окне **Свойства трассировки** или **Свойства шаблона трассировки** .  
   
@@ -61,8 +62,7 @@ ms.lasthandoff: 08/02/2017
   
 -   Если события трассируются из программы **osql** или **sqlcmd** , то всегда добавляйте **%** к фильтрам для столбца данных **TextData** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
-

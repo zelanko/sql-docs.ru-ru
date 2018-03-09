@@ -2,34 +2,32 @@
 title: "Generate (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- GENERATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Generate function
+f1_keywords: GENERATE
+dev_langs: kbMDX
+helpviewer_keywords: Generate function
 ms.assetid: 696a229d-c2f1-47b7-9dca-7b0a6b547d9b
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e78dec45044cc29e375b9116886b183013c74ef1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bc8cf66afbfd56a6d58f360f4c5d17b12f42e19f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="generate-mdx"></a>Generate (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Применяет набор к каждому элементу другого набора и соединяет результирующие наборы. В качестве альтернативы эта функция также возвращает сцепленную строку, созданную путем вычисления строкового выражения по набору.  
   
@@ -57,7 +55,7 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *Разделитель*  
  Допустимый разделитель в виде строкового выражения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если указан второй набор, **формирования** функция возвращает набор, сформированный путем применения кортежей второго набора к каждому кортежу первого набора*,* и последующего объединения результирующих наборов. Если **все** указано, функция сохраняет повторяющиеся значения в результирующем наборе.  
   
  Если строковое выражение указано, **формирования** функция возвращает строку, сформированную путем вычисления выражения указанную строку для каждого кортежа первого набора*,* и последующим объединением результатов. При необходимости строка может содержать разделители, отделяющие результаты в объединенной строке друг от друга.  
@@ -117,7 +115,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>Строковые значения  
+### <a name="string"></a>String  
  В следующем примере показано использование **формирования** для возврата строки:  
   
 ```  
@@ -143,4 +141,3 @@ FROM [Adventure Works]
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

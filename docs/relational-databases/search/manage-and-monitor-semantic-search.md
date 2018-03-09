@@ -2,9 +2,12 @@
 title: "Управление семантическим поиском и наблюдение за ним | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - semantic search [SQL Server], managing
 - semantic search [SQL Server], monitoring
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6749d7f7db6e6e76cd940c166180a7ccd206aaf9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f4a2a8b7d3dff23fe580da64ec083815b897b947
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Управление и наблюдение за семантическим поиском
-  Описывается процесс семантического индексирования и задачи, связанные с наблюдением за индексами и управлением ими.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Описывается процесс семантического индексирования и задачи, связанные с наблюдением за индексами и управлением ими.  
   
 ##  <a name="HowToMonitorStatus"></a> Проверка состояния семантической индексации  
 ### <a name="is-the-first-phase-of-semantic-indexing-complete"></a>Завершен ли первый этап семантического индексирования?
@@ -34,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
  Первый этап индексирования включает заполнение полнотекстового индекса ключевых слов и семантического индекса ключевых фраз, а также извлечение данных о подобии документов.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -61,7 +64,7 @@ GO
   
  Логический размер отображается в количестве страниц индекса.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -72,7 +75,7 @@ GO
 ### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>Каков общий размер полнотекстового и семантического индексов для полнотекстового каталога?  
  Запросите свойство **IndexSize** функции метаданных [FULLTEXTCATALOGPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
 GO  
 ```  
@@ -80,7 +83,7 @@ GO
 ### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>Сколько элементов проиндексированы в полнотекстовом и семантическом индексах для полнотекстового каталога?  
  Запросите свойство **ItemCount** функции метаданных [FULLTEXTCATALOGPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  
 GO  
 ```  
@@ -108,7 +111,7 @@ GO
   
  Если семантическое индексирование отключено и приостановлено, запросы к семантическим данным продолжают успешно выполняться и возвращать ранее проиндексированные данные. Такое поведение не согласуется с поведением полнотекстового поиска.  
   
-```tsql  
+```sql  
 -- To disable semantic indexing on a table  
 USE database_name  
 GO  
@@ -149,4 +152,3 @@ GO
  Дополнительные сведения см. в разделе [Устранение неполадок полнотекстового индексирования](../../relational-databases/search/troubleshoot-full-text-indexing.md).  
   
   
-

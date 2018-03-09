@@ -2,11 +2,13 @@
 title: "Глобализация советы и рекомендации по обеспечению (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +18,20 @@ helpviewer_keywords:
 - time [Analysis Services]
 - month comparisons [Analysis Services]
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 88a6b0a3948e7a29ef97c0bdce85cddcd3f2b6da
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 79c80dd57b6a6ea1257c00dfb95bf1e9a08a5b99
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Советы и рекомендации по глобализации (службы Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
   [!INCLUDE[applies](../includes/applies-md.md)] Только многомерные  
   
  Эти советы и рекомендации помогут улучшить переносимость решений для бизнес-аналитики и избежать ошибок, которые непосредственно связаны с языковыми параметрами и параметрами сортировки.  
@@ -136,7 +139,7 @@ ms.lasthandoff: 09/01/2017
   
 4.  **Воспользуйтесь функцией "Формат", чтобы принудительно использовать определенный формат, не учитывая установленные региональные настройки языка.**  
   
-     В следующем MDX-запросе, заимствованном из записи на форуме, описывается, как использовать формат для возврата дат в определенном формате независимо от базовых региональных параметров.  
+     В следующем запросе MDX, взятом из публикации на форуме, показано использование параметра Format для возврата данных в определенном формате вне зависимости от базовых региональных параметров.  
   
 
     ```  
@@ -156,4 +159,3 @@ ms.lasthandoff: 09/01/2017
  [Написание инструкций Transact-SQL, адаптированных к международному использованию](../relational-databases/collations/write-international-transact-sql-statements.md)  
   
   
-

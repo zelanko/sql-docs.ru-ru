@@ -1,37 +1,38 @@
 ---
-title: "Создание мобильных отчетов служб Reporting Services | Документы Microsoft"
+title: "Создание мобильных отчетов служб Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7fce4526bb296113aedb62e5dcf94b50e198210f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 73de345a79e96800bf194c73bc17d70de7bd4055
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Создание мобильных отчетов служб Reporting Services
-SQL Server Mobile Report Publisher можно быстро создать мобильные отчеты SQL Server 2016 Reporting Services, которые масштабируются в соответствии с любой размер экрана в рабочей области конструирования с настраиваемыми строками и столбцами и сетки гибкими элементами мобильных отчетов.  
+С помощью издателя мобильных отчетов для Microsoft SQL Server в рабочей области конструирования с настраиваемыми строками и столбцами сетки, а также гибкими элементами мобильных отчетов можно быстро создавать мобильные отчеты, которые масштабируются в соответствии с любым размером экрана.  
   
-При первом создании мобильных отчетов SQL Server Mobile Report Publisher можно установить на локальном компьютере на веб-портале Reporting Services. Его также можно установить из [Центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=733527). Впоследствии вы сможете начинать работу и на веб-портале, и локально.   
+Прежде чем начать создание мобильного отчета впервые, можно установить издатель мобильных отчетов для SQL Server на локальном компьютере с веб-портала служб Reporting Services. Его также можно установить из [Центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkID=733527). Впоследствии вы сможете начинать работу и на веб-портале, и локально.   
     
-1. На верхней панели веб-портале Reporting Services, выберите **New** > **мобильным отчетом**.  
+1. На верхней панели веб-портала Reporting Services выберите **Создать** > **Мобильный отчет**.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      
-2. На **макета** в издателе мобильных отчетов выберите навигатора, датчика, диаграммы, карты или сетки данных и перетащите его в бланк запроса.  
+2. На вкладке **Макет** в издателе мобильных отчетов выберите значок навигатора, датчика, диаграммы, карты или сетки данных и перетащите его в бланк.  
   
 3. Захватите правый нижний угол элемента и придайте ему необходимый размер.  
   
@@ -69,12 +70,11 @@ SQL Server Mobile Report Publisher можно быстро создать моб
   
 11. Сохраните отчет. В верхнем левом углу щелкните значок сохранения, а затем выберите **Save Locally** (Сохранить локально) или **Save to Server**(Сохранить на сервер).  
   
-   Чтобы сохранить его на сервер, требуется доступ на сервере отчетов SQL Server 2016 Reporting Services.  
+   Чтобы сохранить отчет на сервере, требуется доступ к серверу отчетов служб SQL Server 2016 Reporting Services.  
      
-   ### <a name="see-also"></a>См. также:  
+   ### <a name="see-also"></a>См. также раздел  
      
 -   [Создание и публикация мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -   [Создание макета мобильного отчета служб Reporting Services для телефона или планшета](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)  
   
    
-

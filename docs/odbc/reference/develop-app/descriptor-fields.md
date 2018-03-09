@@ -3,10 +3,12 @@ title: "Поля дескриптора | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - header fields [ODBC]
 - record fields [ODBC]
 ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ed9b26cf9af0bd6b0a0a81faad62e446f01f03fd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 014a79813f5755e422b5e854b98f737d59a280a6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="descriptor-fields"></a>Поля дескриптора
 Дескрипторы содержат *заголовок* и *записи* поля, которые полностью описать столбцов или параметров.  
@@ -73,9 +74,8 @@ ms.lasthandoff: 09/09/2017
   
 -   [Число записей](../../../odbc/reference/develop-app/record-count.md)  
   
--   [Связанный дескриптор записи](../../../odbc/reference/develop-app/bound-descriptor-records.md)  
+-   [Связанные записи дескриптора](../../../odbc/reference/develop-app/bound-descriptor-records.md)  
   
--   [Отложенных полей](../../../odbc/reference/develop-app/deferred-fields.md)  
+-   [Отложенные поля](../../../odbc/reference/develop-app/deferred-fields.md)  
   
 -   [Проверка согласованности](../../../odbc/reference/develop-app/consistency-check.md)
-

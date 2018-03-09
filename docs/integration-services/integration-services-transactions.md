@@ -1,10 +1,13 @@
 ---
-title: "Транзакции служб Integration Services | Документы Microsoft"
+title: "Транзакции служб Integration Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ helpviewer_keywords:
 - tasks [Integration Services], transactions
 - transactions [Integration Services]
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
-caps.latest.revision: 51
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7355d98c342052997441c2013e056b0453962c5a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 83125af2f2f85c825aae5b594767fa421af2a656
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-transactions"></a>Транзакции служб Integration Services
   Пакеты используют транзакции для связывания выполняемых в базе данных задачами операций в атомарные объекты, и, таким образом, сохраняют целостность данных. Все типы контейнеров служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (пакеты, контейнеры циклов по элементам и по каждому элементу, контейнеры последовательности, а также серверы задач, которые содержат каждую задачу) могут быть настроены для использования транзакций. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют три параметра для настройки транзакций: **NotSupported**, **Supported**и **Required**.  
@@ -108,7 +110,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="multiple-transactions-in-a-package"></a>Несколько транзакций в пакете
 В одном пакете служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] может содержаться несколько самостоятельных транзакций. Каждый раз, когда контейнер в середине иерархии вложенных контейнеров не поддерживает транзакции, контейнеры выше и ниже по иерархии начинают отдельные транзакции, если настроены для поддержки транзакций. Транзакции фиксируются или откатываются, начиная с самой глубокой задачи в иерархии вложенных контейнеров пакета. Однако после фиксации вложенной транзакции она не откатывается, если внешняя транзакция прервана.  
   
-### <a name="example-of-multiple-transactions-in-a-package"></a>Пример множественных транзакций в пакете 
+### <a name="example-of-multiple-transactions-in-a-package"></a>Пример нескольких транзакций в пакете 
  Например, пакет включает контейнер последовательности, содержащий два контейнера «цикл по каждому элементу», и каждый контейнер включает две задачи «Выполнение SQL». Контейнеры «цикл по каждому элементу» не поддерживают транзакции, а контейнер последовательности и задача «Выполнение SQL» поддерживают. В данном примере каждая задача «Выполнение SQL» будет выполнять свою собственную транзакцию и не будет подвергаться откату в случае, если транзакция в задаче последовательности окажется прерванной.  
   
  Свойства TransactionOption контейнера последовательности, контейнера "цикл по каждому элементу" и задач "Выполнение SQL" установлены следующим образом:  
@@ -134,7 +136,7 @@ ms.lasthandoff: 09/26/2017
   
  Контейнеры и задачи в дочернем пакете не могут присоединяться к родительской транзакции пакетов, если только к ней не присоединяется сам дочерний пакет.  
   
-### <a name="example-of-inherited-transactions"></a>Пример наследуемые транзакции  
+### <a name="example-of-inherited-transactions"></a>Пример унаследованных транзакций  
  Все три пакета, показанные на приведенной ниже диаграмме, используют транзакции. Каждый пакет содержит несколько задач. Чтобы выделить поведение транзакций, показаны только задачи «Выполнение пакета». Пакет A запускает пакеты B и C. В свою очередь пакет B запускает пакеты D и E, а пакет C запускает пакет F.  
   
  Пакеты и задачи имеют следующие атрибуты транзакции:  
@@ -145,7 +147,7 @@ ms.lasthandoff: 09/26/2017
   
 -   Параметру**TransactionOption** присвоено значение **NotSupported** в пакете E, а также в задачах выполнения пакетов C и E.  
   
- ![Поток унаследованных транзакций](../integration-services/media/mw-dts-executepack.gif "поток унаследованных транзакций")  
+ ![Поток унаследованных транзакций](../integration-services/media/mw-dts-executepack.gif "Поток унаследованных транзакций")  
   
  Наследовать транзакции от родительских пакетов могут только пакеты B, D и F.  
   
@@ -162,9 +164,8 @@ ms.lasthandoff: 09/26/2017
   
 -   Запись в блоге, [Как использовать транзакции в службах SQL Server Integration Services SSIS](http://go.microsoft.com/fwlink/?LinkId=157783), на сайте www.mssqltips.com  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наследуемые транзакции](http://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)   
  [Множественные транзакции](http://msdn.microsoft.com/library/c3664a94-be89-40c0-a3a0-84b74a7fedbe)  
   
   
-

@@ -2,32 +2,32 @@
 title: "Определение режима сервера служб Analysis Services экземпляр | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
-caps.latest.revision: 32
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: c51a35297b1a079ec026c6bcd8ac0fbd0ea7169e
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 74951b1fd998740bff623f93685f7ee98155c595
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Определение режима работы сервера экземпляра служб Analysis Services
-  Службы Analysis Services можно установить в одном из трех серверных режимов: многомерные данные и интеллектуальный анализ данных (по умолчанию), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint и табличный режим. Режим сервера экземпляра служб Analysis Services определяется во время установки, когда пользователь выбирает параметры для установки сервера.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Службы Analysis Services можно установить в одном из трех серверных режимов: многомерные данные и интеллектуальный анализ данных (по умолчанию), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint и табличный режим. Режим сервера экземпляра служб Analysis Services определяется во время установки, когда пользователь выбирает параметры для установки сервера.  
   
- Режим сервера определяет тип создаваемого и развертываемого решения. Если программное обеспечение сервера не было установлено и необходимо узнать, в каком режиме установлен сервер, режим можно определить, следуя указаниям в этом разделе. Дополнительные сведения о доступных функциях в определенном режиме см. в разделе [Сравнение табличных и многомерных решений (службы SSAS)](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
+ Режим сервера определяет тип создаваемого и развертываемого решения. Если программное обеспечение сервера не было установлено и необходимо узнать, в каком режиме установлен сервер, режим можно определить, следуя указаниям в этом разделе. Дополнительные сведения о доступных функциях в определенном режиме см. в разделе [сравнение табличных и многомерных решений ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
  Если режим установленного сервера не нужен, следует удалить и снова установить программное обеспечение, выбрав нужный режим. Также можно установить дополнительный экземпляр служб Analysis Services на том же компьютере, чтобы использовать несколько экземпляров в разных режимах.  
   
@@ -59,10 +59,9 @@ ms.lasthandoff: 09/01/2017
  [Установка служб Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md)   
  [Установка служб Analysis Services в многомерном режиме и режиме интеллектуального анализа данных](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
  [Установка Power Pivot для SharePoint 2010](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
- [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
- [Решения табличных моделей &#40; Табличные службы SSAS &#41;](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)   
- [Решения многомерной модели (службы SSAS)](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Подключитесь к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
+ [Решения табличных моделей](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)   
+ [Решения многомерной модели ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [Модели интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   
-

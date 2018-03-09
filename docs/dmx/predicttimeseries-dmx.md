@@ -2,18 +2,17 @@
 title: "PredictTimeSeries (расширения интеллектуального анализа данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- PredictTimeSeries
-dev_langs:
-- DMX
+f1_keywords: PredictTimeSeries
+dev_langs: DMX
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - time series [Analysis Services]
@@ -21,20 +20,19 @@ helpviewer_keywords:
 - REPLACE_MODEL_CASES parameter
 - PredictTimeSeries function
 ms.assetid: 85c596be-a7f4-499b-8d36-7e67c2647b6c
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: b1b631ab035bf4c444aa1c6b449eaa87e3305c91
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d6770961f4e48ca2f6d96aecb4d51e679af396d0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает прогнозируемые будущие значения для временного ряда данных. Данные временных рядов являются непрерывными и могут храниться во вложенной таблице или в таблице вариантов. **PredictTimeSeries** функция всегда возвращает вложенную таблицу.  
   
@@ -85,7 +83,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Объект \< *таблицы выражение*>.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Алгоритма временных рядов не поддерживает историческое прогнозирование при использовании инструкции PREDICTION JOIN для добавления новых данных.  
   
  В инструкции PREDICTION JOIN процесс прогнозирования всегда начинается на временном шаге сразу после окончания первоначальной обучающей последовательности. Так происходит даже при добавлении новых данных. Таким образом  *n*  параметр и *n-start* значения параметра должны быть целыми числами больше 0.  
@@ -217,7 +215,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
  Количество: M200 Europe. EXTEND_MODEL_CASES:  
   
-|$TIME|Количество|  
+|$TIME|количество|  
 |-----------|--------------|  
 |7/25/2008 0:00|10|  
 |8/25/2008 0:00|15|  
@@ -227,7 +225,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
  Количество: M200 Pacific. EXTEND_MODEL_CASES:  
   
-|$TIME|Количество|  
+|$TIME|количество|  
 |-----------|--------------|  
 |7/25/2008 0:00|46|  
 |8/25/2008 0:00|44|  
@@ -275,4 +273,3 @@ OR [Model Region] = 'M200 North America'
  [Прогноз &#40; расширений интеллектуального анализа данных &#41;](../dmx/predict-dmx.md)  
   
   
-

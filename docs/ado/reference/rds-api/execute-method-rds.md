@@ -3,7 +3,7 @@ title: "Выполнить метод (RDS) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
-caps.latest.revision: 20
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: be0dfb94d6681af706d75437143dcde28e63587d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 68796c4fa28d3ee553ccf7c44e9bbd9850f32fb7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute-method-rds"></a>Выполнить метод (RDS)
 Выполняет запрос и создает набор записей ADO для использования в ADO 2.5 и более поздней версии.  
@@ -48,7 +47,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *HandlerString*  
  Двойная строка, определяющая обработчик для использования с этого выполнения. Строка состоит из двух частей. Первая часть содержит имя обработчика для использования (ProgID). Вторая часть содержит аргументы, передаваемые обработчику. Сведения о способ интерпретации строки аргументов характерные для каждого обработчика. Эти две части разделяются запятой в строке первого экземпляра. Строка аргументов, может содержать дополнительные запятые. Аргументы являются необязательными.  
   
- *Строка запроса*  
+ *QueryString*  
  Команда в язык команд, поддерживаемых поставщиком OLE DB, указанные в строке подключения. Для поставщиков, основанных на SQL *QueryString* может содержать инструкцию Transact-SQL команду, но для поставщиков, отличных от SQL (например, MSDataShape) это может быть [!INCLUDE[tsql](../../../includes/tsql_md.md)] инструкция запроса.  
   
  Если используется обработчик обработчик можно изменить или заменить указанное здесь значение. Например, обработчик обычно заменяет *QueryString* со строкой запроса из его INI-файла. По умолчанию используется файл Msdfmap.ini.  
@@ -85,11 +84,10 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *pInformation*  
  Указатель на сведения ошибки, возвращенной Execute. Если значение равно NULL, возвращается информация об ошибках.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  *HandlerString* параметр может иметь значение null. Что происходит в этом случае зависит от того, как настроен сервер служб удаленных рабочих СТОЛОВ. Обработчик строку «MSDFMAP.handler» указывает, что обработчик предоставленный корпорацией Майкрософт (Msdfmap.dll) следует использовать. Обработчик строку «MASDFMAP.handler,sample.ini» указывает, должны использоваться обработчик Msdfmap.dll и, аргумент «sample.ini» должен передаваться обработчику. Аргумент MSDFMAP.dll интерпретирует как направление использования sample.ini для проверки строк соединения и запроса.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

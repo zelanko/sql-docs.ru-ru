@@ -2,32 +2,29 @@
 title: "RESTORE, команда (TMSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 360a1567-67ae-459d-8865-9a2bef8d4186
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9c237207731fc7479ab45a0c86c22d13caf5f140
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1b03fce8372619208cc6f065ff4f2cf805efb5fb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="restore-command-tmsl"></a>RESTORE, команда (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Восстанавливает базу данных служб Analysis Services из файла резервной копии.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Восстанавливает базу данных служб Analysis Services из файла резервной копии.  
   
 ## <a name="request"></a>Запрос  
   
@@ -64,8 +61,8 @@ ms.lasthandoff: 09/01/2017
   
 ||||  
 |-|-|-|  
-|**Свойство**|**Default**|**Description**|  
-|базой данных|[Обязательно]|Имя объекта базы данных для восстановления.|  
+|**Свойство**|**Default**|**Описание**|  
+|База данных|[Обязательно]|Имя объекта базы данных для восстановления.|  
 |файл|[Обязательно]|Имя и путь к файлу резервной копии.|  
 |password|Пустой|Пароль, используемый для расшифровки файла резервной копии.|  
 |allowOverwrite|False|Логическое значение, если значение равно true, указывает, где уже существует файл резервной копии будет перезаписан. в противном случае — значение false.|  
@@ -110,4 +107,3 @@ ms.lasthandoff: 09/01/2017
  [Создание и восстановление резервных копий баз данных служб Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   
-

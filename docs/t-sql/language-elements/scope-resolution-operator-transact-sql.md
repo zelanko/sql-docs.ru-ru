@@ -1,10 +1,13 @@
 ---
-title: "Оператор разрешения (Transact-SQL) области | Документы Microsoft"
+title: ":: (Разрешение области действия) (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,22 +17,21 @@ applies_to:
 dev_langs:
 - TSQL
 ms.assetid: 764d8f91-957b-4037-997b-a9b6b533c504
-caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f03f0c8274d52f61e5db2d75fe21e3fe90a4ce26
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a08432ae682cea4156b2090837e2f7b4d85c42b3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="scope-resolution-operator-transact-sql"></a>Оператор разрешения области (Transact-SQL)
+# <a name="-scope-resolution-transact-sql"></a>:: (Разрешение области действия) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Оператор разрешения области **::** предоставляет доступ к статическим элементам составного типа данных. Составной тип данных содержит несколько простых типов данных и методов.  
+  Оператор разрешения области **::** предоставляет доступ к статическим элементам составного типа данных. Составной тип данных является версией, которая содержит несколько простых типов данных и методов, таких как встроенные типы среды CLR и пользовательские SQLCLR User-Defined типы (UDT).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере показано, как применять оператор разрешения области для доступа к элементу `GetRoot()` типа данных `hierarchyid`.  
@@ -44,8 +46,7 @@ PRINT @hid.ToString();
   
  `/`  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
-

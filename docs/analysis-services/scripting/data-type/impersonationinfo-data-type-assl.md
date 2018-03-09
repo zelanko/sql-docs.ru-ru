@@ -2,38 +2,34 @@
 title: "Тип данных ImpersonationInfo (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ImpersonationInfo Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ImpersonationInfo Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ImpersonationInfo data type
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ImpersonationInfo data type
 ms.assetid: 8a6b55fe-1f02-4519-bdc2-4553b576b2f3
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f651898ff723f55b4d3c32ad31f462144d28946c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 31b65b01854f1ae5b4358bcb310eeaff3d6236be
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="impersonationinfo-data-type-assl"></a>Тип данных ImpersonationInfo (ASSL)
-  Определяет примитивный тип данных, представляющий сведения, которые используются для олицетворения пользователя.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет тип-примитив, представляющий сведения, используемые для олицетворения пользователя.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -49,7 +45,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="data-type-characteristics"></a>Характеристики типа данных  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Базовый тип данных|None|  
 |Производные типы данных|None|  
@@ -66,4 +62,3 @@ ms.lasthandoff: 09/01/2017
  [Службы Analysis Services сценариев типы данных XML в &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

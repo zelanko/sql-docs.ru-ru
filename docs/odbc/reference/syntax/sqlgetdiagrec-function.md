@@ -3,33 +3,30 @@ title: "Функции SQLGetDiagRec | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetDiagRec
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetDiagRec
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetDiagRec
-helpviewer_keywords:
-- SQLGetDiagRec function [ODBC]
+f1_keywords: SQLGetDiagRec
+helpviewer_keywords: SQLGetDiagRec function [ODBC]
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 34aa67ed374f525f6195403b299500019192c19a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 591664f329f4c7feeb24fff52b809dba567d0b80
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetdiagrec-function"></a>Функция Sqlgetdescrec
 **Соответствия**  
@@ -143,5 +140,4 @@ SQLRETURN SQLGetDiagRec(
 ## <a name="see-also"></a>См. также:  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовка ODBC](../../../odbc/reference/install/odbc-header-files.md)   
- [Образец программы на ODBC](../../../odbc/reference/sample-odbc-program.md)
-
+ [Образец программы ODBC](../../../odbc/reference/sample-odbc-program.md)

@@ -3,8 +3,11 @@ title: "BufferWithCurves (тип данных geometry) | Документы Mic
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithCurves method (geometry)
 ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a88ea4010ec1cfd48661b34e990634fe371141f3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: d248c248d4b5d9b4a4e90954e01f15841d305319
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (тип данных geometry)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Возвращает **geometry** экземпляр, представляющий набор всех точек, расстояние которых от вызывающего **geometry** экземпляр меньше или равно *расстояние* параметра.  
   
@@ -39,7 +41,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *расстояние*  
+ *distance*  
  — **Float** указывает максимальное расстояние, на котором точки, составляющие буфер может быть из **geometry** экземпляра.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
@@ -56,7 +58,7 @@ ms.lasthandoff: 09/01/2017
   
 -   **Значение NULL** передается методу, например`@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  На следующем рисунке показан пример экземпляра объекта геометрии (geometry), возвращенного этим методом.  
   
  ![BufferedCurve](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
@@ -160,7 +162,6 @@ ms.lasthandoff: 09/01/2017
   
  Первые два **ВЫБЕРИТЕ** инструкции возвращают `GeometryCollection` экземпляра, так как параметр *расстояние* меньше или равен 1/2 расстояния между двумя точками (1 1) и (1-4). Третий **ВЫБЕРИТЕ** инструкция возвращает `CurvePolygon` экземпляра, так как помещенные в буфер экземпляры двух точек (1 1) и (1-4) перекрываются.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
  
-

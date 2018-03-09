@@ -2,11 +2,13 @@
 title: "Справка F1 проводника служебной программы | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - management
 - data-tier application
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
-caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "8"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3bdce7c18b7097217152a9c57964a2f92eb02ec6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 46b3d92d8c1f6a720eb39a701aca50a8bc2733b9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="utility-explorer-f1-help"></a>Справка F1 проводника служебной программы
-  В следующих разделах описываются функциональные возможности служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и связанные с ней операции.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Следующие разделы описывают функциональные возможности служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и связанные с ней операции.  
   
   ## <a name="utility-dashboard-sql-server-utility"></a>Панель мониторинга программ (служебная программа SQL Server)
  Чтобы просмотреть данные на панели мониторинга служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выберите верхний узел дерева обозревателя программ, который называется "Utility<Имя_UCP>\\(Имя_компьютера\UCP)". На панели мониторинга отображаются сводка и подробные данные всех управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и всех приложений уровня данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы обновить данные на панели мониторинга, щелкните правой кнопкой мыши верхний узел в дереве обозревателя программ и выберите команду **Обновить**.  
@@ -127,11 +128,11 @@ ms.lasthandoff: 08/03/2017
  Режим списка  
  В представлении списка в верхней панели отображаются данные об отдельных приложениях уровня данных. Значки состояния исправности показывают общее состояние каждого приложения уровня данных по категории использования.  
   
--   Зеленый флажок — ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") — число приложений уровня данных, которые не нарушают политики использования ресурсов. Ресурсы используются оптимально.  
+-   Зеленый флажок — ![](../../relational-databases/manage/media/well-utilized.gif "Используются оптимально") — число приложений уровня данных, которые не нарушают политики использования ресурсов. Ресурсы используются оптимально.  
   
--   Зеленая стрелка вниз — ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") — ресурсы используются недостаточно.  
+-   Зеленая стрелка вниз — ![](../../relational-databases/manage/media/utility-down-arrow.gif "Стрелка вниз") — ресурсы используются недостаточно интенсивно.  
   
--   Красная стрелка вверх — ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") — ресурсы используются слишком интенсивно.  
+-   Красная стрелка вверх — ![](../../relational-databases/manage/media/utility-up-arrow.gif "Стрелка вверх") — ресурсы используются слишком интенсивно.  
   
  Последовательность столбцов в режиме списка можно менять, перетаскивая столбцы вправо или влево. Столбцы в режиме списка можно добавить или удалить, щелкнув правой кнопкой мыши заголовки столбцов и выделив или сняв выделение. В контекстном меню также доступны параметры сортировки. Сортировку можно активировать и щелчком по имени столбца.  
   
@@ -269,11 +270,11 @@ ms.lasthandoff: 08/03/2017
   
  Значки состояния исправности показывают общее состояние каждого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по категории использования.  
   
--   Зеленый флажок — ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") — число управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые не нарушают политики использования ресурсов. Ресурсы используются оптимально.  
+-   Зеленый флажок — ![](../../relational-databases/manage/media/well-utilized.gif "Используются оптимально") — число управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые не нарушают политики использования ресурсов. Ресурсы используются оптимально.  
   
--   Зеленая стрелка вниз — ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") — ресурсы используются недостаточно.  
+-   Зеленая стрелка вниз — ![](../../relational-databases/manage/media/utility-down-arrow.gif "Стрелка вниз") — ресурсы используются недостаточно интенсивно.  
   
--   Красная стрелка вверх — ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") — ресурсы используются слишком интенсивно.  
+-   Красная стрелка вверх — ![](../../relational-databases/manage/media/utility-up-arrow.gif "Стрелка вверх") — ресурсы используются слишком интенсивно.  
   
  Последовательность столбцов в режиме списка можно менять, перетаскивая столбцы вправо или влево. Столбцы в режиме списка можно добавить или удалить, щелкнув правой кнопкой мыши заголовки столбцов и выделив или сняв выделение. В контекстном меню также доступны параметры сортировки. Сортировку можно активировать и щелчком по имени столбца.  
   
@@ -496,7 +497,7 @@ ms.lasthandoff: 08/03/2017
   
  Каталог UMDW можно настроить: <системный диск\<:\Program Files\Microsoft SQL Server\MSSQL10_50.<имя_UCP>\MSSQL\Data\\, где \<системный диск> — это чаще всего диск C:\. Файл журнала, UMDW_\<GUID>_LOG, находится в том же каталоге.  
   
-> **ПРИМЕЧАНИЕ.** Расположение файла UMDW (sysutility_mdw) можно изменить путем отсоединения и присоединения или с помощью инструкции ALTER DATABASE. Рекомендуется использовать инструкцию ALTER DATABASE. Дополнительные сведения см. в статье [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
+> **ПРИМЕЧАНИЕ.** Расположение файла UMDW (sysutility_mdw) можно изменить путем отсоединения и присоединения или с помощью инструкции ALTER DATABASE. Рекомендуется использовать инструкцию ALTER DATABASE. Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
   
  Вернуться к значениям по умолчанию  
  Чтобы изменить настройки на этой вкладке на значения по умолчанию, нажмите кнопку **Восстановить значения по умолчанию** , затем кнопку **Применить**.  
@@ -518,4 +519,3 @@ ms.lasthandoff: 08/03/2017
  [Устранение неполадок служебной программы SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   
-

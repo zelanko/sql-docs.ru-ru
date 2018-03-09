@@ -3,7 +3,7 @@ title: "Коллекция параметров, пример команды с�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Command property [ADOX], Visual Basic example
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d746f1f1ad92a215440ac9b1d3a3e74a24212df8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b927cf4ae288fce370f20d122c93ba72d79d454d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Коллекция параметров, пример команды свойства (Visual Basic)
 Следующий код демонстрирует использование [команда](../../../ado/reference/adox-api/command-property-adox.md) свойство с [команда](../../../ado/reference/ado-api/command-object-ado.md) объект для получения значений параметров для процедуры.  
@@ -83,10 +82,9 @@ End Sub
 ' EndParametersVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Свойство команды (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
  [Объект процедуры (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Коллекция процедур (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
-
+ [Коллекция Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

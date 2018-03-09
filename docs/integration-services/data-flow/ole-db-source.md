@@ -1,10 +1,13 @@
 ---
-title: "Источник OLE DB | Документы Microsoft"
+title: "Источник OLE DB | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -18,17 +21,16 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: 69
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 995d2688f0e4f8ab9af751c3521e45cb0626451f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: e659322d66c01081c664850366a6cc4abf190d16
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-source"></a>Источник OLE DB
   Источник OLE DB извлекает сведения из множества поддерживающих технологию OLE DB реляционных баз данных с помощью таблицы базы данных, представления или команды SQL. Например, источник OLE DB может извлекать данные из таблиц [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -51,7 +53,7 @@ ms.lasthandoff: 08/17/2017
   
  При использовании параметризированного запроса можно сопоставить переменные с параметрами, чтобы задать значения для отдельных параметров в инструкциях SQL.  
   
- Данный источник для подключения к источнику данных использует диспетчер соединений OLE DB, в котором задается используемый поставщик OLE DB. Дополнительные сведения см. в статье [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+ Данный источник для подключения к источнику данных использует диспетчер соединений OLE DB, в котором задается используемый поставщик OLE DB. Дополнительные сведения см. в разделе [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
  Проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] также предоставляет объект источника данных, из которого можно создать диспетчер соединений OLE DB, делая источники данных и представления источников данных доступными для источника OLE DB.  
   
@@ -101,11 +103,11 @@ ms.lasthandoff: 08/17/2017
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Извлечение данных с помощью источника OLE DB](../../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md)  
   
@@ -113,7 +115,7 @@ ms.lasthandoff: 08/17/2017
   
 -   [Установление свойств компонента потока данных](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Сортировка данных для преобразований «Слияние» и «Соединение слиянием»](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>См. также  
  Статья Wiki [Соединители служб SSIS с Oracle](http://go.microsoft.com/fwlink/?LinkId=220670)на сайте social.technet.microsoft.com.  
@@ -129,7 +131,7 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  Свойство **CommandTimeout** источника OLE DB недоступно в диалоговом окне **Редактор источника OLE DB**, но может быть установлено с помощью **расширенного редактора**. Дополнительные сведения о данном свойстве см. в подразделе «Источник Excel» раздела [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
   
-### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>Откройте редактор источника OLE DB (страница «Диспетчер соединений»)  
+### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>Откройте редактор источника OLE DB (страницу диспетчера соединений)  
   
 1.  Добавьте источник OLE DB к пакету служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -138,7 +140,7 @@ ms.lasthandoff: 08/17/2017
 3.  Щелкните **Диспетчер соединений**.  
   
 ### <a name="static-options"></a>Статические параметры  
- **диспетчер соединений OLE DB**  
+ **Диспетчер соединений OLE DB**  
  Выберите из списка существующий диспетчер соединений или создайте новое соединение, нажав кнопку **Создать**.  
   
  **Создать**  
@@ -158,7 +160,7 @@ ms.lasthandoff: 08/17/2017
  Осуществляйте предварительный просмотр результатов в диалоговом окне **Просмотр данных** . В окне**Предварительный просмотр** может отображаться до 200 строк.  
   
 > [!NOTE]  
->  При предварительном просмотре столбцы с определяемым пользователем типом данных CLR не содержат данных. Вместо этого значения \<значение слишком велико для отображения > или System.Byte []. Первое отображается при доступе к источнику данных с помощью поставщика SQL OLE DB, второе — с помощью поставщика собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+>  При предварительном просмотре столбцы с определяемым пользователем типом данных CLR не содержат данных. Вместо этого отображается текст \<значение слишком велико для отображения> или System.Byte[]. Первое отображается при доступе к источнику данных с помощью поставщика SQL OLE DB, второе — с помощью поставщика собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="data-access-mode-dynamic-options"></a>Динамические параметры режима доступа к данным  
   
@@ -221,7 +223,7 @@ ms.lasthandoff: 08/17/2017
  **Усечение**  
  Укажите, что нужно сделать при усечении: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
- **Description**  
+ **Описание**  
  Просмотреть описание ошибки.  
   
  **Присвоить указанное значение выбранным ячейкам**  
@@ -232,8 +234,7 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="see-also"></a>См. также:  
  [Назначение «OLE DB»](../../integration-services/data-flow/ole-db-destination.md)   
- [Службы Integration Services &#40; Службы SSIS &#41; Переменные](../../integration-services/integration-services-ssis-variables.md)   
+ [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md)   
  [Поток данных](../../integration-services/data-flow/data-flow.md)  
   
   
-

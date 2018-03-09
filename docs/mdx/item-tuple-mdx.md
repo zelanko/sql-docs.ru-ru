@@ -2,34 +2,32 @@
 title: "Item (кортеж) (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- ITEM
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Item function
+f1_keywords: ITEM
+dev_langs: kbMDX
+helpviewer_keywords: Item function
 ms.assetid: 9ee7af55-d5b5-47c8-a480-ef23878306af
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 9c7e727908bbd2265cab05b9d1aa2f55cc7b9ebd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6e9411f3e4404a29ff0908ff53b0e0fb443b1703
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="item-tuple-mdx"></a>Item (кортеж) (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает кортеж из набора.  
   
@@ -54,10 +52,10 @@ Set_Expression.Item(String_Expression1 [ ,String_Expression2,...n])
  *Выражение String_Expression2*  
  Допустимое строковое выражение, обычно являющееся кортежем в форме строки.  
   
- *Индекс*  
+ *Index*  
  Допустимое числовое выражение, указывающее кортеж по его позиции в возвращаемом наборе.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **Элемент** функция возвращает кортеж из указанного набора. Существует три способа вызвать **элемент** функции:  
   
 -   Если одно строковое выражение указано, **элемент** функция возвращает заданный кортеж. Пример: "([2005].Q3, [Store05])".  
@@ -94,4 +92,3 @@ FROM [Adventure Works]
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

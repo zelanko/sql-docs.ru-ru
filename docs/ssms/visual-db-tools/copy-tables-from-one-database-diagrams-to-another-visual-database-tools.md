@@ -3,30 +3,31 @@ title: "Копирование таблиц из одних диаграмм б�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - copying tables
 - duplicating tables
 ms.assetid: 155a4f09-9321-4887-a7d4-aa2ce6b51277
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 655a9fa107e3ea6192b0510d9b955d25250fb95e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4a64ef158777c4f5b5bfc091feb59a70b013973d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="copy-tables-from-one-database-diagrams-to-another-visual-database-tools"></a>Копирование таблиц из одних диаграмм базы данных в другие (визуальные инструменты для баз данных)
-Можно скопировать таблицу из одной диаграммы базы данных в другую в той же самой базе данных.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Можно скопировать таблицу из одной диаграммы базы данных в другую в той же самой базе данных.  
   
 Копирование таблицы из одной диаграммы базы данных в другую диаграмму добавляет ссылку на таблицу во второй диаграмме. Таблица не будет продублирована в базе данных. Например, при копировании таблицы `authors` из одной диаграммы базы данных в другую каждая диаграмма будет ссылаться на одну и ту же таблицу `authors` в базе данных.  
   
@@ -48,4 +49,3 @@ ms.lasthandoff: 08/18/2017
 [Работа с диаграммами баз данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Добавление таблиц в диаграммы (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
   
-

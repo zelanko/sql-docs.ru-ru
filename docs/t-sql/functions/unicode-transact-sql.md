@@ -3,8 +3,11 @@ title: "Юникод (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - UNICODE function
 - Unicode [SQL Server], UNICODE function
 ms.assetid: 5e3c40b2-8401-4741-9f2a-bae70eaa4da6
-caps.latest.revision: 35
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 60d3a635b15cd1413b3c7ba6db145cd5717b7e41
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: ce87bcab037ff99b7eaa03a443727db17db19b74
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает целочисленное значение, соответствующее стандарту Юникод, для первого символа входного выражения.  
   
@@ -45,13 +47,13 @@ UNICODE ( 'ncharacter_expression' )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **"** *ncharacter_expression* **"**  
+ **'** *ncharacter_expression* **'**  
  — **Nchar** или **nvarchar** выражение.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **int**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], более ранних, чем [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] функция Юникода возвращала кодовую точку UCS-2 в диапазоне от 0 до 0xFFFF. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версиях при использовании параметров сортировки SC функция UNICODE возвращает кодовую точку UCS-16 в диапазоне от 0 до 0x10FFFF.  
   
 ## <a name="examples"></a>Примеры  
@@ -143,11 +145,12 @@ Character # Unicode Character UNICODE Value
 12          4                 52  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
+ [ASCII &#40; Transact-SQL &#41;](../../t-sql/functions/ascii-transact-sql.md)  
+ [ДИА &#40; Transact-SQL &#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR &#40; Transact-SQL &#41;](../../t-sql/functions/nchar-transact-sql.md)   
  [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
-
 

@@ -3,7 +3,7 @@ title: "Решения для удаленного доступа | Докуме
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - RDS [ADO]
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2377f7a33f8426d7081806980618c432a56bba42
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9030af4a02555aac77428ba9490ee72e87b93681
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="solutions-for-remote-data-access"></a>Решения для удаленного доступа к данным
 ## <a name="the-issue"></a>Проблема  
@@ -50,11 +49,10 @@ ms.lasthandoff: 09/09/2017
 ## <a name="the-solution"></a>Решение  
  Служб удаленных рабочих СТОЛОВ определяет модель программирования — последовательность действий, необходимых для получения доступа к и обновление источника данных, чтобы получить доступ к данным через посредника, например Internet Information Services (IIS). Модель программирования перечислены все функциональные возможности RDS.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Модель программирования основных служб удаленных рабочих СТОЛОВ](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   
  [Сценарии служб удаленных рабочих СТОЛОВ](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Учебник служб удаленных рабочих СТОЛОВ](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Использование RDS и безопасность](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
 
 

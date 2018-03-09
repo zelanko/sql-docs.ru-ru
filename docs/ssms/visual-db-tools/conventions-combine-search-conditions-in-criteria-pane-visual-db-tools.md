@@ -3,10 +3,12 @@ title: "Обозначения для объединения условий по
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - AND, Criteria pane
 - multiple AND clauses
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 8d99326f7d045aff95bf753d7f1ff68826f313af
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c2115ca07d5e726a4bdb1fc3bba5ba8f0d202277
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Обозначения для условий комбинированного поиска на панели критериев (визуальные инструменты для баз данных)
-Предусмотрена возможность создания запросов, включающих любое количество условий поиска, соединенных любым количеством операторов AND и OR. Запрос с сочетанием предложений AND и OR может стать сложным, поэтому важно знать, как такой запрос интерпретируется при выполнении и представляется на [панели критериев](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) и [панели SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Предусмотрена возможность создания запросов, включающих любое количество условий поиска, соединенных любым количеством операторов AND и OR. Запрос с сочетанием предложений AND и OR может стать сложным, поэтому важно знать, как такой запрос интерпретируется при выполнении и представляется на [панели критериев](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) и [панели SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
 > [!NOTE]  
 > Дополнительные сведения об условиях поиска, которые содержат только один оператор AND или OR, см. в разделах [Указание нескольких условий поиска для одного столбца (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-one-column-visual-database-tools.md) и [Указание нескольких условий поиска для нескольких столбцов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/specify-multiple-search-conditions-for-multiple-columns-visual-database-tools.md).  
@@ -173,4 +174,3 @@ WHERE (hire_date < '01/01/95' ) AND
 ## <a name="see-also"></a>См. также:  
 [Определение критериев поиска (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
-

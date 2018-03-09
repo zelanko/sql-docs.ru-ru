@@ -2,30 +2,32 @@
 title: "Организация безопасности распространителя | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - security [SQL Server replication], Distributors
 - Distributors [SQL Server replication], security
 ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
-caps.latest.revision: 38
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0455938e9a9b0c017da7f8546821a9f318a85d6b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "38"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 69919214ba8fae9f6158466482f5b08201ad8afd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="secure-the-distributor"></a>Организация безопасности распространителя
-  К распространителю подключаются следующие агенты репликации: агент чтения журнала, агент моментальных снимков, агент чтения очереди, агент распространителя и агент слияния. Важно обеспечить для каждого из этих агентов соответствующее имя входа, соблюдая при этом принцип предоставления минимальных необходимых прав, а также защищая хранилище всех паролей:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] К распространителю подключаются следующие агенты репликации: агент чтения журнала, агент моментальных снимков, агент чтения очереди, агент распространения и агент слияния. Важно обеспечить для каждого из этих агентов соответствующее имя входа, соблюдая при этом принцип предоставления минимальных необходимых прав, а также защищая хранилище всех паролей:  
   
 -   Сведения об управлении именами для входа и паролями см. в статье [Управление именами для входа и паролями при репликации](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
   

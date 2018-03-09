@@ -2,32 +2,30 @@
 title: "Настройка Analysis Services и ограниченного делегирования Kerberos (KCD) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0006e143-d3ba-4d10-a415-e42c45e2bb0a
-caps.latest.revision: 20
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9f1a5ab2c98e45d705be57658238077d88daefb5
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4c13b9095224d1c33e09c9513121e46483da05c0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Настройка служб Analysis Services и ограниченного делегирования Kerberos (KCD)
-  Ограниченное делегирование Kerberos (KCD) — это протокол проверки подлинности, который можно настроить с проверкой подлинности Windows для делегирования клиентских учетных данных от службы к службе в вашей среде. Для проверки подлинности Kerberos требуется дополнительная инфраструктура, например контроллер домена, и дополнительная настройка среды. KCD является обязательным в некоторых сценариях, включающих данные [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] с SharePoint 2016. В SharePoint 2016 службы Excel перемещены за пределы фермы SharePoint на отдельный новый сервер **Office Online Server**. Так как Office Online Server является отдельным, существует возросшая потребность в способе делегирования клиентских учетных данных в типичных сценариях двух прыжков.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Ограниченное делегирование Kerberos (KCD) — это протокол проверки подлинности, который можно настроить с проверкой подлинности Windows для делегирования клиентских учетных данных от службы к службе в вашей среде. Для проверки подлинности Kerberos требуется дополнительная инфраструктура, например контроллер домена, и дополнительная настройка среды. KCD является обязательным в некоторых сценариях, включающих данные [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] с SharePoint 2016. В SharePoint 2016 службы Excel перемещены за пределы фермы SharePoint на отдельный новый сервер **Office Online Server**. Так как Office Online Server является отдельным, существует возросшая потребность в способе делегирования клиентских учетных данных в типичных сценариях двух прыжков.  
   
 ## <a name="overview"></a>Обзор  
  Ограниченное делегирование Kerberos позволяет учетной записи олицетворять другую учетную запись для предоставления доступа к ресурсам. Олицетворяющая учетная запись будет учетной записью службы, назначенной веб-приложению, или учетной записью компьютера веб-сервера, а олицетворяемая учетная запись будет учетной записью пользователя, которому требуется доступ к ресурсам. KCD работает на уровне службы, чтобы олицетворяющая учетная запись могла предоставлять доступ к выбранным службам на сервере, в то время как доступ к другим службам на этом сервере или к службам на других серверах запрещен.  
@@ -185,7 +183,7 @@ ms.lasthandoff: 09/01/2017
   
 4.  **Настройте параметры ограниченного делегирования** в учетной записи Office Online Server для экземпляра Power Pivot служб Analysis Services. Это должна быть учетная запись, в которой работает Office Online Server. В учетной записи Office Online Server мы хотим убедиться, что установлено следующее.  
   
-     **Примечание** . Если в разделе "Пользователи и компьютеры Active Directory" отсутствует вкладка делегирования для учетной записи, значит, для этой учетной записи нет SPN.  Чтобы эта вкладка появилась, можно добавить фиктивный SPN, например `my/spn`.  
+     **Примечание**. Если в разделе "Пользователи и компьютеры Active Directory" отсутствует вкладка делегирования для учетной записи, значит, для этой учетной записи нет SPN.  Чтобы эта вкладка появилась, можно добавить фиктивный SPN, например `my/spn`.  
   
      **Доверять этому пользователю делегирование указанных служб** и **Использовать любой протокол проверки подлинности**.  
   
@@ -226,4 +224,3 @@ ms.lasthandoff: 09/01/2017
  [Диспетчер конфигурации Microsoft® Kerberos для SQL Server®](http://www.microsoft.com/en-us/download/details.aspx?id=39046)  
   
   
-

@@ -3,29 +3,29 @@ title: "Диалоговое окно \"XML-индексы\" (визуальны
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vdt.dlgbox.xmlindexes
+f1_keywords: vdt.dlgbox.xmlindexes
 ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f47274fe87b23da05550d05b28af1b003fa9a2bc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 88cb1d98e64580b53af2587c431430d91615d0b6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>Диалоговое окно «XML-индексы» (визуальные инструменты для баз данных)
-Используйте диалоговое окно **XML-индексы** для создания индексов для столбцов с типом данных XML, которые не могут быть индексированы, используя диалоговое окно **Индексы/Ключи** . Каждый XML-столбец может иметь более одного XML-индекса, но созданный первым (первичный) будет основным для остальных (вторичных). Если первичный XML-индекс удален, вторичные индексы также будут удалены.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Используйте диалоговое окно **XML-индексы** для создания индексов для столбцов с типом данных XML, которые не могут быть индексированы, используя диалоговое окно **Индексы/Ключи**. Каждый XML-столбец может иметь более одного XML-индекса, но созданный первым (первичный) будет основным для остальных (вторичных). Если первичный XML-индекс удален, вторичные индексы также будут удалены.  
   
 ## <a name="options"></a>Параметры  
 **Выбранный XML-индекс**  
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/03/2017
 **Добавить**  
 Создать новый XML-индекс.  
   
-**Delete**  
+**Удаление**  
 Удаление XML-индекса, выбранного в списке **Выбранный XML-индекс** . Если удаляется первичный XML-индекс, вы получите уведомление о том, что этим также удаляются все вторичные индексы, и можно далее продолжить либо отменить действие.  
   
 **Общая категория**  
@@ -95,4 +95,3 @@ ms.lasthandoff: 08/03/2017
 ## <a name="see-also"></a>См. также:  
 [Создание XML-индексов](http://msdn.microsoft.com/en-us/6ecac598-355d-4408-baf7-1b2e8d4cf7c1)  
   
-

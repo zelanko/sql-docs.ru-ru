@@ -2,11 +2,12 @@
 title: "Обновление SQL Server с помощью мастера установки (программа установки) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
@@ -15,18 +16,20 @@ helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
-caps.latest.revision: 65
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: c5f13e2dff76b3dc2b3033d4f68fe62602b245a4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c2dd37cf69f59d90d1f9e271ef4c41e602d8c5e1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Обновление SQL Server с помощью мастера установки (программа установки)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 Мастер установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает обновление на месте всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до последней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]с помощью единого дерева компонентов.  
   
 >[!WARNING]  
@@ -44,7 +47,7 @@ ms.lasthandoff: 08/02/2017
 > * [Обновление служб Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)
 > * [Обновление Power Pivot для SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
 Необходимо запустить программу установки с правами администратора. При установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из удаленной общей папки необходимо пользоваться учетной записью домена, имеющей разрешения на чтение и выполнение в удаленной общей папке и являющейся локальным администратором.  
   
 > [!WARNING]  
@@ -110,15 +113,15 @@ ms.lasthandoff: 08/02/2017
   
      **Установленные экземпляры**  — в этой сетке перечислены все экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установленные на компьютере, на котором запущена программа установки. Поскольку экземпляр по умолчанию на компьютере уже имеется, необходимо установить именованный экземпляр [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
-13. Набор операций, оставшихся в этом разделе, зависит от того, какие компоненты были выбраны для установки. В зависимости от сделанного выбора могут отображаться не все страницы.  
+13. Набор операций, оставшихся в этой статье, зависит от того, какие компоненты были выбраны для установки. В зависимости от сделанного выбора могут отображаться не все страницы.  
   
 14. На странице «Конфигурация сервера: учетные записи служб» для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображаются учетные записи по умолчанию. Набор служб, которые можно настроить на этой странице, зависит от компонентов, выбранных для обновления.  
   
-     Сведения для проверки подлинности и имена входа будут перенесены из предыдущего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно назначить одну учетную запись входа всем службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или настроить учетные записи служб индивидуально. Можно также указать, будут службы запускаться автоматически или вручную либо будут отключены. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует настраивать учетные записи служб индивидуально, предоставляя каждой из служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] минимальные разрешения, необходимые для выполнения ее задач. Дополнительные сведения см. в разделе [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     Сведения для проверки подлинности и имена входа будут перенесены из предыдущего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно назначить одну учетную запись входа всем службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или настроить учетные записи служб индивидуально. Можно также указать, будут службы запускаться автоматически или вручную либо будут отключены. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует настраивать учетные записи служб индивидуально, предоставляя каждой из служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] минимальные разрешения, необходимые для выполнения ее задач. Дополнительные сведения см. в статье [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Чтобы задать одну учетную запись входа для всех учетных записей служб этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], укажите учетные данные в полях, которые находятся в нижней части страницы.  
   
-     **Примечание по безопасности.** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+     **Примечание по безопасности** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
      После ввода данных входа для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нажмите кнопку **Далее**.  
   
@@ -134,7 +137,7 @@ ms.lasthandoff: 08/02/2017
   
 20. Если будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения о файлах журналов установки см. в разделе [Просмотр и чтение файлов журналов программы установки SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  После обновления до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]выполните следующие задачи.  
   
 -   **Регистрация серверов:** в процессе обновления удаляются настройки реестра для предыдущего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После обновления необходимо заново зарегистрировать серверы.  
@@ -148,4 +151,3 @@ ms.lasthandoff: 08/02/2017
  [Обратная совместимость_удалено](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   
-

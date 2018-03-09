@@ -1,12 +1,14 @@
 ---
-title: "Создание пользовательских перечислитель | Документы Microsoft"
+title: "Создание пользовательского перечислителя по каждому элементу | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -17,17 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - custom foreach enumerators [Integration Services], creating
 ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
-caps.latest.revision: 53
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f2f852ff319554d0b863fd06d790c2e5e9bf2d59
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 23f211384c7215fa7a139425a8bd7e2cf464d019
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>Создание пользовательского перечислителя по каждому элементу
   Создание пользовательского перечислителя по каждому элементу, как и любого другого пользовательского объекта для служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], осуществляется за несколько шагов, а именно:  
@@ -40,7 +41,7 @@ ms.lasthandoff: 08/03/2017
   
 -   При необходимости разработайте настраиваемый пользовательский интерфейс. В случае с перечислителем по каждому элементу для этого необходимо использовать класс, реализующий интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.IDTSForEachEnumeratorUI>.  
   
- Пользовательский перечислитель размещается в контейнере <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>. Во время выполнения контейнером <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> вызывается метод <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A> пользовательского перечислителя. Пользовательский перечислитель возвращает объект, реализующий интерфейс **IEnumerable** интерфейса, такие как **ArrayList**. Затем перечислитель <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> просматривает последовательно все элементы коллекции, передает значение текущего элемента в поток управления через определяемую пользователем переменную и выполняет поток управления в контейнере.  
+ Пользовательский перечислитель размещается в контейнере <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>. Во время выполнения контейнером <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> вызывается метод <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A> пользовательского перечислителя. Пользовательский перечислитель возвращает объект, реализующий интерфейс **IEnumerable**, например **ArrayList**. Затем перечислитель <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> просматривает последовательно все элементы коллекции, передает значение текущего элемента в поток управления через определяемую пользователем переменную и выполняет поток управления в контейнере.  
   
 ## <a name="getting-started-with-a-custom-foreach-enumerator"></a>Приступая к работе над пользовательским перечислителем по каждому элементу  
   
@@ -52,9 +53,9 @@ ms.lasthandoff: 08/03/2017
  Настройте в обоих проектах подписывание сборок, которые будут создаваться во время построения, с помощью файла ключа для строгого имени.  
   
 ### <a name="applying-the-dtsforeachenumerator-attribute"></a>Применение атрибута DtsForEachEnumerator  
- Примените к созданному классу атрибут <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>, чтобы определить его как перечислитель по каждому элементу. Этот атрибут содержит сведения для времени разработки, например, имя и описание перечислителя по каждому элементу. **Имя** свойство отображается в раскрывающемся списке доступных перечислителей на **коллекции** вкладке **Редактор циклов по каждому элементу** диалоговое окно.  
+ Примените к созданному классу атрибут <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>, чтобы определить его как перечислитель по каждому элементу. Этот атрибут содержит сведения для времени разработки, например, имя и описание перечислителя по каждому элементу. Свойство **Name** отображается в раскрывающемся списке доступных перечислителей на вкладке **Коллекция** диалогового окна **Редактор циклов по каждому элементу**.  
   
- Используйте свойство <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A>, чтобы связать перечислитель по каждому элементу с его пользовательским интерфейсом. Чтобы получить токен открытого ключа, необходимый для этого свойства, можно использовать **sn.exe -t** для отображения токен открытого ключа из файла пары ключей (расширение SNK), который будет использоваться для подписывания сборки пользовательского интерфейса.  
+ Используйте свойство <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A>, чтобы связать перечислитель по каждому элементу с его пользовательским интерфейсом. Чтобы получить токен открытого ключа, необходимый для этого свойства, можно использовать команду **sn.exe -t**, отображающую токен открытого ключа из SNK-файла пары ключей, который предназначен для подписывания сборки пользовательского интерфейса.  
   
 ```vb  
 Imports System  
@@ -82,11 +83,10 @@ namespace Microsoft.Samples.SqlServer.Dts
 ```  
   
 ## <a name="building-deploying-and-debugging-a-custom-enumerator"></a>Построение, развертывание и отладка пользовательского перечислителя  
- Построение, развертывание и отладка пользовательского перечислителя по каждому элементу в службах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] осуществляется за несколько шагов, аналогичных используемым при работе с другими типами пользовательских объектов. Дополнительные сведения см. в разделе [построение, развертывание и отладка пользовательских объектов](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).  
+ Построение, развертывание и отладка пользовательского перечислителя по каждому элементу в службах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] осуществляется за несколько шагов, аналогичных используемым при работе с другими типами пользовательских объектов. Дополнительные сведения см. в разделе [Сборка, развертывание и отладка пользовательских объектов](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Кодирование пользовательский перечислитель](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md)   
- [Разработка пользовательского интерфейса для пользовательского перечислитель](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
+ [Написание кода пользовательского перечислителя по каждому элементу](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md)   
+ [Разработка пользовательского интерфейса для пользовательского перечислителя по каждому элементу](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
   
   
-

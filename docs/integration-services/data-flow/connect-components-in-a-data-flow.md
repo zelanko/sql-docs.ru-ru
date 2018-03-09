@@ -1,10 +1,13 @@
 ---
-title: "Соединение компонентов в потоке данных | Документы Microsoft"
+title: "Соединение компонентов в потоке данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
-caps.latest.revision: 41
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 73a379b190f05f4eedc361b4557afefd700a9664
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 676aa85a4a8b5fcf39f198fe1b70b5b1b9f7fbfe
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-components-in-a-data-flow"></a>Соединение компонентов в потоке данных
   Эта процедура описывает способ соединения выхода компонентов в потоке данных с другими компонентами того же потока.  
@@ -54,9 +56,8 @@ ms.lasthandoff: 08/03/2017
   
 6.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Добавление или удаление компонента в потоке данных](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)   
- [Отладка потока данных](../../integration-services/troubleshooting/debugging-data-flow.md) [потока данных](../../integration-services/data-flow/data-flow.md)  
+ [Отладка потока данных](../../integration-services/troubleshooting/debugging-data-flow.md) [Отладка потока данных](../../integration-services/data-flow/data-flow.md)  
   
   
-

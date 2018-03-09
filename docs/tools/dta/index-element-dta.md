@@ -2,32 +2,31 @@
 title: "Индекс элемента (DTA) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Index element (DTA)
+dev_langs: XML
+helpviewer_keywords: Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "18"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ca17a222eb07926c89283ce1cc2f47f9412af59d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5d5affde03096be39cb219ecb0bac2e402761622
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="index-element-dta"></a>элемент Index (DTA)
-  Содержит сведения об индексе, который необходимо создать в пользовательской конфигурации или удалить из нее.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Содержит сведения об индексе, который требуется создать или удалить для указанной пользователем конфигурации.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -70,8 +69,8 @@ ms.lasthandoff: 08/02/2017
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент Create (DTA)](../../tools/dta/create-element-dta.md)<br /><br /> Элемент**Drop** . Дополнительные сведения см. в разделе «XML-схема помощника по настройке ядра СУБД».|  
-|**Дочерние элементы**|[Элемент Name описания индекса &#40; DTA &#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Элемент Column описания индекса (DTA)](../../tools/dta/column-element-for-index-dta.md)<br /><br /> Элемент**PartitionScheme** . Дополнительные сведения см. в разделе «XML-схема помощника по настройке ядра СУБД».<br /><br /> Элемент**PartitionColumn** . Дополнительные сведения см. в разделе «XML-схема помощника по настройке ядра СУБД».<br /><br /> [Элемент Filegroup описания индекса (DTA)](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> Элемент**NumberOfReferences** . Дополнительные сведения см. в разделе «XML-схема помощника по настройке ядра СУБД».<br /><br /> Элемент**PercentUsage** . Дополнительные сведения см. в разделе «XML-схема помощника по настройке ядра СУБД».|  
+|**Родительский элемент**|[Создать элемент &#40; DTA &#41;](../../tools/dta/create-element-dta.md)<br /><br /> Элемент**Drop** . Дополнительные сведения см. в разделе «XML-схема помощника по настройке ядра СУБД».|  
+|**Дочерние элементы**|[Элемент Name описания индекса &#40; DTA &#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Элемент COLUMN описания индекса &#40; DTA &#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> Элемент**PartitionScheme** . Дополнительные сведения см. в разделе «XML-схема помощника по настройке ядра СУБД».<br /><br /> Элемент**PartitionColumn** . Дополнительные сведения см. в разделе «XML-схема помощника по настройке ядра СУБД».<br /><br /> [Элемент Filegroup описания индекса (DTA)](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> Элемент**NumberOfReferences** . Дополнительные сведения см. в разделе «XML-схема помощника по настройке ядра СУБД».<br /><br /> Элемент**PercentUsage** . Дополнительные сведения см. в разделе «XML-схема помощника по настройке ядра СУБД».|  
   
 ## <a name="example"></a>Пример  
  Пример использования этого элемента см. в разделе [Образец входного XML-файла с пользовательской конфигурацией (DTA)](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
@@ -80,4 +79,3 @@ ms.lasthandoff: 08/02/2017
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

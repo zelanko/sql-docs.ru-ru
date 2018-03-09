@@ -1,26 +1,28 @@
 ---
-title: "Поддержка высокого уровня доступности | Документы Microsoft"
+title: "Поддержка высокого уровня доступности | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2e0f6d3f-0536-46d9-8630-835e199515bf
-caps.latest.revision: 5
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a194c2d28916ad348086a02ff521c1b6cbb16542
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6498c36d78e4252689415b9139c5cd60de7a78ad
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="high-availability-support"></a>Поддержка высокого уровня доступности
   Служба CDC для Oracle разработана с учетом требований высокого уровня доступности. Следующие функции составляют часть функций поддержки высокого уровня доступности:  
@@ -36,4 +38,3 @@ ms.lasthandoff: 08/03/2017
 -   Служба CDC для Oracle поддерживает Oracle RAC, благодаря чему возможен обмен данными между ней и базой данных Oracle, а также обработка журналов вызова, даже если один из узлов Oracle RAC отключен.  
   
   
-

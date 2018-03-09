@@ -3,26 +3,26 @@ title: "Выравнивание | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- alignment issues [ODBC]
+helpviewer_keywords: alignment issues [ODBC]
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 527e8d47d4d352a0fad579d3c12c5ef3768c402b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 412c04f8181997738bac1fc7b457c9ec0c3efcde
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignment"></a>Выравнивание
 Проблемы выравнивания в приложении ODBC обычно не отличаются от они находятся в другом приложении. То есть большинство приложений ODBC имеют несколько или проблем с выравниванием. Штрафов за не выравнивание адреса зависит от оборудования и операционной системы и может быть как значительные как небольшое уменьшение производительности или как фатальной ошибкой во время выполнения. Таким образом приложения ODBC и переносимого приложения ODBC в частности, следует внимательно выравнивание данных должным образом.  
@@ -52,4 +52,3 @@ ms.lasthandoff: 09/09/2017
  ![Привязка по наиболее широкой границе выравнивания](../../../odbc/reference/develop-app/media/pr26.gif "pr26")  
   
  Несмотря на то, что это решение оставляет больше уязвимости, код для реализации его относительно простой и быстрый. В большинстве случаев это смещения штраф оплачено неиспользуемую память. Пример использования этого метода см. в разделе [с помощью SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).
-

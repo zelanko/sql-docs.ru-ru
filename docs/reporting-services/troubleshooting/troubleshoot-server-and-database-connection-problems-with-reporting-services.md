@@ -1,29 +1,29 @@
 ---
-title: "Устранение неполадок подключения базы данных со службами Reporting Services серверу и | Документы Microsoft"
+title: "Устранение неполадок с подключением к серверу и базе данных в Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 02/28/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1b901ec323ee3aa021d9e581cb8a1aedbde3116b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d6544043e8925c77dc88d7d1191e8ccd690b7a00
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Устранение неполадок подключения базы данных служб Reporting Services серверу и
+# <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Устранение неполадок с подключением к серверу и базе данных в Reporting Services
 Используйте этот раздел, чтобы решать проблемы, возникающие при подключении к серверу отчетов. Также в этом разделе описываются сообщения о непредвиденных ошибках. Дополнительные сведения о настройке источников данных и настройке данных о подключении сервера отчетов см. в разделах [Задание учетных данных и сведений о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) и [Настройка соединения с базой данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="cannot-create-a-connection-to-data-source-datasourcename-rserroropeningconnection"></a>Невозможно создать соединение с источником данных «имя_источника_данных». (rsErrorOpeningConnection)  
@@ -63,7 +63,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="wmi-error-when-connecting-to-a-report-server-in-management-studio"></a>Ошибка инструментария WMI при соединении с сервером отчетов в среде Management Studio  
 По умолчанию среда Management Studio использует инструментарий управления Windows (WMI) служб Reporting Services, чтобы установить соединение с сервером отчетов. Если поставщик WMI установлен неправильно, при попытке установить соединение с сервером отчетов возникнет следующая ошибка.  
   
-Не удается подключиться к \<имя сервера >. Поставщик WMI служб Reporting Services не установлен или не настроен (Microsoft.SqlServer.Management.UI.RSClient)».  
+Невозможно установить соединение с \<имя_сервера>. Поставщик WMI служб Reporting Services не установлен или не настроен (Microsoft.SqlServer.Management.UI.RSClient)».  
   
 Чтобы устранить эту ошибку, необходимо переустановить программное обеспечение. В других случаях в качестве временного решения можно соединиться с сервером отчетов через конечную точку SOAP.  
   
@@ -117,15 +117,14 @@ ms.lasthandoff: 08/09/2017
 ## <a name="unable-to-connect-to-the-reports-and-reportserver-directories-when-the-report-server-databases-are-created-on-a-virtual-sql-server-that-runs-in-a-microsoft-cluster-services-mscs-cluster"></a>Невозможность соединения с каталогами /reports и /reportserver при создании баз данных сервера отчетов на виртуальном сервере SQL Server, запущенном в кластере службы кластеров (Майкрософт)  
 При создании баз данных сервера отчетов ( **ReportServer** и **ReportServerTempDB**) на виртуальном сервере SQL Server, запущенном в кластере MSCS, удаленное имя в формате `<domain>\<computer_name>$` может быть не зарегистрировано в качестве имени входа для SQL Server. Если настроить учетную запись службы сервера отчетов как учетную запись, требующую это удаленное имя для подключений, то пользователи не смогут подключиться к каталогам /reports и /reportserver в службах Reporting Services. Например, встроенная в Windows учетная запись NetworkService требует удаленное имя. Чтобы избежать этой проблемы, используйте для соединения с базами данных сервера отчетов явную учетную запись домена или имя входа для SQL Server.  
     
-  ## <a name="see-also"></a>См. также  
+  ## <a name="see-also"></a>См. также:  
 [Поддержка браузера для служб Reporting Services и Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Справочник по ошибкам и событиям (службы Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-[Устранение неполадок при извлечении данных с помощью отчетов служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
+[Устранение неполадок с извлечением данных с помощью отчетов служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Устранение неполадок, связанных с подписками и доставкой служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
   
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

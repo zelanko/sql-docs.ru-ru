@@ -2,28 +2,29 @@
 title: "Резервное копирование и восстановление SQL Server с помощью службы хранилища Blob-объектов Microsoft Azure | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2ca66cdb80dd12a242b2c9e8130cf3236e47371c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 16c41c9d1898303b58a40f6acce36968b571b299
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Резервное копирование и восстановление SQL Server с помощью службы хранилища Blob-объектов Microsoft Azure
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   ![Изображение резервного копирования в большой двоичный объект Azure](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Изображение резервного копирования в большой двоичный объект Azure")  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Удобная оплата. Оплата только тех услуг, которые используются. Может применяться в качестве экономически эффективного решения по удаленному резервному копированию и архивированию. Для получения дополнительной информации и ссылок см. раздел [Вопросы оплаты использования Microsoft Azure](#Billing) .  
   
-##  <a name="Billing"></a> Microsoft Azure Billing Considerations:  
+##  <a name="Billing"></a> Вопросы оплаты использования Microsoft Azure  
  Если вы знаете, сколько стоит использование службы хранилища Microsoft Azure, вы можете прогнозировать стоимость создания и хранения резервных копий в Microsoft Azure.  
   
  [Ценовой калькулятор Microsoft Azure](http://go.microsoft.com/fwlink/?LinkId=277060) может помочь оценить затраты.  
@@ -68,7 +69,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>См. также:  
 
-[Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
+[Архивация в SQL Server по URL-адресу — рекомендации и устранение неполадок](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
 
 [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
 
@@ -77,4 +78,3 @@ ms.lasthandoff: 06/22/2017
 [Резервное копирование в SQL Server по URL-адресу](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   
   
-

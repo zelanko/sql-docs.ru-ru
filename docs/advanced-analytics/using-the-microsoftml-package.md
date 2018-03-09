@@ -2,29 +2,31 @@
 title: "С помощью пакета MicrosoftML с SQL Server | Документы Microsoft"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: sql-server-2016
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
 ms.assetid: 1c377717-e281-431e-8171-3924dcce1cdd
-caps.latest.revision: 132
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: d6b3c17d4fadf639102c4090fceaabee37276bc2
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 38af2297d176205b06bd104228d44e50b4c94861
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>С помощью пакета MicrosoftML с SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 [ **MicrosoftML** ](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction) пакет, который входит в состав Microsoft R Server и SQL Server 2017 г. включает в себя несколько алгоритмов машинного обучения. Эти API-интерфейсы разработанные корпорацией Майкрософт для внутренних машинного обучения приложений и были более точно распределить ресурсы за несколько лет, для поддержки высокой производительности на больших данных с помощью многоядерными обработки и потоковой передачи данных быстро. MicrosoftML также включает множество преобразований для обработки изображений и текста.
 
@@ -125,4 +127,3 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 + [Что такое revoscalepy](python/what-is-revoscalepy.md)
 
 + [Библиотека функций revoscalepy](https://docs.microsoft.com/en-us/r-server/python-reference/revoscalepy/revoscalepy-package) 
-

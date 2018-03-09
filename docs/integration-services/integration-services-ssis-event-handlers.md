@@ -1,10 +1,13 @@
 ---
-title: "В службах Integration Services (SSIS) обработчиков событий | Документы Microsoft"
+title: "Обработчики событий в службах Integration Services (SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -21,17 +24,16 @@ helpviewer_keywords:
 - containers [Integration Services], events
 - events [Integration Services], about events
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
-caps.latest.revision: 52
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fb4fb7cc58ace602daa44d07dbaf59f76d9b7755
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: bf61c56b66a6a64f6e2156c5f458c8e09fe976e9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Обработчики событий в службах Integration Services (SSIS)
   Во время выполнения исполняемых объектов (пакетов, контейнеров «цикл по каждому элементу», «цикл по элементам», последовательности и узлы задач) возникают события. Например, в случае ошибки возникает событие OnError. Можно создать пользовательские обработчики событий для этих событий, чтобы расширить функциональность пакетов и упростить управление пакетами во время их выполнения. Обработчики событий могут выполнять следующие задачи:  
@@ -48,11 +50,11 @@ ms.lasthandoff: 09/26/2017
   
  Следующая диаграмма приводит простой пакет, имеющий контейнер «цикл по элементам», который, в свою очередь, содержит задачу «Выполнение SQL».  
   
- ![Пакет, цикл For, сервер задач и задача «Выполнение SQL»](../integration-services/media/mw-dts-eventhandlerpkg.gif "пакет, цикл For, сервер задач и задача «Выполнение SQL»")  
+ ![Пакет, контейнер "Цикл по элементам", сервер задач, задача "Выполнение SQL"](../integration-services/media/mw-dts-eventhandlerpkg.gif "Пакет, контейнер "Цикл по элементам", сервер задач, задача "Выполнение SQL"")  
   
  Только у пакета имеется обработчик для события **OnError** . Когда ошибка происходит во время выполнения задачи «Выполнение SQL», то запускается обработчик события **OnError** данного пакета. Следующая диаграмма показывает последовательность вызовов, вследствие которой выполняется обработчик события **OnError** данного пакета.  
   
- ![Поток обработчиков событий](../integration-services/media/mw-dts-eventhandlers.gif "поток обработчиков событий")  
+ ![Поток обработчиков событий](../integration-services/media/mw-dts-eventhandlers.gif "Поток обработчиков событий")  
   
  Обработчики событий являются элементами коллекции обработчиков событий, и эта коллекция включена во все контейнеры. Если пакет создается при помощи конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , то можно видеть элементы коллекции обработчиков событий в папке **Обработчики событий** на вкладке **Обозреватель пакетов** конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
@@ -102,7 +104,7 @@ ms.lasthandoff: 09/26/2017
   
  Вкладка **Обработчики событий** также включает зону диспетчеров **Соединения** , в которой можно создавать и изменять диспетчеры соединений, используемых обработчиками событий для соединения с серверами и источниками данных. Дополнительные сведения см. в разделе [Создание диспетчеров соединений](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
   
-### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>Добавить обработчик событий на вкладке «обработчики событий»  
+### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>Добавление обработчика событий на вкладку "Обработчики событий"  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -110,7 +112,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  Перейдите на вкладку **Обработчики событий** .  
   
-     ![Снимок экрана: область конструктора с обработчиком событий](../integration-services/media/eventhandlers.gif "экрана конструктора с обработчиком событий")  
+     ![Снимок экрана: область конструктора с обработчиком событий](../integration-services/media/eventhandlers.gif "Снимок экрана: область конструктора с обработчиком событий")  
   
      Создание потока управления и потоков данных в обработчике событий аналогично созданию потока управления и потока данных в пакете. Дополнительные сведения см. в разделах [Control Flow](../integration-services/control-flow/control-flow.md) и [Data Flow](../integration-services/data-flow/data-flow.md).  
   
@@ -126,15 +128,14 @@ ms.lasthandoff: 09/26/2017
   
 9. Чтобы сохранить пакет, в меню **Файл** выберите пункт **Сохранить выбранные элементы** .  
 
-## <a name="set-the-properties-of-an-event-handler"></a>Задайте свойства обработчика событий  
+## <a name="set-the-properties-of-an-event-handler"></a>Задание свойств обработчика событий  
  Задать свойства можно в окне **Свойства** среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] или программными средствами.  
   
  Дополнительные сведения о настройке свойств этих свойств в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]см. в разделе [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
  Дополнительные сведения о настройке этих свойств программными средствами см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Сведения о том, как добавить обработчик событий в пакет, см. в разделе [Добавление к пакету обработчик событий](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
   
   
-

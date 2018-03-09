@@ -1,10 +1,13 @@
 ---
-title: "Добавление диспетчера соединения файлов диалогового окна справочника по пользовательскому Интерфейсу | Документы Microsoft"
+title: "Справочник по пользовательскому интерфейсу: диалоговое окно \"Добавление диспетчера подключения файлов\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Add File Connection Manager
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c189e040ea0fa8981f9f176cd1e89d80a2f7c445
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d4f3ee30eb310bdf109914dbdfb7dd0b56fb94c7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>Добавление диспетчера соединения файлов диалогового окна пользовательского Интерфейса в справочник
   Используйте диалоговое окно **Добавление диспетчера соединения файлов** , чтобы определить соединение с группой файлов или папок.  
@@ -51,7 +53,7 @@ ms.lasthandoff: 08/03/2017
  **Добавить**  
  Добавьте файл с помощью диалогового окна **Выбор файлов** или добавьте папку с помощью диалогового окна **Выбор папки** .  
   
- **Правка**  
+ **Изменить**  
  Выберите файл или папку, а затем замените их другим файлом или другой папкой с помощью диалогового окна **Выбор файлов** или **Выбор папки** .  
   
  **Удалить**  
@@ -60,8 +62,7 @@ ms.lasthandoff: 08/03/2017
  **Стрелки**  
  Выберите файл или папку, а затем при помощи стрелок переместите его вверх или вниз, чтобы указать последовательность доступа.  
   
-## <a name="see-also"></a>См. также  
- [Об ошибках служб Integration Services и справочник по сообщениям](../../integration-services/integration-services-error-and-message-reference.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
   
   
-

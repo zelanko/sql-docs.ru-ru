@@ -3,10 +3,12 @@ title: "Других архитектур драйвер | Документы Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - heterogeneous join engines[ODBC]
 - drivers [ODBC], middle component
 ms.assetid: 1cad06ee-5940-4361-8d01-7d850db1dd66
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fca4bea3f40702fb2593442ccbbfb311f813a87a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0a458ba0d7e83ab4e4c56ed40c34fae54e24c1b2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="other-driver-architectures"></a>Других архитектур драйвера
 Некоторые драйверы ODBC не полностью соответствуют архитектуры, описанной выше. Возможно, драйверы выполнять свои задачи, отличного от традиционных драйвера ODBC, или не являются драйверами устройств в обычном смысле.  
@@ -55,4 +56,3 @@ ms.lasthandoff: 09/09/2017
  Одно из преимуществ этой архитектуры — обслуживание эффективный программное обеспечение и конфигурации. Драйверы должны обновляться только в одном месте: на сервере. С помощью системных источников данных, можно определить источники данных на сервере для использования всеми клиентами. Источники данных не должны быть определены на стороне клиента. Организация пулов соединений можно использовать для упрощения процесса, по которому клиенты подключаются к источникам данных.  
   
  Драйвер на стороне клиента обычно является очень мало драйвер, который передает вызова диспетчера драйверов на сервер. Его размера может быть значительно меньше, чем полнофункциональные драйверы ODBC на сервере. В этой архитектуре клиента освободить ресурсы, если сервер имеет большей вычислительной мощности. Кроме того эффективность и безопасность всей системы повышается, если установка резервных серверов и выполняет балансировку нагрузки, чтобы оптимизировать работу сервера.
-

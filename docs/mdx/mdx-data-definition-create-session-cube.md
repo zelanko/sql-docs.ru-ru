@@ -2,11 +2,13 @@
 title: "Инструкция CREATE SESSION CUBE (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,26 +19,24 @@ f1_keywords:
 - CREATE SESSION CUBE
 - CREATE SESSION
 - CREATE
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - CREATE SESSION CUBE
 - statements [MDX], CREATE SESSION CUBE
 ms.assetid: 06b90f44-d943-4a52-b0d8-4bcbc57ed6ec
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: be395f43e1a372e54f9759edcf58d0b35f03d15c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 14556669f6c39977fa1f82d8fbe6a2edff927837
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>Определения данных многомерных Выражений — создать КУБ СЕАНСА
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Создает куб сеанса и заполняет его данными существующего куба сервера. Куб сеанса видим только на панели текущего сеанса. Просмотреть куб сеанса и выполнить к нему запрос из любого другого сеанса невозможно. При закрытии сеанса куб сеанса неявно удаляется.  
   
@@ -130,7 +130,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  \<Тип уровня >  
  Спецификация, допустимая только для определения производного измерения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В отличие от кубов сервера и локальных кубов куб сеанса не сохраняется вне области сеанса, в котором он был создан. Куб сеанса определяется на основе мер и измерений, которые его определяют. Существует два типа измерений.  
   
 -   Измерения источника — это измерения, которые были частью одного из исходных кубов.  
@@ -223,4 +223,3 @@ CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]
  [СОЗДАТЬ инструкцию глобального КУБА &#40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-create-global-cube.md)  
   
   
-

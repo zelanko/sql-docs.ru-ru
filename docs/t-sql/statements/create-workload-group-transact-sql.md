@@ -1,10 +1,13 @@
 ---
 title: "СОЗДАТЬ ГРУППУ рабочей НАГРУЗКИ (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 03/16/2016
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ dev_langs:
 helpviewer_keywords:
 - CREATE WORKLOAD GROUP statement
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
-caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 46dce7ed81cdce215cfbff8f5fcce0900a9309a0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: cec1360259d78679fab31a45a074d5fbbf3779b5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Создает группу рабочей нагрузки регулятора ресурсов и связывает ее с пулом ресурсов регулятора ресурсов. Регулятор ресурсов доступен не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
@@ -41,7 +43,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 CREATE WORKLOAD GROUP group_name  
 [ WITH  
     ( [ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -59,28 +60,26 @@ CREATE WORKLOAD GROUP group_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *имя_группы*  
+ *group_name*  
  Определяемое пользователем имя группы рабочей нагрузки. *имя_группы* является алфавитно-цифровым, может иметь длину до 128 символов, должны быть уникальными в рамках экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и должны соответствовать правилам для [идентификаторы](../../relational-databases/databases/database-identifiers.md).  
   
  ВАЖНОСТЬ = {LOW | **СРЕДНИЙ** | ВЫСОКИЙ УРОВЕНЬ}  
  Указывает относительную важность запроса в группе рабочей нагрузки. Важность представлена одним из следующих значений, причем значением по умолчанию является MEDIUM.  
   
 -   LOW  
-  
--   MEDIUM  
-  
+-   MEDIUM (по умолчанию);    
 -   HIGH.  
   
 > [!NOTE]  
->  Внутри системы каждое значение важности хранится в виде числа, используемого для вычислений.  
+> Внутри системы каждое значение важности хранится в виде числа, используемого для вычислений.  
   
  Значение IMPORTANCE локально для пула ресурсов; группы рабочей нагрузки разной важности внутри одного пула ресурсов влияют друг на друга, но не влияют на рабочие группы в других пулов ресурсов.  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*значение*  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
  Указывает максимальное количество памяти, которое может понадобиться одному запросу из пула. Это процентное соотношение относительно к размеру пула ресурсов, указанного в MAX_MEMORY_PERCENT.  
   
 > [!NOTE]  
->  Указанное значение ссылается только на доступную для выполнения запроса память.  
+> Указанное значение ссылается только на доступную для выполнения запроса память.  
   
  *значение* должно быть 0 или положительным целым числом. Допустимые значения для *значение* — от 0 до 100. Значение по умолчанию для *значение* — 25.  
   
@@ -99,13 +98,16 @@ CREATE WORKLOAD GROUP group_name
 >   
 >  Учтите, что в обоих случаях может возникнуть ошибка 8645 (истечение времени ожидания), если на сервере недостаточно физической памяти.  
   
- REQUEST_MAX_CPU_TIME_SEC =*значение*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  Указывает максимальное количество времени ЦП в секундах, которое может использоваться запросом. *значение* должно быть 0 или положительным целым числом. Значение по умолчанию для *значение* равно 0, что означает неограниченное время.  
   
 > [!NOTE]  
->  По истечении лимита времени регулятор ресурсов не прекращает выполнение запроса. Однако будет сформировано событие. Дополнительные сведения см. в разделе [класс событий превышает пороговое значение ЦП](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+> По умолчанию регулятора ресурсов не помешает запрос продолжать, если превышено максимально допустимое время. Однако будет сформировано событие. Дополнительные сведения см. в разделе [класс событий превышает пороговое значение ЦП](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+
+> [!IMPORTANT]
+> Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 и с помощью [2422 флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), при превышении максимального времени регулятор ресурсов приведет к прерыванию запроса. 
   
- REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*значение*  
+ REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Задает максимальное время (в секундах), в течение которого запрос может ожидать выделения памяти (памяти рабочего буфера).  
   
 > [!NOTE]  
@@ -113,7 +115,7 @@ CREATE WORKLOAD GROUP group_name
   
  *значение* должно быть 0 или положительным целым числом. Значение по умолчанию для *значение*, 0, использует внутренние вычисления, основанные на затратах запроса для определения максимального времени.  
   
- MAX_DOP =*значение*  
+ MAX_DOP =*value*  
  Указывает максимальную степень параллелизма (DOP) для параллельных запросов. *значение* должно быть 0 или положительным целым числом. Допустимые значения для *значение* — от 0 до 64. Значение по умолчанию для *значение*, 0, использует глобальные настройки. MAX_DOP обрабатывается следующим образом.  
   
 -   Использование MAX_DOP в качестве указания запроса эффективно до тех пор, пока его значение не превышает значения MAX_DOP группы рабочей нагрузки. Если значение указания запроса MAXDOP превышает значение, которое настроено с помощью регулятора ресурсов, компонент Database Engine использует значение MAXDOP регулятора ресурсов.  
@@ -126,7 +128,7 @@ CREATE WORKLOAD GROUP group_name
   
 -   После того как DOP настроен, он может быть только снижен при нехватке доступной памяти. Перенастройка группы рабочей нагрузки невидима при ожидании в очереди на предоставление памяти.  
   
- GROUP_MAX_REQUESTS =*значение*  
+ GROUP_MAX_REQUESTS =*value*  
  Указывает максимальное число одновременных запросов, разрешенных для выполнения в группе рабочей нагрузки. *значение* должно быть 0 или положительным целым числом. Значение по умолчанию для *значение*(0) означает отсутствие ограничений. Если достигнуто максимальное количество параллельных запросов, пользователь из этой группы сможет войти в систему, но переводится в состоянии ожидания до тех пор, пока количество параллельных запросов не станет меньше указанного значения.  
   
  С помощью { *pool_name* | **«default»** }  
@@ -146,14 +148,14 @@ CREATE WORKLOAD GROUP group_name
   
 -   Внешнего пула ресурсов для внешних процессов. Дополнительные сведения см. в разделе [sp_execute_external_script &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  REQUEST_MEMORY_GRANT_PERCENT: Для использования большего объема памяти рабочей области, чем было предоставлено изначально для повышения производительности разрешено создание индексов. Эта специальная обработка поддерживается регулятором ресурсов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Однако изначально предоставленная память и любая дополнительная выделенная память ограничены пулом ресурсов и настройками группы рабочей нагрузки.  
   
  **Создание индекса для секционированной таблицы**  
   
  Объем памяти, затрачиваемой на создание индекса в невыровненной секционированной таблице, пропорционален количеству секций, охватываемых индексом. Если общий объем необходимой памяти превышает предел на запрос (REQUEST_MAX_MEMORY_GRANT_PERCENT), устанавливаемый регулятором ресурсов для группы рабочей нагрузки, создание такого индекса может завершиться ошибкой. Настройки группы рабочей нагрузки по умолчанию позволяют запросу превосходить установленный для запросов предел памяти, нужной при запуске. Поэтому пользователь может запустить тот же процесс создания индекса в группе рабочей нагрузки по умолчанию, если в пуле ресурсов по умолчанию достаточно памяти, настроенной для выполнения такого запроса.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CONTROL SERVER.  
   
 ## <a name="examples"></a>Примеры  
@@ -165,14 +167,13 @@ CREATE WORKLOAD GROUP newReports
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/alter-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/drop-workload-group-transact-sql.md)   
- [CREATE RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-resource-pool-transact-sql.md)   
+ [СОЗДАТЬ ПУЛ РЕСУРСОВ &#40; Transact-SQL и &#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [ALTER RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL (Transact-SQL)](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
- [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
+ [ALTER RESOURCE GOVERNOR &#40; Transact-SQL и &#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   
-
 

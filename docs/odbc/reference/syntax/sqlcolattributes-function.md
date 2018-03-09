@@ -3,33 +3,30 @@ title: "Функция SQLColAttributes | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLColAttributes
-apilocation:
-- sqlsrv32.dll
+apiname: SQLColAttributes
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLColAttributes
-helpviewer_keywords:
-- SQLColAttributes function [ODBC]
+f1_keywords: SQLColAttributes
+helpviewer_keywords: SQLColAttributes function [ODBC]
 ms.assetid: 3ece37af-db56-47fc-bc9d-6a7d0d8a00ec
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fac46e107aee2d9653705fc2153b821f8b4478e7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 90cf41bc6e4af10411c8c4fe9246e1c454d3ac9f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcolattributes-function"></a>Функция SQLColAttributes
 **Соответствия**  
@@ -46,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>См. также:  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

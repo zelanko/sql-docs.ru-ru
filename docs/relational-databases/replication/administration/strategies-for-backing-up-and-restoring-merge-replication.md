@@ -2,11 +2,13 @@
 title: "Стратегии резервного копирования и восстановления для репликации слиянием | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +17,19 @@ helpviewer_keywords:
 - restoring [SQL Server replication], merge replication
 - merge replication [SQL Server replication], backup and restore
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
-caps.latest.revision: 48
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b518488e5ac42e28487f984bfd65ca196dfbe723
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "48"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 5690ea80bfe12a6995e80987e11bdaa59a30d150
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Стратегия резервного копирования и восстановления из копии для репликации слиянием
-  Для репликации слиянием регулярно создавайте резервные копии следующих баз данных:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Для репликации слиянием регулярно создавайте резервные копии следующих баз данных:  
   
 -   База данных публикаций на издателе.  
   
@@ -65,14 +67,14 @@ ms.lasthandoff: 06/22/2017
   
  Если выполняется синхронизация с подписчиком, на котором запущена версия [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] меньше [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], подписка не может быть анонимной. Это должна быть клиентская или серверная подписка (в предыдущих версиях такие подписки называются локальными и глобальными).  
   
- Чтобы синхронизировать подписку, см. разделы [Синхронизация принудительной подписки](../../../relational-databases/replication/synchronize-a-push-subscription.md) и [Синхронизация подписки по запросу](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+ Чтобы синхронизировать подписку, см. разделы [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) и [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 ### <a name="reinitializing-all-subscriptions"></a>Повторная инициализация всех подписок  
  Повторная инициализация всех подписок гарантирует, что все подписчики находятся в состоянии, согласованном с восстановленной базой данных публикаций. Такой подход следует применять, если требуется вернуть всю топологию в предыдущее состояние, представленное резервной копией базы данных публикаций. Например, повторная инициализация всех подписок может потребоваться, если восстановление базы данных публикаций до более ранней точки используется в качестве механизма возврата из ошибочно выполненной пакетной операции.  
   
  Если выбран данный вариант, создайте новый моментальный снимок для его доставки на повторно инициализированные подписчики сразу после восстановления базы данных публикаций.  
   
- Чтобы повторно инициализировать подписку, см. раздел [Повторная инициализация подписки](../../../relational-databases/replication/reinitialize-a-subscription.md).  
+ Чтобы повторно инициализировать подписку, см. раздел [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md).  
   
  Чтобы создать и применить моментальный снимок, см. разделы [Create и Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) и [Создание моментального снимка для публикации слиянием с параметризованными фильтрами](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   

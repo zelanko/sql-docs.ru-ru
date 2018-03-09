@@ -3,29 +3,29 @@ title: "Свойства учетной записи-посредника — �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.proxy.permissions.f1
+f1_keywords: sql13.ag.proxy.permissions.f1
 ms.assetid: 3e3c42fe-5b61-45e5-8e46-9807bdec5389
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f40b8600316b6093f25342c6d507cff5f44fbe82
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2d0082a5a920c5654859d8c674bcfce07060ec78
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="proxy-account-properties---new-proxy-account-principals-tab"></a>Свойства учетной записи-посредника — создание учетной записи-посредника (вкладка "Участники")
-Данная страница используется для просмотра или изменения субъектов, которые могут использовать учетную запись-посредник агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в шагах заданий.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Данная страница применяется для просмотра или изменения субъектов, которые могут использовать учетную запись-посредник агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в шагах заданий.  
   
 ## <a name="options"></a>Параметры  
 **Участники учетной записи-посредника**  
@@ -40,4 +40,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
 [Создание учетной записи-посредника агента SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md)  
   
-

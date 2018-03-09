@@ -1,31 +1,31 @@
 ---
 title: "Настройка параметров проекта (MySQLToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Setting project options,configuration options
+helpviewer_keywords: Setting project options,configuration options
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3aaec0d6811369af2ab4b5c52591af95fd944b57
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 005889e4a4fc813819f6133d7a5a7b2a5223b861
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-project-options-mysqltosql"></a>Настройка параметров проекта (MySQLToSQL)
 Для каждого проекта SSMA можно задать параметры на уровне проекта. Эти параметры задают преобразование объектов, процесс миграции данных и сопоставлении типов данных источника к типам данных целевого объекта.  Перед началом преобразования объектов в SQL Server или SQL Azure или переноса данных в SQL Server или SQL Azure, убедитесь, что параметры конфигурации подходят для проекта.  
@@ -47,11 +47,11 @@ SSMA имеет пять наборов параметров проекта.
   
 Можно настроить параметры проекта четырьмя способами:  
   
--   По умолчанию  
+-   Default  
   
 -   Optimistic  
   
--   Полная  
+-   Полное  
   
 -   Другой  
   
@@ -112,4 +112,3 @@ SSMA имеет пять наборов параметров проекта.
 ## <a name="see-also"></a>См. также:  
 [Сопоставление MySQL и типов данных SQL Server &#40; MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
-

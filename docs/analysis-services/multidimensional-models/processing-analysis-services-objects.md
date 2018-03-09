@@ -2,33 +2,33 @@
 title: "Обработка служб Analysis Services объектов | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - OLAP objects [Analysis Services], processing
 - OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
-caps.latest.revision: 44
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9b9d17eac58d4ae287f71e924d9c012f63484c21
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58e0a8da7c8bfeae9d661dc78d264218c7c19b81
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-analysis-services-objects"></a>Обработка объектов служб Analysis Services
-  Обрабатываются следующие типы объектов [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , кубы, измерения, группы мер, секции, а также структуры и модели интеллектуального анализа данных. Для каждого объекта можно указать уровень обработки или назначить его обработку по умолчанию, чтобы службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] могли выбрать его автоматически. Дополнительные сведения об уровнях обработки для каждого объекта см. в разделе [Настройка параметров обработки (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Обрабатываются следующие типы объектов [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , кубы, измерения, группы мер, секции, а также структуры и модели интеллектуального анализа данных. Для каждого объекта можно указать уровень обработки или назначить его обработку по умолчанию, чтобы службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] могли выбрать его автоматически. Дополнительные сведения об уровнях обработки для каждого объекта см. в разделе [Настройка параметров обработки (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
  Чтобы исключить все негативные эффекты, важно знать последовательность выполнения этапов обработки. Например, полная обработка измерения автоматически устанавливает все зависимые от него секции в состояние необработанных. Из-за этого до окончания обработки зависимых секций соответствующие кубы становятся недоступными для запросов.  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 09/01/2017
   
 |Страна|Регион продаж|Состояние|  
 |-------------|------------------|-----------|  
-|United States|West|California|  
+|United States|West|Калифорния|  
 |United States|West|Oregon|  
 |United States|West|Washington|  
   
@@ -99,10 +99,9 @@ ms.lasthandoff: 09/01/2017
   
  Дополнительные сведения об обработке структур и моделей интеллектуального анализа данных см. в разделе [Требования к обработке и связанные замечания (интеллектуальный анализ данных)](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Средства и способы обработки (службы Analysis Services)](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
  [Пакетная обработка &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   
-

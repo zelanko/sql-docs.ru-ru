@@ -2,11 +2,13 @@
 title: "Подробнее о репликации слиянием — обнаружение и разрешение конфликтов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - logical record-level conflict tracking [SQL Server replication]
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
-caps.latest.revision: 46
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "46"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9c52b8aa34c3f384e9ab1f638e6f6e9dac3bdf04
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: be8f8a4e1df903cc70191dc582ce2aef19e7e7aa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Подробнее о репликации слиянием — обнаружение и разрешение конфликтов
-  Когда издатель и подписчик соединяются и происходит синхронизация, агент слияния проверяет наличие конфликтов. При обнаружении конфликтов сопоставитель слияния использует арбитр конфликтов (указанный при добавлении статьи в публикацию), чтобы определить, какие данные являются приемлемыми и распространяются на другие сайты.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Когда издатель и подписчик соединяются и происходит синхронизация, агент слияния проверяет наличие конфликтов. При обнаружении конфликтов сопоставитель слияния использует арбитр конфликтов (указанный при добавлении статьи в публикацию), чтобы определить, какие данные являются приемлемыми и распространяются на другие сайты.  
   
 > [!NOTE]  
 >  Хотя подписчик синхронизируется с издателем, конфликты обычно возникают между обновлениями, осуществляемыми на различных подписчиках, а не между обновлениями, осуществляемыми на подписчике и издателе.  
@@ -101,7 +102,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Указание типа подписки слиянием и приоритета устранения конфликтов (SQL Server Management Studio)](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Программирование репликации с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)] и объектов RMO: [Создание подписки по запросу](../../../relational-databases/replication/create-a-pull-subscription.md) и [Создание принудительной подписки](../../../relational-databases/replication/create-a-push-subscription.md)  
+-   Программирование репликации с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)] и объектов RMO: [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md) и [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>Интерактивный сопоставитель  
  Репликация предоставляет пользовательский интерфейс интерактивного сопоставителя, который может использоваться совместно либо с сопоставителем конфликтов на основе приоритетов (по умолчанию), либо с сопоставителем статей. При выполнении синхронизации по требованию с помощью диспетчера синхронизации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows интерактивный сопоставитель отображает конфликтные данные во время выполнения, позволяя выбрать методы разрешения конфликтов. Дополнительные сведения о том, как включить интерактивное устранение конфликтов и запуск интерактивного сопоставителя, см. в разделе [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
@@ -140,4 +141,3 @@ ms.lasthandoff: 08/03/2017
  [Синхронизация данных](../../../relational-databases/replication/synchronize-data.md)  
   
   
-

@@ -1,10 +1,13 @@
 ---
-title: "Редактор задачи (страница «Общие») «профилирование данных» | Документы Microsoft"
+title: "Редактор задачи \"Профилирование данных\" (страница \"Общие\") | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
-caps.latest.revision: 19
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: bed1fa78db9ee0beca66efe57f088d1d74d377f2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e05a90b25672e835963384ab19ec218a7b2d3480
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Редактор задачи «Профилирование данных» (страница «Общие»)
   На странице **Общие** окна **Редактор задачи «Профилирование данных»** можно настроить следующие параметры:  
@@ -63,9 +65,9 @@ ms.lasthandoff: 08/03/2017
  **Назначение**  
  Указывает, какой диспетчер соединения файлов или какая переменная пакета содержит выходные данные профиля данных.  
   
--   Если для параметра **DestinationType** установлено значение **FileConnection**, в параметре **Целевой объект** отображаются доступные диспетчеры соединения файлов. Выберите один из этих диспетчеров соединений или \<создать соединение с файлом > для создания нового файла подключения диспетчера.  
+-   Если для параметра **DestinationType** установлено значение **FileConnection**, в параметре **Целевой объект** отображаются доступные диспетчеры соединения файлов. Выберите один из этих диспетчеров или значение \<>, чтобы создать новый диспетчер подключения файлов.  
   
--   Если для параметра **DestinationType** установлено значение **Переменные**, в параметре **Целевой объект** отображаются доступные в списке **Целевой объект** переменные пакета. Выберите одну из этих переменных или \<создать переменную > для создания новой переменной.  
+-   Если для параметра **DestinationType** установлено значение **Переменные**, в параметре **Целевой объект** отображаются доступные в списке **Целевой объект** переменные пакета. Выберите одну из этих переменных или \<Создать переменную>, чтобы создать новую переменную.  
   
  **OverwriteDestination**  
  Указывает, следует ли перезаписать выходной файл, если он уже существует. Значение по умолчанию равно **False**. Значение этого свойства используется только при условии, что для параметра DestinationType установлено значение FileConnection. Если параметр DestinationType имеет значение Variable, то предыдущее значение переменной всегда перезаписывается.  
@@ -81,11 +83,10 @@ ms.lasthandoff: 08/03/2017
  Открывает средство просмотра профиля данных. Изолированное средство просмотра профиля данных отображает выходной профиль данных из задачи «Профилирование данных». Выходной профиль данных вы можете просмотреть после запуска задачи «Профилирование данных» внутри пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и расчета профилей данных.  
   
 > [!NOTE]  
->  Можно также открыть средство просмотра профиля данных путем запуска DataProfileViewer.exe в папке  *\<диска >*: \Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn.  
+>  Вы можете также открыть средство просмотра профиля данных путем запуска DataProfileViewer.exe в папке: *\<диск>*:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn.  
   
 ## <a name="see-also"></a>См. также:  
  [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)   
- [Данные профилирования редактор задач &#40; Страница «запросы профиля» &#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
+ [Редактор задачи "Профилирование данных" (страница "Запросы профиля")](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   
   
-

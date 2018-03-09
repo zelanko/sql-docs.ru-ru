@@ -2,33 +2,33 @@
 title: "Элементы синтаксиса многомерных Выражений (MDX) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], syntax
 - MDX [Analysis Services], syntax
 ms.assetid: f4c16e1a-cf1a-4be0-839a-db018430ff14
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 7ed42f669cd9e78faa738e876b1872c83c98a790
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 77aab8ddf130fc7f93cecfe762833bbda873c81a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-syntax-elements-mdx"></a>Синтаксические элементы в многомерных выражениях (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   В языке многомерных выражений существует ряд элементов, используемых в большинстве инструкций или оказывающих влияние на них.  
   
@@ -47,4 +47,3 @@ ms.lasthandoff: 08/02/2017
  [Многомерные выражения &#40; Многомерные Выражения &#41; Ссылка](../mdx/multidimensional-expressions-mdx-reference.md)  
   
   
-

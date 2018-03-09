@@ -2,13 +2,13 @@
 title: "Базовый запрос многомерных Выражений (MDX) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - SELECT statement [MDX]
 - cubes [Analysis Services], SELECT statement
 ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
-caps.latest.revision: 32
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: 9abd75f8cbed78630caac64447b8df59cde3ea56
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d8d80527166b6b6a1d49cbd4f3735689c429020e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mdx-query---the-basic-query"></a>Запрос многомерных Выражений — базовый запрос
-  Базовый запрос многомерных выражений — это инструкция SELECT, наиболее частый запрос в многомерных выражениях. Чтобы получить основательные знания о применении многомерных выражений для запроса многомерных данных, необходимо понять, как в инструкции многомерных выражений SELECT определяется результирующий набор, синтаксис инструкции SELECT и как с ее помощью создавать простые запросы.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Базовый запрос многомерных выражений — это инструкция SELECT, наиболее частый запрос в многомерных выражениях. Чтобы получить основательные знания о применении многомерных выражений для запроса многомерных данных, необходимо понять, как в инструкции многомерных выражений SELECT определяется результирующий набор, синтаксис инструкции SELECT и как с ее помощью создавать простые запросы.  
   
 ## <a name="specifying-a-result-set"></a>Указание результирующего набора  
  В многомерном выражении инструкция SELECT указывает результирующий набор, содержащий подмножество многомерных данных, возвращаемое из куба. Чтобы указать результирующий набор, запрос многомерных выражений должен содержать следующие данные.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
 -   Предложение SELECT, определяющее оси запроса в инструкции многомерных выражений SELECT. Дополнительные сведения о построении осей запроса в предложении SELECT см. в разделе [Определение содержимого оси запроса (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md).  
   
--   Предложение FROM, определяющее, к какому кубу будет направлен запрос. Дополнительные сведения о предложении FROM см. в разделе [Инструкция SELECT (многомерные выражения)](../../../mdx/mdx-data-manipulation-select.md).  
+-   Предложение FROM, определяющее, к какому кубу будет направлен запрос. Дополнительные сведения о предложении FROM см. в разделе [SELECT Statement &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md).  
   
 -   Необязательное предложение WHERE, определяющее, какие элементы или кортежи используются на оси среза для ограничения возвращаемых данных. Дополнительные сведения о построении осей среза в предложении WHERE см. в разделе [Определение содержимого оси среза (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
   
@@ -67,7 +67,7 @@ FROM <SELECT subcube clause>
 [ <SELECT cell property list clause> ]  
 ```  
   
- Инструкция многомерных выражений SELECT поддерживает дополнительный синтаксис, например: ключевое слово WITH, использование функций многомерных выражений для создания вычисляемых элементов, включаемых в ось запроса или среза, а также возможность возвращать значения свойств определенных ячеек как части запроса. Дополнительные сведения об инструкции SELECT многомерных выражений см. в разделе [Инструкция SELECT (многомерные выражения)](../../../mdx/mdx-data-manipulation-select.md).  
+ Инструкция многомерных выражений SELECT поддерживает дополнительный синтаксис, например: ключевое слово WITH, использование функций многомерных выражений для создания вычисляемых элементов, включаемых в ось запроса или среза, а также возможность возвращать значения свойств определенных ячеек как части запроса. Дополнительные сведения об инструкции SELECT многомерных выражений см. в разделе [SELECT Statement &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md).  
   
 ### <a name="comparing-the-syntax-of-the-mdx-select-statement-to-sql"></a>Сравнение синтаксиса инструкции многомерных выражений SELECT с синтаксисом SQL  
  Формат синтаксиса для инструкции многомерных выражений SELECT сходен с синтаксисом ее аналога в SQL. Тем не менее есть несколько серьезных отличий.  
@@ -116,8 +116,7 @@ WHERE ( [Sales Territory].[Southwest] )
  Дополнительные примеры см. в разделах [Определение содержимого оси запроса (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md) и [Определение содержимого оси среза (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Основные понятия многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Ключевые понятия многомерных Выражений &#40; Службы Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Инструкция SELECT &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   
-

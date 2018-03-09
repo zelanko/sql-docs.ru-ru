@@ -2,27 +2,29 @@
 title: "Свойства подписки — &lt;подписка&gt; | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
-caps.latest.revision: 19
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 92f21e725c1f3ca471d3d9f774850f987874f836
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "19"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 49bafece891f7ff954938c5c207adb127e4f13c7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-properties---ltsubscriptiongt"></a>Свойства подписки — &lt;Подписка&gt;
-  В этом разделе приводится сведения о диалоговом окне **Свойства подписки** .  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] В этом разделе приводится сведения о диалоговом окне **Свойства подписки**.  
   
 -   В статье [Свойства подписки — подписчик](../../relational-databases/replication/subscription-properties-subscriber.md) рассматриваются свойства подписок, доступные на подписчике (только для подписок по запросу).  
   
@@ -31,7 +33,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
  [Просмотр и изменение свойств подписки по запросу](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [Просмотр и изменение свойств принудительной подписки](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
- [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Справочник по свойствам (репликация)](../../relational-databases/replication/properties-reference-replication.md)  
   
   

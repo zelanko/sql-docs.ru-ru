@@ -3,10 +3,12 @@ title: "Смешанный курсоры | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - cursors [ODBC], key-set driven
 - cursors [ODBC], mixed
 ms.assetid: 9beb2db9-0b6d-491d-9529-d64e64e59014
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3ca9ad7c2c1f085cf3a74ab8b824ef7c4d6df2e6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 16369d96931bd2b01d644756ab7e1e22fd325a85
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mixed-cursors"></a>Смешанный курсоров
 Смешанный курсор представляет собой сочетание курсор, управляемый набором ключей и динамический курсор. Он используется, когда результирующий набор слишком велик для достаточно хранить ключи для всего результирующего набора. Смешанный курсоры реализуются посредством создания набора ключей, меньше, чем весь результирующий набор, но больше, чем набор строк.  
@@ -39,4 +40,3 @@ ms.lasthandoff: 09/09/2017
  Теперь предположим, что другой удаляет строки приложения 11 и 101. Если курсор пытается извлечь строку 11, он будет обнаружить брешь в системе, поскольку имеет ключ для этой строки, но не строка существует; Это поведение, управляемые набором ключей. Если курсор пытается извлечь строку 101, курсор не обнаружит строки отсутствует, так как он не имеет ключа для строки. Вместо этого он будет получать суть ранее строки 102. Это поведение динамических курсоров.  
   
  Смешанный курсора соответствует курсор, управляемый набором ключей, когда размер набора ключей имеет размер результирующего набора. Смешанный курсора соответствует динамический курсор, когда размер набора ключей имеет значение 1.
-

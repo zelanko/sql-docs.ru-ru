@@ -2,27 +2,31 @@
 title: "Поддержка высокого уровня доступности в базах данных OLTP в памяти | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/31/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
-caps.latest.revision: 11
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b1ac85ca1f9e073a7c9b9577601fcc982e7249ab
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 299c2e0d7306fb1cca33eac4a26c1d3b04dca83c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Поддержка высокого уровня доступности в базах данных OLTP в памяти
-  Базы данных, содержащие оптимизированные для памяти таблицы со скомпилированными в собственном коде хранимыми процедурами или без них, полностью поддерживаются с группами доступности AlwaysOn.  Нет никаких различий в конфигурации и поддержке для баз данных, которые содержат объекты [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , и тех, в которых их нет.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Базы данных, содержащие оптимизированные для памяти таблицы со скомпилированными в собственном коде хранимыми процедурами или без них, полностью поддерживаются с группами доступности AlwaysOn.  Нет никаких различий в конфигурации и поддержке для баз данных, которые содержат объекты [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , и тех, в которых их нет.  
   
  При развертывании выполняющейся в памяти OLTP базы данных в конфигурации группы доступности AlwaysOn изменения, внесенные в оптимизированные для памяти таблицы в первичной реплике, применяются в памяти к таблицам во вторичных репликах при применении операции REDO. Это означает, что отработка отказа на вторичную реплику может выполняться очень быстро, так как данные уже находятся в памяти. Кроме того, для запросов доступны таблицы во вторичных репликах, для которых был настроен доступ на чтение.  
   
@@ -57,4 +61,3 @@ ms.lasthandoff: 06/22/2017
  [Репликация на подписчиков оптимизированных для памяти таблиц](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)  
   
   
-

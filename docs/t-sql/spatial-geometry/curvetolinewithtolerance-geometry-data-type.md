@@ -3,8 +3,11 @@ title: "CurveToLineWithTolerance (тип данных geometry) | Докумен
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ dev_langs:
 helpviewer_keywords:
 - CurveToLineWithTolerance method (geometry)
 ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
-caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5120f9c27e6157fd2f19c598ad984e1a3543db94
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 9fd46759735549e06a25544ee04a4db356464916
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance (тип данных geometry)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 Возвращает приближение из многоугольников **geometry** экземпляра, содержащего сегменты дуги.
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 09/01/2017
  *отказоустойчивость*  
  — **Двойные** выражение, определяющее максимальную ошибку между исходным сегментом дуги и его линейной аппроксимацией.  
   
- *относительный*  
+ *relative*  
  — **Bool** выражение, которое указывает, следует ли использовать относительный максимум для отклонения. Когда для относительного параметра задается значение false (0), для абсолютного максимума устанавливается значение, равное возможному отклонению линейной аппроксимации. Если для относительного параметра задано значение true, то вычисляется погрешность, равная произведению параметра tolerance на диаметр ограничивающего прямоугольника для пространственного объекта.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
@@ -53,7 +55,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="exceptions"></a>Исключения  
  При задании tolerance <= 0 возникает исключение `ArgumentOutOfRange`.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод можно указать допустимое количество ошибок для результирующего **LineString**.  
   
  В следующей таблице показан тип экземпляра, который возвращается методом `CurveToLineWithTolerance()` для различных типов.  
@@ -120,10 +122,9 @@ ms.lasthandoff: 09/01/2017
  SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.1, 0).ToString();
  ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CurveToLineWithTolerance &#40; тип данных geography &#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   
  [STCurveToLine &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
   
   
-
 

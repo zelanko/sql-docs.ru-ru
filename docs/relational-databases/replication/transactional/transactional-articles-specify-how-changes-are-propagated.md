@@ -2,9 +2,12 @@
 title: "Определение способа распространения изменений для статей транзакций | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - transactional replication, propagation methods
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
-caps.latest.revision: 48
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 22e745406fe58c38e44e42395844a55efff3f57a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d7b807d914d84a818e9ce9cccadde597a163955c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Определение способа распространения изменений для статей транзакций
-  Репликация транзакций позволяет указывать, как изменения данных распространяются от издателя к подписчикам. Для каждой опубликованной таблицы можно указать один из четырех способов, которым каждая операция (INSERT, UPDATE или DELETE) должна распространяться на подписчик:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Репликация транзакций позволяет указывать, как изменения данных распространяются от издателя к подписчикам. Для каждой опубликованной таблицы можно указать один из четырех способов, которым каждая операция (INSERT, UPDATE или DELETE) должна распространяться на подписчик:  
   
 -   Укажите, что репликации транзакций следует создать скрипт и затем вызвать хранимую процедуру для распространения изменений на подписчики (по умолчанию).  
   
@@ -65,7 +68,7 @@ ms.lasthandoff: 06/22/2017
   
 -   При внесении изменений схемы в опубликованную таблицу пользовательские процедуры должны быть созданы заново. Дополнительные сведения см. в статье [Повторное создание пользовательских процедур транзакций с учетом изменений в схеме](../../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md).  
   
--   При использовании значений больше 1 для параметра **-SubscriptionStreams** агента распространителя убедитесь, что обновления первичных ключевых столбцов выполнены успешно. Например:  
+-   При использовании значений больше 1 для параметра **-SubscriptionStreams** агента распространителя убедитесь, что обновления первичных ключевых столбцов выполнены успешно. Пример:  
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  
@@ -222,4 +225,3 @@ go
  [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   
-

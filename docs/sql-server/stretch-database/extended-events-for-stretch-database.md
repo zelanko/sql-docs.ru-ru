@@ -1,29 +1,32 @@
 ---
-title: "Расширенные события для базы данных Stretch | Документация Майкрософт"
+title: "Расширенные события для Stretch Database | Документация Майкрософт"
 ms.custom: 
 ms.date: 06/14/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: stretch-database
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
-caps.latest.revision: 4
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dad6f8bb729bb16121648f01ec046bffc33443ad
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d17c9eec2443602cde7465426f7349beb4e0a6e1
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="extended-events-for-stretch-database"></a>Расширенные события для базы данных Stretch
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="extended-events-for-stretch-database"></a>Расширенные события для Stretch Database
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
 База данных Stretch предоставляет набор расширенных событий для поиска и устранения неполадок.  
   
@@ -87,6 +90,5 @@ stretch_table_validation_error|Сообщает о завершении пров
 stretch_unprovision_table_start|Сообщает о начале отмены подготовки таблицы расширения.  
   
 ## <a name="see-also"></a>См. также:  
-[Управление базой данных Stretch и устранение связанных с ней неполадок](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
-
+[Управление Stretch Database и устранение связанных с ней неполадок](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
 

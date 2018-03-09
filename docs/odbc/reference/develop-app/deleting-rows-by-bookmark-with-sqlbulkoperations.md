@@ -3,10 +3,12 @@ title: "Удаление строк по закладке с SQLBulkOperations |
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - SQLBulkOperations function [ODBC], deleting rows
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 46139ec9-7095-481a-bf45-20200a2fdc03
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bb572386d385ea081297bc752a9c0f1dd9a8fd7b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: db7e04c5bf76855afdb24676c905c5cccbc60cbc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deleting-rows-by-bookmark-with-sqlbulkoperations"></a>Удаление строк по закладке с SQLBulkOperations
 При удалении строки с закладкой, **SQLBulkOperations** позволяет удалить один или несколько выбранных строк таблицы источника данных. Строки идентифицируются по закладки в столбце привязанного закладки.  
@@ -36,4 +37,3 @@ ms.lasthandoff: 09/09/2017
 2.  Устанавливает атрибут SQL_ATTR_ROW_ARRAY_SIZE инструкции количество закладок и привязывает буфер, содержащий значение или массив закладки для столбца с номером 0.  
   
 3.  Вызовы **SQLBulkOperations** с *операции* значение SQL_DELETE_BY_BOOKMARK.
-

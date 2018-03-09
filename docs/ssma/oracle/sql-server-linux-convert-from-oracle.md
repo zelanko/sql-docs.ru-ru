@@ -6,15 +6,19 @@ ms.author: edmacauley
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: f4ab25f440db693c0fd81093f6191fc0c3390ebb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: d49a98dd9268a2ea532b0b960bb0740580ccee69
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Перенос схемы Oracle для 2017 г. SQL Server в Linux с SQL Server Migration Assistant
 
@@ -28,7 +32,7 @@ ms.lasthandoff: 10/02/2017
 > * Образец схемы HR
 > * Перенос данных
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - Экземпляр Oracle 12c (12.2.0.1.0) с **HR** установлена схема
 - Рабочий экземпляр SQL Server в Linux
@@ -138,4 +142,3 @@ SSMA для Oracle не использует образец схемы Oracle п
 
 > [!div class="nextstepaction"]
 >[Документация по SQL Server Migration Assistant](../sql-server-migration-assistant.md)
-

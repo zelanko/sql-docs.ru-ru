@@ -1,29 +1,28 @@
 ---
-title: "Поиск текста, чисел и дат в отчете | Документы Microsoft"
+title: "Поиск текста, чисел и дат в отчете | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- searching reports
+helpviewer_keywords: searching reports
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 75e9c44d9cb75cef338ff2cd684c38969aa1751f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 285a9a4e1dc3d7babca92270ccc2db665afbdda0
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="find-text-numbers-or-dates-in-a-report"></a>Поиск текста, числа и даты в отчете
   Можно искать содержимое в отчете, введя слово или фразу, которую нужно найти (максимальная длина искомого термина составляет 256 знаков). Поиск является техникой навигации, которая ищет совпадающее значение и устанавливает фокус на часть отчета, содержащую это значение.  
@@ -48,8 +47,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  Для поиска следующих вхождений того же значения нажмите кнопку **Далее**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Добавление веб-части средства просмотра отчетов на веб-страницу (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   
-

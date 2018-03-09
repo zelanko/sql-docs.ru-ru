@@ -2,16 +2,16 @@
 title: "Доступные для записи измерения | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - write-enabled dimensions [Analysis Services]
 - dimensions [Analysis Services], write-enabled
@@ -19,19 +19,19 @@ helpviewer_keywords:
 - write-enabled cubes [Analysis Services]
 - writeback [Analysis Services], dimensions
 ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 175199b7090abc373e0ac39d1e99e81480df4e2e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 73f6b1ec123f334a5169a246e10b2b5bb6b5587f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="write-enabled-dimensions"></a>Измерения, доступные для записи
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
@@ -62,7 +62,7 @@ ms.lasthandoff: 09/01/2017
 > [!NOTE]  
 >  Обратная запись в измерения не поддерживается связанными измерениями.  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
  Обновление измерений, доступных для записи, могут выполнять только бизнес-пользователи, которые являются членами ролей базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , и которым было предоставлено разрешение на чтение измерения и запись в него. Для каждой роли можно контролировать возможность обновления тех или иных элементов. Чтобы бизнес-пользователи могли обновлять измерения, доступные для записи, их клиентское приложение должно поддерживать такую возможность. Для таких пользователей измерение, доступное для записи, должно содержаться в кубе, который подвергался обработке с момента последнего изменения измерения. Дополнительные сведения см. в разделе [Предоставление доступа к объектам и операциям (Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   
  Пользователи и группы, входящие в роль «Администраторы», могут обновлять элементы атрибутов и значения свойств связанных элементов измерения, доступного для записи, даже если оно не включено в куб.  
@@ -73,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [Измерения (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Раздел схемы | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 51c10f0fb21bdab8c83d799d635153b62c2c6e58
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3f691a4ba9632f40ceb4eb08c33a35135d9a0e7d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="schema-section"></a>Раздел схемы
 Раздел схемы является обязательным. Как показано в предыдущем примере, ADO записывает подробные метаданные о каждом столбце, чтобы сохранить семантику значений данных, насколько возможно, для обновления. Тем не менее для загрузки в XML, ADO требуется только имена столбцов и строк, к которому они принадлежат. Ниже приведен пример минимальной схемой:  
@@ -182,6 +181,5 @@ ms.lasthandoff: 09/09/2017
   
  Дополнительные сведения о OLE DB конструкции доступны для использования в схеме XML-документа для OLE DB, в разделе Определение «urn: schemas-microsoft-com:rowset» и руководство программиста OLE DB.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сохранение записей в формате XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
-

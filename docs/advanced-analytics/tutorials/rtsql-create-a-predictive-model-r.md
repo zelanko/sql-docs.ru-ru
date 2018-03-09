@@ -2,30 +2,31 @@
 title: "Создать прогнозную модель (R в быстрый запуск SQL Server) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 dev_langs:
 - R
 - SQL
 ms.assetid: 6eb78a80-5791-438f-9ca6-d142ab5d9bb1
-caps.latest.revision: 11
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 1b40295452da5b7da34a31e6825630da9c6c4861
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 73d957b05c9bc964a3da1c7e177d9413e0c73aa9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-a-predictive-model-r-in-sql-quickstart"></a>Создать прогнозную модель (R в быстрый запуск SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 На этом этапе вы узнаете, как обучить модель с помощью R, а также как сохранить ее в таблицу в SQL Server. Мы будем использовать простую модель регрессии, которая может прогнозировать тормозную дистанцию автомобиля на основе его скорости. Вы воспользуетесь `cars` набора данных, включенных с помощью R, так как он является небольшим и простым для понимания.
 
@@ -159,7 +160,6 @@ VALUES (' latest model', @model)
 
 Теперь, когда у вас есть модель, вы узнаете, как использовать ее для получения прогнозов и построить график с результатами.
 
-[Прогнозировать и построения из модели](../tutorials/rtsql-predict-and-plot-from-model.md)
-
+[Получение прогнозов с помощью модели и построение графика с результатами](../tutorials/rtsql-predict-and-plot-from-model.md)
 
 

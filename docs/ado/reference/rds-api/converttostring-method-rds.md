@@ -3,7 +3,7 @@ title: "Метод ConvertToString (RDS) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - ConvertToString method [ADO]
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 95425c734f254bf534eacdad606025fca43c2158
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b910522edc20c73164d03fd5f7f313c1eaffabd7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="converttostring-method-rds"></a>Метод ConvertToString (RDS)
 Преобразует [записей](../../../ado/reference/ado-api/recordset-object-ado.md) MIME строку, которая представляет данные набора записей.  
@@ -45,10 +44,10 @@ DataFactory.ConvertToString(Recordset)
  *DataFactory*  
  Объектную переменную, которая представляет [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) объекта.  
   
- *Набор записей*  
+ *Recordset*  
  Объектную переменную, которая представляет **записей** объекта.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Файлы .asp использовать **ConvertToString** для внедрения **записей** в HTML-страницы, созданные на сервере, чтобы перенести его на клиентском компьютере.  
   
  **ConvertToString** сначала загружает **записей** курсора службой таблиц и создает поток в формате MIME.  
@@ -61,9 +60,8 @@ DataFactory.ConvertToString(Recordset)
 ## <a name="applies-to"></a>Объект применения  
  [Объект DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода ConvertToString (Visual Basic)](../../../ado/reference/ado-api/converttostring-method-example-vb.md)   
  [Пример метода ConvertToString (VBScript)](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)
-
 
 

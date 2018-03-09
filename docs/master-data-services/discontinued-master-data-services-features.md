@@ -1,27 +1,28 @@
 ---
 title: "Неподдерживаемые функции служб Master Data Services | Документы Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
-caps.latest.revision: 18
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: ae2cd76e15dc93c9ce7e3c88a0e89142141d219d
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 3e4f11a2dd8cc4bc07f359f62daf5d444b0a46d3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="discontinued-master-data-services-features"></a>Неподдерживаемые функции служб Master Data Services
   В этой статье описаны функции служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , которые больше недоступны в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -35,4 +36,3 @@ ms.lasthandoff: 09/07/2017
  [Устаревшие функции Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
   
   
-

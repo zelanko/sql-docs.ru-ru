@@ -3,8 +3,11 @@ title: "Создание функции (Transact-SQL) | Документы Micr
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,20 +38,19 @@ helpviewer_keywords:
 - scalar-valued functions
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-caps.latest.revision: 162
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: c74e3a3322dcc2268fa8e386fda5d55f59be98c5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/24/2017
-
+ms.openlocfilehash: 76b25e852e94ff6a511d8b18adb31f9da883a7fe
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Создает определяемую пользователем функцию в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Определяемая пользователем функция представляет собой подпрограмму [!INCLUDE[tsql](../../includes/tsql-md.md)] или среды CLR, которая принимает параметры, выполняет действия, такие как сложные вычисления, а затем возвращает результат этих действий в виде значения. Возвращаемое значение может быть скалярным значением или таблицей. При помощи этой инструкции можно создать подпрограмму, которую можно повторно использовать следующими способами.  
   
@@ -366,9 +368,9 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  
   
- *\<*table_type_definition *>*  ({ \<column_definition > \<column_constraint > | \<computed_column_definition >}    [ \<table_constraint >] [ ,... *n*  ]) Определяет тип данных таблицы для [!INCLUDE[tsql](../../includes/tsql-md.md)] функции. Объявление таблицы включает определения столбцов, а также ограничений для столбцов и таблиц. Таблица всегда помещается в первичную файловую группу.  
+ *\<*table_type_definition *>*  ({ \<column_definition > \<column_constraint > | \<computed_column_definition >}    [ \<table_constraint >] [,... *n*  ]) Определяет тип данных таблицы для [!INCLUDE[tsql](../../includes/tsql-md.md)] функции. Объявление таблицы включает определения столбцов, а также ограничений для столбцов и таблиц. Таблица всегда помещается в первичную файловую группу.  
   
- \<clr_table_type_definition > ({ *column_name**data_type* } [ ,... *n*  ]) **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Предварительная версия в некоторых регионах](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)). |  
+ \<clr_table_type_definition > ({ *column_name**data_type* } [,...  *n*  ]) **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Предварительная версия в некоторых регионах](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)). |  
   
  Определяет табличные типы данных для функции CLR. Объявление таблицы включает только имена столбцов и типы данных. Таблица всегда помещается в первичную файловую группу.  
   
@@ -538,7 +540,7 @@ RETURNS return_data_type
   
  Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ссылаться на нужный метод, если он переопределен в классе, метод указанным в \<method_specifier >, должен иметь следующие характеристики: 
   
--   Получают одинаковое число параметров, которое указано в [ ,...*n* ].  
+-   Получают одинаковое число параметров, которое указано в [,... *n* ].  
   
 -   Принимать все параметры по значению, а не по ссылке.  
   
@@ -656,7 +658,7 @@ RETURNS return_data_type
 |[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|Выводит сведения о параметрах, определенных в определяемых пользователем функциях.|  
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)|Отображает базовые объекты, на которые ссылается функция.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется разрешение CREATE FUNCTION на базу данных и разрешение ALTER на схему, в которой создается функция. Если в функции указан определяемый пользователем тип, требуется разрешение EXECUTE на этот тип.  
   
 ## <a name="examples"></a>Примеры  
@@ -668,7 +670,7 @@ RETURNS return_data_type
   
  Показан вызов функции. Обратите внимание, что `DATEFIRST` устанавливается в значение `1`.  
   
-```tsql
+```sql
 CREATE FUNCTION dbo.ISOweek (@DATE datetime)  
 RETURNS int  
 WITH EXECUTE AS CALLER  
@@ -703,7 +705,7 @@ ISO Week
 ### <a name="b-creating-an-inline-table-valued-function"></a>Б. Создание встроенной функции с табличным значением  
  Результатом следующего примера является встроенная функция, возвращающая табличное значение в базу данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Он возвращает три столбца `ProductID`, `Name` и статистическое вычисление итоговых значений с начала года по магазину — `YTD Total` для каждого продукта, проданных в магазине.  
   
-```tsql  
+```sql  
 CREATE FUNCTION Sales.ufn_SalesByStore (@storeid int)  
 RETURNS TABLE  
 AS  
@@ -722,14 +724,14 @@ GO
 
  При вызове этой функции выполняется следующий запрос.    
 
-```tsql  
+```sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
 ### <a name="c-creating-a-multi-statement-table-valued-function"></a>В. Создание функции с табличным значением из нескольких инструкций  
  В следующем примере создается функция с табличным значением `fn_FindReports(InEmpID)` в базе данных AdventureWorks2012. Если ей передать допустимый идентификатор сотрудника, она вернет таблицу, в которой содержатся все сотрудники, которые прямо или опосредованно перед ним отчитываются. В функции для построения иерархического списка сотрудников используется рекурсивное обобщенное табличное выражение (CTE). Дополнительные сведения о рекурсивных обобщенных табличных выражений см. в разделе [с общее_табличное_выражение &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.ufn_FindReports (@InEmpID INTEGER)  
 RETURNS @retFindReports TABLE   
 (  
@@ -779,7 +781,7 @@ GO
   
 **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql  
+```sql  
 DECLARE @SamplesPath nvarchar(1024);  
 -- You may have to modify the value of this variable if you have  
 -- installed the sample in a location other than the default location.  
@@ -803,7 +805,7 @@ GO
   
 ### <a name="e-displaying-the-definition-of-includetsqlincludestsql-mdmd-user-defined-functions"></a>Д. Отображение определения [!INCLUDE[tsql](../../includes/tsql-md.md)] определяемых пользователем функций  
   
-```tsql  
+```sql  
 SELECT definition, type   
 FROM sys.sql_modules AS m  
 JOIN sys.objects AS o ON m.object_id = o.object_id   
@@ -825,5 +827,4 @@ GO
  [СОЗДАТЬ ПОЛИТИКУ безопасности &#40; Transact-SQL &#41;](../../t-sql/statements/create-security-policy-transact-sql.md)  
   
  
-
 

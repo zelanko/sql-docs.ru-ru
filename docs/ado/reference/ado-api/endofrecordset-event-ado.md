@@ -3,7 +3,7 @@ title: "Событие EndOfRecordset (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - EndOfRecordset event [ADO]
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 79d37ae42a9c9e607ba4d8dba8917fccd7f20c42
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4cf00efb278f6ea9937bd0fa87f929d45b8294cb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="endofrecordset-event-ado"></a>Событие EndOfRecordset (ADO)
 **EndOfRecordset** событие вызывается при попытке переместить строку за пределами [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -55,12 +54,11 @@ EndOfRecordset fMoreData, adStatus, pRecordset
  *pRecordset*  
  Объект **записей** объекта. **Записей** для возникновения этого события.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **EndOfRecordset** событие может происходить, если [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) завершается с ошибкой.  
   
  Этот обработчик событий вызывается при попытке перемещения за пределами **записей** объекта, например в результате вызова **MoveNext**. Тем не менее, хотя в этом случае можно получить дополнительные записи из базы данных и добавляет их в конец **записей**. В этом случае задайте *fMoreData* значение VARIANT_TRUE и возвращают из **EndOfRecordset**. Затем вызовите **MoveNext** еще раз, чтобы получить доступ к вновь полученных записей.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример модели событий ADO (VC ++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Сводка обработчик событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)
-
+ [Общие сведения об обработчике событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)

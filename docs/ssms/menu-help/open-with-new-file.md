@@ -3,31 +3,30 @@ title: "Открыть с помощью (создать файл) | Докум�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.openwith
-helpviewer_keywords:
-- Open With dialog box
+f1_keywords: vs.openwith
+helpviewer_keywords: Open With dialog box
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e0edd5dbed47243ef0d13f352ec525be43d6f0c7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f7df416a20f8b8bae22e10e72fd35904c460808b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-with-new-file"></a>Открыть с помощью (создать файл)
-Можно открыть документ в одном или нескольких редакторах, щелкнув **Открыть** в меню **Файл**, а затем выбрав **Файл**. В диалоговом окне **Открытие файла** выберите файл, щелкните стрелку **Открыть** , затем щелкните **Открыть с помощью**. В диалоговом окне **Открыть с помощью** в списке **Выберите программу для открытия** выберите нужную программу и нажмите **Открыть**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Можно открыть документ в одном или нескольких редакторах, щелкнув **Открыть** в меню **Файл**, а затем выбрав **Файл**. В диалоговом окне **Открытие файла** выберите файл, щелкните стрелку **Открыть** , затем щелкните **Открыть с помощью**. В диалоговом окне **Открыть с помощью** в списке **Выберите программу для открытия** выберите нужную программу и нажмите **Открыть**.  
   
 ## <a name="options"></a>Параметры  
 **Выберите программу для открытия**  
@@ -51,4 +50,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
 [Связывание расширений файлов с редактором кода](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
   
-

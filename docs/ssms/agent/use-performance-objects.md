@@ -3,8 +3,11 @@ title: "Использование объектов производительн
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - tools-ssms
 ms.tgt_pltfrm: 
@@ -20,19 +23,19 @@ helpviewer_keywords:
 - performance counters [SQL Server], SQL Server Agent
 - counters [SQL Server], SQL Server Agent
 ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
-caps.latest.revision: 5
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5197a38da57e041039dab93d037064bba79db7ff
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f99696f644d5def145d4e4ff1c0b040ec29d6673
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="use-performance-objects"></a>Использование объектов производительности
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Агент включает объекты и счетчики производительности, позволяющие отслеживать работу служб. Эти объекты производительности дают возможность использования системного монитора, средства Windows для определения задач, выполняемых службой агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в фоновом режиме. Например, можно узнать, сколько активных заданий запущено в данный момент в службе агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , и определить заблокированные задания.  
   
 Объекты и счетчики производительности службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] предусмотрены для каждого установленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Имена объектам производительности присваиваются в соответствии с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , которые они представляют.  
@@ -41,10 +44,10 @@ ms.lasthandoff: 06/22/2017
   
 |Тип экземпляра|Имя объекта|  
 |-----------------|---------------|  
-|По умолчанию|**SQLAgent:***объект*:*счетчик*|  
+|Default|**SQLAgent:***объект*:*счетчик*|  
 |Именованный|**SQLAgent$**<br /> **&#42;имя_экземпляра&#42; :***объект*:*счетчик*|  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] содержит следующие объекты производительности для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] содержит следующие объекты производительности для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 |Имя объекта|Description|  
 |---------------|---------------|  
@@ -57,4 +60,3 @@ ms.lasthandoff: 06/22/2017
 [Наблюдение и настройка производительности](http://msdn.microsoft.com/en-us/87f23f03-0f19-4b2e-bfae-efa378f7a0d4)  
 [Практическое руководство. Запуск системного монитора (Windows)](http://msdn.microsoft.com/en-us/5e51bb79-5737-470b-9c47-fac330c001c5)  
   
-

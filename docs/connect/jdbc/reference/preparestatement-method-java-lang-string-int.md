@@ -3,29 +3,28 @@ title: "Метод prepareStatement (java.lang.String) | Документы Micr
 ms.custom: 
 ms.date: 02/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerConnection.prepareStatement (java.lang.String)
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerConnection.prepareStatement (java.lang.String)
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: e825765c-eb55-4800-951b-f3495da36641
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cbf8bdbb869f4a82133918d579f7dfc1fd23d3d0
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c2452837aba5b8c5a146c12de838a3259f65be38
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="preparestatement-method-javalangstring"></a>Метод prepareStatement (java.lang.String)
 
@@ -58,4 +57,3 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql)
 [Элементы SQLServerConnection](./sqlserverconnection-members.md)
 
 [Класс SQLServerConnection](./sqlserverconnection-class.md)
-

@@ -3,7 +3,7 @@ title: "Пример свойства InternetTimeout (VC ++) | Документ
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - InternetTimeout property [ADO], VC++ example
 ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3fcad572c7aaf8325cf77c76cdcb57cf59b3ba65
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 41b7d8dbc90c2cea8eaa198b0caf15aefd8051ba
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="internettimeout-property-example-vc"></a>Пример свойства InternetTimeout (VC ++)
 > [!IMPORTANT]
@@ -163,8 +162,7 @@ void PrintComError(_com_error &e)
 // EndInternetTimeoutCpp  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство InternetTimeout (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)
-
+## <a name="see-also"></a>См. также  
+ [Свойство InternetTimeout (служба удаленных рабочих столов)](../../../ado/reference/rds-api/internettimeout-property-rds.md)
 
 

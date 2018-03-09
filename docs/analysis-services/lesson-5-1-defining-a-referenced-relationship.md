@@ -2,29 +2,32 @@
 title: "Определение ссылочной связи | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
-caps.latest.revision: 17
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: f388389edcd3546f94bc120862e8933b3f790c7c
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 388ff1302e12c602c605c05acb1541eec2c599eb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-5-1---defining-a-referenced-relationship"></a>Занятие 5-1-Определение ссылочной связи
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 До сих пор в этом учебнике каждое определенное измерение куба основывалось на таблице, непосредственно связанной с таблицей фактов для группы мер через связь «внешний ключ — первичный ключ». В задачах этого раздела измерение **География** будет связано с таблицей фактов через измерение **Торговый посредник** , которое называется *ссылочным измерением*. Это позволяет пользователям распределить товарооборот посредников по географии. Дополнительные сведения см. в разделе [Определение ссылочной связи и свойств ссылочной связи](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
   
 ## <a name="dimensioning-reseller-sales-by-geography"></a>Распределение показателя «Товарооборот посредников» по измерению «География»  
@@ -130,10 +133,9 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Определение связи фактов](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Связи атрибутов](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
 [Определение ссылочной связи и свойств ссылочной связи](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   
   
   
-

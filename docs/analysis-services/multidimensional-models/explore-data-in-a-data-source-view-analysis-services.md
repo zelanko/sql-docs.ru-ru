@@ -2,13 +2,13 @@
 title: "Просмотр данных в представлении источника данных (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - data source views [Analysis Services], exploring data
 - viewing source data
 ms.assetid: 2c922c35-fbcb-45b2-96b1-c7a846d8b419
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0245eee4ac1b2b874145fa29f9b659b057977f16
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de15507d7fedd1f582e158e85d1f6245972cf27b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>Просмотр данных в представлении источника данных (службы Analysis Services)
-  Диалоговое окно **Просмотр данных** конструктора представлений источников данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] служит для просмотра данных таблицы, представления или именованного запроса в представлении источника данных. При просмотре данных в конструкторе представлений источника данных можно видеть содержимое каждого столбца данных в выбранной таблице, представлении или именованном запросе. Просмотр содержимого помогает определить, все ли столбцы нужны (если именованные вычисления требуются для повышения удобства для пользователя) и возвращают ли существующие именованные вычисления и именованные запросы ожидаемые результаты.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Диалоговое окно **Просмотр данных** конструктора представлений источников данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] служит для просмотра данных таблицы, представления или именованного запроса в представлении источника данных. При просмотре данных в конструкторе представлений источника данных можно видеть содержимое каждого столбца данных в выбранной таблице, представлении или именованном запросе. Просмотр содержимого помогает определить, все ли столбцы нужны (если именованные вычисления требуются для повышения удобства для пользователя) и возвращают ли существующие именованные вычисления и именованные запросы ожидаемые результаты.  
   
  Для просмотра данных требуется активное соединение с источником или источниками данных выбранного объекта в представлении источника данных. Любые именованные вычисления в таблице также передаются в запрос.  
   
@@ -55,8 +55,7 @@ ms.lasthandoff: 09/01/2017
   
 6.  Для повторной выборки данных, нажмите кнопку **Повторить выборку данных** на **Проводник \<имя объекта > Таблица** инструментов.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления источников данных в многомерных моделях](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
-

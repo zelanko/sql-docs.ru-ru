@@ -2,13 +2,13 @@
 title: "Обработка многомерной модели (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,20 +23,20 @@ helpviewer_keywords:
 - project mode [Analysis Services]
 - cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
-caps.latest.revision: 52
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3b53e351836edaecfc37230b389b4fba308eb3d3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb063d1667fc3cd3824f2577784278fa46308960
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>Обработка многомерной модели (службы Analysis Services)
-  Обработка ― это шаг или последовательность шагов, в которых службы Analysis Services загружают данные из реляционного источника данных в многомерную модель. Для объектов, использующих режим хранения MOLAP, данные сохраняются на диске в папке файла базы данных. Для режима хранения ROLAP обработка происходит по запросу, в ответ на запрос многомерных выражений к объекту. Для объектов, использующих режим хранения ROLAP, обработка относится к обновлению кэш-памяти до возврата результатов запроса.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Обработка ― это шаг или последовательность шагов, в которых службы Analysis Services загружают данные из реляционного источника данных в многомерную модель. Для объектов, использующих режим хранения MOLAP, данные сохраняются на диске в папке файла базы данных. Для режима хранения ROLAP обработка происходит по запросу, в ответ на запрос многомерных выражений к объекту. Для объектов, использующих режим хранения ROLAP, обработка относится к обновлению кэш-памяти до возврата результатов запроса.  
   
  По умолчанию обработка выполняется при развертывании решения на сервер. Можно также обработать все решение или его часть либо с помощью нерегламентированных средств, таких как [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] или [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], либо по расписанию с помощью служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и агента SQL Server. При выполнении структурных изменений в модель, например при удалении измерения или изменении его уровня совместимости, необходимо выполнить обработку повторно, чтобы синхронизировать физические и логические аспекты модели.  
   
@@ -85,9 +85,8 @@ ms.lasthandoff: 09/01/2017
   
  При обработке объектов в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно выбрать параметр обработки или включить службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для определения соответствующего типа обработки. Доступные методы обработки отличаются от одного объекта к другому и зависят от типа объекта. Кроме того, доступные методы зависят от типа изменений, внесенных в объект с момента его последней обработки. Если включить в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] автоматический выбор типа обработки, будет использоваться метод, возвращающий объект в полностью обработанном состоянии за минимальное время. Дополнительные сведения см. в разделе [Настройка параметров обработки (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Логическая архитектура (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Объекты баз данных (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Объекты базы данных &#40; Analysis Services — многомерные данные &#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

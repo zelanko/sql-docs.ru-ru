@@ -2,32 +2,31 @@
 title: "ПРОГНОЗ (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/17/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - PREDICT
 - PREDICT_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- PREDICT clause
+dev_langs: TSQL
+helpviewer_keywords: PREDICT clause
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: b9aacbffa28783adf6e92d9260d2bf73d89a0cc4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 529cb229b6658085d0f2122604a4ed638f66a84c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="predict-transact-sql"></a>ПРОГНОЗ (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Создает прогнозируемое значение или оценки на основе хранимых модели.  
 
@@ -62,7 +61,7 @@ MODEL = @model | model_literal
 
 Объект модели могут создаваться с помощью R, Python или другого средства.
 
-**данные**
+**data**
 
 Параметр данных используется для указания данных, используемых для оценки и прогнозирования. Данные указываются в виде источника таблицы в запросе. Источник таблицы может быть таблицу, псевдоним таблицы, псевдоним обобщенного табличного Выражения, представление или табличную функцию.
 
@@ -92,7 +91,7 @@ MODEL = @model | model_literal
 
 Не удается просмотреть структуру внутренней модели с помощью `PREDICT`. Если вы хотите понять содержимое самой модели, необходимо загрузить объект модели, десериализацию и используйте соответствующий код R для синтаксического анализа модели.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 
 `PREDICT` Функция поддерживается во всех выпусках SQL Server, включая Linux.
 
@@ -102,7 +101,7 @@ MODEL = @model | model_literal
 
 Модели, которая используется должен быть создан с помощью одного из поддерживаемых алгоритмов из пакета RevoScaleR. Список поддерживаемых в настоящее время моделей см. в разделе [в режиме реального времени оценки](../../advanced-analytics/real-time-scoring.md).
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Разрешения
 
 Разрешения не требуются для `PREDICT`, однако потребности пользователей `EXECUTE` разрешения в базе данных, а также разрешения на любые данные, которые используются в качестве входных данных запроса. Пользователь также должны быть видимы для считывания из таблицы в модели, если модель хранилось в таблице.
 
@@ -197,6 +196,5 @@ FROM PREDICT( MODEL = @logitObj,  DATA = new_kyphosis_data AS d,
   computeStdErr = 1, interval = 'confidence')
 WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 ```
-
 
 

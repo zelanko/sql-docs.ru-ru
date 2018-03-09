@@ -1,10 +1,13 @@
 ---
-title: "Использование заметок в пакетах | Документы Microsoft"
+title: "Использование заметок в пакетах | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ helpviewer_keywords:
 - adding annotations
 - annotations [Integration Services]
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
-caps.latest.revision: 42
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dabeecf1a4e2715bf4ccd214ac21ff3311f27411
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 55c87d73f66244d00a7ea8599b20565e5bac8eed
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-annotations-in-packages"></a>Использование заметок в пакетах
   Конструктор служб [!INCLUDE[ssIS](../includes/ssis-md.md)] предоставляет заметки, которые можно использовать для обеспечения самодокументируемости пакетов, упрощения их понимания и поддержки. Заметки вы можете добавлять в области конструктора потока управления, потока данных и обработчика событий конструктора [!INCLUDE[ssIS](../includes/ssis-md.md)] . Заметки могут содержать разные типы текста; они полезны при добавлении меток, примечаний и других описательных сведений в пакет. Создание заметок возможно только во время проектирования. Например, они не записываются в журналы.  
@@ -57,4 +59,3 @@ ms.lasthandoff: 09/26/2017
 7.  Чтобы добавить заметку к группе, щелкните правой кнопкой мыши заметку и выберите пункт **Группа**.  
   
 8.  Чтобы сохранить обновленный пакет, в меню **Файл** выберите команду **Сохранить все**.  
-

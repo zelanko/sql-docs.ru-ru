@@ -3,7 +3,7 @@ title: "С помощью связанных технологий с помощ�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - RDS related technologies [ADO]
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 57452cdc7cd0542bd81308f223c559118391204c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b43e5c81fce869ef500524f02a78fda3d7f2bbe3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-related-technologies-with-rds"></a>С помощью связанных технологий с помощью служб удаленных рабочих СТОЛОВ
 Этот раздел содержит следующие подразделы.  
@@ -51,9 +50,8 @@ ms.lasthandoff: 09/09/2017
   
  **Microsoft Windows NT Server или Windows 2000 Server** Дополнительные сведения о безопасности в Microsoft Windows NT Server или Windows 2000 Server см. в разделе Microsoft Windows, веб-сайта.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные принципы RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
 
 
 

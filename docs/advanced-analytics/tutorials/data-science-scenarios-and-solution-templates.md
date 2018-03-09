@@ -2,29 +2,30 @@
 title: "Сценарии обработки и анализа данных и шаблоны решений | Документы Microsoft"
 ms.custom: 
 ms.date: 08/22/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 ms.assetid: 49e54fa9-9b28-44ba-b256-06dad4e8dece
-caps.latest.revision: 17
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 5317f42d3acd85f7865f79405b2daf12793a7de4
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 618e2d43d4ae9e9c214084a4da3ab9d1688b3dba
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Сценарии обработки и анализа данных и шаблоны решений
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Шаблоны — это образцы решений, которые демонстрируют практические приемы и предоставляют стандартные блоки для быстрой реализации собственного решения. Каждый шаблон предназначен для решения конкретной проблемы, для конкретных по вертикали или отрасли. Каждый шаблон охватывает различные задачи: от подготовки данных и формирования характеристик до обучения модели и оценки. Использовать эти шаблоны, чтобы узнать, как [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] работает. Затем вы можете настроить шаблон для соответствия собственные сценарии и создать пользовательское решение. 
 
@@ -113,7 +114,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-steps"></a>Следующие шаги
 
 + [Учебники по обучения машины SQL Server](machine-learning-services-tutorials.md)
-
 
 
 

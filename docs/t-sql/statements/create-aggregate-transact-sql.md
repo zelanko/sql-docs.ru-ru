@@ -3,8 +3,11 @@ title: "Создание статистической функции (Transact-S
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - aggregate functions [SQL Server], user-defined
 - user-defined functions [CLR integration]
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
-caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ad5cf36e97bf3903cc9d42ec5179de6375624f95
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 07509e36b76aad995297cfae0147df7e8db41c20
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Создает определяемую пользователем агрегатную функцию, реализация которой определена в классе сборки платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Чтобы компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] привязал агрегатную функцию к ее реализации, содержащая реализацию сборка платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] должна быть сначала передана в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью инструкции CREATE ASSEMBLY.  
   
@@ -83,15 +85,15 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *udt_type_name*  
  Название пользовательского типа среды CLR, созданного в текущей базе данных. Если *udt_schema_name* не указан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предполагается, что тип принадлежит к схеме текущего пользователя.  
   
- *assembly_name* [ **.** *class_name* ]  
+ *assembly_name* [ **.***class_name* ]  
  Указывает сборку, с которой связывается определяемая пользователем агрегатная функция и, при необходимости, имя схемы, к которой принадлежит сборка, и имя класса в сборке, реализующего определяемую пользователем статистическую функцию. Сборка уже должна быть создана в базе данных с помощью инструкции CREATE ASSEMBLY. *class_name* должен быть допустимым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] идентификатор и совпадать с именем класса, который существует в сборке. *class_name* может быть имя, уточненное пространством имен, если язык программирования, используемый для написания класса используются пространства имен, например C#. Если *class_name* не указан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оно интерпретируется таким же, как *aggregate_name*.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  По умолчанию возможность [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускать код CLR отключена. Можно создавать, изменять и удалять объекты базы данных, которые ссылаются на модули управляемого кода, но код в этих модулях не будет выполняться в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Если [параметр clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) включен с помощью [sp_ Настройка](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
  Класс сборки, указанной в *assembly_name* и его методы должны соответствовать всем требованиям для реализации определяемой пользователем статистической функции в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [пользовательские агрегатные функции](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения CREATE AGGREGATE и разрешения REFERENCES для сборки, указанной в предложении EXTERNAL NAME.  
   
 ## <a name="examples"></a>Примеры  
@@ -120,8 +122,7 @@ EXTERNAL NAME [StringUtilities].[Microsoft.Samples.SqlServer.Concatenate];
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [DROP AGGREGATE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
   
   
-

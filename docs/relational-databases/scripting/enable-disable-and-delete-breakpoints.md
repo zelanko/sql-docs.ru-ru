@@ -2,28 +2,30 @@
 title: "Включение, отключение и удаление точек останова | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
-caps.latest.revision: 5
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0133a419971cfdeeaadbc3a68b79452c20d0dafc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2c78a83bbf85641580f05d08af7272bce554bff2
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Включение, отключение и удаление точек останова
-  Для просмотра всех открытых точек останова и управления ими используется окно **Точки останова** . Используйте данное окно для просмотра сведений о точках останова, а также для выполнения таких действий, как удаление, отключение или включение точек останова.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Для просмотра всех открытых точек останова и управления ими используется окно **Точки останова**. Используйте данное окно для просмотра сведений о точках останова, а также для выполнения таких действий, как удаление, отключение или включение точек останова.  
   
 ## <a name="the-breakpoints-window"></a>Окно точек останова  
  В окне **Точки останова** приводятся такие сведения, как строка кода, в которой расположена точка останова. Кроме того, в окне **Точки останова** можно удалять, отключать и включать точки останова. Дополнительные сведения об окне **Точки останова** см. в разделе [Точки останова Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md).  
@@ -101,4 +103,3 @@ ms.lasthandoff: 06/22/2017
  [Переключение точки останова](../../relational-databases/scripting/toggle-a-breakpoint.md)  
   
   
-

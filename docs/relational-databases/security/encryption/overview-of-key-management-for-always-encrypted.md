@@ -2,28 +2,30 @@
 title: "Общие сведения об управлении ключами для постоянного шифрования | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/20/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
-caps.latest.revision: 32
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: fbe87e904a8e46ae19d6dcb06600352a29949dc2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 8333a497795ae7968b5d297b62aba83944f1b3ba
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Overview of Key Management for Always Encrypted
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 Функция [постоянного шифрования](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) использует два типа ключей шифрования для защиты данных: один ключ для шифрования данных, а другой — для шифрования ключа, который шифрует данные. Ключ шифрования столбца шифрует данные, главный ключ столбца шифрует ключ шифрования столбца. В этой статье приведен подробный обзор процесса управления этими ключами.
@@ -99,12 +101,12 @@ ms.lasthandoff: 09/27/2017
 - Никогда не создавайте главные ключи столбцов или ключи шифрования столбцов на компьютере с базой данных. Ключи следует создавать на отдельном компьютере, который либо выделен для управления ключами, либо является компьютером с приложениями, которым доступ к ключам требуется в любом случае. Это означает, что **никогда не следует запускать средства, используемые для создания ключей, на компьютере с базой данных** , так как если злоумышленник получит доступ к компьютеру, используемому для подготовки или обслуживания ключей постоянного шифрования, он может получить ключи, даже если они появляются в памяти этого средства на короткое время.
 - Чтобы исключить возможность случайного раскрытия главных ключей столбцов или ключей шифрования столбцов в процессе управления ключами, перед определением и реализацией этого процесса крайне важно идентифицировать потенциальных злоумышленников и угрозы безопасности. Например, если требуется, чтобы администраторы баз данных не имели доступа к конфиденциальным данным, то эти администраторы не могут отвечать за создание ключей. Однако администратор баз данных *может* управлять метаданными ключей в базе данных, так как метаданные не содержат ключей с открытым текстом.
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Next Steps
 
 - [Создание и хранение главных ключей столбцов (постоянное шифрование)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
 - [Настройка ключей постоянного шифрования с помощью PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
 - [Смена ключей постоянного шифрования с помощью PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [Configure Always Encrypted using SQL Server Management Studio (Настройка постоянного шифрования с помощью среды SQL Server Management Studio)](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
+- [Настройка функции Always Encrypted с помощью SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
@@ -112,7 +114,6 @@ ms.lasthandoff: 09/27/2017
 - [Always Encrypted (Client Development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [Руководство по использованию мастера постоянного шифрования (хранилище ключей Azure)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
 - [Руководство по использованию мастера постоянного шифрования (хранилище сертификатов Windows)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-
 
 
 

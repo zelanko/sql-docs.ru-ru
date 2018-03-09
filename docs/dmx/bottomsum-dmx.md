@@ -2,35 +2,32 @@
 title: "BottomSum (расширения интеллектуального анализа данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- BOTTOMSUM
-dev_langs:
-- DMX
-helpviewer_keywords:
-- BottomSum function
+f1_keywords: BOTTOMSUM
+dev_langs: DMX
+helpviewer_keywords: BottomSum function
 ms.assetid: fd4b0418-f814-4d83-b2fe-850117e1beb7
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 6fa897bdaf0ebccf356603eaf0bfd3b4dafa1de6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8f6d13ccce9bc25f08e1f0f86b026b24ea75d375
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает в порядке возрастания ранга нижние строки таблицы, сумма которых является, как минимум, указанным значением.  
   
@@ -47,7 +44,7 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  \<Таблица выражения >  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **BottomSum** функция возвращает нижние строки в порядке возрастания их ранга. Ранг основывается на вычисляемом значении из \<ранжирования выражения > аргумент для каждой строки таким образом, что сумма \<ранжирования выражения > значения составляет не менее больше суммы, который задается параметром \<сумма > аргумент. **BottomSum** возвращает возможные наименьшее количество элементов, соответствующих указанному значению суммы.  
   
 ## <a name="examples"></a>Примеры  
@@ -117,4 +114,3 @@ NATURAL PREDICTION JOIN
  [BottomPercent &#40; расширений интеллектуального анализа данных &#41;](../dmx/bottompercent-dmx.md)  
   
   
-

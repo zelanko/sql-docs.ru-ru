@@ -3,7 +3,7 @@ title: "ConnectComplete и отключения событий (ADO) | Доку�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - Disconnect event [ADO]
 - ConnectComplete event [ADO]
 ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7ca521c0e850dd7fdacee6cd594b5c9f23a289d3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ebd4363f166a67a6e48fee41c2585b68de93bc98
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete и отключения событий (ADO)
 **ConnectComplete** событие вызывается после начала подключения. **Disconnect** событие вызывается после завершения соединения.  
@@ -59,7 +58,6 @@ Disconnect adStatus, pConnection
  *pConnection*  
  **Подключения** объектов, для которого применяется это событие.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример модели событий ADO (VC ++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Сводка обработчик событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)
-
+ [Общие сведения об обработчике событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)

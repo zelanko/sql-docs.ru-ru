@@ -3,30 +3,31 @@ title: "Сортировка строк (визуальные инструмен
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - sorting rows [SQL Server]
 - sorting query results [SQL Server]
 ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e48f10c8bcc1302442a5c30e62c08160eb16e82a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 75acf3f01a6d166548ef811275945670802fdb4d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sort-rows-visual-database-tools"></a>Сортировка строк (визуальные инструменты для баз данных)
-Строки в результатах запроса можно сортировать. То есть можно указать конкретный столбец или набор столбцов, значениями которых определяется порядок строк в результирующем наборе.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Строки в результатах запроса можно сортировать. То есть можно указать конкретный столбец или набор столбцов, значениями которых определяется порядок строк в результирующем наборе.  
   
 > [!NOTE]  
 > Порядок сортировки частично определяется параметрами сортировки столбца. Очередность использования параметров сортировки можно изменить в диалоговом окне [Параметры сортировки](../../ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md).  
@@ -113,4 +114,3 @@ ms.lasthandoff: 08/18/2017
 [Результаты запросов сортировки и группирования (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
 [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
-

@@ -2,9 +2,12 @@
 title: "Использование таблиц inserted и deleted | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-dml
 ms.tgt_pltfrm: 
@@ -18,19 +21,20 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: 35
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f7b04d0977ceaa1bde5eddf5246be56822517e84
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 269334b04860147254bf7430a7c9291ef83c08bc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Использование таблиц inserted и deleted
-  Инструкции триггеров DML используют две особые таблицы: deleted и inserted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически создает эти таблицы и управляет ими. Эти временные таблицы, находящиеся в оперативной памяти, используются для проверки результатов изменений данных и для установки условий срабатывания триггеров DML. Нельзя в этих таблицах изменять данные напрямую или выполнять над ними операции языка описания данных DDL, например инструкцию CREATE INDEX.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+Инструкции триггеров DML используют две особые таблицы: deleted и inserted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически создает эти таблицы и управляет ими. Эти временные таблицы, находящиеся в оперативной памяти, используются для проверки результатов изменений данных и для установки условий срабатывания триггеров DML. Нельзя в этих таблицах изменять данные напрямую или выполнять над ними операции языка описания данных DDL, например инструкцию CREATE INDEX.  
   
  В триггерах DML таблицы inserted и deleted в основном используются для выполнения следующих операций.  
   
@@ -78,7 +82,7 @@ ms.lasthandoff: 06/22/2017
   
  Если инструкция INSERT, UPDATE или DELETE ссылается на представление, для которого определен триггер INSTEAD OF, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] вызывает триггер вместо того, чтобы предпринять какое-либо прямое действие по отношению к таблице. Триггер использует сведения, представленные в таблицах inserted и deleted, для создания инструкций, необходимых для выполнения требуемых действий в базовых таблицах, даже в том случае, если формат данных в таблицах inserted и deleted, созданных для представления, отличается от формата данных базовой таблицы.  
   
- Формат таблиц inserted и deleted триггера INSTEAD OF, заданного для представления, совпадает со списком выборки инструкции SELECT, заданной для представления. Например:  
+ Формат таблиц inserted и deleted триггера INSTEAD OF, заданного для представления, совпадает со списком выборки инструкции SELECT, заданной для представления. Пример:  
   
 ```  
 USE AdventureWorks2012;  

@@ -1,28 +1,28 @@
 ---
 title: "Сопоставление Oracle и типы данных SQL Server (OracleToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Type Mapping Inheritance
+helpviewer_keywords: Type Mapping Inheritance
 ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 8984f279cb6a42d057093f048a29149a7be2d981
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 400ed2a28e622ffb9493af7462e06f551a214a51
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Сопоставление Oracle и типы данных SQL Server (OracleToSQL)
 Типы баз данных Oracle отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типы базы данных. При преобразовании объекты базы данных Oracle для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] объектов, необходимо указать способ сопоставления типов данных из Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Вы можете принять сопоставления типов данных по умолчанию или можно настроить сопоставления, как показано в следующих разделах.  
@@ -92,10 +92,9 @@ SSMA имеет набор по умолчанию сопоставлений т
   
         Не удается удалить наследуемые сопоставления. Тем не менее наследуемые сопоставления переопределяются пользовательских сопоставлений на отдельный объект или объект категории.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 Следующим шагом в процессе миграции является либо [Создание отчета оценки](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357) или [преобразования объектов базы данных Oracle в синтаксис SQL Server](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272). При создании отчета оценки объектов Oracle автоматически преобразуются во время оценки.  
   
 ## <a name="see-also"></a>См. также:  
 [Миграция баз данных Oracle в SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
-

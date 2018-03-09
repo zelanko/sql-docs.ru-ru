@@ -2,32 +2,31 @@
 title: "Просмотр отчетов настройки | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.suite: sql
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- tuning reports [SQL Server]
+applies_to: SQL Server 2016
+helpviewer_keywords: tuning reports [SQL Server]
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "21"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c986b13e3c38e168f7384a6552befca085f9be2f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a395ca1faceb1465c1ce7dc8fc43215dae31c8be
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-3---viewing-tuning-reports"></a>Занятие 1-3 - Просмотр отчетов настройки
-В предыдущей практической работе этого учебника были рассмотрены скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые создают или сбрасывают объекты базы данных в рекомендациях помощника по настройке ядра СУБД, которые были созданы в сеансе настройки MySession. Сеанс настройки MySession был создан в разделе [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]В предыдущей практической на этом занятии вы просмотрели [!INCLUDE[tsql](../../includes/tsql-md.md)] скрипты, создающие или удаляющие объекты базы данных в рекомендациях по настройке ядра СУБД, которые были созданы в результате сеанс настройки MySession. Сеанс настройки MySession был создан в разделе [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
   
 Хотя очень полезно рассмотреть скрипты, которые можно использовать для применения результатов настройки, помощник по настройке ядра СУБД также предоставляет много полезных отчетов. Эти отчеты содержат сведения о существующих структурах физического проектирования в настраиваемой базе данных, а также о рекомендуемых структурах. Отчеты настройки можно просмотреть, перейдя на вкладку **Отчеты** , как описано в следующей практической работе. В этой практической работе используются сеансы настройки MySession и EvaluateMySession, которые были созданы упражнениях разделов [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md) и [Viewing Tuning Recommendations](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md).  
   
@@ -57,4 +56,3 @@ ms.lasthandoff: 08/02/2017
   
   
   
-

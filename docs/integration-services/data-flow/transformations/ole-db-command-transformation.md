@@ -1,10 +1,13 @@
 ---
-title: "Преобразование «Команда OLE DB» | Документы Microsoft"
+title: "Преобразование \"Команда OLE DB\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -15,17 +18,16 @@ helpviewer_keywords:
 - statements [Integration Services]
 - OLE DB Command transformation
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-caps.latest.revision: 55
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 99d34e8dd153c5ca1793d14cc9638aab6529a643
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: b759d86a0a501364cdb5f4a1544ac2eb3df8d717
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-command-transformation"></a>преобразование «Команда OLE DB»
   Преобразование «Команда OLE DB» выполняет инструкцию SQL для каждой строки потока данных. Например, можно выполнить инструкцию SQL, с помощью которой создаются, обновляются или удаляются строки в таблице базы данных.  
@@ -51,7 +53,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="logging"></a>Ведение журнала  
  В журнал можно записывать вызовы, сделанные преобразованием «Команда OLE DB» к внешним источникам данных. Эта возможность протоколирования может быть использована для устранения неполадок соединений и выполнения команд для внешних источников данных, которые выполняются преобразованием «Команда OLE DB». Для протоколирования вызовов, которые преобразование «Команда OLE DB» совершает к внешним поставщикам данных, необходимо разрешить ведение журнала пакета и выбрать событие **Диагностика** на уровне пакета. Дополнительные сведения см. в разделе [Инструменты устранения неполадок при выполнении пакетов](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Преобразование можно настроить с помощью конструктора служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или объектной модели. Сведения о настройке этого преобразования программными средствами см. в руководстве разработчика.  
   
 ## <a name="configure-the-ole-db-command-transformation"></a>настроить преобразование «Команда OLE DB»
@@ -110,4 +112,3 @@ ms.lasthandoff: 08/19/2017
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

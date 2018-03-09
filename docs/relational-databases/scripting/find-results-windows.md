@@ -2,9 +2,12 @@
 title: "Окно \"Результаты поиска\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,19 @@ f1_keywords:
 helpviewer_keywords:
 - Find Results Windows dialog box
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 52589dedfb673f299f63d12c2381be04019a78bb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: cda243b10834a4c131acf5b71448a19c2856d5d1
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="find-results-windows"></a>Окна «Результаты поиска»
-  В двух окнах «Результаты поиска» отображаются совпадения, найденные с использованием вкладок **Поиск в файлах** или **Замена в файлах** диалогового окна **Найти и заменить** . Команда **Параметры результата** для **Поиск в файлах** и **Замена в файлах** позволяет выбрать окно «Результаты поиска», содержащее список найденных совпадений.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В двух окнах "Результаты поиска" отображаются совпадения, найденные с использованием вкладок **Поиск в файлах** или **Замена в файлах** диалогового окна **Найти и заменить**. Команда **Параметры результата** для **Поиск в файлах** и **Замена в файлах** позволяет выбрать окно «Результаты поиска», содержащее список найденных совпадений.  
   
  Выбранное окно «Результаты поиска» открывается автоматически при нахождении совпадений. Для ручного отображение окна «Результаты поиска» выберите пункт **Другие окна** в меню **Просмотр** , а затем выберите пункт **Результаты поиска 1** или **Результаты поиска 2**.  
   
@@ -103,4 +105,3 @@ ms.lasthandoff: 06/22/2017
  `Total replaced: 57  Matching files: 23  Total files searched: 59`  
   
   
-

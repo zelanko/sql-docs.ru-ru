@@ -2,34 +2,32 @@
 title: "IS (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- IS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- IS operator
+f1_keywords: IS
+dev_langs: kbMDX
+helpviewer_keywords: IS operator
 ms.assetid: dc8c0b91-3bb1-49e5-8d70-57545baaa8e0
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 2851106b509cb3907b06b21adc0d08e850af4fdd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 97183b67350b6d3db613bb8bc8e957642bf5bb76
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="is-mdx"></a>IS (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Выполняет логическое сравнение двух выражений объектов.  
   
@@ -50,7 +48,7 @@ Expression1 IS ( Expression2 | NULL )
 ## <a name="return-value"></a>Возвращаемое значение  
  Логическое значение, которое возвращает **true** , если оба аргумента ссылаются на один и тот же объект; в противном случае **false**. Если **NULL** указывается ключевое слово, оператор возвращает **true** Если *Expression1* — **null**; в противном случае **false**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **IS** часто используется для определения кортежи и элементы идемпотентными, то есть полностью эквивалентными.  
   
 ## <a name="examples"></a>Примеры  
@@ -78,4 +76,3 @@ Expression1 IS ( Expression2 | NULL )
  [Справочник по операторам Многомерных &#40; Многомерные Выражения &#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   
-

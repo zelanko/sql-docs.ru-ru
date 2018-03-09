@@ -3,32 +3,32 @@ title: "Создание проекта | Документация Майкро�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.newproject
 - vs.addnewproject
-helpviewer_keywords:
-- projects [SQL Server Management Studio], creating
+helpviewer_keywords: projects [SQL Server Management Studio], creating
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 07eabcd5f183ff5ecba9d6718a8a51aae8a80503
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 767341628dec4f192235954aaa4eeb6ece681615
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="create-a-project"></a>Создание проекта
-В существующем решении можно создать один или несколько проектов.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В существующем решении можно создать один или несколько проектов.  
   
 ### <a name="to-create-a-new-project-and-add-it-to-a-solution"></a>Создание нового проекта и добавление его к решению  
   
@@ -104,10 +104,9 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
 [обозревателе решений](../../ssms/solution/solution-explorer.md)  
 [Добавление к решению существующий проект](../../ssms/solution/add-an-existing-project-to-a-solution.md)  
-[Добавление в проект новые элементы](../../ssms/solution/add-new-items-to-a-project.md)  
+[Добавление новых элементов в проект](../../ssms/solution/add-new-items-to-a-project.md)  
 [Добавление существующих элементов в проект](../../ssms/solution/add-existing-items-to-a-project.md)  
 [Изменение местоположения проектов по умолчанию](../../ssms/solution/change-the-default-location-for-projects.md)  
 [Перемещение или удаление элемента или проекта](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
 [Удаление решения](../../ssms/solution/delete-a-solution.md)  
   
-

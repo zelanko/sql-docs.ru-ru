@@ -1,12 +1,14 @@
 ---
-title: "Разработка пользовательского компонента преобразования с синхронными выходами | Документы Microsoft"
+title: "Разработка пользовательского компонента преобразования с синхронными выходами | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -23,20 +25,19 @@ helpviewer_keywords:
 - output columns [Integration Services]
 - data flow components [Integration Services], transformation components
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
-caps.latest.revision: 56
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: d316a3921cd3b2d8b3e82a6ed5c5b629389614a7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7717bfcbe29f9d59abe25a8b295fb57b955d0c63
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>Разработка пользовательского компонента преобразования с синхронными выходами
-  Компоненты преобразования с синхронными выходами получают строки из вышестоящих компонентов и считывают либо изменяют значения в столбцах этих строк по мере передачи строк нижестоящим компонентам. В них также можно определить дополнительные выходные столбцы, производные от столбцов, которые передаются вышестоящими компонентами, однако эти столбцы не добавляют строки в поток данных. Дополнительные сведения о различиях между синхронными и асинхронными выходами см. в разделе [основные сведения о синхронных и асинхронных преобразованиях](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
+  Компоненты преобразования с синхронными выходами получают строки из вышестоящих компонентов и считывают либо изменяют значения в столбцах этих строк по мере передачи строк нижестоящим компонентам. В них также можно определить дополнительные выходные столбцы, производные от столбцов, которые передаются вышестоящими компонентами, однако эти столбцы не добавляют строки в поток данных. Дополнительные сведения о различиях между синхронными и асинхронными компонентами см. в разделе [Основные сведения о синхронных и асинхронных преобразованиях](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
   
  Компоненты такого типа подходят для задач, в которых данные изменяются встроенными средствами при передаче компоненту, а компоненту необязательно просматривать все строки, прежде чем приступать к их обработке. Это наиболее простой для разработки вид компонента, поскольку преобразования с синхронными выходами обычно не соединяются с внешними источниками данных, не управляют столбцами внешних метаданных и не добавляют строки в выходные буферы.  
   
@@ -124,7 +125,7 @@ End Class
 |DT_CY|0|0|0|0|  
 |DT_NUMERIC|0|Больше 0, меньше или равно 28 и меньше, чем точность.|Больше или равно 1 и меньше или равно 38.|0|  
 |DT_BYTES|Больше 0.|0|0|0|  
-|DT_STR|Больше 0 и меньше, чем 8000.|0|0|Не равно 0 и представляет допустимую кодовую страницу.|  
+|DT_STR|Больше 0 и меньше 8000.|0|0|Не равно 0 и представляет допустимую кодовую страницу.|  
 |DT_WSTR|Больше 0 и меньше 4 000.|0|0|0|  
   
  Поскольку ограничения свойств типа данных основаны на типе данных выходного столбца, во время работы с управляемыми типами необходимо выбрать правильный тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Базовый класс предоставляет три вспомогательных метода, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> и <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>, которые упрощают для разработчиков управляемых компонентов выбор типа данных служб [!INCLUDE[ssIS](../../includes/ssis-md.md)], если необходим управляемый тип. Эти методы преобразуют управляемые типы данных в типы данных служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] и обратно.  
@@ -191,7 +192,7 @@ End Sub
 ### <a name="processing-rows"></a>Обработка строк  
  Компоненты получают объекты <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>, содержащие строки и столбцы, в методе <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>. При выполнении этого метода осуществляется итерация по строкам в буфере, а столбцы, идентифицированные во время выполнения метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A>, считываются и изменяются. Метод вызывается задачей потока данных повторно до тех пор, пока не останется строк, переданных из вышестоящего компонента.  
   
- Чтения или записи с помощью метода доступа индексатора массива или с помощью одного из отдельного столбца в буфере **получить** или **задать** методы. **Получить** и **задать** методы более эффективны и следует использовать, если известен тип данных столбца в буфере.  
+ Считывание или запись отдельного столбца в буфере осуществляется с использованием индексатора массива в качестве метода доступа либо с помощью одного из методов **Get** или **Set**. Методы **Get** и **Set** более эффективны. Их следует использовать в случаях, когда тип данных столбца в буфере известен.  
   
  В следующем примере кода демонстрируется реализация метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>, обрабатывающего входящие строки.  
   
@@ -334,4 +335,3 @@ End Namespace
  [Создание синхронного преобразования с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
   
   
-

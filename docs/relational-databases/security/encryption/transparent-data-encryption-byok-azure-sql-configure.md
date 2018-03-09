@@ -2,36 +2,34 @@
 title: "Включение прозрачного шифрования данных с использованием собственного ключа Azure Key Vault с помощью PowerShell | Документы Майкрософт"
 description: "Сведения о настройке базы данных и хранилища данных SQL Azure для использования прозрачного шифрования данных (TDE) для шифрования хранящихся данных с помощью PowerShell."
 keywords: 
-services: sql-database
 documentationcenter: 
-author: becczhang
-manager: cguyer
+author: aliceku
+manager: craigg
 editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
-ms.workload: Inactive
+ms.component: security
+ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
-ms.author: rebeccaz
+ms.author: aliceku
+ms.openlocfilehash: 186db9581a3404fe04e4a748d6df06c5899bf810
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: cf8f46ab01c08e68fa22f65a4f86f4ff16f16ba3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/04/2018
 ---
+# <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault-preview"></a>Включение прозрачного шифрования данных с использованием собственного ключа из Azure Key Vault (предварительная версия) с помощью PowerShell
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
+Это практическое руководство показывает, как использовать ключ из Azure Key Vault для прозрачного шифрования данных (TDE) (в предварительной версии) в хранилище данных или базе данных SQL. Дополнительные сведения о TDE с поддержкой создания собственных ключей (BYOK) (в предварительной версии) см. в статье о [прозрачном шифровании данных с поддержкой BYOK в Azure SQL](transparent-data-encryption-byok-azure-sql.md). 
 
-# <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>Включение прозрачного шифрования данных с использованием собственного ключа из Azure Key Vault с помощью PowerShell
-
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
-
-В этом практическом руководстве рассматриваются способы использования ключа из Azure Key Vault для прозрачного шифрования данных (TDE) в базе данных или хранилище данных SQL. Дополнительные сведения о TDE с поддержкой подхода BYOK см. в статье [о прозрачном шифровании данных с поддержкой BYOK в Azure SQL](transparent-data-encryption-byok-azure-sql.md). 
-
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - Требуется подписка Azure и права администратора этой подписки.
 - [Рекомендуется, но необязательно] Наличие аппаратного модуля безопасности (HSM) или локального хранилища ключей для создания локальной копии материала ключа средства защиты TDE.
@@ -69,7 +67,7 @@ ms.lasthandoff: 09/05/2017
 
 ## <a name="step-2-grant-key-vault-permissions-to-your-server"></a>Шаг 2. Предоставление серверу разрешений на доступ к хранилищу Key Vault
 
-С помощью командлета [Set-AzureRmKeyValutAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) предоставьте серверу доступ к хранилищу ключей перед использованием хранящегося в нем ключа для прозрачного шифрования данных.
+С помощью командлета [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) предоставьте серверу доступ к хранилищу ключей перед использованием хранящегося в нем ключа для прозрачного шифрования данных.
 
    ```powershell
    Set-AzureRmKeyVaultAccessPolicy  `
@@ -193,6 +191,5 @@ ms.lasthandoff: 09/05/2017
 
 - Узнайте, как заменить средство защиты TDE сервера в соответствии с требованиями безопасности: [Rotate the Transparent Data Encryption protector Using PowerShell](transparent-data-encryption-byok-azure-sql-key-rotation.md) (Смена средства защиты прозрачного шифрования данных с помощью PowerShell).
 - Узнайте, как удалить потенциально скомпрометированное средство защиты TDE в случае угрозы безопасности, изучив [эту статью](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md). 
-
 
 

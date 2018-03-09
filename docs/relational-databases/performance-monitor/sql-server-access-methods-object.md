@@ -2,31 +2,32 @@
 title: "SQL Server, объект Access Methods | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Access Methods object
 - SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
-caps.latest.revision: 36
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "36"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 19dcb59cbc63c0c956604fb5745f8446da067642
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: dfbbfd6ac0e746fc8165186745006a1834f5aebe
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, объект Access Methods
-  Объект **Access Methods** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики, помогающие следить за доступом к логическим данным в рамках базы данных. Физический доступ к страницам базы данных на диске контролируется при помощи счетчиков **диспетчера буферов** . Наблюдение за методами доступа к данным в базе данных помогает определить, можно ли увеличить производительность запросов путем добавления или изменения индексов, добавления или перемещения секций, добавления файлов или групп файлов, дефрагментации индексов или изменения текста запросов. Кроме того, при помощи счетчиков объекта **Access Methods** можно следить за размером данных, индексов и свободного пространства в базе данных, контролируя объем и фрагментацию для каждого экземпляра сервера. Чрезмерная фрагментация индексов может значительно снизить производительность.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект **Access Methods** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики, помогающие следить за доступом к логическим данным в рамках базы данных. Физический доступ к страницам базы данных на диске контролируется при помощи счетчиков **диспетчера буферов** . Наблюдение за методами доступа к данным в базе данных помогает определить, можно ли увеличить производительность запросов путем добавления или изменения индексов, добавления или перемещения секций, добавления файлов или групп файлов, дефрагментации индексов или изменения текста запросов. Кроме того, при помощи счетчиков объекта **Access Methods** можно следить за размером данных, индексов и свободного пространства в базе данных, контролируя объем и фрагментацию для каждого экземпляра сервера. Чрезмерная фрагментация индексов может значительно снизить производительность.  
   
  Дополнительные сведения об объеме, фрагментации и использовании данных можно узнать при помощи следующих динамических административных представлений:  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
  В этой таблице приводится описание счетчиков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **методы доступа** .  
   
-|Счетчики объекта SQL Server Access Methods|Описание|  
+|Счетчики объекта SQL Server Access Methods|Description|  
 |----------------------------------------|-----------------|  
 |**Пакетов очистки единиц распределения/с**|Количество пакетов в секунду, успешно выполненных фоновой задачей, которая очищает отложенные удаленные единицы распределения.|  
 |**Очисток единиц распределения/с**|Количество единиц распределения в секунду, успешно удаленных фоновой задачей, которая очищает отложенные удаленные единицы распределения. Каждое удаление единицы распределения требует нескольких пакетов.|  
@@ -99,4 +100,3 @@ ms.lasthandoff: 06/22/2017
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

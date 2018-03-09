@@ -2,31 +2,32 @@
 title: "Шаг 2: Импорт данных в SQL Server с помощью PowerShell | Документы Microsoft"
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-server-vnext-ctp2
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: 2
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: 1c97a15d3b70d42337d3054f97e2e695813ca6f8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: b4741dcfee4bdc2e5ca2327b50f5dd727be9de55
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>Шаг 2: Импорт данных в SQL Server с помощью PowerShell
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье является частью учебника [analytics Python в базе данных для разработчиков SQL](sqldev-in-database-python-for-sql-developers.md). 
 
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/18/2017
     - Имя или адрес [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] экземпляра, где установлены службы обучения машины с Python.
     - имя пользователя и пароль учетной записи в экземпляре; Используется учетная запись должна иметь возможность создавать базы данных, создание таблиц и хранимых процедур и массовой загрузки данных в таблицы. 
     - Если не указано имя пользователя и пароль удостоверения Windows используется для входа в SQL Server и повышаются на ввод пароля.
-    - путь к скачанному файлу с образцом данных и его имя. Например `C:\temp\pysql\nyctaxi1pct.csv`
+    - путь к скачанному файлу с образцом данных и его имя. Например: `C:\temp\pysql\nyctaxi1pct.csv`
 
     > [!NOTE]
     > Для успешной загрузки данных в той же папке, что bcp.exe необходимо библиотеку xmlrw.dll.
@@ -90,7 +91,7 @@ ms.lasthandoff: 10/18/2017
 
 В последней части этого пошагового руководства создайте эти дополнительные хранимые процедуры:
     
-|**Имя файла скрипта SQL**|**Компонент**|
+|**Имя файла скрипта SQL**|**Функция**|
 |------|------|
 |SerializePlots.sql|Создает хранимую процедуру для изучения данных. Эта хранимая процедура создает графический объект, с помощью Python и последующей сериализации графа объектов.|
 |TrainTipPredictionModelSciKitPy.sql|Создает хранимую процедуру, которая обучает модель логистической регрессии (scikit-узнать). Модель прогнозирует значение скошенные столбца и обучается с помощью случайно выбранных 60% данных. Выходными данными хранимой процедуры является обученная модель, которая сохраняется в таблице nyc_taxi_models.|
@@ -103,5 +104,4 @@ ms.lasthandoff: 10/18/2017
 ## <a name="previous-step"></a>Предыдущий шаг
 
 [Шаг 1. Скачивание образца данных](sqldev-py1-download-the-sample-data.md)
-
 

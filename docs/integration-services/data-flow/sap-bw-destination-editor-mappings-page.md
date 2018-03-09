@@ -1,10 +1,13 @@
 ---
-title: "Редактор назначений SAP BW (страница «сопоставления») | Документы Microsoft"
+title: "Редактор назначения SAP BW (страница \"Сопоставления\") | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sapbwdestination.columns.f1
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
-caps.latest.revision: 11
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 245ff83f84ff1a60a08f4a73d24ee76179b31e2b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3019f68825fd8fd52ea85b9b1b5c0fad37b4fb2b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>Редактор назначений SAP BW (страница «Сопоставления»)
   Страница **Сопоставления** диалогового окна **Редактор назначений SAP BW** используется для сопоставления входных столбцов с целевыми столбцами.  
@@ -78,16 +80,15 @@ ms.lasthandoff: 08/03/2017
  **Входной столбец**  
  Позволяет просматривать выбранные входные столбцы.  
   
- Для сопоставления другого входного столбца с тем же целевым столбцом выберите другой входной столбец в списке. Чтобы удалить сопоставление, выберите  **\<пропустить >** чтобы исключить входной столбец из выходных данных.  
+ Для сопоставления другого входного столбца с тем же целевым столбцом выберите другой входной столбец в списке. Для удаления сопоставления выберите **\<игнорировать>**, чтобы исключить входной столбец из выходных данных.  
   
  **Целевой столбец**  
  Позволяет просмотреть каждый из доступных целевых столбцов без учета наличия или отсутствия сопоставления.  
   
-## <a name="see-also"></a>См. также  
- [Редактор назначений SAP BW &#40; Страницы диспетчера соединений &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
- [Редактор назначений SAP BW &#40; Страница «Вывод ошибок» &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
- [Редактор назначений SAP BW &#40; Страница "Дополнительно" &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
- [Справка F1 по Microsoft Connector для SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+## <a name="see-also"></a>См. также:  
+ [Редактор назначений SAP BW (страница "Диспетчер подключений")](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [Редактор назначений SAP BW (страница "Вывод ошибок")](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
+ [Редактор назначений SAP BW (страница "Дополнительно")](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
+ [Справка F1 по соединителю с SAP BW (Microsoft)](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

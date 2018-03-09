@@ -2,9 +2,12 @@
 title: "Указание сетевого адреса сервера (зеркальное отображение базы данных) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-high-availability
 ms.tgt_pltfrm: 
@@ -15,20 +18,20 @@ helpviewer_keywords:
 - endpoints [SQL Server], database mirroring
 - server network addresses [SQL Server]
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
-caps.latest.revision: 60
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 33ae2be4dae083d5b404bdcb4cd1b91d5b85feea
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 92b34f32f94e24e98c331f726cd15fe96361784c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Указание сетевого адреса сервера (зеркальное отображение базы данных)
-  При настройке сеанса зеркального отображения базы данных для каждого экземпляра сервера необходим сетевой адрес. Он должен однозначно определять экземпляр по адресу и номеру порта, который прослушивается данным экземпляром.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+При настройке сеанса зеркального отображения базы данных для каждого экземпляра сервера необходим сетевой адрес. Он должен однозначно определять экземпляр по адресу и номеру порта, который прослушивается данным экземпляром.  
   
  Определение порта в сетевом адресе сервера возможно при наличии конечной точки зеркального отображения базы данных в экземпляре сервера. Дополнительные сведения см. в разделе [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
@@ -36,7 +39,7 @@ ms.lasthandoff: 08/02/2017
 ##  <a name="Syntax"></a> Синтаксис сетевого адреса сервера  
  Сетевой адрес сервера имеет следующий синтаксис:  
   
- TCP**://***\<системный_адрес>***:***\<порт>*  
+ TCP**://***\<адрес_системы>***:***\<порт>*  
   
  где  
   
@@ -50,9 +53,9 @@ ms.lasthandoff: 08/02/2017
   
     -   При указании полного доменного имени гарантируется правильная работа. Это локально определенная строка адреса, которая имеет различную форму в разных местах. Часто, но не всегда полное доменное имя представляет собой составное имя, состоящее из имени компьютера и нескольких компонентов доменов, разделенных точками, в следующем виде:  
   
-         *имя_компьютера* **.** *компонент_домена*[...**.***компонент_домена*]  
+         *имя_компьютера* **.** *domain_segment*[...**.***domain_segment*]  
   
-         где *имя_компьютера*— сетевое имя компьютера, на котором запущен экземпляр сервера, а *сегмент_домена*[...**.***сегмент_домена*] — остальные сведения о домене для сервера, например `localinfo.corp.Adventure-Works.com`.  
+         где *имя_компьютера* — сетевое имя компьютера, на котором запущен экземпляр сервера, а *сегмент_домена*[...**.***сегмент_домена*] — остальные сведения о домене для сервера, например `localinfo.corp.Adventure-Works.com`.  
   
          Содержание и количество доменных сегментов определяется компанией или организацией. Полное доменное имя сервера можно узнать у системного администратора.  
   
@@ -142,4 +145,3 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
  [Конечная точка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   
-

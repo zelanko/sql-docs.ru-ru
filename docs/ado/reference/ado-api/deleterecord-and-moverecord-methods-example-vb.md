@@ -3,7 +3,7 @@ title: "Макрокоманду УдалитьЗапись и пример Move
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - MoveRecord method [ADO], Visual Basic example
 - DeleteRecord method [ADO], Visual Basic example
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 055d5a093f96c30fe30224996ccfff5905a3a75c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9d8bc240a84112df29e3b7fe85d16f721c0da5a5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>Макрокоманду УдалитьЗапись и пример MoveRecord методы (Visual Basic)
 В этом примере показано, как копирование, перемещение, изменение и удаление содержимого текстового файла, опубликованных в веб-папку. Другие свойства и методы, используемые включают [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [источника](../../../ado/reference/ado-api/source-property-ado-record.md), и [Flush](../../../ado/reference/ado-api/flush-method-ado.md).  
@@ -156,11 +155,10 @@ End Sub
 'EndDeleteRecordVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод макрокоманду УдалитьЗапись (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)   
  [Flush-метод (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
  [Метод GetChildren (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   
  [Метод MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)   
  [Свойство ParentURL (ADO)](../../../ado/reference/ado-api/parenturl-property-ado.md)   
- [Свойство Source (ADO запись)](../../../ado/reference/ado-api/source-property-ado-record.md)
-
+ [Свойство Source (объект Record ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)

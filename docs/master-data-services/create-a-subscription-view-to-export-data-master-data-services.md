@@ -1,11 +1,13 @@
 ---
 title: "Создание представления подписки для экспорта данных (службы Master Data Services) | Документы Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
@@ -14,23 +16,22 @@ helpviewer_keywords:
 - subscription views [Master Data Services], creating
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
-caps.latest.revision: 10
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: eda098f740c6ffa5bf7bbb4025b6f7d181af608d
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 863c5976f20cda1edc4ecba9ae81db599ec94d99
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Создание представления подписки для экспорта данных (службы Master Data Services)
   Создайте представление подписки, чтобы экспортировать данные служб Master Data Services в системы-подписчики. Представление данных создается в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="prerequisites"></a>Предварительные требования  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо разрешение на доступ к функциональной области **Управление интеграцией** ; Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
   
@@ -68,12 +69,12 @@ ms.lasthandoff: 09/07/2017
 ## <a name="view-information"></a>Сведения о представлении  
  Для всех созданных представлений в сетке создается строка с 10 столбцами. В следующей таблице приводятся описания этих столбцов.  
   
-|Столбец|Description|  
+|столбцом|Description|  
 |------------|-----------------|  
 |Состояние|Состояние представления.<br /><br /> Когда вы нажимаете **Сохранить**, появляется изображение ![Значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния"), указывающее на обновление атрибута.<br /><br /> Если при создании или редактировании атрибута произойдет ошибка, появится изображение ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки").<br /><br /> В противном случае состояние является нормальным, и появляется изображение ![Значок нормального состояния](../master-data-services/media/mds-statusicon-ok.png "Значок нормального состояния").|  
 |Имя|Имя представления подписки.|  
 |Модель|Имя модели.|  
-|Версия|Имя версии.|  
+|Version|Имя версии.|  
 |Флаг версии|Имя флага версии.|  
 |Производная иерархия|Имя производной иерархии.|  
 |Сущность|Имя сущности.|  
@@ -97,4 +98,3 @@ ms.lasthandoff: 09/07/2017
  [Создание флага версии (службы Master Data Services)](../master-data-services/create-a-version-flag-master-data-services.md)  
   
   
-

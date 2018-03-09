@@ -2,30 +2,30 @@
 title: "Восстановление конфигурации SQL Server Management Studio по умолчанию | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 4efb0f74-edd5-4b14-bca6-bee94fb48bcc
-caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "30"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 950da8016baf537197623dcdb501ff997474a9e2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 89b560ab563dbed6236ba694b692cdff0dfa8685
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-8---restore-the-default-sql-server-management-studio-configuration"></a>Занятие 1–8. Восстановление конфигурации SQL Server Management Studio по умолчанию
-Начинающие пользователи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] могут неумышленно закрыть или скрыть окна, не зная, как восстановить первоначальный вид среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Следующие шаги позволяют вернуться к заданному по умолчанию виду среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Начинающие пользователи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] могут неумышленно закрыть или скрыть окна, не зная, как восстановить первоначальный вид среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Следующие шаги позволяют вернуться к заданному по умолчанию виду среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
 ## <a name="restoring-components"></a>Восстановление компонентов  
   
@@ -41,4 +41,3 @@ ms.lasthandoff: 07/31/2017
   
   
   
-

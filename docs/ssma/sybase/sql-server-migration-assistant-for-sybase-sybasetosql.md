@@ -3,27 +3,28 @@ title: "SQL Server Migration Assistant для Sybase (SybaseToSQL) | Докум�
 ms.custom: 
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 59e63eac-8a7e-4d54-be1c-0633a9bf510d
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
+ms.openlocfilehash: 2e9c5c0c3b54055a267c4f2e21d1ec8ec1314ca9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 5316f9d560f7e15bb0699780f67aff641067b203
-ms.openlocfilehash: 7ca9cad19b0a6e9eadb4c369eb6405298a31ac6b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/15/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-migration-assistant-for-sybase-sybasetosql"></a>SQL Server Migration Assistant для Sybase (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) для Sybase адаптивной Server Enterprise (ASE) — это средство для миграции баз данных ASE для [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 или [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 или [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 или [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 или [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 или [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2017 г. в Windows и Linux (Предварительная версия) или [!INCLUDE[msCoName](../../includes/msconame_md.md)] базу данных SQL Azure. SSMA для СУБД Sybase преобразует ASE объекты базы данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] объектов базы данных, создает эти объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или Azure SQL и затем перемещает данные из ASE для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или Azure SQL.  
@@ -42,4 +43,3 @@ ms.lasthandoff: 08/15/2017
 |[Работа с SSMA для Sybase консоли](http://msdn.microsoft.com/c465e477-c479-4aa8-918d-58bf30884789)|Содержит документацию по SSMA консольного приложения.|  
 |[Получение помощи Sybase SSMA](http://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Сведения о получении дополнительной помощи.|  
   
-

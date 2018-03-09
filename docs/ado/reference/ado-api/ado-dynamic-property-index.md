@@ -12,16 +12,15 @@ ms.topic: article
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: 5c56ef6d6a146d1613bdd11618fadb3b11296fe7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f126cc040174725ded02bd320e54a76536c0d516
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-dynamic-property-index"></a>ADO динамических свойств индекса
 Поставщики данных, поставщики служб и компонентов службы можно добавить все динамические свойства **свойства** коллекции Неоткрытое [подключения](../../../ado/reference/ado-api/connection-object-ado.md) и [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекты. Заданный поставщик также может вставить дополнительные свойства, при открытии этих объектов. Некоторые из этих свойств, перечислены в [динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) раздела. Несколько отображаются в отдельных поставщиков в [приложение A: поставщики](../../../ado/guide/appendixes/appendix-a-providers.md) раздела.  
@@ -68,7 +67,7 @@ ms.lasthandoff: 09/09/2017
 |Обновление нескольких таблицы|DBPROP_MULTITABLEUPDATE|  
 |Порядок сортировки значений NULL|DBPROP_NULLCOLLATION|  
 |Поведение сцепление со значением NULL|DBPROP_CONCATNULLBEHAVIOR|  
-|Службы OLE DB|DBPROP_INIT_OLEDBSERVICES, УСТАНОВИТЬ|  
+|Службы OLE DB|DBPROP_INIT_OLEDBSERVICES|  
 |OLE DB версии|DBPROP_PROVIDEROLEDBVER|  
 |Поддержка объекта OLE|DBPROP_OLEOBJECTS|  
 |Поддержка открытых наборов строк|DBPROP_OPENROWSETSUPPORT|  

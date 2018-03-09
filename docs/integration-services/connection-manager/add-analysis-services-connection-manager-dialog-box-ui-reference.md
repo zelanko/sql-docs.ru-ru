@@ -1,10 +1,13 @@
 ---
-title: "Добавление служб Analysis Services диспетчер соединений диалогового окна справочника по пользовательскому Интерфейсу | Документы Microsoft"
+title: "Справочник по пользовательскому интерфейсу: диалоговое окно \"Добавление диспетчера подключений служб Analysis Services\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - Add Analysis Services Connection Manager
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
-caps.latest.revision: 25
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 87542f1672fb53f1ea08d15c942c56a2e3bef4d5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: fad19adc4f40c8feaafb48686d7772efc6f1684d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Добавление диалогового окна  «Диспетчер соединений со службами Analysis Services" в справочник по пользовательскому интерфейсу
   Диалоговое окно **Добавление диспетчера соединений служб Analysis Services** используется для создания соединения с сервером, на котором выполняются службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], и для редактирования свойств соединения.  
@@ -47,9 +49,8 @@ ms.lasthandoff: 08/03/2017
  **Проект служб Analysis Services**  
  Выберите проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из списка.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
- [Службы Integration Services &#40;Службы SSIS&#41; Подключения](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   
-

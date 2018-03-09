@@ -1,10 +1,13 @@
 ---
-title: "ATN2 (Transact-SQL) | Документы Microsoft"
+title: "ATN2 (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - tangent
 - ATN2 function
 ms.assetid: 014b291e-7cd7-4c39-b20d-5db3a9f0505d
-caps.latest.revision: 36
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 3c68b65c2bde2d8b4c5cd8f34452563b433c6a29
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: 022c5cd7655debb529ec00789f075d95278073f6
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="atn2-transact-sql"></a>ATN2 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Возвращает угол в радианах между положительным направлением оси X и лучом, проведенным из начала координат в точку (y, x), где x и y — значения двух указанных выражений с плавающей запятой.
   
@@ -45,9 +47,9 @@ ATN2 ( float_expression , float_expression )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-*float_expression* — [выражение](../../t-sql/language-elements/expressions-transact-sql.md) из **float** тип данных.
+*float_expression* Выражение [expression](../../t-sql/language-elements/expressions-transact-sql.md) типа данных **float**.
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **float**
   
 ## <a name="examples"></a>Примеры  
@@ -66,11 +68,10 @@ The ATN2 of the angle is: 0.265345
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[&#40; float и real Transact-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
-[Математические функции &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[Типы данных float и real (Transact-SQL)](../../t-sql/data-types/float-and-real-transact-sql.md)  
+[Математические функции (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
-
 

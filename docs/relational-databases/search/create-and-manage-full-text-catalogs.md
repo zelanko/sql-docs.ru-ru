@@ -2,9 +2,12 @@
 title: "Создание полнотекстовых каталогов и управление ими | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -13,19 +16,19 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
-caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 04ab847cd0305139aa1f7e1dc462ef77ef555bee
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b3e98a00fd7f165fbd5c83b7149a8e63505116e3
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Создание и управление полнотекстовыми каталогами
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Полнотекстовый каталог — это логический контейнер для группы полнотекстовых индексов. Необходимо создать полнотекстовый каталог, прежде чем создавать полнотекстовый индекс.
 
 Полнотекстовый каталог является виртуальным объектом и не входит в какую-либо файловую группу.
@@ -33,9 +36,9 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="creating"></a> Создание полнотекстового каталога  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Создание полнотекстового каталога с помощью Transact-SQL
-Используйте инструкцию [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Например:
+Используйте инструкцию [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Пример:
 
-```tsql 
+```sql 
 USE AdventureWorks;  
 GO  
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;  
@@ -70,7 +73,7 @@ GO
   
 В следующей таблице перечислены свойства, о которых сообщается в полнотекстовых каталогах. Эти сведения полезны для администрирования и устранения нарушений в работе средств полнотекстового поиска. 
   
-|Свойство|Описание|  
+|Свойство|Description|  
 |--------------|-----------------|  
 |**AccentSensitivity**|Настройка учета диакритических знаков:|
 |**ImportStatus**|Выполняется ли в настоящее время импорт полнотекстового каталога.|  
@@ -125,4 +128,3 @@ GO
 
 ## <a name="next-step"></a>Следующий шаг
 [Создание и управление полнотекстовыми индексами](../../relational-databases/search/create-and-manage-full-text-indexes.md)
-

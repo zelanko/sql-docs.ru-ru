@@ -1,10 +1,13 @@
 ---
-title: "Средства устранения неполадок для разработки пакетов | Документы Microsoft"
+title: "Инструменты устранения неполадок при разработке пакета | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -16,16 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
-caps.latest.revision: 65
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: c4c51f83c7e691f9c77c4d035e7dd80ead4f4a94
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 5c47c0b46d9b171c2bf75e11e9e854ed91c68836
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Инструменты устранения неполадок при разработке пакета
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат функции и средства, которые можно использовать для устранения неполадок в пакетах при разработке в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -92,8 +95,8 @@ ms.lasthandoff: 08/03/2017
 ## <a name="troubleshooting-errors-without-a-description"></a>Устранение неполадок при ошибках без описаний  
  Если во время разработки пакета встречается ошибка служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , не имеющая описания, его можно найти в [справочнике по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md). Этот список сейчас не включает сведения об устранении неполадок.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Устранение неполадок инструментов с помощью отчетов](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)   
- [Data Flow Performance Features](../../integration-services/data-flow/data-flow-performance-features.md)  
+ [Возможности для повышения производительности потока данных](../../integration-services/data-flow/data-flow-performance-features.md)  
   
   

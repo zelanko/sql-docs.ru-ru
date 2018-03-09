@@ -2,30 +2,30 @@
 title: "Состояние сервера столбцы данных событий обнаружения | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- Discover Server State event category
+helpviewer_keywords: Discover Server State event category
 ms.assetid: fbacb187-a4d1-4aa4-be3b-3ddd175f9e19
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 192c9bc97a67f5690619ac0b0ef667e9de6c99d6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c71c32614ee4be7fdbe198530d5ce228452d2276
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discover-server-state-events-data-columns"></a>Столбцы данных событий «Определение состояния сервера»
-  Категория событий «Определение состояния сервера» содержит следующие классы событий.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Категория событий «Определение состояния сервера» содержит следующие классы событий:  
   
 |**Идентификатор события**|**Имя события**|**Описание события**|  
 |------------------|--------------------|---------------------------|  
@@ -81,7 +81,7 @@ ms.lasthandoff: 09/01/2017
 |CurrentTime|2|5|Содержит текущее время события определения состояния сервера, если доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |StartTime|3|5|Содержит время начала события, если оно доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |EndTime|4|5|Содержит время окончания события. Этот столбец не заполняется для таких классов событий запуска, как SQL:BatchStarting или SP:Starting. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
-|Длительность|5|2|Содержит время в миллисекундах, использованное событием.|  
+|Duration|5|2|Содержит время в миллисекундах, использованное событием.|  
 |CPUTime|6|2|Содержит количество времени ЦП в миллисекундах, используемое событием определения состояния сервера.|  
 |ConnectionID|25|1|Содержит уникальный идентификатор соединения, связанный с событием определения состояния сервера.|  
 |NTUserName|32|8|Содержит учетную запись пользователя Windows, связанную с событием определения состояния сервера.|  
@@ -94,8 +94,7 @@ ms.lasthandoff: 09/01/2017
 |TextData|42|9|Содержит текстовые данные, связанные с ответом сервера на запрос распознавания.|  
 |ServerName|43|8|Содержит имя экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , где произошло событие определения состояния сервера.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Discover Server State Event Category](../../analysis-services/trace-events/discover-server-state-event-category.md)  
   
   
-

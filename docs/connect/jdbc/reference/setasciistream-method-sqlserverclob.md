@@ -3,29 +3,28 @@ title: "Метод setAsciiStream (SQLServerClob) | Документы Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerClob.setAsciiStream
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerClob.setAsciiStream
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6e1779df-3b2a-41d1-8dca-99692cc9da14
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f501c9c610319e0cad34dfabfe70dbf3f6cfffe2
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6e5d609145246cad254ba7242a0dd5717588d276
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="setasciistream-method-sqlserverclob"></a>Метод setAsciiStream (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,4 +60,3 @@ public java.io.OutputStream setAsciiStream(long pos)
  [Класс SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md)  
   
   
-

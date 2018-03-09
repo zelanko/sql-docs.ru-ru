@@ -3,7 +3,7 @@ title: "CursorTypeEnum | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - CursorTypeEnum enumeration [ADO]
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0e58e1d7660b4bcd014d5e4b80226fc9c3cfb293
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6875e6b2b967cf73511c73bf4ca7cdafed21557b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
 Указывает тип курсора, используемого в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adOpenDynamic**|2|Использует динамический курсор. Добавления, изменения и удаления другими пользователями являются видимыми и все типы перемещения через **записей** разрешены, за исключением закладки, если поставщик не поддерживает их.|  
 |**adOpenForwardOnly**|0|По умолчанию. Использует курсор последовательного доступа. Аналогична статический курсор, за исключением того, что прокрутку можно использовать только вперед записей. Это позволяет повысить производительность, если необходимо внести только одно проходят через **записей**.|  
@@ -54,4 +53,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="applies-to"></a>Объект применения  
  [Свойство CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)
-

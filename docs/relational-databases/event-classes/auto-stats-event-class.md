@@ -1,34 +1,14 @@
----
-title: "Класс событий Auto Stats | Документация Майкрософт"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- Auto Stats event class
-ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
-caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c9cce1c5b1d74e1a952402fd83082fa051292d78
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+title: "Класс событий Auto Stats | Документация Майкрософт" ms.custom: "" ms.date: "03/14/2017" ms.prod: "sql-non-specified" ms.prod_service: "database-engine, sql-database" ms.service: "" ms.component: "event-classes" ms.reviewer: "" ms.suite: "sql" ms.technology: 
+  - "database-engine" ms.tgt_pltfrm: "" ms.topic: "article" helpviewer_keywords: 
+  - "Класс событий Auto Stats" ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e caps.latest.revision: 34 author: "stevestein" ms.author: "sstein" manager: "craigg" ms.workload: "Inactive"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats, класс событий
-  Класс событий **Auto Stats** указывает, что произошло автоматическое обновление статистики индекса и столбца.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Класс событий **Auto Stats** указывает, что произошло автоматическое обновление статистики индекса и столбца.  **Auto Stats** также применяется при загрузке статистики, используемой оптимизатором.
   
 ## <a name="auto-stats-event-class-data-columns"></a>Столбцы данных класса событий Auto Stats  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |**ClientProcessID**|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
@@ -37,8 +17,8 @@ ms.lasthandoff: 06/22/2017
 |**Длительность**|**bigint**|Длительность события (в микросекундах).|13|Да|  
 |**EndTime**|**datetime**|Время окончания события.|15|Да|  
 |**Ошибка**|**int**|Номер ошибки для данного события. Часто это номер ошибки, который хранится в представлении каталога **sys.messages** .|31|Да|  
-|**EventClass**|**int**|Тип события = 58.|27|Нет|  
-|**EventSequence**|**int**|Последовательность данного события в запросе.|51|Нет|  
+|**EventClass**|**int**|Тип события = 58.|27|нет|  
+|**EventSequence**|**int**|Последовательность данного события в запросе.|51|нет|  
 |**EventSubClass**|**int**|Тип подкласса событий:<br /><br /> 1. Статистика создана или обновлена синхронно; столбец **TextData** указывает, какая именно статистика и была ли она создана или обновлена.<br /><br /> 2. Асинхронное обновление статистики; задание поставлено в очередь.<br /><br /> 3. Асинхронное обновление статистики; задание запускается.<br /><br /> 4. Асинхронное обновление статистики; задание завершено.|21|Да|  
 |**GroupID**|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
@@ -52,8 +32,8 @@ ms.lasthandoff: 06/22/2017
 |**NTUserName**|**nvarchar**|Имя пользователя Windows.|6|Да|  
 |**ObjectID**|**int**|Идентификатор объекта, назначенный системой.|22|Да|  
 |**RequestID**|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
-|**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени Имя_входа1 и при выполнении инструкции под именем Имя_входа2 **SessionLoginName** содержит значение «Имя_входа1», а **LoginName** содержит значение «Имя_входа2». В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
+|**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|нет|  
+|**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени "Имя_входа1" и при выполнении инструкции под именем "Имя_входа2" **SessionLoginName** содержит значение "Имя_входа1", а **LoginName** — значение "Имя_входа2". В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |**SPID**|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если оно известно.|14|Да|  
 |**Успешно**|**int**|0 = ошибка.<br /><br /> 1 = успешное завершение.<br /><br /> 2 = пропущено из-за приостановки сервера (выпуск MSDE).|23|Да|  

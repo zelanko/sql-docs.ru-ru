@@ -1,68 +1,70 @@
 ---
-title: "Запустить пакет служб SSIS с помощью SSMS | Документы Microsoft"
+title: "Выполнение пакета служб SSIS с помощью SSMS | Документы Майкрософт"
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: sql-server-2017
-ms.technology:
-- integration-services
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: quick-start
+ms.suite: sql
+ms.custom: 
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: bbc17907311785ef98560493cb453b7b9b6d1556
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/22/2017
-
+ms.openlocfilehash: 53ad81ce3021f14e6d0638e7e60a050f892bb8bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>Запустить пакет служб SSIS с SQL Server Management Studio (SSMS)
-В этом кратком руководстве показано, как использовать SQL Server Management Studio (SSMS) для подключения к базе данных каталога служб SSIS, а затем запустите пакет служб SSIS, сохраненные в каталоге служб SSIS из обозревателя объектов в среде SSMS.
+# <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>Выполнение пакета служб SSIS с помощью SQL Server Management Studio (SSMS)
+В этом кратком руководстве показано, как использовать SQL Server Management Studio (SSMS) для подключения к базе данных каталога служб SSIS, а затем запустить пакет служб SSIS, хранящийся в каталоге SSIS, из обозревателя объектов в SSMS.
 
-SQL Server Management Studio — это интегрированная среда для управления любой инфраструктуры SQL из SQL Server к базе данных SQL. Дополнительные сведения о SSMS см. в разделе [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md).
+SQL Server Management Studio — это интегрированная среда для управления любой инфраструктурой SQL, от SQL Server до базы данных SQL. Дополнительные сведения о SSMS см. в разделе [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
-Прежде чем начать, убедитесь, что установлена последняя версия служб SQL Server Management Studio (SSMS). Скачать SSMS [загрузить SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Прежде чем начать, убедитесь в наличии последней версии SQL Server Management Studio (SSMS). Чтобы скачать среду SSMS, посетите страницу [Скачивание SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-## <a name="connect-to-the-ssisdb-database"></a>Подключения к базе данных SSISDB
+## <a name="connect-to-the-ssisdb-database"></a>Подключение к базе данных SSISDB
 
-Используйте SQL Server Management Studio для подключения в каталоге служб SSIS. 
+С помощью SQL Server Management Studio установите соединение с каталогом служб SSIS. 
 
 > [!NOTE]
-> Сервер базы данных SQL Azure прослушивает порт 1433. Если вы пытаетесь подключиться к серверу базы данных SQL Azure внутри корпоративного брандмауэра, этот порт должен быть открыт в корпоративный брандмауэр, для успешного подключения.
+> Сервер базы данных SQL Azure прослушивает порт 1433. Если вы пытаетесь подключиться к серверу базы данных SQL Azure изнутри корпоративного брандмауэра, для успешного подключения в этом брандмауэре должен быть открыт данный порт.
 
 1. Откройте среду SQL Server Management Studio.
 
-2. В **соединение с сервером** диалоговом окне введите следующие сведения:
+2. В диалоговом окне **Соединение с сервером** введите следующие данные:
 
    | Настройка       | Предлагаемое значение | Дополнительные сведения | 
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Тип сервера** | Компонент Database engine | Это значение обязательно. |
-   | **Имя сервера** | Полное имя сервера | При подключении к серверу базы данных SQL Azure, называется в следующем формате: `<server_name>.database.windows.net`. |
-   | **Проверка подлинности** | Проверка подлинности SQL Server | Это краткое руководство использует проверку подлинности SQL. |
-   | **Имя входа** | Учетная запись администратора сервера | Это учетная запись, указанную при создании сервера. |
-   | **Пароль** | Пароль для учетной записи администратора сервера | Это пароль, указанный при создании сервера. |
+   | **Тип сервера** | Ядро СУБД | Это значение обязательно. |
+   | **Имя сервера** | Полное имя сервера | При подключении к серверу базы данных SQL Azure используйте следующий формат имени: `<server_name>.database.windows.net`. |
+   | **Проверка подлинности** | Проверка подлинности SQL Server | В этом кратком руководстве используется проверка подлинности SQL. |
+   | **Имя входа** | Учетная запись администратора сервера | Это учетная запись, которая была указана при создании сервера. |
+   | **Пароль** | Пароль для учетной записи администратора сервера | Это пароль, который был указан при создании сервера. |
 
-3. Нажмите кнопку **Соединить**. Открывается окно обозревателя объектов в среде SSMS. 
+3. Нажмите кнопку **Соединить**. В SSMS открывается окно обозревателя объектов. 
 
-4. В обозревателе объектов разверните **каталоги служб Integration Services** и разверните **SSISDB** для просмотра объектов в базе данных каталога служб SSIS.
+4. В обозревателе объектов разверните узел **Каталоги служб Integration Services** и затем узел **SSISDB** для просмотра объектов в базе данных каталога служб SSIS.
 
 ## <a name="run-a-package"></a>Запуск пакета
 
-1. В обозревателе объектов выберите пакет, которую требуется запустить.
+1. Выберите пакет, который хотите запустить, в обозревателе объектов.
 
-2. Щелкните правой кнопкой мыши и выберите **Execute**. **Выполнение пакета** откроется диалоговое окно.
+2. Щелкните правой кнопкой мыши и выберите команду **Выполнить**. Открывается диалоговое окно **Выполнение пакета**.
 
-3.  Настройте выполнение пакета с помощью параметров на **параметры**, **диспетчеры соединений**, и **Дополнительно** вкладок в диалоговом окне выполнения пакета.
+3.  Настройте выполнение пакета с помощью параметров на вкладках **Параметры**, **Диспетчеры соединений** и **Расширенные** диалогового окна "Выполнение пакета".
 
-4.  Нажмите кнопку ОК, чтобы запустить пакет.
+4.  Нажмите кнопку "ОК", чтобы выполнить пакет.
 
 ## <a name="next-steps"></a>Следующие шаги
-- Рассмотрите другие возможности для выполнения пакета.
-    - [Запустить пакет служб SSIS с помощью Transact-SQL (среда SSMS)](./ssis-quickstart-run-tsql-ssms.md)
-    - [Запустить пакет служб SSIS с помощью Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
-    - [Выполните пакет служб SSIS из командной строки](./ssis-quickstart-run-cmdline.md)
-    - [Выполнить пакет служб SSIS с помощью PowerShell](ssis-quickstart-run-powershell.md)
-    - [Запустить пакет служб SSIS с помощью C#](./ssis-quickstart-run-dotnet.md) 
-
+- Рассмотрите другие варианты выполнения пакета.
+    - [Выполнение пакета служб SSIS с помощью Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
+    - [Выполнение пакета служб SSIS с помощью Transact-SQL (Visual Studio Code)](ssis-quickstart-run-tsql-vscode.md)
+    - [Выполнение пакета служб SSIS из командной строки](./ssis-quickstart-run-cmdline.md)
+    - [Выполнение пакета служб SSIS с помощью PowerShell](ssis-quickstart-run-powershell.md)
+    - [Выполнение пакета служб SSIS с помощью C#](./ssis-quickstart-run-dotnet.md) 

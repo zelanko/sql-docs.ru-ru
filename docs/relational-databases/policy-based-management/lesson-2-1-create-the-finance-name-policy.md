@@ -2,9 +2,12 @@
 title: "Создание политики имен для базы данных Finance | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-query-tuning
 ms.tgt_pltfrm: 
@@ -12,19 +15,19 @@ ms.topic: article
 applies_to:
 - SQL Server 2016
 ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
-caps.latest.revision: 26
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0837f30154f0d18403cfa42f56e20079bf3cec14
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 260f0934e69d1db1ffd8f2af4cb71b0b96f64c84
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-2-1---create-the-finance-name-policy"></a>Занятие 2.1. Создание политики имен для базы данных Finance
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 В этой задаче создается база данных с именем Finance, а затем формируется условие, требующее, чтобы все таблицы начинались с букв **fintbl**. После этого создается политика и категория политики по обеспечению стандарта именования таблиц в базе данных Finance.  
   
 ### <a name="to-create-the-finance-database"></a>Создание базы данных Finance  
@@ -90,4 +93,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

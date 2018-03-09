@@ -1,68 +1,68 @@
 ---
-title: "Новые возможности в Reporting Services (SSRS) | Документы Microsoft"
+title: "Новые возможности служб Reporting Services (SSRS) | Документы Майкрософт"
 ms.date: 10/10/2017
-ms.prod: sql-server-2017
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.custom: 
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 52c2f8fae79884b025e067b7d628cd3154ba93f4
-ms.openlocfilehash: 323873f42f6d3abd8442683731deef478dd2ebfb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/10/2017
-
+ms.openlocfilehash: f739af4e274a8d9ccdb4ccb3bc4ab3de3776d8a8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Новые возможности служб SQL Server Reporting Services (SSRS)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
-Дополнительные сведения о новых возможностях SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Охватывает основные функциональные аспекты и обновляется по мере выпуска новых элементов.
+Сведения о новых возможностях SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Охватывает основные функциональные аспекты и обновляется по мере выпуска новых элементов.
 
-  Сведения о новых возможностях в других компонентах SQL Server см. в разделе [новые возможности SQL Server 2017 г.](../sql-server/what-s-new-in-sql-server-2017.md) или [новые возможности SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
+  Сведения о новых возможностях в других разделах SQL Server см. в статье [Что нового в SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md) или [Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
 
  **Загрузка** ![download](../analysis-services/media/download.png "download")
 
-- Чтобы загрузить службы отчетов SQL Server 2017 г., перейдите на  **[центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=55252)**.
+- Чтобы скачать службы SQL Server 2017 Reporting Services, перейдите в **[Центр загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=55252)**.
 
-Текущие заметки о выпуске в разделе [заметки о выпуске SQL Server 2017 г.](../sql-server/sql-server-2017-release-notes.md) или [заметки о выпуске сервера отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-release-notes/). Сведения о сервере отчетов Power BI см. в разделе [приступить к работе с сервером отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
+Текущие заметки о выпуске см. в статье [Заметки о выпуске SQL Server 2017](../sql-server/sql-server-2017-release-notes.md) или [Заметки о выпуске Сервера отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-release-notes/). Сведения о Сервере отчетов Power BI см. в разделе [Начало работы с Сервером отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
 
 ## <a name="whats-new-in-sql-server-2017"></a>Новые возможности в SQL Server 2017
 
-### <a name="comments-on-reports"></a>Комментарии в отчетах
+### <a name="comments-on-reports"></a>Комментарии к отчетам
 
 В отчетах теперь доступны комментарии, позволяющие сообщать свою точку зрения и взаимодействовать с другими пользователями. Для комментариев также доступны вложения.
 
-![Комментарии в сервере отчетов](media/what-s-new-in-sql-server-reporting-services-ssrs/report-server-comments.png)
+![Комментарии на сервере отчетов](media/what-s-new-in-sql-server-reporting-services-ssrs/report-server-comments.png)
 
-Дополнительные сведения см. в разделе [добавлять комментарии к отчету на сервере отчетов в](https://powerbi.microsoft.com/documentation/reportserver-add-comments/).
+Дополнительные сведения см. в разделе [Добавление комментариев к отчету на сервере отчетов](https://powerbi.microsoft.com/documentation/reportserver-add-comments/).
 
-### <a name="dax-queries-in-reporting-tools"></a>Запросы DAX в средства создания отчетов
+### <a name="dax-queries-in-reporting-tools"></a>Запросы DAX в средствах создания отчетов
 
 В последних выпусках построителя отчетов и SQL Server Data Tools вы можете создавать собственные запросы DAX для поддерживаемых табличных моделей данных SQL Server Analysis Services, перетаскивая нужные поля в конструкторах запросов. См. [блог по Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
-### <a name="rest-api-support"></a>Поддержка API-интерфейса REST
+### <a name="rest-api-support"></a>Поддержка REST API
 
-Чтобы включить Разработка современных приложений и настройки, SQL Server Reporting Services теперь поддерживает полностью OpenAPI совместимые API RESTful. Полный API спецификации и документация теперь находится на [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
+В целях разработки и настройки современных приложений службы SQL Server Reporting Services теперь поддерживают интерфейс API RESTful, полностью совместимый с OpenAPI. Полная спецификация и документация по API теперь находится на сайте [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
-## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>Поддержка DAX теперь в построитель отчетов и SQL Server Data Tools в конструкторе запросов
+## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>Поддержка конструктора запросов для DAX в построителе отчетов и SQL Server Data Tools
 
-В последних версиях построителя отчетов и SQL Server Data Tools — версия-кандидат, теперь можно создать собственные запросы DAX к поддерживаемые модели табличных данных SQL Server Analysis Services. Перетаскивание полей и имеется запрос DAX, созданный для вас, вместо написания собственного можно использовать конструктор запросов в обеих средах.  
+В последних выпусках построителя отчетов и релизе-кандидате SQL Server Data Tools вы можете создавать собственные запросы DAX для поддерживаемых табличных моделей данных SQL Server Analysis Services. В обоих средствах вы можете перетаскивать нужные поля в конструкторе запросов. Запросы DAX могут создаваться автоматически, так что вам не придется их писать.  
  
-Узнайте больше о [блога службы Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
+Подробнее см. в [блоге по службам Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
-* Загрузить [построителя отчетов SQL Server 2016](https://go.microsoft.com/fwlink/?LinkId=734968).
-* Загрузить [SQL Server Data Tools — версия-кандидат](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate).
+* Скачайте [построитель отчетов SQL Server 2016](https://go.microsoft.com/fwlink/?LinkId=734968).
+* Скачайте [SQL Server Data Tools — релиз-кандидат](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate).
 
-> **Примечание**: можно использовать только в конструкторе запросов для DAX с источников табличных данных SSAS, встроенные в SQL Server 2016 +.
+> **Примечание**. Конструктор запросов для DAX можно использовать только с табличными источниками данных SSAS, встроенными в SQL Server 2016 и более поздних версий.
  
 ## <a name="whats-new-in-sql-server-2016"></a>Что нового в SQL Server 2016
   
@@ -112,7 +112,7 @@ ms.lasthandoff: 10/10/2017
  
 Дополнительные сведения см. в разделе:  
   
--   [Поддерживаемые сочетания SharePoint и Reporting Server служб и надстройки &#40; SQL Server 2016 &#41;](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+-   [Поддерживаемые сочетания SharePoint, компонентов служб Reporting Services и надстроек (SQL Server 2016)](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 -   [Где найти надстройку службы Reporting Services для продуктов SharePoint](../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
@@ -129,15 +129,15 @@ ms.lasthandoff: 10/10/2017
 
 **Современные отчеты с разбиением на страницы:** новые, современные стили для диаграмм, датчиков, карт и других средств визуального представления данных позволяют создавать современные удобные отчеты с разбивкой на страницы.
   
-**"Дерево" и "солнечные лучи" диаграмм:** Улучшайте отчеты с помощью плоского дерева ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") и "солнечные лучи" ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") диаграммы, замечательные возможности для отображения иерархических данных. Дополнительные сведения см. в разделе [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
+**Диаграммы типа "дерево" и "солнечные лучи"**: улучшайте отчеты с помощью диаграмм "дерево" ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") и диаграмм "солнечные лучи" ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"), которые обеспечивают удобное отображение иерархических данных. Дополнительные сведения см. в разделе [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
 **Внедрение отчетов:** сегодня с помощью iframe, а также параметров URL-адреса мобильные отчеты и отчеты с разбиением по страницам можно внедрять в другие веб-страницы и приложения.  
 
-**Закрепление элементов отчета на панели мониторинга Power BI** : при просмотре отчета в [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]можно выбрать элементы отчета и закрепить их на панели мониторинга [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .   Закреплять можно такие элементы, как диаграммы, панели датчиков, карты и изображения. **(1)** Выберите группу, содержащую панель мониторинга, на которой нужно закрепить элемент; **(2)** выберите панель мониторинга, на которой требуется закрепить элемент; и **(3)** выберите частоту обновления плитки на этой панели мониторинга.   ![Примечание](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Примечание") обновления управляется [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] подписки и после закрепления элемента можно изменить подписку и настроить другое расписание обновления.  
+**Закрепление элементов отчета на панели мониторинга Power BI** : при просмотре отчета в [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]можно выбрать элементы отчета и закрепить их на панели мониторинга [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .   Закреплять можно такие элементы, как диаграммы, панели датчиков, карты и изображения. **(1)** Выберите группу, содержащую панель мониторинга, на которой нужно закрепить элемент; **(2)** выберите панель мониторинга, на которой требуется закрепить элемент; и **(3)** выберите частоту обновления плитки на этой панели мониторинга.   ![примечание](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "примечание") Обновлением управляют подписки служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], а после закрепления элемента можно изменить подписку и настроить другое расписание обновления.  
   
  ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
   
- Дополнительные сведения см. в разделе [интеграции сервера отчетов Power BI &#40; Configuration Manager &#41; ](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) и [элементы ПИН-код Reporting Services на информационных панелях Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
+ Дополнительные сведения см. в разделах [Интеграция Сервера отчетов Power BI (диспетчер конфигурации)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) и [Закрепление элементов служб Reporting Services на информационных панелях Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
  
  **Визуализация в PowerPoint и экспорт** : новый модуль подготовки отчетов [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] имеет формат Microsoft PowerPoint (PPTX). Экспортировать отчеты в формате PPTX можно из обычных приложений, построителя отчетов, конструктора отчетов (в SSDT) и [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. Например, на следующем рисунке показано меню экспорта из [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
   
@@ -178,7 +178,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 **Панель пользовательских параметров** : сейчас можно настраивать панель параметров. С помощью области конструктора в построителе отчетов параметр можно перетащить в конкретный столбец и строку на панели параметров. Для изменения макета панели столбцы можно добавлять и удалять.   Дополнительные сведения см. в разделе [Настройка области параметров в отчете (построитель отчетов)](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
   
- ![Список параметров в области данных отчета и в области параметров](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "список параметров в области данных отчета и в области параметров")  
+ ![Список параметров в области "Данные отчета" и в области параметров](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Список параметров в области "Данные отчета" и в области параметров")  
 
   
 **Поддержка высокого разрешения** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] поддерживает масштабирование с высоким разрешением (DPI; точек на дюйм) и соответствующие устройства.  Дополнительные сведения о высоком разрешении см. в следующих разделах:  
@@ -199,4 +199,3 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 [Сервер отчетов Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

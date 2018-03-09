@@ -3,10 +3,12 @@ title: "Разделы по конструированию запросов и �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,22 +23,21 @@ helpviewer_keywords:
 - Query Designer [SQL Server], about Query Designer
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 33b5f17a28639d750e1c3df36c5619d33740c3db
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 77c335c54f7794f621850c727e57729a4bd526c6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)
-Конструктор запросов и представлений помогает создавать и поддерживать фрагменты для получения данных и управления данными для приложения.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Конструктор запросов и представлений помогает создавать и поддерживать фрагменты для получения данных и управления данными для приложения.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 [Открытие конструктора запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  
 Описывает шаги открытия нового или существующего запроса или представления в конструкторе запросов и представлений.  
   
@@ -68,4 +69,3 @@ ms.lasthandoff: 08/18/2017
 [Проектирование таблиц (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
 Подробные шаги создания и поддержки структур баз данных через таблицы, столбцы, ключи, индексы, хранимые процедуры и др.  
   
-

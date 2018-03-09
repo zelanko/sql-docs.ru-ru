@@ -3,10 +3,12 @@ title: "Добавление таблиц в запросы (визуальны�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - adding tables
 - queries [SQL Server], tables
 ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f19aca315ef01bc4a329d6b03ca9c07b6f2a52f6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ffa0dc48650d116f76df704ceae1d10f96b2b5be
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>Добавление таблиц в запросы (визуальные инструменты для баз данных)
-При создании запроса извлекаются данные из таблицы или других объектов, структурированных подобно таблицам, таких как представления и некоторые пользовательские функции. Чтобы любые из этих объектов можно было использовать в запросе, их следует добавить на **панель диаграммы**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] При создании запроса извлекаются данные из таблицы или других объектов, структурированных подобно таблицам, таких как представления и некоторые пользовательские функции. Чтобы любые из этих объектов можно было использовать в запросе, их следует добавить на **панель диаграммы**.  
   
 ### <a name="to-add-a-table-or-table-valued-object-to-a-query"></a>Добавление таблицы или возвращающего табличное значение объекта в запрос  
   
@@ -68,4 +69,3 @@ ms.lasthandoff: 08/18/2017
 [Резюмирование результатов запросов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [Выполнение основных операций с запросами (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

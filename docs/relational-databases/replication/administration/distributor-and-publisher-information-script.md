@@ -2,30 +2,32 @@
 title: "Скрипт вывода сведений о распространителе и издателе | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Publishers [SQL Server replication], information scripts
 - Distributors [SQL Server replication], information scripts
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dec278a7a34d1e6f3c056dcd6ea8ec65d0acdfc5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "13"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 875ed870e28e1a3ff0822a677905282f1fbd87ae
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-and-publisher-information-script"></a>Скрипт вывода сведений о распространителе и издателе
-  Этот скрипт использует системные таблицы и хранимые процедуры репликации, позволяющие получить ответы на часто задаваемые вопросы об объектах на распространителе и издателе. Скрипт может использоваться «как есть», а также может служить основой для пользовательских скриптов. Для выполнения в вашей среде, возможно, потребуется внести в скрипт два изменения:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Этот скрипт использует системные таблицы и хранимые процедуры репликации, позволяющие получить ответы на часто задаваемые вопросы об объектах в распространителе и издателе. Скрипт может использоваться «как есть», а также может служить основой для пользовательских скриптов. Для выполнения в вашей среде, возможно, потребуется внести в скрипт два изменения:  
   
 -   Изменить строку `use AdventureWorks2012` для использования имени вашей базы данных публикации.  
   

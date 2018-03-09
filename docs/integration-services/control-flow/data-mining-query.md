@@ -1,10 +1,13 @@
 ---
-title: "Запрос интеллектуального анализа данных | Документы Microsoft"
+title: "Запрос интеллектуального анализа данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
-caps.latest.revision: 23
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8809f1e5f91ad5746b66d4640747b1ec0a923f0f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c91306039512defe3455e8e77ef617813dee31df
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-mining-query"></a>Запрос интеллектуального анализа данных
   Панель конструктора содержит построитель прогнозирующих запросов интеллектуального анализа данных, который можно использовать для построения прогнозирующих запросов интеллектуального анализа данных. Можно строить либо прогнозирующие запросы на основании входных таблиц, либо одноэлементные прогнозирующие запросы. Переключитесь в просмотр результата, чтобы запустить запрос и просмотреть результаты. Просмотр запроса отображает запрос расширения интеллектуального анализа данных, созданный построителем прогнозирующих запросов.  
@@ -31,9 +33,9 @@ ms.lasthandoff: 08/03/2017
  Кнопка переключения представлений  
  Для переключения между панелями конструирования и запросов щелкните значок. По умолчанию открыта панель конструирования.  
   
- Для переключения на панель конструктора щелкните ![значок конструктора](../../integration-services/control-flow/media/ssis-designicon.gif "значок конструктора") значок.  
+ Для переключения на панель конструктора щелкните значок ![значок конструктора](../../integration-services/control-flow/media/ssis-designicon.gif "значок конструктора").  
   
- Для переключения на панель запросов щелкните ![значок SQL](../../integration-services/control-flow/media/ssis-queryicon.gif "значок SQL") значок.  
+ Для переключения на панель запросов щелкните значок ![значок SQL](../../integration-services/control-flow/media/ssis-queryicon.gif "значок SQL").  
   
  **Модель интеллектуального анализа данных**  
  Отображает выбранную модель интеллектуального анализа данных, на основе которой будет производиться прогнозирование.  
@@ -67,9 +69,8 @@ ms.lasthandoff: 08/03/2017
  **Критерий или аргумент**  
  Задайте условие или пользовательское выражение, применимое к столбцу. В ячейку можно перетаскивать столбцы из таблиц, содержащих модели интеллектуального анализа данных, а также входные столбцы.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Средства запросов интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../../dmx/data-mining-extensions-dmx-statements.md)  
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

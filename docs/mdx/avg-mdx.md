@@ -2,34 +2,32 @@
 title: "AVG (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- AVG
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Avg function [MDX]
+f1_keywords: AVG
+dev_langs: kbMDX
+helpviewer_keywords: Avg function [MDX]
 ms.assetid: efe61272-c3eb-4a33-b231-e00c30be16aa
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 4972d38cb5cd52d0da7d76c6eb771520a89fb896
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a0393bc578fd7c4f5b470ced1bb682755483f448
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="avg-mdx"></a>Avg (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Вычисляет набор и возвращает среднее непустых значений ячеек набора; среднее считается по мерам в наборе или по указанной мере.  
   
@@ -47,7 +45,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  Допустимое числовое выражение (обычно многомерное выражение координат ячейки), возвращающее число.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если указан набор пустых кортежей или пустой набор, **Avg** функция возвращает пустое значение.  
   
  **Avg** функция вычисляет среднее из непустых значений ячеек в указанном наборе, сначала рассчитывается сумма значений для ячеек в указанном наборе, а затем полученная сумма делится на число непустых ячеек в указанном наборе.  
@@ -161,4 +159,3 @@ FROM
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

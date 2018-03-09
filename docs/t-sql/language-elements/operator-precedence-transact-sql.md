@@ -3,8 +3,11 @@ title: "Приоритет операторов (Transact-SQL) | Докумен�
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ helpviewer_keywords:
 - order of operator execution [Transact-SQL]
 - precedence [SQL Server], operators
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: db0c7bd10a7d53f4de8fb5aedbe6f1cf3c9be42b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c9de4447c5918edbc33ec67c783272f724883e81
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="operator-precedence-transact-sql"></a>Приоритет операторов (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Если сложное выражение содержит несколько операторов, порядок выполнения этих операторов определяется их приоритетом. Порядок исполнения может существенно повлиять на результирующее значение.  
   
@@ -39,8 +41,8 @@ ms.lasthandoff: 09/01/2017
 |Level|Операторы|  
 |-----------|---------------|  
 |1|~ (побитовое НЕ)|  
-|2|* (умножение), / (деление), % (остаток от деления)|  
-|3|+ (Положительное), - (отрицательное), + (сложение), (+ объединение), - (вычитание), & (побитовое и), ^ (побитовое исключающее или), &#124; (Побитовый оператор или)|  
+|2|* (Умножение) / (деление), % (модуль)|  
+|3|+ (Положительное), - (отрицательное), + (сложение), (+ объединение),-(вычитание), & (побитовое и), ^ (побитовое исключающее или), &#124; (Побитовый оператор или)|  
 |4|=, >, \<, > =, < = <>,! =,! >,! < (операторы сравнения)|  
 |5|NOT|  
 |6|и|  
@@ -86,10 +88,9 @@ SET @MyNumber = 2 * (4 + (5 - 3) );
 SELECT @MyNumber;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Логические операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
  [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)  
   
   
-

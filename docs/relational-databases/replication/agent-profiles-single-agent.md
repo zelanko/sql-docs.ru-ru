@@ -2,31 +2,31 @@
 title: "Профили агента (один агент) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.profiles.perfprofileagentname.f1
-helpviewer_keywords:
-- Agent Profile dialog box
+f1_keywords: sql13.rep.profiles.perfprofileagentname.f1
+helpviewer_keywords: Agent Profile dialog box
 ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 16dd8b8f48927c74afc929f62e13339c23df9b05
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "18"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 6984179c2dacffa2d6c2ebcb816114e1fcfdcfd0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="agent-profiles-single-agent"></a>Профили агента (один агент)
-  Диалоговое окно **Профили агентов** служит для управления профилями агента. Профили агентов предоставляют удобный способ управления параметрами среды выполнения для каждого агента. Каждый агент имеет профиль по умолчанию, а некоторые агенты имеют и дополнительные предопределенные профили. Например, агент слияния имеет профиль «медленной связи», предназначенный для соединений с низкой пропускной способностью. Предопределенных профилей достаточно для создания большинства приложений, однако существует возможность создания пользовательских профилей, позволяющих настроить поведение агента.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Диалоговое окно **Профили агентов** служит для управления профилями агента. Профили агентов предоставляют удобный способ управления параметрами среды выполнения для каждого агента. Каждый агент имеет профиль по умолчанию, а некоторые агенты имеют и дополнительные предопределенные профили. Например, агент слияния имеет профиль «медленной связи», предназначенный для соединений с низкой пропускной способностью. Предопределенных профилей достаточно для создания большинства приложений, однако существует возможность создания пользовательских профилей, позволяющих настроить поведение агента.  
   
 ## <a name="options"></a>Параметры  
  **По умолчанию для нового**  
@@ -44,7 +44,7 @@ ms.lasthandoff: 06/22/2017
  **Создать**  
  Нажмите для создания нового профиля.  
   
- **Delete**  
+ **Удаление**  
  Выберите пользовательский профиль и нажмите кнопку **Удалить** , чтобы удалить его. Предопределенные профили удалить нельзя.  
   
  **Изменить существующие агенты**  

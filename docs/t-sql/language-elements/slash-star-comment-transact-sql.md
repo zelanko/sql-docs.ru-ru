@@ -1,10 +1,13 @@
 ---
-title: "Косая черта звезда комментария (Transact-SQL) | Документы Microsoft"
+title: "Звезда (блочного комментария) косой черты (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,20 @@ helpviewer_keywords:
 - remarks [SQL Server]
 - comments [SQL Server]
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
-caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3e617c6f0108906046d6c6ea983d1bbc26082709
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4d7181070cb0524b31364a915040307198054780
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="slash-star-comment-transact-sql"></a>Комментарий типа «звезда» косая черта (Transact-SQL)
+# <a name="slash-star-block-comment-transact-sql"></a>Звезда (блочного комментария) косой черты (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
 
   Обозначает текст комментария пользователя. Текст, помещенный между / * и \*/, не вычисляется сервером.  
   
@@ -53,7 +56,7 @@ text_of_comment
  *text_of_comment*  
  Текст комментария. Это одна или более символьных строк.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Комментарии могут вставляться в отдельную строку или в пределах инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. Многострочные комментарии должны обозначаться символами / * и \*/. Для многострочных комментариев часто используется многострочных является начинается с первой строки или\*последующие строки — с \* \*и заканчиваться \*/.  
   
  Длина комментариев не ограничена.  
@@ -105,10 +108,9 @@ JOIN Person.Address AS a ON ea.AddressID = a.AddressID;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [--&#40; Комментарий &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/comment-transact-sql.md)   
  [Язык управления выполнением &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   
-
 

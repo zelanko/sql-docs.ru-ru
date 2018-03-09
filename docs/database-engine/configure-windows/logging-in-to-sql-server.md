@@ -2,11 +2,13 @@
 title: "Вход в систему SQL Server | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,20 +23,19 @@ helpviewer_keywords:
 - logging in [SQL Server]
 - logins [SQL Server]
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "34"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 9afd0526acb2531222828a104a81096a29846342
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4ed2e0c35921a717fc9447e62d469fb0153a74c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="logging-in-to-sql-server"></a>Вход в систему SQL Server
-  Войти в систему на экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно с использованием любого графического средства администрирования или из командной строки.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Войти в систему в экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно с использованием любого графического средства администрирования или из командной строки.  
   
  При входе на экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью графического средства администрирования, такого как среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], пользователю предлагается ввести имя сервера, имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и, при необходимости, пароль. Если вход на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляется с проверкой подлинности Windows, то каждый раз при обращении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]вводить имя входа SQL Server не нужно. Вместо этого в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется учетная запись [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows для автоматического входа в систему. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает в смешанном режиме (проверка подлинности[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows) и пользователь входит в систему с проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то необходимо указать имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и пароль. По возможности используйте аутентификацию Windows.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 08/02/2017
 |----------------------|-------------------------------|  
 |Соединение с экземпляром по умолчанию с помощью протокола по умолчанию. (Это рекомендуемый элемент для экземпляра по умолчанию).|APPHOST|  
 |Соединение с именованным экземпляром с помощью протокола по умолчанию. (Это рекомендуемый элемент для именованного экземпляра).|APPHOST\SQLEXPRESS|  
-|Соединение с экземпляром по умолчанию на том же компьютере при помощи точки для указания, что экземпляр выполняется на локальном компьютере.|вводить имя входа SQL Server не нужно.|  
+|Соединение с экземпляром по умолчанию на том же компьютере при помощи точки для указания, что экземпляр выполняется на локальном компьютере.|, и делает это по-другому.|  
 |Соединение с именованным экземпляром на том же компьютере с помощью точки для указания, что экземпляр выполняется на локальном компьютере.|.\SQLEXPRESS|  
 |Соединение с экземпляром по умолчанию на том же компьютере при помощи localhost для указания, что экземпляр выполняется на локальном компьютере.|localhost|  
 |Соединение с именованным экземпляром на том же компьютере с помощью localhost, указывающее, что экземпляр выполняется на локальном компьютере.|localhost\SQLEXPRESS|  
@@ -76,13 +77,13 @@ ms.lasthandoff: 08/02/2017
 ## <a name="verifying-your-connection-protocol"></a>Проверка протокола соединения  
  При соединении с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)]следующий запрос возвратит протокол, используемый для текущего соединения, вместе с методом проверки подлинности (NTLM или Kerberos) и укажет состояние шифрования соединения.  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme, encrypt_option   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  
 ```  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Вход в экземпляр SQL Server (командная строка)](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)  
   
  Следующие ресурсы могут помочь устранить проблему с соединением.  
@@ -92,11 +93,10 @@ WHERE session_id = @@SPID;
 -   [Шаги для устранения неполадок с подключением SQL](http://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   
 ## <a name="related-content"></a>См. также  
- [Выбор режима проверки подлинности](../../relational-databases/security/choose-an-authentication-mode.md)  
+ [Выбор режима аутентификации](../../relational-databases/security/choose-an-authentication-mode.md)  
   
  [Использование программы sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
  [Создание имени входа](../../t-sql/lesson-2-1-creating-a-login.md)  
   
   
-

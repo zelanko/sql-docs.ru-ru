@@ -2,13 +2,13 @@
 title: "Определение логических первичных ключей в представлении источника данных (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - deleting logical primary keys
 - data source views [Analysis Services], logical primary keys
 ms.assetid: 172bc267-c637-4caa-bf55-0ba198d30b1e
-caps.latest.revision: 36
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ab3e26fdddc257e2ddf8edd450c412bbabb7c557
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 34a94946c37d6a0b5abc5fe48db70e02c111a2ba
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>Определение логических первичных ключей в представлении источника данных (службы Analysis Services)
-  Мастер представлений источника данных и конструктор представлений источника данных автоматически определяют первичный ключ для таблицы, добавляемой в представление источника данных на основе базовой таблицы базы данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Мастер представлений источника данных и конструктор представлений источника данных автоматически определяют первичный ключ для таблицы, добавляемой в представление источника данных на основе базовой таблицы базы данных.  
   
  Иногда может потребоваться вручную определить первичный ключ в представлении источника данных. Например, по соображениям производительности или архитектурным соображениям таблицы в источнике данных могут не иметь явно определенных первичных ключевых столбцов. В именованных запросах и представлениях первичный ключевой столбец для таблицы также может опускаться. Если таблица, представление или именованный запрос не имеют заданного физического первичного ключа, можно вручную задать логический первичный ключ для таблицы или именованного запроса в конструкторе представлений источника данных.  
   
@@ -53,7 +53,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>См. также  
  [Представления источников данных в многомерных моделях](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Определение именованных вычислений в представлении источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Определение именованных вычислений в представлении источника данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   
-

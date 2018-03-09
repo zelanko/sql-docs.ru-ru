@@ -1,12 +1,14 @@
 ---
 title: "Выполнение консоли SSMA (MySQLToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -21,17 +23,16 @@ helpviewer_keywords:
 - Script file commands, Report commands
 - Script file commands, Script generation commands
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6faf8033f2210a68217fe6cf3e7021edc2b29b98
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d3524ac9d8aac255fdf87bedbe6cf3badad963bd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Выполнение консоли SSMA (MySQLToSQL)
 Корпорация Майкрософт предоставляет широкий набор сценариев файл команд для выполнения и контроля над SSMA действий.  
@@ -294,7 +295,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <generate-assessment-report  
@@ -368,7 +369,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <convert-schema  
@@ -428,7 +429,7 @@ Force нагрузки-/ target-базы данных источника
   
 </migrate-data>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <migrate-data  
@@ -516,7 +517,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <synchronize-target  
@@ -525,7 +526,7 @@ Force нагрузки-/ target-базы данных источника
   
   object-type="<object-category>"/>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <synchronize-target>  
@@ -581,7 +582,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <refresh-from-database  
@@ -590,7 +591,7 @@ Force нагрузки-/ target-базы данных источника
   
    object-type="<object-category>"/>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <refresh-from-database>  
@@ -640,7 +641,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <save-as-script  
@@ -716,7 +717,7 @@ Force нагрузки-/ target-базы данных источника
   
 </convert-sql-statement>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```  
 <convert-sql-statement  
@@ -741,7 +742,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```  
 <convert-sql-statement  
@@ -770,4 +771,3 @@ Force нагрузки-/ target-базы данных источника
   
 3.  Для устранения неполадок в консоли, в разделе [Устранение неполадок &#40; MySQLToSQL &#41; ](../../ssma/mysql/troubleshooting-mysqltosql.md).  
   
-

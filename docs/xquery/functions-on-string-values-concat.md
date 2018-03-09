@@ -3,8 +3,11 @@ title: "Функция concat (XQuery) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ helpviewer_keywords:
 - fn:concat function
 - concat function [XQuery]
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
-caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5f4970f431b3929268414fd78d7e834d7a835919
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eed49c93e3f5754ad3c6a2d6b503ce0546cf9b34
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="functions-on-string-values---concat"></a>Строковые функции - concat
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Принимает от нуля и более строк и возвращает строку, содержащую результат сцепления переданных аргументов.  
   
@@ -47,7 +49,7 @@ fn:concat ($string as xs:string?
  *$string*  
  Необязательная строка для сцепления.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функции требуется как минимум два аргумента. Если в качестве аргумента передана пустая последовательность, она трактуется как строка нулевой длины.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Дополнительные символы (суррогатные пары)  
@@ -119,8 +121,7 @@ WHERE CatalogDescription.exist('//pd:ProductDescription ') = 1
   
 -   **Concat()** функции в SQL Server принимает только значения типа xs: String. Все остальные значения должны быть явно приведены в xs:string или xdt:untypedAtomic.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции XQuery для типа данных XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   
-

@@ -1,13 +1,14 @@
 ---
-title: "Использование подключения данных Office (ODC) в отчетах | Документы Microsoft"
+title: "Использованные подключения к данным Office (ODC) в отчетах | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +16,16 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
-caps.latest.revision: 13
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "13"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7df29304e469a78f64a8b81198d7991f956953fe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 68cbb3437a7f994a60e13163a8372f2e5c0a7174
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>использовать в отчетах ODC-файл подключения к данным Office
   В некоторых случаях для предоставления в отчет служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сведений о соединении можно использовать существующий ODC-файл. ODC-файл может быть использован вместо RSDS-файла при создании общего источника данных. Сервер отчетов использует ODC-файл так же, как и RSDS-файлы. Он считывает из файла тип источника данных, строку соединения и сведения об учетных данных.  
@@ -102,12 +102,11 @@ ms.lasthandoff: 08/09/2017
   
 12. Выделите только что переданный ODC-файл.  
   
-13. Чтобы выбрать файл и сохранить изменения, дважды нажмите кнопку **ОК******.  
+13. Нажмите кнопку **ОК** для выберите файл, а затем нажмите кнопку **ОК** для сохранения изменений.  
   
      Если представленные выше шаги применяются к образцу базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , необходимо иметь в виду, что полной совместимостью с ODC-файлом обладает только отчет Company Sales. Другие образцы отчетов включают в себя параметры и функции запросов, не совместимые с поставщиком OLE DB. Однако указанные отчеты можно преобразовать с помощью конструктора отчетов, после чего их можно будет использовать с поставщиком OLE DB.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание, изменение и удаление общих источников данных (службы SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   
-

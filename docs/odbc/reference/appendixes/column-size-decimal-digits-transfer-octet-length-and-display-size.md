@@ -3,10 +3,12 @@ title: "Размер столбца, десятичных цифр, длина �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +23,16 @@ helpviewer_keywords:
 - column size of data types [ODBC]
 - data types [ODBC], transfer octet length
 ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fa5322870c92ee8c48d9d4dc49fbc5a50b6b3e7e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19f505751d63f07dbd5eb2d1d53b9c191307e9b2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>Размер столбца, десятичных цифр, передачи длина в октетах и размер - ODBC
 Типы данных характеризуются их размер столбца (или параметр), десятичных цифр, длина и размер изображения. Следующие функции ODBC возвращают эти атрибуты в качестве параметра в инструкции SQL или для типа данных SQL на источнике данных. Каждая функция ODBC возвращает набор этих атрибутов следующим образом:  
@@ -56,6 +57,5 @@ ms.lasthandoff: 09/09/2017
   
 -   [Размер столбца](../../../odbc/reference/appendixes/column-size.md)  
 -   [Десятичные цифры](../../../odbc/reference/appendixes/decimal-digits.md)  
--   [Длина в октетах передачи](../../../odbc/reference/appendixes/transfer-octet-length.md)  
--   [Размер экрана](../../../odbc/reference/appendixes/display-size.md)
-
+-   [Длительность октета передачи](../../../odbc/reference/appendixes/transfer-octet-length.md)  
+-   [Отображаемый размер](../../../odbc/reference/appendixes/display-size.md)

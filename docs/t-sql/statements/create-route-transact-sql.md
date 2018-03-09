@@ -3,8 +3,11 @@ title: "Создание МАРШРУТА (Transact-SQL) | Документы Mi
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,20 +29,19 @@ helpviewer_keywords:
 - activating routes
 - CREATE ROUTE statement
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b7268b5c9b43505d3c66fb6573a9a41c3cd62e3a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 767be5069d65c11dad849a8fc32f5b15296a4eda
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Добавляет новый маршрут к таблице маршрутов для текущей базы данных. Для исходящих сообщений компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] определяет маршруты, проверяя таблицу маршрутов в локальной базе данных. Для сообщений диалогов, начатых в другом экземпляре, включая пересылаемые, сообщения [!INCLUDE[ssSB](../../includes/sssb-md.md)] проверяет маршруты в **msdb**.  
   
@@ -70,7 +72,7 @@ WITH
  на  
  Представляет предложения, которые определяют создаваемый маршрут.  
   
- Параметры SERVICE_NAME = **"***service_name***"**  
+ SERVICE_NAME = **'***service_name***'**  
  Указывает имя удаленной службы, находящейся по этому маршруту. *Service_name* должно точно совпадать, используется имя удаленной службы. [!INCLUDE[ssSB](../../includes/sssb-md.md)]использует сравнение байт за байтом *service_name*. Другими словами, при сравнении учитывается регистр и не применяются текущие параметры сортировки. Если аргумент SERVICE_NAME опущен, этот маршрут соответствует любому имени службы, но имеет более низкий приоритет, чем маршрут с аргументом SERVICE_NAME. Маршрут с именем службы **«SQL/ServiceBroker/BrokerConfiguration»** маршрут для службы уведомления конфигурации брокера. В маршруте к этой службе может не указываться экземпляр компонента Service Broker.  
   
  BROKER_INSTANCE = **"***broker_instance_identifier***"**  
@@ -84,13 +86,13 @@ WHERE database_id = DB_ID()
   
  Если предложение BROKER_INSTANCE опущено, то маршрут соответствует любому экземпляру брокера. Маршрут, соответствующий любому экземпляру брокера, имеет более высокий приоритет соответствия, чем маршрут с явным экземпляром брокера, когда диалог не указывает экземпляр брокера. Для диалогов, указывающих экземпляр брокера, маршрут с экземпляром брокера имеет более высокий приоритет, чем маршрут, соответствующий любому экземпляру брокера.  
   
- Время СУЩЕСТВОВАНИЯ  **=**  *route_lifetime*  
+ LIFETIME **=***route_lifetime*  
  Время в секундах, в течение которого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранит маршрут в таблице маршрутизации. По истечении этого времени действие маршрута истекает, и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при выборе маршрута для новых диалогов далее его не рассматривает. Если это предложение опущено, *route_lifetime* имеет значение NULL и маршрута никогда не истекает.  
   
  АДРЕС **= "***next_hop_address***"**  
  Указывает сетевой адрес для данного маршрута. *Next_hop_address* задает адрес TCP/IP в следующем формате:  
   
- **TCP: / /**{ *dns_name* | *netbios_name* | *ip_address* } **:**  *номер_порта*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:***port_number*  
   
  Указанный *Номер_порта* должен соответствовать номеру порта для [!INCLUDE[ssSB](../../includes/sssb-md.md)] конечной точки экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на указанном компьютере. Его можно получить, выполнив к выбранной базе данных следующий запрос:  
   
@@ -108,10 +110,10 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Если указывается значение **'TRANSPORT'** для *next_hop_address*, сетевой адрес определяется на основе адреса сетевого имени службы. Маршрут, указывающий **'TRANSPORT'** может не указывать имя или компонента broker экземпляра службы.  
   
- Параметр MIRROR_ADDRESS **= "***next_hop_mirror_address***"**  
+ MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
  Указывает сетевой адрес для зеркальной базы данных с одним зеркальная база данных находится в *next_hop_address*. *Next_hop_mirror_address* задает адрес TCP/IP в следующем формате:  
   
- **TCP: / /**{ *dns_name* | *netbios_name* | *ip_address* } **:**  *номер_порта*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  Указанный *Номер_порта* должен соответствовать номеру порта для [!INCLUDE[ssSB](../../includes/sssb-md.md)] конечной точки экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на указанном компьютере. Его можно получить, выполнив к выбранной базе данных следующий запрос:  
   
@@ -125,7 +127,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Если указано предложение MIRROR_ADDRESS, маршрут должен указать предложения SERVICE_NAME и BROKER_INSTANCE. Маршрут, указывающий **'LOCAL'** или **'TRANSPORT'** для *next_hop_address* , нельзя указывать зеркальный адрес.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Таблица маршрутизации, хранящая маршруты представляет таблицу метаданных, которые могут быть получены с помощью **sys.routes** представления каталога. Это представление каталога может быть обновлено только с помощью инструкций CREATE ROUTE, ALTER ROUTE и DROP ROUTE.  
   
  По умолчанию таблица маршрутов в каждой базе данных содержит один маршрут. Этот маршрут называется **AutoCreatedLocal**. Маршрут указывает **'LOCAL'** для *next_hop_address* и соответствует любому идентификатору службы имя и broker экземпляра.  
@@ -138,7 +140,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Маршрут не может быть временным объектом. Имена маршрутов, начинающиеся с  **#**  разрешены, но являются постоянными объектами.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Разрешение на Создание маршрута по умолчанию принадлежит членам **db_ddladmin** или **db_owner** предопределенных ролей базы данных и **sysadmin** предопределенной роли сервера.  
   
 ## <a name="examples"></a>Примеры  
@@ -226,10 +228,9 @@ CREATE ROUTE TransportRoute
     WITH ADDRESS = 'TRANSPORT' ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER ROUTE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-route-transact-sql.md)   
  [DROP ROUTE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

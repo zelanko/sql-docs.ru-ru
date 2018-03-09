@@ -2,31 +2,32 @@
 title: "Представление перспективы (табличное) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 6d2636c4-dae4-448f-a1d4-dbee739e177c
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 425138863142460faf9115705b494d0691d8444a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6fbef7caf08fe13a1f86e9797277c609b836bc5d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="perspective-representation-tabular"></a>Представление перспективы (табличное)
-  Перспектива представляет собой механизм упрощения или фокусировки модели в меньшую ее часть для клиентского приложения.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Перспектива представляет собой механизм упрощения или фокусировки модели в меньшую ее часть для клиентского приложения.  
   
  В разделе [представление перспективы (табличные данные)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md) подробные пояснения о том, как создать и управлять ею представление перспективы.  
   
@@ -141,4 +142,3 @@ private void updatePerspective_Click(
  Однако, чтобы получить основные сведения об использовании объектов AMO для создания представлений перспектив и управления ими, ознакомьтесь с исходным кодом примера преобразования объектов AMO в табличную модель. Этот образец доступен на сайте Codeplex. Важное примечание о коде. Код предоставляется только для иллюстрации логических концепций, поясняемых в этом разделе. Его не следует использовать в рабочей среде или для других целей, за исключением учебных.  
   
   
-

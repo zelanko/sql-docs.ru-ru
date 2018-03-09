@@ -2,30 +2,30 @@
 title: "Режимы работы зеркального отображения базы данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- database mirroring [SQL Server], operating modes
+helpviewer_keywords: database mirroring [SQL Server], operating modes
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 8c716fa65c68b44c6a4eb53e9c63bbe378298633
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4427cd045642ed4f59e1c9fdb0ab1a5916841bf0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-operating-modes"></a>Режимы работы зеркального отображения базы данных
-  В этом разделе описываются синхронный и асинхронный режимы работы для сеансов зеркального отображения базы данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описываются синхронный и асинхронный режимы работы для сеансов зеркального отображения базы данных.  
   
 > [!NOTE]  
 >  Базовые сведения о зеркальном отображении базы данных см. в разделе [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
@@ -151,7 +151,7 @@ ms.lasthandoff: 08/02/2017
   
  ![Взаимодействие участников без следящего сервера](../../database-engine/database-mirroring/media/dbm-high-protection-mode.gif "Взаимодействие участников без следящего сервера")  
   
- Если между участниками имеется соединение, а база данных синхронизирована, поддерживается отработка отказа вручную. Если экземпляр зеркального сервера отключен, это не влияет на экземпляр основного сервера, который остается работать в незащищенном режиме (без зеркального отображения данных). При выходе из строя основного сервера зеркальный сервер приостанавливается, но обслуживание может быть принудительно перенесено на него (с возможной потерей данных). Дополнительные сведения см. в разделе [Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
+ Если между участниками имеется соединение, а база данных синхронизирована, поддерживается отработка отказа вручную. Если экземпляр зеркального сервера отключен, это не влияет на экземпляр основного сервера, который остается работать в незащищенном режиме (без зеркального отображения данных). При выходе из строя основного сервера зеркальный сервер приостанавливается, но обслуживание может быть принудительно перенесено на него (с возможной потерей данных). Дополнительные сведения см. в статье [Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
 ###  <a name="HighSafetyWithAutoFailover"></a> Режим высокой безопасности с автоматическим переходом на другой ресурс  
  Автоматический переход на другой ресурс обеспечивает высокий уровень доступности за счет того, что обслуживание базы данных продолжается после выхода из строя одного сервера. При использовании режима автоматической отработки отказа в сеансе должен присутствовать третий экземпляр сервера, *следящий сервер*, который в идеальном случае должен находиться на третьем компьютере. На следующем рисунке показана конфигурация сеанса режима высокой безопасности с автоматической отработкой отказа.  
@@ -251,7 +251,7 @@ ms.lasthandoff: 08/02/2017
 ###  <a name="ViewWitness"></a> Просмотр установки безопасности и состояния следящего сервера  
  Для просмотра настройки безопасности и состояния следящего сервера для базы данных используется представление каталога **sys.database_mirroring** . Соответствующие данные отображаются в следующих столбцах:  
   
-|Фактор|Столбцы|Описание|  
+|Фактор|Столбцы|Description|  
 |------------|-------------|-----------------|  
 |Безопасность транзакций|**mirroring_safety_level** или **mirroring_safety_level_desc**|Установка безопасности транзакций для обновления на зеркальной базе данных. Может принимать одно из следующих значений:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> ПОЛНОЕ<br /><br /> NULL = база данных находится не в режиме в сети.|  
 |Существует ли следящий сервер?|**mirroring_witness_name**|Имя следящего сервера зеркального отображения базы данных или значение NULL, означающее, что следящий сервер не существует.|  
@@ -292,4 +292,3 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
  [Следящий сервер зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   
-

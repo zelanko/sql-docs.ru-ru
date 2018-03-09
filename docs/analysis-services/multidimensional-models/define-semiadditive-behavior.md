@@ -2,13 +2,13 @@
 title: "Определение полуаддитивного режима | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], semiadditive behavior
 - measures [Analysis Services], semiadditive
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
-caps.latest.revision: 28
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f78bd8b53f358b63393b374594ce76d31791c606
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9bbc456220e6b9e8d46c93699a38e2b2cb959ba2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-semiadditive-behavior"></a>Определение полуаддитивного режима
-  Во многих бизнес-сценариях широко распространены полуаддитивные меры, которые не используют статистическое вычисление единообразно для всех измерений. Со временем данная проблема затрагивает все кубы, основанные на моментальных снимках балансов. Такие моментальные снимки можно найти в приложениях, связанных с ценными бумагами, балансом счета, бюджетированием, персоналом, страховыми полисами и требованиями, и многими другими областями коммерческой деятельности.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Во многих бизнес-сценариях широко распространены полуаддитивные меры, которые не используют статистическое вычисление единообразно для всех измерений. Со временем данная проблема затрагивает все кубы, основанные на моментальных снимках балансов. Такие моментальные снимки можно найти в приложениях, связанных с ценными бумагами, балансом счета, бюджетированием, персоналом, страховыми полисами и требованиями, и многими другими областями коммерческой деятельности.  
   
  Для определения метода статистического вычисления для отдельных мер или элементов атрибута типа учетной записи добавьте к кубу полуаддитивный режим. Если в кубе содержится измерение счетов, то полуаддитивный режим можно добавлять автоматически на основании типа учетной записи.  
   
@@ -91,4 +91,3 @@ ms.lasthandoff: 09/01/2017
  После завершения работы с мастером любой существующий полуаддитивный режим будет заменен.  
   
   
-

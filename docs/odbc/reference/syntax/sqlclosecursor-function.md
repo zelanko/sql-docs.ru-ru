@@ -3,33 +3,30 @@ title: "Функция SQLCloseCursor | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLCloseCursor
-apilocation:
-- sqlsrv32.dll
+apiname: SQLCloseCursor
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLCloseCursor
-helpviewer_keywords:
-- SQLCloseCursor function [ODBC]
+f1_keywords: SQLCloseCursor
+helpviewer_keywords: SQLCloseCursor function [ODBC]
 ms.assetid: 05b0a054-e28d-4e16-b5b0-07418486b372
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8c8e82312bda206d941bb08fe21fdcd27dbc0f56
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0921de0c8bc117ca86f4aaabd273efff1f09a9e6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlclosecursor-function"></a>Функция SQLCloseCursor
 **Соответствия**  
@@ -90,4 +87,3 @@ SQLRETURN SQLCloseCursor(
 ## <a name="see-also"></a>См. также:  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

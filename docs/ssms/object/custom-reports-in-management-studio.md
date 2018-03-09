@@ -3,31 +3,30 @@ title: "Пользовательские отчеты в среде Management S
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.summary.new.custom.report.f1
-helpviewer_keywords:
-- SQL Server Management Studio [SQL Server], custom reports
+f1_keywords: sql13.swb.summary.new.custom.report.f1
+helpviewer_keywords: SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b1292293885329df9b38dfcf94cd8ee1c5ca5238
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: be381dfcba80135f5c76694ab2f19f2942e0f5a8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="custom-reports-in-management-studio"></a>Пользовательские отчеты в среде Management Studio
-Во многих узлах обозревателя объектов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] отображается набор стандартных отчетов, созданных в [!INCLUDE[msCoName](../../includes/msconame_md.md)]. В этих отчетах сведены все обычно запрашиваемые данные о серверах. Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] с пакетом обновления 2 (SP2), администраторы могут запускать настраиваемые отчеты, созданные в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] , из среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Во многих узлах обозревателя объектов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] отображается набор стандартных отчетов, созданных в [!INCLUDE[msCoName](../../includes/msconame_md.md)]. В этих отчетах сведены все обычно запрашиваемые данные о серверах. Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] с пакетом обновления 2 (SP2), администраторы могут запускать настраиваемые отчеты, созданные в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] , из среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
   
 ## <a name="implementation"></a>Реализация  
 Пользовательские отчеты создаются на языке определения отчетов и хранятся в виде файлов определения отчетов (RDL). RDL определяет сведения о получении данных и макете отчета в формате XML. Язык RDL представляет собой открытую схему. Это дает разработчикам возможность расширять его, добавляя дополнительные атрибуты и элементы. Внутри отчета могут выполняться любые допустимые инструкции [!INCLUDE[tsql](../../includes/tsql_md.md)] .  
@@ -65,7 +64,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="managing-custom-reports"></a>Управление пользовательскими отчетами  
 Пользователям, имеющим несколько пользовательских отчетов, рекомендуется упорядочить их по папкам файловой системы, задав соответствующие разрешения файловой системы NTFS.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Пользовательские отчеты работают с разрешениями текущего пользователя. Чтобы предотвратить изменение выполняемых отчетом запросов злоумышленниками, рекомендуется предоставлять ограниченные разрешения на папки, содержащие файлы отчетов.  
   
 И пользователь, и применяемая службой [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] учетная запись должны иметь доступ на чтение системной папки с файлами отчетов.  
@@ -80,6 +79,5 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
 [Добавление пользовательского отчета в среду Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)  
 [Отмена подавления предупреждений для пользовательских отчетов](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
-[Использование пользовательских отчетов совместно со свойствами узлов обозревателя объектов](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
+[Использование пользовательских отчетов для свойств узлов обозревателя объектов](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
   
-

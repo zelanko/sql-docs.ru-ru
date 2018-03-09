@@ -1,10 +1,13 @@
 ---
-title: "Подготовка к запросу информации об изменениях | Документы Microsoft"
+title: "Подготовка к запросу информации об изменениях данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b15733feeca10976315834b2dfc897cc8a9d1216
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 83a9a9297270598346b6f4b7c43891ece83e2254
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>Подготовка к запросу информации об изменениях
   В потоке управления пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , который выполняет добавочную загрузку измененных данных, третья и последняя задача состоит в том, чтобы подготовить запрос для измененных данных и добавить задачу потока данных.  
@@ -206,4 +208,3 @@ ms.lasthandoff: 08/03/2017
  **Следующий раздел:** [Создание функции для получения измененных данных](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
   
   
-

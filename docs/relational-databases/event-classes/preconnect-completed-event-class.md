@@ -2,9 +2,12 @@
 title: "Класс событий PreConnect:Completed | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,30 +15,31 @@ ms.topic: article
 helpviewer_keywords:
 - PreConnect:Completed Event Class
 ms.assetid: 7ed2f620-6511-4985-9961-d2927c2b1759
-caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5f6bba668ddd25925ede8fe8cf71e4f1775f3dd9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 380092bc284bdd6ba85f7f7a3d624734b65559ae
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed, класс событий
-  Класс событий PreConnect:Completedevent указывает на завершение триггера LOGON или функции-классификатора регулятора ресурсов.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Класс событий PreConnect:Completedevent указывает на завершение триггера LOGON или функции-классификатора регулятора ресурсов.  
   
 ## <a name="preconnectcompleted-event-class-data-columns"></a>Столбцы данных класса событий PreConnect:Completed  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|EventClass|**int**|216|27|Нет|  
+|EventClass|**int**|216|27|нет|  
 |SPID|**int**|Идентификатор процесса сервера, создающего это событие.|12|Да|  
 |EventSubClass|**int**|1 для определяемой пользователем функции-классификатора.|21|Да|  
 |StartTime|**datetime**|Время начала выполнения определяемой пользователем функции-классификатора.|14|Да|  
 |EndTime|**datetime**|Время начала выполнения определяемой пользователем функции-классификатора.|15|Да|  
-|Длительность|**bigint**|Количество времени (в миллисекундах), затраченного функцией-классификатором.|13|Да|  
+|Duration|**bigint**|Количество времени (в миллисекундах), затраченного функцией-классификатором.|13|Да|  
 |ObjectID|**int**|Идентификатор определяемого пользователем объекта-классификатора.|22|Да|  
 |ЦП|**int**|Использование ЦП в миллисекундах.|18|Да|  
 |Reads|**int**|Количество операций логического считывания.|16|Да|  

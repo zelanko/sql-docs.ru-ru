@@ -3,27 +3,28 @@ title: "Проекты (среда SQL Server Management Studio) | Докуме�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6aee221e94bfddd9ef968d5868c07ae2d9291d91
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e207a41546270197fa35cccd63348107db2d30f4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="projects-sql-server-management-studio"></a>Проекты (среда SQL Server Management Studio)
-Проект [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] представляет собой коллекцию логически связанных скриптов и файлов, которые можно хранить вместе для администрирования и разработки базы данных.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Проект [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] представляет собой коллекцию логически связанных скриптов и файлов, которые можно хранить вместе для администрирования и разработки базы данных.  
   
 ## <a name="script-project-overview"></a>Обзор проекта скрипта  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] отображаются в обозревателе решений среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]. Проект скрипта может содержать 0 или более файлов проекта. В решение можно добавить один проект или объединить в одном решении несколько проектов.  
@@ -55,9 +56,9 @@ ms.lasthandoff: 08/18/2017
 |Описано добавление существующего проекта к решению.|[Добавление к решению существующий проект](../../ssms/solution/add-an-existing-project-to-a-solution.md)|  
 |Описано изменение места сохранения файлов проекта по умолчанию.|[Изменение местоположения проектов по умолчанию](../../ssms/solution/change-the-default-location-for-projects.md)|  
 |Описан просмотр текущих свойств проекта.|[Просмотр свойств проекта](../../ssms/solution/view-project-properties.md)|  
-|Описано добавление новых элементов в проект (соединений, файлов скриптов и т. д).|[Добавление в проект новые элементы](../../ssms/solution/add-new-items-to-a-project.md)|  
+|Описано добавление новых элементов в проект (соединений, файлов скриптов и т. д).|[Добавление новых элементов в проект](../../ssms/solution/add-new-items-to-a-project.md)|  
 |Описано создание сведений о подключении для запроса.|[Связь запроса с соединением в проекте](../../ssms/solution/associate-a-query-with-a-connection-in-a-project.md)|  
-|Описано изменение сведений о подключении для запроса.|[Изменение соединение, связанное с запросом](../../ssms/solution/change-the-connection-associated-with-a-query.md)|  
+|Описано изменение сведений о подключении для запроса.|[Изменение соединения, связанного с запросом](../../ssms/solution/change-the-connection-associated-with-a-query.md)|  
 |Описано изменение свойств подключения.|[Просмотр или изменение свойств соединения в проекте](../../ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md)|  
   
 ## <a name="see-also"></a>См. также:  
@@ -65,4 +66,3 @@ ms.lasthandoff: 08/18/2017
 [Решения (среда SQL Server Management Studio)](../../ssms/solution/solutions-sql-server-management-studio.md)  
 [Обозреватель решений системы управления версиями](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
   
-

@@ -2,11 +2,13 @@
 title: "Аварийное восстановление WSFC через принудительный кворум (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,24 +16,23 @@ helpviewer_keywords:
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f79077825cabd60fa12cd906ff375d149b29a7d3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 16d17e02c0594f3906651b0f270c8a36e891e69d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Аварийное восстановление WSFC через принудительный кворум (SQL Server)
-  Обычно сбой кворума бывает вызван системной аварией, постоянным сбоем связи или ошибкой конфигурации, затрагивающей несколько узлов в кластере WSFC.  Для восстановления после сбоя кворума требуется участие пользователя.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Обычно сбой кворума бывает вызван системной аварией, постоянным сбоем связи или ошибкой конфигурации, затрагивающей несколько узлов в кластере WSFC.  Для восстановления после сбоя кворума требуется участие пользователя.  
   
--   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
+-   **Перед началом:**  [Предварительные требования](#Prerequisites), [Безопасность](#Security)  
   
--   **WSFC Disaster Recovery through the Forced Quorum Procedure** [WSFC Disaster Recovery through the Forced Quorum Procedure](#Main)  
+-   **Аварийное восстановление WSFC с помощью процедуры принудительного кворума** [Аварийное восстановление WSFC с помощью процедуры принудительного кворума](#Main)  
   
 -   [Связанные задачи](#RelatedTasks)  
   
@@ -130,4 +131,3 @@ ms.lasthandoff: 06/22/2017
  [Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
-

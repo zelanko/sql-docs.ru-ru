@@ -3,8 +3,11 @@ title: "ВСЕ (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - single-column set of values [SQL Server]
 - ALL (Transact-SQL)
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
-caps.latest.revision: 40
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1fd1b250a30b83a3b014384aafee6c40ff4f1a5a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 142fbd5b352a73e382f89a61f60fba6373902172
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Сравнивает скалярное значение с набором значений, состоящим из одного столбца.  
   
@@ -54,7 +56,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  { = | <> | != | > | >= | !> | < | <= | !< }  
  Оператор сравнения.  
   
- *вложенный запрос*  
+ *subquery*  
  Вложенный запрос, возвращающий результирующий набор, состоящий из одного столбца. Тип данных возвращаемого столбца должен быть тот же тип данных, как тип данных *scalar_expression*.  
   
  Ограниченная инструкция SELECT, в которой запрещено предложение ORDER BY, а также ключевое слово INTO.  
@@ -63,9 +65,9 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Логическое значение**  
   
 ## <a name="result-value"></a>Значение результата  
- Возвращает значение TRUE, если указанное сравнение имеет значение TRUE для всех пар (*scalar_expression***,***x)*, когда *x* в значении набор одного столбца; в противном случае возвращает FALSE.  
+ Возвращает значение TRUE, если указанное сравнение имеет значение TRUE для всех пар (*scalar_expression***,***x)*, когда *x* это значение в наборе один столбец; в противном случае возвращает FALSE.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  ВСЕ требует *scalar_expression* для сравнения каждого значения, возвращаемого вложенным запросом. Например, если вложенный запрос возвращает значения 2 и 3, *scalar_expression* < = ALL (вложенными запросами) будет возвращаться TRUE для *scalar_expression* 2. Если вложенный запрос возвращает значения 2 и 3, *scalar_expression* = ALL (вложенными запросами) будет возвращаться FALSE, так как некоторые значения вложенного запроса (значение 3) не отвечают критериям этого выражения.  
   
  Для инструкций, которые требуют *scalar_expression* сравнения только одного значения, возвращаемого вложенным запросом, перечислены в разделе [НЕКОТОРЫЕ &#124; ВСЕ &#40; Transact-SQL &#41; ](../../t-sql/language-elements/some-any-transact-sql.md).  
@@ -113,7 +115,7 @@ EXECUTE DaysToBuild 49080, 1 ;
   
  `Some items for this order cannot be manufactured in specified number of days or less.`  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [РЕГИСТР &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
@@ -124,4 +126,3 @@ EXECUTE DaysToBuild 49080, 1 ;
  [ИН &#40; Transact-SQL &#41;](../../t-sql/language-elements/in-transact-sql.md)  
   
   
-

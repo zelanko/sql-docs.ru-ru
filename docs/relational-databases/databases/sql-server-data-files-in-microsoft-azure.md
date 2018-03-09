@@ -2,29 +2,28 @@
 title: "Файлы данных SQL Server в Microsoft Azure | Microsoft Docs"
 ms.custom: 
 ms.date: 10/02/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: 8c86ddf9555dbdac83821d7f16a7000415ec7b2d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 59dd3517d0b0e4cfdafb470132e620576f1ffbc7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/04/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Файлы данных SQL Server в Microsoft Azure
-  ![Файлы данных в Azure](../../relational-databases/databases/media/data-files-on-azure.png "Файлы данных в Azure")  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ![Файлы данных в Azure](../../relational-databases/databases/media/data-files-on-azure.png "Файлы данных в Azure")  
   
  Файлы данных SQL Server в Microsoft Azure включают встроенную поддержку файлов баз данных SQL Server, которые хранятся в виде больших двоичных объектов Microsoft Azure. Этот компонент позволяет создать базу данных на сервере SQL Server, работающем локально или на виртуальной машине в Microsoft Azure, с назначенным местом хранения для данных в хранилище BLOB-объектов Microsoft Azure. Это усовершенствование значительно упрощает перемещение баз данных между компьютерами с помощью операций отсоединения и присоединения. Кроме того, данный компонент предоставляет альтернативное расположение для хранения файлов резервных копий баз данных, позволяя выполнять восстановление из службы хранилища Microsoft Azure и в нее. Поэтому он обеспечивает возможность реализации нескольких гибридных решений, предоставляя ряд преимуществ для виртуализации данных, перемещения данных, безопасности и доступности, а также достижения снижения затрат и обслуживания для высокого уровня доступности и эластичного масштабирования.
  

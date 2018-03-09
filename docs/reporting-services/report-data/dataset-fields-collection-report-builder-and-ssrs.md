@@ -1,27 +1,27 @@
 ---
-title: "Коллекция полей набора данных (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Коллекция полей набора данных (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
-caps.latest.revision: 13
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "13"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 271d1b4018890ab23db0254b24cbf7664491b848
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 93e0f3ac2c38d3fa61ec63c65c3a5ceb664bc4d8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Коллекция полей набора данных (построитель отчетов и службы SSRS)
   Поля набора представляют данные из соединения с данными. Поле может использоваться для представления как числовых, так и нечисловых данных. Примеры включают в себя следующее: объемы продаж, итоговые суммы продаж, имена клиентов, идентификаторы баз данных, URL-адреса, изображения, пространственные данные и адреса электронной почты. В области конструктора поля отображаются в виде выражений в элементах отчета, таких как текстовые поля, таблицы и диаграммы.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/09/2017
  Источники данных, поддерживающие многомерные запросы, такие как службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], могут работать со свойствами полей. Свойства полей появляются в результирующем наборе запроса, но не видны на панели **Данные отчета** . Тем не менее, их можно использовать в отчете. Для обращения к свойству поля, перетащите поле в отчет и измените свойство по умолчанию **Value** на имя поля требуемого свойства. Например, в кубе служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно определить формат значений в ячейках куба. Значение форматируется с помощью свойства поля **FormattedValue**. Чтобы использовать значение напрямую, а не устанавливать свойство форматирования текстового поля, перетащите поле в текстовое поле и измените выражение по умолчанию `=Fields!FieldName.Value` на `=Fields!FieldName.FormattedValue`.  
   
 > [!NOTE]  
->  Не все свойства **Field** можно использовать для всех источников данных. Свойства **Value** и **IsMissing** определены для всех источников данных. Другие стандартные свойства (например, **Key**, **UniqueName**и **ParentUniqueName** для многомерных источников данных) поддерживаются только в случае поддержки этих свойств источником данных. Некоторые поставщики данных поддерживают пользовательские свойства. Дополнительные сведения см. в конкретных подразделах, посвященных расширенным свойствам полей для типа источника данных, в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Например, для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] источника данных в разделе [расширенные свойства поля для базы данных служб Analysis Services &#40; Службы SSRS &#41; ](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+>  Не все свойства **Field** можно использовать для всех источников данных. Свойства **Value** и **IsMissing** определены для всех источников данных. Другие стандартные свойства (например, **Key**, **UniqueName**и **ParentUniqueName** для многомерных источников данных) поддерживаются только в случае поддержки этих свойств источником данных. Некоторые поставщики данных поддерживают пользовательские свойства. Дополнительные сведения см. в конкретных подразделах, посвященных расширенным свойствам полей для типа источника данных, в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Например, сведения об источнике данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см. в разделе [Расширенные свойства поля для базы данных служб Analysis Services (службы SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
 ##  <a name="Defaults"></a> Основные сведения о выражениях по умолчанию для полей  
@@ -99,8 +99,8 @@ ms.lasthandoff: 08/09/2017
   
     |Тип данных SQL|Тип данных CLR|Description|  
     |-------------------|-------------------|-----------------|  
-    |**Date**|**DateTime**|Только тип данных Date|  
-    |**Time**|**TimeSpan**|Только время|  
+    |**Дата**|**DateTime**|Только тип данных Date|  
+    |**Time**|**TimeSpan**|Только тип данных Time|  
     |**DateTimeTZ**|**DateTimeOffset**|Дата и время со смещением часового пояса|  
     |**DateTime2**|**DateTime**|Дата и время с долями миллисекунд|  
   
@@ -116,7 +116,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>См. также:  
  [Диалоговое окно "Свойства набора данных" — "Поля" (построитель отчетов)](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
  [Элементы отчета и наборы данных в построителе отчетов](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Отчет внедренные наборы данных и общие наборы данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
-

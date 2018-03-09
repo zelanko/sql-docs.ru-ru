@@ -3,8 +3,11 @@ title: "ShortestLineTo (тип данных geography) | Документы Micr
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - ShortestLineTo method (geography)
 ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
-caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: acb6d16fbf1413a81a05582bc203a7e768b70c75
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 0b920113686547966cb67e31fc3f726ffbefba67
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (тип данных geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Возвращает **LineString** экземпляра с двумя точками, представляющий кратчайшее расстояние между двумя **geography** экземпляров. Длина **LineString** возвращаемый экземпляр — это расстояние между двумя **geography** экземпляров.  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 09/01/2017
   
  Возвращаемый тип CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Метод возвращает **LineString** экземпляр с конечными точками, лежащими на границах двух непересекающиеся **geography** сравниваемых экземпляров. Длина **LineString** возвращаемый равна кратчайшему расстоянию между двумя **geography** экземпляров. Пустой **LineString** экземпляр возвращается, когда два **geography** пересекаются друг с другом.  
   
 ## <a name="examples"></a>Примеры  
@@ -73,8 +75,7 @@ ms.lasthandoff: 09/01/2017
  SELECT @g1.ShortestLineTo(@g2).ToString();
 ``` 
   
-## <a name="see-also"></a>См. также:  
- [Расширенные методы в экземплярах географических объектов](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
+## <a name="see-also"></a>См. также  
+ [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   
-

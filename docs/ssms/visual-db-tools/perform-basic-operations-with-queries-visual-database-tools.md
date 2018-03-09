@@ -3,32 +3,33 @@ title: "Выполнение основных операций с запроса
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - queries [Visual Database Tools]
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e61d1ac966ed5c5829e6c03c463fc5fa4b1e38bf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 91ba67fc6ea916272470b4df83e6614dd76a2a84
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>Выполнение основных операций с запросами (визуальные инструменты для баз данных)
-Следующие основные операции применяются к большинству или всем запросам.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Следующие базовые операции применимы практически ко всем запросам.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 [Создание запросов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
 Шаги для создания новых запросов.  
   
@@ -115,4 +116,3 @@ ms.lasthandoff: 08/18/2017
 [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 Обзорные подразделы, в которых приведены более детальные ссылки.  
   
-

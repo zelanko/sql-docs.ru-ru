@@ -1,29 +1,31 @@
 ---
 title: "Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL | Документация Майкрософт"
 ms.custom: 
-ms.date: 04/12/2017
-ms.prod: sql-server-2016
+ms.date: 10/23/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-caps.latest.revision: 44
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 462245faec6b34c8ad38e47ec23c1f8038769ae8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
-ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
   В этом разделе содержится список компонентов контактной зоны T-SQL и поддерживаемых функций в тексте модулей, скомпилированных в собственном коде T-SQL, например хранимых процедур ([CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)), скалярных определяемых пользователем функций, встроенных функций с табличными значениями и триггеров.  
@@ -136,7 +138,7 @@ ms.lasthandoff: 07/31/2017
   - Это ограничение может быть понижено в случае, если запрос содержит соединения или агрегатные функции. (Например, с одним соединением (двумя таблицами) ограничение составляет 4 096 строк. С двумя соединениями (тремя таблицами) ограничение равно 2 730 строкам.)  
   - Результаты более 8 192 можно получить, сохраняя в переменной несколько строк.  
 
-```tsql
+```sql
 DECLARE @v INT = 9000;
 SELECT TOP (@v) … FROM … ORDER BY …
 ```
@@ -154,7 +156,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 -   UPDATE  
 
--   DELETE  
+-   Delete  
 
 -   предложение WHERE поддерживается вместе с инструкциями UPDATE и DELETE.  
 
@@ -195,8 +197,8 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Битовые операторы ~, &, |, и ^  
 
 -   APPLY, оператор
-    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 оператор APPLY поддерживается в модулях, скомпилированных в собственном коде.
+    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], оператор APPLY поддерживается в модулях, скомпилированных в машинном коде.
 
 ##  <a name="bfncsp"></a> Встроенные функции в модулях, скомпилированных в собственном коде  
  В ограничениях таблиц, оптимизированных для памяти, и в модулях, скомпилированных в собственном коде T-SQL, поддерживаются следующие функции.  
@@ -206,8 +208,8 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Функции для работы с датами: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME и YEAR.  
 
 -   Строковые функции: LEN, LTRIM, RTRIM и SUBSTRING.  
-    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 также поддерживаются следующие встроенные функции: TRIM, TRANSLATE и CONCAT_WS.  
+    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], также поддерживаются следующие встроенные функции: TRIM, TRANSLATE и CONCAT_WS.  
 
 -   Функции идентификации: SCOPE_IDENTITY.  
 
@@ -216,8 +218,8 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Функции уникальных идентификаторов: NEWID и NEWSEQUENTIALID  
 
 -   Функции JSON  
-    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 функции JSON поддерживаются в модулях, скомпилированных в собственном коде.
+    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], функции JSON поддерживаются в модулях, скомпилированных в машинном коде.
 
 -   Функции обработки ошибок: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY и ERROR_STATE.  
 
@@ -256,7 +258,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
  Пример для оператора TOP с числом значений 8192: компиляция  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -269,7 +271,7 @@ GO
 
  Пример для оператора TOP с числом значений > 8192: сбой компиляции.  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -284,7 +286,7 @@ GO
 
  Пример использования переменной: компиляция  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -304,9 +306,8 @@ GO
 
  Формула для вычисления наименьшего поддерживаемого значения N в предложении TOP N выглядит следующим образом: `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`.  
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Скомпилированные в собственном коде хранимые процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [Проблемы миграции, связанные с хранимыми процедурами, скомпилированными в собственном коде](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-
 
 

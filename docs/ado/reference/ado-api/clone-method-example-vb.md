@@ -3,7 +3,7 @@ title: "Клонирование пример метода (Visual Basic) | До
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Clone method [ADO], Visual Basic example
 ms.assetid: 64cb1753-e074-4a2d-8b74-7c35f3f6f64d
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e12ea632c58e1b9c332d6b981551baa404c82371
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c540b2231d4e1f6a9e55f7c173479ce17af68c84
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="clone-method-example-vb"></a>Пример метода клона (Visual Basic)
 В этом примере используется [клон](../../../ado/reference/ado-api/clone-method-ado.md) метод для создания копии [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и затем пользователю указатель записи каждой копии независимо друг от друга.  
@@ -135,7 +134,6 @@ End Sub
 'EndCloneVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод clone (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

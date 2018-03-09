@@ -1,12 +1,14 @@
 ---
-title: "Сохранение пользовательских объектов | Документы Microsoft"
+title: "Сохранение пользовательских объектов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-custom-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -14,20 +16,19 @@ applies_to:
 helpviewer_keywords:
 - custom objects [Integration Services], persisting
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
-caps.latest.revision: 21
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7b43f65b19f3dd4804ba1f7c18a81b640ed277d5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 22ebbf55dbe6fb9a1e63e8a7cfae9fb6674c62ed
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="persisting-custom-objects"></a>Сохранение пользовательских объектов
-  Необходимо реализовывать пользовательскую сохраняемость для создаваемых пользовательских объектов, создаваемые при условии, что их свойствами пользуются только простые типы данных, такие как **целое** и **строка**. Реализация сохраняемости по умолчанию обеспечивает сохранение метаданных для пользовательского объекта, а также значений всех его свойств.  
+  Нет необходимости реализовывать пользовательскую сохраняемость для создаваемых пользовательских объектов при условии, что их свойствами пользуются только простые типы данных, например **integer** и **string**. Реализация сохраняемости по умолчанию обеспечивает сохранение метаданных для пользовательского объекта, а также значений всех его свойств.  
   
  Однако, если свойствами объекта используются сложные типы данных, либо если необходимо выполнить особую обработку значений свойств во время их загрузки и сохранения, можно реализовать интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist> и его методы <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.LoadFromXML%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.SaveToXML%2A>. В этих методах из XML-определения пакета загружается XML-фрагмент, содержащий свойства объекта и их текущие значения, или XML-фрагмент сохраняется в XML-определении пакета. Формат этого XML-фрагмента не определен. Необходимо только, чтобы это был XML правильного формата.  
   
@@ -35,7 +36,7 @@ ms.lasthandoff: 08/03/2017
 >  При реализации нестандартной сохраняемости необходимо обеспечить сохранение всех свойств объекта, в том числе наследуемых свойств и пользовательских свойств, добавленных разработчиком.  
   
 ## <a name="example"></a>Пример  
- Несмотря на то, что образец пользовательского диспетчера соединений Sql Server не требует пользовательской сохраняемости для трех его свойств типа **строка**, следующий код является примером пользовательского кода, который потребовался бы для сохранения диспетчера соединений и его свойств. В классе, содержащем этот код, должен быть реализован интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist>.  
+ Хотя для образца пользовательского диспетчера подключений SQL Server не требуется применение настраиваемой сохраняемости для трех его свойств типа **string**, ниже приведен образец пользовательского кода, который потребовался бы для обеспечения сохраняемости диспетчера подключений и его свойств. В классе, содержащем этот код, должен быть реализован интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist>.  
   
 ```vb  
 Private Const PERSIST_ELEMENT As String = "SqlConnectionManager"  
@@ -164,4 +165,3 @@ public void SaveToXML(System.Xml.XmlDocument doc,
  [Сборка, развертывание и отладка пользовательских объектов](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
   
   
-

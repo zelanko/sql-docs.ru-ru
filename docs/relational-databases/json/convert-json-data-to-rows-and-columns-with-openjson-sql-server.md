@@ -1,11 +1,12 @@
 ---
-title: "Преобразование данных JSON в строки и столбцы с помощью функции OPENJSON (SQL Server) | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+title: "Анализ и преобразование данных JSON с помощью OPENJSON (SQL Server) | Документация Майкрософт"
+ms.custom: 
 ms.date: 07/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.component: json
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-json
 ms.tgt_pltfrm: 
@@ -15,20 +16,19 @@ helpviewer_keywords:
 - JSON, importing
 - importing JSON
 ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
-caps.latest.revision: 31
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: d6caf93638c66ff2c8c23842fafdedff1fd22fcb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 6e4a7b49bb01bd4254fad855daedd3981b2fa6a8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
-# <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>Преобразование данных JSON в строки и столбцы с помощью функции OPENJSON (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+# <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>Анализ и преобразование данных JSON с помощью OPENJSON (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Функция набора строк **OPENJSON** позволяет преобразовать текст JSON в набор строк и столбцов. После того как коллекция данных JSON будет преобразована в набор строк с помощью **OPENJSON**, вы сможете выполнять любые SQL-запросы к полученным данным или вставлять эти данные в таблицу SQL Server. 
   
@@ -60,9 +60,9 @@ FROM OPENJSON(@json);
   
 **Результаты**  
   
-|ключ|value|type|  
+|ключ|value|Тип|  
 |---------|-----------|----------|  
-|имя|Джон|1|  
+|NAME|Джон|1|  
 |surname|Doe|1|  
 |age|45|2|  
 |навыки|["SQL","C#","MVC"]|4|
@@ -138,18 +138,30 @@ WITH (
 Сведения о синтаксисе и использовании см. в статье [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md).
 
 ## <a name="openjson-requires-compatibility-level-130"></a>OPENJSON необходим уровень совместимости 130.
-Функция **OPENJSON** доступна только при **уровне совместимости 130**. Если уровень совместимости вашей базы данных меньше 130, SQL Server не сможет найти и выполнить функцию **OPENJSON**. Другие встроенные функции JSON доступны на всех уровнях совместимости.
+Функция **OPENJSON** доступна только при **уровне совместимости 130**. Если уровень совместимости вашей базы данных меньше 130, SQL Server не сможет найти и выполнить функцию **OPENJSON** . Другие встроенные функции JSON доступны на всех уровнях совместимости.
 
 Проверить уровень совместимости можно в представлении `sys.databases` или в свойствах базы данных.
 
 Изменить уровень совместимости базы данных можно с помощью следующей команды:   
 `ALTER DATABASE <DatabaseName> SET COMPATIBILITY_LEVEL = 130`  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Дополнительные сведения о встроенной поддержке JSON в SQL Server  
-Много определенных решений, варианты использования и рекомендации см. в [записях блога о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) (категории SQL Server и Azure SQL Database (База данных SQL Azure), автор — руководитель программ корпорации Майкрософт Йован Попович (Jovan Popovic)).
+## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Дополнительные сведения о JSON в SQL Server и базе данных SQL Azure  
+  
+### <a name="microsoft-blog-posts"></a>Публикации блога Майкрософт  
+  
+Конкретные решения, варианты использования и рекомендации см. в [записях блога](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) о встроенной поддержке JSON в SQL Server и базе данных SQL Azure.  
+
+### <a name="microsoft-videos"></a>Видео Майкрософт
+
+Наглядные инструкции по встроенной поддержке JSON в SQL Server и базе данных SQL Azure см. в следующих видео.
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support) (SQL Server 2016 и поддержка JSON)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database) (Использование JSON в SQL Server 2016 и базе данных SQL Azure)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds) (JSON как мост между NoSQL и реляционными решениями)
   
 ## <a name="see-also"></a>См. также:  
  [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)  
   
   
-

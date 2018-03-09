@@ -1,36 +1,35 @@
 ---
 title: "Рекомендации по хранилищу запросов | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Query Store, best practices
+helpviewer_keywords: Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-caps.latest.revision: 24
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "24"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 7e41e78e7e4ffc1699a79bee2e7ed6236210e52d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 69f93d0bc7a7a0126f505bbe7e97c68d5677c7eb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="best-practice-with-the-query-store"></a>Рекомендации по хранилищу запросов
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   В этом разделе описаны рекомендации по использованию хранилища запросов с вашей рабочей нагрузкой.  
   
-##  <a name="SSMS"></a> Используйте последний выпуск SQL Server Management Studio  
+##  <a name="SSMS"></a> Используйте последнюю версию [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] включает в себя набор пользовательских интерфейсов, предназначенных для настройки хранилища запросов, а также для использования собранных данных о рабочей нагрузке.  
 Скачайте последнюю версию [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [здесь](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).  
   
@@ -58,7 +57,7 @@ ms.lasthandoff: 10/10/2017
   
  Значение по умолчанию (100 МБ) может быть недостаточным, если рабочая нагрузка создает большое количество различных запросов и планов или если вы хотите хранить журнал запросов за более длительный период времени. Отслеживайте текущее использование пространства и увеличивайте максимальный размер (МБ), чтобы предотвратить переход хранилища запросов в режим "только чтение".  Используйте [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] или выполните следующий скрипт, чтобы получить последние сведения о размере хранилища запросов.  
   
-```tsql 
+```sql 
 USE [QueryStoreDB];  
 GO  
   
@@ -69,14 +68,14 @@ FROM sys.database_query_store_options;
   
  Следующий скрипт задает новый максимальный размер (МБ).  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
   
  **Интервал сбора статистики** . Определяет уровень детализации для собираемой статистики среды выполнения (значение по умолчанию — 1 час). Рекомендуется использовать меньшее значение, если требуется большая степень детализации или меньшее время на обнаружение и устранение проблем, но помните, что это значение будет напрямую влиять на объем данных в хранилище запросов. Чтобы задать другое значение для интервала сбора статистики, используйте SSMS или Transact-SQL:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
@@ -85,7 +84,7 @@ ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);
   
  Старайтесь не хранить исторические данные, которые не планируется использовать. Это позволит снизить переходы в состояние только чтения. Объем данных в хранилище запросов, а также время на обнаружение и устранение проблем будут более предсказуемыми. Используйте [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] или следующий скрипт, чтобы настроить политику очистки на основе времени:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
@@ -94,7 +93,7 @@ SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));
   
  Настоятельно рекомендуется активировать очистку на основе размера, чтобы хранилище запросов всегда работало в режиме чтения и записи и собирало последние данные.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
@@ -109,7 +108,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  Следующий скрипт задает режим записи запросов как Auto (автоматически).  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
@@ -121,7 +120,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
   
  Включите хранилище запросов с помощью [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , как описано в предыдущем разделе, или выполните следующую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
-```tsql  
+```sql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
   
@@ -129,9 +128,10 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 Перейдите во вложенную папку Query Store в узле базы данных в обозревателе объектов [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , чтобы открыть представления по устранению неполадок для конкретных сценариев.   
 Представления хранилища запросов[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] работают с набором метрик выполнения, каждая из которых выражается в виде какой-либо из следующих статистических функций.  
   
-|Метрика выполнения|Статистическая функция|  
-|----------------------|------------------------|  
-|CPU time (время ЦП), Duration (длительность), Execution Count (число выполнений), Logical Reads (число логических операций чтения), Logical writes (число логических операций записи), Memory consumption (потребление памяти) и Physical Reads (число физических операций чтения)|Average (среднее), Maximum (максимум), Minimum (минимум), Standard Deviation (стандартное отклонение), Total (всего)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Метрика выполнения|Статистическая функция|  
+|----------------------|----------------------|------------------------|  
+|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|CPU time (время ЦП), Duration (длительность), Execution Count (число выполнений), Logical Reads (число логических операций чтения), Logical writes (число логических операций записи), Memory consumption (потребление памяти), Physical Reads (число физических операций чтения), CLR time (время среды CLR), Degree of Parallelism (DOP) (степень параллелизма) и Row count (число строк)|Average (среднее), Maximum (максимум), Minimum (минимум), Standard Deviation (стандартное отклонение), Total (всего)|
+|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|CPU time (время ЦП), Duration (длительность), Execution Count (число выполнений), Logical Reads (число логических операций чтения), Logical writes (число логических операций записи), Memory consumption (потребление памяти), Physical Reads (число физических операций чтения), CLR time (время среды CLR), Degree of Parallelism (DOP) (степень параллелизма), Row count (число строк), Log memory (память, занимаемая журналом), TempDB memory (память, занимаемая базой данных TempDB) и Wait times (время ожидания)|Average (среднее), Maximum (максимум), Minimum (минимум), Standard Deviation (стандартное отклонение), Total (всего)|
   
  На следующем рисунке показано, как найти представления хранилища запросов.  
   
@@ -179,7 +179,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 ##  <a name="Verify"></a> Проверяйте непрерывность сбора данных запросов хранилищем запросов  
  Хранилище запросов может без предупреждения изменять режим работы. Вы должны постоянно наблюдать за состоянием хранилища запросов, чтобы знать, что хранилище запросов работает, и предпринимать действия для исключения сбоев по предотвращаемым причинам. Выполните следующий запрос, чтобы определить режим работы и просмотреть наиболее актуальные параметры.  
   
-```tsql
+```sql
 USE [QueryStoreDB];  
 GO  
   
@@ -200,13 +200,13 @@ FROM sys.database_query_store_options;
   
 -   Очистка данных в хранилище запросов с помощью следующей инструкции.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
- Можно применить одно или оба этих действия, выполнив следующую инструкцию, которая явно изменяет режим работы обратно в режим чтения и записи.  
+Можно применить одно или оба этих действия, выполнив следующую инструкцию, которая явно изменяет режим работы обратно в режим чтения и записи.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);  
 ```  
@@ -222,7 +222,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 ### <a name="error-state"></a>Состояние ошибки  
  Чтобы восстановить хранилище запросов, попробуйте явно установить режим чтения и записи и проверьте фактическое состояние еще раз.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);    
 GO  
@@ -238,9 +238,9 @@ FROM sys.database_query_store_options;
  
  Хранилище запросов можно освободить, выполнив хранимую процедуру **sp_query_store_consistency_check** в соответствующей базе данных.
  
- Если это не помогло, необходимо очистить хранилище запросов перед запросом режима чтения и записи.  
+ Если это не помогло, можно попробовать очистить хранилище запросов перед запросом режима чтения и записи.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE CLEAR;  
 GO  
@@ -303,7 +303,7 @@ FROM sys.database_query_store_options;
 
  Форсирование плана — это удобный механизм, позволяющий исправлять производительность важных запросов и делать их более предсказуемыми. Тем не менее, как и в случае подсказок планов и структур планов, не гарантируется, что это будет использовано в будущих выполнениях. Обычно, когда схема базы данных изменяется так, что объекты, упоминаемые в плане выполнения, изменяются или удаляются, принудительное выполнение плана будет начинаться сбоем. В этом случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращается к перекомпиляции запроса, а фактическая причина сбоя принудительного выполнения отображается в [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). Следующий запрос возвращает информацию о принудительно выполненных планах.  
   
-```tsql  
+```sql  
 USE [QueryStoreDB];  
 GO  
   
@@ -334,7 +334,6 @@ WHERE is_forced_plan = 1;
  [Query Store Catalog Views (Transact-SQL) ](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  (Представления каталогов хранилища запросов (Transact-SQL))  
  [Query Store Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  (Хранимые процедуры хранилища запросов (Transact-SQL))  
  [Использование хранилища запросов с выполняющейся в памяти OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
- [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md)  
   
-

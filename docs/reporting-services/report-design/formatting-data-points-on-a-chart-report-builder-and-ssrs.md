@@ -2,29 +2,29 @@
 title: "Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - "10248"
 - sql13.rtp.rptdesigner.serieslabelproperties.general.f1
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d1514b7ec2a5f1d7d2d5abd3513db47a208a2e24
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7dedffd365d48a18f896815660585c5b602a5688
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)
 В отчете [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы точка данных является наименьшей неделимой сущностью диаграммы. Для нефигурных диаграмм представление точек данных зависит от типа диаграммы. Например, ряд графика состоит из одной или нескольких соединенных точек данных. Для фигурных диаграмм точки данных представляются отдельными срезами или сегментами, из которых состоит диаграмма. Например, для круговой диаграммы каждый из сегментов является точкой данных. Дополнительные сведения см. в разделе [Типы диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
@@ -66,21 +66,21 @@ ms.lasthandoff: 08/09/2017
   
 |Ключевое слово|Description|Тип диаграммы|Пример эквивалентного простого выражения|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
-|#VALY|Значение Y точки данных.|все|`=Fields!MyDataField.Value`|  
-|#VALY2|Второе значение Y точки данных.|Пузырьковая, диаграмма диапазонов|Нет|  
-|#VALY3|Третье значение Y точки данных.|Биржевая, японские свечи|Нет|  
-|#VALY4|Четвертое значение Y точки данных.|Биржевая, японские свечи|Нет|  
-|#SERIESNAME|Имя ряда.|все|Нет|  
-|#LABEL|Метка точки данных.|все|Нет|  
+|#VALY|Значение Y точки данных.|All|`=Fields!MyDataField.Value`|  
+|#VALY2|Второе значение Y точки данных.|Пузырьковая, диаграмма диапазонов|None|  
+|#VALY3|Третье значение Y точки данных.|Биржевая, японские свечи|None|  
+|#VALY4|Четвертое значение Y точки данных.|Биржевая, японские свечи|None|  
+|#SERIESNAME|Имя ряда.|All|None|  
+|#LABEL|Метка точки данных.|All|None|  
 |#AXISLABEL|Метка оси точки данных.|Фигурная|`=Fields!MyDataField.Value`|  
-|#INDEX|Индекс точки данных.|все|Нет|  
-|#PERCENT|Процентная доля значения Y точки данных.|все|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
-|#TOTAL|Сумма всех значений Y ряда.|все|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|Текст, соответствующий описанию элемента в условных обозначениях.|все|Нет|  
-|#AVG|Среднее всех значений Y ряда.|все|`=Avg(Fields!MyDataField.Value)`|  
+|#INDEX|Индекс точки данных.|All|None|  
+|#PERCENT|Процентная доля значения Y точки данных.|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
+|#TOTAL|Сумма всех значений Y ряда.|All|`=Sum(Fields!MyDataField.Value)`|  
+|#LEGENDTEXT|Текст, соответствующий описанию элемента в условных обозначениях.|All|None|  
+|#AVG|Среднее всех значений Y ряда.|All|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|Минимальное значение Y в ряду.|все|`=Min(Fields!MyDataField.Value)`|  
-|#MAX|Максимальное значение Y в ряду.|все|`=Max(Fields!MyDataField.Value)`|  
-|#FIRST|Первое значение Y в ряду.|все|`=First(Fields!MyDataField.Value)`|  
+|#MAX|Максимальное значение Y в ряду.|All|`=Max(Fields!MyDataField.Value)`|  
+|#FIRST|Первое значение Y в ряду.|All|`=First(Fields!MyDataField.Value)`|  
   
  Чтобы отформатировать ключевое слово, укажите в скобках строку форматирования платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Например, чтобы указать в подсказке значение точки данных как двузначное число, заключите строку форматирования "N2" в фигурные скобки (например, "#VALY{N2}") для свойства **ToolTip** ряда. Дополнительные сведения о строках форматирования [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в разделе [Типы форматирования](http://go.microsoft.com/fwlink/?LinkId=112024) на веб-узле MSDN. Дополнительные сведения о форматировании чисел в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Форматирование чисел и дат &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
@@ -94,14 +94,14 @@ ms.lasthandoff: 08/09/2017
 ## <a name="inserting-data-point-markers"></a>Вставка маркеров точек данных  
  Маркер точки данных представляет собой визуальный индикатор, предназначенный для привлечения внимания к каждой из точек данных ряда. На точечной диаграмме маркер определяет форму и размер отдельных точек данных. Размер маркера указывается исходя из типа диаграммы. Можно изменить размер, цвет и стиль маркера. Маркеры не поддерживаются для диаграмм диапазонов и типов фигурных диаграмм, а также для любых подтипов с накоплением.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Отображение всплывающих подсказок для ряда (построитель отчетов и службы SSRS)](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
  [Отображение меток точек данных за пределами круговой диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)  
   
  [Отображение процентных значений на круговой диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
@@ -111,4 +111,3 @@ ms.lasthandoff: 08/09/2017
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

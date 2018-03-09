@@ -2,9 +2,12 @@
 title: "Присоединение и отсоединение базы данных (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,20 +30,20 @@ helpviewer_keywords:
 - attaching databases [SQL Server]
 - databases [SQL Server], moving
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
-caps.latest.revision: 98
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f95cd17c64efff4731b77ba42df3b5dc656f2cf9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7338e364e970aaccc6c24cdba04e1b43a188c8c9
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Присоединение и отсоединение базы данных (SQL Server)
-  Файлы данных и журналов транзакций базы данных можно отсоединить, а затем снова присоединить к тому же или другому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Отсоединение и присоединение базы данных полезно, если необходимо переместить базу данных на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на том же компьютере либо перенести базу данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Файлы данных и журналов транзакций базы данных можно отсоединить, а затем снова присоединить к тому же или другому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Отсоединение и присоединение базы данных полезно, если необходимо переместить базу данных на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на том же компьютере либо перенести базу данных.  
   
   
 ##  <a name="Security"></a> безопасность  
@@ -94,7 +97,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  Если присоединяемый первичный файл данных доступен только для чтения, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] предполагает, что и база данных доступна только для чтения.  
   
- Когда зашифрованная база данных впервые присоединяется к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], владелец базы данных должен открыть главный ключ базы данных, выполнив следующую инструкцию: OPEN MASTER KEY DECRYPTION BY PASSWORD = **'***пароль***'**. Рекомендуется включить автоматическую расшифровку главного ключа, выполнив следующую инструкцию: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Дополнительные сведения см. в разделах [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md) и [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md).  
+ Когда зашифрованная база данных впервые присоединяется к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ее владелец должен открыть главный ключ базы данных, выполнив следующую инструкцию: OPEN MASTER KEY DECRYPTION BY PASSWORD = **'***пароль***'**. Рекомендуется включить автоматическую расшифровку главного ключа, выполнив следующую инструкцию: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Дополнительные сведения см. в разделах [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md) и [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
  Требования для присоединения файлов журналов частично зависят от того, доступна база данных для записи и чтения или только для чтения.  
   
@@ -153,4 +156,3 @@ ms.lasthandoff: 06/22/2017
  [Файлы и файловые группы базы данных](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   
-

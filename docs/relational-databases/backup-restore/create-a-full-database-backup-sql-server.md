@@ -2,9 +2,12 @@
 title: "Создание полной резервной копии базы данных (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 06/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-backup-restore
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: 63
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 99efc19a0379e6e4e79a9913c3fd193c219c2666
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: a5f180c837af757fd5a8df7f356b8c644916612f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/11/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Создание полной резервной копии базы данных (SQL Server)
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > При использовании SQL Server 2014 перейдите к разделу [Создание полной резервной копии базы данных (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
 
   В этом разделе описывается создание полной резервной копии базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или PowerShell.  
@@ -47,18 +49,18 @@ ms.lasthandoff: 10/11/2017
   
 ###  <a name="Recommendations"></a> Рекомендации  
   
--   По мере увеличения размера базы данных полное резервное копирование занимает больше времени и требует больше дискового пространства. При работе с большими базами данных рекомендуется дополнить полную резервную копию серией [разностных резервных копий баз данных] ((../../relational-databases/backup-restore/differential-backups-sql-server.md). Дополнительные сведения см. в разделе [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+-   По мере увеличения размера базы данных полное резервное копирование занимает больше времени и требует больше дискового пространства. Для больших баз данных может потребоваться, кроме полных резервных копий, создавать также и [разностные резервные копии баз данных](../../relational-databases/backup-restore/differential-backups-sql-server.md). Дополнительные сведения см. в разделе [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 -   Размер полной резервной копии базы данных вы можете вычислить с помощью системной хранимой процедуры [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .  
   
 -   По умолчанию каждая успешная операция резервного копирования добавляет запись в журнал ошибок служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и в журнал системных событий. Если резервное копирование выполняется часто, сообщения об успешном завершении операций накапливаются быстро, что приводит к стремительному увеличению журналов ошибок! Это может осложнить поиск других сообщений. Если работа существующих скриптов не зависит от записей журнала резервного копирования, то их можно отключить с помощью флага трассировки 3226. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
  Для резервной копии базы данных свойству TRUSTWORTHY присваивается значение OFF. Дополнительные сведения о том, как задать для параметра TRUSTWORTHY значение ON, см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , параметры **PASSWORD** и **MEDIAPASSWORD** не поддерживаются при создании резервных копий. Все еще вы можете восстанавливать резервные копии, созданные с паролями.  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Разрешения BACKUP DATABASE и BACKUP LOG назначены по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator** .  
   
  Проблемы, связанные с владельцем и разрешениями у физических файлов на устройстве резервного копирования, могут помешать операции резервного копирования. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь возможность считывать и записывать данные на устройстве; учетная запись, от имени которой выполняется служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **должна** иметь разрешения на запись. Однако процедура [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), добавляющая запись для устройства резервного копирования в системные таблицы, не проверяет разрешения на доступ к файлу. Проблемы физического файла устройства резервного копирования могут не проявляться до момента доступа к физическому ресурсу во время операции резервного копирования или восстановления.  
@@ -264,10 +266,10 @@ ms.lasthandoff: 10/11/2017
   
      [ WITH *with_options* [ **,**...*o* ] ] ;  
   
-    |Параметр|Описание|  
+    |Параметр|Description|  
     |------------|-----------------|  
     |*database*|База данных для резервного копирования.|  
-    |*backup_device* [ **,**...*n* ]|Указывает список от 1 до 64 устройств резервного копирования, используемых для создания резервной копии. Можно указать как физическое устройство резервного копирования, так и соответствующее логическое устройство, если оно уже определено. Для указания физического устройства резервного копирования используйте параметр DISK или TAPE.<br /><br /> { DISK &#124; TAPE } **=***имя_физического_устройства_резервного _копирования*<br /><br /> Дополнительные сведения см. в разделе [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
+    |*backup_device* [ **,**...*n* ]|Указывает список от 1 до 64 устройств резервного копирования, используемых для создания резервной копии. Можно указать как физическое устройство резервного копирования, так и соответствующее логическое устройство, если оно уже определено. Для указания физического устройства резервного копирования используйте параметр DISK или TAPE.<br /><br /> { DISK &#124; TAPE } **=***имя_физического_устройства_резервного_копирования*<br /><br /> Дополнительные сведения см. в разделе [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
     |WITH *with_options* [ **,**...*o* ]|При необходимости можно указать один или несколько дополнительных параметров, *o*. Сведения о некоторых основных параметрах см. в пункте 2.|  
   
 2.  При необходимости укажите один или несколько параметров WITH. Здесь описываются некоторые основные параметры WITH. Сведения обо всех параметрах WITH см. в разделе [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md).  
@@ -280,10 +282,10 @@ ms.lasthandoff: 10/11/2017
          ШИФРОВАНИЕ (АЛГОРИТМ, СЕРТИФИКАТ СЕРВЕРА |АСИММЕТРИЧНЫЙ КЛЮЧ)  
          Только для SQL Server 2014 и выше укажите используемый алгоритм шифрования, а также сертификат или асимметричный ключ для шифрования.  
   
-         DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
+         DESCRIPTION **=** { **'***текст***'** | **@***текстовая_переменная* }  
          Задает произвольное текстовое описание резервного набора данных. В этой строке может содержаться до 255 символов.  
   
-         NAME **=** { *backup_set_name* | **@***backup_set_name_var* }  
+         NAME **=** { *имя_резервного_набора_данных* | **@***переменная_имени_резервного_набора_данных* }  
          Указывает имя резервного набора данных. Длина имени не может превышать 128 символов. Если параметр NAME не указан, то имя является пустым.  
   
     -   Основные параметры WITH резервного набора данных:  
@@ -292,7 +294,7 @@ ms.lasthandoff: 10/11/2017
   
          Чтобы отформатировать носитель резервной копии используется параметр FORMAT:  
   
-         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@***media_name_variable* } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@***text_variable* } ]  
+         FORMAT [ **,** MEDIANAME**=** { *имя_носителя* | **@***переменная_имени_носителя* } ] [ **,** MEDIADESCRIPTION **=** { *текст* | **@***текстовая_переменная* } ]  
          Используйте предложение FORMAT при первом использовании носителя или при необходимости перезаписать существующие данные. При необходимости назначьте новому носителю имя и описание.  
   
         > [!IMPORTANT]  
@@ -303,7 +305,7 @@ ms.lasthandoff: 10/11/2017
 #### <a name="a-back-up-to-a-disk-device"></a>**А. Резервное копирование на дисковое устройство**  
  В следующем примере производится резервное копирование всей базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на диск и создание нового набора носителей с помощью параметра `FORMAT` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -317,7 +319,7 @@ GO
 #### <a name="b-back-up-to-a-tape-device"></a>**Б. Резервное копирование на ленточное устройство**  
  В следующем примере создается полная резервная копия базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на ленте в дополнение к предыдущим резервными копиям.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -330,7 +332,7 @@ GO
 #### <a name="c-back-up-to-a-logical-tape-device"></a>**В. Резервное копирование на логическое ленточное устройство**  
  В следующем примере создается логическое устройство резервного копирования для ленточного накопителя. Затем показано, как производится полное резервное копирование базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на этот накопитель.  
   
-```tsql  
+```sql  
 -- Create a logical backup device,   
 -- AdventureWorks2012_Bak_Tape, for tape device \\.\tape0.  
 USE master;  
@@ -371,7 +373,7 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
  
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [SQL Server PowerShell, поставщик](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Поставщик SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
@@ -389,7 +391,7 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
   
 -   [Использование мастера планов обслуживания](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
 **[Устранение неполадок операций резервного копирования и восстановления SQL Server](https://support.microsoft.com/en-us/kb/224071)**          
 [Общие сведения о резервном копировании (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Резервные копии журналов транзакций (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
@@ -402,4 +404,3 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
  [Полные резервные копии баз данных (SQL Server)](../../relational-databases/backup-restore/full-database-backups-sql-server.md)  
   
   
-

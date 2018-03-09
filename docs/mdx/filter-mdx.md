@@ -2,34 +2,32 @@
 title: "Filter (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- filter
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Filter function
+f1_keywords: filter
+dev_langs: kbMDX
+helpviewer_keywords: Filter function
 ms.assetid: f2df51c8-6acb-4300-b71c-2a480c9fbdf8
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 729adc2230242798e67914907b6928ec7346b871
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: aa3ab61a16a7448379228899eed28ec69c0c9be2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="filter-mdx"></a>Filter (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает набор, получающийся в результате фильтрации заданного набора на основе условия поиска.  
   
@@ -47,7 +45,7 @@ Filter(Set_Expression, Logical_Expression )
  *Logical_Expression*  
  Допустимое многомерное выражение иерархии, принимающее значение «true» или «false».  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **Фильтра** функция вычисляет указанное логическое выражение для каждого кортежа в указанном наборе. Функция возвращает набор, состоящий из всех кортежей указанного набора, где логическое выражение принимает значение **true**. Если ни для каких кортежей принимают значение **true**, возвращается пустой набор.  
   
  **Фильтра** функция работает таким образом, аналогичны [IIf](../mdx/iif-mdx.md) функции. **IIf** функция возвращает только один из двух вариантов на основе вычисления логического Многомерного выражения, а **фильтра** функция возвращает набор кортежей, удовлетворяющих заданному условию поиска. В результате **фильтра** функция выполняет `IIf(Logical_Expression, Set_Expression.Current, NULL)` для каждого кортежа набора и возвращает результирующий набор.  
@@ -100,4 +98,3 @@ WHERE ([Geography].[State-Province].x,
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

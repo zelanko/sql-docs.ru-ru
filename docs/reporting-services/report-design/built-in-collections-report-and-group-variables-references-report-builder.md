@@ -1,13 +1,14 @@
 ---
-title: "Отчетов и сгруппируйте ссылки на коллекции переменных (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Ссылки на коллекции переменных отчета и группы (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,19 +21,18 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.variables.f1
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 99b5b8ec78220064b79795e51b37b22f18a60886
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d26444b6232558c09d694c523d21e70f1d5d9475
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Встроенные коллекции - отчет и ссылки на переменные группы (построитель отчетов)
+# <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Встроенные коллекции — ссылки на переменные отчета и группы (построитель отчетов)
   При сложном вычислении, которое используется несколько раз в выражениях отчета, может потребоваться создание переменной. Можно создать переменную отчета или переменную группы. В отчете имена переменных должны быть уникальными.  
   
 > [!NOTE]  
@@ -63,7 +63,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="group-variables"></a>Групповые переменные  
  Групповые переменные используются для однократного вычисления сложного выражения в области группы. Групповая переменная действительна только в области группы и ее дочерних групп.  
   
- Например, предположим, что область данных отображает складские запасы элементов, находящихся в различных налоговых категориях, и требуется установить налоговые ставки для каждой категории. Затем следует сгруппировать данные в категории и определить переменную *Tax* в родительской группе. Потом необходимо определить групповую переменную для параметра *ItemTax* для каждой налоговой категории и назначить для каждой из отдельных подгрупп категории требуемую групповую переменную. Например:  
+ Например, предположим, что область данных отображает складские запасы элементов, находящихся в различных налоговых категориях, и требуется установить налоговые ставки для каждой категории. Затем следует сгруппировать данные в категории и определить переменную *Tax* в родительской группе. Потом необходимо определить групповую переменную для параметра *ItemTax* для каждой налоговой категории и назначить для каждой из отдельных подгрупп категории требуемую групповую переменную. Пример:  
   
 -   Для родительской группы, основанной на `[Category]`, следует определить переменную *Tax* со значением `[Tax]`. Предположим, что значениями категории являются пищевые продукты и одежда.  
   
@@ -77,10 +77,9 @@ ms.lasthandoff: 08/09/2017
   
  Для ссылки на переменную в выражении используется синтаксис глобальной коллекции, например `=Variables!GroupDescription.Value`. В области конструктора значение появляется в текстовом поле в виде `<<Expr>>`.  
   
-## <a name="see-also"></a>См. также  
- [Фильтр, группы и сортировка данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Встроенные коллекции в выражениях &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [Примеры выражений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>См. также:  
+ [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Встроенные коллекции в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   
-

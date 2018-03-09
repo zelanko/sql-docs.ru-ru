@@ -1,27 +1,27 @@
 ---
-title: "Разделах области данных Табликса (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Области данных табликса (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1f264426872fea87eec1da8ab17243bbe82ae76
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e3bd85c7fee051173c5b6b6860d0e978dacc42d4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Области данных табликса (построитель отчетов и службы SSRS)
  В отчете с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] область данных табликса имеет четыре области, которые содержат ячейки табликса:   
@@ -50,17 +50,16 @@ ms.lasthandoff: 08/09/2017
   
  На следующем рисунке показана область данных табликса при предварительном просмотре.  
   
- ![Предварительный просмотр, Табликса угла, строки и столбца группы, текст](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "группы предварительного просмотра, Табликса угла, строки и столбца, текст")  
+ ![Просмотр, угол табликса, группы строк и столбцов, основная часть](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "Просмотр, угол табликса, группы строк и столбцов, основная часть")  
   
  В области группы строк отображаются два экземпляра группы категорий для Clothing и Components. Группа столбцов отображает экземпляр группы территориального расположения для Северной Америки, с двумя вложенными экземплярами группы стран или регионов для Канады (CA) и Соединенных Штатов (US). Кроме того, в смежном столбце отображаются два экземпляра группы года для 2003 года и 2004 года. В строке столбца «Итог» отображаются итоги строки; строка итогов, которая повторяется с каждой группой категорий, показывает итоги по подкатегориям, а строка общего итога показывает итоги по категориям один раз для всей области данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Учебники по построителю отчетов](../../reporting-services/report-builder-tutorials.md)   
- [Tables &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Таблицы &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Создание матрицы](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Создание счета и форм со списками](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Создание счета-фактуры и форм со списками](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Область данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
   
   
-

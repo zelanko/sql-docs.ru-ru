@@ -2,9 +2,12 @@
 title: "Настройка компонента Database Mail | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mail
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,23 +42,24 @@ f1_keywords:
 - sql13.swb.dbmail.manageexistingprofile.f1
 - sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 74432814fa4cc99c8ef8ec8c3c63f37ec8b8b25a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 3d88087b9d1142919f844155c805e2284e954e54
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-database-mail"></a>Настройка компонента Database Mail
-  В этом разделе описано включение и настройка компонента Database Mail с помощью мастера настройки компонента Database Mail и создание скрипта настройки компонента Database Mail с помощью шаблонов.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+В этом разделе описано включение и настройка компонента Database Mail с помощью мастера настройки компонента Database Mail и создание скрипта настройки компонента Database Mail с помощью шаблонов.  
   
--   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
+-   **Перед началом:**  [Ограничения](#Restrictions), [Безопасность](#Security)  
   
--   **To configure Database Mail, using:**  [Database Mail Configuration Wizard](#DBWizard), [Using Templates](#Template)  
+-   **Настройка компонента Database Mail с помощью:**  [Мастера настройки компонента Database Mail](#DBWizard), [С помощью шаблонов](#Template)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  Используйте параметр **Расширенные хранимые процедуры компонента Database Mail** для включения компонента Database Mail на сервере. Дополнительные сведения см. в справочном разделе [Параметр конфигурации сервера "Database Mail XPs"](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
@@ -63,7 +67,7 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="Restrictions"></a> Ограничения  
  Чтобы включить компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker в любой базе данных, требуется блокировка базы данных. Если компонент Service Broker был выключен в базе данных **msdb**, чтобы включить компонент Database Mail, сначала необходимо остановить агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы компонент Service Broker смог получить необходимую блокировку.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
  Чтобы настроить компонент Database Mail, необходимо быть членом предопределенной роли сервера **sysadmin** . Чтобы отправлять почту через компонент Database Mail, необходимо быть членом роли **DatabaseMailUserRole** в базе данных **msdb** .  
   
 ##  <a name="DBWizard"></a> Использование мастера настройки компонента Database Mail  
@@ -165,7 +169,7 @@ ms.lasthandoff: 06/22/2017
  **Для этого сервера требуется безопасное соединение (SSL)**  
  Осуществляет шифрование связи, используя протокол SSL.  
   
- **Проверка подлинности Windows с использованием учетных данных службы ядра СУБД**  
+ **Проверка подлинности Windows с использованием учетных данных службы компонента Database Engine**  
  Соединение с SMTP-сервером выполняется с помощью учетных данных, настроенных для службы компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
  **Обычная проверка подлинности**  
@@ -191,7 +195,7 @@ ms.lasthandoff: 06/22/2017
  **Имя учетной записи**  
  Выберите учетную запись для просмотра, изменения или удаления.  
   
- **Delete**  
+ **Удаление**  
  Удаление выбранной учетной записи. Необходимо удалить эту учетную запись из связанных профилей или удалить эти профили до удаления учетной записи.  
   
  **Описание**  
@@ -215,13 +219,13 @@ ms.lasthandoff: 06/22/2017
  **Для этого сервера требуется безопасное соединение (SSL)**  
  Осуществляет шифрование связи, используя протокол SSL.  
   
- **Проверка подлинности Windows с использованием учетных данных службы ядра СУБД**  
+ **Проверка подлинности Windows с использованием учетных данных службы компонента Database Engine**  
  Соединение с SMTP-сервером выполняется с помощью учетных данных, настроенных для службы компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
  **Обычная проверка подлинности**  
  Задайте имя пользователя и пароль, которые требуются для SMTP-сервера.  
   
- **Имя пользователя**  
+ **User name**  
  Просмотр или обновление имени пользователя, которое компонент Database Mail использует для входа в систему на SMTP-сервере. Если SMTP-сервер требует обычную проверку подлинности, необходимо имя пользователя.  
   
  **Пароль**  
@@ -255,7 +259,7 @@ ms.lasthandoff: 06/22/2017
  **Удалить**  
  Удалите выбранную учетную запись из профиля.  
   
- **Вверх**  
+ **вверх**  
  Повысьте приоритет выбранной учетной записи.  
   
  **Вниз**  
@@ -271,7 +275,7 @@ ms.lasthandoff: 06/22/2017
  **Имя профиля**  
  Выберите имя профиля для управления.  
   
- **Delete**  
+ **Удаление**  
  Удаление выбранного профиля. Будет выведено предложение выбрать **Да** , чтобы удалить выделенный профиль и не отправлять неотправленные сообщения, или выбрать **Нет** , чтобы удалить выделенный профиль только в случае, если неотправленные сообщения отсутствуют.  
   
  **Описание**  
@@ -289,7 +293,7 @@ ms.lasthandoff: 06/22/2017
  **Вверх**  
  Повысить приоритет отработки отказа выбранной учетной записи.  
   
- **Вниз**  
+ **вниз**  
  Понизить приоритет отработки отказа выбранной учетной записи.  
   
  **Приоритет**  
@@ -365,7 +369,7 @@ ms.lasthandoff: 06/22/2017
   
  Профиль может быть профилем по умолчанию. В этом случае пользователь и роли могут отправлять электронную почту с использованием этого профиля без явного его указания. Если пользователь или роль, отправляющие электронное сообщение, имеют личный профиль по умолчанию, компонент Database Mail использует этот профиль. Если у пользователя или роли нет личного профиля по умолчанию, процедура **sp_send_dbmail** использует открытый профиль по умолчанию для базы данных **msdb** . Если нет ни личного профиля по умолчанию для пользователя или роли, ни открытого профиля по умолчанию для базы данных, процедура **sp_send_dbmail** возвращает ошибку.  
   
- **Имя пользователя**  
+ **User name**  
  Выберите имя пользователя или роли в базе данных **msdb** .  
   
  **Доступ**  

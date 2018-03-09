@@ -2,30 +2,32 @@
 title: "Разностные резервные копии (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - differential backups
 - differential backups, about
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
-caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cd2ac098f25c8d6bd883255c35c42e937ee10190
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "60"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 65c3f103ad65c9726be098dde183b1302b4e5645
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="differential-backups-sql-server"></a>Разностные резервные копии (SQL Server)
-  В данной теме рассматривается резервное копирование и восстановление любых баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе рассматривается резервное копирование и восстановление любых баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Разностное резервное копирование основано на самой последней предыдущей полной резервной копии данных. В разностной резервной копии сохраняются только те изменения, которые были произведены с момента создания последней полной резервной копии. Полная резервная копия, на которой основано разностное резервное копирование, известна также как *основа* разностной резервной копии. Полные резервные копии, за исключением резервных копий только для копирования, могут служить базой для последовательности разностных резервных копий, включая резервные копии баз данных, частичные резервные копии и резервные копии файлов. Базовая разностная резервная копия для файла может содержаться в полной резервной копии, в резервной копии файлов или частичной резервной копии.  
   

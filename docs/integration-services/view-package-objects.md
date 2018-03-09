@@ -1,11 +1,13 @@
 ---
-title: "Просмотр объектов пакета | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Просмотр объектов пакета | Документы Майкрософт"
+ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -20,17 +22,16 @@ helpviewer_keywords:
 - viewing package objects
 - SQL Server Integration Services packages, properties
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
-caps.latest.revision: 36
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4314664538d2f3f328e0fbc48965e2541089a95c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: fd8ac9e0e21ac4d0bc575cff199f827d4bef76ad
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="view-package-objects"></a>просмотр объектов пакета
   В конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] вкладка **Обозреватель пакетов** предоставляет режим обозревателя. В данном режиме отображается иерархия контейнеров архитектуры [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Контейнер пакетов стоит на самом верху иерархии. При разворачивании пакета можно просмотреть все соединения, исполняемые объекты, обработчики событий, регистраторы, объекты управления очередностью и переменные.  
@@ -43,9 +44,9 @@ ms.lasthandoff: 09/26/2017
   
  На следующей диаграмме показана древовидная структура простого пакета.  
   
- ![Снимок экрана: вкладка «Обозреватель пакетов»](../integration-services/media/packageexplorer.gif "снимок экрана: вкладка «Обозреватель пакетов»")  
+ ![Снимок экрана: вкладка "Обозреватель пакетов"](../integration-services/media/packageexplorer.gif "Снимок экрана: вкладка "Обозреватель пакетов"")  
   
-## <a name="view-the-package-structure-and-content"></a>Просмотреть структуру и содержимое пакета  
+## <a name="view-the-package-structure-and-content"></a>Просмотр структуры и содержимого пакета  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] с пакетом, который необходимо просмотреть в **обозревателе пакетов**.  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 09/26/2017
   
 4.  В зависимости от структуры пакета раскройте папки следующих уровней.  
   
-## <a name="view-the-properties-of-a-package-object"></a>Просмотреть свойства объекта пакета
+## <a name="view-the-properties-of-a-package-object"></a>Просмотр свойств объекта пакета
   
 -   Щелкните объект правой кнопкой мыши и выберите пункт **Свойства** , чтобы открыть окно **Свойства** .  
   
@@ -66,10 +67,9 @@ ms.lasthandoff: 09/26/2017
 ## <a name="see-also"></a>См. также:  
  [Задачи служб Integration Services](../integration-services/control-flow/integration-services-tasks.md)   
  [Контейнеры служб Integration Services](../integration-services/control-flow/integration-services-containers.md)   
- [Ограничения очередностью](../integration-services/control-flow/precedence-constraints.md)   
+ [Управление очередностью](../integration-services/control-flow/precedence-constraints.md)   
  [Переменные в службах Integration Services (SSIS)](../integration-services/integration-services-ssis-variables.md)   
- [Службы Integration Services &#40; Службы SSIS &#41; Обработчики событий](../integration-services/integration-services-ssis-event-handlers.md)   
- [Службы Integration Services &#40; Службы SSIS &#41; Ведение журнала](../integration-services/performance/integration-services-ssis-logging.md)  
+ [Обработчики событий в службах Integration Services (SSIS)](../integration-services/integration-services-ssis-event-handlers.md)   
+ [Ведение журналов в службах Integration Services (SSIS)](../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

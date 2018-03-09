@@ -2,29 +2,30 @@
 title: "Проекты интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
-caps.latest.revision: 25
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f545d90cd695eef78f4ae8b33eef7f2f32e9439f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4462aa5a323af4b957fedc5bdbb522705f4f7140
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="data-mining-projects"></a>Проекты интеллектуального анализа данных
-  Проект интеллектуального анализа данных — это часть решения служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Во время проектирования объекты, создаваемые в этом проекте, доступны для тестирования и запросов в составе базы данных рабочей области. Чтобы дать пользователям возможность просматривать объекты в проекте и составлять к ним запросы, необходимо развернуть проект в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , работающем в многомерном режиме.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Проект интеллектуального анализа данных — это часть решения служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Во время проектирования объекты, создаваемые в этом проекте, доступны для тестирования и запросов в составе базы данных рабочей области. Чтобы дать пользователям возможность просматривать объекты в проекте и составлять к ним запросы, необходимо развернуть проект в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , работающем в многомерном режиме.  
   
  В этом разделе содержатся основные сведения о проектах интеллектуального анализа данных, необходимые для создания проектов.  
   
@@ -129,7 +130,7 @@ ms.lasthandoff: 09/01/2017
 > [!WARNING]  
 >  Отфильтровать данные можно либо в представлении источников данных, либо с помощью фильтров, создаваемых на уровне модели интеллектуального анализа данных. Поскольку определение фильтра хранится в модели интеллектуального анализа данных, использование фильтров модели упрощает определение данных, которые использовались для обучения модели. Более того, можно создать несколько связанных моделей с различными условиями фильтра. Дополнительные сведения см. в разделе [Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
- Заметьте, что создаваемое представление источника данных может содержать дополнительные данные, которые непосредственно не используются в анализе. Например, можно добавить в представление источника данные, используемые для тестирования, прогнозов или детализации. Дополнительные сведения о таких вариантах использования см. в разделах [Тестирование и проверка (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-data-mining.md) и [Детализация](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+ Заметьте, что создаваемое представление источника данных может содержать дополнительные данные, которые непосредственно не используются в анализе. Например, можно добавить в представление источника данные, используемые для тестирования, прогнозов или детализации. Дополнительные сведения о таких вариантах использования см. в разделах [Testing и Validation &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md) и [Детализация](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
   
 ###  <a name="bkmk_Structures"></a> Mining Structures  
@@ -213,18 +214,17 @@ ms.lasthandoff: 09/01/2017
   
 |Задания|Подраздел|  
 |-----------|------------|  
-|Работа со столбцами структуры интеллектуального анализа данных|[Создание реляционной структуры интеллектуального анализа данных](../../analysis-services/data-mining/create-a-relational-mining-structure.md)|  
-|Дополнительные сведения о добавлении новых моделей интеллектуального анализа данных, обработке структуры и моделей|[Добавление моделей интеллектуального анализа данных в структуру (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Работа со столбцами структуры интеллектуального анализа данных|[Создание реляционной структуры](../../analysis-services/data-mining/create-a-relational-mining-structure.md)|  
+|Дополнительные сведения о добавлении новых моделей интеллектуального анализа данных, обработке структуры и моделей|[Добавление моделей интеллектуального анализа данных к структуре &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Ссылки на ресурсы, полезные для настройки алгоритмов, выполняющих построение моделей интеллектуального анализа данных|[Настройка структуры и моделей интеллектуального анализа данных](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
 |Ссылки на сведения о каждом средстве просмотра моделей интеллектуального анализа данных|[Средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
-|Сведения о создании диаграммы точности прогнозов, диаграммы роста прибыли или матрицы классификации и сведения о тестировании структуры интеллектуального анализа данных|[Тестирование и проверка (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
+|Сведения о создании диаграммы точности прогнозов, диаграммы роста прибыли или матрицы классификации и сведения о тестировании структуры интеллектуального анализа данных|[Тестирование и проверка &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |Сведения о параметрах обработки и разрешениях|[Обработка объектов интеллектуального анализа данных](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|Дополнительные сведения о службах Analysis Services|[Базы данных многомерных моделей (службы SSAS)](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Дополнительные сведения о службах Analysis Services|[Многомерный шаблон баз данных ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>См. также  
- [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md)   
- [Создание многомерных моделей с помощью SQL Server Data Tools (SSDT)](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [База данных рабочей области (табличные службы SSAS)](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
+ [Конструктор интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-designer.md)   
+ [Создание многомерных моделей с помощью SQL Server Data Tools &#40; SSDT &#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [База данных рабочей области](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   
-

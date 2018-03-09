@@ -2,9 +2,12 @@
 title: "Занятие 3. Настройка распространения | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: 
@@ -14,19 +17,19 @@ applies_to:
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e582c5fb7853c69a083755a944bd3922d0d4c5af
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2888c3f576159def2fb141802aafc1853ce9b50f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-3-configuring-distribution"></a>Урок 3. Настройка распространения
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 На этом занятии предстоит настроить распространение на издателе и установить необходимые разрешения на базу данных публикации и распространителя. Если распространитель уже настроен, необходимо отключить публикацию и распространение перед тем, как приступить к занятию. Не следует этого выполнять в случае, если необходимо сохранить существующую топологию репликации.  
   
 Настройка издателя с удаленным распространителем не рассматривается в этом учебнике.  
@@ -56,7 +59,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]разверните узел **Безопасность**, щелкните правой кнопкой мыши **Имена входа**, а затем выберите пункт **Создать имя входа**.  
   
-2.  На странице **Общее** щелкните **Поиск** и в поле **Введите имя объекта** введите \<*Имя_компьютера>***\repl_snapshot**, где \<*Имя_компьютера>* является именем локального сервера издателя, затем щелкните **Проверить имена** и нажмите кнопку **ОК**.  
+2.  На странице **Общее** щелкните **Поиск** и в поле **Введите имя объекта** введите \<*Имя_компьютера>***\repl_snapshot**, где \<*имя_компьютера>* является именем локального сервера издателя, затем щелкните **Проверить имена** и нажмите кнопку **ОК**.  
   
 3.  На странице **Сопоставление пользователя** в списке **Пользователи, сопоставленные с этим именем входа** выберите **distribution** и базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
@@ -76,4 +79,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

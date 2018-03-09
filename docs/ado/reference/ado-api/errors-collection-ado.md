@@ -3,7 +3,7 @@ title: "Коллекция ошибок (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,22 +20,21 @@ f1_keywords:
 helpviewer_keywords:
 - Errors collection [ADO]
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 011d5956b7d2f9d752f15028ce0b09e3a35a0c71
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 27ca46528314f34b769d505269ade0c73fb1b051
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="errors-collection-ado"></a>Коллекция ошибок (ADO)
 Содержит все [ошибка](../../../ado/reference/ado-api/error-object.md) объектов, созданных в ответ на сбой одного поставщика.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Любая операция, включающее объекты ADO можно создать одну или несколько ошибок поставщика. Как возникли ошибки, один или несколько **ошибка** объектов может быть помещен в **ошибки** коллекцию [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Если другая операция ADO создает ошибку, **ошибки** коллекция очищается и новый набор **ошибка** объектов может быть помещен в **ошибки** коллекции.  
   
  Каждый **ошибка** представляет ошибку конкретного поставщика, а не ошибка ADO. Ошибки ADO предоставляется механизм обработки исключений во время выполнения. Например, в Visual Basic возникновение ошибки конкретного ADO активируют [onError](../../../ado/reference/rds-api/onerror-event-rds.md) событий и отображаются в **Err** объекта.  
@@ -53,7 +52,6 @@ ms.lasthandoff: 09/09/2017
   
 -   [Свойства коллекции ошибок, методы и события](../../../ado/reference/ado-api/errors-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Error](../../../ado/reference/ado-api/error-object.md)   
- [Поставщики приложение A:](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

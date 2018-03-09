@@ -3,7 +3,7 @@ title: "Свойства объекта DataControl (RDS), методы и со�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,75 +15,73 @@ ms.topic: article
 helpviewer_keywords:
 - DataControl object [ADO], members
 ms.assetid: 9a8f9b0c-8452-4e95-a561-cfc4b7165c5e
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 10dfef2df10149f49623911986d51850bc34f81c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ae933633bedf31dd14bd953ff6acdb2240adedc8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="datacontrol-object-rds-properties-methods-and-events"></a>Свойства объекта DataControl (RDS), методы и события
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, серверные компоненты служб удаленных рабочих СТОЛОВ больше не включаются в операционной системе Windows (в разделе Windows 8 и [руководство по Windows Server 2012 совместимости](https://www.microsoft.com/en-us/download/details.aspx?id=27416) для получения дополнительных сведений). Клиентские компоненты служб удаленных рабочих СТОЛОВ будут удалены в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие служб удаленных рабочих СТОЛОВ необходимо перенести в [службы данных WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="properties"></a>Свойства  
- [Свойство (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)  
+ [Свойство Connect (служба удаленных рабочих столов)](../../../ado/reference/rds-api/connect-property-rds.md)  
   
- [Свойство ExecuteOptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)  
+ [Свойство ExecuteOptions (служба удаленных рабочих столов)](../../../ado/reference/rds-api/executeoptions-property-rds.md)  
   
- [Свойство FetchOptions (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)  
+ [Свойство FetchOptions (служба удаленных рабочих столов)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)  
   
- [Свойство FilterColumn (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)  
+ [Свойство FilterColumn (служба удаленных рабочих столов)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)  
   
- [Свойство FilterCriterion (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)  
+ [Свойство FilterCriterion (служба удаленных рабочих столов)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)  
   
- [Свойство FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)  
+ [Свойство FilterValue (служба удаленных рабочих столов)](../../../ado/reference/rds-api/filtervalue-property-rds.md)  
   
- [Свойство обработчика (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)  
+ [Свойство Handler (служба удаленных рабочих столов)](../../../ado/reference/rds-api/handler-property-rds.md)  
   
- [Свойство InternetTimeout (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)  
+ [Свойство InternetTimeout (служба удаленных рабочих столов)](../../../ado/reference/rds-api/internettimeout-property-rds.md)  
   
- [Состояние готовности свойство (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)  
+ [Свойство ReadyState (служба удаленных рабочих столов)](../../../ado/reference/rds-api/readystate-property-rds.md)  
   
- [Набор записей, свойства SourceRecordset (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)  
+ [Свойства Recordset и SourceRecordset (служба удаленных рабочих столов)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)  
   
- [Свойства сервера (RDS)](../../../ado/reference/rds-api/server-property-rds.md)  
+ [Свойство Server (служба удаленных рабочих столов)](../../../ado/reference/rds-api/server-property-rds.md)  
   
- [Свойство SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)  
+ [Свойство SortColumn (служба удаленных рабочих столов)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)  
   
- [Свойство SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)  
+ [Свойство SortDirection (служба удаленных рабочих столов)](../../../ado/reference/rds-api/sortdirection-property-rds.md)  
   
  [Свойство SQL](../../../ado/reference/rds-api/sql-property.md)  
   
- [Свойство URL-адреса (RDS)](../../../ado/reference/rds-api/url-property-rds.md)  
+ [Свойство URL (служба удаленных рабочих столов)](../../../ado/reference/rds-api/url-property-rds.md)  
   
 ## <a name="methods"></a>Методы  
- [Метод Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)  
+ [Метод Cancel (служба удаленных рабочих столов)](../../../ado/reference/rds-api/cancel-method-rds.md)  
   
- [Метод CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)  
+ [Метод CancelUpdate (служба удаленных рабочих столов)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)  
   
- [Метод CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)  
+ [Метод CreateRecordset (служба удаленных рабочих столов)](../../../ado/reference/rds-api/createrecordset-method-rds.md)  
   
- [MoveFirst, MoveLast, MoveNext и MovePrevious методов (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)  
+ [Методы MoveFirst, MoveLast, MoveNext и MovePrevious (служба удаленных рабочих столов)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)  
   
- [Обновить метод (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)  
+ [Метод Refresh (служба удаленных рабочих столов)](../../../ado/reference/rds-api/refresh-method-rds.md)  
   
- [Метод Reset (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)  
+ [Метод Reset (служба удаленных рабочих столов)](../../../ado/reference/rds-api/reset-method-rds.md)  
   
- [Метод SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)  
+ [Метод SubmitChanges (служба удаленных рабочих столов)](../../../ado/reference/rds-api/submitchanges-method-rds.md)  
   
 ## <a name="events"></a>События  
- [onError событий (RDS)](../../../ado/reference/rds-api/onerror-event-rds.md)  
+ [Событие onError (служба удаленных рабочих столов)](../../../ado/reference/rds-api/onerror-event-rds.md)  
   
- [onReadyStateChange событий (RDS)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)  
+ [Событие onReadyStateChange (служба удаленных рабочих столов)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)  
   
-## <a name="see-also"></a>См. также:  
- [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
-
+## <a name="see-also"></a>См. также  
+ [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
 
 

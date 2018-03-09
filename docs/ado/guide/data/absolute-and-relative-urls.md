@@ -3,7 +3,7 @@ title: "Абсолютные и относительные URL-адреса | Д
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 3564236b7b6bee2ae21f1b78a4275fb615aa2e4e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c87fea24a0f03bbf179c74102fbb5514873f134a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="absolute-and-relative-urls"></a>Абсолютные и относительные URL-адреса
 URL-адрес указывает расположение целевого объекта, хранящиеся на локальном или сетевом компьютере. Целевой объект может быть файл, каталог, HTML-страницы, изображения, программы и т. д*.*  
@@ -40,16 +39,16 @@ URL-адрес указывает расположение целевого об
   
  Относительный URL-адрес, как правило, состоит только из *путь*и при необходимости *ресурсов*, но не *схема* или *сервера*. В следующих таблицах отдельных частей полный формат URL-адреса.  
   
- *Схема*  
+ *scheme*  
  Указывает, как *ресурсов* осуществляется.  
   
- *сервер*  
+ *server*  
  Указывает имя компьютера, где *ресурсов* находится.  
   
  *путь*  
  Задает последовательность приведет к целевой каталоги. Если *ресурсов* — этот параметр опущен, целевой объект — последнего каталога в *путь*.  
   
- *ресурс*  
+ *resource*  
  Если включен, *ресурсов* является целевым, а обычно совпадает с именем файла. Возможно, она *простой файл* один двоичный поток байтов, содержащий или *структурированный документ* содержащий один или несколько систем хранения данных, так и двоичные потоки байтов.  
   
 ## <a name="url-scheme-registration"></a>Регистрация URL-адреса схемы  
@@ -95,8 +94,7 @@ recordset.Open "", "URL=http://YourServer/Winnt/",,,adCmdTableDirect
   
  ADO поддерживает поставщики OLE DB, которые распознают собственные схемы URL-адрес. Например [поставщик Microsoft OLE DB для публикаций в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*,* которая обращается к файлам «опубликовано» Windows 2000, распознает существующие схемы HTTP.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Объект записи (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

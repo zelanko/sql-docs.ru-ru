@@ -1,12 +1,14 @@
 ---
-title: "Примеры задач скрипта | Документы Microsoft"
+title: "Примеры задачи \"Скрипт\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - examples [Integration Services]
 - SSIS Script task, examples
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
-caps.latest.revision: 26
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f7732abe880aa5eeaab2030da423e18d1977d64a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5187a97eb3424813b94b03438a31c62f583ee852
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="script-task-examples"></a>Примеры задачи «Скрипт»
   Задача «Скрипт» — это многоцелевой инструмент, который можно использовать в пакете для выполнения практически любых действий, которые невозможно произвести с помощью задач, поставляемых со службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. В этом разделе приведены образцы кода задачи «Скрипт», в которых демонстрируются некоторые элементы доступной функциональности.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  Если необходимо создать задачи, пригодные для повторного использования в нескольких пакетах, рассмотрите возможность использования кода в этих образцах как отправной точки для создания пользовательских задач. Дополнительные сведения см. в разделе [Разработка пользовательской задачи](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 ### <a name="example-topics"></a>Разделы с образцами  
  В этом разделе содержатся примеры кода, демонстрирующие различные варианты использования классов платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], которые можно включить в задачу «Скрипт» служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -48,16 +49,16 @@ ms.lasthandoff: 09/26/2017
  Собирает список файлов, отвечающих заданным пользователем критериям, и заполняет переменную для использования в дальнейшем в перечислителе по объекту из переменной.  
   
  [Запрос Active Directory в задаче «Скрипт»](../../integration-services/extending-packages-scripting-task-examples/querying-the-active-directory-with-the-script-task.md)  
- Извлекает сведения о пользователе из Active Directory на основе значения [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] переменной с помощью классов в пространстве имен System.DirectoryServices.  
+ Извлекает сведения о пользователе из службы каталогов Active Directory на основе значения переменной служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с использованием классов в пространстве имен System.DirectoryServices.  
   
  [Наблюдение за счетчиками производительности в задаче «Скрипт»](../../integration-services/extending-packages-scripting-task-examples/monitoring-performance-counters-with-the-script-task.md)  
- Создает пользовательский счетчик производительности, можно использовать для отслеживания хода выполнения [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакета с помощью классов в пространстве имен System.Diagnostics.  
+ Создает пользовательский счетчик производительности, который можно использовать для отслеживания хода выполнения пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], применяя классы в пространстве имен System.Diagnostics.  
   
  [Работа с изображениями в задаче «Скрипт»](../../integration-services/extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)  
- Выполняет сжатие изображений в формате JPEG и создает миниатюрные изображения их, используя классы в пространстве имен System.Drawing.  
+ Выполняет сжатие изображений в формат JPEG и создает из них эскизы изображений, используя классы в пространстве имен System.Drawing.  
   
  [Обнаружение установленных принтеров с помощью задачи «Скрипт»](../../integration-services/extending-packages-scripting-task-examples/finding-installed-printers-with-the-script-task.md)  
- Поиск установленных принтеров, поддерживающих определенный размер бумаги, используя классы в пространстве имен System.Drawing.Printing.  
+ Осуществляет поиск установленных принтеров, поддерживающих определенный размер бумаги, используя классы в пространстве имен System.Drawing.Printing.  
   
  [Отправка почтового сообщения в формате HTML с помощью задачи «Скрипт»](../../integration-services/extending-packages-scripting-task-examples/sending-an-html-mail-message-with-the-script-task.md)  
  Отправляет почтовое сообщение в формате HTML вместо обычного текстового формата.  
@@ -84,4 +85,3 @@ ms.lasthandoff: 09/26/2017
  Регистрирует число элементов, обработанных задачей в активных регистраторах.  
   
   
-

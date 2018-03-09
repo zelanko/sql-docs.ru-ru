@@ -3,10 +3,12 @@ title: "Диагностические правилам обработки | Д�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - SQLGetDiagRec function [ODBC], diagnostic handling rules
 - diagnostic information [ODBC], SqlGetDiagRec
 ms.assetid: 74387c3a-d6b3-4c35-b209-b9612602b20a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d7dde3b01f27efb992640594d46756b38cb94ede
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7cfd05e9c41fee1e0a753e2c4e4fa4f86db641b3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagnostic-handling-rules"></a>Правила обработки диагностики
 Следующие правила определяют диагностики обработки в **SQLGetDiagRec** и **SQLGetDiagField**.  
@@ -63,4 +64,3 @@ ms.lasthandoff: 09/09/2017
  Для одного компонента ODBC отличные от диспетчера драйверов:  
   
 -   Необходимо задать значение SQLSTATE, на основании собственной ошибки. Для драйверов на основе файлов и драйверов на основе СУБД, которые не используют шлюз драйвер необходимо задать значение SQLSTATE. Для драйверов на основе DBMS, использующие шлюз драйвер или шлюз, поддерживающий ODBC могут устанавливать SQLSTATE.
-

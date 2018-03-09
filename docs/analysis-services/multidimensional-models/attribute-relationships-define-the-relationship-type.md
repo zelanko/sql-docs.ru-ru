@@ -2,13 +2,13 @@
 title: "Определение типа связи атрибутов | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - adding member properties
 - member properties [Analysis Services], removing
 ms.assetid: 893a9084-d0fe-425c-b251-7518d3b3b65b
-caps.latest.revision: 43
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 158e22518b67117f830ba019860bacb95454a73a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 21fc6bc9a26916f2abdd0d433318c8175223084e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="attribute-relationships---define-the-relationship-type"></a>Связи атрибутов — тип связи
-  Тип связи атрибутов задается с помощью вкладки **Связи атрибутов** в конструкторе измерений, который можно вызвать из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Тип связи атрибутов задается с помощью вкладки **Связи атрибутов** в конструкторе измерений, который можно вызвать из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-set-the-relationship-type-of-an-attribute-relationship"></a>Как задать тип связи атрибутов  
   
@@ -48,4 +48,3 @@ ms.lasthandoff: 09/01/2017
  [Определение связей атрибутов](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
   
   
-

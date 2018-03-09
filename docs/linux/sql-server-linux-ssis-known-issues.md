@@ -7,19 +7,25 @@ ms.reviewer: douglasl
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: c366afc1b8755a22b13fa6224ec117db045c8dd3
+ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: eec45efe8fb49afefab418130d05d7a2b82bddd3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Ограничения и известные проблемы для служб SSIS в Linux
 
-В этом разделе описываются текущие ограничения и известные проблемы для SQL Server Integration Services (SSIS) в Linux.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+Эта статья описывает текущие ограничения и известные проблемы для SQL Server Integration Services (SSIS) для Linux.
 
 ## <a name="general-limitations-and-known-issues"></a>Общие ограничения и известные проблемы
 
@@ -36,7 +42,7 @@ ms.lasthandoff: 10/10/2017
 
 Другие ограничения и известные проблемы с помощью служб SSIS в Linux см. в разделе [заметки о выпуске](sql-server-linux-release-notes.md#ssis).
 
-## <a name="components"></a>Поддерживаемые и неподдерживаемые компоненты
+## <a name="components"></a> Поддерживаемые и неподдерживаемые компоненты
 
 На платформе Linux поддерживаются следующие встроенные компоненты служб Integration Services. Некоторые из них имеют ограничения на платформе Linux, как описано в следующих таблицах.
 
@@ -46,12 +52,12 @@ ms.lasthandoff: 10/10/2017
 - задача «Массовая вставка»
 - Задача потока данных
 - Задача «Профилирование данных»
-- Задача «Выполнение SQL»
+- Задача "Выполнение SQL"
 - Задача «Выполнение инструкции T-SQL»
 - Задания выражения
 - Задача «FTP»
 - Задача «Веб-служба»
-- Задача «XML»
+- XML Task
 
 ### <a name="control-flow-tasks-supported-with-limitations"></a>Такие ограничения задач потока управления
 
@@ -80,7 +86,7 @@ ms.lasthandoff: 10/10/2017
 | ADO.NET, источник и назначение | Поддерживается только поставщик данных SQLClient. |
 | Неструктурированный файл источника и назначения | Поддерживают только пути к файлам Windows стиля, к которым применяется правило сопоставления пути по умолчанию. Например `D:\home\ssis\travel.csv` становится `/home/ssis/travel.csv`. |
 | Источник OData | Поддерживает только обычная проверка подлинности. |
-| Источник и назначение | Поддерживает 64-разрядные драйверы ODBC Юникод в Linux. Зависит от диспетчера драйверов UnixODBC в Linux. |
+| Источник и назначение ODBC | Поддерживает 64-разрядные драйверы ODBC Юникод в Linux. Зависит от диспетчера драйверов UnixODBC в Linux. |
 | Источник OLE DB и назначение | Поддерживается только SQL Server Native Client 11.0 и поставщик Microsoft OLE DB для SQL Server. |
 | | |
 
@@ -126,4 +132,8 @@ ms.lasthandoff: 10/10/2017
 -   Если не указать путь, регистратор записывает текущий каталог узла. Если текущий пользователь не имеет разрешения на запись в каталоге текущего узла, регистратор приведет к ошибке.
 -   Нельзя использовать переменную среды в пути к файлу. Если указать переменную среды, литеральный текст, который указывается отображается в путь к файлу. Например, при указании `%TMP%/log.txt`, регистратор, который добавляет текст `/%TMP%/log.txt` в текущий каталог узла.
 
-
+## <a name="related-content-about-ssis-on-linux"></a>См. также о служб SSIS в Linux
+-   [Извлечения, преобразования и загрузки данных в Linux с помощью служб SSIS](sql-server-linux-migrate-ssis.md)
+-   [Установка SQL Server Integration Services (SSIS) для Linux](sql-server-linux-setup-ssis.md)
+-   [Настройка служб интеграции SQL Server в Linux с conf служб ssis](sql-server-linux-configure-ssis.md)
+-   [Выполнение в Linux с cron пакетов служб интеграции SQL Server расписание](sql-server-linux-schedule-ssis-packages.md)

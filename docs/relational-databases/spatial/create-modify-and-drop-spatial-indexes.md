@@ -2,9 +2,12 @@
 title: "Создание, изменение и удаление пространственных индексов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: 
@@ -17,19 +20,20 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 57aebfb8b20a0e6c751deb4b9914f8122b3c3cd3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 68f2d5d07002de55913fd8cca4166d4254f9ed90
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Создание, изменение и удаление пространственных индексов
-  Пространственный индекс позволяет более эффективно выполнять определенные операции со столбцами, содержащими данные типа **geometry** или **geography** ( *пространственные столбцы*). Для пространственного столбца может быть задано несколько пространственных индексов. Это целесообразно, например, при индексировании различных параметров тесселяции в одном столбце.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Пространственный индекс позволяет более эффективно выполнять определенные операции со столбцами, содержащими данные типа **geometry** или **geography** ( *пространственные столбцы*). Для пространственного столбца может быть задано несколько пространственных индексов. Это целесообразно, например, при индексировании различных параметров тесселяции в одном столбце.  
   
  На создание пространственных индексов накладывается ряд ограничений. Дополнительные сведения см. в подразделе [Ограничения пространственных индексов](#restrictions) далее в этом разделе.  
   

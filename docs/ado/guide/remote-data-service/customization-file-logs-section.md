@@ -3,7 +3,7 @@ title: "Файл настроек журналы раздел | Документ
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - logs section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 10f6e47bcf8cede8c59a406fef4951a11cbd56bd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 99d22cd98548548463f1cbd5516d26faaf4b9bf1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customization-file-logs-section"></a>Раздел журналы настройки файла
 **Журналы** раздел содержит записи файла журнала, который указывает имя файла, в который записываются ошибки во время работы **DataFactory**.  
@@ -44,16 +43,16 @@ FileName
   
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
-|Часть|Description|  
+|Часть|Описание|  
 |----------|-----------------|  
-|**Err**|Строковый литерал, который указывает на это является запись в файле журнала.|  
+|**err**|Строковый литерал, который указывает на это является запись в файле журнала.|  
 |*FileName*|Полный путь и имя файла. Имя файла обычно **c:\msdfmap.log**.|  
   
  Файл журнала будет содержать имя пользователя, HRESULT, Дата и время каждой ошибки.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Файл настроек присоединения раздела](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [Раздел SQL настройки файла](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [Раздел UserList настройки файла](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
@@ -61,6 +60,5 @@ FileName
  [Параметры клиента](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Основные сведения о настройке файла](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Запись собственного настраиваемого обработчика](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 

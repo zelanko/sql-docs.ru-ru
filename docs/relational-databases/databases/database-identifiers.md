@@ -2,15 +2,16 @@
 title: "Идентификаторы баз данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - regular identifiers [SQL Server]
 - identifiers [SQL Server]
@@ -20,19 +21,19 @@ helpviewer_keywords:
 - Transact-SQL identifiers
 - database objects [SQL Server], names
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
-caps.latest.revision: 40
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a6ec8d756aa5aa0c728ba5a3456a30809b4a0484
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "40"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 35570e23edbec76e06c58a0756c6850024d371ea
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-identifiers"></a>Идентификаторы баз данных
-  Имя объекта базы данных называется его идентификатором. Идентификаторы в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут присваиваться любым сущностям: серверам, базам данных и их объектам, например таблицам, представлениям, столбцам, индексам, триггерам, процедурам, ограничениям и правилам. Для большинства объектов идентификаторы необходимы, а для некоторых, например ограничений, необязательны.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Имя объекта базы данных называется его идентификатором. Идентификаторы в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут присваиваться любым сущностям: серверам, базам данных и их объектам, например таблицам, представлениям, столбцам, индексам, триггерам, процедурам, ограничениям и правилам. Для большинства объектов идентификаторы необходимы, а для некоторых, например ограничений, необязательны.  
   
  Идентификатор объекта создается при определении объекта. Затем идентификатор используется для обращения к объекту. Например, следующая инструкция создает таблицу с идентификатором `TableX`и двумя столбцами с идентификаторами `KeyCol` и `Description`:  
   
@@ -61,7 +62,7 @@ WHERE KeyCol = 124
 ```  
   
  Идентификаторы с разделителем  
- Заключаются в двойные кавычки (") или квадратные скобки ([ ]). Идентификаторы, которые соответствуют правилам форматирования идентификаторов, могут быть не разделяемыми. Например:  
+ Заключаются в двойные кавычки (") или квадратные скобки ([ ]). Идентификаторы, которые соответствуют правилам форматирования идентификаторов, могут быть не разделяемыми. Пример:  
   
 ```  
 SELECT *  
@@ -69,7 +70,7 @@ FROM [TableX]         --Delimiter is optional.
 WHERE [KeyCol] = 124  --Delimiter is optional.  
 ```  
   
- Идентификаторы, которые не соответствуют всем правилам для идентификаторов, в инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] должны быть разделены. Например:  
+ Идентификаторы, которые не соответствуют всем правилам для идентификаторов, в инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] должны быть разделены. Пример:  
   
 ```  
 SELECT *  

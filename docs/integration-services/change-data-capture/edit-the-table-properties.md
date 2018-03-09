@@ -1,10 +1,13 @@
 ---
-title: "Изменение свойств таблицы | Документы Microsoft"
+title: "Изменение свойств таблицы | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - editTabProps
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5213e0c5757afd3a74c8b76f43bf1a2c88ced7e4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 77b15cf8fc0db0b10ccccf6068f83b0a94910c47
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="edit-the-table-properties"></a>Изменение свойств таблицы
   Это диалоговое окно служит для изменения столбцов из выбранной таблицы, для которой производится отслеживание изменений. Можно также изменить **Роль безопасности** и **Экземпляр отслеживания** .  
@@ -55,9 +57,8 @@ ms.lasthandoff: 08/03/2017
   
  После окончания ввода данных в этом диалоговом окне нажмите кнопку **ОК** , чтобы принять изменения.  
   
-## <a name="see-also"></a>См. также  
- [Изменение свойств экземпляра CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Внесение изменений таблицы, выбранные для отслеживания изменений](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
+## <a name="see-also"></a>См. также:  
+ [Как изменить свойства экземпляра CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
+ [Внесение изменений в выбранные для отслеживания изменений таблицы](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
   
-

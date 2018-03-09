@@ -2,27 +2,28 @@
 title: "Файл конфигурации RsReportServer.config | Документация Майкрософт"
 ms.custom: 
 ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: 20
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 967dfebc4add43efb039a3b5eb54f8e5d20f1fab
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Active
+ms.openlocfilehash: 87efa1c9f3fd309ac6b9da150545ac7e08630cd5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="rsreportserverconfig-configuration-file"></a>Файл конфигурации RsReportServer.config
+# <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 В файле [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** хранятся параметры, которые используются веб-службой сервера отчетов и для фоновой обработки. Все приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] работают в одном процессе, который считывает параметры конфигурации, хранящиеся в файле RSReportServer.config. Серверы отчетов, работающие в собственном режиме и в режиме интеграции с SharePoint, используют файл RSReportServer.config, однако в этих режимах используются разные параметры из этого файла конфигурации. Версия файла для режима интеграции с SharePoint имеет меньший размер, поскольку многие параметры для этого режима хранятся не в файле, а в базах данных конфигурации SharePoint. В этом разделе описывается файл конфигурации по умолчанию, который устанавливается для собственного режима и для режима интеграции с SharePoint, а также некоторые важные параметры и варианты работы, которые управляются файлом конфигурации.  
 
 В режиме интеграции с SharePoint файл конфигурации содержит параметры, которые применяются ко всем экземплярам приложения службы, работающим на данном компьютере. База данных конфигурации SharePoint содержит параметры конфигурации, которые относятся к отдельным приложениям службы. Параметры, которые хранятся в базе данных конфигурации и для управления которыми служат страницы управления SharePoint, могут быть различными для каждого приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -73,12 +74,12 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**LogonUser, LogonDomain, LogonCred**|Содержит домен, имя пользователя и пароль учетной записи в домене, которые используются сервером отчетов для подключения к базе данных сервера отчетов. Значения **LogonUser**, **LogonDomain**и **LogonCred** создаются, когда соединение сервера отчетов настроено для работы с учетной записью домена. Дополнительные сведения о подключении к базе данных сервера отчетов см. в разделе [Настройка подключения к базе данных сервера отчетов &#40;диспетчер конфигурации SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).|Нет|  
 |**InstanceID**|Идентификатор экземпляра сервера отчетов. Имена экземпляров сервера отчетов создаются на основе имен экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это значение содержит имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . По умолчанию это значение равно **MSRS12***\<имя_экземпляра>*. Не изменяйте этот параметр. Ниже приводится пример полного значения: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> Далее приведен пример режима интеграции с SharePoint.<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
 |**InstallationID**|Идентификатор установки сервера отчетов, создаваемый программой установки. Его значение установлено в значение идентификатора GUID. Не изменяйте этот параметр.|Нет|  
-|**SecureConnectionLevel**|Задает уровень, на котором вызовы веб-служб должны использовать протокол SSL. Этот параметр используется как для веб-службы сервера отчетов, так и для портала. Значение устанавливается при настройке URL-адреса для использования протоколов HTTP или HTTPS в программе настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Диапазон допустимых значений от 0 до 3, где 0 — минимальный уровень. Дополнительные сведения см. в разделах [Использование защищенных методов веб-службы](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) и [Настройка соединений SSL для сервера отчетов, работающего в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|N,S|  
+|**SecureConnectionLevel**|Задает уровень, на котором вызовы веб-служб должны использовать протокол SSL. Этот параметр используется как для веб-службы сервера отчетов, так и для портала. Значение устанавливается при настройке URL-адреса для использования протоколов HTTP или HTTPS в программе настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . В SQL Server 2008 R2 элемент SecureConnectionLevel является двухфазным переключателем. Для версий, предшествовавших SQL Server 2008 R2, диапазон допустимых значений составляет от 0 до 3, где 0 является наименее безопасным. Дополнительные сведения см. в разделах [Метод ConfigurationSetting — SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md), [Использование защищенных методов веб-службы](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) и [Настройка соединений SSL для сервера отчетов, работающего в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|N,S|
 |**DisableSecureFormsAuthenticationCookie**|По умолчанию используется значение False.<br /><br /> Указывает, необходимо ли отключить принудительное использование куки-файла, используемого для формы, и необходимо ли отметить нестандартную проверку подлинности как безопасную. Начиная с версии SQL Server 2012, службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] автоматически помечают куки-файлы, используемые для проверки подлинности с помощью форм с нестандартными модулями проверки подлинности, как безопасные куки-файлы при их передаче клиенту. Изменяя это свойство, администраторы сервера отчетов и создатели настраиваемых модулей безопасности могут вернуться к предыдущему поведению, допускавшему задание автором необходимости отметки куки-файла как безопасного. Рекомендуется использовать защищенные куки-файлы для проверки подлинности с помощью форм, чтобы предотвратить атаки с повторной передачей пакетов и атаки сниффинга через сеть.|Нет|  
 |**CleanupCycleMinutes**|Содержит время в минутах, после которого старые сеансы и моментальные снимки с истекшим сроком жизни удаляются из базы данных сервера отчетов. Диапазон допустимых значений — от 0 до максимального целого числа. Значение по умолчанию равно 10. Если установить значение 0, очистка базы данных будет отключена.|N,S|  
 |**MaxActiveReqForOneUser**|Задает максимальное число отчетов, которые один пользователь может обрабатывать одновременно. При превышении этого предела все дальнейшие запросы на обработку отчетов запрещаются. Допустимые значения: от 1 до максимального значения, заданного целым числом. Значение по умолчанию равно 20.<br /><br /> Обратите внимание, что большинство запросов выполняется очень быстро, поэтому маловероятно, что для одного пользователя одновременно будет открыто более 20 соединений. Если пользователи открывают одновременно более 15 отчетов, интенсивно использующих процессы, то, возможно, это значение нужно увеличить.<br /><br /> Эта настройка не обрабатывается серверами отчетов, работающими в режиме интеграции с SharePoint.|N,S|  
-|**MaxActiveReqForAnonymous**|Указывает максимальное число анонимных запросов, которые могут быть в процессе, в то же время. По достижении предела дальнейшие запросы на обработку отклоняются. Допустимые значения: от 1 до максимального значения, заданного целым числом. Значение по умолчанию — 200.
-|**DatabaseQueryTimeout**|Указывает интервал в секундах, по истечении которого соединение с базой данных сервера отчетов закрывается. Это значение берется из свойства System.Data.SQLClient.SQLCommand.CommandTimeout. Допустимы значения от 0 до 2 147 483 647. Значение по умолчанию равно 120. Значение 0 задает неограниченное время ожидания и поэтому не рекомендуется.|Нет|  
+|**MaxActiveReqForAnonymous**|Задает максимальное число анонимных запросов, которые могут обрабатываться одновременно. При превышении этого предела все дальнейшие запросы на обработку запрещаются. Допустимые значения: от 1 до максимального значения, заданного целым числом. Значение по умолчанию равно 200.
+|**DatabaseQueryTimeout**|Указывает интервал в секундах, по истечении которого соединение с базой данных сервера отчетов закрывается. Это значение берется из свойства System.Data.SQLClient.SQLCommand.CommandTimeout. Допустимы значения от 0 до 2 147 483 647. Значение по умолчанию равно 120. Значение 0 задает неограниченное время ожидания и поэтому не рекомендуется.|Нет|  
 |**AlertingCleanupCycleMinutes**|Значение по умолчанию равно 20.<br /><br /> Определяет частоту очистки временных данных, хранящихся в базе данных предупреждений.|S|  
 |**AlertingDataCleanupMinutes**|Значение по умолчанию равно 360.<br /><br /> Определяет, как долго данные сеанса, используемые для создания или изменения определения предупреждения, сохраняются в базе данных предупреждений. Значение по умолчанию — 6 часов.|S|  
 |**AlertingExecutionLogCleanup**Minutes|Значение по умолчанию равно 10 080.<br /><br /> Определяет продолжительность хранения значений журнала выполнения системы предупреждений. Значение по умолчанию равно 7 суткам.|S|  
@@ -847,7 +848,6 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [Инициализация сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Хранение зашифрованных данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- Остались вопросы? [Повторите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
-

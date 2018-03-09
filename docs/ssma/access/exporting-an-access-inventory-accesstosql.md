@@ -1,12 +1,14 @@
 ---
 title: "Экспорт инвентаризацию доступа (AccessToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -22,17 +24,16 @@ helpviewer_keywords:
 - inventories of Access databases
 - querying exported metadata
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7f1ca36e752e0df28ca4b1fb3dcc7dff6f8895cf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 55f91e6b5e83b3a317f74b71e591de7e08009413
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Экспорт инвентаризацию доступа (AccessToSQL)
 Если у вас есть несколько баз данных Access, и вы не уверены, какие из них для переноса в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], вы можете экспортировать данные инвентаризации всех баз данных Access в проекте. Можно просмотреть и запросов к метаданным инвентаризации, чтобы определить, какие базы данных и объекты внутри них для переноса. Это инвентаризации позволяет быстро найти ответы на вопросы, например следующие:  
@@ -238,4 +239,3 @@ WHERE ColumnName LIKE '%salary%';
 ## <a name="see-also"></a>См. также:  
 [Подготовка к миграции базы данных Access](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
   
-

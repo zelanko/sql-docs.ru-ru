@@ -1,13 +1,14 @@
 ---
-title: "Приостановка и возобновление общих расписаний | Документы Microsoft"
+title: "Приостановка и возобновление общих расписаний | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +20,16 @@ helpviewer_keywords:
 - schedules [Reporting Services], resuming
 - schedules [Reporting Services], pausing
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
-caps.latest.revision: 36
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "36"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0eceb425b1294026a1c82043800c6aaa2ec83972
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: aff3fe5efdee7db2dfb0ac17f8d797badec97da9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Приостановка и возобновление общих расписаний
   Можно приостановить и возобновить общее расписание, используемое в данное время. Приостановка выполнения общего расписания позволяет временно приостановить действие расписания, инициирующего обработку отчетов и подписок. Приостанавливать и возобновлять можно только общие расписания. Расписания конкретных отчетов приостанавливать нельзя.  
@@ -68,11 +68,10 @@ ms.lasthandoff: 08/09/2017
   
 4.  Выберите расписание, затем нажмите кнопку **Приостановить выбранные расписания** или **Запустить выбранные расписания**. Если в настоящее время расписание приостановлено, то в столбце **Состояние** будет указано **Приостановлено**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расписания](../../reporting-services/subscriptions/schedules.md)   
  [Создание, изменение и удаление расписаний](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
- [Изменение часовых поясов и настроек часов на сервере отчетов](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
+ [Изменение часовых поясов и параметров часов на сервере отчетов](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
  [Управление запущенным процессом](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   
-

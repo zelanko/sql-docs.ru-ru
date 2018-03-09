@@ -3,7 +3,7 @@ title: "Подключение (ADO - синтаксис WFC) | Документ
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - Connection collection [ADO], ADO/WFC syntax
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: db507899d827973d66a18e34628ae1aa435e0323
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 05a4b45caddc9110712fdc363f44ba37c4e92d45
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connection-ado---wfc-syntax"></a>Подключение (ADO - WFC синтаксис)
 ## <a name="package-commswfcdata"></a>пакет com.ms.wfc.data  
@@ -117,6 +116,5 @@ public void addOnWillExecute(ConnectionEventHandler handler)
 public void removeOnWillExecute(ConnectionEventHandler handler)  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
-
+## <a name="see-also"></a>См. также  
+ [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

@@ -1,13 +1,14 @@
 ---
-title: "Обеспечение защиты папок | Документы Microsoft"
+title: "Обеспечение защиты папок| Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +17,16 @@ helpviewer_keywords:
 - folders [Reporting Services], security
 - security [Reporting Services], folders
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
-caps.latest.revision: 34
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "34"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5aad5bbe0b53e2e6669df93496795f4c5b6a3bca
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e7d20035ce370e8e096963afe20083a82eed19a2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="secure-folders"></a>Обеспечение защиты папок
   Безопасность папок является основой защиты всего содержимого сервера отчетов. Поскольку безопасность является унаследованной в структуре папок, можно определить разрешения определенного доступа для больших или маленьких разделов иерархии папок.  
@@ -48,10 +48,9 @@ ms.lasthandoff: 08/09/2017
 |Управление источниками данных|Добавление новых общих элементов источника данных в папку и последующее изменение существующих общих источников данных.|  
 |Установка безопасности элементов|Создание и изменение назначений ролей, управляющих доступом к папке. Эта задача должна использоваться либо с задачей «Просмотр папок», либо с «Управление папок». Если задача не будет использовать ни просмотр, ни управление, то задача не сможет производить изменения, поскольку пользователь не сможет выбирать элементы.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Защищенные отчеты и ресурсы](../../reporting-services/security/secure-reports-and-resources.md)   
  [Защита совместно используемых элементов источника данных](../../reporting-services/security/secure-shared-data-source-items.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

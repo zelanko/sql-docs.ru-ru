@@ -2,19 +2,19 @@
 title: "ИЗМЕНЕНИЕ СТРУКТУРЫ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ (DMX) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_MINING_STRUCTURE
 - ALTER MINING STRUCTURE
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - mining structures [DMX], creating
 - WITH DRILLTHROUGH clause
@@ -22,20 +22,19 @@ helpviewer_keywords:
 - parameter lists [DMX]
 - ALTER MINING STRUCTURE statement
 ms.assetid: d1efd2a8-1a4d-47bc-ba7f-73a7c61e2fde
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e52b312871dd76ee1e72f515ce83a2e7269d5ab3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7ad24d223012bb301abc57f2fb48f34e112a7647
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Создает новую модель интеллектуального анализа данных, основанную на уже существующей структуре интеллектуального анализа данных.  При использовании **ALTER MINING STRUCTURE** инструкцию, чтобы создать новую модель интеллектуального анализа данных, структура должна существовать. Напротив, при использовании инструкции, [CREATE MINING MODEL &#40; расширений интеллектуального анализа данных &#41;](../dmx/create-mining-model-dmx.md), создайте модель и автоматически создавать его базовой структуры интеллектуального анализа данных, в то же время.  
   
@@ -77,12 +76,12 @@ USING <algorithm> [(<parameter list>)]
 >  Список алгоритмов, поддерживаемых текущим поставщиком можно получить с помощью [строк DMSCHEMA_MINING_SERVICES](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). Для просмотра алгоритмы, поддерживаемые в текущем экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], в разделе [свойства интеллектуального анализа данных](../analysis-services/server-properties/data-mining-properties.md).  
   
  *список параметров*  
- Необязательно. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
+ Необязательный параметр. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
   
  *условия фильтра*  
  Критерий фильтра, применяющийся к столбцам таблицы вариантов.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если структура интеллектуального анализа данных содержит составные ключи, то модель интеллектуального анализа данных должна включать в себя все ключевые столбцы, определенные в структуре.  
   
  Если модель не требуется прогнозируемый столбец, например, модели, построенные с помощью [!INCLUDE[msCoName](../includes/msconame-md.md)] кластеризации и [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритма кластеризации последовательностей, не нужно включать определение столбца в инструкции. Все атрибуты в создаваемой модели будут рассматриваться как входы.  
@@ -140,7 +139,7 @@ USING <algorithm> [(<parameter list>)]
   
 |||  
 |-|-|  
-|**ПРОГНОЗ**|Данный столбец может быть спрогнозирован с помощью модели, и его значения можно использовать во входных вариантах для вычисления значений других прогнозируемых столбцов.|  
+|**PREDICT**|Данный столбец может быть спрогнозирован с помощью модели, и его значения можно использовать во входных вариантах для вычисления значений других прогнозируемых столбцов.|  
 |**PREDICT_ONLY**|Данный столбец может быть спрогнозирован с помощью модели, однако его нельзя использовать во входных вариантах для вычисления значений других прогнозируемых столбцов.|  
   
 ## <a name="filter-criteria-expressions"></a>Выражения условия фильтра  
@@ -222,7 +221,6 @@ USING Microsoft_Decision Trees
 ## <a name="see-also"></a>См. также:  
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции управления данными](../dmx/dmx-statements-data-manipulation.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

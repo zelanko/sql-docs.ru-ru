@@ -2,28 +2,31 @@
 title: "Поддержка служб SQL Server Integration Services для выполняющейся в памяти OLTP | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
-caps.latest.revision: 12
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d08caf561e3eb0703f9f21cc607d2100d845cea8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 57a7662de278ed7122583bc62ab02895f29aeb8f
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>Поддержка служб SQL Server Integration Services для In-Memory OLTP
-  Можно использовать таблицу, оптимизированную для памяти, представление, ссылающееся на подобные таблицы, или скомпилированную хранимую процедуру как источник или назначение для пакета служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS). Можно использовать [Источник ADO NET](../../integration-services/data-flow/ado-net-source.md), [Источник OLE DB](../../integration-services/data-flow/ole-db-source.md)или [Источник ODBC](../../integration-services/data-flow/odbc-source.md) в потоке данных пакета служб SSIS и настроить компонент источника для получения данных из оптимизированной для памяти таблицы или представления. Или же можно указать инструкцию SQL для выполнения скомпилированной хранимой процедуры. Аналогично можно использовать [Назначение ADO NET](../../integration-services/data-flow/ado-net-destination.md), [Назначение OLE DB](../../integration-services/data-flow/ole-db-destination.md)или [Назначение ODBC](../../integration-services/data-flow/odbc-destination.md) для загрузки данных в таблицу, оптимизированную для памяти, или в представление либо же указать инструкцию SQL для выполнения скомпилированной хранимой процедуры.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Можно использовать таблицу, оптимизированную для памяти, представление, ссылающееся на подобные таблицы, или скомпилированную хранимую процедуру как источник или назначение для пакета служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS). Можно использовать [Источник ADO NET](../../integration-services/data-flow/ado-net-source.md), [Источник OLE DB](../../integration-services/data-flow/ole-db-source.md)или [Источник ODBC](../../integration-services/data-flow/odbc-source.md) в потоке данных пакета служб SSIS и настроить компонент источника для получения данных из оптимизированной для памяти таблицы или представления. Или же можно указать инструкцию SQL для выполнения скомпилированной хранимой процедуры. Аналогично можно использовать [Назначение ADO NET](../../integration-services/data-flow/ado-net-destination.md), [Назначение OLE DB](../../integration-services/data-flow/ole-db-destination.md)или [Назначение ODBC](../../integration-services/data-flow/odbc-destination.md) для загрузки данных в таблицу, оптимизированную для памяти, или в представление либо же указать инструкцию SQL для выполнения скомпилированной хранимой процедуры.  
   
  Можно настроить вышеупомянутые исходные и целевые компоненты в пакете служб SSIS для чтения и записи данных в таблицах и представлениях, оптимизированных для памяти, точно таким же образом, как и в случае с другими таблицами и представлениями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Однако при использовании компилированных хранимых процедур необходимо учитывать два важных аспекта, приведенные в следующем разделе.  
   
@@ -36,4 +39,3 @@ ms.lasthandoff: 06/22/2017
  [Поддержка SQL Server для In-Memory OLTP](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   
-

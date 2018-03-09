@@ -2,28 +2,30 @@
 title: "Развертывание решений PowerPivot для SharePoint | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fac07e924fb94ce9901f1aca771b1954b474aaff
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8a9725c24b4cc324db21e9c39cdd9feef0829cae
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Развертывание решений PowerPivot в SharePoint
-  Используйте следующие инструкции, чтобы вручную развернуть два пакета решений, которые добавляют компоненты [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в среду SharePoint Server 2010. Развертывание решений — это обязательный шаг по настройке [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint на сервере SharePoint 2010. Сведения о просмотре полного списка необходимых действий см. в разделе [Настройка и администрирование сервера Power Pivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Используйте следующие инструкции, чтобы вручную развернуть два пакета решений, которые добавляют компоненты [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в среду SharePoint Server 2010. Развертывание решений — это обязательный шаг по настройке [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint на сервере SharePoint 2010. Сведения о просмотре полного списка необходимых действий см. в разделе [Настройка и администрирование сервера Power Pivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
  Кроме того, для развертывания решений можно использовать средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . При установке одиночного сервера проще и удобнее использовать средство настройки, однако если вы предпочитаете знакомое средство или если требуется настроить несколько компонентов одновременно, то лучше пользоваться центром администрирования и PowerShell. Дополнительные сведения об использовании средства настройки см. в разделе [Средства настройки PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
@@ -147,7 +149,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Решение веб-приложения сначала развертывается в центре администрирования, а затем — в любых дополнительных веб-приложениях с поддержкой запросов к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Развернуть решение веб-приложения в центре администрирования можно с помощью средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или командлета PowerShell. Решение веб-приложения для других веб-приложений можно развернуть вручную с помощью центра администрирования или PowerShell.  
   
-|Решение|Description|  
+|Решение|Описание|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|Добавляет файл Microsoft.AnalysisServices.SharePoint.Integration.dll к глобальной сборке.<br /><br /> Добавляет файл Microsoft.AnalysisServices.ChannelTransport.dll к глобальной сборке.<br /><br /> Устанавливает функции и файлы ресурсов, а также регистрирует типы содержимого.<br /><br /> Добавляет шаблоны библиотек для библиотек веб-канала данных и коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Добавляет страницы приложений для настройки приложений службы, панели мониторинга [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , обновления данных и коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 |powerpivotwebapp.wsp|Добавляет файлы ресурсов Microsoft.AnalysisServices.SharePoint.Integration.dll в папку расширений веб-сервера на сервере клиентского веб-интерфейса.<br /><br /> Добавляет веб-службу [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] к серверу клиентского веб-интерфейса.<br /><br /> Добавляет возможность формирования эскизов для коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
@@ -158,4 +160,3 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
  [Настройка PowerPivot с помощью Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
   
   
-

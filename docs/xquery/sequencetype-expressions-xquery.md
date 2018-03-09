@@ -3,8 +3,11 @@ title: "Выражения SequenceType (XQuery) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - expressions [XQuery], SequenceType
 - cast as operator
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
-caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3fa5ebb01c50823b5fe329063d9fc63023ce2478
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ac481d608106e5ce787ffe737d8d11fda67af3fb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sequencetype-expressions-xquery"></a>Выражения SequenceType (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   В XQuery значение всегда является последовательностью. Тип значения называется типом последовательности. Тип последовательности можно использовать в **экземпляр** выражения XQuery. Для обращения к типам в выражениях XQuery применяется синтаксис SequenceType, описанный в спецификации XQuery.  
   
@@ -102,7 +104,7 @@ select @x.query('data(/a[1]/@attrA) instance of xdt:untypedAtomic')
 go  
 ```  
   
-### <a name="example-b"></a>Пример B-адреса  
+### <a name="example-b"></a>Пример Б  
  В этом примере запрашиваются данные типизированного XML-столбца образца базы данных AdventureWorks. Сведения о типах предоставляет связанная с этим столбцом коллекция XML-схем.  
   
  В выражении **data()** возвращает типизированное значение атрибута ProductModelID, типом которого является xs: String в соответствии со схемой, связанного со столбцом. Поэтому оператор `instance of` возвращает значение True.  
@@ -413,9 +415,8 @@ select @x.query('xs:date("2000-01-01Z")')
     <a>2002-05-25Z</a>  
     ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выражения языка XQuery](../xquery/xquery-expressions.md)   
  [Система типов &#40; XQuery &#41;](../xquery/type-system-xquery.md)  
   
   
-

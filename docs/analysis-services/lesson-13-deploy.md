@@ -2,27 +2,28 @@
 title: "Занятие 14: Развертывание | Документы Microsoft"
 ms.custom: 
 ms.date: 03/27/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
-caps.latest.revision: 25
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 29a05dfbeea281b2468b95e69b458d4948f7f624
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f93ae84ae1ab52e5be122b0d2d397af7bf9e458a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lesson-13-deploy"></a>Занятие 13. Развертывание
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 09/01/2017
   
 Предполагаемое время выполнения этого занятия: **5 минут**.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
 Этот раздел является частью учебника по табличному моделированию, который необходимо изучать по порядку. Перед выполнением задач этого занятия, необходимо завершить предыдущее занятие: [занятии 12: анализ в Excel](../analysis-services/lesson-12-analyze-in-excel.md).  
   
 ## <a name="deploy-the-model"></a>Развертывание модели  
@@ -74,13 +75,12 @@ ms.lasthandoff: 09/01/2017
   
   
 ## <a name="see-also"></a>См. также:  
-[Режим DirectQuery (табличные службы SSAS)](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)  
-[Настройка моделирования данных по умолчанию и свойств развертывания (табличные службы SSAS)](../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
-[Базы данных табличной модели (табличные службы SSAS)](../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)  
+[Режим DirectQuery](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)  
+[Настройка свойств моделирования и развертывания данных по умолчанию](../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
+[Табличный шаблон баз данных](../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   
   ## <a name="whats-next"></a>Дальнейшие действия
 *  [Дополнительного занятия - реализация динамической безопасности с помощью фильтров строк](../analysis-services/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md).
 
 *  [Дополнительное занятие — Настройка свойства отчетов для отчетов Power View](../analysis-services/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md).
-

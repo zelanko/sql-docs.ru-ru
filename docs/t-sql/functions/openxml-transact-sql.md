@@ -3,8 +3,11 @@ title: "OPENXML (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ff4578d88cdb76468d261843c36043ef4696d92c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f5b32c99393bb5b7f31423df840f7f0069dd3518
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   OPENXML предоставляет представление набора строк XML-документа. Так как OPENXML является поставщиком наборов строк, он может применяться в инструкциях языка [!INCLUDE[tsql](../../includes/tsql-md.md)], в которых могут быть использованы такие поставщики наборов строк, как таблицы, представления или функция OPENROWSET.  
   
@@ -47,16 +49,16 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *IDOC*  
+ *idoc*  
  Дескриптор документа внутреннего представления XML-документа. Внутреннее представление XML-документа создается путем вызова **sp_xml_preparedocument**.  
   
  *rowpattern*  
  Шаблон XPath, используется для идентификации узлов (в XML-документе, дескриптор которого передается в *idoc* параметр) должен обрабатываться как строки.  
   
- *флаги*  
+ *flags*  
  Указывает на сопоставление, которое должно использоваться между XML-данными и реляционным набором строк, а также на порядок заполнения переполненного столбца. *флаги* является необязательным входным параметром и может принимать одно из следующих значений.  
   
-|Байтовое значение|Description|  
+|Байтовое значение|Описание|  
 |----------------|-----------------|  
 |**0**|По умолчанию используется значение **атрибутивного** сопоставления.|  
 |**1**|Используйте **атрибутивного** сопоставления. Может быть совмещено с XML_ELEMENTS. В этом случае **атрибутивного** сопоставление применяется первым и затем **элементного** сопоставление применяется для всех столбцов, которые еще не были обработаны с.|  
@@ -64,7 +66,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Может быть совмещено (логическое OR) с XML_ATTRIBUTES или XML_ELEMENTS. В смысле получения, этот флаг указывает, что используемые данные не должны копироваться в свойство переполнения  **@mp:xmltext** .|  
   
  *SchemaDeclaration*  
- Определение схемы формы: *ColName**ColType* [*ColPattern* | *метасвойства*] [**** *ColNameColType* [*ColPattern* | *метасвойства*]...]  
+ Определение схемы формы: *ColName ** ColType* [*ColPattern* | *метасвойства*] [**, *** ColNameColType* [*ColPattern * | *Метасвойства*]...]  
   
  *ColName*  
  Название столбца в наборе строк.  
@@ -79,13 +81,13 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  Общий шаблон XPath, заданный как *ColPattern* также поддерживает метасвойства.  
   
- *Метасвойства*  
+ *MetaProperty*  
  Одно из метасвойств, предоставляемых OPENXML. Если *метасвойства* указано, что столбец содержит сведения, предоставленные метасвойством. Метасвойства позволяют извлекать сведения (такие как относительное положение и сведения о пространстве имен) об узлах XML. По сравнению с текстовым представлением метасвойства позволяют увидеть больше сведений.  
   
  *Имя_таблицы*  
  Имя таблицы, которое может быть указано (вместо *SchemaDeclaration*) Если таблица с необходимой схемой уже существует, и никакого шаблона столбцов являются обязательными.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Предложение WITH предоставляет формат набора строк (и Дополнительные сведения о необходимых сопоставлениях) с помощью *SchemaDeclaration* или указать существующую *TableName*. Если необязательное предложение WITH не указан, результаты возвращаются в **edge** формат таблицы. Краевые таблицы представляют собой структуру мелкогранулированного XML-документа (имена элементов/атрибутов, иерархия документа, пространства имен, и т. д.) в одной таблице.  
   
  В следующей таблице описаны структуры **edge** таблицы.  
@@ -249,8 +251,7 @@ EXEC sp_xml_removedocument @idoc;
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры. Использование OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
   
   
-

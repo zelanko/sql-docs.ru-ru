@@ -2,12 +2,13 @@
 title: "Модель интеллектуального анализа данных для моделей логистической регрессии | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +16,20 @@ helpviewer_keywords:
 - mining model content, logistic regression models
 - regression algorithms [Analysis Services]
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5490990412aa4883d575a1fc65fee7e29db06dde
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6a57348fa7e83daeb4c9df2bc8d17cd34689c4a5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>Содержимое моделей интеллектуального анализа данных для моделей логистической регрессии
-  В этом разделе приведено описание содержимого модели интеллектуального анализа данных, характерного для моделей, в которых используется алгоритм логистической регрессии (Майкрософт). Объяснение способов интерпретации статистики и описание структуры, общей для всех типов моделей, а также общие определения терминов, связанных с содержимым моделей интеллектуального анализа данных, см. в разделе [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+В этом разделе приведено описание содержимого модели интеллектуального анализа данных, характерного для моделей, в которых используется алгоритм логистической регрессии (Майкрософт). Объяснение способов интерпретации статистики и описание структуры, общей для всех типов моделей, а также общие определения терминов, связанных с содержимым моделей интеллектуального анализа данных, см. в разделе [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-logistic-regression-model"></a>Основные сведения о структуре модели логистической регрессии  
  Модель логистической регрессии создается алгоритмом нейронной сети (Майкрософт) с параметрами, которые исключают из модели скрытый узел. Таким образом, общая структура модели логистической регрессии почти идентична структуре нейронной сети: каждая модель имеет один родительский узел, представляющий модель и ее метаданные, а также специальный узел граничной статистики (NODE_TYPE = 24), который содержит описательную статистику о входных атрибутах, используемых в модели.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="model-content-for-a-logistic-regression-model"></a>Содержимое модели логистической регрессии  
  В этом разделе представлено подробное описание с примерами только для тех столбцов модели интеллектуального анализа данных, которые имеют отношение к логистической регрессии. Содержимое модели почти полностью идентично содержимому модели нейронной сети, но описания, применимые к моделям нейронной сети, можно для удобства повторить в этой таблице.  
   
- Сведения о столбцах общего назначения в наборе строк схемы, таких как MODEL_CATALOG и MODEL_NAME, которые здесь не рассмотрены, а также объяснение терминологии моделей интеллектуального анализа данных см. в разделе [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+ Сведения о столбцах общего назначения в наборе строк схемы, таких как MODEL_CATALOG и MODEL_NAME, которые здесь не рассмотрены, а также объяснение терминологии моделей интеллектуального анализа данных см. в разделе [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Имя базы данных, в которой хранится модель.  
@@ -68,7 +69,7 @@ ms.lasthandoff: 09/01/2017
 |Выходной узел|Имя выходного атрибута|  
   
  NODE_NAME  
- Тип узла. В текущей версии этот столбец содержит то же значение, что и NODE_UNIQUE_NAME, но такое соответствие может измениться в следующих версиях.  
+ Имя узла. В текущей версии этот столбец содержит то же значение, что и NODE_UNIQUE_NAME, но такое соответствие может измениться в следующих версиях.  
   
  NODE_UNIQUE_NAME  
  Уникальное имя узла.  
@@ -101,7 +102,7 @@ ms.lasthandoff: 09/01/2017
 |Граничная статистика|Всегда равно 0.|  
 |Входной слой|Показывает число пар «входной атрибут-значение», использованных моделью.|  
 |Входной узел|Всегда равно 0.|  
-|Скрытый слой|В моделях логистической регрессии значение всегда равно 0.|  
+|скрытый слой|В моделях логистической регрессии значение всегда равно 0.|  
 |Выходной слой|Показывает число выходных значений.|  
 |Выходной узел|Всегда равно 0.|  
   
@@ -132,7 +133,7 @@ ms.lasthandoff: 09/01/2017
 |Граничная статистика|Пусто|  
 |Входной слой|Пусто|  
 |Входной узел|Фрагмент XML-кода, содержащий те же сведения, что и столбец NODE_DESCRIPTION.|  
-|Скрытый слой|Пусто|  
+|скрытый слой|Пусто|  
 |Выходной слой|Пусто|  
 |Выходной узел|Фрагмент XML-кода, содержащий те же сведения, что и столбец NODE_DESCRIPTION.|  
   
@@ -193,7 +194,6 @@ ms.lasthandoff: 09/01/2017
  [Алгоритм логистической регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Содержимое модели интеллектуального анализа данных для модели нейронной сети &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Примеры запросов модели логистической регрессии](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)   
- [Технический справочник по алгоритму логистической регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
+ [Технический справочник по алгоритму логистической регрессии Майкрософт](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
   
   
-

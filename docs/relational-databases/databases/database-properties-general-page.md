@@ -2,30 +2,32 @@
 title: "Свойства базы данных (страница \"Общие\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 10/27/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.databaseproperties.general.f1
 - sql13.swb.databaseproperties.segments.f1
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
-caps.latest.revision: 30
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1ab703fcc2c29fae271b7484495cacf47bbcfd67
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "30"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: b5239b20134c58cf828b9c35a3bd3802e4b15bf9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-general-page"></a>Свойства базы данных (страница «Общие»)
-  На этой странице можно просмотреть или изменить свойства выбранной базы данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] На этой странице можно просмотреть или изменить свойства выбранной базы данных.  
   
 ## <a name="options"></a>Параметры  
  **Последнее резервное копирование базы данных**  
@@ -65,4 +67,3 @@ ms.lasthandoff: 06/22/2017
  [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md)  
   
   
-

@@ -3,8 +3,11 @@ title: "ВЫБОРКИ (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - SCROLL option
 - row fetching [SQL Server]
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-caps.latest.revision: 43
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1333af6ceba4a4410fefadd1a99d8611fae88a6a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: fae1e085c26c2bcbc6b2605187b4554dba414642
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Получает определенную строку из серверного курсора [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -88,7 +90,7 @@ FETCH
  INTO @*имя_переменной*[,...*n*]  
  Позволяет поместить данные из столбцов выборки в локальные переменные. Каждая переменная из списка, слева направо, связывается с соответствующим столбцом в результирующем наборе курсора. Тип данных каждой переменной должен соответствовать типу данных соответствующего столбца результирующего набора, или должна обеспечиваться поддержка неявного преобразования в тип данных этого столбца. Количество переменных должно совпадать с количеством столбцов в списке выбора курсора.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если в инструкции DECLARE CURSOR в стиле ISO не указан параметр SCROLL, единственным поддерживаемым параметром инструкции FETCH является NEXT. Если в инструкции DECLARE CURSOR в стиле ISO параметр SCROLL указан, поддерживаются все параметры инструкции FETCH.  
   
  При использовании расширений курсора [!INCLUDE[tsql](../../includes/tsql-md.md)] DECLARE применимы следующие правила.  
@@ -101,7 +103,7 @@ FETCH
   
  @@FETCH_STATUS Функция сообщает состояние последней инструкции FETCH. Те же данные записываются в столбец fetch_status в курсоре, возвращаемом процедурой sp_describe_cursor. Эти сведения о состоянии должны использоваться для определения действительности данных, возвращаемых инструкцией FETCH перед попыткой выполнения любой операции над этими данными. Дополнительные сведения см. в разделе [@@FETCH_STATUS &#40; Transact-SQL &#41; ](../../t-sql/functions/fetch-status-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Разрешения на инструкцию FETCH по умолчанию предоставляются всем допустимым пользователям.  
   
 ## <a name="examples"></a>Примеры  
@@ -212,11 +214,10 @@ DEALLOCATE contact_cursor;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ЗАКРЫТЬ &#40; Transact-SQL &#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [DEALLOCATE &#40; Transact-SQL &#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR (Transact-SQL)](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [ОТКРЫТЬ &#40; Transact-SQL &#41;](../../t-sql/language-elements/open-transact-sql.md)  
   
   
-

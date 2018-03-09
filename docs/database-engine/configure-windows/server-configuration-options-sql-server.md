@@ -1,11 +1,13 @@
 ---
 title: "Параметры конфигурации сервера (SQL Server) | Документы Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 04/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,20 +32,19 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 - administering SQL Server, configuration options
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
-caps.latest.revision: 128
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 4bf8c88d19d6b23f1cae11cc32c048e50a2d6b2f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e5fd7bae9ba05669af1b21a931b39aba3132e25e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="server-configuration-options-sql-server"></a>Параметры конфигурации сервера (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Управление и оптимизация ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] производятся на основе параметров конфигурации с применением среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или системной хранимой процедуры sp_configure. Наиболее часто используемые параметры конфигурации сервера доступны в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]; доступ ко всем параметрам конфигурации можно получить при помощи sp_configure. Взвесьте возможные последствия для системы, прежде чем устанавливать эти параметры. Дополнительные сведения см. в разделе [Просмотр или изменение свойств сервера (SQL Server)](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="configuration-options-table"></a>Таблица параметров конфигурации  
  В нижеследующей таблице приведены все доступные параметры конфигурации, диапазон возможных значений и значения по умолчанию. Параметры конфигурации помечаются буквенными кодовыми обозначениями, как показано ниже:  
   
--   A= Дополнительные параметры, которые следует изменять только с помощью опытного администратора баз данных или сертифицированного технического специалиста [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и для которых требуется установить для show advanced options значение 1.  
+-   A= Дополнительные параметры, которые следует изменять только опытному администратору баз данных или сертифицированному по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] специалисту и для которых требуется установить для параметра "Отображение дополнительных параметров" значение 1.  
   
 -   RR = Параметры, требующие перезапуска компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 08/02/2017
   
 -   SC = Самонастраивающиеся параметры.  
   
-    |Параметр конфигурации|Минимальное значение|Максимальное значение|По умолчанию|  
+    |Параметр конфигурации|Минимальное значение|Максимальное значение|Default|  
     |--------------------------|-------------------|-------------------|-------------|  
     |[access check cache bucket count](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[access check cache quota](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
@@ -92,7 +93,7 @@ ms.lasthandoff: 08/02/2017
     |[blocked process threshold](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
     |[c2 audit mode](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md) (A, RR)|0|1|0|  
     |[clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)|0|1|0|  
-    |[clr strict security](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)). |0|1|0|  
+    |[clr strict security](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|0|1|0|  
     |[common criteria compliance enabled](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md) (A, RR)|0|1|0|  
     |[Проверка подлинности автономной базы данных](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)|0|1|0|  
     |[cost threshold for parallelism](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A)|0|32767|5|  
@@ -104,7 +105,7 @@ ms.lasthandoff: 08/02/2017
     |[default trace enabled](../../database-engine/configure-windows/default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
     |[disallow results from triggers](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) (A)|0|1|0|  
     |[Поставщик расширенного управления ключами включен](../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)|0|1|0|  
-    |[external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (RR)<br /><br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|0|1|0|  
+    |[external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (RR)<br /><br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|0|1|0|  
     |[filestream_access_level](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)|0|2|0|  
     |[fill factor](../../database-engine/configure-windows/configure-the-fill-factor-server-configuration-option.md) (A, RR)|0|100|0|  
     |ft crawl bandwidth (max), см. раздел [ft crawl bandwidth](../../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md)(A)|0|32767|100|  
@@ -119,7 +120,7 @@ ms.lasthandoff: 08/02/2017
     |[max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (1024 является максимальным значением, рекомендуемым для 32-разрядной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а 2048 — для 64-разрядной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] — последняя версия, которая была доступна в 32-разрядной операционной системе.)|0<br /><br /> При нулевом значении максимальное число рабочих потоков исполнителя настраивается автоматически в зависимости от количества процессоров по формуле (256 + (*\<процессоры>* - 4) * 8) для 32-разрядных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и в два раза больше для 64-разрядных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] — последняя версия, которая была доступна в 32-разрядной операционной системе.)|  
+    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 1024 является максимальным значением, рекомендуемым для 32-разрядных операционных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 2048 — для 64-разрядных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Примечание**. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] — последняя версия, которая была доступна в 32-разрядной операционной системе.|0<br /><br /> При нулевом значении максимальное число рабочих потоков настраивается автоматически в зависимости от количества процессоров по формуле (256 + (*\<процессоры>* – 4) * 8) для 32-разрядных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и (512 + (*\<процессоры>* – 4) * 8) для 64-разрядных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Примечание**. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] — последняя версия, которая была доступна в 32-разрядной операционной системе.|  
     |[media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
     |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  
@@ -129,7 +130,7 @@ ms.lasthandoff: 08/02/2017
     |[open objects](../../database-engine/configure-windows/open-objects-server-configuration-option.md) (A, RR, устаревший)|0|2147483647|0|  
     |[optimize for ad hoc workloads](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
-    |[PolyBase Hadoop and Azure blob storage](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|0|7|0|   
+    |[PolyBase Hadoop and Azure blob storage](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|0|7|0|   
     |[precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A)|0|1|0|  
     |[priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A, RR)|0|1|0|  
     |[query governor cost limit](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  
@@ -153,10 +154,9 @@ ms.lasthandoff: 08/02/2017
     |[user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)|0|32767|0|  
     |[xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md) (A)|0|1|0|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)  
  [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)
   
   
-

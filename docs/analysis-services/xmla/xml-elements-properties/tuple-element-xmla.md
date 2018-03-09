@@ -2,42 +2,38 @@
 title: "Элемент Tuple (XML для Аналитики) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Tuple Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Tuple Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.tuple
 - urn:schemas-microsoft-com:xml-analysis#Tuple
 - http://schemas.microsoft.com/analysisservices/2003/engine#Tuple
-helpviewer_keywords:
-- Tuple element
+helpviewer_keywords: Tuple element
 ms.assetid: d65aba10-55e1-49c1-81bc-0756c39c0da2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 72e7e976397ad2d7566b9e0efd7daa4102289768
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 11a9d3b633e680154787615c04ee1f08b65b8139
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tuple-element-xmla"></a>Элемент Tuple (XML для аналитики)
-  Содержит коллекцию элементов [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md), содержащихся в родительском элементе [Tuples](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит коллекцию [член](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) элементов, содержащихся в родительском [кортежей](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,7 +49,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -66,7 +62,7 @@ ms.lasthandoff: 09/01/2017
 |Родительские элементы|[Кортежи](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md)|  
 |Дочерние элементы|[Член](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Когда клиентское приложение устанавливает для свойства **AxisFormat** значение *TupleFormat*, ось представляется в виде набора кортежей. Каждый элемент **Axis** содержит элемент **Tuples**, представляющий набор кортежей на этой оси. Каждый кортеж представлен с помощью элемента **Tuple**, содержащего элементы **Member** из каждой иерархии оси.  
   
 ## <a name="example"></a>Пример  
@@ -121,4 +117,3 @@ ms.lasthandoff: 09/01/2017
  [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

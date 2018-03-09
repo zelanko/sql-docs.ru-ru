@@ -3,25 +3,29 @@ title: "Управление SQL Server в Linux с помощью SSMS | Док
 description: "Этого учебника показано, как использовать SQL Server Management Studio в Windows для подключения к SQL Server под управлением Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ms.workload: On Demand
+ms.openlocfilehash: 442d57154222fdb06ba26ad7858eb783103e93cd
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: b4e70106782541d771a2539d025a0a6dd75c34d9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="use-sql-server-management-studio-ssms-on-windows-to-manage-sql-server-on-linux"></a>Использование SQL Server Management Studio (SSMS) в Windows для управления SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этом разделе показано, как использовать [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) для подключения к 2017 г. SQL Server в Linux. SSMS — это приложение Windows, поэтому SSMS следует использовать при наличии компьютером Windows, можно подключиться к удаленному экземпляру SQL Server в Linux.
+В этой статье показано, как использовать [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) для подключения к 2017 г. SQL Server в Linux. SSMS — это приложение Windows, поэтому SSMS следует использовать при наличии компьютером Windows, можно подключиться к удаленному экземпляру SQL Server в Linux.
 
 После успешного подключения, выполняется простой запрос Transact-SQL (T-SQL), чтобы проверить связь с базой данных.
 
@@ -39,7 +43,7 @@ ms.lasthandoff: 10/02/2017
 
 2. В **соединение с сервером** окно, введите следующие сведения (если SSMS уже запущен, щелкните **Connect > Database Engine** для открытия **соединение с сервером** окна):
 
-   | Настройка | Description |
+   | Настройка | Описание |
    |-----|-----|
    | **Тип сервера** | Значение по умолчанию — компонент database engine; не изменяйте это значение. |
    | **Имя сервера** | Введите имя целевом компьютере Linux SQL Server или его IP-адрес. |
@@ -85,4 +89,3 @@ ms.lasthandoff: 10/02/2017
 Если вы не знакомы с T-SQL, см. раздел [учебника: написание инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md) и [Справочник по Transact-SQL (компонент Database Engine)](https://msdn.microsoft.com/library/bb510741.aspx).
 
 Дополнительные сведения о том, как с помощью среды SSMS см. в разделе [использовать SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx).
-

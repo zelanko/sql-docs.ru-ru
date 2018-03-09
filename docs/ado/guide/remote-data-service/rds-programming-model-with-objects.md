@@ -3,7 +3,7 @@ title: "Модель программирования служб удаленн�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - RDS programming model [ADO]
 - RDS objects [ADO]
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 46dcfe88b0405eaf34a52f2b25e131b5ba72eafe
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2f89c867cb836ec69fd5fe59adf16d93f4708d0f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-programming-model-with-objects"></a>Модель программирования служб удаленных рабочих СТОЛОВ с объектами
 Службы удаленных рабочих столов предназначена для того, чтобы получить доступ к и обновление источников данных через посредника, такими как службы IIS. Модель программирования определяет последовательность действий, необходимых для достижения этой цели. Объектную модель указывает объекты, методы и свойства, влияющие на модели программирования.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Изменения **записей** отправляются обратно на сервер и используется для обновления источника данных объекта (**RDS. DataControl** или **RDSServer.DataFactory**).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о модели объектов служб удаленных рабочих СТОЛОВ](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
  [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Объект DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
@@ -57,6 +56,5 @@ ms.lasthandoff: 09/09/2017
  [Учебник служб удаленных рабочих СТОЛОВ](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Использование RDS и безопасность](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
 
 

@@ -2,31 +2,32 @@
 title: "Архивация базы данных, страница \"Параметры носителя\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - swb.backupdatabase.mediaoptions.f1
 - sql13.swb.backupdatabase.mediaoptions.f1
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
-caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "7"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4a220cb8eb2218843e460741c016120787b943b0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7e1fd480768d75f33793f7260eb2652a25c1cc77
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-database-media-options-page"></a>Резервное копирование базы данных (страница «Параметры носителя»)
-  На странице  **Параметры носителя** диалогового окна **Резервное копирование базы данных** можно просмотреть или изменить параметры носителя базы данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] На странице **Параметры носителя** диалогового окна **Резервное копирование базы данных** можно просмотреть или изменить параметры носителя базы данных.  
   
  **Создание резервной копии с помощью среды SQL Server Management Studio**  
   
@@ -123,4 +124,3 @@ ms.lasthandoff: 08/03/2017
  [Создание резервной копии журнала транзакций при повреждении базы данных (SQL Server)](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   
   
-

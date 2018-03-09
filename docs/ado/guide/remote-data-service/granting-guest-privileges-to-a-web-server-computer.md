@@ -3,7 +3,7 @@ title: "Предоставление прав гостевой веб-серве
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - guest privileges in RDS [ADO]
 ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4c9e1f3dace4916b7d8044a5b21f480bacb04238
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d9027a8e8adead5801a27465bda36a347472e383
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>Предоставление прав гостевой веб-сервере
 Учетная запись анонимного Web server (IUSR_*ComputerName*) должны добавляться к локальной группе гостей на компьютере веб-сервера для использования RDS.  
@@ -46,6 +45,5 @@ ms.lasthandoff: 09/09/2017
 5.  Если учетной записи анонимного Web server не отображается в списке в **Выбор пользователей или групп** диалогового окна введите его имя (IUSR_*ComputerName*) в нижней пустое поле и нажмите кнопку **добавить** .  
   
 6.  Нажмите кнопку **ОК**.
-
 
 

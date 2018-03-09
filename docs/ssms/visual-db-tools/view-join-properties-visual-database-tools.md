@@ -3,10 +3,12 @@ title: "Просмотр свойств соединения (визуальны
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - viewing join properties
 - displaying join properties
 ms.assetid: e7985d14-8e6c-4fca-a1c9-9af1eeacb1e2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: bf9184edf85ff6dd7edf79ef9ada5103a8bc4de4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4ce8f5339b5221f1888106ed032fe84c1922fa08
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="view-join-properties-visual-database-tools"></a>Просмотр свойств соединения (визуальные инструменты для баз данных)
-Можно вывести коллекцию свойств для просмотра в окно «Свойства».  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Можно вывести коллекцию свойств для просмотра в окно "Свойства".  
   
 ### <a name="to-view-join-properties"></a>Просмотр свойств соединения  
   
@@ -40,4 +41,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>См. также:  
 [Запросы с соединениями (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   
-

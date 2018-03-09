@@ -3,24 +3,25 @@ title: "Уведомление о завершении асинхронной ф
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 336565da-4203-4745-bce2-4f011c08e357
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dbccf95ca62f3a77618f36f69523e28e5d85c17a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 91c63c55a3d36e1b0c788361a8ae13a01ece9a38
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>Уведомление о завершении асинхронной функции
 В Windows 8 SDK ODBC добавлен механизм для уведомления приложения при завершении асинхронной операции, который мы будем называть «уведомления о завершении». (См. [асинхронное выполнение (метод уведомления)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) для получения дополнительной информации.) В этом разделе рассматриваются некоторые вопросы для разработчиков драйвера.  
@@ -42,4 +43,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>См. также:  
  [Разработка драйвера ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)
-

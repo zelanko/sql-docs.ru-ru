@@ -3,8 +3,11 @@ title: "DROP EVENT NOTIFICATION (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - DROP EVENT NOTIFICATION statement
 - removing event notifications
 ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
-caps.latest.revision: 33
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ab32a9ffadce83635e8ef987607af913fe0f2472
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: b2ecaff48f54ce76fe0d193eda5406df1bc574e7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="drop-event-notification-transact-sql"></a>DROP EVENT NOTIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет триггер уведомления о событии из данной базы данных.  
   
@@ -62,10 +64,10 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  ОЧЕРЕДЬ *имя_очереди*  
  Показывает область уведомления о событии, относящемся к в очередь указанную *имя_очереди*. Аргумент QUEUE должен быть указан, если он был указан при создании уведомления о событии. *имя_очереди* является именем очереди и также должен быть указан.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если уведомление о событии возникает и удаляется в одной и той же транзакции, то вначале происходит отправка экземпляра уведомления о событии, а затем происходит удаление этого уведомления.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Чтобы удалить уведомление о событии, относящемся к уровню базы данных, пользователь должен быть, как минимум, владельцем уведомления о событии или обладать разрешением ALTER ANY DATABASE EVENT NOTIFICATION в данной базе данных.  
   
  Чтобы удалить уведомление о событии, относящемся к уровню сервера, пользователь должен быть, как минимум, владельцем уведомления о событии или иметь разрешение ALTER ANY EVENT NOTIFICATION в данной базе данных.  
@@ -75,7 +77,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
 ## <a name="examples"></a>Примеры  
  В следующем примере создается уведомление о событии, существующее в пределах базы данных, а затем оно удаляется.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE EVENT NOTIFICATION NotifyALTER_T1  
@@ -95,4 +97,3 @@ ON DATABASE;
  [sys.Events &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
   
   
-

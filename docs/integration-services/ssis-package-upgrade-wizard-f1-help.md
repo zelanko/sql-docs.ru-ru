@@ -1,10 +1,13 @@
 ---
-title: "Справка F1 мастера обновления пакетов служб SSIS | Документы Microsoft"
+title: "Справка F1 по мастеру обновления пакетов служб SSIS | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -18,32 +21,31 @@ f1_keywords:
 - sql13.is.upgradewizard.completewizard.f1
 - sql13.is.upgradewizard.upgradingpackage.f1
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-caps.latest.revision: 20
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0e9c1eccc9a14c580ba733fc3c4f63e88db92d60
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: ff131d66dbe20fb844ba9ab3c768c6597acd62aa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Справка F1 мастера обновления пакетов служб SSIS
-  Использовать мастер обновления пакетов служб SSIS, чтобы обновить пакеты, созданные в более ранних версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] до формата пакета текущего выпуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+  Воспользуйтесь мастером обновления пакетов SSIS, чтобы обновить пакеты, созданные в более ранних версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], до формата пакета текущего выпуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  **Запуск мастера обновления пакетов служб SSIS**  
   
 -   [Обновление пакетов служб Integration Services с помощью мастера обновления пакетов служб SSIS](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
 
-## <a name="ssis-upgrade-wizard"></a>Мастер обновления служб SSIS
+## <a name="ssis-upgrade-wizard"></a>Мастер обновления SSIS
   
 ### <a name="options"></a>Параметры  
  **Больше не показывать эту страницу.**  
  Пропустить страницу приветствия при следующем открытии мастера.  
  
-## <a name="select-source-location-page"></a>Страница «Выбор источника»
+## <a name="select-source-location-page"></a>Страница "Выбор исходного расположения"
  Используйте страницу **Выбор исходного расположения** для задания местонахождения источника обновляемых пакетов.  
   
 > [!NOTE]  
@@ -81,13 +83,13 @@ ms.lasthandoff: 09/26/2017
  **Использовать проверку подлинности SQL Server**  
  Выберите использование проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для подключения к серверу. Если используется проверка подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , необходимо ввести имя пользователя и пароль.  
   
- **Имя пользователя**  
+ **User name**  
  Введите имя пользователя, которое будет использовано для проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] при подключении к серверу.  
   
  **Пароль**  
  Введите пароль, который будет использован для проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] при подключении к серверу.  
  
-## <a name="select-destination-location-page"></a>Страница «Выбор целевого расположения»
+## <a name="select-destination-location-page"></a>Страница "Выбор целевого расположения"
  Страница **Выбор целевого расположения** используется для указания назначения, в которое сохраняются обновленные пакеты.  
   
 > [!NOTE]  
@@ -133,13 +135,13 @@ ms.lasthandoff: 09/26/2017
  **Использовать проверку подлинности SQL Server**  
  Выберите использование проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для подключения к серверу. Если используется проверка подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , необходимо ввести имя пользователя и пароль.  
   
- **Имя пользователя**  
+ **User name**  
  Введите имя пользователя, которое будет использовано, если при подключении к серверу применяется проверка подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Пароль**  
  Введите пароль, который будет использован, если при подключении к серверу применяется проверка подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
  
-## <a name="select-package-management-options-page"></a>Страница «Выбор параметров управления пакетами»
+## <a name="select-package-management-options-page"></a>Страница "Выбор параметров управления пакетами"
   Страница **Выбор параметров управления пакетами** используется для выбора параметров обновления пакетов.  
   
  **Запуск мастера обновления пакетов служб SSIS**  
@@ -150,7 +152,7 @@ ms.lasthandoff: 09/26/2017
  **Обновить строки соединения для использования новых имен поставщиков**  
  Обновите строки соединения, чтобы в них использовались имена для следующих поставщиков текущего выпуска служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
--   Поставщик OLE DB для[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
+-   Поставщик OLE DB для служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client  
   
@@ -175,7 +177,7 @@ ms.lasthandoff: 09/26/2017
  **Перезаписать существующие файлы пакетов**  
  Заменяет существующий пакет обновленным пакетом с тем же именем.  
   
- **Добавление к именам обновленных пакетов числовые суффиксы**  
+ **Добавлять к именам обновленных пакетов числовые суффиксы**  
  Добавляет к именам обновленных пакетов числовые суффиксы.  
   
  **Не обновлять пакеты**  
@@ -183,16 +185,16 @@ ms.lasthandoff: 09/26/2017
   
  Эти параметры недоступны, если выбран параметр **Сохранить в исходное расположение** страницы мастера **Выбор целевого расположения** .  
   
- **Пропуск конфигураций**  
+ **Игнорировать конфигурации**  
  Конфигурации пакетов не загружаются во время обновления пакетов. Выбор этого параметра позволяет сократить время, требуемое на обновление пакета.  
   
- **Резервной копии исходных пакетов**  
+ **Создать резервную копию исходных пакетов**  
  Мастер будет создавать резервные копии исходных пакетов в папке **SSISBackupFolder** . Мастер создает папку **SSISBackupFolder** в папке, которая содержит исходные и обновленные пакеты.  
   
 > [!NOTE]  
 >  Этот параметр становится доступен только после указания, что исходные и обновленные пакеты должны храниться в файловой системе и в одной и той же папке.  
 
-## <a name="select-packages-page"></a>Страница «Выбор пакетов»
+## <a name="select-packages-page"></a>Страница "Выбор пакетов"
   Страница **Выбор пакетов** используется для выбора пакетов, подлежащих обновлению. Здесь перечислены пакеты, сохраненные в то же расположение, которое было указано на странице мастера **Выбор исходного расположения** .  
   
 ### <a name="options"></a>Параметры  
@@ -218,7 +220,7 @@ ms.lasthandoff: 09/26/2017
  **Сводка параметров**  
  Просмотрите выбранные с помощью мастера параметры обновления. Чтобы изменить параметр, нажмите кнопку **Назад** , чтобы вернуться на предыдущие страницы мастера.
  
-## <a name="upgrading-the-packages-page"></a>Обновление пакетов страницы
+## <a name="upgrading-the-packages-page"></a>Страница "Обновление пакетов"
   Страница **Обновление пакетов** используется для слежения за ходом обновления пакетов и прерывания процесса обновления. Мастер обновления пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] обновляет выбранные пакеты один за другим.  
   
 ### <a name="options"></a>Параметры  
@@ -249,11 +251,11 @@ ms.lasthandoff: 09/26/2017
 -   отправка отчета по электронной почте.  
 
 ## <a name="view-upgraded-packages"></a>Просмотр обновленных пакетов
-### <a name="view-upgraded-packages-that-were-saved-to-a-sql-server-database-or-to-the-package-store"></a>Просмотр обновленных пакетов, сохраненных в базе данных SQL Server или в хранилище пакетов
+### <a name="view-upgraded-packages-that-were-saved-to-a-sql-server-database-or-to-the-package-store"></a>Просмотр обновленных пакетов, сохраненных в базе данных SQL Server или в хранилище пакетов
   
 В обозревателе объектов среды [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]установите соединение с локальным экземпляром служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], а затем разверните узел **Сохраненные пакеты** , чтобы увидеть обновленные пакеты.  
   
-### <a name="view-upgraded-packages-that-were-upgraded-from-sql-server-data-tools"></a>Просмотр обновленных пакетов, которые были обновлены из SQL Server Data Tools  
+### <a name="view-upgraded-packages-that-were-upgraded-from-sql-server-data-tools"></a>Просмотр обновленных пакетов из SQL Server Data Tools  
   
 В обозревателе решений среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , а затем разверните узел **Пакеты служб SSIS** , чтобы увидеть обновленные пакеты.  
   
@@ -261,4 +263,3 @@ ms.lasthandoff: 09/26/2017
  [Обновление пакетов служб Integration Services](../integration-services/install-windows/upgrade-integration-services-packages.md)  
   
   
-

@@ -1,12 +1,14 @@
 ---
 title: "ИЗМЕНИТЬ параметры SET базы данных (Transact-SQL) | Документы Microsoft"
 description: "Дополнительные сведения о том, как задать параметры базы данных, например автоматической настройки, шифрование хранилища запросов в SQL Server и базы данных SQL Azure"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 08/07/2017
+ms.custom: 
+ms.date: 12/20/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,21 +28,22 @@ helpviewer_keywords:
 - checksums [SQL Server]
 - automatic tuning
 - SQL plan regression correction
+- auto_create_statistics
+- auto_update_statistics
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-caps.latest.revision: 159
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 5dbb93a69c6f8194c2d17eb982fae1ba15d4a522
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: de5b72bd7e890c2b7375448119af832f0e79d075
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL) 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   В данном разделе приведен синтаксис инструкции ALTER DATABASE, связанный с установкой параметров базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для других Синтаксис инструкции ALTER DATABASE в следующих разделах.  
   
@@ -55,7 +58,7 @@ ms.lasthandoff: 09/27/2017
 Зеркальное отображение базы данных, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], и уровни совместимости `SET` параметры но описаны в отдельных разделах из-за их длины. Дополнительные сведения см. в разделе [ALTER база данных зеркального отображения базы данных &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-hadr.md), и [изменить уровень совместимости базы данных &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
->  Можно настроить многие параметры set базы данных для текущего сеанса с помощью [инструкции SET &#40; Transact-SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md) и они часто задаются приложениями при подключении. Параметры инструкции SET уровня сеанса переопределяют значения **ALTER DATABASE SET** . Описанные далее параметры баз данных являются значениями, которые можно задавать для сеансов, не предоставляющих явно другие значения параметров инструкции SET.  
+> Можно настроить многие параметры set базы данных для текущего сеанса с помощью [инструкции SET &#40; Transact-SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md) и они часто задаются приложениями при подключении. Параметры инструкции SET уровня сеанса переопределяют значения **ALTER DATABASE SET** . Описанные далее параметры баз данных являются значениями, которые можно задавать для сеансов, не предоставляющих явно другие значения параметров инструкции SET.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -247,7 +250,7 @@ SET
   | ANSI_PADDING { ON | OFF }   
   | ANSI_WARNINGS { ON | OFF }   
   | ARITHABORT { ON | OFF }   
-  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120}  
+  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120 | 130 | 140 }  
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }   
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
@@ -277,8 +280,7 @@ SET
  **\<auto_option >:: =**  
   
  Управляет автоматическими параметрами.  
-  
- AUTO_CLOSE { ON | OFF }  
+ <a name="auto_close"></a>ПАРАМЕТР AUTO_CLOSE {ON | {OFF}  
  ON  
  База данных закрыта правильно, а ее ресурсы освобождены после выхода последнего пользователя.  
   
@@ -301,8 +303,8 @@ SET
 >  Зеркальное отображение базы данных требует, чтобы параметр AUTO_CLOSE был установлен в состояние OFF.  
   
  Если параметр базы данных AUTOCLOSE установлен в значение ON, то действия, инициирующие автоматическое закрытие базы данных, очищают кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Очистка кэша планов становится причиной перекомпиляции всех последующих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 2 (SP2) и выше для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение: «[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил %d экземпляров, записанных на диск хранилищ кэша для хранилища кэша "%s" (части кэша планов) в результате операций по обслуживанию или изменению конфигурации базы данных». Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.  
-  
- AUTO_CREATE_STATISTICS { ON | OFF }  
+ 
+ <a name="auto_create_statistics"></a>ПАРАМЕТР AUTO_CREATE_STATISTICS {ON | {OFF}  
  ON  
  Оптимизатор запросов в случае необходимости создает статистику по отдельным столбцам в предикатах запросов, чтобы улучшить планы запросов и повысить производительность запросов. Такая статистика по отдельным столбцам создается, когда оптимизатор запросов компилирует запросы. Статистика по отдельным столбцам создается только для столбцов, ни один из которых не является первым столбцом в существующем объекте статистики.  
   
@@ -316,11 +318,11 @@ SET
  Дополнительные сведения см. в подразделе «Использование параметров статистики уровня базы данных» в [статистики](../../relational-databases/statistics/statistics.md).  
   
  INCREMENTAL = ON | OFF  
- Если для AUTO_CREATE_STATISTICS установлено значение ON и для INCREMENTAL тоже ON, то автоматически создаваемые статистики создаются как добавочные везде, где поддерживаются добавочные статистики. Значение по умолчанию — OFF. Дополнительные сведения см. в разделе [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).  
+ Если для AUTO_CREATE_STATISTICS установлено значение ON и для INCREMENTAL тоже ON, то автоматически создаваемые статистики создаются как добавочные везде, где поддерживаются добавочные статистики. Значение по умолчанию — OFF. Дополнительные сведения см. в статье [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).  
   
  **Применяется к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
- AUTO_SHRINK { ON | OFF }  
+ <a name="auto_shrink"></a>AUTO_SHRINK {ON | {OFF}  
  ON  
  Файлы базы данных являются кандидатами на периодическое сжатие.  
   
@@ -336,9 +338,9 @@ SET
  Состояние этого параметра можно определить с помощью проверки значения столбца is_auto_shrink_on в представлении каталога sys.databases или свойства IsAutoShrink функции DATABASEPROPERTYEX.  
   
 > [!NOTE]  
->  В автономной базе данных параметр AUTO_SHRINK недоступен.  
+> В автономной базе данных параметр AUTO_SHRINK недоступен.  
   
- AUTO_UPDATE_STATISTICS { ON | OFF }  
+ <a name="auto_update_statistics"></a>ПАРАМЕТР AUTO_UPDATE_STATISTICS {ON | {OFF}  
  ON  
  Указывает, что оптимизатор запросов обновляет статистику, если она используется в запросе и может оказаться устаревшей. Статистика становится устаревшей, после того как операции вставки, обновления, удаления или слияния изменяют распределение данных в таблице или индексированном представлении. Оптимизатор запросов определяет, когда статистика может оказаться устаревшей, подсчитывая операции изменения данных с момента последнего обновления статистики и сравнивая количество изменений с пороговым значением. Пороговое значение основано на количестве строк в таблице или индексированном представлении.  
   
@@ -357,7 +359,7 @@ SET
   
  Дополнительные сведения см. в подразделе «Использование параметров статистики уровня базы данных» в [статистики](../../relational-databases/statistics/statistics.md).  
   
- AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
+ <a name="auto_update_statistics_async"></a>ПАРАМЕТР AUTO_UPDATE_STATISTICS_ASYNC {ON | {OFF}  
  ON  
  Указывает, что обновление статистики для параметра AUTO_UPDATE_STATISTICS выполняется асинхронно. Оптимизатор запросов не ожидает завершения обновления статистики перед компиляцией запросов.  
   
@@ -374,7 +376,7 @@ SET
   
  Дополнительные сведения, описывающие условия обновления статистики, синхронный или асинхронный использовать, см. в подразделе «Использование параметров статистики уровня базы данных» в [статистики](../../relational-databases/statistics/statistics.md).  
   
- **\<automatic_tuning_option >:: =**  
+ <a name="auto_tuning"></a> **\<automatic_tuning_option >:: =**  
  **Область применения**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
 
  Включает или отключает `FORCE_LAST_GOOD_PLAN` [автоматической настройки](../../relational-databases/automatic-tuning/automatic-tuning.md) параметр.  
@@ -388,7 +390,7 @@ SET
 
  **\<change_tracking_option >:: =**  
   
- **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Недоступно в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)].  
   
  Определяет параметры отслеживания изменений. Отслеживание изменений можно включить или отключить, а также установить или изменить параметры. Примеры использования см. далее в этом разделе.  
   
@@ -426,7 +428,7 @@ SET
  Это автономная база данных. Задать параметр частичной автономности базы данных невозможно, если в базе данных включена репликация, сбор данных об изменениях или отслеживание изменений. Проверка на наличие ошибок прекращается после обнаружения первой ошибки. Дополнительные сведения об автономных базах данных см. в разделе [Contained Databases](../../relational-databases/databases/contained-databases.md).  
   
 > [!NOTE]  
->  Вложения не могут быть настроены на [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. Вложения не поддерживают явно, но [!INCLUDE[ssSDS](../../includes/sssds-md.md)] можно использовать автономной функции например содержащихся пользователей базы данных.  
+> Вложения не могут быть настроены на [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. Вложения не поддерживают явно, но [!INCLUDE[ssSDS](../../includes/sssds-md.md)] можно использовать автономной функции например содержащихся пользователей базы данных.  
   
  **\<cursor_option >:: =**  
   
@@ -444,7 +446,7 @@ SET
  Состояние этого параметра можно определить с помощью проверки значения столбца is_cursor_close_on_commit_on в представлении каталога sys.databases или свойства IsCloseCursorsOnCommitEnabled функции DATABASEPROPERTYEX.  
   
  CURSOR_DEFAULT { LOCAL | GLOBAL }  
- **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Недоступно в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Недоступно в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Управляет тем, какую область (LOCAL или GLOBAL) использует курсор.  
   
@@ -460,13 +462,13 @@ SET
   
  **\<database_mirroring >**  
   
- **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Недоступно в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Недоступно в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Описания аргументов см. в разделе [ALTER база данных зеркального отображения базы данных &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).  
   
  **\<date_correlation_optimization_option >:: =**  
   
- **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Недоступно в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Недоступно в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Управляет параметром date_correlation_optimization.  
   
@@ -494,7 +496,7 @@ SET
   
  **\<db_state_option >:: =**  
   
- **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Недоступно в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Недоступно в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Управляет состоянием базы данных.  
   
@@ -508,7 +510,7 @@ SET
  База данных помечена как READ_ONLY, ведение журнала отключено и доступ возможен только элементам предопределенной роли сервера sysadmin. EMERGENCY используется в основном для диагностики. Например, база данных, помеченная как подозрительная из-за поврежденного файла журнала, может быть переведена в состояние EMERGENCY. Таким образом, системный администратор может получить доступ к базе данных только для чтения. Только члены предопределенной роли сервера sysadmin могут перевести базу данных в состояние EMERGENCY.  
   
 > [!NOTE]  
->  **Разрешения:** для изменения базы данных в состояние вне сети или в аварийном требуется разрешение ALTER DATABASE для базы данных предметной. Разрешение ALTER ANY DATABASE на уровне сервера требуется, чтобы перевести базу данных из режима «вне сети» в режим «в сети».  
+> **Разрешения:** для изменения базы данных в состояние вне сети или в аварийном требуется разрешение ALTER DATABASE для базы данных предметной. Разрешение ALTER ANY DATABASE на уровне сервера требуется, чтобы перевести базу данных из режима «вне сети» в режим «в сети».  
   
  Состояние этого параметра можно определить с помощью проверки столбцов state и state_desc в [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) представление каталога или свойства Status [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) функции. Дополнительные сведения см. в разделе [Database States](../../relational-databases/databases/database-states.md).  
   
@@ -530,14 +532,14 @@ SET
  Чтобы изменить это состояние, необходимо обладать монопольным доступом к базе данных. Дополнительные сведения см. в описании предложения SINGLE_USER.  
   
 > [!NOTE]  
->  Применительно к федеративным базам данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)], инструкция SET { READ_ONLY | READ_WRITE } отключена.  
+> Применительно к федеративным базам данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)], инструкция SET { READ_ONLY | READ_WRITE } отключена.  
   
  **\<db_user_access_option >:: =**  
   
  Управляет пользовательским доступом к базе данных.  
   
  SINGLE_USER  
- **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Недоступно в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Недоступно в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Указывает, что только один пользователь одновременно может обращаться к базе данных. Если параметр SINGLE_USER указан и есть другие пользователи, подключенные к базе данных, инструкция ALTER DATABASE будет блокирована, пока все пользователи не отключатся от указанной базы данных. Чтобы переопределить это поведение, см. предложение WITH \<завершения > предложения.  
   
@@ -576,7 +578,7 @@ MULTI_USER
   
  **\<external_access_option >:: =**  
   
- **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Недоступно в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Недоступно в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Управляет возможностью обращения к базе данных из внешних ресурсов, таких как объекты другой базы данных.  
   
@@ -588,7 +590,7 @@ MULTI_USER
  База данных не может быть членом межбазовой цепочки владения.  
   
 > [!IMPORTANT]  
->  Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] распознает эту настройку, если параметр сервера cross db ownership chaining имеет значение 0 (OFF). Если параметр cross db ownership chaining имеет значение 1 (ON), то все пользовательские базы данных могут участвовать в межбазовых цепочках владения, вне зависимости от значения этого параметра. Этот параметр задается с помощью [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+> Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] распознает эту настройку, если параметр сервера cross db ownership chaining имеет значение 0 (OFF). Если параметр cross db ownership chaining имеет значение 1 (ON), то все пользовательские базы данных могут участвовать в межбазовых цепочках владения, вне зависимости от значения этого параметра. Этот параметр задается с помощью [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
  Установка этого параметра требуется разрешение CONTROL SERVER для базы данных.  
   
@@ -660,7 +662,7 @@ MULTI_USER
   
  **\<HADR_options >:: =**  
   
- **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Недоступно в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Недоступно в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  В разделе [ALTER DATABASE SET HADR &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).  
   
@@ -693,7 +695,7 @@ MULTI_USER
   
  **\<query_store_options >:: =**  
   
- **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ON | OFF | CLEAR [ ALL ]  
  Указывает, включено ли хранилище запросов в этой базе данных, а также управляет удалением содержимого хранилища запросов.  
@@ -763,7 +765,7 @@ OPERATION_MODE
  Предусматривается стратегия простого резервирования, которая использует минимальное пространство под журналы. Пространство, отведенное под журналы, может быть автоматически многократно использовано, если оно больше не требуется для восстановления сбоев сервера. Дополнительные сведения см. в разделе [Модели восстановления (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
 > [!IMPORTANT]  
->  Простая модель восстановления проще в управлении, чем другие две модели, но больше подвержена потере данных, если файл данных поврежден. Все изменения, начиная с наиболее свежей резервной копии базы данных или разностной резервной копии базы данных, будут потеряны и должны быть повторно введены вручную.  
+> Простая модель восстановления проще в управлении, чем другие две модели, но больше подвержена потере данных, если файл данных поврежден. Все изменения, начиная с наиболее свежей резервной копии базы данных или разностной резервной копии базы данных, будут потеряны и должны быть повторно введены вручную.  
   
  Модель восстановления по умолчанию определяется моделью восстановления базы данных **model** . Дополнительные сведения о выборе подходящей модели восстановления см. в разделе [моделей восстановления &#40; SQL Server &#41; ](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
@@ -777,9 +779,9 @@ OPERATION_MODE
  Неполные страницы не могут быть обнаружены компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 > [!IMPORTANT]  
->  Синтаксическая структура TORN_PAGE_DETECTION ON | OFF будет удалена в будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этой структуры в новых разработках и запланируйте изменение приложений, которые сейчас ее используют. Вместо этого используйте параметр PAGE_VERIFY.  
+> Синтаксическая структура TORN_PAGE_DETECTION ON | OFF будет удалена в будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этой структуры в новых разработках и запланируйте изменение приложений, которые сейчас ее используют. Вместо этого используйте параметр PAGE_VERIFY.  
   
- PAGE_VERIFY { CHECKSUM | TORN_PAGE_DETECTION | NONE }  
+<a name="page_verify"></a>PAGE_VERIFY {CHECKSUM | TORN_PAGE_DETECTION | НЕТ}  
  Обнаруживает поврежденные страницы базы данных, вызванные ошибками пути дискового ввода-вывода. Ошибки пути дискового ввода-вывода могут быть причиной повреждения базы данных и обычно происходят при сбоях питания или сбоях оборудования диска, происходящих во время записи страницы на диск.  
   
  CHECKSUM  
@@ -798,7 +800,7 @@ OPERATION_MODE
 -   При обновлении пользовательской или системной базы данных до версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней значение PAGE_VERIFY (NONE или TORN_PAGE_DETECTION) сохраняется. Рекомендуется использовать CHECKSUM.  
   
     > [!NOTE]  
-    >  В более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметру базы данных PAGE_VERIFY присваивается значение NONE применительно к базе данных tempdb, которая не может быть изменена. В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях значение по умолчанию для базы данных tempdb является CHECKSUM для новых установок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После обновления установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] значением по умолчанию остается NONE. Этот параметр можно изменять. Для работы с базой данных tempdb рекомендуется использовать CHECKSUM.  
+    > В более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметру базы данных PAGE_VERIFY присваивается значение NONE применительно к базе данных tempdb, которая не может быть изменена. В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях значение по умолчанию для базы данных tempdb является CHECKSUM для новых установок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После обновления установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] значением по умолчанию остается NONE. Этот параметр можно изменять. Для работы с базой данных tempdb рекомендуется использовать CHECKSUM.  
   
 -   Значение TORN_PAGE_DETECTION использует меньше ресурсов, но обеспечивает минимальный вариант защиты CHECKSUM.  
   
@@ -810,9 +812,9 @@ OPERATION_MODE
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] повторяет любую операцию считывания, которая закончилась ошибкой контрольной суммы, разрыва страницы или другой ошибкой ввода-вывода, четыре раза. Если считывание закончится успешно в любой из попыток, то в журнал ошибок будет записано сообщение и команда, вызвавшая считывание, продолжится. Если все повторные попытки закончатся ошибкой, команда закончит работу с сообщением об ошибке 824.  
   
- Дополнительные сведения о контрольной суммы, разрыва страницы, повторном считывании сообщения об ошибках 823 и 824 и других [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] характеристиках аудита ввода-вывода см. Эти [веб-сайте Майкрософт](http://go.microsoft.com/fwlink/?LinkId=47160).  
+ Дополнительные сведения о сообщениях об ошибках 823 и 824 825 см. в разделе [Устранение ошибки Msg 823 в SQL Server](http://support.microsoft.com/help/2015755), [Устранение ошибки Msg 824 в SQL Server](http://support.microsoft.com/help/2015756) и [Устранение ошибки Msg 825 &#40; Повтор чтения &#41; в SQL Server](http://support.microsoft.com/help/2015757).
   
- Текущее состояние этого параметра можно определить с помощью проверки значения столбца page_verify_option в [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) представление каталога или свойства IsTornPageDetectionEnabled [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)функции.  
+ Текущее состояние этого параметра можно определить с помощью проверки *page_verify_option* столбца в [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) представления каталога или *IsTornPageDetectionEnabled*свойство [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) функции.  
   
 **\<remote_data_archive_option >:: =**  
   
@@ -1018,7 +1020,7 @@ FEDERATED_SERVICE_ACCOUNT = ON | ОТКЛЮЧЕНИЕ
   
  Состояние этого параметра можно определить с помощью проверки значения столбца is_arithabort_on в представлении каталога sys.databases или свойства IsArithmeticAbortEnabled функции DATABASEPROPERTYEX.  
   
- COMPATIBILITY_LEVEL { 90 | 100 | 110 | 120}  
+ COMPATIBILITY_LEVEL = {90 | 100 | 110 | 120 | 130 | 140}  
  Дополнительные сведения см. в разделе [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
  CONCAT_NULL_YIELDS_NULL { ON | OFF }  
@@ -1050,7 +1052,7 @@ FEDERATED_SERVICE_ACCOUNT = ON | ОТКЛЮЧЕНИЕ
   
  После создания таблицы параметр QUOTED IDENTIFIER всегда сохраняется в метаданных таблицы со значением ON, даже если при создании таблицы для него было задано OFF.  
   
- Настройки уровня соединения, установленные с помощью инструкции SET, переопределяют параметры базы данных по умолчанию для QUOTED_IDENTIFIER. По умолчанию клиенты ODBC и OLE DB при соединении с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливают параметр QUOTED_IDENTIFIER инструкции SET уровня соединения в состояние ON. Дополнительные сведения см. в разделе [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ Настройки уровня соединения, установленные с помощью инструкции SET, переопределяют параметры базы данных по умолчанию для QUOTED_IDENTIFIER. По умолчанию клиенты ODBC и OLE DB при соединении с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливают параметр QUOTED_IDENTIFIER инструкции SET уровня соединения в состояние ON. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  Состояние этого параметра можно определить с помощью проверки значения столбца is_quoted_identifier_on в представлении каталога sys.databases или свойства IsQuotedIdentifiersEnabled функции DATABASEPROPERTYEX.  
   
@@ -1123,21 +1125,21 @@ FEDERATED_SERVICE_ACCOUNT = ON | ОТКЛЮЧЕНИЕ
 |\<db_user_access_option >|Да|Да|  
 |\<db_update_option >|Да|Да|  
 |\<delayed_durability_option >|Да|Да|  
-|\<external_access_option >|Да|Нет|  
-|\<cursor_option >|Да|Нет|  
-|\<auto_option >|Да|Нет|  
-|\<sql_option >|Да|Нет|  
-|\<recovery_option >|Да|Нет|  
-|\<target_recovery_time_option >|Нет|Да|  
-|\<database_mirroring_option >|Нет|Нет|  
-|ALLOW_SNAPSHOT_ISOLATION|Нет|Нет|  
-|READ_COMMITTED_SNAPSHOT|Нет|Да|  
+|\<external_access_option >|Да|нет|  
+|\<cursor_option >|Да|нет|  
+|\<auto_option >|Да|нет|  
+|\<sql_option >|Да|нет|  
+|\<recovery_option >|Да|нет|  
+|\<target_recovery_time_option >|нет|Да|  
+|\<database_mirroring_option >|нет|нет|  
+|ALLOW_SNAPSHOT_ISOLATION|нет|нет|  
+|READ_COMMITTED_SNAPSHOT|нет|Да|  
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Да|Да|  
-|\<service_broker_option >|Да|Нет|  
+|\<service_broker_option >|Да|нет|  
 |DATE_CORRELATION_OPTIMIZATION|Да|Да|  
 |\<parameterization_option >|Да|Да|  
 |\<change_tracking_option >|Да|Да|  
-|\<db_encryption >|Да|Нет|  
+|\<db_encryption >|Да|нет|  
   
  Кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] очищается при установке одного из следующих параметров.  
   
@@ -1223,7 +1225,7 @@ GO
   
  Результирующий набор показывает, что платформа изоляции моментального снимка включена.  
   
- |имя |snapshot_isolation_state |description|  
+ |NAME |snapshot_isolation_state |description|  
  |-------------------- |------------------------  |----------|  
  |AdventureWorks2012   |1                        | ON |  
   
@@ -1251,7 +1253,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### <a name="e-enabling-the-query-store"></a>Д. Включение хранилища запросов  
- **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Следующий пример включает хранилище запросов и настраивает его параметры.  
   
@@ -1259,11 +1261,11 @@ SET CHANGE_TRACKING = OFF;
 ALTER DATABASE AdventureWorks2012  
 SET QUERY_STORE = ON   
     (  
-      OPERATION_MODE = READ_ONLY   
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 5 )  
-    , DATA_FLUSH_INTERVAL_SECONDS = 2000   
-    , MAX_STORAGE_SIZE_MB = 10   
-    , INTERVAL_LENGTH_MINUTES = 10   
+      OPERATION_MODE = READ_WRITE   
+    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )  
+    , DATA_FLUSH_INTERVAL_SECONDS = 900   
+    , MAX_STORAGE_SIZE_MB = 1024   
+    , INTERVAL_LENGTH_MINUTES = 60   
     );  
 ```  
   
@@ -1279,7 +1281,6 @@ SET QUERY_STORE = ON
  [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
+ [sys.data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [Рекомендации по хранилищу запросов](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
-  
-

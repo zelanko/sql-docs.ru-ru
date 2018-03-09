@@ -2,34 +2,35 @@
 title: "Журнал XTP-транзакций (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d16491ef-4a25-4e02-88a7-ab7c0812904a
-caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "7"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 245749e60af21a0aa130cc5ac63950c592188e3b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: dcf41a8d7223bbebc313f22fa5c08cffffcb3733
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-xtp-transaction-log"></a>Журнал XTP-транзакций SQL Server
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Объект производительности транзакций XTP SQL Server содержит счетчики, связанные с журналом транзакций In-Memory OLTP в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  В этой таблице перечислены счетчики **журналов транзакций XTP SQL Server** .  
   
-|Счетчик|Описание|  
+|Счетчик|Description|  
 |-------------|-----------------|  
 |**Записанные байты журнала/с**|Число байтов, записанное в журнал транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] механизмом In-Memory OLTP (в среднем), в секунду.|  
 |**Записанные записи журнала/с**|Число записей в журнале транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , создаваемых механизмом In-Memory OLTP (в среднем), в секунду.|  
@@ -38,4 +39,3 @@ ms.lasthandoff: 06/22/2017
  [Счетчики производительности XTP (In-Memory OLTP) для SQL Server](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   
-

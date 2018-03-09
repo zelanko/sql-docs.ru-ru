@@ -2,9 +2,12 @@
 title: "Работа с каталогами и путями в таблицах FileTable | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -12,19 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d41410b3da1f823a29da0c5b7bd706dff4ce4584
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: fc785c40fae67d160fd8dff1947e964a58c78d67
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Работа с каталогами и путями в таблицах FileTable
-  Описывает структуру каталогов, в которой файлы хранятся в таблицах FileTable.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Описывает структуру каталогов, в которой файлы хранятся в таблицах FileTable.  
   
 ##  <a name="HowToDirectories"></a> Практическое руководство. Работа с каталогами и путями в таблицах FileTable  
  Следующие 3 функции можно использовать для работы с каталогами FileTable в [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
@@ -38,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="BestPracticeRelativePaths"></a> Практическое руководство. Использование относительных путей для переносимого кода  
  Чтобы код и приложения были независимы от текущего компьютера и базы данных, следует избегать создания кода с использованием абсолютных путей. Вместо этого рекомендуется получать полный путь к файлу во время выполнения с помощью функций [FileTableRootPath (Transact-SQL)](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) и [GetFileNamespacePath (Transact-SQL)](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md), как показано в приведенном ниже примере. По умолчанию функция **GetFileNamespacePath** возвращает относительный путь к файлу, находящемуся внутри корневого пути к базе данных.  
   
-```tsql  
+```sql  
 USE database_name;  
 DECLARE @root nvarchar(100);  
 DECLARE @fullpath nvarchar(1000);  
@@ -97,7 +101,7 @@ GO
   
 ||||  
 |-|-|-|  
-|*is_directory* **value**|*file_stream* **value**|**Поведение**|  
+|*is_directory* **значение**|*file_stream* **значение**|**Поведение**|  
 |FALSE|NULL|Это недопустимое сочетание, которое будет перехвачено системным ограничением.|  
 |FALSE|\<значение>|Этот элемент представляет файл.|  
 |TRUE|NULL|Этот элемент представляет каталог.|  
@@ -117,4 +121,3 @@ GO
  [Доступ к таблицам FileTable с помощью API-интерфейсов ввода-вывода файлов](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   
   
-

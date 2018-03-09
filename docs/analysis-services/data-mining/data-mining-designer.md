@@ -2,12 +2,13 @@
 title: "Конструктор интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +18,20 @@ helpviewer_keywords:
 - Data Mining Designer
 - data mining [Analysis Services], modifying
 ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
-caps.latest.revision: 35
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8ba0683192d2e0aabfce9e8c340692e48053a7f8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6f173bca2b294cb839e542d1bc5e8a650b6d7afb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-designer"></a>конструктор интеллектуального анализа данных
-  Конструктор интеллектуального анализа данных — это основная среда для работы с моделями интеллектуального анализа данных в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Чтобы получить доступ к конструктору, выберите элемент существующей структуры интеллектуального анализа данных либо создайте новую структуру или модель интеллектуального анализа с помощью мастера интеллектуального анализа данных. Конструктор интеллектуального анализа данных можно использовать для выполнения следующих задач.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Конструктор интеллектуального анализа данных — это основная среда для работы с моделями интеллектуального анализа данных в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Чтобы получить доступ к конструктору, выберите элемент существующей структуры интеллектуального анализа данных либо создайте новую структуру или модель интеллектуального анализа с помощью мастера интеллектуального анализа данных. Конструктор интеллектуального анализа данных можно использовать для выполнения следующих задач.  
   
 -   Изменение структуры и модели интеллектуального анализа, ранее созданных при помощи мастера интеллектуального анализа данных.  
   
@@ -45,9 +46,9 @@ ms.lasthandoff: 09/01/2017
 ## <a name="mining-structure-tab"></a>Вкладка «Структура интеллектуального анализа данных»  
  Добавление столбцов и изменение свойств существующей структуры интеллектуального анализа данных производится на вкладке **Структура интеллектуального анализа** . В следующих заданиях и подразделах приведены более подробные сведения о работе со структурами интеллектуального анализа.  
   
- [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Структуры интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
- [Задачи и инструкции по структуре интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Интеллектуального анализа данных структуры задачи и инструкции](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
 ## <a name="mining-models-tab"></a>Вкладка «Модели интеллектуального анализа данных»  
  Вкладка **Модели интеллектуального анализа данных** предназначена для управления существующими моделями интеллектуального анализа и создания новых моделей. Модели интеллектуального анализа данных всегда основаны на существующей структуре интеллектуального анализа.  
@@ -56,9 +57,9 @@ ms.lasthandoff: 09/01/2017
   
  Дополнительные сведения о работе с моделями интеллектуального анализа данных см. в следующих разделах.  
   
- [Модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Модели интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
- [Задачи и инструкции по модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Задачи модели интеллектуального анализа данных и инструкции](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
 ## <a name="mining-model-viewer-tab"></a>Вкладка «Средство просмотра модели интеллектуального анализа данных»  
  Вкладка **Средство просмотра модели интеллектуального анализа данных** применяется для визуального изучения моделей интеллектуального анализа данных. Каждая модель интеллектуального анализа связана с пользовательским средством просмотра, которое отображает характерное для модели содержимое. Модель интеллектуального анализа данных также можно изучать с помощью средства просмотра содержимого.  
@@ -67,16 +68,16 @@ ms.lasthandoff: 09/01/2017
   
  [Средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
- [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
 ## <a name="mining-accuracy-chart-tab"></a>Вкладка «Диаграмма точности интеллектуального анализа»  
  Вкладка **Диаграмма точности интеллектуального анализа данных** позволяет проверить точность прогнозов отдельной модели интеллектуального анализа или сравнить эффективность нескольких моделей из одной структуры интеллектуального анализа. Вкладка содержит средства для фильтрации данных, выбора моделей интеллектуального анализа данных и отображения результатов в виде диаграммы точности прогнозов, диаграммы прибыльности или матрицы классификации.  
   
  Дополнительные сведения о тестировании и проверке моделей интеллектуального анализа данных см. в следующих разделах.  
   
- [Тестирование и проверка (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Тестирование и проверка &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
- [Задачи и решения по тестированию и проверке (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Тестирование и проверка задачи и инструкции по &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
 ## <a name="mining-model-prediction-tab"></a>Вкладка «Прогноз модели интеллектуального анализа данных»  
  Вкладка **Прогноз модели интеллектуального анализа данных** содержит построитель прогнозирующих запросов, который применяется для создания запроса прогнозов расширений интеллектуального анализа данных. Вкладка содержит средства, которые позволяют указать модели интеллектуального анализа и входные таблицы, сопоставить столбцы модели интеллектуального анализа столбцам во входных таблицах, добавить функции в запрос и указать условие для каждого столбца.  
@@ -87,10 +88,9 @@ ms.lasthandoff: 09/01/2017
   
  [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md)  
   
- [Задачи и инструкции по запросам интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)  
+ [Задачи запроса интеллектуального анализа данных и инструкции по](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)  
   
 ## <a name="see-also"></a>См. также  
  [Решения для интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "SearchDirectionEnum | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - SearchDirectionEnum enumeration [ADO]
 ms.assetid: 81272ae3-2165-4f4e-adfe-9ede0368cb17
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 46b8e127ed67c71a733cf232e92e967a031b4314
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1ae30d042b6e1f4a3590cd8d3a46a636004aead8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="searchdirectionenum"></a>SearchDirectionEnum
 Указывает направление поиска записей в [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adSearchBackward**|-1|Выполняет поиск назад, остановка в начале **записей**. Если совпадение не найдено, указатель записи расположена на [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md).|  
 |**adSearchForward**|1|Поиск вперед, остановка в конце **записей**. Если совпадение не найдено, указатель записи расположена на [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md).|  
@@ -47,5 +46,4 @@ ms.lasthandoff: 09/09/2017
 |AdoEnums.SearchDirection.FORWARD|  
   
 ## <a name="applies-to"></a>Объект применения  
- [Find-метод (ADO)](../../../ado/reference/ado-api/find-method-ado.md)
-
+ [Метод Find (ADO)](../../../ado/reference/ado-api/find-method-ado.md)

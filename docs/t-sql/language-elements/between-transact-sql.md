@@ -3,8 +3,11 @@ title: "МЕЖДУ (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 08/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -22,20 +25,19 @@ helpviewer_keywords:
 - BETWEEN operator
 - range to test [SQL Server]
 ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 71bc6e3bee0176f895dac6037219294acdab52d0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: b2e5f028fdc431ebd52302cc0b62dcf456d1d79f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="between-transact-sql"></a>Оператор BETWEEN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Определяет диапазон для проверки.  
   
@@ -71,7 +73,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
   
  NOT BETWEEN возвращает **TRUE** Если значение *test_expression* меньше, чем значение *begin_expression* или больше, чем значение *end_expression* .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Для задания исключающего диапазона используйте операторы «больше» (>) и «меньше» (<). Если любой параметр предиката BETWEEN или NOT BETWEEN имеет значение NULL, результат не определен (UNKNOWN).  
   
 ## <a name="examples"></a>Примеры  
@@ -185,7 +187,7 @@ WHERE RateChangeDate BETWEEN '20011212' AND '20020105';
  Запрос извлекает ожидаемые строки, так как значения даты в запросе и **datetime** значения, хранящиеся в `RateChangeDate` были заданы без указания времени даты. Если время не указано, по умолчанию оно принимается равным 0:00. Обратите внимание, что строка, время в которой позднее 12:00. 05.01.2002, не будет возвращена данным запросом, так как она находится за пределами диапазона.  
   
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [&#62; &#40; Больше &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/greater-than-transact-sql.md)   
  [&#60; &#40; Меньше, чем &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/less-than-transact-sql.md)   
  [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
@@ -195,6 +197,5 @@ WHERE RateChangeDate BETWEEN '20011212' AND '20020105';
  [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-
 
 

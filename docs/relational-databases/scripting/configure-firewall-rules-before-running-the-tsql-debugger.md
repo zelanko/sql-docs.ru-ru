@@ -2,9 +2,12 @@
 title: "Настройка правил брандмауэра перед запуском отладчика TSQL | Документация Майкрософт"
 ms.custom: 
 ms.date: 10/20/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,19 +24,19 @@ helpviewer_keywords:
 - ports [SQL Server], Transact-SQL debugger
 - TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
-caps.latest.revision: 43
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1aec49f13a7e4c37fd9d8212393c5bdc3a5694d0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 1c1196f3195b1b54844a5420a8a9322265a1efa8
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Настройка правил брандмауэра перед запуском отладчика TSQL
-  Необходимо настроить правила брандмауэра Windows, включив отладку [!INCLUDE[tsql](../../includes/tsql-md.md)] при подключении к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], который работает на компьютере, отличном от того, на котором работает редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Необходимо настроить правила брандмауэра Windows, включив отладку [!INCLUDE[tsql](../../includes/tsql-md.md)] при подключении к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], который работает на компьютере, отличном от того, на котором работает редактор запросов [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="configuring-the-transact-sql-debugger"></a>Настройка отладчика Transact-SQL  
  Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] имеет как серверные, так и клиентские компоненты. Серверные компоненты отладчика устанавливаются с каждым экземпляром ядра СУБД из [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 2 (SP2) или более поздней версии. Клиентские компоненты отладчика устанавливаются в следующих случаях:  
@@ -170,4 +173,3 @@ ms.lasthandoff: 06/22/2017
  [Редактор запросов компонента Database Engine (среда SQL Server Management Studio)](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)  
   
   
-

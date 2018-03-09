@@ -2,31 +2,32 @@
 title: "Компоненты SQL Server для поддержки R | Документы Microsoft"
 ms.custom: 
 ms.date: 04/05/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54e9ef3f-1136-471e-865a-7cf013673186
-caps.latest.revision: 9
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: c66936108d054c5ee4772769732c8543283af3f9
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e2bff53d3e324999c7cdca743d6e7b2ff9f85780
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="components-in-sql-server-to-support-r"></a>Компоненты SQL Server для поддержки R
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В SQL Server 2016 и 2017 г. компонент database engine включает дополнительные компоненты, поддерживающие расширяемости для внешнего сценария языков, включая R и Python. Была добавлена поддержка языка R в SQL Server 2016; Поддержка Python был добавлен в службах SQL Server 2017 г машины обучения.
 
-В этом разделе описываются новые компоненты, которые работают в частности, с помощью языка r.. Описание принципов работы этих компонентов с открытым исходным кодом R см. в разделе [взаимодействие R](r-interoperability-in-sql-server.md)
+В этом разделе описываются новые компоненты, которые работают в частности, с помощью языка r. Описание принципов работы этих компонентов с открытым исходным кодом R см. в разделе [взаимодействие R](r-interoperability-in-sql-server.md)
 
 ## <a name="components-and-providers"></a>Компоненты и поставщиков
 
@@ -111,7 +112,7 @@ BxlServer использует вспомогательное соединени
 4. BxlServer взаимодействует со средой выполнения R для управления обменом данными между [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] и хранилищем результатов работы.
 5. Вспомогательные SQL управляет взаимодействием связанные задачи и процессы, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 6. BxlServer использует вспомогательное соединение SQL для передачи состояния и результатов в [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] получает результаты и закрывает связанные задачи и процессы.
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Возвращает результаты и закрывает связанные задачи и процессы.
 
 ### <a name="r-scripts-executed-from-a-remote-client"></a>Скрипты R, выполняемые из удаленного клиента
 
@@ -136,4 +137,3 @@ BxlServer использует вспомогательное соединени
 [Общие сведения о безопасности](security-overview-sql-server-r.md)
 
 [Вопросы безопасности](security-considerations-for-the-r-runtime-in-sql-server.md)
-

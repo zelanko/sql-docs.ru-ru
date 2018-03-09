@@ -2,30 +2,30 @@
 title: "Настройки монитора доставки журналов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.databaseproperties.logshipping.settings.monitor.f1
+f1_keywords: sql13.swb.databaseproperties.logshipping.settings.monitor.f1
 ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
-caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "17"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e93dde0e413ab7f7303d0f8404cdc4311edf8aa7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 39a41cec811cacb613ef61a8cf0b5c753f84fd86
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="log-shipping-monitor-settings"></a>Настройки монитора доставки журналов
-  Используйте эту страницу для настройки и изменения параметров монитора доставки журналов на сервере мониторинга.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Используйте эту страницу для настройки и изменения свойств сервера мониторинга доставки журналов.  
   
  Основные сведения о доставке журналов изложены в статье [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/22/2017
  **Экземпляр сервера мониторинга**  
  Отображает имя экземпляра сервера, настроенного в качестве сервера мониторинга для конфигурации доставки журнала.  
   
- **Connect**  
+ **Подключить**  
  Выберите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который используется в качестве сервера мониторинга, и соединитесь с ним. Учетная запись, использованная для подключения, должна быть экземпляром предопределенной роли сервера sysadmin на экземпляре сервера-получателя.  
   
  **С помощью олицетворения учетной записи-посредника этого задания**  
@@ -51,11 +51,10 @@ ms.lasthandoff: 06/22/2017
  **Расписание**  
  Текущее расписание задания предупреждения агента SQL Server.  
   
- **Правка**  
+ **Изменить**  
  Измените параметры задания предупреждения агента SQL Server.  
   
  **Отключить это задание**  
  Приостановите задание предупреждения агента SQL Server.  
   
   
-

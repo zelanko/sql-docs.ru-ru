@@ -3,7 +3,7 @@ title: "Пример свойства состояния (поле) (Visual Basi
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Status property [ADO Field], Visual Basic example
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4ea3ebba271ebdc12802b31cc1f50cdd3befead0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 91c3418fea062661ffba94feb791d700301ff097
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="status-property-example-field-vb"></a>Пример свойства состояния (поле) (Visual Basic)
 В следующем примере открывается документ из папки/Чтение с помощью [публикации поставщика услуг Интернета](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). [Состояние](../../../ado/reference/ado-api/status-property-ado-field.md) свойство [поле](../../../ado/reference/ado-api/field-object.md) объект [запись](../../../ado/reference/ado-api/record-object-ado.md) сначала устанавливается **adFieldPendingInsert**, обновляться для **adFieldOk**.  
@@ -99,8 +98,7 @@ Attribute VB_Name = "StatusField"
 Attribute VB_Name = "StatusField"  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект field](../../../ado/reference/ado-api/field-object.md)   
  [Объект записи (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Свойство Status (ADO поле)](../../../ado/reference/ado-api/status-property-ado-field.md)
-
+ [Свойство Status (объект Field ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)

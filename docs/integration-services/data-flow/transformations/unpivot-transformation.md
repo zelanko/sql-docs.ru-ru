@@ -1,10 +1,13 @@
 ---
-title: "Преобразование отмены свертывания | Документы Microsoft"
+title: "Преобразование отмены свертывания | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -18,28 +21,27 @@ helpviewer_keywords:
 - normalized data [Integration Services]
 - datasets [Integration Services], normalized data
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
-caps.latest.revision: 45
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 62a84ccfd5fdf3e6b439388e6175804b567f4be3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 667a8c77caa3d3cdbfe4601f1f8597ac7e6d5a11
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="unpivot-transformation"></a>Преобразование отмены свертывания
   Преобразование «Отмена свертывания» превращает набор ненормализованных данных в более нормализованную версию за счет развертывания значений из нескольких столбцов одной записи в несколько записей с теми же значениями в одном столбце. Например, набор данных с перечнем имен клиентов имеет одну строку для каждого клиента, при этом купленные товары и их количество отображаются в столбцах строки. После нормализации с помощью преобразования отмены свертывания набор данных содержит отдельную строку по каждому продукту, приобретенному клиентом.  
   
  На диаграмме ниже показан набор данных до преобразования «Отмена сведения» в столбце Product.  
   
- ![Набор данных после отмены сведения](../../../integration-services/data-flow/transformations/media/mw-dts-18.gif "набор данных после отмены сведения")  
+ ![Набор данных после отмены сведения](../../../integration-services/data-flow/transformations/media/mw-dts-18.gif "Набор данных после отмены сведения")  
   
  На диаграмме ниже показан набор данных после преобразования «Отмена сведения» в столбце Product.  
   
- ![Набор данных до отмены сведения](../../../integration-services/data-flow/transformations/media/mw-dts-17.gif "набор данных до отмены сведения")  
+ ![Набор данных до отмены сведения](../../../integration-services/data-flow/transformations/media/mw-dts-17.gif "Набор данных до отмены сведения")  
   
  В некоторых случаях результаты преобразования «Отмена свертывания» могут содержать строки с непредвиденными значениями. Например, если образец данных для отмены свертывания, показанных на диаграмме, содержит для пользователя Фреда во всех столбцах Qty значения NULL, то для Фреда выходные данные будут содержать только одну строку, а не пять. Столбец Qty будет содержать либо значение NULL, либо ноль в зависимости от типа данных столбца.  
   
@@ -96,9 +98,8 @@ ms.lasthandoff: 08/19/2017
   
  В сценарии отмены свертывания, описанном в разделе [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), именем столбца значений ключа сведения является **Product** , оно обозначает новый столбец **Product** , в который осуществляется отмена свертывания столбцов **Ham**, **Soda**, **Milk**, **Beer**и **Chips** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Преобразование "Сведение"](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
+ [Преобразование «Сведение»](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
   
   
-

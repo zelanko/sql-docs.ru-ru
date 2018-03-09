@@ -2,13 +2,13 @@
 title: "Создание и управление локальной секции (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - partitions [Analysis Services], local
 - partitions [Analysis Services], creating
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
-caps.latest.revision: 23
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 94cf5d3bdf0feadadf2180c6eb03f9898a4b6966
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ebc3093a0e030aca329338359be2a6f256c24fe7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Создание локальной секции и управление ей (Analysis Services)
-  Для улучшения производительности обработки можно создать дополнительные секции для группы мер. Несколько секций позволяют разделять фактические данные между соответствующим числом файлов физических данных на локальном и удаленных серверах. В службах Analysis Services секции могут обрабатываться параллельно, что дает больше контроля над процессом обработки рабочих нагрузок на сервере.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Для улучшения производительности обработки можно создать дополнительные секции для группы мер. Несколько секций позволяют разделять фактические данные между соответствующим числом файлов физических данных на локальном и удаленных серверах. В службах Analysis Services секции могут обрабатываться параллельно, что дает больше контроля над процессом обработки рабочих нагрузок на сервере.  
   
  Секции могут создаваться во время разработки модели в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] или при развертывании решения с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или XMLA-скрипта. Рекомендуется выбрать и использовать только один подход. При использовании разных средств может возникнуть ситуация, когда изменения, внесенные в развернутую базу данных с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , будут перезаписаны последующим развертыванием решения из [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
@@ -129,9 +129,8 @@ ms.lasthandoff: 09/01/2017
  В качестве последнего действия обычно необходимо удалить секцию по умолчанию, которая была основана на самой таблице (если она еще есть), иначе секции, основанные на запросах, будут перекрываться с запросом, основанным на полной таблице.  
   
 ## <a name="see-also"></a>См. также  
- [Секции (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Секций &#40; Analysis Services — многомерные данные &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Удаленные секции](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Объединение секций в службах Analysis Services (службы SSAS — многомерные данные)](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Слияние секций в службы Analysis Services &#40; Службы SSAS — многомерные &#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   
-

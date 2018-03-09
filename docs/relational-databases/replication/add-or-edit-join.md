@@ -2,29 +2,30 @@
 title: "Добавление или изменение соединения | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.addeditjoin.f1
+f1_keywords: sql13.rep.newpubwizard.addeditjoin.f1
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 70780bc8284ad454014f2b1e0188d9a22db6ba03
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "25"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: d9aece9102787b048d9a46f32a17013ae057a9da
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-or-edit-join"></a>Добавление или изменение соединения
-  Диалоговые окна **Добавить соединение** и **Изменить соединение** позволяют добавлять и редактировать фильтры соединения для публикаций слиянием.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Диалоговые окна **Добавление соединения** и **Изменение соединения** позволяют добавлять и редактировать фильтры соединения для публикаций слиянием.  
   
 > [!NOTE]  
 >  Для редактирования фильтра в существующей публикации необходим новый моментальный снимок для этой публикации. Если публикация содержит подписки, эти подписки должны быть повторно инициализированы. Дополнительные сведения об изменении свойств см. в статье [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
@@ -70,7 +71,7 @@ ms.lasthandoff: 06/22/2017
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Просмотр и изменение свойств публикации](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Фильтрация опубликованных данных](../../relational-databases/replication/publish/filter-published-data.md)   
- [Фильтры соединения](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Публикация данных и объектов базы данных](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

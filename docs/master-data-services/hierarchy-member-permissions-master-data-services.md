@@ -2,9 +2,12 @@
 title: "Разрешения для элементов иерархии (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - members [Master Data Services], permissions
 - permissions [Master Data Services], members
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
-caps.latest.revision: 11
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 40b02314019015dcc6a348dcc7569c72fe098f98
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 831587a0a6a3c86491ea0b2e7fba1595664e8897
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Разрешения на элементы иерархии (службы Master Data Services)
   Разрешения на элементы иерархии не являются обязательными и их следует использовать только в тех случаях, когда пользователь должен иметь ограниченный доступ к определенным элементам. Если на вкладке **Элементы иерархии** разрешения не назначены, то разрешения пользователя определяются только на основании разрешений, заданных на вкладке **Модели** .  
@@ -44,7 +46,7 @@ ms.lasthandoff: 09/07/2017
 |**Чтение**|Элементы отображаются.<br /><br /> <br /><br /> Примечание. При назначении только разрешения **Чтение** уровню **Корневой**элементы на более низких уровнях, чем **Корневой** , будут доступны только для чтения. Однако в явных иерархиях и коллекциях пользователь может перемещать элементы на уровень **Корневой** и добавлять новые элементы к уровню **Корневой**.|  
 |**Создание**|Разрешение "Создание" недоступно в разрешении элемента иерархии.|  
 |**Update**|Элементы отображаются, и пользователь может их изменять. Пользователь также может перемещать элементы в явных иерархиях или коллекциях, к которым принадлежат элементы.|  
-|**Delete**|Элементы отображаются, и пользователь может их удалять.|  
+|**Удаление**|Элементы отображаются, и пользователь может их удалять.|  
 |**Запретить**|Элементы не отображаются.|  
   
  Назначенные на вкладке **Элементы иерархии** разрешения вступают в силу не сразу. Частота применения разрешений зависит от параметра **Интервал обработки безопасности элементов** в таблице "Системные параметры" в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Применить разрешения для элементов можно немедленно, выполнив шаги, описанные в разделе [Срочное применение разрешения для элемента (службы Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
@@ -75,4 +77,3 @@ ms.lasthandoff: 09/07/2017
  [Срочное применение разрешения для элемента (службы Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
   
   
-

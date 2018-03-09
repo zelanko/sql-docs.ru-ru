@@ -2,31 +2,33 @@
 title: "Службы Analysis Services документации для разработчиков | Документы Microsoft"
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
 - multidimensional data [Analysis Services], developer's guide
 - developer's guide [Analysis Services - multidimensional data]
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
-caps.latest.revision: 22
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b20751879e566f85d12545238a890d4667190306
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4694fd3def6dea209929f99559fcc61fe833972a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Документация для разработчика служб Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
 В службах Analysis Services почти для всех объектов и рабочей нагрузки можно программировать и часто является более чем одним из подходов для выбора.  Варианты написания управляемого кода, скрипта или с помощью открытых стандартах, таких как XML для Аналитики и MSOLAP, если ваш требований к решению исключают с использованием .NET framework.
 
 ## <a name="what-you-can-accomplish-in-code"></a>Можно сделать в коде
@@ -79,7 +81,6 @@ ms.lasthandoff: 09/01/2017
 
 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md) документы командлеты, используемые для административных функций, а также общего назначения **Invoke-ASCmd** командлет, который принимает любой скрипт или запрос в качестве входных данных.
 
-## <a name="see-also"></a>См. также:
-[Технический справочник по &#40; Службы SSAS &#41; ](../analysis-services/powershell/technical-reference-ssas.md) 
- [Запроса и справочник по языку выражений &#40; Службы Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)
-
+## <a name="see-also"></a>См. также
+[Технический справочник по ](../analysis-services/powershell/technical-reference-ssas.md) 
+ [запроса и справочник по языку выражений &#40; Службы Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)

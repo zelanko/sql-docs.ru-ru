@@ -2,36 +2,35 @@
 title: "Инструкция DRILLTHROUGH (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- DRILLTHROUGH
-dev_langs:
-- kbMDX
+f1_keywords: DRILLTHROUGH
+dev_langs: kbMDX
 helpviewer_keywords:
 - DRILLTHROUGH statement
 - retrieving data
 - data retrieval [MDX]
 ms.assetid: dfa22755-0ed4-4bba-9c31-7ade26d9ebdb
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 7118640d592f34e6ea4da6f866f1bfe22317239d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6beadd42ec1f41ccec1ce8b0df999897b50568f5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>Управление данными MDX - ДЕТАЛИЗАЦИИ
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Получает строки базовой таблицы, которые использовались для создания определенной ячейки или куба.  
   
@@ -56,7 +55,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  *Set_of_Attributes_and_Measures*  
  Список атрибутов и мер измерения, разделенный запятыми.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Сквозная детализация — это операция, в которой конечный пользователь выбирает одиночную ячейку из куба и извлекает результирующий набор из исходных данных для данной ячейки для получения более полной информации. По умолчанию результирующий набор сквозной детализации выводится из строк таблицы, на основе которых было вычислено значение выбранной ячейки куба. Для использования сквозной детализации конечными пользователями необходима поддержка этой возможности их клиентскими приложениями. В [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], результаты извлекаются прямо из хранилища MOLAP, если не запрашиваются секции или измерения ROLAP.  
   
 > [!IMPORTANT]  
@@ -115,4 +114,3 @@ RETURN
  [Инструкции для манипулирования данными многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   
-

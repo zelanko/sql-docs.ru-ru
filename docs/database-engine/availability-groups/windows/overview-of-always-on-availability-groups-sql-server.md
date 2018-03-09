@@ -2,11 +2,13 @@
 title: "Обзор групп доступности AlwaysOn (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +18,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], data movement
 - Availability Groups [SQL Server]
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 22f2cac063d651a2c5eb2867e54a64515b1472e1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 162c688c587e0d9277f713e3fe7f9ee35e88bfcc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Обзор групп доступности AlwaysOn (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
  > Содержимое, связанное с предыдущими версиями SQL Server, см. в разделе [Обзор групп доступности AlwaysOn (SQL Server)](https://msdn.microsoft.com/en-US/library/ff877884(SQL.120).aspx).
 
@@ -62,7 +64,7 @@ ms.lasthandoff: 08/02/2017
  ![Группа доступности с пятью репликами](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "Группа доступности с пятью репликами")  
   
 ##  <a name="AvDbs"></a> Availability Databases  
- Чтобы можно было добавить базу данных в группу доступности, база данных должна быть в сети, быть доступной для чтения и записи и существовать на экземпляре сервера, на котором располагается первичная реплика. При добавлении база данных присоединяется к группе доступности как база данных-источник, оставаясь доступной для клиентов. База данных-получатель не существует до тех пор, пока резервные копии новой базы данных-источника не будут восстановлены на экземпляр сервера, на котором размещается вторичная реплика (с помощью инструкции RESTORE WITH NORECOVERY). Новая база данных-получатель находится в состоянии RESTORING до тех пор, пока не войдет в состав группы доступности. Дополнительные сведения см. в разделе [Запуск перемещения данных в базе данных-получателе AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+ Чтобы можно было добавить базу данных в группу доступности, база данных должна быть в сети, быть доступной для чтения и записи и существовать на экземпляре сервера, на котором располагается первичная реплика. При добавлении база данных присоединяется к группе доступности как база данных-источник, оставаясь доступной для клиентов. База данных-получатель не существует до тех пор, пока резервные копии новой базы данных-источника не будут восстановлены на экземпляр сервера, на котором размещается вторичная реплика (с помощью инструкции RESTORE WITH NORECOVERY). Новая база данных-получатель находится в состоянии RESTORING до тех пор, пока не войдет в состав группы доступности. Дополнительные сведения см. в статье [Запуск перемещения данных для базы данных-получателя AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
  Присоединение переводит базу данных-получатель в режим ONLINE и инициирует синхронизацию данных с соответствующей базой данных-источником. *Синхронизация данных* — это процесс, в ходе которого изменения в базе данных-источнике воспроизводятся в базе данных-получателе. В процессе синхронизации данных база данных-источник отправляет записи журнала транзакций в базу данных-получатель.  
   
@@ -130,7 +132,7 @@ ms.lasthandoff: 08/02/2017
   
 -   **Проведение операций резервного копирования со вторичными репликами.**  
   
-     Вторичные реплики поддерживают создание резервных копий журнала и резервных копий [только для копирования](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) всей базы данных, файлов и файловых групп. Можно настроить группу доступности, указав предпочтение, где следует выполнять резервное копирование. Важно понимать, что приоритет не определяется в SQL Server, поэтому не влияет на выполнение нерегламентированного резервного копирования. Интерпретация данного приоритета зависит от логики, при ее наличии, которая внесена в задания резервного копирования для каждой из баз данных в указанной группе доступности. Для отдельной реплики доступности можно указать приоритет выполнения резервного копирования на данной реплике по отношению к другим репликам из той же группы доступности. Дополнительные сведения см. в разделе [Активные вторичные реплики: резервное копирование во вторичных репликах (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Вторичные реплики поддерживают создание резервных копий журнала и резервных копий [только для копирования](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) всей базы данных, файлов и файловых групп. Можно настроить группу доступности, указав предпочтение, где следует выполнять резервное копирование. Важно понимать, что приоритет не определяется в SQL Server, поэтому не влияет на выполнение нерегламентированного резервного копирования. Интерпретация данного приоритета зависит от логики, при ее наличии, которая внесена в задания резервного копирования для каждой из баз данных в указанной группе доступности. Для отдельной реплики доступности можно указать приоритет выполнения резервного копирования на данной реплике по отношению к другим репликам из той же группы доступности. Дополнительные сведения см. в статье [Активные вторичные реплики, резервное копирование во вторичных репликах (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Доступ только для чтения к одной или нескольким вторичным репликам (доступные для чтения вторичные реплики)**  
   
@@ -194,4 +196,3 @@ ms.lasthandoff: 08/02/2017
  [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
    
-

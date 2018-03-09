@@ -2,32 +2,33 @@
 title: "Решения для интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data mining [Analysis Services], about data mining
 - data mining [Analysis Services], development
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
-caps.latest.revision: 64
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 595282e28a55171ed5a528d28f37500a21f71c0d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ee2196b673eb9a53d5fefe5c62d1158ae94bf702
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="data-mining-solutions"></a>Решения для интеллектуального анализа данных
-  Решение по интеллектуальному анализу данных представляет собой решение служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , которое содержит один или несколько проектов интеллектуального анализа данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Решение по интеллектуальному анализу данных представляет собой решение служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , которое содержит один или несколько проектов интеллектуального анализа данных.  
   
  Подразделы этого раздела содержат сведения о том, как спроектировать и внедрить интегрированное решение по интеллектуальному анализу данных с помощью служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Общие сведения о процессе разработки в области интеллектуального анализа данных и связанных с этим средствах см. в разделе [Data Mining Concepts](../../analysis-services/data-mining/data-mining-concepts.md).  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_Walkthru"></a> Пошаговое руководство по решениям  
  Содержит обзорные сведения о том, как создавать решения по интеллектуальному анализу данных с помощью мастера интеллектуального анализа данных.  
   
- [Создание реляционной структуры интеллектуального анализа данных](../../analysis-services/data-mining/create-a-relational-mining-structure.md)  
+ [Создание реляционной структуры](../../analysis-services/data-mining/create-a-relational-mining-structure.md)  
  Создание структуры интеллектуального анализа данных на основе реляционных данных, текстовых файлов и других источников, которые можно объединить в представлении источников данных.  
   
  [Создание структуры интеллектуального анализа данных OLAP](../../analysis-services/data-mining/create-an-olap-mining-structure.md)  
@@ -84,14 +85,13 @@ ms.lasthandoff: 09/01/2017
   
 |Задания|Подраздел|  
 |-----------|------------|  
-|Тестирование создаваемых моделей, проверка качества обучающих данных и создание диаграмм, представляющих точность моделей интеллектуального анализа данных.|[Тестирование и проверка (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
+|Тестирование создаваемых моделей, проверка качества обучающих данных и создание диаграмм, представляющих точность моделей интеллектуального анализа данных.|[Тестирование и проверка &#40; интеллектуального анализа данных &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |Обучение модели путем заполнения структуры и связанных моделей данными. Обновление и расширение моделей новыми данными.|[Обработка объектов интеллектуального анализа данных](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
 |Настройка модели интеллектуального анализа данных путем применения фильтров к обучающим данным, выбора другого алгоритма или задания расширенных параметров алгоритма.|[Настройка структуры и моделей интеллектуального анализа данных](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
-|Настройка модели интеллектуального анализа данных путем применения фильтров к данным, используемым в обучении модели.|[Добавление моделей интеллектуального анализа данных в структуру (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Настройка модели интеллектуального анализа данных путем применения фильтров к данным, используемым в обучении модели.|[Добавление моделей интеллектуального анализа данных к структуре &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Обновление решений по интеллектуальному анализу данных и управление ими.|Ссылка подлежит определению|  
   
 ## <a name="see-also"></a>См. также  
- [Учебники по интеллектуальному анализу данных (службы Analysis Services)](../../analysis-services/data-mining-tutorials-analysis-services.md)  
+ [Учебники по интеллектуальному анализу данных &#40; Службы Analysis Services &#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
   
   
-

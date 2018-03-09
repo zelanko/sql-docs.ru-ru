@@ -3,8 +3,11 @@ title: "Инструкция WAITFOR (Transact-SQL) | Документы Microso
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,20 +29,19 @@ helpviewer_keywords:
 - WAITFOR statement
 - timing executions
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
-caps.latest.revision: 40
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 003a48d9f4e7e36061674b60909f84957670f5d5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 2a1453c5d7beaf9d4ab9d140a0414e730c9d651a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Блокирует выполнение пакета, хранимой процедуры или транзакции до наступления указанного времени или интервала времени, либо заданная инструкция изменяет или возвращает, по крайней мере, одну строку.  
   
@@ -62,13 +64,13 @@ WAITFOR
  DELAY  
  Заданный период времени (не более 24 часов), который должен пройти до выполнения пакета, хранимой процедуры или продолжения транзакции.  
   
- "*time_to_pass*"  
+ '*time_to_pass*'  
  Период времени ожидания. *time_to_pass* может быть указан в одном из допустимых форматов для **datetime** данных или его можно указать как локальная переменная. Невозможно указать даты; Таким образом, часть даты **datetime** значение недопустимо.  
   
  TIME  
  Заданное время выполнения пакета, хранимой процедуры или транзакции.  
   
- "*time_to_execute*"  
+ '*time_to_execute*'  
  Время, в которое инструкция WAITFOR завершает работу. *time_to_execute* может быть указан в одном из допустимых форматов для **datetime** данных или его можно указать как локальная переменная. Невозможно указать даты; Таким образом, часть даты **datetime** значение недопустимо.  
   
  *receive_statement*  
@@ -89,7 +91,7 @@ WAITFOR
 > [!IMPORTANT]  
 >  Инструкция WAITFOR с аргументом TIMEOUT применима только к сообщениям компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Дополнительные сведения см. в разделе [RECEIVE &#40; Transact-SQL &#41; ](../../t-sql/statements/receive-transact-sql.md) и [GET CONVERSATION GROUP &#40; Transact-SQL &#41; ](../../t-sql/statements/get-conversation-group-transact-sql.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Во время выполнения инструкции WAITFOR выполняется транзакция, и другие запросы не могут быть выполнены в рамках этой транзакции.  
   
  Действительная продолжительность задержки может отличаться от времени, указанного в *time_to_pass*, *time_to_execute*, или *время ожидания* и зависит от уровня активности сервера. Счетчик времени запускается, когда запланирован поток, связанный с инструкцией WAITFOR. Если сервер занят, запланированный запуск потока может оказаться невозможным, поэтому время задержки может оказаться больше заданного.  
@@ -173,10 +175,9 @@ GO
   
  `A total time of 00:00:10, in hh:mm:ss, has elapsed. Your time is up.`  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Язык управления выполнением &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
  [DateTime &#40; Transact-SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)   
  [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   
-

@@ -3,26 +3,26 @@ title: "Скалярная функция вызывает | Документы 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- escape sequences [ODBC], scalar function calls
+helpviewer_keywords: escape sequences [ODBC], scalar function calls
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4e69cc7382c73aaedda31a902cc8ed8daff5cff8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3fb62d7c916584da7411f398f66a2acf134bfa24
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scalar-function-calls"></a>Вызовы скалярных функций
 Скалярные функции возвращают значение для каждой строки. Например скалярная функция абсолютное значение числового столбца в качестве аргумента принимает и возвращает абсолютное значение каждого значения в столбце. Escape-последовательность для вызова скалярной функции  
@@ -57,4 +57,3 @@ INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)
 ```  
   
  Чтобы определить, скалярные функции, которые поддерживаются источником данных, приложение вызывает **SQLGetInfo** SQL_CONVERT_FUNCTIONS, SQL_NUMERIC_FUNCTIONS, SQL_STRING_FUNCTIONS, SQL_SYSTEM_FUNCTIONS и SQL_TIMEDATE_ Параметры функции. Чтобы определить какие операции преобразования, поддерживаемые **преобразовать** приложение вызывает функцию, **SQLGetInfo** с одним из параметров, которые начинаются с SQL_CONVERT.
-

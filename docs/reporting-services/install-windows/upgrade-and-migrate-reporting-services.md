@@ -1,13 +1,14 @@
 ---
-title: "Обновление и перенос служб Reporting Services | Документы Microsoft"
+title: "Обновление и перенос служб Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,24 +17,22 @@ helpviewer_keywords:
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
-caps.latest.revision: 92
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "92"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
-ms.openlocfilehash: b5706abc4f362ee3bd4f042c1e081951dcd9ad1d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/25/2017
-
+ms.openlocfilehash: f67b915820ae2d458ff6e43c7c3b0bbe7fdf1f98
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-
-# <a name="upgrade-and-migrate-reporting-services"></a>Обновление и перенос служб Reporting Services
+# <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  В этом разделе приведен обзор параметров обновления и миграции для служб SQL Server Reporting Services. Существует два принципиальных подхода к обновлению развертывания служб SQL Server Reporting Services.  
+  Этот раздел содержит общие сведения о вариантах обновления и миграции для служб SQL Server Reporting Services. Существуют два принципиальных подхода к обновлению развертывания служб SQL Server Reporting Services.  
   
 -   **Обновление.** Обновляются компоненты [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на тех серверах и экземплярах, где они установлены в данный момент. Обычно это называется обновлением на месте. Обновление на месте с одного режима сервера [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на другой режим не поддерживается. Например, невозможно обновить сервер отчетов в собственном режиме до сервера отчетов в режиме интеграции с SharePoint. Элементы отчета можно переносить из одного режима в другой. Дополнительные сведения см. в разделе «Миграция из собственного режима в режим интеграции с SharePoint» далее в этом документе.  
   
@@ -45,21 +44,21 @@ ms.lasthandoff: 10/25/2017
  Подробный список поддерживаемых версий и выпусков, которые можно обновить, см. в разделе [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
 > [!TIP]  
->  Последние сведения о проблемах с SQL Server см. в следующих:  
+>  Последние сведения о проблемах, связанных с SQL Server, см. в следующих разделах:  
 >   
 >  -   [Заметки о выпуске SQL Server 2016](http://go.microsoft.com/fwlink/?LinkID=398124).  
   
   
 ##  <a name="bkmk_side_by_side"></a> Параллельная установка  
- SQL Server Reporting Services собственный режим может быть установленных side-by-side с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] развертывание собственного режима.  
+ Службы SQL Server Reporting Services в собственном режиме можно установить параллельно с развертыванием служб [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] в собственном режиме.  
   
- Поддержка развертываний side-by-side служб SQL Server Reporting Services в режиме интеграции с SharePoint и все предыдущие версии [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] компоненты режиме интеграции с SharePoint.  
+ Отсутствует поддержка параллельных развертываний служб SQL Server Reporting Services в режиме интеграции с SharePoint и всех предыдущих версий компонентов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint.  
   
   
 ##  <a name="bkmk_inplace_upgrade"></a> Обновление на месте  
  Обновление завершается программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно использовать для обновления любого компонента или всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , включая службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Программа установки обнаружит существующие экземпляры и предложит выполнить обновление. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программа установки позволяет использовать параметры обновления, которые можно указывать в качестве параметров командной строки или в мастере установки.  
   
- При запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] программы установки, можно выбрать параметр, чтобы обновить одну из следующих версий, или можно установить новый экземпляр SQL Server Reporting Services, работающей side-by-side существующие установки:  
+ После запуска программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно либо обновить одну из следующих версий, либо установить новый экземпляр служб SQL Server Reporting Services, который будет выполняться параллельно с существующими установками.  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
@@ -71,17 +70,17 @@ ms.lasthandoff: 10/25/2017
   
  Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в следующих разделах:  
 
-* [Обновление до SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)
+* [Обновление до SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)
 * [Обновление до SQL Server 2016 с помощью мастера установки (программа установки)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 * [Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)
   
   
 ##  <a name="bkmk_upgrade_checklist"></a> Контрольный список действий перед обновлением  
- Перед обновлением до SQL Server Reporting Services, проверьте следующее.  
+ Перед обновлением до служб SQL Server Reporting Services проверьте следующие моменты.  
   
 -   Ознакомьтесь с требованиями, чтобы определить, поддерживает ли оборудование и программное обеспечение службы [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. Дополнительные сведения см. в разделе [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
--   Средство проверки конфигурации системы (SCC) используется для просмотра на компьютере сервера отчетов условий, которые могут препятствовать успешной установке служб SQL Server Reporting Services. Дополнительные сведения см. в разделе [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
+-   Используйте средство проверки конфигурации системы (SCC) для просмотра на компьютере сервера отчетов условий, которые могут препятствовать успешной установке служб SQL Server Reporting Services. Дополнительные сведения см. в разделе [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
   
 -   Просмотрите рекомендации и руководство по безопасности для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
@@ -91,7 +90,7 @@ ms.lasthandoff: 10/25/2017
   
 -   Создайте резервные копии всех настроек виртуальных каталогов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , существующих в IIS.  
   
--   Удалите недопустимые SSL-сертификаты.  К ним относятся сертификаты с истекшим сроком действия, которые не планируется обновлять до обновления служб Reporting Services.  Наличие недопустимых сертификатов приведет к неудаче обновления, а в файл журнала служб Reporting Services будет записано сообщение об ошибке, аналогичное следующему: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: на веб-сайте не настроен SSL-сертификат.**.  
+-   Удалите недопустимые SSL-сертификаты.  К ним относятся сертификаты с истекшим сроком действия, которые не планируется обновлять до обновления служб Reporting Services.  Наличие недопустимых сертификатов приведет к неудаче обновления, а в файл журнала служб Reporting Services будет записано сообщение об ошибке, аналогичное следующему: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: на веб-сайте не настроен SSL-сертификат**.  
   
  Перед обновлением рабочей среды всегда запускайте проверку обновления в предварительной рабочей среде, имеющей аналогичную конфигурацию.  
   
@@ -101,7 +100,7 @@ ms.lasthandoff: 10/25/2017
   
  Но при этом требуется **миграция** установки сервера отчетов вручную, если обнаруживаются любые из следующих условий.  
   
--   Вы хотите изменить тип сервера отчетов, используемого в вашем развертывании. Например, невозможно обновить или преобразовать сервер отчетов в собственном режиме в сервер, работающий в режиме интеграции с SharePoint. Дополнительные сведения см. в разделе [машинного кода к миграции SharePoint &#40; Службы SSRS &#41; ](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md).  
+-   Вы хотите изменить тип сервера отчетов, используемого в вашем развертывании. Например, невозможно обновить или преобразовать сервер отчетов в собственном режиме в сервер, работающий в режиме интеграции с SharePoint. Дополнительные сведения см. в статье [Миграция из собственного режима в режим интеграции с SharePoint (службы SSRS)](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md).  
   
 -   Нужно уменьшить время, на которое сервер отчетов переводится в режим «вне сети» во время процесса обновления. Текущая установка остается в режиме «в сети» при копировании данных содержимого на новый экземпляр сервера отчетов и проверки установки без изменения состояния существующей установки сервера отчетов.  
   
@@ -115,13 +114,13 @@ ms.lasthandoff: 10/25/2017
   
 1.  Если база данных сервера отчетов размещается на удаленном компьютере и у вас нет разрешения на обновление этой базы данных, программа установки предложит вам представить учетные данные для обновления базы данных удаленного сервера отчетов. Обязательно представьте учетные данные, имеющие разрешение **sysadmin** или разрешение на обновление базы данных.  
   
-2.  Программа установки выявляет обстоятельства или настройки, не позволяющие осуществлять обновление, и считывает параметры конфигурации. Ниже представлены примеры, включающие пользовательские модули, развернутые на сервере отчетов. Если обновление заблокировано, необходимо либо изменить установку, чтобы обновление больше не блокируются, либо выполнить миграцию в новый экземпляр SQL Server Reporting Services. Дополнительные сведения см. в документации помощника по обновлению.  
+2.  Программа установки выявляет обстоятельства или настройки, не позволяющие осуществлять обновление, и считывает параметры конфигурации. Ниже представлены примеры, включающие пользовательские модули, развернутые на сервере отчетов. Если обновление заблокировано, необходимо либо модифицировать установку так, чтобы этот процесс был разблокирован, либо перейти на новый экземпляр служб SQL Server Reporting Services. Дополнительные сведения см. в документации помощника по обновлению.  
   
 3.  Если процесс обновления может быть продолжен, программа установки предлагает продолжить его выполнение.  
   
-4.  Программа установки создает новые папки для файлов программы SQL Server Reporting Services. Программных папок для [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] установка включает MSRS13.\< *имя экземпляра*>.  
+4.  Программа установки создает новые папки для программных файлов служб SQL Server Reporting Services. К числу программных папок для установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] относится MSRS13.\<*имя_экземпляра*>.  
   
-5.  Программа установки добавляет программные файлы сервера отчетов SQL Server Reporting Services, средства настройки и служебные программы командной строки, которые входят в состав компонента сервера отчетов.  
+5.  Программа установки добавляет программные файлы сервера отчетов служб SQL Server Reporting Services, средства настройки, а также программы командной строки, которые входят в состав компонента сервера отчетов.  
   
     1.  Программные файлы предшествующих версий удаляются.  
   
@@ -131,30 +130,30 @@ ms.lasthandoff: 10/25/2017
   
     4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] загружается отдельно. Дополнительные сведения см. в разделе [SQL Server Data Tools в Visual Studio 2015](https://msdn.microsoft.com/mt186501).  
   
-6.  Программа установки повторно использует запись службы в диспетчере управления службами для службы сервера отчетов служб отчетов SQL Server. Эта запись службы включает учетную запись службы Windows сервера отчетов.  
+6.  Программа установки повторно использует запись службы в диспетчере управления службами для службы сервера отчетов служб SQL Server Reporting Services. Эта запись службы включает учетную запись службы Windows сервера отчетов.  
   
 7.  Программа установки резервирует новые URL-адреса в соответствии с существующими настройками виртуального каталога в службах IIS. Программа установки может не удалить виртуальные каталоги в IIS, поэтому не забывайте удалять их вручную по завершении процесса обновления.  
   
 8.  Программа установки осуществляет слияние параметров в файлах конфигурации. При использовании в качестве основы файлов конфигурации из текущей установки добавляются новые записи. Устаревшие записи не удаляются, но по завершении процесса обновления они не считываются сервером отчетов. Старые файлы регистрации, устаревший файл RSWebApplication.config и установки виртуального каталога в IIS при обновлении не удаляются. Более старые версии конструктора отчетов, среда Management Studio и другие клиентские средства при обновлении не удаляются. Если они больше не нужны, позаботьтесь об удалении этих файлов и средств по завершении обновления.  
   
- **Миграция:** миграция предыдущей версии установки в собственном режиме в SQL Server Reporting Services имеет те же действия для всех поддерживаемых версий, перечисленных ранее в этом разделе. Дополнительные сведения см. в статье [Перенос установки служб Reporting Services (собственный режим)](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
+ **Миграция**. Миграция предыдущей версии установки в собственном режиме в службы SQL Server Reporting Services представляет собой одну последовательность шагов для всех поддерживаемых версий, перечисленных ранее в этом разделе. Дополнительные сведения см. в статье [Перенос установки служб Reporting Services (собственный режим)](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
   
   
 ##  <a name="bkmk_native_scaleout"></a> Обновление масштабного развертывания служб Reporting Services, работающих в собственном режиме  
  Ниже приводится сводка действий по обновлению развертывания служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме, которое масштабировано на использование более одного сервера отчетов. Этот процесс требует остановки развертывания [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
-1.  Создайте резервные копии ключей шифрования и баз данных сервера отчетов. Дополнительные сведения см. в разделе [резервное копирование и восстановление для служб Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) и [Добавление и удаление ключей шифрования для масштабного развертывания &#40; Диспетчер конфигурации служб SSRS &#41; ](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
+1.  Создайте резервные копии ключей шифрования и баз данных сервера отчетов. Дополнительные сведения см. в статьях [Операции резервного копирования и восстановления для служб Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) и [Добавление и удаление ключей шифрования для масштабного развертывания (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
   
 2.  Используйте диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и удалите все серверы отчетов из масштабированного развертывания. Дополнительные сведения см. в разделе [Настройка масштабного развертывания сервера отчетов в собственном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
-3.  Обновите один из серверов отчетов служб SQL Server Reporting Services.  
+3.  Обновите один из серверов отчетов до служб SQL Server Reporting Services.  
   
 4.  Используйте диспетчер конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для добавления серверов отчетов обратно в развертывание. Дополнительные сведения см. в разделе [Настройка масштабного развертывания сервера отчетов в собственном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
      Для каждого сервера повторите шаги по обновлению и масштабированию.  
   
 ##  <a name="bkmk_sharePoint_scenarios"></a> Обновление в режиме интеграции с SharePoint и сценарии миграции  
- В следующих разделах описаны проблемы и основных шагов, необходимых для обновления или миграции с определенных версий [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] режиме интеграции с SharePoint служб SQL Server Reporting Services [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] режиме интеграции с SharePoint.  
+ В следующих разделах приводится описание возможных проблем и основных шагов, необходимых для обновления или миграции с определенных версий [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint на службы SQL Server Reporting Services [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме SharePoint.  
   
  Есть два компонента установки для обновления развертывания служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint.  
   
@@ -165,41 +164,41 @@ ms.lasthandoff: 10/25/2017
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Надстройка для продуктов SharePoint. Дополнительные сведения см. в статье [Установка и удаление надстройки служб Reporting Services для SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
   
- Подробные инструкции по переносу установки в режиме интеграции с SharePoint см. в разделе [миграцию установки служб Reporting Services &#40; Режиме интеграции с SharePoint &#41; ](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
+ Подробные инструкции по переносу установки в режиме SharePoint см. в статье [Перенос установки служб Reporting Services (режим интеграции с SharePoint)](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
   
 > [!IMPORTANT]  
 >  При выполнении некоторых из следующих сценариев для среды SharePoint неизбежно время простоя. Это вызвано необходимостью обновления различных технологий. Если простой неприемлем, необходимо вместо обновления на месте выполнить миграцию.  
   
-### <a name="includesssql14includessssql14-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]в SQL Server Reporting Services  
+### <a name="includesssql14includessssql14-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] на службы SQL Server Reporting Services  
  **Начальная среда:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или в собственном режиме [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 1 (SP1), SharePoint 2010 или SharePoint 2013.  
   
- **Конечная среда:** служб отчетов SQL Server, SharePoint 2013 или SharePoint 2016.   
+ **Конечная среда:** службы SQL Server Reporting Services, SharePoint 2013 или SharePoint 2016.   
   
 -   **SharePoint 2013/2016:** не поддерживается обновление SharePoint 2010 на месте до SharePoint 2013/2016. Однако процедура **обновления присоединением базы данных поддерживается**  .
   
      Если имеется установленная версия [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , интегрированная с SharePoint 2010, нельзя обновить сервер SharePoint на месте. Однако можно выполнить миграцию баз данных содержимого и баз данных приложений службы из фермы SharePoint 2010 в ферму SharePoint 2013/2016.  
   
-### <a name="includesssql11includessssql11-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]в SQL Server Reporting Services  
+### <a name="includesssql11includessssql11-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] на службы SQL Server Reporting Services  
  **Начальная среда:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или в собственном режиме [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)], SharePoint 2010.  
   
- **Конечная среда:** служб отчетов SQL Server, SharePoint 2013 или SharePoint 2016.   
+ **Конечная среда:** службы SQL Server Reporting Services, SharePoint 2013 или SharePoint 2016.   
   
 -   **SharePoint 2013/2016:** не поддерживается обновление SharePoint 2010 на месте до SharePoint 2013/2016. Однако процедура **обновления присоединением базы данных поддерживается**  .
   
      Если имеется установленная версия [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , интегрированная с SharePoint 2010, нельзя обновить сервер SharePoint на месте. Однако можно выполнить миграцию баз данных содержимого и баз данных приложений службы из фермы SharePoint 2010 в ферму SharePoint 2013/2016.  
   
-### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]в SQL Server Reporting Services  
+### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] на службы SQL Server Reporting Services  
  **Начальная среда:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SharePoint 2010.  
   
- **Конечная среда:** служб отчетов SQL Server, SharePoint 2013 или SharePoint 2016.  
+ **Конечная среда:** службы SQL Server Reporting Services, SharePoint 2013 или SharePoint 2016.  
  
 -   **SharePoint 2013/2016:** не поддерживается обновление SharePoint 2010 на месте до SharePoint 2013/2016. Однако процедура **обновления присоединением базы данных поддерживается**  .
 
     Следует перенести SharePoint, прежде чем можно будет обновить службы Reporting Services.
   
--   Установите версию SQL Server Reporting Services [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] надстройка для SharePoint на каждом веб-интерфейса в ферме. Надстройку можно установить с помощью мастера установки SQL Server Reporting Services или с помощью загрузки надстройки.  
+-   Установите версию служб SQL Server Reporting Services надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для SharePoint на все клиентские веб-интерфейсы в ферме. Установить надстройку можно с помощью мастера установки служб SQL Server Reporting Services или с помощью загрузки надстройки.  
   
--   Запустите установку SQL Server Reporting Services для обновления в режиме SharePoint для каждого «серверов отчетов». Мастер установки SQL Server устанавливает службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и создает новое приложение службы. 
+-   Запустите установку служб SQL Server Reporting Services, чтобы обновить режим интеграции с SharePoint для всех "серверов отчетов". Мастер установки SQL Server устанавливает службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и создает новое приложение службы. 
   
   
 ##  <a name="bkmk_migration_considerations"></a> Вопросы миграции  
@@ -254,4 +253,3 @@ ms.lasthandoff: 10/25/2017
 [Обновление до SQL Server 2016 с помощью мастера установки (программа установки)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

@@ -3,7 +3,7 @@ title: "Введите пример свойства (поля) (VC ++) | Док
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Type property [field] [ADO], VC++ example
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d50cc9fb72a1ac9ba30bc2903fc553d7574736c2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 109fda6751505bbdaf059e97a1bbf645962b9ec1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="type-property-example-field-vc"></a>Пример свойства типа (поле) (VC ++)
 В этом примере демонстрируется [тип](../../../ado/reference/ado-api/type-property-ado.md) свойства выводится имя константы, соответствующее значению **тип** всех [поле](../../../ado/reference/ado-api/field-object.md) объекты в ***Сотрудников*** таблицы. Функция FieldType необходим для выполнения этой процедуры.  
@@ -172,13 +171,12 @@ void PrintComError(_com_error &e) {
  **Тип: adVarChar**  
  **Имя: job_id**  
  **Тип: adSmallInt**  
- **Имя: job_lvl**  
+ **Name: job_lvl**  
  **Тип: adUnsignedTinyInt**  
  **Имя: pub_id**  
  **Тип: adChar**  
  **Имя: hire_date**  
  **Тип: adDBTimeStamp**   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект field](../../../ado/reference/ado-api/field-object.md)   
  [Свойство Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
-

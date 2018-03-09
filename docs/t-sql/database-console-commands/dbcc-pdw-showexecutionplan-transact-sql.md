@@ -3,29 +3,30 @@ title: ": DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL) | Документы Microso
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|database-console-commands
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - TSQL
-caps.latest.revision: 12
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 461ee87f41692172b31125e36553c0eab0b09772
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: af6b466df18df3df0535a2de8f582f57484255aa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>: DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Отображает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] план выполнения для запросов, выполняемых на определенном [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] вычислительный узел или узел элемента управления. Используется для устранения неполадок проблем производительности запросов при выполнении запросов на вычислительные узлы и узел элемента управления.
   
@@ -54,10 +55,10 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
  *pdw_node_id*  
  Идентификатор для узла, на котором выполняется план запроса. Это должно быть целым числом и не может иметь значение NULL. Используется при нацеливании на устройстве.  
   
- *Идентификатор SPID*  
+ *spid*  
  Идентификатор для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сеанса, на котором выполняется план запроса. Это должно быть целым числом и не может иметь значение NULL.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения CONTROL на [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
 Необходимо разрешение VIEW SERVER STATE на устройстве.
@@ -103,4 +104,3 @@ DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );
 ## <a name="see-also"></a>См. также:
 [DBCC PDW_SHOWPARTITIONSTATS &#40; Transact-SQL &#41;](dbcc-pdw-showpartitionstats-transact-sql.md)  
 [DBCC PDW_SHOWSPACEUSED &#40; Transact-SQL &#41;](dbcc-pdw-showspaceused-transact-sql.md)
-

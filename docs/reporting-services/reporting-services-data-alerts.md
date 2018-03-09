@@ -1,27 +1,27 @@
 ---
-title: "Предупреждения об изменении данных служб Reporting Services | Документы Microsoft"
+title: "Предупреждения об изменении данных в службах Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-caps.latest.revision: 33
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "33"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 27956feca3ad15233943a447422e2260bd61c913
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c66c095233b8e7642e4c491767ce678218d8ef42
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-data-alerts"></a>Предупреждения об изменении данных в службах Reporting Services
 
@@ -29,12 +29,12 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-Предупреждения об изменении данных служб SQL Server Reporting Services являются данными решение, поможет вам быть в курсе данных отчетов, требуемых или важна для вас и в соответствующее время. Использование предупреждений об изменении данных позволяет воздержаться от поиска данных — данные будут доставляться вам.
+SQL Server Reporting Services — это управляемое данными решение, информирующее пользователей об изменении данных отчета, которые представляют для них непосредственный интерес. Использование предупреждений об изменении данных позволяет воздержаться от поиска данных — данные будут доставляться вам.
 
 Предупреждения об изменении данных отправляются по электронной почте. В зависимости от степени важности информации можно задать частоту отправления предупреждающих сообщений или указать, что они должны отправляться только при изменении результатов. Можно указать нескольких получателей электронных сообщений, что позволяет держать в курсе коллег, повышая эффективность совместной работы.
 
 > [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
 
 ##  <a name="AlertingWF"></a> Архитектура предупреждений об изменении данных и рабочий процесс
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/09/2017
   
  Следующая диаграмма показывает рабочий процесс создания и сохранения определения предупреждения об изменении данных, создания задания агента SQL Server для начала обработки экземпляра предупреждения об изменении данных и отправки по электронной почте одному или нескольким получателям сообщения, содержащего данные отчета, вызвавшие предупреждение.  
   
- ![Рабочий процесс в службы Reporting Services предупреждения](../reporting-services/media/rs-alertingworkflow.gif "рабочего процесса в предупреждений служб Reporting Services")  
+ ![Рабочий процесс выдачи предупреждений в службах Reporting Services](../reporting-services/media/rs-alertingworkflow.gif "Рабочий процесс выдачи предупреждений в службах Reporting Services")  
   
 ### <a name="reports-supported-by-data-alerts"></a>Отчеты, поддерживаемые предупреждениями об изменении данных  
  Предупреждения об изменении данных могут быть созданы во всех профессиональных отчетах, написанных на языке определения отчета (язык RDL) и созданных в конструкторе отчетов или построителе отчетов. Отчеты, содержащие области данных, такие как таблицы и диаграммы, отчеты с вложенными отчетами и сложные отчеты с несколькими параллельными группами столбцов и вложенными областями данных. Единственными требованиями к отчетам являются присутствие как минимум одной области данных любого типа, а также присутствие источника данных отчета, настроенного на использование сохраненных учетных данных или на работу без учетных данных. Если отчет не содержит областей данных, для него нельзя создать предупреждение.  
@@ -88,7 +88,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="save-data-alert-definitions-and-alerting-metadata"></a>Сохранение определений предупреждений об изменении данных и метаданных предупреждений  
  При установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint будет автоматически создана база данных предупреждений SQL Server.  
   
- Определения предупреждений об изменении данных и метаданные предупреждений сохраняются в базе данных предупреждений. По умолчанию эта база данных называется ReportingServices\<GUID > _Alerting.  
+ Определения предупреждений об изменении данных и метаданные предупреждений сохраняются в базе данных предупреждений. По умолчанию эта база данных имеет имя ReportingServices\<GUID>_Alerting.  
   
  При сохранении определения предупреждения об изменении данных система предупреждений создает задание агента SQL Server для этого определения предупреждения. В задание включено расписание задания. Расписание основано на шаблоне повторения, определенном для определения предупреждения. Запуск этого задания инициирует обработку определения предупреждения об изменении данных.  
   
@@ -127,7 +127,7 @@ ms.lasthandoff: 08/09/2017
   
  Как показано на приведенной выше диаграмме, предупреждения об изменении данных используют задания агента SQL Server. Чтобы можно было создавать задания, должен работать агент SQL Server. Агент SQL Server мог быть настроен для автоматического запуска при установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Если это не было сделано, вы можете запустить агент SQL Server вручную. Дополнительные сведения см. в статьях [Настройка агента SQL Server](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) и [Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
- Страницу **Подготовка подписок и предупреждений** в центре администрирования SharePoint можно использовать, чтобы узнать, выполняется ли агент SQL Server, а также чтобы создавать и загружать пользовательские скрипты [!INCLUDE[tsql](../includes/tsql-md.md)] , которые впоследствии запускаются для предоставления разрешений агенту SQL Server. С ее помощью также можно создавать скрипты [!INCLUDE[tsql](../includes/tsql-md.md)] с использованием PowerShell. Дополнительные сведения см. в статье [Provision Subscriptions and Alerts for SSRS Service Applications](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
+ Страницу **Подготовка подписок и предупреждений** в центре администрирования SharePoint можно использовать, чтобы узнать, выполняется ли агент SQL Server, а также чтобы создавать и загружать пользовательские скрипты [!INCLUDE[tsql](../includes/tsql-md.md)] , которые впоследствии запускаются для предоставления разрешений агенту SQL Server. С ее помощью также можно создавать скрипты [!INCLUDE[tsql](../includes/tsql-md.md)] с использованием PowerShell. Дополнительные сведения см. в разделе [Подготовка подписок и предупреждений для приложений служб SSRS](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ##  <a name="ConfigAlert"></a> Настройка предупреждений об изменении данных  
  Начиная с версии [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] настройки для функций служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , включая предупреждения об изменении данных, распределяются между файлом конфигурации сервера отчетов (rsreportserver.config) и базой данных конфигурации SharePoint при установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint. Если вы создаете приложение службы в ходе установки и настройки служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], то будет автоматически создана база данных конфигурации SharePoint. Дополнительные сведения см. в разделах [Файл конфигурации RsReportServer.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md) и [Файлы конфигурации служб Reporting Services](../reporting-services/report-server/reporting-services-configuration-files.md).  
@@ -295,7 +295,7 @@ ms.lasthandoff: 08/09/2017
   
      Дополнительные сведения об управлении всеми предупреждениями данных на сайте см. в разделах [Диспетчер предупреждений данных для оповещения администраторов](../reporting-services/data-alert-manager-for-alerting-administrators.md) и [Управление всеми предупреждениями данных на сайте SharePoint в диспетчере предупреждений данных](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
   
--   **Подготовка подписок и предупреждений об изменении данных** , в которой можно определить, могут ли службы Reporting Services использовать агент SQL Server для работы с предупреждениями об изменении данных и для загрузки скриптов, позволяющих осуществлять доступ к агенту SQL Server. Дополнительные сведения см. в статье [Provision Subscriptions and Alerts for SSRS Service Applications](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
+-   **Подготовка подписок и предупреждений об изменении данных** , в которой можно определить, могут ли службы Reporting Services использовать агент SQL Server для работы с предупреждениями об изменении данных и для загрузки скриптов, позволяющих осуществлять доступ к агенту SQL Server. Дополнительные сведения см. в разделе [Подготовка подписок и предупреждений для приложений служб SSRS](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ##  <a name="Globalization"></a> Глобализация предупреждений об изменении данных  
  Запись в определенных скриптах, например арабском или иврите, производится справа налево. Предупреждения об изменении данных поддерживают запись скрипта справа налево и запись слева направо. Предупреждения об изменении данных определяют культуру и изменяют соответствующим образом внешний вид и поведение пользовательского интерфейса, а также макет предупреждающих сообщений. Культура определяется исходя из региональных настроек операционной системы на компьютере пользователя. Культура сохраняется при каждом обновлении и сохранении определения предупреждения об изменении данных.  
@@ -314,7 +314,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [Создание предупреждения данных в конструкторе предупреждений данных](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
   
--   [Изменение предупреждения в конструкторе предупреждений](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [Изменение предупреждения данных в конструкторе предупреждений](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
   
 -   [Управление предупреждениями данных в диспетчере предупреждений данных](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  
   
@@ -322,11 +322,10 @@ ms.lasthandoff: 08/09/2017
   
 -   [Предоставление разрешений для пользователей и оповещение администраторов](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Конструктор предупреждений об изменении данных](../reporting-services/data-alert-designer.md)   
 [Диспетчер предупреждений данных для оповещения администраторов](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Диспетчер предупреждений данных для пользователей SharePoint](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

@@ -2,34 +2,32 @@
 title: "DrilldownLevelTop (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- DRILLDOWNLEVELTOP
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- DrilldownLevelTop function
+f1_keywords: DRILLDOWNLEVELTOP
+dev_langs: kbMDX
+helpviewer_keywords: DrilldownLevelTop function
 ms.assetid: b3b45dd6-2ade-4dd7-83dd-849231e2e517
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: f4f3454f14371a7d75cf04f18ba69f11bce6d71f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d094ec3e2897bef5dfed1d98eddf82e115d84df5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drilldownleveltop-mdx"></a>DrilldownLevelTop (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Детализирует углублением самые верхние элементы набора на указанном уровне и одним уровнем ниже.  
   
@@ -45,7 +43,7 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
- *Count*  
+ *Счетчик*  
  Допустимое числовое выражение, указывающее количество возвращаемых кортежей.  
   
  *Level_Expression*  
@@ -57,7 +55,7 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
  *Include_Calc_Members*  
  Ключевое слово для добавления вычисляемых элементов в результаты углубленной детализации.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если числовое выражение указано, **DrilldownLevelTop** функция сортирует в порядке убывания потомки каждого элемента в заданном наборе согласно значению числового выражения, вычисленного над набором дочерних элементов. Если числовое выражение не указано, функция сортирует в порядке убывания потомки каждого элемента в заданном наборе согласно значениям ячеек, представленных набором элементов-потомков, как определено контекстом запроса.  
   
  После сортировки **DrilldownLevelTop** функция возвращает набор, содержащий родительские элементы и количество дочерних элементов, указанные в *Count,* с наибольшим значением.  
@@ -100,4 +98,3 @@ FROM [Adventure Works]
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

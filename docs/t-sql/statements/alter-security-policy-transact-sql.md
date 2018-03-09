@@ -1,11 +1,13 @@
 ---
 title: "ALTER SECURITY POLICY (Transact-SQL) | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +22,19 @@ dev_langs:
 helpviewer_keywords:
 - ALTER SECURITY POLICY statement
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
-caps.latest.revision: 20
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7babf1f7769d800f18a17ee21b87a0ba2b997fb6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f5ce90660a43e5285735a74a01b560ec210ba3f0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Изменяет политику безопасности.  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```tsql  
+```sql  
 ALTER SECURITY POLICY schema_name.security_policy_name   
     (  
         { ADD { FILTER | BLOCK } PREDICATE tvf_schema_name.security_predicate_function_name   
@@ -94,14 +95,14 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  table_schema_name.table_name  
  Представляет целевую таблицу, к которой будет применяться предикат безопасности. Для одной таблицы могут быть предназначены несколько отключенных политик безопасности, но только одна может быть включена в любой момент времени.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Инструкция ALTER SECURITY POLICY относится к области транзакции. Если выполняется откат транзакции, происходит также откат этой инструкции.  
   
  При использовании функции предикатов с таблицами, оптимизированными для памяти, должен включать политики безопасности **SCHEMABINDING** и использовать **WITH NATIVE_COMPILATION** указание компиляции. Аргумент SCHEMABINDING нельзя изменить с помощью инструкции ALTER, так как он применяется ко всем предикатам. Чтобы изменить привязки к схеме необходимо удалить и заново создайте политику безопасности.  
   
  Предикаты блокировки вычисляются после выполнения операции DML. Таким образом запрос READ UNCOMMITTED отображаются временные значения, будет выполнен откат.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER ANY SECURITY POLICY.  
   
  Кроме того, для каждого добавляемого предиката требуются следующие разрешения:  
@@ -165,7 +166,6 @@ ALTER SECURITY POLICY rls.SecPol
  [CREATE SECURITY POLICY (Transact-SQL)](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY (Transact-SQL)](../../t-sql/statements/drop-security-policy-transact-sql.md)   
  [sys.security_policies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
- [sys.security_predicates & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
+ [sys.security_predicates &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
   
   
-

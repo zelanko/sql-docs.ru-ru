@@ -1,31 +1,31 @@
 ---
 title: "Работа с файлами скриптов образца консоли (MySQLToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Sample console script files
+helpviewer_keywords: Sample console script files
 ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8647293328bd0da43c095ddebb4844917afdc580
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 84a1bddb2cb42011d5150257e5dd28ebab1a9ade
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Работа с файлами скриптов образца консоли (MySQLToSQL)
 Несколько файлов образец предоставляется вместе с продуктом использования и справочник по пользовательскому. Этот раздел описывает способ легко настроить эти сценарии, в соответствии с потребностями пользователя.  
@@ -88,7 +88,7 @@ ms.lasthandoff: 08/02/2017
   
     Сопоставление схемы базы данных-источника в целевую схему.  
   
-    **Атрибут**  
+    **Attribute**  
   
     -   `source-schema:`Указывает, требуется для преобразования базы данных-источника.  
   
@@ -102,7 +102,7 @@ ms.lasthandoff: 08/02/2017
   
     2.  Если пользователь имеет для оценки нескольких объектов и баз данных, он можно указать несколько `metabase-object` узлов, как показано в `convert-schema` 4 пример команды консоли образца файла скрипта.  
   
-    **Атрибут**  
+    **Attribute**  
   
     `object-name`Для указания базы данных-источника или имя, которое требуется для преобразования объекта. Убедитесь, что соответствующие `object-type` изменяется в зависимости от типа объекта, указанного в`object-name`  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 08/02/2017
   
     2.  Если пользователь имеет для оценки нескольких объектов и баз данных, он можно указать несколько `metabase-object` узлов, как показано в `synchronize-target` 3 пример команды консоли образца файла скрипта.  
   
-    **Атрибут**  
+    **Attribute**  
   
     `object-name:`Укажите базы данных sql server / объекта имя, которое требуется создать. Убедитесь, что соответствующие `object-type` изменяется в зависимости от типа объекта, указанного в`object-name`  
   
@@ -126,7 +126,7 @@ ms.lasthandoff: 08/02/2017
   
     2.  Если пользователь имеет для оценки нескольких объектов и баз данных, он может указать несколько `metabase-object` узлов, как показано в `migrate-data` команды пример 2 файла скрипта образец консоли.  
   
-    **Атрибут**  
+    **Attribute**  
   
     `object-name:`Указывает базы данных-источника или имя, которое требуется для переноса таблиц. Убедитесь, что соответствующие `object-type` изменяется в зависимости от типа объекта, указанного в`object-name`  
   
@@ -135,4 +135,3 @@ ms.lasthandoff: 08/02/2017
 [Создание файлов подключения сервера &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
 [Создание отчетов &#40; MySQLToSQL &#41;](../../ssma/mysql/generating-reports-mysqltosql.md)  
   
-

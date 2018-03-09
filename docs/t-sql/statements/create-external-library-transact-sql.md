@@ -2,11 +2,13 @@
 title: "Создание ВНЕШНЕЙ БИБЛИОТЕКИ (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,23 +16,20 @@ f1_keywords:
 - CREATE_EXTERNAL_LIBRARY_TSQL
 - EXTERNAL LIBRARY
 - EXTERNAL_LIBRARY_TSQL
-dev_langs:
-- TSQL
-helpviewer_keywords:
-- CREATE EXTERNAL LIBRARY
+dev_langs: TSQL
+helpviewer_keywords: CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: fe1cb90bce5717d194defd2c684d7b20fc29a061
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 8066d267790f346a22a649fb0c873a3d454489a8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-library-transact-sql"></a>Создание ВНЕШНЕЙ БИБЛИОТЕКИ (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
 Отправляет пакеты R в базу данных из указанного байтового потока или путь к файлу.
 
@@ -90,7 +89,7 @@ WITH ( LANGUAGE = 'R' )
 
 Указывает платформу для библиотеки содержимого. Значение по умолчанию платформа узла, на котором выполняется SQL Server. Таким образом что пользователь не имеет для указания значения. Он необходим в случае которых поддерживаются несколько платформ, или пользователь должен указать другой платформе. Windows является единственным поддерживаемой платформы.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 
 Пакеты для языка R, при использовании файла, необходимо подготовить в виде ZIP-архив файлов с. ПОЧТОВЫЙ модуль для Windows. В настоящее время поддерживается только на платформу Windows
 
@@ -100,7 +99,7 @@ WITH ( LANGUAGE = 'R' )
 
 Большие двоичные объекты нельзя использовать в качестве источника данных в выпуске 2017 г. SQL Server.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Разрешения
 
 Требуется `CREATE ANY EXTERNAL LIBRARY` разрешение.
 
@@ -196,4 +195,3 @@ DROP EXTERNAL LIBRARY customPackage <user_name>;
 [DROP ВНЕШНЕЙ БИБЛИОТЕКИ (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
-

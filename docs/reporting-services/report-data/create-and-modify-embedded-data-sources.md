@@ -1,27 +1,27 @@
 ---
-title: "Создание и изменение внедренных источников данных | Документы Microsoft"
+title: "Создание и изменение внедренных источников данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
-caps.latest.revision: 10
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "10"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
-ms.openlocfilehash: 50ec28d3a5080187c0bd844dcba364295bcdef35
-ms.contentlocale: ru-ru
-ms.lasthandoff: 11/07/2017
-
+ms.openlocfilehash: c55223a992c7965dcb247aaaa36b53a7649b6a31
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>Создание и изменение внедренных источников данных
   Внедренный источник данных определяется в определении отчета и используется только этим отчетом.  
@@ -41,13 +41,13 @@ ms.lasthandoff: 11/07/2017
   
     2.  Укажите строку соединения одним из следующих способов.  
   
-        -   Введите строку соединения непосредственно в текстовое поле **Строка подключения** . Список примеров строк соединения см. в разделе [подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) или [подключения к данным, источники данных и строк соединения &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+        -   Введите строку соединения непосредственно в текстовое поле **Строка подключения** . Список примеров строк подключения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) или [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
         -   Нажмите кнопку выражения**(fx)** , чтобы создать выражение, результатом которого является строка подключения. В диалоговом окне **Выражение** введите выражение на панели выражений. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
         -   Нажмите кнопку **Изменить** , чтобы открыть диалоговое окно **Свойства соединения** для типа источника данных, выбранного в шаге 2.  
   
-             Заполните поля в диалоговом окне **Свойства соединения** , соответствующие этому типу источника данных. Свойства соединения включают тип и имя источника данных, а также учетные данные. После указания значений в диалоговом окне, нажмите кнопку **Проверить соединение** , чтобы убедиться, что источник данных доступен и что заданные учетные данные правильны. Дополнительные сведения о типах источников данных см. в подразделах [добавить данные из внешних источников данных &#40; Службы SSRS &#41; ](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
+             Заполните поля в диалоговом окне **Свойства соединения** , соответствующие этому типу источника данных. Свойства соединения включают тип и имя источника данных, а также учетные данные. После указания значений в диалоговом окне, нажмите кнопку **Проверить соединение** , чтобы убедиться, что источник данных доступен и что заданные учетные данные правильны. Дополнительные сведения о конкретных типах источников данных см. в разделе [Добавление данных из внешних источников данных (службы SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
   
     3.  Нажмите кнопку **Учетные данные**.  
   
@@ -83,9 +83,8 @@ ms.lasthandoff: 11/07/2017
   
      Источник данных появится в области данных отчета.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Указание учетных данных в построителе отчетов](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
   
   
-

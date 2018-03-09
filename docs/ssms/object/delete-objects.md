@@ -3,31 +3,30 @@ title: "Удаление объектов | Документация Майкр�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.deleteobjects.f1
-helpviewer_keywords:
-- Delete Objects dialog box
+f1_keywords: sql13.swb.deleteobjects.f1
+helpviewer_keywords: Delete Objects dialog box
 ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 053e53c609786f9ba9193c5dd2f70c58ec00eba3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9b56c909bf8038ed70460bbea6ee98ba539bd3cb
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="delete-objects"></a>Удаление объектов
-Используйте данное диалоговое окно для удаления базы данных или объекта базы данных.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Используйте это диалоговое окно, чтобы удалить базу данных или объект базы данных.  
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
 **Объект для удаления**  
@@ -48,4 +47,3 @@ ms.lasthandoff: 06/22/2017
 **Закрыть существующие соединения**  
 Флажок отображается только после удаления базы данных и используется для закрытия соединения с базой данных.  
   
-

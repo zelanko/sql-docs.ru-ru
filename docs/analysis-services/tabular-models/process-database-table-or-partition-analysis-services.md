@@ -2,34 +2,34 @@
 title: "Обработка базы данных, таблицы или секции (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ASVS.SSMS.PARTITIONS.PROCESSINGOPTIONS.IMBI.F1
 ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: c789fc9601bd4889585d52dcb6ecfe6365038323
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 89e7f6904f4e47fc6f2047acec2b7bbc02c68c20
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="process-database-table-or-partition-analysis-services"></a>Обработка базы данных, таблицы или секции (службы Analysis Services)
-  В этом разделе описывается, как обработка базы данных табличной модели, таблицы или секций вручную с помощью **процесс \<объекта >** диалоговое окно в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+В этом разделе описывается, как обработка базы данных табличной модели, таблицы или секций вручную с помощью **процесс \<объекта >** диалоговое окно в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- Дополнительные сведения об обработке табличной модели см. в разделе [Обработка данных (табличные службы SSAS)](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
+ Дополнительные сведения об обработке табличной модели см. в разделе [обработки данных](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
 ##  <a name="bkmk_process_tasks"></a> Задания  
   
@@ -83,8 +83,7 @@ ms.lasthandoff: 09/01/2017
 4.  В столбце флажков **Обработка** выберите секции для обработки в текущем режиме и нажмите кнопку **ОК**.  
   
 ## <a name="see-also"></a>См. также  
- [Секции табличных моделей (табличные службы SSAS)](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
- [Создание секций табличной модели и управление ими (табличные службы SSAS)](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [Секции табличных моделей](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
+ [Создание секций табличной модели и управление ими](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   
-

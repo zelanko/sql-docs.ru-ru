@@ -2,28 +2,30 @@
 title: "Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти | Документация Майкрософт"
 ms.custom: 
 ms.date: 10/18/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
-caps.latest.revision: 20
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 29b7fbe140943ba0f2f3493f00561e8cf2b509e2
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: fffb61c4c3dfa58edaf684f103046d1029895e7c
-ms.openlocfilehash: 2c44f6288c4e58caa45748e6e832465f43145b83
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/19/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 Если вы используете временные таблицы, табличные переменные или возвращающие табличные значения параметры, рекомендуем преобразовать их в оптимизированные для памяти таблицы и табличные переменные с целью повышения производительности. Изменения, которые необходимо внести в код, обычно минимальны.  
@@ -172,14 +174,14 @@ ms.lasthandoff: 10/19/2017
         на  
             (MEMORY_OPTIMIZED = ON,  
              DURABILITY = SCHEMA_ONLY);  
-    go  
+    GO  
   
   
     CREATE SECURITY POLICY dbo.soSessionC_SpidFilter_Policy  
         ADD FILTER PREDICATE dbo.fn_SpidFilter(SpidFilter)  
         ON dbo.soSessionC  
         WITH (STATE = ON);  
-    go  
+    GO  
   
   
   
@@ -290,7 +292,7 @@ ms.lasthandoff: 10/19/2017
     ALTER DATABASE InMemTest2  
         ADD FILEGROUP FgMemOptim3  
             CONTAINS MEMORY_OPTIMIZED_DATA;  
-    go  
+    GO  
     ALTER DATABASE InMemTest2  
         ADD FILE  
         (  
@@ -299,7 +301,7 @@ ms.lasthandoff: 10/19/2017
                      --  C:\DATA\    preexisted.  
         )  
         TO FILEGROUP FgMemOptim3;  
-    go  
+    GO  
   
   
 Следующий скрипт создает файловую группу и настраивает рекомендованные параметры базы данных: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
@@ -430,9 +432,8 @@ ms.lasthandoff: 10/19/2017
   
 Если в каждой операции доступа к оптимизированной для памяти табличной переменной используется только одно точное значение ключа, хэш-индекс может быть предпочтительнее некластеризованного индекса. Однако, если вы не можете оценить подходящее значение BUCKET_COUNT, можно использовать и некластеризованный индекс.  
   
-## <a name="h-see-also"></a>З. См. также:  
+## <a name="h-see-also"></a>З. См. также раздел  
   
 - [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 - [Определение устойчивости для оптимизированных для памяти объектов](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
   
-

@@ -2,38 +2,39 @@
 title: "Набор строк DISCOVER_STORAGE_TABLES | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 13df6f10-8efe-4fe9-83a6-96d108809ed1
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 51b5bd319480be4c7757d4fb642859af54f209a3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d882e8b20949a656c1402af084a6e017c33b444f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="discoverstoragetables-rowset"></a>Набор строк DISCOVER_STORAGE_TABLES
-  Позволяет клиенту определить таблицы, которые включены в базу данных служб Analysis Services, работающую в табличном режиме или режиме интеграции с SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+Позволяет клиенту определить таблицы, которые включены в базу данных служб Analysis Services, работающую в табличном режиме или режиме интеграции с SharePoint.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  Набор строк **DISCOVER_STORAGE_TABLES** содержит следующие столбцы.  
   
 |**Имя столбца**|**Индикатор типа**|**Длина**|**Description**|  
 |---------------------|------------------------|----------------|---------------------|  
-|**ИМЯ_БАЗЫ_ДАННЫХ**|**DBTYPE_WSTR**||Указывает имя базы данных, содержащей эти таблицы.<br /><br /> С помощью этого столбца можно ограничить набор строк **DISCOVER_STORAGE_TABLES** . Если этот столбец не используется для ограничения состава набора строк, используется текущая база данных.|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**||Указывает имя базы данных, содержащей эти таблицы.<br /><br /> С помощью этого столбца можно ограничить набор строк **DISCOVER_STORAGE_TABLES** . Если этот столбец не используется для ограничения состава набора строк, используется текущая база данных.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**||Указывает куб или модель, содержащие эти таблицы.<br /><br /> С помощью этого столбца можно ограничить набор строк **DISCOVER_STORAGE_TABLES** .|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**||Имя группы мер.|  
 |**ИМЯ_РАЗДЕЛА**|**DBTYPE_WSTR**||Имя секции.|  
@@ -49,7 +50,7 @@ ms.lasthandoff: 09/01/2017
   
 |**Имя столбца**|**Индикатор типа**|**Состояние ограничения**|  
 |---------------------|------------------------|---------------------------|  
-|**ИМЯ_БАЗЫ_ДАННЫХ**|**DBTYPE_WSTR**|Необязательно.|  
+|**DATABASE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Необязательно|  
 |**ИМЯ_РАЗДЕЛА**|**DBTYPE_WSTR**|Необязательно|  
@@ -64,8 +65,7 @@ ORDER BY TABLE_ID DESC
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Службы Analysis Services наборы строк схемы](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   
-

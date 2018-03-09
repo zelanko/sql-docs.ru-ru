@@ -3,30 +3,31 @@ title: "Сохранение запросов (визуальные инстру
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - queries [SQL Server], saving
 - saving queries
 ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f50e2c3733c636d04fa69ed4226ffeef2685874a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9a976c7b8fbc6889b5edcb8bc5e338a4d44a3cdc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="save-queries-visual-database-tools"></a>Сохранение запросов (визуальные инструменты для баз данных)
-Сохранение запроса для дальнейшей работы с ним. Обратите внимание, что при выполнении запроса изменения не сохраняются.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Сохраните свой запрос, если планируете работать с ним в дальнейшем. Обратите внимание, что при выполнении запроса изменения не сохраняются.  
   
 ### <a name="to-save-a-query"></a>Сохранение запроса  
   
@@ -47,4 +48,3 @@ ms.lasthandoff: 06/22/2017
 [Типы запросов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
 [Выполнение основных операций с запросами (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

@@ -1,14 +1,14 @@
 ---
-title: "Фильтрация данных в таблице (табличные службы SSAS) | Документы Microsoft"
+title: "Фильтрация данных в таблицу | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,20 +16,20 @@ f1_keywords:
 - sql13.asvs.bidtoolset.autofiltermenu.f1
 - sql13.asvs.bidtoolset.customfilterdb.f1
 ms.assetid: 3223059d-f525-4835-bf88-ebc195d9dbdc
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c9b9fbee486fe2817a34c589041e1e8566585b96
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 310909a6e5f607a9473fca8720d718351ef00476
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="filter-data-in-a-table-ssas-tabular"></a>Фильтрация данных в таблице (табличные службы SSAS)
-  Чтобы ограничить число строк, загружаемых в таблицу во время импорта данных, можно применить фильтры. После выполнения импорта данных отдельные строки удалить нельзя. Можно применить пользовательские фильтры для отображения строк. Строки, не соответствующие условиям сортировки, скрыты. Фильтрацию можно выполнять по одному или нескольким столбцам. Фильтры добавляются друг к другу, что означает, что каждый дополнительный фильтр основывается на текущем фильтре и еще более ограничивает подмножество данных.  
+# <a name="filter-data-in-a-table"></a>Фильтрация данных в таблице 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Чтобы ограничить число строк, загружаемых в таблицу во время импорта данных, можно применить фильтры. После выполнения импорта данных отдельные строки удалить нельзя. Можно применить пользовательские фильтры для отображения строк. Строки, не соответствующие условиям сортировки, скрыты. Фильтрацию можно выполнять по одному или нескольким столбцам. Фильтры добавляются друг к другу, что означает, что каждый дополнительный фильтр основывается на текущем фильтре и еще более ограничивает подмножество данных.  
   
 > [!NOTE]  
 >  Окно предварительного просмотра фильтра ограничивает количество отображаемых значений. При превышении этого ограничения выводится сообщение.  
@@ -59,9 +59,8 @@ ms.lasthandoff: 09/01/2017
 2.  В меню **Столбец** выберите пункт **Очистить все фильтры**.  
   
 ## <a name="see-also"></a>См. также  
- [Сортировка и фильтрация данных (табличные службы SSAS)](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)   
- [Перспективы (табличные службы SSAS)](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [Роли (табличные службы SSAS)](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
+ [Сортировка и фильтрация данных](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)   
+ [Перспективы](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
+ [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
   
-

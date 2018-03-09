@@ -3,7 +3,7 @@ title: "Обновить пример метода (Visual Basic) | Докуме
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Refresh method [ADO], Visual Basic example
 ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ce88d206400119a00ae1dfb326498b92dc8d305d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c0cd079125e15e3e49d9c055d4d7619cc48140da
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="refresh-method-example-vb"></a>Обновить пример метода (Visual Basic)
 В этом примере показано использование [обновление](../../../ado/reference/ado-api/refresh-method-ado.md) метод для обновления [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекции для хранимой процедуры [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта.  
@@ -128,8 +127,7 @@ End Sub
 'EndRefreshVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект команды (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Коллекция параметров (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Обновить метод (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
-
+ [Метод Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

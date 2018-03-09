@@ -2,9 +2,12 @@
 title: "Загрузка XML-данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 627870d10fb4a6d91a4570f14274b6b2d1c2119b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 441a0e2050acc61575ecf7386302b731d31090b8
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="load-xml-data"></a>Загрузка XML-данных
-  Есть несколько способов передачи XML-данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Например:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Есть несколько способов передачи XML-данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Пример:  
   
 -   Если в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данные хранятся в столбце типа [n]text или image, то эту таблицу можно импортировать с помощью служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Изменить тип столбца на XML можно с использованием инструкции ALTER TABLE.  
   
@@ -49,7 +52,7 @@ FROM    (SELECT *
 ```  
   
 ## <a name="text-encoding"></a>Кодировка текста  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранит XML-данные в кодировке Юникод (UTF-16). XML-данные, извлекаемые из баз данных сервера, предоставляются в кодировке UTF-16. Если требуются данные в другой кодировке, извлеченные данные нужно преобразовать. Иногда XML-данные могут быть представлены в другой кодировке. Если это так, во время загрузки данных нужно быть внимательным. Например:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранит XML-данные в кодировке Юникод (UTF-16). XML-данные, извлекаемые из баз данных сервера, предоставляются в кодировке UTF-16. Если требуются данные в другой кодировке, извлеченные данные нужно преобразовать. Иногда XML-данные могут быть представлены в другой кодировке. Если это так, во время загрузки данных нужно быть внимательным. Пример:  
   
 -   Если текст XML представлен в кодировке Юникод (UCS-2, UTF-16), можно назначить его XML-столбцу, переменной или параметру без каких-либо проблем.  
   
@@ -67,14 +70,14 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
 ```  
   
 ### <a name="string-encoding-incompatibilities"></a>Несоответствия кодировок строк  
- При копировании и вставке XML как строкового литерала в окно редактора запросов служб в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]могут возникнуть несоответствия с кодировкой строк типа (N)VARCHAR. Это будет зависеть от кодировки копируемого экземпляра XML. Во многих случаях может возникнуть необходимость удаления XML-декларации. Например:  
+ При копировании и вставке XML как строкового литерала в окно редактора запросов служб в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]могут возникнуть несоответствия с кодировкой строк типа (N)VARCHAR. Это будет зависеть от кодировки копируемого экземпляра XML. Во многих случаях может возникнуть необходимость удаления XML-декларации. Пример:  
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  
   <xsd:schema …  
 ```  
   
- Затем нужно будет добавить N, чтобы сделать экземпляр XML экземпляром Юникода. Например:  
+ Затем нужно будет добавить N, чтобы сделать экземпляр XML экземпляром Юникода. Пример:  
   
 ```  
 -- Assign XML instance to a variable.  
@@ -90,4 +93,3 @@ CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema … '
  [Данные XML (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)  
   
   
-

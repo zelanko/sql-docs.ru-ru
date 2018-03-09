@@ -3,10 +3,12 @@ title: "Архитектура драйверов для настольных б
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], architecture
 - desktop database drivers [ODBC], architecture
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3f5c7b12e5413441476e70dc63fe9d3da9284635
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b85711437c50ccc246ad1af1432d9475d1cfc3d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="desktop-database-drivers-architecture"></a>Архитектура драйверов для настольных баз данных
 Эти драйверы предназначены для использования в Microsoft Windows 95 и более поздних версиях или Windows NT 4.0 и Windows 2000. Поддерживаются только 32-разрядных приложений, в Windows 95 или более поздней версии; 16-разрядных и 32-разрядные приложения, поддерживаются в Windows NT 4.0 и Windows 2000.  
@@ -55,4 +56,3 @@ ms.lasthandoff: 09/09/2017
  Odbcjt32.dll реализует функции ODBC поверх API-Интерфейс Microsoft Jet. Однако имеется однозначное соответствие между функциями ODBC и Microsoft Jet, отсутствует. Множество факторов, таких как модели курсора и сопоставление SQL не прямая связь функций.  
   
  Драйвер ODBC находится между модулем Microsoft Jet и диспетчер драйверов ODBC. Некоторые функции ODBC, вызвана приложением обрабатываются диспетчером драйверов и не передаются в драйвер. Для этих функций Microsoft Jet никогда не видит вызова, так как он не имеет прямое подключение к диспетчеру драйверов функции.
-

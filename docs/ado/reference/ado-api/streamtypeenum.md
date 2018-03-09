@@ -3,7 +3,7 @@ title: "StreamTypeEnum | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - StreamTypeEnum enumeration [ADO]
 ms.assetid: 220fe51d-4889-4020-a099-2ec9c7485503
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c177ce7cb62862743f81fab207ab8f6c8f842af0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ac3e7193183ecfbc4d814d11e36c9ab7c6ba8bc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="streamtypeenum"></a>StreamTypeEnum
 Указывает тип данных, хранящихся в [поток](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adTypeBinary**|1|Указывает двоичные данные.|  
 |**adTypeText**|2|По умолчанию. Указывает текстовых данных, находящейся в набор знаков, указанных в [Charset](../../../ado/reference/ado-api/charset-property-ado.md).|  
@@ -42,5 +41,4 @@ ms.lasthandoff: 09/09/2017
  Эти константы не имеют эквивалентов ADO/WFC.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Свойство Type (поток ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)
-
+ [Свойство Type (объект Stream ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)

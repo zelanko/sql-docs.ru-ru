@@ -1,27 +1,27 @@
 ---
-title: "Тип соединения SAP NetWeaver BI (SSRS) | Документы Microsoft"
+title: "Тип соединения SAP NetWeaver BI (службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
-caps.latest.revision: 8
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "8"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f7a1cea7b91f3b45afd364bc55e9a4b42c836935
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 22a2d5eec19c545771fb5791b37aa50b90124b94
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Тип соединения SAP NetWeaver BI (службы SSRS)
   Чтобы включить данные из внешнего источника данных SAP NetWeaver® Business Intelligence в отчет, необходимо иметь набор данных, основанный на источнике данных отчета типа [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных для поставщика данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 1.0 для [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  
@@ -91,13 +91,13 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 |------------------|--------------|---------------------------------------|  
 |**Value**|**Объект**|Указывает значение данных поля.|  
 |**IsMissing**|**Логическое значение**|Указывает, найдено ли поле в результирующем наборе данных.|  
-|**FormattedValue**|**Строковые значения**|Возвращает форматированное значение для ключевой цифры.|  
-|**BackgroundColor**|**Строковые значения**|Возвращает цвет фона, заданный в базе данных для этого поля.|  
-|**Color**|**Строковые значения**|Возвращает цвет переднего плана, заданный в базе данных для этого элемента.|  
+|**FormattedValue**|**String**|Возвращает форматированное значение для ключевой цифры.|  
+|**BackgroundColor**|**String**|Возвращает цвет фона, заданный в базе данных для этого поля.|  
+|**Color**|**String**|Возвращает цвет переднего плана, заданный в базе данных для этого элемента.|  
 |**Key**|**Объект**|Возвращает ключ для уровня.|  
-|**LevelNumber**|**Целочисленный**|Для иерархий типа «родители-потомки» возвращает номер уровня или измерения.|  
-|**ParentUniqueName**|**Строковые значения**|Для иерархий типа «родители-потомки» это свойство возвращает полное имя родительского уровня.|  
-|**UniqueName**|**Строковые значения**|Возвращает полное имя уровня. Например, значением **UniqueName** для сотрудника может быть *[0D_Company].[10D_Department].[11]*.|  
+|**LevelNumber**|**Integer**|Для иерархий типа «родители-потомки» возвращает номер уровня или измерения.|  
+|**ParentUniqueName**|**String**|Для иерархий типа «родители-потомки» это свойство возвращает полное имя родительского уровня.|  
+|**UniqueName**|**String**|Возвращает полное имя уровня. Например, значением **UniqueName** для сотрудника может быть *[0D_Company].[10D_Department].[11]*.|  
   
  Дополнительные сведения об использовании полей и свойств полей в выражении см. в разделе [Встроенные коллекции в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -115,7 +115,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
  [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [Добавление фильтра для набора данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [Добавление фильтра к набору данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
 ##  <a name="Related"></a> См. также  
@@ -127,20 +127,19 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [Подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Предоставляет сведения о подключениях к данным и источникам данных.  
   
- [Отчет внедренные наборы данных и общие наборы данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Предоставляет сведения об общих и внедренных наборах данных.  
   
- [Коллекция полей набора данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Коллекция полей набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Предоставляет сведения о коллекции полей набора данных, создаваемой запросом.  
   
  [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
  Предоставляет подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.  
   
   
-## <a name="see-also"></a>См. также  
- [Параметры отчета &#40; Построитель отчетов и конструктор отчетов &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Фильтр, группы и сортировка данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Выражения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>См. также:  
+ [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

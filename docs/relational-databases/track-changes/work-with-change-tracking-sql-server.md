@@ -2,9 +2,12 @@
 title: "Работа с отслеживанием изменений (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,19 +24,19 @@ helpviewer_keywords:
 - change tracking [SQL Server], ensuring consistent results
 - change tracking [SQL Server], handling changes
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
-caps.latest.revision: 26
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f7440e5f259c45a782066ac311a2f9f42c134c25
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 359afda249ede3ddfcf05e2f1f8b973fa578dd28
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Работа с отслеживанием изменений (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Приложения, в которых используется отслеживание изменений, должны иметь возможность получать отслеженные изменения, применять эти изменения к другому хранилищу данных и обновлять базу данных-источник. В этом разделе описаны способы выполнения этих задач и роль отслеживания изменений в случае отработки отказа и необходимостью восстановить базу данных из резервной копии.  
   
@@ -67,7 +70,7 @@ ms.lasthandoff: 06/22/2017
   
  В следующем примере показано получение первоначальной версии синхронизации и первоначального набора данных.  
   
-```tsql  
+```sql  
     -- Obtain the current synchronization version. This will be used next time that changes are obtained.  
     SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
@@ -81,7 +84,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>Использование функций отслеживания изменений для получения изменений  
  Чтобы получить измененные строки таблицы и сведения об этих изменениях, используется функция CHANGETABLE(CHANGES…). Например, следующий запрос получает изменения в таблице `SalesLT.Product` .  
   
-```tsql  
+```sql  
 SELECT  
     CT.ProductID, CT.SYS_CHANGE_OPERATION,  
     CT.SYS_CHANGE_COLUMNS, CT.SYS_CHANGE_CONTEXT  
@@ -92,7 +95,7 @@ FROM
   
  Как правило, клиенту нужно получить последние данные строки, а не просто первичные ключи. Поэтому приложение соединяет результаты запроса функции CHANGETABLE(CHANGES …) с данными в пользовательской таблице. Например, следующий запрос соединяется с таблицей `SalesLT.Product` , чтобы получить значения столбцов `Name` и `ListPrice` . Обратите внимание на использование `OUTER JOIN`. Это требуется, чтобы убедиться, что возвращаются сведения об изменениях в строках, удаленных из пользовательской таблицы.  
   
-```tsql  
+```sql  
 SELECT  
     CT.ProductID, P.Name, P.ListPrice,  
     CT.SYS_CHANGE_OPERATION, CT.SYS_CHANGE_COLUMNS,  
@@ -107,13 +110,13 @@ ON
   
  Чтобы получить версию, которая будет использоваться в следующем перечислении изменений, используется функция CHANGE_TRACKING_CURRENT_VERSION(), как показано в следующем примере.  
   
-```tsql  
+```sql  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION()  
 ```  
   
  Когда приложение получает изменения, оно должно использовать как функцию CHANGETABLE(CHANGES…), так и CHANGE_TRACKING_CURRENT_VERSION(), как показано в следующем примере.  
   
-```tsql  
+```sql  
 -- Obtain the current synchronization version. This will be used the next time CHANGETABLE(CHANGES...) is called.  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
@@ -140,7 +143,7 @@ ON
   
  В следующем примере показано, как проверять достоверность значения `last_synchronization_version` для каждой таблицы.  
   
-```tsql  
+```sql  
 -- Check individual table.  
 IF (@last_synchronization_version < CHANGE_TRACKING_MIN_VALID_VERSION(  
                                    OBJECT_ID('SalesLT.Product')))  
@@ -152,7 +155,7 @@ END
   
  Как показано в следующем примере, достоверность значения `last_synchronization_version` можно проверить для всех таблиц в базе данных.  
   
-```tsql  
+```sql  
 -- Check all tables with change tracking enabled  
 IF EXISTS (  
   SELECT COUNT(*) FROM sys.change_tracking_tables  
@@ -172,7 +175,7 @@ END
   
  В следующем примере столбец `CT_ThumbnailPhoto` будет иметь значение `NULL` , если он не был изменен. Этот столбец может также принимать значение `NULL` , потому что он был изменен на `NULL` , поэтому приложение может использовать столбец `CT_ThumbNailPhoto_Changed` , чтобы определить, происходили ли изменения.  
   
-```tsql  
+```sql  
 DECLARE @PhotoColumnId int = COLUMNPROPERTY(  
     OBJECT_ID('SalesLT.Product'),'ThumbNailPhoto', 'ColumnId')  
   
@@ -250,7 +253,7 @@ ON
   
  В следующем примере показано включение изоляции моментального снимка в базе данных.  
   
-```tsql  
+```sql  
 -- The database must be configured to enable snapshot isolation.  
 ALTER DATABASE AdventureWorksLT  
     SET ALLOW_SNAPSHOT_ISOLATION ON;  
@@ -258,7 +261,7 @@ ALTER DATABASE AdventureWorksLT
   
  Транзакция моментального снимка используется следующим образом.  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
 BEGIN TRAN  
   -- Verify that version of the previous synchronization is valid.  
@@ -319,7 +322,7 @@ COMMIT TRAN
   
  В следующем примере показано использование функции CHANGETABLE(VERSION …) для проверки конфликтов самым эффективным способом — без отдельного запроса. В примере `CHANGETABLE(VERSION …)` определяет `SYS_CHANGE_VERSION` для строки, заданной аргументом `@product id`. `CHANGETABLE(CHANGES …)` может получить те же сведения, но это будет менее эффективным. Если значение `SYS_CHANGE_VERSION` для строки больше, чем значение `@last_sync_version`, существует конфликт. Если возникает конфликт, эта строка не будет обновляться. Проверка `ISNULL()` необходима, поскольку для строки может не иметься информации об изменениях. Информации об изменениях не будет, если строка не была обновлена со времени включения отслеживания изменений или времени очистки информации об изменениях.  
   
-```tsql  
+```sql  
 -- Assumption: @last_sync_version has been validated.  
   
 UPDATE  
@@ -339,7 +342,7 @@ WHERE
   
  Следующий код проверяет обновленное число строк и может предоставить более подробные сведения о конфликте.  
   
-```tsql  
+```sql  
 -- If the change cannot be made, find out more information.  
 IF (@@ROWCOUNT = 0)  
 BEGIN  
@@ -365,7 +368,7 @@ END
   
  Контекстные данные обычно используются для определения источника изменений. Если источник изменений можно определить, эти данные могут использоваться хранилищем данных, чтобы не получать изменения при повторной синхронизации.  
   
-```tsql  
+```sql  
   -- Try to update the row and check for a conflict.  
   WITH CHANGE_TRACKING_CONTEXT (@source_id)  
   UPDATE  
@@ -388,7 +391,7 @@ END
 > [!IMPORTANT]  
 >  Рекомендуется использовать изоляцию моментального снимка и выполнять изменения в транзакции моментального снимка.  
   
-```tsql  
+```sql  
 -- Prerequisite is to ensure ALLOW_SNAPSHOT_ISOLATION is ON for the database.  
   
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
@@ -448,4 +451,3 @@ COMMIT TRAN
  [WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md)  
   
   
-

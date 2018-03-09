@@ -1,10 +1,13 @@
 ---
-title: "Типы данных в выражениях служб Integration Services | Документы Microsoft"
+title: "Типы данных в выражениях служб Integration Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,16 +16,16 @@ helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-caps.latest.revision: 57
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd0a604c665f7bd31a8ebd3e46b78afde802cc98
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 83b16b04dfe061c3953dc7dd593fbf328588129f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Типы данных в выражениях служб Integration Services
   Средство оценки выражений использует типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Когда данные впервые попадают в поток данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , подсистема обработки потока данных преобразует все данные столбцов в тип данных [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , а данные столбцов, используемых выражением, уже имеют тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Выражения, используемые в преобразованиях «Условное разбиение» и «Производный столбец», могут ссылаться на столбцы, поскольку являются частью потока данных, включающего данные столбцов.  
@@ -44,7 +47,7 @@ ms.lasthandoff: 08/03/2017
   
  Рассмотрим выражения на снимке экрана ниже.  
   
- ![Строковые типы данных в выражениях служб SSIS](../../integration-services/expressions/media/stringsinssisexpressions.png "строковые типы данных в выражениях служб SSIS")  
+ ![Строковые типы данных в выражениях служб SSIS](../../integration-services/expressions/media/stringsinssisexpressions.png "Строковые типы данных в выражениях служб SSIS")  
   
 1.  Первое выражение выполняется без ошибок, так как функция NULL(DT_STR, …) находится на корневом уровне выражения.  
   
@@ -58,7 +61,7 @@ ms.lasthandoff: 08/03/2017
   
  В следующих примерах демонстрируется влияние приведения.  
   
- ![Приведение строки в выражениях служб SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "приведение строк в выражениях служб SSIS")  
+ ![Приведение строк в выражениях служб SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "Приведение строк в выражениях служб SSIS")  
   
 1.  В первом выражении приведение находится не на корневом уровне выражения. Вычислитель выражений интеллектуально обрабатывает это приведение и выполняет его применительно к типу DT_WSTR, а не DT_STR. Выражение возвращает DT_WSTR.  
   
@@ -71,7 +74,7 @@ ms.lasthandoff: 08/03/2017
   
  На следующей диаграмме показан тип результата неявного преобразования операций BINARY. Пересечение столбцов и строк в этой таблице является типом результата побитовой операции с операндами левого (From) и правого (To) типов.  
   
- ![Неявное преобразование между типами данных ТипДанных](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "неявное преобразование между типами данных ТипДанных")  
+ ![Неявное преобразование между типами данных](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "Неявное преобразование между типами данных")  
   
  Пересечением целых чисел со знаком и без знака является целое число со знаком, которое потенциально больше любого из этих двух аргументов.  
   
@@ -88,7 +91,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [= = (равно) (выражение служб SSIS)](../../integration-services/expressions/equal-ssis-expression.md)  
   
--   [!= (не равно) (выражение служб SSIS)](../../integration-services/expressions/unequal-ssis-expression.md)  
+-   [\!= (не равно) (выражение служб SSIS)](../../integration-services/expressions/unequal-ssis-expression.md)  
   
 -   [&#62; (больше чем) (выражение служб SSIS)](../../integration-services/expressions/greater-than-ssis-expression.md)  
   
@@ -133,7 +136,7 @@ ms.lasthandoff: 08/03/2017
   
  Результаты многих операций и функций имеют предопределенные типы данных. Это может быть тип данных аргумента или тип данных, к которому средство оценки выражений приводит результат. Например, результат логического оператора ИЛИ (||) всегда имеет тип Boolean, результат функции ABS имеет численный тип данных аргумента, результат операции умножения имеет наименьший численный тип, который может представить результат без потери точности. Дополнительные сведения о типах данных результатов см. в разделе [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md) и [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Использование выражения в компоненте потока данных](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>См. также  

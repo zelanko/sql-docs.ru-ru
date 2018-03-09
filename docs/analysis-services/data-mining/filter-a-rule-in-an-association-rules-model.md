@@ -2,12 +2,13 @@
 title: "Фильтр правила в ассоциации модели правил | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +16,20 @@ helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], rules
 - Rules Viewer
 ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
-caps.latest.revision: 28
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8627d46cc0d919ecf41c7ad5c202d13921cd77df
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 88eb75188ed36a8a79178f6b893c5301ffd2d47e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>Фильтрация правила в модели ассоциативных правил
-  Чтобы ограничить итоговый список, показав только нужные взаимосвязи, с моделями взаимосвязей можно использовать фильтрацию. Например, можно отфильтровать правила, чтобы показать только правила, содержащие определенный товар.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Чтобы ограничить итоговый список, показав только нужные взаимосвязи, с моделями взаимосвязей можно использовать фильтрацию. Например, можно отфильтровать правила, чтобы показать только правила, содержащие определенный товар.  
   
  В конструкторе интеллектуального анализа данных вы используете элементы управления на вкладке **Правила** средства просмотра правил взаимосвязи [!INCLUDE[msCoName](../../includes/msconame-md.md)] , чтобы отфильтровать отображаемые правила.  Можно также создать запрос для модели, чтобы просмотреть только набор элементов, содержащий определенное значение.  
   
@@ -62,12 +63,11 @@ ms.lasthandoff: 09/01/2017
   
 ### <a name="create-a-query-on-the-itemsets-in-an-association-model"></a>Создание запроса к наборам элементов в модели взаимосвязей  
   
--   [Примеры запросов моделей взаимосвязей](../../analysis-services/data-mining/association-model-query-examples.md)  
+-   [Примеры запросов к модели взаимосвязей](../../analysis-services/data-mining/association-model-query-examples.md)  
   
 ## <a name="see-also"></a>См. также  
- [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Просмотр модели с помощью средства просмотра правил взаимосвязи (Microsoft)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
  [Занятие 3: Построение сценария потребительской корзины &#40; учебник по интеллектуальному анализу данных — средний &#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
   
   
-

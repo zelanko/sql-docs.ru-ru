@@ -1,32 +1,32 @@
 ---
-title: "Создание пошагового отчета (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Создание пошагового отчета (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 232b8e03dc8e5e2130d127408f356ba2dc0492d5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d94397d96f5532ed798c2bfe6b50ea17709f9654
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Создание пошагового отчета (построитель отчетов и службы SSRS)
 Пошаговый отчет представляет собой тип отчета  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы, где строки детализации или дочерние группы располагаются с отступом в родительской группе в том же столбце, как показано в примере ниже.  
   
- ![Пошаговый отчет к просмотру](../../reporting-services/report-design/media/steppedreportrendered.gif "шаг с заходом готовые для просмотра отчетов")  
+ ![Готовый к просмотру пошаговый отчет](../../reporting-services/report-design/media/steppedreportrendered.gif "Готовый к просмотру пошаговый отчет")  
   
  В обычных табличных отчетах родительская группа помещается в соседний столбец отчета. Новая область данных табликса позволяет добавлять строки групп, строки детализации или дочерние группы в тот же столбец. Чтобы отличить строки групп от строк детализации или строк дочерних групп, можно применить форматирование (например, цвет шрифта) либо создать отступ для строк детализации.  
   
@@ -54,15 +54,15 @@ ms.lasthandoff: 08/09/2017
   
      В результате создан простой табличный отчет. После его подготовки один из его столбцов будет содержать значения экземпляра группы, а один или несколько других столбцов — сгруппированные подробные данные. На следующем рисунке показано, как может выглядеть область данных в области конструктора.  
   
-     ![Область данных таблицы с группой](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "область данных таблицы с группой")  
+     ![Табличная область данных с группированием](../../reporting-services/report-design/media/tabledataregionwithgroup.gif "Табличная область данных с группированием")  
   
      На следующем рисунке показано, как готовая для просмотра область данных может выглядеть при просмотре отчета.  
   
-     ![К просмотру отчет с группированием](../../reporting-services/report-design/media/tablereportrendered.gif "готовые для просмотра отчет с группировкой")  
+     ![Готовый к просмотру отчет с группированием](../../reporting-services/report-design/media/tablereportrendered.gif "Готовый к просмотру отчет с группированием")  
   
 3.  В пошаговом отчете не требуется наличие первого столбца, отображающего экземпляр группы. Вместо этого следует скопировать значение ячейки заголовка группы, удалить столбец группы и вставить это значение в первое текстовое поле строки заголовка группы. Чтобы удалить столбец группы, щелкните правой кнопкой мыши столбец или ячейку группы и выберите команду **Удалить столбцы**. На следующем рисунке показано, как может выглядеть область данных в области конструктора.  
   
-     ![Область данных со строкой заголовка группы](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "область данных со строкой заголовка группы")  
+     ![Область данных со строкой заголовка группы](../../reporting-services/report-design/media/tabledataregiongroupheader.gif "Область данных со строкой заголовка группы")  
   
 4.  Создать отступ для строк детализации под строкой заголовка в том же столбце можно, изменив поля ячеек с подробными данными.  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 08/09/2017
   
      Область данных может выглядеть примерно так.  
   
-     ![Область данных для пошагового отчета](../../reporting-services/report-design/media/steppedreportdataregion.gif "область данных для пошагового отчета")  
+     ![Область данных для пошагового отчета](../../reporting-services/report-design/media/steppedreportdataregion.gif "Область данных для пошагового отчета")  
   
      **Область данных для макета пошагового отчета**  
   
@@ -109,14 +109,13 @@ ms.lasthandoff: 08/09/2017
   
 3.  Измените заполнение для ячейки, отображающей данные группы.  
   
-## <a name="see-also"></a>См. также  
- [Верхние и нижние колонтитулы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Форматирование элементов отчета &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Область данных Табликса &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Tables &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Матрицы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>См. также:  
+ [Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Форматирование элементов отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Область данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [Таблицы &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Матрицы &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [Списки &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

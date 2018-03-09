@@ -3,7 +3,7 @@ title: "Шаг 2: Вызвать программу Server (учебник сл�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - RDS tutorial [ADO], invoking server program
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3dcff87b21f9c9c85281d0f5798e3364d15732e9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fd6ffeef7f178c7823b25fcd9a6b8e1a73c6756b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Шаг 2: Вызвать программу Server (служб удаленных рабочих СТОЛОВ учебник)
 При вызове метода на клиенте *прокси-сервера*, самой программы на сервере выполняется метод. На этом шаге будет выполнить запрос на сервере.  
@@ -71,7 +70,6 @@ Sub RDSTutorial2B()
 ...  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Шаг 3: Сервер получает набор записей (учебник служб удаленных рабочих СТОЛОВ)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
  [Учебник по RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
-

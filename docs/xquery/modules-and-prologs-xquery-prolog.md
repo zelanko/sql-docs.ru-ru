@@ -3,8 +3,11 @@ title: "XQuery Prolog | Документы Microsoft"
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - namespaces [XQuery]
 - default namespace declarations
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
-caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: bb14308461be8c13e8a683ae842a63647191c9e0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 38b0c622448c2a46e9b7ecbe38c01b7e522c4ec6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Модули и Прологи - прологе XQuery
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Запрос XQuery состоит из пролога и текста запроса. Пролог XQuery является набором объявлений и определений, создающим требуемую для обработки запроса среду. На сервере SQL Server, в прологе XQuery могут содержаться объявления пространств имен. Текст запроса XQuery состоит из последовательности выражений, которые определяют желаемый результат запроса.  
   
@@ -107,8 +109,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID=19   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Добавление пространств имен в запросы с WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)  
   
   
-

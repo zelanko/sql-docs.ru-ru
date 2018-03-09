@@ -1,29 +1,28 @@
 ---
-title: "Создание схемы документа (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Создание схемы документа (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3abd0b8ce2b463cf793b6b75c908a69308cb68a8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9ae85cf2e8a27dda8d4a6d6a280160ffd8263d01
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Создание схемы документа (построитель отчетов и службы SSRS)
 
 В схеме документа предоставляется набор ссылок на элементы отчета, готового к просмотру. Когда осуществляется просмотр отчета, содержащего схему документа, рядом с отчетом появляется отдельная боковая панель. Пользователи могут использовать ссылки в схеме документа для перехода к странице отчета, на которой отображен данный элемент. Разделы и группы отчета выстроены в соответствии с иерархией ссылок. При выборе элементов схемы документа отчет обновляется и отображается та его область, которая соответствует выбранному элементу.  
@@ -117,10 +116,9 @@ ms.lasthandoff: 08/09/2017
 4.  Вставьте URL-адрес в диспетчер отчетов и нажмите клавишу ВВОД. Отчет будет запущен со скрытой схемой документа.  
   
 > [!NOTE]  
->  Дополнительные сведения о загрузке образцов отчетов см. в разделе [примеры отчетов построителя отчетов и конструктора отчетов](http://go.microsoft.com/fwlink/?LinkId=198283).  
+>  Дополнительные сведения о скачивании образцов отчетов см. в статье [(Примеры отчетов построителя отчетов и конструктора отчетов)](http://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
 >  Дополнительные сведения см. в разделе «Доступ по URL-адресу» [документации по службам Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) , входящей в состав электронной документации по SQL Server.  
 
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

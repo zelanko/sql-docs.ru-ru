@@ -3,8 +3,11 @@ title: "^ (Побитовое исключающее или) (Transact-SQL) | Д
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - exclusive OR mathematical operations
 - bitwise exclusive OR (^)
 ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
-caps.latest.revision: 44
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 635cdf87939b15fad65ba4cc103166bff2ba04d2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: b5833bd94dd28f6c09b2f1c05d4a59a8a137ddad
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-bitwise-exclusive-or-transact-sql"></a>^ (побитовое исключающее ИЛИ) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Выполняет побитовую операцию исключающего ИЛИ между двумя целочисленными значениями.  
   
@@ -63,10 +65,10 @@ expression ^ expression
   
  **tinyint** Если входные значения имеют **tinyint**.  
   
-## <a name="remarks"></a>Замечания  
-  **^**  Побитовый оператор выполняет операцию побитового логического исключающего или между двумя выражениями, последовательно обрабатывая соответствующие биты для двух выражений. Значение результирующих битов устанавливается равным 1, если для текущего разрешаемого бита один из битов (но не оба) во входных выражениях имеет значение 1. Если оба бита имеют равные значения, результирующий бит принимает значение 0.  
+## <a name="remarks"></a>Remarks  
+ **^**  Побитовый оператор выполняет операцию побитового логического исключающего или между двумя выражениями, последовательно обрабатывая соответствующие биты для двух выражений. Значение результирующих битов устанавливается равным 1, если для текущего разрешаемого бита один из битов (но не оба) во входных выражениях имеет значение 1. Если оба бита имеют равные значения, результирующий бит принимает значение 0.  
   
- Если левое и правое выражения имеют разные целочисленные типы данных (например, влево *выражение* — **smallint** и правом *выражение* —  **int**), аргумент более короткого типа данных преобразуется в тип данных большего размера. В этом случае **smallint***выражение* преобразуется в **int**.  
+ Если левое и правое выражения имеют разные целочисленные типы данных (например, влево *выражение* — **smallint** и правом *выражение* —  **int**), аргумент более короткого типа данных преобразуется в тип данных большего размера. В этом случае **smallint *** выражение* преобразуется в **int**.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается таблица, использующая **int** тип для хранения оригинальных значений данных и два значения вставляются в одну строку.  
@@ -111,14 +113,13 @@ GO
   
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Побитовые операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
- [^ = &#40; Побитовое исключающее или равно &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)   
+ [^ = &#40; Побитовое исключающее или назначения &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)   
  [Составные операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
-
 
 

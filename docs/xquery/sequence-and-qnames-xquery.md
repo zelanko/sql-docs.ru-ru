@@ -3,8 +3,11 @@ title: "Последовательность и QNames (XQuery) | Докумен
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - QName [XQuery]
 - predefined namespaces [XML in SQL Server]
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
-caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f75694958ca453d1b630a0c02c422d35c6ff4c34
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 79e43de914a80fd8f39ebab0b93c55c1e1fc2670
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sequence-and-qnames-xquery"></a>Последовательность и QNames (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описаны следующие основные понятия XQuery.  
   
@@ -139,7 +141,7 @@ WHERE ProductModelID=7;
   
  Ниже приведены пространства имен, стандартные в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для использования с поддержкой XQuery.  
   
-|Префикс|URI|  
+|Prefix|URI|  
 |------------|---------|  
 |xs|http://www.w3.org/2001/XMLSchema|  
 |xsi|http://www.w3.org/2001/XMLSchema-instance|  
@@ -155,8 +157,7 @@ WHERE ProductModelID=7;
 > [!NOTE]  
 >  Данная реализация не поддерживает префикс `local` согласно спецификации XQuery на сайте http://www.w3.org/2004/07/xquery-local-functions.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основы XQuery](../xquery/xquery-basics.md)  
   
   
-

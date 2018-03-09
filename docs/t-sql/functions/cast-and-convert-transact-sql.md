@@ -3,8 +3,11 @@ title: "CAST и CONVERT (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 09/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,20 +37,19 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-caps.latest.revision: 136
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: b7f2f78bbda485de979c76076404f35122b61277
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: 56326d7862c004ac056e329e6cc05f7bbe056aea
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="cast-and-convert-transact-sql"></a>Функции CAST и CONVERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Преобразует выражение одного типа данных в другой.  
 Например следующие примеры изменить входным типом данных в двух других типов данных, с разными уровнями точности.
@@ -58,7 +60,7 @@ SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int,
     CONVERT(decimal(6,4), 9.5) AS decimal;
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-|Исходный текст   |int    |decimal |  
+|Исходный текст   |int    |Decimal |  
 |----|----|----|  
 |9.5 |9 |9.5000 |  
 
@@ -81,13 +83,13 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 *expression*  
 Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md).
   
-*Тип данных*  
+*data_type*  
 Целевой тип данных. Сюда входят **xml**, **bigint**, и **sql_variant**. Псевдонимы типов данных недопустимы.
   
-*length*  
+*длина*  
 Указываемое дополнительно целое число, обозначающее длину целевого типа данных. Значение по умолчанию — 30.
   
-*стиль*  
+*style*  
 Целочисленное выражение, указывающее, как функцию CONVERT для преобразования *выражение*. Если стиль имеет значение NULL, возвращается NULL. Диапазон определяется *data_type*. 
   
 ## <a name="return-types"></a>Возвращаемые типы
@@ -166,7 +168,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |**126**|Эквивалентно стилю 2 при преобразовании в char(n) или varchar(n)|  
   
 ## <a name="xml-styles"></a>стили данных XML
-Когда *выражение* — **xml***, стиль* может принимать одно из значений, приведенных в следующей таблице. Другие значения обрабатываются как 0.
+Когда *выражение* — **xml ***, стиль* может принимать одно из значений, приведенных в следующей таблице. Другие значения обрабатываются как 0.
   
 |Значение|Вывод|  
 |---|---|
@@ -711,9 +713,10 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 ```  
   
 ## <a name="see-also"></a>См. также:
-[Преобразование типов данных &#40; компонент Database Engine &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
-[SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  
-[Системные функции &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
-[Написание инструкций Transact-SQL, адаптированных к международному использованию](../../relational-databases/collations/write-international-transact-sql-statements.md)
+ [Преобразование типов данных &#40; компонент Database Engine &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+ [ФОРМАТ &#40; Transact-SQL &#41;](../../t-sql/functions/format-transact-sql.md)  
+ [СТРУ &#40; Transact-SQL &#41;](../../t-sql/functions/str-transact-sql.md)  
+ [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  
+ [Системные функции &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Написание инструкций Transact-SQL, адаптированных к международному использованию](../../relational-databases/collations/write-international-transact-sql-statements.md)
   
-

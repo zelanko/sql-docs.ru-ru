@@ -3,27 +3,28 @@ title: "Ограничения по григорианскому календа�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], Gregorian calendar
 - Gregorian calendar [ODBC]
 ms.assetid: 70667410-c582-4369-8e06-9d98e21cd2bf
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7ac773945c5c138ab6834aa7914d4028d1d5e156
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1b149b1e9df8338b5502d57e6e7eb355b66bcc3f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>Ограничения григорианского календаря
 Типы данных даты и даты и времени, а также конечные поля типов данных интервала должны соответствовать ограничениям по григорианскому календарю. Ниже приведены эти ограничения.  
@@ -39,4 +40,3 @@ ms.lasthandoff: 09/09/2017
 -   Для конечные поле секунд типа данных interval, значение в поле секунд должно быть от 0 до 59.9 (*n*), включительно, где  *n*  число цифр в точность в долях секунды.  
   
 -   В поле секунд конечные типов данных даты и времени значение в поле секунд должно быть между 0 и 61.9 (*n*), включительно, где  *n*  указывает количество «9» цифры, а для параметра  *n*  имеет точность в долях секунды. (До двух корректировочных секунд для синхронизации времени sidereal позволяет диапазон секунд).
-

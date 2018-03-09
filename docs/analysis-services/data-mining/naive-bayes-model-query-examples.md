@@ -2,12 +2,13 @@
 title: "Примеры запросов к модели упрощенного алгоритма Байеса | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +16,20 @@ helpviewer_keywords:
 - naive bayes algorithms [Analysis Services]
 - content queries [DMX]
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1fa67a1dce190a145588f90b740213f6400612dd
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6935ffd8851a9454a1a2e53655be814a4eda3af1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="naive-bayes-model-query-examples"></a>Примеры запросов к модели упрощенного алгоритма Байеса
-  К модели интеллектуального анализа данных можно создать два вида запросов: запросы содержимого, возвращающие подробные сведения о закономерностях, обнаруженных при анализе, и прогнозирующие запросы, использующие закономерности, содержащиеся в модели, для прогнозирования новых данных. Получение метаданных модели интеллектуального анализа данных выполняется с помощью запроса к набору строк схемы интеллектуального анализа данных. В этом разделе описывается процесс создания запросов к моделям, основанным на упрощенном алгоритме Байеса (Майкрософт).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+К модели интеллектуального анализа данных можно создать два вида запросов: запросы содержимого, возвращающие подробные сведения о закономерностях, обнаруженных при анализе, и прогнозирующие запросы, использующие закономерности, содержащиеся в модели, для прогнозирования новых данных. Получение метаданных модели интеллектуального анализа данных выполняется с помощью запроса к набору строк схемы интеллектуального анализа данных. В этом разделе описывается процесс создания запросов к моделям, основанным на упрощенном алгоритме Байеса (Майкрософт).  
   
  **Запросы содержимого**  
   
@@ -250,20 +251,19 @@ AS t
 |||  
 |-|-|  
 |прогнозирующую функцию|Использование|  
-|[IsDescendant (расширения интеллектуального анализа данных)](../../dmx/isdescendant-dmx.md)|Определяет, является ли узел дочерним для другого узла модели.|  
-|[Predict (расширения интеллектуального анализа данных)](../../dmx/predict-dmx.md)|Возвращает прогнозируемое значение или набор значений для указанного столбца.|  
-|[PredictAdjustedProbability (расширения интеллектуального анализа данных)](../../dmx/predictadjustedprobability-dmx.md)|Возвращает взвешенную вероятность.|  
-|[PredictAssociation (расширения интеллектуального анализа данных)](../../dmx/predictassociation-dmx.md)|Прогнозирует вхождение в ассоциативном наборе данных.|  
-|[PredictNodeId (расширения интеллектуального анализа данных)](../../dmx/predictnodeid-dmx.md)|Возвращает параметр Node_ID для каждого случая.|  
-|[PredictProbability (расширения интеллектуального анализа данных)](../../dmx/predictprobability-dmx.md)|Возвращает вероятность для прогнозируемого значения.|  
-|[PredictSupport (расширения интеллектуального анализа данных)](../../dmx/predictsupport-dmx.md)|Возвращает опорное значение для указанного состояния.|  
+|[IsDescendant &#40; расширений интеллектуального анализа данных &#41;](../../dmx/isdescendant-dmx.md)|Определяет, является ли узел дочерним для другого узла модели.|  
+|[Прогноз &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predict-dmx.md)|Возвращает прогнозируемое значение или набор значений для указанного столбца.|  
+|[PredictAdjustedProbability &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictadjustedprobability-dmx.md)|Возвращает взвешенную вероятность.|  
+|[PredictAssociation &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictassociation-dmx.md)|Прогнозирует вхождение в ассоциативном наборе данных.|  
+|[PredictNodeId &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictnodeid-dmx.md)|Возвращает параметр Node_ID для каждого случая.|  
+|[PredictProbability &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictprobability-dmx.md)|Возвращает вероятность для прогнозируемого значения.|  
+|[PredictSupport &#40; расширений интеллектуального анализа данных &#41;](../../dmx/predictsupport-dmx.md)|Возвращает опорное значение для указанного состояния.|  
   
  Синтаксис специальных функций см. в разделе [Справочник по функциям расширений интеллектуального анализа данных](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Технический справочник по упрощенному алгоритму Байеса (Майкрософт)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)   
- [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
- [Содержимое моделей интеллектуального анализа данных для моделей упрощенного алгоритма Байеса (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Технический справочник Майкрософт упрощенный алгоритм Байеса](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)   
+ [Алгоритма Байеса (Майкрософт)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
+ [Содержимое модели интеллектуального анализа данных для моделей упрощенного алгоритма Байеса &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   
-

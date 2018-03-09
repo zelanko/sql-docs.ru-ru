@@ -2,25 +2,26 @@
 title: "Управление доменом | Microsoft Docs"
 ms.custom: 
 ms.date: 07/31/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- data-quality-services
+ms.suite: sql
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: "13"
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4ca23eae8c1593e9bc5d8a9a58402b6a46d7603d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 13743e56a9965e9a417b7c8222a7fa534b7feced
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="managing-a-domain"></a>Управление доменом
   В этом разделе описывается использование доменов в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Домен содержит семантическое представление данных из одного поля в анализируемом источнике данных. Домен является частью базы знаний, которая создается для источника данных, и набор знаний, которые создаются путем анализа образца источника данных или импорта данных, добавляются в домены, определенные в базе знаний. Набор знаний в этих доменах затем используется для выполнения очистки и сопоставления в проекте служб DQS. Домены являются основой всех операций служб Data Quality Services.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Если данные имеют строковый тип, в службах DQS вы можете отменить определение синтаксических ошибок, когда известно, что в строках таких ошибок не будет.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  Использование домена позволяет выполнять следующие действия.  
   
 |||  
@@ -57,7 +58,7 @@ ms.lasthandoff: 09/09/2017
 |Использовать отношения для исправления терминов, которые являются частью значений в домене.|[Создание связей на основе термина](../data-quality-services/create-term-based-relations.md)|  
 |Завершать, закрывать или отменять операцию управления доменами.|[Завершение операции по управлению доменами](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
@@ -66,4 +67,3 @@ ms.lasthandoff: 09/09/2017
 |Создание составного домена и добавление набора знаний в этот домен.|[Управление составным доменом](../data-quality-services/managing-a-composite-domain.md)|  
   
   
-

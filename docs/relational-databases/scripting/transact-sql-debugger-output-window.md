@@ -2,9 +2,12 @@
 title: "Окно \"Вывод\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - Output Window [Transact-SQL]
 - Output Window [SQL Server Management Studio]
 ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9b72555e4286f74f7fc369c076af8d27721b2b3a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 764c995e18349b104a3c14297fb3347d44c103c5
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="transact-sql-debugger---output-window"></a>Отладчик Transact-SQL, окно вывода
-  В этом окне отображается сообщение о состоянии для различных функциональных возможностей в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Выходные данные доставляются в специальные панели окна **Вывод** из отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] , компонентов внешних средств или команд, выполняемых в **Окне команд**отладчика. Также доступны выходные данные внешних средств, таких как BAT и COM-файлы, обычно отображаемые в окне командной строки.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этом окне отображаются сообщения о состоянии для различных функциональных возможностей в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Выходные данные доставляются в специальные панели окна **Вывод** из отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] , компонентов внешних средств или команд, выполняемых в **Окне команд**отладчика. Также доступны выходные данные внешних средств, таких как BAT и COM-файлы, обычно отображаемые в окне командной строки.  
   
  **Получение доступа к окну «Вывод»**  
   
@@ -45,4 +47,3 @@ ms.lasthandoff: 06/22/2017
  [Отладчик Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)  
   
   
-

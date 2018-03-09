@@ -3,7 +3,7 @@ title: "Добавление записей | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - editing data [ADO], AddNew method
 - editing data [ADO], adding data
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1dc55762f934ecd3371aeb4d14311e6458b44c2c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f2804e2662e15c993fb3c5de7e1278a623ffcd47
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adding-records-to-a-recordset"></a>Добавление записей в наборе записей
 Используйте **AddNew** метод для создания и инициализации новой записи в существующем **записей**. Можно использовать **поддерживает** метод с **CursorOptionEnum** значение **adAddNew** Чтобы проверить возможность добавления записи в текущий **наборазаписей** объекта.
@@ -43,7 +42,6 @@ ms.lasthandoff: 09/09/2017
 
 -   [Добавление нескольких полей](../../../ado/guide/data/adding-multiple-fields.md)
 
--   [Определение режима редактирования](../../../ado/guide/data/determining-edit-mode.md)
+-   [Определение режима изменения](../../../ado/guide/data/determining-edit-mode.md)
 
--   [С помощью AddNew в интерпретации и пакетного режима](../../../ado/guide/data/using-addnew-in-immediate-and-batch-modes.md)
-
+-   [Использование AddNew в режиме интерпретации и пакетном режиме](../../../ado/guide/data/using-addnew-in-immediate-and-batch-modes.md)

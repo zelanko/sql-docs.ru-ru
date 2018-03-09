@@ -3,26 +3,26 @@ title: "Функция SQLSetConnectAttrForDbcInfo | Документы Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLSetConnectAttrForDbcInfo function [ODBC]
+helpviewer_keywords: SQLSetConnectAttrForDbcInfo function [ODBC]
 ms.assetid: a28fadb9-b998-472a-b252-709507e92005
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8ef62393ac00b7d094e6ba47613038fdf7ac2175
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3ffe1bf224a28d7ff1151033576abcd5f10f56ed
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>Функция SQLSetConnectAttrForDbcInfo
 **Соответствия**  
@@ -72,7 +72,7 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
 ## <a name="diagnostics"></a>Диагностика  
  То же, что [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), за исключением того, что будет использоваться диспетчер драйверов **HandleType** из SQL_HANDLE_DBC_INFO_TOKEN и **обработки** из *hDbcInfoToken* .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **SQLSetConnectAttrForDbcInfo** совпадает со значением **SQLSetConnectAttr**, но задает атрибут на маркер сведения соединения вместо на дескриптор соединения. Например если **SQLSetConnectAttr** не распознает атрибут **SQLSetConnectAttrForDbcInfo** также вернет значение SQL_ERROR для этого атрибута.  
   
  Каждый раз, когда драйвер возвращает значение SQL_ERROR или SQL_INVALID_HANDLE, драйвер должен игнорировать этот атрибут для вычисления код пула. Кроме того, диспетчер драйверов будет получать диагностические данные из *hDbcInfoToken*и возвращают значение SQL_SUCCESS_WITH_INFO к приложению в [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) и [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md). Таким образом приложение может получить сведения о том, почему некоторые атрибуты нельзя устанавливать.  
@@ -84,5 +84,4 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
 ## <a name="see-also"></a>См. также:  
  [Разработка драйвера ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Организация пулов соединений с учетом драйвера](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
- [Разработка драйвера ODBC, поддерживающие пула соединений](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)
-
+ [Разработка драйвера ODBC с поддержкой пула подключений](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

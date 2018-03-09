@@ -2,33 +2,31 @@
 title: "Правила именования (службы Analysis Services) объектов | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- objects [Analysis Services], naming
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: objects [Analysis Services], naming
 ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9b489ecceb4d8aeb5716708ae680999a296b5d14
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 116ee643ee52c3bdb8c5b6188ba5198afc24265d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="object-naming-rules-analysis-services"></a>Правила именования объектов (службы Analysis Services)
-  В этом разделе описываются соглашения об именовании объектов. В нем также приведены зарезервированные слова и символы, которые нельзя использовать в именах объектов, в коде или в скриптах в службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]В этом разделе описываются соглашения об именовании объектов, а также зарезервированные слова и символы, которые нельзя использовать в именах объектов, в коде или в скриптах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ##  <a name="bkmk_Names"></a>Соглашения об именовании  
  Каждый объект имеет свойства **Name** и **ID** , которые должны быть уникальными в области определения родительской коллекции. Например, два измерения могут иметь одинаковое имя, только если они находятся в разных базах данных.  
@@ -74,13 +72,13 @@ ms.lasthandoff: 09/01/2017
   
  В следующей таблице перечислены символы, которые являются недопустимыми для конкретных объектов.  
   
-|Объект|Недопустимые символы|  
+|Object|Недопустимые символы|  
 |------------|------------------------|  
 |**Server**|При именовании серверных объектов следуйте соглашению об именах для сервера Windows. Дополнительные сведения см. в разделе [Соглашения об именах (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) .|  
 |**DataSource**|: / \ * &#124; ? " () [] {} <>|  
-|**Level** или **Attribute**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
-|**Dimension** или **Hierarchy**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \<,>|  
-|Все прочие объекты|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} < >|  
+|**Level** или **Attribute**|, и делает это по-другому. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
+|**Dimension** или **Hierarchy**|, и делает это по-другому. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \<,>|  
+|Все прочие объекты|, и делает это по-другому. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} < >|  
   
  **Исключения: Когда зарезервированные символы разрешены**  
   
@@ -88,9 +86,9 @@ ms.lasthandoff: 09/01/2017
   
 |Режим сервера и уровень совместимости базы данных|Зарезервированные символы разрешены?|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (все версии)|Нет|  
-|Табличные — 1050|Нет|  
-|Табличные — 1100|Нет|  
+|MOLAP (все версии)|нет|  
+|Табличные — 1050|нет|  
+|Табличные — 1100|нет|  
 |Табличные — 1130 и выше|Да|  
   
  Базы данных могут иметь ModelType по умолчанию. Типом по умолчанию является многомерная база данных, в связи с чем использование зарезервированных символов в именах столбцов не поддерживается.  
@@ -101,4 +99,3 @@ ms.lasthandoff: 09/01/2017
  [XML для аналитики соответствия &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  
   
   
-

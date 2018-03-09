@@ -2,13 +2,13 @@
 title: "Предоставление разрешений на чтение описания метаданным объекта (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - permissions [Analysis Services], read metadata
 - read metadata permissions
 ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
-caps.latest.revision: 32
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 24e661c0ba9bd5c143365c69282e2cdae91b174a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 55c4e6d43ffedd933e968e8fc2355871c698d290
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>Предоставление разрешений на чтение описания метаданным объекта (службы Analysis Services)
-  Разрешение на чтение описания объекта или метаданных на выбранных объектах позволяет администратору предоставлять разрешение на просмотр информации об объекте без дополнительного предоставления разрешения на изменение описания объекта, изменение структуры объекта или просмотр фактических данных объекта. Разрешения**Чтение определения** могут быть предоставлены на уровнях базы данных, источника данных, измерения, структуры интеллектуального анализа данных и модели интеллектуального анализа данных.. Если вам необходимы разрешения на **Чтение Описания** для куба, вы должны активировать **Чтение Описания** для базы данных. Помните о том, что разрешения являются аддитивными. Например, одна роль предоставляет разрешение кубу на чтение метаданных, в то время как вторая роль предоставляет этому же пользователю разрешение измерению на чтение метаданных. Разрешения от двух разных ролей соединяются для предоставления пользователю разрешения как на чтение метаданных для куба, так и метаданных для измерения в рамках этой базы данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Разрешение на чтение описания объекта или метаданных на выбранных объектах позволяет администратору предоставлять разрешение на просмотр информации об объекте без дополнительного предоставления разрешения на изменение описания объекта, изменение структуры объекта или просмотр фактических данных объекта. Разрешения**Чтение определения** могут быть предоставлены на уровнях базы данных, источника данных, измерения, структуры интеллектуального анализа данных и модели интеллектуального анализа данных. Если вам необходимы разрешения на **Чтение Описания** для куба, вы должны активировать **Чтение Описания** для базы данных. Помните о том, что разрешения являются аддитивными. Например, одна роль предоставляет разрешение кубу на чтение метаданных, в то время как вторая роль предоставляет этому же пользователю разрешение измерению на чтение метаданных. Разрешения от двух разных ролей соединяются для предоставления пользователю разрешения как на чтение метаданных для куба, так и метаданных для измерения в рамках этой базы данных.  
   
 > [!NOTE]  
 >  Разрешение на чтение метаданных базы данных является минимальным разрешением, необходимым для соединения с базой данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с использованием среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] или среды [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Пользователь, имеющий разрешение на чтение метаданных, также может использовать набор строк схемы DISCOVER_XML_METADATA для создания запросов к объекту и просмотра его метаданных. Дополнительные сведения см. в разделе [Набор строк DISCOVER_XML_METADATA](../../analysis-services/schema-rowsets/xml/discover-xml-metadata-rowset.md).  
@@ -39,7 +39,7 @@ ms.lasthandoff: 09/01/2017
   
  Мы советуем вам включать разрешение на **Чтение Описания** на уровне базы данных всякий раз, когда вы настраиваете роли для целевой обработки. Благодаря разрешению **Считывание определения** пользователи без прав администратора могут видеть иерархию объекта модели в службе [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и переходить к индивидуальным объектам для последующей обработки.  
   
-1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]соединитесь с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], разверните узел **Роли** для соответствующей базы данных в обозревателе объектов, а затем щелкните роль базы данных (или создайте новую).  
+1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] соединитесь с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], разверните узел **Роли** для соответствующей базы данных в обозревателе объектов, а затем щелкните роль базы данных (или создайте новую).  
   
 2.  На вкладке **Общие** выберите параметр **Чтение определения** .  
   
@@ -66,8 +66,7 @@ ms.lasthandoff: 09/01/2017
 5.  Нажмите **ОК** для завершения процесса создания роли.  
   
 ## <a name="see-also"></a>См. также  
- [Предоставление разрешений базы данных (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
- [Предоставление разрешений на обработку (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+ [Предоставление разрешений базы данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
+ [Предоставление разрешений доступа &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   
-

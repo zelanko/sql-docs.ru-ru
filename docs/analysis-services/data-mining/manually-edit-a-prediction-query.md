@@ -2,12 +2,13 @@
 title: "Изменение прогнозирующего запроса вручную | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +16,20 @@ helpviewer_keywords:
 - Mining Model Prediction [Analysis Services], modifying prediction queries
 - manual prediction query modification [Analysis Services]
 ms.assetid: 9f6a9298-49d5-4675-ad49-977a47dff5a6
-caps.latest.revision: 17
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 48eb031ed8d8bd7d2788f74c349d4ff03eb27bb8
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 57f892500d2ef26dc2227b4c0710c4d039dcb34e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="manually-edit-a-prediction-query"></a>Изменение прогнозирующего запроса вручную
-  После проектирования запроса с использованием построителя прогнозирующих запросов можно изменить этот запрос, переключившись в представление «Текст запроса» на вкладке **Прогноз модели интеллектуального анализа данных** конструктора интеллектуального анализа данных. В нижней части экрана появится текстовый редактор, отображающий запрос, созданный построителем запросов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+После проектирования запроса с использованием построителя прогнозирующих запросов можно изменить этот запрос, переключившись в представление «Текст запроса» на вкладке **Прогноз модели интеллектуального анализа данных** конструктора интеллектуального анализа данных. В нижней части экрана появится текстовый редактор, отображающий запрос, созданный построителем запросов.  
   
  Переключение на представление «Текст запроса» полезно при внесении дополнений в запрос. Например, можно добавить предложение WHERE или ORDER BY.  
   
@@ -51,7 +52,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>См. также  
  [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md)   
  [Построитель прогнозирующих запросов &#40; интеллектуального анализа данных &#41;](http://msdn.microsoft.com/library/12900d49-db88-48bb-a5f4-0a9a172bc126)   
- [Занятие 6. Создание прогнозов и работа с ними (учебник по интеллектуальному анализу данных — начальный уровень)](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)  
+ [Урок 6: Создание и работа с прогнозов &#40; Учебник по интеллектуальному анализу данных &#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)  
   
   
-

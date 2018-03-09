@@ -1,30 +1,30 @@
 ---
 title: "Скалярные пользовательские функции для выполняющейся в памяти OLTP | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.suite: sql
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d2546e40-fdfc-414b-8196-76ed1f124bf5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ec9be02546a7402b1451a94ff9bc9fd0357e7210
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: e2bc469930621e79c05435c042240510d7826648
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>Скалярные определяемые пользователем функции для выполняющейся в памяти OLTP
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]можно создавать и удалять скомпилированные в собственном коде определяемые пользователем скалярные функции. Их также можно изменять. Компиляция в собственном коде повышает производительность вычисления определяемых пользователем функций в Transact-SQL.  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 09/08/2017
   
  Ниже приведен пример скалярной определяемой пользователем функции из примера базы данных [AdventureWorks2016CTP3](https://www.microsoft.com/download/details.aspx?id=49502) .  
   
-```tsql  
+```sql  
 CREATE FUNCTION [dbo].[ufnLeadingZeros_native](@Value int)   
 RETURNS varchar(8)   
 WITH NATIVE_COMPILATION, SCHEMABINDING  
@@ -111,4 +111,3 @@ END
  [Сохранение плана выполнения в формате XML](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
   
-

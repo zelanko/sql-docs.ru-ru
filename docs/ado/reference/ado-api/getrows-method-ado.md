@@ -3,7 +3,7 @@ title: "Метод GetRows (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Getrows method [ADO]
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 1fb0ab2e6673a85b7204cacfbeed5bf4968970b9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1c76e506432e4aeeaae552ea67803bf4723c85fa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="getrows-method-ado"></a>Метод GetRows (ADO)
 Возвращает множество записей, имеющих [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект в массив.  
@@ -51,10 +50,10 @@ array = recordset.GetRows(Rows, Start, Fields )
  *Запуск*  
  Необязательно. Объект **строка** значение или **Variant** , результатом которого является закладка для записи из которого **GetRows** должна начаться операция. Можно также использовать [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) значение.  
   
- *Поля*  
+ *Fields*  
  Необязательно. Объект **Variant** , представляющий одно поле имя или порядковый номер или массив имен полей или номера порядковый номер. ADO возвращает только данные в этих полях.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **GetRows** метод копирования записей из **записей** в двухмерный массив. Первый индекс определяет поля, а второй определяет номер записи. *Массива* переменной автоматически измеренных правильный размер при **GetRows** метод возвращает данные.  
   
  Если не указать значение для *строк* аргумент, **GetRows** метод автоматически получает все записи в **записей** объекта. Если запрос больше записей, чем доступно, **GetRows** возвращает число доступных записей.  
@@ -66,9 +65,8 @@ array = recordset.GetRows(Rows, Start, Fields )
  После вызова метода **GetRows**, далее непрочитанные запись становится текущей записи или [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) свойству **True** Если нет дополнительных записей.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода GetRows (Visual Basic)](../../../ado/reference/ado-api/getrows-method-example-vb.md)   
- [Пример метода GetRows (VC ++)](../../../ado/reference/ado-api/getrows-method-example-vc.md)   
-
+ [Пример метода GetRows (Visual C++)](../../../ado/reference/ado-api/getrows-method-example-vc.md)   

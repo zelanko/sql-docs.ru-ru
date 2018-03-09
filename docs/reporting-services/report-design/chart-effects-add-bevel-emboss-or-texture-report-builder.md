@@ -1,29 +1,29 @@
 ---
-title: "Добавление стилей рельефа, приподнятости и текстуры в диаграмму (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Добавление в диаграмму стилей багетной рамки, рельефа и текстуры (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2081d22c9e0aefd82cda5dff97b8ece503fdd9b0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ce27503bed40b45359d8c65c6eeec7674e1ce486
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>Эффекты для диаграммы - добавить Рельеф, рельефный, или текстуры (построитель отчетов)
+# <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>Эффекты диаграммы — добавление багетной рамки, рельефа и текстуры (построитель отчетов)
   При использовании диаграмм определенных типов можно ввести в действие эффекты рисования для повышения внешней привлекательности диаграммы. Эти эффекты рисования применяются только к ряду, представленному на диаграмме. Они не оказывают никакого влияния на другие элементы диаграммы.  
   
  Если используется какой-либо вариант круговой или кольцевой диаграммы, можно определить стиль рисования с применением размытых краев или вогнутых участков, аналогичный стилю с эффектами скоса или выпуклости, которые могут быть применены к изображению.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  На одной диаграмме не могут применяться объемный и рельефный или приподнятый стили. Если для диаграммы включен объемный стиль, свойство PieDrawingStyle не будет выводиться.  
   
- ![Круговая диаграмма с вогнутым стилем](../../reporting-services/report-design/media/rs-piedrawingeffects-concave.gif "круговая диаграмма с вогнутым стилем")  
+ ![Круговая диаграмма, нарисованная вогнутым стилем](../../reporting-services/report-design/media/rs-piedrawingeffects-concave.gif "Круговая диаграмма, нарисованная вогнутым стилем")  
   
 ### <a name="to-add-texture-styles-to-a-bar-or-column-chart"></a>Чтобы добавить стили текстуры к линейчатой диаграмме или гистограмме  
   
@@ -63,13 +63,12 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  На одной диаграмме не могут применяться объемный и рельефный или приподнятый стили. Если для диаграммы включен объемный стиль, свойство PieDrawingStyle не будет выводиться.  
   
- ![Линейчатая диаграмма с эффектом рисования LightToDark](../../reporting-services/report-design/media/rs-bardrawingeffects-lighttodark.gif "линейчатая диаграмма с эффектом рисования LightToDark")  
+ ![Линейчатая диаграмма с эффектом LightToDark](../../reporting-services/report-design/media/rs-bardrawingeffects-lighttodark.gif "Линейчатая диаграмма с эффектом LightToDark")  
   
 ## <a name="see-also"></a>См. также:  
  [Линейчатые диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
- [Гистограмма с накоплением &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
- [Круговые диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
- [Форматирование диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
+ [Гистограммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
+ [Круговые диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
+ [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   
-

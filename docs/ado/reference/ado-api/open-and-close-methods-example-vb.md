@@ -3,7 +3,7 @@ title: "Открытие и закрытие примере методы (Visual
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Close method [ADO], Visual Basic example
 - Open method [ADO], Visual Basic example
 ms.assetid: 1311d561-0e86-40f5-8cbc-ad8f13e626d1
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 1b69303657d88f1ea74f7ff969d8380d0954b886
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ca0bb3c993a830f8c9704570483bf70c952abfb2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-and-close-methods-example-vb"></a>Открытие и закрытие примере методы (Visual Basic)
 В этом примере используется **откройте** и [закрыть](../../../ado/reference/ado-api/close-method-ado.md) методы как на [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекты, которые были открыты.  
@@ -109,10 +108,9 @@ End Sub
 'EndOpenVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Close-метод (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
  [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Метод Open (соединение ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Метод Open (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

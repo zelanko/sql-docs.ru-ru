@@ -3,7 +3,7 @@ title: "DataTypeEnum | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - DataTypeEnum enumeration [ADO]
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: f99476b2ccbf9e405d29eca6adbf49ce22fc3f85
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 289d11f586fc1bd583baeb615ce3cff491949ccc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Указывает тип данных [поле](../../../ado/reference/ado-api/field-object.md), [параметр](../../../ado/reference/ado-api/parameter-object.md), или [свойства](../../../ado/reference/ado-api/property-object-ado.md). В круглых скобках в столбце "Описание" в следующей таблице показан соответствующий индикатор типа OLE DB.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|Значение флага всегда в сочетании с другой константой данных типа, указывающее массив другого типа данных. Не применяется к ADOX.|  
 |**adBigInt**|20|Показывает, 8 байтовое целое число со знаком (DBTYPE_I8).|  
@@ -126,6 +125,5 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[Append-метод (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[Метод CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)|  
-|[Метод CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|[Свойство Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)|
-
+|[Метод Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[Метод CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)|  
+|[Метод CreateRecordset (служба удаленных рабочих столов)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|[Свойство Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)|

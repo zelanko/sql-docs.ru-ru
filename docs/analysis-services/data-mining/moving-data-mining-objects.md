@@ -2,12 +2,13 @@
 title: "Перемещение объектов интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +18,20 @@ helpviewer_keywords:
 - Data Mining Designer
 - mining models [Analysis Services], modifying
 ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
-caps.latest.revision: 45
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c43da2044b4f3231d947c88626cb43081fb29f6a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 198dd7792a24f0090aec82593704f0f2165b0d43
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="moving-data-mining-objects"></a>Перемещение объектов интеллектуального анализа данных
-  Самым распространенным случаем перемещения объектов интеллектуального анализа данных является развертывание модели из тестовой среды или среды анализа в рабочей среде или обеспечение общего доступа к моделям для других пользователей.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Самым распространенным случаем перемещения объектов интеллектуального анализа данных является развертывание модели из тестовой среды или среды анализа в рабочей среде или обеспечение общего доступа к моделям для других пользователей.  
   
  В данном разделе описывается использование средств и языков скриптов [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]для перемещения объектов интеллектуального анализа данных.  
   
@@ -72,16 +73,16 @@ ms.lasthandoff: 09/01/2017
  Дополнительные сведения см. в разделе [Разработка на языке ASSL (язык ASSL)](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
 ### <a name="backup-and-restore"></a>Резервное копирование и восстановление  
- Резервное копирование и восстановление из копии всей базы данных служб Analysis Services является лучшим методом, если решение интеллектуального анализа данных зависит от объектов OLAP. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] предоставляет функции резервного копирования и восстановления, ускоряющие и облегчающие резервное копирование баз данных.  
+ Резервное копирование и восстановление из копии всей базы данных служб Analysis Services является лучшим методом, если решение интеллектуального анализа данных зависит от объектов OLAP. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]предоставляет функциональные возможности резервного копирования и восстановления, ускоряющие и облегчающие резервное копирование баз данных.  
   
  Дополнительные сведения о резервном копировании см. в разделе [Создание и восстановление резервных копий баз данных служб Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md).  
   
 ### <a name="exporting-and-importing"></a>Импорт и экспорт  
  Экспорт и последующий импорт моделей и структур интеллектуального анализа данных с помощью инструкций DMX — лучший способ перемещения или создания резервных копий отдельных реляционных объектов интеллектуального анализа данных. Дополнительные сведения о синтаксисе расширения интеллектуального анализа данных для этих операций см. в следующих разделах:  
   
--   [EXPORT (расширения интеллектуального анализа данных)](../../dmx/export-dmx.md)  
+-   [ЭКСПОРТИРОВАТЬ &#40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ &#41;](../../dmx/export-dmx.md)  
   
--   [IMPORT (расширения интеллектуального анализа данных)](../../dmx/import-dmx.md)  
+-   [ИМПОРТИРОВАТЬ &#40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ &#41;](../../dmx/import-dmx.md)  
   
  Если указывается параметр INCLUDE DEPENDENCIES, службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] также экспортируют определения всех соответствующих представлений источников данных, а при импорте модели или структуры они повторно создают представление источника данных на целевом сервере. После завершения импорта модели убедитесь, что в объекте установлены все необходимые разрешения интеллектуального анализа.  
   
@@ -89,7 +90,6 @@ ms.lasthandoff: 09/01/2017
 >  С помощью инструкций DMX нельзя экспортировать и импортировать модели OLAP. Если модель интеллектуального анализа данных основана на кубе OLAP, для резервного копирования и восстановления всей базы данных необходимо воспользоваться функциями служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] либо выполнить повторное развертывание куба и его моделей.  
   
 ## <a name="see-also"></a>См. также  
- [Управление решениями и объектами интеллектуального анализа данных](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+ [Управление решениями интеллектуального анализа данных и объектов](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   
-

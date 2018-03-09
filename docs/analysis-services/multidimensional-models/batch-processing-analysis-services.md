@@ -2,32 +2,30 @@
 title: "Пакетная обработка (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- batches [Analysis Services]
+helpviewer_keywords: batches [Analysis Services]
 ms.assetid: ba4dcf72-0667-41d0-816b-ab8ff9a7d9cb
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ec94963644de42f6fd07da60c16f2f314f168e41
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a7770a5b6f5a6ba26cfa89d1200a776ec55c0942
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="batch-processing-analysis-services"></a>Пакетная обработка (службы Analysis Services)
-  В службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]вы можете использовать команду «Пакет», чтобы отправить несколько команд обработки на сервер в одном запросе. Пакетная обработка позволяет выбирать объекты для обработки и управлять порядком их обработки. Кроме того, пакет можно выполнить как серию изолированных заданий или как транзакцию, в которой сбой одного из процессов влечет за собой откат всего пакета.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], чтобы отправить несколько команд обработки на сервере в одном запросе можно использовать пакетную команду. Пакетная обработка позволяет выбирать объекты для обработки и управлять порядком их обработки. Кроме того, пакет можно выполнить как серию изолированных заданий или как транзакцию, в которой сбой одного из процессов влечет за собой откат всего пакета.  
   
  Обработка пакетами увеличивает доступность данных за счет совмещения и уменьшения времени на фиксацию изменений. При полной обработке измерения любая использующая его секция помечается как необработанная. В результате этого кубы, содержащие необработанные секции, становятся недоступными для просмотра. Эту ситуацию можно исправить, включив в задание пакетной обработки измерение вместе с соответствующими секциями. При выполнении задания пакетной обработки как транзакции все включенные в транзакцию объекты останутся доступными для запросов до полного завершения обработки. После того как транзакция зафиксирована, на затронутые объекты налагается блокировка, что временно делает их недоступными, однако при этом суммарное количество времени на фиксацию оказывается меньше по сравнению с обработкой объектов по одному.  
   
@@ -81,8 +79,7 @@ ms.lasthandoff: 09/01/2017
   
  Пошаговые инструкции см. в подразделе **Пример 2** раздела [Schedule SSAS Admразделаistrative Tasks with SQL Server Agent](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Свойство AbsolutePosition (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - AbsolutePosition property [ADO]
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e2d1df667bb580d451e527e458d83703940483f4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9c8a31bd7b0fbf2809b09b10b2ebcb983d7c811c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="absoluteposition-property-ado"></a>Свойство AbsolutePosition (ADO)
 Указывает порядковый номер [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта текущей записи.  
@@ -38,7 +37,7 @@ ms.lasthandoff: 09/09/2017
   
  Для 64-разрядного кода используйте тип данных, который обеспечивает хранение 64-разрядное значение. Например, можно использовать долго или другой значение, представляющее длину 64-разрядной, например DBORDINAL. Не используйте **PositionEnum** значения, так как они ограничены длиной 32 бит.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Чтобы задать **AbsolutePosition** свойства, ADO требуется реализовать, поставщик OLE DB, который вы используете [IRowsetLocate:IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx) интерфейса.  
   
  Доступ к **AbsolutePosition** свойство **записей** , был открыт с помощью последовательным или динамический курсор вызывает ошибку **adErrFeatureNotAvailable**. Для других типов курсоров правильное положение будут возвращены при условии, что поставщик OLE DB поддерживает **IRowsetScroll:IRowsetLocate** интерфейса. Если поставщик не поддерживает **IRowsetScroll** интерфейс, является свойство **adPosUnknown**. См. в документации для поставщика определить, поддерживает ли он **IRowsetScroll**.  
@@ -53,11 +52,10 @@ ms.lasthandoff: 09/09/2017
 >  Не следует использовать **AbsolutePosition** свойство в качестве символов-заместителей номер записи. Позиция изменения определенной записи, при удалении предыдущей записи. Нет никакой гарантии, что данная запись будет иметь такой же **AbsolutePosition** Если **записей** опросить или повторном открытии объекта. Закладки, будут по-прежнему рекомендуемый способ сохранения и возврат к заданной позиции и являются единственным способом размещения различных типов **записей** объектов.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [AbsolutePosition и CursorLocation-пример свойства (Visual Basic)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vb.md)   
  [AbsolutePosition и пример свойства CursorLocation (VC ++)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vc.md)   
  [Свойство AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [Свойство RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)
-

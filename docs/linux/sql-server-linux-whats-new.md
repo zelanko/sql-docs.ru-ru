@@ -1,163 +1,78 @@
 ---
 title: "Новые возможности для SQL Server 2017 г. для Linux | Документы Microsoft"
-description: "В этом разделе представлены новые возможности в текущем выпуске 2017 г. SQL Server в Linux."
+description: "В данной статье описываются новые возможности для 2017 г. SQL Server в Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 10/02/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
+ms.workload: On Demand
+ms.openlocfilehash: fd7f69a8cb21fa8aaabb518f9b3d1d178606a685
+ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
 ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: f76985a8721e154269b36b0bdcb40a83f6136cb3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/20/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Новые возможности для 2017 г. SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этом разделе описаны новые для SQL Server 2017 г., выполняемым на платформе Linux.
+В этой статье описываются основные функции и службы, доступные для ОС Linux 2017 г. SQL Server.
 
-## <a name="ga"></a>ГЛОБАЛЬНЫЙ АДМИНИСТРАТОР
+> [!NOTE]
+> Помимо этих возможностей в этой статье накопительные обновления выпускаются с регулярными интервалами после выпуска общедоступной версии. Эти накопительные обновления содержат много усовершенствований и исправлений. Сведения о последнем выпуске CU см. в разделе [http://aka.ms/sql2017cu](http://aka.ms/sql2017cu). Загрузка пакетов и известных проблемах см. в разделе [заметки о выпуске](sql-server-linux-release-notes.md).
 
-Выпуск общедоступной Availaiblity версии (GA) содержит следующие улучшения и исправления:
+## <a name="sql-server-database-engine"></a>Компонент SQL Server Database Engine
 
-- Файлы базы данных теперь может размещаться в NFS. Это устраняет проблемы со сценариями NFS общего диска с подключением удаленного хранилища для контейнера платформ и Монтирование папок для Docker для Windows.
-- Другие исправления различных ошибок и улучшения.
-
-## <a name="rc2"></a>RC2
-
-В выпуске версии-кандидата 2 содержит исправления различных ошибок и усовершенствования.
-
-## <a name="rc1"></a>RC1
-
-Обновление версии-кандидата 1 содержит следующие улучшения и исправления:
-
-- Включить прозрачное Layer Security (TLS) для шифрованных соединений. Дополнительные сведения см. в разделе [шифрование соединений с SQL Server в Linux](sql-server-linux-encrypted-connections.md).
+- Включить основных возможностей SQL Server Database Engine.
+- Поддержка собственного пути Linux.
+- Поддержка протокола IPv6.
+- Поддержку файлов баз данных в NFS.
+- Включить [прозрачный слой безопасности](sql-server-linux-encrypted-connections.md) шифрования (TLS).
 - Включить [проверки подлинности Active Directory](sql-server-linux-active-directory-authentication.md).
-- Включить [компонента DB Mail](../relational-databases/database-mail/database-mail.md).
-- Добавлена поддержка IPV6.
-- Переменные среды, добавленных для начальной установки SQL Server. Дополнительные сведения см. в разделе [SQL Server можно настроить параметры с переменными среды на Linux](sql-server-linux-configure-environment-variables.md).
-- Удалить **sqlpackage** установлены двоичные файлы. SqlPackage можно по-прежнему выполняться для Linux удаленно из Windows.
-- Общие наборы агента ресурсов кластера диска, имя ресурса, как он делает экземпляра отказоустойчивого кластера Windows SQL Server. `@@ServerName`Возвращает имя ресурса кластера общего диска SQL Server; до версии-кандидата 1 возвращается имя узла кластера, принадлежащий ресурс.
+- [Функции групп доступности](sql-server-linux-availability-group-overview.md) для обеспечения высокой доступности.
+- [Компонент Full-text Search](sql-server-linux-setup-full-text-search.md) поддержки.
 
-## <a name="ctp-21"></a>CTP-ВЕРСИИ 2.1
+## <a name="sql-server-agent"></a>SQL Server, агент
 
-В выпуске CTP-версии 2.1 содержит следующие улучшения и исправления:
+- Включить [агента SQL Server](sql-server-linux-setup-sql-agent.md) поддержки для выполнения следующих задач:
+  - [Задания Transact-SQL](sql-server-linux-run-sql-server-agent-job.md)
+  - [DB mail](sql-server-linux-db-mail-sql-agent.md)
+  - [Доставка журналов](sql-server-linux-use-log-shipping.md)
 
-- Добавлен [переменных среды, чтобы настроить службу SQL Server](sql-server-linux-configure-environment-variables.md).
-- [MSSQL conf](sql-server-linux-configure-mssql-conf.md) теперь требует двух частей соглашение об именах для параметров.
-- [Mssql-scripter](https://github.com/Microsoft/sql-xplat-cli) средства. Эта программа позволяет разработчикам, администраторам баз данных и администраторами для создания `CREATE` и `INSERT` скриптов Transact-SQL из объектов базы данных в базах данных SQL Server, база данных SQL Azure и хранилища данных SQL Azure из командной строки.
-- [DBFS средство](https://github.com/Microsoft/dbfs). Это средство с открытым исходным кодом, который позволяет администраторам баз данных и администраторами для упрощения мониторинга SQL Server, предоставляя актуальные данные из SQL Server динамические административные представления (DMV) в качестве виртуальных файлов в виртуальном каталоге, в операционных системах Linux.
-- SQL Server Integration Services (SSIS) теперь работает на платформе Linux. Кроме того имеется новый пакет, который позволяет запускать пакеты служб SSIS в Linux из командной строки. Дополнительные сведения см. в разделе [блога post Представляем поддержку SSIS для Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). С помощью служб SSIS на Linux CTP-версии 2.1 обновления пакетов служб SSIS можно использовать подключения ODBC в Linux. Дополнительные сведения см. в разделе [записи блога Представляем поддержка ODBC в Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+## <a name="sql-server-integration-services-ssis"></a>Службы SQL Server Integration Services
 
-## <a name="ctp-20"></a>CTP 2.0
+- Возможность запускать пакеты служб SSIS в Linux. Дополнительные сведения см. в разделе [настройки SQL Server Integration Services в Linux с помощью служб ssis conf](sql-server-linux-configure-ssis.md).
 
-В выпуске CTP-версии 2.0 содержит следующие улучшения и исправления:
+## <a name="other-improvements"></a>Другие усовершенствования
 
-- Добавлен **доставки журналов** функциональные возможности для агента SQL Server.
-- Локализованные сообщения mssql конфигурацией
-- Форматирование путь Linux теперь совместимы в SQL Server Engine. Но поддержка «C:\\"будет продолжена с префиксом пути.
-- Включить динамическое административное Представление **sys.dm_os_file_exists**.
-- Включить динамическое административное Представление **sys.fn_trace_gettable**.
-- Добавлен [режиме строгой безопасности CLR](/sql/database-engine/configure-windows/clr-strict-security).
-- Граф SQL.
-- Перестроение возобновляемые индексов в сети.
-- Обработка адаптивной запросов.
-- Добавлены кодировку UTF-8 для системных файлов, включая файлы журнала.
-- Исправлена ограничение расположение в памяти баз данных. 
-- Добавление нового типа кластера `CLUSTER_TYPE = EXTERNAL` для настройки группы доступности для обеспечения высокой доступности.
-- Исправьте прослушивателя группы доступности для маршрутизации только для чтения.
-- Производственной поддержки для клиентов программы раннего внедрения (EAP). Регистрация [здесь](http://aka.ms/eapsignup).
+- Средство командной строки настройки [mssql conf](sql-server-linux-configure-mssql-conf.md).
+- Поддержка автоматической установки с помощью [переменных среды](sql-server-linux-configure-environment-variables.md).
+- Кросс платформенных [расширения Visual Studio Code mssql сервера](sql-server-linux-develop-use-vscode.md).
+- Генератор скриптов между различными платформами, [mssql-scripter](https://github.com/Microsoft/sql-xplat-cli/blob/dev/doc/usage_guide.md).
+- Монитор кросс платформенных динамическое административное представление (DMV), [DBFS средство](https://github.com/Microsoft/dbfs).
 
-## <a name="ctp-14"></a>CTP-ВЕРСИИ 1.4
+## <a name="next-steps"></a>Следующие шаги
 
-В выпуске CTP-версии 1.4 содержит следующие улучшения и исправления:
+Для установки SQL Server в Linux, используйте один из следующих учебников:
 
-- Включить [агента SQL Server](sql-server-linux-setup-sql-agent.md).
-  - Включить функции заданий T-SQL.
-- Часовой пояс основных ошибок:
-  - Поддержка Азия/Калькутта часовой пояс.
-  - Основные функции GETDATE().
-- Сетевой Async I / 0 усовершенствования:
-  - Значительные улучшения производительности рабочей нагрузки OLTP в памяти.
-- Образ docker теперь содержит служебные программы командной строки SQL Server. (sqlcmd и bcp).
-- Включить поддержку интерфейс виртуальных устройств (VDI) для резервного копирования.
-- Расположение базы данных tempdb теперь может быть изменен после установки с помощью `ALTER DATABASE`.
+- [Установите на Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Установите на SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Установите на Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Запустите на Docker](quickstart-install-connect-docker.md)
+- [Подготовка виртуальной машины SQL в Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-## <a name="ctp-13"></a>CTP-ВЕРСИИ 1.3
+Другие улучшения, появившиеся в SQL Server 2017 г. см. в разделе [новые возможности SQL Server 2017 г](../sql-server/what-s-new-in-sql-server-2017.md).
 
-В выпуске CTP-версии 1.3 содержит следующие улучшения и исправления:
+> [!TIP]
+> Ответы на часто задаваемые вопросы см. в разделе [SQL Server в Linux часто задаваемые вопросы о](sql-server-linux-faq.md).
 
-- Включить [Full-text Search](sql-server-linux-setup-full-text-search.md) компонентов.
-- Всегда включена [функции групп доступности](sql-server-linux-availability-group-overview.md) для обеспечения высокой доступности.
-- Дополнительные возможности в **mssql conf**:
-  - Первый время установки, используя **mssql conf**. В разделе Использование mssql-conf в [руководства по установке](sql-server-linux-setup.md#platforms).
-  - Включение групп доступности. В разделе [раздела группы доступности](sql-server-linux-availability-group-overview.md).
-- Фиксированный путь собственного Linux Поддержка файловых групп OLTP в памяти.
-- Включить функции dm_os_host_info динамического административного Представления.
-
-## <a name="ctp-12"></a>CTP-ВЕРСИИ 1.2
-
-В выпуске CTP-версии 1.2 содержит следующие улучшения и исправления:
-
-- Поддержка [SUSE Linux Enterprise Server версии 12 SP2](quickstart-install-connect-suse.md).
-- Исправления ошибок для улучшения основных компонентов подсистемы и стабильности.
-- Образ docker: 
-  - Фиксированный [выдача #1](https://github.com/Microsoft/mssql-docker/issues/1) путем добавления Python в образ.
-  - Удалить `/opt/mssql/data` как тома по умолчанию.
-- Обновление .NET 4.6.2.
-
-## <a name="ctp-11"></a>CTP-ВЕРСИИ 1.1
-
-В выпуске CTP-версия 1.1 содержит следующие улучшения и исправления:
-
-- Поддержка Red Hat Enterprise Linux версии 7.3.
-- Поддержка Ubuntu 16.10.
-- Обновленный слой Docker ОС для Ubuntu 16.04.
-- Исправлены проблемы телеметрии образа Docker.
-- Ошибки, связанные с основных сценария установки SQL Server.
-- Улучшенная производительность для модулей, скомпилированных в собственном коде T-SQL, включая:
-  - **OPENJSON**, **FOR JSON**, **JSON** встроенные объекты.
-  - Вычисляемые столбцы (только разрешены индексы материализованных вычисляемых столбцов, но не для нематериализованных вычисляемых столбцов для таблиц в памяти).
-  - **CROSS APPLY** операций.
-- Новые возможности языка:
-  - Строковые функции: **TRIM**, **CONCAT_WS**, **перевод** и **STRING_AGG** с поддержкой **WITHIN GROUP (ORDER BY)**.
-  - **МАССОВЫЙ ИМПОРТ** теперь поддерживает формат CSV и хранилища больших двоичных объектов в качестве источника файлов.
-
-В режиме совместимости 140:
-
-- Повышение производительности обновлений к некластеризованным индексам в случае строка находится в разностного хранилища. Изменено с удаления и вставки для обновления. Также можно изменить форме плана, используемого с расширенными для ограничения.
-- Пакетные запросы режима теперь поддерживают «циклов обратной связи предоставления памяти». Это улучшит параллелизма и пропускной способности в системах, где повторяющихся запросов, использующих пакетного режима. Это может позволить дополнительные запросы, чтобы запускать на системах, которые в противном случае блокировки памяти перед запуском запросы.
-- Чтобы предусмотреть параллельные планы для выбора вместо от columnstores планов повышения производительности в пакете режима параллелизма, игнорируя обычный план для пакетного режима. 
-
-[Улучшения по сравнению с пакетом обновления 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) в этом выпуске CTP1.1:
-- Клонирование базы данных для среды CLR, Filestream или Filetable, объектов в памяти и хранилища запросов.
-  - **Обновление 10/18/2017 г**: при более тщательного тестирования Filestream не поддерживается в настоящее время выпуска общедоступной версии 2017 г. SQL Server в Linux  
-- **Создание** или **ALTER** операторы для программирования объектов.
-- Новый **используйте ПОДСКАЗКУ** запроса параметр, чтобы предоставить подсказки для обработчика запросов. Дополнительные сведения: [подсказки в запросе](../t-sql/queries/hints-transact-sql-query.md).
-- Учетная запись службы SQL теперь можно программным образом определять включить закрепление страниц в памяти и быстрой инициализации файлов разрешения.
-- Поддержка число файлов TempDB, размер файла и параметры увеличения файла.
-- Расширенные диагностики в showplan XML.
-- Профилирование выполнения запроса упрощенных оператор.
-- Новые функции динамического управления **sys.dm_exec_query_statistics_xml**.
-- Новая функция динамического управления для добавочной статистики.
-- Удален шум в памяти, связанные с сообщения для ведения журнала из журнала ошибок.
-- Улучшенная Диагностика AlwaysOn задержки.
-- Очистить отслеживания изменений вручную.
-- **DROP TABLE** поддержка репликации.
-- **BULK INSERT** в куч с **TABLOCK АВТОМАТИЧЕСКИ** под TF 715.
-- Параллельные **INSERT... ВЫБЕРИТЕ** изменения для локальных временных таблиц.
-
-Дополнительные сведения об этих исправлениях в [описание 1 пакета обновлений](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/).
-
-Многие улучшения ядра базы данных применяются к Windows и Linux. Единственное исключение будет функции ядра СУБД, которые в настоящее время не поддерживаются в Linux. Дополнительные сведения см. в разделе [новые возможности SQL Server 2017 г. (компонент Database Engine)](https://msdn.microsoft.com/library/mt775028).
-
-## <a name="see-also"></a>См. также:
-
-Требования к установке, неподдерживаемых функциональных областей и известных проблемах см. [заметки о выпуске для 2017 г. SQL Server в Linux](sql-server-linux-release-notes.md).
-
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

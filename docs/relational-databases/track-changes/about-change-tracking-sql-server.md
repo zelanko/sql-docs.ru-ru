@@ -2,9 +2,12 @@
 title: "Об отслеживании изменений (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,19 +19,19 @@ helpviewer_keywords:
 - change tracking [SQL Server]
 - data [SQL Server], changing
 ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
-caps.latest.revision: 36
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d5170f0f7f363d307a932b5d6ff40f7b42d86b93
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 0a9a3b1f3b66e9ba790375605b46ddfb863996a5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="about-change-tracking-sql-server"></a>Об отслеживании изменений (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Отслеживание изменений — это простое решение, обеспечивающее эффективный механизм отслеживания изменений для приложений. Обычно, чтобы позволить приложениям направлять запросы об изменениях данных в базе данных и получить доступ к сведениям об изменениях, разработчикам приложений приходится реализовывать специальные механизмы отслеживания изменений. Создание таких механизмов, как правило, трудоемкая работа и часто связана с использованием сочетания триггеров, столбцов **timestamp** , новых таблиц для хранения сведений отслеживания и специальных процессов очистки.  
   
@@ -87,4 +90,3 @@ ms.lasthandoff: 06/22/2017
  [Отслеживание измененных данных (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   
   
-

@@ -3,10 +3,12 @@ title: "Диалоговое окно установки Visual FoxPro ODBC | Д
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4142d2806cb71f8cb188f1ab155213493d4dc975
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 22208bd706e7b8966f54a501e9580b35d99a0555
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>Диалоговое окно установки Visual FoxPro ODBC
 **Установки Visual FoxPro ODBC** диалоговое окно позволяет добавить или изменить источник данных Visual FoxPro.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 09/09/2017
  **Имя источника данных**  
  Введите имя, которое будет использоваться для источника данных.  
   
- **Description**  
+ **Описание**  
  Введите описание для источника данных.  
   
  **Тип базы данных**  
@@ -82,4 +83,3 @@ DELETED=YES"
   
  **Выборка данных в фоновом режиме**  
  Определяет, будут выбираться записи в фоновом режиме (последовательная выборка) или приложение ожидает, пока не будут выбраны все записи в результирующем наборе.
-

@@ -2,27 +2,27 @@
 title: "Занятие 2: Добавление данных | Документы Microsoft"
 ms.custom: 
 ms.date: 06/19/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 05a93e001f4b5deb7be0aa3367ad74278e90d70a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5f17ae5dc82279056efc825f3d6a8092ea1b7623
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-2-add-data"></a>Занятие 2. Добавление данных
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 09/01/2017
   
 Предполагаемое время выполнения данного занятия: **20 минут**  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
 Этот раздел является частью учебника по табличному моделированию, который необходимо изучать по порядку. Прежде чем выполнять задания в этом занятии, необходимо завершить предыдущее [Занятие 1. Создание нового проекта табличной модели](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Создание подключения  
@@ -93,7 +93,7 @@ ms.lasthandoff: 09/01/2017
     
     **DimDate**
     
-      |Столбец|  
+      |столбцом|  
       |--------|  
       |**DateKey**|  
       |**SpanishDayNameOfWeek**|  
@@ -103,7 +103,7 @@ ms.lasthandoff: 09/01/2017
   
     **DimGeography**
   
-      |Столбец|  
+      |столбцом|  
       |-------------|  
       |**SpanishCountryRegionName**|  
       |**FrenchCountryRegionName**|  
@@ -111,7 +111,7 @@ ms.lasthandoff: 09/01/2017
   
     **DimProduct**
   
-      |Столбец|  
+      |столбцом|  
       |-----------|  
       |**SpanishProductName**|  
       |**FrenchProductName**|  
@@ -126,21 +126,21 @@ ms.lasthandoff: 09/01/2017
   
     **DimProductCategory**
   
-      |Столбец|  
+      |столбцом|  
       |--------------------|  
       |**SpanishProductCategoryName**|  
       |**FrenchProductCategoryName**|  
   
     **DimProductSubcategory**
   
-      |Столбец|  
+      |столбцом|  
       |-----------------------|  
       |**SpanishProductSubcategoryName**|  
       |**FrenchProductSubcategoryName**|  
   
     **FactInternetSales**
   
-      |Столбец|  
+      |столбцом|  
       |------------------|  
       |**OrderDateKey**|  
       |**DueDateKey**|  
@@ -176,4 +176,3 @@ ms.lasthandoff: 09/01/2017
 
   
   
-

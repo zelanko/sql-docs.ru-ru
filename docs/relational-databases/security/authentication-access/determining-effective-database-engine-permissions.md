@@ -3,30 +3,31 @@ title: "Определение действующих разрешений дл�
 ms.custom: 
 ms.date: 01/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - permissions, effective
 - effective permissions
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d21efb4495f786b6000fe0b8675fa042b4d2ca6e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5c940b6382349630be1de89e5fde8db3991500bb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Определение действующих разрешений для ядра СУБД
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Здесь описывается, как определить, кто имеет разрешения на различные объекты в ядре СУБД SQL Server. SQL Server реализует две системы разрешений для ядра СУБД. Более старая система предопределенных ролей имеет предварительно настроенные разрешения. Начиная с версии SQL Server 2005, доступна более гибкая и точная система. (Сведения из данного раздела также относятся к службам SQL Server, начиная с версии 2005. Отдельные типы разрешений недоступны в некоторых версиях SQL Server.)
 
@@ -56,7 +57,7 @@ ms.lasthandoff: 06/22/2017
 Для предопределенных ролей сервера и предопределенных ролей базы данных предварительно настроены разрешения, которые не могут быть изменены. Чтобы определить, кто является участником предопределенной роли сервера, выполните следующий запрос.    
 >  [!NOTE] 
 >  Не относится к базе данных SQL или хранилищу данных SQL, где разрешение на уровне сервера недоступно. Столбец `is_fixed_role` таблицы `sys.server_principals` был добавлен в SQL Server 2012. Он не требуется для более старых версий SQL Server.  
-```tsql
+```sql
 SELECT SP1.name AS ServerRoleName, 
  isnull (SP2.name, 'No members') AS LoginName   
  FROM sys.server_role_members AS SRM
@@ -72,7 +73,7 @@ SELECT SP1.name AS ServerRoleName,
 >  * Этот запрос проверяет таблицы в базе данных master, но может выполняться в любой базе данных локального продукта. 
 
 Чтобы определить, кто является участником предопределенной роли базы данных, выполните следующий запрос в каждой базе данных.
-```tsql
+```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
  FROM sys.database_role_members AS DRM
@@ -112,7 +113,7 @@ SELECT DP1.name AS DatabaseRoleName,
 Следующий запрос возвращает список разрешений, которые были предоставлены или запрещены на уровне сервера. Этот запрос должен быть выполнен в базе данных master.   
 >  [!NOTE] 
 >  Разрешения уровня сервера нельзя предоставлять и запрашивать в базе данных SQL или в хранилище данных SQL.   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -126,7 +127,7 @@ SELECT pr.type_desc, pr.name,
 ### <a name="database-permissions"></a>Разрешения базы данных
 
 Следующий запрос возвращает список разрешений, которые были предоставлены или отклонены на уровне базы данных. Этот запрос должен быть выполнен в каждой базе данных.   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -138,7 +139,7 @@ ORDER BY pr.name, type_desc;
 ```
 
 Каждый класс разрешений в таблице разрешений может быть присоединен к другим системным представлениям, содержащим связанные сведения о классе защищаемого объекта. Например, следующий запрос предоставляет имя объекта базы данных, на которого распространяется разрешение.    
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, pe.state_desc, 
  pe.permission_name, s.name + '.' + oj.name AS Object, major_id
  FROM sys.database_principals AS pr
@@ -150,8 +151,8 @@ SELECT pr.type_desc, pr.name, pe.state_desc,
    ON oj.schema_id = s.schema_id
  WHERE class_desc = 'OBJECT_OR_COLUMN';
 ```
-Используйте функцию `HAS_PERMS_BY_NAME`, чтобы определить, имеет ли разрешение конкретный пользователь (в данном случае `TestUser`). Например:   
-```tsql
+Используйте функцию `HAS_PERMS_BY_NAME`, чтобы определить, имеет ли разрешение конкретный пользователь (в данном случае `TestUser`). Пример:   
+```sql
 EXECUTE AS USER = 'TestUser';
 SELECT HAS_PERMS_BY_NAME ('dbo.T1', 'OBJECT', 'SELECT');
 REVERT;
@@ -162,5 +163,4 @@ REVERT;
 
 [Приступая к работе с разрешениями ядра СУБД](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
 [Руководство по началу работы с ядром СУБД](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
-
 

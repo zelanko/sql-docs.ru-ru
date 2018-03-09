@@ -2,9 +2,12 @@
 title: "Категория событий Sessions | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,26 +17,25 @@ helpviewer_keywords:
 - SQL Server event classes, Sessions event category
 - event classes [SQL Server], Sessions event category
 ms.assetid: 61881d22-381d-407e-8c43-a07ba94389f6
-caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bad5ad9148bdfd89a6d73bcc359b236491a73dfa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8dadb9582d7b721bdc09384e300d2c68162f63bd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="sessions-event-category"></a>Категория событий Sessions
-  Категория событий **Sessions** включает класс событий **ExistingConnection** .  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Категория событий **Sessions** включает класс событий **ExistingConnection** .  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Класс событий ExistingConnection](../../relational-databases/event-classes/existingconnection-event-class.md)|Отражает свойства существующих пользовательских соединений в момент запуска трассировки.|  
   
   
-

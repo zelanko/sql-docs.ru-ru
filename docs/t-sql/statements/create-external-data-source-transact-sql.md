@@ -3,36 +3,36 @@ title: "СОЗДАЙТЕ внешний ИСТОЧНИК данных (Transact-
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL DATA SOURCE
 - CREATE_EXTERNAL_DATA_SOURCE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - External
 - External, data source
 - PolyBase, create data source
 ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 8e5f0a03ef6efa09218cc6740df4439a25eb7265
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
-ms.sourcegitcommit: c2a0a43aefe59bc11f16445b5ee0c781179a33fa
-ms.openlocfilehash: 477d2f682da2c91ba8e4bfd42186c4b1b9735f85
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-data-source-transact-sql"></a>СОЗДАЙТЕ внешний ИСТОЧНИК данных (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Создает внешний источник данных для PolyBase, запросы эластичной базы данных или хранилища BLOB-объектов Azure. В зависимости от сценария синтаксис существенно отличается. Источник данных, созданный для PolyBase не может использоваться для запросов эластичной базы данных.  Аналогичным образом источник данных, созданный для запросов эластичной базы данных не может использоваться для PolyBase и т. д. 
   
@@ -143,14 +143,14 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 `LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
 NameNode_URI: Имя компьютера или IP-адрес кластера Hadoop Namenode.  
 порт: Namenode IPC-порт. Это указывается в параметре конфигурации fs.default.name Hadoop. Если значение не указано, по умолчанию будет использоваться 8020.  
-Пример:`LOCATION = 'hdfs://10.10.10.10:8020'`
+Пример: `LOCATION = 'hdfs://10.10.10.10:8020'`
 
 Для хранения больших двоичных объектов Azure с Hadoop указывает URI для подключения к хранилищу больших двоичных объектов.  
 `LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'`  
 wasb [s]: Указывает протокол для хранилища BLOB-объектов Azure. [S] является необязательным и указывает безопасное соединение SSL. данные, отправляемые из SQL Server надежно шифруются по протоколу SSL. Настоятельно рекомендуется использовать «wasbs» вместо «wasb». Обратите внимание, что расположение может использовать asv [s] вместо wasb [s]. Синтаксис asv [s] является устаревшей и будет удален в будущем выпуске.  
 контейнер: задает имя контейнера хранилища BLOB-объектов Azure. Чтобы указать корневой контейнер домена учетной записи хранения, используйте имя домена вместо имени контейнера. Контейнеры корневой являются только для чтения, поэтому данные не записываются в контейнер.  
 account_name: полное доменное имя (FQDN) учетной записи хранилища Azure.  
-Пример:`LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
+Пример: `LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
 
 Для хранилища Озера данных Azure местоположение указывает URI для подключения к хранилищу Озера данных Azure.
 
@@ -177,7 +177,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 
 Пошаговое руководство см. в разделе [Приступая к работе с эластичной запросов для сегментирования (горизонтальное секционирование)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/).
   
-**РЕЛЯЦИОННОЙ СУБД**   
+**RDBMS**   
 Для реляционной СУБД указывает имя логического сервера удаленной базы данных в базе данных SQL Azure.  
 
 ```  
@@ -259,7 +259,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
  Учетные данные = *credential_name*  
  Указывает учетные данные уровня базы данных для проверки подлинности на внешнем источнике данных. Пример см. в разделе [. Создание источника внешних данных хранилища больших двоичных объектов Azure](../../t-sql/statements/create-external-data-source-transact-sql.md#credential). Создание учетных данных, в разделе [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md). Обратите внимание, что учетные данные не требуется для общих наборов данных, которые разрешить анонимный доступ. 
   
- DATABASE_NAME = *«QueryDatabaseName»*  
+ DATABASE_NAME = *'QueryDatabaseName'*  
  Имя базы данных, которое работает в качестве диспетчера карты сегментов (для SHARD_MAP_MANAGER) или удаленной базы данных (для реляционной СУБД).  
   
  SHARD_MAP_NAME = *«ShardMapName»*  
@@ -276,7 +276,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
   
 -   Внешнюю таблицу, которая ссылается на внешний источник данных и формата внешнего файла.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CONTROL на базу данных в хранилища данных SQL, SQL Server, APS 2016 и баз данных SQL Server.
 
 > [!IMPORTANT]  
@@ -308,7 +308,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 ### <a name="a-create-external-data-source-to-reference-hadoop"></a>A. Создайте внешний источник данных к ссылке Hadoop  
 Для создания внешнего источника данных для ссылки на Hortonworks или Cloudera Hadoop кластера, укажите имя компьютера или IP-адрес Hadoop Namenode и порт.  
   
-```tsql  
+```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH (
     TYPE = HADOOP,
@@ -320,7 +320,7 @@ WITH (
 ### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>Б. Создайте внешний источник данных к ссылке Hadoop при включении включена  
 Укажите параметр RESOURCE_MANAGER_LOCATION для включения принудительной передачи вычислений в Hadoop для обработки запросов PolyBase. После включения PolyBase используется решение на основе затрат для определения вычисление запроса должны быть переданы в Hadoop или перемещения всех данных для обработки запросов в SQL Server.
   
-```tsql  
+```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH (
     TYPE = HADOOP,
@@ -333,7 +333,7 @@ WITH (
 ###  <a name="credential"></a> В. Создайте внешний источник данных для ссылки защитой Kerberos Hadoop  
 Для проверки, если кластер Hadoop, защита Kerberos, проверьте значение свойства hadoop.security.authentication в Hadoop core-site.xml. Для ссылки защитой Kerberos кластеру, необходимо указать учетные данные уровня базы данных, содержащий Kerberos имя пользователя и пароль. Главный ключ базы данных используется для шифрования секрета учетных данных области базы данных. 
   
-```tsql  
+```sql  
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';
 
@@ -380,7 +380,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ### <a name="e-create-a-shard-map-manager-external-data-source"></a>Д. Создать источник внешних данных диспетчера карты сегментов
 Для создания внешнего источника данных для ссылки на SHARD_MAP_MANAGER, укажите имя логического сервера, на котором размещена диспетчера карты сегментов в базе данных SQL Azure или базы данных SQL Server на виртуальной машине Azure.
 
-```tsql
+```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
 CREATE DATABASE SCOPED CREDENTIAL ElasticDBQueryCred  
@@ -400,7 +400,7 @@ WITH (
 ### <a name="f-create-an-rdbms-external-data-source"></a>Е. Создание реляционной СУБД внешнего источника данных
 Для создания внешнего источника данных для реляционной СУБД, ссылки на имя логического сервера удаленной базы данных в базе данных SQL Azure.
 
-```tsql
+```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
 
 CREATE DATABASE SCOPED CREDENTIAL SQL_Credential  
@@ -418,34 +418,10 @@ WITH (
 
 ## <a name="examples-azure-sql-data-warehouse"></a>Примеры: Хранилище данных Azure SQL
 
-### <a name="g-create-external-data-source-to-reference-azure-blob-storage"></a>Ж. Создайте внешний источник данных для ссылки на хранилище больших двоичных объектов
-Для создания внешнего источника данных для ссылки контейнера хранилища BLOB-объектов Azure, укажите URI хранилища BLOB-объектов Azure и учетные данные уровня базы данных, содержащий ключ учетной записи хранилища Azure.
-
-В этом примере к внешнему источнику данных представляет собой контейнер хранилища BLOB-объектов Azure, вызывается dailylogs под учетной записью хранилища Azure с именем myaccount. Источник внешних данных хранилища Azure для передачи данных только и не поддерживает включение предиката.
-
-В этом примере показано, как создать учетные данные уровня базы данных для проверки подлинности в хранилище Azure. Укажите ключ учетной записи хранилища Azure в секретные учетные данные базы данных. Укажите идентификатор учетных данных, областью действия любую строку в базе данных, он не используется для проверки подлинности в хранилище Azure. Затем учетных данных используется в инструкции, которая создает внешний источник данных.
-
-```tsql
--- Create a database master key if one does not already exist. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY;
-
--- Create a database scoped credential with Azure storage account key as the secret.
-CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential 
-WITH IDENTITY = 'myaccount', 
-SECRET = '<azure_storage_account_key>';
-
--- Create an external data source with CREDENTIAL option.
-CREATE EXTERNAL DATA SOURCE MyAzureStorage 
-WITH (
-    TYPE = HADOOP, 
-    LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/',
-    CREDENTIAL = AzureStorageCredential
-);
-```
-### <a name="h-create-external-data-source-to-reference-azure-data-lake-store"></a>З. Создайте внешний источник данных к ссылке хранилища Озера данных Azure
+### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>Ж. Создайте внешний источник данных к ссылке хранилища Озера данных Azure
 Подключение хранилища Озера данных Azure основан на ADLS URI и приложение Azure активные directory участника службы. Документация для создания этого приложения можно найти на[проверки подлинности хранилища Озера данных с помощью Active Directory](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
 
-```tsql
+```sql
 -- If you do not have a Master Key on your DW you will need to create one.
 CREATE MASTER KEY
 
@@ -465,21 +441,10 @@ WITH (TYPE = HADOOP,
 
 ## <a name="examples-parallel-data-warehouse"></a>Примеры: Параллельное хранилище данных
 
-### <a name="i-create-external-data-source-to-reference-hadoop"></a>И. Создайте внешний источник данных к ссылке Hadoop
-Для создания внешнего источника данных для ссылки на Hortonworks или Cloudera Hadoop кластера, укажите имя компьютера или IP-адрес Hadoop Namenode и порт.
-
-```tsql
-CREATE EXTERNAL DATA SOURCE MyHadoopCluster
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'hdfs://10.10.10.10:8050'
-);
-```
-
-### <a name="j-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>К. Создайте внешний источник данных к ссылке Hadoop при включении включена
+### <a name="h-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>З. Создайте внешний источник данных к ссылке Hadoop при включении включена
 Укажите параметр JOB_TRACKER_LOCATION для включения принудительной передачи вычислений в Hadoop для обработки запросов PolyBase. После включения PolyBase используется решение на основе затрат для определения вычисление запроса должны быть переданы в Hadoop или перемещения всех данных для обработки запросов в SQL Server. 
 
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH (
     TYPE = HADOOP,
@@ -488,12 +453,12 @@ WITH (
 );
 ```
 
-### <a name="k-create-external-data-source-to-reference-azure-blob-storage"></a>Л. Создайте внешний источник данных для ссылки на хранилище больших двоичных объектов
+### <a name="i-create-external-data-source-to-reference-azure-blob-storage"></a>И. Создайте внешний источник данных для ссылки на хранилище больших двоичных объектов
 Для создания внешнего источника данных для ссылки контейнера хранилища BLOB-объектов Azure, укажите URI хранилища BLOB-объектов Azure в качестве внешних данных исходное МЕСТОПОЛОЖЕНИЕ. Добавление ключа учетной записи хранилища Azure PDW core-site.xml файл для проверки подлинности.
 
 В этом примере к внешнему источнику данных представляет собой контейнер хранилища BLOB-объектов Azure, вызывается dailylogs под учетной записью хранилища Azure с именем myaccount. Источник внешних данных хранилища Azure для передачи данных только и не поддерживает включение предиката.
 
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
         TYPE = HADOOP, 
         LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'
@@ -501,10 +466,10 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ```
 
 ## <a name="examples-bulk-operations"></a>Примеры: Массовых операций   
-### <a name="l-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>М. Создание внешнего источника данных для массовых операций, извлечение данных из хранилища больших двоичных объектов Azure.   
+### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>К. Создание внешнего источника данных для массовых операций, извлечение данных из хранилища больших двоичных объектов Azure.   
 **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].   
 Используйте следующий источник данных с помощью массовых операций [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) или [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Учетные данные, используемые, должен быть создан с помощью `SHARED ACCESS SIGNATURE` с удостоверением. Дополнительные сведения о подписанных URL-адресах см. в [этой статье](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,
@@ -514,7 +479,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 ```   
 В этом примере используется см. в разделе [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 [Изменение ВНЕШНЕГО источника данных (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  
 [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md)   
 [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)   
@@ -523,5 +488,4 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 [sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   
   
-
 

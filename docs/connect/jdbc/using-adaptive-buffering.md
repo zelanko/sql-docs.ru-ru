@@ -3,24 +3,25 @@ title: "Использование адаптивной буферизации |
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4743d48d09625dd4ce1840b61abb58497057789d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 80944d5ebb5ec8c9f6ba98d9c520b10a0c4ade30
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-adaptive-buffering"></a>Использование адаптивной буферизации
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
 -   **Запрос создает очень большой результирующий набор:** приложение может выполнить инструкцию SELECT, возвращающую больше строк, чем может уместиться в памяти приложения. В предыдущих версиях приложение должно было использовать серверный курсор, чтобы избежать OutOfMemoryError. Адаптивная буферизация обеспечивает возможность однопроходного просмотра данных в режиме только для чтения для результирующего набора произвольно большого объема без использования курсора сервера.  
   
--   **Запрос создает очень большие**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**столбцы или**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**значения параметра OUT:**  Приложение может извлечь одно значение (столбец или параметр OUT) слишком большого объема, чтобы поместиться полностью в памяти приложения.         Адаптивная буферизация позволяет клиентскому приложению получать значения в виде потока, с помощью методов getCharacterStream, getBinaryStream или getAsciiStream. Приложение извлекает значение из [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] при чтении из потока.  
+-   **Запрос создает очень большие**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**столбцы или**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**значения параметра OUT:**  Приложение может извлечь одно значение (столбец или параметр OUT) слишком большого объема, чтобы поместиться полностью в памяти приложения. Адаптивная буферизация позволяет клиентскому приложению получать значения в виде потока, с помощью методов getCharacterStream, getBinaryStream или getAsciiStream. Приложение извлекает значение из [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] при чтении из потока.  
   
 > [!NOTE]  
 >  Благодаря адаптивной буферизации драйвер JDBC помещает в буфер только необходимое количество данных. Драйвер не позволяет любому открытому методу контролировать или ограничивать размер буфера.  
@@ -96,4 +97,3 @@ ms.lasthandoff: 09/09/2017
  [Повышение производительности и надежности с помощью драйвера JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   
-

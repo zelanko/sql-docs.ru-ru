@@ -3,7 +3,7 @@ title: "Подключение закрывается метод пример с
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Close method [ADOX], Visual Basic example
 - Type property [ADOX], Visual Basic example
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1bdc520343baf5e00091aab8d683b6e6ea8456f4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 95ea01c8cfb495ce104e60cbb3e24110fac98116
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Подключение метода закрытия, пример свойство типа таблицы (Visual Basic)
 Установка [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) свойства **ничего** следует закрыть подключение к каталогу. Связанные коллекции будет пустым. Все объекты, которые были созданы из объектов схемы в каталоге будут изолированы. Все свойства на те объекты, которые были кэшированы по-прежнему доступен, но попытка чтения свойства, требуется вызов поставщика завершится ошибкой.  
@@ -80,12 +79,11 @@ End Sub
 Attribute VB_Name = "Connection"  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Объект столбца (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Коллекция столбцов (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Объект таблицы (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
  [Коллекция таблиц (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [Свойство Type (таблица) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
-
+ [Свойство Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

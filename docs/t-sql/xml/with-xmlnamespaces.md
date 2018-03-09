@@ -3,8 +3,11 @@ title: "Использование предложения WITH XMLNAMESPACES (Tr
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - WITH XMLNAMESPACES clause
 - declaring XML namespaces
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
-caps.latest.revision: 17
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c34d67133c083c0dba5325548971997e8b95d6c5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 2ac45cd469430bd6fd9852ca6eb6b58831b29fef
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Данное предложение объявляет одно или несколько пространств имен XML.  
   
@@ -73,7 +75,7 @@ DEFAULT <xml_namespace_uri>
  *xml_namespace_prefix*  
  Задает префикс, сопоставляемый и связываемый со значением URI пространства имен, указанным в *xml_namespace_uri*. *xml_namespace_prefix* должно быть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] идентификатор.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При использовании предложения WITH XMLNAMESPACES в инструкции, включающей также обобщенное табличное выражение, предложение WITH XMLNAMESPACES должно предшествовать этому выражению.  
   
  Ниже приведены общие синтаксические правила, которые следует соблюдать при использовании предложения WITH XMLNAMESPACES.  
@@ -105,8 +107,7 @@ DEFAULT <xml_namespace_uri>
 ## <a name="examples"></a>Примеры  
  Примеры см. в разделе [добавление пространств имен в запросы с WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по языку XQuery (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)  
   
   
-

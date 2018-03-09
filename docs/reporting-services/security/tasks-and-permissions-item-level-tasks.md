@@ -1,31 +1,30 @@
 ---
-title: "Задачи на уровне элемента | Документы Microsoft"
+title: "Задачи уровня элемента | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- item-level tasks [Reporting Services]
+helpviewer_keywords: item-level tasks [Reporting Services]
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
-caps.latest.revision: 37
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "37"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 067a0b9d4f33e20625fb796fa98f7b4ec6184f3e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6a824675df700ba1910d21acea217061acb0879d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="tasks-and-permissions---item-level-tasks"></a>Задачи и разрешения - задачи уровня элемента
+# <a name="tasks-and-permissions---item-level-tasks"></a>Разрешения в задачах на уровне элемента
   Задача уровня элемента представляет собой коллекцию разрешений, связанных с отчетом, папкой, моделью отчета, ресурсом или общим источником данных. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] также располагают задачами на уровне системы, которые применяются к сайту сервера отчетов в целом. Дополнительные сведения см. в разделе [Задачи уровня системы](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md). Дополнительные сведения о задачах и правах в целом см. в разделе [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  
   
 > [!NOTE]  
@@ -36,14 +35,14 @@ ms.lasthandoff: 08/09/2017
   
  Общие наборы данных используют те же наборы разрешений, что и отчеты. Элементы отчета используют те же наборы разрешений, что и ресурсы.  
   
-|Задача|Применяется к элементу|Permissions|  
+|Задача|Применяется к элементу|Разрешения|  
 |----------|---------------------|-----------------|  
 |Использование отчетов|Отчеты|Читать содержимое<br /><br /> Читать определения отчета<br /><br /> Читать свойства|  
 |Использование отчетов|Общие наборы данных|Читать содержимое<br /><br /> Читать определения отчета<br /><br /> Читать свойства|  
 |Создание связанных отчетов|Отчеты|Создавать ссылки<br /><br /> Читать свойства|  
 |Управление всеми подписками|Отчеты|Читать свойства<br /><br /> Читать любую подписку<br /><br /> Создавать любую подписку<br /><br /> Удалять любую подписку<br /><br /> Обновлять любую подписку|  
 |Управление источниками данных|Папки|Создавать источник данных|  
-|Управление источниками данных|Источники данных|Обновлять свойства<br /><br /> Удалять обновление содержимого<br /><br /> Читать свойства|  
+|Управление источниками данных|обозревателе решений|Обновлять свойства<br /><br /> Удалять обновление содержимого<br /><br /> Читать свойства|  
 |Управление папками|Папки|Создавать папку<br /><br /> Удалять обновление свойств<br /><br /> Читать свойства|  
 |Управление отдельными подписками|Отчеты|Читать свойства<br /><br /> Создавать подписку<br /><br /> Удалять подписку<br /><br /> Читать подписку<br /><br /> Обновлять подписку|  
 |Управление моделями|Папки|Создавать модель|  
@@ -64,8 +63,7 @@ ms.lasthandoff: 08/09/2017
 |Просмотр ресурсов|Ресурсы|Читать содержимое<br /><br /> Читать свойства|  
 |Просмотр ресурсов|Элементы отчетов|Читать содержимое<br /><br /> Читать свойства|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

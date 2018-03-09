@@ -2,11 +2,12 @@
 title: "Добавление компонентов в экземпляр SQL Server (программа установки) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/07/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: 
@@ -16,24 +17,26 @@ helpviewer_keywords:
 - SQL Server, features
 - adding features to SQL Server
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
-caps.latest.revision: 29
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: 5fa60413b2cb5440a92f00d31fee587dfac75c6a
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: eb201c27f255ac57c667c3a727c2b4c1551f37fe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Добавление компонентов в экземпляр SQL Server (программа установки)
-  В этом разделе приведена пошаговая процедура добавления компонентов в экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Некоторые компоненты и службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] принадлежат определенному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Такие компоненты называются привязанными к экземпляру. Они имеют ту же версию, что и экземпляр, которому они принадлежат, и используются только для этого экземпляра. К экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно добавить привязанные к экземпляру компоненты и общие компоненты, если они еще не установлены. Список функций, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Выпуски и поддерживаемые функции SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  
+ В этой статье приведена пошаговая процедура добавления компонентов в экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Некоторые компоненты и службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] принадлежат определенному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Такие компоненты называются привязанными к экземпляру. Они имеют ту же версию, что и экземпляр, которому они принадлежат, и используются только для этого экземпляра. К экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно добавить привязанные к экземпляру компоненты и общие компоненты, если они еще не установлены. Список функций, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Выпуски и поддерживаемые функции SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  Сведения о добавлении функций к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из командной строки см. в разделе [Установка SQL Server из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
-## <a name="prerequisites"></a>Предварительные требования  
- Перед продолжением изучите разделы [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).  
+## <a name="prerequisites"></a>предварительные требования  
+ Перед продолжением изучите статьи, указанные в разделе [Планирование установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
   
 > [!NOTE]  
 >  Для локальных установок необходимо запускать программу установки с правами администратора. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливается с удаленного общего ресурса, необходимо использовать учетную запись домена, у которой есть разрешения на чтение на этом удаленном ресурсе.  
@@ -51,7 +54,7 @@ ms.lasthandoff: 09/12/2017
   
 3.  Средство проверки конфигурации системы запустит операцию обнаружения на компьютере. Щелкните **Просмотр подробностей**, чтобы просмотреть подробности проверки. Чтобы продолжить, [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
-4.  На странице «Обновление продукта» приведены последние обновления продукта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если устанавливать обновления не требуется, снимите флажок **Включить обновления продукта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Если обновлений продукта не обнаружено, программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выводит на экран эту страницу и сразу переходит на страницу **Установка файлов** .  
+4.  На странице «Обновление продукта» приведены последние обновления продукта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если устанавливать обновления не требуется, снимите флажок **Включить обновления продукта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Если обновлений продукта не обнаружено, программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выводит на экран эту страницу и сразу переходит на страницу **Установка файлов** .  
   
 5.  На странице «Установка установочных файлов» программа установки отображает индикаторы хода загрузки, извлечения и установки установочных файлов. При обнаружении обновления программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оно также будет установлено, если указано, что его следует использовать. Чтобы установить файлы поддержки программы установки, нажмите кнопку **Установить** .  
   
@@ -67,7 +70,7 @@ ms.lasthandoff: 09/12/2017
   
 9. На странице «Необходимое пространство на диске» отображается расчет дискового пространства для выбранных компонентов, а также приводится сравнение требуемого и доступного места на диске, где выполняется программа установки.  
   
-10. Набор операций, оставшихся в этом разделе, зависит от того, какие компоненты были выбраны для установки. В зависимости от сделанного выбора, на экране могут отображаться не все страницы.  
+10. Набор операций, оставшихся в этой статье, зависит от того, какие компоненты были выбраны для установки. В зависимости от сделанного выбора, на экране могут отображаться не все страницы.  
   
 11. На странице «Конфигурация сервера: учетные записи служб» укажите учетные записи входа для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Набор служб, которые можно настроить на этой странице, зависит от компонентов, выбранных при установке.  
   
@@ -145,7 +148,7 @@ ms.lasthandoff: 09/12/2017
   
 26. Если будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения о файлах журналов установки см. в разделе [Просмотр и чтение файлов журналов программы установки SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  Настройте установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Чтобы сократить уязвимую для атак контактную зону системы, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выборочно устанавливает и активирует ключевые службы и функции. Дополнительные сведения см. в разделе [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
@@ -158,4 +161,3 @@ ms.lasthandoff: 09/12/2017
  [Установка SQL Server из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   
-

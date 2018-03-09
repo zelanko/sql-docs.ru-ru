@@ -3,10 +3,12 @@ title: "Данные в Юникоде | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - C data types [ODBC], Unicode
 - SQL data types [ODBC], Unicode
 ms.assetid: abc28718-e6d9-49fb-97ff-402d50c3c375
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e3bb3278fe83922aee29aa8348d32b3fbc757511
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 407a67c6c4d641366b1ffabef10b22a6931a2212
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unicode-data"></a>Данные в Юникоде
 Для описания данных, которые хранятся в Юникоде в СУБД представлены типы данных SQL в Юникоде. Тип данных Юникода C предназначена для обеспечения привязки данных в Юникоде буфер приложения. Диспетчер драйверов можно преобразовать данные из типа Юникода C (SQL_C_WCHAR), чтобы сделать его функции с помощью драйвера ANSI.  
@@ -53,4 +54,3 @@ SQLBindParameter(StatementHandle, 1, SQL_PARAM_INPUT, SQL_C_TCHAR, SQL_WCHAR, Na
  Драйверы Юникода по-прежнему должны поддерживать типы данных ANSI, включая SQL_CHAR. При работе с драйвером Юникод приложение связывает SQL_CHAR, диспетчер драйверов не сопоставляются SQL_CHAR данных SQL_WCHAR. Драйвер Юникода необходимо принять данных SQL_CHAR.  
   
  Диспетчер драйверов драйвера и имена DSN хранятся в Юникоде и сопоставляет их с ANSI при необходимости. Если символ Юникода не удается сопоставить в символ ANSI (как это может произойти при использовании символов из кодовую страницу, которая не является страницей машинный код компьютера в имена DSN и драйверов), символы, которые не могут быть преобразованы, представляются sup символ по умолчанию plied системой.
-

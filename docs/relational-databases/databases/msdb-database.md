@@ -2,11 +2,13 @@
 title: "База данных msdb | Документация Майкрософт"
 ms.custom: 
 ms.date: 11/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - jobs [SQL Server], msdb database
 - msdb database [SQL Server]
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
-caps.latest.revision: 46
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "46"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d3ea8b1e63f5cc458130e3dd7deeed99be7f53e9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d749784b0a89d8307e0f2be23f25a836ba9a9c14
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="msdb-database"></a>База данных msdb
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   База данных **msdb** используется агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для создания расписания предупреждений и заданий, а также другими компонентами, такими как среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]и компоненты [!INCLUDE[ssSB](../../includes/sssb-md.md)] и Database Mail.  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 06/22/2017
   
 |Параметр базы данных|Значение по умолчанию|Можно ли изменить|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|Нет|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|нет|  
 |ANSI_NULL_DEFAULT|OFF|Да|  
 |ANSI_NULLS|OFF|Да|  
 |ANSI_PADDING|OFF|Да|  
@@ -65,20 +66,20 @@ ms.lasthandoff: 06/22/2017
 |AUTO_SHRINK|OFF|Да|  
 |AUTO_UPDATE_STATISTICS|ON|Да|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Да|  
-|CHANGE_TRACKING|OFF|Нет|  
+|CHANGE_TRACKING|OFF|нет|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Да|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Да|  
 |CURSOR_DEFAULT|GLOBAL|Да|  
-|Параметры доступности базы данных|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Нет<br /><br /> Да<br /><br /> Да|  
+|Параметры доступности базы данных|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|нет<br /><br /> Да<br /><br /> Да|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Да|  
 |DB_CHAINING|ON|Да|  
-|ENCRYPTION|OFF|Нет|  
-|MIXED_PAGE_ALLOCATION|ON|Нет|  
+|ENCRYPTION|OFF|нет|  
+|MIXED_PAGE_ALLOCATION|ON|нет|  
 |NUMERIC_ROUNDABORT|OFF|Да|  
 |PAGE_VERIFY|CHECKSUM|Да|  
 |PARAMETERIZATION|SIMPLE|Да|  
 |QUOTED_IDENTIFIER|OFF|Да|  
-|READ_COMMITTED_SNAPSHOT|OFF|Нет|  
+|READ_COMMITTED_SNAPSHOT|OFF|нет|  
 |RECOVERY|SIMPLE|Да|  
 |RECURSIVE_TRIGGERS|OFF|Да|  
 |Параметры компонента Service Broker|ENABLE_BROKER|Да|  
@@ -121,4 +122,3 @@ ms.lasthandoff: 06/22/2017
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   
-

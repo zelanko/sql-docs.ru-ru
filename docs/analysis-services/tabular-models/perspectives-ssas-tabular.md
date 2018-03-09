@@ -1,31 +1,31 @@
 ---
-title: "Перспективы (табличные службы SSAS) | Документы Microsoft"
+title: "Перспективы | Документы Microsoft"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
-caps.latest.revision: 12
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: e78bf1c9300fcd9a6c0d198d0239ecee12a5ea22
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a9c1ad93e5c4af1736721436f4ce5116ac279934
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="perspectives"></a>Перспективы
-  Перспективы в табличных моделях определяют просматриваемые подмножества модели, реализующие точки обзора для модели, которые сосредоточены на определенном аспекте либо предназначены для конкретных деловых целей или использования в конкретном приложении.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Перспективы в табличных моделях определяют просматриваемые подмножества модели, реализующие точки обзора для модели, которые сосредоточены на определенном аспекте либо предназначены для конкретных деловых целей или использования в конкретном приложении.  
   
 ##  <a name="bkmk_understanding"></a> Преимущества  
  Табличные модели могут быть очень сложными для изучения. Одна модель может представлять все содержимое целого хранилища данных с многими таблицами, мерами и измерениями. Подобная сложность может отпугнуть пользователей, которым для удовлетворения своих запросов в области бизнес-аналитики и отчетности часто необходимо взаимодействовать только с небольшой частью модели.  
@@ -41,13 +41,12 @@ ms.lasthandoff: 09/01/2017
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Создание перспектив и управление ими](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)|Содержит описание порядка создания и управления перспективами с помощью диалогового окна «Перспективы» в конструкторе моделей.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Роли](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [Иерархии](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   
   
-

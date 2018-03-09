@@ -2,40 +2,35 @@
 title: "Элемент ModelingFlag (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ModelingFlag Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ModelingFlag Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ModelingFlag
-helpviewer_keywords:
-- ModelingFlag element
+applies_to: SQL Server 2016 Preview
+f1_keywords: ModelingFlag
+helpviewer_keywords: ModelingFlag element
 ms.assetid: c9af1b9a-506f-4cc1-acd7-e57698cb672c
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9e26e418f889f6d0bf6db33b643f803e33471028
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5b87b9f1bfb882ba7c1bb408e5d0717a8f1b8429
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="modelingflag-element-assl"></a>Элемент ModelingFlag (ASSL)
-  Содержит флаг моделирования для столбца в структуре или модели интеллектуального анализа данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит флаг моделирования для столбца в структуре интеллектуального анализа данных или модель интеллектуального анализа данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,7 +43,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|[MiningModelingFlag](../../../analysis-services/scripting/data-type/miningmodelingflag-data-type-assl.md)|  
 |Значение по умолчанию|None|  
@@ -61,7 +56,7 @@ ms.lasthandoff: 09/01/2017
 |Родительские элементы|[ModelingFlags](../../../analysis-services/scripting/collections/modelingflags-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Тесно связанный элемент в объектной модели AMO — это <xref:Microsoft.AnalysisServices.MiningModelingFlags>.  
   
 ## <a name="see-also"></a>См. также:  
@@ -70,4 +65,3 @@ ms.lasthandoff: 09/01/2017
  [Объекты &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

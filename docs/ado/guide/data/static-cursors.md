@@ -3,7 +3,7 @@ title: "Статические курсоры | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - cursors [ADO], static
 - static cursors [ADO]
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 41af8e500710f3944f43f2408f00f24184204718
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fd0ace9aabf10c2b7e5b34d28bd54dbde84cfd0a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="static-cursors"></a>Статические курсоры
 Статический курсор всегда отображает результирующий набор, в котором он был при первом открытии курсора. В зависимости от реализации, статические курсоры имеют только для чтения или чтения и записи и предоставить прямой и обратной прокрутки. Статический курсор обычно не обнаруживает изменений в членство, порядок и значения из результирующего набора, после открытия курсора. Статические курсоры могут обнаруживать свои собственные обновления, удаления и вставки, несмотря на то, что они не требуются для этого.  
@@ -35,8 +34,7 @@ ms.lasthandoff: 09/09/2017
   
  Если приложения не требуется для обнаружения изменения данных и требуется прокрутка, статический курсор является лучшим вариантом. Используйте **adOpenStatic CursorTypeEnum** для указания, что вы хотите использовать статический курсор в ADO.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Однопроходные курсоры](../../../ado/guide/data/forward-only-cursors.md)   
  [Управляемые набором ключей курсоры](../../../ado/guide/data/keyset-cursors.md)   
  [Динамические курсоры](../../../ado/guide/data/dynamic-cursors.md)
-

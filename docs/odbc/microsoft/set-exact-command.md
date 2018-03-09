@@ -3,26 +3,26 @@ title: "ТОЧНОЕ команды SET | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SET EXACT command [ODBC]
+helpviewer_keywords: SET EXACT command [ODBC]
 ms.assetid: 9533d3e0-e7c1-49de-a3a3-0cc4373a91cb
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dcb836649993ddb644006986f284f0c0a362ed81
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c94efa07d23249c9fc3e9d661998419b68f7b624
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-exact-command"></a>ТОЧНОЕ команды SET
 Указывает правила для сравнения двух строк разной длины.  
@@ -41,7 +41,7 @@ SET EXACT ON | OFF
  OFF  
  (По умолчанию). Указывает, что, как эквивалентные, выражения должны соответствовать символ пока не будет достигнут конец выражения с правой стороны.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  ЗАДАЙТЕ ТОЧНОЕ параметр имеет смысл, если обе строки имеют одинаковую длину.  
   
 ## <a name="string-comparisons"></a>Сравнение строк  
@@ -71,5 +71,4 @@ SET EXACT ON | OFF
 |«» = TRIM("___")|Совпадение|Совпадение|Совпадение|  
   
 ## <a name="see-also"></a>См. также:  
- [Команды SET ANSI](../../odbc/microsoft/set-ansi-command.md)
-
+ [Команда SET ANSI](../../odbc/microsoft/set-ansi-command.md)

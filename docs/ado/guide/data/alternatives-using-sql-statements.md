@@ -3,7 +3,7 @@ title: "Альтернативы: С помощью инструкций SQL | �
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - editing data [ADO], sql statements
 - ADO, SQL statements
 ms.assetid: 8b528b23-063d-45ea-8dea-6a90d4060b20
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 85831e635103ec622414af7a77d545fb470c3f7e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6c1d1da58832a1fbbc133c17f58d940d46f5c6e1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="alternatives-using-sql-statements"></a>Альтернативы: С помощью инструкций SQL
 ADO также позволяет с помощью команд в качестве альтернативы его встроенные свойства и методы для изменения данных. В зависимости от поставщика, все операции, описанные в этом разделе также может выполняться путем передачи команды для источника данных. Например, можно использовать инструкции SQL UPDATE для изменения данных без использования **значение** свойство **поля**. Добавление новых записей в источник данных, а не метод ADO можно использовать инструкции SQL INSERT **AddNew**. Дополнительные сведения о SQL или языка обработки данных поставщика см. в документации источника данных.  
@@ -40,4 +39,3 @@ strSQL = "DELETE FROM Shippers WHERE ShipperID = " & intId
 objConn1.Execute strSQL, , adCmdText + adExecuteNoRecords  
 'EndSQLDelete  
 ```
-

@@ -2,15 +2,16 @@
 title: "Состояния базы данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/14/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- SQL13.SWB.DATABASESTATES.F1
+f1_keywords: SQL13.SWB.DATABASESTATES.F1
 helpviewer_keywords:
 - emergency database state [SQL Server]
 - verifying database states
@@ -26,20 +27,19 @@ helpviewer_keywords:
 - states [SQL Server]
 - restoring database state [SQL Server]
 ms.assetid: b7f1f111-ca73-4a89-b567-a98d64d6ecb3
-caps.latest.revision: 20
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "20"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 62c469f7504615a361025fd56bb4939e02c4d242
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e6acde3a545115bc189da2cfdad0297789fea6a1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-states"></a>Состояния базы данных
-  База данных всегда находится в определенном состоянии. Например, к этим состояниям относятся состояния ONLINE, OFFLINE или SUSPECT. Чтобы проверить текущее состояние базы данных, выберите столбец **state_desc** в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) или свойство **Status** в функции [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] База данных всегда находится в определенном состоянии. Например, к этим состояниям относятся состояния ONLINE, OFFLINE или SUSPECT. Чтобы проверить текущее состояние базы данных, выберите столбец **state_desc** в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) или свойство **Status** в функции [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) .  
   
 ## <a name="database-state-definitions"></a>Определения состояний базы данных  
  Состояния базы данных определяются в следующей таблице.  
@@ -62,4 +62,3 @@ ms.lasthandoff: 06/22/2017
  [Состояния файла](../../relational-databases/databases/file-states.md)  
   
   
-

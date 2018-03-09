@@ -1,13 +1,14 @@
 ---
 title: "Сценарии глобализации для служб Analysis Services | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - SQL Server Analysis Services, international considerations
 - Analysis Services, international considerations
 ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f577134d61829f5c491462901c96f69f0f1e9973
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 23602752bf7a996b66974ce3d5dcf9c8bf6389cd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Сценарии глобализации для служб Analysis Services
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] хранят многоязычные данные и метаданные, а также управляют ими как в табличных, так и в многомерных моделях данных. Данные хранятся в Юникоде (UTF-16), в кодировках, использующих кодировку Юникод. При загрузке данных ANSI в модель данных символы хранятся с использованием эквивалентных кодовых точек Юникода.  
   
  Поддержка Юникода означает, что службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] могут хранить данные в любом из языков, поддерживаемых клиентскими и серверными операционными системами Windows, позволяя читать, записывать, сортировать и сравнивать данные в любой кодировке, используемой на компьютере Windows. Клиентские приложения бизнес-аналитики, использующие данные служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , могут представлять данные на выбранном пользователем языке, при условии что в модели существуют данные на этом языке.  
@@ -73,7 +75,7 @@ ms.lasthandoff: 09/01/2017
 |Реализация поддержки преобразования|Используйте [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , чтобы создать файлы преобразования, которые сначала заполняются, а затем импортируются в модель.<br /><br /> Дополнительные сведения см. в разделе [Переводы в табличных моделях (службы Analysis Services)](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).|Используйте[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , чтобы определить преобразования для заголовков, описаний и типов учетных записей для кубов, а также мер, измерений и атрибутов.<br /><br /> Дополнительные сведения см. в разделе [Переводы в многомерных моделях (службы Analysis Services)](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md). Урок по использованию этой функции можно найти в [Уроке 9. Определение перспектив и переводов](../analysis-services/lesson-9-defining-perspectives-and-translations.md) учебника [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |Преобразование валюты|Недоступно.|Преобразование валюты выполняется с помощью специальных сценариев многомерных выражений, которые преобразуют меры, содержащие данные валюты. Вы можете создать скрипт многомерных выражений, использующий комбинацию данных и метаданных из измерений, атрибутов и групп мер для конвертации мер, содержащих данные в валюте, с помощью мастера бизнес-аналитики в [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] . См. раздел [Преобразования валюты (службы Analysis Services)](../analysis-services/currency-conversions-analysis-services.md).|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поддержка параметров перевода в службах Analysis Services](../analysis-services/translation-support-in-analysis-services.md)   
  [Интернационализация для приложений Windows](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
  [Центр разработчиков go Global](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
@@ -81,4 +83,3 @@ ms.lasthandoff: 09/01/2017
  [Разработка универсальных приложений Windows на C# и XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   
-

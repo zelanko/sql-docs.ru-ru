@@ -3,7 +3,7 @@ title: "CursorOptionEnum | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - CursorOptionEnum enumeration [ADO]
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 93999724b38f670f8462ae62c9052b10028bf929
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e8c57737a5162f902c349f74b941de6d8f5ca30e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 Указывает, какие функции [поддерживает](../../../ado/reference/ado-api/supports-method.md) метода следует проверить.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adAddNew**|0x1000400|Поддерживает [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) метод, чтобы добавить новые записи.|  
 |**adApproxPosition**|0x4000|Поддерживает [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) и [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) свойства.|  
@@ -69,5 +68,4 @@ ms.lasthandoff: 09/09/2017
 |AdoEnums.CursorOption.UPDATEBATCH|  
   
 ## <a name="applies-to"></a>Объект применения  
- [Поддерживает метод](../../../ado/reference/ado-api/supports-method.md)
-
+ [Метод Supports](../../../ado/reference/ado-api/supports-method.md)

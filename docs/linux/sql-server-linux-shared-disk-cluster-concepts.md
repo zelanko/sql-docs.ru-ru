@@ -3,22 +3,27 @@ title: "Экземпляры отказоустойчивого кластера
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: a9e8964b16eff5da35ef3abac6f493afc7615903
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 229c6a989a4707921eae3046e3c9707b05bb0306
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
-
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Экземпляры отказоустойчивого кластера — SQL Server в Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 В этой статье объясняется понятия, связанные с SQL Server экземпляры отказоустойчивого кластера (FCI) в Linux. 
 
@@ -37,13 +42,13 @@ ms.lasthandoff: 10/02/2017
 
 Надстройка RHEL высокой ДОСТУПНОСТИ и для которых Имеется SUSE построены на [Pacemaker](http://clusterlabs.org/).
 
-В диаграмме ниже показан хранилище представляется двумя серверами. Кластерные компоненты - Corosync и Pacemaker - координировать связи и управление ресурсами. Один из серверов имеет активное подключение к ресурсам хранилища и SQL Server. Когда Pacemaker обнаруживает сбой кластеризации компоненты управления перемещения ресурсов на другой узел.  
+Как показано на следующей диаграмме, хранилище представляется двумя серверами. Кластерные компоненты - Corosync и Pacemaker - координировать связи и управление ресурсами. Один из серверов имеет активное подключение к ресурсам хранилища и SQL Server. Когда Pacemaker обнаруживает сбой кластеризации компоненты управления перемещения ресурсов на другой узел.  
 
 ![Red Hat Enterprise Linux 7 общий диск кластера SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
 
 > [!NOTE]
-> На этом этапе интеграции SQL Server с Pacemaker в Linux не, а также как WSFC в Windows. Из в SQL, неизвестно о наличии кластера, все orchestration находится за пределами в и служба управляется как отдельный экземпляр Pacemaker. Кроме того имя виртуальной сети доступен только в WSFC, не имеет эквивалента в одной и той же в Pacemaker. Ожидается, что @@servername и sys.servers для возврата имени узла, а sys.dm_os_cluster_nodes кластера динамических административных представлений и sys.dm_os_cluster_properties нет записей. Чтобы использовать строку подключения, указывающая на строку имя сервера и не используйте IP-адрес, они будут иметь для регистрации в своих DNS-сервера IP-адрес, используемый для создания виртуального IP-ресурс (как описано ниже) с именем выбранного сервера.
+> На этом этапе интеграции SQL Server с Pacemaker в Linux не, а также как WSFC в Windows. Из в SQL, неизвестно о наличии кластера, все orchestration находится за пределами в и служба управляется как отдельный экземпляр Pacemaker. Кроме того имя виртуальной сети доступен только в WSFC, не имеет эквивалента в одной и той же в Pacemaker. Ожидается, что @@servername и sys.servers для возврата имени узла, а sys.dm_os_cluster_nodes кластера динамических административных представлений и sys.dm_os_cluster_properties нет записей. Чтобы использовать строку подключения, указывающая на строку имя сервера и не используйте IP-адрес, они будут иметь IP-адрес, используемый для создания виртуального IP-ресурс (как описано в следующих разделах) регистрация в DNS-сервер с именем выбранного сервера.
 
 ## <a name="number-of-instances-and-nodes"></a>Количество экземпляров и узлы
 
@@ -54,7 +59,7 @@ Pacemaker кластера может иметь только до 16 узлов
 В отказоустойчивого Кластера SQL Server экземпляр SQL Server активен на одном узле или другой.
 
 ## <a name="ip-address-and-name"></a>IP-адрес и имя
-В кластере Linux Pacemaker каждого SQL Server FCI потребуется свой собственный уникальный IP-адрес и имя. Если в конфигурацию FCI распространяется на несколько подсетей, один IP-адрес требуется каждой подсети. Уникальное имя и IP-адреса используются для доступа к FCI, поэтому приложений и пользователей не требуется знать, какой базовый сервер Pacemaker кластера.
+В кластере Linux Pacemaker каждого FCI SQL Server требуется свой собственный уникальный IP-адрес и имя. Если в конфигурацию FCI распространяется на несколько подсетей, один IP-адрес требуется каждой подсети. Уникальное имя и IP-адреса используются для доступа к FCI, поэтому приложений и пользователей не требуется знать, какой базовый сервер Pacemaker кластера.
 
 Имя отказоустойчивого Кластера, в DNS должны совпадать с имя ресурса отказоустойчивого Кластера, который создается в кластере Pacemaker.
 Имя и IP-адреса должны регистрироваться в DNS.
@@ -87,4 +92,3 @@ Pacemaker кластера может иметь только до 16 узлов
 - [Настройка экземпляра отказоустойчивого кластера — iSCSI - SQL Server в Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 - [Настроить экземпляр отказоустойчивого кластера — NFS - SQL Server в Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 - [Настройте экземпляр отказоустойчивого кластера — SMB - SQL Server в Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)
-

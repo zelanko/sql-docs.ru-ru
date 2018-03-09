@@ -1,30 +1,30 @@
 ---
-title: "Управление всеми предупреждениями на сайте SharePoint в диспетчере предупреждений данных | Документы Microsoft"
+title: "Управление всеми предупреждениями на сайте SharePoint в диспетчере предупреждений данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
-caps.latest.revision: 13
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "13"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: c0451f12b68cd45a387bfca4d94c8cf4f71919ea
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 64a4ead7995cb03d63daced6c3f218b3aae13e29
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>Управление всеми предупреждениями данных на сайте SharePoint в диспетчере предупреждений данных
 
@@ -32,10 +32,10 @@ ms.lasthandoff: 08/17/2017
 
 Администраторы предупреждений SharePoint могут просматривать списки предупреждений об изменении данных, созданных любыми пользователями сайта, и сведения об этих предупреждениях. Администраторы системы предупреждений могут также удалять предупреждения. На следующем рисунке показаны функции, предоставляемые администраторам предупреждений в диспетчере предупреждений об изменении данных.
 
- ![Диспетчер предупреждений для администраторов сайта SharePoint](../reporting-services/media/rs-alertmanagersite.gif "диспетчер предупреждений для администраторов сайта SharePoint")
+ ![Диспетчер предупреждений для администраторов сайта SharePoint](../reporting-services/media/rs-alertmanagersite.gif "Диспетчер предупреждений для администраторов сайта SharePoint")
 
 > [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
 
 ## <a name="view-a-list-of-alerts-created-by-a-site-user"></a>Просмотр списка предупреждений, созданных пользователем сайта  
   
@@ -60,10 +60,9 @@ ms.lasthandoff: 08/17/2017
     > [!NOTE]  
     >  После того как предупреждение будет удалено, дальнейшая отправка предупреждающих сообщений прекращается. Тем не менее при запросе к базе данных предупреждений может оказаться, что определение предупреждения все еще существует. Служба предупреждений выполняет очистку по расписанию и окончательно удаляет определение предупреждения при следующей очистке. Значение интервала очистки по умолчанию составляет 20 минут. Этот и другие интервалы выполнения очистки являются настраиваемыми. Дополнительные сведения см. в статье [Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md).  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Диспетчер предупреждений данных для оповещения администраторов](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

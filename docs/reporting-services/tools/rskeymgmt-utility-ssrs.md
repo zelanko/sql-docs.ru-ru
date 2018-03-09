@@ -1,13 +1,14 @@
 ---
-title: "Программа rskeymgmt (SSRS) | Документы Microsoft"
+title: "Программа rskeymgmt (SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +23,16 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: 56
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "56"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 95e64239c30aab1a341c281230c887f9668b9277
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3e78a5b9e393dc24c1bfdb1ccc72cd05a0675bfd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Программа rskeymgmt (SSRS)
   Извлекает, восстанавливает, создает и удаляет симметричный ключ, используемый для защиты важных данных сервера отчетов от несанкционированного доступа. Эта программа также используется для соединения экземпляров сервера отчетов в конфигурацию с масштабным развертыванием. *Конфигурация сервера отчетов с масштабным развертыванием* означает множество экземпляров сервера отчетов, которые совместно используют одну базу данных сервера отчетов.  
@@ -112,7 +112,7 @@ rskeymgmt {-?}
  **-t**  *трассировка*  
  Выводит сообщения об ошибках в журнал трассировки. Этот аргумент не принимает значения. Дополнительные сведения см. в статье [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для запуска этого средства необходимо быть локальным администратором. Запускать его необходимо локально на компьютере, где размещается сервер отчетов. Программа rskeymgmt работает с локальным экземпляром сервера отчетов Windows (программа не может подключиться к удаленным экземплярам службы сервера отчетов Windows, и поэтому она не может использоваться для управления ключами шифрования удаленного экземпляра сервера отчетов).  
   
 > [!NOTE]  
@@ -155,7 +155,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Объединение экземпляров сервера отчетов на одном компьютере  
  Можно создать конфигурацию с масштабным развертыванием из нескольких экземпляров сервера отчетов, установленных на одном компьютере. При объединении экземпляров сервера отчетов, установленных локально, нельзя использовать аргументы **-u** и **-v** . Аргументы **-u** и **-v** используются только при присоединении экземпляра с удаленного компьютера. Если задать аргументы, появится такая ошибка: "Учетные данные пользователя не могут использоваться для локальных подключений".  
   
- Следующий пример показывает синтаксис для создания масштабного развертывания из нескольких локальных экземпляров. В этом примере \< **initializedinstance**> — имя экземпляра, уже инициализированного на использование базы данных сервера отчетов, и \< **newinstance**> — имя экземпляра, который требуется добавить в развертывание:  
+ Следующий пример показывает синтаксис для создания масштабного развертывания из нескольких локальных экземпляров. В этом примере \<**initializedinstance**> — имя экземпляра, уже инициализированного для использования базы данных сервера отчетов, а \<**newinstance**> — имя экземпляра, который добавляется к развертыванию:  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  
@@ -171,9 +171,9 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>Размещение файла  
- Rskeymgmt.exe находится в каталоге  **\<* диск*>: \Program Files\Microsoft SQL Server\110\Tools\Binn ** или на  **\<* диск*>: \Program \Microsoft SQL Server\110\Tools\Binn** файлы (x86). Программу можно запустить из любой папки файловой системы.  
+ Программа Rskeymgmt.exe находится в каталоге **\<*диск*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** или **\<*диск*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn**. Программу можно запустить из любой папки файловой системы.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Сервер отчетов шифрует сохраненные учетные данные и сведения о соединении. Для шифрования данных используются открытый ключ и симметричный ключ. Для запуска сервера отчетов в базе данных сервера отчетов должен находиться набор допустимых ключей. Программу **rskeymgmt** можно использовать для создания резервных копий, удаления или восстановления ключей. Если ключи не могут быть восстановлены, это средство предоставляет возможность удаления зашифрованного содержимого, которое больше не может использоваться.  
   
  Программа **rskeymgmt** используется для управления набором ключей, указанным во время установки или при инициализации. Она подключается к локальной службе Windows сервера отчетов через конечную точку удаленного вызова процедур (RPC). Чтобы эта программа могла работать, должна быть запущена служба Windows сервера отчетов.  
@@ -182,9 +182,8 @@ rskeymgmt -r <installationID>
   
 ## <a name="see-also"></a>См. также:  
  [Масштабное развертывание — основной режим служб Reporting Services (диспетчер конфигурации)](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
- [Отчеты служб отчетов сервера &#40; Основной режим &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Программы командной строки сервера отчетов &#40; Службы SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [Настройка и управление ключами &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Сервер отчетов служб Reporting Services (основной режим)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Программы командной строки сервера отчетов (службы SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
-

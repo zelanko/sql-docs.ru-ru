@@ -3,7 +3,7 @@ title: "ADO для индекса синтаксис Visual C++ для моде�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,22 +19,21 @@ helpviewer_keywords:
 - ADO for Visual C++ syntax [ADO]
 - syntax indexes [ADO], ADO for Visual C++ syntax
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 081d81654e6898496e81b809b9c4925020630181
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ace385c89003d7b528643c5047337eb32ed0847e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO для индекса синтаксис Visual C++ для модели COM
 Этот индекс лучше перекрестной ссылки на Справочник по языку ADO, исходя из Microsoft Visual C++.  
   
- Если вы используете **#import** директив в приложении, в файле заголовка будет создаваться, обеспечивающие возможность использования синтаксиса, аналогичного для Microsoft Visual Basic. Имена свойств формы **get_***PropertyName* и **put_***PropertyName* могут рассматриваться, как если бы они были объявлены как просто *PropertyName*. Свойство может затем обрабатывается, как член данных вместо функции.  
+ Если вы используете **#import** директив в приложении, в файле заголовка будет создаваться, обеспечивающие возможность использования синтаксиса, аналогичного для Microsoft Visual Basic. Имена свойств формы **get_ *** PropertyName* и **put_ *** PropertyName* могут рассматриваться, как если бы они были объявлены как просто *PropertyName*. Свойство может затем обрабатывается, как член данных вместо функции.  
   
  Все методы, свойства и события являются функции, возвращающие **HRESULT**, который можно проверить, чтобы определить, если функция выполнена успешно.  
   
@@ -58,7 +57,6 @@ ms.lasthandoff: 09/09/2017
   
 -   [Объект потока](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ADO для индекса в Visual C++ синтаксис с #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [Объекты данных Microsoft ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)
-

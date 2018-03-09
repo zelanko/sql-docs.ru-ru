@@ -2,13 +2,13 @@
 title: "Определение назначений и других команд скриптов | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - MDX [Analysis Services], scripts
 - scripts [Analysis Services], calculations
 ms.assetid: f28b9b22-3dc7-4a45-b4eb-2d023f2c94b8
-caps.latest.revision: 29
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 63f814c8878e1e1151861a8979398a4422d4578a
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 023b316229c46ff2b151ce6c1a6506cbcf9d602a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-assignments-and-other-script-commands"></a>Определение назначений и других команд скриптов
-  На вкладке **Вычисления** конструктора кубов щелкните значок **Создать команду скрипта** на панели инструментов для создания пустого скрипта. После создания новый скрипт отображается с пустым именем на панели **Организатор скриптов** на вкладке «Вычисления». Символы, вводимые на панели «Выражения вычисления», отображаются как имя элемента на панели **Организатор скриптов**. Следовательно, можно в первую строку ввести имя с комментарием для упрощения определения скрипта на панели **Организатор скриптов** . Дополнительные сведения см. в разделе [Введение в сценарии многомерных выражений в Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Дополнительные сведения о производительности запросов многомерных выражений и вычислений см. в разделе «Написание эффективных многомерных выражений» [Руководства по производительности служб SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+На вкладке **Вычисления** конструктора кубов щелкните значок **Создать команду скрипта** на панели инструментов для создания пустого скрипта. После создания новый скрипт отображается с пустым именем на панели **Организатор скриптов** на вкладке «Вычисления». Символы, вводимые на панели «Выражения вычисления», отображаются как имя элемента на панели **Организатор скриптов**. Следовательно, можно в первую строку ввести имя с комментарием для упрощения определения скрипта на панели **Организатор скриптов** . Дополнительные сведения см. в разделе [Введение в сценарии многомерных выражений в Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Дополнительные сведения о производительности запросов многомерных выражений и вычислений см. в разделе «Написание эффективных многомерных выражений» [Руководства по производительности служб SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
   
 > [!IMPORTANT]  
 >  Затем перейдите на вкладку **Вычисления** конструктора кубов, на панели **Организатор скриптов** содержится один скрипт с командой CALCULATE. Команда CALCULATE управляет статистическим вычислением ячеек куба, ее следует изменять только в том случае, если планируется вручную определять статистическое вычисление ячеек куба.  
@@ -44,4 +44,3 @@ ms.lasthandoff: 09/01/2017
  [Вычисления в многомерных моделях](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   
-

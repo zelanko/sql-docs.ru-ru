@@ -2,9 +2,12 @@
 title: "Наблюдение за зеркальным отображением базы данных (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-high-availability
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - monitoring [SQL Server], database mirroring
 - database mirroring [SQL Server], monitoring
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
-caps.latest.revision: 78
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: c0133d9255da8fd0dfe9d373b717bf813bb17767
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 882ea4b4fd7c2954ec3586e78db5c22aa0418e54
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Наблюдение за зеркальным отображением базы данных (SQL Server)
-  В данном разделе приводятся общие сведения о мониторе зеркального отображения баз данных и системных хранимых процедурах **sp_dbmmonitor** , описывается, как работает наблюдение за зеркальным отображением базы данных (включая **задание наблюдения за зеркальным отображением баз данных**), а также приводятся сведения о сеансах зеркального отображения базы данных, которые можно получить при наблюдении. Кроме того, в данном разделе описывается определение пороговых значений предупреждений для набора стандартных событий зеркального отражения базы данных и установка предупреждений на любое событие зеркального отображения базы данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+В данном разделе приводятся общие сведения о мониторе зеркального отображения баз данных и системных хранимых процедурах **sp_dbmmonitor** , описывается, как работает наблюдение за зеркальным отображением базы данных (включая **задание наблюдения за зеркальным отображением баз данных**), а также приводятся сведения о сеансах зеркального отображения базы данных, которые можно получить при наблюдении. Кроме того, в данном разделе описывается определение пороговых значений предупреждений для набора стандартных событий зеркального отражения базы данных и установка предупреждений на любое событие зеркального отображения базы данных.  
   
  В сеансе зеркального отображения может производиться наблюдение за зеркальной базой данных, что позволяет следить за тем, идет ли передача данных и насколько хорошо. Для контроля за одной или несколькими зеркальными базами данных на экземпляре сервера можно воспользоваться монитором зеркального отображения баз данных или системными хранимыми процедурами **sp_dbmmonitor** .  
   
@@ -87,7 +90,7 @@ ms.lasthandoff: 08/02/2017
   
      В следующей таблице приведены хранимые процедуры для использования мониторинга зеркального отображения и управления им независимо от монитора зеркального отображения баз данных.  
   
-    |Процедура|Описание|  
+    |Процедура|Description|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)|Создает задание, периодически обновляющее сведения о состоянии по каждой зеркально отображаемой базе данных на экземпляре сервера.|  
     |[sp_dbmmonitorchangemonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)|Изменяет значение параметра мониторинга зеркального отображения базы данных.|  
@@ -173,7 +176,7 @@ ms.lasthandoff: 08/02/2017
   
     -   Синхронизация  
   
-    -   Синхронизировано  
+    -   синхронизировано;  
   
     -   Приостановлена  
   
@@ -339,4 +342,3 @@ ms.lasthandoff: 08/02/2017
  [Основные понятия о поставщике WMI для событий сервера](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   
-

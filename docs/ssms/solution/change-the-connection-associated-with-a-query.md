@@ -3,10 +3,12 @@ title: "Изменение связанного с запросом соедин
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], query connections
 - query associations [SQL Server Management Studio]
 ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e10105d7589cfeeb3f0fc7cd3a57bd23f396704a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d9c3781ae2d43b1b88c2a38ca8b98f16229a41a9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>Изменение связанного с запросом соединения
-Путем изменения соединения, используемого запросом, запрос можно выполнить на нескольких различных серверах или базах данных.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Путем изменения соединения, используемого запросом, запрос можно выполнить на нескольких различных серверах или базах данных.  
   
 ### <a name="to-change-the-connection-associated-with-a-query"></a>Изменение соединения, связанного с запросом  
   
@@ -41,4 +42,3 @@ ms.lasthandoff: 06/22/2017
 [Связь запроса с соединением в проекте](../../ssms/solution/associate-a-query-with-a-connection-in-a-project.md)  
 [Просмотр или изменение свойств соединения в проекте](../../ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md)  
   
-

@@ -3,26 +3,26 @@ title: "SQLGetInfo (библиотека курсоров) | Документы 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLGetInfo function [ODBC], Cursor Library
+helpviewer_keywords: SQLGetInfo function [ODBC], Cursor Library
 ms.assetid: 1b4d220d-2c07-4f56-987e-36813bb1a6ce
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 23f51036bd64f9035e736b2e33aac0beb346ba7e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d8e1aa6617d19c9028ff08dcf171abac060bb6f1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgetinfo-cursor-library"></a>SQLGetInfo (библиотека курсоров)
 > [!IMPORTANT]  
@@ -57,4 +57,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  Библиотека курсоров реализует такое же поведение курсора после фиксации или отката в качестве источника данных транзакций. То есть, фиксация или откат транзакции, либо путем вызова **SQLEndTran** или с помощью атрибута соединения SQL_ATTR_AUTOCOMMIT, могут привести к источнику данных для удаления планов доступа и закрытие курсоров для всех инструкций для подключения. Дополнительные сведения см. в разделе типы информации SQL_CURSOR_COMMIT_BEHAVIOR и SQL_CURSOR_ROLLBACK_BEHAVIOR в [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).
-

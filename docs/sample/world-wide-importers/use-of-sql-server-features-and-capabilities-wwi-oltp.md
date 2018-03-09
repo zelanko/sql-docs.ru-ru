@@ -1,30 +1,31 @@
 ---
 title: "Использование SQL Server функций и возможностей | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: samples
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: 9a76e8c2bb70be5accc28d65de7f86db86dacd29
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 90b1cd86f2fcc282922111ac9325470635bcfcad
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>Использование компонентов SQL Server и возможности
-WideWorldImporters использовать SQL Server функций и возможностей базы данных OLTP.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WideWorldImporters использовать SQL Server функций и возможностей базы данных OLTP.
 
 WideWorldImporters предназначен для демонстрации многие из основных возможностей SQL Server, включая последние функции, представленные в SQL Server 2016. Ниже приведен список компонентов SQL Server и возможности и как они используются в WideWorldImporters описание.
 
@@ -51,4 +52,3 @@ WideWorldImporters предназначен для демонстрации мн
 |Хранилище запросов|Хранилище запросов включено в базе данных. После выполнения нескольких запросов, открыть базу данных в среде Management Studio, откройте узел хранилища запросов, который находится в базе данных, и Топ ресурсоемких запросов для выполнения запросов и планов для запросов, которые вы только что запустил отчет.|
 |STRING_SPLIT|Столбец `DeliveryInstructions` в таблице `Sales.Invoices`имеет значение с разделителями запятыми, который может использоваться для демонстрации STRING_SPLIT.|
 |Аудит|Подсистема аудита SQL Server можно включить для этого образца базы данных, выполнив следующую инструкцию в базе данных:<br/><br/>    `EXECUTE [Application].[Configuration_ApplyAuditing]`<br/><br/>В базе данных SQL Azure, аудит включен через [портал Azure](https://portal.azure.com/).<br/><br/>Операции обеспечения безопасности, связанных с именами входа, ролей и разрешений регистрируются во всех системах, где включен аудит (в том числе системы выпуска standard edition). Аудита направляется в журнал приложений, поскольку они доступны во всех системах и не требует дополнительных разрешений. Предупреждение указывает, что для более высокого уровня защиты, он должен перенаправляться в журнал безопасности или в файл в защищенную папку. Приводятся ссылки для описания требуется дополнительная настройка.<br/><br/>Для систем, evaluation и developer или enterprise edition аудите доступа ко всем данным финансовых транзакций.|
-

@@ -2,12 +2,13 @@
 title: "Копирование представления модели интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +16,20 @@ helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], clipboards
 - copying mining models to clipboard
 ms.assetid: 768372db-e5b4-4990-b459-03d854fd9a6d
-caps.latest.revision: 38
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c1b439df2696fc44552d42680e1d4642e4728aa9
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 353d9d48d8dc8fd6ca596935d96c01522467cdde
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>Копирование представления модели интеллектуального анализа данных
-  Вкладка **Средство просмотра моделей интеллектуального анализа данных** в конструкторе интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует отдельное средство просмотра для каждого типа модели интеллектуального анализа данных. Некоторые средства просмотра имеют компоненты, из которых можно скопировать содержимое в буфер обмена, а затем вставить это содержимое в документ или в программу обработки изображений. Такой функциональностью обладают следующие компоненты.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Вкладка **Средство просмотра моделей интеллектуального анализа данных** в конструкторе интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует отдельное средство просмотра для каждого типа модели интеллектуального анализа данных. Некоторые средства просмотра имеют компоненты, из которых можно скопировать содержимое в буфер обмена, а затем вставить это содержимое в документ или в программу обработки изображений. Такой функциональностью обладают следующие компоненты.  
   
 -   Диаграмма кластеров в средстве просмотра кластеров ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) и средстве просмотра кластеризации последовательностей ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] )  
   
@@ -72,7 +73,6 @@ ms.lasthandoff: 09/01/2017
 5.  Щелкните правой кнопкой мыши панель **Сведения об узле** повторно и выберите команду **Копировать**.  
   
 ## <a name="see-also"></a>См. также  
- [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   
-

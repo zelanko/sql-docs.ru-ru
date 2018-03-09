@@ -1,36 +1,36 @@
 ---
-title: "Установка или удаление Reporting Services для SharePoint | Документы Microsoft"
+title: "Установка или удаление надстройки служб Reporting Services для SharePoint | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
-caps.latest.revision: 15
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "15"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: e10b1aadc6a89e0d18b55d577f075fcb04353fcb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 7c5db49ed18a5c025b1f237b59ca78ca5fbdbf71
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-
-# <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Установка и удаление надстройки служб Reporting Services для SharePoint
+# <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Установка или удаление надстройки служб Reporting Services для SharePoint
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  Запустите пакет установки надстройки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint (rsSharePoint.msi) на серверах SharePoint, чтобы включить функции [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в составе развертывания SharePoint. К этим компонентам относится Power View, веб-часть средства просмотра отчетов, конечная точка прокси для URL-адреса, типы содержимого [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и страницы приложений, которые позволяют создавать и просматривать отчеты, модели отчетов, источники данных и другое содержимое сервера отчетов на сайте SharePoint, а также управлять всем этим. Для сервера отчетов, работающего в режиме интеграции с SharePoint, надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint является обязательным компонентом. Надстройку можно установить из мастера установки SQL Server 2016 или загрузить файл rsSharePoint.msi из пакета дополнительных компонентов SQL Server 2016. Список версий надстройки и страницы загрузки приведены в разделе [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+  Запустите пакет установки надстройки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint (rsSharePoint.msi) на серверах SharePoint, чтобы включить функции [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в составе развертывания SharePoint. К этим компонентам относится Power View, веб-часть средства просмотра отчетов, конечная точка прокси для URL-адреса, типы содержимого [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и страницы приложений, которые позволяют создавать и просматривать отчеты, модели отчетов, источники данных и другое содержимое сервера отчетов на сайте SharePoint, а также управлять всем этим. Для сервера отчетов, работающего в режиме интеграции с SharePoint, надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint является обязательным компонентом. Надстройку можно установить с помощью мастера установки SQL Server 2016 или скачать файл rsSharePoint.msi из пакета дополнительных компонентов SQL Server 2016. Список версий надстройки и страницы загрузки приведены в разделе [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 > [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
   
 ##  <a name="bkmk_prereq"></a> Предварительные требования  
  Установка надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] является одним из обязательных шагов интеграции сервера отчетов с экземпляром продукта SharePoint. Дополнительные сведения об установке и настройке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]см. в разделе [Установка первого сервера отчетов в режиме интеграции с SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
@@ -57,9 +57,9 @@ ms.lasthandoff: 08/17/2017
 >  Преимущество установки надстройки до развертывания продукта SharePoint заключается в том, что по мере добавления новых серверов в ферму надстройка служб Reporting Services будет настраиваться и активироваться фермой SharePoint.  
   
 ##  <a name="bkmk_3ways_to_install"></a> Общие сведения о методах установки  
- SQL Server 2016 Reporting Services надстройки для продуктов SharePoint можно установить с помощью одного из следующих двух способов:  
+ Надстройку служб SQL Server 2016 Reporting Services для продуктов SharePoint можно установить одним из двух способов.  
   
--   **Мастер установки:** ![Примечание](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Примечание")New с SQL Server 2016 надстройку можно установить с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастера установки. Выберите **надстройку служб Reporting Services для продуктов SharePoint** на странице мастера **Выбор компонентов** .  
+-   **Мастер установки** ![примечание](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "примечание")Эту надстройку, добавленную в версии SQL Server 2016, можно установить с помощью мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Выберите **надстройку служб Reporting Services для продуктов SharePoint** на странице мастера **Выбор компонентов** .  
   
 -   **rsSharepoint.msi** . Надстройку можно установить напрямую с установочного носителя или скачать и установить. Файл rsSharepoint.msi поддерживает как графический пользовательский интерфейс, так и установку из командной строки. Файл MSI необходимо запустить с правами администратора, сначала открыв окно командной строки с повышенными разрешениями, затем запустить файл rsSharepoint.msi из командной строки. Дополнительные сведения о скачивании надстройки см. в разделе [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
@@ -81,11 +81,11 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\15\` (SharePoint 2013)
   
-     либо  
+     или диспетчер конфигурации служб  
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\16\` (SharePoint 2016)  
   
-3.  Настройте параметры сервера отчетов и включите нужные компоненты в центре администрирования SharePoint. . Дополнительные сведения об установке и настройке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , работающих в режиме интеграции с SharePoint, см. в разделе [Установка первого сервера отчетов в режиме интеграции с SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+3.  Настройте параметры сервера отчетов и включите нужные компоненты в центре администрирования SharePoint. , и делает это по-другому. Дополнительные сведения об установке и настройке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , работающих в режиме интеграции с SharePoint, см. в разделе [Установка первого сервера отчетов в режиме интеграции с SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
   
 ###  <a name="bkmk_files_only_installation"></a> Установка только файлов  
  Чтобы установить файлы и пропустить этап пользовательских действий, запустите файл rssharepoint.msi из командной строки с параметром SKIPCA.  
@@ -111,7 +111,7 @@ Rssharepoint.msi /?
   
          **CD %temp%**.  
   
-         Файл должен находиться в: **\Users\\< ваше имя\>\AppData\Local\Temp**  
+         Файл должен быть расположен в папке: **\Users\\<ваше имя\>\AppData\Local\Temp**.  
   
     2.  Введите следующую команду. Выполнение этого шага настройки требует нескольких минут. В течение этого времени будет перезапущена служба W3SVC. Пока программа копирует файлы, регистрирует компоненты и запускает мастер настройки продуктов SharePoint, на экране будут появляться различные сообщения о состоянии.  
   
@@ -219,7 +219,7 @@ Rssharepoint.msi /?
     ```  
   
 ##  <a name="bkmk_logfiles"></a> Файлы журналов установки  
- При запуске программы установки она записывает сведения в файл журнала в папке **%temp%** пользователя, который устанавливает надстройку служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Например **c:\Users\\< имя_пользователя\>\AppData\Local\Temp** . Имя файла — **RS_SP_\<число > .log**, например **RS_SP_0.log**. Каждая запись об ошибке в журнале начинается со строки «SSRSCustomActionError».  
+ При запуске программы установки она записывает сведения в файл журнала в папке **%temp%** пользователя, который устанавливает надстройку служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Например, **c:\Users\\<имя_пользователя\>\AppData\Local\Temp**. Имя файла имеет вид **RS_SP_\<число>.log**, например **RS_SP_0.log**. Каждая запись об ошибке в журнале начинается со строки «SSRSCustomActionError».  
   
 > [!NOTE]  
 >  AppData — это скрытая папка в операционной системе Windows. Для отображения скрытых файлов и папок, возможно, потребуется изменить параметры папки в проводнике Windows.  
@@ -255,7 +255,7 @@ Rssharepoint.msi /?
 ##  <a name="bkmk_upgrade"></a> Обновление  
  Если надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] уже установлена, ее можно обновить до текущей версии. Программа установки надстройки обнаружит существующую версию и предложит подтвердить обновление. Сообщение имеет следующий вид:  
   
- **В системе обнаружена более ранняя версия этого продукта. Вы действительно хотите обновить установленную версию?**  
+ **В системе обнаружена более ранняя версия этого продукта. Обновить установленную версию?**  
   
  При получении подтверждения старая версия надстройки будет удалена, а новая установлена.  
   
@@ -264,7 +264,7 @@ Rssharepoint.msi /?
 ##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
  В следующей таблице описываются параметры командной строки для программы rscustomaction.exe.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |------------|-----------------|  
 |i|Устанавливает пользовательские действия. Регистрирует компоненты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в SharePoint. Перезапускает службу W3SVCservice.|  
 |r|Восстановление|  
@@ -280,5 +280,4 @@ Rssharepoint.msi /?
 [Установка первого сервера отчетов в режиме интеграции с SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)   
 [Сервер отчетов служб Reporting Services (режим SharePoint)](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

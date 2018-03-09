@@ -3,8 +3,11 @@ title: "Значения, возвращаемые для доступа к SQLG
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -16,17 +19,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Access driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c56a813ec873293fec2dc846da851fc9d36f2dae
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1b830be937d31e763fbbf517ef07a3c2b8c729d3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>SQLGetInfo, значения, возвращаемые для доступа
 В следующей таблице перечислены языка C# defines для *fInfoType* аргумент и соответствующие значения, возвращаемые методом **SQLGetInfo**. Эти сведения можно получить, передав перечисленных языка C# defines **SQLGetInfo** в *fInfoType* аргумент. Дополнительные сведения о значениях, возвращаемых **SQLGetInfo**, в разделе *справочнике программиста ODBC*.  
@@ -99,7 +101,7 @@ ms.lasthandoff: 09/09/2017
 |SQL_DRIVER_HENV|Обрабатываются диспетчером драйверов.|  
 |SQL_DRIVER_HLIB|Обрабатываются диспетчером драйверов.|  
 |SQL_DRIVER_HSTMT|Обрабатываются диспетчером драйверов.|  
-|SQL_DRIVER_NAME|«OdbcJt32.dll»|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
 |SQL_DRIVER_VER|«4.00.*nnnn*» ( *nnnn*  Дата сборки)|  
 |SQL_DROP_ASSERTION|0|  
@@ -115,7 +117,7 @@ ms.lasthandoff: 09/09/2017
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_CA1_NEXT|  
 |SQL_GETDATA_EXTENSIONS|Несколько значений|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
-|SQL_IDENTIFIER_CASE|SQL_IC_MIXED, ИМЕЮЩИМ|  
+|SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
 |SQL_IDENTIFIER_QUOTE_CHAR|«"» (Обратная кавычка)|  
 |SQL_KEYWORDS|Несколько значений|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
@@ -146,7 +148,7 @@ ms.lasthandoff: 09/09/2017
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Несколько значений|  
-|СООТВЕТСТВИЕ SQL_ODBC_SAG_CLI_|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|Из диспетчера драйверов|  
 |SQL_OJ_CAPABILITIES|Несколько значений|  
@@ -154,7 +156,7 @@ ms.lasthandoff: 09/09/2017
 |SQL_OUTER_JOINS|«Y»|  
 |SQL_PROCEDURE_TERM|«ЗАПРОС»|  
 |SQL_PROCEDURES|«Y»|  
-|SQL_QUOTED_IDENTIFIER_CASE|SQL_IC_MIXED, ИМЕЮЩИМ|  
+|SQL_QUOTED_IDENTIFIER_CASE|SQL_IC_MIXED|  
 |SQL_ROW_UPDATES|"N"|  
 |SQL_SCHEMA_TERM|""|  
 |SQL_SCHEMA_USAGE|0|  
@@ -173,4 +175,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_TXN_ISOLATION_OPTION|SQL_TXN_READ_COMMITTED|  
 |SQL_UNION|Несколько значений|  
 |SQL_USER_NAME|«ADMIN»|
-

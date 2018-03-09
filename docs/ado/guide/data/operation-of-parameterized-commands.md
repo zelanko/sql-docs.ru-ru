@@ -3,7 +3,7 @@ title: "Операция параметризованных команд | До�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7d826d5407aabce4baa82b0952cff6c8344944e8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 65f8a1caba2f709e4583613ced4d6aa03b2d6bf1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="operation-of-parameterized-commands"></a>Операция параметризованных команд
 При работе с большой дочерним **записей**, особенно по сравнению с размером родительского **записей**, но требуется доступ только несколько дочерних разделов, может оказаться более эффективно использовать параметризованные команды.  
@@ -96,8 +95,7 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
 > [!NOTE]
 >  Если с помощью предложения WHERE, параметры можно не использовать типы данных SQL для text, ntext и image или, будет выдана ошибка содержит следующее описание: `Invalid operator for data type`.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример формирования данных](../../../ado/guide/data/data-shaping-example.md)   
  [Грамматика формальных фигуры](../../../ado/guide/data/formal-shape-grammar.md)   
- [Команды фигуры в целом](../../../ado/guide/data/shape-commands-in-general.md)
-
+ [Общие сведения о командах формирования данных](../../../ado/guide/data/shape-commands-in-general.md)

@@ -3,7 +3,7 @@ title: "Свойство InternetTimeout (RDS) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ apitype: COM
 helpviewer_keywords:
 - InternetTimeout property [ADO]
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7961cf7594df99caa6f8aa4c8ba0ef6cd94696dc
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2320ba200cf8343a32e2a0d00589a80014517260
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="internettimeout-property-rds"></a>Свойство InternetTimeout (RDS)
 Указывает количество миллисекунд для ожидания запроса.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **длинные** представляет количество миллисекунд до запрос времени ожидания.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Это свойство применяется только для запросов, отправленных с помощью протоколов HTTP или HTTPS.  
   
  Запросы в трехуровневой среде может занять несколько минут для выполнения. Это свойство позволяет указать дополнительное время для долго выполняющихся запросов.  
@@ -46,11 +45,10 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[Объект пространства данных (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|  
+|[Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[Объект DataSpace (служба удаленных рабочих столов)](../../../ado/reference/rds-api/dataspace-object-rds.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойства InternetTimeout (Visual Basic)](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)   
- [Пример свойства InternetTimeout (VC ++)](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)   
+ [Пример свойства InternetTimeout (Visual C++)](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)   
  
-
 

@@ -2,9 +2,12 @@
 title: "Создание файла форматирования (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 02/23/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - format files [SQL Server], creating
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
-caps.latest.revision: 57
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 39e7e7d14ab96b696ac5b849b413544f1de24c14
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: f043381909cd5a7fb7146f424163af69a443022c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-a-format-file-sql-server"></a>Создание файла форматирования (SQL Server)
-  При массовом импорте в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или массовом экспорте данных из таблицы вы можете воспользоваться файлом форматирования, который обеспечивает гибкую структуру записи файлов данных и практически не требует изменения для поддержки соответствия с другими форматами данных или для считывания данных из других программ.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+При массовом импорте в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или массовом экспорте данных из таблицы вы можете воспользоваться файлом форматирования, который обеспечивает гибкую структуру записи файлов данных и практически не требует изменения для поддержки соответствия с другими форматами данных или для считывания данных из других программ.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает два типа файлов форматирования: файлы форматирования в формате, отличном от XML, и XML-файлы форматирования. Файл форматирования не в формате XML поддерживается более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -39,7 +42,7 @@ ms.lasthandoff: 10/06/2017
 ## <a name="creating-a-non-xml-format-file"></a>Создание файла форматирования в формате, отличном от XML  
  Чтобы создать файл форматирования с помощью служебной программы **bcp** , укажите аргумент **format** , а вместо пути файла данных задайте значение **nul** . Параметр **format** также требует наличия параметра **-f** , например:  
   
- **bcp** *таблица_или_представление* **format** nul **-f***имя_файла_формата*  
+ **bcp** *table_or_view* **format** nul **-f***format_file_name*  
   
 > [!NOTE]  
 >  Для файлов форматирования в формате, отличном от XML рекомендуется использовать расширение FMT, например MyTable.fmt.  
@@ -66,7 +69,7 @@ ms.lasthandoff: 10/06/2017
   
  Команда **bcp** содержит следующие квалификаторы:  
   
-|Квалификаторы|Описание|  
+|Квалификаторы|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|Задает файл форматирования в формате, отличном от XML.|  
 |**-n**|Указывает собственные типы данных.|  
@@ -96,7 +99,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  Команда **bcp** содержит следующие квалификаторы:  
   
-|Квалификаторы|Описание|  
+|Квалификаторы|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|Задает файл форматирования в формате, отличном от XML.|  
 |**-c**|Задает символьные данные.|  
@@ -195,7 +198,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
  Команда **bcp** содержит следующие квалификаторы:  
   
-|Квалификаторы|Описание|  
+|Квалификаторы|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|Задает XML-файл форматирования.|  
 |**-c**|Задает символьные данные.|  
@@ -235,7 +238,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  Команда **bcp** содержит следующие квалификаторы:  
   
-|Квалификаторы|Описание|  
+|Квалификаторы|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|Задает XML-файл форматирования.|  
 |**-n**|Указывает собственные типы данных.|  
@@ -279,7 +282,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
 -   [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>См. также:  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Программа bcp](../../tools/bcp-utility.md)   
  [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
  [Пропуск столбца таблицы с помощью файла форматирования (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Использование файла форматирования для пропуска поля данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)   
@@ -287,4 +290,3 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
  [XML-файлы форматирования (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md)  
   
   
-

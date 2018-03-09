@@ -1,11 +1,13 @@
 ---
 title: "Установка PolyBase | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/31/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: polybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-polybase
 ms.tgt_pltfrm: 
@@ -13,24 +15,23 @@ ms.topic: article
 helpviewer_keywords:
 - PolyBase, installation
 ms.assetid: 3a1e64be-9bfc-4408-accd-35990e1a6b52
-caps.latest.revision: 25
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 6a207474995eb36fbda4b446949bdf188f959edd
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
-ms.openlocfilehash: 9a4f230e8c25a24f85f36f3a1aaf82fbf247cd9a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-installation"></a>Установка PolyBase
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Чтобы установить пробную версию SQL Server, перейдите на страницу [ознакомительных версий SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
   
 -   64-разрядный выпуск ознакомительной версии SQL Server;  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 07/31/2017
   
 -   минимальный объем памяти: 4 ГБ;  
   
--   Минимальное свободное место на жестком диске: 2 ГБ.  
+-   минимальное свободное место на жестком диске: 2 ГБ.  
   
 -   Для корректной работы Polybase должен быть включен протокол TCP/IP. TCP/IP включен по умолчанию во всех выпусках SQL Server, кроме Developer и Express. Для корректной работы Polybase в выпусках Developer и Express нужно включить подключение по TCP/IP. См. раздел [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) (Включение и отключение сетевого протокола сервера).
   
@@ -52,7 +53,8 @@ ms.lasthandoff: 07/31/2017
 Прежде чем начать установку PolyBase на экземплярах SQL Server, вам следует выбрать режим этой установки: на одном узле или в масштабируемой группе PolyBase. Для создания масштабируемой группы PolyBase должны соблюдаться следующие условия. 
 - Все компьютеры находятся в одном домене.
 - На всех компьютерах используются одинаковые имена и пароли учетной записи службы.
-- Экземпляры SQL Server могут взаимодействовать друг с другом по сети.
+- Экземпляры SQL Server могут взаимодействовать друг с другом по сети.
+- Экземпляры SQL Server имеют одинаковую версию SQL Server.
 
 После установки PolyBase режим установки (автономная или в масштабируемой группе) изменить нельзя. Чтобы перейти от одного режима к другому, следует удалить весь компонент и переустановить его заново.
 
@@ -117,7 +119,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 ### <a name="how-to-confirm-installation"></a>Подтверждение установки  
  Выполните следующую команду. Если служба PolyBase установлена, она возвращает значение 1, а если нет — значение 0.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
@@ -149,4 +151,3 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
  См. раздел [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
   
-

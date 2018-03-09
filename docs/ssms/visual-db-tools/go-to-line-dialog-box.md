@@ -3,28 +3,27 @@ title: "Диалоговое окно \"Переход к строке\" | До�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.gotoline
+f1_keywords: vs.gotoline
 ms.assetid: 779fdb9a-4ede-4784-b9eb-997a6683c26e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 51793a269a149be9d05ba49ffd787dee1f74a589
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b0c8037b7900a9b6f049daa4221e62aaf44d1eed
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="go-to-line-dialog-box"></a>Диалоговое окно «Переход к строке»
-Чтобы перейти в нужное место в окне редактора кода, введите номер строки и нажмите кнопку **ОК**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Чтобы перейти в нужное место в окне редактора кода, введите номер строки и нажмите кнопку **ОК**.  
   
-

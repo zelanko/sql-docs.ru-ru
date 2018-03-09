@@ -1,29 +1,31 @@
 ---
-title: "Catalog.create_folder (база данных SSISDB) | Документы Microsoft"
+title: "catalog.create_folder (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 06fb3549-e970-4ca2-a61f-59affb9c6dcc
-caps.latest.revision: 12
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 43d128f9dcc4cea632c810a13d21eb5e1ddb61df
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 07545406ae08af9c09d30bccb100674dbb68b688
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcreatefolder-ssisdb-database"></a>catalog.create_folder (база данных SSISDB)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Создает папку в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -34,27 +36,26 @@ catalog.create_folder [@folder_name =] folder_name, [@folder_id =] folder_id OUT
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [@folder_name =] *имя_папки*  
- Имя новой папки. *Имя_папки* — **nvarchar(128)**.  
+ [@folder_name =] *folder_name*  
+ Имя новой папки. Параметр *folder_name* имеет тип **nvarchar(128)**.  
   
  [@folder_name =] *folder_id*  
- Уникальный идентификатор папки. *Folder_id* — **bigint**.  
+ Уникальный идентификатор папки. Параметр *folder_id* имеет тип **bigint**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  Возвращается идентификатор папки.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
-Если папка с таким именем уже существует, хранимая процедура возвращает ошибку.  
+Хранимая процедура возвращает ошибку, если уже существует папка с тем же именем.  
   
   
-

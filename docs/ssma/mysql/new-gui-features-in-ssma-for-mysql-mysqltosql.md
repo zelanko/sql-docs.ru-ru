@@ -1,29 +1,30 @@
 ---
 title: "Новые возможности графического пользовательского интерфейса в SSMA для MySQL (MySQLToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-mysql
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 0e59e2dc-1e4a-47c0-a5c3-ae7b5f5e469c
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d5278d3427e8dc30f4cbc4986745c22ee9bf0f77
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ac62e3e7a77ad3e4941f8a8da143eba8e0b253fd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-gui-features-in-ssma-for-mysql-mysqltosql"></a>Новые возможности графического пользовательского интерфейса в SSMA для MySQL (MySQLToSQL)
 В этой главе описываются новые функции пользовательский интерфейс SSMA  
@@ -132,4 +133,3 @@ ms.lasthandoff: 08/02/2017
 ### <a name="advanced-search"></a>Расширенный поиск  
 Чтобы открыть диалоговое окно расширенного поиска, для поиска точек редактирования меню, а затем нажмите кнопку расширенного поиска. В диалоговом окне можно будет найти любой объект, с помощью шаблона. В верхней части диалогового окна можно выбрать область и объект категории поиска.  
   
-

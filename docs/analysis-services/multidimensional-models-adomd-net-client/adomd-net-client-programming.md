@@ -1,13 +1,14 @@
 ---
 title: "Программирование клиента ADOMD.NET | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -16,17 +17,16 @@ helpviewer_keywords:
 - programming [ADOMD.NET]
 - ADOMD.NET, programming
 ms.assetid: 55156115-ecd1-4ed9-876e-23406af9bbf9
-caps.latest.revision: 42
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 453848d922a5e2a88258922f764403cf4126de12
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f8a7debab516c8f48b4184c66028c42f44d5bdd2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="adomdnet-client-programming"></a>Программирование клиента ADOMD.NET
   Клиентские компоненты ADOMD.NET находятся в пределах **Microsoft.AnalysisServices.AdomdClient** пространства имен (в файл microsoft.analysisservices.adomdclient.dll). Клиентские компоненты обеспечивают функциональные возможности для клиента и приложений среднего уровня возможность запрашивать данные и метаданные из хранилища аналитических данных, таких как [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -34,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="using-the-adomdnet-client-objects"></a>Использование клиентских объектов ADOMD.NET  
  Существует набор наиболее типичных действий при выполнении запроса к источнику аналитических данных. В следующей таблице приведены наиболее часто используемые задачи, в которых клиентские объекты ADOMD.NET используются для выполнения такого запроса.  
   
-|Задача|Description|  
+|Задача|Описание|  
 |----------|-----------------|  
 |[Установление соединений в ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net.md)|Объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> используется в ADOMD.NET для установления соединений с источниками аналитических данных, например базами данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> может применяться для выполнения команд, получения данных и метаданных из источника аналитических данных.|  
 |[Получение метаданных из источника аналитических данных](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)|Получить сведения о базовом источнике данных можно после установления соединения при помощи широкого спектра объектов. Это позволяет приложению адаптироваться к источнику данных, с которым оно соединено.|  
@@ -54,9 +54,8 @@ ms.lasthandoff: 09/01/2017
 |Получение метаданных о кубах (доступных измерений, мер, именованных наборов и др.)|<xref:Microsoft.AnalysisServices.AdomdClient.CubeDef><br /> Объект <xref:Microsoft.AnalysisServices.AdomdClient.CubeDef> представляет метаданные о кубе. Объект <xref:Microsoft.AnalysisServices.AdomdClient.CubeDef> доступен по ссылке из объекта <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.|  
 |Получение данных с помощью **System.Data.IDbDataAdapter** интерфейса|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataAdapter><br /> Объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataAdapter> обеспечивает поддержку режима «только для чтения» для существующих клиентских приложений платформы .NET Framework.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Программирование сервера ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md)   
  [Разработка с использованием ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
   
   
-

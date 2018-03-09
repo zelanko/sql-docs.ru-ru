@@ -1,10 +1,13 @@
 ---
-title: "MONTH (выражение служб SSIS) | Документы Microsoft"
+title: "MONTH (выражение служб SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - dates [Integration Services], MONTH
 - MONTH function
 ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
-caps.latest.revision: 38
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e2e480bc53181fdf01a64716e1fdb94fe4116716
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9c04a2a80ed3c1224a5b9db2af1c57270de76526
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="month-ssis-expression"></a>MONTH (выражение служб SSIS)
   Возвращает целое число, представляющее месяц указанной даты.  
@@ -42,7 +44,7 @@ MONTH(date)
 ## <a name="result-types"></a>Типы результата  
  DT_I4  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция MONTH возвращает значение NULL, если значение аргумента NULL.  
   
  Литерал даты должен быть явно приведен к одному из типов данных даты. Дополнительные сведения см. в статье [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -71,13 +73,12 @@ MONTH(ModifiedDate)
 MONTH(GETDATE())  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Функция DATEADD &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
- [Функция DATEDIFF &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
- [DATEPART &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
- [ДЕНЬ &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/day-ssis-expression.md)   
- [ГОД &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/year-ssis-expression.md)   
- [Функции &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>См. также:  
+ [DATEADD (выражение служб SSIS)](../../integration-services/expressions/dateadd-ssis-expression.md)   
+ [DATEDIFF (выражение служб SSIS)](../../integration-services/expressions/datediff-ssis-expression.md)   
+ [DATEPART (выражение служб SSIS)](../../integration-services/expressions/datepart-ssis-expression.md)   
+ [DAY (выражение служб SSIS)](../../integration-services/expressions/day-ssis-expression.md)   
+ [YEAR (выражение служб SSIS)](../../integration-services/expressions/year-ssis-expression.md)   
+ [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

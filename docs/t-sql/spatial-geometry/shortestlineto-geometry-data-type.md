@@ -3,8 +3,11 @@ title: "ShortestLineTo (тип данных geometry) | Документы Micro
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ dev_langs:
 helpviewer_keywords:
 - ShortestLineTo method (geometry)
 ms.assetid: 39a2d0e4-4f93-4e94-a27e-6ad9537cfe74
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc8843ceefe8819d2f314d76b019720863866ed1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 08e83f7bb1993d3b55a48e5e3714c75d4bd33429
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (тип данных geometry)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 Возвращает **LineString** экземпляра с двумя точками, представляющий кратчайшее расстояние между двумя **geometry** экземпляров. Длина **LineString** возвращаемый экземпляр — это расстояние между двумя **geometry** экземпляров.
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 09/01/2017
   
  Возвращаемый тип CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Метод возвращает **LineString** экземпляр с конечными точками, лежащими на границах двух непересекающиеся **geometry** сравниваемых экземпляров. Длина **LineString** возвращаемый равна кратчайшему расстоянию между двумя **geometry** экземпляров. Пустой **LineString** экземпляр возвращается, когда два **geometry** пересекаются друг с другом.  
   
 ## <a name="examples"></a>Примеры  
@@ -70,9 +72,8 @@ ms.lasthandoff: 09/01/2017
  SELECT @g1.ShortestLineTo(@g2).ToString();
  ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ShortestLineTo &#40; тип данных geography &#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
   
   
-
 

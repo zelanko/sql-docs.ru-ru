@@ -3,7 +3,7 @@ title: "Шаг 1: Настройка проекта Visual Basic | Докуме�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -13,17 +13,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77d3bfa5-fc9f-4a72-93b4-790c7d227988
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: ca52a0c56d37a8ebb5da2ef52cd98d71fa3f937d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7b27969d78328118f98911c68eb555357bc3118
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="step-1-set-up-the-visual-basic-project"></a>Шаг 1: Настройка проекта Visual Basic
 В этом сценарии предполагается наличие Microsoft Visual Basic 6.0, поставщик Microsoft OLE DB и ADO 2.5 или более поздней версии для публикаций в Интернете на компьютере. Будет сначала создайте новый проект и затем добавлять некоторые элементы управления в форму по умолчанию в проекте.  
@@ -44,7 +43,6 @@ ms.lasthandoff: 09/09/2017
   
 3.  Добавьте элемент управления TextBox в форму Form1. Значение свойства Name **txtDetails**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сценарий публикации в Интернете](../../../ado/guide/data/internet-publishing-scenario.md)   
- [Шаг 2: Инициализируйте главном списке](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)
-
+ [Шаг 2. Инициализация главного списка](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)

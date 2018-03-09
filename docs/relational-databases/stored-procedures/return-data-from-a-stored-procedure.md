@@ -2,9 +2,12 @@
 title: "Возврат данных из хранимой процедуры | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
 ms.tgt_pltfrm: 
@@ -13,23 +16,49 @@ helpviewer_keywords:
 - stored procedures [SQL Server], returning data
 - returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
-caps.latest.revision: 25
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 7d4ec18d40f6777a2d72b838030e3b4305c891e6
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 715ce3fff853f4eab433d095ffd952033defad69
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Возврат данных из хранимой процедуры
-
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
  > Материалы по предыдущим версиям SQL Server см. в разделе [Возврат данных из хранимой процедуры](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
 
-  Существует два способа возврата результирующих наборов или данных из процедуры вызывающей программе: параметры вывода и коды возврата. В этом разделе приводятся сведения по обоим способам.  
+  Существует три способа возврата данных из процедуры в вызывающую программу: результирующие наборы, параметры вывода и коды возврата. Этот раздел содержит сведения по всем трем способам.  
+  
+  ## <a name="returning-data-using-result-sets"></a>Возврат данных с помощью результирующих наборов
+ Если включить инструкцию SELECT в тело хранимой процедуры (но не SELECT... INTO или INSERT... SELECT), строки, указанные инструкцией SELECT, будут отправляться непосредственно клиенту.  Для больших результирующих наборов выполнение хранимой процедуры не перейдет к следующей инструкции, пока результирующий набор не будет полностью передан клиенту.  Для небольших результирующих наборов результаты будут буферизированы для возврата клиенту, а выполнение продолжится.  Если при выполнении хранимой процедуры запускаются несколько таких инструкций SELECT, клиенту отправляется несколько результирующих наборов.  Такое поведение также применяется к вложенным пакетам TSQL, вложенным хранимым процедурам и пакетам TSQL верхнего уровня.
+ 
+ 
+ ### <a name="examples-of-returning-data-using-a-result-set"></a>Примеры возврата данных с помощью результирующего набора 
+  Приведенный ниже пример показывает хранимую процедуру, которая возвращает значения LastName и SalesYTD для всех строк SalesPerson, которые также отображаются в представлении vEmployee.
+  
+ ```  
+USE AdventureWorks2012;  
+GO  
+IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
+    DROP PROCEDURE Sales.uspGetEmployeeSalesYTD;  
+GO  
+CREATE PROCEDURE Sales.uspGetEmployeeSalesYTD  
+AS    
+  
+    SET NOCOUNT ON;  
+    SELECT LastName, SalesYTD  
+    FROM Sales.SalesPerson AS sp  
+    JOIN HumanResources.vEmployee AS e ON e.BusinessEntityID = sp.BusinessEntityID  
+    
+RETURN  
+GO  
+  
+```  
+
   
 ## <a name="returning-data-using-an-output-parameter"></a>Возврат данных с помощью выходного параметра  
  Процедура может возвращать текущее значение параметра в вызываемой программе при завершении работы при указании ключевого слова OUTPUT для параметра в определении процедуры. Чтобы сохранить значение параметра в переменной, которая может быть использована в вызываемой программе, при выполнении процедуры вызываемая программа должна использовать ключевое слово OUTPUT. Дополнительные сведения о том, какие типы данных могут использоваться в качестве выходных параметров, см. в разделе [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md).  
@@ -113,7 +142,7 @@ GO
   
 ### <a name="examples-of-cursor-output-parameters"></a>Примеры выходных параметров курсора  
  В следующем примере создается процедура, которая указывает выходной параметр `@currency_cursor`, используя тип данных **cursor**. Процедура затем будет вызвана из пакета.  
-  
+ 
  Сначала создайте процедуру, которая объявляет и затем открывает курсор в таблице Currency.  
   
 ```  
@@ -160,7 +189,7 @@ DECLARE @result int;
 EXECUTE @result = my_proc;  
 ```  
   
- Коды возврата часто применяются в блоках управления потоком процедур для присвоения кода возврата каждой из возможных ошибок. Чтобы выяснить, произошла ли во время выполнения инструкции ошибка, запустите функцию @@ERROR после инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ Коды возврата часто применяются в блоках управления потоком процедур для присвоения кода возврата каждой из возможных ошибок. Чтобы выяснить, произошла ли во время выполнения инструкции ошибка, запустите функцию @@ERROR после инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)].  До появления обработки ошибок TRY/CATCH/THROW в TSQL для определения успеха или сбоя хранимых процедур иногда требовались коды возврата.  Хранимые процедуры должны всегда указывать на сбой с помощью ошибки (которая при необходимости создается с помощью THROW/RAISERROR), не полагаясь в этом на код возврата.  Кроме того, следует избегать использования кода возврата для возврата данных приложения.
   
 ### <a name="examples-of-return-codes"></a>Примеры кодов возврата  
  В следующем примере показана процедура `usp_GetSalesYTD` с обработкой ошибок, устанавливающей специальные значения кода возврата для различных ошибок. В следующей таблице показано целое число, которое назначается процедурой каждой возможной ошибке, и соответствующее значение каждого числа.  
@@ -270,4 +299,3 @@ GO
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   
   
-

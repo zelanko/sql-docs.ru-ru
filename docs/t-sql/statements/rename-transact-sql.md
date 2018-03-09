@@ -1,35 +1,36 @@
 ---
 title: "RENAME (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 04/13/2016
+ms.date: 11/20/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
-caps.latest.revision: 15
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d58470957ab58085ddd6a733cf30dbc77ce7439a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 3c08b4d991717d877ca33cd2d136d0dbf0d30483
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Переименование таблицы, созданные пользователем, в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Переименовывает пользовательской таблицы или базы данных в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 > [!NOTE]  
->  Переименование базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssSDS](../../includes/sssds-md.md)] хранимая процедура [sp_renamedb &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).  
+>  Переименование базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используйте хранимую процедуру [sp_renamedb &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Чтобы переименовать базу данных в службе базы данных SQL Azure, используйте инструкцию [ALTER DATABASE (база данных SQL Azure)](/statements/alter-database-azure-sql-database.md). 
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -56,13 +57,13 @@ RENAME DATABASE [::] database_name TO new_database_name
   
 ## <a name="arguments"></a>Аргументы  
  ПЕРЕИМЕНОВАТЬ ОБЪЕКТ [:]   
-          [[*имя_базы_данных* . [ *schema_name* ]. ] | [ *schema_name* . []]*table_name* TO *new_table_name*  
+          [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* TO *new_table_name*  
  **ПРИМЕНЯЕТСЯ К:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)],  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  Измените имя определяемой пользователем таблицей. Укажите таблицу для переименования с одно-, двух- или трехкомпонентное имя.    Укажите новую таблицу *new_table_name* виде однокомпонентного имени.  
   
  ПЕРЕИМЕНОВАНИЕ БАЗЫ ДАННЫХ [:]   
-          [ *имя_базы_данных* TO *новое_имя_базы_данных*  
+          [ *database_name* TO *new_database_name*  
  **ОБЛАСТЬ ПРИМЕНЕНИЯ:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  Измените имя пользовательской базы данных из *имя_базы_данных* для *новое_имя_базы_данных*.  Невозможно переименовать базу данных на любой из этих [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]зарезервированные имена баз данных:  
@@ -85,7 +86,7 @@ RENAME DATABASE [::] database_name TO new_database_name
   
 -   DWQueue  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для выполнения этой команды требуется это разрешение:  
   
 -   **ALTER** разрешение на таблицу  
@@ -110,7 +111,7 @@ RENAME DATABASE [::] database_name TO new_database_name
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-rename-a-database"></a>A. Переименование базы данных  
- **ПРИМЕНЯЕТСЯ к:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] только    
+ **ПРИМЕНЯЕТСЯ к:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] только  
   
  В этом примере переименовывает определяемую пользователем базу данных AdWorks в AdWorks2.  
   
@@ -162,4 +163,3 @@ KILL 'SID1234';
 ```  
   
   
-

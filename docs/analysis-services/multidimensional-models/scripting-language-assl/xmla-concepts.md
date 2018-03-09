@@ -2,33 +2,31 @@
 title: "Основные понятия XMLA | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- XMLA, concepts
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: XMLA, concepts
 ms.assetid: 816183a7-d2f7-4e14-8e5b-2a4c1798fbc1
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 31764ea957feff56c50357f8058ba710e6c1c658
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2c8df1713f3015e9319f7a1323b43f697bebb625
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="xmla-concepts"></a>Основные понятия XML для аналитики
-  Открытый стандарт XML для аналитики (XMLA) поддерживает доступ к данным в источниках данных, находящихся в Интернете. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] реализует XML для Аналитики в соответствии со спецификацией XML для Аналитики 1.1.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]XML для аналитики (XMLA) открытый стандарт поддерживает данных доступ к источникам данных, которые находятся в Интернете. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] реализует XML для Аналитики в соответствии со спецификацией XML для Аналитики 1.1.  
   
  XML для аналитики (XMLA) — это XML-протокол, основанный на протоколе SOAP, который специально предназначен для обеспечения унифицированного доступа к данным в любом стандартном многомерном источнике данных, находящемся в Интернете. XML для Аналитики также избавляет от необходимости развертывать клиентский компонент, который предоставляет модель объектов компонентов (COM) или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] интерфейсы платформы .NET Framework. Протокол XMLA оптимизирован для работы с Интернетом, особенно если обмен данными с сервером требует больших затрат времени и ресурсов, а в связи с применением поддерживающих состояние соединений с источниками данных количество соединений пользователя с сервером может стать ограниченным.  
   
@@ -53,4 +51,3 @@ ms.lasthandoff: 09/01/2017
  XMLA — это протокол, который применяется для приложений бизнес-аналитики, использующих методологию унифицированной многомерной модели.  
   
   
-

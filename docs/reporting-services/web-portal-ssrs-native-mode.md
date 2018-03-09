@@ -1,26 +1,27 @@
 ---
 title: "Веб-портал (основной режим служб SSRS) | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
-caps.latest.revision: 15
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: e3dff8b613f933caa84522b31bdc862aa9c799f7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+caps.latest.revision: "15"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Active
+ms.openlocfilehash: e134b496c8e7e9a3cf39c2fa8fb0f8f6cf31dafb
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Веб-портал (основной режим служб SSRS)
 
@@ -96,7 +97,7 @@ ms.lasthandoff: 08/09/2017
 - Отчеты Power BI Desktop
 - Книги Excel
 - Наборы данных
-- Источники данных
+- обозревателе решений
 - Ресурсы
 
 Отображаемым содержимым можно управлять, выбрав элемент **Вид** в правом верхнем углу. Если выбрать параметр "Показать скрытые", такие элементы будут отображаться более светлым цветом.
@@ -127,7 +128,7 @@ ms.lasthandoff: 08/09/2017
 
 [Работа с общими наборами данных](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  

@@ -1,13 +1,14 @@
 ---
-title: "Создание, изменение и удаление общих источников данных (SSRS) | Документы Microsoft"
+title: "Создание, изменение и удаление общих источников данных (службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +20,16 @@ helpviewer_keywords:
 - data sources [Reporting Services], modifying properties
 - deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
-caps.latest.revision: 53
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3d4025539369dcc955e8675a92def39e356cb86d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fc63cde6f20cda1b6d302c881ca6bf5b8a294ba8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Создание, изменение и удаление общих источников данных (SSRS)
   Общий источник данных — это набор свойств соединения с источником данных, на который могут ссылаться несколько отчетов, моделей и управляемых данными подписок, работающих на сервере отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Общие источники данных предоставляют удобный способ управления часто изменяющимися свойствами источника данных. Если изменились свойства учетной записи пользователя или пароль или база данных перенесена на другой сервер, все сведения о соединении можно изменить в одном месте.  
@@ -45,11 +45,11 @@ ms.lasthandoff: 08/09/2017
   
 |Часть|Description|  
 |----------|-----------------|  
-|Название|Имя, которое идентифицирует элемент в иерархии папок сервера отчетов.|  
+|Имя|Имя, которое идентифицирует элемент в иерархии папок сервера отчетов.|  
 |Description|Описание, которое отображается вместе с элементом в диспетчере отчетов при просмотре содержимого папки.|  
-|Тип соединений|Модуль обработки данных, используемый с источником данных. Можно использовать только модули обработки данных, развернутые на сервере отчетов. Дополнительные сведения о модулях обработки данных, входящий в состав [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], в разделе [источники данных, поддерживаемые службой Reporting Services &#40; Службы SSRS &#41; ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
+|Тип соединений|Модуль обработки данных, используемый с источником данных. Можно использовать только модули обработки данных, развернутые на сервере отчетов. Дополнительные сведения о модулях обработки данных, включенных в службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], см. в разделе [Источники данных, поддерживаемые службами Reporting Services (службы SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
 |Строка соединения|Строка соединения для базы данных. Дополнительные сведения о строках соединения и примеры их использования с часто используемыми источниками данных см. в разделе [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
-|Тип учетных данных|Указывает, каким образом соединение получает учетные данные и используются ли они после того, как соединение установлено. Дополнительные сведения см. в статье [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  
+|Тип учетных данных|Указывает, каким образом соединение получает учетные данные и используются ли они после того, как соединение установлено. Дополнительные сведения см. в статье [Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  
   
  Общий источник данных не содержит сведений о запросе для получения данных. Запрос всегда сохраняется в определении отчета.  
   
@@ -196,7 +196,7 @@ ms.lasthandoff: 08/09/2017
   
     -   Чтобы пользователь вводил учетные данные каждый раз при выполнении отчета, выберите **Запрос учетных данных** . Не следует выбирать этот параметр, если для отчета необходимо по расписанию обрабатывать данные или подписку.  
   
-    -   Выберите параметр **Сохраненные учетные данные** , чтобы пользователь получал доступ с помощью единственного набора учетных данных. Эти учетные данные шифруются перед сохранением. Можно выбрать параметры, которые определяют, как проверяются сохраненные учетные данные. Выберите «Использовать учетные данные Windows», если сохраненные учетные данные принадлежат пользовательской учетной записи Windows. Выберите **Выполнять в контексте этой учетной записи** , чтобы настроить контекст выполнения на сервере базы данных. Для баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот параметр задает функцию SETUSER. Дополнительные сведения см. в разделе [SETUSER &#40; Transact-SQL &#41; ](../../t-sql/statements/setuser-transact-sql.md).  
+    -   Выберите параметр **Сохраненные учетные данные** , чтобы пользователь получал доступ с помощью единственного набора учетных данных. Эти учетные данные шифруются перед сохранением. Можно выбрать параметры, которые определяют, как проверяются сохраненные учетные данные. Выберите «Использовать учетные данные Windows», если сохраненные учетные данные принадлежат пользовательской учетной записи Windows. Выберите **Выполнять в контексте этой учетной записи** , чтобы настроить контекст выполнения на сервере базы данных. Для баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот параметр задает функцию SETUSER. Дополнительные сведения см. в разделе [SETUSER (Transact-SQL)](../../t-sql/statements/setuser-transact-sql.md).  
   
     -   Выберите **Учетные данные не требуются** , чтобы задать учетные данные в строке подключения или выполнить отчет под учетной записью с минимальными правами доступа, настроенной на сервере отчетов. Если эта учетная запись не настроена на сервере отчетов, у пользователей будут запрашиваться учетные данные и все запланированные операции, определенные для сервера отчетов, выполняться не будут.  
   
@@ -234,15 +234,14 @@ ms.lasthandoff: 08/09/2017
   
      Для моделей отчетов список зависимых элементов содержит отчеты, созданные в построителе отчетов. Для общих источников данных список зависимых элементов может включать как отчеты, так и модели отчетов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание общих источников данных и управление ими (службы Reporting Services в режиме интеграции с SharePoint)](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [Подключения к данным, источники данных и строки подключения &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Управление источниками данных отчета](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Диспетчер отчетов &#40; Собственный режим служб SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Внедренные и общие подключения к данным или источники данных (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [Страницы свойств источников данных &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [Создать, удалить или изменить общий источник данных &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Настройка свойств источника данных для отчета &#40; Диспетчер отчетов &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Страница "Свойства источников данных" (диспетчер отчетов)](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [Создание, удаление или изменение общего источника данных (диспетчер отчетов)](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Настройка свойств источника данных для отчета (диспетчер отчетов)](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   
-

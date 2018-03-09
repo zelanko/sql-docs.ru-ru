@@ -2,11 +2,13 @@
 title: "Просмотр состояний публикаций и подписок в мониторе репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,20 +23,19 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], viewing status
 - Replication Monitor, publication and subscription status
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "34"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6de5f69f5c5d6fefea0fb3dca7f6b11b3c6c7194
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ab769d9d4a6c5c311fa6695056ef503999455d8f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Просмотр состояний публикаций и подписок в мониторе репликации
-  Монитор репликации[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] отображает сведения о состоянии публикаций и подписок:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Монитор репликации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] отображает сведения о состоянии публикаций и подписок:  
   
 -   Состояние публикации определяется наиболее приоритетным состоянием ее подписок. Например, если в одной подписке на публикацию содержится ошибка, в другой — проблема с производительностью, для публикации отображается состояние ошибки.  
   
@@ -72,7 +73,7 @@ ms.lasthandoff: 06/22/2017
 |Ошибка|![Значок интерфейса пользователя: ошибка](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Значок интерфейса пользователя: ошибка")|  
 |Критическая производительность|![Значок интерфейса пользователя: предупреждение](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Значок интерфейса пользователя: предупреждение")|  
 |Повтор последней невыполненной команды|![Значок интерфейса пользователя: повторное выполнение агента репликации](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Значок интерфейса пользователя: повторное выполнение агента репликации")|  
-|ОК|none|  
+|OK|none|  
   
 ## <a name="subscription-status-values"></a>Значения состояния подписки  
  В следующей таблице содержатся значения состояния подписки и соответствующие им значки в порядке приоритета. Подписка может находиться одновременно в двух состояниях, например в состоянии **Срок действия скоро истекает или истек** и **Повторное выполнение неудавшейся команды**. При этом выводится состояние с наибольшим приоритетом.  
@@ -119,4 +120,3 @@ ms.lasthandoff: 06/22/2017
  [Наблюдение за репликацией](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   
-

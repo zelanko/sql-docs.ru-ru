@@ -3,7 +3,7 @@ title: "Хранимые процедуры свойства примере (JSc
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - Direction property [ADO], JScript example
 - CommandTimeout property [ADO], JScript example
 ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9de22a7cb7d4fa673f37368c72ab3390841304d8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c975baf653e9cc32432bfec9359ff2caef7dc1c7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>ActiveConnection, CommandText, CommandTimeout, CommandType, размер и направление-пример свойства (JScript)
 В этом примере используется [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [размер](../../../ado/reference/ado-api/size-property-ado-parameter.md), и [направление](../../../ado/reference/ado-api/direction-property.md) свойства для выполнения хранимой процедуры. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **ActiveConnectionJS.asp**.  
@@ -180,7 +179,7 @@ BODY {
 <!-- EndActiveConnectionJS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Объект команды (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Свойства CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
@@ -191,5 +190,4 @@ BODY {
  [Объект параметра](../../../ado/reference/ado-api/parameter-object.md)   
  [Объект записи (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Свойство Size (параметр ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)
-
+ [Свойство Size (объект Parameter ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)

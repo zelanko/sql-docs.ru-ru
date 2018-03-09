@@ -1,29 +1,30 @@
 ---
 title: "Параметры командной строки в консоли SSMA (AccessToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 08/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
+ms.openlocfilehash: c1d26043b33ea902aec4ae7976ad8b215829bf34
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 827257d90042aa1655545edd9fc20d114952f426
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>Параметры командной строки в консоли SSMA (AccessToSQL)
 Майкрософт предоставляет широкий набор параметров командной строки для выполнения и контроля над SSMA действий. В дальнейших разделах содержатся дополнительные сведения.  
@@ -183,4 +184,3 @@ ms.lasthandoff: 08/21/2017
   
 3.  Для устранения неполадок в консоли, в разделе [Устранение неполадок &#40; AccessToSQL &#41; ](../../ssma/access/troubleshooting-accesstosql.md).  
   
-

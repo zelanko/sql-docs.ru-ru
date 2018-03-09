@@ -1,10 +1,13 @@
 ---
-title: "Диспетчер соединений с несколькими файлами | Документы Microsoft"
+title: "Диспетчер подключений к нескольким файлам |  | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -17,17 +20,16 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - multiple file connections
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
-caps.latest.revision: 36
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 23dc2338948dc97d68436b23995a1817a0b3bb66
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5ff3fcef1362333dc1ac2de5774d63ce025b8557
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="multiple-files-connection-manager"></a>диспетчер соединений с несколькими файлами
   Диспетчер соединений с несколькими файлами позволяет пакету обращаться к существующим файлам и папкам или создавать файлы и папки во время выполнения.  
@@ -40,7 +42,7 @@ ms.lasthandoff: 08/03/2017
   
  В следующей таблице приводятся значения **FileUsageType**.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**0**|Диспетчер соединений с несколькими файлами использует существующий файл.|  
 |**1**|Диспетчер соединений с несколькими файлами создает файл.|  
@@ -64,7 +66,7 @@ ms.lasthandoff: 08/03/2017
   
  \<*путь*>|\<*путь*>  
   
- Также можно определить множество файлов и папок, используя символы-шаблоны. Например, для создания ссылки на все текстовые файлы на диске C значение свойства **ConnectionString** может быть равно "C:\\*.txt".  
+ Также можно определить множество файлов и папок, используя символы-шаблоны. Например, для создания ссылки на все текстовые файлы на диске C значение свойства **ConnectionString** может быть равно "C:\\\*.txt".  
   
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
@@ -73,4 +75,3 @@ ms.lasthandoff: 08/03/2017
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
   
-

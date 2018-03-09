@@ -3,7 +3,7 @@ title: "RecordStatusEnum | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - RecordStatusEnum enumeration [ADO]
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2315d18add9b25aab826d47346d8725aaa2af6e7
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9bf2413bed1bbdf96b83b7e805aac90529a721c9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 Указывает [состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md) записи по отношению к пакетные обновления и других операций массового.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|Указывает, что запись не была сохранена, так как операция была отменена.|  
 |**adRecCantRelease**|0x400|Указывает, новая запись не был сохранен, так как существующую запись была заблокирована.|  
@@ -81,5 +80,4 @@ ms.lasthandoff: 09/09/2017
 |AdoEnums.RecordStatus.UNMODIFIED|  
   
 ## <a name="applies-to"></a>Объект применения  
- [Свойство Status (набора записей ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
-
+ [Свойство Status (объект Recordset ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)

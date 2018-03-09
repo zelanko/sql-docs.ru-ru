@@ -2,36 +2,33 @@
 title: "Набор строк DISCOVER_DATASOURCES | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- DISCOVER_DATASOURCES
+apiname: DISCOVER_DATASOURCES
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_DATASOURCES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_DATASOURCES rowset
 ms.assetid: f3ff26ab-a447-416b-ba54-1716df2283de
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d52c95835c5583bd4b8a01a416131aaa7166f385
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b9c91d5b1d3e0fb7ec972e47079a1bf36d8f9b87
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverdatasources-rowset"></a>Набор строк DISCOVER_DATASOURCES
-  Возвращает список источников данных поставщика XML для аналитики, которые доступны на сервере или в веб-службе. Для возврата источников опубликованных данных применяется URL-адрес веб-сервера приложения. Клиент может подключиться к одному из источников данных в этом списке.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Возвращает список XML для аналитики (XMLA) источников данных поставщика, доступных на сервере или веб-службы. Для возврата источников опубликованных данных применяется URL-адрес веб-сервера приложения. Клиент может подключиться к одному из источников данных в этом списке.  
   
  При вызове метода [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) метод с **DISCOVER_DATASOURCES** значения перечисления в [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) элемент, **Discover** метод возвращает **DISCOVER_DATASOURCES** набора строк.  
   
@@ -48,7 +45,7 @@ ms.lasthandoff: 09/01/2017
 |**DataSourceDescription**|**DBTYPE_WSTR**||Описание источника данных, введенное издателем.<br /><br /> Может возвращать значение **NULL**.|  
 |**URL-адрес**|**DBTYPE_WSTR**|Да|Уникальный путь, который показывает, откуда следует вызывать методы XML для аналитики для этого источника данных.<br /><br /> Может возвращать значение **NULL**.|  
 |**DataSourceInfo**|**DBTYPE_WSTR**||Строка, которая содержит любые дополнительные сведения, необходимые для подключения к источнику данных.<br /><br /> Может возвращать значение **NULL**.|  
-|**ProviderName**|**DBTYPE_WSTR**|Да|Имя поставщика для источника данных.<br /><br /> Пример:`"MSOLAP"`<br /><br /> Может возвращать значение **NULL**.|  
+|**ProviderName**|**DBTYPE_WSTR**|Да|Имя поставщика для источника данных.<br /><br /> Пример: `"MSOLAP"`<br /><br /> Может возвращать значение **NULL**.|  
 |**ProviderType**|**DBTYPE_WSTR**|Да|Типы данных, поддерживаемые поставщиком. Этот массив может включать один или несколько следующих типов:<br /><br /> **MDP**. Поставщик многомерных данных.<br /><br /> **TDP**. Поставщик табличных данных.<br /><br /> **DMP**. Поставщик интеллектуального анализа данных (реализовывает технологию OLE для DB применительно к спецификации интеллектуального анализа данных).|  
 |**AuthenticationMode**|**DBTYPE_WSTR**|Да|Спецификация, определяющая тип режима безопасности, используемого в источнике данных. Значением может быть одно из следующих.<br /><br /> **Unauthenticated**: Не требуется отправка какого-либо идентификатора пользователя или пароля.<br /><br /> **Authenticated**: Идентификатор пользователя и пароль должны быть включены в сведения, необходимые для подключения к источнику данных.<br /><br /> **Интегрированный**: источник данных используются базовые средства безопасности для определения авторизации, такие как встроенная безопасность, обеспечиваемая [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS).|  
   
@@ -68,7 +65,6 @@ ms.lasthandoff: 09/01/2017
 |ADOMDNAME|DataSources|  
   
 ## <a name="see-also"></a>См. также:  
- [XML для аналитики наборы строк схемы](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [Наборы строк схемы XML для аналитики](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

@@ -1,12 +1,14 @@
 ---
-title: "Отправка в удаленную закрытую очередь сообщений с помощью задачи «скрипт» | Документы Microsoft"
+title: "Отправка в удаленную закрытую очередь сообщений в задаче \"Скрипт\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - Message Queue task [Integration Services]
 - Script task [Integration Services], examples
 ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
-caps.latest.revision: 31
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5ab9314ef0825486914d1801bfa2b9613883b43e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 53ca565e15c29397826bb37c95d7fcb70a6ba7a2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>Отправка в удаленную закрытую очередь сообщений в задаче «Скрипт»
   Служба очередей сообщений (называемая также MSMQ) облегчает разработчикам обеспечение быстрой и надежной связи с прикладными программами при помощи отправки и получения сообщений. Очередь сообщений может находиться в локальном или в удаленном компьютере и может быть открытой или закрытой. В службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] диспетчер соединений MSMQ и задача «Очередь сообщений» не поддерживают отправку в закрытую очередь на удаленном компьютере. Но при использовании задачи «Скрипт» можно легко отправить сообщение в удаленную закрытую очередь.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 09/26/2017
 >  Если нужно создать задачу, которую будет удобно использовать в нескольких пакетах, рекомендуется начать разработку пользовательской задачи с этого образца задачи «Скрипт». Дополнительные сведения см. в разделе [Разработка пользовательской задачи](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="description"></a>Description  
- В следующем примере существующий диспетчер соединений MSMQ, а также объекты и методы из пространства имен System.Messaging для отправки текста, содержащегося в переменной пакета в удаленную закрытую очередь сообщений. Вызов метода M:Microsoft.SqlServer.Dts.ManagedConnections.MSMQConn.AcquireConnection(System.Object) диспетчера соединений MSMQ возвращает **MessageQueue** которого **отправки** метод выполняет эту задачу.  
+ В следующем примере для отправки текста (содержащегося в переменной пакета) в удаленную закрытую очередь сообщений используется существующий диспетчер соединений MSMQ вместе с объектами и методами из пространства имен System.Messaging. Вызов метода M:Microsoft.SqlServer.Dts.ManagedConnections.MSMQConn.AcquireConnection(System.Object) диспетчера подключений MSMQ возвращает объект **MessageQueue**, метод **Send** которого выполняет эту задачу.  
   
 #### <a name="to-configure-this-script-task-example"></a>Настройка этого образца задачи «Скрипт»  
   
@@ -47,17 +48,17 @@ ms.lasthandoff: 09/26/2017
     FORMATNAME:DIRECT=OS:<computername>\private$\<queuename>  
     ```  
   
-2.  Создание [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] переменную с именем **MessageText** типа **строка** чтобы передать текст сообщения в скрипт. Введите сообщение по умолчанию как значение переменной.  
+2.  Создайте переменную служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с именем **MessageText** типа **String**, чтобы передать текст сообщения в скрипт. Введите сообщение по умолчанию как значение переменной.  
   
-3.  Добавьте задачу «Скрипт» в область конструктора и измените ее. На **сценарий** вкладке **редактор задачи «скрипт»**, добавьте `MessageText` переменной **ReadOnlyVariables** свойство, чтобы сделать переменную доступной в скрипте .  
+3.  Добавьте задачу «Скрипт» в область конструктора и измените ее. На вкладке **Скрипт** **редактора задачи "Скрипт"** добавьте переменную `MessageText` к свойству **ReadOnlyVariables**, чтобы сделать переменную доступной в скрипте.  
   
-4.  Нажмите кнопку **изменить скрипт** Открытие [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] средств для приложений (VSTA) Редактор сценариев.  
+4.  Нажмите кнопку **Изменить скрипт**, чтобы открыть редактор скриптов средств [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] для приложений (VSTA).  
   
-5.  Добавьте ссылку в проект скрипта **System.Messaging** пространства имен.  
+5.  В проект скрипта добавьте ссылку на пространство имен **System.Messaging**.  
   
 6.  Замените содержимое окна скрипта кодом из следующего раздела.  
   
-## <a name="code"></a>код  
+## <a name="code"></a>Код  
   
 ```vb  
 Imports System  
@@ -113,4 +114,3 @@ public class ScriptMain
  [Задача «Очередь сообщений»](../../integration-services/control-flow/message-queue-task.md)  
   
   
-

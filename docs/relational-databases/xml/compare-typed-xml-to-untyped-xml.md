@@ -2,9 +2,12 @@
 title: "Сравнение типизированного и нетипизированного XML | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -25,19 +28,20 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-caps.latest.revision: 57
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 27533bcc63a8df64597db4529b16a26f1fb5a009
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: b40976e2a8efdaf0b41ede4f79786060b7e1163c
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Сравнение типизированного и нетипизированного XML
-  Можно создать переменные, параметры и столбцы типа **xml** . При необходимости можно связать коллекцию схем XML с переменной, параметром или столбцом типа **xml** . В данном случае экземпляр типа данных **xml** называется *типизированным*. В противном случае экземпляр XML называется *нетипизированным*.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Можно создать переменные, параметры и столбцы типа **xml** . При необходимости можно связать коллекцию схем XML с переменной, параметром или столбцом типа **xml** . В данном случае экземпляр типа данных **xml** называется *типизированным*. В противном случае экземпляр XML называется *нетипизированным*.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>XML-документы правильного формата и тип данных XML  
  Тип данных **xml** соответствует типу данных **xml** стандарта ISO. Таким образом, он позволяет хранить синтаксически корректные документы XML 1.0, а также так называемые фрагменты XML-содержимого с текстовыми узлами и произвольным числом элементов верхнего уровня в нетипизированном XML-столбце. Система, осуществляющая проверку правильности формата данных, не требует, чтобы столбец был связан с XML-схемами, и отклоняет данные, имеющие неправильный формат в общепринятом смысле. Это также верно для нетипизированных переменных и параметров типа XML.  
@@ -72,7 +76,7 @@ ms.lasthandoff: 06/22/2017
  В следующих примерах для указания имени коллекции XML-схем используется обозначение, состоящее из двух частей. Первая часть — это имя схемы, вторая часть — имя коллекции XML-схем.  
   
 ### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Пример. Связывание коллекции схем с переменными типа xml  
- В приведенном ниже примере создается переменная типа**xml** , с которой затем связывается коллекция схем. Коллекция схем, указанная в примере, уже импортирована в базу данных **AdventureWorks** .  
+ В приведенном ниже примере создается переменная типа **xml**, с которой затем связывается коллекция схем. Коллекция схем, указанная в примере, уже импортирована в базу данных **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
@@ -161,7 +165,7 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
 ## <a name="see-also"></a>См. также:  
  [Создание экземпляров XML-данных](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [Методы типа данных XML](../../t-sql/xml/xml-data-type-methods.md)   
+ [методов типа данных xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Язык модификации XML-данных (XML DML)](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [Данные XML (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)  
   

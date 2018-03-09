@@ -3,8 +3,11 @@ title: "Инструкция DBCC TRACESTATUS (Transact-SQL) | Документ�
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - session trace flags [SQL Server]
 - displaying trace flag status
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
-caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 75d78069427891cfab6f7aaef7192d498912611a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4f373d7cf31a4dbc53318245b8ba2800ab9e90b8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Отображает состояние флагов трассировки.
   
@@ -66,19 +68,19 @@ WITH NO_INFOMSGS
 ## <a name="result-sets"></a>Результирующие наборы  
 В следующей таблице описаны сведения в результирующем наборе.
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |---|---|
 |**TraceFlag**|Имя флага трассировки.|  
 |**Состояние**|Показывает, как задан глобальный или сеансовый флаг трассировки (включен или выключен):<br /><br /> 1 = включен;<br /><br /> 0 = выключен.|  
-|**Глобальные**|Показывает, задан ли флаг трассировки глобально;<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|**Global**|Показывает, задан ли флаг трассировки глобально;<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |**Сеанс**|Показывает, задан ли флаг трассировки для сеанса:<br /><br /> 1 = True<br /><br /> 0 = False.|  
   
 Инструкция DBCC TRACESTATUS возвращает столбец с номерами флагов трассировки и столбец их состояний. Показывает, включен (1) или выключен (2) флаг трассировки. Столбец заголовков для номеров флагов трассировки может либо **глобальный флаг трассировки** или **Session Trace Flag**, в зависимости от, отражающие состояние глобально или флага трассировки.
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] существуют два типа флагов трассировки: для сеанса и глобальные. Флаги трассировки сеанса действуют во время данного соединения и доступны только для этого соединения. Глобальные флаги трассировки устанавливаются на уровне сервера и доступны для каждого соединения с этим сервером.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Необходимо быть членом роли **public** .
   
 ## <a name="examples"></a>Примеры  
@@ -110,11 +112,10 @@ DBCC TRACESTATUS();
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEOFF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
 [DBCC TRACEON (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)  
 [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   
-

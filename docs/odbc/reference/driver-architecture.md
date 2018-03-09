@@ -3,27 +3,28 @@ title: "Архитектура драйвера | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC architecture [ODBC], drivers
 - drivers [ODBC], architecture
 ms.assetid: c5003413-0cc1-4f41-b877-a64e2f5ab118
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fe6ffa26bdae5f4d40257b36e9776cff95d8f9ee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a74f6e1b212f570ba9aa47a09310b63b13ee0e42
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-architecture"></a>Архитектура драйвера
 Архитектура драйвера подразделяется на две категории, в зависимости от того, какие процессы программного обеспечения инструкции SQL.  
@@ -38,11 +39,10 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующие подразделы.  
   
--   [Драйверов на основе файлов](../../odbc/reference/file-based-drivers.md)  
+-   [Драйверы на основе файлов](../../odbc/reference/file-based-drivers.md)  
   
--   [Драйверов на основе DBMS](../../odbc/reference/dbms-based-drivers.md)  
+-   [Драйверы на основе СУБД](../../odbc/reference/dbms-based-drivers.md)  
   
--   [Пример сети](../../odbc/reference/network-example.md)  
+-   [Сетевой пример](../../odbc/reference/network-example.md)  
   
--   [Других архитектур драйвера](../../odbc/reference/other-driver-architectures.md)
-
+-   [Другие архитектуры драйверов](../../odbc/reference/other-driver-architectures.md)

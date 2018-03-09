@@ -1,12 +1,14 @@
 ---
-title: "Программная загрузка и запуск локального пакета | Документы Microsoft"
+title: "Программная загрузка и запуск локального пакета | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: run-manage-packages-programmatically
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -22,20 +24,19 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - programmatically load and run packages [SSIS]
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
-caps.latest.revision: 60
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 07ceb460488ca1973295b6b8e991948efe8b9d2a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 604c25de1d6ca478612bd3a83f79e35b969e5d8c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Программная загрузка и запуск локального пакета
-  Можно запустить [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакетов по мере необходимости или в заранее определенное время с помощью методов, описанных в [выполняемые пакеты](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx). Однако с помощью всего нескольких строк кода можно выполнить пакет из пользовательского приложения, такого как приложение Windows Forms, приложение командной строки, веб-форма ASP.NET, веб-служба или служба Windows.  
+  Пакеты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно выполнять по мере необходимости или в заранее определенное время с помощью методов, описанных в разделе [Выполнение пакетов](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx). Однако с помощью всего нескольких строк кода можно выполнить пакет из пользовательского приложения, такого как приложение Windows Forms, приложение командной строки, веб-форма ASP.NET, веб-служба или служба Windows.  
   
  В данном разделе рассматриваются следующие темы.  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Программное выполнение пакета.  
   
- Все методы, используемые в этом разделе для загрузки и выполнения пакетов, требуют наличия ссылки на **Microsoft.SqlServer.ManagedDTS** сборки. После добавления ссылки в новый проект импортируйте <xref:Microsoft.SqlServer.Dts.Runtime> пространство имен с **с помощью** или **Imports** инструкции.  
+ Все методы, используемые в данном разделе для загрузки и выполнения пакетов, требуют наличия ссылки на сборку **Microsoft.SqlServer.ManagedDTS**. После добавления ссылки в новый проект импортируйте пространство имен <xref:Microsoft.SqlServer.Dts.Runtime> с помощью инструкции **using** или **Imports**.  
   
 ## <a name="loading-a-package-programmatically"></a>Программная загрузка пакета  
  Чтобы загрузить хранящийся локально или удаленно пакет на локальный компьютер программным путем, вызовите один из перечисленных далее методов.  
@@ -64,9 +65,9 @@ ms.lasthandoff: 08/03/2017
   
 1.  Запустите среду разработки Visual Studio и создайте новое приложение на языке программирования по своему выбору. В этом образце используется приложение командной строки. Однако выполнить пакет можно также из приложения Windows Forms, веб-формы ASP.NET, веб-службы или службы Windows.  
   
-2.  На **проекта** меню, нажмите кнопку **добавить ссылку** и добавьте ссылку на **Microsoft.SqlServer.ManagedDTS.dll**. Нажмите кнопку **ОК**.  
+2.  В меню **Проект** выберите пункт **Добавить ссылку** и добавьте ссылку на **Microsoft.SqlServer.ManagedDTS.dll**. Нажмите кнопку **ОК**.  
   
-3.  В Visual Basic использовать **Imports** инструкции или C# **с помощью** инструкцию, чтобы импортировать **Microsoft.SqlServer.Dts.Runtime** пространства имен.  
+3.  Используйте инструкцию Visual Basic **Imports** или инструкцию C# **using** для импорта пространства имен **Microsoft.SqlServer.Dts.Runtime**.  
   
 4.  Добавьте следующий код в подпрограмму main. В следующем примере представлено полное консольное приложения.  
   
@@ -231,9 +232,8 @@ namespace RunFromClientAppWithEventsCS
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Основные сведения о различиях между локальным и удаленным выполнением](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
+ [Основные сведения об отличиях между локальным и удаленным выполнением](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Программная загрузка и запуск удаленного пакета](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
  [Загрузка выхода локального пакета](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
   
   
-

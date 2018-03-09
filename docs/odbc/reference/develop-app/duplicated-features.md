@@ -3,10 +3,12 @@ title: "Дублировать возможности | Документы Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - functions [ODBC], duplicated functions
 - backward compatibility [ODBC], duplicated functions
 ms.assetid: 641b16bc-f791-46d8-b093-31736473fe3d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 911e36882d278a997126dbf0ee99bbab837c5125
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b12ba1b5b8c70e6ab0f7efe6f0811984411a6022
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="duplicated-features"></a>Повторяющийся функции
 Следующие 2 ODBC. *x* повторяются функции ODBC 3. *x* функции. В результате ODBC 2. *x* функции являются устаревшими в ODBC 3. *x*. ODBC 3. *x* функции называются замены функции.  
@@ -57,4 +58,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Функция **SQLBindParam** является особым случаем. **SQLBindParam** повторяющихся функциональность. Это не ODBC 2*.x* функции, но функция, которая присутствует в стандартах Open Group и ISO. Функциональные возможности, предоставляемые этой функцией полностью включена в группу по **SQLBindParameter**. В результате диспетчера драйверов сопоставляет вызов **SQLBindParam** для **SQLBindParameter** при базового драйвера ODBC 3. *x* драйвера. Однако когда базового драйвера имеет ODBC 2*.x* драйвера, диспетчер драйверов не выполнять сопоставление.
-

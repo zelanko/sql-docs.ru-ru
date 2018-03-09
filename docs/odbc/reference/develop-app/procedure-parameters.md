@@ -3,31 +3,31 @@ title: "Параметры процедуры | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- procedure parameters [ODBC]
+helpviewer_keywords: procedure parameters [ODBC]
 ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ea30d30d66761e245a89fadd4bea37d6503c458b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4cf4aa29c376ac600842804eb4b7e3b935fb049b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="procedure-parameters"></a>Параметры процедуры
 Параметры в вызове процедуры могут быть входными, ввода вывода или выходных параметров. Это отличается от параметров в все другие инструкции SQL, которые всегда являются входными параметрами.  
   
- Входные параметры используются для передачи значений в процедуру. Например предположим, что таблицы частей имеет PartID, описаний и цен столбцов. Процедура InsertPart может иметь входного параметра для каждого столбца в таблице. Например:  
+ Входные параметры используются для передачи значений в процедуру. Например предположим, что таблицы частей имеет PartID, описаний и цен столбцов. Процедура InsertPart может иметь входного параметра для каждого столбца в таблице. Пример:  
   
 ```  
 {call InsertPart(?, ?, ?)}  
@@ -58,4 +58,3 @@ ms.lasthandoff: 09/09/2017
  После выполнения инструкции драйверы хранения возвращенные значения ввода вывода и выходные параметры в переменных, связанных с этими параметрами. Эти возвращаемые значения не обязательно быть установлены до после будут выбраны все результаты, возвращаемые процедурой и **SQLMoreResults** вернула значение SQL_NO_DATA. Если выполнение инструкции приведет к ошибке, его содержимое буфера входным или выходным параметром или выходной параметр буфер не определено.  
   
  Приложение вызывает **SQLProcedure** для определения, имеет ли процедура возвращает значение. Он вызывает **SQLProcedureColumns** для определения типа (возвращаемое значение, входной, ввода вывода или выходной) каждого параметра процедуры.
-

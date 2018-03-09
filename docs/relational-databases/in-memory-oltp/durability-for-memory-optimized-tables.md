@@ -2,28 +2,30 @@
 title: "Устойчивость оптимизированных для памяти таблиц | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
-caps.latest.revision: 28
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 67987be025c453a2b1c5629c44314834716c7ec6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 206337e355352ce6b1f1a13cd36f90f18937de91
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Устойчивость таблиц, оптимизированных для памяти
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] обеспечивает полную устойчивость хранения для таблиц, оптимизированных для памяти. При фиксации транзакции, которая изменила таблицу, оптимизированную для памяти, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (как и для дисковых таблиц) гарантирует, что изменения будут необратимы (выдержат перезапуск базы данных) при доступности используемого хранилища. Есть два ключевых компонента устойчивости таблицы: ведение журнала транзакций и сохранение изменений данных в хранилище на диске.  
   
@@ -117,4 +119,3 @@ ms.lasthandoff: 06/22/2017
  [Создание и управление хранилищем для оптимизированных для памяти объектов](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   
-

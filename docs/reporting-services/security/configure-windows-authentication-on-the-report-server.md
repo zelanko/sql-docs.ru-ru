@@ -1,29 +1,29 @@
 ---
-title: "Настройка проверки подлинности Windows на сервере отчетов | Документы Microsoft"
+title: "Настройка проверки подлинности Windows на сервере отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-caps.latest.revision: 25
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "25"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b948fea25ec62f338556b604812ff4d9574462ed
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b59cdb7f5087ed7cb02300758f593ea952be3778
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Настройка проверки подлинности Windows на сервере отчетов
   По умолчанию службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] принимают запросы, в которых определена проверка подлинности Negotiate или NTLM. Если в развертывание входят клиентские приложения и браузеры, в которых используются поставщики безопасности, то можно использовать значения по умолчанию без дополнительной настройки. Если нужно использовать другого поставщика безопасности для встроенной безопасности Windows (например, требуется применять протокол Kerberos напрямую) или если значения по умолчанию были изменены, и нужно восстановить первоначальные настройки, то можно использовать сведения данного раздела, чтобы указать настройки проверки подлинности на сервере отчетов.  
@@ -37,9 +37,9 @@ ms.lasthandoff: 08/09/2017
     > [!IMPORTANT]  
     >  Использование **RSWindowsNegotiate** приведет к ошибке проверки подлинности протокола Kerberos, если служба сервера отчетов настроена на запуск с доменной учетной записью пользователя и для учетной записи не зарегистрировано имя участника-службы (SPN). Дополнительные сведения см. в разделе [Разрешение ошибок проверок подлинности протокола Kerberos при соединении с сервером отчетов](#proxyfirewallRSWindowsNegotiate) в этом разделе.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]должен быть настроен для проверки подлинности Windows. По умолчанию файлы Web.config для сервера веб-службы отчетов включают \<режим проверки подлинности = «Windows» > параметр. Если вы изменяете \<режим проверки подлинности = «Forms» >, проверку подлинности Windows для [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] завершится ошибкой.  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] должна быть настроена для проверки подлинности Windows. По умолчанию файлы Web.config для веб-службы сервера отчетов содержат параметр \<authentication mode="Windows">. Если изменить его на \<authentication mode="Forms">, проверка подлинности Windows для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] завершится ошибкой.  
   
--   Файлы Web.config для сервера веб-службы отчетов должна иметь \<identity impersonate = «true» / >.  
+-   Файлы Web.config для веб-службы сервера отчетов должны содержать параметр \<identity impersonate= "true"/>.  
   
 -   Клиентское приложение или браузер должны поддерживать встроенную безопасность Windows.  
 
@@ -52,13 +52,13 @@ ms.lasthandoff: 08/09/2017
  Следующие параметры настраиваются для сервера отчетов, работающего в собственном режиме. Если развертывание сервера отчетов производилось в режиме интеграции с SharePoint, то необходимо пользоваться настройками проверки подлинности по умолчанию, в которых задана встроенная безопасность Windows. Сервер отчетов использует внутренние функции модуля проверки подлинности Windows по умолчанию для поддержки серверов отчетов в режиме интеграции с SharePoint.  
   
 ## <a name="extended-protection-for-authentication"></a>Расширенная защита для проверки подлинности  
- Начиная с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], доступна поддержка расширенной защиты для проверки подлинности. Функция [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует привязку каналов и служб для повышения уровня защиты проверки подлинности. Функции [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно использовать в ОС, поддерживающей расширенную защиту. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Настройка расширенной защиты, определяется параметрами в файле RSReportServer.config. Это можно сделать как в текстовом редакторе, так и при помощи средств WMI API. Дополнительные сведения см. в статье [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).  
+ Начиная с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], доступна поддержка расширенной защиты для проверки подлинности. Функция [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует привязку каналов и служб для повышения уровня защиты проверки подлинности. Функции [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно использовать в ОС, поддерживающей расширенную защиту. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] определяется параметрами в файле RSReportServer.config. Это можно сделать как в текстовом редакторе, так и при помощи средств WMI API. Дополнительные сведения см. в статье [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md).  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>Настройка сервера отчетов на использование встроенной безопасности Windows  
   
 1.  Откройте файл конфигурации RSReportServer.config в текстовом редакторе.  
   
-2.  Найти \< **проверки подлинности**>.  
+2.  Найдите параметр \<**Authentication**>.  
   
 3.  Выберите и скопируйте наиболее подходящую из следующих XML-структур. **RSWindowsNegotiate**, **RSWindowsNTLM**и **RSWindowsKerberos** можно указывать в любом порядке. Включите сохраняемость проверки подлинности, если нужно проверить подлинность соединений, а не каждого отдельного запроса. При сохраняемости проверки подлинности все запросы, для которых требуется проверка подлинности, разрешены в продолжение существования соединения.  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 08/09/2017
           <EnableAuthPersistence>true</EnableAuthPersistence>  
     ```  
   
-     \</ Проверка подлинности >  
+     \</Authentication>  
   
      Третья XML-структура указывает все пакеты безопасности, используемые во встроенной безопасности Windows:  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 08/09/2017
           </AuthenticationTypes>  
     ```  
   
-4.  Вставьте его поверх существующих записей для \< **проверки подлинности**>.  
+4.  Вставьте ее на место существующих элементов параметра \<**Authentication**>.  
   
      Также невозможно использование синтаксиса **Custom** с типами **RSWindows** .  
   
@@ -131,13 +131,13 @@ ms.lasthandoff: 08/09/2017
   
  Можно заметить ошибку, если включить ведение журнала протокола Kerberos. Другой признак ошибки — многократное получение запроса для ввода учетных данных с последующим появлением пустого окна браузера.  
   
- Убедитесь, что возникающие ошибки проверки подлинности Kerberos, удалив < **RSWindowsNegotiate** / > из файла конфигурации и повторив попытку соединения.  
+ Наличие ошибки проверки подлинности протокола Kerberos можно подтвердить, удалив <**RSWindowsNegotiate**/> из файла конфигурации и повторив попытку соединения.  
   
  Если неполадка подтверждается, ее можно устранить следующими способами:  
   
--   Зарегистрируйте имя участника-службы для службы сервера отчетов, которая запускается от учетной записи пользователя домена. Дополнительные сведения см. в статье [Регистрация имени участника-службы (SPN) для сервера отчетов](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
+-   Зарегистрируйте имя участника-службы для службы сервера отчетов, которая запускается от учетной записи пользователя домена. Дополнительные сведения см. в статье [Регистрация имени субъекта-службы (SPN) для сервера отчетов](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
--   Измените учетную запись службы для запуска под встроенной учетной записью, такой как сетевая служба. Встроенные учетные записи сопоставляют имя участника-службы HTTP с именем участника-службы Host, которое определяется при соединении компьютера с сетью. Дополнительные сведения см. в разделе [Настройка учетной записи службы (диспетчер конфигурации служб SSRS)](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0).  
+-   Измените учетную запись службы для запуска под встроенной учетной записью, такой как сетевая служба. Встроенные учетные записи сопоставляют имя участника-службы HTTP с именем участника-службы Host, которое определяется при соединении компьютера с сетью. Дополнительные сведения см. в разделе [Настройка учетной записи службы (диспетчер конфигураций служб SSRS)](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0).  
   
 -   Используйте NTLM. Как правило, NTLM функционирует в случаях, когда проверка подлинности протокола Kerberos заканчивается неуспешно. Чтобы задействовать NTLM, удалите **RSWindowsNegotiate** из файла RSReportServer.config и проверьте, что указан только **RSWindowsNTLM** . Если выбран этот подход, то можно продолжить использовать учетную запись пользователя домена для службы сервера отчетов, даже если для него не определено имя участника-службы (SPN).  
   
@@ -173,7 +173,7 @@ ms.lasthandoff: 08/09/2017
     rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - \<HTTP/sqlpod064-13.w2k3.net>.  
     ```  
   
--   Значения в полях \<Explicit > будет содержать имена участников-служб, настроенные в Active Directory для [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] учетной записи службы.  
+-   Значения в столбце \<Явные> — это имена субъектов-служб, настроенные в Active Directory для учетной записи службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  Если дальнейшей необходимости в использовании расширенной защиты нет, восстановите параметры по умолчанию и перезапустите учетную запись службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -211,13 +211,12 @@ ms.lasthandoff: 08/09/2017
   
 -   Дополнительные сведения о Kerberos и серверах отчетов см. на странице [Развертывание решений бизнес-аналитики с помощью SharePoint, служб Reporting Services и сервера мониторинга PerformancePoint с Kerberos.](http://go.microsoft.com/fwlink/?LinkID=177751)  
   
-## <a name="see-also"></a>См. также  
- [Проверка подлинности на сервере отчетов](../../reporting-services/security/authentication-with-the-report-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Проверка подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Настройка обычной проверки подлинности на сервере отчетов](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
- [Настройка нестандартной проверки подлинности или проверки подлинности форм на сервере отчетов](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
- [Расширенная защита для проверки подлинности служб Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
+ [Настройка нестандартной проверки подлинности или проверки подлинности с помощью форм на сервере отчетов](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
+ [Расширенная защита для аутентификации с использованием служб Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   
-

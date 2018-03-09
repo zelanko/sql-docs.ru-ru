@@ -2,33 +2,33 @@
 title: "Создание или настройка прослушивателя группы доступности (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.availabilitygroup.newaglistener.general.f1
+f1_keywords: sql13.swb.availabilitygroup.newaglistener.general.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: Active
+ms.openlocfilehash: fae108d9d72c9ba183b7f4b37b418b6d99ed5f56
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 85130cfb53873de6e378c26b68b9b4d601695614
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Создание или настройка прослушивателя группы доступности (SQL Server)
-  В этом разделе описывается создание или настройка одного *прослушивателя группы доступности* для группы доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается создание или настройка одного *прослушивателя группы доступности* для группы доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!IMPORTANT]  
 >  Для создания прослушивателя первой группы доступности настоятельно рекомендуется использовать [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или Powershell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Старайтесь не создавать прослушиватель непосредственно в кластере WSFC, кроме случаев, когда необходимо, например, создать дополнительный прослушиватель.  
@@ -384,4 +384,3 @@ Start-ClusterResource yourListenerName
  [Кластеры SQL Server с несколькими подсетями (SQL Server)](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
   
   
-

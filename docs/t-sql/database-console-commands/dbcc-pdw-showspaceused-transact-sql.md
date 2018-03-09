@@ -3,9 +3,11 @@ title: "PDW_SHOWSPACEUSED DBCC (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|database-console-commands
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -13,20 +15,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
-caps.latest.revision: 10
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4a16d4a7a10eb4f36d0ead2a19f8e37d251e417f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 8c564a6debb9c110cb41f8fc90a7cc1c0c5a01f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>PDW_SHOWSPACEUSED DBCC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Отображает количество строк, зарезервированное место на диске и дисковое пространство, используемое для конкретной таблицы или для всех таблиц в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] базы данных.
   
@@ -45,16 +46,16 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ *имя_базы_данных* . [ *schema_name* ]. | *schema_name* . ] *имя_таблицы*  
+ [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
  Одно-, двух или трех частей имя таблицы для отображения. Для двух или трех частей таблицы имен, имя необходимо заключать в двойные кавычки (»»). Использование в кавычки имя одной части таблицы является необязательным. Если имя таблицы не указан, отображается текст в текущей базе данных.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Необходимо разрешение VIEW SERVER STATE.
   
 ## <a name="result-sets"></a>Результирующие наборы  
 Это результирующий набор для всех таблиц.
   
-|Столбец|Тип данных|Description|  
+|Столбец|Тип данных|Описание|  
 |------------|---------------|-----------------|  
 |reserved_space|bigint|Общее пространство, используемые в базе данных, в КБ.|  
 |data_space|bigint|Пространство, используемое для данных, в КБ.|  
@@ -64,7 +65,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
   
 Это результирующий набор для одной таблицы.
   
-|Столбец|Тип данных|Description|Диапазон|  
+|Столбец|Тип данных|Описание|Диапазон|  
 |------------|---------------|-----------------|-----------|  
 |rows|bigint|Количество строк.||  
 |reserved_space|bigint|Общее пространство, зарезервированное для объекта, в КБ.||  
@@ -100,4 +101,3 @@ DBCC PDW_SHOWSPACEUSED;
 [DBCC PDW_SHOWPARTITIONSTATS &#40; Transact-SQL &#41;](dbcc-pdw-showpartitionstats-transact-sql.md)
 
   
-

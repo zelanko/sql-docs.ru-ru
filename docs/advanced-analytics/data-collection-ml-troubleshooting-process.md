@@ -2,28 +2,30 @@
 title: "Устранение неполадок при сборе данных для машинного обучения — SQL Server"
 ms.custom: 
 ms.date: 06/16/2017
-ms.prod: sql-server-2016
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
-caps.latest.revision: 1
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: ee3b5fb649d659ade9cca22292aa5c8715f515c8
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: b9185b1798c638541a5228d9cbe9e675a8de3427
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Устранение неполадок при сборе данных для машинного обучения
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Тип данных, которые следует собирать при попытке устранить проблемы с установки, настройки или производительность машинного обучения в SQL Server описаны в этой статье. Такие данные включают журналы, сообщения об ошибках и сведения о системе.
 
@@ -158,7 +160,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 * Во время установки выбрать службы R (в базе данных) и R Server (изолированный). 
 * Установки клиента Microsoft R в дополнение к SQL Server.
-* Другой набор библиотек R была установлена с помощью средства R для Visual Studio, R Studio, Microsoft R клиента или другого интерфейса IDE r..
+* Другой набор библиотек R была установлена с помощью средства R для Visual Studio, R Studio, Microsoft R клиента или другого интерфейса IDE r.
 * Компьютер содержит несколько экземпляров SQL Server и более одного экземпляра с применением машинного обучения.
 
 Применяются те же условия Python.
@@ -272,7 +274,7 @@ SQL Server создает отдельные файлы журналов для 
 
 1. Найдите папку, содержащую журналы установки начальной загрузки для SQL Server. Например в SQL Server 2016 путь по умолчанию был C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log.
 2. Откройте папку начальной загрузки журнала, характерное для расширяемости.
-3. Если необходимо отправить запрос на техническую поддержку, добавьте все содержимое этой папки в ZIP-файл. Например C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log\LOG\ExtensibilityLog.
+3. Если необходимо отправить запрос на техническую поддержку, добавьте все содержимое этой папки в ZIP-файл. For example, C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log\LOG\ExtensibilityLog.
   
 Точное расположение может отличаться в вашей системе, и может оказаться на диске, отличном от диска C. Убедитесь в том, что получить журналы для экземпляра, где установлен машинного обучения. 
 
@@ -345,4 +347,3 @@ SQL Server создает отдельные файлы журналов для 
 ## <a name="see-also"></a>См. также:
 
 [Устранение неполадок машинного обучения в SQL Server](machine-learning-troubleshooting-faq.md)
-

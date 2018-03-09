@@ -2,13 +2,13 @@
 title: "Настройка обратной записи секции | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - partitions [Analysis Services], write-enabled
 - writeback [Analysis Services], partitions
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
-caps.latest.revision: 34
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c1e6971bd8c1bc228386ad5b39a498f0e0ed5d42
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 45057f5e164c473b588df70f5b8a8617f74390d2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="set-partition-writeback"></a>Настройка обратной записи секции
-  При включении возможности записи в группе мер пользователи смогут вносить изменения в данные куба при их просмотре. При этом сделанные изменения сохраняются не в данных куба или исходных данных, а в отдельной таблице, которая называется таблицей обратной записи. Конечные пользователи, просматривающие секцию, доступную для записи, видят суммарный результат всех изменений в таблице обратной записи для секции.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+При включении возможности записи в группе мер пользователи смогут вносить изменения в данные куба при их просмотре. При этом сделанные изменения сохраняются не в данных куба или исходных данных, а в отдельной таблице, которая называется таблицей обратной записи. Конечные пользователи, просматривающие секцию, доступную для записи, видят суммарный результат всех изменений в таблице обратной записи для секции.  
   
  Данные обратной записи можно просматривать или удалять. Также можно преобразовывать данные обратной записи в секцию. В секции, доступной для записи, можно использовать роли кубов для предоставления доступа на чтение и запись пользователям и группам пользователей и для ограничения доступа к конкретным ячейкам или группам ячеек в секции.  
   
@@ -72,4 +72,3 @@ ms.lasthandoff: 09/01/2017
  [Включение и защита ввода данных с помощью обратной записи служб Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   
-

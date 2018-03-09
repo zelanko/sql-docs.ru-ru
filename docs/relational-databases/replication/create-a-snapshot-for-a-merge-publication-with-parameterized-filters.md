@@ -2,11 +2,13 @@
 title: "Создание моментального снимка для публикации слиянием с параметризованными фильтрами | Документация Майкрософт"
 ms.custom: 
 ms.date: 05/03/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,23 +16,23 @@ helpviewer_keywords:
 - snapshots [SQL Server replication], parameterized filters and
 - filters [SQL Server replication], parameterized
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
-caps.latest.revision: 45
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 975801baee969fa3afea20be96606a816083260c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "45"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: ba5139f4e42806e2cee949a626acf75a9e3de181
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Создание моментального снимка для публикации слиянием с параметризованными фильтрами
-  В данном разделе описывается процесс создания моментального снимка для публикации слиянием с параметризованными фильтрами в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Этот раздел описывает создание моментального снимка для публикации слиянием с параметризованными фильтрами в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] или объектов RMO.  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Рекомендации](#Recommendations)  
   
@@ -55,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
  Перед созданием моментальных снимков для одной или нескольких секций необходимо следующее.  
   
-1.  Создать публикацию слиянием при помощи мастера создания публикаций и указать один или несколько параметризованных фильтров строк на странице **Добавление фильтра** окна мастера. Дополнительные сведения см. в статье [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+1.  Создать публикацию слиянием при помощи мастера создания публикаций и указать один или несколько параметризованных фильтров строк на странице **Добавление фильтра** окна мастера. Дополнительные сведения см. в разделе [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 2.  Создайте моментальный снимок схемы для публикации. По умолчанию создание моментального снимка схемы происходит по завершении выполнения мастера создания публикаций; создание моментального снимка схемы также возможно из среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -117,10 +119,10 @@ ms.lasthandoff: 06/22/2017
   
     -   допустимое число параллельно выполняемых процессов динамических моментальных снимков в качестве значения параметра **@max_concurrent_dynamic_snapshots**. Если выполняется максимальное число процессов и подписчик пытается создать моментальный снимок, то процесс помещается в очередь. По умолчанию число параллельных процессов не ограничено.  
   
-2.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). В качестве значения параметра **@publication** укажите имя публикации, которое использовалось в шаге 1, а также учетные данные [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, под которыми выполняется [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md) , — в качестве значений параметров **@job_login** и **@password**. Если агент при соединении с издателем будет использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то необходимо также указать значение **0** параметра **@publisher_security_mode** укажите имя публикации, которое использовалось в шаге 1, а также учетные данные [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** и **@publisher_password**. Будет создано задание агента моментальных снимков для публикации. Дополнительные сведения о формировании исходного моментального снимка и определении пользовательского расписания для агента моментальных снимков см. в разделе [Создание и применение исходного моментального снимка](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+2.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). В качестве значения параметра **@publication** укажите имя публикации, которое использовалось в шаге 1, а также учетные данные [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, под которыми выполняется [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md) , — в качестве значений параметров **@job_login** и **@password**. Если агент при соединении с издателем будет использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то необходимо также указать значение **0** параметра **@publisher_security_mode** укажите имя публикации, которое использовалось в шаге 1, а также учетные данные [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** и **@publisher_password**. Будет создано задание агента моментальных снимков для публикации. Дополнительные сведения о формировании исходного моментального снимка и определении пользовательского расписания для агента моментальных снимков см. в разделе [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
-    >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 3.  Выполните хранимую процедуру [sp_addmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), чтобы добавить статьи в публикацию. Эту хранимую процедуру необходимо выполнить один раз для каждой статьи в публикации. При использовании параметризованных фильтров необходимо указать параметризованный фильтр строк для одной или нескольких статей, использующих параметр **@subset_filterclause** . Дополнительные сведения см. в статье [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
@@ -132,14 +134,14 @@ ms.lasthandoff: 06/22/2017
   
 1.  Чтобы создать публикацию, выполните хранимую процедуру [sp_addmergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Дополнительные сведения см. в статье [о создании публикации](../../relational-databases/replication/publish/create-a-publication.md).  
   
-2.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). В качестве значения параметра **@publication** , а учетные данные Windows, с которыми работает агент моментальных снимков, — в параметрах **@job_login** и **@password**. Если агент при соединении с издателем будет использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то необходимо также указать значение **0** параметра **@publisher_security_mode** укажите имя публикации, которое использовалось в шаге 1, а также учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** и **@publisher_password**. Будет создано задание агента моментальных снимков для публикации. Дополнительные сведения о формировании исходного моментального снимка и определении пользовательского расписания для агента моментальных снимков см. в разделе [Создание и применение исходного моментального снимка](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+2.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). В качестве значения параметра **@publication** , а учетные данные Windows, с которыми работает агент моментальных снимков, — в параметрах **@job_login** и **@password**. Если агент при соединении с издателем будет использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то необходимо также указать значение **0** параметра **@publisher_security_mode** укажите имя публикации, которое использовалось в шаге 1, а также учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** и **@publisher_password**. Будет создано задание агента моментальных снимков для публикации. Дополнительные сведения о формировании исходного моментального снимка и определении пользовательского расписания для агента моментальных снимков см. в разделе [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
-    >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-3.  Выполните хранимую процедуру [sp_addmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), чтобы добавить статьи в публикацию. Эту хранимую процедуру необходимо выполнить один раз для каждой статьи в публикации. При использовании параметризованных фильтров необходимо указать параметризованный фильтр строк для одной статьи, использующей параметр **@subset_filterclause** . Дополнительные сведения см. в статье [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+3.  Выполните хранимую процедуру [sp_addmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), чтобы добавить статьи в публикацию. Эту хранимую процедуру необходимо выполнить один раз для каждой статьи в публикации. При использовании параметризованных фильтров необходимо указать параметризованный фильтр строк для одной статьи, использующей параметр **@subset_filterclause** . Дополнительные сведения см. в разделе [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
-4.  Если другие статьи будут фильтроваться на основании параметризованного фильтра строк, выполните хранимую процедуру [sp_addmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md), чтобы определить между статьями соединение или связь логических записей. Эту хранимую процедуру необходимо выполнить один раз для каждой определяемой связи. Дополнительные сведения см. в разделе [Определение и изменение фильтра соединения между статьями публикации слиянием](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+4.  Если другие статьи будут фильтроваться на основании параметризованного фильтра строк, выполните хранимую процедуру [sp_addmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md), чтобы определить между статьями соединение или связь логических записей. Эту хранимую процедуру необходимо выполнить один раз для каждой определяемой связи. Дополнительные сведения см. в статье [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 5.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpmergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), указав в параметре **@publication** значение из шага 1. Запомните значение параметра **snapshot_jobid** в результирующем наборе.  
   
@@ -164,16 +166,16 @@ ms.lasthandoff: 06/22/2017
   
 1.  Чтобы создать публикацию, выполните хранимую процедуру [sp_addmergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Дополнительные сведения см. в статье [о создании публикации](../../relational-databases/replication/publish/create-a-publication.md).  
   
-2.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). В качестве значения параметра **@publication** , а учетные данные Windows, с которыми работает агент моментальных снимков, — в параметрах **@job_login** и **@password**. Если агент при соединении с издателем будет использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то необходимо также указать значение **0** параметра **@publisher_security_mode** укажите имя публикации, которое использовалось в шаге 1, а также учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** и **@publisher_password**. Будет создано задание агента моментальных снимков для публикации. Дополнительные сведения о формировании исходного моментального снимка и определении пользовательского расписания для агента моментальных снимков см. в разделе [Создание и применение исходного моментального снимка](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+2.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). В качестве значения параметра **@publication** , а учетные данные Windows, с которыми работает агент моментальных снимков, — в параметрах **@job_login** и **@password**. Если агент при соединении с издателем будет использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то необходимо также указать значение **0** параметра **@publisher_security_mode** укажите имя публикации, которое использовалось в шаге 1, а также учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** и **@publisher_password**. Будет создано задание агента моментальных снимков для публикации. Дополнительные сведения о формировании исходного моментального снимка и определении пользовательского расписания для агента моментальных снимков см. в разделе [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
-    >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-3.  Выполните хранимую процедуру [sp_addmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), чтобы добавить статьи в публикацию. Эту хранимую процедуру необходимо выполнить один раз для каждой статьи в публикации. При использовании параметризованных фильтров необходимо указать параметризованный фильтр строк хотя бы для одной статьи, использующей параметр **@subset_filterclause** . Дополнительные сведения см. в статье [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+3.  Выполните хранимую процедуру [sp_addmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), чтобы добавить статьи в публикацию. Эту хранимую процедуру необходимо выполнить один раз для каждой статьи в публикации. При использовании параметризованных фильтров необходимо указать параметризованный фильтр строк хотя бы для одной статьи, использующей параметр **@subset_filterclause** . Дополнительные сведения см. в разделе [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
-4.  Если другие статьи будут фильтроваться на основании параметризованного фильтра строк, выполните хранимую процедуру [sp_addmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md), чтобы определить между статьями соединение или связь логических записей. Эту хранимую процедуру необходимо выполнить один раз для каждой определяемой связи. Дополнительные сведения см. в разделе [Определение и изменение фильтра соединения между статьями публикации слиянием](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+4.  Если другие статьи будут фильтроваться на основании параметризованного фильтра строк, выполните хранимую процедуру [sp_addmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md), чтобы определить между статьями соединение или связь логических записей. Эту хранимую процедуру необходимо выполнить один раз для каждой определяемой связи. Дополнительные сведения см. в статье [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
-5.  Чтобы создать стандартную схему моментального снимка и другие файлы, запустите задание моментального снимка или агент моментальных снимков репликации из командной строки. Дополнительные сведения см. в статье [Создание и применение исходного моментального снимка](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+5.  Чтобы создать стандартную схему моментального снимка и другие файлы, запустите задание моментального снимка или агент моментальных снимков репликации из командной строки. Дополнительные сведения см. в разделе [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 6.  Запустите агент моментальных снимков репликации из командной строки еще раз, чтобы создать файлы массового копирования (BCP-файл); при этом укажите расположение секционированного снимка в качестве значения параметра **-DynamicSnapshotLocation** , а также одно или оба приведенные ниже свойства, определяющие секцию:  
   
@@ -274,122 +276,122 @@ PAUSE
 -   Создайте моментальный снимок вручную для каждого подписчика при помощи агента моментальных снимков.  
   
 > [!NOTE]  
->  Если фильтрация статьи приводит к образованию неперекрывающихся секций, уникальных для каждой подписки (если указано значение F:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription для P:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption при создании статьи публикации слиянием), метаданные очищаются при запуске агента слияния. Это означает, что срок действия секционированного снимка истекает быстрее. Если выбран этот режим, рекомендуется рассмотреть возможность разрешения подписчикам создания моментальных снимков. Дополнительные сведения см. в подразделе «Использование соответствующих параметров фильтрации» раздела [параметризованные фильтры строк](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+>  Если фильтрация статьи приводит к образованию неперекрывающихся секций, уникальных для каждой подписки (если указано значение F:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription для P:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption при создании статьи публикации слиянием), метаданные очищаются при запуске агента слияния. Это означает, что срок действия секционированного снимка истекает быстрее. Если выбран этот режим, рекомендуется рассмотреть возможность разрешения подписчикам создания моментальных снимков. Дополнительные сведения см. в подразделе «Использование соответствующих параметров фильтрации» раздела [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 > [!IMPORTANT]  
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](http://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-create-a-publication-that-allows-subscribers-to-initiate-snapshot-generation-and-delivery"></a>Создание публикации, которая позволяет подписчикам инициировать формирование и доставку моментальных снимков  
   
-1.  Установите соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> для базы данных публикации, установите в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> экземпляр соединения <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, созданный на шаге 1, и вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> возвращает значение **false**, убедитесь, что база данных существует.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> для базы данных публикации, установите в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> экземпляр соединения <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданный на шаге 1, и вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . If <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> возвращает значение **false**, убедитесь, что база данных существует.  
   
-3.  Если свойство <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> имеет значение **false**, то его следует изменить на **true** и вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
+3.  If <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> присвоено значение **false**, укажите значение **true** и вызовите <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
   
 4.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication> и укажите для него следующие свойства:  
   
-    -   Соединение <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, созданное на шаге 1, для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+    -   Соединение <xref:Microsoft.SqlServer.Management.Common.ServerConnection> , созданное на шаге 1, в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-    -   Имя опубликованной базы данных в свойстве <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>.  
+    -   имя опубликованной базы данных в свойстве <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>;  
   
-    -   имя публикации в качестве значения свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>.  
+    -   имя публикации в качестве значения свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>;  
   
     -   Максимальное количество заданий динамических моментальных снимков, которые должны быть выполнены <xref:Microsoft.SqlServer.Replication.MergePublication.MaxConcurrentDynamicSnapshots%2A>. Поскольку инициированные подписчиком запросы на моментальные снимки могут возникнуть в любое время, это свойство ограничивает количество заданий агента моментальных снимков, которые могут выполняться одновременно, когда несколько подписчиков запрашивают секционированные снимки в одно и то же время. Если выполняется максимальное количество заданий, дополнительные запросы на секционированные моментальные снимки помещаются в очередь, пока одно из выполняющихся заданий не будет завершено.  
   
-    -   Используйте оператор побитового логического "ИЛИ" (**|** в Visual C# и **OR** в Visual Basic), чтобы добавить значение <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot> в <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
+    -   Используйте оператор побитового логического ИЛИ (**|** в Visual C# и **Or** в Visual Basic), чтобы добавить значение <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot> в <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
   
     -   Поля <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> свойства <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> содержат учетные данные учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, от имени которой выполняются задания агента моментальных снимков.  
   
         > [!NOTE]  
-        >  Рекомендуется указать свойство <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, если публикацию создает участник предопределенной роли сервера **sysadmin**. Дополнительные сведения см. в статье [Модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md).  
+        >  Рекомендуется указывать свойство <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> , если публикация создается членом предопределенной роли сервера **sysadmin** . Дополнительные сведения см. в статье [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-5.  Чтобы создать публикацию, вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.Create%2A>.  
+5.  Чтобы создать публикацию, вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> .  
   
     > [!IMPORTANT]  
-    >  При настройке издателя с удаленным распространителем значения, передаваемые для всех свойств, включая <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, отправляются распространителю в виде обычного текста. Следует зашифровать соединение между издателем и его удаленным распространителем перед вызовом метода <xref:Microsoft.SqlServer.Replication.Publication.Create%2A>. Дополнительные сведения см. в разделе [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  При настройке издателя с удаленным распространителем значения, передаваемые для всех свойств, включая <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, отправляются распространителю в виде обычного текста. Перед вызовом метода <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> следует зашифровать подключение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-6.  Чтобы добавить статьи к публикации, используйте свойство <xref:Microsoft.SqlServer.Replication.MergeArticle>. Укажите свойство <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> хотя бы для одной статьи, определяющей параметризованный фильтр. (Необязательно.) Создайте объекты <xref:Microsoft.SqlServer.Replication.MergeJoinFilter>, определяющие фильтры соединения между статьями. Дополнительные сведения см. в статье [определить статью](../../relational-databases/replication/publish/define-an-article.md).  
+6.  Чтобы добавить статьи к публикации, используйте свойство <xref:Microsoft.SqlServer.Replication.MergeArticle> . Укажите свойство <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> хотя бы для одной статьи, определяющей параметризованный фильтр. (Необязательно) Создайте объекты <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> , определяющие фильтры соединения между статьями. Дополнительные сведения см. в статье [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-7.  Если для свойства <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> указано значение **false**, вызовите <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>, чтобы создать исходное задание агента моментального снимка для этой публикации.  
+7.  Если для свойства <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> указано значение **false**, вызовите <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> , чтобы создать исходное задание агента моментального снимка для этой публикации.  
   
-8.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> объекта <xref:Microsoft.SqlServer.Replication.MergePublication>, созданного на шаге 4. Запустится задание агента по созданию исходного моментального снимка. Дополнительные сведения о формировании исходного моментального снимка и определении пользовательского расписания для агента моментальных снимков см. в разделе [Создание и применение исходного моментального снимка](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+8.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> объекта <xref:Microsoft.SqlServer.Replication.MergePublication> , созданного на шаге 4. Запустится задание агента по созданию исходного моментального снимка. Дополнительные сведения о формировании исходного моментального снимка и определении пользовательского расписания для агента моментальных снимков см. в разделе [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
-9. (Необязательно.) Проверьте, указано ли значение **true** для свойства <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A>, чтобы определить, когда исходный моментальный снимок будет готов к использованию.  
+9. (Необязательно) Проверьте, указано ли значение **true** для свойства <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> , чтобы определить, когда исходный моментальный снимок будет готов к использованию.  
   
 10. Когда агент слияния для подписчика подключается в первый раз, секционированный моментальный снимок создается автоматически.  
   
 #### <a name="to-create-a-publication-and-pregenerate-or-automatically-refresh-snapshots"></a>Создание публикации и предварительное создание или автоматическое обновление моментальных снимков  
   
-1.  Чтобы определить публикацию слиянием, используйте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication>. Дополнительные сведения см. в статье [о создании публикации](../../relational-databases/replication/publish/create-a-publication.md).  
+1.  Чтобы определить публикацию слиянием, используйте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication> . Дополнительные сведения см. в разделе [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
-2.  Чтобы добавить статьи к публикации, используйте свойство <xref:Microsoft.SqlServer.Replication.MergeArticle>. Укажите свойство <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> хотя бы для одной статьи, определяющей параметризованный фильтр, и создайте любые объекты <xref:Microsoft.SqlServer.Replication.MergeJoinFilter>, определяющие фильтры соединения между статьями. Дополнительные сведения см. в статье [определить статью](../../relational-databases/replication/publish/define-an-article.md).  
+2.  Чтобы добавить статьи к публикации, используйте свойство <xref:Microsoft.SqlServer.Replication.MergeArticle> . Укажите свойство <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> хотя бы для одной статьи, определяющей параметризованный фильтр, и создайте любые объекты <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> , определяющие фильтры соединения между статьями. Дополнительные сведения см. в статье [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-3.  Если для свойства <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> указано значение **false**, то для создания задания агента моментальных снимков для этой публикации вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>.  
+3.  Если для свойства <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> указано значение **false**, вызовите <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> .  
   
-4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> объекта <xref:Microsoft.SqlServer.Replication.MergePublication>, созданного на шаге 1. Этот метод запускает задание агента по созданию исходного моментального снимка. Дополнительные сведения о создании исходного моментального снимка и определении пользовательского расписания для агента моментальных снимков см. в разделе [Создание и применение исходного моментального снимка](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> объекта <xref:Microsoft.SqlServer.Replication.MergePublication> , созданного в шаге 1. Этот метод запускает задание агента по созданию исходного моментального снимка. Дополнительные сведения о создании исходного моментального снимка и определении пользовательского расписания для агента моментальных снимков см. в разделе [Создание и применение исходного моментального снимка](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
-5.  Проверьте, указано ли значение **true** для свойства <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A>, чтобы определить, когда исходный моментальный снимок будет готов к использованию.  
+5.  Проверьте, указано ли значение **true** для свойства <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> , чтобы определить, когда исходный моментальный снимок будет готов к использованию.  
   
 6.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePartition> и укажите критерии параметризованного фильтра для подписчика, используя одно или оба следующих свойства.  
   
-    -   Если секция подписчика определяется результатом функции [SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md), используйте <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterLogin%2A>.  
+    -   Если секция подписчика определена результатом функции [SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md), используйте <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterLogin%2A>.  
   
-    -   Если секция подписчика определяется результатом функции [HOST_NAME (Transact-SQL)](../../t-sql/functions/host-name-transact-sql.md) или перегружающей ее функции, используйте <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterHostName%2A>.  
+    -   Если секция подписчика определена результатом функции [HOST_NAME (Transact-SQL)](../../t-sql/functions/host-name-transact-sql.md) или перегружающей ее функции, используйте <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterHostName%2A>.  
   
-7.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeDynamicSnapshotJob> и укажите то же свойство, что и на шаге 6.  
+7.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeDynamicSnapshotJob> и укажите то же свойство, что и в шаге 6.  
   
-8.  Используйте класс <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule>, чтобы определить расписание создания фильтрованных моментальных снимков для секции подписчика.  
+8.  Используйте класс <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule> , чтобы определить расписание создания фильтрованных моментальных снимков для секции подписчика.  
   
-9. Используя экземпляр <xref:Microsoft.SqlServer.Replication.MergePublication> из шага 1, вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.AddMergePartition%2A>. Передайте объект <xref:Microsoft.SqlServer.Replication.MergePartition>, созданный на шаге 6.  
+9. Используя экземпляр <xref:Microsoft.SqlServer.Replication.MergePublication> из шага 1, вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.AddMergePartition%2A>. Передайте объект <xref:Microsoft.SqlServer.Replication.MergePartition> , созданный на шаге 6.  
   
-10. Используя экземпляр <xref:Microsoft.SqlServer.Replication.MergePublication> из шага 1, вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.AddMergeDynamicSnapshotJob%2A>. Передайте объект <xref:Microsoft.SqlServer.Replication.MergeDynamicSnapshotJob> из шага 7 и объект <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule> из шага 8.  
+10. Используя экземпляр <xref:Microsoft.SqlServer.Replication.MergePublication> из шага 1, вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.AddMergeDynamicSnapshotJob%2A> . Передайте объект <xref:Microsoft.SqlServer.Replication.MergeDynamicSnapshotJob> из шага 7 и объект <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule> из шага 8.  
   
-11. Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergeDynamicSnapshotJobs%2A> и найдите объект <xref:Microsoft.SqlServer.Replication.MergeDynamicSnapshotJob> для вновь добавленного задания секционированного моментального снимка в возвращенном массиве.  
+11. Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergeDynamicSnapshotJobs%2A>и найдите объект <xref:Microsoft.SqlServer.Replication.MergeDynamicSnapshotJob> для вновь добавленного задания секционированного моментального снимка в возвращенном массиве.  
   
 12. Получите свойство <xref:Microsoft.SqlServer.Replication.MergeDynamicSnapshotJob.Name%2A> для этого задания.  
   
-13. Установите соединение с распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+13. Создайте соединение с распространителем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-14. Создайте экземпляр класса <xref:Microsoft.SqlServer.Management.Smo.Server> управляющих объектов SQL Server, передав объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 13.  
+14. Создайте экземпляр класса <xref:Microsoft.SqlServer.Management.Smo.Server> управляющих объектов SQL Server, передав объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 13.  
   
-15. Создайте экземпляр класса <xref:Microsoft.SqlServer.Management.Smo.Agent.Job>, передав свойство <xref:Microsoft.SqlServer.Management.Smo.Server.JobServer%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Server> из шага 14 и имя задания из шага 12.  
+15. Создайте экземпляр класса <xref:Microsoft.SqlServer.Management.Smo.Agent.Job> , передав свойство <xref:Microsoft.SqlServer.Management.Smo.Server.JobServer%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Server> из шага 14 и имя задания из шага 12.  
   
-16. Вызовите метод <xref:Microsoft.SqlServer.Management.Smo.Agent.Job.Start%2A>, чтобы запустить задание секционированного моментального снимка.  
+16. Вызовите метод <xref:Microsoft.SqlServer.Management.Smo.Agent.Job.Start%2A> , чтобы запустить задание секционированного моментального снимка.  
   
 17. Повторите шаги 6 — 16 для каждого подписчика.  
   
 #### <a name="to-create-a-publication-and-manually-create-snapshots-for-each-partition"></a>Создание публикации и моментальных снимков для каждой секции вручную  
   
-1.  Чтобы определить публикацию слиянием, используйте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication>. Дополнительные сведения см. в статье [о создании публикации](../../relational-databases/replication/publish/create-a-publication.md).  
+1.  Чтобы определить публикацию слиянием, используйте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication> . Дополнительные сведения см. в разделе [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
-2.  Чтобы добавить статьи в публикацию, используйте свойство <xref:Microsoft.SqlServer.Replication.MergeArticle>. Укажите свойство <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> хотя бы для одной статьи, определяющей параметризованный фильтр, и создайте любые объекты <xref:Microsoft.SqlServer.Replication.MergeJoinFilter>, определяющие фильтры соединения между статьями. Дополнительные сведения см. в статье [определить статью](../../relational-databases/replication/publish/define-an-article.md).  
+2.  Чтобы добавить статьи в публикацию, используйте свойство <xref:Microsoft.SqlServer.Replication.MergeArticle> . Укажите свойство <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> хотя бы для одной статьи, определяющей параметризованный фильтр, и создайте любые объекты <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> , определяющие фильтры соединения между статьями. Дополнительные сведения см. в статье [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-3.  Создайте исходный моментальный снимок. Дополнительные сведения см. в статье [Создание и применение исходного моментального снимка](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+3.  Создайте исходный моментальный снимок. Дополнительные сведения см. в статье [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
-4.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> и укажите следующие необходимые свойства:  
+4.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> и укажите следующие необходимые свойства.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> — имя издателя.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> — имя издателя.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> — имя базы данных публикации.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> — имя базы данных публикации.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> — имя публикации.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> — имя публикации.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> — имя распространителя.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> — имя распространителя.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> — значение <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> для использования встроенной проверки подлинности Windows или значение <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> для использования проверки подлинности SQL Server.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> — значение <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> для использования встроенной проверки подлинности Windows или значение <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> для использования проверки подлинности SQL Server.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> — значение <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> для использования встроенной проверки подлинности Windows или значение <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> для использования проверки подлинности SQL Server.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> — значение <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> для использования встроенной проверки подлинности Windows или значение <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> для использования проверки подлинности SQL Server.  
   
 5.  Укажите значение <xref:Microsoft.SqlServer.Replication.ReplicationType.Merge> в параметре <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>.  
   
 6.  Задайте одно или несколько следующих свойств, чтобы определить параметры секционирования.  
   
-    -   Если секция подписчика определяется результатом функции [SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md), используйте <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DynamicFilterLogin%2A>.  
+    -   Если секция подписчика определена результатом функции [SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md), используйте <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DynamicFilterLogin%2A>.  
   
-    -   Если секция подписчика определяется результатом функции [HOST_NAME (Transact-SQL)](../../t-sql/functions/host-name-transact-sql.md) или перегружающей ее функции, используйте <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DynamicFilterHostName%2A>.  
+    -   Если секция подписчика определена результатом функции [HOST_NAME (Transact-SQL)](../../t-sql/functions/host-name-transact-sql.md) или перегружающей ее функции, используйте <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DynamicFilterHostName%2A>.  
   
-7.  Вызовите метод <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A>.  
+7.  Вызовите метод <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> .  
   
 8.  Повторите шаги 4–7 для каждого подписчика.  
   
@@ -413,10 +415,9 @@ PAUSE
  [!code-vb[HowTo#rmo_vb_GenerateFilteredSnapshot](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_generatefilteredsnapshot)]  
   
 ## <a name="see-also"></a>См. также:  
- [Параметризованные фильтры строк](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
- [Основные понятия системных хранимых процедур репликации](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
+ [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  (Моментальные снимки для публикаций слиянием с параметризованными фильтрами)  
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Свойство ParentSameAsPrev (ADO MD) | Документы Microsof
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - ParentSameAsPrev property [ADO MD]
 ms.assetid: 510842e0-e8dc-4b33-9517-bd1c6df0cf3c
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3fef78fc9764a98f6cf2f2cb19e72816926480d0
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cecbb86b26acea2e6674d10a2f8d0af1325d9e77
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parentsameasprev-property-ado-md"></a>Свойство ParentSameAsPrev (ADO MD)
 Указывает ли родительский этой позиции [член](../../../ado/reference/ado-md-api/member-object-ado-md.md) совпадает со значением родителем непосредственно предшествующего элемента.  
@@ -37,12 +36,11 @@ ms.lasthandoff: 09/09/2017
 ## <a name="return-values"></a>Возвращаемые значения  
  Возвращает **логическое** значение и доступно только для чтения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Это свойство поддерживается только в [член](../../../ado/reference/ado-md-api/member-object-ado-md.md) объектов, принадлежащих [позиции](../../../ado/reference/ado-md-api/position-object-ado-md.md) объекта. Произошла ошибка при обращении к этому свойству из **член** объектов, принадлежащих [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md) объекта.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект члена (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+ [Объект Member (многомерные объекты ADO)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>См. также:  
- [Свойство DrilledDown (ADO MD)](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)
-
+## <a name="see-also"></a>См. также  
+ [Свойство DrilledDown (многомерные объекты ADO)](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)

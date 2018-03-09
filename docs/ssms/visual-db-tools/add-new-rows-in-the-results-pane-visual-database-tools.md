@@ -3,10 +3,12 @@ title: "Добавление строк на панели результатов
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +19,19 @@ helpviewer_keywords:
 - adding rows
 - row additions [SQL Server], Results pane
 ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7e6585253bd81c11059d8021cf972ca57129730a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0ba11f05536a52023c382e040738b8d9f9a4a215
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>Добавление новых строк на панель результатов (визуальные инструменты для баз данных)
-Новые данные можно добавлять, вводя их или копируя из другой программы, например из блокнота или приложения Excel. Чтобы можно было вставить строку, в ней должно быть ровно то же число столбцов тех же типов, что и в таблице, куда производится вставка. За раз на панель результатов можно вставить несколько строк.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Новые данные можно добавлять, вводя их или копируя из другой программы, например из блокнота или приложения Excel. Чтобы можно было вставить строку, в ней должно быть ровно то же число столбцов тех же типов, что и в таблице, куда производится вставка. За раз на панель результатов можно вставить несколько строк.  
   
 Сведения о вводе данных см. в разделе [Правила обновления результатов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md).  
   
@@ -62,4 +63,3 @@ ms.lasthandoff: 08/18/2017
 [Работа с данными на панели результатов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
 [Выполнение основных операций с запросами (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

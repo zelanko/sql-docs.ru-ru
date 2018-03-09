@@ -2,11 +2,13 @@
 title: "ALTER CUBE, инструкция (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,27 +16,25 @@ f1_keywords:
 - ALTER_CUBE
 - ALTER CUBE
 - ALTER
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - ALTER CUBE statement
 - cubes [Analysis Services], modifying
 - modifying cubes
 ms.assetid: 2f0af61b-f509-4e1a-990f-20a215d22994
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 8780f95cab9d124b78d486e86b78897a2f2d6d39
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e20832dac862a4a4973c4350c64efdd23a35b461
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Определения данных многомерных Выражений — ALTER CUBE
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Изменяет структуру указанного куба. Обычно используется для поддержки обратной записи в измерении. Дополнительные сведения об использовании обратной записи в приложении см. в записи блога: [Создание приложения обратной записи со службами Analysis Services (блог)](http://go.microsoft.com/fwlink/?LinkId=394977)  
   
@@ -131,7 +131,7 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  Допустимое строковое выражение, обозначающее имя или ключ элемента.  
   
-### <a name="remarks"></a>Замечания  
+### <a name="remarks"></a>Remarks  
  Если предложение WITH DESCENDANTS не используется, потомки удаляемого элемента становятся потомками его родителя. Если предложение WITH DESCENDANTS указывается, вместе с элементом удаляются все потомки и соответствующие строки в таблице измерения.  
   
 > [!NOTE]  
@@ -147,7 +147,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  Допустимое многомерное выражение, возвращающее один элемент.  
   
-### <a name="remarks"></a>Замечания  
+### <a name="remarks"></a>Remarks  
  Заданное многомерное выражение может быть статическим или динамическим.  
   
 ## <a name="moving-a-dimension-member"></a>Перемещение элемента измерения  
@@ -185,4 +185,3 @@ CELL CALCULATION Calculation_Name
  [Инструкции определения данных &#40; Многомерные Выражения &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
-

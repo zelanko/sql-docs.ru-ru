@@ -1,10 +1,13 @@
 ---
-title: "Задаче «скрипт» | Документы Microsoft"
+title: "Задача \"Скрипт\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -18,17 +21,16 @@ helpviewer_keywords:
 - Script task [Integration Services], about Script task
 - Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-caps.latest.revision: 67
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: b1a74f830a25717aa3e0e36910842582be4be1c5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 02febb9ffc5fd20842bff97edc231005a64c30dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="script-task"></a>Задача «Скрипт»
   Задача "Скрипт" представляет код для выполнения функций, недоступных в задачах и преобразованиях, предоставляемых средствами служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Задача «Скрипт» также позволяет объединять функции в одном скрипте вместо использования нескольких задач и преобразований. Задачу «Скрипт» следует использовать для выполнения операций над пакетом (или над каждым перечисленным объектом), а не над каждой строкой данных.  
@@ -97,7 +99,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="script-task-editor-general-page"></a>Редактор задачи «Скрипт» (страница «Общие»)
   Страница **Общие** диалогового окна **Редактор задачи «Скрипт»** позволяет дать имя и описание задаче «Скрипт».  
   
- Дополнительные сведения о задаче «Скрипт» см. в разделах [задачи сценария](../../integration-services/control-flow/script-task.md) и [Настройка задачи «Скрипт» в редакторе сценариев задач](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Дополнительные сведения о программировании задачи «Скрипт» см. в разделе [расширение пакетов с помощью задачи «Скрипт»](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+ Дополнительные сведения о задаче «Скрипт» см. в разделах [Script Task](../../integration-services/control-flow/script-task.md) и [Настройка задачи «Скрипт» в редакторе задачи «Скрипт»](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Дополнительные сведения о программировании задачи «Скрипт» см. в разделе [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
 ### <a name="options"></a>Параметры  
  **Название**  
@@ -106,7 +108,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Description**  
+ **Описание**  
  Введите описание задачи «Скрипт».  
   
 ## <a name="script-task-editor-script-page"></a>Редактор задачи «Скрипт» (страница «Скрипт»)
@@ -115,7 +117,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  В [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] и более поздних версиях все скрипты предварительно скомпилированы. В предыдущих версиях для предварительной компиляции необходимо было установить свойство **PrecompileScriptIntoBinaryCode** .  
   
- Дополнительные сведения о задаче «Скрипт» см. в разделах [Script Task](../../integration-services/control-flow/script-task.md) и [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Дополнительные сведения о программировании задачи «Скрипт» см. в разделе [расширение пакетов с помощью задачи «Скрипт»](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+ Дополнительные сведения о задаче «Скрипт» см. в разделах [Script Task](../../integration-services/control-flow/script-task.md) и [Настройка задачи «Скрипт» в редакторе задачи «Скрипт»](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Дополнительные сведения о программировании задачи «Скрипт» см. в разделе [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
 ### <a name="options"></a>Параметры  
  **ScriptLanguage**  
@@ -147,7 +149,6 @@ ms.lasthandoff: 08/11/2017
   
 ## <a name="related-content"></a>См. также  
   
--   Техническая статья [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625)на сайте shareourideas.com  
+-   Техническая статья [oтправка электронной почты с уведомлением доставки в C#](http://go.microsoft.com/fwlink/?LinkId=237625)на сайте shareourideas.com  
   
   
-

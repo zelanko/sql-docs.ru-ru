@@ -3,27 +3,28 @@ title: "Отложенное поля | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - descriptors [ODBC], deferred fields
 - deferred fields [ODBC]
 ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c2042efcdacf45a8638bb5197da04f903a6ffdd0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 38967637f505191a5ff353c13b4ebfbbe08e615a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deferred-fields"></a>Отложенных полей
 Значения *отложенных полей* не используются, когда они заданы, но драйвер сохраняет адреса переменных для отложенного эффекта. Для дескриптора параметра приложения, драйвер использует содержимое переменных во время вызова **SQLExecDirect** или **SQLExecute**. Для дескриптор строк приложения драйвер использует содержимое переменных во время выборки.  
@@ -47,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 -   Если поле SQL_DESC_OCTET_LENGTH_PTR в APD имеет значение null, а параметр — строку символов, драйвер предполагает, что строка является символом null. Для вывода динамических параметров значение null в этом поле не позволяет драйвер возвращает сведения о длине. (Если параметр символьной строки не указывает на поле SQL_DESC_TYPE, SQL_DESC_OCTET_LENGTH_PTR поля учитывается.)  
   
  Приложение не должно освобождать или отменить переменных, используемых для отложенных полей между связывает их с полями и временем, драйвер считывает или записывает их.
-

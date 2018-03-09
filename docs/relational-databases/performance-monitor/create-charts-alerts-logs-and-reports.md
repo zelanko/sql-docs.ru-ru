@@ -2,11 +2,13 @@
 title: "Создание диаграмм, предупреждений, журналов и отчетов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - System Monitor [SQL Server], logs
 - Windows System Monitor [SQL Server], logs
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "21"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4350582f3a798a4543f84a09c089976e4d18f712
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0c84f299a27b69def3acf965f7a3cf6d4ab74017
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>Создание диаграмм, предупреждений, журналов и отчетов
-  Для контроля экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]системный монитор позволяет создавать диаграммы, предупреждения, журналы и отчеты.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Для контроля экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] системный монитор позволяет создавать диаграммы, предупреждения, журналы и отчеты.  
   
 ## <a name="charts"></a>Диаграммы  
  Диаграммы позволяют контролировать производительность выбранных объектов и состояние счетчиков, например загрузку ЦП или дисковый ввод-вывод. К диаграмме можно добавить различные сочетания объектов и счетчиков системного монитора. К диаграмме также можно добавить объекты и счетчики [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 06/22/2017
   
  Диаграммы полезно использовать для кратковременного контроля показателей локального или удаленного компьютера в реальном времени (например, контроля возникновения определенных событий).  
   
-## <a name="alerts"></a>Предупреждения  
+## <a name="alerts"></a>видны узлы  
  При помощи предупреждений системный монитор отслеживает определенные события и уведомляет выбранным способом. В журнал предупреждений можно записывать текущее состояние выбранных счетчиков производительности и экземпляров объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Когда счетчик превышает заданное значение, в журнал записываются соответствующие дата и время. Предупреждения о событиях можно передавать по сети. Кроме того, можно указать программу, которую необходимо запускать при первом или каждом возникновении события. Например, можно передать по сети сообщение всем системным администраторам о том, что экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не хватает пространства на диске.  
   
 ## <a name="logs"></a>Журналы  
@@ -70,4 +71,3 @@ ms.lasthandoff: 06/22/2017
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

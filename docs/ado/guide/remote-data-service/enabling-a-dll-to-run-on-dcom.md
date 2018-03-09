@@ -3,7 +3,7 @@ title: "Включение библиотеки DLL для работы на DCO
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - DCOM in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 65401d1e0f3da015982d27aa7608cba4046313a2
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e2d67a595c97547934b04794f036d58445e8c282
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>Включение библиотеки DLL для запуска на DCOM
 > [!IMPORTANT]
@@ -50,6 +49,5 @@ ms.lasthandoff: 09/09/2017
      Чтобы DLL-файл доступен через DCOM и IIS на том же компьютере, необходимо задать атрибут активации компонента в оснастке MMC служб компонентов. После выбора атрибута **в процессе создателя**, можно будет заметить, что **Inproc** раздел реестра сервера был добавлен, точек для служб компонентов суррогатные DLL-файл.  
   
  Дополнительные сведения о служб компонентов (или Microsoft Transaction Service, если вы используете Windows NT) и как выполнить эти действия, веб-сервере транзакций Microsoft узле.
-
 
 

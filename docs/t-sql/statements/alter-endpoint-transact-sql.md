@@ -3,8 +3,11 @@ title: "ALTER ENDPOINT (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - modifying endpoints
 - endpoints [SQL Server], modifying
 ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
-caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2552e1b3ece67afb0f73b1ab9e1f9911ee235703
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: f33dfa3c49397a5f69a59420b74e3cfdeae25857
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Эта инструкция позволяет изменять существующие конечные точки следующими способами.  
   
@@ -115,7 +117,7 @@ FOR DATABASE_MIRRORING (
  **ДЛЯ** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
  Невозможно изменить тип полезных данных с **ALTER ENDPOINT**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При использовании ALTER ENDPOINT укажите только те параметры, которые необходимо обновить. При отсутствии явного изменения все свойства существующей конечной точки остаются прежними.  
   
  Инструкции ENDPOINT DDL внутри пользовательской транзакции выполняться не могут.  
@@ -127,16 +129,15 @@ FOR DATABASE_MIRRORING (
 >   
 >  RC4 — относительно слабый алгоритм, а AES — относительно сильный. Однако AES заметно медленнее RC4. Если приоритет защиты выше скорости, рекомендуется использовать алгоритм AES.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Пользователь должен быть членом **sysadmin** предопределенной роли сервера, владельцем конечной точки, или разрешение ALTER ANY ENDPOINT.  
   
  Чтобы изменить принадлежность существующей конечной точки, необходимо применить инструкцию ALTER AUTHORIZATION. Дополнительные сведения см. в разделе [ALTER AUTHORIZATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
- Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на конечные точки (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+ Дополнительные сведения см. в разделе [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
-## <a name="see-also"></a>См. также:  
- [DROP ENDPOINT (Transact-SQL)](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [DROP ENDPOINT &#40; Transact-SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

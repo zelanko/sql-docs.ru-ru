@@ -1,28 +1,31 @@
 ---
 title: "Экспорт и импорт базы данных на платформе Linux | Документы Microsoft"
 description: 
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.custom: H1Hack27Feb2017
+ms.custom: sql-linux
 ms.workload: On Demand
+ms.openlocfilehash: 817fc0ae018ebb7999ad572c0f18ede943ff7090
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 06dc93bec060f2ceb435fcf17817df9e7a8daee9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Экспорт и импорт базы данных в Linux с помощью SSMS или SqlPackage.exe в Windows
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-В этом разделе показано, как использовать [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) и [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) для экспорта и импорта базы данных на 2017 г. SQL Server в Linux. Среда SSMS и SqlPackage.exe приложений Windows, поэтому используйте этот метод, если компьютером Windows, можно подключиться к удаленному экземпляру SQL Server в Linux.
+В этой статье показано, как использовать [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) и [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) для экспорта и импорта базы данных на 2017 г. SQL Server в Linux. Среда SSMS и SqlPackage.exe приложений Windows, поэтому используйте этот метод, если компьютером Windows, можно подключиться к удаленному экземпляру SQL Server в Linux.
 
 Следует всегда устанавливать и использовать последнюю версию служб SQL Server Management Studio (SSMS), как описано в [используйте SSMS в Windows для подключения к SQL Server в Linux](sql-server-linux-develop-use-ssms.md)
 
@@ -65,7 +68,7 @@ ms.lasthandoff: 10/02/2017
 
 *. Чтобы создать новую базу данных в указанный целевой сервер импортируется BACPAC-файл.
 
-## <a id="sqlpackage"></a>SqlPackage параметр командной строки
+## <a id="sqlpackage"></a> SqlPackage параметр командной строки
 
 Можно также использовать средство командной строки SQL Server Data Tools (SSDT) [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx), для экспорта и импорта BACPAC-файлов.
 
@@ -84,4 +87,3 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 
 ## <a name="see-also"></a>См. также:
 Дополнительные сведения о том, как с помощью среды SSMS см. в разделе [использовать SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx). Дополнительные сведения о SqlPackage.exe см. в разделе [SqlPackage справочной документации](https://msdn.microsoft.com/library/hh550080.aspx).
-

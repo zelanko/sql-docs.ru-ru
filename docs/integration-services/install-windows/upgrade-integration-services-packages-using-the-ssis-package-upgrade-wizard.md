@@ -1,10 +1,13 @@
 ---
-title: "Обновление пакетов служб Integration Services с помощью мастера обновления пакетов служб SSIS | Документы Microsoft"
+title: "Обновление пакетов служб Integration Services с помощью мастера обновления пакетов служб SSIS | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - Integration Services packages, upgrading
 - upgrading Integration Services packages
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
-caps.latest.revision: 22
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: fdb35bac3e7f302e74d2bb33aca870041c36bb31
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 27411b3f61efd0474313ce8de98b28fa3ebd51b1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>обновить пакеты служб Integration Services с помощью мастера обновления пакетов служб SSIS
   Пакеты, созданные в более ранних версиях служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , можно обновить до формата служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , используемых [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет мастер обновления пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Мастер можно настроить так, что исходные пакеты останутся без изменений. Поэтому в случае каких-либо трудностей обновления можно продолжать использовать исходные пакеты.  
@@ -96,4 +98,3 @@ ms.lasthandoff: 09/26/2017
 3.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]запустите мастер обновления пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
   
-

@@ -2,31 +2,32 @@
 title: "Создание обновляемых подписок для публикаций транзакций | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/21/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - updatable transactional subscriptions
 - updateable transactional subscriptions, SSMS
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
-caps.latest.revision: 51
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "51"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 94a6afee0fbc828b7c3036cfc4d1282b71674384
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9c6843e88fd7e7a8ba6c29da635a7d502bd52045
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Создание обновляемых подписок для публикаций транзакций
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 > [!NOTE]  
 >  Эта функция поддерживается в версиях [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] с 2012 по 2016.  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
  
@@ -106,5 +107,4 @@ ms.lasthandoff: 06/22/2017
 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)
 
 [Создание обновляемой подписки для публикации транзакций](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md) 
-
 

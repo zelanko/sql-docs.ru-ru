@@ -2,9 +2,12 @@
 title: "Создание и конструирование геометрических экземпляров и отправка запросов к ним | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: 
@@ -13,19 +16,20 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
 - geometry data type [SQL Server], getting started
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
-caps.latest.revision: 27
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 67afdd066ed1ecff52f4ce7fecb41d344fb6d20a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 8fac630d1dd38409a6ba9d4877d803a9f064a992
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Создание, конструирование и запрос экземпляров geometry
-  Планарный пространственный тип данных **geometry**представляет данные в евклидовой (плоской) системе координат. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот тип реализован как тип данных среды CLR.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Планарный пространственный тип данных **geometry**представляет данные в евклидовой (плоской) системе координат. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот тип реализован как тип данных среды CLR.  
   
  Тип **geometry** является стандартным и доступен в каждой базе данных. В таблице можно создать столбцы типа **geometry** и обращаться с данными **geometry** так же, как и с данными других типов среды CLR.  
   
@@ -221,7 +225,7 @@ ms.lasthandoff: 06/22/2017
   
   
 ###  <a name="empty"></a> Пустой  
- *Пустой* объект **geometry** не имеет никаких точек. Длина пустых экземпляров **LineString, CircularString**, **CompoundCurve**и **MultiLineString** равна нулю. Площадь пустых экземпляров **Polygon**, **CurvePolygon**и **MultiPolygon** равна нулю.  
+ *Пустой объект ***geometry** не имеет никаких точек. Длина пустых экземпляров **LineString, CircularString**, **CompoundCurve**и **MultiLineString** равна нулю. Площадь пустых экземпляров **Polygon**, **CurvePolygon**и **MultiPolygon** равна нулю.  
   
  **Проверка, является ли экземпляр пустым**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md).  
@@ -248,7 +252,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Экземпляры**Point** и **MultiPoint** не имеют границы.  
   
--   Границы **LineString** и **MultiLineString** образуются начальными и конечными точками, за исключением тех, которые появляются четное число раз.  
+-   Границы**LineString** и **MultiLineString** boundaries are formed by the start points и end points, removing those that occur an even number of times.  
   
 ```  
 DECLARE @g geometry;  
@@ -276,7 +280,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a> Замыкание  
- *Замкнутый* объект **geometry** — это фигура, начальная и конечная точки которой совпадают. Экземпляры**Polygon** считаются замкнутыми. Экземпляры**Point** не замкнуты.  
+ *Замкнутый объект ***geometry** — это фигура, начальная и конечная точки которой совпадают. Экземпляры**Polygon** считаются замкнутыми. Экземпляры**Point** не замкнуты.  
   
  Кольцо — это простой замкнутый экземпляр **LineString** .  
   

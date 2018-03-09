@@ -2,31 +2,30 @@
 title: "Командлет New-RestoreFolder | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 5938b3a9-6412-45fc-86f8-264651d01598
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 20e512bbc1ac3ba7c2a6b6604032c047f83d10cf
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4ee3a6068f376ff4f08af4cae67aa00d157d1f86
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="new-restorefolder-cmdlet"></a>Командлет New-RestoreFolder
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Восстанавливает исходную папку в новую.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Восстанавливает исходную папку в новую.  
 
 >[!NOTE] 
 >В этой статье может содержать устаревшие сведения и примеры. С помощью командлета Get-Help для последней версии.
@@ -38,7 +37,7 @@ ms.lasthandoff: 09/01/2017
   
  Общие параметры, такие как –Verbose, -Debug, сообщения управления ошибками и предупреждениями, -Whatif и –Confir документированы в справке по Windows PowerShell. Дополнительные сведения см. в разделе [Об общих параметрах](http://technet.microsoft.com/library/dd315352.aspx).  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Командлет New-RestoreFolder используется для создания новой папки на основе имени исходной папки.  
   
 ## <a name="parameters"></a>Параметры  
@@ -110,4 +109,3 @@ ms.lasthandoff: 09/01/2017
 |Входные данные||  
 |Выходные данные|Нет|  
   
-

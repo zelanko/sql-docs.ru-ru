@@ -2,9 +2,12 @@
 title: "Пример. Указание директив ID и IDREF | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
-caps.latest.revision: 11
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fc36427330033bac793e8f62658b62b93c18dbf6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9998ad6318f303861473e5e510c782b16fbb42ff
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>Пример. Указание директив ID и IDREF
-  Данный пример почти совпадает с примером [Указание директивы ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) . Единственная разница заключается в указании в данном запросе директив **ID** и **IDREF** . Эти директивы перезаписывают типы атрибута **SalesPersonID** в элементах <`OrderHeader`> и <`OrderDetail`>. Образуются связи внутри документа. Для просмотра перезаписанных типов необходима схема. Поэтому в запросе указывается параметр **XMLDATA** в предложении FOR XML для получения схемы.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Данный пример почти совпадает с примером [Указание директивы ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) . Единственная разница заключается в указании в данном запросе директив **ID** и **IDREF** . Эти директивы перезаписывают типы атрибута **SalesPersonID** в элементах <`OrderHeader`> и <`OrderDetail`>. Образуются связи внутри документа. Для просмотра перезаписанных типов необходима схема. Поэтому в запросе указывается параметр **XMLDATA** в предложении FOR XML для получения схемы.  
   
 ```  
 USE AdventureWorks2012;  
@@ -114,4 +117,3 @@ FOR XML EXPLICIT, XMLDATA
  [Использование режима EXPLICIT совместно с предложением FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   
-

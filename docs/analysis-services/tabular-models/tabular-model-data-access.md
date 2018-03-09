@@ -2,32 +2,32 @@
 title: "Доступ к данным табличной модели | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
-caps.latest.revision: 23
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 4c1fa9b4e4f9003b193628d114ad6832436a7c8f
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4763973d0ea4bf905b1c38ace337667c92186e3a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tabular-model-data-access"></a>Доступ к данным табличной модели
-  К табличным шаблонам базы данных в службах Analysis Services можно получить доступ с помощью большинства тех же клиентов, интерфейсов и языков, которые используются для извлечения данных или метаданных из многомерной модели. Дополнительные сведения см. в разделе [Доступ к данным многомерной модели (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+К табличным шаблонам базы данных в службах Analysis Services можно получить доступ с помощью большинства тех же клиентов, интерфейсов и языков, которые используются для извлечения данных или метаданных из многомерной модели. Дополнительные сведения см. в разделе [Доступ к данным многомерной модели (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
   
- В этом разделе описываются клиенты, языки запросов и программные интерфейсы, работающие с табличными моделями.  
+ В этой статье описываются клиенты, языки запросов и программные интерфейсы, работающие с табличными моделями.  
   
 ## <a name="clients"></a>Клиенты  
  Следующие клиентские приложения Майкрософт поддерживают собственные соединения с базами данных табличной модели служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 ### <a name="excel"></a>Excel  
  К базам данных табличной модели можно подключаться из Excel, используя функции визуализации и анализа данных в Excel для работы с данными. Для доступа к данным необходимо определить соединение с данными служб Analysis Services, указать сервер, работающий в табличном режиме, и выбрать нужную базу данных. Дополнительные сведения см. в разделе [Подключение к службам SQL Server Analysis Services или импорт данных из них](http://go.microsoft.com/fwlink/?linkID=215150).  
   
- Excel также является рекомендуемым приложением для просмотра табличных моделей в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Это средство включает команду **Анализ в Excel** , которая запускает новый экземпляр Excel, создает книгу Excel и устанавливает подключение к данным между книгой и базой данных рабочей области модели. При просмотре данных табличной модели в Excel следует учитывать, что Excel направляет запросы к модели через клиент сводных таблиц Excel. Соответственно, операции внутри книги Excel приводят к отправке запросов многомерных выражений к базе данных рабочей области, а не запросов DAX. Если для отслеживания запросов используется приложение SQL Profiler или другое средство наблюдения, в трассировке профайлера могут появляться многомерные выражения (MDX), а не выражения DAX. Дополнительные сведения о функции "Анализ в Excel" см. в разделе [Анализ в Excel (табличные службы SSAS)](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
+ Excel также является рекомендуемым приложением для просмотра табличных моделей в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Это средство включает команду **Анализ в Excel** , которая запускает новый экземпляр Excel, создает книгу Excel и устанавливает подключение к данным между книгой и базой данных рабочей области модели. При просмотре данных табличной модели в Excel следует учитывать, что Excel направляет запросы к модели через клиент сводных таблиц Excel. Соответственно, операции внутри книги Excel приводят к отправке запросов многомерных выражений к базе данных рабочей области, а не запросов DAX. Если для отслеживания запросов используется приложение SQL Profiler или другое средство наблюдения, в трассировке профайлера могут появляться многомерные выражения (MDX), а не выражения DAX. Дополнительные сведения о «анализ в Excel» см. в разделе [анализ в Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
   
 ### <a name="power-view"></a>Power View  
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] — это клиентское приложение для создания отчетов служб Reporting Services, которое выполняется в среде SharePoint 2010. В нем в интегрированной среде нерегламентированных отчетов сочетаются возможности исследования данных, конструктора запросов и создания презентаций. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] может использовать в качестве источников данных табличные модели, вне зависимости от того, размещена ли модель на экземпляре служб Analysis Services, работающем в табличном режиме, или же данные модели извлекаются из реляционного хранилища данных с использованием режима DirectQuery. Для подключения к табличной модели в [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]необходимо создать файл соединения, содержащий расположение сервера и имя базы данных. В SharePoint можно создать общий источник данных служб Reporting Services или соединение с семантической моделью бизнес-аналитики. Дополнительные сведения о соединениях с семантическими моделями бизнес-аналитики см. в разделе [Соединение семантической модели бизнес-аналитики PowerPivot (BISM-файлы)](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md).  
@@ -47,14 +47,14 @@ ms.lasthandoff: 09/01/2017
   
  Запросы, отправляемые клиентом [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] к модели, выдаются в виде инструкций DAX, которые можно отслеживать, установив трассировку для модели.  Клиент также выдает запрос серверу на первоначальное определение схемы, которое представляется согласно языку определения концептуальной схемы (CSDL). Дополнительные сведения см. в разделе [Заметки языка CSDL для бизнес-аналитики (CSDLBI)](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
-### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
+### <a name="sql-server-management-studio"></a>Среда SQL Server Management Studio  
  С помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно управлять экземплярами, в которых размещаются табличные модели, а также запрашивать из них метаданные и данные. Можно обрабатывать модели или объекты в модели, создавать секции и управлять ими, а также устанавливать параметры безопасности для управления доступом к данным. Дополнительные сведения см. в следующих разделах:  
   
 -   [Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
 -   [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
--   [Наблюдение за экземпляром служб Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+-   [Мониторинг экземпляра служб Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для извлечения данных и метаданных из табличного шаблона базы данных можно использовать как многомерные выражения, так и окна запросов XMLA. Однако обратите внимание на следующие ограничения.  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 09/01/2017
 ### <a name="data-and-metadata"></a>Данные и метаданные  
  Можно извлекать данные и метаданные из табличных моделей в управляемых приложениях с помощью ADOMD.NET. 
   
--   [Использование динамических административных представлений для мониторинга служб Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [Используйте динамические административные представления &#40; динамических административных представлений &#41; для мониторинга служб Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  Для поддержки доступа в OLE DB к табличным моделям в неуправляемых клиентских приложениях можно использовать поставщик OLE DB для служб Analysis Services версии 9.0. Для включения доступа к табличной модели требуется обновленная версия поставщика OLE DB для служб Analysis Services. Дополнительные сведения о поставщиках, используемых с табличными моделями, см. в статье [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) .  
   
@@ -124,7 +124,7 @@ ms.lasthandoff: 09/01/2017
   
 -   [Набор строк MDSCHEMA_HIERARCHIES](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
   
-     Новое перечисление **STRUCTURE_TYPE** поддерживает идентификацию определяемых пользователем иерархий, создаваемых в табличных моделях. Дополнительные сведения см. в разделе [Иерархии (табличные службы SSAS)](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
+     Новое перечисление **STRUCTURE_TYPE** поддерживает идентификацию определяемых пользователем иерархий, создаваемых в табличных моделях. Дополнительные сведения см. в разделе [иерархий](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
   
  В данном выпуске нет обновлений для наборов строк схемы OLE DB для интеллектуального анализа данных.  
   
@@ -132,9 +132,8 @@ ms.lasthandoff: 09/01/2017
 >  Использовать запросы многомерных выражений или расширений интеллектуального анализа данных в базе данных, развернутой в режиме DirectQuery, нельзя; поэтому, если необходимо выполнить запрос к модели DirectQuery с использованием наборов строк схемы, следует использовать XMLA, а не связанное динамическое административное представление. Для динамических административных представлений, которые возвращают результаты для сервера в виде единого целого, например SELECT * from $system.DBSCHEMA_CATALOGS or DISCOVER_TRACES, можно выполнить запрос в содержимом базы данных, развернутой в режиме кэширования.  
   
 ## <a name="see-also"></a>См. также  
- [Соединение с табличным шаблоном базы данных (службы SSAS)](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)   
+ [Соединиться с базой данных табличной модели ](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)   
  [Доступ к данным PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-access.md)   
  [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   
-

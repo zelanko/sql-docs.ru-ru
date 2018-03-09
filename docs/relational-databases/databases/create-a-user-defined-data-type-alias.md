@@ -2,9 +2,12 @@
 title: "Создание пользовательского псевдонима для типа данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,28 +18,28 @@ f1_keywords:
 helpviewer_keywords:
 - alias data types [SQL Server], creating
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
-caps.latest.revision: 27
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5a2acca73084c6815410f9e0f151ab12c7d5e0b3
+ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
 ms.translationtype: HT
-ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
-ms.openlocfilehash: 77a4561aa148a98a593d0279f217a354d01c7b31
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/29/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Создание псевдонима определяемого пользователем типа данных
-  В этом разделе описывается создание нового определяемого пользователем псевдонима типа данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+В этом разделе описывается создание нового определяемого пользователем псевдонима типа данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Создание пользовательского псевдонима типа данных с помощью различных средств.**  
   
@@ -50,9 +53,9 @@ ms.lasthandoff: 09/29/2017
   
 -   Определяемый пользователем псевдоним типа данных должен соответствовать правилам для идентификаторов.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Требует разрешения CREATE TYPE в текущей базе данных и разрешения ALTER для схемы *schema_name*. Если аргумент *schema_name* не указан, в действие вступают принимаемые по умолчанию правила разрешения имен с целью определения схемы для текущего пользователя.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -64,7 +67,7 @@ ms.lasthandoff: 09/29/2017
      **Разрешить значения NULL**  
      Указание, допускает ли определяемый пользователем тип данных значения NULL. Допустимость значений NULL для существующего определенного пользователем типа данных не может быть изменена.  
   
-     **Тип данных**  
+     **Data type**  
      Выберите базовый тип данных из списка. В списке показаны все типы данных, за исключением типов **geography**, **geometry**, **hierarchyid**, **sysname**, **timestamp** и **xml** . Тип данных существующего определенного пользователем типа данных не может быть изменен.  
   
      **Default**  
@@ -123,7 +126,7 @@ ms.lasthandoff: 09/29/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В следующем примере создается псевдоним типа данных на базе определенного в системе типа данных `varchar` . Псевдоним типа данных `ssn` используется для столбцов, хранящих номера карточек социального страхования, состоящих из 11 разрядов (999-99-9999). Эти столбцы не могут иметь значение NULL.  
   
-```tsql  
+```sql  
 CREATE TYPE ssn  
 FROM varchar(11) NOT NULL ;  
 ```  
@@ -133,4 +136,3 @@ FROM varchar(11) NOT NULL ;
  [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)  
   
   
-

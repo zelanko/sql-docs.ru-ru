@@ -3,33 +3,30 @@ title: "Функция SQLSetDescField | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetDescField
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetDescField
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetDescField
-helpviewer_keywords:
-- SQLSetDescField function [ODBC]
+f1_keywords: SQLSetDescField
+helpviewer_keywords: SQLSetDescField function [ODBC]
 ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3e6a0ee843ce2b78ebc611fee30a5ee8e16fc7e1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3a67508ad9e676e679f0458eef8e46960cc72737
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetdescfield-function"></a>Функция SQLSetDescField
 **Соответствия**  
@@ -144,7 +141,7 @@ SQLRETURN SQLSetDescField(
   
  В следующей таблице описывается инициализация поля заголовка.  
   
-|Имя поля заголовка|Тип|Чтение-запись|По умолчанию|  
+|Имя поля заголовка|Тип|Чтение-запись|Default|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|ОТМЕНИТЬ: R APD: R IRD: R IPD: R|Отменить: SQL_DESC_ALLOC_AUTO для неявных или SQL_DESC_ALLOC_USER для явного<br /><br /> APD: SQL_DESC_ALLOC_AUTO для неявных или SQL_DESC_ALLOC_USER для явного<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN|Отменить: Чтения или APD: IRD для чтения и записи: неиспользуемые IPD: неиспользуемые|Отменить: APD [1]: [1] IRD: неиспользуемые IPD: неиспользуемые|  
@@ -158,7 +155,7 @@ SQL_DESC_COUNT|SQLSMALLINT|ОТМЕНИТЬ: ДЛЯ ЧТЕНИЯ И ЗАПИСИ
   
  Инициализация поля записи определяется, как показано в следующей таблице.  
   
-|Имя поля записи|Тип|Чтение-запись|По умолчанию|  
+|Имя поля записи|Тип|Чтение-запись|Default|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|Отменить: Неиспользуемые APD: неиспользуемые IRD: R IPD: неиспользуемые|Отменить: Неиспользуемые APD: неиспользуемые IRD: D IPD: неиспользуемые|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|Отменить: Неиспользуемые APD: неиспользуемые IRD: R IPD: неиспользуемые|Отменить: Неиспользуемые APD: неиспользуемые IRD: D IPD: неиспользуемые|  
@@ -554,4 +551,3 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
 ## <a name="see-also"></a>См. также:  
  [Файлы заголовка ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)
-

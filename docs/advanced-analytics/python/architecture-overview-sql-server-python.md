@@ -2,25 +2,26 @@
 title: "Архитектура | Документы Microsoft"
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 5ca823bc7094c77a31cfd3178294cd49a360d77a
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1328a346dd9852cba349e38204b49faf32573611
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architecture-overview-for-machine-learning-services-with-python"></a>Общие сведения об архитектуре служб обучения машины с Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Здесь представлен обзор интеграции Python с SQL Server, включая модель безопасности, компоненты database engine, который поддерживает выполнение внешних скриптов и новые компоненты, которые позволяет взаимодействовать Python с SQL Server. Дополнительные сведения см. в связанных разделах.
 
@@ -56,4 +57,3 @@ Python задачи выполняются вне процесса SQL Server, �
 ## <a name="next-steps"></a>Следующие шаги
 
 [Выполнения Python, с помощью T-SQL](../tutorials/run-python-using-t-sql.md)
-

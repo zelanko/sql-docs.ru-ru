@@ -1,12 +1,14 @@
 ---
 title: "Оценка объекты баз данных Access для преобразования (AccessToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -22,17 +24,16 @@ helpviewer_keywords:
 - SQL, assessing
 - syntax, assessing
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e5deebf9af1de40aedfd549ba050e37a4539a1c7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 61e0ad607f242d6d96f81326621f46df9602c023
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Оценки для преобразования (AccessToSQL) объектов базы данных Access
 Прежде чем загружать объекты и переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, следует определить, насколько миграции будет выполнено успешно, и сколько времени может потребоваться преобразование. SSMA можно создать отчет об оценки, который показывает процент объекты, которые были успешно преобразованы [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или синтаксис SQL Azure и время оценки для выполнения миграции. SSMA также позволяет просматривать конкретные проблемы, вызвавшие ошибки преобразования.  
@@ -66,9 +67,8 @@ ms.lasthandoff: 08/02/2017
 Перед выполнением отчета оценки еще раз или преобразовать схемы, следует исправить ошибки. Чтобы найти ошибки, нажмите кнопку **ошибки** кнопку на панели сообщений, а затем разверните каждой ошибки, чтобы просмотреть список объектов, где произошла ошибка. Если щелкнуть объект на панели сообщений, все ошибки и предупреждения для этого объекта будет отображаться в области сведений.  
   
 ## <a name="next-step"></a>Следующий шаг  
-[Преобразование объектов базы данных Access](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+[Преобразование объектов базы данных Access](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## <a name="see-also"></a>См. также:  
 [Миграция баз данных Access в SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

@@ -1,14 +1,14 @@
 ---
-title: "Включение и отключение печати на стороне клиента для служб Reporting Services | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Включение и отключение печати на стороне клиента для служб Reporting Services | Документы Майкрософт"
+ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,29 +17,27 @@ helpviewer_keywords:
 - reportviewer
 - toolbar
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
-caps.latest.revision: 14
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "14"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ee650a09b57ae92abda378fea6fc780b550fbac4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6ada6514fe7efa57bea6e6d0ac6e484d4a4a88a7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Включение и отключение печати на стороне клиента для служб Reporting Services
 
   Кнопка печати на панели инструментов средства просмотра отчетов позволяет использовать формат PDF для печати отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , просматриваемых в браузере, на стороне клиента. В новой функции удаленной печати для преобразования отчета в формат PDF используется модуль подготовки отчетов, который входит в состав [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Вы можете скачать отчет в формате PDF. А если у вас есть установленное приложение для просмотра PDF-файлов, с помощью кнопки печати можно отобразить диалоговое окно со стандартными средствами для настройки параметров страницы, включая ее размер и ориентацию, а также возможность предварительного просмотра PDF-файла. Хотя по умолчанию клиентская печать допускается, эту функцию можно отключить.  
   
- В предыдущих версиях [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] использовался элемент управления ActiveX, который приходилось скачивать с сервера отчетов на клиентский компьютер. При обновлении сервера отчетов до SQL Server 2016 элемента управления печатью не удаляется с сервера отчетов или клиентских компьютеров.  
+ В предыдущих версиях [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] использовался элемент управления ActiveX, который приходилось скачивать с сервера отчетов на клиентский компьютер. Если вы обновите сервер отчетов до версии SQL Server 2016, элемент управления печатью не будет автоматически удален с сервера отчетов или клиентских компьютеров.  
 
 ##  <a name="bkmk_clientside_printexpereince"></a> Процесс печати  
- Когда вы нажимаете кнопку печати ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") на панели инструментов средства просмотра отчетов, процесс варьируется в зависимости от того, что. Для просмотра PDF приложения устанавливаются на клиентском компьютере и что вы используете браузер.   Учитывая конфигурацию клиентского компьютера, вы сможете скачать PDF-файл, настроить в диалоговом окне параметры печати или выбрать оба варианта.  
+ Когда вы нажимаете кнопку печати ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") на панели инструментов средства просмотра отчетов, запускаются разные процессы. Они зависят от используемого браузера и установленных на клиентском компьютере приложений для просмотра PDF-файлов.   Учитывая конфигурацию клиентского компьютера, вы сможете скачать PDF-файл, настроить в диалоговом окне параметры печати или выбрать оба варианта.  
   
- ![Панель инструментов отчета](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "панель инструментов отчета")  
+ ![Панель инструментов "Отчет"](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Панель инструментов "Отчет"")  
   
 |||  
 |-|-|  
@@ -70,7 +68,7 @@ ms.lasthandoff: 08/09/2017
   
     3.  Щелкните правой кнопкой мыши узел сервера отчетов и выберите пункт **Свойства**. Если параметр **Свойства** недоступен, то убедитесь, что среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] запущена с правами администратора.  
   
-    4.  Перейдите на вкладку **Дополнительно**.  
+    4.  Щелкните **Дополнительно**.  
   
     5.  Выберите **EnableClientPrinting**.  
   
@@ -121,5 +119,4 @@ Dim rs As New ReportingService()
 End Class 'Sample  
 ```
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

@@ -3,8 +3,11 @@ title: "Parse (тип данных geography) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - Parse method
 - Parse (geography Data Type)
 ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 953db8cfb7240b14ee2775ed01ee18d78cd7073f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: c29c43af7034f86fa993fc5f12046200216ec57f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="parse-geography-data-type"></a>Parse (тип данных geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Возвращает **geography** экземпляр из представления Open Geospatial Consortium (OGC) Well-Known Text (WKT). Эквивалентно Parse() [STGeomFromText](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md), за исключением того, что предполагается идентификатор пространственной ссылки (SRID) 4326 как параметр. Входные данные могут дополнительно содержать значения Z (высота) и M (мера).
   
@@ -50,7 +52,7 @@ Parse ( 'geography_tagged_text' )
   
  Возвращаемый тип CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Тип OGC **geography** экземпляр, возвращаемый `Parse()` равно соответствующих входных данных WKT.  
   
  Строка «Null» будет интерпретироваться как строку null **geography** экземпляра.  
@@ -66,9 +68,8 @@ SET @g = geography::Parse('LINESTRING(-122.360 47.656, -122.343 47.656)');
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные статические географические методы](../../t-sql/spatial-geography/extended-static-geography-methods.md)   
  [STGeomFromText (тип данных geography)](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
   
   
-

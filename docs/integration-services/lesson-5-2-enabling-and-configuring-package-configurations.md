@@ -1,10 +1,13 @@
 ---
-title: "Шаг 2: Включение и настройка конфигурации пакетов | Документы Microsoft"
+title: "Шаг 2. Активация и настройка конфигураций пакетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-caps.latest.revision: 39
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f5cf47715b998a7f09b6d90772a2b456872eebed
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 1a63c43606d2a27da3469c4cedb83654c79c1bf1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Занятие 5-2-Включение и настройка конфигурации пакетов
+# <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Занятие 5–2. Активация и настройка конфигураций пакетов
 В этой задаче вы преобразуете проект в модель развертывания пакета и включите конфигурации пакетов с помощью мастера настройки пакета. Этот мастер будет использоваться для создания файла конфигурации в формате XML, который содержит параметры конфигурации для свойства **Directory** контейнера "цикл по каждому элементу". Значение свойства Directory содержится в новой переменной уровня пакета, обновление которой можно осуществлять в процессе выполнения. Кроме того, будет заполнена новая папка с образцами данных для использования при проверке.  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>Создание новой переменной уровня пакета, сопоставленной со свойством Directory  
@@ -66,7 +68,7 @@ ms.lasthandoff: 09/26/2017
   
 2.  Нажмите кнопку **ОК** в окне предупреждения и после завершения преобразования нажмите кнопку **ОК** в диалоговом окне **Преобразование в модель развертывания пакета** .  
   
-3.  Щелкните фон вкладки **Поток управления** в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
+3.  Щелкните фон вкладки **Поток управления** в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
 4.  В меню **Службы SSIS** выберите команду **Конфигурации пакетов**.  
   
@@ -114,4 +116,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Шаг 3. Изменение значения конфигурации свойства Directory](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
-

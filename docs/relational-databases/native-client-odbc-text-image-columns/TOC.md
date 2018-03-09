@@ -1,5 +1,5 @@
-# [Управление столбцами Text и Image](managing-text-and-image-columns.md)
+# [Управление столбцами text и image](managing-text-and-image-columns.md)
 
-# [Граница vs. Несвязанный текст и столбцы изображений](bound-vs-unbound-text-and-image-columns.md)
-# [Данные времени выполнения и Text, ntext или столбцы изображений](data-at-execution-and-text-ntext-or-image-columns.md)
-# [Журнал vs. Незафиксированных изменений](logged-vs-unlogged-modifications.md)
+# [Привязанные и непривязанные столбцы text и image](bound-vs-unbound-text-and-image-columns.md)
+# [Данные времени выполнения и столбцы text, ntext или image](data-at-execution-and-text-ntext-or-image-columns.md)
+# [Изменения с ведением журнала и без ведения журнала](logged-vs-unlogged-modifications.md)

@@ -2,13 +2,13 @@
 title: "Действия в многомерных моделях | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - drillthrough actions [Analysis Services]
 - cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
-caps.latest.revision: 20
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6c68c3d8eba2ec1519c38a89c7a1b0b71f3be4e3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a4b7d3b0523fb19b9b0d7e0542cc587fb1585992
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="actions-in-multidimensional-models"></a>Действия в многомерных моделях
-  Действие представляет собой инициированную пользователем операцию для выбранного куба или его части. Эта операция может запускать приложение, для которого в качестве параметра используется выбранный элемент, или получать сведения о выбранном элементе. Дополнительные сведения о действиях см. в разделе [Действия (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Действие представляет собой инициированную пользователем операцию для выбранного куба или его части. Эта операция может запускать приложение, для которого в качестве параметра используется выбранный элемент, или получать сведения о выбранном элементе. Дополнительные сведения о действиях см. в разделе [Действия (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md).  
   
  Для построения действий для куба используется вкладка **Действия** конструктора кубов. Укажите следующее.  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 09/01/2017
  **Содержимое действия**  
  Выберите тип действия. Следующая таблица содержит сводку возможных типов.  
   
-|Тип|Description|  
+|Тип|Описание|  
 |----------|-----------------|  
 |Набор данных|Извлекает набор данных.|  
 |Частный|Выполняет операцию с использованием интерфейса, отличного от приведенных в данной таблице.|  
@@ -77,7 +77,7 @@ ms.lasthandoff: 09/01/2017
  **Дополнительные свойства**  
  Выберите свойство. Следующая таблица содержит сводку возможных свойств.  
   
-|Свойство|Description|  
+|property|Описание|  
 |--------------|-----------------|  
 |**Вызов**|Указывает способ запуска действия. Интерактивный способ, заданный по умолчанию, указывает на то, что действие будет запущено при открытии пользователем объекта. Допустимые параметры:<br /><br /> Пакет<br /><br /> Интерактивно<br /><br /> При открытии|  
 |**Приложение**|Описывает приложение действия.|  
@@ -94,7 +94,7 @@ ms.lasthandoff: 09/01/2017
  **Сервер отчетов**  
  Свойства, описанные в следующей таблице, указываются для сервера отчетов.  
   
-|Свойство|Description|  
+|property|Описание|  
 |--------------|-----------------|  
 |**Имя сервера**|Имя компьютера, на котором запущен сервер отчетов.|  
 |**Путь сервера**|Путь, предоставленный сервером отчетов.|  
@@ -137,4 +137,3 @@ http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Regi
  [Кубы в многомерных моделях](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   
-

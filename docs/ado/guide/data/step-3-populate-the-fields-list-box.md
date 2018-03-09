@@ -3,7 +3,7 @@ title: "Шаг 3: Заполнения списка полей | Докумен�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -13,17 +13,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
-caps.latest.revision: 5
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 53600209952c84dc19009348df580fb660cbe396
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6ef92cbf72ad8a8aa3a8076be7ccaf3761f51ab0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>Шаг 3: Заполнения списка полей
 Для заполнения списка полей, вставьте следующий код в обработчик событий нажатия `lstMain`:  
@@ -64,8 +63,7 @@ End Sub
   
  Код не реализуется в том случае, если ресурс структурированный документ.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сценарий публикации в Интернете](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Шаг 2: Инициализируйте главном списке](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
- [Шаг 4: Заполнить текстовое поле сведений](../../../ado/guide/data/step-4-populate-the-details-text-box.md)
-
+ [Шаг 4. Заполнение текстового поля сведений](../../../ado/guide/data/step-4-populate-the-details-text-box.md)

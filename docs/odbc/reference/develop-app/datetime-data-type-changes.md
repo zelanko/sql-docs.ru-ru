@@ -3,10 +3,12 @@ title: "Изменяет тип данных DateTime | Документы Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - timestamp data type [ODBC]
 - compatibility [ODBC], datetime data types
 ms.assetid: c38c79f9-8bb0-4633-ac86-542366c09a95
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c81717abdde1a8427df5e20e9241820ab11b5879
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b09a6daa19b7a8b22ac5f4b3147e6cefde6ffc60
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datetime-data-type-changes"></a>Изменение типов данных даты и времени
 В ODBC 3. *x*, идентификаторы для даты, времени и типы данных timestamp SQL были изменены из SQL_DATE, SQL_TIME и SQL_TIMESTAMP (экземплярами **#define** в файле заголовка, 9, 10 и 11) для SQL_TYPE_DATE, SQL_TYPE_TIME и SQL_TYPE_TIMESTAMP (экземплярами **#define** в файле заголовка 91, 92 и 93) соответственно. Соответствующие идентификаторы типа C измененных с SQL_C_DATE, SQL_C_TIME и SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME и SQL_C_TYPE_TIMESTAMP, соответственно.  
@@ -65,4 +66,3 @@ ms.lasthandoff: 09/09/2017
  [1] в результате использования этого ODBC 3. *x* приложения, работа с ODBC 2. *x* драйвер может использовать коды даты, времени или timestamp, возвращенные в результирующих наборов, которые возвращаются функциями каталога.  
   
  [2] в результате использования этого ODBC 3. *x* приложения, работа с ODBC 3. *x* драйвер может использовать коды даты, времени или timestamp, возвращенные в результирующих наборов, которые возвращаются функциями каталога.
-

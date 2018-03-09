@@ -1,10 +1,13 @@
 ---
-title: "Монитор выполнение пакетов и других операций | Документы Microsoft"
+title: "Наблюдение за выполнением пакетов и других операций | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-caps.latest.revision: 14
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 2555a719c2677c2c573a07dfa803ad80b3946ebf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: c2254c139d1e93755cd9b3c503ad0bc42f08cb4e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Наблюдение за выполнением пакетов и других операций
   Вы можете отслеживать выполнения пакета [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , проверки проекта и другие операции с помощью одного или нескольких из следующих средств. Такие средства, как отводы данных, доступны только для проектов, которые развертываются на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -51,7 +53,7 @@ ms.lasthandoff: 09/27/2017
   
  Для указания состояния операции используются девять различных типов состояний. Полный список типов состояний см. в представлении [catalog.operations (база данных SSISDB)](../../integration-services/system-views/catalog-operations-ssisdb-database.md)  
 
-## <a name="active_ops"></a>Диалоговое окно «активные операции»
+## <a name="active_ops"></a> Диалоговое окно "Активные операции"
   Воспользуйтесь диалоговым окном **Активные операции** , чтобы просмотреть состояние выполняемых в настоящий момент операций [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , таких как развертывание, проверка и выполнение пакетов. Эти данные хранятся в каталоге SSISDB.  
   
  Дополнительные сведения о связанных представлениях [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделах [catalog.operations (база данных SSISDB)](../../integration-services/system-views/catalog-operations-ssisdb-database.md), [catalog.validations (база данных SSISDB)](../../integration-services/system-views/catalog-validations-ssisdb-database.md) и [catalog.executions (база данных SSISDB)](../../integration-services/system-views/catalog-executions-ssisdb-database.md).  
@@ -99,7 +101,7 @@ ms.lasthandoff: 09/27/2017
  Чтобы просмотреть список пакетов, запущенных на сервере, создайте запрос к представлению [catalog.executions (база данных SSISDB)](../../integration-services/system-views/catalog-executions-ssisdb-database.md) для пакетов со значением состояния 2.  
   
  Программный доступ с использованием управляемого API-интерфейса  
- В разделе <xref:Microsoft.SqlServer.Management.IntegrationServices> пространства имен и классы.  
+ См. пространство имен <xref:Microsoft.SqlServer.Management.IntegrationServices> и его классы.  
   
 ### <a name="stopping-a-running-package"></a>Остановка выполнения пакета  
  Можно запросить остановку выполняющегося пакета в диалоговом окне **Активные операции** . Дополнительные сведения см. в статье [Active Operations Dialog Box](#active_ops).  
@@ -110,7 +112,7 @@ ms.lasthandoff: 09/27/2017
  Чтобы остановить выполняемый на сервере пакет, следует вызвать хранимую процедуру [catalog.stop_operation (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md).  
   
  Программный доступ с использованием управляемого API-интерфейса  
- В разделе <xref:Microsoft.SqlServer.Management.IntegrationServices> пространства имен и классы.  
+ См. пространство имен <xref:Microsoft.SqlServer.Management.IntegrationServices> и его классы.  
   
 ### <a name="viewing-the-history-of-packages-that-have-run"></a>Просмотр журнала выполненных пакетов  
  Для просмотра журнала пакетов, выполнявшихся в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], используйте отчет **Все выполнения** . Дополнительные сведения об отчете **Все выполнения** и других стандартных отчетах см. в разделе [Отчеты для сервера служб Integration Services](#reports).  
@@ -121,14 +123,14 @@ ms.lasthandoff: 09/27/2017
  Для просмотра сведений о выполнявшихся пакетах запросите представление [catalog.executions (база данных SSISDB)](../../integration-services/system-views/catalog-executions-ssisdb-database.md).  
   
  Программный доступ с использованием управляемого API-интерфейса  
- В разделе <xref:Microsoft.SqlServer.Management.IntegrationServices> пространства имен и классы.  
+ См. пространство имен <xref:Microsoft.SqlServer.Management.IntegrationServices> и его классы.  
 
 ## <a name="reports"></a> Reports for the Integration Services Server
   Для текущего выпуска служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предусмотрены стандартные отчеты, помогающие отслеживать проекты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , развернутые на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Эти отчеты позволяют просмотреть состояние пакета и журнал, а также, если необходимо, определить причину сбоев при выполнении пакетов.  
   
  На любой странице отчета в верхней части имеется значок возврата на предыдущую страницу, значок обновления сведений, отображаемых на странице, и значок печати, который позволяет распечатать текущую страницу.  
   
- Дополнительные сведения о развертывании пакетов на [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сервера, в разделе [развертывания Integration Services (SSIS) проектов и пакетов](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+ Дополнительные сведения о развертывании пакетов на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] см. в разделе [Развертывание проектов и пакетов служб Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
 ### <a name="integration-services-dashboard"></a>Панель мониторинга служб Integration Services  
  Отчет **Панель мониторинга служб Integration Services** представляет общие сведения обо всех выполнявшихся пакетах на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Для каждого пакета, который был запущен на сервере, панель мониторинга позволяет «укрупнить вид» и просмотреть подробные сведения об ошибках, которые могли возникнуть при выполнении пакета.  
@@ -165,7 +167,7 @@ ms.lasthandoff: 09/27/2017
   
 |Раздел|Description|  
 |-------------|-----------------|  
-|Фильтр|Отображает текущий фильтр, применяемый к отчету, например соединения с указанной строкой подключения и в диапазоне **Время последнего сбоя** .<br /><br /> Диапазон **Время последнего сбоя** задается, чтобы показать только сбои соединения, произошедшие в диапазона дат. Диапазон может занимать несколько дней, месяцев или лет.|  
+|Filter|Отображает текущий фильтр, применяемый к отчету, например соединения с указанной строкой подключения и в диапазоне **Время последнего сбоя** .<br /><br /> Диапазон **Время последнего сбоя** задается, чтобы показать только сбои соединения, произошедшие в диапазона дат. Диапазон может занимать несколько дней, месяцев или лет.|  
 |Сведения|Показывается строка подключения, число выполнений, в течение которых подключение завершилось с ошибкой, и дату последнего сбоя подключения.|  
   
 ### <a name="all-operations-report"></a>Отчет «Все операции»  
@@ -175,7 +177,7 @@ ms.lasthandoff: 09/27/2017
  Отчет **Все проверки** отображает сводку по всем проверкам служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , выполненным на сервере. В сводке показываются данные о каждой проверке: состояние, время начала и время окончания. Каждая запись сводки содержит ссылку на сообщения, полученные в ходе проверки. Как и в отчете «Панель мониторинга служб Integration Services», здесь вы можете применить фильтр к таблице, чтобы сократить объем информации.  
   
 ### <a name="custom-reports"></a>Пользовательские отчеты  
- Вы можете добавить пользовательский отчет (файл языка определения отчетов) к узлу каталога **SSISDB** в узле **Каталоги служб Integration Services** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Прежде чем добавить отчет, убедитесь, что используется контекст трехкомпонентного именования для полного уточнения ссылок на объекты, таких как исходная таблица. В противном случае функция [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] отобразит ошибку. Согласно соглашению об именовании \<базы данных >.\< Владелец >. \<объект >. В качестве примера можно указать SSISDB.internal.executions.  
+ Вы можете добавить пользовательский отчет (файл языка определения отчетов) к узлу каталога **SSISDB** в узле **Каталоги служб Integration Services** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Прежде чем добавить отчет, убедитесь, что используется контекст трехкомпонентного именования для полного уточнения ссылок на объекты, таких как исходная таблица. В противном случае функция [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] отобразит ошибку. Контекст именования — \<database>.\<owner>.\<object>. В качестве примера можно указать SSISDB.internal.executions.  
   
 > [!NOTE]  
 >  При добавлении пользовательских отчетов к узлу **SSISDB** в узле **Базы данных** префикс SSISDB не требуется.  
@@ -206,4 +208,3 @@ ms.lasthandoff: 09/27/2017
 ## <a name="see-also"></a>См. также:  
  [Запуск проектов и пакетов](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
  [Отчеты по устранению неполадок для выполнения пакетов](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
-

@@ -2,13 +2,13 @@
 title: "Добавление логики измерений к измерению | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - dimension intelligence [Analysis Services]
 - Type property
 ms.assetid: b64fa386-eac2-4286-a320-0631a1887aac
-caps.latest.revision: 32
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 86c5f345dc963667ea5b05177e84517609f7e5a7
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d1d167da0ab38819f016dd4a0c18c2e65ef42da1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>Мастер бизнес-Аналитики — Добавление логики измерений к измерению
-  Добавьте расширение логики измерений к кубу или измерению, чтобы задать для измерения стандартный бизнес-тип. Данное расширение также указывает соответствующие типы атрибутов измерения. Клиентские приложения могут использовать эти характеристики типа при анализе данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Добавьте расширение логики измерений к кубу или измерению, чтобы задать для измерения стандартный бизнес-тип. Данное расширение также указывает соответствующие типы атрибутов измерения. Клиентские приложения могут использовать эти характеристики типа при анализе данных.  
   
  Чтобы добавить логику измерений, используйте мастер бизнес-аналитики и выберите параметр **Определить логику операций с измерениями** на странице **Выбор расширения** . После этого мастер проведет по шагам, позволяющим выбрать измерение, к которому необходимо применить логику измерений, а также определить атрибуты для выбранного измерения.  
   
@@ -48,7 +48,6 @@ ms.lasthandoff: 09/01/2017
  Например, необходимо добавить логику измерений к измерению «Учетные записи». В списке **Тип измерения**выберите пункт **Учетные записи**. Затем, если у измерения есть атрибуты **Тип учетной записи** и **Описание учетной записи** , в столбце **Включить** установите флажки напротив типов учетной записи **Имя учетной записи** и **Тип учетной записи** . В столбце **Атрибут измерения** свяжите эти типы учетной записи с атрибутами измерения **Описание учетной записи** и **Тип учетной записи** соответственно.  
   
 ## <a name="see-also"></a>См. также  
- [Определение вычислений логики операций со временем с использованием мастера бизнес-аналитики](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
+ [Определение логика операций со временем с использованием мастера бизнес-аналитики](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
   
   
-

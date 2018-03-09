@@ -2,30 +2,30 @@
 title: "Столбцы данных событий запросов | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords:
-- Queries Events event category
+helpviewer_keywords: Queries Events event category
 ms.assetid: 28aa7df5-3e1f-4f4f-8a1c-8bbd29d5da13
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f329c73f2fbfd0b99e45c2012fb90b90ec52f879
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 48f2e8dec1939bedda904845dd2e56a237ddc10c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="queries-events-data-columns"></a>Столбцы данных «События запросов»
-  Категория событий «События запросов» содержит следующие классы событий:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Категория событий «события запросов» содержит следующие классы событий:  
   
 |**Идентификатор события**|**Имя события**|**Описание события**|  
 |------------------|--------------------|---------------------------|  
@@ -65,10 +65,10 @@ ms.lasthandoff: 09/01/2017
 |CurrentTime|2|5|Содержит текущее время события, если доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |StartTime|3|5|Содержит время начала события, если оно доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |EndTime|4|5|Содержит время окончания события. Этот столбец не заполняется для таких классов событий запуска, как SQL:BatchStarting или SP:Starting. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
-|Длительность|5|2|Содержит прошедшую длительность события в миллисекундах.|  
+|Duration|5|2|Содержит прошедшую длительность события в миллисекундах.|  
 |CPUTime|6|2|Содержит время ЦП в миллисекундах, использованного событием.|  
 |Severity|22|1|Содержит уровень серьезности исключения, связанного с событием запроса. Возможны следующие значения.<br /><br /> 0 = успешное завершение<br /><br /> 1 = информационное сообщение<br /><br /> 2 = предупреждение<br /><br /> 3 = ошибка|  
-|Успешно|23|1|Содержит флаг успешного или неудачного завершения события. Возможны следующие значения.<br /><br /> 0 = неуспешное завершение;<br /><br /> 1 = успешное завершение.|  
+|Успешно |23|1|Содержит флаг успешного или неудачного завершения события. Возможны следующие значения.<br /><br /> 0 = неуспешное завершение;<br /><br /> 1 = успешное завершение.|  
 |Ошибка|24|1|Содержит номер любой ошибки, связанной с событием запроса.|  
 |ConnectionID|25|1|Содержит уникальный идентификатор соединения, связанный с событием запроса.|  
 |DatabaseName|28|8|Содержит имя базы данных, в которой выполняется запрос.|  
@@ -82,8 +82,7 @@ ms.lasthandoff: 09/01/2017
 |TextData|42|9|Содержит текстовые данные, связанные с событием запроса.|  
 |ServerName|43|8|Содержит имя экземпляра служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , на котором произошло событие запроса.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Категория «События запросов»](../../analysis-services/trace-events/queries-events-category.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Экспорт сведений о зарегистрированном сервере (SQL Server Management Studio) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,20 +19,20 @@ helpviewer_keywords:
 - exporting registered server information
 - transferring registered server information
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
-caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: b47f3de05f1d1143774803579c0b1ede7258ab77
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 384095b7fc904f9e8d57cb3d71a1bd074900c86a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Выполнение экспорта сведений компонента «Зарегистрированные серверы» (среда SQL Server Management Studio)
-  В этом разделе описывается, как сохранить и экспортировать сведения о зарегистрированных серверах в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]и передать их другим сотрудникам и на другие серверы. Данную возможность экспорта можно использовать для создания согласованного пользовательского интерфейса на нескольких компьютерах.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+В этом разделе описывается, как сохранить и экспортировать сведения о зарегистрированных серверах в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]и передать их другим сотрудникам и на другие серверы. Данную возможность экспорта можно использовать для создания согласованного пользовательского интерфейса на нескольких компьютерах.  
   
  Экспорт и последующий импорт файлов зарегистрированных серверов позволяет легко настроить одинаковые серверы для нескольких компьютеров в окне «Зарегистрированные серверы». Это полезно при обращении к большому числу серверов с локальных компьютеров, расположенных в разных местах, или при необходимости настроить базовые параметры соединения для менее опытного пользователя.  
   
@@ -66,4 +69,3 @@ ms.lasthandoff: 07/31/2017
  [Создание нового зарегистрированного сервера (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)  
   
   
-

@@ -3,8 +3,11 @@ title: "WRITETEXT (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - overwriting data
 - data updates [SQL Server], WRITETEXT statement
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
-caps.latest.revision: 52
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5bf092ec05c2ae07864c12f092cf8b98f97234fa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: fda340750c555d7e6e858ddac1a87401e215891e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Разрешает протоколируются интерактивное обновление существующего **текст**, **ntext**, или **изображения** столбца. Инструкция WRITETEXT перезаписывает любые существующие данные в столбце, для которого применяется. Инструкция WRITETEXT не может использоваться для **текст**, **ntext**, и **изображения** столбцы в представлениях.  
   
@@ -70,10 +72,10 @@ WRITETEXT [BULK]
  WITH LOG  
  Не учитывается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ведение журнала определяется моделью восстановления, действующей для базы данных.  
   
- *данные*  
+ *data*  
  Представляет собой фактические **текст**, **ntext** или **изображения** данные для хранения. *данные* может быть литералом или параметром. Максимальная длина текста, который можно вставить интерактивно с помощью инструкции WRITETEXT — приблизительно 120 КБ для **текст**, **ntext**, и **изображения** данные.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте WRITETEXT для замены **текст**, **ntext**, и **изображения** данных и UPDATETEXT для изменения **текст**, **ntext**, и **изображения** данные. UPDATETEXT является более гибкой, так как изменяется только часть **текст**, **ntext**, или **изображения** столбца, а не весь столбец.  
   
  Для наилучшей производительности рекомендуется **текст**, **ntext**, и **изображения** вставлять или обновлять фрагментами, кратными 8040 байт данных.  
@@ -91,7 +93,7 @@ WRITETEXT [BULK]
   
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в текстовые указатели на строки **текст**, **ntext**, или **изображения** данных могут существовать, но могут оказаться недопустимыми. Сведения о текста в строке см. в разделе [sp_tableoption &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Сведения о допустимости указателей текста см. в разделе [sp_invalidate_textptr &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение UPDATE на указанную таблицу. Разрешение может передаваться, если передано разрешение UPDATE.  
   
 ## <a name="examples"></a>Примеры  
@@ -116,7 +118,7 @@ ALTER DATABASE pubs SET RECOVERY SIMPLE;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
@@ -125,4 +127,3 @@ GO
  [UPDATETEXT &#40; Transact-SQL &#41;](../../t-sql/queries/updatetext-transact-sql.md)  
   
   
-

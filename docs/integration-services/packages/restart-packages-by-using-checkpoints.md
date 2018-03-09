@@ -1,10 +1,13 @@
 ---
-title: "Перезапуск пакетов с помощью контрольных точек | Документы Microsoft"
+title: "Перезапуск пакетов с помощью контрольных точек | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: packages
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -14,17 +17,16 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-caps.latest.revision: 54
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 5207ffe29852aa5ed10144a3184917704682c49e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5630458cf4f925ad1cce7cfab27cedbcf66bf3eb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Перезапуск пакетов с помощью контрольных точек
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] могут перезапустить пакеты, при выполнении которых произошел сбой, начиная с момента этого сбоя вместо перезапуска всего пакета. Если настройка пакета предполагает использование контрольных точек, сведения о выполнении пакета записываются в файл контрольных точек. Файл контрольных точек используется при перезапуске давшего сбой пакета для осуществления повторного запуска пакета с момента сбоя. В случае успешного выполнения пакета файл контрольных точек удаляется, а затем при следующем выполнении пакета создается повторно.  
@@ -120,4 +122,3 @@ ms.lasthandoff: 08/03/2017
 -   Техническая статья [Автоматический перезапуск пакетов служб SSIS после отработки отказа или ошибки](http://go.microsoft.com/fwlink/?LinkId=200407)на сайте social.technet.microsoft.com  
   
 -   Статья службы поддержки [Контрольные точки служб SSIS не соблюдаются элементами контейнера «цикл по элементам» и «цикл по каждому элементу»](http://go.microsoft.com/fwlink/?LinkId=241633)на сайте support.microsoft.com.  
-

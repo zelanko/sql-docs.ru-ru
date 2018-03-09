@@ -2,31 +2,32 @@
 title: "Настройка стандартных предупреждений репликации (среда SQL Server Management Studio) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - alerts [SQL Server replication]
 - predefined replication alerts [SQL Server replication]
 ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
-caps.latest.revision: 24
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "24"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fdd1352c4f7f6c62c8adfc5fcf9b2932568c12d1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a88d254d198f88a04ad99f987d4641abc575505d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>Настройка стандартных предупреждений репликации (среда SQL Server Management Studio)
-  Репликация предоставляет следующие предварительно установленные предупреждения, которые могут быть настроены для реакции на события репликации:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Репликация предоставляет следующие предварительно установленные предупреждения, которые могут быть настроены для реакции на события репликации:  
   
 -   **Репликация: успех агента**  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-configure-a-predefined-replication-alert-in-management-studio"></a>Настройка предварительно определенного предупреждения репликации в Management Studio  
   
-1.  Подключитесь к распространителю в [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]и раскройте узел сервера.  
+1.  Подключитесь к распространителю в [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]и разверните узел сервера.  
   
 2.  Раскройте папку **Агент SQL Server** , затем раскройте папку **Предупреждения** .  
   
@@ -92,4 +93,3 @@ ms.lasthandoff: 06/22/2017
  [Использование предупреждений для событий агента репликации](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)  
   
   
-

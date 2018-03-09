@@ -3,26 +3,26 @@ title: "Как: подключение с использованием пров�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- connecting to the server, SQL Server Authentication
+helpviewer_keywords: connecting to the server, SQL Server Authentication
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 5802ddf79f53fda9e03c842ce21def20cb99f6e3
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8d4305d3b6dd25f3a06cda56db8e69fcd5d09972
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>Практическое руководство. Подключение с использованием проверки подлинности SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -145,4 +145,3 @@ sqlsrv_close( $conn);
 [Отделение пользователей от схем](http://go.microsoft.com/fwlink/?LinkId=106330)  
 [Разрешения объекта GRANT (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=106332)  
   
-

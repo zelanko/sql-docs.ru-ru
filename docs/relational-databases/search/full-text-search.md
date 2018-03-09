@@ -2,9 +2,12 @@
 title: "Полнотекстовый поиск | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-search
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: f69fa33969aeaa0d6ae1064651afd6c93c93d353
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8df15a6d8f9875fbecf9e14fcdae51d37c7154fe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="full-text-search"></a>Компонент Full-text Search
-  Полнотекстовый поиск в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] позволяет пользователям и приложениям выполнять полнотекстовые запросы к символьным данным в таблицах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Полнотекстовый поиск в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] позволяет пользователям и приложениям выполнять полнотекстовые запросы к символьным данным в таблицах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
 ## <a name="basic-tasks"></a>Основные задачи
 В этой статье представлен обзор функции полнотекстового поиска и описываются ее компоненты и архитектура. Если вы хотите немедленно приступить к работе, здесь вы найдете простые примеры задач.
@@ -60,7 +63,7 @@ ms.lasthandoff: 07/31/2017
   
  В полнотекстовых запросах не учитывается регистр букв. Например, поиск значения «Алюминий» или «алюминий» вернет одинаковые результаты.  
   
- Все полнотекстовые запросы используют небольшой набор предикатов [!INCLUDE[tsql](../../includes/tsql-md.md)] (CONTAINS и FREETEXT) и функций (CONTAINSTABLE и FREETEXTTABLE). Однако точная структура полнотекстовых запросов определяется целями поиска данного бизнес-сценария. Например:  
+ Все полнотекстовые запросы используют небольшой набор предикатов [!INCLUDE[tsql](../../includes/tsql-md.md)] (CONTAINS и FREETEXT) и функций (CONTAINSTABLE и FREETEXTTABLE). Однако точная структура полнотекстовых запросов определяется целями поиска данного бизнес-сценария. Пример:  
   
 -   Электронный бизнес — поиск продукта на веб-сайте:  
   
@@ -257,5 +260,4 @@ ms.lasthandoff: 07/31/2017
  Средства разбиения по словам (и парадигматические модули), а также фильтры выполняются в процессе управляющей программы фильтрации (fdhost.exe).  
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-
 

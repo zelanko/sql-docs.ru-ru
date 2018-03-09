@@ -1,10 +1,13 @@
 ---
-title: "Соединиться с базой данных-источником Oracle | Документы Microsoft"
+title: "Соединение с базой данных-источником Oracle | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - oraDb
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
-caps.latest.revision: 8
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5c5a28264e255b50ee3d33986ba2b84c646c0f8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6d8007bd54b9ee8612d9b65a0864b3271427f0b8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Соединение с базой данных-источником Oracle
   На странице «Источник Oracle» указываются сведения, необходимые для соединения с базой данных-источником Oracle. Экземпляр CDC считывает журналы повторов базы данных Oracle, с которой установлено соединение.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Для выполнения интеллектуального анализа журналов пользователь должен иметь следующие права доступа, предоставленные в базе данных Oracle.  
 >   
->  -   ВЫБЕРИТЕ на \<any отслеживаемая Таблица >  
+>  -   SELECT на \<любая-отслеживаемая-таблица>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE на DBMS LOGMNR  
 > -   SELECT на V$LOGMNR CONTENTS  
@@ -70,9 +72,8 @@ ms.lasthandoff: 08/03/2017
   
  Завершив ввод данных на этой странице, нажмите кнопку **Далее** , чтобы перейти на страницу [Select Oracle Tables and Columns](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Как создать экземпляр изменения базы данных SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Изменение свойств экземпляра](../../integration-services/change-data-capture/edit-instance-properties.md)  
   
   
-

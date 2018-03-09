@@ -1,10 +1,13 @@
 ---
-title: "Средства устранения неполадок соединения пакетов | Документы Microsoft"
+title: "Средства устранения неполадок с подключением пакетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -17,17 +20,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-caps.latest.revision: 13
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3799e224930806445bc1c27f37c05b95a0bbbae
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 223023cae5ba0ca6ac2fab8298334547875ab4d2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshooting-tools-for-package-connectivity"></a>Инструменты устранения неполадок с соединением пакетов
 Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают в себя функции и средства, которые используются для устранения неполадок соединений между пакетами и источниками данных, из которых пакеты извлекают и загружают данные.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 08/03/2017
   
     -   Диспетчер соединений OLE DB, источник OLE DB и назначение «OLE DB»  
   
-    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)]Диспетчер соединений и источник ADO NET  
+    -   Диспетчер подключений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] и источник ADO NET  
   
     -   Задача «Выполнение SQL»  
   
@@ -75,7 +77,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>См. также:  
  [Инструменты устранения неполадок при разработке пакета](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Средства устранения неполадок при выполнении пакета](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Инструменты устранения неполадок с выполнением пакетов](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   
-

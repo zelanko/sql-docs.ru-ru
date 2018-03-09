@@ -2,9 +2,12 @@
 title: "Управление режимами редактирования и просмотра | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - displaying line numbers
 - view modes [SQL Server Management Studio]
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 364c8e7db9d336df91b984d62aaf62cff19da4ac
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: bc33a7d686cd91cb502ac37c0c1ab4ef267ff872
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Управление режимами редактирования и просмотра
-  Редактор позволяет управлять способами просмотра кода.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Редактор позволяет управлять способами просмотра кода.  
   
 ## <a name="changing-the-view-mode"></a>Изменение режима просмотра  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] имеется режим просмотра **Документы с вкладками**, позволяющий открыть одновременно несколько редакторов и документов и переключаться между ними с помощью вкладок в верхней части окна редактора. Также можно открыть среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] в режиме интерфейса MDI (Multiple Document Interface), объединяющем окна без вкладок и позволяющем сворачивать окна, располагать их рядом и т. д.  
@@ -124,4 +126,3 @@ ms.lasthandoff: 06/22/2017
 1.  В меню **Окно** выберите **Скрыть все автоматически** .  
   
   
-

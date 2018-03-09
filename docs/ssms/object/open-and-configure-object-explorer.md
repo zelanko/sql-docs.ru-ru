@@ -3,27 +3,28 @@ title: "Открытие и настройка обозревателя объе
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 13745947a33fbe51bddb69f4bb35165fd26c1867
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b771f013b84cd5252c66ee20a804d2a3bb764acf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-and-configure-object-explorer"></a>Открытие и настройка обозревателя объектов
-Откройте обозреватель объектов с помощью меню **Просмотр** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Проведите настройку параметров обозревателя объектов с помощью пункта **Параметры** меню **Сервис** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Откройте обозреватель объектов с помощью меню **Просмотр** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Проведите настройку параметров обозревателя объектов с помощью пункта **Параметры** меню **Сервис** .  
   
 ## <a name="viewing-object-explorer"></a>Просмотр обозревателя объектов  
 Обозреватель объектов отображается в [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] по умолчанию. Если обозреватель объектов не виден, откройте меню **Вид** и выберите пункт **Обозреватель объектов**.  
@@ -38,4 +39,3 @@ ms.lasthandoff: 06/22/2017
 [Область сведений обозревателя объектов](../../ssms/object/object-explorer-details-pane.md)  
 [Пользовательские отчеты в среде Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
   
-

@@ -3,29 +3,29 @@ title: "Параметры командной строки в консоли SSM
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-sybase
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Sybase Console,Command Line Options
+helpviewer_keywords: Sybase Console,Command Line Options
 ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8eb96fb924a26d691db1ba6577d0b6f9c93e49ee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f5dd6992056b19367f8e7f9d9ee4119976827764
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>Параметры командной строки в консоли SSMA (SybaseToSQL)
 Майкрософт предоставляет широкий набор параметров командной строки для выполнения и контроля над SSMA действий. В последующих разделах подробно одинаковыми.  
@@ -181,4 +181,3 @@ ms.lasthandoff: 08/02/2017
   
 -   Для устранения неполадок в консоли, в разделе [Устранение неполадок &#40; SybaseToSQL &#41; ](../../ssma/sybase/troubleshooting-sybasetosql.md).  
   
-

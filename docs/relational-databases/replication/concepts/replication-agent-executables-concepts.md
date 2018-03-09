@@ -2,15 +2,16 @@
 title: "Основные понятия исполняемых файлов агента репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programming interfaces [SQL Server replication]
 - programming [SQL Server replication], agents
@@ -18,24 +19,23 @@ helpviewer_keywords:
 - agents [SQL Server replication], executables
 - command prompt [SQL Server replication]
 ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
-caps.latest.revision: 38
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "38"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 096156484b2378713485e1177eb9b0cfd6faa5d8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 13d16f3c7cee8e344917238bf8637cfef202432a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-agent-executables-concepts"></a>Основные понятия исполняемых файлов агента репликации
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Управление агентами репликации может осуществляться программным путем следующими способами:  
   
--   С помощью управляемых интерфейсов программирование агента в пространстве имен <xref:Microsoft.SqlServer.Replication>.  
+-   использованием управляемых программных интерфейсов агента в пространстве имен <xref:Microsoft.SqlServer.Replication>;  
   
 -   вызовом исполняемых файлов агента из командной строки с предоставленным набором параметров.  
   
@@ -47,11 +47,11 @@ ms.lasthandoff: 06/22/2017
   
 -   [Агент чтения журнала репликации](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
--   [Агент слияния репликации](../../../relational-databases/replication/agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
--   [Агент чтения очереди репликации](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+-   [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
--   [Агент моментальных снимков репликации](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+-   [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
  При вызове агентов репликации можно использовать профили производительности для автоматической передачи определенного набора параметров для исполняемого файла агента. Дополнительные сведения см. в статье [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
@@ -119,4 +119,3 @@ REM -- The following command must be supplied without line breaks.
 ```  
   
   
-

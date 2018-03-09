@@ -2,35 +2,32 @@
 title: "PredictSequence (расширения интеллектуального анализа данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- PredictSequence
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictSequence function
+f1_keywords: PredictSequence
+dev_langs: DMX
+helpviewer_keywords: PredictSequence function
 ms.assetid: c2992dfc-b99d-4430-8dcd-21ad3ffd4590
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: aaeb95f70c9afc6872bd56df494a8eba88f98f91
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e9ddd402be082937ec828a86d82a238d121e55dd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Дает предварительную оценку будущих значений заданной последовательности данных.  
   
@@ -46,7 +43,7 @@ PredictSequence(\<table column reference, n-start, n-end>)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Объект \<таблицы выражения >.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если  *n*  параметр указан, он возвращает следующие значения:  
   
 -   Если  *n*  больше нуля, наиболее вероятные значения в следующем  *n*  действия.  
@@ -69,4 +66,3 @@ From
  [Общие функции прогнозирования &#40; расширений интеллектуального анализа данных &#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

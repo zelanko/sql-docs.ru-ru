@@ -2,11 +2,13 @@
 title: "Выбор режима аутентификации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,20 +27,19 @@ helpviewer_keywords:
 - SQL authentication mode
 - Password Expired dialog box
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0c13fbf9ffbe2337c1766d7a089c1d8072a17f77
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: 1164bed25cbd7c13809c4a4ec8ea679119befd7b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="choose-an-authentication-mode"></a>Выбор режима проверки подлинности
-  Во время процесса установки следует выбрать режим проверки подлинности для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Существует два возможных режима: проверка подлинности Windows и смешанный режим. Режим проверки подлинности Windows включает проверку подлинности Windows и отключает проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В смешанном режиме включены как проверка подлинности Windows, так и проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Проверка подлинности Windows доступна всегда, и отключить ее нельзя.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Во время установки следует выбрать режим проверки подлинности для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Существует два возможных режима: проверка подлинности Windows и смешанный режим. Режим проверки подлинности Windows включает проверку подлинности Windows и отключает проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В смешанном режиме включены как проверка подлинности Windows, так и проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Проверка подлинности Windows доступна всегда, и отключить ее нельзя.  
   
 ## <a name="configuring-the-authentication-mode"></a>Настройка режима проверки подлинности  
  Если во время установки был выбран смешанный режим проверки подлинности, необходимо задать и подтвердить надежный пароль для встроенной учетной записи системного администратора [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с именем sa. Учетная запись sa устанавливает соединения с помощью проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -109,4 +110,3 @@ ms.lasthandoff: 04/11/2017
  [Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
   
-

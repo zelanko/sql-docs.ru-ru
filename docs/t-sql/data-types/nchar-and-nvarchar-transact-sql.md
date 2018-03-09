@@ -3,8 +3,11 @@ title: "nchar и nvarchar (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ helpviewer_keywords:
 - nvarchar data type
 - nchar data type
 ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
-caps.latest.revision: 44
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc7de3b64519f3d0fd1f2e9557ccf7196e3f07a8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 4c3f2e9ad1d63992be8f4e4a4c65d821fae73389
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar и nvarchar (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Символьные типы данных, которые являются либо фиксированной длины, **nchar**, или переменную длину, **nvarchar**, набор символов в Юникоде и использование ЮНИКОДА UCS-2.
   
@@ -37,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 Строковые данные постоянной длины в Юникоде. *n*Определяет длину строки и должен быть значением от 1 до 4000. Размер хранения составляет два раза  *n*  байт. Если кодовая страница параметров сортировки использует двухбайтовые символы, размер хранения остается  *n*  байт. В зависимости от строки, размер хранилища  *n*  байтов может быть меньше, чем значение, указанное для  *n* . Синонимами по стандарту ISO для **nchar** , **national char** и **символов национального алфавита**...
   
 **nvarchar** [(n | **max** )]  
-Строковые данные переменной длины в Юникоде. *n*Определяет длину строки и может принимать значение от 1 до 4000. **Max** указывает, что максимальный размер хранилища равен 2 ^ 31-1 байт (2 ГБ). Размер хранилища в байтах вдвое больше числа введенных символов + 2 байта. Синонимами по стандарту ISO для **nvarchar** , **national char переменной** и **символов национального алфавита переменной**.
+Строковые данные переменной длины в Юникоде. *n*Определяет длину строки и может принимать значение от 1 до 4000. **Max** указывает, что максимальный размер хранилища равен 2 ^ 31-1 символов (2 ГБ). Размер хранилища в байтах вдвое больше числа введенных символов + 2 байта. Синонимами по стандарту ISO для **nvarchar** , **national char переменной** и **символов национального алфавита переменной**.
   
 ## <a name="remarks"></a>Замечания  
 Когда  *n*  не указан в определении данных или в инструкции объявления переменной, длина по умолчанию равна 1. Когда  *n*  не указан в функции CAST, длина по умолчанию равна 30.
@@ -103,4 +105,3 @@ Test data       More test data
 [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md)
   
   
-

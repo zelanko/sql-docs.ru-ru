@@ -3,7 +3,7 @@ title: "Выполнить метод (команда ADO) | Документы 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 7f16d3c01fb219bdbe7f52bbc39d3c410b5de918
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 651123d3112ca58c028412bd025325f303f0d637
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="execute-method-ado-command"></a>Выполнить метод (команда ADO)
 Выполняет запрос, инструкции SQL или хранимой процедуры, указанной в [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) или [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) свойство [объект команды](../../../ado/reference/ado-api/command-object-ado.md).  
@@ -57,7 +56,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 > [!NOTE]
 >  Используйте **ExecuteOptionEnum** значение **adExecuteNoRecords** для повышения производительности путем минимизации внутренней обработки. Если **adExecuteStream** был указан параметр **adAsyncFetch** и **adAsynchFetchNonBlocking** игнорируются. Не используйте **CommandTypeEnum** значения **adCmdFile** или **adCmdTableDirect** с **Execute**. Эти значения можно использовать только как параметры с [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) и [Requery](../../../ado/reference/ado-api/requery-method.md) методы **записей**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  С помощью **Execute** метод **команда** выполняется запрос, указанный в объект **CommandText** свойство или **CommandStream** свойство объекта.  
   
  Результаты возвращаются в **записей** (по умолчанию) или в виде потока двоичных данных. Чтобы получить двоичный поток, задайте **adExecuteStream** в *параметры*, затем указать поток, задав **Command.Properties («поток вывода»)**. ADO **поток** можно указать объект мог получать результаты, или другой объект потока, например объект ответа службы IIS могут быть указаны. Если поток не был указан перед вызовом **Execute** с **adExecuteStream**, возникает ошибка. Позиция в потоке при возврате из **Execute** зависит от поставщика.  
@@ -77,9 +76,9 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 >  При выдаче команды, содержащие URL-адресов, используемых в схему http автоматически вызывает [поставщик Microsoft OLE DB для публикаций в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [абсолютные и относительные URL-адреса](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект команды (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+ [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выполнение и Requery снимите примере методы (Visual Basic)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
  [Выполнение и Requery снимите примере методы (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
  [Выполнение и Requery снимите примере методы (VC ++)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
@@ -88,4 +87,3 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
  [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)   
  [Выполнить метод (соединение ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [Событие ExecuteComplete (ADO)](../../../ado/reference/ado-api/executecomplete-event-ado.md)
-

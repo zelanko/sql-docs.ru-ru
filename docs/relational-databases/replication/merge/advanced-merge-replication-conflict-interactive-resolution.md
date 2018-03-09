@@ -2,11 +2,13 @@
 title: "Интерактивное разрешение конфликтов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - articles [SQL Server replication], conflict resolution
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
-caps.latest.revision: 34
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "34"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 410b9b720455a699ced2b276df7e76d442cf380e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0acc68329b1b9b07633c24db2521f5cf3502b38f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-merge-replication-conflict---interactive-resolution"></a>Конфликт расширенной репликации слиянием: интерактивное разрешение
-  Репликация[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует интерактивный арбитр конфликтов, который позволяет разрешать конфликты вручную при проведении синхронизации по требованию в диспетчере синхронизации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Активируемый во время запуска интерактивный сопо является графическим интерфейсом, отображающим данные для каждой конфликтующей строки. Он обеспечивает возможности просмотра и изменения конфликтующих данных, а также разрешения каждого конфликта по отдельности.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Репликация [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует интерактивный арбитр, который позволяет разрешать конфликты вручную при проведении синхронизации по требованию в диспетчере синхронизации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Активируемый во время запуска интерактивный сопо является графическим интерфейсом, отображающим данные для каждой конфликтующей строки. Он обеспечивает возможности просмотра и изменения конфликтующих данных, а также разрешения каждого конфликта по отдельности.  
   
  Интерактивный сопоставитель напоминает средство просмотра конфликтов. Однако в то время как средство просмотра конфликтов отображает результаты уже разрешенных конфликтов после синхронизации слиянием, интерактивный сопоставитель отображает каждый конфликт до его разрешения, что позволяет определить исход каждого конфликта во время синхронизации слиянием. Необходим сотрудник, следящий за интерактивным сопоставителем при возникновении конфликта.  
   
@@ -46,4 +47,3 @@ ms.lasthandoff: 06/22/2017
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Использование программы sqlcmd с переменными скрипта | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/09/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +21,19 @@ helpviewer_keywords:
 - sqlcmd utility, scripts
 - setvar command
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
-caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: mightypen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 50548a9c34ff3c55c22e5492b807e338bcd4ccc2
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: d088599955f156dd82f327bcc9833bbae64b6185
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd — использование с переменными скрипта
-  Переменные, которые используются в скриптах, называются переменными скрипта. Переменные скрипта позволяют использовать один скрипт в различных обстоятельствах. Например, если нужно выполнить один скрипт на нескольких серверах, вместо изменения скрипта для каждого сервера можно указать для имени сервера соответствующую переменную скрипта. Изменяя имя сервера, указываемое в переменной скрипта, можно выполнять один и тот же скрипт на разных серверах.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Переменные, которые используются в скриптах, называются переменными скрипта. Переменные скрипта позволяют использовать один скрипт в различных обстоятельствах. Например, если нужно выполнить один скрипт на нескольких серверах, вместо изменения скрипта для каждого сервера можно указать для имени сервера соответствующую переменную скрипта. Изменяя имя сервера, указываемое в переменной скрипта, можно выполнять один и тот же скрипт на разных серверах.  
   
  Переменные сценариев можно определить явно с помощью команды **setvar** или неявно с помощью параметра **sqlcmd-v** .  
   
@@ -113,7 +115,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 ## <a name="sqlcmd-scripting-variables"></a>Переменные скрипта sqlcmd  
  Переменные, которые определяются программой **sqlcmd** , называются переменными сценария. В следующей таблице приведен список переменных сценария программы **sqlcmd** .  
   
-|        Переменная         | Связанный параметр | Чтение-запись |         По умолчанию         |
+|        Переменная         | Связанный параметр | Чтение-запись |         Default         |
 | ----------------------- | -------------- | --- | ----------------------- |
 | SQLCMDUSER*             | -U             | Чтение   | ""                      |
 | SQLCMDPASSWORD*         | -P             | --  | ""                      |
@@ -340,4 +342,3 @@ C:\> sqlcmd
  [Справочник по программе командной строки ( компонент Database Engine)](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   
-

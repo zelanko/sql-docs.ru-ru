@@ -2,32 +2,33 @@
 title: "Подсистема аудита SQL Server (ядро СУБД) | Документация Майкрософт"
 ms.custom: 
 ms.date: 11/21/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- audit
+f1_keywords: audit
 helpviewer_keywords:
 - SQL Server Audit
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-caps.latest.revision: 58
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f00c5db3574f21010e682f964d06f3c2b61a1d09
-ms.openlocfilehash: 7852b00948b193a07e4ac38d1ace6135a63bc599
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "58"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 02c5d20286c4bcf688e9570a85d58ac89e2ffd06
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sql-server-audit-database-engine"></a>Подсистема аудита SQL Server (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   *Аудит* экземпляра среды [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] или отдельной базы данных включает в себя отслеживание и протоколирование событий, происходящих в компоненте [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Аудит среды[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет проводить аудит сервера, который может включать в себя спецификации аудита сервера для событий на уровне сервера, а также спецификации аудита базы данных для событий на уровне базы данных. События аудита могут записываться в журналы событий или файлы аудита.  
   
@@ -190,7 +191,7 @@ ms.lasthandoff: 06/22/2017
   
  [Создание спецификации аудита для сервера и базы данных](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
   
- [Просмотр журнала подсистемы аудита SQL Server](../../../relational-databases/security/auditing/view-a-sql-server-audit-log.md)  
+ [Просмотр журнала подсистемы аудита SQL Server](../../../relational-databases/security/auditing/view-a-sql-server-audit-log.md)  
   
  [Запись событий подсистемы аудита SQL Server в журнал безопасности](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)  
   
@@ -218,5 +219,4 @@ ms.lasthandoff: 06/22/2017
  [Записи подсистемы аудита SQL Server](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   
   
-
 

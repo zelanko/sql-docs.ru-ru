@@ -3,7 +3,7 @@ title: "Open-метод (запись ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1da941f0a4e16a649adc6139cd24fc4642218b84
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c7e7f1c5e35ced700818954056b380a44c75570c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="open-method-ado-record"></a>Метод Open (ADO запись)
 Открывает существующий [запись](../../../ado/reference/ado-api/record-object-ado.md) объект или создает новый элемент, представленный **записи**, таких как файл или каталог.  
@@ -63,7 +62,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *Пароль*  
  Необязательно. Объект **строка** значение, содержащее пароль, если это требуется, проверяет *UserName*.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  *Источник* может быть:  
   
 -   URL-АДРЕС. Если протокол для URL-адрес http, будет вызван поставщика Интернета по умолчанию. Если URL-адрес указывает на узел, содержащий исполняемый скрипт (такие как. ASP-странице), **записи** , содержащий источник вместо выполненной открытии содержимое по умолчанию. Используйте *параметры* аргумент, чтобы изменить это поведение.  
@@ -82,11 +81,10 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
 >  URL-адреса, с помощью схемы http автоматически вызывает [поставщик Microsoft OLE DB для публикаций в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [абсолютные и относительные URL-адреса](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект записи (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод Open (соединение ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Метод Open (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Метод Open (поток ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Метод OpenSchema](../../../ado/reference/ado-api/openschema-method.md)
-

@@ -3,7 +3,7 @@ title: "С помощью объекта набора записей | Доку�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 737b0b01da5f339c1fbda1cf234301dfafad4d19
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5c9c3d117c6c5ed3bf6c9e5e3f5c6822915681fc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-a-recordset-object"></a>С помощью объекта набора записей
 Кроме того, можно использовать **Recordset.Open** неявно для подключения и команды по этому соединению в одной операции. Например в Visual Basic:  
@@ -56,4 +55,3 @@ Set oRs = Nothing
 ```  
   
  Обратите внимание, что **oRs.Open** принимает строку подключения (*sConn*), вместо **подключения** объекта (*oConn*), в качестве значения его  **ActiveConnection** параметра. Также применяется тип курсор на стороне клиента, задав **CursorLocation** свойство **записей** объекта. Опять же, сравните это с **HelloData** примере.
-

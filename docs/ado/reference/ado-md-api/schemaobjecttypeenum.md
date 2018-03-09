@@ -3,7 +3,7 @@ title: "SchemaObjectTypeEnum | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,25 +18,23 @@ f1_keywords:
 helpviewer_keywords:
 - SchemaObjectTypeEnum enumeration [ADO MD]
 ms.assetid: bf53939f-5543-40ac-a707-aa35e9bde1dd
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e7f8ed56c2762ca054cd812e3184e556cce94195
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 62aea6f8e996aed9752d153e717e725c4e20566c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="schemaobjecttypeenum"></a>SchemaObjectTypeEnum
 Указывает тип объекта, которые следует извлечь, [GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md) метод.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adObjectTypeDimension**|1|Объект [измерения](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) объекта.|  
 |**adObjectTypeHierarchy**|2|Объект [иерархии](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) объекта.|  
 |**adObjectTypeLevel**|3|Объект [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md) объекта.|  
 |**adObjectTypeMember**|4|Объект [член](../../../ado/reference/ado-md-api/member-object-ado-md.md) объекта.|
-

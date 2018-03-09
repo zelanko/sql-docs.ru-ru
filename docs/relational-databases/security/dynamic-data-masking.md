@@ -2,28 +2,29 @@
 title: "Динамическое маскирование данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 09/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: a40b52ccc4839f63acbd1be1f9b2643552a44430
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
-ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
-ms.openlocfilehash: 6ea14b40f988028a714323bc4e35fcd7a357e27c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dynamic-data-masking"></a>Динамическое маскирование данных
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 ![Динамическое маскирование данных](../../relational-databases/security/media/dynamic-data-masking.png)
 
@@ -45,14 +46,14 @@ ms.lasthandoff: 09/27/2017
 ## <a name="defining-a-dynamic-data-mask"></a>Определение маски для динамического маскирования данных  
  Правило маскирования можно задать для столбца в таблице, чтобы замаскировать данные в этом столбце. Доступны четыре типа маскирования.  
   
-|Функция|Описание|Примеры|  
+|Компонент|Description|Примеры|  
 |--------------|-----------------|--------------|  
-|По умолчанию|Полное маскирование в соответствии с типами данных назначенных полей.<br /><br /> Для строковых типов данных используйте XXXX или меньшее количество X, если размер поля меньше 4 символов (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Для числовых данных типов используйте нулевое значение (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Для типов данных даты и времени используйте 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Для двоичных типов данных используйте однобайтовое значение 0 ASCII (**binary**, **varbinary**, **image**).|Пример синтаксиса для определения столбца: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Пример изменения синтаксиса: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
-|Email|Метод маскирования, который раскрывает первую букву адреса электронной почты и постоянный суффикс .com, в формате адреса электронной почты. . `aXXX@XXXX.com`.|Пример определения синтаксиса: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Пример изменения синтаксиса: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()'`)|  
+|Default|Полное маскирование в соответствии с типами данных назначенных полей.<br /><br /> Для строковых типов данных используйте XXXX или меньшее количество X, если размер поля меньше 4 символов (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Для числовых данных типов используйте нулевое значение (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Для типов данных даты и времени используйте 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Для двоичных типов данных используйте однобайтовое значение 0 ASCII (**binary**, **varbinary**, **image**).|Пример синтаксиса для определения столбца: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Пример изменения синтаксиса: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
+|Email|Метод маскирования, который раскрывает первую букву адреса электронной почты и постоянный суффикс .com, в формате адреса электронной почты. , и делает это по-другому. `aXXX@XXXX.com`.|Пример определения синтаксиса: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Пример изменения синтаксиса: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |Случайные|Функция случайного маскирования для использования с любым числовым типом, которая маскирует исходное значение случайным значением в указанном диапазоне.|Пример определения синтаксиса: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> Пример изменения синтаксиса: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
 |Пользовательская строка|Метод маскирования, который раскрывает первую и последнюю буквы и добавляет пользовательскую строку заполнения в середине. `prefix,[padding],suffix`<br /><br /> Примечание. Если исходное значение слишком короткое для заполнения всей маски, часть префикса или суффикса не раскрывается.|Пример определения синтаксиса: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> Пример изменения синтаксиса: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> Дополнительные примеры<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для создания таблицы с динамическим маскированием данных не требуется специальных разрешений — только стандартные разрешения **CREATE TABLE** и **ALTER** для схемы.  
   
  Для добавления, замены или удаления маски столбца требуется разрешение **ALTER ANY MASK** и разрешение **ALTER** для таблицы. Разрешение **ALTER ANY MASK** может быть выдано директору по безопасности.  
@@ -110,7 +111,7 @@ SELECT ID, Name, Salary FROM Employees
 WHERE Salary > 99999 and Salary < 100001;
 ```
 
->    |  Идентификатор | Название| Salary |   
+>    |  Идентификатор | Имя| Salary |   
 >    | ----- | ---------- | ------ | 
 >    |  62543 | Jane Doe | 0 | 
 >    |  91245 | John Smith | 0 |  
@@ -204,4 +205,3 @@ ALTER COLUMN LastName DROP MASKED;
  [Приступая к работе с динамическим маскированием данных в базах данных SQL (портал предварительной версии Azure)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
   
   
-

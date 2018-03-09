@@ -2,31 +2,31 @@
 title: "Агент чтения журнала | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.monitor.logreaderagent.f1
-helpviewer_keywords:
-- Log Reader Agent dialog box
+f1_keywords: sql13.rep.monitor.logreaderagent.f1
+helpviewer_keywords: Log Reader Agent dialog box
 ms.assetid: 300a3c46-0e48-4334-99c0-9ee690d2ef4f
-caps.latest.revision: 18
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7b1922e8a9bb857328a94e3f2b0773f84c29eb54
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "18"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: c32b53de8a12fb091701e848e419fbdbc405b05b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="log-reader-agent"></a>Агент чтения журнала.
-  В диалоговом окне **Агент чтения журнала** отображаются подробные сведения об агенте чтения журнала, включая состояние, историю, информационные сообщения и возможные сообщения об ошибках.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В диалоговом окне **Агент чтения журнала** приводятся подробные сведения об агенте чтения журнала, включая состояние, данные журнала, информационные сообщения и возможные сообщения об ошибках.  
   
 ## <a name="options"></a>Параметры  
  В меню **Вид** выберите сеансы какого агента чтения журнала необходимо просмотреть, а затем в сетке **Сеансы агента чтения журнала**выберите определенный сеанс. Подробные сведения об этом сеансе отображаются в сетке, помеченной как **Действия в выбранном сеансе**. Если выбранный сеанс закончен с ошибкой, также выводится на экран текстовое поле, помеченное как **Описание ошибки или сообщение выбранного сеанса** .  
@@ -70,6 +70,6 @@ ms.lasthandoff: 06/22/2017
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Обзор агентов репликации](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

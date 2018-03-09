@@ -2,11 +2,13 @@
 title: "Сведения о доставке журналов (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,20 +27,19 @@ helpviewer_keywords:
 - backup jobs [SQL Server]
 - primary servers [SQL Server]
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 5ab35997e2241e7ef2c788308c56c6b532852517
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dd5412ff60f00e648452796423fcf715d8e56168
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="about-log-shipping-sql-server"></a>Сведения о доставке журналов (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет автоматически отправлять резервные копии журналов транзакций из *базы данных-источника* экземпляра *сервера-источника* в одну или более *баз данных-получателей* других экземпляров *сервера-получателя* . Резервные копии журналов транзакций применяются к каждой из баз данных-получателей индивидуально. Необязательный третий экземпляр сервера, известный как *сервер мониторинга*, ведет журнал и отслеживает состояние операций резервного копирования и восстановления и при необходимости выдает предупреждение, если в этих запланированных операциях происходит сбой.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет автоматически отправлять резервные копии журналов транзакций из *базы данных-источника* экземпляра *сервера-источника* в одну или более *баз данных-получателей* других экземпляров *сервера-получателя*. Резервные копии журналов транзакций применяются к каждой из баз данных-получателей индивидуально. Необязательный третий экземпляр сервера, известный как *сервер мониторинга*, ведет журнал и отслеживает состояние операций резервного копирования и восстановления и при необходимости выдает предупреждение, если в этих запланированных операциях происходит сбой.  
   
  **В этом разделе.**  
   
@@ -168,4 +169,3 @@ ms.lasthandoff: 08/02/2017
  [Обзор групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
-

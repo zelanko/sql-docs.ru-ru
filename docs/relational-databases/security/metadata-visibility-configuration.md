@@ -2,11 +2,13 @@
 title: "Настройка видимости метаданных | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +21,19 @@ helpviewer_keywords:
 - database metadata [SQL Server]
 - metadata [SQL Server], permissions
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
-caps.latest.revision: 51
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9381b69a605ed7928851a18e64d7054d43fcb65c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "51"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 10d93d94543bca50d57aee2647e28fadd16064a4
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="metadata-visibility-configuration"></a>Настройка видимости метаданных
-  Видимость метаданных ограничивается защищаемыми объектами, которыми пользователь владеет или на которые пользователю предоставлено разрешение. Например, следующий запрос возвращает строку, если пользователю было предоставлено разрешение SELECT или INSERT на таблицу `myTable`.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Видимость метаданных ограничивается защищаемыми объектами, которыми пользователь владеет или на которые пользователю предоставлено разрешение. Например, следующий запрос возвращает строку, если пользователю было предоставлено разрешение SELECT или INSERT на таблицу `myTable`.  
   
 ```  
 SELECT name, object_id  
@@ -200,4 +202,3 @@ GO
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   
-

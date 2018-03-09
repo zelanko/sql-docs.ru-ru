@@ -2,29 +2,32 @@
 title: "Определение связи «многие ко многим» | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
-caps.latest.revision: 16
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ec51909c0d333ead023cf695b5d63cbdb734f276
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3872befe63b01c0de21efa14c5b4fdbaa9fbed89
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Занятие 5-3-определение связи «многие ко многим»
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 При определении измерения каждый из фактов, как правило, соединяется с одним и только одним элементом измерения, в то время как отдельные элементы измерения могут быть связаны с несколькими разными фактами. Например, клиент может иметь много заказов, но каждый заказ принадлежит только одному клиенту. В терминологии реляционных баз данных такая связь имеет название *связь "один ко многим"*. Однако в некоторых случаях один факт может быть соединен с несколькими элементами измерения. В терминологии реляционных баз данных такая связь имеет название *связь "многие ко многим"*. Например, клиент может иметь несколько причин для совершения покупки, а причина покупки может быть связана с несколькими покупками. Соединяемая таблица используется для определения причин покупок, которые связаны с каждой покупкой. Измерение «Причина покупки», основанное на таких связях, будет иметь несколько элементов, связанных с одной транзакцией продажи. Связи «многие ко многим» выводят модель измерений за пределы классической схемы «звезда» и поддерживают комплексную аналитику, когда измерения не связаны напрямую с таблицей фактов.  
   
 В службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]связь «многие ко многим» между измерением и группой мер определяется указанием промежуточной таблицы фактов, которая соединяется с таблицей измерения. В свою очередь, промежуточная таблица фактов соединена с промежуточной таблицей измерения, с которой связана эта таблица фактов. Связи «многие ко многим» между промежуточной таблицей фактов, таблицами измерений в этой связи и промежуточным измерением создают связи «многие ко многим» между элементами первичных измерений и мерами группы мер, которая указана данной связью. Чтобы определить связь «многие ко многим» между измерением и группой мер через промежуточную группу мер, промежуточная группа мер должна иметь одно или несколько общих измерений с исходной группой мер.  
@@ -86,7 +89,7 @@ ms.lasthandoff: 09/01/2017
   
 5.  Выберите меру **Internet Sales Reason Count** и просмотрите свойства этой меры в окне свойств.  
   
-    Обратите внимание, что свойство **AggregateFunction** для этой меры определено как **Число** , а не **Сумма**. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Число **Число** , поскольку базовый тип данных — строковый. Другие два столбца в базовой таблице фактов не были выделены как меры, поскольку в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] они определены как числовые ключи, а не фактические меры. Дополнительные сведения см. в разделе [Определение полуаддитивного режима](../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
+    Обратите внимание, что свойство **AggregateFunction** для этой меры определено как **Число** , а не **Сумма**. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]Выберите **число** так как базовый тип данных является строковым типом данных. Другие два столбца в базовой таблице фактов не были выделены как меры, поскольку в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] они определены как числовые ключи, а не фактические меры. Дополнительные сведения см. в разделе [Определение полуаддитивного режима](../analysis-services/multidimensional-models/define-semiadditive-behavior.md).  
   
 6.  В окне «Свойства» измените значение свойства **Visible** меры **Internet Sales Reason Count** на **False**.  
   
@@ -179,11 +182,10 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Определение степени гранулярности измерения в группе мер](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
-## <a name="see-also"></a>См. также:  
-[Работа с диаграммами в конструкторе представлений источника данных (службы Analysis Services)](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
-[Связи измерений](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
+## <a name="see-also"></a>См. также  
+[Работа с диаграммами в конструкторе представлений источников данных &#40; Службы Analysis Services &#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[Связей измерений](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [Определение связей "многие ко многим" и свойств связей "многие ко многим"](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   
   
   
-

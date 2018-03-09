@@ -3,8 +3,11 @@ title: "(Transact-SQL) и | Документы Microsoft"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - AND
 - combining expressions
 ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
-caps.latest.revision: 26
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f21efc0360c992c3a88706a13f84f35d7026b101
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 340905e1f4ed4917fa4485278e43c6dc754f6164
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Объединяет два логических выражения и возвращает **TRUE** Если оба выражения имеют **TRUE**. Если в инструкции используется более одного логического оператора **AND** операторы вычисляются первыми. Можно изменить порядок вычисления с помощью скобок.  
   
@@ -56,14 +58,14 @@ boolean_expression AND boolean_expression
 ## <a name="result-value"></a>Значение результата  
  Возвращает значение TRUE, если оба выражения — TRUE.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В следующей диаграмме показаны результаты сравнения значений TRUE и FALSE с использованием оператора AND.  
   
 ||TRUE|FALSE|UNKNOWN|  
 |------|----------|-----------|-------------|  
 |**ЗНАЧЕНИЕ TRUE**|TRUE|FALSE|UNKNOWN|  
 |**ЗНАЧЕНИЕ FALSE**|FALSE|FALSE|FALSE|  
-|**НЕИЗВЕСТНЫЙ**|UNKNOWN|FALSE|UNKNOWN|  
+|**UNKNOWN**|UNKNOWN|FALSE|UNKNOWN|  
   
 ## <a name="examples"></a>Примеры  
   
@@ -98,11 +100,10 @@ ELSE PRINT 'Second Example is FALSE' ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
  [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-

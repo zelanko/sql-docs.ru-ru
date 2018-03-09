@@ -3,7 +3,7 @@ title: "StreamReadEnum | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - StreamReadEnum enumeration [ADO]
 ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6bd88a62a46bae523904b308d011ebe956e02497
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a781fb44d547237dab71c81a99a14ef0f2694b1a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
 Указывает, должны ли считываться весь поток или следующую строку из [поток](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adReadAll**|-1|По умолчанию. Считывает все байты из потока, начиная с текущей позиции, начиная с [электрической ПЕРЕГРУЗКИ](../../../ado/reference/ado-api/eos-property.md) маркера. Это допустимо только **StreamReadEnum** значение с двоичные потоки ([тип](../../../ado/reference/ado-api/type-property-ado-stream.md) — **adTypeBinary**).|  
 |**adReadLine**|-2|Считывает следующую строку из потока (обозначенный [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) свойство).|  
@@ -45,5 +44,4 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[Read, метод](../../../ado/reference/ado-api/read-method.md)|[Метод ReadText](../../../ado/reference/ado-api/readtext-method.md)|
-
+|[Метод Read](../../../ado/reference/ado-api/read-method.md)|[Метод ReadText](../../../ado/reference/ado-api/readtext-method.md)|

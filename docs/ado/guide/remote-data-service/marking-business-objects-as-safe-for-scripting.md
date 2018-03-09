@@ -3,7 +3,7 @@ title: "Маркировка бизнес-объектов как безопас
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - business objects in RDS [ADO]
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2e9e400052e9c3cb794089d1731d42abd6feca37
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 05a2131b594d20c4215a2c52422d930c0ac2edfb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>Маркировка бизнес-объектов как безопасный для сценариев
 > [!IMPORTANT]
@@ -52,6 +51,5 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
  На последнем шаге мастера установки приложений создает .htm и CAB-файл. Затем можно скопировать эти файлы на целевой компьютер и дважды щелкните htm-файл для загрузки страницы и правильно зарегистрировать сервер.  
   
  Так как бизнес-объекта будут установлены в каталоге Windows\System32\Occache по умолчанию, переместите его в папку Windows\System32 и измените **HKEY_CLASSES_ROOT\CLSID\\**  \< *MyActiveXGUID*>\\**InprocServer32** раздел реестра для сопоставления правильный путь.
-
 
 

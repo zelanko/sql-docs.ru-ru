@@ -1,32 +1,34 @@
 ---
-title: "Создать, удалить или изменить папку (веб-портал) | Документы Microsoft"
+title: "Создание, удаление и изменение папки (веб-портал) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
-caps.latest.revision: 6
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "6"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: Inactive
+ms.openlocfilehash: a569bbb511fda6089ba8d3e14bad5858ab1bbf4b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6a9eef590a80442110d49359c789ff5317246791
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-delete-or-modify-a-folder-web-portal"></a>Создание, удаление и изменение папки (веб-портала)
   Для упорядочения элементов и управления элементами, публикуемыми на сервере отчетов, можно создать папки. Создание папок поможет пользователям находить интересующие их отчеты. Для диспетчеров содержимого папки обеспечивают инфраструктуру для применения разрешений. Можно создать назначения ролей для определенных папок, чтобы ограничить доступ к отчетам, которые находятся на стадии разработки или не подлежат широкому распространению.  
   
 #### <a name="to-create-a-folder"></a>Создание папки  
   
-1.  Запуск [диспетчера отчетов &#40; Собственный режим служб SSRS &#41; ](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  На веб-портале выберите в раскрывающемся меню **Создать** пункт **Папка** . Либо, чтобы создать папку внутри существующей папки, перейдите к этой папке и выберите в раскрывающемся меню **Создать** пункт **Папка** .  
   
@@ -54,8 +56,7 @@ ms.lasthandoff: 08/09/2017
   
 6.  Для сохранения изменений нажмите кнопку **Применить** .  
   
-## <a name="see-also"></a>См. также  
- [Поиск, просмотр и управление отчетами &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>См. также:  
+ [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
-

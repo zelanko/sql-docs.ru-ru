@@ -2,32 +2,31 @@
 title: "Элемент KeepExisting (DTA) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- KeepExisting element
+dev_langs: XML
+helpviewer_keywords: KeepExisting element
 ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
-caps.latest.revision: 13
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "13"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1a929f9f6a1718ce4ffeb13623de3022206b198b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b67140ed0c525636e3229852521e21d0e0078c5a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="keepexisting-element-dta"></a>Элемент KeepExisting (DTA)
-  Задает структуры физического проектирования (индексы, индексированные представления или секции), по которым помощник по настройке ядра СУБД должен формировать свои рекомендации.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Задает структуры физического проектирования (индексы, индексированные представления или секционирование), по которым помощник по настройке ядра СУБД должен формировать свои рекомендации.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,4 +61,3 @@ ms.lasthandoff: 08/02/2017
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

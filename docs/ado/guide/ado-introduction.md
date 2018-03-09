@@ -8,23 +8,22 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords:
 - ADO, programming
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
-caps.latest.revision: 14
+caps.latest.revision: 
 author: MightyPen
 ms.author: MightyPen
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f20d7d3a90d524cbb452fc081a9a6cdcaa1ebe0d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 17fb13aafe00ce39d18ea52c3a2240f4bebf14d2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-overview-and-benefits"></a>Общие сведения о ADO и преимущества
 Объекты данных ActiveX (ADO) — это высокого уровня, простой в использовании интерфейс для OLE DB. OLE DB является более низкого уровня, высокопроизводительный интерфейс для различных хранилищ данных. ADO и OLE DB можно работать с реляционных (табличных) и нереляционных (иерархическое или потока) данных.
@@ -33,15 +32,14 @@ ms.lasthandoff: 09/09/2017
 
  Этот раздел содержит следующие подразделы.
 
--   [Журнал ADO](../../ado/guide/ado-history.md)
+-   [Журнал объектов ADO](../../ado/guide/ado-history.md)
 
--   [Предварительные требования для использования в документации по ADO](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)
+-   [Обязательные условия для использования документации по объектам ADO](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)
 
--   [Ссылающееся на библиотеки ADO](../../ado/guide/referencing-the-ado-libraries.md)
+-   [Ссылки на библиотеки ADO](../../ado/guide/referencing-the-ado-libraries.md)
 
--   [Таблица задач ADO](../../ado/guide/ado-task-table.md)
+-   [Таблица задач модели ADO](../../ado/guide/ado-task-table.md)
 
--   [Таблица технологии ADO](../../ado/guide/ado-technology-table.md)
+-   [Таблица технологий модели ADO](../../ado/guide/ado-technology-table.md)
 
--   [Проблемы проектирования безопасности ADO](../../ado/guide/ado-security-design-issues.md)
-
+-   [Проблемы проектирования, связанные с безопасностью объектов ADO](../../ado/guide/ado-security-design-issues.md)

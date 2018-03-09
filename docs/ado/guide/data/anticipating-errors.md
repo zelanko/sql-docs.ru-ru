@@ -3,7 +3,7 @@ title: "Планирование ошибки | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - errors [ADO], preventing
 - preventing errors [ADO]
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
-caps.latest.revision: 6
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3343e525bba78fe0a020208ff35cc620fbf49184
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 359dc6c1bd396a0909aea36c5039a4ba5195f326
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="anticipating-errors"></a>Планирование ошибок
 Предотвращение ошибок по крайней мере столь же важно, как обработка ошибок. В этом последнем разделе содержит краткого списка меры предосторожности, приложение может воспользоваться для того, чтобы вероятность возникновения ошибок.  
@@ -41,4 +40,3 @@ ms.lasthandoff: 09/09/2017
  Убедитесь, что **записей** объекты не находятся за пределами **записей** перед попыткой перемещения указателя записи. Если вы попытаетесь **MoveNext** при **EOF** имеет значение True или **MovePrev** при **BOF** имеет значение True, возникнет ошибка. При выполнении любого из **переместить** методов при обоих **EOF** и **BOF** имеют значение True, будет сформирована ошибка.  
   
  Также возникнут ошибки при попытке выполнения операций, таких как **Seek** и **найти** с пустым **записей**.
-

@@ -1,10 +1,13 @@
 ---
-title: "LTRIM (выражение служб SSIS) | Документы Microsoft"
+title: "LTRIM (выражение служб SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - leading blanks
 - LTRIM function
 ms.assetid: d082f42a-d7e7-49f5-a503-ac44ba630832
-caps.latest.revision: 33
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d68b87ab59dab0a5b7bbd199b58a6259eb28daf9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 29461d1213fb251895a6dc423e5fdd1df09b2b12
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ltrim-ssis-expression"></a>LTRIM (выражение служб SSIS)
   Возвращает символьное выражение после удаления начальных пробелов.  
@@ -45,7 +47,7 @@ LTRIM(character expression)
 ## <a name="result-types"></a>Типы результата  
  DT_WSTR  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция LTRIM работает только с типом данных DT_WSTR. Аргумент *character_expression* , являющийся строковым литералом или столбцом данных с типом данных DT_STR, неявно приведен к типу данных DT_WSTR до выполнения функции LTRIM. Прочие типы данных должны быть явно приведены к типу данных DT_WSTR. Дополнительные сведения см. в разделах [Типы данных служб Integration Services](../../integration-services/data-flow/integration-services-data-types.md) и [Приведение (выражение служб SSIS)](../../integration-services/expressions/cast-ssis-expression.md).  
   
  Функция LTRIM возвращает значение NULL, если аргумент принимает значение NULL.  
@@ -69,10 +71,9 @@ LTRIM(FirstName)
 LTRIM(@FirstName)  
 ```  
   
-## <a name="see-also"></a>См. также  
- [RTRIM &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/rtrim-ssis-expression.md)   
- [Функция TRIM &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/trim-ssis-expression.md)   
- [Функции &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>См. также:  
+ [RTRIM (выражение служб SSIS)](../../integration-services/expressions/rtrim-ssis-expression.md)   
+ [TRIM (выражение служб SSIS)](../../integration-services/expressions/trim-ssis-expression.md)   
+ [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

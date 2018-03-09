@@ -1,27 +1,27 @@
 ---
-title: "Собственный миграции SharePoint (SSRS) | Документы Microsoft"
+title: "Миграция из собственного режима в режим интеграции с SharePoint (SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
-caps.latest.revision: 8
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: 
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 1a58f3884e041b06f741a40ada0bbff6ce7e3181
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: f7418326fb11d712ad8cea0bd77fb4479e3020f2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>Миграция из собственного режима в режим интеграции с SharePoint (SSRS)
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/17/2017
   
  В следующей таблице перечислены объекты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , которые можно перенести с помощью скриптов.  
   
-|Объект|Можно вносить в скрипт|Комментарии|  
+|Object|Можно вносить в скрипт|Комментарии|  
 |------------|---------------------|--------------|  
 |Отчеты|Да|После миграции потребуется повторно ввести пароли для источников данных.|  
 |Источники данных|Да|После миграции восстановите ссылки отчетов на источники данных.|  
@@ -60,5 +60,4 @@ ms.lasthandoff: 08/17/2017
 |Подписки|Да|См. метод List Subscriptions [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) и метод <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> .|  
 |Моментальные снимки|||
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

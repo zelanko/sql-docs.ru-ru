@@ -3,10 +3,12 @@ title: "Пользовательские приложения | Документ
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - custom applications [ODBC]
 - interoperability [ODBC], levels
 ms.assetid: f28178d9-ecd6-4e8c-9644-9bb624999dcb
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0bac0656a0e0de15d216b73b76285d1ddede6e74
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b899cda97d68801d03e1b5cc9655df0eaeaf8ad
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-applications"></a>Пользовательские приложения
 Пользовательские приложения обычно выполнения определенной задачи для нескольких СУБД. Например приложение может получать данные из одного СУБД и Создание отчета или он может передачи данных между несколькими СУБД. То, что эти приложения имеют общий, что эти СУБД известны, прежде чем приложение создано и вряд ли будут изменены в течение срока службы приложения.  
@@ -32,4 +33,3 @@ ms.lasthandoff: 09/09/2017
  Пользовательское приложение, поэтому необходимо почти или совсем не взаимодействие. Разработчик приложения можно выбрать один драйвер для каждой СУБД и код непосредственно для этих драйверов. Приложение безопасного может содержать код драйвера, чтобы использовать возможности этих драйверов и даже может выполнять вызовы собственного API базы данных для использования функциональных возможностей, не поддерживаемых ODBC.  
   
  Основные возможности взаимодействия большинство пользовательских приложений ставится ли целевой СУБД изменится в будущем. Если Да, этот процесс можно упростить путем написания кода, более безопасная со. Однако такие изменения СУБД редко и обычно приводит к большой объем работы. По этой причине разработчики пользовательских приложений редко решили увеличить взаимодействие за счет ухудшения функциональности. Обычно они предпочитают создавать эти функциональные возможности при смене СУБД.
-

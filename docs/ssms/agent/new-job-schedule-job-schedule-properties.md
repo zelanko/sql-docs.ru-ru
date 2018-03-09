@@ -3,30 +3,31 @@ title: "Создание расписания задания — свойств
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ag.job.scheduleproperties.f1
 - sql13.swb.maint.editrecurringjobsched.f1
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aa34dd512a588b02aa30ee1733e037e8b9580d89
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b4ddf72c55ea9dcc3561ea6903f024dc9a071569
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="new-job-schedule---job-schedule-properties"></a>Создание расписания задания — свойства расписания задания
-Используйте эту страницу для просмотра и изменения свойств расписания.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Используйте эту страницу для просмотра и изменения свойств расписания.  
   
 ## <a name="options"></a>Параметры  
 **Название**  
@@ -38,7 +39,7 @@ ms.lasthandoff: 06/22/2017
 **Тип расписания**  
 Выбор типа расписания.  
   
-**Включено**  
+**Enabled**  
 Установите флажок, чтобы включить расписание, и снимите, чтобы отключить.  
   
 ## <a name="recurring-schedule-types-options"></a>Параметры повторяющихся расписаний  
@@ -104,4 +105,3 @@ ms.lasthandoff: 06/22/2017
 [Создание и присоединение расписаний к заданиям](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  
 [Планирование задания](../../ssms/agent/schedule-a-job.md)  
   
-

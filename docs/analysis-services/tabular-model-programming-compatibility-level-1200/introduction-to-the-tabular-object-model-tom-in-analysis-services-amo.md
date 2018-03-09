@@ -2,32 +2,30 @@
 title: "Общие сведения о табличной объектной модели (TOM) в Analysis Services AMO | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
-caps.latest.revision: 15
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 7efb5e145bbc4b481f73624a4c0d08d9698dc24c
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: ab4bfb890124538878fd4d618dee05d393a4864c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Общие сведения о табличной объектной модели (TOM) в службах Analysis Services объектов AMO
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Модели табличных объектов (TOM) — это расширение клиентской библиотеки управление объектов служб Analysis Services (AMO), созданный для поддержки сценариев программирования для табличных моделей, построенных на уровне совместимости 1200 и выше. С помощью объектов AMO, TOM предоставляет программный способ обработки административных функций, таких как создание моделей, Импорт и обновление данных и назначение роли и разрешения.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Модели табличных объектов (TOM) — это расширение клиентской библиотеки управление объектов служб Analysis Services (AMO), созданный для поддержки сценариев программирования для табличных моделей, построенных на уровне совместимости 1200 и выше. С помощью объектов AMO, TOM предоставляет программный способ обработки административных функций, таких как создание моделей, Импорт и обновление данных и назначение роли и разрешения.  
   
 TOM предоставляет собственный табличных метаданных, таких как **модель**, **таблиц**, **столбцы**, и **связи** объектов.  Высокоуровневое представление дерева модели объектов, представленных ниже показано, как связаны элементы компонента.  
   
@@ -56,7 +54,7 @@ TOM построено на основе инфраструктуры объек
 
 ### <a name="tom-and-xmla"></a>ТОМ и XML для Аналитики
 
-В канале связи TOM использует протокол XML для Аналитики для связи с сервером служб Analysis Services и управления объектами. Используется при управлении-табличных объектов, TOM [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), расширение XML для Аналитики язык сценариев служб Analysis Services. При управлении табличных объектов, TOM используется протокол табличные службы SSAS также расширение XML для Аналитики. В разделе [документации по протоколу MS SSAS-T SQL Server Analysis Services табличной](https://msdn.microsoft.com/library/mt719260.aspx) для получения дополнительной информации.
+В канале связи TOM использует протокол XML для Аналитики для связи с сервером служб Analysis Services и управления объектами. Используется при управлении-табличных объектов, TOM [ASSL](../scripting/analysis-services-scripting-language-assl-for-xmla.md), расширение XML для Аналитики язык сценариев служб Analysis Services. При управлении табличных объектов, TOM с протоколом MS SSAS табличные, также расширение XML для Аналитики. В разделе [документации по протоколу MS SSAS-T SQL Server Analysis Services табличной](https://msdn.microsoft.com/library/mt719260.aspx) для получения дополнительной информации.
 
 ### <a name="tom-and-json"></a>TOM и JSON
 
@@ -68,9 +66,8 @@ TOM построено на основе инфраструктуры объек
 
 Решение использовать одно из них будет поставлено особенности вашим требованиям. Библиотека TOM предоставляет более широкие возможности по сравнению с TMSL. В частности в то время как TMSL только предлагает недетализированного операций на уровне базы данных, таблицы, раздела или роли, TOM позволяет выполнять операции более более точно. Создание или обновление моделей программным способом, необходимо будет полный спектр управляемых API-Интерфейс в библиотеке TOM.
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Программирование табличных моделей уровня совместимости 1200](../../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)   
  [Уровень совместимости табличных моделей в службах Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
 [Службы Analysis Services PowerShell](../../analysis-services/powershell/analysis-services-powershell-reference.md)
   
-

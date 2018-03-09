@@ -2,25 +2,27 @@
 title: "Диалоговое окно \"Фильтр\" (надстройка MDS для Excel) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: microsoft-excel-add-in
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
-caps.latest.revision: 8
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: af0dd255b49e77593bbd14ffa6d06542a995a06c
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: bb522a011c1fc2e94e5b47a5e20cdad8b121c562
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>Диалоговое окно «Фильтр» (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]воспользуйтесь диалоговым окном **Фильтр** , чтобы сузить список данных, управляемых MDS, прежде чем загружать их в Excel.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 09/07/2017
   
 |Имя элемента управления|Description|  
 |------------------|-----------------|  
-|Attribute|Отображает атрибут, по которому необходимо фильтровать. Если в списке нет атрибутов, то это означает, что они не добавлены.<br /><br /> Примечание. Можно выполнять фильтрацию по атрибутам, которые не планируется показывать на листе.|  
+|attribute|Отображает атрибут, по которому необходимо фильтровать. Если в списке нет атрибутов, то это означает, что они не добавлены.<br /><br /> Примечание. Можно выполнять фильтрацию по атрибутам, которые не планируется показывать на листе.|  
 |Оператор|Содержит операторы, соответствующие типу выбранного атрибута. Дополнительные сведения см. в разделе [Операторы фильтров (службы Master Data Services)](../../master-data-services/filter-operators-master-data-services.md).|  
 |Критерии|Условие, по которому нужно выполнить фильтрацию.|  
 |Обновить сводку|При открытии больших баз данных щелкните, чтобы выбрать обновление в разделе **Сводка** сведений об объемах данных, которые будут загружены.|  
@@ -58,7 +60,7 @@ ms.lasthandoff: 09/07/2017
 |Имя элемента управления|Description|  
 |------------------|-----------------|  
 |Модель|Имя модели.|  
-|Версия|Имя версии.|  
+|Version|Имя версии.|  
 |Сущность|Имя сущности.|  
 |Строки|Число строк, которые будут загружены в Excel, исходя из фильтров, примененных в разделе **Строки** .|  
 |Столбцы|Число столбцов, которые будут загружены в Excel, исходя из атрибутов, примененных в разделе **Столбцы** .|  
@@ -68,4 +70,3 @@ ms.lasthandoff: 09/07/2017
  [Обзор экспорта данных в Excel (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
   
-

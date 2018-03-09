@@ -1,28 +1,33 @@
 ---
 title: "Разработка приложений для SQL Server для Linux | Документы Microsoft"
 description: 
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
-ms.date: 10/02/2017
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.date: 11/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.custom: sql-linux
+ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.custom: H1Hack27Feb2017
 ms.workload: On Demand
+ms.openlocfilehash: fb07628c8818b16709abab07efc1f52248426305
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: c83b105706916c193cb1a0bbf966ff64fb7bac05
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Как приступить к разработке приложений для SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Можно создавать приложения, подключения и использования 2017 г. SQL Server в Linux из различных языков программирования, например C#, Java, Node.js, PHP, Python, Ruby и C++. Можно также использовать популярных веб-платформ и платформ объекта реляционного сопоставления (ORM).
+
+> [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
 > [!TIP]
 > Эти же параметры разработки также обеспечивают целевого SQL Server на других платформах. Приложение можно настроить SQL Server, работающий локально или в облаке, в Linux, Windows или Docker на macOS. Или можно выбрать целевую базу данных SQL Azure и хранилище данных SQL Azure.
@@ -67,16 +72,15 @@ ms.lasthandoff: 10/02/2017
 
 Можно также использовать новые средства командной строки, которые являются собственными для Linux. Эти средства включают следующие:
 
-- [программа sqlcmd](../tools/sqlcmd-utility.md)
+- [sqlcmd](../tools/sqlcmd-utility.md)
 - [bcp](sql-server-linux-migrate-bcp.md)
-- [MSSQL conf](sql-server-linux-configure-mssql-conf.md)
+- [mssql-conf](sql-server-linux-configure-mssql-conf.md)
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Чтобы приступить к работе, установка SQL Server в Linux с помощью одного из следующих учебников краткое руководство:
+Чтобы приступить к работе, установите SQL Server в Linux с помощью одного из следующих краткие руководства:
 
 - [Установите на Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Установите на SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Установите на Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Запустите на Docker](quickstart-install-connect-ubuntu.md)
-

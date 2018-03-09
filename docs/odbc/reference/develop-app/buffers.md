@@ -3,10 +3,12 @@ title: "Буферы | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - application buffers [ODBC]
 - buffers [ODBC]
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ceb263eb42a4ef58c38f18eba98736a4c9de89e2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5953f3409a3886abbf76963d0207a89be1e83aec
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="buffers"></a>Буферы
 Буфер является любая память приложения, используемый для передачи данных между приложением и драйвер. Например, буферы приложения может быть связан с, или *связаны с* результирующего набора столбцов с **SQLBindCol**. Каждая строка выбирается, данные возвращаются для каждого столбца в буфер. *Входные буферы* используются для передачи данных из приложения для драйвера. *Выходные буферы* используются для возврата данных с помощью драйвера в приложение.  
@@ -57,9 +58,8 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующие подразделы.  
   
--   [Отложенное буферов](../../../odbc/reference/develop-app/deferred-buffers.md)  
+-   [Отложенные буферы](../../../odbc/reference/develop-app/deferred-buffers.md)  
   
 -   [Выделение и освобождение буферов](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)  
   
 -   [Использование буферов данных](../../../odbc/reference/develop-app/using-data-buffers.md)
-

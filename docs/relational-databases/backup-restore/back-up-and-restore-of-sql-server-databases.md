@@ -2,11 +2,13 @@
 title: "Резервное копирование и восстановление баз данных SQL Server | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +24,19 @@ helpviewer_keywords:
 - Database Engine [SQL Server], backups
 - databases [SQL Server], backups
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
-caps.latest.revision: 91
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79c3074c9a6e56434fd7241828f02966c31da521
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "91"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 959fea6c816396c70883a47c1d9f00cbd11be9dc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Резервное копирование и восстановление баз данных SQL Server
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описываются преимущества резервного копирования баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , основные условия резервного копирования и восстановления, а также приводятся стратегии резервного копирования и восстановления для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и рассматриваются вопросы безопасности, связанные с резервным копированием и восстановлением в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
   
@@ -102,7 +104,7 @@ ms.lasthandoff: 06/22/2017
  ##  <a name="backup-and-restore-strategies"></a>Стратегии резервного копирования и восстановления  
  Операции резервирования и восстановления данных следует адаптировать под конкретную среду с учетом доступных ресурсов. Таким образом, для надежной работы операций резервирования и восстановления необходима стратегия резервирования и восстановления. Правильно созданная стратегия резервирования и восстановления увеличивает доступность данных и уменьшает их потери, учитывая требования пользователей.  
   
-#### <a name="important"></a>Внимание! 
+#### <a name="important"></a>Важно! 
 **Базу данных и резервные копии следует размещать на разных устройствах. В противном случае при сбое устройства, содержащего базу данных, резервные копии окажутся недоступными. Кроме того, размещение данных и их резервных копий на отдельных устройствах повышает производительность ввода-вывода как при записи резервных копий, так и в процессе эксплуатации базы данных.**  
   
  Стратегия резервирования и восстановления состоит из части, относящейся к резервированию, и части, относящейся к восстановлению. Часть, относящаяся к резервированию, определяет тип и частоту создания резервных копий, тип и скоростные характеристики оборудования, необходимого для их создания, способ проверки резервных копий, а также местонахождение и тип носителя резервных копий (включая и вопросы безопасности). Часть, относящаяся к восстановлению, определяет ответственного за проведение операций восстановления, а также методы их проведения, позволяющие удовлетворить требования пользователей по доступности данных и минимизации их потерь. Рекомендуется документировать процедуры резервирования и восстановления и хранить копию этой документации в документации по задаче.  
@@ -190,7 +192,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Создание резервной копии журнала транзакций (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
--   [Создание резервных копий файлов и файловых групп (SQL Server)](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  
+-   [Резервное копирование файлов и файловых групп (SQL Server)](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  
   
 -   [Создание разностной резервной копии базы данных (SQL Server)](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   
@@ -252,4 +254,3 @@ ms.lasthandoff: 06/22/2017
  [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   
   
-

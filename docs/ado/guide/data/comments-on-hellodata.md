@@ -3,7 +3,7 @@ title: "Комментарии к HelloData | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - hellodata sample application [ADO]
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2265e361258ee49a9d387f3cb879f138c196ba8e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b84d5aef9958c15682c6aeae2942487f30a6581
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="comments-on-hellodata"></a>Комментарии к HelloData
 Приложения HelloData пошаговое выполнение основных операций типичного приложения ADO: начало, проверки, изменение и обновление данных. При запуске приложения, нажмите первую кнопку, **получение данных**. Будет запущен **GetData** подпрограммы.  
@@ -82,4 +81,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="formunload"></a>Form_Unload  
  **Form_Unload** подпрограммы важно по следующим причинам. Во-первых поскольку это образец приложения, Form_Unload очищает изменения, внесенные в базу данных до завершения приложения. Во-вторых, в коде показано, как команда может быть выполнена напрямую из открытого **подключения** объектов с помощью **Execute** метод. Наконец он приведен пример выполнения не — возвращение строки запроса (запрос на обновление) в источнике данных.
-

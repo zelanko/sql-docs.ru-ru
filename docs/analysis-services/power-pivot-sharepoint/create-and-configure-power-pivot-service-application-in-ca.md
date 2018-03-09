@@ -2,30 +2,30 @@
 title: "Создание и настройка приложения службы PowerPivot в ЦС | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
-caps.latest.revision: 19
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 625844e5cc54882fadd7707de4b7548caa820ea3
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 343e3ed597e892e7b9e332d35acb6719e5b27aee
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Создание и настройка приложения службы PowerPivot в ЦС
-  Приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] — это общий экземпляр системной службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Каждое приложение службы имеет свое удостоверение, параметры настройки, свойства и внутреннее хранилище данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] — это общий экземпляр системной службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Каждое приложение службы имеет свое удостоверение, параметры настройки, свойства и внутреннее хранилище данных.  
   
  Этот раздел состоит из следующих подразделов.  
   
@@ -163,4 +163,3 @@ ms.lasthandoff: 09/01/2017
  [Настройка и администрирование сервера Power Pivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   
-

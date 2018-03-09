@@ -3,7 +3,7 @@ title: "Метод OpenSchema | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - OpenSchema method [ADO]
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
-caps.latest.revision: 21
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: bf2b79bc39ff1f376801b5df6c24a768067a53b9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e5c547eb8a6c1208bedffb988096f45b4c871d09
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="openschema-method"></a>Метод OpenSchema
 Получает сведения о схеме базы данных от поставщика.  
@@ -54,7 +53,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  *SchemaID*  
  Идентификатор GUID схемы поставщика запросов, не определенных в спецификации OLE DB. Этот параметр является обязательным, если *QueryType* равно **adSchemaProviderSpecific**; в противном случае он не используется.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **OpenSchema** метод возвращает описательные сведения об источнике данных, например, таблицы в источнике данных столбцы в таблицах, и поддерживаемые типы данных.  
   
  *QueryType* аргумент имеет значение GUID, которое указывает, возвращаются столбцы (схемы). Спецификация OLE DB содержит полный список схем.  
@@ -75,14 +74,13 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 >  **Пользователи Visual C/C++** при не использует клиентские курсоры, получение «ORDINAL_POSITION» столбец схемы в ADO возвращает разновидностью VT_R8 MDAC 2.7, компоненты MDAC версии 2.8 и компоненты доступа к данным Windows (Windows DAC) 6.0, что типом, используемые в компонентах MDAC 2.6 был VT_I4. Программ, написанных для MDAC 2.6, только найдите вариант вернул типа VT_I4 будет получена ноль для каждого порядковый номер, если выполняются под MDAC 2.7, компоненты MDAC версии 2.8 и Windows DAC 6.0 без изменений. Это изменение было внесено, так как тип данных, который возвращает OLE DB является DBTYPE_UI4 и в тип со знаком VT_I4 не достаточно места для хранения всех возможных значений без возможно усечение происходит и тем самым вызывая потери данных.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода OpenSchema (Visual Basic)](../../../ado/reference/ado-api/openschema-method-example-vb.md)   
  [Пример метода OpenSchema (VC ++)](../../../ado/reference/ado-api/openschema-method-example-vc.md)   
  [Метод Open (соединение ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Метод Open (ADO запись)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Метод Open (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Метод Open (поток ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Поставщики приложение A:](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

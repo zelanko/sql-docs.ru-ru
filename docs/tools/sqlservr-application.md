@@ -2,11 +2,13 @@
 title: "Приложение sqlservr | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: sqlservr
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,20 +24,19 @@ helpviewer_keywords:
 - command prompt [SQL Server], starting instance of SQL Server
 - continuing instance of SQL Server
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "39"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e2c3a63c23d2a7ecdb374269af72861c16638984
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f0abbf1d371f7fb97547b7e52331c150c7c003ae
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlservr-application"></a>Приложение sqlservr
-  Приложение **sqlservr** позволяет запускать, останавливать, приостанавливать и возобновлять работу экземпляра [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] из командной строки.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Sqlservr** приложение запускает, останавливает, приостанавливает и возобновить работу экземпляра [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] из командной строки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -96,11 +97,11 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
   
  Используйте значение параметра **-g** по умолчанию, только если в файле журнала ошибок [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не присутствуют следующие предупреждения:  
   
--   «Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<размер >»  
+-   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<size>" (Ошибка виртуального выделения байтов: FAIL_VIRTUAL_RESERVE \<размер>).  
   
--   «Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<размер >»  
+-   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<size>" (Ошибка виртуального выделения байтов: FAIL_VIRTUAL_COMMIT \<размер>).  
   
- Эти сообщения могут свидетельствовать о попытках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] освободить часть пула памяти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], чтобы найти пространство для таких элементов, как dll-файлы расширенных хранимых процедур или объекты автоматизации. В этом случае рассмотрите возможность увеличения размера памяти, зарезервированной с помощью параметра **-g**``.  
+ Эти сообщения могут свидетельствовать о попытках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] освободить часть пула памяти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], чтобы найти пространство для таких элементов, как dll-файлы расширенных хранимых процедур или объекты автоматизации. В этом случае рассмотрите возможность увеличения размера памяти, зарезервированной с помощью параметра **-g** .  
   
  Использование значения меньше, чем значение по умолчанию, увеличивает объем памяти, доступной для буферного пула и стеков потоков. Это может обеспечить некоторое повышение производительности при рабочих нагрузках, интенсивно использующих память в системах, использующих небольшое количество расширенных хранимых процедур, распределенных запросов или объектов автоматизации.  
   
@@ -110,8 +111,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
 ## <a name="compatibility-support"></a>Поддержка совместимости  
  Параметр **-h**  не поддерживается в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Этот параметр использовался в более ранних версиях 32-битных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для резервирования виртуального адресного пространства для метаданных памяти с «горячей» заменой при включенных расширениях AWE. Дополнительные сведения см. в разделе [Неподдерживаемые функции SQL Server 2016](http://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Параметры запуска службы Database Engine](../database-engine/configure-windows/database-engine-service-startup-options.md)  
   
   
-

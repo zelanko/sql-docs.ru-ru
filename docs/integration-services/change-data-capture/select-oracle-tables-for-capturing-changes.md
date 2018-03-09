@@ -1,10 +1,13 @@
 ---
-title: "Выбор таблиц Oracle для отслеживания изменений | Документы Microsoft"
+title: "Выбор таблиц Oracle для отслеживания изменений | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: change-data-capture
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - selOraTabDia
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: af36432c89c6ac031f3275eebcdf3f1a7b56e481
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 983338ce51799c8a2d36cc87404f4b6f477e590c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>Выбор таблиц Oracle для отслеживания изменений
   В этом диалоговом окне можно выбрать таблицы, включенные в экземпляр CDC. Выбранные таблицы добавляются в список на странице **Выбор таблиц и столбцов** мастера создания экземпляра. Это диалоговое окно предназначено для следующих целей.  
@@ -49,9 +51,8 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Если была выбрана таблица, в которой содержатся данные неподдерживаемого типа, то на экране появится сообщение об ошибке, а таблица не будет включена в экземпляр.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Как создать экземпляр изменения базы данных SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [Выберите столбцы и таблицы Oracle](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
+ [Выбор таблиц и столбцов Oracle](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   
   
-

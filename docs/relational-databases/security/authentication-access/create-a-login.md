@@ -2,11 +2,13 @@
 title: "Создание имени для входа | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,19 +24,19 @@ helpviewer_keywords:
 - Create login [SQL Server]
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 297b1f20843f16a1885676e4428331f75ced8cd6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "29"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
+ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="create-a-login"></a>Создание имени входа
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   В этой статье описано, как создать имя входа в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] или [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Имя входа представляет собой идентификатор пользователя или процесса, выполняющего соединение с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
  Как субъекты безопасности, разрешения могут быть предоставлены именам входов. Областью имени входа является весь компонент [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Для подключения к определенной базе данных на экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]имя входа должно быть сопоставлено с пользователем базы данных. Разрешения внутри базы данных предоставляются и запрещаются для пользователя базы данных, а не имени входа. Разрешения, областью которых является весь экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (например разрешение **CREATE ENDPOINT** ), могут предоставляться именам входов.  
   
-> **ПРИМЕЧАНИЕ.** При подключении к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по имени входа идентификатор проверяется в базе данных master. Используйте пользователей автономной базы данных для проверки подлинности подключений [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]r и [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] на уровне базы данных. При использовании пользователей автономной базы данных имя для входа не требуется. Автономная база данных — это база данных, изолированная от других баз данных и от экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (и базы данных master), на котором размещена эта база данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает пользователей автономной базы данных для проверки подлинности Windows и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . При использовании [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]объединяйте пользователей автономной базы данных с правилами брандмауэра уровня базы данных. Дополнительные сведения см. в разделе [Пользователи автономной базы данных — создание переносимой базы данных](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+> **ПРИМЕЧАНИЕ.** При подключении к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по имени входа идентификатор проверяется в базе данных master. Используйте пользователей автономной базы данных для проверки подлинности подключений [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] на уровне базы данных. При использовании пользователей автономной базы данных имя для входа не требуется. Автономная база данных — это база данных, изолированная от других баз данных и от экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (и базы данных master), на котором размещена эта база данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает пользователей автономной базы данных для проверки подлинности Windows и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . При использовании [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]объединяйте пользователей автономной базы данных с правилами брандмауэра уровня базы данных. Дополнительные сведения см. в разделе [Пользователи автономной базы данных — создание переносимой базы данных](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ##  <a name="Security"></a> безопасность  
 
@@ -279,4 +281,3 @@ ms.lasthandoff: 06/22/2017
  [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
-

@@ -1,29 +1,30 @@
 ---
 title: "Проект Settings(Synchronization) (DB2ToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9a701544d5f7d111d234b4a87def52beb3e1edbd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3b2dee631b1f0d21b69949e5239f279cc22fdabe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>Проект Settings(Synchronization) (DB2ToSQL)
 На странице синхронизации **параметры проекта** диалоговое окно содержит параметры, которые настройки SSMA загружает и обновление базы данных объектов, таких как таблицы и хранимые процедуры в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -106,4 +107,3 @@ ms.lasthandoff: 08/02/2017
   
 -   При выборе **пропустить**, SSMA не выполняет каких-либо действий обновления.  
   
-

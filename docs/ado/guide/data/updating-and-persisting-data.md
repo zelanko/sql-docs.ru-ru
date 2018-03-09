@@ -3,7 +3,7 @@ title: "Обновление и сохранение данных | Докуме
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - data updates [ADO]
 - ADO, updating data
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1fd0fc64e1727b5e4ba9d2830218f3ddb6e004be
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c08f7bfbb813bb3e2041f350a2e4397d9aff6ffd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="updating-and-persisting-data"></a>Обновление и сохранение данных
 Предшествующих главах обсуждались, как использовать ADO для получения данных в источнике данных, как перемещение данных и даже о редактировать данные. Конечно Если целью приложения является предоставление пользователям вносить изменения в данные, будет необходимо понять, как сохранить эти изменения. Можно либо сохранить **записей** изменения в файл с помощью **Сохранить** метода, или можно отправить изменения обратно в источник данных для хранилища с помощью **обновление** или  **UpdateBatch** методы.  
@@ -45,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 -   [Обновление данных](../../../ado/guide/data/updating-data.md)  
   
 -   [Сохранение данных](../../../ado/guide/data/persisting-data.md)
-

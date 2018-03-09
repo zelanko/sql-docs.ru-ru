@@ -1,26 +1,27 @@
 ---
 title: "Глобальные параметры (редактор) (OracleToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a63e4112-4b5d-4b7a-a5c2-06a24e86ab1b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 3fad4c5437b998b6a8d13957fad529fb82c7a91c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 300f735eedfd1948d8eb67d84b7d4a41ecac4c56
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-editor-oracletosql"></a>Глобальные параметры (редактор) (OracleToSQL)
 Используйте страницу редактор **глобальные параметры** диалоговое окно «», чтобы указать параметры для окон редактора кода.  
@@ -33,4 +34,3 @@ ms.lasthandoff: 08/02/2017
   
 Если выбран в окне редактора кода для этого параметра, может потребоваться повторно выбрать текущего объекта, чтобы обновить список.  
   
-

@@ -1,29 +1,30 @@
 ---
 title: "Метод Synchronize21 (RDS) | Документы Microsoft"
-ms.prod: sql-non-specified
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
 helpviewer_keywords:
 - Synchronize21 method [ADO]
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
-caps.latest.revision: 17
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c973d97465963ba865bb768569bf70f70366a1b9
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4a9c335379853272340a731d194d1e2360513a1b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="synchronize21-method-rds"></a>Метод Synchronize21 (RDS)
 Синхронизировать заданного набора записей с базой данных, указанной в строке подключения для использования с ADO 2.1.  
@@ -62,7 +63,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  *pStatusArray*  
  Значение variant, применяемое для возврата безопасный массив состояния строк для строк, затронутых при синхронизации. Не задается, если задан ни один из следующих параметров синхронизации: *RefreshWithUpdate*, *обновление* и *RefreshConflicts*.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  *HandlerString* параметр может иметь значение null. Что происходит в этом случае зависит от того, как настроен сервер служб удаленных рабочих СТОЛОВ. Обработчик строку «MSDFMAP.handler» указывает, что обработчик предоставленный корпорацией Майкрософт (Msdfmap.dll) следует использовать. Обработчик строку «MASDFMAP.handler,sample.ini» указывает, должны использоваться обработчик Msdfmap.dll и, аргумент «sample.ini» должен передаваться обработчику. Затем Msdfmap.dll интерпретирует аргумент как направление использования sample.ini для проверки строк соединения и запроса.  
   
 > [!NOTE]
@@ -70,6 +71,5 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

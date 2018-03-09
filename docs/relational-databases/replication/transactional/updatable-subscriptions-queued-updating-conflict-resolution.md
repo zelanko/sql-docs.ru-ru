@@ -2,11 +2,13 @@
 title: "Обнаружение и разрешение конфликтов обновлений посредством очередей | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +18,19 @@ helpviewer_keywords:
 - queued updating subscriptions [SQL Server replication]
 - articles [SQL Server replication], conflict resolution
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "39"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 0720762973d0144393761b11b3997c4626de2088
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 666ad0200e8429c470772fc68110d14a7809d12a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Обновляемые подписки. Разрешение конфликтов для обновления посредством очередей
-  Поскольку подписки, обновляемые посредством очередей, допускают изменения одних и тех же данных в различных местоположениях, при синхронизации данных у издателя могут возникать конфликты. Системой репликации обнаруживаются любые конфликты, возникающие при синхронизации изменений с издателем, которые затем разрешаются с помощью политики разрешения конфликтов, выбранной при создании публикации. Могут возникнуть следующие конфликты.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Так как подписки, обновляемые посредством очередей, допускают изменения одних и тех же данных в различных расположениях, при синхронизации данных у издателя могут возникать конфликты. Системой репликации обнаруживаются любые конфликты, возникающие при синхронизации изменений с издателем, которые затем разрешаются с помощью политики разрешения конфликтов, выбранной при создании публикации. Могут возникнуть следующие конфликты.  
   
 -   Конфликты обновления и вставки. Этот конфликт происходит, когда одни и те же данные изменяются в разных местах. Одно изменение вступает в силу, а другое нет. При этом говорят о выигрыше одного изменения относительно другого.  
   
@@ -86,4 +87,3 @@ ms.lasthandoff: 07/31/2017
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   
-

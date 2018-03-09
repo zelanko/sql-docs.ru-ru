@@ -2,9 +2,12 @@
 title: "Замена в файлах | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,19 @@ f1_keywords:
 helpviewer_keywords:
 - Replace in Files dialog box
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
-caps.latest.revision: 21
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b2626e43307f63dc878531d36c5129575f1ff69e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8ff5ad7512f416d936f14c2aa080e114e8bbcd4d
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="replace-in-files"></a>Замена в файлах
-  Вкладка **Замена в файлах** окна «Найти и заменить» позволяет осуществлять поиск в коде заданного набора файлов заданной строки или выражения и заменять все или некоторые из найденных совпадений. Обнаруженные совпадения и предпринятые действия перечисляются в окне «Результаты поиска», выбранном в диалоговом окне **Параметры результата**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Вкладка **Заменить в файлах** окна "Найти и заменить" позволяет искать строку или выражение в коде, содержащемся в указанном наборе файлов, и заменять все или некоторые из найденных совпадений. Обнаруженные совпадения и предпринятые действия перечисляются в окне «Результаты поиска», выбранном в диалоговом окне **Параметры результата**.  
   
  Кнопки панели инструментов и сочетания клавиш также могут использоваться для открытия диалогового окна **Найти и заменить** .  
   
@@ -164,4 +166,3 @@ ms.lasthandoff: 06/22/2017
  [Сочетания клавиш среды SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   
-

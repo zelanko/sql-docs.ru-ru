@@ -3,10 +3,12 @@ title: "Типы данных параметров | Документы Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: fd7e99d8-d26a-408c-9733-6ffccde99f75
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1deb0723864a0ed27f639a5060cc17afe886b9e3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5dcd41f599a6e57a55d05a8a869363ec70c5f756
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameter-data-types"></a>Типы данных параметров
 Несмотря на то, что каждый параметр указан с **SQLBindParameter** имеет определенный тип данных SQL с параметрами инструкции SQL с помощью имеют внутренний тип данных. Таким образом маркеры параметров может быть включено в инструкцию SQL, только в том случае, если их типы данных может быть выведен из другой операнд в инструкции. Например в арифметического выражения, такие как? + Столбец1, тип данных параметра может быть выведено из именованного столбца, представленный COLUMN1 тип данных. Приложение нельзя использовать маркер параметра, если не удается определить тип данных.  
@@ -41,4 +42,3 @@ ms.lasthandoff: 09/09/2017
 |Значение, используемое в **IN**|То же, что выражение или первое значение, если маркер параметра в выражении|  
 |Значение шаблона, используемого с **как**|VARCHAR|  
 |Новое значение, при использовании **обновления**|То же, что обновления столбцов|
-

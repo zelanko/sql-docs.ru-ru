@@ -3,30 +3,31 @@ title: "Добавление таблиц в диаграммы (визуаль�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - inserting tables
 - adding tables
 ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ae6c38826ce111508e88de0948ffe8e1ecb35c24
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 07c5008fda7a404723d96d2a116f14141eeb7d0e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>Добавление таблиц в диаграммы (визуальные инструменты для баз данных)
-Можно добавить таблицу в диаграмму базы данных, чтобы изменить структуру этой таблицы или связать ее с другими таблицами. В диаграмму можно добавлять существующие таблицы или вставлять новые, еще не определенные в базе данных.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Можно добавить таблицу в диаграмму базы данных, чтобы изменить структуру этой таблицы или связать ее с другими таблицами. В диаграмму можно добавлять существующие таблицы или вставлять новые, еще не определенные в базе данных.  
   
 ### <a name="to-insert-a-new-table-into-a-diagram"></a>Вставка новой таблицы в диаграмму  
   
@@ -79,4 +80,3 @@ ms.lasthandoff: 06/22/2017
 [Работа с диаграммами баз данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Работа с таблицами в диаграммах базы данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   
-

@@ -1,13 +1,14 @@
 ---
-title: "Создание, изменение и удаление расписаний | Документы Microsoft"
+title: "Создание, изменение и удаление расписаний | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/01/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +24,18 @@ helpviewer_keywords:
 - schedules [Reporting Services], modifying
 - shared schedules [Reporting Services], deleting
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
-caps.latest.revision: 50
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "50"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 66a306d07b8556fe43659d4b078e2d31f3d51900
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6d89557d71739545d4f119363273951a20953429
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="create-modify-and-delete-schedules"></a>Создание, изменение и удаление расписаний
+# <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   В этом подразделе представлены сведения о создании, изменении и удалении общих расписаний [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .  Для управления общими расписаниями для собственного режима используйте страницу "Расписания" на веб-портале или папку "Общие расписания" в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Для режима интеграции с SharePoint используйте страницы управления для приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Определите, используется ли расписание, одним из описанных ниже способов.  
@@ -144,11 +144,10 @@ ms.lasthandoff: 08/09/2017
 4.  Выберите расписание и нажмите кнопку **Удалить**.  
  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
  [Приостановка и возобновление общих расписаний](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
- [Кэшировать отчет &#40; Диспетчер отчетов &#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
- [Добавить моментальный снимок для отчета, истории &#40; Диспетчер отчетов &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
+ [Кэширование отчета (диспетчер отчетов)](../../reporting-services/report-server/cache-a-report-report-manager.md)   
+ [Добавление моментального снимка к журналу отчета (диспетчер отчетов)](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
   
   
-

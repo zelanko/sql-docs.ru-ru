@@ -2,35 +2,35 @@
 title: "Приостановка базы данных доступности (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.availabilitygroup.suspenddatamove.f1
+f1_keywords: sql13.swb.availabilitygroup.suspenddatamove.f1
 helpviewer_keywords:
 - secondary databases [SQL Server], in availability group
 - primary databases [SQL Server], in availability group
 - Availability Groups [SQL Server], suspending a database
 - Availability Groups [SQL Server], databases
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 1ca99d049a5df8788c220a2a582539426c6488f0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 23d68367d77f5346dfb2873203b6c96c912fd5c5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Приостановка базы данных доступности (SQL Server)
-  В [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] можно приостановить базу данных доступности с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Обратите внимание, что команда приостановки должна выполняться на экземпляре сервера, содержащем базу данных, которая приостанавливается или возобновляется.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] можно приостановить базу данных доступности с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Обратите внимание, что команда приостановки должна выполняться на экземпляре сервера, содержащем базу данных, которая приостанавливается или возобновляется.  
   
  Результат выполнения команды приостановки зависит от того, над какой базой данных выполняется команда: над базой данных-получателем или источником.  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 >  Приостановка вторичной базы данных AlwaysOn непосредственно не влияет на доступность базы данных-источника. Но приостановка базы данных-получателя может повлиять на функции избыточности и отработки отказа базы данных-источника. В этом состоит отличие от зеркального отображения базы данных, где состояние зеркального отображения приостанавливается как в зеркальной базе данных, так и в основной базе данных. Приостановка базы данных-источника AlwaysOn приостанавливает перемещение данных для всех соответствующих баз данных-получателей, а функции избыточности и отработки отказа для этой базы данных не работают до тех пор, пока работа базы данных-источника не будет возобновлена.  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/02/2017
   
      [Рекомендации](#Recommendations)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Для приостановки базы данных используется:**  
   
@@ -75,9 +75,9 @@ ms.lasthandoff: 08/02/2017
 ###  <a name="Recommendations"></a> Рекомендации  
  При возникновении узких мест краткая приостановка одной или нескольких баз данных-получателей может временно повысить производительность на первичной реплике. Пока база данных-получатель находится в состоянии приостановки, журнал транзакций соответствующей базы данных-источника не может быть усечен. Это приводит к накоплению записей журнала в базе данных-источнике. Поэтому рекомендуется быстро возобновить или удалить приостановленную базу данных-получатель. Дополнительные сведения см. ниже в разделе [Дальнейшие действия. Избежание переполнения журнала транзакций](#FollowUp).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на базу данных.  
   
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
@@ -124,11 +124,11 @@ ms.lasthandoff: 08/02/2017
     ```  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [SQL Server PowerShell, поставщик](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Поставщик SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
  Обычно при обработке в базе данных автоматической контрольной точки журнал транзакций этой базы данных усекается до этой контрольной точки после следующего резервного копирования журнала. Однако, пока база данных-получатель приостановлена, все текущие записи журнала остаются активными в базе данных-источнике. Если журнал транзакций заполняется до конца (достигается максимальный размер, или на экземпляре сервера не хватает пространства), база данных не позволяет обновить данные.  
@@ -154,4 +154,3 @@ ms.lasthandoff: 08/02/2017
  [Возобновление базы данных доступности (SQL Server)](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)  
   
   
-

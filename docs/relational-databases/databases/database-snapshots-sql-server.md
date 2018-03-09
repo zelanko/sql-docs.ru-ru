@@ -2,11 +2,13 @@
 title: "Моментальные снимки базы данных (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +20,19 @@ helpviewer_keywords:
 - read-only database views
 - database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
-caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "54"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1087898fae9896722e795f2c6c68c5df20d0f3aa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f888c404cf4342e23965d421fcb7855b918b7e25
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-snapshots-sql-server"></a>Моментальные снимки базы данных (SQL Server)
-  Моментальный снимок базы данных является статичным, доступным только для чтения представлением базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (*базы данных-источника*). Моментальный снимок базы данных согласуется на уровне транзакций с базой данных-источником в момент создания моментального снимка. Моментальный снимок базы данных всегда находится на том же экземпляре сервера, что и база данных-источник. При обновлении базы данных-источника обновляется и моментальный снимок базы данных. Это означает, что чем дольше существует моментальный снимок базы данных, тем больше вероятность того, что он израсходует все доступное место на диске.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Моментальный снимок базы данных является статичным доступным только для чтения представлением базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (*базы данных-источника*). Моментальный снимок базы данных согласуется на уровне транзакций с базой данных-источником в момент создания моментального снимка. Моментальный снимок базы данных всегда находится на том же экземпляре сервера, что и база данных-источник. При обновлении базы данных-источника обновляется и моментальный снимок базы данных. Это означает, что чем дольше существует моментальный снимок базы данных, тем больше вероятность того, что он израсходует все доступное место на диске.  
   
  Может существовать несколько моментальных снимков одной и той же базы данных-источника. Каждый моментальный снимок базы данных существует до тех пор, пока он не будет явно удален владельцем базы данных.  
   
@@ -166,7 +167,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Если при обновлении страницы в базе данных-источнике и при записи этого обновления в моментальный снимок не хватает места на диске или возникает какая-либо иная ошибка, моментальный снимок становится подозрительным и должен быть удален.  
   
--   Моментальные снимки доступны только для чтения. Так как они доступны только для чтения, они не могут быть обновлены. Таким образом, моментальные снимки базы данных не будут работоспособны после обновления.  
+-   Моментальные снимки доступны только для чтения. Так как они доступны только для чтения, они не могут быть обновлены.  Таким образом, моментальные снимки базы данных не будут работоспособны после обновления.  
   
 -   Создание моментальных снимков баз данных **model**, **master**и **tempdb** запрещено.  
   
@@ -244,5 +245,4 @@ ms.lasthandoff: 06/22/2017
  [Зеркальное отображение и моментальные снимки баз данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   
-
 

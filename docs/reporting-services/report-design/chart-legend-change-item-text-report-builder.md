@@ -1,34 +1,34 @@
 ---
-title: "Изменение текста элемента условных обозначений (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Изменение текста элемента условных обозначений (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8c253794b7b884a3dd7835409e256245ae0dc5a2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9e5b23ce9d8055822fc4d32fb4be5794e7ecf3b1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="chart-legend---change-item-text-report-builder"></a>Обозначения диаграммы — изменение элементов текста (построитель отчетов)
+# <a name="chart-legend---change-item-text-report-builder"></a>Условные обозначения диаграммы — изменение текста элемента (построитель отчетов)
   При помещении поля в область «Значения» диаграммы автоматически создается элемент условных обозначений, содержащий имя этого поля. Каждый элемент условных обозначений связан с отдельным рядом на диаграмме, за исключением фигурных диаграмм, в которых условные обозначения связаны с конкретными точками данных, а не с отдельными рядами.  
   
  В фигурных диаграммах можно изменять текст элемента условных обозначений для отображения дополнительных сведений об отдельных точках данных. Например, если в условных обозначениях необходимо отобразить значения точек данных в виде процентов, можно использовать ключевое слово **#PERCENT**. Для применения числовых форматов и форматов данных добавляются коды формата .NET Framework совместно с ключевыми словами. Дополнительные сведения о ключевых словах см. в разделе [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
- ![Острые диаграммы](../../reporting-services/report-design/media/sharpchart.png "острые диаграммы")  
+ ![Диаграмма Sharp](../../reporting-services/report-design/media/sharpchart.png "Диаграмма Sharp")  
   
  В диаграммах, отличных от фигурных, можно изменять текст элемента условных обозначений. Например, если ряд имеет имя «Ряд1», то может потребоваться изменить этот текст на более описательное имя, например, «Продажи за 2008 год».  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Щелкните элемент **Условные обозначения** и в поле **Пользовательский текст условных обозначений** введите ключевое слово.  
   
- В следующей таблице представлены примеры ключевых слов, относящихся к определенным диаграммам, которые могут использоваться для свойства **Пользовательский текст условных обозначений**. Дополнительные сведения о ключевых словах см. в разделе [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
+ В следующей таблице представлены примеры ключевых слов, относящихся к определенным диаграммам, которые могут использоваться для свойства **Пользовательский текст условных обозначений** . Дополнительные сведения о ключевых словах см. в разделе [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
 |Ключевое слово|Description|Пример отображения текста в условных обозначениях|  
 |-------------|-----------------|---------------------------------------------------|  
@@ -59,10 +59,9 @@ ms.lasthandoff: 08/09/2017
   
 2.  Щелкните элемент **Условные обозначения** и в поле **Пользовательский текст условных обозначений** введите метку условных обозначений. Произойдет обновление ряда с учетом этого текста.  
   
-## <a name="see-also"></a>См. также  
- [Форматирование условных обозначений на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
- [Форматирование цветов для рядов на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Скрытие элементов условных обозначений на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)  
+## <a name="see-also"></a>См. также:  
+ [Форматирование условных обозначений на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Скрытие элементов условных обозначений на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)  
   
   
-

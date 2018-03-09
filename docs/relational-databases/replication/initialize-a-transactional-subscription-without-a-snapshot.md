@@ -2,11 +2,13 @@
 title: "Инициализация транзакционной подписки без моментального снимка | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - replication [SQL Server], initializing
 - initializing subscriptions [SQL Server replication], without snapshots
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
-caps.latest.revision: 37
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "37"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0c8e0d600647d81dde027bb053cfeabb83518ae7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4b4c95296d12ba08582ecf6929c5c13dd02b2bae
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Инициализация подписки на публикацию транзакций без моментального снимка
-  По умолчанию инициализация подписки на публикацию транзакций осуществляется с помощью моментального снимка, созданного агентом моментальных снимков и применяемого агентом распространителя. Например, в некоторых сценариях, использующих большие исходные наборы данных, лучше инициализировать подписку другим методом. Другие методы инициализации подписчика:  
+# <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialize a Transactional Subscription Without a Snapshot
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] По умолчанию инициализация подписки на публикацию транзакций осуществляется с помощью моментального снимка, созданного агентом моментальных снимков и применяемого агентом распространения. Например, в некоторых сценариях, использующих большие исходные наборы данных, лучше инициализировать подписку другим методом. Другие методы инициализации подписчика:  
   
 -   Указание резервной копии. Восстановите резервную копию на подписчике, а затем агент распространителя скопирует все необходимые метаданные репликации и системные процедуры. Инициализация с помощью резервной копии — самый быстрый и удобный способ доставки данных на подписчик, поскольку можно использовать любую резервную копию, если она была сделана после включения для базы данных возможности инициализации с помощью резервной копии.  
   
@@ -82,4 +83,3 @@ ms.lasthandoff: 07/31/2017
  [Инициализация подписки](../../relational-databases/replication/initialize-a-subscription.md)  
   
   
-

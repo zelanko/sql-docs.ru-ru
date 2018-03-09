@@ -3,7 +3,7 @@ title: "Свойства коллекции пользователей, мето
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Users collection [ADOX], members
 ms.assetid: 1b89a12f-96bc-48b3-a88d-4da74780ea40
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 522f96a20ded26c38b785b3aac1fc269ffd9184c
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bb31def2f0cbf4d7d9bf2c2a899937994fb62c2d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="users-collection-properties-methods-and-events"></a>Свойства коллекции пользователей, методы и события
 ## <a name="properties"></a>Свойства  
@@ -43,6 +42,5 @@ ms.lasthandoff: 09/09/2017
 ## <a name="events"></a>События  
  Нет.  
   
-## <a name="see-also"></a>См. также:  
- [Коллекции пользователей (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
-
+## <a name="see-also"></a>См. также  
+ [Коллекция Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

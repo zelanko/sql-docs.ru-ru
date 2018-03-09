@@ -2,33 +2,33 @@
 title: "Определите связанные измерения | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - dimensions [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
-caps.latest.revision: 37
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2d9b665cc3aa5dd70ea481cd6b3328ffb6d7aa82
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d7830d5075da8ab4b741ecb31bbdefb3acdf6cb9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-linked-dimensions"></a>Определите связанные измерения
-  Связанное измерение основано на измерении, созданном и хранящемся в другой базе данных служб Analysis Services с той же версией и уровнем совместимости. С помощью связанного измерения можно создавать, хранить и поддерживать измерения в одной базе данных, при этом данное измерение будет доступно для пользователей нескольких баз данных. Для пользователей связанное измерение ничем не отличается от других измерений.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Связанное измерение основано на измерении, созданном и хранящемся в другой базе данных служб Analysis Services с той же версией и уровнем совместимости. С помощью связанного измерения можно создавать, хранить и поддерживать измерения в одной базе данных, при этом данное измерение будет доступно для пользователей нескольких баз данных. Для пользователей связанное измерение ничем не отличается от других измерений.  
   
  Связанные измерения доступны только для чтения. Если необходимо изменить измерение или создать новые связи, необходимо изменить исходное измерение, а затем удалить и повторно создать связанное измерение и его связи. Обновлять связанное измерение, чтобы получить изменения из исходного объекта, нельзя.  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 > [!NOTE]  
 >  Поскольку обновление недоступно, большинство разработчиков служб Analysis Services предпочитают копировать измерения, а не связать их. Можно копировать измерения между проектами в рамках одного решения. Дополнительные сведения см. в разделе [Обновление связанных измерений в службах SSAS](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  База данных, предоставляющая измерение, и текущая база данных, использующая его в данный момент, должны иметь одну и ту же версию и уровень совместимости. Дополнительные сведения см. в разделе [Уровень совместимости многомерной базы данных (службы Analysis Services)](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
  База данных-источник должна быть развернута и находиться в режиме «в сети». Серверы, публикующие или использующие связанные объекты, должны быть настроены на разрешение операции (см. ниже).  
@@ -88,4 +88,3 @@ ms.lasthandoff: 09/01/2017
  [Связей измерений](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   
-

@@ -3,8 +3,11 @@ title: "STGeometryType (тип данных geography) | Документы Micr
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - STGeometryType method
 ms.assetid: 3e169ead-a98e-44af-8d33-fd59a955cae4
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9ce316d900f057e8c1907b8e731f1080a84fb5dc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: ba32b26da5f46470b2e8b22d65fa59025a689e6b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="stgeometrytype-geography-data-type"></a>STGeometryType (тип данных geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает имя типа Open Geospatial Consortium (OGC), представленный **geography** экземпляра.  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
  Возвращаемый тип CLR: **SqlString**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Имена типов OGC, которые могут быть возвращены `STGeometryType()` , **точки**, **LineString**, **CircularString**, **CompoundCurve**, **Многоугольника**, **CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString**, и **MultiPolygon**.  
   
 ## <a name="examples"></a>Примеры  
@@ -58,8 +60,7 @@ SET @g = geometry::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -1
 SELECT @g.STGeometryType();  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Методы OGC в экземплярах географических объектов](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+## <a name="see-also"></a>См. также  
+ [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   
-

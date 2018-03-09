@@ -2,11 +2,13 @@
 title: "Проверка пакета приложения уровня данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.suite: sql
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +19,19 @@ helpviewer_keywords:
 - data-tier application [SQL Server], view
 - view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
-caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "17"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c8eba0d38c9a36f9f66009283126e34f55f38202
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
-ms.openlocfilehash: b821b7c7aa037467bfe2607267faa6aed0a47859
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="validate-a-dac-package"></a>Проверка пакета приложения уровня данных
-  Перед развертыванием пакета приложения уровня данных рекомендуется просмотреть его содержимое и проверить действия по обновлению перед обновлением существующего пакета приложения уровня данных. Тем более это истина для развертывания пакетов, которые ранее в организации не развертывались.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Перед развертыванием пакета приложения уровня данных рекомендуется просмотреть его содержимое и проверить действия по обновлению перед обновлением существующего приложения уровня данных. Тем более это истина для развертывания пакетов, которые ранее в организации не развертывались.  
   
 1.  **Перед началом работы выполните следующие действия.**  [Предварительные требования](#Prerequisites)  
   
@@ -181,4 +182,3 @@ $fileStream.Close()
  [Обновление приложения уровня данных](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  
   
   
-

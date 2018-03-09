@@ -1,26 +1,28 @@
 ---
-title: "Загрузка данных с помощью назначения «ODBC» | Документы Microsoft"
+title: "Загрузка данных с помощью назначения \"ODBС\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
-caps.latest.revision: 9
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 668cf193758a8dfaba90e598ccbdb7d0d84351fc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9675d9f901f47a08cb18ea725e272f054eeb17ac
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>Загрузка данных с помощью назначения ODBС
   Эта процедура показывает, как загрузить данные с использованием назначения ODBC. Чтобы можно было добавить и настроить назначение ODBC, пакет уже должен включать по крайней мере одну задачу «Поток данных» и источник.  
@@ -55,10 +57,9 @@ ms.lasthandoff: 08/03/2017
   
 12. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также  
- [Редактор назначения ODBC &#40; Страницы диспетчера соединений &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
- [Редактор назначения ODBC &#40; Страница «сопоставления» &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
- [Редактор источника ODBC &#40; Страница «Вывод ошибок» &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
+## <a name="see-also"></a>См. также:  
+ [Редактор назначения ODBC (страница "Диспетчер соединений")](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
+ [Редактор назначения ODBC (страница "Сопоставления")](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
+ [Редактор источника ODBC (страница "Вывод ошибок")](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   
-

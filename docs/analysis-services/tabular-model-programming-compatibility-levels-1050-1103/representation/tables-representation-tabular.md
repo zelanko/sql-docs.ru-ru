@@ -2,31 +2,32 @@
 title: "Таблицы представление (табличное) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: a636fc13-4054-4cea-bce1-192ec4796063
-caps.latest.revision: 10
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3e4b05c59281b64258a4037c2764b667615e75a5
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 62aab281804991cb4951403876d358ac2c2abf12
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="tables-representation-tabular"></a>Представление таблиц (табличное)
-  В табличных моделях таблица является базовым представлением данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+В табличных моделях таблица является базовым представлением данных.  
   
 ## <a name="tables-representation"></a>Представление таблиц  
   
@@ -271,4 +272,3 @@ private Boolean CreateTable(
 >  В приведенном фрагменте кода не выполняется проверка ошибок и очистка процедур в случае ошибки.  
   
   
-

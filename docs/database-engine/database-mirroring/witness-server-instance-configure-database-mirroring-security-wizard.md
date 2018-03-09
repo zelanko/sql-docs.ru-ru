@@ -2,30 +2,30 @@
 title: "Экземпляр следящего сервера (мастер настройки безопасности зеркального отображения баз данных) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.configdbmsecurwiz.witnsrvr.f1
+f1_keywords: sql13.swb.configdbmsecurwiz.witnsrvr.f1
 ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 431241d90b29dad208a1029ed595f889f3596681
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6b73051639099ca66c3991a4b4faaef2d2ef60ec
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="witness-server-instance-configure-database-mirroring-security-wizard"></a>Экземпляр следящего сервера (мастер настройки безопасности зеркального отображения баз данных)
-  Эта страница используется для задания сведений об экземпляре сервера, служащего в качестве средства слежения за сеансом.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Эта страница используется для задания сведений об экземпляре сервера, служащего в качестве средства слежения за сеансом.  
   
 > [!NOTE]  
 >  Экземпляр следящего сервера доступен не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -42,7 +42,7 @@ ms.lasthandoff: 08/02/2017
   
  В противном случае в этом списке отображается имя текущего сервера. Обратите внимание, что экземпляр следящего сервера не может одновременно быть экземпляром основного или зеркального сервера.  
   
- **Connect**  
+ **Подключить**  
  Если экземпляр следящего сервера не задан, нажмите **Соединить**. При этом выводится диалоговое окно **Соединение с сервером** , в котором можно указать экземпляр сервера и установить с ним соединение.  
   
  Если экземпляр был указан, но мастер не смог установить соединение с разрешениями, достаточными для проверки существования конечной точки, нажмите **Соединить**. При этом выводится диалоговое окно **Соединение с сервером** с предварительно заданным и неизменяемым экземпляром сервера. Укажите учетную запись домена, имеющую достаточные разрешения, и установите соединение с экземпляром сервера.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/02/2017
   
 -   Если в экземпляре сервера нет средства прослушивания, в текстовом поле **Порт** в качестве порта отображается порт с номером 5022. Можно ввести любой доступный номер порта, например 7022.  
   
--   Если конечная точка зеркального отображения уже существует, отображается номер порта конечной точки. Если необходимо изменить этот порт, используйте инструкцию ALTER ENDPOINT. Дополнительные сведения см. в разделе [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md).  
+-   Если конечная точка зеркального отображения уже существует, отображается номер порта конечной точки. Если необходимо изменить этот порт, используйте инструкцию ALTER ENDPOINT. Дополнительные сведения см. в статье [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
     > [!NOTE]  
     >  Номер порта обязателен.  
@@ -77,4 +77,3 @@ ms.lasthandoff: 08/02/2017
  [Следящий сервер зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   
-

@@ -3,26 +3,28 @@ title: "Распространенные проблемы с выполнени�
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 10/11/2017
-ms.prod: sql-server-2016
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 261f7c750ab958cf85b3cfa6806704ca18f6d597
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 2be854d38728670d5f68325da0bcf8136aef53f9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Распространенные проблемы с выполнением внешних скриптов в SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье содержится список известных проблем и типичных проблем с выполнением кода R или Python в SQL Server.
 
@@ -191,9 +193,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 4. Перезапуск службы обычно решает проблему, для запуска сценариев обучения машины. Если перезапуск не устранит проблему, запишите путь и аргументов в **путь к двоичным файлам** свойство и выполнить следующие:
 
-    а. Просмотрите файл .config средство запуска и проверьте правильность рабочего каталога.
+    A. Просмотрите файл .config средство запуска и проверьте правильность рабочего каталога.
 
-    б. Убедитесь, что группу Windows, которая используется для запуска можно подключиться к экземпляру SQL Server, как описано в [предыдущего раздела](#bkmk_LaunchpadTS).
+    Б. Убедитесь, что группу Windows, которая используется для запуска можно подключиться к экземпляру SQL Server, как описано в [предыдущего раздела](#bkmk_LaunchpadTS).
 
     в. Если изменить свойства службы, перезапустите службу запуска.
 
@@ -319,7 +321,7 @@ EXEC sp_execute_external_script @language = N'R',
 
 *[1]» C:\\программные файлы\\Microsoft SQL Server\\MSSQL13. SQL2016\\R_SERVICES»*
 
-*[1]» C:/Program файлы или Microsoft SQL Server/MSSQL13. SQL2016/R_SERVICES/библиотека»*
+*[1] "C:/Program Files/Microsoft SQL Server/MSSQL13.SQL2016/R_SERVICES/library"*
 
 Чтобы устранить проблему, необходимо переустановить пакет библиотеку экземпляра SQL Server.
 
@@ -335,4 +337,3 @@ EXEC sp_execute_external_script @language = N'R',
 [Часто задаваемые вопросы по обновлению и установке](r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 [Устранение неполадок соединения с ядром СУБД](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)
-

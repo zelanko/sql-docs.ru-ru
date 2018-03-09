@@ -3,29 +3,29 @@ title: "Диалоговое окно \"Параметры страницы\" | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.PageSetup
+f1_keywords: vs.PageSetup
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3545691459ecb808bbf67fce41235a6335e4d85f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8ff85dabb4dc02737ccd0379435c85c87902a8dc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="page-setup-dialog-box"></a>Диалоговое окно «Параметры страницы»
-Структуру страницы можно настроить, выбирая параметры в диалоговом окне **Параметры страницы** . Доступность некоторых параметров зависит от языков, установленных и применяемых для изменения.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Структуру страницы можно настроить, выбирая параметры в диалоговом окне **Параметры страницы**. Доступность некоторых параметров зависит от языков, установленных и применяемых для изменения.  
   
 ## <a name="paper"></a>Бумага  
 **Размер**  
@@ -48,7 +48,7 @@ ms.lasthandoff: 06/22/2017
 Справа  
 Устанавливает расстояние между правым краем страницы и правым краем выровненных вправо строк без отступов.  
   
-В начало  
+TOP  
 Устанавливает расстояние между верхом страницы и верхней кромкой первой строки страницы.  
   
 Нижнее  
@@ -61,4 +61,3 @@ ms.lasthandoff: 06/22/2017
 **Верхний колонтитул страницы**  
 Выводит имя и путь файла в верхнем колонтитуле страницы.  
   
-

@@ -1,27 +1,28 @@
 ---
 title: "Отображение связей \"многие ко многим\" в производных иерархиях (службы Master Data Services) | Документы Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
-caps.latest.revision: 13
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e97bda2761c85e690bf43e568371d7dc25584b41
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: e50d65ddecb9a22c852c9ed8543db4931df6dfb9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Отображение связей "многие-ко-многим" в производных иерархиях (Master Data Services)
   Теперь в производных иерархиях (DH) наряду с отображением связей "один-ко-многим" могут отображаться связи "многие-ко-многим".  
@@ -94,7 +95,7 @@ ms.lasthandoff: 09/07/2017
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="bkmk_member_security"></a> Безопасность элементов  
- Иерархию, допускающую дублирование элементов (элемент может иметь несколько родительских элементов), нельзя использовать для назначения элементам разрешений безопасности. Например:  
+ Иерархию, допускающую дублирование элементов (элемент может иметь несколько родительских элементов), нельзя использовать для назначения элементам разрешений безопасности. Пример:  
   
 -   Рекурсивная производная иерархия (RDH), которая не привязывает нулевые рекурсии (каждый элемент на рекурсивном уровне располагается под уровнем ROOT и его рекурсивным родительским элементом).  
   
@@ -109,4 +110,3 @@ ms.lasthandoff: 09/07/2017
  [Производные иерархии (службы Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   
-

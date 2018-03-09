@@ -1,13 +1,14 @@
 ---
 title: "Вставка, обновление и удаление элементов (XMLA) | Документы Microsoft"
 ms.custom: 
-ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -22,17 +23,16 @@ helpviewer_keywords:
 - deleting dimension members
 - dimensions [Analysis Services], XML for Analysis
 ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 55572d91ab28593f17cda8ce400fcf7301e52c17
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cb089245a47a70890bb45ed2499bdf6e852d3ef6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Вставка, обновление и удаление элементов (XMLA)
   Можно использовать [вставить](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [обновление](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), и [Drop](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) команды XML для аналитики (XMLA) чтобы соответственно вставлять, обновления или удаления элементов из измерения, доступные для записи. Дополнительные сведения о записи измерений см. в разделе [измерениях](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
@@ -117,7 +117,7 @@ ms.lasthandoff: 09/01/2017
 > [!IMPORTANT]  
 >  Чтобы удалить и родительский элемент, и его потомков, пользователю необходимо иметь только разрешения на удаление родительского элемента. Разрешения на удаление потомков иметь не обязательно.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Удалить элемент &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   
  [Вставить элемент &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
  [Обновить элемент &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
@@ -125,4 +125,3 @@ ms.lasthandoff: 09/01/2017
  [Разработка с использованием XML для Аналитики в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

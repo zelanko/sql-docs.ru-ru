@@ -2,31 +2,32 @@
 title: "SQL Server распределенное воспроизведение | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: distributed-replay
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Distributed Replay
 - SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
-caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "25"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 9672fa8ab5fd84c3b9526f24838c192a7ff170e1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fb2346d3d23d313288d86f98d85dca5a42275cb3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-distributed-replay"></a>Распределенное воспроизведение SQL Server
-  Функция распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет оценить влияние будущих обновлений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ее также можно использовать для оценки влияния обновления аппаратной части и операционной системы, а также для настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программы распределенного воспроизведения помогает оценить влияние будущих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обновления. Ее также можно использовать для оценки влияния обновления аппаратной части и операционной системы, а также для настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="benefits-of-distributed-replay"></a>Преимущества распределенного воспроизведения  
  Как и приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], распределенное воспроизведение можно использовать для воспроизведения записанной трассировки в обновленной тестовой среде. В отличие от приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], распределенное воспроизведение не ограничено воспроизведением рабочих нагрузок с одного компьютера.  
@@ -76,10 +77,9 @@ ms.lasthandoff: 08/02/2017
 |Описывает просмотр результатов данных трассировки распределенного воспроизведения.|[просмотреть результаты воспроизведения](../../tools/distributed-replay/review-the-replay-results.md)|  
 |Описывает, как при помощи средства администрирования можно инициировать операции на контроллере, наблюдать за ними и отменять их.|[Параметры командной строки средства администрирования (программа распределенного воспроизведения)](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Форум о распределенном воспроизведении SQL Server](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
  [Использование распределенного воспроизведения для нагрузочного теста SQL Server. Часть 2](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
  [Использование распределенного воспроизведения для нагрузочного теста SQL Server. Часть 1](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   
-

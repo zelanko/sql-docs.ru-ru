@@ -2,35 +2,34 @@
 title: "Инструкция SELECT (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- SELECT
-dev_langs:
-- kbMDX
+f1_keywords: SELECT
+dev_langs: kbMDX
 helpviewer_keywords:
 - SELECT statement [MDX]
 - cubes [Analysis Services], SELECT statement
 ms.assetid: c0a57214-aa3f-44ce-a369-660c69746f34
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: b1cf2d78fcb8b275a899be437b85b643c2f5b6af
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f6ad16fe8fd4bfc9c8bfeecf86b7a1954ae8a0e6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-manipulation---select"></a>Управление данными MDX - Выбор
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Извлекает данные из заданного куба.  
   
@@ -123,7 +122,7 @@ FROM
  *MemberProperty_Name*  
  Допустимая строка, представляющая свойство элемента.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В выражении `<SELECT slicer axis clause>` должны содержаться элементы измерений и иерархий, отличающиеся от указанных в заданных выражениях `<SELECT query axis clause>`.  
   
  Если в заданных выражениях `<SELECT query axis clause>` и значении `<SELECT slicer axis clause>` атрибут куба пропущен, то к оси среза неявно добавляется элемент атрибута по умолчанию.  
@@ -132,7 +131,7 @@ FROM
   
  Вычисляемые элементы могут быть включены в \<предложение осей запроса SELECT > каждый раз, когда было открыто соединение с помощью параметра строки подключения *вложенные запросы = 1*; в разделе [поддерживаемые свойства XMLA &#40; XML для Аналитики &#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) и <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> для использования параметра. Пример приведен для вычисляемых элементов в подзапросах выборки.  
   
-## <a name="autoexists"></a>Автоматическая проверка существования  
+## <a name="autoexists"></a>автоматическая проверка существования  
  Если два или более атрибута измерения используются в инструкции SELECT, службы Analysis Services оценивают эти атрибуты, чтобы обеспечить, что элементы этих атрибутов правильно ограничены и соответствуют критериям остальных атрибутов. Например, предположим, что идет работа с атрибутами измерения «Geography». Если существует выражение, возвращающее все элементы атрибута «Город», и другое выражение, ограничивающее элементы атрибута «Страна» всеми странами Европы, то элементы атрибута «Город» будут ограничены только городами, расположенным в странах Европы. Эта характеристика служб Analysis Services называется автоматической проверкой существования и применима только к атрибутам, находящимся в одном измерении. Автоматическая проверка существования применима только к атрибутам, находящимся в одном измерении, потому что пытается предотвратить включение записей измерения, не включенных в одно выражение с атрибутом, в другое выражение с атрибутом. Автоматическую проверку существования можно также воспринимать как результат пересечения различных выражений с атрибутом по записям измерения. См. следующий пример:  
   
  `//Obtain the Top 10 best reseller selling products by Name`  
@@ -442,8 +441,8 @@ WHERE
   
 |||||  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
-|All Resellers|$ 73 694 430,80|$ 506 172,45|$ 1 524 906,93|  
+||Все продукты|Accessories|Clothing|  
+|Все торговые посредники|$ 73 694 430,80|$ 506 172,45|$ 1 524 906,93|  
 |Value Added Reseller|$ 34 967 517,33|$ 175 002,81|$ 592 385,71|  
 |Warehouse|$ 38 726 913,48|$ 331 169,64|$ 932 521,23|  
   
@@ -482,5 +481,4 @@ WHERE
  [Ограничение запроса с &#40; запросов и осей среза Многомерные Выражения &#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   
-
 

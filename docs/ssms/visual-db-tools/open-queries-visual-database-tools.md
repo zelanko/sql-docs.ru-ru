@@ -3,30 +3,31 @@ title: "Открытие запросов (визуальные инструме
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - opening queries
 - queries [SQL Server], opening
 ms.assetid: 6d7ce59b-2ce6-42af-9330-84ce3dc1197e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e7ce3fbbc5a81cadd403c2afcf3c447d08557472
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f6955727dd2fa31e76ad6cf5e0195650abdc2ded
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-queries-visual-database-tools"></a>Открытие запросов (визуальные инструменты для баз данных)
-Существующий запрос можно открыть в конструкторе запросов и представлений с помощью команды **Открыть** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Существующий запрос можно открыть в конструкторе запросов и представлений с помощью команды **Открыть**.  
   
 ### <a name="to-open-a-query-in-all-panes"></a>Открытие запроса на всех панелях  
   
@@ -44,4 +45,3 @@ ms.lasthandoff: 08/18/2017
 [Сохранение запросов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
 [Работа с данными на панели результатов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   
-

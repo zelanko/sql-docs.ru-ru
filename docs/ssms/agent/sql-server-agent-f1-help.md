@@ -3,26 +3,26 @@ title: "Справка F1 агента SQL Server | Документация М�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 55f4bd55-aa61-4d5c-98fd-f85824206ea0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d57a1fb33cf2f27a969a23bba341f561dcfa9921
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ff8d050afe694b38d4dcb43e2822f125f8cd8461
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-agent-f1-help"></a>Справка F1 агента SQL Server
-В данном разделе содержится справка F1 для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Эти разделы доступны из пользовательского интерфейса по нажатию клавиши F1 или при нажатии кнопки «Справка» в диалоговых окнах.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В данном разделе содержится справка F1 для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Эти разделы доступны из пользовательского интерфейса по нажатию клавиши F1 или при нажатии кнопки «Справка» в диалоговых окнах.  
   
-

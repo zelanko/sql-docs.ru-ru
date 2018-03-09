@@ -1,32 +1,31 @@
 ---
 title: "Как хранилище запросов собирает данные | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 09/13/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Query Store, data collection
+helpviewer_keywords: Query Store, data collection
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
-caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "10"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 50e8f4fdae89572403ec8e5b7a5575b6ea61b132
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: dcc8a068ee429f889726cfc1b5fa3d0be579135e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="how-query-store-collects-data"></a>Сбор данных в хранилище запросов
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Хранилище запросов работает подобно **бортовому регистратору данных в самолете** , непрерывно собирая сведения о компиляции и времени выполнения, связанные с запросами и планами. Связанные с запросами данные сохраняются во внутренних таблицах и предоставляются пользователям с помощью набора представлений.  
   
@@ -37,7 +36,7 @@ ms.lasthandoff: 09/27/2017
   
  **Описания представлений**  
   
-|Просмотр|Описание|  
+|Просмотр|Description|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|Показывает тексты уникальных запросов к базе данных. Комментарии и пробелы до и после текста запроса игнорируются. Комментарии и пробелы внутри текста учитываются. Каждая инструкция в пакете создает текстовую запись отдельного запроса.|  
 |**sys.query_context_settings**|Показывает уникальные комбинации влияющих на план параметров, при которых выполняются запросы. Тот же текст запроса, выполненного с другими влияющими на план параметрами, создает запись отдельного запроса в хранилище запросов, так как элемент `context_settings_id` является частью ключа запроса.|  
@@ -81,4 +80,3 @@ ms.lasthandoff: 09/27/2017
  [Представления каталога хранилища запросов (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
-

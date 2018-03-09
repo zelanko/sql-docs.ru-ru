@@ -3,8 +3,11 @@ title: "Использование операторов PIVOT и UNPIVOT | До�
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - FROM clause, PIVOT operator
 - rotating columns
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
-caps.latest.revision: 35
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 413e4e89679358f0c53c82340dcae5640387ddcb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 1feee91c251b5c1f326e8e69569186c049007d9e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="from---using-pivot-and-unpivot"></a>ОТ - использование операторов PIVOT и UNPIVOT
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Можно использовать `PIVOT` и `UNPIVOT` реляционные операторы, чтобы изменить выражение, возвращающие табличные значения, в другую таблицу. `PIVOT`Поворачивает указано табличное выражение, преобразуя уникальные значения из одного столбца выражения в несколько столбцов в выходных данных и выполняет статистические функции, где это требуется в оставшихся значений столбца, которые требуются в окончательный результат. `UNPIVOT`выполняет обратную операцию для PIVOT, преобразуя столбцы возвращающего табличное значение выражения в значения столбца.  
   
@@ -65,7 +67,7 @@ FOR
 <optional ORDER BY clause>;  
 ```  
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Столбец идентификаторов в `UNPIVOT` предложение выполните параметров сортировки каталога. Для [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], параметры сортировки всегда является `SQL_Latin1_General_CP1_CI_AS`. Для [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] частично автономных баз данных, параметры сортировки всегда является `Latin1_General_100_CI_AS_KS_WS_SC`. Если столбец используется в сочетании с других столбцов, а затем предложение collate (`COLLATE DATABASE_DEFAULT`) требуется для предотвращения конфликтов.  
 
   
@@ -209,9 +211,8 @@ VendorID    Employee    Orders
   
  `Sales.vSalesPersonSalesByFiscalYears` Просмотра в [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] примере используется база данных `PIVOT` для возврата суммарный объем продаж для каждого менеджера по продажам для каждого финансового года. Чтобы просмотреть скрипт представления в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в **обозревателя объектов**, найдите представление в списке **представления** папку для [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базы данных. Щелкните правой кнопкой мыши имя представления, а затем выберите **создать скрипт для представления**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
  [РЕГИСТР (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
   
   
-

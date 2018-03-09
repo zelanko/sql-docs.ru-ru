@@ -3,8 +3,11 @@ title: "Поддержка пространств имен в XQuery | Доку�
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -18,20 +21,19 @@ helpviewer_keywords:
 - namespaces [XQuery]
 - XQuery, namespaces
 ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
-caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 285277ec57e10d23e1c5dc4c322dbba57a5d793e
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4689645ffae5399894bd4208535527d528ccaefb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="handling-namespaces-in-xquery"></a>Поддержка пространств имен в XQuery
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе приведены примеры обработки пространств имен в запросах.  
   
@@ -152,10 +154,9 @@ where ProductModelID=19
   
  Обратите внимание, что после замещения пустого пространства имен элементов по умолчанию все локальные элементы в создаваемом XML привязываются к новому пространству имен. Поэтому, если при создании XML нужна гибкость за счет использования пустого пространства имен, не замещайте пространство имен элементов по умолчанию.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Добавление пространств имен в запросы с WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
  [Справочник по языку XQuery (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  
   
   
-

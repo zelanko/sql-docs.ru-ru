@@ -1,26 +1,27 @@
 ---
 title: "Подключение к базе данных Oracle (OracleToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-oracle
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 04f87810ef02030a95c06870012972f307c41f33
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d685be15fb8d0c6fea21d539e3370b3377316324
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Подключение к базе данных Oracle (OracleToSQL)
 Используйте **подключение к Oracle** диалоговое окно подключения к базе данных Oracle, которые требуется перенести.  
@@ -61,7 +62,7 @@ ms.lasthandoff: 08/02/2017
   
 Это стандартный режим.  
   
-**Имя пользователя**  
+**User name**  
 Введите имя пользователя, который будет использовать SSMA для подключения к базе данных Oracle.  
   
 **Пароль**  
@@ -79,4 +80,3 @@ ms.lasthandoff: 08/02/2017
   
 SSMA строк подключения всегда включайте параметр поставщика. Кроме того убедитесь, что включить параметр порта при подключении к базе данных Oracle.  
   
-

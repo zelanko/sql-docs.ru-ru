@@ -1,10 +1,13 @@
 ---
-title: "Шаг 3: Проверка пакета Lesson 6 | Документы Microsoft"
+title: "Шаг 3. Проверка пакета, созданного на занятии 6 | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
-caps.latest.revision: 4
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0b97045d3916f7e3831bc1711e8657eecc58bdc0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d3127ba4edc47aa7ae9b6aab8fc309fe2c854da3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-6-3---testing-the-lesson-6-package"></a>Урок 6-3-тестирования пакета Lesson 6
+# <a name="lesson-6-3---testing-the-lesson-6-package"></a>Занятие 6–3. Проверка пакета, созданного на занятии 6
 Во время выполнения пакет получит значение для свойства Directory из параметра VarFolderName.  
   
 Чтобы убедиться, что пакет обновляет свойство Directory новым значением во время выполнения, выполните пакет. Поскольку в новый каталог были скопированы только три файла образцов данных, поток данных будет запущен только три раза, а не 14 раз в соответствии с количеством файлов в исходном каталоге.  
@@ -51,4 +53,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

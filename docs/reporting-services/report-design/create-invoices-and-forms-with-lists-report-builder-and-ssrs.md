@@ -1,27 +1,27 @@
 ---
-title: "Создание счета и форм с списки (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Создание счета-фактуры и формы со списками (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: dcbc50e4c1bb576d4956b569dc7644d8e6f23abf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 47d1cf1399a788e271240f7b233115f6f3669b3a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>Создание счета-фактуры и формы со списками (построитель отчетов и службы SSRS)
   Область списка данных повторяется с каждой группой или строкой набора данных отчета с разбиением на страницы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Список может использоваться для создания отчетов произвольного формата, таких как счета, либо совместно с другими областями данных. Можно определять списки, содержащие любое количество элементов отчета. Список может быть вложен  
@@ -34,11 +34,11 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="AddingList"></a> Добавление списка к отчету  
  Добавьте список в область конструктора из вкладки «Вставка» на ленте. По умолчанию поначалу список имеет единственную ячейку в строке, связанной с группой сведений.  
   
- ![Новый элемент списка отчетов в рабочей области конструирования](../../reporting-services/report-design/media/rs-listtemplatenew.gif "новый список элемента отчета в области конструктора")  
+ ![Элемент отчета "Новый список" в области конструктора](../../reporting-services/report-design/media/rs-listtemplatenew.gif "Элемент отчета "Новый список" в области конструктора")  
   
  При выборе списка в области конструктора появляются маркеры строки и столбца, как показано на следующем рисунке.  
   
- ![Добавлен новый список из элементов, выбранных](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "добавлен новый список из элементов, выбранных")  
+ ![Элемент "Новый список" добавлен с панели элементов и выделен](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "Элемент "Новый список" добавлен с панели элементов и выделен")  
   
  Начальный список представляет собой шаблон в области данных табликса. После добавления списка можно продолжить конструирование, изменяя содержимое или внешний вид списка путем назначения выражений фильтрации, сортировки или группы или изменяя способ отображения списка на страницах отчетов. Дополнительные сведения см. в разделе [Управление отображением области данных табликса на странице отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md). Хотя начальный список состоит из единственных строки и столбца, можно развивать структуру списка, добавляя вложенные или смежные группы строк или группы столбцов, или добавляя дополнительные строки подробностей. Дополнительные сведения см. в разделе [Изучение возможностей области данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
@@ -48,11 +48,11 @@ ms.lasthandoff: 08/09/2017
   
  На следующем рисунке показан список, в котором отображаются сведения о заказе, в том числе поля: Date, Order, Qty, Product, LineTotal и изображение.  
   
- ![Список в режиме конструктора, 4 поля или изображения](../../reporting-services/report-design/media/rs-basiclistformdesign.gif "список в режиме конструктора, 4 поля и изображения")  
+ ![Список в режиме конструктора, 4 поля и изображение](../../reporting-services/report-design/media/rs-basiclistformdesign.gif "Список в режиме конструктора, 4 поля и изображение")  
   
  В области предварительного просмотра список повторяется, чтобы показать данные полей в свободном формате, как показано на следующем рисунке.  
   
- ![Просмотр списка с 4 полями и одним изображением](../../reporting-services/report-design/media/rs-basiclistformpreview.gif "Просмотр списка с 4 полями и одним изображением")  
+ ![Просмотр списка с 4 полями и одним изображением](../../reporting-services/report-design/media/rs-basiclistformpreview.gif "Просмотр списка с 4 полями и одним изображением")  
   
 > [!NOTE]  
 >  Пунктирные линии на этих рисунках показывают размещение свободной формы для каждого значения поля. Обычно пунктирные линии не используются в производственном отчете.  
@@ -63,16 +63,15 @@ ms.lasthandoff: 08/09/2017
   
  Например, можно встроить таблицу и диаграмму, которые показывают различные представления одного набора данных. Можно добавить группу в список, чтобы вложенные элементы отчета повторялись один раз для каждого значения группы. На следующем рисунке показан список, сгруппированный по категории продукта. Обратите внимание на отсутствие строки подробностей. Две таблицы вложены в список рядом. Первая таблица отображает подкатегории с суммарным объемом продаж. Вторая таблица отображает категорию, сгруппированную по географическому региону, с диаграммой, показывающей распределение подкатегорий.  
   
- ![Список с 2 таблицами, одна со вложенной диаграммы](../../reporting-services/report-design/media/rs-basiclistgroupdesign.gif "список с 2 таблицами, одна со вложенной диаграммой")  
+ ![Список с 2 таблицами, одна с вложенной диаграммой](../../reporting-services/report-design/media/rs-basiclistgroupdesign.gif "Список с 2 таблицами, одна с вложенной диаграммой")  
   
  В области предварительного просмотра таблица отображает суммарный объем продаж для всех подкатегорий велосипедов, а таблица рядом с ней отображает разбиение продаж по географическим регионам. Используя выражение для задания фонового цвета таблицы и пользовательскую палитру для диаграммы, первая таблица также содержит условные обозначения цветов диаграммы.  
   
- ![Предварительный просмотр, 2 таблицы, одна со вложенной диаграммой](../../reporting-services/report-design/media/rs-basiclistgrouppreview.gif "Просмотр, 2 таблицы, одна со вложенной диаграммой")  
+ ![Просмотр, 2 таблицы, одна с вложенной диаграммой](../../reporting-services/report-design/media/rs-basiclistgrouppreview.gif "Просмотр, 2 таблицы, одна с вложенной диаграммой")  
   
   
 ## <a name="see-also"></a>См. также:  
- [Справочник по агрегатным функциям &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Примеры выражений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   
-

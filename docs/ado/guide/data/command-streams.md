@@ -3,7 +3,7 @@ title: "Команда потоки | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - command streams [ADO]
 - streams [ADO], command
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b7564f349c25fda5d39f977320937b2515bb9dfd
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1be2cc9528e62e548feb242b06686ad50a1753c8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="command-streams"></a>Команда потоков
 ADO всегда поддерживается ввода команды в строку формата, заданного в **CommandText** свойство. Кроме того, при использовании ADO 2.7 или более поздней версии, также можно потока данных для ввода команды путем назначения потока **CommandStream** свойство. Можно назначить ADO **поток** объекта или любым объектом, поддерживающим COM **IStream** интерфейса.  
@@ -82,4 +81,3 @@ adoCmd.Dialect = "{5D531CB2-E6Ed-11D2-B252-00C04F681B71}"
 ```  
 Set objRS = adoCmd.Execute  
 ```
-

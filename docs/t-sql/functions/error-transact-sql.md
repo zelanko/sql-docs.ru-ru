@@ -3,8 +3,11 @@ title: "@@ERROR (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,20 +22,19 @@ helpviewer_keywords:
 - errors [SQL Server], Transact-SQL
 - error numbers [SQL Server]
 ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
-caps.latest.revision: 50
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1ef3f7b2f0b051fd79dd59325af7900aefff95a9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 9ce2b79b12af1ae4894cd33867bccc27b2354185
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40; Ошибка (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает номер ошибки для последней выполненной инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="return-types"></a>Типы возвращаемых значений  
  integer  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Возвращает 0, если в предыдущей инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] не возникло ошибок.  
   
  Возвращает номер ошибки, если в предыдущей инструкции возникла ошибка. Если ошибка была одной из ошибок, в представлении каталога sys.messages, в затем@ERROR содержит значение из столбца sys.messages.message_id для этой ошибки. Можно просмотреть текст, связанный с @@ERROR номер ошибки в представлении каталога sys.messages.  
@@ -73,7 +75,7 @@ GO
 ```  
   
 ### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>Б. С помощью @@ERROR чтобы условно выхода из процедуры  
- В следующем примере используется `IF...ELSE` инструкции для проверки `@@ERROR` после `INSERT` инструкции в хранимой процедуре. Значение переменной `@@ERROR` определяет код возврата, который отправляется вызывающей программе и указывает на успешное или неуспешное выполнение процедуры.  
+ В следующем примере используется `IF...ELSE` инструкции для проверки `@@ERROR` после `DELETE` инструкции в хранимой процедуре. Значение переменной `@@ERROR` определяет код возврата, который отправляется вызывающей программе и указывает на успешное или неуспешное выполнение процедуры.  
   
 ```  
 USE AdventureWorks2012;  
@@ -170,7 +172,7 @@ GO
 ```  
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE (Transact-SQL)](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE (Transact-SQL)](../../t-sql/functions/error-message-transact-sql.md)   
@@ -182,5 +184,4 @@ GO
  [sys.messages &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
   
   
-
 

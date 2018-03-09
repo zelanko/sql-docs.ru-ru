@@ -3,7 +3,7 @@ title: "Обновить пример метода (VC ++) | Документы 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Refresh method [ADO], VC++ example
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 701d8dbef80af059e618d88bde0eaca7ed732de6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 83b6f2f9caac6ec3d10ddd5c224079c25e951c9c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="refresh-method-example-vc"></a>Обновить пример метода (VC ++)
 В этом примере показано использование [обновление](../../../ado/reference/ado-api/refresh-method-ado.md) метод для обновления [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекции для хранимой процедуры [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта.  
@@ -241,8 +240,7 @@ Authors with 25 percent royalty
   899-46-2035, Anne Ringer  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект команды (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Коллекция параметров (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Обновить метод (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
-
+ [Метод Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

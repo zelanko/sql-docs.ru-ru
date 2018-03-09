@@ -1,27 +1,27 @@
 ---
-title: "Сохранение отчетов на сервере отчетов (построитель отчетов) | Документы Microsoft"
+title: "Сохранение отчетов на сервере отчетов (построитель отчетов) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
-caps.latest.revision: 7
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d2a1b09aefaf3baf454edd419e3d1edd8aa575f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b92ace95ff7d250fda16b1e021fddf61379cdb19
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Сохранение отчетов на сервере отчетов (построитель отчетов)
   В построителе отчетов можно сохранить определение отчета на сервере отчетов (также называется публикацией отчета). Если отчет сохранен на сервере отчетов, его могут просматривать другие пользователи. При каждом запуске опубликованного отчета будут получены самые последние данные. Чтобы сохранить статическую копию отчета, готового к просмотру, экспортируйте отчет в другой формат файла и сохраните его или используйте функцию журнала отчета, чтобы сохранить версию отчета, готового к просмотру.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-save-a-report-to-a-report-server"></a>Сохранение отчета на сервере отчетов  
   
-1.  В построителе отчетов нажмите кнопку **Сохранить**. **Сохранить как***\<элемент отчета >* откроется диалоговое окно.  
+1.  В построителе отчетов нажмите кнопку **Сохранить**. Откроется диалоговое окно **Сохранить как***\<Элемент_отчета>*.  
   
     > [!NOTE]  
     >  Во время повторного сохранения отчет автоматически сохраняется в предыдущем расположении. Чтобы изменить расположение, используйте параметр «Сохранить как».  
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Сохранение отчета с другим именем  
   
-1.  Нажмите кнопку «Построитель отчетов» и выберите **Сохранить как**. **Сохранить как***\<элемент отчета >* откроется диалоговое окно.  
+1.  Нажмите кнопку «Построитель отчетов» и выберите **Сохранить как**. Откроется диалоговое окно **Сохранить как***\<Элемент_отчета>*.  
   
 2.  Перейдите к расположению сервера отчетов или в общую папку, где нужно сохранить отчет.  
   
@@ -54,11 +54,10 @@ ms.lasthandoff: 08/09/2017
   
 4.  В поле **Элементы типа**выберите тип сохраняемого элемента отчета. Для отчетов используется тип «Отчеты» (RDL).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Сохранение отчетов (построитель отчетов)](../../reporting-services/report-builder/saving-reports-report-builder.md)   
- [Экспорт отчета в файл другого типа &#40; Построитель отчетов и службы SSRS &#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
+ [Экспорт отчета в файл другого типа (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)  
   
   
-

@@ -1,27 +1,27 @@
 ---
-title: "Работать с смоделированных данных в мобильных отчетов Reporting Services | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Работа со смоделированными данными в мобильных отчетах служб Reporting Services | Документы Майкрософт"
+ms.custom: 
 ms.date: 02/08/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0eb83717100f70933d2b1fe00bcd19a8a2901f65
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 347abee7c61c43e8453f27df2c6bb3147c4d677c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Work with simulated data in Reporting Services mobile reports
 При размещении элемента коллекции в область конструктора [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] немедленно генерирует смоделированные данные для этого элемента. Эти данные служат для достижения нескольких полезных целей при создании мобильных отчетов.   
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/09/2017
   
 Смоделированные данные также предоставляют шаблон, который точно соответствует требованиям к данным конкретного проекта мобильного отчета.   
   
--  В правом верхнем углу представления данных щелкните **Экспортировать все данные** .   
+-  В правом верхнем углу представления данных щелкните **Экспортировать все данные**.   
   
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] создает документ Excel, содержащий смоделированные данные, позволяя тем самым быстро заменить фактические данные, готовые к импорту.   
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/09/2017
   
 >**Примечание**. Смоделированные данные не увеличивают общее занимаемое мобильным отчетом место, так как они не сериализуются с мобильным отчетом, а генерируются динамически во время выполнения.  
   
-### <a name="see-also"></a>См. также:  
+### <a name="see-also"></a>См. также раздел  
 - [Создание и публикация мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  См. статью [Просмотр мобильных отчетов SQL Server и ключевых показателей эффективности в приложении для iPad](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI для iOS).  
 -  См. статью [Просмотр мобильных отчетов SQL Server и ключевых показателей эффективности в приложении для iPhone](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI для iOS).  
@@ -57,5 +57,4 @@ ms.lasthandoff: 08/09/2017
   
   
   
-
 

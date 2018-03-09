@@ -3,33 +3,30 @@ title: "Функция SQLFetchScroll | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLFetchScroll
-apilocation:
-- sqlsrv32.dll
+apiname: SQLFetchScroll
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLFetchScroll
-helpviewer_keywords:
-- SQLFetchScroll function [ODBC]
+f1_keywords: SQLFetchScroll
+helpviewer_keywords: SQLFetchScroll function [ODBC]
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: df50946b183bcd7072f12f67b8f0293ac5eef080
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 79224469fe1e6e4f0840eceb394b30cec63fcd2a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlfetchscroll-function"></a>Функция SQLFetchScroll
 **Соответствия**  
@@ -261,7 +258,7 @@ SQLRETURN SQLFetchScroll(
   
  Если курсор определяет строки, добавленные в результирующий набор или удаляет строки, удаленные из результирующего набора, он отображается, как если бы он обнаруживает эти изменения только в том случае, если он выбирает данные. Это включает случай при **SQLFetchScroll** вызывается с FetchOrientation SQL_FETCH_RELATIVE и FetchOffset, равным 0, чтобы повторно извлечь тот же набор строк, но не включает так, при вызове SQLSetPos присвоено SQL_ fOption ОБНОВЛЕНИЕ. В последнем случае обновляются данные в буферы строк, но не refetched и удаленные строки не удаляются из результирующего набора. Таким образом при вставке в текущем наборе строк или удалены из строки, курсор не изменяет буферы строк. Вместо этого обнаруженных изменений при выборке любому набору строк, ранее включить удаленную строку, и теперь включает вставленной строки.  
   
- Например:  
+ Пример:  
   
 ```  
 // Fetch the next rowset.  
@@ -371,4 +368,3 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 ## <a name="see-also"></a>См. также:  
  [Справочник по API-интерфейса ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

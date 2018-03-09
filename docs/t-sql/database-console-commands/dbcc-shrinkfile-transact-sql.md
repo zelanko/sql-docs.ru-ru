@@ -1,10 +1,13 @@
 ---
 title: "Инструкция DBCC SHRINKFILE (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,20 +32,19 @@ helpviewer_keywords:
 - reducing database size
 - DBCC SHRINKFILE statement
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
-caps.latest.revision: 87
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 14746a5bfac3674299e03b6eba0da1a823f1bba9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 94ad5652920129790045e33c93e2a8fbb83816bd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Сокращает размер указанного файла данных или журнала для текущей базы данных или освобождает файл, перемещая данные из указанного файла в другие файлы из той же файловой группы, разрешая удаление файла из базы данных. Можно сжать файл до размера, который будет меньше, чем размер, указанный во время его создания. В результате будет установлено новое значение минимального размера файла.
   
@@ -63,7 +65,7 @@ DBCC SHRINKFILE
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-*имя_файла*  
+*file_name*  
 Логическое имя файла, предназначенного для сжатия.
   
 *file_id*  
@@ -100,16 +102,16 @@ WITH NO_INFOMSGS
 ## <a name="result-sets"></a>Результирующие наборы  
 В следующей таблице отображены столбцы результирующего набора.
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |---|---|
 |**DbId**|Идентификатор базы данных, файл которой компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] пытался сжать.|  
-|**Идентификатор файла**|Идентификационный номер файла, сжатие которого было предпринято компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
+|**FileId**|Идентификационный номер файла, сжатие которого было предпринято компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |**CurrentSize**|Количество 8-килобайтных страниц, занятых файлом в настоящее время.|  
-|**Минимальный размер**|Минимальное количество 8-килобайтных страниц, которое может занимать файл. Оно соответствует минимальному размеру или размеру файла, указанному при создании.|  
+|**MinimumSize**|Минимальное количество 8-килобайтных страниц, которое может занимать файл. Оно соответствует минимальному размеру или размеру файла, указанному при создании.|  
 |**UsedPages**|Количество 8-килобайтных страниц, используемых файлом в настоящее время.|  
 |**EstimatedPages**|Количество 8-килобайтных страниц, до которого можно было бы сжать файл по оценке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Инструкция DBCC SHRINKFILE применяется к файлам в текущей базе данных. Дополнительные сведения об изменении текущей базы данных см. в разделе [использовать &#40; Transact-SQL &#41; ](../../t-sql/language-elements/use-transact-sql.md).
   
 Операции DBCC SHRINKFILE могут быть остановлены на любом этапе процесса, при этом вся выполненная работа сохраняется.
@@ -163,7 +165,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 -   Прервите операцию сжатия. Если операция сжатия прервана, любая завершенная работа сохранена.  
 -   Пока операция сжатия ожидает завершения блокирующей транзакции, ничего делать не нужно.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Необходимо быть членом предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** .
   
 ## <a name="examples"></a>Примеры  
@@ -232,7 +234,7 @@ REMOVE FILE Test1data;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC SHRINKDATABASE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  
@@ -241,4 +243,3 @@ GO
 [Сжатие файла](../../relational-databases/databases/shrink-a-file.md)
   
   
-

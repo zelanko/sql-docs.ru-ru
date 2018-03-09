@@ -3,29 +3,29 @@ title: "Свойства объектов с табличными значени
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vdt.designers.properties.TVO
+f1_keywords: vdt.designers.properties.TVO
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e1a3aab7fc71e38e5383b8adad799ba3c2a01e4f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 59393ef73eb121fced9a2c7d0232c49d707d1efd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="table-valued-object-properties-visual-database-tools"></a>Свойства объектов с табличными значениями (визуальные инструменты для баз данных)
-Эти свойства отображаются в окне свойств при выборе табличного объекта в **конструкторе запросов и представлений**. Табличный объект может быть представлением, синонимом, производной таблицей или возвращающей табличное значение функцией. Если не указано иное, в окне **Свойства** эти свойства отображаются только для чтения.  
+# <a name="table-valued-object-properties-visual-database-tools"></a>Свойства табличных объектов (визуальные инструменты для баз данных)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Эти свойства отображаются в окне свойств при выборе табличного объекта в **конструкторе запросов и представлений**. Табличный объект может быть представлением, синонимом, производной таблицей или возвращающей табличное значение функцией. Если не указано иное, в окне **Свойства** эти свойства отображаются только для чтения.  
   
 > [!NOTE]  
 > Свойства в данном разделе сгруппированы по категориям, а не по алфавиту.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
 **Категория «Идентификатор»**  
 При открытии отображает свойства **Имя** и **Тип объекта, возвращающего табличное значение** .  
   
-**Имя**  
+**Название**  
 Отображает имя указанного табличного объекта.  
   
 **Тип объекта, возвращающего табличное значение**  
@@ -57,4 +57,3 @@ ms.lasthandoff: 06/22/2017
 **Список параметров**  
 Отображает параметры, определенные для выбранной возвращающей табличное значение функции. Чтобы определить значения параметров, щелкните «Список параметров», затем нажмите кнопку с многоточием (…) справа от свойства. В диалоговом окне «Параметры функции» введите значения. Это свойство доступно лишь тогда, когда выбрана возвращающая табличное значение функция.  
   
-

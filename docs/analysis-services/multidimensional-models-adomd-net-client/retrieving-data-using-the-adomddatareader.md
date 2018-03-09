@@ -1,13 +1,14 @@
 ---
 title: "Получение данных с помощью объекта AdomdDataReader | Документы Microsoft"
 ms.custom: 
-ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.date: 02/14/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -17,17 +18,16 @@ helpviewer_keywords:
 - AdomdDataReader object
 - data retrieval [ADOMD.NET], AdomdDataReader object
 ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
-caps.latest.revision: 37
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3e536803b34715bdfc4beb87de40cda0380a589e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a04a25d6bf72a8bacd5af46313982e8ff0197170
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>Получение данных с помощью объекта AdomdDataReader
   Что касается извлечения аналитических данных, объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> обеспечивает достижение приемлемого равновесия между издержками и интерактивностью. Объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> извлекает из источника аналитических данных поток данных, предназначенный только для чтения и последовательного доступа, преобразованный в плоский формат. Этот небуферизованный поток данных позволяет применять процедурные средства для последовательной обработки результатов, получаемых из источника аналитических данных, с высокой эффективностью. Поэтому объект <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> хорошо подходит для извлечения больших объемов данных в целях отображения, поскольку данные не кэшируются в памяти.  
@@ -123,10 +123,9 @@ foreach (DataRow objRow in schemaTable.Rows)
 ## <a name="retrieving-multiple-result-sets"></a>Извлечение нескольких результирующих наборов  
  Интеллектуальный анализ данных поддерживает концепцию вложенных таблиц, к которым ADOMD.NET предоставляет доступ как к вложенным наборам строк. Чтобы извлечь вложенный набор строк, связанный с каждой строкой, вызывается метод <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetDataReader%2A>.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Получение данных из источника аналитических данных](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
  [Получение данных с помощью набора ячеек](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-cellset.md)   
  [Получение данных с помощью объекта XmlReader](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader.md)  
   
   
-

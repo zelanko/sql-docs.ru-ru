@@ -2,32 +2,30 @@
 title: "Внутренние свойства элементов (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- intrinsic member properties [MDX]
+helpviewer_keywords: intrinsic member properties [MDX]
 ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 823c8c1c387d2fb234fcf042cd416ce6e1ebb550
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1b3dfd57447e95c22a468e3635030f8973fcc2bc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>Свойства элементов MDX - внутренние свойства элементов
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] предоставляет внутренние свойства элементов измерения, которые можно включить в запрос для возвращения дополнительных данных или метаданных для использования в пользовательском приложении или при исследовании в модели или структуре. Если используются клиентские средства SQL Server, внутренние свойства можно просматривать в среде SQL Server Management Studio (SSMS).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] предоставляет внутренние свойства элементов измерения, которые можно включить в запрос для возврата дополнительных данных или метаданных для использования в пользовательском приложении или при исследовании в модели или структуре. Если используются клиентские средства SQL Server, внутренние свойства можно просматривать в среде SQL Server Management Studio (SSMS).  
   
  Внутренние свойства включают: **ID**, **KEY**, **KEYx**и **NAME**— это свойства, предоставляемые каждым элементом, на любом уровне. Среди прочего можно также получить информацию о позиции, например **LEVEL_NUMBER** или **PARENT_UNIQUE_NAME**.  
   
@@ -71,7 +69,7 @@ ms.lasthandoff: 09/01/2017
 |**ID**|Внутренний идентификатор элемента.|  
 |**Key**|Значение ключа элемента в исходном типе данных. Параметр MEMBER_KEY сохранен в целях обратной совместимости.  Параметр MEMBER_KEY имеет то же самое значение, что и KEY0 для несоставного ключа, и имеет значение NULL для составных ключей.|  
 |**KEYx**|Ключ для элемента, где x — это начинающийся с нуля порядковый номер ключа. Значение KEY0 доступно для составных и несоставных ключей, но в основном используется для составных ключей.<br /><br /> Для составных ключей KEY0, KEY1, KEY2 и т. д. совместно образуют составной ключ. Можно использовать каждый из них независимо в запросе для возврата части составного ключа. Например, если указать значение KEY0, то будет возвращена первая часть составного ключа, а при указании значения KEY1 — следующая часть составного ключа, и т. д.<br /><br /> Если ключ не является составным, значение KEY0 эквивалентно **Key**.<br /><br /> Обратите внимание, что **KEYx** может использоваться как в контексте, так и без контекста. По этой причине оно приведено в обоих списках.<br /><br /> Пример использования этого свойства элемента см. в статье [A Simple MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364)(О простой инструкции многомерного выражения: Key0, Key1, Key2).|  
-|**Name**|Имя элемента.|  
+|**Название**|Имя элемента.|  
   
 ### <a name="properties-syntax-for-context-sensitive-properties"></a>Синтаксис ключевого слова PROPERTIES для свойств, зависящих от контекста  
  Данные свойства элементов используются в контексте конкретного измерения или уровня и передают значения для каждого элемента заданного измерения или уровня.  
@@ -212,7 +210,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [PeriodsToDate (многомерные выражения)](../../../mdx/periodstodate-mdx.md)   
  [Дочерние элементы &#40; Многомерные Выражения &#41;](../../../mdx/children-mdx.md)   
  [Hierarchize &#40; Многомерные Выражения &#41;](../../../mdx/hierarchize-mdx.md)   
@@ -226,4 +224,3 @@ FROM [Adventure Works]
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   
-

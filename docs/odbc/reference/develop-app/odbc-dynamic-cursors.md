@@ -3,27 +3,28 @@ title: "Динамические курсоры ODBC | Документы Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - cursors [ODBC], dynamic
 - dynamic cursors [ODBC]
 ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e0d82da741babc168ce305ed8134d8f44f682f57
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a60688231bc01f55cf5b49fae3bb8d6da4a54950
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-dynamic-cursors"></a>Динамические курсоры ODBC
 Динамический курсор, является: динамические. Он может определить любые изменения членства, порядок и значения из результирующего набора, после открытия курсора. Например предположим, курсор dynamic извлекает две строки и другое приложение, затем обновляет один из этих строк и удаляет другой. Если динамический курсор пытается повторно извлечь эти строки, не позволяет найти удаленную строку, но будет возвращать новые значения для измененной строки.  
@@ -48,4 +49,3 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
  Эта инструкция создает второй результирующий набор следующего набора строк в исходном результирующем наборе является первый набор строк, из которых — в данном случае набор строк в таблице Customers. Курсор возвращает следующий набор строк в приложение.  
   
  Это интересно отметить, что динамический курсор, реализованный таким образом фактически создает несколько результирующих наборов, позволяет обнаружить изменения в исходном результирующем наборе. Приложение никогда не узнает о существовании этих вспомогательных результирующих наборов; он просто отображается, как если бы курсор может обнаружить изменения в исходном результирующем наборе.
-

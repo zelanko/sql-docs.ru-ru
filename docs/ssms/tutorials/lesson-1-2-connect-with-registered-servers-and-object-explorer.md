@@ -2,30 +2,30 @@
 title: "Подключение к зарегистрированным серверам и к обозревателю объектов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: d6b3911f-68b4-4483-831b-df89d6400add
-caps.latest.revision: 50
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "50"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5514eccd9ccfe59362d9bbe752692433327e06e2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: f5dc51dc1a49d66d6ea5194cb3357ecea6fb876f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-2---connect-with-registered-servers-and-object-explorer"></a>Занятие 1–2. Подключение к зарегистрированным серверам и к обозревателю объектов
-В этом учебнике показано, как использовать зарегистрированные серверы и обозреватель объектов.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этом учебнике показано, как использовать зарегистрированные серверы и обозреватель объектов.  
   
 В этом учебнике используется образец базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . По соображениям безопасности образцы базы данных по умолчанию не устанавливаются. Дополнительные сведения см. в разделе [Установка образцов кода и образцов баз данных SQL Server](http://sqlserversamples.codeplex.com).  
   
@@ -78,4 +78,3 @@ ms.lasthandoff: 07/31/2017
   
   
   
-

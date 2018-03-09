@@ -2,30 +2,30 @@
 title: "SQL Server, объект LogPool FreePool | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLServer:LogPool FreePool
+helpviewer_keywords: SQLServer:LogPool FreePool
 ms.assetid: 8ffd569b-045f-4c3f-a473-4a491d6a1d80
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dagiro
 ms.author: v-dagir
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 94165b004d209bef5b62727bce5eb4ae4a0bfcb8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c75bad21742f0fdfef13685094623d309bda5b42
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-logpool-freepool-object"></a>SQL Server, объект LogPool FreePool
-Объект производительности **SQLServer:LogPool FreePool** предоставляет счетчики для сбора статистики по свободному пулу внутри пула журналов.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект производительности **SQLServer:LogPool FreePool** предоставляет счетчики для сбора статистики по свободному пулу внутри пула журналов.
 
 В следующей таблице представлены объекты производительности **LogPool FreePool** SQL Server.
 
@@ -38,5 +38,4 @@ ms.lasthandoff: 06/22/2017
 
 ## <a name="see-also"></a>См. также:  
 [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)
-
 

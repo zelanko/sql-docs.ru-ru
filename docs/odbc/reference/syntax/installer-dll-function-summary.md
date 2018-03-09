@@ -3,27 +3,28 @@ title: "Сводка по функциям DLL установщика | Доку
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], installer DLL functions
 - installer DLL [ODBC]
 ms.assetid: 666c09d3-1e10-4d89-9b42-eda2957a87f0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2fcd7785696a49659c5d2e19cd4d5645624c52e6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 42b2338cafa53a2813929c3d674d9ed0a9789bdb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installer-dll-function-summary"></a>Сводка по функциям DLL установщика
 Ниже перечислены функции в программе установки библиотеки DLL. Дополнительные сведения о синтаксисе и семантику для каждой функции см. в разделе [Справочник по API библиотеки DLL установщика](../../../odbc/reference/syntax/installer-dll-api-reference-function.md).  
@@ -54,4 +55,3 @@ ms.lasthandoff: 09/09/2017
 ||[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|Добавление источника данных.|  
 ||[SQLWriteFileDSN](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|Записывает сведения в файл источников данных.|  
 ||[SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|Возвращает значение из сведений о системе.|
-

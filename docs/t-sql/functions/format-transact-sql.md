@@ -3,8 +3,11 @@ title: "ФОРМАТ (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - FORMAT function
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
-caps.latest.revision: 21
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 75f944ad28bc56300db7ca9dd7220036faaea711
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 46c7becb151b1942b411aefe337717172f207bb9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Возвращает значение, указанное в формате, языке и региональных параметрах (необязательно) в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Для выполнения форматирования значения даты, времени и чисел с учетом локали в виде строк используется функция FORMAT. Для общих преобразований типов данных продолжайте использовать CAST и CONVERT.  
   
@@ -46,7 +48,7 @@ FORMAT ( value, format [, culture ] )
  *value*  
  Выражение поддерживаемого типа данных для форматирования. Список допустимых типов см. в таблице в последующем разделе «Примечания».  
   
- *Формат*  
+ *format*  
  **nvarchar** шаблон формата.  
   
  *Формат* аргумент должен содержать допустимую строку форматирования .NET Framework, как строка стандартного формата (например, «C» или «D») или в виде шаблона пользовательских символов для дат и числовые значения (например, «мммм дд, гггг (дддд)») . Составное форматирование не поддерживается. Полное описание этих шаблонах форматирования см. в документации .NET Framework по форматированию строк в целом, настраиваемые дата и форматы времени и пользовательские числовые форматы. Хорошей отправной точкой является раздел «[типы форматирования](http://go.microsoft.com/fwlink/?LinkId=211776).»  
@@ -61,7 +63,7 @@ FORMAT ( value, format [, culture ] )
   
  Длина возвращаемого значения определяется *формат*.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  ФОРМАТ возвращает значение NULL для ошибки, отличный от *языка и региональных параметров* , не *допустимый*. Например, возвращается значение NULL, если значение, указанное в *формат* является недопустимым.  
  
  Функция FORMAT не детерминирована.   
@@ -211,8 +213,9 @@ SELECT FORMAT(cast('07:35' as time), N'hh\.mm');  --> returns 07.35
 SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ [СТРУ &#40; Transact-SQL &#41;](../../t-sql/functions/str-transact-sql.md)  
+ [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
-

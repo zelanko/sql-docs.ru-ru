@@ -1,10 +1,13 @@
 ---
-title: "Диспетчер соединений MSMQ | Документы Microsoft"
+title: "Диспетчер подключений MSMQ | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: connection-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -17,17 +20,16 @@ helpviewer_keywords:
 - MSMQ connection manager
 - message queue connections [Integration Services]
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
-caps.latest.revision: 35
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 0e028f9f648acc18d56dc05262adccbbc52f8f7e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: add29828603c19a3d909ebb621e99ba58bdc6052
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="msmq-connection-manager"></a>диспетчер соединений MSMQ
   Диспетчер соединений MSMQ позволяет пакетам соединяться с очередями сообщений, которые используют службу очередей сообщений (также называемую MSMQ). Задача «Очередь сообщений», содержащаяся в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , использует диспетчер соединений MSMQ.  
@@ -44,8 +46,8 @@ ms.lasthandoff: 08/09/2017
   
 |Тип очереди|Образец пути|  
 |----------------|-----------------|  
-|Открытый|\<Имя компьютера >\\< имя очереди\>|  
-|Private|\<Имя компьютера > \Private$\\< имя очереди\>|  
+|Открытый|\<имя компьютера>\\<имя очереди\>|  
+|Private|\<имя компьютера>\Private$\\<имя очереди\>|  
   
  Для представления локального компьютера можно использовать знак точки («.»).  
   
@@ -68,7 +70,7 @@ ms.lasthandoff: 08/09/2017
  **Название**  
  Задайте уникальное имя для диспетчера MSMQ-сеансов в рабочем процессе. Выбранное имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Описание**  
  Задайте описание диспетчера соединений. Рекомендуется описать назначение диспетчера соединений, чтобы сделать пакеты самодокументируемыми и более простыми в использовании.  
   
  **Путь**  
@@ -76,8 +78,8 @@ ms.lasthandoff: 08/09/2017
   
 |Тип очереди|Образец пути|  
 |----------------|-----------------|  
-|Открытый|\<Имя компьютера >\\< имя очереди\>|  
-|Private|\<Имя компьютера > \Private$\\< имя очереди\>|  
+|Открытый|\<имя компьютера>\\<имя очереди\>|  
+|Private|\<имя компьютера>\Private$\\<имя очереди\>|  
   
  Для представления локального компьютера можно использовать знак точки «.».  
   
@@ -86,7 +88,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также:  
  [Задача «Очередь сообщений»](../../integration-services/control-flow/message-queue-task.md)   
- [Службы Integration Services &#40; Службы SSIS &#41; Подключения](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   
-

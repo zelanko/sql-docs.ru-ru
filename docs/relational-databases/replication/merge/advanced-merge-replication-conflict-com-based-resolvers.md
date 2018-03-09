@@ -2,30 +2,32 @@
 title: "Сопоставители на базе технологии Microsoft COM | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - COM-based resolvers [SQL Server replication]
 - custom resolvers [SQL Server replication]
 ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
-caps.latest.revision: 38
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b0389bb0387489b581aae3225fd1a02e7bc9d713
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "38"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 409a397589bd7add43ffcb29e9bcf1a9c9e67f59
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="advanced-merge-replication-conflict---com-based-resolvers"></a>Конфликт расширенной репликации слиянием: сопоставители на базе технологии COM
-  Все сопоставители, основанные на технологии COM и поставляемые с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , обрабатывают конфликты обновления, а там, где это оговорено специально, они также обрабатывают конфликты вставки и удаления. Все арбитры производят отслеживание столбцов; большинство из них также производят отслеживание строк. Эти и все другие основанные на технологии COM сопоставители объявляют типы конфликтов, которые они обрабатывают, а для всех остальных типов конфликтов агент слияния использует сопоставитель по умолчанию.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Все сопоставители, основанные на технологии COM и поставляемые с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], обрабатывают конфликты обновления, а там, где это оговорено специально, они также обрабатывают конфликты вставки и удаления. Все арбитры производят отслеживание столбцов; большинство из них также производят отслеживание строк. Эти и все другие основанные на технологии COM сопоставители объявляют типы конфликтов, которые они обрабатывают, а для всех остальных типов конфликтов агент слияния использует сопоставитель по умолчанию.  
   
  Сопоставители устанавливаются во время процесса установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Выполните хранимую процедуру **sp_enumcustomresolvers** для просмотра всех сопоставителей, зарегистрированных на компьютере. При выполнении этой процедуры отображаются описание и глобальный уникальный идентификатор (GUID) для каждого сопоставителя в отдельном результирующем наборе.  
   
@@ -33,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
  В следующей таблице описываются атрибуты конкретных сопоставителей.  
   
-|Название|Требуемые входные данные|Описание|Комментарии|  
+|Имя|Требуемые входные данные|Description|Комментарии|  
 |----------|--------------------|-----------------|--------------|  
 |Арбитр конфликтов[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , использующий суммирование|Имя суммируемого столбца. Столбец должен относиться к арифметическому типу данных (например, **int**, **smallint**, **numeric**и т. д.).|Победитель в конфликте определяется по значению приоритета. Указанные значения столбца устанавливаются равными сумме значений исходного столбца и целевого столбца. Если одно из значений — NULL, итоговое значение устанавливается равным значению другого столбца.|Поддерживает конфликты обновления, и только отслеживание столбцов.|  
 |Арбитр конфликтов[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , использующий усреднение|Имя усредняемого столбца. Столбец должен относиться к арифметическому типу данных (например, **int**, **smallint**, **numeric**и т. д.).|Победитель в конфликте определяется по значению приоритета. Значения результирующего столбца устанавливаются равными среднему значению от значений исходного и целевого столбца. Если одно из значений — NULL, итоговое значение устанавливается равным значению другого столбца.|Поддерживает конфликты обновления, и только отслеживание столбцов.|  

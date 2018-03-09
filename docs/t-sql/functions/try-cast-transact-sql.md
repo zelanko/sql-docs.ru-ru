@@ -3,8 +3,11 @@ title: "TRY_CAST (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - TRY_CAST function
 ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
-caps.latest.revision: 10
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 09c5b6060798f28541f61e763954ed44920cf83d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 38958007757b3bc2d4016946a918982eba91251b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="trycast-transact-sql"></a>TRY_CAST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Возвращает значение, приведенное к указанному типу, если приведение проходит успешно; в противном случае возвращает NULL.  
   
@@ -58,7 +60,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
 ## <a name="return-types"></a>Типы возвращаемых значений  
  Возвращает значение, приведенное к указанному типу, если приведение проходит успешно; в противном случае возвращает NULL.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **TRY_CAST** принимает переданное значение и пытается привести его в указанный *data_type*. Если приведение выполнено успешно, **TRY_CAST** возвращает значение, что и заданный *data_type*; при возникновении ошибки возвращается значение null. Однако если запрашивается преобразования, которая явно не разрешена, затем **TRY_CAST** завершается с ошибкой.  
   
  **TRY_CAST** не новые зарезервированным ключевым словом и доступно на всех уровнях совместимости. **TRY_CAST** имеет ту же семантику, что **TRY_CONVERT** при соединении с удаленными серверами.  
@@ -68,7 +70,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
 ### <a name="a-trycast-returns-null"></a>A. TRY_CAST возвращает NULL  
  В следующем примере показано, что TRY_CAST возвращает значение NULL, если не удается выполнить приведение.  
   
-```tsql  
+```sql  
 SELECT   
     CASE WHEN TRY_CAST('test' AS float) IS NULL   
     THEN 'Cast failed'  
@@ -89,7 +91,7 @@ Cast failed
   
  В следующем примере показано, что выражение должно иметь ожидаемый формат.  
   
-```tsql  
+```sql  
 SET DATEFORMAT dmy;  
 SELECT TRY_CAST('12/31/2010' AS datetime2) AS Result;  
 GO  
@@ -108,7 +110,7 @@ NULL
 ### <a name="b-trycast-fails-with-an-error"></a>Б. TRY_CAST завершается с ошибкой  
  В следующем примере показано, что TRY_CAST возвращает ошибку, если явное приведение недопустимо.  
   
-```tsql  
+```sql  
 SELECT TRY_CAST(4 AS xml) AS Result;  
 GO  
 ```  
@@ -143,4 +145,3 @@ Result
  [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   
-

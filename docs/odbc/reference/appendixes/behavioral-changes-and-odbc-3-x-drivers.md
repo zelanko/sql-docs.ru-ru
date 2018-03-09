@@ -3,10 +3,12 @@ title: "Изменения поведения и драйверы ODBC 3.x | Д�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], behavioral changes
 - compatibility [ODBC], behavioral changes
 ms.assetid: 88a503cc-bff7-42d9-83ff-8e232109ed06
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dc06520b8dcf2fe5686d041e1c48e50cf5555b79
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5bd1ce6560e8c93d22cac8f99f2eee53be1b953
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>Изменения поведения и драйверы ODBC 3.x
 Атрибут среды SQL_ATTR_ODBC_VERSION Указывает драйверу ли он должен достичь ODBC 2. *x* поведение или ODBC 3*.x* поведение. Как задать атрибут среды SQL_ATTR_ODBC_VERSION зависит от приложения. ODBC 3*.x* приложений необходимо вызвать **SQLSetEnvAttr** для установки этого атрибута после вызова они **SQLAllocHandle** выделить дескриптор среды и до вызова  **SQLAllocHandle** для выделения дескриптора соединения. Если они не сделано, диспетчер драйверов возвращает SQLSTATE HY010 (функция ошибка последовательности) при последнем вызове функции **SQLAllocHandle**.  
@@ -42,15 +43,14 @@ ms.lasthandoff: 09/09/2017
   
 -   [Типы данных даты и времени](../../../odbc/reference/appendixes/datetime-data-types.md)  
   
--   [Обратная совместимость типов данных C](../../../odbc/reference/appendixes/backward-compatibility-of-c-data-types.md)  
+-   [Обратная совместимость типов данных C](../../../odbc/reference/appendixes/backward-compatibility-of-c-data-types.md)  
   
 -   [Закладки фиксированной длины](../../../odbc/reference/appendixes/fixed-length-bookmarks.md)  
   
 -   [Поддержка SQLGetInfo](../../../odbc/reference/appendixes/sqlgetinfo-support.md)  
   
--   [Возвращает значение SQL_NO_DATA](../../../odbc/reference/appendixes/returning-sql-no-data.md)  
+-   [Возврат SQL_NO_DATA](../../../odbc/reference/appendixes/returning-sql-no-data.md)  
   
 -   [Вызов SQLSetPos для вставки данных](../../../odbc/reference/appendixes/calling-sqlsetpos-to-insert-data.md)  
   
 -   [Загрузка по порядковому номеру](../../../odbc/reference/appendixes/loading-by-ordinal.md)
-

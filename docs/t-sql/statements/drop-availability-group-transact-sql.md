@@ -3,8 +3,11 @@ title: "DROP AVAILABILITY GROUP (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,20 +23,19 @@ helpviewer_keywords:
 - DROP AVAILABILITY GROUP statement
 - Availability Groups [SQL Server], dropping
 ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
-caps.latest.revision: 44
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c1cd1e16d7d25810d571f940aaf1dece825406c3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 82fdb4b104a0be0aa0d6469ccdd23f361f55618b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-availability-group-transact-sql"></a>DROP AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Удаляет указанную группу доступности и все ее реплики. Если экземпляр сервера, на котором размещена одна из реплик доступности, находится в режиме «вне сети» при удалении группы доступности, то после перехода в режим «в сети» локальная реплика доступности будет удалена с экземпляра сервера. При удалении группы доступности также удаляется и связанный с ней прослушиватель группы доступности, если он существует.  
   
@@ -53,7 +55,7 @@ DROP AVAILABILITY GROUP group_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *имя_группы*  
+ *group_name*  
  Указывает имя удаляемой группы доступности.  
   
 ## <a name="limitations-and-recommendations"></a>Ограничения  
@@ -69,9 +71,9 @@ DROP AVAILABILITY GROUP group_name
   
 -   На вторичной реплике **DROP AVAILABILITY GROUP** следует использовать только в экстренных случаях. Это связано с тем, что удаление группы доступности переводит группу в режим «вне сети». При удалении группы доступности из вторичной реплики первичная реплика не может определить, является ли **OFFLINE** состояние возникло из-за потери кворума, принудительного перехода на другой ресурс или **DROP AVAILABILITY GROUP**команды. Первичная реплика переходит **RESTORING** состояние, чтобы избежать возможной ситуации с дроблением. Дополнительные сведения см. в статье [Поведение инструкции DROP AVAILABILITY GROUP](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (блог инженеров CSS SQL Server).  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Разрешения  
  Требуется **ALTER AVAILABILITY GROUP** разрешение для группы доступности, **CONTROL AVAILABILITY GROUP** разрешение, **ALTER ANY AVAILABILITY GROUP** разрешение, или **CONTROL SERVER** разрешение. Для удаления группы доступности, которая не размещена на экземпляре локального сервера, необходимо **CONTROL SERVER** разрешение или **УПРАВЛЕНИЯ** разрешение для этой группы доступности.  
   
 ## <a name="examples"></a>Примеры  
@@ -81,14 +83,13 @@ DROP AVAILABILITY GROUP group_name
 DROP AVAILABILITY GROUP AccountsAG;  
 ```  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="RelatedContent"></a> Related Content  
   
 -   [Принцип работы. Поведение инструкции DROP AVAILABILITY GROUP](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (блог инженеров CSS SQL Server)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [Удаление группы доступности (SQL Server)](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
+ [Создание группы ДОСТУПНОСТИ &#40; Transact-SQL &#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [Удаление группы доступности &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
   
   
-

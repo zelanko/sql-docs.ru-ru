@@ -2,9 +2,12 @@
 title: "Предоставление доступа к объекту базы данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,20 +17,19 @@ applies_to:
 helpviewer_keywords:
 - granting access to database objects
 ms.assetid: a44d9bbf-f58e-4734-b7f4-eb3b492b777b
-caps.latest.revision: 14
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7cc5c15a44f16e4049974ff76095a389348707c7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 5ccbacfe52541c59e12b992220f40806cae46bca
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-2-4---granting-access-to-a-database-object"></a>Занятие 2-4-Предоставление доступа к объекту базы данных
-Будучи администратором, можно выполнять инструкцию SELECT из таблицы **Products** и представления **vw_Names** , а также выполнять процедуру **pr_Names** ; однако Mary всего этого не может. Чтобы предоставить Mary необходимые разрешения, воспользуйтесь инструкцией GRANT.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Администратор может выполнять инструкцию SELECT из **продуктов** таблицы и **vw_Names** , а также выполнять **pr_Names** процедуры; однако Mary невозможно. Чтобы предоставить Mary необходимые разрешения, воспользуйтесь инструкцией GRANT.  
   
 ### <a name="procedure-title"></a>Описание процедуры  
   
@@ -55,4 +57,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

@@ -1,10 +1,13 @@
 ---
-title: "Задаче потока данных | Документы Microsoft"
+title: "Задача потока данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -18,17 +21,16 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-caps.latest.revision: 75
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 8823647eeb74020da575143375d416a03e62d424
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0e16ec789222a73e6d4a73a654576f5d0295df64
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-flow-task"></a>Задача потока данных
   В состав задачи потока данных входит подсистема обработки потока данных, перемещающая данные между источником и назначением и позволяющая пользователю преобразовывать, очищать и изменять данные в процессе перемещения. Добавление задачи потока данных в поток управления пакета позволяет пакету извлекать, преобразовывать и загружать данные.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 08/03/2017
   
  На следующей диаграмме показана задача потока данных с несколькими потоками данных.  
   
- ![Потоки данных](../../integration-services/control-flow/media/mw-dts-09.gif "потоков данных")  
+ ![Потоки данных](../../integration-services/control-flow/media/mw-dts-09.gif "Потоки данных")  
   
 ## <a name="log-entries"></a>Записи журнала  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют несколько событий журнала, которые доступны всем задачам. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют также пользовательские записи журнала. Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md). Задача потока данных содержит следующие пользовательские записи журнала.  
@@ -93,12 +95,12 @@ ms.lasthandoff: 08/03/2017
   
  Например, следующая таблица содержит сообщение «В качестве входных данных компоненту потока данных были предоставлены строки. :  : 1185 : выход источника OLE DB : 1180 : сортировка : 1181 : вход сортировки : 76", разделенное на столбцы. Сообщение записано событием **OnPipelineRowsSent** , когда строки были отправлены из источника «OLE DB» в преобразование «Сортировка».  
   
-|Столбец|Description|Значение|  
+|столбцом|Description|Значение|  
 |------------|-----------------|-----------|  
 |**PathID**|Значение свойства **ID** пути между источником «OLE DB» и преобразованием «Сортировка».|1185|  
 |**PathName**|Значение свойства **Name** пути.|Выход данных источника «OLE DB»|  
 |**ComponentID**|Значение свойства **ID** преобразования «Сортировка».|1180|  
-|**ComponentName**|Значение свойства **Name** преобразования «Сортировка».|Сортировка|  
+|**ComponentName**|Значение свойства **Name** преобразования «Сортировка».|Sort|  
 |**InputID**|Значение свойства **ID** входных данных для преобразования «Сортировка».|1181|  
 |**InputName**|Значение свойства **Name** входных данных для преобразования «Сортировка».|Вход сортировки|  
 |**RowsSent**|Количество строк, отправленных в качестве входных данных на преобразование «Сортировка».|76|  
@@ -115,11 +117,10 @@ ms.lasthandoff: 08/03/2017
   
 -   [Добавление задачи потока данных программным образом](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="related-content"></a>См. также  
  Видеоматериал [Распространитель сбалансированных данных](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)на узле Technet.microsoft.com (на английском языке).  
   
   
-

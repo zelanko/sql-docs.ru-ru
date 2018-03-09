@@ -1,19 +1,19 @@
 # [Обзор](catalog-views-transact-sql.md)
 
-# [Запросив системный каталог SQL Server часто задаваемые вопросы](querying-the-sql-server-system-catalog-faq.md)  
-# [Схемы - sys.schemas](schemas-catalog-views-sys-schemas.md)  
-# [Сообщения (для ошибок) - sys.messages](messages-for-errors-catalog-views-sys-messages.md)  
-# [Расширенные свойства - sys.extended_properties](extended-properties-catalog-views-sys-extended-properties.md)  
+# [Часто задаваемые вопросы о запросах к системному каталогу SQL Server](querying-the-sql-server-system-catalog-faq.md)  
+# [Схемы — sys.schemas](schemas-catalog-views-sys-schemas.md)  
+# [Сообщения (для ошибок) — sys.messages](messages-for-errors-catalog-views-sys-messages.md)  
+# [Расширенные свойства — sys.extended_properties](extended-properties-catalog-views-sys-extended-properties.md)  
 
-# Отслеживание изменений
+# отслеживание изменений
 ## [sys.change_tracking_databases](change-tracking-catalog-views-sys-change-tracking-databases.md)  
 ## [sys.change_tracking_tables](change-tracking-catalog-views-sys-change-tracking-tables.md)  
 
 # Зеркальное отображение базы данных
-## [Следящий сервер зеркального отображения - базы данных sys.database_mirroring_witnesses](database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  
+## [Следящий сервер зеркального отображения базы данных — sys.database_mirroring_witnesses](database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  
 
 # Приложения уровня данных
-## [Представления приложения уровня данных — dbo.sysdac_instance](data-tier-application-views-dbo-sysdac-instances.md)  
+## [Представления приложений уровня данных — dbo.sysdac_instance](data-tier-application-views-dbo-sysdac-instances.md)  
 
 # [Группы доступности](always-on-availability-groups-catalog-views-transact-sql.md)  
 ## [sys.availability_databases_cluster](sys-availability-databases-cluster-transact-sql.md)  
@@ -36,11 +36,8 @@
 ## [sys.resource_stats](sys-resource-stats-azure-sql-database.md)  
 ## [sys.resource_usage](sys-resource-usage-azure-sql-database.md)  
 ## [dbo.server_quotas](dbo-server-quotas-azure-sql-database.md)  
-## [dbo.slo_assignment_history](dbo-slo-assignment-history-azure-sql-database.md)  
-## [dbo.slo_database_objectives](dbo-slo-database-objectives-azure-sql-database.md)  
-## [dbo.slo_service_objectives](dbo-slo-service-objectives-azure-sql-database.md)  
 
-# [Сборки среды CLR](clr-assembly-catalog-views-transact-sql.md)  
+# [Сборка CLR](clr-assembly-catalog-views-transact-sql.md)  
 ## [sys.assemblies](sys-assemblies-transact-sql.md)  
 ## [sys.assembly_files](sys-assembly-files-transact-sql.md)  
 ## [sys.assembly_references](sys-assembly-references-transact-sql.md)  
@@ -79,7 +76,7 @@
 
 # [Конечные точки](endpoints-catalog-views-transact-sql.md)  
 ## [sys.database_mirroring_endpoints](sys-database-mirroring-endpoints-transact-sql.md)  
-## [sys.Endpoints](sys-endpoints-transact-sql.md)  
+## [sys.endpoints](sys-endpoints-transact-sql.md)  
 ## [sys.endpoint_webmethods](sys-endpoint-webmethods-transact-sql.md)  
 ## [sys.http_endpoints](sys-http-endpoints-transact-sql.md)  
 ## [sys.service_broker_endpoints](sys-service-broker-endpoints-transact-sql.md)  
@@ -103,12 +100,12 @@
 ## [sys.external_data_sources](sys-external-data-sources-transact-sql.md)  
 ## [sys.external_file_formats](sys-external-file-formats-transact-sql.md)  
 
-# [FileStream и FileTable](filestream-and-filetable-catalog-views-transact-sql.md)  
+# [Filestream и FileTable](filestream-and-filetable-catalog-views-transact-sql.md)  
 ## [sys.database_filestream_options](sys-database-filestream-options-transact-sql.md)  
 ## [sys.filetable_system_defined_objects](sys-filetable-system-defined-objects-transact-sql.md)  
 ## [sys.filetables](sys-filetables-transact-sql.md)  
 
-# [Компонент Full-Text Search и семантический поиск](full-text-search-and-semantic-search-catalog-views-transact-sql.md)  
+# [Семантический поиск и полнотекстовый поиск](full-text-search-and-semantic-search-catalog-views-transact-sql.md)  
 ## [sys.fulltext_catalogs](sys-fulltext-catalogs-transact-sql.md)  
 ## [sys.fulltext_document_types](sys-fulltext-document-types-transact-sql.md)  
 ## [sys.fulltext_index_catalog_usages](sys-fulltext-index-catalog-usages-transact-sql.md)  
@@ -125,9 +122,9 @@
 ## [sys.registered_search_property_lists](sys-registered-search-property-lists-transact-sql.md)  
 
 # [Связанные серверы](linked-servers-catalog-views-transact-sql.md)  
-## [представление sys.linked_logins](sys-linked-logins-transact-sql.md)  
-## [представление sys.remote_logins](sys-remote-logins-transact-sql.md)  
-## [sys.Servers](sys-servers-transact-sql.md)  
+## [sys.linked_logins](sys-linked-logins-transact-sql.md)  
+## [sys.remote_logins](sys-remote-logins-transact-sql.md)  
+## [sys.servers](sys-servers-transact-sql.md)  
 
 # [Объект](object-catalog-views-transact-sql.md)  
 ## [sys.all_columns](sys-all-columns-transact-sql.md)  
@@ -141,10 +138,10 @@
 ## [sys.column_store_dictionaries](sys-column-store-dictionaries-transact-sql.md)  
 ## [sys.column_store_row_groups](sys-column-store-row-groups-transact-sql.md)  
 ## [sys.column_store_segments](sys-column-store-segments-transact-sql.md)  
-## [sys.Columns](sys-columns-transact-sql.md)  
+## [sys.columns](sys-columns-transact-sql.md)  
 ## [sys.computed_columns](sys-computed-columns-transact-sql.md)  
 ## [sys.default_constraints](sys-default-constraints-transact-sql.md)  
-## [sys.Events](sys-events-transact-sql.md)  
+## [sys.events](sys-events-transact-sql.md)  
 ## [sys.event_notifications](sys-event-notifications-transact-sql.md)  
 ## [sys.event_notification_event_types](sys-event-notification-event-types-transact-sql.md)  
 ## [sys.extended_procedures](sys-extended-procedures-transact-sql.md)  
@@ -166,12 +163,12 @@
 ## [sys.module_assembly_usages](sys-module-assembly-usages-transact-sql.md)  
 ## [sys.numbered_procedures](sys-numbered-procedures-transact-sql.md)  
 ## [sys.numbered_procedure_parameters](sys-numbered-procedure-parameters-transact-sql.md)  
-## [sys.Objects](sys-objects-transact-sql.md)  
+## [sys.objects](sys-objects-transact-sql.md)  
 ## [sys.parameters](sys-parameters-transact-sql.md)  
 ## [sys.partitions](sys-partitions-transact-sql.md)  
-## [sys.Periods](sys-periods-transact-sql.md)  
+## [sys.periods](sys-periods-transact-sql.md)  
 ## [sys.plan_guides](sys-plan-guides-transact-sql.md)  
-## [sys.Procedures](sys-procedures-transact-sql.md)  
+## [sys.procedures](sys-procedures-transact-sql.md)  
 ## [sys.sequences](sys-sequences-transact-sql.md)  
 ## [sys.server_assembly_modules](sys-server-assembly-modules-transact-sql.md)  
 ## [sys.server_events](sys-server-events-transact-sql.md)  
@@ -191,11 +188,11 @@
 ## [sys.system_sql_modules](sys-system-sql-modules-transact-sql.md)  
 ## [sys.system_views](sys-system-views-transact-sql.md)  
 ## [sys.table_types](sys-table-types-transact-sql.md)  
-## [sys.Tables](sys-tables-transact-sql.md)  
+## [sys.tables](sys-tables-transact-sql.md)  
 ## [sys.trigger_event_types](sys-trigger-event-types-transact-sql.md)  
 ## [sys.trigger_events](sys-trigger-events-transact-sql.md)  
 ## [sys.triggers](sys-triggers-transact-sql.md)  
-## [sys.Views](sys-views-transact-sql.md)  
+## [sys.views](sys-views-transact-sql.md)  
 
 # [Функция секционирования](partition-function-catalog-views-transact-sql.md)  
 ## [sys.partition_functions](sys-partition-functions-transact-sql.md)  
@@ -211,7 +208,7 @@
 ## [syspolicy_policy_category_subscriptions](syspolicy-policy-category-subscriptions-transact-sql.md)  
 ## [syspolicy_system_health_state](syspolicy-system-health-state-transact-sql.md)  
 
-# [регулятор ресурсов](resource-governor-catalog-views-transact-sql.md)  
+# [Регулятор ресурсов](resource-governor-catalog-views-transact-sql.md)  
 ## [sys.resource_governor_configuration](sys-resource-governor-configuration-transact-sql.md)  
 ## [sys.resource_governor_external_resource_pools](sys-resource-governor-external-resource-pools-transact-sql.md)  
 ## [sys.resource_governor_resource_pools](sys-resource-governor-resource-pools-transact-sql.md)  
@@ -234,13 +231,13 @@
 ## [sys.column_type_usages](sys-column-type-usages-transact-sql.md)  
 ## [sys.parameter_type_usages](sys-parameter-type-usages-transact-sql.md)  
 
-# [Безопасность](security-catalog-views-transact-sql.md)  
+# [безопасность](security-catalog-views-transact-sql.md)  
 ## [sys.asymmetric_keys](sys-asymmetric-keys-transact-sql.md)  
-## [sys.Certificates](sys-certificates-transact-sql.md)  
-## [sys.column_encryption_keys](sys-column-encryption-keys-transact-sql.md)  
+## [sys.certificates](sys-certificates-transact-sql.md)  
+## [sys.column_encryption_keys ](sys-column-encryption-keys-transact-sql.md)  
 ## [sys.column_encryption_key_values](sys-column-encryption-key-values-transact-sql.md)  
 ## [sys.column_master_keys](sys-column-master-keys-transact-sql.md)  
-## [sys.Credentials](sys-credentials-transact-sql.md)  
+## [sys.credentials](sys-credentials-transact-sql.md)  
 ## [sys.crypt_properties](sys-crypt-properties-transact-sql.md)  
 ## [sys.cryptographic_providers](sys-cryptographic-providers-transact-sql.md)  
 ## [sys.database_audit_specifications](sys-database-audit-specifications-transact-sql.md)  
@@ -282,10 +279,10 @@
 ## [sys.service_message_types](sys-service-message-types-transact-sql.md)  
 ## [sys.service_queue_usages](sys-service-queue-usages-transact-sql.md)  
 ## [sys.service_queues](sys-service-queues-transact-sql.md)  
-## [sys.Services](sys-services-transact-sql.md)  
+## [sys.services](sys-services-transact-sql.md)  
 ## [sys.transmission_queue](sys-transmission-queue-transact-sql.md)  
 
-# [Конфигурации на уровне сервера](server-wide-configuration-catalog-views-transact-sql.md)  
+# [Конфигурация уровня сервера](server-wide-configuration-catalog-views-transact-sql.md)  
 ## [sys.configurations](sys-configurations-transact-sql.md)  
 ## [sys.time_zone_info](sys-time-zone-info-transact-sql.md)  
 ## [sys.traces](sys-traces-transact-sql.md)  
@@ -333,7 +330,7 @@
 ## [sys.remote_data_archive_tables](stretch-database-catalog-views-sys-remote-data-archive-tables.md)
 
 
-# [XML-схем (системы типов XML)](xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+# [Схемы XML (система типов XML)](xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
 ## [sys.column_xml_schema_collection_usages](sys-column-xml-schema-collection-usages-transact-sql.md)  
 ## [sys.parameter_xml_schema_collection_usages](sys-parameter-xml-schema-collection-usages-transact-sql.md)  
 ## [sys.selective_xml_index_paths](sys-selective-xml-index-paths-transact-sql.md)  

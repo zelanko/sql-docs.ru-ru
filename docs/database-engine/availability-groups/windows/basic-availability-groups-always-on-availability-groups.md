@@ -1,34 +1,34 @@
 ---
 title: "Основные группы доступности (группы доступности AlwaysOn) | Документы Майкрософт"
 ms.custom: 
-ms.date: 09/27/2016
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.date: 02/01/2018
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
-caps.latest.revision: 9
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
+ms.openlocfilehash: ba38095f11a5f40ec6b9a9398217a98f390d146d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: HT
-ms.sourcegitcommit: b5ac9749e7ba4aecad3f6211750623afa71c9e69
-ms.openlocfilehash: 83bccd06657b880cc4ebf7a21f8b327753dc4bee
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>Базовые группы доступности (группы доступности AlwaysOn)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Базовые группы доступности AlwaysOn предоставляют решение высокой доступности для SQL Server 2016 и SQL Server 2017 Standard. Основная группа доступности обеспечивает функционирование среды отработки отказа для одной базы данных. Базовые группы создаются и управляются так же, как обычные (расширенные) [группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) в выпуске Enterprise Edition. В этом документе описаны отличия и ограничения основных групп доступности.  
   
-## <a name="features"></a>Функции  
+## <a name="features"></a>Компоненты  
  Базовые группы доступности AlwaysOn заменяют нерекомендуемую функцию зеркального отображения базы данных и предоставляют такой же уровень поддержки. Основные группы доступности позволяют поддерживать одну реплику базы данных-источника. Эта реплика может использовать режим синхронной или асинхронной фиксации. Дополнительные сведения о режимах доступности см. в разделе [Режимы доступности (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md). Вторичная реплика остается неактивной, пока нет необходимости отработки отказа. При такой отработке первичная и вторичная роли меняются местами, в результате чего вторичная реплика становится первичной активной базой данных. Дополнительные сведения об отработке отказа см. в разделе [Отработка отказа и режимы отработки отказа (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md). Основные группы доступности могут работать в гибридной среде, охватывающей локальные данные и облако Microsoft Azure.  
   
 ## <a name="limitations"></a>Ограничения  
@@ -43,9 +43,7 @@ ms.lasthandoff: 09/28/2017
 - Отсутствуют проверки целостности на вторичных репликах. 
 
 - Отсутствует поддержка реплик, размещенных на серверах под управлением SQL Server версии ниже SQL Server 2016 Community Technology Preview 3 (CTP3).  
-  
-- Отсутствует поддержка добавления или удаления реплик в существующих основных группах доступности.  
-  
+
 - Поддержка одной базы данных доступности.  
   
 - Основные группы доступности не могут быть обновлены до расширенных групп доступности. В этом случае группу необходимо удалить и повторно добавить в группу, содержащую серверы под управлением SQL Server 2016 Enterprise Edition.  
@@ -66,4 +64,3 @@ ms.lasthandoff: 09/28/2017
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
-

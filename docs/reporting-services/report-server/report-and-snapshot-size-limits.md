@@ -1,13 +1,14 @@
 ---
-title: "Предельные размеры отчетов и моментальных снимков | Документы Microsoft"
+title: "Максимальные размеры отчетов и моментальных снимков | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +19,16 @@ helpviewer_keywords:
 - reports [Reporting Services], size
 - denial of service attacks [Reporting Services]
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
-caps.latest.revision: 48
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "48"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8a101dd362ea9ec71a0d4e75347bea60171cd8d1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9498eab0fb3117567aab18207f3a207fd0410c2c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-and-snapshot-size-limits"></a>Максимальные размеры отчетов и моментальных снимков
   Администраторы, которые управляют развертыванием служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , могут использовать этот раздел, чтобы получить основные сведения об ограничениях максимального размера отчета при публикации на сервере отчетов, о подготовке к просмотру во время выполнения и сохранении в файловой системе. В этом разделе содержатся практические рекомендации по определению размера базы данных сервера отчетов, а также описывается влияние размера моментальных снимков на производительность сервера.  
@@ -85,10 +85,9 @@ EXEC sp_spaceused
   
  Размер моментального снимка, который хранится в базе данных сервера отчетов, сам по себе не является фактором, определяющим производительность системы. Можно хранить большое число моментальных снимков без влияния на производительность сервера. Можно сохранить неограниченное количество моментальных снимков. Однако нужно иметь в виду, что журнал отчетов можно настраивать. Если администратор сервера отчетов уменьшит объем журнала отчетов, то можно потерять журналы отчетов, которые планировалось сохранить. Если удалить отчет, то все журналы отчета будут удалены вместе с ним.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка свойств обработки отчетов](../../reporting-services/report-server/set-report-processing-properties.md)   
- [База данных сервера отчетов &#40; Собственный режим служб SSRS &#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [База данных сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Обработка больших отчетов](../../reporting-services/report-server/process-large-reports.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Регистрация пользовательских бизнес-о�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - registering custom business objects in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
-caps.latest.revision: 19
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1b95345c2c3818330bf442b56671192d9a47cad6
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: be54505545b80211ec34216a67596c32ca8ce2b2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="registering-a-custom-business-object"></a>Регистрация пользовательских бизнес-объект
 Чтобы успешно запустить пользовательский бизнес-объект (.dll или .exe) через веб-сервер, ProgID бизнес-объект должен быть введен в реестре как описано в этой процедуре. Эта функция служб удаленных рабочих СТОЛОВ защищает безопасности веб-сервера, запустив только санкционированные исполняемые файлы.  
@@ -49,6 +48,5 @@ ms.lasthandoff: 09/09/2017
 4.  Выберите **ADCLaunch** ключа, а затем из **изменить**последовательно выберите пункты **New** и нажмите кнопку **ключ**.  
   
 5.  Введите идентификатор ProgID пользовательский бизнес-объект и нажмите кнопку **ввод**. Оставить **значение** входа с пустым.
-
 
 

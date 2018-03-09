@@ -1,13 +1,14 @@
 ---
-title: "Язык определения (SSRS) отчетов | Документы Microsoft"
+title: "Язык определения отчетов (SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +21,16 @@ helpviewer_keywords:
 - RDL [Reporting Services]
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
-caps.latest.revision: 52
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "52"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 003d81f131eeeadbf672e63f0c949e4a1a6df2ad
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6a0acf3ce891459589445e28b73ef762e3a82da8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-definition-language-ssrs"></a>Язык определения отчетов (SSRS)
   Язык определения отчетов — это средство представления определений отчетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в формате XML. Определение отчета содержит сведения о получении данных и о макете для отчета. Язык определения отчетов состоит из элементов XML, которые соответствуют грамматике XML, созданной для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Предусмотрена возможность добавления пользовательских функций для управления значениями элементов отчета, стилями и форматированием путем обращения к сборкам кода в файлах определения отчета.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
  Например, следующая схема включает элемент **ReportParameters**на языке определения отчетов, имеющий сложный тип **ReportParametersType**. В соответствии с принятым соглашением обозначением сложного типа для элемента является имя элемента, за которым следует слово **Type**. Элемент **ReportParameters** может входить в элемент **Report** (сложного типа) и в свою очередь содержать элементы **ReportParameter** . **ReportParameterType** — это простой тип, который может принимать только одно из следующих значений: **Boolean**, **DateTime**, **Integer**, **Float**или **String**. Дополнительные сведения о типах данных схем XML см. в статье [XML Schema Part 2: Datatypes Second Edition](http://go.microsoft.com/fwlink/?linkid=4871)(Схема XML, часть 2. Типы данных, второе издание).  
   
- Схема XSD для языка определения отчетов доступна в файле ReportDefinition.xsd, расположенном в папке Extras на компакт-диске продукта. Эта схема также доступна на сервере отчетов по следующему URL-АДРЕСУ: `http://servername/reportserver/reportdefinition.xsd`.  
+ Схема XSD для языка определения отчетов доступна в файле ReportDefinition.xsd, расположенном в папке Extras на компакт-диске продукта. Эта схема также доступна на сервере отчетов по следующему URL-адресу: `http://servername/reportserver/reportdefinition.xsd`.  
   
 ##  <a name="bkmk_Creating_RDL"></a> Создание RDL  
  Язык определения отчетов характеризуется открытостью и расширяемостью, поэтому обеспечивает возможность построения целого ряда средств и приложений, позволяющих создавать код на языке определения отчетов на основе схемы XML этого языка.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_RDL_Types"></a> Типы RDL  
  Следующая таблица содержит список типов, используемых в элементах и атрибутах RDL.  
   
-|Type|Description|  
+|Тип|Description|  
 |----------|-----------------|  
 |**Двоичный**|Свойство с закодированным в base-64 двоичным значением.|  
 |**Boolean**|Свойство объекта со значением **true** или **false** . Если иное не указано, то значением дополнительного объекта Boolean будет **False**.|  
@@ -86,16 +86,15 @@ ms.lasthandoff: 08/09/2017
   
 |**Типы CLR**|**Соответствующий тип данных**|  
 |-----------------------|---------------------------------|  
-|Boolean|Boolean|  
+|Логическое значение|Логическое значение|  
 |DateTime, DateTimeOffset|DateTime|  
-|Int16, Int32, UInt16, Byte, SByte|Integer|  
+|Int16, Int32, UInt16, Byte, SByte|Целочисленный|  
 |Single, Double|Float|  
 |String, Char, GUID, Timespan|String|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Определение версии схемы определения отчета (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)   
  [Использование пользовательских сборок с отчетами](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Пользовательские элементы отчета](../../reporting-services/custom-report-items/custom-report-items.md)  
   
   
-

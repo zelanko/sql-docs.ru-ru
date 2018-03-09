@@ -2,33 +2,35 @@
 title: "Настройка шифрования столбцов с помощью PowerShell | Документация Майкрософт"
 ms.custom: 
 ms.date: 05/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - powershell
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
-caps.latest.revision: 8
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b558ecb78086123cff3c65ae95446fb1a30f9cf4
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
-ms.openlocfilehash: d4a5651f3ef4f8d848253711ed93721f387c016a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="configure-column-encryption-using-powershell"></a>Настройка шифрования столбцов с помощью PowerShell
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 В этой статье описаны шаги по настройке целевой конфигурации постоянного шифрования для столбцов базы данных с помощью командлета [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) (в модуле *SqlServer* PowerShell). Командлет **Set-SqlColumnEncryption** изменяет схему целевой базы данных и данные, хранящиеся в выбранных столбцах. В зависимости от целевых параметров шифрования, указанных для столбцов и текущей конфигурации шифрования, хранящиеся в столбце данные могут быть зашифрованы, повторно зашифрованы или расшифрованы.
 Дополнительные сведения о поддержке функции Always Encrypted в модуле SqlServer PowerShell см. в статье [Настройка постоянного шифрования с помощью PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Чтобы задать целевую конфигурацию шифрования, необходимо выполнить следующие условия:
 - в базе данных должен быть настроен ключ шифрования столбца (если выполняется шифрование или повторное шифрование столбца). Дополнительные сведения см. в разделе [Configure Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)(Настройка ключей постоянного шифрования с помощью PowerShell).
@@ -42,7 +44,7 @@ ms.lasthandoff: 07/31/2017
 
 При использовании режима "вне сети" целевые таблицы (и любые, относящиеся к ним таблицы, например таблицы, имеющие связь с целевой таблицей по внешнему ключу) недоступны для записи транзакций на протяжении операции. Семантика ограничений внешнего ключа (**CHECK** или **NOCHECK**) всегда сохраняется при использовании режима "вне сети".
 
-При использовании режима "в сети" (требуется модуль SqlServer PowerShell 21.x или более поздней версии) операция копирования и шифрования, расшифровки или повторного шифрования данных выполняется постепенно. Приложения могут считывать данные в целевых таблицах и записывать их в эти таблицы во время выполнения операции перемещения, за исключением последней итерации, длительность которой ограничивается параметром **MaxDownTimeInSeconds** (его можно определить). Приложения могут обнаруживать и обрабатывать изменения во время копирования данных. [Отслеживание изменений](../../track-changes/enable-and-disable-change-tracking-sql-server.md) включается с помощью командлета в целевой базе данных. Поэтому при использовании режима "в сети" на стороне сервера потребляется больше ресурсов. Операции в этом режиме также могут занять гораздо больше времени, в частности при интенсивной записи в базу данных. Режим "в сети" можно использовать для шифрования одной таблицы за раз. При этом она должна содержать первичный ключ. По умолчанию ограничения внешнего ключа создаются повторно с помощью параметра **NOCHECK**, чтобы свести к минимуму воздействие на приложения. Вы можете принудительно задать сохранение семантики ограничений внешнего ключа, указав параметр **KeepCheckForeignKeyConstraints**.
+При использовании режима "в сети" (требуется модуль SqlServer PowerShell из SSMS 21 или более поздней версии) операция копирования и шифрования, расшифровки или повторного шифрования данных выполняется постепенно. Приложения могут считывать данные в целевых таблицах и записывать их в эти таблицы во время выполнения операции перемещения, за исключением последней итерации, длительность которой ограничивается параметром **MaxDownTimeInSeconds** (его можно определить). Приложения могут обнаруживать и обрабатывать изменения во время копирования данных. [Отслеживание изменений](../../track-changes/enable-and-disable-change-tracking-sql-server.md) включается с помощью командлета в целевой базе данных. Поэтому при использовании режима "в сети" на стороне сервера потребляется больше ресурсов. Операции в этом режиме также могут занять гораздо больше времени, в частности при интенсивной записи в базу данных. Режим "в сети" можно использовать для шифрования одной таблицы за раз. При этом она должна содержать первичный ключ. По умолчанию ограничения внешнего ключа создаются повторно с помощью параметра **NOCHECK**, чтобы свести к минимуму воздействие на приложения. Вы можете принудительно задать сохранение семантики ограничений внешнего ключа, указав параметр **KeepCheckForeignKeyConstraints**.
 
 Ниже приведены рекомендации по выбору между режимом "в сети" и "вне сети".
 
@@ -54,16 +56,16 @@ ms.lasthandoff: 07/31/2017
 Режим "в сети" следует использовать:
 - чтобы свести к минимуму время простоя или недоступность базы данных для приложений.
 
-## <a name="security-considerations"></a>Вопросы безопасности
+## <a name="security-considerations"></a>Соображения безопасности
 
 Командлет **Set-SqlColumnEncryption** , используемый для настройки шифрования столбцов базы данных, обрабатывает ключи постоянного шифрования и данные, хранящиеся в столбцах базы данных. Поэтому командлет нужно запускать на защищенном компьютере. Если база данных размещена на сервере SQL Server, командлет нужно запускать на компьютере, отличном от компьютера с экземпляром SQL Server. Поскольку основной задачей функции постоянного шифрования является обеспечение целостности зашифрованных конфиденциальных данных даже в случае нарушения безопасности системы базы данных, выполнение скрипта PowerShell, обрабатывающего ключи или конфиденциальные данные на сервере SQL Server, может снизить или вообще отменить эффект действия функции.
 
 Задача  |Статья  |Доступ к ключам с открытым текстом или хранилищу ключей  |Доступ к базе данных   
 ---|---|---|---
-Шаг 1. Запуск среды PowerShell и импорт модуля SqlServer. | [Импорт модуля SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | Нет | Нет
-Шаг 2. Соединение с сервером и базой данных | [Соединение с базой данных](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Нет | Да
-Шаг 3. Проверка подлинности в Azure, если главный ключ столбца (для смены, защищающий ключ шифрования) хранится в хранилище ключей Azure | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Да | Нет
-Шаг 4. Создание массива объектов SqlColumnEncryptionSettings — по одному для каждого столбца базы данных, который требуется зашифровать, повторно зашифровать или расшифровать. SqlColumnMasterKeySettings — это объект, который существует в памяти (PowerShell). Он определяет целевую схему шифрования столбца. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | Нет | Нет
+Шаг 1. Запуск среды PowerShell и импорт модуля SqlServer. | [Импорт модуля SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | нет | нет
+Шаг 2. Соединение с сервером и базой данных | [Соединение с базой данных](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | нет | Да
+Шаг 3. Проверка подлинности в Azure, если главный ключ столбца (для смены, защищающий ключ шифрования) хранится в хранилище ключей Azure | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Да | нет
+Шаг 4. Создание массива объектов SqlColumnEncryptionSettings — по одному для каждого столбца базы данных, который требуется зашифровать, повторно зашифровать или расшифровать. SqlColumnMasterKeySettings — это объект, который существует в памяти (PowerShell). Он определяет целевую схему шифрования столбца. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | нет | нет
 Шаг 5. Задание нужной конфигурации шифрования, указанной в массиве объектов SqlColumnMasterKeySettings, созданном на предыдущем шаге. В зависимости от заданных целевых параметров и текущей конфигурации шифрования столбец может быть зашифрован, повторно зашифрован или расшифрован.| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Примечание.** Выполнение этого шага может занять длительное время. Приложения не будут иметь доступа к таблицам на протяжении всей операции или ее части в зависимости от выбранного вами режима (в сети или вне сети). | Да | Да
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>Пример шифрования столбцов в режиме "вне сети"
@@ -156,7 +158,6 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 - [Настройка постоянного шифрования с помощью PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 - [Always Encrypted (ядро СУБД)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-
 
 
 

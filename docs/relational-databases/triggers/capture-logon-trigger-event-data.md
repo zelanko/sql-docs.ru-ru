@@ -2,28 +2,31 @@
 title: "Данные о захвате событий триггера входа | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e05b1ab4-c10b-402a-9591-f6ec1e3db8c0
-caps.latest.revision: 5
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 790a086c90eeeeb606a86056f239853d805cb091
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 97d6ddad9af98be0e5f92fb32a195c883e2c9635
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="capture-logon-trigger-event-data"></a>Захват данных событий триггера входа
-  XML-данные о событиях LOGON для использования внутри триггеров входа могут быть захвачены с использованием функции [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md) . Для события LOGON возвращается следующая схема данных событий:  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+XML-данные о событиях LOGON для использования внутри триггеров входа могут быть захвачены с использованием функции [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md) . Для события LOGON возвращается следующая схема данных событий:  
   
  `<EVENT_INSTANCE>`  
   
@@ -63,4 +66,3 @@ ms.lasthandoff: 06/22/2017
  `1` , если соединение повторно используется с помощью пула соединений. В противном случае — значение `0`.  
   
   
-

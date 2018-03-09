@@ -2,29 +2,32 @@
 title: "Определение свойств родительского атрибута в иерархии родители потомки | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
-caps.latest.revision: 15
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: a7430bd3692788b8977d4c1849a599ada77dfc59
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e369924d45fe9cc718103cf1e763340e2c03c018
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="lesson-4-2---defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Занятие 4-2-Определение свойств родительского атрибута в иерархии родители потомки
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Иерархия типа «родители-потомки» представляет собой иерархию в измерении, которая основана на двух столбцах таблицы. Вместе эти столбцы определяют иерархическую связь между элементами измерения. Первый столбец, называемый *ключевым столбцом элемента*, идентифицирует каждый элемент измерения. Второй столбец, называемый *родительским столбцом*, идентифицирует родителя для каждого из элементов измерения. Свойство **NamingTemplate** родительского атрибута определяет имя каждого уровня в иерархии типа "родители-потомки", а свойство **MembersWithData** — будут ли отображаться данные для родительских элементов.  
   
 Дополнительные сведения см. в разделе [Измерения "родители-потомки"](../analysis-services/multidimensional-models/parent-child-dimension.md), [Атрибуты в иерархиях типа "родители-потомки"](../analysis-services/multidimensional-models/parent-child-dimension-attributes.md).  
@@ -56,7 +59,7 @@ ms.lasthandoff: 09/01/2017
   
 7.  Щелкните значок Excel, а затем выберите **Включить** при появлении запроса на включение подключений.  
   
-8.  В списке полей сводной таблицы разверните узел **Продажи через торговых посредников**. Перетащите меру **Товарооборот посредников — объем продаж** в область значений.  
+8.  В списке полей сводной таблицы разверните узел **Продажи через торговых посредников**. Перетащите меру **Товарооборот посредников — объем продаж** в область значений.  
   
 9. В списке полей сводной таблицы разверните узел **Сотрудник**, а затем перетащите иерархию **Сотрудники** в область **Строки** .  
   
@@ -113,10 +116,9 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Автоматическое группирование элементов атрибута](../analysis-services/lesson-4-3-automatically-grouping-attribute-members.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Измерения "родители-потомки"](../analysis-services/multidimensional-models/parent-child-dimension.md)  
 [Атрибуты в иерархиях типа "родители-потомки"](../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)  
   
   
   
-

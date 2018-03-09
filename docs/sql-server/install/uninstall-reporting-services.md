@@ -2,27 +2,32 @@
 title: "Удаление служб Reporting Services | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 - setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
-caps.latest.revision: 7
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: be3ac5ed46a8807d6d78296d142ae36b9eb7664d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 89bd9331c7e4d8d89bdd617200dbce2664f00074
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="uninstall-reporting-services"></a>Удаление служб Reporting Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Удаление [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не приводит к удалению созданного содержимого или измененной конфигурации. Но если имеется содержимое, которое потребуется после завершения удаления, то рекомендуется создать копии содержимого до начала процесса удаления.  
   
 ## <a name="uninstall-sharepoint-mode"></a>Удаление режима интеграции с SharePoint  
@@ -54,7 +59,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  На панели управления Windows щелкните **Программы и компоненты**.  
   
-2.  В окне **Программы и компоненты** выберите **Microsoft SQL Server 2012**.  
+2.  В окне **Программы и компоненты** выберите **Microsoft SQL Server 2016**.  
   
 3.  В мастере удаления выберите экземпляр, который включает функцию экземпляра [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **RS**.  
   

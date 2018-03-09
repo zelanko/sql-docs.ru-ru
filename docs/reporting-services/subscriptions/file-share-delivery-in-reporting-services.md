@@ -1,35 +1,35 @@
 ---
-title: "Файл Share Delivery in Reporting Services | Документы Microsoft"
+title: "Доставка отчетов в общие папки с помощью служб Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
-caps.latest.revision: 54
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "54"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e33585c625c49967304ca36ad91ccc1ebac32f1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: cfdf980d2d9ed24f18c29771920bcf16b34aebd5
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Доставка отчетов в общие папки с помощью служб Reporting Services
   Службы SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают модуль доставки в общую папку, позволяющий доставить отчет в любую папку. Модуль доставки в общие папки доступен по умолчанию и не требует какой-либо дополнительной настройки. Для успешной доставки файла необходимо иметь разрешение на запись в общую папку. Учетная запись, требующая разрешения модуля записи, может быть учетными данными, настроенными в подписке, или **учетной записью общей папки** , настроенной для сервера отчетов. Дополнительные сведения об учетной записи общей папки см. в разделе [Параметры подписки и учетная запись общей папки (диспетчер конфигураций)](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Кроме того, у пользователей, которым нужен доступ к отчетам, должно быть разрешение на чтение из общей папки.  
   
- Для распространения отчета через общую папку нужно определить либо стандартную, либо привязанную к данным подписку. Сведения об использовании доставки в общую папку в управляемой данными подписки, в разделе [Создание управляемой данными подписки &#40; Учебник по службам SSRS &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md). Кроме того, учетная запись, запускающая удаленные подписки общей папки, требует права на локальный вход на компьютер служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ Для распространения отчета через общую папку нужно определить либо стандартную, либо привязанную к данным подписку. Дополнительные сведения об использовании доставки в общую папку в управляемой данными подписке см. в разделе [Создание управляемой данными подписки (учебник по службам SSRS)](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md). Кроме того, учетная запись, запускающая удаленные подписки общей папки, требует права на локальный вход на компьютер служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ||  
 |-|  
@@ -84,11 +84,10 @@ ms.lasthandoff: 08/09/2017
   
  На следующем рисунке представлен пример файла параметров для подписки, настроенной для доставки в общую папку.  
   
- ![файл подписки общей папки](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "файл подписки общей папки")  
+ ![Подписка для доставки в общую папку](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "Подписка для доставки в общую папку")  
   
 ## <a name="see-also"></a>См. также:  
  [Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Параметры подписки и учетная запись общей папки &#40; Configuration Manager &#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
+ [Параметры подписки и учетная запись общей папки (диспетчер конфигураций)](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
   
   
-

@@ -1,47 +1,45 @@
 ---
 title: "Включить режим DirectQuery в среде SSMS | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/06/2017
-ms.prod: sql-server-2016
+ms.custom: 
+ms.date: 02/22/2018
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
-caps.latest.revision: 18
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 544725a89521eb86f61fcfd3194c3d56be9da606
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 86bae72aacde357b372e48f83a429e8102553325
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Включение режима DirectQuery в SSMS
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Вы можете изменить свойства доступа к данным в уже развернутой табличной модели, включив режим DirectQuery, при котором запросы выполняются для источника реляционных данных серверной части, а не для кэшированных данных, находящихся в памяти.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Вы можете изменить свойства доступа к данным в уже развернутой табличной модели, включив режим DirectQuery, при котором запросы выполняются для источника реляционных данных серверной части, а не для кэшированных данных, находящихся в памяти.  
   
  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]действия, необходимые для настройки DirectQuery, различаются в зависимости от уровня совместимости модели. Ниже описаны шаги, которые подойдут для всех уровней совместимости.  
   
- В этом разделе предполагается, что вы уже создана и проверена табличную модель в памяти на уровне совместимости 1200 или выше и необходимость включения доступа DirectQuery и обновить строки подключения. Если вы начинаете работу с более низкого уровня совместимости, необходимо сначала обновить его вручную. Соответствующие шаги описаны в разделе [Обновление служб Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) .  
+ В этой статье предполагается, что вы уже создана и проверена табличную модель в памяти на уровне совместимости 1200 или выше и необходимость включения доступа DirectQuery и обновить строки подключения. Если вы начинаете работу с более низкого уровня совместимости, необходимо сначала обновить его вручную. Соответствующие шаги описаны в разделе [Обновление служб Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) .  
   
 > [!IMPORTANT]  
 >  Мы рекомендуем использовать [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] вместо Management Studio для переключения между режимами хранения данных. При изменении модели с помощью  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] и последующем развертывании на сервере модель и база данных остаются синхронизированными. Кроме того, при изменении режимов хранения в модели вы сможете просматривать любые возникающие ошибки проверки. При использовании [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , как описано в этой статье, ошибки проверки не отображаются.  
   
 ## <a name="requirements"></a>Требования  
- Включение режима Direct Query для табличной модели состоит из нескольких шагов.  
+ Включение режима Direct Query для табличной модели состоит из нескольких шагов.  
   
 -   Убедитесь, что модель не имеет функций, которые могут вызвать ошибки проверки в режиме DirectQuery, и затем измените режим хранения данных в модели с хранения в памяти на DirectQuery.  
   
-     Список функциональных ограничений описан в разделе [Режим DirectQuery (табличные службы SSAS)](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
+     Список функциональных ограничений описан в [режим DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
   
 -   Проверьте строку соединения и учетные данные, используемые в развернутой базе данных для получения данных из внешней базы данных серверной части. Убедитесь, что подключение только одно и что его параметры подходят для выполнения запроса.  
   
@@ -98,7 +96,7 @@ ms.lasthandoff: 09/01/2017
   
 -   Если доступны как кэш, так и реляционный источник данных, можно задать предпочтительный метод подключения, но в конечном счете именно клиент выбирает используемый источник с помощью свойства DirectQueryMode строки подключения.  
   
--   Секции в кэше можно настроить таким образом, чтобы первичная секция, используемая для режима DirectQuery, никогда не обрабатывалась и всегда ссылалась на реляционный источник. Есть много способов использования секций для оптимизации проектирования моделей и составления отчетов. Дополнительные сведения см. в разделе [Определение секций в моделях DirectQuery (табличные службы SSAS)](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md).  
+-   Секции в кэше можно настроить таким образом, чтобы первичная секция, используемая для режима DirectQuery, никогда не обрабатывалась и всегда ссылалась на реляционный источник. Есть много способов использования секций для оптимизации проектирования моделей и составления отчетов. Дополнительные сведения см. в разделе [определение секций в моделях DirectQuery](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md).  
   
 -   После развертывания модели можно изменить предпочтительный метод подключения. Например, можно использовать гибридную модель для тестирования и переключать модель в режим **Только DirectQuery** лишь после тщательного тестирования отчетов или запросов, использующих модель. Дополнительные сведения см. в разделе [Установка или изменение предпочтительного метода подключения для DirectQuery](http://msdn.microsoft.com/library/f10d5678-d678-4251-8cce-4e30cfe15751).  
   
@@ -109,7 +107,7 @@ ms.lasthandoff: 09/01/2017
   
 1.  В обозревателе объектов разверните **Подключения** и дважды щелкните подключение, чтобы просмотреть его свойства.  
   
-     Для моделей DirectQuery должно быть определено только одно подключение к базе данных. Источник данных должен быть реляционным и поддерживать тип базы данных. Соответствующие шаги описаны в разделе [Поддерживаемые источники данных (табличные службы SSAS)](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
+     Для моделей DirectQuery должно быть определено только одно подключение к базе данных. Источник данных должен быть реляционным и поддерживать тип базы данных. В разделе [источники данных, поддерживаемые](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
   
 2.  В**строке подключения** следует указать сервер, имя базы данных и метод проверки подлинности, используемый в операциях DirectQuery. Если используется проверка подлинности SQL Server, в строке подключения можно указать имя входа для базы данных.  
   
@@ -134,10 +132,9 @@ ms.lasthandoff: 09/01/2017
 3.  Изучив трассировку, вы увидите свидетельство выполнения запроса к реляционной базе данных.  
   
 ## <a name="see-also"></a>См. также:  
- [Уровень совместимости табличных моделей в службах Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
- [Поддерживаемые источники данных (табличные службы SSAS)](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Уровень совместимости](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
+ [Поддерживаемые источники данных](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)   
  [Наблюдение за экземпляром служб Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   
-

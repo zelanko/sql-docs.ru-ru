@@ -1,43 +1,42 @@
 ---
-title: "Подготовка к реализации модуля обработки данных | Документы Microsoft"
+title: "Подготовка к реализации модуля обработки данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - interfaces [Reporting Services]
 - data processing extensions [Reporting Services], implementing
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
-caps.latest.revision: 36
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "36"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 6d516201d8018b1d58b77be8e3cf543745da037a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 424e36f6be32da0aafb6981e923f66aed7c22139
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Подготовка к реализации модуля обработки данных
-  При реализации вашей [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] модуля обработки данных, следует определить реализуемые интерфейсы. Необходимо предоставить реализации всего набора интерфейсов расширения, или может просто необходимо сосредоточиться реализации на подмножестве, такие как <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> и <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> интерфейсов, в которых клиенты основном взаимодействовали бы с результирующего набора в виде **DataReader** объекта и использовать ваш [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] модуль обработки данных в качестве моста между результирующего набора и источником данных.  
+  Перед реализацией собственного модуля обработки данных служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] вам следует определить реализуемые интерфейсы. Вы можете создать зависящие от модулей реализации всего набора интерфейсов либо реализовать только ограниченное его подмножество, например интерфейсы <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> и <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand>. Используя эти интерфейсы, клиенты в основном взаимодействовали бы с результирующим набором в виде объекта **DataReader**, а модуль обработки данных служб [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] использовался бы как посредник между результирующим набором и источником данных.  
   
  Модули обработки данных можно реализовать двумя путями:  
   
--   Классы модуля обработки данных можно реализовать [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] интерфейсов поставщиков данных и, при необходимости, расширенные интерфейсы обработки данных расширения, предоставляемые [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+-   Классы модуля обработки данных могут реализовывать интерфейсы поставщика данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] и при необходимости расширенные интерфейсы модуля обработки данных, предоставляемые службами [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
 -   Классы модуля обработки данных могут реализовать интерфейсы модуля обработки данных, предоставляемые службами [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], и, при необходимости, расширенные интерфейсы модуля обработки данных.  
   
- Если модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] не поддерживает определенное свойство или метод, то его следует реализовать, как операцию, не выполняющую никакого действия. Если клиент ожидает определенное поведение, возникает исключение **NotSupportedException** исключение.  
+ Если модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] не поддерживает определенное свойство или метод, то его следует реализовать, как операцию, не выполняющую никакого действия. Если клиент ожидает определенное поведение, то следует создать исключение **NotSupportedException**.  
   
 > [!NOTE]  
 >  Реализация в виде пустой команды свойства или метода применяется только к свойствам и методам интерфейсов, которые пользователь решил реализовать. Необязательные интерфейсы, которые пользователь решил не реализовывать, следует исключить из сборки модуля обработки данных. Дополнительные сведения о том, какие из интерфейсов являются необходимыми, а какие нет, смотрите далее в этом разделе.  
@@ -91,7 +90,6 @@ ms.lasthandoff: 08/12/2017
 ## <a name="see-also"></a>См. также:  
  [Модули служб Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Реализация модуля обработки данных](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Библиотека служб Reporting Services расширения](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Библиотека модулей Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

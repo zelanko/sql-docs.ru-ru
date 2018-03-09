@@ -1,52 +1,54 @@
 ---
-title: "Catalog.event_messages | Документы Microsoft"
+title: "catalog.event_messages | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-views
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
-caps.latest.revision: 7
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a0db5ace2a95bea93189cb48378b01a4ba599942
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 1e67ff8d521b46f0f22462b244b6b4aff41c1a6f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogeventmessages"></a>catalog.event_messages
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Показывает сведения о сообщениях, которые были зарегистрированы в ходе операций.  
   
 |Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|Event_message_ID|bigint|Уникальный идентификатор сообщения о событии.|  
-|Operation_id|bigint|Тип операции.<br /><br /> Список типов операций см. в разделе [catalog.operations &#40; База данных SSISDB &#41; ](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
+|Event_message_ID|BIGINT|Уникальный идентификатор сообщения о событии.|  
+|Operation_id|BIGINT|Тип операции.<br /><br /> Список типов операций см. в разделе [catalog.operations (база данных SSISDB)](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
 |Message_time|datetimeoffset(7)|Время создания сообщения.|  
-|Message_type|smallint|Тип отображаемого сообщения. Дополнительные сведения о типах сообщений см. в разделе [catalog.operation_messages &#40; База данных SSISDB &#41; ](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md).|  
-|Message_source_type|smallint|Источник сообщения.|  
+|Message_type|SMALLINT|Тип отображаемого сообщения. Дополнительные сведения о типах сообщений см. в разделе [catalog.operation_messages &#40;база данных SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md).|  
+|Message_source_type|SMALLINT|Источник сообщения.|  
 |message|nvarchar(max)|Текст сообщения.|  
-|Extended_info_id|bigint|Идентификатор дополнительных сведений, которые относятся к сообщению операции найден в [catalog.extended_operation_info &#40; База данных SSISDB &#41; ](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) представления.|  
+|Extended_info_id|BIGINT|Идентификатор дополнительных сведений, которые относятся к сообщению об операции и находятся в представлении [catalog.extended_operation_info &#40;база данных SSISDB&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
 |Package_name|nvarchar(260)|Имя файла пакета.|  
 |Event_name|nvarchar(1024)|Событие времени выполнения, связанное с сообщением.|  
 |Message_source_name|nvarchar(4000)|Компонент пакета, являющийся источником сообщения.|  
-|Message_source_id|Nvarchar(38)|Уникальный идентификатор источника сообщения.|  
+|Message_source_id|nvarchar(38)|Уникальный идентификатор источника сообщения.|  
 |Subcomponent_name|nvarchar(4000)|Компонент потока данных, являющийся источником сообщения.<br /><br /> Если сообщения возвращаются ядром [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], в этом столбце появляется SSIS.Pipeline.|  
 |Package_path|nvarchar(max)|Уникальный путь к компоненту внутри пакета.|  
 |Execution_path|nvarchar(max)|Полный путь от родительского пакета до точки выполнения компонента.<br /><br /> Этот путь также включает повторения компонента.|  
-|threadID|int|Идентификатор потока, который выполняется при регистрации сообщения.|  
-|Message_code|int|Код, связанный с этим сообщением.|  
+|threadID|ssNoversion|Идентификатор потока, который выполняется при регистрации сообщения.|  
+|Message_code|ssNoversion|Код, связанный с этим сообщением.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В этом представлении отображаются следующие типы источников сообщений.  
   
 |**message_source_type**|Description|  
@@ -58,17 +60,16 @@ ms.lasthandoff: 09/26/2017
 |50|Контейнеры потока управления|  
 |60|Задача потока данных|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Это представление требует применения одного из следующих разрешений:  
   
 -   Разрешение READ по отношению к операции  
   
--   Членство в **ssis_admin** роли базы данных.  
+-   Членство в роли базы данных **ssis_admin**.  
   
--   Членство в **sysadmin** роли сервера.  
+-   Членство в роли сервера **sysadmin**.  
   
 ## <a name="see-also"></a>См. также:  
  [catalog.event_message_context](../../integration-services/system-views/catalog-event-message-context.md)  
   
   
-

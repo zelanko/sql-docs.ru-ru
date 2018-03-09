@@ -2,44 +2,44 @@
 title: "Мастер добавления базы данных в группу доступности | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.adddatabasewizard.f1
+f1_keywords: sql13.swb.adddatabasewizard.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], databases
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e7a24cc777a0b13329c38fe4a276fae1c8b22d36
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 414c1f89c590f9d6db74e7458621badc452548e1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group---add-database-to-group-wizard"></a>Мастер добавления базы данных в группу доступности
-  Используйте мастер добавления базы данных в группу доступности для добавления одной или нескольких баз данных в существующую группу доступности AlwaysOn.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Используйте мастер добавления базы данных в группу доступности для добавления одной или нескольких баз данных в существующую группу доступности AlwaysOn.  
   
 > [!NOTE]  
 >  Сведения об использовании [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell для добавления базы данных см. в разделе [Добавление базы данных в группу доступности (SQL Server)](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md).  
   
  **В этом разделе:**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Требования и ограничения](#Prerequisites)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Чтобы добавить базу данных, воспользуйтесь инструкциями из раздела:**  [Мастер добавления базы данных в группу доступности (среда SQL Server Management Studio)](#SSMSProcedure)  
   
@@ -60,9 +60,9 @@ ms.lasthandoff: 08/02/2017
   
      Если нет возможности воспользоваться мастером для выполнения полной первоначальной синхронизации данных, то базы данных-получатели нужно подготовить вручную. Это можно сделать до или после запуска мастера. Дополнительные сведения см. в разделе [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Использование мастера добавления базы данных в группу доступности (среда SQL Server Management Studio)  
@@ -82,11 +82,11 @@ ms.lasthandoff: 08/02/2017
   
     -   **Полный**  
   
-         Выберите этот режим, если ваша среда удовлетворяет требованиям для автоматического запуска начальной синхронизации данных (дополнительные сведения см. в подразделе [Предварительные условия, ограничения и рекомендации](#Prerequisites)ранее в этой теме).  
+         Выберите этот режим, если ваша среда удовлетворяет требованиям для автоматического запуска начальной синхронизации данных (дополнительные сведения см. в подразделе [Предварительные условия, ограничения и рекомендации](#Prerequisites)ранее в этом разделе).  
   
          При выборе режима **Полная**после создания группы доступности мастер выполнит резервное копирование всех баз данных-источников из журналов транзакций в сетевую папку и восстановит резервные копии на всех экземплярах серверов, на которых размещены вторичные реплики. После этого мастер выполнит присоединение всех баз данных-получателей к группе доступности.  
   
-         В поле **Укажите общую сетевую папку, доступную для всех реплик:** укажите общую папку резервной копии, к которой имеют доступ на чтение и запись все экземпляры серверов, на которых размещаются реплики. Резервные копии журналов будут входить в цепочку резервных копий журналов. Храните файлы резервных копий журналов надлежащим образом.  
+         В поле **Выберите сетевую папку, доступную для всех реплик:** укажите общую папку резервной копии, к которой имеют доступ на чтение и запись все экземпляры серверов, на которых размещаются реплики. Резервные копии журналов будут входить в цепочку резервных копий журналов. Храните файлы резервных копий журналов надлежащим образом.  
   
         > [!IMPORTANT]  
         >  Дополнительные сведения о требуемых разрешениях файловой системы см. в подразделе [Предварительные требования](#Prerequisites)выше в этом разделе.  
@@ -97,7 +97,7 @@ ms.lasthandoff: 08/02/2017
   
     -   **Пропустить начальную синхронизацию данных**  
   
-         Выберите этот параметр, если вы хотите использовать собственные резервные копии баз данных-источников и их журналов. Дополнительные сведения см. в разделе [Запуск перемещения данных в базе данных-получателе AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
+         Выберите этот параметр, если вы хотите использовать собственные резервные копии баз данных-источников и их журналов. Дополнительные сведения см. в статье [Запуск перемещения данных для базы данных-получателя AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
      Дополнительные сведения см. в разделе [Выбор начальной страницы синхронизации данных (мастеры группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md).  
   
@@ -141,4 +141,3 @@ ms.lasthandoff: 08/02/2017
  [Добавление базы данных в группу доступности (SQL Server)](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)  
   
   
-

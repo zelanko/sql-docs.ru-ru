@@ -1,10 +1,13 @@
 ---
-title: "Назначение SQL Server | Документы Microsoft"
+title: "Назначение SQL Server | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -21,22 +24,21 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
-caps.latest.revision: 65
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: e85093b58f8fcad60231c0f1a5c24387be686be3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 0b47f04704002aa14fb957dc05a593695d2f689b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="sql-server-destination"></a>Назначение SQL Server
+# <a name="sql-server-destination"></a>назначение «SQL Server»
   Назначение «SQL Server» подключается к локальной базе данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и производит массовую загрузку данных в таблицы и представления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Нельзя использовать назначение «SQL Server» в пакетах, получающих доступ к базе данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на удаленном сервере. Вместо этого пакеты должны использовать назначение «OLE DB». Дополнительные сведения см. в разделе [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Пользователям, выполняющим пакеты, которые содержат назначение «SQL Server», необходимо разрешение на «Создание глобальных объектов». Предоставить это разрешение пользователям можно с помощью средства политики локальной безопасности, доступного в меню **Администрирование** . Если при выполнении пакета, который использует назначение «SQL Server», получено сообщение об ошибке, убедитесь, что учетная запись, под которой был запущен пакет, имеет разрешение на «Создание глобальных объектов».  
   
 ## <a name="bulk-inserts"></a>Массовые вставки  
@@ -89,7 +91,7 @@ ms.lasthandoff: 08/17/2017
   
 -   Укажите время ожидания для операции массовой загрузки.  
   
- Это назначение использует диспетчер соединений OLE DB для подключения к источнику данных, и диспетчер соединений определяет используемый поставщик OLE DB. Дополнительные сведения см. в статье [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+ Это назначение использует диспетчер соединений OLE DB для подключения к источнику данных, и диспетчер соединений определяет используемый поставщик OLE DB. Дополнительные сведения см. в разделе [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
  Проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] также предоставляет объект источника данных, из которого можно создать диспетчер соединений OLE DB. Это предоставляет назначению «SQL Server» доступ к источникам данных и представлениям источника данных.  
   
@@ -99,7 +101,7 @@ ms.lasthandoff: 08/17/2017
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства назначения «SQL Server»](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   
@@ -109,7 +111,7 @@ ms.lasthandoff: 08/17/2017
   
 -   [Установление свойств компонента потока данных](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Выполнение массовой загрузки данных с помощью назначения «SQL Server»](../../integration-services/data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
@@ -127,11 +129,11 @@ ms.lasthandoff: 08/17/2017
   Страница **Диспетчер соединений** диалогового окна **Редактор назначения «SQL»** используется для задания сведений об источнике данных и для предварительного просмотра результатов. Назначение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] загружает данные в таблицы или представления в базе данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="options"></a>Параметры  
- **диспетчер соединений OLE DB**  
+ **Диспетчер соединений OLE DB**  
  Выберите существующий диспетчер подключений из списка или создайте новое соединение, выбрав пункт **Создать**.  
   
  **Создать**  
- Позволяет создать новое соединение с помощью диалогового окна **Настройка диспетчера соединений OLE DB** .  
+ Создайте новое соединение с помощью диалогового окна **Настройка диспетчера соединений OLE DB** .  
   
  **Использовать таблицу или представление**  
  Выберите существующую таблицу или представление из списка или создайте новое соединение, нажав кнопку **Создать**.  
@@ -208,4 +210,3 @@ ms.lasthandoff: 08/17/2017
  [Поток данных](../../integration-services/data-flow/data-flow.md)  
   
   
-

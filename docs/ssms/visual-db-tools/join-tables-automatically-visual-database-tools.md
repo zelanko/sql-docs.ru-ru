@@ -3,10 +3,12 @@ title: "Автоматическое соединение таблиц (визу
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - joins [SQL Server], creating
 - joins [SQL Server], automatic
 ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 56ea342f5e4d8997855b8a98007b1d90b7778aa7
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0588bd78ef06aa1d24fa7a4ae008002420b9d367
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>Автоматическое соединение таблиц (визуальные инструменты для баз данных)
-При добавлении двух или более таблиц в запрос [конструктор запросов и представлений](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) пытается определить, имеется ли между ними связь. Если это так, конструктор запросов и представлений автоматически помещает строки соединения между прямоугольниками, представляющими таблицы или объекты, структурированные в виде таблиц.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] При добавлении двух или более таблиц в запрос [конструктор запросов и представлений](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) пытается определить, имеется ли между ними связь. Если это так, конструктор запросов и представлений автоматически помещает строки соединения между прямоугольниками, представляющими таблицы или объекты, структурированные в виде таблиц.  
   
 Конструктор запросов и представлений определяет таблицы как соединенные, если:  
   
@@ -49,4 +50,3 @@ ms.lasthandoff: 08/18/2017
 [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Запросы с соединениями (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   
-

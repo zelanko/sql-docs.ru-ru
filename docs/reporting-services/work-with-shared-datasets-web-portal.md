@@ -1,28 +1,29 @@
 ---
-title: "Работа с общими наборами данных (веб-портал) | Документы Microsoft"
+title: "Работа с общими наборами данных (веб-портал) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
-caps.latest.revision: 7
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "7"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4e72c48f816752530abddb6246410e4936ac20a6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="work-with-shared-datasets---web-portal"></a>Работа с общими наборами данных — веб-портала
+# <a name="work-with-shared-datasets---web-portal"></a>Работа с общими наборами данных (веб-портал)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -55,11 +56,11 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]
 > Если общий набор данных не отображается в папке, убедитесь, что вы просматриваете наборы данных. Выберите **Вид** в строке меню в правом верхнем углу веб-портала. Убедитесь, что установлен флажок **Наборы данных** .  
   
-1.  Выберите **кнопку с многоточием (...)**  для набора данных, которым требуется управлять.  
+1.  Щелкните **многоточие (…)** рядом с набором данных, которым требуется управлять.  
   
     ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
   
-2.  Выберите **Управление** , после чего откроется экран редактирования.  
+2.  Выберите **Управление**, после чего откроется экран редактирования.  
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
@@ -111,5 +112,4 @@ ms.lasthandoff: 08/09/2017
   
 Затем можно **изменить** или **удалить** планы из списка. Параметр **Новый на основе существующего** доступен, когда выбран один и только один план обновления кэша. При выборе этого параметра создаваемый план обновления будет скопирован из исходного плана. Страница плана обновления кэша открывается предварительно заполненная подробными сведениями выбранного плана. Затем можно изменить параметры плана обновления и сохранить план с новым описанием.  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

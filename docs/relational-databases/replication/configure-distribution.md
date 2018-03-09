@@ -2,11 +2,13 @@
 title: "Настройка распространения | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +22,19 @@ helpviewer_keywords:
 - distribution databases [SQL Server replication]
 - merge replication [SQL Server replication], configuring distribution
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
-caps.latest.revision: 44
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc7ddc90a9592cd62c50b31a2d5b8220c85e3f83
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "44"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: dfc635f07a64fdb9c4055e402407b7a70bf3329d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="configure-distribution"></a>Настройка распространения
-  Распространитель — это сервер, на котором находится база данных распространителя, хранящая метаданные и данные предыстории для всех типов репликации, а также транзакции репликации транзакций. Для настройки репликации, необходимо настроить распространитель. Каждый издатель может быть назначен только одному экземпляру распространителя, однако один распространитель может совместно использоваться несколькими издателями. Распространитель использует следующие дополнительные ресурсы на сервере, где он расположен.  
+# <a name="configure-distribution"></a>Настройка распространителя
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Распространитель — это сервер, на котором находится база данных распространителя, хранящая метаданные и данные предыстории для всех типов репликации, а также транзакции репликации транзакций. Для настройки репликации, необходимо настроить распространитель. Каждый издатель может быть назначен только одному экземпляру распространителя, однако один распространитель может совместно использоваться несколькими издателями. Распространитель использует следующие дополнительные ресурсы на сервере, где он расположен.  
   
 -   Дополнительное дисковое пространство, если файлы моментальных снимков для публикации хранятся на распространителе (где они обычно и хранятся).  
   

@@ -3,8 +3,11 @@ title: "Инструкция ROLLBACK TRANSACTION (Transact-SQL) | Докуме�
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,20 +27,19 @@ helpviewer_keywords:
 - roll back transactions [SQL Server]
 - savepoints [SQL Server]
 ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
-caps.latest.revision: 52
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
-ms.openlocfilehash: 7a7cf37490b1dab17a061104ab14b5d11d26632d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/14/2017
-
+ms.openlocfilehash: 0df2fdf3d3e4aa7915fbfef3ff921d12b2851044
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Откатывает явные или неявные транзакции до начала или до точки сохранения транзакции. ROLLBACK TRANSACTION можно использовать для отмены всех изменений данных, произведенных с начала транзакции или до точки сохранения. Она также освобождает ресурсы, используемые транзакцией.  
   
@@ -57,13 +59,13 @@ ROLLBACK { TRAN | TRANSACTION }
  *transaction_name*  
  Имя, присвоенное транзакции в BEGIN TRANSACTION. *transaction_name* должны соответствовать правилам для идентификаторов, но используются только первые 32 символа имени транзакции. При вложении транзакций *transaction_name* должно быть имя из внешней инструкции BEGIN TRANSACTION. *transaction_name* всегда учитывается регистр, даже если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не учитывается регистр знаков.  
   
- **@***tran_name_variable*  
+ **@** *tran_name_variable*  
  Имя определенной пользователем переменной, содержащей допустимое имя транзакции. Переменная должна быть объявлена с **char**, **varchar**, **nchar**, или **nvarchar** тип данных.  
   
  *savepoint_name*  
  — *Savepoint_name* из инструкции SAVE TRANSACTION. *savepoint_name* должны соответствовать правилам для идентификаторов. Используйте *savepoint_name* при откат по условию должен влиять только часть транзакции.  
   
- **@***savepoint_variable*  
+ **@** *savepoint_variable*  
  Имя пользовательской переменной, содержащей допустимое имя точки сохранения. Переменная должна быть объявлена с **char**, **varchar**, **nchar**, или **nvarchar** тип данных.  
   
 ## <a name="error-handling"></a>Обработка ошибок  
@@ -104,7 +106,7 @@ ROLLBACK { TRAN | TRANSACTION }
 ## <a name="locking-behavior"></a>Режим блокировки  
  Значение типа, указывающее инструкцию ROLLBACK TRANSACTION *savepoint_name* снимает все блокировки, полученные после точки сохранения, за исключением укрупненных и блокировок преобразования. Такие блокировки не освобождаются и не переводятся в прежний режим.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public** .  
   
 ## <a name="examples"></a>Примеры  
@@ -137,7 +139,7 @@ value
 ```  
   
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION (Transact-SQL)](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
@@ -146,4 +148,3 @@ value
  [SAVE TRANSACTION (Transact-SQL)](../../t-sql/language-elements/save-transaction-transact-sql.md)  
   
   
-

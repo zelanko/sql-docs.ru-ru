@@ -1,10 +1,13 @@
 ---
-title: "Расширение пакетов с помощью задачи «скрипт» | Документы Microsoft"
+title: "Расширение пакета с помощью задачи \"Скрипт\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -21,57 +24,55 @@ helpviewer_keywords:
 - scripts [Integration Services], about Script task with packages
 - SSIS Script task, about Script task
 ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
-caps.latest.revision: 57
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b2e0b0a933568f8313cefd2f1d6dbdd02f5d3cbc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 801cae05602e9c618637be57298572a9ca27aeb8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extending-the-package-with-the-script-task"></a>Расширение пакета с помощью задачи «Скрипт»
-  Задача «скрипт» расширяет возможности времени выполнения [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] пакеты с пользовательским кодом, написанным [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#, который компилируется и выполняется во время выполнения пакета. Задача «Скрипт» упрощает разработку пользовательской задачи времени выполнения, если задачи, включенные в службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], не полностью удовлетворяют требованиям разработчика. Задача «Скрипт» самостоятельно пишет весь инфраструктурный код, давая разработчику возможность сосредоточиться исключительно на коде, необходимом для пользовательской обработки.  
+  Задача "Скрипт" расширяет возможности времени выполнения для пакетов служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] благодаря пользовательскому коду, написанному на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#, который компилируется и выполняется во время выполнения пакетов. Задача «Скрипт» упрощает разработку пользовательской задачи времени выполнения, если задачи, включенные в службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], не полностью удовлетворяют требованиям разработчика. Задача «Скрипт» самостоятельно пишет весь инфраструктурный код, давая разработчику возможность сосредоточиться исключительно на коде, необходимом для пользовательской обработки.  
   
- Задача «скрипт» взаимодействует с пакетом-контейнером через глобальный **Dts** объекта, экземпляр <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> класса, предоставляемого средой скриптов. В задаче «Скрипт» можно писать код, который изменяет значения, хранящиеся в переменных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]. Позже пакет использует эти обновленные значения для определения рабочего процесса. Задача «Скрипт» может также использовать пространство имен [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], библиотеку классов платформы [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] и пользовательские сборки для реализации собственной функциональности.  
+ Задача "Скрипт" взаимодействует с пакетом-контейнером через глобальный объект **Dts**, экземпляр класса <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>, предоставляемого средой скриптов. В задаче «Скрипт» можно писать код, который изменяет значения, хранящиеся в переменных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]. Позже пакет использует эти обновленные значения для определения рабочего процесса. Задача «Скрипт» может также использовать пространство имен [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], библиотеку классов платформы [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] и пользовательские сборки для реализации собственной функциональности.  
   
- Задача «Скрипт» и инфраструктурный код, который она создает, значительно упрощают разработку пользовательской задачи. Тем не менее, чтобы понять, как работает задача «скрипт», то может быть полезно прочитать раздел [разработку пользовательской задачи](../../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md) для понимания шагов, которые участвуют в разработку пользовательской задачи.  
+ Задача «Скрипт» и инфраструктурный код, который она создает, значительно упрощают разработку пользовательской задачи. Однако, чтобы понять, как работает задача "Скрипт", будет полезно прочитать раздел [Разработка пользовательской задачи](../../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md), чтобы ознакомиться с шагами разработки пользовательской задачи.  
   
- Если создается задача, которую планируется повторно использовать в нескольких пакетах, вместо использования задачи «Скрипт» следует разработать собственную задачу. Дополнительные сведения см. в разделе [сравнение решений сценариев и пользовательскими объектами](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md).  
+ Если создается задача, которую планируется повторно использовать в нескольких пакетах, вместо использования задачи «Скрипт» следует разработать собственную задачу. Дополнительные сведения см. в разделе [Сравнение решений со сценариями и пользовательских объектов](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  В следующих разделах представлены дополнительные сведения о задаче «Скрипт».  
   
- [Настройка задачи «скрипт» в редакторе сценариев задач](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
- Объясняет, как свойства, которые можно настроить в **редактор задачи «скрипт»** влияют на возможности и производительность кода в задаче «скрипт».  
+ [Настройка задачи «Скрипт» в редакторе задачи «Скрипт»](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
+ Объясняется, как настроенные в окне **Редактор задачи "скрипт"** свойства влияют на возможности и производительность кода в задаче "Скрипт".  
   
- [Кодирование и отладка задачи «скрипт»](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  
- Описание способов использования [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] средств для приложений (VSTA) для разработки скриптов, содержащихся в задаче «скрипт».  
+ [Написание кода и отладка задачи «Скрипт»](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  
+ Объясняется использование редактора средств [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] для приложений (VSTA) для разработки скриптов, содержащихся в задаче "Скрипт".  
   
- [Использование переменных в задаче «скрипт»](../../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)  
+ [Использование переменных в задаче «Скрипт»](../../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)  
  Объясняется использование переменных с помощью свойства <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>.  
   
- [Подключение к источникам данных в задаче «скрипт»](../../../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)  
+ [Соединение с источниками данных в задаче «Скрипт»](../../../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)  
  Объясняется использование соединений с помощью свойства <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>.  
   
- [Создание событий в задаче «скрипт»](../../../integration-services/extending-packages-scripting/task/raising-events-in-the-script-task.md)  
+ [Вызов событий в задаче «Скрипт»](../../../integration-services/extending-packages-scripting/task/raising-events-in-the-script-task.md)  
  Объясняется инициирование событий с помощью свойства <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>.  
   
- [Ведение журналов в задаче «скрипт»](../../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)  
+ [Ведение журнала в задаче «Скрипт»](../../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)  
  Объясняется регистрация сведений с помощью метода <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>.  
   
- [Возврат результатов из задачи «скрипт»](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md)  
+ [Возврат результатов из задачи «Скрипт»](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md)  
  Объясняется возвращение результатов через свойства <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A> и <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>.  
   
- [Примеры сценариев задач](../../../integration-services/extending-packages-scripting-task-examples/script-task-examples.md)  
+ [Примеры задачи «Скрипт»](../../../integration-services/extending-packages-scripting-task-examples/script-task-examples.md)  
  Содержит примеры, в которых показано несколько возможных использований задачи «Скрипт».  
   
 ## <a name="see-also"></a>См. также:  
- [Задача «скрипт»](../../../integration-services/control-flow/script-task.md)   
- [Сравнение задачи «скрипт» и компоненте скрипта](../../../integration-services/extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
+ [Задача "Скрипт"](../../../integration-services/control-flow/script-task.md)   
+ [Сравнение задачи «Скрипт» и компонента скрипта](../../../integration-services/extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
   
   
-

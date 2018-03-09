@@ -1,13 +1,14 @@
 ---
-title: "Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,17 +21,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.sorting.f1
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 422c3efc7f6514efafcfa552ed78658d002a2f42
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ec9e18aeee47b023b6afcf8dbac2e733fd2c6223
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)
   Выражения в отчетах используются для управления, организации и сортировки данных отчетов. По умолчанию по мере создания наборов данных и разработки макета отчета свойства элементов отчета задаются автоматически выражениями, исходя из полей набора данных, параметров и других элементов, появляющихся на панели данных отчета. Можно также добавить кнопку интерактивной сортировки к таблице или ячейке матрицы, чтобы пользователь мог в интерактивном режиме изменять порядок сортировки рядов для групп или строк внутри групп.  
@@ -95,7 +95,7 @@ ms.lasthandoff: 08/09/2017
   
  Чтобы обеспечить группирование по нескольким полям набора данных, необходимо добавить каждое поле к набору выражений группы. Можно также написать собственные выражения группы в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Например, можно провести группирование по диапазону значений или применить параметр отчета, чтобы дать возможность пользователю выбрать способ группирования данных в области данных. Дополнительные сведения см. в разделе [Примеры выражений групп (построитель отчетов и службы SSRS)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
   
- Для представления отчета можно добавлять разрывы страниц до и после каждой группы или каждого экземпляра группы, чтобы уменьшить объем данных на странице и облегчить управление производительностью при подготовке к просмотру отчета. Дополнительные сведения см. в разделе [добавить разрыв страницы &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md).  
+ Для представления отчета можно добавлять разрывы страниц до и после каждой группы или каждого экземпляра группы, чтобы уменьшить объем данных на странице и облегчить управление производительностью при подготовке к просмотру отчета. Дополнительные сведения см. в разделе [Добавление разрыва страницы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md).  
   
  Создание групп областей данных — это один из способов организации данных в отчете. Существует несколько других способов организации данных, у каждого из которых есть свои преимущества. Дополнительные сведения см. в разделе [Детализация, углубленная детализация, вложенные отчеты и вложенные области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md).  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 08/09/2017
   
  В одном отчете можно использовать все три типа сортировки. По умолчанию порядок сортировки определяется порядком, в котором данные возвращаются запросом для набора данных. Выражения сортировки применяются к области данных и к группе областей данных. Интерактивная сортировка применяется после выражений сортировки.  
   
- Для выражений, которые содержат агрегатные функции, порядок сортировки не влияет на большинство результатов. Порядок сортировки влияет на возвращаемые значения для следующих агрегатных функций: First, Last и Previous. Дополнительные сведения см. в разделе [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
+ Для выражений, которые содержат агрегатные функции, порядок сортировки не влияет на большинство результатов. Порядок сортировки влияет на возвращаемые значения для следующих агрегатных функций: First, Last и Previous. Дополнительные сведения см. в разделах [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>Сортировка данных в запросе к набору данных  
  Сортировку можно включить в запрос к набору данных для предварительной сортировки данных до их возвращения в отчет. При сортировке внутри запроса все операции по сортировке выполняются источником данных, а не обработчиком отчетов.  
@@ -192,7 +192,7 @@ FROM Production.Product
   
  [Добавление итога в группу или область данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
-##  <a name="Section"></a> В этом разделе  
+##  <a name="Section"></a> в этом разделе  
  [Примеры выражений групп (построитель отчетов и службы SSRS)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
   
  [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
@@ -212,14 +212,13 @@ FROM Production.Product
   
  [Связывание нескольких областей данных с одним набором данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Maps &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Спарклайны и гистограммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Датчики &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [Индикаторы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Спарклайны и гистограммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [Датчики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [Индикаторы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-

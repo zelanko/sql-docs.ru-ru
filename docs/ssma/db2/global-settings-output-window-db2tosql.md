@@ -1,29 +1,30 @@
 ---
 title: "Глобальные параметры (в окне выходных данных) (DB2ToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f21f80f4-9a2a-448d-9fe8-b6926595389e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 71cd07bb7a2e249193dfd0337d3d0aa055493e04
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 730b00d5c5918ad38d4df24d721bf7a984bb5555
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-output-window-db2tosql"></a>Глобальные параметры (в окне выходных данных) (DB2ToSQL)
 Используйте **глобальные параметры** диалоговое окно «», чтобы указать параметры для SSMA.  
@@ -37,4 +38,3 @@ ms.lasthandoff: 08/02/2017
 **Показать область вывода**  
 Выберите **True** Если SSMA для отображения области вывода, если сообщения.  
   
-

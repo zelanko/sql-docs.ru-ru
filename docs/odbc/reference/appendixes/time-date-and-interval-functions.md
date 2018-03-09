@@ -3,10 +3,12 @@ title: "Даты, времени и интервала функции | Доку
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - time functions [ODBC]
 - date functions [ODBC]
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 49f765c78f6c0b861c56d1299fc90786b6c22b78
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
-ms.openlocfilehash: 54a471846953e7afffa74fe910ae7376731e517b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="time-date-and-interval-functions"></a>Функции даты, времени и интервалов
 В следующей таблице перечислены функций даты и времени, которые включены в набор скалярные функции ODBC. Приложение может определить, какие функции даты и времени поддерживаются драйвером путем вызова **SQLGetInfo** с *типу информации* из SQL_TIMEDATE_FUNCTIONS.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/05/2017
   
  CURRENT_DATE, CURRENT_TIME и CURRENT_TIMESTAMP timedate скалярные функции были добавлены в ODBC 3.0 в соответствии со стандартом SQL-92.  
   
-|Функция|Description|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |**(CURRENT_DATE)** (ODBC 3.0)|Возвращает текущую дату.|  
 |**CURRENT_TIME [(** *точность_в_секундах* **)]** (ODBC 3.0)|Возвращает текущее время. *Точность_в_секундах* аргумент определяет секунды значения типа возвращаемого значения.|  
@@ -63,4 +64,3 @@ ms.lasthandoff: 10/05/2017
 |**TIMESTAMPDIFF (** *интервал*, *timestamp_exp1*, *timestamp_exp2* **)** (ODBC 2.0)|Возвращает целое число интервалов типа *интервал* , на который *timestamp_exp2* больше, чем *timestamp_exp1*. Допустимые значения *интервал* являются следующие ключевые слова:<br /><br /> SQL_TSI_FRAC_SECOND<br /><br /> SQL_TSI_SECOND<br /><br /> SQL_TSI_MINUTE<br /><br /> SQL_TSI_HOUR<br /><br /> SQL_TSI_DAY<br /><br /> SQL_TSI_WEEK<br /><br /> SQL_TSI_MONTH<br /><br /> SQL_TSI_QUARTER<br /><br /> SQL_TSI_YEAR<br /><br /> где доли секунды отображаются в миллиардных долей секунды. Например следующая инструкция SQL возвращает имя каждого сотрудника и количества лет, которые он или она принят на работу:<br /><br /> `SELECT NAME, {fn  TIMESTAMPDIFF(SQL_TSI_YEAR, {fn CURDATE()}, HIRE_DATE)} FROM EMPLOYEES`<br /><br /> Если любое из выражений timestamp значение времени и *интервал* указывает на текущую дату, прежде чем разность между отметки времени задан дней, недель, месяцев, кварталы или годы, часть даты, отметка времени.<br /><br /> Если любое из выражений timestamp значение даты и *интервал* указывает доли секунды, секунд, минут или часов, промежуток времени, отметка времени имеет значение 0 перед разность между отметки времени.<br /><br /> Приложение определяет, какие интервалы, поддерживаемый источником данных, вызвав **SQLGetInfo** с параметром SQL_TIMEDATE_DIFF_INTERVALS.|  
 |**НЕДЕЛЯ (** *выражение_даты* **)** (ODBC 1.0)|Возвращает неделю года, основываясь на поля недели в *выражение_даты* в виде целочисленного значения в диапазоне 1-53.|  
 |**ГОД (** *выражение_даты* **)** (ODBC 1.0)|Возвращает года, основываясь на поле года в *выражение_даты* в виде целочисленного значения. Диапазон включает зависит от источника данных.|
-

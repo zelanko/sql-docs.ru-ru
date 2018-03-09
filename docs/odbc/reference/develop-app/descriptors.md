@@ -3,10 +3,12 @@ title: "Дескрипторы | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - descriptor handles [ODBC]
 - handles [ODBC], descriptor
 ms.assetid: ef2cbb93-cd00-40f8-b1d2-5f5723a991aa
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 78f53c07a036719b669e3c14192eda5da3ead55e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8754e568c166113a0812878ef8bc91a196776100
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="descriptors"></a>Дескрипторы
 Дескриптора ссылается на структуру данных, которая содержит информацию о столбцах или динамических параметров.  
@@ -43,7 +44,6 @@ ms.lasthandoff: 09/09/2017
   
 -   [Поля дескриптора](../../../odbc/reference/develop-app/descriptor-fields.md)  
   
--   [Выделения и освобождения дескрипторов](../../../odbc/reference/develop-app/allocating-and-freeing-descriptors.md)  
+-   [Выделение и освобождение дескрипторов](../../../odbc/reference/develop-app/allocating-and-freeing-descriptors.md)  
   
--   [Получение и задание поля дескриптора](../../../odbc/reference/develop-app/getting-and-setting-descriptor-fields.md)
-
+-   [Получение и установка полей дескриптора](../../../odbc/reference/develop-app/getting-and-setting-descriptor-fields.md)

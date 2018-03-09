@@ -1,28 +1,28 @@
 ---
-title: "Добавление дополнительного сервера отчетов в ферму (горизонтально масштабируемые службы SSRS) | Документы Microsoft"
+title: "Добавление дополнительного сервера отчетов в ферму (горизонтально масштабируемые службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
-caps.latest.revision: 12
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "12"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b810d42e1d7e74db8aa81939cfe83f81a1694c36
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6a0929e4e86c8fbb342115e9ae978e162f7b2de0
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Добавление дополнительного сервера отчетов в ферму (горизонтально масштабируемые службы SSRS)
 
   Добавление второго и последующих серверов отчетов в режиме интеграции с SharePoint в ферму SharePoint может улучшить производительность обработки и время ответа сервера отчетов. Если при добавлении пользователей, отчетов и приложений на сервер отчетов производительность уменьшается, добавление дополнительных серверов отчетов может улучшить ее. Второй сервер отчетов также рекомендуется добавить для повышения доступности серверов отчетов, когда обнаруживаются проблемы с оборудованием или проводится штатное обслуживание отдельных серверов в среде. Начиная с выпуска [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] действия по созданию масштабного развертывания в среде служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint соответствуют стандартам развертывания ферм SharePoint и используют возможности SharePoint по балансировке нагрузки.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 08/09/2017
 >  Масштабное развертывание служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживается не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] статьи [Функции, поддерживаемые выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!TIP]  
->  Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не используется для добавления серверов и масштабного развертывания серверов отчетов. Продукты SharePoint управляют масштабным развертыванием служб Reporting Services по мере добавления в ферму серверов SharePoint со службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+>  Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не используется для добавления серверов и масштабного развертывания серверов отчетов. Продукты SharePoint управляют масштабным развертыванием служб Reporting Services по мере добавления в ферму серверов SharePoint со службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Сведения о масштабировании серверов отчетов в собственном режиме см. в разделе [Настройка масштабного развертывания сервера отчетов в собственном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
 -   (4) Представляет программное или решение для оборудования по распределению сетевой нагрузки (NLB)  
   
- ![Добавление сервера приложения службы Reporting Services](../../reporting-services/install-windows/media/rs-sharepointscale.gif "Добавление сервера приложения службы Reporting Services")  
+ ![Добавление сервера приложения служб Reporting Services](../../reporting-services/install-windows/media/rs-sharepointscale.gif "Добавление сервера приложения служб Reporting Services")  
   
  Следующие шаги предполагают, что установкой и настройкой сервера занимается администратор. Сервер будет настроен в качестве нового сервера приложений на ферме и не будет использоваться в качестве веб-интерфейса (WFE).  
   
@@ -74,11 +74,11 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_additional"></a> Дополнительная настройка  
  Отдельные серверы служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в масштабном развертывании вы можете оптимизировать для выполнения фоновой обработки только так, чтобы они не соперничали за ресурсы с интерактивным выполнением отчетов. Фоновая обработка включает в себя расписания, подписки и оповещения о данных.  
   
- Чтобы изменить поведение отдельных серверов отчетов, установите  **\<IsWebServiceEnable >** значение false в **RSreportServer.config** файла конфигурации.  
+ Чтобы изменить поведение отдельных серверов отчетов, в файле конфигурации **RSreportServer.config** задайте параметру **\<IsWebServiceEnable>** значение false.  
   
- По умолчанию серверы отчетов должны быть настроены \<IsWebServiceEnable > задано значение TRUE. Если параметры всех серверов настроены для значения TRUE, нагрузка от интерактивной и фоновой обработки будет сбалансирована по всем узлам фермы.  
+ По умолчанию для серверов отчетов параметру \<IsWebServiceEnable> задано значение TRUE. Если параметры всех серверов настроены для значения TRUE, нагрузка от интерактивной и фоновой обработки будет сбалансирована по всем узлам фермы.  
   
- Если настройка всех серверов отчетов \<IsWebServiceEnable > задано значение False, появится следующее сообщение об ошибке при попытке использовать [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] функции:  
+ Если параметру \<IsWebServiceEnable> задать значение False для всех серверов отчетов, при попытке использовать функции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на экране появится сообщение об ошибке, подобное приведенному далее.  
   
       The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true. 
  
@@ -89,5 +89,4 @@ ms.lasthandoff: 08/09/2017
 [Добавление сервера SharePoint в ферму в SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
 [Добавление сервера SharePoint в ферму в SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

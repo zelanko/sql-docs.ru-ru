@@ -2,31 +2,31 @@
 title: "Свойства распространителя, страница \"Общие\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.configdistwizard.distproperties.general.f1
-helpviewer_keywords:
-- Distributor Properties dialog box
+f1_keywords: sql13.rep.configdistwizard.distproperties.general.f1
+helpviewer_keywords: Distributor Properties dialog box
 ms.assetid: ab4120ec-e524-4c0c-8b48-f2f40adb1a3b
-caps.latest.revision: 22
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 48fcfa8c620bba8340243dca8c712102853edc7a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "22"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 6ca8eee800c47b047b27097ce84a425f1cf251d1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-properties-general"></a>Диалоговое окно «Свойства распространителя», страница «Общие»
-  На странице **Общие** диалогового окна **Свойства распространителя** можно добавлять и удалять базы данных распространителя, а также менять их свойства.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] На странице **Общие** диалогового окна **Свойства распространителя** можно добавлять и удалять базы данных распространителя, а также менять их свойства.  
   
  В базе данных распространителя хранятся метаданные и данные журнала для всех типов репликации, а также транзакции для репликации транзакций. В большинстве случаев достаточно одной базы данных распространителя. Но если несколько издателей используют один распространитель, рассмотрите вариант создания отдельной базы данных распространителя для каждого издателя. Это гарантирует то, что данные, проходящие через каждую базу данных распространителя, будут различаться.  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 06/22/2017
  **Создать**  
  Нажмите для создания новой базы данных распространителя.  
   
- **Delete**  
+ **Удаление**  
  Выберите существующую базу данных распространителя в сетке свойств **Базы данных** и нажмите **Удалить** для удаления этой базы данных. Нельзя удалить базу данных распространителя, если существует только одна такая база данных; каждый распространитель должен иметь, по крайней мере, одну базу данных распространителя. Для удаления всех баз данных распространителя необходимо отключить распространение на компьютере. Дополнительные сведения см. в статье [Отключение публикации и распространения](../../relational-databases/replication/disable-publishing-and-distribution.md).  
   
  **Параметры профиля по умолчанию**  

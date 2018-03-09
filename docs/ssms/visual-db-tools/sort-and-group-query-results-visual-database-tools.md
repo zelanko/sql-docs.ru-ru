@@ -3,10 +3,12 @@ title: "Результаты запросов сортировки и групп
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,24 +24,23 @@ helpviewer_keywords:
 - Results pane
 - sorting query results [SQL Server]
 ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f1151b57f590a184c1152a6504949fadd1caeca3
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d1adeb21a6fca540cd4359c57ac6756bffa8cd16
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>Результаты запросов сортировки и группирования (визуальные инструменты для баз данных)
-Может быть создан результат запроса, в котором каждая результирующая строка соответствует всей группе строк исходных данных.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Может быть создан результат запроса, в котором каждая результирующая строка соответствует всей группе строк исходных данных.  
   
 Подробные сведения о создании таких запросов см. в указанных ниже разделах.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 [Сортировка строк (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/sort-rows-visual-database-tools.md)  
 В этом разделе описываются различные способы сортировки строк и даются советы по их применению.  
   
@@ -74,4 +75,3 @@ ms.lasthandoff: 08/18/2017
 [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 Предоставляет ссылки на разделы, объясняющие как использовать конструктор запросов и представлений.  
   
-

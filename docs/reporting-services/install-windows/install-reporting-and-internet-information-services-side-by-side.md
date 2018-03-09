@@ -1,39 +1,38 @@
 ---
-title: "Установить модуль создания отчетов и в службах IIS Side-by-Side | Документы Microsoft"
+title: "Параллельная установка служб Reporting Services и служб IIS | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- deploying [Reporting Services], IIS
+helpviewer_keywords: deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
-caps.latest.revision: 40
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "40"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: f7e12ebcec8e06828430e10c377205e2421f50f4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7645b04a492c182283c79c814be0c59baa23fbc6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-
-# <a name="install-reporting-and-internet-information-services-side-by-side"></a>Установить модуль создания отчетов и в службах IIS Side-by-Side
+# <a name="install-reporting-and-internet-information-services-side-by-side"></a>Параллельная установка служб Reporting Services и служб IIS
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-Можно установить и запустить службы SQL Server Reporting Services (SSRS) и Internet Information Services (IIS) на том же компьютере. От используемой версии служб IIS будет зависеть, какие возникнут проблемы совместимости.  
+Службы SQL Server Reporting Services (SSRS) и IIS могут быть установлены и запущены на одном и том же компьютере. От используемой версии служб IIS будет зависеть, какие возникнут проблемы совместимости.  
   
-|Версия служб IIS|Проблемы|Описание|  
+|Версия служб IIS|Проблемы|Description|  
 |-----------------|------------|-----------------|  
 |8.0, 8.5|Запросы, предназначенные для одного приложения, принимаются другим приложением.<br /><br /> Компонент HTTP.SYS предписывает правила приоритета для резервирования URL-адресов. Запросы, передаваемые в приложения, которые имеют одинаковое имя виртуального каталога и совместно отслеживают запросы, поступающие через порт 80, могут не достичь намеченной цели, если применяемое резервирование URL-адресов слабее резервирования URL-адресов другого приложения.|При определенных условиях зарегистрированная конечная точка, URL-адрес которой предшествует URL-адресу другой конечной точки в схеме резервирования URL-адресов, может получать HTTP-запросы, предназначенные для другого приложения.<br /><br /> Использование уникальных имен виртуальных каталогов для таких компонентов, как веб-служба сервера отчетов и [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] , поможет избежать этого конфликта.<br /><br /> Подробные сведения об этом сценарии приведены в этом разделе.|  
   
@@ -50,32 +49,32 @@ ms.lasthandoff: 08/09/2017
   
 |Пример|Запрос|  
 |-------------|-------------|  
-|`http://123.234.345.456:80/reports`|Получает все запросы, отправляемые `http://123.234.345.456/reports` или `http://\<computername>/reports` служба доменных имен можно разрешить IP-адрес в это имя узла.|  
+|`http://123.234.345.456:80/reports`|Получает все запросы, которые передаются по адресу `http://123.234.345.456/reports` или `http://\<computername>/reports`, если служба доменных имен способна разрешить этот IP-адрес в это имя узла.|  
 |`http://+:80/reports`|Получает любые запросы, отправленные любому IP-адресу или имени узла, являющимся допустимыми для этого компьютера, при условии, что URL-адрес содержит имя виртуального каталога reports.|  
-|`http://123.234.345.456:80`|Получает любой запрос, который указывает `http://123.234.345.456` или `http://\<computername>` служба доменных имен можно разрешить IP-адрес в это имя узла.|  
+|`http://123.234.345.456:80`|Получает все запросы, в которых указан адрес `http://123.234.345.456` или `http://\<computername>`, если служба доменных имен способна разрешить этот IP-адрес в это имя узла.|  
 |`http://+:80`|Получает запросы, которые еще не получены другими приложениями, применительно к любым конечным точкам приложений, сопоставленным со значением **Все назначенные**.|  
 |`http://*:80`|Получает запросы, которые еще не получены другими приложениями, применительно к любым конечным точкам приложений, сопоставленным со значением **Все неназначенные**.|  
   
  Одним из признаков конфликта портов является следующее сообщение об ошибке: "System.IO.FileLoadException. Процесс не может получить доступ к файлу, так как этот файл занят другим процессом. (Исключение в HRESULT: 0x80070020)".  
   
-## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>Резервирование URL-адресов для служб IIS 8.0, 8.5 со службами отчетов SQL Server  
+## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>Резервирование URL-адресов для служб IIS 8.0, 8.5 со службами SQL Server Reporting Services  
  Изучение правил приоритета, приведенных в предыдущем разделе, позволяет разобраться, как резервирования URL-адресов, определенные для служб Reporting Services и IIS, поддерживают совместимость. Службы Reporting Services получают запросы, в которых явно указаны имена виртуальных каталогов для их приложений; службы IIS получают все остальные запросы, которые могут затем быть направлены приложениям, запущенным в рамках модели процесса IIS.  
   
-|Приложение|Резервирование URL-адресов|Описание|Прием запроса|  
+|Приложение|Резервирование URL-адресов|Description|Прием запроса|  
 |-----------------|---------------------|-----------------|---------------------|  
-|Сервер отчетов|`http://+:80/ReportServer`|Сильный шаблон для доступа к порту 80, с указанием виртуального каталога сервера отчетов.|Получает все запросы на порт 80, в которых указан виртуальный каталог сервера отчетов. Сервер веб-службы отчетов получает все запросы с http://\<имя_компьютера > / reportserver.|  
-|Веб-портал|`http://+:80/Reports`|Сильный шаблон для доступа к порту 80, с указанием виртуального каталога Reports.|Получает все запросы на порт 80, в которых указан виртуальный каталог reports. [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] Получает все запросы с http://\<имя_компьютера > / reports.|  
+|Сервер отчетов|`http://+:80/ReportServer`|Сильный шаблон для доступа к порту 80, с указанием виртуального каталога сервера отчетов.|Получает все запросы на порт 80, в которых указан виртуальный каталог сервера отчетов. Веб-служба сервера отчетов получает все запросы, отправленные по адресу http://\<имя_компьютера>/reportserver.|  
+|Веб-портал|`http://+:80/Reports`|Сильный шаблон для доступа к порту 80, с указанием виртуального каталога Reports.|Получает все запросы на порт 80, в которых указан виртуальный каталог reports. [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] получает все запросы, отправленные по адресу http://\<имя_компьютера>/reports.|  
 |IIS|`http://*:80/`|Слабый шаблон для доступа к порту 80.|Получает любые оставшиеся запросы на порт 80, которые не получены другим приложением.|  
 
-## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>Side-by-Side развертывания служб SQL Server Reporting Services в службах IIS 8.0, 8.5
+## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>Параллельное развертывание служб SQL Server Reporting Services в службах IIS 8.0, 8.5
 
  Если веб-сайты IIS имеют имена виртуальных каталогов, идентичные используемым в службах Reporting Services, возникают проблемы функциональной совместимости служб IIS и служб Reporting Services. Например, предположим, что имеется следующая конфигурация.  
   
 -   Веб-сайт в службах IIS, который назначен на порт 80 и виртуальный каталог с именем Reports.  
   
--   Экземпляр сервера отчетов, установленный в конфигурации по умолчанию, где резервирование URL-адресов также указан порт 80 и [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] приложение также использует «Отчеты» в качестве имени виртуального каталога.  
+-   Экземпляр сервера отчетов, установленный в конфигурации по умолчанию, где в резервировании URL-адресов также указан порт 80, а в приложении [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] также используется "Reports" в качестве имени виртуального каталога.  
   
- Такой конфигурации запрос, который отправляется http://\<имя_компьютера >: 80/reports получит [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Приложение, которое можно получить с помощью виртуального каталога Reports в службах IIS больше не будет получать запросы, после установки экземпляра сервера отчетов.  
+ В такой конфигурации запрос, отправленный по адресу http://\<имя_компьютера>:80/reports, принимает [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Приложение, доступ к которому предоставляется с помощью виртуального каталога Reports в службах IIS, после установки экземпляра сервера отчетов больше не будет получать запросы.  
   
  При работе развернутых параллельно старой и новой версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], по всей вероятности будут обнаруживаться только что описанные проблемы маршрутизации. Это связано с тем, что во всех версиях служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в качестве имен виртуальных каталогов для приложений таких компонентов, как сервер отчетов и [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] , используются ReportServer и Reports, в результате чего повышается вероятность наличия виртуальных каталогов reports и reportserver в службах IIS.  
   
@@ -89,7 +88,6 @@ ms.lasthandoff: 08/09/2017
 
 [Настройка URL-адресов сервера отчетов](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [Настройка URL-адреса](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
-[Установка сервера отчетов собственный режим служб Reporting Services](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
+[Установка сервера отчетов служб Reporting Services в собственном режиме](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

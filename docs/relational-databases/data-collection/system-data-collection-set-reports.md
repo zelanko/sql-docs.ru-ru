@@ -2,9 +2,12 @@
 title: "Отчеты о наборе элементов сбора системных данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-collection
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -20,19 +23,20 @@ helpviewer_keywords:
 - query statistics reports [SQL Server]
 - disk usage reports [SQL Server]
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
-caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 26ff209c4b0f52f3a25de54463a4fa4c2837d0a5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: a2395391111bcd8b21fd030d02bc4756aa98d1fc
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="system-data-collection-set-reports"></a>Отчеты наборов элементов сбора системных данных
-  Сборщик данных предоставляет отчет с предысторией для каждого набора элементов сбора системных данных. Каждый из следующих отчетов использует данные, содержащиеся в хранилище данных управления.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Сборщик данных предоставляет отчет с предысторией для каждого набора элементов сбора системных данных. Каждый из следующих отчетов использует данные, содержащиеся в хранилище данных управления.  
   
 -   [Сводка по использованию дискового пространства.](#Disk)  
   
@@ -66,7 +70,7 @@ ms.lasthandoff: 06/22/2017
 |--------------|----------------|  
 |Указатель|Место на диске, занятое для хранения страниц индекса.|  
 |Не выделено|Место на диске, доступное базе данных, но не выделенное ни одному из объектов.|  
-|Данные|Место на диске, занятое для страниц данных.|  
+|data|Место на диске, занятое для страниц данных.|  
 |Не используется|Место на диске, выделенное для одного или более объектов, но пока не занятое.|  
   
  Использование места на диске для файла журнала транзакций характеризуется следующими значениями: занято и свободно.  

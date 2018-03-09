@@ -1,10 +1,13 @@
 ---
-title: "Шаг 7: Добавление и Настройка назначения «OLE DB» | Документы Microsoft"
+title: "Шаг 7. Добавление и настройка назначения OLE DB | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,19 +15,18 @@ ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
-caps.latest.revision: 24
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e50d2f6d1622cc124cf8b55fbd1ae14811d5cc9c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 125045500038af764f10ec3746ade7e7069a4817
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="lesson-1-7---adding-and-configuring-the-ole-db-destination"></a>Занятие 1-7-Добавление и Настройка назначения «OLE DB»
+# <a name="lesson-1-7---adding-and-configuring-the-ole-db-destination"></a>Занятие 1–7. Добавление и настройка назначения OLE DB
 Созданный пакет теперь может извлекать данные из источника «Неструктурированный файл» и преобразовывать эти данные в формат, совместимый с форматом назначения. Далее требуется загрузить преобразованные данные в указанное назначение. Чтобы загрузить данные, необходимо добавить назначение OLE DB в поток данных. Назначение OLE DB может использовать таблицу, представление или SQL-команду базы данных, чтобы загрузить данные в различные OLE DB-совместимые базы данных.  
   
 В этой процедуре добавляется и настраивается назначение OLE DB, что позволит использовать диспетчер соединений OLE DB, созданный ранее.  
@@ -67,4 +69,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

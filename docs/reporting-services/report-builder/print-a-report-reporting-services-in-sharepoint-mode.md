@@ -1,30 +1,30 @@
 ---
-title: "Печать отчета (службы Reporting Services в режиме интеграции с SharePoint) | Документы Microsoft"
+title: "Печать отчетов (службы Reporting Services в режиме интеграции с SharePoint) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - printing reports, SharePoint Web application
 - printing reports
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f89c8f0d330561aacd678e4556fdaf2910b5dcc7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 69ce18de1901a873a4eaf0f39854af2512122e72
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Печать отчетов (службы Reporting Services в режиме SharePoint)
   Для сервера отчетов, работающего в режиме интеграции с SharePoint, существует три способа напечатать отчет из веб-приложения SharePoint.  
@@ -54,8 +54,7 @@ ms.lasthandoff: 08/09/2017
   
      Чтобы просмотреть отчет до печати, нажмите кнопку **Предварительный просмотр** . После этого в отдельном окне предварительного просмотра откроется первая страница отчета. Остальные страницы становятся доступными по мере отображения отчета сервером отчетов. Отчет для предварительного просмотра отображается в формате EMF. Можно переходить к предыдущей или следующей странице, вплоть до последней, когда кнопка **Далее** станет недоступной. Чтобы изменить размеры полей на странице предварительного просмотра, нажмите кнопку **Поля** . Появится диалоговое окно **Поля** . Настройте необходимые размеры верхнего, нижнего, правого и левого полей и нажмите кнопку **ОК**. Диалоговое окно закрывается, и сохраняются параметры для предварительного просмотра и печати.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Включение и отключение печати на стороне клиента для служб Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   
-

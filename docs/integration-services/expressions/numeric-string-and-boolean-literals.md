@@ -1,10 +1,13 @@
 ---
-title: "Литералы (службы SSIS) | Документы Microsoft"
+title: "Литералы (службы SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 11/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -17,19 +20,18 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-caps.latest.revision: 35
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 149e9cb31f5e7cecfba9d0c221c1cbddb2b76cfa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a89f9c1fde9d4a14776d37bc648341a5b5fa4aad
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
-# <a name="numeric-string-and-boolean-literals"></a>Числовые, строки и логические литералы
+# <a name="numeric-string-and-boolean-literals"></a>Числовые, строковые и логические литералы
  Выражения могут содержать числовые, строковые и логические литералы. Средство оценки выражений поддерживает различные числовые литералы, такие как целые числа, десятичные дроби и константы с плавающей точкой. Средство оценки выражений также поддерживает суффиксы для длинных чисел и чисел с плавающей точкой, указывающие, как механизм вычисления выражений обрабатывает значения, а также экспоненциальное представление чисел в числовых литералах.  
   
 ## <a name="numeric-literals"></a>Числовые литералы  
@@ -81,7 +83,7 @@ ms.lasthandoff: 09/26/2017
   
     |Суффикс|Тип результата|  
     |------------|-----------------|  
-    |Нет|DT_I4|  
+    |None|DT_I4|  
     |U|DT_UI4|  
     |L|DT_I8|  
     |UL|DT_UI8|  
@@ -120,4 +122,3 @@ ms.lasthandoff: 09/26/2017
 > **ПРИМЕЧАНИЕ.** В выражении логические литералы должны быть разделены пробелами.  
   
   
-

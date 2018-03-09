@@ -3,8 +3,11 @@ title: "STRING_SPLIT (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - STRING_SPLIT function
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
-caps.latest.revision: 15
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 049bdf1021d57e28ed94e11c89aa997ee0eba5e5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 00debf90f1b79a0e38cb883f31479ae5731f40d3
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Разделяет символьное выражение, используя заданный разделитель.  
   
@@ -58,7 +60,7 @@ STRING_SPLIT ( string , separator )
 ## <a name="return-types"></a>Типы возвращаемых значений  
  Возвращает один столбец таблицы с помощью фрагментов. Имя столбца — **значение**. Возвращает **nvarchar** Если какой-либо из входных аргументов **nvarchar** или **nchar**. В противном случае возвращает **varchar**. Длина возвращаемого типа является таким же, как длина строковый аргумент.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **STRING_SPLIT** принимает строку, которая должна быть разделена и разделитель, который будет использоваться для разделения строки. Он возвращает один столбец таблицы с подстроками. Например, следующая инструкция `SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');` с помощью символа пробела в качестве разделителя, возвращаются следующие таблицы результатов:  
   
 |value|  
@@ -93,7 +95,7 @@ WHERE RTRIM(value) <> '';
 ### <a name="b-split-comma-separated-value-string-in-a-column"></a>Б. Разделить запятыми строковое значение в столбце  
  Таблица Product содержит столбец с разделителями отдельные список тегов, показано в следующем примере:  
   
-|productId|Имя|Теги|  
+|productId|Название|Теги|  
 |---------------|----------|----------|  
 |1|Full пальцем перчатки|одежда, дорожный, туристического велосипеда|  
 |2|Головные LL|велосипеда|  
@@ -109,7 +111,7 @@ FROM Product
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|productId|Имя|value|  
+|productId|Название|value|  
 |---------------|----------|-----------|  
 |1|Full пальцем перчатки|одежда|  
 |1|Full пальцем перчатки|дорога|  
@@ -171,9 +173,13 @@ FROM Product
 WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Левый &#40; Transact-SQL &#41;](../../t-sql/functions/left-transact-sql.md)  
+ [Функция LTRIM &#40; Transact-SQL &#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [ПРАВО &#40; Transact-SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40; Transact-SQL &#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [ПОДСТРОКА &#40; Transact-SQL &#41;](../../t-sql/functions/substring-transact-sql.md)  
+ [Функция TRIM &#40; Transact-SQL &#41;](../../t-sql/functions/trim-transact-sql.md)  
+ [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
-

@@ -3,8 +3,11 @@ title: "Разрешение ALTER LOGIN (Transact-SQL) | Документы Mic
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,20 +26,19 @@ helpviewer_keywords:
 - names [SQL Server], logins
 - modifying login accounts
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
-caps.latest.revision: 68
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9dd47cb63c56dbbfb5f31ea3f7b2c8d4f45e9d73
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: fc5c2a17e3d75cb743c6c0e3a335d911e102de0e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Изменяет свойства учетной записи входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -209,7 +211,7 @@ ALTER LOGIN login_name
   
 Удаляет учетные данные поставщика расширенного управления ключами (EKM) из имени входа. Дополнительные сведения см. [расширенного управления ключами &#40; Расширенное управление Ключами &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если параметр CHECK_POLICY имеет значение ON, аргумент HASHED использовать нельзя.  
   
  При изменении значения CHECK_POLICY на ON происходит следующее.  
@@ -238,7 +240,7 @@ ALTER LOGIN login_name
   
 В [!INCLUDE[ssSDS](../../includes/sssds-md.md)], требуются данные входа для проверки подлинности подключения и правила брандмауэра уровня сервера временно кэшируются в каждой базе данных. Этот кэш периодически обновляется. Чтобы принудительно обновить кэш проверки подлинности и убедитесь в том, что база данных имеет последнюю версию таблицы, имена входа, выполните [DBCC FLUSHAUTHCACHE &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER ANY LOGIN.  
   
  Если используется параметр CREDENTIAL, то также требуется разрешение ALTER ANY CREDENTIAL.  
@@ -262,28 +264,28 @@ ALTER LOGIN login_name
 ### <a name="a-enabling-a-disabled-login"></a>A. Включение отключенного имени входа  
  Следующий пример включает имя входа `Mary5`.  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5 ENABLE;  
 ```  
   
 ### <a name="b-changing-the-password-of-a-login"></a>Б. Изменение пароля для имени входа  
  В следующем примере пароль для имени входа `Mary5` изменяется на надежный пароль.  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5 WITH PASSWORD = '<enterStrongPasswordHere>';  
 ```  
   
 ### <a name="c-changing-the-name-of-a-login"></a>В. Изменение имени входа  
  Следующий пример изменяет имя входа `Mary5` на `John2`.  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5 WITH NAME = John2;  
 ```  
   
 ### <a name="d-mapping-a-login-to-a-credential"></a>Г. Сопоставление имени входа с учетными данными  
  Следующий пример сопоставляет имя входа `John2` с учетными данными `Custodian04`.  
   
-```tsql  
+```sql  
 ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;  
 ```  
   
@@ -293,7 +295,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
  
 **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql  
+```sql  
 ALTER LOGIN Mary5  
 ADD CREDENTIAL EKMProvider1;  
 GO  
@@ -303,7 +305,7 @@ GO
  Чтобы разблокировать имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполните следующую инструкцию, заменив **** нужным паролем учетной записи.  
   
   
-```tsql  
+```sql  
 ALTER LOGIN [Mary5] WITH PASSWORD = '****' UNLOCK ;  
 
 GO  
@@ -311,7 +313,7 @@ GO
   
  Чтобы разблокировать учетную запись без изменения пароля, отключите и снова включите политику проверки.  
   
-```tsql  
+```sql  
 ALTER LOGIN [Mary5] WITH CHECK_POLICY = OFF;  
 ALTER LOGIN [Mary5] WITH CHECK_POLICY = ON;  
 GO  
@@ -322,7 +324,7 @@ GO
   
 **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql  
+```sql  
 ALTER LOGIN TestUser WITH   
 PASSWORD = 0x01000CF35567C60BFB41EBDE4CF700A985A13D773D6B45B90900 HASHED ;  
 GO  
@@ -339,6 +341,5 @@ GO
  [Расширенное управление ключами &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   
-
 
 

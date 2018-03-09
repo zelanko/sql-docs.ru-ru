@@ -3,7 +3,7 @@ title: "Обработка транзакций | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - updating data [ADO], transaction processing
 - nested transactions [ADO]
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: c37bf04fd14bb2d5f276efd3321b044759cbe7ee
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d4879ea2bc89552409e29847ed39c9418ba668c8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="transaction-processing"></a>Обработка транзакций
 Объект *транзакции* разделяет начало и конец ряда операций доступа к данным выполняется через подключение. Зависит от возможностей источника данных транзакций **подключения** объекта также дает возможность создания и управления транзакциями. Например используя поставщик Microsoft OLE DB для SQL Server для доступа к базе данных на Microsoft SQL Server, можно создать несколько вложенных транзакций, для выполнения команд.  
@@ -53,4 +52,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="nested-transactions"></a>Вложенные транзакции  
  Для поставщиков, которые поддерживают вложенные транзакции вызова **BeginTrans** метод в открытой транзакции запускает новую, вложенные транзакции. Возвращает значение, указывающее уровень вложенности: «1» возвращает значение, указывающее, был открыт транзакцией верхнего уровня (то есть транзакция не является вложенным в другой транзакции), «2» означает, что вы открыли транзакции второго уровня ( транзакция вложена в рамках транзакции верхнего уровня), и т. д. Вызов **CommitTrans** или **RollbackTrans** затрагивает только последний открытый транзакции; необходимо закрыть или откат текущей транзакции, чтобы связать все более высокого уровня транзакции.
-

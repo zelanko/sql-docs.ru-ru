@@ -2,12 +2,13 @@
 title: "Отладка хранимых процедур | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -16,19 +17,19 @@ helpviewer_keywords:
 - debugging stored procedures [Analysis Services]
 - stored procedures [Analysis Services], debugging
 ms.assetid: 34f51b85-02b3-40dd-bf93-375a9e522385
-caps.latest.revision: 26
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7b605ee9a2af577048c03d406ff628b1d279a68e
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a2bec11c4a5d374c7e4dc2b9cc5a264c69402853
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="debugging-stored-procedures"></a>Отладка хранимых процедур
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Хранимые процедуры служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в реальности представляют собой библиотеки CLR или COM (обычно DLL), написанные на языке C# (или на любом другом языке CLR или COM). Таким образом, отладка хранимой процедуры практически аналогична отладке любого другого приложения в среде отладки Visual Studio. Отладка хранимых процедур в среде разработки Visual Studio производится с использованием интегрированных функций отладки. Они позволяют осуществлять остановку процедуры в определенных местах, контролировать значения в памяти и регистрах, изменять переменные, следить за трафиком сообщений и подробно анализировать работу кода.  
   
 ### <a name="to-debug-a-stored-procedure"></a>Отладка хранимой процедуры  
@@ -59,9 +60,8 @@ ms.lasthandoff: 09/01/2017
   
  При возникновении проблем с отладкой библиотеки убедитесь, что соответствующий файл базы данных программ (PDB-файл) скопирован в место развертывания на сервере. Если этот файл не был скопирован во время регистрации или развертывания, то его необходимо скопировать вручную в то же место, где находится библиотека DLL. Для собственного кода (COM DLL) PDB-файл находится в подкаталоге \debug. Для управляемого (CLR DLL) — он находится в подкаталоге \WINDEBUG.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление сборками многомерной модели](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)   
  [Определение хранимых процедур](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   
-

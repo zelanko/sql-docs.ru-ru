@@ -1,29 +1,29 @@
 ---
-title: "Ссылки на коллекцию ReportItems (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Ссылки на коллекцию ReportItems (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cfa69eca6201980d4449c28a8a7018846fd4e4a0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5a084d3bb236100728b5decab3569c37f46600f8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="built-in-collections---reportitems-collection-references-report-builder"></a>Встроенные коллекции - ссылки на коллекцию ReportItems (построитель отчетов)
+# <a name="built-in-collections---reportitems-collection-references-report-builder"></a>Встроенные коллекции — ссылки на коллекцию ReportItems (построитель отчетов)
   Встроенная коллекция **ReportItems** является набором текстовых полей из элементов отчета, например строк области данных или текстовых полей в области конструктора отчетов. Коллекция **ReportItems** включает текстовые поля, находящиеся в текущей области верхнего колонтитула, нижнего колонтитула или текста отчета. Эта коллекция определяется во время выполнения обработчика отчетов и модуля подготовки отчетов. Текущая область изменяется после успешного объединения обработчиком отчетов данных отчета и элементов макета элементов отчета, когда пользователь просматривает страницы отчета. Встроенная коллекция **ReportItems** может использоваться для формирования верхних колонтитулов страницы в стиле словаря, отображающих первый и последний элемент на каждой странице.  
   
 > [!NOTE]  
@@ -32,13 +32,13 @@ ms.lasthandoff: 08/09/2017
 ## <a name="using-the-reportitems-value-property"></a>Использования свойства значения ReportItems  
  Элементы коллекции **ReportItems** имеют только одно свойство: Value. Значение элемента **ReportItems** может использоваться для отображения или вычисления данных из другого поля отчета. Чтобы получить доступ к значению текущего текстового поля, можно использовать встроенное в [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] глобальное выражение Me.Value или просто Value. Однако в функциях отчета, таких как First и агрегатных функциях, необходимо использовать полный синтаксис.  
   
- Например:  
+ Пример:  
   
 -   Это выражение, помещенное в текстовое поле, отображает значение текстового поля **ReportItem** с именем `Textbox1`:  
   
      `=ReportItems!Textbox1.Value`  
   
--   Это выражение, помещенное в **ReportItem** текстовое поле свойства Color, отображает текст черным цветом, если значение > 0; в противном случае — значение отображается красным цветом:  
+-   Это выражение, помещенное в текстовое поле **ReportItem** свойства Color, отображает текст черным цветом, если значение > 0, в противном случае — красным:  
   
      `=IIF(Me.Value > 0,"Black","Red")`  
   
@@ -54,13 +54,12 @@ ms.lasthandoff: 08/09/2017
 ## <a name="scope-for-the-reportitems-collection"></a>Область коллекции ReportItems  
  При выполнении отчета каждое текстовое поле в теле отчета или в области данных оценивается в контексте его набора данных, области данных и взаимосвязей групп. Областью для ссылки на коллекцию **ReportItems** является текущая область или любая точка, находящаяся выше текущей области.  
   
- Например, текстовое поле в строке, находящейся в родительской группе, не должно содержать выражение, ссылающееся на имя текстового поля в строке дочерней группы. Результат вычисления такого выражения отличается от значения в отчете, т. к. текстовое поле дочерней строки расположено вне этой области. Дополнительные сведения см. в разделе [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
+ Например, текстовое поле в строке, находящейся в родительской группе, не должно содержать выражение, ссылающееся на имя текстового поля в строке дочерней группы. Результат вычисления такого выражения отличается от значения в отчете, т. к. текстовое поле дочерней строки расположено вне этой области. Дополнительные сведения см. в разделах [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Встроенные коллекции в выражениях &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [Примеры выражений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Разбиение на страницы в службах Reporting Services &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Фильтр, группы и сортировка данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Встроенные коллекции в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
-

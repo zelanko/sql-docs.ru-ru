@@ -3,7 +3,7 @@ title: "Пример свойства соединения (VB) | Докумен
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - ConnectionTimeout property [ADO], Visual Basic example
 - State property [ADO], Visual Basic example
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: fa6edc93360752ae1bf65bb291ea2c87ba185e4f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4bf2c0e0b9d1c7b4aed1729a7da25f8ec9260d4f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString, ConnectionTimeout и пример свойства состояния (Visual Basic)
 В этом примере рассматриваются различные способы использования [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойства, чтобы открыть [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Она также использует [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) свойство, чтобы задать период ожидания соединения и [состояние](../../../ado/reference/ado-api/state-property-ado.md) свойство для проверки состояния соединения. Функция GetState является обязательным для выполнения этой процедуры.  
@@ -134,9 +133,8 @@ End Function
 'EndConnectionStringVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Свойство ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
  [Свойство ConnectionTimeout (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
  [Свойство State (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
-

@@ -2,32 +2,33 @@
 title: "В базе данных аналитики R для разработчиков SQL (учебник) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 - TSQL
 ms.assetid: c18cb249-2146-41b7-8821-3a20c5d7a690
-caps.latest.revision: 15
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 0062a75b92fc633e61b0aa73ae2c955ccd60cec5
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 149cafe2595c176bcb3d1f162d1455aa7c4c6616
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>Аналитика в базе данных R для разработчиков SQL (учебник)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Цель данного руководства — предоставить программисты SQL практический опыт создания машинного обучения решения в SQL Server. В этом учебнике вы узнаете, как включить R в приложение или решение бизнес-Аналитики, заключив код R в хранимые процедуры.
 
@@ -88,4 +89,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-lesson"></a>Следующее занятие
 
 [Урок 1: Загрузите образец данных](../tutorials/sqldev-download-the-sample-data.md)
-

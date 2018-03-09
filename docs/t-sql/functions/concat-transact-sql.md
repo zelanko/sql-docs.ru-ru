@@ -3,8 +3,11 @@ title: "CONCAT (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - CONCAT function
 ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
-caps.latest.revision: 22
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 046278bb3016b39df8039a1450a58b177d2bc180
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: 1f3a1ef2b55b2f67b6b2e01ceb1965a5076e8476
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
 Возвращает строку, являющуюся результатом объединения двух или более строковых значений. (Для добавления отделение значения во время объединения, в разделе [CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md).)
   
@@ -49,7 +51,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 ## <a name="return-types"></a>Возвращаемые типы
 Строка, длина и тип которой зависят от входных данных.
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 **CONCAT** принимает переменное количество строковых аргументов и объединяет их в одну строку. Для этого требуется не менее двух входных значений. В противном случае возникает ошибка. Все аргументы неявно преобразуются в строковые типы и затем объединяются. Значения NULL неявно преобразуются в пустую строку. Если все аргументы имеют значение null, возвращается пустая строка типа **varchar**(1) возвращается. Неявное преобразование в строки выполняется по существующим правилам преобразования типов данных. Дополнительные сведения о преобразованиях типов данных см. в разделе [CAST и CONVERT &#40; Transact-SQL &#41; ](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 Тип возвращаемого значения зависит от типа аргументов. Описанные выше основные понятия проиллюстрированы в следующей таблице.
@@ -109,9 +111,16 @@ NameLastname
 ```  
   
 ## <a name="see-also"></a>См. также:
-[Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
-[CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)   
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)   
+ [Функция FORMATMESSAGE &#40; Transact-SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40; Transact-SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [Заменить &#40; Transact-SQL &#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [ОБРАТИТЬ &#40; Transact-SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40; Transact-SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40; Transact-SQL &#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [ПРЕОБРАЗОВАТЬ &#40; Transact-SQL &#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
-
 
 

@@ -1,36 +1,33 @@
 ---
-title: "Метод SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting) | Документы Microsoft"
+title: "Метод SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: wmi-provider-library-reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SetEmailConfiguration method
+helpviewer_keywords: SetEmailConfiguration method
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
-caps.latest.revision: 19
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "19"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: da1694467a88220546fa8ec8e02ff78564f605ed
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 277196f9b8817500dda3c0c7470b4950ed0ff535
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="configurationsetting-method---setemailconfiguration"></a>Метод ConfigurationSetting - SetEmailConfiguration
+# <a name="configurationsetting-method---setemailconfiguration"></a>Метод ConfigurationSetting — SetEmailConfiguration
   Настраивает модуль доставки электронной почты, используемый сервером отчетов для отправки электронной почты.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -63,7 +60,7 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение *HRESULT* , являющееся признаком успешного или неуспешного завершение вызова метода. Значение 0 указывает, что вызов метода завершился успешно. Ненулевое значение указывает, что произошла ошибка.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Когда значение параметра *SendUsingSMTPServer* становится равным **true**, запись **SendUsing** в файле конфигурации сервера отчетов изменяет значение на 1. Когда параметр *SendUsingSMTPServer* приобретает значение **false**, запись **SendUsing** не настраивается.  
   
  Этот метод не позволяет пользователям задать для записи **SendUsing** в файле конфигурации сервера отчетов какое-либо значение, кроме 1. Чтобы настроить на сервере отчетов почтовый протокол, отличный от SMTP, необходимо изменить файл конфигурации вручную.  
@@ -71,8 +68,7 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

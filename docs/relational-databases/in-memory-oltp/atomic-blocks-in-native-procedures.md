@@ -1,28 +1,32 @@
 ---
 title: "Атомарные блоки | Документация Майкрософт"
 ms.custom: 
-ms.date: 12/02/2016
-ms.prod: sql-server-2016
+ms.date: 10/26/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
-caps.latest.revision: 13
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cadb8454b9d9470afc7b0add40e21fd9f1346b00
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 40d88b09043e3b21326dde6cb85ced071f2b89b5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Атомарные блоки в собственных процедурах
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   **BEGIN ATOMIC** — часть стандарта ANSI SQL. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает атомарные блоки на верхнем уровне хранимых процедур, скомпилированных в собственном коде, а также для скомпилированных в собственном коде скалярных пользовательских функций. Дополнительные сведения об этих функциях см. в разделе [Скалярные определяемые пользователем функции для выполняющейся в памяти OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
 -   Каждая хранимая процедура, скомпилированная в собственном коде, содержит только один блок инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] . Это блок ATOMIC.  
@@ -40,7 +44,7 @@ ms.lasthandoff: 08/03/2017
   
  Следующий пример иллюстрирует работу функции обработки ошибок с блоками ATOMIC и хранимыми процедурами, скомпилированными в собственном коде:  
   
-```tsql  
+```sql  
 -- sample table  
 CREATE TABLE dbo.t1 (  
   c1 int not null primary key nonclustered  
@@ -128,7 +132,7 @@ ORDER BY c1
 GO  
 ```  
   
- Следующие сообщения об ошибке, относящиеся к таблицам с оптимизацией для памяти, указывают на неудачу транзакции. Если они встречаются в атомарном блок, это приведет к тому, что транзакция будет прервана: 10772, 41301, 41302, 41305, 41325, 41332 и 41333.  
+ Следующие сообщения об ошибке, относящиеся к таблицам с оптимизацией для памяти, указывают на неудачу транзакции. Если они встречаются в атомарном блоке, это приведет к тому, что транзакция будет прервана: 10772, 41301, 41302, 41305, 41325, 41332, 41333 и 41839.  
   
 ## <a name="session-settings"></a>Параметры сеанса  
  Параметры сеанса в блоках ATOMIC фиксируются, если выполнена компиляция хранимой процедуры. Некоторые параметры могут быть заданы с помощью **BEGIN ATOMIC** , тогда как другие параметры всегда фиксируются в одно и то же значение.  
@@ -146,7 +150,7 @@ GO
 |----------------------|-----------------|  
 |**DATEFORMAT**|Поддерживаются все форматы даты, отличные от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если он указан, параметр **DATEFORMAT** переопределяет формат даты по умолчанию, связанный с объектом **LANGUAGE**.|  
 |**DATEFIRST**|Если он указан, параметр **DATEFIRST** переопределяет значение по умолчанию, связанное с **LANGUAGE**.|  
-|**DELAYED_DURABILITY**|Поддерживаются значения **OFF** и **ON**.<br /><br /> Фиксации транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут быть полностью устойчивыми (вариант по умолчанию) или отложенно устойчивыми. Дополнительные сведения см. в статье [Управление устойчивостью транзакций](../../relational-databases/logs/control-transaction-durability.md).|  
+|**DELAYED_DURABILITY**|Поддерживаются значения **OFF** и **ON**.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] фиксации транзакций могут быть либо полностью устойчивыми, по умолчанию, или отложенно устойчивыми. Дополнительные сведения см. в статье [Управление устойчивостью транзакций](../../relational-databases/logs/control-transaction-durability.md).|  
   
  Следующие параметры SET имеют одно и то же значение по умолчанию для всех блоков ATOMIC во всех хранимых процедурах, скомпилированных в собственном коде.  
   
@@ -170,4 +174,3 @@ GO
  [Скомпилированные в собственном коде хранимые процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   
-

@@ -2,31 +2,32 @@
 title: "Рекомендации по администрированию репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - administering replication, best practices
 - replication [SQL Server], administering
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
-caps.latest.revision: 17
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "17"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4e86f2eb13062223533a3994180446174f9291b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1aade2a55ca0af319c84ddff35ced1f22b675839
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="best-practices-for-replication-administration"></a>Рекомендации по администрированию репликации
-  После настройки репликации важно разобраться, как следует управлять топологией репликации. В этом разделе предоставляются основные рекомендации по ряду вопросов со ссылками на дополнительные источники информации по рассматриваемым темам. Помимо рекомендаций, описываемых в этой статье, ознакомьтесь с часто встречающимися вопросами и проблемами, описанными в следующей статье: [Вопросы, часто задаваемые администраторам репликации](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] После настройки репликации важно разобраться, как следует управлять топологией репликации. В этом разделе предоставляются основные рекомендации по ряду вопросов со ссылками на дополнительные источники информации по рассматриваемым темам. Помимо рекомендаций, описываемых в этой статье, ознакомьтесь с часто встречающимися вопросами и проблемами, описанными в следующей статье: [Вопросы, часто задаваемые администраторам репликации](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
   
  Рекомендации удобно разбить на две группы:  
   
@@ -156,4 +157,3 @@ ms.lasthandoff: 06/22/2017
  [Администрирование (репликация)](../../../relational-databases/replication/administration/administration-replication.md)  
   
   
-

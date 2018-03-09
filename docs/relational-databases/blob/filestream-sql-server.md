@@ -1,10 +1,13 @@
 ---
 title: "FILESTREAM (SQL Server) | Документация Майкрософт"
 ms.custom: 
-ms.date: 10/17/2016
-ms.prod: sql-server-2016
+ms.date: 01/11/2018
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -14,21 +17,19 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], about
 - FILESTREAM [SQL Server], overview
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
-caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 2e0a757bb7582d3bc9690d804ab34d47aeaedf03
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 404dcc9a6be22c8a56c2a2311fb28062c280af64
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
-
-[!INCLUDE[tsql-appliesto-sslinux-only](../../includes/tsql-appliesto-sswindows-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 FILESTREAM позволяет приложениям на основе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранить в файловой системе неструктурированные данные, например документы и изображения. Приложения могут одновременно использовать многопоточные API-интерфейсы и производительность файловой системы, тем самым обеспечивая транзакционную согласованность между неструктурированными и соответствующими им структурированными данными.  
   
@@ -153,7 +154,7 @@ FILESTREAM не включается автоматически при уста�
 
 Создание представлений, отображенных в памяти (отображенных в памяти операций ввода-вывода), при помощи дескриптора FILESTREAM не поддерживается. Если для данных FILESTREAM используется отображение в памяти, то компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не может гарантировать согласованность и надежность данных или целостность базы данных.  
 
-## <a name="related-tasks"></a>Связанные задачи
+## <a name="related-tasks"></a>Related Tasks
 
 [Включение и настройка FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
 [Создание базы данных с поддержкой FILESTREAM](../../relational-databases/blob/create-a-filestream-enabled-database.md)  
@@ -169,4 +170,3 @@ FILESTREAM не включается автоматически при уста�
 ## <a name="related-content"></a>См. также
 
 [Совместимость FILESTREAM с другими компонентами SQL Server](../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)
-

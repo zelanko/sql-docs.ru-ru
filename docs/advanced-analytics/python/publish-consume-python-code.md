@@ -1,50 +1,45 @@
 ---
-title: "Публикация и использование кода Python | Документы Microsoft"
+title: "Публикация и использование кода Python - обучения машины сервера SQL Server (автономный) | Документы Microsoft"
 ms.custom: 
-ms.date: 09/29/2017
-ms.prod: sql-server-2016
+ms.date: 03/07/2018
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlun
 ms.workload: Inactive
+ms.openlocfilehash: 9a7e56d5f2726b627381d24e3cfd8e50ade325f6
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 550056f595b881484f3be272b8ae8b2a6d5455af
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/30/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/08/2018
 ---
-
 # <a name="publish-and-consume-python-web-services"></a>Публикация и использование Python веб-служб
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Можно развернуть рабочее решение Python в веб-службу с помощью функции ввода в эксплуатацию в Microsoft Server обучения машины. В этом разделе описывается для успешной публикации и запуска решения.
+Можно развернуть рабочую решение Python в веб-службу с помощью функции ввода в эксплуатацию на [обучения машины сервера SQL Server (автономный)](../r/r-server-standalone.md) экземпляра. В этой статье описывается способ успешной публикации, а затем запустите решение.
 
-> [!IMPORTANT]
->
-> Этот образец разработан для версии Python, который входит в состав машины обучения Server (изолированный) и в Machine Learning Server версии 9.1.0 используются функциональные возможности.
- > 
- > Аналогичный пример, использующий возможности в последнем выпуске машины обучения Microsoft Server, версии 9.2.0, см в этой статье на сайте сервера машины обучения: [развертывание и управление веб-службами в Python](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services).
+Целевая аудитория — анализу данных, которые хотят узнать, как опубликовать кода Python или модели на сервере обучения машины и как использовать код или модели в пользовательское приложение. 
 
-В этой статье предназначен для специалистов по анализу данных, чтобы узнать, как опубликовать как веб-службы, размещается в Microsoft Server обучения машины кода Python или модели. Здесь также описывается, как приложения могут использовать в коде или модель. В этой статье предполагается, что вы специализация Python.
-
-**Применяется к: машинного обучения Server (изолированный) в SQL Server 2017 г.**
+В этой статье предполагается, что вы специализация Python. Также необходимо изолированный сервер, который устанавливается независимо от других компонентов SQL Server. Сервер должен иметь [настроены для ввода в эксплуатацию](../operationalization-with-mrsdeploy.md) для включения веб-службы размещения. 
 
 ## <a name="overview-of-workflow"></a>Обзор рабочего процесса
 
 Рабочий процесс публикации для этого веб-служба Python можно интерпретировать следующим образом:
 
-1. Выполнить [необходимого компонента](#prereq) создания клиентской библиотеки Python из документа API Swagger core.
-2. Добавьте логику проверки подлинности и заголовок сценарий Python.
-3. Создание сеанса Python, подготовьте среду и создание моментального снимка для сохранения среды.
-4. Опубликовать веб-службу и внедрить этот моментальный снимок.
-5. Пробное использование веб-службы путем использования ее в текущем сеансе.
-6. Управление этими службами.
+1. Убедитесь, что у вас есть установке отдельного сервера машины Server обучения с Python.
+2. Выполнить [необходимого компонента](#prereq) создания клиентской библиотеки Python из документа API Swagger core.
+3. Добавьте логику проверки подлинности и заголовок сценарий Python.
+4. Создание сеанса Python, подготовьте среду и создание моментального снимка для сохранения среды.
+5. Опубликовать веб-службу и внедрить этот моментальный снимок.
+6. Пробное использование веб-службы путем использования ее в текущем сеансе.
+7. Управление этими службами.
 
 ![Swagger рабочего процесса](./media/data-scientist-python-workflow.png)
 
@@ -52,9 +47,9 @@ ms.lasthandoff: 09/30/2017
 
 ## <a name="sample-code"></a>Образец кода
 
-Этот пример кода предполагает вы выполнили требования [необходимые компоненты](#prereq) для создания клиентской библиотеки Python из Swagger этот файл и что использовали Autorest.
+Этот пример кода предполагает имеется [созданный готовности к установке клиентской библиотеки Python](#prereq) из Swagger, которые вы использовали Autorest. Этот код можно выполните на экземпляре сервера обучения машины SQL Server (автономный), настроенного для ввода в эксплуатацию.
 
-После блока кода вы найдете Пошаговое руководство с более подробное описание каждого steo в процессе.
+Чтобы изучить этот код в глубину, сразу перейти к [Пошаговое руководство](#walkthrough) для более подробное описание всего процесса.
 
 > [!IMPORTANT]
 > В этом примере используется локальная `admin` учетной записи для проверки подлинности. Тем не менее, следует заменить учетные данные и [метод проверки подлинности](#python-auth) настроенный администратором.
@@ -65,7 +60,12 @@ ms.lasthandoff: 09/30/2017
 ##################################################
 
 # Import the generated client library. 
+
 import deployrclient
+
+# This example is intended for use with Microsoft R Server 9.0.1. 
+# If you are using a newer version of Machine Learning Server, 
+# use the mrs_server library instead.
 
 ##################################################
 ##              AUTHENTICATION                  ##
@@ -75,6 +75,7 @@ import deployrclient
 #Create client instance and point it at an R Server. 
 #In this case, R Server is local.
 client = deployrclient.DeployRClient("http://localhost:12800")
+# To use ML Server, replace with mrs_server.MRSServer()
 
 #Define the login request and provide credentials 
 #Update values with the connection parameters from your admin
@@ -88,7 +89,7 @@ token_response = client.login(login_request)
 headers = {"Authorization": "Bearer {0}".format(token_response.access_token)}
 
 #Verify that the server is running.
-#Remember to include `headers` in every request!
+#Remember to include `headers` in all requests!
 status_response = client.status(headers) 
 print(status_response.status_code)
 
@@ -103,7 +104,7 @@ print(status_response.status_code)
 create_session_request = deployrclient.models.CreateSessionRequest("Session 1", runtime_type="Python")
 
 #Make the call to start the session. 
-#Remember to include headers in every method call to the server.
+#Remember to include headers in all method calls to the server.
 #Returns a session ID.
 response = client.create_session(create_session_request, headers) 
    
@@ -151,7 +152,7 @@ else:
 response = client.create_snapshot(session_id, deployrclient.models.CreateSnapshotRequest("Iris Snapshot"), headers)
 #Return the snapshot ID for reference when you publish later.
 response.snapshot_id
-#If you forget the ID, list every snapshot to get the ID again.
+#If you forget the ID, list snapshots to get the ID again.
 for snapshot in client.list_snapshots(headers):
     print(snapshot)
 
@@ -283,14 +284,16 @@ for service in client.get_all_web_services(headers):
 client.delete_web_service_version("Iris","V2.0",headers)
 ```
 
+<a name="walkthrough"></a>
+
 ## <a name="walkthrough"></a>Пошаговое руководство
 
 В этом разделе описывается, как работает код более подробно.
 
 
-### <a name="prereq"></a>Шаг 1. Создание необходимых клиентских библиотек
+### <a name="prereq"></a> Шаг 1. Создание необходимых клиентских библиотек
 
-Перед началом публикации вашей Python кода и модели с помощью порядкового Microsoft Server обучения машины, необходимо создать библиотеку клиента, с помощью Swagger документа, выделенный для этого выпуска.
+Перед началом публикации кода Python и моделей с помощью сервера Machine обучения, необходимо создать библиотеку клиента, с помощью Swagger документа, выделенный для этого выпуска.
 
 1. Установите генератор кода Swagger на локальном компьютере и ознакомиться с ним. Используется для создания клиентских библиотек API в Python. Популярные средства включают в себя [Azure AutoRest](https://github.com/Azure/autorest) (требуется Node.js) и [Swagger Codegen](https://github.com/swagger-api/swagger-codegen). 
 
@@ -300,30 +303,28 @@ client.delete_web_service_version("Iris","V2.0",headers)
 
 3. Создание статически созданные клиентской библиотеке, передав `rserver-swagger-<version>.json` файла в генератор кода Swagger и, задающее язык. В этом случае следует указать Python.  
 
-   Например если AutoRest использовать для создания клиентской библиотеки Python, он может выглядеть следующим образом, где 3-значное число представляет номер версии R Server:
-   
-   `AutoRest.exe -Input rserver-swagger-9.1.0.json -CodeGenerator Python  -OutputDirectory C:\Users\rserver-user\Documents\Python`
-   
+    Например если AutoRest использовать для создания клиентской библиотеки Python, он может выглядеть следующим образом, где 3-значное число представляет номер версии R Server:
+    
+    `AutoRest.exe -Input rserver-swagger-9.1.0.json -CodeGenerator Python  -OutputDirectory C:\Users\rserver-user\Documents\Python`
 
-   Теперь можно предоставить некоторые настраиваемые заголовки и вносить другие изменения перед началом использования созданного клиента библиотеки заглушки. В разделе [Command Line Interface](https://github.com/Azure/autorest/blob/master/docs/user/cli.md) сведения о различные параметры конфигурации и настройки, таких как переименование пространство имен документации на сайте GitHub.
+4. Можно также предоставляют некоторые настраиваемые заголовки и вносить другие изменения перед началом использования созданного клиента библиотеки заглушки. В разделе [Command Line Interface](https://github.com/Azure/autorest/blob/master/docs/user/cli.md) сведения о различные параметры конфигурации и настройки, таких как переименование пространство имен документации на сайте GitHub.
    
-4. Просмотрите основной библиотеки клиента для просмотра различных API-вызовами, которые можно выбрать. 
+5. Просмотрите основной библиотеки клиента для просмотра различных API-вызовами, которые можно выбрать. 
 
-   В нашем примере Autorest создан некоторые каталоги и файлы для клиентской библиотеки Python в локальной системе. По умолчанию пространство имен (и каталог) является `deployrclient` и может выглядеть следующим образом:
+    В нашем примере Autorest создан некоторые каталоги и файлы для клиентской библиотеки Python в локальной системе. По умолчанию пространство имен (и каталог) является `deployrclient` и может выглядеть следующим образом:
    
    ![Выходной путь Autorest](./media/data-scientist-python-autorest.png)
 
-   Для этого пространства имен по умолчанию, называется клиентской библиотеке сам `deploy_rclient.py`. При открытии этого файла в вашей разработки, такой как Visual Studio, вы увидите примерно следующим образом:
+    Для этого пространства имен по умолчанию, называется клиентской библиотеке сам `deploy_rclient.py`. При открытии этого файла в вашей разработки, такой как Visual Studio, вы увидите примерно следующим образом:
    
    ![Библиотека клиентов Python](./media/data-scientist-python-client-library.png)
-
 
 
 ### <a name="step-2-add-authentication-and-header-logic"></a>Шаг 2. Добавьте логику проверки подлинности и заголовок
 
 Следует помнить, что все интерфейсы API требуется проверка подлинности; Таким образом, все пользователи должен пройти проверку подлинности при выполнении вызовы с использованием API `POST /login` API или через Azure Active Directory (AAD). 
 
-Для упрощения этого процесса, чтобы пользователям не обязательно предоставлять свои учетные данные для каждого вызова одного выдаются маркеры доступа носителя.  Этот токен носителя является это упрощенный токен безопасности, предоставляющий «предъявителю» доступ к защищенному ресурсу: в этом случае на компьютере сервер обучения API-интерфейсы. После проверки подлинности пользователя приложение должно проверить пользовательский маркер носителя, чтобы убедиться в успешности проверки подлинности для предполагаемых сторон. Дополнительные сведения об управлении этих токенов см. в разделе [маркера безопасного доступа](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens).
+Чтобы пользователям не обязательно предоставлять свои учетные данные для каждого вызова, чтобы упростить этот процесс, выдаются маркеры доступа носителя.  Этот токен носителя является это упрощенный токен безопасности, предоставляющий «предъявителю» доступ к защищенному ресурсу: в этом случае на компьютере сервер обучения API-интерфейсы. После проверки подлинности пользователя приложение должно проверить пользовательский маркер носителя, чтобы убедиться в успешности проверки подлинности для предполагаемых сторон. Дополнительные сведения об управлении этих токенов см. в разделе [маркера безопасного доступа](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens).
 
 Перед общением с базовые интерфейсы API, сначала выполнить проверку подлинности, получить доступ на предъявителя токена с помощью [метод проверки подлинности](https://msdn.microsoft.com/microsoft-r/operationalize/security-authentication) настроенный администратором, а затем включить ее в каждом верхнем колонтитуле для каждого последующего запроса:
 
@@ -336,11 +337,11 @@ client.delete_web_service_version("Iris","V2.0",headers)
    import deployrclient
    ```
 
-2. Добавьте логику проверки подлинности в приложение определить соединение с локального компьютера с сервером обучения машины, учетные данные, записать маркер доступа, добавьте этот токен в заголовок и использовать этот заголовок для всех последующих запросов.  Использование метода проверки подлинности, определенных администратором: учетная запись администратора, basic, Active Directory или LDAP (AD или LDAP) или Azure Active Directory (AAD).
+2. Добавьте логику проверки подлинности в приложение, чтобы определить соединение с локального компьютера с сервером обучения машины, учетные данные, записать маркер доступа, добавьте этот токен в заголовок. Заголовок, которые будут использоваться для всех последующих запросов.  Использование метода проверки подлинности, определенных администратором: учетная запись администратора, basic, Active Directory или LDAP (AD или LDAP) или Azure Active Directory (AAD).
 
    **AD или LDAP или `admin` проверка подлинности учетной записи**
 
-   Необходимо вызвать метод `POST /login` API для проверки подлинности. Вам потребуется передать `username` и `password` для локального администратора, или если Active Directory включена, сведения об учетной записи LDAP. В свою очередь компьютере обучения, сервер будет выдавать маркер носителя или доступа. После проверки подлинности пользователь не потребуется снова ввести учетные данные, пока маркер еще действителен, и заголовок передается с каждым запросом. Если вы не знаете параметры подключения, обратитесь к администратору.
+   Вызовите `POST /login` API для проверки подлинности. Передайте `username` и `password` для локального администратора, или если Active Directory включена, сведения об учетной записи LDAP. В свою очередь компьютере обучения сервер выдает маркер носителя или доступа. После проверки подлинности пользователя больше нет необходимости предоставить учетные данные еще раз, при условии, что маркер еще действителен и заголовок передается с каждым запросом. Если вы не знаете параметры подключения, обратитесь к администратору.
 
    ```python
    #Using client library generated from Autorest
@@ -358,7 +359,7 @@ client.delete_web_service_version("Iris","V2.0",headers)
 
    **Проверка подлинности Azure Active Directory (AAD)**
 
-   AAD необходимо передать учетные данные, сертификацией и идентификатор клиента. В свою очередь, будет выдавать AAD [токен доступа носителя](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens). После проверки подлинности пользователь не потребуется снова ввести учетные данные, пока маркер еще действителен, и заголовок передается с каждым запросом. Если вы не знаете параметры подключения, обратитесь к администратору.
+   Передать учетные данные AAD, сертификацией и идентификатор клиента. В свою очередь, выдает AAD [токен доступа носителя](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens). После проверки подлинности пользователя больше нет необходимости предоставить учетные данные еще раз, при условии, что маркер еще действителен и заголовок передается с каждым запросом. Если вы не знаете параметры подключения, обратитесь к администратору.
 
    ```python
    #Import the AAD authentication library
@@ -397,7 +398,7 @@ client.delete_web_service_version("Iris","V2.0",headers)
 
 ### <a name="step-3-prepare-session-and-code"></a>Шаг 3. Подготовка сеанса и кода
 
-После проверки подлинности можно начать сеанс Python и создать модель, которую опубликуем позднее. Можно включать кода Python или моделей в веб-службы. После настройки среды сеанса можно даже сохранить его как моментальный снимок, можно перезагрузить сеанс, как был до. 
+После проверки подлинности можно начать сеанс Python и создать модель для публикации в более поздней версии. Можно включать кода Python или моделей в веб-службы. После настройки среды сеанса можно даже сохранить его как моментальный снимок, можно перезагрузить сеанс, как был до. 
 
 > [!IMPORTANT]
 > Не забудьте включить `headers` в каждом запросе.
@@ -464,10 +465,7 @@ client.delete_web_service_version("Iris","V2.0",headers)
        print (execute_response.error_message)
    ```
 
-3. Создать моментальный снимок из этого Python сеанса, поэтому в этой среде можно сохранить в веб-службе и воспроизвести на равно времени. Моментальные снимки очень полезны при необходимости среды с подготовленной, которая включает некоторые библиотеки, объекты, моделей, файлы и артефакты. Моментальные снимки сохранить всей рабочей области и рабочий каталог. Тем не менее при публикации, можно использовать только моментальные снимки, которые вы создали.
-
-   > [!NOTE] 
-   > Хотя также можно использовать моментальные снимки, при публикации веб-службы для зависимостей среды, он может оказывать влияние на производительность, потребление времени.  Для оптимальной производительности следует внимательно рассмотреть размер моментального снимка и убедитесь, что только рабочей объекты нужно и удалить остальные. В рамках сеанса, можно использовать Python `del` функции или [ `deleteWorkspaceObject` запроса API](https://microsoft.github.io/deployr-api-docs/#delete-workspace-object) для удаления ненужных объектов. 
+3. Создать моментальный снимок из этого Python сеанса, поэтому в этой среде можно сохранить в веб-службе и воспроизвести на равно времени. Моментальные снимки полезны в тех случаях, когда требуется среды с подготовленной, которая включает определенных библиотек, объекты, моделей, файлы и артефакты. Моментальные снимки сохранить всей рабочей области и рабочий каталог. Тем не менее при публикации, можно использовать только моментальные снимки, которые вы создали.
 
    ```python
    #Create a snapshot of the current session.
@@ -476,27 +474,27 @@ client.delete_web_service_version("Iris","V2.0",headers)
    #Return the snapshot ID for reference when you publish later.
    response.snapshot_id
    
-   #If you forget the ID, list every snapshot to get the ID again.
+   #If you forget the ID, list snapshots to get the ID again.
    for snapshot in client.list_snapshots(headers):
        print(snapshot)
    ```
+
+  > [!NOTE] 
+   > Хотя также можно использовать моментальные снимки, при публикации веб-службы для зависимостей среды, он может оказывать влияние на производительность, потребление времени.  Для оптимальной производительности следует внимательно рассмотреть размер моментального снимка и убедитесь, что только рабочей объекты нужно и удалить остальные. В рамках сеанса, можно использовать Python `del` функции или [ `deleteWorkspaceObject` запроса API](https://microsoft.github.io/deployr-api-docs/#delete-workspace-object) для удаления ненужных объектов. 
 
 ### <a name="step-4-publish-the-model"></a>Шаг 4. Опубликовать модель 
 
 После библиотеку клиента был создан и вы создали логики проверки подлинности в приложение, вы можете взаимодействовать с основной API для создания сеанса Python, создания модели и затем опубликовать веб-службу, с помощью этой модели.
 
-> [!NOTE]
-> Помните, что вы должны пройти проверку подлинности перед внесением каких-либо вызовов API. Таким образом, включать `headers` в каждом запросе.
+Необходимо помнить следующее:
 
-+ Опубликуйте эту модель SVM Python веб-службы в Machine Learning Server. Эта веб-служба будет оценки вектор, который передается в него.
++ Необходимо пройти проверку подлинности перед внесением каких-либо вызовов API. Таким образом, включать `headers` во всех запросах.
++ Чтобы убедиться, что веб-службы зарегистрировано как служба Python, не забудьте указать `runtime_type="Python"`. Если не задан тип среды выполнения Python, то по умолчанию R.
++ Оценки требует вектор с sepal длины, ширина sepal, лепесток длины и ширины лепесток
 
-> [!IMPORTANT]
-> Чтобы убедиться, что веб-службы зарегистрировано как служба Python, не забудьте указать `runtime_type="Python"`. Если не задан тип среды выполнения Python, то по умолчанию R.
+Следующий код публикует модели SVM Python веб-службы. Эта веб-служба создает прогнозируемых на основе значений, переданных ему категорию.
 
 ```python
-   #Define a web service that determines the iris species by scoring 
-   #a vector of sepal length and width, petal length and width
-   
    #Set `flower_data` for the sepal and petal length and width
    flower_data = deployrclient.models.ParameterDefinition(name = "flower_data", type = "vector")
    #Set `iris_species` for the species of iris
@@ -545,22 +543,22 @@ client.delete_web_service_version("Iris","V2.0",headers)
    #Record the R Server endpoint URL hosting the web services you created
    url = "http://localhost:12800"
 
-   #Give the request.Session object the authentication headers 
-   #so you don't have to repeat it with each request.
+   #Include the request.Session object in the authentication headers.
+   #By doing so, you don't need to repeat it with each request.
    s.headers = headers
 
-   # Retrieve the service-specific swagger file using the requests library.
+   # Retrieve the service-specific Swagger file using the requests library.
    swagger_resp = s.get(url+"/api/Iris/V1.0/swagger.json")
 
-   #Either download service-specific swagger file using the json library.
+   #You can download a service-specific Swagger file using the json library.
    with open('iris_swagger.json','w') as f:
       (json.dump(client.get_web_service_swagger("Iris","V1.0",headers),f, indent = 1))
 
-   #Or print just what you need from the Swagger file, 
-   #such as the routing paths for the endpoints to be consumed.
+   #Or, you can print just what you need from the Swagger file. 
+   #This example gets the routing paths for the endpoints to be consumed.
    print(json.dumps(swagger_resp.json()["paths"], indent = 1, sort_keys = True))
 
-   #Or, print input and output parameters as defined in the Swagger.io format
+   #You can also print input and output parameters as defined in the Swagger.io format
    print("Input")
    print(json.dumps(swagger_resp.json()["definitions"]["InputParameters"], indent = 1, sort_keys = True))
    print("Output")
@@ -585,11 +583,11 @@ client.delete_web_service_version("Iris","V2.0",headers)
 
 ## <a name="managing-the-services"></a>Управление службами
 
-После создания веб-службы можно обновить, удалить или повторно опубликовать эту службу. Можно составить список всех веб-служб, размещенных с помощью Microsoft Server обучения машины.
+После создания веб-службы можно обновить, удалить или повторно опубликовать эту службу. Можно составить список всех веб-служб, размещенных с помощью R Server (или сервера обучения Machine).
 
 ### <a name="update-a-web-service"></a>Обновление веб-службы
 
-Вы можете обновить веб-службы, чтобы изменить код, модели, описание, входов, выходов и многое другое. В этом примере обновления службы, чтобы добавить описание полезных для людей, которые могут использовать эту службу.
+ В этом примере обновления службы, чтобы добавить описание полезных для людей, которые могут использовать эту службу.
 
 ```python
 #Define what needs to be updated. Here we add a description.
@@ -600,9 +598,11 @@ update_request = deployrclient.models.PublishWebServiceRequest(
 client.patch_web_service_version("Iris", "V1.0", update_request, headers)
 ```
 
+Вы можете обновить веб-службы, чтобы изменить код, модели, описание, входов, выходов и многое другое.
+
 ### <a name="publish-another-version"></a>Другой версии публикации
 
-Также можно опубликовать другая версия веб-службы. В этом примере служба теперь возвращают указывает Iris как строки, а не как список строк.
+В этом примере служба теперь возвращают указывает Iris как строки, а не как список строк.
 
 ```python
 #Publish another version of the web service, but this time 
@@ -629,9 +629,11 @@ resp = s.post(url+"/api/Iris/V2.0",json={"flower_data":[5.1,3.5,1.4,.2]})
 print(json.dumps(resp.json(), indent = 1, sort_keys = True))
 ```
 
+Этот шаблон можно использовать для публикации нескольких версий одной веб-службы. 
+
 ### <a name="list-services"></a>Перечисление служб
 
-Получение списка всех веб-служб, включая созданные другими пользователями или на разных языках.
+Этот пример возвращает список всех веб-служб, включая созданные другими пользователями или на разных языках.
 
 ```python
 #Return the list of all existing web services.
@@ -645,8 +647,6 @@ for service in client.get_all_web_services(headers):
 
 ### <a name="delete-services"></a>Удаление служб
 
-Можно удалить службы, которые вы создали. Можно также удалить службы другим пользователям при назначении роли, которая имеет соответствующие разрешения.
-
 В этом примере мы удалить второй веб-версию службы мы публикации.
 
 ```python
@@ -654,3 +654,4 @@ for service in client.get_all_web_services(headers):
 client.delete_web_service_version("Iris","V2.0",headers)
 ```
 
+Можно удалить все службы, которые вы создали. Службы других компаний можно удалить только в том случае, если вы назначены роли, которая имеет соответствующие разрешения.

@@ -3,7 +3,7 @@ title: "События ADO | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - events [ADO]
 - ADO, events
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4315048296c450e1365874e021725c8160612313
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 59492bb63fd11aa1c60b3c45daed5a7431475cd9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-events"></a>События ADO
 |||  
@@ -52,7 +51,7 @@ ms.lasthandoff: 09/09/2017
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)|Вызывается непосредственно перед ожидания выполнения команды выполняется по этому соединению и дает пользователю возможность проверки и изменения параметров ожидается выполнение.|  
 |[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|**WillMove** событие вызвано *перед* ожидающая выполнения операция изменяет текущую позицию в **записей**.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO коллекций](../../../ado/reference/ado-api/ado-collections.md)   
  [Динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
@@ -63,4 +62,3 @@ ms.lasthandoff: 09/09/2017
  [Объектная модель ADO](../../../ado/reference/ado-api/ado-object-model.md)   
  [Объекты ADO и интерфейсы](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [Свойства ADO](../../../ado/reference/ado-api/ado-properties.md)
-

@@ -2,9 +2,12 @@
 title: "Реализация триггеров DDL | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-ddl
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - DDL triggers, implementing
 ms.assetid: f44e5340-1d18-40e9-828e-0ffcca091ae3
-caps.latest.revision: 32
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ebeb270725abbb10a2bcb86c3248d71cdd3f15b1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c38f38fcdea2edf93780629c8eabeb03edcfa531
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="implement-ddl-triggers"></a>Реализация триггеров DDL
-  В этом разделе приведены сведения, необходимые для создания, изменения, выключения и удаления триггеров DDL.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+В этом разделе приведены сведения, необходимые для создания, изменения, выключения и удаления триггеров DDL.  
   
 ## <a name="creating-ddl-triggers"></a>Создание триггеров DDL  
  Триггеры DDL создаются при помощи инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TRIGGER для триггеров DDL.  
@@ -80,4 +83,3 @@ ms.lasthandoff: 06/22/2017
 -   [DROP TRIGGER (Transact-SQL)](../../t-sql/statements/drop-trigger-transact-sql.md)  
   
   
-

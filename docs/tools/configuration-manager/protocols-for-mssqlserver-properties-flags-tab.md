@@ -2,9 +2,12 @@
 title: "Протоколы для свойств MSSQLSERVER (вкладка «Флаги») | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - MSSQLSERVER property protocols
 ms.assetid: 4d38e6e9-f95f-4e79-ae45-89f631037528
-caps.latest.revision: 32
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: eeca5f9ce24cd9ff24663a05344bd8543b1141b7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 141fb04ee3c89dca748f04dec9c6984d7106d886
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
-# Протоколы для свойств MSSQLSERVER (вкладка «Флаги»)
-  Если на сервер установлен сертификат, используйте вкладку **Флаги** диалогового окна **Протоколы для свойств MSSQLSERVER** , чтобы просмотреть или задать параметры шифрования протокола и скрытия экземпляра. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо перезапустить, чтобы включить или отключить **ForceEncryption** параметр.  
+# <a name="protocols-for-mssqlserver-properties-flags-tab"></a>Протоколы для свойств MSSQLSERVER (вкладка «Флаги»)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+Если на сервер установлен сертификат, используйте вкладку **Флаги** диалогового окна **Протоколы для свойств MSSQLSERVER** , чтобы просмотреть или задать параметры шифрования протокола и скрытия экземпляра. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо перезапустить, чтобы включить или отключить **ForceEncryption** параметр.  
   
  Для шифрования соединений необходимо обеспечить сертификат для компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Если сертификат не установлен, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует сертификат с собственной подписью при запуске экземпляра. Самозаверяющий сертификат можно использовать вместо сертификата, предоставленного доверенным центром сертификации, однако он не обеспечивает проверку подлинности и нет гарантии, что он не будет аннулирован.  
   
@@ -36,10 +39,10 @@ ms.lasthandoff: 08/02/2017
   
  Процесс входа в систему всегда шифруется. Если для свойства **ForceEncryption** установлено значение **Да**, вся передача данных между клиентом и сервером шифруется, а клиент, соединяющийся с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] , должен быть настроен на доверие корневому центру сертификата сервера. Дополнительные сведения см. в статье "Инструкции. Включение зашифрованных соединений с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] (диспетчер конфигурации[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )" электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Серверы кластера  
+## <a name="cluster-servers"></a>Серверы кластера  
  Для использования шифрования в отказоустойчивом кластере необходимо установить сертификат сервера с полным именем DNS виртуального сервера на все узлы отказоустойчивого кластера. Например, если имеется кластер двух узлов с узлами «test1.  *\<ваша компания >*.com» и «test2. *\<ваша компания >*.com» и виртуального сервера «virtsql», необходимо установить сертификат для «virtsql. *\<ваша компания >*.com» на обоих узлах. Затем можно установить флажок **ForceEncryption** в окне **Диспетчер конфигурации SQL Server** , чтобы настроить шифрование в отказоустойчивом кластере.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **ForceEncryption**  
  Выполнять принудительное шифрование протокола. Шифрование — это метод сохранения конфиденциальности важной информации путем преобразования данных в вид, недоступный для прочтения. Шифрование гарантирует, что данные останутся в сохранности, даже если передаваемые пакеты будут просмотрены во время процесса передачи. Чтобы использовать привязку канала, задайте для параметра **Принудительное шифрование** значение **Вкл** и настройте **Расширенную защиту** на вкладке **Дополнительно** .  
   
@@ -49,4 +52,3 @@ ms.lasthandoff: 08/02/2017
  Дополнительные сведения см. в статье "Инструкции. Включение шифрования соединений с компонентом Database Engine (диспетчер конфигурации SQL Server)" электронной документации.  
   
   
-

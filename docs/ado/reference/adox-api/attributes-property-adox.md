@@ -3,7 +3,7 @@ title: "Атрибуты свойства (ADOX) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -22,17 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - Attributes property [ADOX]
 ms.assetid: e3abb359-79a3-4c22-b3a8-2900817e0d23
-caps.latest.revision: 15
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 5502bb8b4bac9945ec21aa1fc9c4e94c2636156d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4386e0943a9703373e4bec6bb7c6a99c8981e687
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="attributes-property-adox"></a>Свойства атрибутов (ADOX)
 Описывает характеристики столбца.  
@@ -42,8 +41,7 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="applies-to"></a>Объект применения  
   
-- [Объект столбца (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+- [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>См. также:  
- [Пример свойства атрибутов (Visual Basic)](../../../ado/reference/adox-api/attributes-property-example-vb.md)
-
+## <a name="see-also"></a>См. также  
+ [Пример свойства Attributes (Visual Basic)](../../../ado/reference/adox-api/attributes-property-example-vb.md)

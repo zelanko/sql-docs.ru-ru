@@ -3,7 +3,7 @@ title: "Учебник служб удаленных рабочих СТОЛОВ
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - RDS tutorial [ADO]
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b9918088a748a778fb31d064b73ccdc70eae61bb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6cfb12781ca9e7387ea8016de581217ddf95f9c1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rds-tutorial"></a>Учебник служб удаленных рабочих СТОЛОВ
 Этот учебник демонстрирует использование модели программирования служб удаленных рабочих СТОЛОВ для запроса и обновления источника данных. Во-первых он описывает действия, необходимые для выполнения этой задачи. Затем учебника повторяется в Microsoft® Visual Basic Scripting Edition (с ADO ввода для Windows Foundation Classes (ADO и WFC)).  
@@ -76,7 +75,6 @@ ms.lasthandoff: 09/09/2017
   
 -   [Учебник по RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Шаг 1: Укажите программу Server (служб удаленных рабочих СТОЛОВ учебник)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
  [Учебник по RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
-

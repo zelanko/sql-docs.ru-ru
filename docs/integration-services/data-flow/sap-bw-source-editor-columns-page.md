@@ -1,10 +1,13 @@
 ---
-title: "Редактор источников SAP BW (страница «столбцы») | Документы Microsoft"
+title: "Редактор источника SAP BW (страница \"Столбцы\") | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,17 +15,16 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sapbwsource.columns.f1
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2047fddb6986bd3014015d742053bfb0dda42019
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 33b0ea8d0c8774aa128ff4698cad163fd08d9645
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>Редактор источников SAP BW (страница «Столбцы»)
   Страница **Столбцы** диалогового окна **Редактор источников SAP BW** используется для сопоставления выходного столбца с каждым внешним (исходным) столбцом.  
@@ -59,13 +61,12 @@ ms.lasthandoff: 08/03/2017
  Для изменения порядка столбцов в списке **Доступные внешние столбцы** снимите флажки для всех столбцов. После этого выберите столбцы в том порядке, в котором они должны отображаться.  
   
  **Выходной столбец**  
- Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца. Однако можно ввести любое уникальное описательное имя. [!INCLUDE[ssIS](../../includes/ssis-md.md)]Конструктор отображает **выходного столбца** имена для столбцов, при настройке компонентов нисходящего потока, использующих данные из этого источника.  
+ Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца. Однако можно ввести любое уникальное описательное имя. [!INCLUDE[ssIS](../../includes/ssis-md.md)] отобразятся имена **Выходной столбец** при настройке компонентов нисходящего потока, использующих данные из этого источника.  
   
-## <a name="see-also"></a>См. также  
- [Редактор источников SAP BW &#40; Страницы диспетчера соединений &#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
- [Редактор источников SAP BW &#40; Страница «Вывод ошибок» &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
- [Редактор источников SAP BW &#40; Страница "Дополнительно" &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+## <a name="see-also"></a>См. также:  
+ [Редактор источника SAP BW (страница "Диспетчер подключений")](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
+ [Редактор источника SAP BW (страница "Вывод ошибок")](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
+ [Редактор источника SAP BW (страница "Дополнительно")](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Справка F1 по соединителю с SAP BW (Microsoft)](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   
-

@@ -2,35 +2,32 @@
 title: "Lag (расширения интеллектуального анализа данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- LAG
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Lag function
+f1_keywords: LAG
+dev_langs: DMX
+helpviewer_keywords: Lag function
 ms.assetid: 2da6df1a-5506-4871-a0f0-83292f1df41e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 7e101503a866def1f88f4db6fb8aa7c1234b2009
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4947b2f9a0dc89cd79923f2528ee21471ea9091e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lag-dmx"></a>Lag (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает временной срез между датой текущего варианта и последней датой тренировочного набора.  
   
@@ -44,7 +41,7 @@ Lag()
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Скалярное значение целочисленного типа.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если **запаздывания** функция используется в модели, где размещен во вложенной таблице столбец KEY TIME, функция должна размещаться внутри вложенного списка выбора инструкции.  
   
 ## <a name="examples"></a>Примеры  
@@ -61,4 +58,3 @@ WHERE Lag() < 12
  [Общие функции прогнозирования &#40; расширений интеллектуального анализа данных &#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

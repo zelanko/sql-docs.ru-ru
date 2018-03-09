@@ -1,11 +1,13 @@
 ---
 title: "Объекты PolyBase T-SQL | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-data-warehouse, pdw
+ms.service: 
+ms.component: polybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-polybase
 ms.tgt_pltfrm: 
@@ -14,22 +16,20 @@ helpviewer_keywords:
 - PolyBase, fundamentals
 - PolyBase, SQL statements
 - PolyBase, SQL objects
-caps.latest.revision: 20
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 9941f7e1c8bda690114a626315c9fe5afb4a2da7
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: 8a6a21a3cc6317d1eee54cd83ced008e3358e139
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="polybase-t-sql-objects"></a>Объекты T-SQL PolyBase
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
-
-  Чтобы использовать PolyBase, необходимо создать внешние таблицы для ссылок на внешние данные.  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Чтобы использовать PolyBase, необходимо создать внешние таблицы для ссылок на внешние данные.  
   
  [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/16/2017
 > [!NOTE]
 >  PolyBase в SQL Server 2016 поддерживает только пользователей Windows. Если вы попытаетесь использовать пользователя SQL для запроса внешней таблицы PolyBase, запрос завершится с ошибкой.
 
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Настройте PolyBase. См. раздел [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
 ## <a name="create-external-tables-for-hadoop"></a>Создание внешних таблиц для Hadoop
@@ -304,4 +304,3 @@ CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)
  [Руководство по PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   
   
-

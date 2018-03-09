@@ -3,7 +3,7 @@ title: "MarshalOptionsEnum | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - MarshalOptionsEnum enumeration [ADO]
 ms.assetid: 4013075d-dbea-4bbc-a6f4-c345a55c5633
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 837e648bdc05324fe1a1618fec69d778b8cafd5d
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0a0a36e0451f8a0f64ccf1e7e7cf98478c33400f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 Указывает, какие записи должны быть возвращены на сервер.  
   
-|Константа|Значение|Description|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adMarshalAll**|0|По умолчанию. Возвращает все строки на сервере.|  
 |**adMarshalModifiedOnly**|1|Возвращает только измененных строк на сервер.|  
@@ -48,4 +47,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="applies-to"></a>Объект применения  
  [Свойство MarshalOptions (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)
-

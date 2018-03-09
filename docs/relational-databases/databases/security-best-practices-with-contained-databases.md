@@ -2,9 +2,12 @@
 title: "Рекомендации по защите автономных баз данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,19 +15,19 @@ ms.topic: article
 helpviewer_keywords:
 - contained database, threats
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ecaa4832edf588d2fbe08e740d51db1194616361
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: c18410a29b500b3fd4fadfac987b1e94503ec7bb
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Рекомендации по обеспечению безопасности автономных баз данных
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   С автономными базами данных связаны некоторые уникальные угрозы, о которых администраторы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] должны знать (и принимать меры по их устранению). Большая часть угроз связана с процессом проверки подлинности **USER WITH PASSWORD** , который перемещает границу проверки подлинности с уровня компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] на уровень базы данных.  
   
@@ -96,4 +99,3 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
  [Миграция на частично автономную базу данных](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)  
   
   
-

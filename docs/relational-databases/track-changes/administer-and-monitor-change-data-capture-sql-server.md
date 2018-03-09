@@ -2,9 +2,12 @@
 title: "Администрирование и мониторинг отслеживания измененных данных (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -14,19 +17,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], administering
 - change data capture [SQL Server], jobs
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
-caps.latest.revision: 15
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1c5b04e64e1cea0c24a6695a46eac0a2f94d04cf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: ffe44a6f8b86c1c745ac583ddccac3d6998612e5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Администрирование и наблюдение за отслеживанием измененных данных (SQL Server)
-  В этом разделе описано, как администрировать и наблюдать за отслеживанием измененных данных.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+В этом разделе описано, как администрировать и наблюдать за отслеживанием измененных данных.  
   
 ##  <a name="Capture"></a> Задание отслеживания  
  Задание отслеживания инициируется путем запуска хранимой процедуры без параметров **sp_MScdc_capture_job**. После запуска данная хранимая процедура получает из таблицы msdb.dbo.cdc_jobs значения, заданные для параметров *maxtrans*, *maxscans*, *continuous*и *pollinginterval* задания отслеживания. Затем эти настроенные значения передаются хранимой процедуре **sp_cdc_scan**в качестве параметров. Это используется для вызова процедуры **sp_replcmds** с целью просмотра журнала.  
@@ -109,7 +113,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Выполните следующий код для создания пользовательского сборщика для отслеживания измененных данных.  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
   
     DECLARE @schedule_uid uniqueidentifier;  

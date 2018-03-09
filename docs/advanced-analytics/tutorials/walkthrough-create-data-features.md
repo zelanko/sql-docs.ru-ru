@@ -2,31 +2,32 @@
 title: "Создание компонентов данных, с помощью R и SQL (Пошаговое руководство) | Документы Microsoft"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
 ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: 21
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 9b447f8c8faa834bea4360844308e468bf15d89c
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: 4f3f5463e6a0117780add65feb9916ff78dad68d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>Создание компонентов данных, с помощью R и SQL (Пошаговое руководство)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Проектирование данных — это важная составляющая машинного обучения. Данные часто требуют преобразования, прежде чем можно будет использовать для прогнозирующего моделирования. Если данные не имеют требуемых характеристик, их необходимо создать на основе существующих значений.
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/07/2017
 На этом шаге мы сравнить две различные методы для создания компонентов на основе данных:
 
 - С помощью пользовательской функции R
-- С помощью пользовательской функции в T-SQL[!INCLUDE[tsql](../../includes/tsql-md.md)]
+- С помощью пользовательской функции в T-SQL [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
 Предназначена для того, чтобы создать новую [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] набор данных, который содержит исходные столбцы, а также новый числовых признаков *direct_distance*.
 
@@ -250,5 +251,4 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, 
 ## <a name="previous-lesson"></a>Предыдущее занятие
 
 [Просмотр и сведение данных с помощью R](walkthrough-view-and-summarize-data-using-r.md)
-
 

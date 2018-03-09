@@ -1,15 +1,14 @@
 ---
 title: "Переименование экземпляра служб Analysis Services | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,20 +17,20 @@ helpviewer_keywords:
 - names [Analysis Services], renaming instances
 - names [Analysis Services]
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
-caps.latest.revision: 53
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bc7c79c56282f662a6392f966364ae7f38bc4395
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ce3a87eed86b8f876c8bf9bdde305166c2681d18
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="rename-an-analysis-services-instance"></a>Переименование экземпляра служб Analysis Services
-  Существующий экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно переименовать с помощью средства **переименования экземпляра** , установленного вместе со средой Management Studio (веб-установка).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Существующий экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно переименовать с помощью средства **переименования экземпляра** , установленного вместе со средой Management Studio (веб-установка).  
   
 > [!IMPORTANT]  
 >  При переименовании экземпляра средство переименования экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняется с расширенными правами доступа, обновляя имя службы Windows, учетные записи безопасности и записи реестра, связанные с этим экземпляром. Чтобы обеспечить выполнение этих действий, не забудьте перед запуском средства выполнить вход от имени администратора локальной системы.  
@@ -84,4 +83,3 @@ ms.lasthandoff: 09/01/2017
      Как видно, разрешения базы данных и файлов, ранее предоставленные учетной записи «NT Service\ MSOLAP$TABULAR», теперь недействительны. Чтобы обеспечить нормальную работу выполняемых службой задач и операций, необходимо предоставить новые разрешения на базу данных и файлы учетной записи «NT Service\ MSOLAP$TAB2».  
   
   
-

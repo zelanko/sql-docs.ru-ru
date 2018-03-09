@@ -1,11 +1,13 @@
 ---
-title: "Преобразование данных распространителя сбалансированных | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Преобразование сбалансированного распределителя данных | Документы Майкрософт"
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,24 +15,23 @@ ms.topic: article
 f1_keywords:
 - sql13.dts.designer.balanceddatadistributor.f1
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a148470ac38ee6168d5c6a245899d629a0e3250
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a054a759317186f4d060442ff20e642d9ab67190
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="balanced-data-distributor-transformation"></a>Преобразование распространителя сбалансированных данных
   В процессе преобразования распространителя сбалансированных данных (BDD) используются возможности параллельной обработки современных процессоров. Оно равномерно распределяет буферы входящих строк по отдельным потокам. С помощью отдельных потоков пути для каждого пути вывода компонент BDD улучшает производительность пакета служб SSIS на многоядерных и мультипроцессорных компьютерах.  
   
  На следующей диаграмме показан простой пример использования преобразования BDD. В этом примере преобразование BDD выбирает один буфер конвейера из входных данных неструктурированного файла и отправляет его в один из трех путей вывода в ходе циклического перебора. В SQL Server Data Tools можно проверить значения параметров <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferSize%2A>(размер буфера конвейера по умолчанию) и <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferMaxRows%2A>(максимальное количество строк в буфере конвейера по умолчанию) в окне **Свойства** задачи потока данных.  
   
- ![Balanced Data Distributor](../../../integration-services/data-flow/transformations/media/balanceddatadistributor.JPG "Balanced Data Distributor")  
+ ![Сбалансированный распределитель данных](../../../integration-services/data-flow/transformations/media/balanceddatadistributor.JPG "Сбалансированный распределитель данных")  
   
  Преобразование BDD повышает производительность пакета в случае, когда удовлетворяются следующие условия.  
   
@@ -46,4 +47,3 @@ ms.lasthandoff: 08/03/2017
 >  См. в видеоролике [Распространитель сбалансированных данных](http://go.microsoft.com/fwlink/?LinkID=226278) библиотеки TechNet демонстрацию использования преобразования.  
   
   
-

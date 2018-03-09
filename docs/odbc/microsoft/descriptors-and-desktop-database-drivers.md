@@ -3,10 +3,12 @@ title: "Дескрипторы и системной базы данных др�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - descriptors [ODBC], Jet-supported descriptor fields
 - ODBC desktop database drivers [ODBC], descriptors
 ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 136c037cbf6d6d40335350e1c6cb9136d9bf8f0c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 67f656acd349419d7fc3d1c264985beeb36298ce
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>Дескрипторы и драйверы для настольных баз данных
 Дескриптор является структурой данных, который содержит сведения о данных столбца или динамических параметров. **SQLGetDescField** может использоваться для получения поддерживаемой дескрипторы, перечисленные ниже. Дескрипторов параметра реализации (IPD) не заполняется автоматически из-за **SQLDescribeParam** не поддерживается. Поля дескриптора, которые недоступны через Jet (например, SQL_DESC_BASE_TABLE_NAME) также не поддерживаются.  
@@ -76,4 +77,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_DESC_UNNAMED|Поддерживается|  
 |SQL_DESC_UNSIGNED|Поддерживается|  
 |SQL_DESC_UPDATABLE|Поддерживается|
-

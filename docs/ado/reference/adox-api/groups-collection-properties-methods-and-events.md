@@ -3,7 +3,7 @@ title: "Группирует коллекцию свойств, методов �
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Groups collection [ADOX], members
 ms.assetid: 0776457f-bf78-4a79-96bf-a17136d45811
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f9ecd832e1f987c598c3abc1522d749486bf0b86
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 27a752b29ea2cb7a606940b4af83dc76f628be13
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="groups-collection-properties-methods-and-events"></a>Свойства коллекции групп, методы и события
 ## <a name="properties"></a>Свойства  
@@ -43,6 +42,5 @@ ms.lasthandoff: 09/09/2017
 ## <a name="events"></a>События  
  Нет.  
   
-## <a name="see-also"></a>См. также:  
- [Коллекция групп (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)
-
+## <a name="see-also"></a>См. также  
+ [Коллекция Groups (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)

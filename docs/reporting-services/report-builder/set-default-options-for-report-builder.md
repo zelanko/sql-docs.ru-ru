@@ -1,29 +1,28 @@
 ---
-title: "Задание параметров по умолчанию для построителя отчетов | Документы Microsoft"
+title: "Задание параметров по умолчанию для построителя отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10427"
+f1_keywords: "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38dd786c1f1caabb5e949784bb4c9dd98eab7281
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f50138fa4045822456105962aec3c8a6c2305fbe
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-default-options-for-report-builder"></a>Задание параметров по умолчанию для построителя отчетов
   В построителе отчетов можно задать некоторое количество подходящих значений по умолчанию, чтобы упростить и ускорить создание отчетов.  Например, если можно задать или изменить сервер отчетов по умолчанию, построитель отчетов автоматически сохраняет отчеты на тот же сервер отчетов, пока не будет указано иное.  
@@ -53,8 +52,7 @@ ms.lasthandoff: 08/09/2017
  **Очистить все списки последних элементов**  
  Позволяет очистить текущие списки последних сайтов и серверов, общих наборов данных, соединений с общими источниками данных и документов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск построителя отчетов](../../reporting-services/report-builder/start-report-builder.md)  
   
   
-

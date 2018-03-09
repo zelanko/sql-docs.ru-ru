@@ -2,11 +2,12 @@
 title: "Оценка размера некластеризованного индекса | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: SQL
+ms.prod_service: database-engine, sql-database
+ms.component: indexes
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +20,21 @@ helpviewer_keywords:
 - designing databases [SQL Server], estimating size
 - calculating table size
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
-caps.latest.revision: 40
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "40"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 03eaa651f6184c9dc1dc53913e1662798664b983
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: daec226de4b93ae00997c07e25ba84352c5258e4
-ms.openlocfilehash: 28b5c5dbf4ab85b11818648e2daf62621df64219
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Оценка размера некластеризованного индекса
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   Чтобы оценить объем пространства, необходимого для хранения некластеризованного индекса, можно выполнить следующие шаги.  
   
 1.  Вычислить переменные, используемые на шагах 2 и 3.  
@@ -270,4 +273,3 @@ ms.lasthandoff: 08/31/2017
  [Оценка размера базы данных](../../relational-databases/databases/estimate-the-size-of-a-database.md)  
   
   
-

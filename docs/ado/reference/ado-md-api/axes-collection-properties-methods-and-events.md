@@ -3,7 +3,7 @@ title: "Оси коллекцию свойств, методов и событи
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Axes collection [ADO MD], members
 ms.assetid: be459530-6f28-458f-ad70-759eae3ae08c
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: da969e494fa97d66ff2b58448c7b486130c13ea5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 49b7f8ba545fcca54aed40cef8f95ab5d3e62377
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="axes-collection-properties-methods-and-events"></a>Свойства коллекции осей, методы и события
 ## <a name="properties"></a>Свойства  
@@ -39,6 +38,5 @@ ms.lasthandoff: 09/09/2017
 ## <a name="events"></a>События  
  Нет.  
   
-## <a name="see-also"></a>См. также:  
- [Коллекция axes (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)
-
+## <a name="see-also"></a>См. также  
+ [Коллекция Axes (многомерные объекты ADO)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)

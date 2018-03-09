@@ -2,33 +2,33 @@
 title: "Временная шкала резервного копирования | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.SWB.POINTINTIMERESTORE.F1
 - sql13.swb.backuptimeline.f1
-helpviewer_keywords:
-- Backup Timeline
+helpviewer_keywords: Backup Timeline
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
-caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "24"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2acfacf611c712047591716da85a3e9f06d5630d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d3a58978a14d96a772675db69ab2fe425608987e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-timeline"></a>Временная шкала резервного копирования
-  Диалоговое окно **Временная шкала резервного копирования** служит для поиска и указания резервных копий для восстановления базы данных на момент времени. Чтобы открыть диалоговое окно **Временная шкала резервного копирования** , нажмите кнопку **Временная шкала** на панели **Восстановление базы данных (страница "Общие")** . В этом диалоговом окне можно просмотреть временную шкалу операций восстановления, применявшихся к базе данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Диалоговое окно **Временная шкала резервного копирования** служит для поиска и указания резервных копий с целью восстановления базы данных на момент времени. Чтобы открыть диалоговое окно **Временная шкала резервного копирования** , нажмите кнопку **Временная шкала** на панели **Восстановление базы данных (страница "Общие")** . В этом диалоговом окне можно просмотреть временную шкалу операций восстановления, применявшихся к базе данных.  
   
  Помощник по восстановлению базы данных гарантирует, что будут выбраны только резервные копии, которые необходимы для восстановления из копии до указанного момента времени. Эти выбранные резервные копии составляют рекомендованный план восстановления для операции восстановления. Следует использовать только выбранные резервные копии. Сведения о помощнике по восстановлению базы данных см. в статье [Обзор процессов восстановления (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
   
@@ -65,4 +65,3 @@ ms.lasthandoff: 06/22/2017
  [Восстановление базы данных (страница "Общие")](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
   
-

@@ -3,7 +3,7 @@ title: "Исходный пример свойства (VC ++) | Докумен�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Source property [ADO], VC++ example
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 54114054a8d3a1133c0cb5163052fde60f473a5f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 74443425eea8cdb45f598307db844c2c279b6b56
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="source-property-example-vc"></a>Пример свойства источника (VC ++)
 В этом примере демонстрируется [источника](../../../ado/reference/ado-api/source-property-ado-recordset.md) свойства, открыв три [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекты на основе различных источников данных.  
@@ -164,7 +163,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Свойство Source (набора записей ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
-
+ [Свойство Source (объект Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

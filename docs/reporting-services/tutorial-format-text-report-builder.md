@@ -2,28 +2,28 @@
 title: "Учебник. Форматирование текста (построитель отчетов) | Документация Майкрософт"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: e5791f58be1674011744036de4c6ddd5c5c90754
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cfbe1001a049466af839363db29156df6b972556
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
-
 # <a name="tutorial-format-text-report-builder"></a>Учебник. Форматирование текста (построитель отчетов)
 
 В этом учебнике приведено описание различных способов форматирования текста в отчете [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы. Вы можете поэкспериментировать с различными форматами. 
@@ -362,7 +362,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  Нажмите кнопку **Сохранить**.  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Next Steps
 
 В построителе отчетов предусмотрено несколько способов форматирования текста. [Учебник. Создание отчета в свободной форме](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) содержит дополнительные примеры.  
 

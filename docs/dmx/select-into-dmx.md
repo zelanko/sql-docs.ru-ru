@@ -2,40 +2,39 @@
 title: "SELECT INTO (РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT
 - SELECT_INTO
 - SELECT INTO
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - mining models [Analysis Services], copying
 - SELECT INTO statement
 - mining models [Analysis Services], creating
 - copying mining models
 ms.assetid: 31ab9b4c-e20d-41ee-886f-6665c22c6ad5
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 5d373c62b61469835ed8a6c41e9231c5eff67fd8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: db4e68e8051e1104ce9ed7ad42d8ac9f86a98274
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Создает новую модель интеллектуального анализа данных на основе структуры интеллектуального анализа данных существующей модели. **SELECT INTO** инструкция создает новые модели интеллектуального анализа данных путем копирования схемы и других данных, не относящейся к конкретному алгоритму.  
   
@@ -56,7 +55,7 @@ FROM <existing model>
  Имя алгоритма интеллектуального анализа данных, определенное поставщиком.  
   
  *список параметров*  
- Необязательно. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
+ Необязательный параметр. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
   
  *expression*  
  Выражение, значением которого является действительное условие фильтрации для обучающих данных. Дополнительные сведения о выражениях, которые могут использоваться в качестве фильтров см. в разделе [фильтров для модели интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41; ](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
@@ -64,7 +63,7 @@ FROM <existing model>
  *существующей модели*  
  Имя существующей модели для копирования.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если существующая модель является обученной, новая модель автоматически обрабатывается при выполнении этой инструкции. В противном случае новая модель оставляется необработанной.  
   
  **SELECT INTO** инструкция работает только в том случае, если структура существующей модели совместима с алгоритмом новой модели. Следовательно, эта инструкция больше всего подходит для быстрого создания и тестирования моделей, основанных на одном алгоритме. Если изменить тип алгоритма, новый алгоритм должен поддерживать тип данных каждого столбца существующей модели, иначе при обработке модели может произойти ошибка.  
@@ -95,7 +94,6 @@ FROM [TM Clustering]
 ## <a name="see-also"></a>См. также:  
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции управления данными](../dmx/dmx-statements-data-manipulation.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

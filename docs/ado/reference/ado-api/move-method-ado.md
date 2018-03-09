@@ -3,7 +3,7 @@ title: "Move-метод (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Move method [ADO]
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 098ef46d9d0e336cb142b29b9b899ec0bcaf2eba
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 69f3ce38f87be4670bcb08f80db076ce88d37212
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="move-method-ado"></a>Move-метод (ADO)
 Перемещает позицию в текущей записи [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -48,7 +47,7 @@ recordset.Move NumRecords, Start
  *Запуск*  
  Необязательно. Объект **строка** значение или **Variant** , результатом которого является закладка. Можно также использовать [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **Переместить** метод поддерживается на всех **записей** объектов.  
   
  Если *NumRecords* аргумент больше нуля, положение текущей записи перемещается вперед (ближе к концу **записей**). Если *NumRecords* меньше нуля, положение текущей записи выполняется перемещение назад (к началу **записей**).  
@@ -69,13 +68,12 @@ recordset.Move NumRecords, Start
 >  Поддержка возврат к предыдущим последовательным **записей** не является прогнозируемым, зависящее от поставщика. Если текущая запись был помещен после последней записи в **записей**, **переместить** обратной он не может привести к правильный текущей позиции.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода Move (Visual Basic)](../../../ado/reference/ado-api/move-method-example-vb.md)   
  [Пример метода Move (VBScript)](../../../ado/reference/ado-api/move-method-example-vbscript.md)   
  [Пример метода Move (VC ++)](../../../ado/reference/ado-api/move-method-example-vc.md)   
  [MoveFirst, MoveLast, MoveNext и MovePrevious методов (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [MoveFirst, MoveLast, MoveNext и MovePrevious методов (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)   
  [Метод MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
-

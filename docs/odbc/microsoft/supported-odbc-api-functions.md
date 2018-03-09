@@ -3,27 +3,28 @@ title: "Поддерживаемые функции ODBC API | Документ�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC, API functions
 - ODBC SQL grammar, API functions mapped to driver (table) [ODBC]
 ms.assetid: b28a8ed6-09b1-4acf-bf3e-f90bb32422de
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f898533861d389336da3aafa6f839f8a66a340a1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 01b64e71e67aa9839d858d919d3cfbdcc8f2ec75
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supported-odbc-api-functions"></a>Поддерживаемые ODBC функций API
 Выравнивание предназначено для уведомления приложения, какие функции доступны на него с помощью драйвера. Microsoft Desktop базы данных драйверы ODBC поддерживают все функции основных компонентов и уровня 1.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 09/09/2017
 |[SQLGetCursorName](../../odbc/reference/syntax/sqlgetcursorname-function.md)||||||[Все драйверы](../../odbc/microsoft/sqlgetcursorname-desktop-database-drivers.md)|  
 |[SQLGetData](../../odbc/reference/syntax/sqlgetdata-function.md)||||||[Все драйверы](../../odbc/microsoft/sqlgetdata-desktop-database-drivers.md)|  
 |[SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md)|[Доступ](../../odbc/microsoft/sqlgetinfo-access-driver.md)|[dBASE](../../odbc/microsoft/sqlgetinfo-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqlgetinfo-paradox-driver.md)|[Текстовый файл](../../odbc/microsoft/sqlgetinfo-text-file-driver.md)|[Excel](../../odbc/microsoft/sqlgetinfo-excel-driver.md)||  
-GetStmtOption] (../Topic/SQLGetStmtOption%20Function.md)|[Все драйверы](../../odbc/microsoft/sqlgetstmtoption-desktop-database-drivers.md)||||||  
+GetStmtOption] (.. / Topic/SQLGetStmtOption%20Function.md)|[Все драйверы](../../odbc/microsoft/sqlgetstmtoption-desktop-database-drivers.md)||||||  
 |[SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md)|[Доступ](../../odbc/microsoft/sqlgettypeinfo-access-driver.md)|[dBASE](../../odbc/microsoft/sqlgettypeinfo-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqlgettypeinfo-paradox-driver.md)|[Текстовый файл](../../odbc/microsoft/sqlgettypeinfo-text-file-driver.md)|[Excel](../../odbc/microsoft/sqlgettypeinfo-excel-driver.md)||  
 |[SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md)||||||[Все драйверы](../../odbc/microsoft/sqlmoreresults-desktop-database-drivers.md)|  
 |[SQLPrepare](../../odbc/reference/syntax/sqlprepare-function.md)||||||[Все драйверы](../../odbc/microsoft/sqlprepare-desktop-database-drivers.md)|  
@@ -56,27 +57,26 @@ GetStmtOption] (../Topic/SQLGetStmtOption%20Function.md)|[Все драйвер�
 |[SQLSpecialColumns](../../odbc/reference/syntax/sqlspecialcolumns-function.md)||||||[Все драйверы](../../odbc/microsoft/sqlspecialcolumns-desktop-database-drivers.md)|  
 |[SQLStatistics](../../odbc/reference/syntax/sqlstatistics-function.md)|[Доступ](../../odbc/microsoft/sqlstatistics-access-driver.md)|[dBASE](../../odbc/microsoft/sqlstatistics-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqlstatistics-paradox-driver.md)|[Текстовый файл](../../odbc/microsoft/sqlstatistics-text-file-driver.md)|[Excel](../../odbc/microsoft/sqlstatistics-excel-driver.md)||  
 |[SQLTables](../../odbc/reference/syntax/sqltables-function.md)|[Доступ](../../odbc/microsoft/sqltables-access-driver.md)|[dBASE](../../odbc/microsoft/sqltables-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqltables-paradox-driver.md)|[Текстовый файл](../../odbc/microsoft/sqltables-text-file-driver.md)|[Excel](../../odbc/microsoft/sqltables-excel-driver.md)||  
-Transact] (../Topic/SQLTransact%20Function.md)|[Доступ](../../odbc/microsoft/sqltransact-access-driver.md)|[dBASE](../../odbc/microsoft/sqltransact-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqltransact-paradox-driver.md)|[Текстовый файл](../../odbc/microsoft/sqltransact-text-file-driver.md)|[Excel](../../odbc/microsoft/sqltransact-excel-driver.md)||  
+Transact] (.. / Topic/SQLTransact%20Function.md)|[Доступ](../../odbc/microsoft/sqltransact-access-driver.md)|[dBASE](../../odbc/microsoft/sqltransact-dbase-driver.md)|[Paradox](../../odbc/microsoft/sqltransact-paradox-driver.md)|[Текстовый файл](../../odbc/microsoft/sqltransact-text-file-driver.md)|[Excel](../../odbc/microsoft/sqltransact-excel-driver.md)||  
   
  В следующих разделах приводятся замечания о функции ODBC. Следующие примечания относятся к всех драйверов базы данных ODBC.  
   
--   [SQLGetData (драйверы для настольных баз данных)](../../odbc/microsoft/sqlgetdata-desktop-database-drivers.md)  
+-   [SQLGetData (драйверы для баз данных на настольном компьютере)](../../odbc/microsoft/sqlgetdata-desktop-database-drivers.md)  
   
 -   [SQLGetStmtOption (драйверы для настольных баз данных)](../../odbc/microsoft/sqlgetstmtoption-desktop-database-drivers.md)  
   
--   [SQLMoreResults (драйверы для настольных баз данных)](../../odbc/microsoft/sqlmoreresults-desktop-database-drivers.md)  
+-   [SQLMoreResults (драйверы для баз данных на настольном компьютере)](../../odbc/microsoft/sqlmoreresults-desktop-database-drivers.md)  
   
--   [SQLPrepare (драйверы для настольных баз данных)](../../odbc/microsoft/sqlprepare-desktop-database-drivers.md)  
+-   [SQLPrepare (драйверы для баз данных на настольном компьютере)](../../odbc/microsoft/sqlprepare-desktop-database-drivers.md)  
   
--   [SQLProcedures (драйверы для настольных баз данных)](../../odbc/microsoft/sqlprocedures-desktop-database-drivers.md)  
+-   [SQLProcedures (драйверы для баз данных на настольном компьютере)](../../odbc/microsoft/sqlprocedures-desktop-database-drivers.md)  
   
--   [SQLSetCursorName (драйверы для настольных баз данных)](../../odbc/microsoft/sqlsetcursorname-desktop-database-drivers.md)  
+-   [SQLSetCursorName (драйверы для баз данных на настольном компьютере)](../../odbc/microsoft/sqlsetcursorname-desktop-database-drivers.md)  
   
--   [SQLSetPos (драйверы для настольных баз данных)](../../odbc/microsoft/sqlsetpos-desktop-database-drivers.md)  
+-   [SQLSetPos (драйверы для баз данных на настольном компьютере)](../../odbc/microsoft/sqlsetpos-desktop-database-drivers.md)  
   
--   [SQLSetScrollOptions (драйверы для настольных баз данных)](../../odbc/microsoft/sqlsetscrolloptions-desktop-database-drivers.md)  
+-   [SQLSetScrollOptions (драйверы для баз данных на настольном компьютере)](../../odbc/microsoft/sqlsetscrolloptions-desktop-database-drivers.md)  
   
--   [SQLSetStmtOption (драйверы для настольных баз данных)](../../odbc/microsoft/sqlsetstmtoption-desktop-database-drivers.md)  
+-   [SQLSetStmtOption (драйверы для баз данных на настольном компьютере)](../../odbc/microsoft/sqlsetstmtoption-desktop-database-drivers.md)  
   
--   [SQLSpecialColumns (драйверы для настольных баз данных)](../../odbc/microsoft/sqlspecialcolumns-desktop-database-drivers.md)
-
+-   [SQLSpecialColumns (драйверы для баз данных на настольном компьютере)](../../odbc/microsoft/sqlspecialcolumns-desktop-database-drivers.md)

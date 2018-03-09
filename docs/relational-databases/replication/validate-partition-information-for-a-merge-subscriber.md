@@ -2,11 +2,13 @@
 title: "Проверка сведений о секции для подписчика на публикацию слиянием | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +16,19 @@ helpviewer_keywords:
 - parameterized filters [SQL Server replication], validating partition information
 - validating partition information
 ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
-caps.latest.revision: 36
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0675e88ff16a1999d801d9cc43b44ad206dc3530
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "36"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: cc42df9e9610c6deda9d2301b1a54d1a40d49888
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>Проверка сведений о секции для подписчика на публикацию слиянием
-  При определении параметризованного фильтра строк для публикации слиянием используется функция, ссылающаяся на данные подписчика, например на имя входа подписчика. По умолчанию репликация проверяет данные подписчика на основании этой функции перед каждой синхронизацией и при использовании моментального снимка на подписчике. Процесс проверки обеспечивает правильность секционирования данных для каждого подписчика. Характер проверки контролируется свойством публикации **validate_subscriber_info**, изменить которое можно при помощи процедуры [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) или на странице **Параметры подписки** диалогового окна **Свойства публикаций**. Дополнительные сведения об изменении свойств публикаций см. в разделе [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] При определении параметризованного фильтра строк для публикации слиянием используется функция, ссылающаяся на данные подписчика, например на имя входа подписчика. По умолчанию репликация проверяет данные подписчика на основании этой функции перед каждой синхронизацией и при использовании моментального снимка на подписчике. Процесс проверки обеспечивает правильность секционирования данных для каждого подписчика. Характер проверки контролируется свойством публикации **validate_subscriber_info**, изменить которое можно при помощи процедуры [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) или на странице **Параметры подписки** диалогового окна **Свойства публикаций**. Дополнительные сведения об изменении свойств публикаций см. в разделе [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 ## <a name="how-partition-validation-works"></a>Сведения о работе проверки секции  
  Например, при фильтрации публикации при помощи функции **SUSER_SNAME()**агент слияния использует исходный моментальный снимок для каждого подписчика на основании данных, допустимых для выражения **SUSER_SNAME()** .  

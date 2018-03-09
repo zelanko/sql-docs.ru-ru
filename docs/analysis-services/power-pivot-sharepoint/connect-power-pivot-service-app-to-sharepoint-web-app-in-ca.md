@@ -2,30 +2,30 @@
 title: "Подключение приложения службы Power Pivot для SharePoint веб-приложения в ЦС | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
-caps.latest.revision: 8
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 888a9c7c06a43f1fcee9306a7edeaed4b484e24b
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cbaf5f7fce645c4133c94a5ae1562b7aabcfc897
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Подключение приложения службы Power Pivot для SharePoint веб-приложения в ЦС
-  Приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] может использовать неограниченное число веб-приложений SharePoint в ферме. Чтобы приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] стало доступным, его необходимо добавить в список ассоциаций служб.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] может использовать неограниченное число веб-приложений SharePoint в ферме. Чтобы приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] стало доступным, его необходимо добавить в список ассоциаций служб.  
   
 > [!IMPORTANT]  
 >  Наличие приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в группе ассоциаций по умолчанию необходимо для правильной работы панели мониторинга [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Не добавляйте в группу по умолчанию более одного приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Добавление нескольких записей приложений службы одного типа не поддерживается, это может привести к возникновению ошибок. При создании дополнительных приложений службы добавляйте их в пользовательский список.  
@@ -69,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Первоначальная настройка (Power Pivot для SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)  
   
   
-

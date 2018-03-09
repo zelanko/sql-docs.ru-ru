@@ -2,34 +2,31 @@
 title: "Задание параметров олицетворения (службы SSAS — многомерные) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.sqlserverstudio.impersonationinfo.f1
-helpviewer_keywords:
-- Impersonation Information dialog box
+f1_keywords: sql13.asvs.sqlserverstudio.impersonationinfo.f1
+helpviewer_keywords: Impersonation Information dialog box
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 55ec66efd96a14bde8a9ea8b26488e18faadac0f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9dfd1dbf5f4f514136695dc2bb0d776afda99562
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Задание параметров олицетворения (службы SSAS — многомерные)
-  При создании объекта **data source** в модели служб Analysis Services одним из параметров, которые необходимо настроить, является параметр олицетворения. Этот параметр определяет, действуют ли службы Analysis Services под удостоверением определенной учетной записи пользователя Windows при выполнении локальных операций, связанных с соединением, например загрузки поставщика данных OLE DB или разрешения данных профиля пользователя в средах, поддерживающих перемещаемые профили.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При создании **источника данных** объекта в модели служб Analysis Services, один из параметров, которые необходимо настроить, является параметр олицетворения. Этот параметр определяет, действуют ли службы Analysis Services под удостоверением определенной учетной записи пользователя Windows при выполнении локальных операций, связанных с соединением, например загрузки поставщика данных OLE DB или разрешения данных профиля пользователя в средах, поддерживающих перемещаемые профили.  
   
  Для соединений, использующих проверку подлинности Windows, параметр олицетворения также определяет удостоверение пользователя, от имени которого выполняются запросы к внешнему источнику данных. Например, если параметр олицетворения установлен в значение **contoso\dbuser**, то запросы, используемые для получения данных при обработке, выполняются на сервере баз данных как **contoso\dbuser** .  
   
@@ -105,10 +102,9 @@ ms.lasthandoff: 09/01/2017
 
  Для многомерных баз данных параметр **По умолчанию** означает, что будет использоваться учетная запись службы, а для операций интеллектуального анализа данных — учетная запись текущего пользователя.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание источника данных (многомерные службы SSAS)](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [Задание свойств источника данных (многомерные службы SSAS)](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 
   
   
-

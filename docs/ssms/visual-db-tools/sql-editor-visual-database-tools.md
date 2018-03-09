@@ -3,10 +3,12 @@ title: "Редактор SQL (визуальные инструменты для
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,20 +23,19 @@ helpviewer_keywords:
 - Query Designer [SQL Server], SQL Editor
 - View Designer, SQL Editor
 ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 94b11dc5e05e50c0f0982d2d5c66a61f63594c6c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dd01c244e33751b49c4bd811a879eedd500be957
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-editor-visual-database-tools"></a>Редактор SQL (визуальные инструменты для баз данных)
-Используйте редактор SQL для изменения существующих хранимых процедур, функций, триггеров и скриптов SQL. Данное окно появляется при открытии любого из перечисленных объектов. Если нужно создать новую инструкцию SQL для работы со своим источником данных, воспользуйтесь [панелью SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) конструктора запросов.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Используйте редактор SQL для изменения существующих хранимых процедур, функций, триггеров и скриптов SQL. Данное окно появляется при открытии любого из перечисленных объектов. Если нужно создать новую инструкцию SQL для работы со своим источником данных, воспользуйтесь [панелью SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) конструктора запросов.  
   
 Редактор SQL обладает множеством полезных функций SQL для редактирования текста, таких как:  
   
@@ -56,4 +57,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>См. также:  
 [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
-

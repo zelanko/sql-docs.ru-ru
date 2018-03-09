@@ -2,9 +2,12 @@
 title: "Работа с информацией об изменениях (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -15,20 +18,20 @@ helpviewer_keywords:
 - change data capture [SQL Server], LSN boundaries
 - change data capture [SQL Server], query functions
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
-caps.latest.revision: 19
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 643ba52d666c9661d66a8a7e8039dba5e7f38549
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5352e093cf531e4bbacdfb284966b8c9739abf4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="work-with-change-data-sql-server"></a>Работа с информацией об изменениях (SQL Server)
-  Информация об изменениях сделана доступной для клиентов системы отслеживания измененных данных через функции с табличным значением. Всем запросам этих функций требуются два параметра для определения диапазона регистрационных номеров транзакций в журнале, которые нужно учитывать при разработке возвращаемого результирующего набора. Необходимо рассмотреть как верхнее, так и нижнее значения номеров LSN, ограничивающие этот интервал.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Информация об изменениях сделана доступной для клиентов системы отслеживания измененных данных через функции с табличным значением. Всем запросам этих функций требуются два параметра для определения диапазона регистрационных номеров транзакций в журнале, которые нужно учитывать при разработке возвращаемого результирующего набора. Необходимо рассмотреть как верхнее, так и нижнее значения номеров LSN, ограничивающие этот интервал.  
   
  Для помощи в определении соответствующих значений LSN имеется несколько функций, которые можно использовать в запросах с возвращающими табличное значение функциями. Функция [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) возвращает наименьший номер LSN, связанный с периодом действия экземпляра системы отслеживания. Периодом действия является интервал времени, в течение которого информация об изменениях остается доступной для экземпляров системы отслеживания. Функция [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) возвращает наибольший номер LSN для периода действия. Функции [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) и [sys.fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) помогают расположить значения номеров LSN на стандартной временной шкале. Поскольку система отслеживания измененных данных использует закрытые интервалы запроса, иногда требуется создать следующий номер LSN, чтобы убедиться, что изменения не повторяются в последовательных окнах запроса. Функции [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) и [sys.fn_cdc_decrement_lsn](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md) используются, если значению номера LSN необходима добавочная корректировка.  
   
@@ -123,7 +126,7 @@ ms.lasthandoff: 08/03/2017
   
  Если в качестве значения параметра @from_lsn или @to_lsn функции созданного запроса, возвращающей табличное значение, указано NULL, то она не завершается успешно, тогда как функции-оболочки datetime используют значение NULL, чтобы оболочки datetime могли возвратить все текущие изменения. Это означает, что если значение NULL передается оболочке datetime как нижняя конечная точка окна запроса, то нижняя конечная точка периода действия экземпляра системы отслеживания используется в базовой инструкции SELECT, которая применяется к функции запроса, возвращающей табличное значение. Аналогично, если NULL передается как верхняя конечная точка окна запроса, то верхняя конечная точка периода действия экземпляра системы отслеживания используется при выборе из функции запроса, возвращающей табличное значение.  
   
- В результирующий набор, возвращаемый функцией-оболочкой, включаются все запрошенные столбцы, за которыми следует столбец операции, записанный как один или два символа для идентификации операции, связанной со строкой. Флаги обновления при запросе возвращаются как битовые столбцы после кода операции в порядке, указанном параметром @update_flag_list . Сведения о параметрах вызова для настройки формируемых оболочек datetime см. в разделе [sys.sp_cdc_generate_wrapper_function (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md).  
+ В результирующий набор, возвращаемый функцией-оболочкой, включаются все запрошенные столбцы, за которыми следует столбец операции, записанный как один или два символа для идентификации операции, связанной со строкой. Флаги обновления при запросе возвращаются как битовые столбцы после кода операции в порядке, указанном параметром @update_flag_list. Сведения о параметрах вызова для настройки формируемых оболочек datetime см. в разделе [sys.sp_cdc_generate_wrapper_function (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md).  
   
  Шаблон «Создание возвращающей табличное значение функции-оболочки с помощью флага обновления» показывает, как настроить в созданной функции-оболочке присоединение флага обновления для заданного столбца к результирующему набору запросом суммарных изменений. Шаблон «Возвращающие табличное значение функции-оболочки CDC для схемы» показывает, как создавать оболочки datetime для возвращающих табличное значение функций запроса для всех экземпляров системы отслеживания, созданных для исходных таблиц в схеме конкретной базы данных.  
   
@@ -139,4 +142,3 @@ ms.lasthandoff: 08/03/2017
  [Администрирование и наблюдение за отслеживанием измененных данных (SQL Server)](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   
-

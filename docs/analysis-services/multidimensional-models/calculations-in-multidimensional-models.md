@@ -2,13 +2,13 @@
 title: "Вычисления в многомерных моделях | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,20 +23,20 @@ helpviewer_keywords:
 - cubes [Analysis Services], calculations
 - solve orders [Analysis Services]
 ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
-caps.latest.revision: 26
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8b82aa83deb8d2b428972fb65a64383c6a3d7271
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 725f0ac6753947e587b6746528b6efc6d409f269
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="calculations-in-multidimensional-models"></a>Вычисления в многомерных моделях
-  Для создания вычисляемых элементов, именованных наборов и других вычислений многомерных выражений используется вкладка **Вычисления** конструктора кубов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Для создания вычисляемых элементов, именованных наборов и других вычислений многомерных выражений используется вкладка **Вычисления** конструктора кубов.  
   
  Вкладка **Вычисления** содержит следующие три панели.  
   
@@ -68,4 +68,3 @@ ms.lasthandoff: 09/01/2017
  Чтобы удалить существующее вычисление, в разделе **Вычисления** области **Организатор скриптов** выберите вычисление, которое требуется удалить, затем выберите пункт **Удалить** в меню **Правка** или нажмите кнопку **Удалить** на панели инструментов. Также можно щелкнуть правой кнопкой мыши вычисление на панели **Организатор скриптов** и выбрать в контекстном меню пункт **Удалить** .  
   
   
-

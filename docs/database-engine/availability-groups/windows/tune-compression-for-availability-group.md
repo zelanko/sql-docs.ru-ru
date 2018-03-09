@@ -3,28 +3,28 @@ title: "Настройка сжатия для группы доступност
 ms.custom: 
 ms.date: 06/22/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: v-saume
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 36179f5848f1e5bd78176fc4dd508de5c31f70bd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: d7eed64649188267eafb4a555fa811d8c9d27f0e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tune-compression-for-availability-group"></a>Настройка сжатия для группы доступности
-
-По умолчанию SQL Server сжимает потоки данных для групп доступности, где это необходимо. Сжатие позволяет сократить объем сетевого трафика, увеличить загрузку ЦП и может вызывать задержки. Включить сжатие могут только члены предопределенной роли сервера sysadmin. В следующей таблице приведены ситуации, в которых SQL Server использует сжатие для потоков журнала группы доступности.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] По умолчанию SQL Server сжимает потоки данных для групп доступности, где это необходимо. Сжатие позволяет сократить объем сетевого трафика, увеличить загрузку ЦП и может вызывать задержки. Включить сжатие могут только члены предопределенной роли сервера sysadmin. В следующей таблице приведены ситуации, в которых SQL Server использует сжатие для потоков журнала группы доступности.
 
 | Сценарий | Параметр сжатия
 | ---- | ----
@@ -53,4 +53,3 @@ ms.lasthandoff: 09/27/2017
 [Автоматическое заполнение](https://msdn.microsoft.com/library/mt735149(SQL.130).aspx)
 
 [Предварительные требования для AlwaysOn](prereqs-restrictions-recommendations-always-on-availability.md) 
-

@@ -2,9 +2,12 @@
 title: "Иерархии (Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 04/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ helpviewer_keywords:
 - hierarchies [Master Data Services]
 - hierarchies [Master Data Services], about hierarchies
 ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
-caps.latest.revision: 11
-author: smartysanthosh
-ms.author: nagavo
+caps.latest.revision: 
+author: leolimsft
+ms.author: lle
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2d86add6f1bfe23fe1ed327b2c11787153bebea1
+ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 5618ad01875ee9b8c222784e97f19b18c47f1bfa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="hierarchies-master-data-services"></a>Иерархии (службы основных данных)
   Иерархия в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]— древовидная структура, которую можно использовать:  
@@ -57,7 +59,7 @@ ms.lasthandoff: 09/07/2017
   
  ![Пример иерархии, сгруппированной по подкатегориям](../master-data-services/media/mds-conc-hierarchy.gif "Пример иерархии, сгруппированной по подкатегориям")  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
@@ -78,4 +80,3 @@ ms.lasthandoff: 09/07/2017
 -   [Коллекции (службы Master Data Services)](../master-data-services/collections-master-data-services.md)  
   
   
-

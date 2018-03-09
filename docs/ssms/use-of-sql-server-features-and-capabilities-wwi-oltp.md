@@ -3,34 +3,35 @@ title: "Аргументы для внешних средств | Докумен
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - arguments [SQL Server Management Studio]
 - external tools [SQL Server Management Studio]
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 514b5f4e9e5df63f745e7f2e6a9465cddd6c4628
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b0634f3f7fff7a96f972302a3f7f4da7e3f75ac2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="arguments-for-external-tools"></a>Аргументы для внешних средств
-Аргументы — это переменные, с помощью которых среда Studio передает параметры внешним средствам, запускаемым через меню **Сервис** . Внешние средства, например «Блокнот», можно добавить в меню **Сервис** с помощью диалогового окна **Внешние средства** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Аргументы — это переменные, с помощью которых среда Studio передает параметры внешним средствам, запускаемым через меню **Сервис**. Внешние средства, например «Блокнот», можно добавить в меню **Сервис** с помощью диалогового окна **Внешние средства** .  
   
 В следующей таблице приведены возможные аргументы для внешних программ.  
   
-|Название|Аргумент|Description|  
+|Имя|Аргумент|Description|  
 |--------|------------|---------------|  
 |**Путь элемента**|$(ItemPath)|Полное имя файла текущего источника (определяемое как диск + путь + имя файла); пусто, если окно источника не активно.|  
 |**Каталог элемента**|$(ItemDir)|Каталог текущего источника (определяемое как диск + путь); пусто, если окно источника не активно.|  
@@ -54,4 +55,3 @@ ms.lasthandoff: 06/22/2017
 [Диалоговое окно «Внешние средства»](../ssms/external-tools-dialog-box.md)  
 [Общие элементы интерфейса пользователя](../ssms/general-user-interface-elements.md)  
   
-

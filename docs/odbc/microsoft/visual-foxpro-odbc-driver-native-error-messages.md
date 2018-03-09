@@ -3,10 +3,12 @@ title: "Visual FoxPro ODBC Driver собственной ошибки сообщ
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], error messages
 - FoxPro ODBC driver [ODBC], error messages
 ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9bc0b106b88eee6335514723aa083aef44bd5b66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 49c71ee77178b71ed67fbdddf955af1f14643199
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Сообщения собственной ошибки драйвера ODBC Visual FoxPro
 В следующих таблицах перечислены сообщения об ошибках Visual FoxPro драйвер ODBC собственного.  
@@ -191,7 +192,7 @@ ms.lasthandoff: 09/09/2017
 |528|Отсутствует точка входа ODBC, *значение*.|  
 |530|Извлечение отменено; Закрыто удаленной таблицы.|  
 |532|Преобразование типов не поддерживается.|  
-|533|Это свойство предназначено только для чтения.|  
+|533|Это свойство доступно только для чтения.|  
 |536|Функция не поддерживается в машинном коде таблицах.|  
 |538|Выполняет хранимую процедуру.|  
 |540|Недопустимый номер сеанса.|  
@@ -338,4 +339,3 @@ ms.lasthandoff: 09/09/2017
 |988|Значение валюты находится вне диапазона.|  
 |990|Отмена.|  
 |999|Функция не реализована.|
-

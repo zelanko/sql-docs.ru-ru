@@ -2,11 +2,13 @@
 title: "Уменьшение загрузки при настройке рабочего сервера | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +20,19 @@ helpviewer_keywords:
 - production servers [SQL Server]
 - offload tuning overhead [SQL Server]
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
-caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e7cc75ed2f7ab28f5ad1498f9a6dfa8d6ad8b770
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "39"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 17d4f6a412677dbdfa580baeec777ed069cdc7d1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Уменьшение настроечной загрузки рабочего сервера
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] полагается на оптимизатор запросов, который анализирует рабочую нагрузку и создает рекомендации по настройке. Выполнение этого анализа на рабочем сервере добавляет нагрузки этому серверу и может снизить его производительность на время сеанса настройки. Чтобы уменьшить дополнительную нагрузку сервера во время сеанса настройки, можно использовать тестовый сервер в дополнение к рабочему серверу.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Помощник по настройке [!INCLUDE[ssDE](../../includes/ssde-md.md)] полагается на оптимизатор запросов, который анализирует рабочую нагрузку и создает рекомендации по настройке. Выполнение этого анализа на рабочем сервере добавляет нагрузки этому серверу и может снизить его производительность на время сеанса настройки. Чтобы уменьшить дополнительную нагрузку сервера во время сеанса настройки, можно использовать тестовый сервер в дополнение к рабочему серверу.  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>Как помощник по настройке ядра СУБД работает с тестовым сервером  
  Традиционным методом является копирование всех данных с рабочего сервера на тестовый, затем производится настройка тестового сервера и реализация рекомендаций на производственном сервере. Этот процесс устраняет влияние на производительность рабочего сервера, но не является оптимальным решением. Например, копирование большого количества данных с рабочего сервера на тестовый может занять много времени и ресурсов. Кроме того, оборудование тестового сервера редко также производительно, как и использующееся на рабочих серверах. Процесс настройки полагается на оптимизатор запросов, а формируемые им рекомендации частично основываются на параметрах оборудования. Если оборудование рабочего и тестового серверов неодинаково, качество рекомендаций помощника по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] может снизиться.  

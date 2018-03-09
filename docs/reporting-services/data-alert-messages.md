@@ -1,27 +1,27 @@
 ---
-title: "В предупреждающих сообщениях | Документы Microsoft"
+title: "Предупреждающие сообщения | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
-caps.latest.revision: 9
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "9"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: a192628a5f2f899e96753d98e210bca6bfd426f1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8e12172ffc24d67a0ad27f07be3c08b17e9c660f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-alert-messages"></a>Предупреждающие сообщения
 
@@ -29,23 +29,23 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-Предупреждения об изменении данных служб отчетов SQL Server доступны два типа предупреждающих сообщений, отправляемых по электронной почте: сообщения с данными предупреждения об изменении, результаты и сообщения с описаниями ошибок. Сообщения с результатами информируют всех получателей об изменениях в данных отчетов, представляющих для них интерес и важных для принятия бизнес-решений. Если по какой-то причине произошла ошибка и результаты оказались недоступны, вместо сообщения с результатами будет отправлено сообщение об ошибке.
+В предупреждениях об изменении данных служб SQL Server Reporting доступны два типа предупреждающих сообщений, отправляемых по электронной почте: сообщения с результатами предупреждения об изменении данных и сообщения с описаниями ошибок. Сообщения с результатами информируют всех получателей об изменениях в данных отчетов, представляющих для них интерес и важных для принятия бизнес-решений. Если по какой-то причине произошла ошибка и результаты оказались недоступны, вместо сообщения с результатами будет отправлено сообщение об ошибке.
 
 Владельцы определений предупреждений об изменении данных также могут просматривать сведения об экземплярах предупреждений об изменении данных в диспетчере предупреждения об изменении данных. Дополнительные сведения см. в статье [Data Alert Manager for SharePoint Users](../reporting-services/data-alert-manager-for-sharepoint-users.md).  
 
 > [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
   
 ##  <a name="DataAlertMessages"></a> Предупреждающие сообщения  
  На изображениях ниже показаны предупреждающее сообщение с результатами и предупреждающее сообщение с описанием ошибки.  
   
  **Сообщение с результатами**  
   
- ![Данные предупреждения по электронной почте сообщение с результатами](../reporting-services/media/rs-alertmessageresults.gif "данных электронное сообщение с результатами")  
+ ![Сообщение электронной почты предупреждения о данных с результатами](../reporting-services/media/rs-alertmessageresults.gif "Сообщение электронной почты предупреждения о данных с результатами")  
   
  **Сообщение об ошибке**  
   
- ![Предупреждающее сообщение с сообщением об ошибке](../reporting-services/media/rs-alertmessageerrror.gif "предупреждающее сообщение с сообщением об ошибке")  
+ ![Сообщение предупреждения о данных с сообщением об ошибке](../reporting-services/media/rs-alertmessageerrror.gif "Сообщение предупреждения о данных с сообщением об ошибке")  
   
  Эти сообщения включают в себя те же типы информации.  
   
@@ -71,12 +71,11 @@ ms.lasthandoff: 08/09/2017
   
 -   [Создание предупреждения данных в конструкторе предупреждений](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
   
--   [Изменить предупреждение в конструкторе предупреждений](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
+-   [изменить предупреждение в конструкторе предупреждений](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Конструктор предупреждений об изменении данных](../reporting-services/data-alert-designer.md)   
+[Конструктор предупреждений данных](../reporting-services/data-alert-designer.md)   
 [Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

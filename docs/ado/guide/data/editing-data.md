@@ -3,7 +3,7 @@ title: "Изменение данных | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - AdUseClient [ADO]
 - editing data [ADO]
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
-caps.latest.revision: 16
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7048a7774e965f29d67ba1cbc65aac51dde1c271
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 76a5921185f6643f328559e3bc73dfac46bfee0c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="editing-data"></a>Редактирование данных
 Было показано, как использовать ADO для подключения к источнику данных, выполнить команду, получить результаты в **набора записей** объекта и перемещение в **набора записей**. В этом разделе рассматриваются основные след ADO: изменения данных.  
@@ -95,9 +94,8 @@ End Function
   
 -   [Добавление записей](../../../ado/guide/data/adding-records.md)  
   
--   [Определение того, что поддерживается](../../../ado/guide/data/determining-what-is-supported.md)  
+-   [Определение поддерживаемых возможностей](../../../ado/guide/data/determining-what-is-supported.md)  
   
 -   [Удаление записей с помощью метода Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
   
--   [Альтернативы: С помощью инструкций SQL](../../../ado/guide/data/alternatives-using-sql-statements.md)
-
+-   [Варианты: с помощью инструкций SQL](../../../ado/guide/data/alternatives-using-sql-statements.md)

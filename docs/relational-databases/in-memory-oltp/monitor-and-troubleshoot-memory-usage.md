@@ -2,26 +2,30 @@
 title: "Мониторинг и устранение неполадок с использованием памяти | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
-caps.latest.revision: 29
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c5b936bf52653ea81c579c345d09f4f2d0e76339
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: b1e30a7ef6ebf2ee0f2a586950b50e4b1b1744b5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Мониторинг и устранение неполадок с использованием памяти
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] использует память в шаблонах, отличных от дисковых таблиц. Можно контролировать объем выделенной памяти, используемый оптимизированными для памяти таблицами и индексами в базе данных, с помощью динамических административных представлений (DMV) и счетчиков производительности, предназначенных для подсистемы памяти и сборки мусора.  Это обеспечивает видимость на уровне системы и базы данных и позволяет предотвращать проблемы нехватки памяти.  
   
  В этом разделе описывается процесс мониторинга использования памяти в [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
@@ -153,7 +157,7 @@ ms.lasthandoff: 06/22/2017
 #### <a name="memory-consumption-by-memory-optimized-tables-and-indexes"></a>Использование памяти оптимизированными для памяти таблицами и индексами  
  Можно узнать использование памяти для всех пользовательских таблиц, индексов и системных объектов с помощью запроса `sys.dm_db_xtp_table_memory_stats` , как показано ниже.  
   
-```tsql  
+```sql  
 SELECT object_name(object_id) AS Name  
      , *  
    FROM sys.dm_db_xtp_table_memory_stats  
@@ -179,7 +183,7 @@ NULL       -2          192                           25                      16 
 #### <a name="memory-consumption-by-internal-system-structures"></a>Использование памяти внутренними системными структурами  
  Память также используется системными объектами, например транзакционными структурами, буферами для разностных файлов и данных, структурами для сборки мусора и другими объектами. Можно узнать объем памяти, используемый для этих системных объектов с помощью запроса `sys.dm_xtp_system_memory_consumers` , как показано ниже.  
   
-```tsql  
+```sql  
 SELECT memory_consumer_desc  
      , allocated_bytes/1024 AS allocated_bytes_kb  
      , used_bytes/1024 AS used_bytes_kb  
@@ -218,7 +222,7 @@ PGPOOL:  4K               0                    0                    0
 #### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>Использование памяти во время выполнения при обращении к оптимизированным для памяти таблицам  
  Следующим запросом можно определить объем памяти, занятый структурами времени выполнения, например для кэша процедур. Выполните этот запрос, чтобы получить объем памяти, используемый структурами времени выполнения, например для кэша процедур. Все структуры времени помечены как XTP.  
   
-```tsql  
+```sql  
 SELECT memory_object_address  
      , pages_in_bytes  
      , bytes_used  
@@ -251,7 +255,7 @@ memory_object_address pages_ in_bytes bytes_used type
 #### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>Память, используемая модулем [!INCLUDE[hek_2](../../includes/hek-2-md.md)] в памяти в пределах экземпляра  
  В экземпляре SQL Server память, выделенная для модуля [!INCLUDE[hek_2](../../includes/hek-2-md.md)] в памяти и оптимизированных для памяти объектов, управляется таким же образом, как и любой другой потребитель памяти в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Клерки типа учетных записей MEMORYCLERK_XTP для всей памяти, выделенной для модуля [!INCLUDE[hek_2](../../includes/hek-2-md.md)] . Следующий запрос применяется для вычисления объема всей памяти, используемого модулем [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  
   
-```tsql  
+```sql  
 -- this DMV accounts for all memory used by the hek_2 engine  
 SELECT type  
      , name  

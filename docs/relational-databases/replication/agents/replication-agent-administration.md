@@ -2,11 +2,13 @@
 title: "Администрирование агента репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +24,19 @@ helpviewer_keywords:
 - replication [SQL Server], administering
 - independent agents [SQL Server replication]
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
-caps.latest.revision: 48
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "48"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 86cebd3ab2286cc34ff25d45ec1837d75716c16f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ee0ddd687702068508c54ea60a533fc3c5c75b10
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-agent-administration"></a>Администрирование агента репликации
-  Агенты репликации выполняют многие задачи, связанные с репликацией, включая создание копий схемы и данных, обнаружение обновлений на издателе или подписчике и распространение изменений между серверами. По умолчанию агенты репликации выполняются в рамках отдельных шагов задания агента [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Агенты являются обычными исполняемыми приложениями, поэтому их можно вызывать непосредственно из командной строки или пакетных скриптов. Каждый агент репликации поддерживает набор параметров исполнения, используемых для управления его работой. Эти параметры задаются в профиле агента или в командной строке.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Агенты репликации выполняют множество задач, связанных с репликацией, включая создание копий схемы и данных, обнаружение обновлений в издателе или подписчике и распространение изменений между серверами. По умолчанию агенты репликации выполняются в рамках отдельных шагов задания агента [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Агенты являются обычными исполняемыми приложениями, поэтому их можно вызывать непосредственно из командной строки или пакетных скриптов. Каждый агент репликации поддерживает набор параметров исполнения, используемых для управления его работой. Эти параметры задаются в профиле агента или в командной строке.  
   
 > [!IMPORTANT]  
 >  Служба агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию отключается при установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , если только во время установки не будет явно выбран режим автоматического запуска.  
@@ -44,10 +46,10 @@ ms.lasthandoff: 08/03/2017
 |Исполняемый объект агента|Имя файла|  
 |----------------------|---------------|  
 |[Агент моментальных снимков репликации](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
-|[Агент распространения репликации](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
+|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
 |[Агент чтения журнала репликации](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|logread.exe|  
 |[Агент чтения очереди репликации](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|qrdrsvc.exe|  
-|[Агент слияния репликации](../../../relational-databases/replication/agents/replication-merge-agent.md)|replmerg.exe|  
+|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|replmerg.exe|  
   
  Кроме агентов репликации, для репликации существует ряд заданий, выполняющих обслуживание по расписанию и по требованию.  
   
@@ -89,7 +91,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="replication-maintenance-jobs"></a>Задания обслуживания репликации  
  Следующие задания используются службой репликаций для выполнения обслуживания по расписанию или обслуживания по требованию.  
   
-|Задание очистки|Описание|Расписание по умолчанию|  
+|Задание очистки|Description|Расписание по умолчанию|  
 |------------------|-----------------|----------------------|  
 |Очистка журнала агента: распространитель|Удаляется журнал агента репликации из базы данных распространителя.|Запускается каждые десять минут|  
 |Очистка распространения: распространитель|Удаляются реплицированные транзакции из базы данных распространителя. Деактивируются подписки, которые не были синхронизированы в течение максимального срока хранения распространения.|Запускается каждые десять минут|  
@@ -102,4 +104,3 @@ ms.lasthandoff: 08/03/2017
  [Наблюдение за репликацией](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   
-

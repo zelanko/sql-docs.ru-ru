@@ -2,9 +2,12 @@
 title: "Формирование одноуровневых элементов с помощью вложенного запроса в режиме AUTO | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -13,20 +16,20 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
-caps.latest.revision: 10
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: e8ec9136aa7676405f5392a29ae7f0e4104a2ed9
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6d85a1b59656222cf07338d2eb98925e30a5c658
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Формирование одноуровневых элементов с помощью вложенного запроса в режиме AUTO
-  В следующем примере показано, как создавать элементы с общим родителем при помощи вложенного запроса в режиме AUTO. Единственный способ создать такой XML — использовать режим EXPLICIT. Однако пользоваться этим способом не всегда удобно.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+В следующем примере показано, как создавать элементы с общим родителем при помощи вложенного запроса в режиме AUTO. Единственный способ создать такой XML — использовать режим EXPLICIT. Однако пользоваться этим способом не всегда удобно.  
   
 ## <a name="example"></a>Пример  
  Этот запрос создает XML, который предоставляет сведения о заказах на продажу. Это включает следующие действия.  
@@ -174,4 +177,3 @@ FOR XML AUTO, TYPE
  [Использование вложенных запросов FOR XML](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   
-

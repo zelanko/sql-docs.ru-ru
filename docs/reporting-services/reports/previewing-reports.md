@@ -2,12 +2,13 @@
 title: "Предварительный просмотр отчетов | Документация Майкрософт"
 ms.custom: 
 ms.date: 05/05/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +17,16 @@ helpviewer_keywords:
 - printing previews
 - test servers [Reporting Services]
 ms.assetid: 85117f6c-828e-45c9-810f-e700d9bfba67
-caps.latest.revision: 44
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "44"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 45df97d21abc1ac494592c98e69964a38d7f4d21
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1ee5dbf3a8823554acbb811e874bfcd09196c0a1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="previewing-reports"></a>Предварительный просмотр отчетов
   При проектировании отчета     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] может понадобиться просмотреть его до публикации в рабочей среде. Это можно сделать несколькими способами: воспользовавшись вкладкой «Предварительный просмотр» конструктора отчетов, при помощи окна предварительного просмотра в конструкторе отчетов, а также опубликовав отчет на сервере отчетов в тестовом режиме.  
@@ -56,11 +56,10 @@ ms.lasthandoff: 08/09/2017
 ## <a name="publishing-to-a-test-server"></a>Публикация на тестовом сервере  
  Отчеты также можно протестировать, опубликовав их на тестовом сервере и открыв предварительный просмотр. Публикация отчета на тестовом сервере происходит точно так же, как публикация на производственном сервере. Сведения о публикации отчета см. в разделе [Публикация отчетов на сервере отчетов](../../reporting-services/reports/publishing-reports-to-a-report-server.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Печать отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Печать отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)   
  [Публикация отчетов](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
  [Использование пользовательских сборок с отчетами](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   
-

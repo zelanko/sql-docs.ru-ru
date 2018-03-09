@@ -3,26 +3,28 @@ title: "Data-Tier Application Framework. Условия лицензирован
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssdt
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssdt
+ms.suite: sql
+ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 68b76541-ab99-436a-982b-f18c46bc6fe3
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 20cd5814a6855e7a576642d23d83166c48603a8a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1f149d3f9f87cc9306cf7e0ee316a326c0fd7956
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-tier-application-framework---license-terms"></a>Data-Tier Application Framework. Условия лицензирования
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ## <a name="microsoft-software-license-terms"></a>УСЛОВИЯ ЛИЦЕНЗИОННОГО СОГЛАШЕНИЯ НА ИСПОЛЬЗОВАНИЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ КОРПОРАЦИИ МАЙКРОСОФТ  
   
 **MICROSOFT SQL SERVER DATA-TIER APPLICATION FRAMEWORK**  
@@ -52,7 +54,7 @@ ms.lasthandoff: 06/22/2017
     - вы можете копировать и распространять форму объектного кода программного обеспечения («распространяемый код») в разрабатываемых вами программах;  
     - вы можете разрешить распространителям ваших программ копировать и распространять распространяемый код, являющийся частью этих программ.  
   
-    &nbsp;ii.   **Требования к распространению. В отношении любого распространяемого кода вы должны:**  
+    &nbsp;ii.   **Требования к распространению. В отношении любого Распространяемого кода вы должны:**  
   
     - добавить к нему значительные основные функциональные возможности в своих программах;  
     - в отношении любого распространяемого кода с расширением имени файла LIB распространять только результаты выполнения распространяемого кода через связующий объект с вашей программой;  
@@ -131,4 +133,3 @@ ms.lasthandoff: 06/22/2017
 Elle s’applique également même si Microsoft connaissait l'éventualité d'un tel dommage. La limitation ou exclusion ci-dessus peut également ne pas vous être applicable, car votre pays n’autorise pas l’exclusion ou la limitation de responsabilité pour les dommages indirects, accessoires ou de quelque nature que ce soit.  
   
   
-

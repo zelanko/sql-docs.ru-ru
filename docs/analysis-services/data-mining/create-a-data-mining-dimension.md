@@ -2,31 +2,30 @@
 title: "Создание измерения интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining structures [Analysis Services], dimensions
+helpviewer_keywords: mining structures [Analysis Services], dimensions
 ms.assetid: 9f0c39e5-3516-43ab-b203-f3f6dbcff89a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 786ef852e8bb6e820c4f52df87767478b68e74f2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 238af959c27daaf75415cf913fddb823f6927c85
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-data-mining-dimension"></a>создать измерение интеллектуального анализа данных
-  Если структура интеллектуального анализа данных основана на кубе OLAP, то можно создать измерение, которое содержит содержимое модели интеллектуального анализа данных. После этого можно встроить это измерение обратно в исходный куб.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Если в структуре интеллектуального анализа данных основана на кубе OLAP, можно создать измерение, которое содержит содержимое модели интеллектуального анализа данных. После этого можно встроить это измерение обратно в исходный куб.  
   
  Также можно просмотреть измерение, использовать его для исследования результатов модели или выполнить запрос к измерению с помощью многомерного выражения.  
   
@@ -48,8 +47,7 @@ ms.lasthandoff: 09/01/2017
   
      Измерение интеллектуального анализа данных создается и добавляется в папку **Измерения** в обозревателе решений. Если выбран пункт **Создать куб**, то также создается новый куб и добавляется в папку **Кубы** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи и инструкции по структуре интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   
-

@@ -2,33 +2,33 @@
 title: "Определение ссылочной связи и свойств ссылочной связи | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - referenced dimension relationship
 - relationships [Analysis Services], referenced dimensions
 ms.assetid: 5bb44b41-635b-4398-8fe9-0bfbb142553e
-caps.latest.revision: 13
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 96804fae479d3332eebc07e7477a1807fa4831be
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3213d88fd8f1119ffbb4bb71ab8658e0750f98c6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="define-a-referenced-relationship-and-referenced-relationship-properties"></a>Определение ссылочной связи и свойств ссылочной связи
-  Связь ссылочного измерения определяется на вкладке **Использование измерений** конструктора кубов. Связь ссылочного измерения определяется путем указания следующих параметров.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Связь ссылочного измерения определяется на вкладке **Использование измерений** конструктора кубов. Связь ссылочного измерения определяется путем указания следующих параметров.  
   
 -   Промежуточное измерение, с которым необходимо соединяться. Это может быть обычное измерение или другое ссылочное измерение.  
   
@@ -43,4 +43,3 @@ ms.lasthandoff: 09/01/2017
  В ссылочном измерении гранулярность указывается путем идентификации атрибута, определяющего связь между ссылочным измерением и группой мер, соответствующей главной таблице измерения. Когда несколько ссылочных измерений последовательно соединены вместе, ссылки определяют связь между самым внешним измерением и группой мер.  
   
   
-

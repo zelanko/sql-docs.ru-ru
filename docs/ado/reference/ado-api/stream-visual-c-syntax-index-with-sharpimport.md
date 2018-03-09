@@ -3,7 +3,7 @@ title: "Поток (Visual C++ синтаксис индекс с #import) | Д�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - Stream collection [ADO]
 ms.assetid: e59d0687-1f5a-45c5-9d0a-c1f27079495d
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f8adb3a741d04184e313df146ffaacb0f3b4e5e8
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 77c960197a8439127820c8d1b5e8f807d5b0e1fd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="stream-visual-c-syntax-index-with-import"></a>Поток (Visual C++ синтаксис индекс с #import)
 ## <a name="methods"></a>Методы  
@@ -99,6 +98,5 @@ void PutType( enum StreamTypeEnum ptype );
 __declspec(property(get=GetType,put=PutType)) enum StreamTypeEnum Type;  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект потока (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
-
+## <a name="see-also"></a>См. также  
+ [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

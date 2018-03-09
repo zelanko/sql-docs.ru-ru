@@ -3,7 +3,7 @@ title: "Исходное свойство (запись ADO) | Документ�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -23,17 +23,16 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Record]
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1ea9472275b0dbaa8a1a88ba70c21e8b6576af14
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 524845f59338a483df89586847157e6d9eaa598c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="source-property-ado-record"></a>Свойство Source (ADO запись)
 Указывает источник данных или объекта, представленного [записи](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -41,7 +40,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **Variant** значение, указывающее, сущности, представленной **записи**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **Источника** возвращает *источника* аргумент **запись** объекта [откройте](../../../ado/reference/ado-api/open-method-ado-record.md) метод. Он может содержать строку абсолютный или относительный URL-адрес. Абсолютный URL-адрес может быть использован без параметра [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) свойства, чтобы открыть непосредственно **записи** объекта. Неявный **подключения** в этом случае создается объект.  
   
  **Источника** свойство также может содержать ссылку на уже открыта **набора записей**, чтобы открыть **записи** объект, представляющий текущую строку в  **Набор записей**.  
@@ -56,9 +55,8 @@ ms.lasthandoff: 09/09/2017
 >  URL-адреса, с помощью схемы http автоматически вызывает [поставщик Microsoft OLE DB для публикаций в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [абсолютные и относительные URL-адреса](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект записи (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство Source (ошибка)](../../../ado/reference/ado-api/source-property-ado-error.md)   
- [Свойство Source (набора записей ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
-
+ [Свойство Source (объект Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

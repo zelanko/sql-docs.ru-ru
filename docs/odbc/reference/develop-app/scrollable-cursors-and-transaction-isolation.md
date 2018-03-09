@@ -3,10 +3,12 @@ title: "Прокручиваемые курсоры и транзакции из
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6c9e38f4287a8832d8e794940093ce696ac0eaf7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 192962491095f8c6b8fb212ab7789cb74b609897
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Прокручиваемые курсоры и транзакции изоляции
 В следующей таблице перечислены факторы, управляющие видимостью изменений.  
@@ -45,17 +46,17 @@ ms.lasthandoff: 09/09/2017
 |Type\action курсора|Самообслуживания|Владельцем<br /><br /> TXN|Другую<br /><br /> TXN<br /><br /> (RU[a])|Другую<br /><br /> TXN<br /><br /> (RC[a])|Другую<br /><br /> TXN<br /><br /> (RR[a])|Другую<br /><br /> TXN<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |Статические|||||||  
-|Insert|Может быть [b]|Нет|Нет|Нет|Нет|Нет|  
-|Update|Может быть [b]|Нет|Нет|Нет|Нет|Нет|  
-|DELETE|Может быть [b]|Нет|Нет|Нет|Нет|Нет|  
+|Insert|Может быть [b]|нет|нет|нет|нет|нет|  
+|Update|Может быть [b]|нет|нет|нет|нет|нет|  
+|DELETE|Может быть [b]|нет|нет|нет|нет|нет|  
 |Управляемый набором ключей|||||||  
-|Insert|Может быть [b]|Нет|Нет|Нет|Нет|Нет|  
-|Update|Да|Да|Да|Да|Нет|Нет|  
-|DELETE|Может быть [b]|Да|Да|Да|Нет|Нет|  
+|Insert|Может быть [b]|нет|нет|нет|нет|нет|  
+|Update|Да|Да|Да|Да|нет|нет|  
+|DELETE|Может быть [b]|Да|Да|Да|нет|нет|  
 |Динамический|||||||  
-|Insert|Да|Да|Да|Да|Да|Нет|  
-|Update|Да|Да|Да|Да|Нет|Нет|  
-|DELETE|Да|Да|Да|Да|Нет|Нет|  
+|Insert|Да|Да|Да|Да|Да|нет|  
+|Update|Да|Да|Да|Да|нет|нет|  
+|DELETE|Да|Да|Да|Да|нет|нет|  
   
  [] буквы в круглые скобки указывают уровень изоляции транзакции, содержащей курсор; уровень изоляции, другие транзакции (в которой изменения) не имеет значения.  
   
@@ -68,4 +69,3 @@ ms.lasthandoff: 09/09/2017
  S: сериализуемые  
   
  [b] зависит от реализации курсора. Является ли курсор может обнаружить такие изменения передается через параметр SQL_STATIC_SENSITIVITY в **SQLGetInfo**.
-

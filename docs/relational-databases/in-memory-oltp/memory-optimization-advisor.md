@@ -2,9 +2,12 @@
 title: "Помощник по оптимизации памяти | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
@@ -13,20 +16,19 @@ f1_keywords:
 - swb.memoryoptimizationwizard.f1
 - sql13.swb.memoryoptimizationwizard.f1
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
-caps.latest.revision: 17
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 04ee098de4740d0d4a3d3c195d24869ee41cea9a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3c27cd83d09891b95c71abfb56aecbc87805e3e5
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="memory-optimization-advisor"></a>Помощник по оптимизации памяти
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Отчеты об анализе производительности транзакции (см. статью [Определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) информируют о том, какие таблицы в базе данных смогут воспользоваться преимуществами перехода на выполняющуюся в памяти OLTP. После определения таблицы, которую планируется перенести для использования In-Memory OLTP, можно воспользоваться помощником по оптимизации памяти в SQL Server Management Studio для миграции таблицы базы данных в таблицу, оптимизированную для памяти.  
   
@@ -36,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Перенос таблицы и данных в среду, оптимизированную для памяти (при отсутствии неподдерживаемых компонентов).  
     
- Дополнительные сведения о методологиях миграции см. в разделе [In-Memory OLTP — стандартные шаблоны рабочей нагрузки и вопросы миграции](http://msdn.microsoft.com/library/dn673538.aspx).  
+ Сведения о методиках миграции см. в разделе [In-Memory OLTP — стандартные шаблоны рабочей нагрузки и вопросы миграции](http://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Пошаговое руководство по помощнику по оптимизации памяти  
  В **обозревателе объектов**щелкните правой кнопкой мыши таблицу для преобразования и выберите пункт **Помощник по оптимизации памяти**. Появится стартовая страница **помощника по оптимизации памяти таблицы**.  
@@ -136,4 +138,3 @@ ms.lasthandoff: 06/22/2017
  [Миграция в In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
-

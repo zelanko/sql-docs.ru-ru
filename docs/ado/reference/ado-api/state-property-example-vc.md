@@ -3,7 +3,7 @@ title: "Состояние примера свойства (VC ++) | Докум�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - State property [ADO], VC++ example
 ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 6bdb7823ed43d251105330ef235fe16537037ac5
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8aeca0021dc40b34dc19e59308256f6b7c4438f8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="state-property-example-vc"></a>Пример свойство State (VC ++)
 В этом примере используется [состояние](../../../ado/reference/ado-api/state-property-ado.md) свойство для отображения сообщения во время открытия асинхронное подключение и выполнении асинхронных команд.  
@@ -143,6 +142,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство State (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
-

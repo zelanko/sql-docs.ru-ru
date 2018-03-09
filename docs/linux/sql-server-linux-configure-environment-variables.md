@@ -1,25 +1,29 @@
 ---
 title: "Настройка параметров SQL Server с переменными среды | Документы Microsoft"
-description: "В этом разделе описывается использование переменных среды для настройки определенных параметров 2017 г. SQL Server в Linux."
+description: "В этой статье описывается использование переменных среды для настройки определенных параметров 2017 г. SQL Server в Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.date: 07/21/2017
+manager: craigg
+ms.date: 02/20/2018
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
+ms.openlocfilehash: e6d21c8f2e7636ee787bbd735b3d69b71ac20671
+ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
 ms.translationtype: MT
-ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
-ms.openlocfilehash: 72c648e147b628a4a99ffc9605ba42b11c83883e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/14/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Настройка параметров SQL Server с помощью переменных среды в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Настройка 2017 г. SQL Server в Linux, можно использовать несколько переменных в другой среде. Эти переменные используются в двух сценариях:
 
@@ -31,11 +35,11 @@ ms.lasthandoff: 10/14/2017
 
 ## <a name="environment-variables"></a>Переменные среды
 
-| Переменная среды | Description |
+| Переменная среды | Описание |
 |-----|-----|
 | **ACCEPT_EULA** | Примите лицензионное соглашение SQL Server, если задано любое значение (например, «Y»). |
 | **MSSQL_SA_PASSWORD** | Настройте пароль пользователя SA. |
-| **MSSQL_PID** | Установите ключ edition или продукта SQL Server. Возможные значения. </br></br>**Ознакомительная версия**</br>**Разработчик**</br>**Экспресс-выпуск**</br>**Web**</br>**Standard Edition**</br>**Enterprise**</br>**Ключ продукта**</br></br>При указании ключа продукта, он должен иметь вид ###-###-###-###-###, где «#» — это число или буквы.|
+| **MSSQL_PID** | Установите ключ edition или продукта SQL Server. Возможные значения. </br></br>**Ознакомительная версия**</br>**Разработчик**</br>**Экспресс-выпуск**</br>**Web**</br>**Standard Edition Edition**</br>**Enterprise**</br>**Ключ продукта**</br></br>При указании ключа продукта, он должен иметь вид ###-###-###-###-###, где «#» — это число или буквы.|
 | **MSSQL_LCID** | Задает идентификатор языка для SQL Server. Например 1036 — французский. |
 | **MSSQL_COLLATION** | Задает параметры сортировки по умолчанию для SQL Server. Он переопределяет сопоставление по умолчанию идентификатор языка (LCID) для параметров сортировки. |
 | **MSSQL_MEMORY_LIMIT_MB** | Задает максимальный объем памяти (в МБ), который можно использовать SQL Server. По умолчанию он составляет 80% от общего объема физической памяти. |
@@ -45,7 +49,11 @@ ms.lasthandoff: 10/14/2017
 | **MSSQL_DATA_DIR** | Перейдите в каталог, в котором создаются новые базы данных файлы данных SQL Server (.mdf). |
 | **MSSQL_LOG_DIR** | Перейдите в каталог, в котором создаются новые файлы журналов (LDF) базы данных SQL Server. |
 | **MSSQL_DUMP_DIR** | Перейдите в каталог, где SQL Server будет помещать дампы памяти и другие файлы устранения неполадок по умолчанию. |
-| **MSSQL_ENABLE_HADR** | Включите группы доступности. |
+| **MSSQL_ENABLE_HADR** | Включить группы доступности. Например "1" включен и отключен "0" |
+| **MSSQL_AGENT_ENABLED** | Включите агент SQL Server. Например включить 'true' и 'false' отключена. По умолчанию агент отключен.  |
+| **MSSQL_MASTER_DATA_FILE** | Задает расположение файла данных базы данных master. |
+| **MSSQL_MASTER_LOG_FILE** | Задает расположение файла журнала базы данных master. |
+
 
 ## <a name="example-initial-setup"></a>Пример: начальная настройка
 
@@ -82,11 +90,10 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 ```
 
 > [!NOTE]
-> Процесс запуска выпуски производства в контейнерах немного отличается. Дополнительные сведения см. в разделе [запуска производства образы контейнеров](sql-server-linux-configure-docker.md#production).
+> Процесс запуска контейнера с производственными выпусками немного отличается. Дополнительные сведения см. в разделе [Запуск образов контейнеров с производственными выпусками](sql-server-linux-configure-docker.md#production).
 
 ## <a name="next-steps"></a>Следующие шаги
 
 Другие параметры SQL Server, не перечисленных здесь, в разделе [Настройка SQL Server в Linux с помощью средства mssql conf](sql-server-linux-configure-mssql-conf.md).
 
 Дополнительные сведения о том, как установить и запустить SQL Server в Linux см. в разделе [Установка SQL Server в Linux](sql-server-linux-setup.md).
-

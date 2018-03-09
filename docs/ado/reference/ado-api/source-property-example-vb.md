@@ -3,7 +3,7 @@ title: "Исходный пример свойства (Visual Basic) | Доку
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - Source property [ADO], Visual Basic example
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3d26368119e985202b74986215cf8df4307fd4ce
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 95fa9497ce4a8efea8e8b361ade7f484fa01d42c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="source-property-example-vb"></a>Пример свойства источника (Visual Basic)
 В этом примере демонстрируется [источника](../../../ado/reference/ado-api/source-property-ado-recordset.md) свойства, открыв три [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекты на основе различных источников данных.  
@@ -134,7 +133,6 @@ End Sub
 'EndSourceVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Свойство Source (набора записей ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
-
+ [Свойство Source (объект Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

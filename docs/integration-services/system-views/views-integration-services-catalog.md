@@ -1,10 +1,13 @@
 ---
-title: "Представления (каталог служб Integration Services) | Документы Microsoft"
+title: "Представления (каталог служб Integration Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-views
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -12,34 +15,33 @@ ms.topic: language-reference
 helpviewer_keywords:
 - views [Integration Services]
 ms.assetid: d0294d43-4852-46dc-9afa-d0c19ea9aa03
-caps.latest.revision: 18
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b7293a70046df19eef816d3e7830518959ecbc98
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 2d33dc708d9c0e2a6e1788c694c1b7c19c386069
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="views-integration-services-catalog"></a>Представления (каталог служб Integration Services)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описываются отображения [!INCLUDE[tsql](../../includes/tsql-md.md)], доступные для администрирования проектов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], развернутых в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Запрос [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] представлений для просмотра объектов, параметров и рабочих данных, которые хранятся в **SSISDB** каталога.  
+ Запросы к представлениям служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] позволяют просматривать объекты, параметры и рабочие данные, которые хранятся в каталоге **SSISDB**.  
   
  Имя каталога по умолчанию — SSISDB. Объекты, которые хранятся в каталоге, включают проекты, пакеты, параметры, среды и журнал операций.  
   
  Представления базы данных и хранимые процедуры можно использовать непосредственно или писать пользовательский код, который вызывает управляемый API. Среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и управляемый API запрашивают представления и вызывают хранимые процедуры, описанные в этом разделе, для выполнения многих своих задач.  
   
-## <a name="in-this-section"></a>В этом разделе  
- [Catalog.catalog_properties &#40; База данных SSISDB &#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)  
+## <a name="in-this-section"></a>в этом разделе  
+ [catalog.catalog_properties (база данных SSISDB)](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)  
  Отображает свойства каталога служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- [Catalog.effective_object_permissions &#40; База данных SSISDB &#41;](../../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md)  
+ [catalog.effective_object_permissions (база данных SSISDB)](../../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md)  
  Отображает действующие разрешения текущего участника для всех объектов в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [catalog.environment_variables (база данных SSISDB)](../../integration-services/system-views/catalog-environment-variables-ssisdb-database.md)  
@@ -54,13 +56,13 @@ ms.lasthandoff: 09/26/2017
  [catalog.executions (база данных SSISDB)](../../integration-services/system-views/catalog-executions-ssisdb-database.md)  
  Отображает экземпляры выполнения пакета в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Пакеты, которые выполняются с помощью задачи «Выполнение пакета», запускаются в том же экземпляре выполнения, что и родительский пакет.  
   
- [Catalog.explicit_object_permissions &#40; База данных SSISDB &#41;](../../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md)  
+ [catalog.explicit_object_permissions (база данных SSISDB)](../../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md)  
  Отображает только разрешения, которые были явно назначены пользователю.  
   
  [catalog.extended_operation_info (база данных SSISDB)](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md)  
  Отображает расширенные сведения для всех операций в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- [Catalog.Folders &#40; База данных SSISDB &#41;](../../integration-services/system-views/catalog-folders-ssisdb-database.md)  
+ [catalog.folders (база данных SSISDB)](../../integration-services/system-views/catalog-folders-ssisdb-database.md)  
  Отображает папки в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [catalog.object_parameters (база данных SSISDB)](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)  
@@ -84,12 +86,11 @@ ms.lasthandoff: 09/26/2017
  [catalog.projects (база данных SSISDB)](../../integration-services/system-views/catalog-projects-ssisdb-database.md)  
  Отображает подробные сведения для всех проектов, которые находятся в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- [Catalog.validations &#40; База данных SSISDB &#41;](../../integration-services/system-views/catalog-validations-ssisdb-database.md)  
+ [catalog.validations (база данных SSISDB)](../../integration-services/system-views/catalog-validations-ssisdb-database.md)  
  Отображает сведения о проверке правильности всех проектов и пакетов в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-[Catalog.master_properties &#40; База данных SSISDB &#41;](../../integration-services/system-views/catalog-master-properties-ssisdb-database.md)  
-Отображает свойства [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] шкалы Out Master.
+[catalog.master_properties (база данных SSISDB)](../../integration-services/system-views/catalog-master-properties-ssisdb-database.md)  
+Отображает свойства мастера [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out.
 
-[Catalog.worker_agents &#40; База данных SSISDB &#41;](../../integration-services/system-views/catalog-worker-agents-ssisdb-database.md)  
-Отображает сведения о [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] шкалы Out работника.  
-
+[catalog.worker_agents (база данных SSISDB)](../../integration-services/system-views/catalog-worker-agents-ssisdb-database.md)  
+Отображает сведения для рабочей роли [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out.  

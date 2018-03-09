@@ -2,29 +2,30 @@
 title: "Устройство резервного копирования (страница \"Общие\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.suite: sql
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.backupdevice.general.f1
+f1_keywords: sql13.swb.backupdevice.general.f1
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
-caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4cca5d50abc9aad1babf20cdbb8566e437aa9236
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "34"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 783ec3d28cac152932ffd2088d0aa53c92f9dcb7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-device-general-page"></a>Устройство резервного копирования (страница «Общие»)
-  На странице **Общие** можно указать или просмотреть общие свойства логического устройства резервного копирования.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] На странице **Общие** можно указать или просмотреть общие свойства логического устройства резервного копирования.  
   
  **Использование среды SQL Server Management Studio для просмотра содержимого устройства резервного копирования**  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 06/22/2017
     > [!IMPORTANT]  
     >  Возможны сетевые ошибки в случае резервного копирования данных по сети, поэтому по его окончании рекомендуется сделать проверку. Дополнительные сведения см. в разделе [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Резервные копии на наборе из одного или нескольких устройств резервного копирования образуют отдельный набор носителей. *Набор носителей* — это упорядоченная коллекция носителей резервных копий, лент или дисковых файлов, на которые производили запись одна или несколько операций резервного копирования, получая доступ по фиксированному типу и номеру устройства. Сведения о наборах носителей см. в разделе [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md), подключен ленточный накопитель.  
   
  Инициализация физического устройства резервного копирования, соответствующего логическому устройству, производится при записи первой резервной копии в наборе носителей на логическое устройство резервной копии. Если физическое устройство резервного копирования представляет собой не существующий до этого момента файл, он создается на данном этапе.  

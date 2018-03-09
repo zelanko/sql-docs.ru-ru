@@ -2,15 +2,16 @@
 title: "Подписка на публикации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.conc.subtopubs.f1
+f1_keywords: sql13.rep.conc.subtopubs.f1
 helpviewer_keywords:
 - subscriptions [SQL Server replication], about subscriptions
 - pull subscriptions [SQL Server replication]
@@ -24,20 +25,19 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], subscribing
 - transactional replication, subscribing
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
-caps.latest.revision: 44
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "44"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: a8f88fca63abe24ce7093d628062c4ae90b40733
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 640c90e4f58c0dc09a732eb26a03808be2097999
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="subscribe-to-publications"></a>Подписка на публикации
-  Подписка представляет собой запрос на копию данных и объектов из базы данных в публикации. Подписка определяет получаемую публикацию, а также место и время ее получения. При планировании подписок необходимо определить место обработки агентом. Выбранный тип подписки определяет место запуска агента. В случае принудительной подписки агент слияния или агент распространителя запускается у распространителя, а в случае подписки по запросу агент запускается у подписчиков. После того, как подписка создана, ее тип нельзя изменить.  
+# <a name="subscribe-to-publications"></a>Subscribe to Publications
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Подписка представляет собой запрос на копию данных и объектов из базы данных в публикации. Подписка определяет получаемую публикацию, а также место и время ее получения. При планировании подписок необходимо определить место обработки агентом. Выбранный тип подписки определяет место запуска агента. В случае принудительной подписки агент слияния или агент распространителя запускается у распространителя, а в случае подписки по запросу агент запускается у подписчиков. После того, как подписка создана, ее тип нельзя изменить.  
   
 |Подписка|Характеристики|Использовать|  
 |------------------|---------------------|--------------|  
@@ -96,7 +96,6 @@ ms.lasthandoff: 07/31/2017
   
 ## <a name="see-also"></a>См. также:  
  [Защита подписчика](../../relational-databases/replication/security/secure-the-subscriber.md)   
- [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
+ [Окончание срока действия и отключение подписки](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
   
-

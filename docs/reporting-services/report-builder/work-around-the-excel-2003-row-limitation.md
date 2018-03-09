@@ -1,27 +1,27 @@
 ---
-title: "Обход ограничения строк Excel 2003 | Документы Microsoft"
+title: "Решение проблем с ограничениями для строк в Excel 2003 | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8533cd39c8a3d5efde78fee3e045eb744d562a97
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 76705db4f9467f412cbe2dcc7d611d8576c447d6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
   В этом разделе объясняется, как обойти ограничения строк Excel 2003 при экспорте отчетов с разбиением на страницы в Excel. Это решение подходит для отчета, который содержит только таблицу.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Щелкните правой кнопкой мыши строку данных в таблице, а затем выберите **Добавить группу** > **Родительская группа** , чтобы добавить внешнюю группу таблицы.  
   
-     ![Выберите родительскую группу](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "выберите родительскую группу")  
+     ![Выбор родительской группы](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "Выбор родительской группы")  
   
 3.  Введите следующую формулу в поле выражения **Группировать по** и нажмите кнопку **ОК** для добавления родительской группы.  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  Удалите столбец группы, щелкнув правой кнопкой мыши заголовок столбца, затем последовательно выбрав **Удалить столбцы**, **Удалить только столбцы**и нажав кнопку **ОК**.  
   
-     ![Удаление столбца группы](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "удаление столбца группы")  
+     ![Удаление столбца группы](../../reporting-services/report-builder/media/groupcolumn-delete-updated.png "Удаление столбца группы")  
   
 5.  Щелкните правой кнопкой мыши **группу 1** в разделе **Группы строк** , а затем выберите **Свойства группы**.  
   
@@ -57,13 +57,12 @@ ms.lasthandoff: 08/09/2017
   
 6.  На странице **Сортировка** диалогового окна **Свойства группы** выберите параметр сортировки по умолчанию и нажмите кнопку **Удалить**.  
   
-     ![Удаление сортировки по умолчанию](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "удаление сортировки по умолчанию")  
+     ![Удаление сортировки по умолчанию](../../reporting-services/report-builder/media/groupproperties-sorting-updated.png "Удаление сортировки по умолчанию")  
   
 7.  На странице **Разрывы страниц** щелкните **Между всеми экземплярами группы** , затем нажмите кнопку **ОК**.  
   
-     ![Разрывы страниц](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "разрывы страниц")  
+     ![Задание разрывов страниц](../../reporting-services/report-builder/media/groupproperties-pagebreaks-updated.png "Задание разрывов страниц")  
   
 8.  Сохраните отчет. При экспорте отчета в книгу Excel он размещается на нескольких листах, каждый из которых может содержать не более 65 000 строк.  
   
   
-

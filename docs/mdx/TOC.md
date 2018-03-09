@@ -1,5 +1,5 @@
 # [Обзор](analysis-services-language-reference.md)  
-# [Новые и недавно обновленные статьи](new-updated-mdx.md)
+# [Новые и обновленные Статьи](new-updated-mdx.md)
 
 # [Справочник по многомерным выражениям](multidimensional-expressions-mdx-reference.md)  
 ## [Синтаксические элементы в многомерных выражениях](mdx-syntax-elements-mdx.md)  

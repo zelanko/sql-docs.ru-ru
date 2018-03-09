@@ -2,34 +2,32 @@
 title: "Ancestors (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- ANCESTORS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Ancestors function
+f1_keywords: ANCESTORS
+dev_langs: kbMDX
+helpviewer_keywords: Ancestors function
 ms.assetid: abdf2e9c-72c8-4f2e-a823-d42efc4cc7d5
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 3bf406938a92ec3b3c8829b3e1cb59098ea62524
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b2d6304b9a87bcdb87a98a8351d4e60074ebb4d8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="ancestors-mdx"></a>Ancestors (многомерные выражения)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Функция, возвращающая набор предков заданного элемента на заданном уровне или заданном расстоянии от элемента. С [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], возвращаемый набор всегда будет содержать один элемент — [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживают нескольких родителей для одного элемента.  
   
@@ -54,7 +52,7 @@ Ancestors(Member_Expression, Distance)
  *Расстояние*  
  Допустимое числовое выражение, указывающее расстояние от заданного элемента.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  С **предков** функции, задать функцию с Многомерным выражением элемента, а затем задать Многомерное выражение уровня, являющегося предком элемента, или числовое выражение, представляющее число уровней над данным элементом. С этой информацией **предков** функция возвращает набор элементов (который будет набором, состоящим из одного элемента) этого уровня.  
   
 > [!NOTE]  
@@ -114,4 +112,3 @@ FROM [Adventure Works]
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

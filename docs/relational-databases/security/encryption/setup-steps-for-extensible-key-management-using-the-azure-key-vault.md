@@ -2,11 +2,13 @@
 title: "Этапы настройки расширенного управления ключами с использованием хранилища ключей Azure | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/09/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - SQL Server Connector, setup
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8b6ddedabeb826caf903701327b6b103666b2abb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 375898263ea58a2ac8dd9e54f86257d07d1daeca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>Этапы настройки расширенного управления ключами с использованием хранилища ключей Azure
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Ниже приведены пошаговые действия по установке и настройке Соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для хранилища ключей Azure.  
   
@@ -272,7 +273,7 @@ ms.lasthandoff: 06/22/2017
   
      Выполните следующий скрипт [!INCLUDE[tsql](../../../includes/tsql-md.md)] , чтобы настроить [!INCLUDE[ssDE](../../../includes/ssde-md.md)] для использования поставщика расширенного управления ключами.  
   
-    ```tsql  
+    ```sql  
     -- Enable advanced options.  
     USE master;  
     GO  
@@ -293,7 +294,7 @@ ms.lasthandoff: 06/22/2017
      Создайте поставщик служб шифрования с помощью соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , который является поставщиком расширенного управления ключами для хранилища ключей Azure.    
     В этом примере используется имя `AzureKeyVault_EKM_Prov`.  
   
-    ```tsql  
+    ```sql  
     CREATE CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
     FROM FILE = 'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
     GO  
@@ -325,7 +326,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Дополните вторую часть аргумента `SECRET` **секретом клиента** из части I. В этом примере **секрет клиента** из части I имеет значение `Replace-With-AAD-Client-Secret`. Окончательная строка аргумента `SECRET` будет представлять собой длинную последовательность букв и цифр *без дефисов*.  
   
-    ```tsql  
+    ```sql  
     USE master;  
     CREATE CREDENTIAL sysadmin_ekm_cred   
         WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
@@ -350,7 +351,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Замените `ContosoRSAKey0` на имя ключа в хранилище ключей Azure.  
   
-    ```tsql  
+    ```sql  
     CREATE ASYMMETRIC KEY CONTOSO_KEY   
     FROM PROVIDER [AzureKeyVault_EKM_Prov]  
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  
@@ -365,4 +366,3 @@ ms.lasthandoff: 06/22/2017
 [Соединитель SQL Server, приложение](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   
-

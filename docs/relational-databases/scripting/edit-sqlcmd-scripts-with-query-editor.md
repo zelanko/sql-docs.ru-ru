@@ -2,9 +2,12 @@
 title: "Изменение скриптов SQLCMD при помощи редактора запросов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -16,19 +19,19 @@ helpviewer_keywords:
 - Query Editor [Database Engine], SQLCMD scripts
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
-caps.latest.revision: 42
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1bee07ba4b378dca877f7c204d9f764e666171d8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 35f569c6d26c888566eb8dbb47f1472101158d61
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Изменение скриптов SQLCMD при помощи редактора запросов
-  Используя редактор запросов [!INCLUDE[ssDE](../../includes/ssde-md.md)] в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно записывать и редактировать запросы в виде скриптов SQLMD. Скрипты SQLCMD применяются в тех случаях, когда необходимо обработать системные команды Windows и инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] в одном и том же скрипте.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Используя редактор запросов [!INCLUDE[ssDE](../../includes/ssde-md.md)] в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], можно записывать и редактировать запросы в виде скриптов SQLCMD. Скрипты SQLCMD применяются в тех случаях, когда необходимо обработать системные команды Windows и инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] в одном и том же скрипте.  
   
 ## <a name="sqlcmd-mode"></a>Режим SQLCMD  
  Чтобы при помощи редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] писать и изменять скрипты SQLCMD, необходимо включить режим скриптов SQLCMD. По умолчанию режим скриптов SQLCMD в редакторе запросов отключен. Режим скриптов можно включить, нажав кнопку **Режим SQLCMD** на панели инструментов или выбрав пункт **Режим SQLCMD** в меню **Запрос** .  
@@ -42,7 +45,7 @@ ms.lasthandoff: 06/22/2017
   
 -   выполнение скриптов;  
   
--   Система управления версиями  
+-   система управления версиями;  
   
 -   синтаксический анализ скриптов;  
   

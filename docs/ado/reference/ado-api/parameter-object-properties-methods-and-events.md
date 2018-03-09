@@ -3,7 +3,7 @@ title: "Параметр объекта свойства, методы и соб
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - Parameter object [ADO], members
 ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4aed60607b071183c3ba6a88ccab7a549aa9d755
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e8ddb7d07eb09c41daee052ccdffe1daf583c8d3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="parameter-object-properties-methods-and-events"></a>Параметр объекта свойства, методы и события
 ## <a name="propertiescollections"></a>Свойства и коллекции  
@@ -53,6 +52,5 @@ ms.lasthandoff: 09/09/2017
 ## <a name="events"></a>События  
  Нет.  
   
-## <a name="see-also"></a>См. также:  
- [Объект параметра](../../../ado/reference/ado-api/parameter-object.md)
-
+## <a name="see-also"></a>См. также  
+ [Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)

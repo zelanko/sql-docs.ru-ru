@@ -1,27 +1,27 @@
 ---
-title: "Фигурные диаграммы (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Фигурные диаграммы (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 84ee7a9030bb27725994a33860b26b8754034cd9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 339028127ce757f08aed35ee0868da28c69a5355
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Фигурные диаграммы (построитель отчетов и службы SSRS)
   Фигурная диаграмма показывает значения данных в процентах от целого. Фигурные диаграммы обычно используются для отображения результатов сравнения различных значений в наборе с учетом пропорций. Категории представлены отдельными сегментами фигуры. Размер сегмента определяется этим значением. Фигурные диаграммы аналогичны по своему назначению круговым диаграммам, за исключением того, что в них категории упорядочиваются от наиболее крупных до самых мелких.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/09/2017
   
  Пример воронкообразной диаграммы показан на следующей иллюстрации.  
   
- ![Воронкообразной диаграммы](../../reporting-services/report-design/media/rs-funnelchart.gif "воронкообразной диаграммы")  
+ ![Воронкообразная диаграмма](../../reporting-services/report-design/media/rs-funnelchart.gif "Воронкообразная диаграмма")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Фигурные диаграммы наиболее эффективны для отображения отсортированных пропорциональных процентных отношений. Однако по умолчанию с целью сохранения согласованности значения в наборе данных на диаграмме не сортируются. Чтобы как можно точнее представить данные в виде воронкообразных или пирамидальных диаграмм, рекомендуется сортировать значения в убывающем порядке. Дополнительные сведения см. в разделе [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
--   Значения NULL, пустые, отрицательные и нулевые значения при вычислении долей не учитываются. Поэтому такие значения не принято показывать на фигурной диаграмме. Если требуется визуально отобразить на диаграмме значения этого типа, выберите тип диаграммы, отличный от фигурной диаграммы. Дополнительные сведения о том, как добавить пустые точки нефигурных диаграммах см. в разделе [Добавление пустых точек на диаграмму &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   Значения NULL, пустые, отрицательные и нулевые значения при вычислении долей не учитываются. Поэтому такие значения не принято показывать на фигурной диаграмме. Если требуется визуально отобразить на диаграмме значения этого типа, выберите тип диаграммы, отличный от фигурной диаграммы. Дополнительные сведения о добавлении пустых точек на диаграмму, не являющуюся фигурной, см. в разделе [Добавление пустых точек на диаграмму (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
 -   Если принято решение определить на фигурной диаграмме собственные цвета, используя пользовательскую палитру, убедитесь в том, что в палитре имеется достаточное количество цветов для выделения каждой точки данных ее собственным, уникальным цветом. Дополнительные сведения см. в разделе [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
@@ -57,13 +57,12 @@ ms.lasthandoff: 08/09/2017
   
 -   Диаграммы такого типа, как фигурные диаграммы, не могут быть представлены совместно с диаграммами любых других типов в одной и той же области диаграммы. Чтобы показать для сравнения данные, приведенные на фигурной диаграмме, и данные, приведенные на диаграмме другого типа, необходимо добавить вторую область диаграммы.  
   
--   Предусмотрена возможность применять дополнительные стили рисования к круговым и кольцевым диаграммам для усиления визуального впечатления. В разделе [форматирование цветов для рядов на диаграмме &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md) для получения дополнительной информации.  
+-   Предусмотрена возможность применять дополнительные стили рисования к круговым и кольцевым диаграммам для усиления визуального впечатления. Дополнительные сведения см. в разделе [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Форматирование диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [NULL и пустые точки данных в диаграммах &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Круговые диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
+ [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Точки данных со значением NULL и пустые точки в диаграммах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Круговые диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
   
   
-

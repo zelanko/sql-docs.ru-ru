@@ -2,33 +2,31 @@
 title: "Набор строк DISCOVER_OBJECT_ACTIVITY | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_OBJECT_ACTIVITY rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_OBJECT_ACTIVITY rowset
 ms.assetid: 100f7de1-ad5c-4973-b863-3c10df1245c4
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 573b41cb848ee7a8e93bfdc4625b8a05857f2d61
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f42115f46be220580d42d54f5cab62c7c12492ec
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverobjectactivity-rowset"></a>Набор строк DISCOVER_OBJECT_ACTIVITY
-  Предоставляет сведения об использовании ресурсов каждым объектом с начала работы службы.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Предоставляет сведения об использовании ресурсов, на объект с момента запуска службы.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  Набор строк **DISCOVER_OBJECT_ACTIVITY** содержит следующие столбцы.  
@@ -59,10 +57,9 @@ ms.lasthandoff: 09/01/2017
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
 |OBJECT_PARENT_PATH|DBTYPE_WSTR|Необязательный параметр.|  
-|OBJECT_ID|DBTYPE_WSTR|Необязательно.|  
+|OBJECT_ID|DBTYPE_WSTR|Необязательный параметр.|  
   
 ## <a name="see-also"></a>См. также:  
- [XML для аналитики наборы строк схемы](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [Наборы строк схемы XML для аналитики](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

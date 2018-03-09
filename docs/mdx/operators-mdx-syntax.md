@@ -2,35 +2,35 @@
 title: "Операторы (синтаксис многомерных Выражений) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], operators
 - operators [MDX]
 - precedence [MDX]
 - MDX [Analysis Services], operators
 ms.assetid: 1ff5a529-88fd-4619-86e1-19fa214650d6
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 87304b4a33daa7d9460983a403136974c46c1f81
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e931d63ae6e46b1828e940535434f5f5a10b0481
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="operators-mdx-syntax"></a>Операторы (синтаксис многомерных выражений)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   В многомерных выражениях операторы выполняют следующие действия:  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/02/2017
 |---------------------------------------|---------|  
 |Назначения значения переменной или связывания столбцов результирующего набора данных с псевдонимом.|[Операторы присваивания](../mdx/assignment-operators.md)|  
 |Сложение, вычитание, умножение, деление.|[Арифметические операторы](../mdx/arithmetic-operators.md)|  
-|Проверка истинности условия, такого как AND, OR, NOT и XOR.|[Побитовые операторы](../mdx/bitwise-operators.md)|  
+|Проверка истинности условия, такого как AND, OR, NOT и XOR.|[Битовые операторы](../mdx/bitwise-operators.md)|  
 |Сравнение значения с другим значением или выражением.|[Операторы сравнения](../mdx/comparison-operators.md)|  
 |Или постоянное, или временное объединение двух строк в одну.|[Операторы объединения](../mdx/concatenation-operators.md)|  
 |Или постоянное, или временное объединение двух выражений набора в один набор.|[Операторы наборов](../mdx/set-operators.md)|  
@@ -116,4 +116,3 @@ ms.lasthandoff: 08/02/2017
  [Элементы синтаксиса многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: "Настройка веб-синхронизации | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/10/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -32,20 +34,19 @@ helpviewer_keywords:
 - Web synchronization, security best practices
 - Web synchronization, configuring
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
-caps.latest.revision: 74
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "74"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 1d8ae90df79860b503830c9881fecd5f26b252e3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bc4b16adf509a811980323e2bc41e3f44c9906d9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="configure-web-synchronization"></a>Настройка веб-синхронизации
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="configure-web-synchronization"></a>Настроить веб-синхронизацию
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Поддержка веб-синхронизации для репликации слиянием [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет производить репликацию данных по протоколу HTTPS через Интернет. Чтобы использовать веб-синхронизацию, сначала необходимо выполнить следующие действия.  
   
@@ -183,4 +184,3 @@ ms.lasthandoff: 07/31/2017
  [Веб-синхронизация для репликации слиянием](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   
-

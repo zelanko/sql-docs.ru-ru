@@ -2,9 +2,12 @@
 title: "Доступ к таблицам FileTable с помощью API-интерфейсов ввода-вывода файлов | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-blob
 ms.tgt_pltfrm: 
@@ -12,19 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-caps.latest.revision: 16
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fee941d70d60091034abfd77998616508fedd611
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: f482eb2ff361f6c923076093ceb22ab873f0ce8f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Доступ к таблицам FileTable с помощью API-интерфейсов ввода-вывода файлов
-  Описание работы файловой системы ввода-вывода с таблицами FileTable.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Описание работы файловой системы ввода-вывода с таблицами FileTable.  
   
 ##  <a name="accessing"></a> Начало использования API-интерфейсов файлового ввода-вывода с таблицами FileTable  
  Предполагается, что таблицы FileTable в первую очередь будут использоваться через файловую систему Windows и API-интерфейсы файлового ввода-вывода. Таблицы FileTable поддерживают нетранзакционный доступ с помощью широкого набора API-интерфейсов файлового ввода-вывода.  
@@ -60,7 +64,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="delete"></a> Удаление файлов и каталогов в таблице FileTable  
  При удалении файла или каталога применяется вся семантика API-интерфейсов файлового ввода-вывода Windows.  
   
--   При удалении каталога происходит сбой, если каталог содержит файлы и вложенные каталоги.  
+-   При удалении каталога происходит сбой, если каталог содержит файлы или вложенные каталоги.  
   
 -   При удалении файла или каталога удаляется соответствующая строка из таблицы FileTable. Это эквивалентно удалению этой строки с помощью операции [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
@@ -109,31 +113,30 @@ ms.lasthandoff: 06/22/2017
 |Capability|Поддерживается|Комментарии|  
 |----------------|---------------|--------------|  
 |**Операционные блокировки**|Да|Поддерживаются операционные блокировки уровня 2, уровня 1, пакетные операционные блокировки и операционные блокировки фильтров.|  
-|**Расширенные атрибуты**|Нет||  
-|**Точки повторного синтаксического анализа**|Нет||  
-|**Постоянные ACL**|Нет||  
-|**Именованные потоки**|Нет||  
+|**Расширенные атрибуты**|нет||  
+|**Точки повторного синтаксического анализа**|нет||  
+|**Постоянные ACL**|нет||  
+|**Именованные потоки**|нет||  
 |**Разреженные файлы**|Да|Разреженность можно задавать только для файлов, она влияет на способ хранения потока данных. Поскольку данные FILESTREAM хранятся на томах NTFS, функции FileTable поддерживают разреженные файлы, перенаправляя запросы в файловую систему NTFS.|  
 |**Сжатие**|Да||  
 |**Шифрование**|Да||  
-|**TxF**|Нет||  
-|**Идентификаторы файлов**|Нет||  
-|**Идентификаторы объектов**|Нет||  
-|**Символические ссылки**|Нет||  
-|**Жесткие связи**|Нет||  
-|**Краткие имена**|Нет||  
-|**Уведомления об изменении каталога**|Нет||  
+|**TxF**|нет||  
+|**Идентификаторы файлов**|нет||  
+|**Идентификаторы объектов**|нет||  
+|**Символические ссылки**|нет||  
+|**Жесткие связи**|нет||  
+|**Краткие имена**|нет||  
+|**Уведомления об изменении каталога**|нет||  
 |**Блокировка диапазона байтов**|Да|Запросы блокировки диапазона байтов передаются в файловую систему NTFS.|  
-|**Файлы, отображенные в памяти**|Нет||  
+|**Файлы, отображенные в памяти**|нет||  
 |**Отмена ввода-вывода**|Да||  
-|**Безопасность**|Нет|Принудительно применяются настройки безопасности уровня общего ресурса Windows и уровня таблицы или столбца [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**Журнал USN**|Нет|Изменения метаданных для файлов и каталогов в таблице FileTable являются операциями DML в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Поэтому они записываются в соответствующий файл журнала базы данных. Однако они не регистрируются в журнале USN файловой системы NTFS (за исключением изменения размера).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**Безопасность**|нет|Принудительно применяются настройки безопасности уровня общего ресурса Windows и уровня таблицы или столбца [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**Журнал USN**|нет|Изменения метаданных для файлов и каталогов в таблице FileTable являются операциями DML в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Поэтому они записываются в соответствующий файл журнала базы данных. Однако они не регистрируются в журнале USN файловой системы NTFS (за исключением изменения размера).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
 ## <a name="see-also"></a>См. также:  
  [выполнить загрузку файлов в таблицу FileTables](../../relational-databases/blob/load-files-into-filetables.md)   
  [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Доступ к таблицам FileTable с помощью Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
- [Инструкции FileTable языка DDL, функции, хранимые процедуры и представления](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
+ [Инструкции DDL, функции, хранимые процедуры и представления для FileTable](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
-

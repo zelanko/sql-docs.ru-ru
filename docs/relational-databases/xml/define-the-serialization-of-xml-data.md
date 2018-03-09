@@ -2,9 +2,12 @@
 title: "Определение сериализации данных XML | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: 
@@ -18,24 +21,25 @@ helpviewer_keywords:
 - xml data type [SQL Server], serialization
 - typed XML
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
-caps.latest.revision: 23
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 01e295b33ebd66543f2b431661799570bbe419b9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 02ae370490f638a0ad02d5539473c61c6c89b2b3
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Определение сериализации XML-данных
-  При явном или неявном приведении данных типа XML к строковому или двоичному типу данных SQL они сериализуются в соответствии с правилами, изложенными в этом разделе.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+При явном или неявном приведении данных типа XML к строковому или двоичному типу данных SQL они сериализуются в соответствии с правилами, изложенными в этом разделе.  
   
 ## <a name="serialization-encoding"></a>Кодировка сериализации  
  Если целевой тип данных — VARBINARY, результат сериализуется в UTF-16 с отметкой порядка байтов UTF-16 в начале, но без XML-декларации. Если целевой тип слишком мал, возникает ошибка.  
   
- Например:  
+ Пример:  
   
 ```  
 select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
@@ -49,7 +53,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
   
  Если целевой тип данных — NVARCHAR или NCHAR, результат сериализуется в UTF-16 без отметки порядка байтов UTF-16 в начале и без XML-декларации. Если целевой тип слишком мал, возникает ошибка.  
   
- Например:  
+ Пример:  
   
 ```  
 select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
@@ -63,7 +67,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
   
  Если целевой тип данных — VARCHAR или NCHAR, результат сериализуется в кодировке, соответствующей кодовой странице параметров сортировки базы данных без отметки порядка байтов и XML-декларации. Если целевой тип слишком мал или значение не может быть отображено на целевую кодовую страницу параметров сортировки, возникнет ошибка.  
   
- Например:  
+ Пример:  
   
 ```  
 select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
@@ -91,7 +95,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
   
 -   Чтобы защитить текстовые узлы, не содержащие ничего кроме пробелов, один из них, обычно последний, преобразуется к сущности по числовой ссылке. Таким образом, повторный синтаксический анализ сохраняет текстовый узел с пробелами, независимо от установки параметров обработки пробелов во время синтаксического разбора.  
   
- Например:  
+ Пример:  
   
 ```  
 declare @u NVARCHAR(50)  

@@ -3,7 +3,7 @@ title: "Метод Save | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -19,17 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Save method [ADO]
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 3ca1aa95841be1331ad1b214b2a8b377622883d3
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: edefe1c8d25abd84d5a5f82d7dde8035d82022ee
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="save-method"></a>Save-метод
 Сохраняет [записей](../../../ado/reference/ado-api/recordset-object-ado.md) в файле или [поток](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
@@ -48,7 +47,7 @@ recordset.Save Destination, PersistFormat
  *PersistFormat*  
  Необязательно. Объект [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) значение, указывающее формат, в котором **записей** должен быть сохранен (XML или ADTG). Значение по умолчанию — **adPersistADTG**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  [Метод Save](../../../ado/reference/ado-api/save-method.md) метод можно вызывать только для открытого **записей**. Используйте [метода Open (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) способ восстановления более поздней версии **записей** из *назначения*.  
   
  Если [свойство фильтра](../../../ado/reference/ado-api/filter-property.md) свойство действует для **записей**, то сохраняются только те строки, которые доступны в фильтре. Если **набора записей** имеет иерархическую структуру, затем текущий дочерний элемент **набора записей** и его дочерние элементы сохраняются, включая родительскую **набора записей**. Если метод Save дочернего **записей** является именем, дочерним элементом, а также все его дочерние элементы сохраняются, но не является родительским.  
@@ -99,12 +98,11 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
   
 |||  
 |-|-|  
-|[Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Объект потока (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
+|[Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сохранение и открытие примере методы (Visual Basic)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
  [Сохранение и открытие примере методы (VC ++)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
  [Метод Open (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Метод Open (поток ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Метод SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)
-

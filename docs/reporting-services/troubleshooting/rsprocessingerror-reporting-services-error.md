@@ -1,29 +1,28 @@
 ---
-title: "rsProcessingError - ошибка службы Reporting Services | Документы Microsoft"
+title: "rsProcessingError — ошибка служб Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- rsProcessingError
+helpviewer_keywords: rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
-caps.latest.revision: 29
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "29"
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7065e2f766ec3ce56bed2d9b3bc0e90c5290b6ea
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ab52b302e3dddfd4ab42d2cd09019f0fa62f5a91
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Ошибка службы Reporting Services
     
@@ -78,7 +77,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Если отчет просматривается на сервере отчетов, на котором вы работаете под учетной записью локального администратора, то для просмотра стека вызовов щелкните страницу правой кнопкой мыши и выберите команду **Исходный код**. Дополнительные сведения содержатся в стеке вызовов.  
   
--   Если запуск производится от лица локального администратора на сервере отчетов, просмотрите файл журнала в поисках `ReportProcessingException`. В записях журнала содержится дополнительная информация. Файл журнала сервера отчетов обычно находится в \< *диск*>: \Program Files\Microsoft SQL Server\MSRS12. MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*datetimestamp*. журнала. Дополнительные сведения см. в разделе [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+-   Если запуск производится от лица локального администратора на сервере отчетов, просмотрите файл журнала в поисках `ReportProcessingException`. В записях журнала содержится дополнительная информация. Журнал сервера отчетов обычно находится в файле \<*диск*>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*метка_даты_и_времени*.log. Дополнительные сведения см. в разделе [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
 ### <a name="failed-to-load-expression-host-assembly"></a>Не удалось загрузить хранилище сборки выражений  
  У пользовательских сборок должны быть подписанные строгие имена и установлен атрибут AllowPartiallyTrustedCallers. Дополнительные сведения см. в разделах [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md) и [Understanding Security Policies](../../reporting-services/extensions/secure-development/understanding-security-policies.md).  
@@ -104,11 +103,11 @@ ms.lasthandoff: 08/09/2017
 ### <a name="cannot-compare-data-types-for-a-filter"></a>Не удается сравнить типы данных в фильтре  
  В уравнении фильтра выражение, определяющее, что именно фильтруется, и значение фильтра должны относиться к одному и тому же типу данных, чтобы их можно было сравнивать. При появлении одной из следующих ошибок измените выражение поля или значение фильтра, чтобы типы данных соответствовали друг другу.  
   
--   Обработка  *\<тип отчета >* для  *\<имя элемента отчета >* не может быть выполнена. Невозможно сравнить данные типов  *\<типа >* и  *\<типа >*. Проверьте тип данных, возвращаемый  *\<имя элемента отчета >*.  
+-   Невозможно обработать тип элемента отчета *\<тип элемента отчета>* для элемента отчета *\<имя элемента отчета>*. Невозможно сравнить данные типов *\<тип>* и *\<тип>*. Проверьте тип данных, возвращаемых выражением фильтра *\<имя элемента отчета>*.  
   
--   Не удалось вычислить  *\<имя свойства >*.  
+-   Не удалось вычислить *\<имя свойства>*.  
   
--   Не удалось вычислить  *\<имя свойства >*. Оно ссылается на поле набора данных, содержащее ошибку:  *\<строка ошибки >*.  
+-   Не удалось вычислить *\<имя свойства>*. В нем имеется ссылка на поле набора данных, содержащее ошибку: *\<строка ошибки>*.  
   
  Дополнительные сведения см. в разделе [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
@@ -117,28 +116,27 @@ ms.lasthandoff: 08/09/2017
   
  Можно также передать агрегатной функции имя конкретной области. Область может быть именем набора данных, областью данных или именем области более высокого порядка в иерархии данных. Это относится к следующим сообщениям:  
   
--    *\<Тип отчета >* "*\<имя элемента отчета >*" имеет недопустимую область «*\<имя области >*». Область должна совпадать с текущей или содержаться в ней.  
+-   Элемента отчета *\<тип элемента отчета>* "*\<имя элемента отчета>*" имеет недопустимую область "*\<имя области>*". Область должна совпадать с текущей или содержаться в ней.  
   
--    *\<Имя свойства >* выражение для  *\<тип отчета >* "*\<имя элемента отчета >*" содержит параметр области, недопустимый для агрегатной функции. Параметр области должен быть задан строковой константой, совпадающей с именем объемлющей группы, объемлющей области данных или имени набора данных.  
+-   Выражение *\<имя свойства>* для элемента отчета *\<тип элемента отчета>* "*\<имя элемента отчета>*" содержит параметр области, недопустимый для агрегатной функции. Параметр области должен быть задан строковой константой, совпадающей с именем объемлющей группы, объемлющей области данных или имени набора данных.  
   
  Для агрегатных функций, вычисляющих промежуточные итоги (**Previous**, **RunningValue**или **RowNumber**), можно задать параметр области, представляющий собой либо имя группы строк, либо имя группы столбцов, но не то и другое сразу. Это относится к следующим сообщениям:  
   
--   **Предыдущие**, **RunningValue** или **RowNumber** агрегатные функции, используемые в ячейках данных  *\<тип отчета >* "*\<имя элемента отчета >*" ссылаются на области в столбцах и строках группирования  *\<тип отчета >*. Параметры области для всех **Назад**, **RunningValue** и **RowNumber** агрегатные функции в  *\<тип отчета >* могут ссылаться на группирования строк или столбца группирования данных, но не оба.  
+-   Агрегатные функции **Previous**, **RunningValue** или **RowNumber**, используемые в ячейках данных элемента отчета *\<тип элемента отчета>* "*\<имя элемента отчета>*", ссылаются на группирование данных по строкам или столбцам *\<тип элемента отчета>*. Параметры области для всех агрегатных функций **Previous**, **RunningValue** и **RowNumber** в элементе отчета типа *\<тип элемента отчета>* могут ссылаться на группирование данных по строкам или столбцам, но не на оба типа группирования одновременно.  
   
  Дополнительные сведения см. в разделах [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) и [Встроенные коллекции (построитель отчетов и службы SSRS)](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
 ### <a name="default-dataset-scope-for-a-top-level-text-box"></a>Область набора данных по умолчанию для текстового поля верхнего уровня  
  Не рекомендуется использовать область по умолчанию для текстового поля, добавленного в область конструктора отчетов, если у отчета есть несколько наборов данных. Используйте выражение, включающее как агрегатную функцию, так и имя набора данных для задания области. Например, `=First(Fields!FieldName.Value, "DataSet2")`.  
   
-## <a name="see-also"></a>См. также  
- [Выражения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Справочник по агрегатным функциям &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Примеры выражений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>См. также:  
+ [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Часто используемые фильтры &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
- [Коллекция полей набора данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Пользовательский код и ссылок на сборки в выражениях в конструкторе отчетов &#40; Службы SSRS &#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Ссылки на коллекцию параметров &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Часто используемые фильтры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
+ [Коллекция полей набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов (службы SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [Ссылки на коллекцию параметров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   
-

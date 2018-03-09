@@ -1,10 +1,13 @@
 ---
-title: "Задача «Управление CDC» | Документы Microsoft"
+title: "Задача управления CDC | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -13,17 +16,16 @@ f1_keywords:
 - sql13.ssis.designer.cdccontroltask.f1
 - sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-caps.latest.revision: 12
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 99a864cf9f2e8708fa4e605dacaa7ecaf170ef79
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 0990c664bb8a962dc8a9c1eebd862808965f2c02
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cdc-control-task"></a>Задача управления CDC
   Задача «Управление CDC» используется для управления жизненным циклом пакетов системы отслеживания изменений данных (CDC). Эта задача обеспечивает синхронизацию пакета CDC с пакетом начальной загрузки и управление диапазонами регистрационных номеров транзакций в журнале (номеров LSN), которые обрабатываются в прогоне пакета CDC. Дополнительно задача «Управление CDC» связана со сценариями обработки ошибок и с восстановлением.  
@@ -73,11 +75,11 @@ ms.lasthandoff: 08/11/2017
 ## <a name="configuring-the-cdc-control-task"></a>Настройка задачи «Управление CDC»  
  Свойства могут быть заданы с помощью конструктора SSIS или программным путем.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
--   [Пользовательские свойства задач управления CDC](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
+-   [Пользовательские свойства задачи «Управление CDC»](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Определение переменной состояния](../../integration-services/data-flow/define-a-state-variable.md)  
   
 ## <a name="related-content"></a>См. также  
@@ -158,4 +160,3 @@ ms.lasthandoff: 08/11/2017
  **Имя состояния**  
  Введите имя, связанное с сохраняемым состоянием CDC. В пакетах полной загрузки и пакетах CDC, работающих в одном контексте CDC, будет указываться общее имя состояния. Это имя используется для подстановки строки состояния в таблице состояния  
   
-

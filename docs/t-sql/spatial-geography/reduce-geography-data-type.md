@@ -3,8 +3,11 @@ title: "Уменьшить (тип данных geography) | Документы 
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ dev_langs:
 helpviewer_keywords:
 - Reduce method
 ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
-caps.latest.revision: 14
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c5b174f3f4b8daf99c402b110ba10d95345783d7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: a4ac2e0f44ee4d6361f0f91c47f4472de7c23756
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="reduce-geography-data-type-"></a>Reduce (тип данных geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает приближение заданного **geography** экземпляра, полученное путем выполнения алгоритма Дугласа-Пекера для экземпляра с заданным допуском.  
   
@@ -55,7 +57,7 @@ ms.lasthandoff: 09/01/2017
   
  Возвращаемый тип CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Для типов коллекции этот алгоритм работает независимо для каждого **geography** содержащиеся в экземпляре. Этот алгоритм не изменяет **точки** экземпляров.  
   
  Этот метод выполнит попытку сохранения конечных точек **LineString** экземпляров, но не сможет сделать это для сохранения действительного результата.  
@@ -76,8 +78,7 @@ DECLARE @g geography = 'LineString(120 45, 120.1 45.1, 199.9 45.2, 120 46)'
 SELECT @g.Reduce(10000).ToString()  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Расширенные методы в экземплярах географических объектов](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
+## <a name="see-also"></a>См. также  
+ [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   
-

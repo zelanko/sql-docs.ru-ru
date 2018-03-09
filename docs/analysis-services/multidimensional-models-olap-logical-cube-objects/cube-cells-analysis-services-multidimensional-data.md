@@ -2,12 +2,13 @@
 title: "Куб ячейки (службы Analysis Services — многомерные данные) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to:
@@ -29,20 +30,20 @@ helpviewer_keywords:
 - leaf members
 - leaf cells
 ms.assetid: 9945773c-a43b-40d4-91cf-3d2ebc90bca5
-caps.latest.revision: 39
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6542727b42e98fa73f2e485f0bf88426c442df2d
+ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7da5c513675b85a209e76da5787828eb31be24f8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>Ячейки куба (службы Analysis Services — многомерные данные)
-  Куб состоит из ячеек, организованных по группам мер и по измерениям. Ячейка представляет собой уникальное логическое пересечение элементов — по одному из каждого измерения в кубе. Например, куб, описываемый следующей диаграммой, содержит одну группу мер с двумя мерами, организованными вдоль трех измерений, названных «Источник», «Маршрут» и «Время».  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+Куб состоит из ячеек, организованных по группам мер и по измерениям. Ячейка представляет собой уникальное логическое пересечение элементов — по одному из каждого измерения в кубе. Например, куб, описываемый следующей диаграммой, содержит одну группу мер с двумя мерами, организованными вдоль трех измерений, названных «Источник», «Маршрут» и «Время».  
   
  ![Диаграмма куба, определяющая одну ячейку](../../analysis-services/multidimensional-models-olap-logical-cube-objects/media/as-cubeintro5.gif "Диаграмма куба, определяющая одну ячейку")  
   
@@ -89,9 +90,8 @@ ms.lasthandoff: 09/01/2017
 ## <a name="security"></a>безопасность  
  Доступ к данным ячеек в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] осуществляется на уровне ролей и может точно управляться с помощью многомерных выражений. Дополнительные сведения см. в разделе [предоставление настраиваемого доступа к измерению данных &#40; Службы Analysis Services &#41; ](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md), и [предоставление настраиваемого доступа к ячейке данных &#40; Службы Analysis Services &#41; ](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранилище куба &#40; Analysis Services — многомерные данные &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)   
  [Агрегаты и статистические схемы](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   
-

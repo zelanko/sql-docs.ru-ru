@@ -1,31 +1,33 @@
 ---
-title: "Компоненты потока ODBC | Документы Microsoft"
+title: "Компоненты потока ODBC | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
-caps.latest.revision: 10
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bb47de9a618b4d83e961ff2e032861375b0d6c22
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1d2f92077fd1424827866820a0627ac62447e3f2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-flow-components"></a>Компоненты потока ODBC
   Этот раздел содержит описание основных понятий, необходимых для создания потока данных ODBC с использованием [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
- Соединитель для ODBC компании Attunity для [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] позволяет разработчикам служб SSIS легко создавать пакеты, которые загружают и выгружают данные из баз данных с поддержкой ODBC.  
+ Соединитель для ODBC для [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] помогает разработчикам служб SSIS легко создавать пакеты, которые загружают и выгружают данные из поддерживающих ODBC баз данных.  
   
  Соединитель ODBC предназначен для достижения оптимальной производительности при загрузке или выгрузке данных из базы данных с поддержкой ODBC в контексте [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
@@ -39,7 +41,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [ODBC-источник](../../integration-services/data-flow/odbc-source.md)  
   
--   [Назначение ODBC](../../integration-services/data-flow/odbc-destination.md)  
+-   [Назначение «ODBC»](../../integration-services/data-flow/odbc-destination.md)  
   
  Источник и назначение ODBC предоставляют простой способ выгрузки и загрузки данных, а также передачи данных из базы данных-источника с поддержкой ODBC в целевую базу данных с поддержкой ODBC.  
   
@@ -134,11 +136,10 @@ ms.lasthandoff: 08/03/2017
 |SQL_INTERVAL_YEAR<br /><br />SQL_INTERVAL_MONTH<br /><br />SQL_INTERVAL_DAY<br /><br />SQL_INTERVAL_HOUR<br /><br />SQL_INTERVAL_MINUTE<br /><br />SQL_INTERVAL_SECOND<br /><br />SQL_INTERVAL_YEAR_TO_MONTH<br /><br />SQL_INTERVAL_DAY_TO_HOUR<br /><br />SQL_INTERVAL_DAY_TO_MINUTE<br /><br />SQL_INTERVAL_DAY_TO_SECOND<br /><br />SQL_INTERVAL_HOUR_TO_MINUTE<br /><br />SQL_INTERVAL_HOUR_TO_SECOND<br /><br />SQL_INTERVAL_MINUTE_TO_SECOND|DT_WSTR|  
 |Типы данных для конкретных поставщиков|DT_BYTES<br /><br />DT_IMAGE|Тип DT_BYTES используется, если длина столбца меньше или равна 8000.<br /><br />Тип DT_IMAGE используется, если длина столбца равна нулю или больше 8000.|  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
--   [ODBC-источник](../../integration-services/data-flow/odbc-source.md)  
+-   [Источник «ODBC»](../../integration-services/data-flow/odbc-source.md)  
   
 -   [Назначение ODBC](../../integration-services/data-flow/odbc-destination.md)  
   
  
-

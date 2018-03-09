@@ -3,7 +3,7 @@ title: "Поиск метода и пример свойства индекса 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Seek method [ADO], Visual Basic example
 - index property [ADO]
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
-caps.latest.revision: 10
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: cc9b364d38cfa14ba69598c8c8f4cc09811a0395
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 683a74aa2fadb070309a40f86a448128df56906e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Поиск метода и пример свойства индекса (Visual Basic)
 В этом примере используется [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта [Seek](../../../ado/reference/ado-api/seek-method.md) метод и [индекс](../../../ado/reference/ado-api/index-property.md) свойства в сочетании с заданной ***идентификатор сотрудника***, чтобы найти Имя сотрудника в ***сотрудников*** Nwind.mdb базы данных.  
@@ -123,8 +122,7 @@ End Sub
 'EndSeekVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойство Index](../../../ado/reference/ado-api/index-property.md)   
  [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Метод поиска](../../../ado/reference/ado-api/seek-method.md)
-
+ [Метод Seek](../../../ado/reference/ado-api/seek-method.md)

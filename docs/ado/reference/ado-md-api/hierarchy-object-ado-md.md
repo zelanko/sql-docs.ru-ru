@@ -3,7 +3,7 @@ title: "Объект иерархии (ADO MD) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -18,22 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - Hierarchy object [ADO MD]
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
-caps.latest.revision: 11
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 355560aecba3e18317aa91ed1a09dcc9ed344f5f
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 46bb03c91b2305f0453676891d87676e784b03fa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hierarchy-object-ado-md"></a>Объект иерархии (ADO MD)
 Представляет один способ, которым элементы [измерения](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) статистическую обработку или «накоплены.» Измерение может быть статистически вычислена вдоль одной или нескольких иерархий.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  С коллекциями и свойствами **иерархии** объекта, можно сделать следующее:  
   
 -   Определить **иерархии** с [имя](../../../ado/reference/ado-md-api/name-property-ado-md.md) и [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) свойства.  
@@ -46,13 +45,13 @@ ms.lasthandoff: 09/09/2017
   
  **Свойства** коллекция содержит указанный поставщик свойства. В следующей таблице перечислены свойства, которые могут быть доступны. Фактическое свойство списка могут различаться в зависимости от реализации поставщика. См. в документации для поставщика более полный список доступных свойств.  
   
-|Имя|Description|  
+|Название|Описание|  
 |----------|-----------------|  
 |AllMember|Элемент, на самом высоком уровне свертки в иерархии.|  
 |CatalogName|Имя каталога, к которому принадлежит этот куб.|  
-|Имя куба|Имя куба.|  
+|CubeName|Имя куба.|  
 |DefaultMember|Уникальное имя элемента по умолчанию для данной иерархии.|  
-|Description|Понятное описание иерархии.|  
+|Описание|Понятное описание иерархии.|  
 |DimensionType|Тип измерения, к которому принадлежит эта иерархия.|  
 |DimensionUniqueName|Однозначная имя измерения.|  
 |HierarchyCaption|Метка или заголовок, связанный с иерархией.|  
@@ -66,10 +65,9 @@ ms.lasthandoff: 09/09/2017
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/hierarchy-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример CubeDef (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [Объект измерения (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
  [Коллекция hierarchies (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
  [Коллекция уровней (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
- [Коллекция свойств (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

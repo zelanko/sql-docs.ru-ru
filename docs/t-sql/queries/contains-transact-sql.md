@@ -3,8 +3,11 @@ title: "СОДЕРЖИТ (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,20 +37,19 @@ helpviewer_keywords:
 - inflectional forms [full-text search]
 - prefix searches [full-text search]
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
-caps.latest.revision: 117
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 67d85ab09ac28beca984372e3df2bd6a1ca0bfa3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 81b231ce95ae1b87bbda2f2fd786d12cb709e9fe
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Производит поиск точных или нечетких (менее точных) совпадений с отдельными словами и фразами, слов на определенном расстоянии друг от друга или взвешенных совпадений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS — предикат, используемый в [предложение WHERE](../../t-sql/queries/where-transact-sql.md) из [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции SELECT для выполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] полнотекстового поиска в полнотекстовых индексированных столбцах, содержащим типы символьных данных.  
   
@@ -162,7 +164,7 @@ CONTAINS (
 > [!IMPORTANT]  
 >  Запрос может вернуть все строки *property_name* должен быть указан в свойстве поиска список полнотекстового индекса и полнотекстовый индекс должен содержать связанные со свойствами записи для *property_name*. Дополнительные сведения см. в статье [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
- Язык *language_term*  
+ LANGUAGE *language_term*  
  Язык для разбиение по словам, морфологического поиска, расширения тезауруса и замены и пропускаемых слов (или [стоп-слово](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) удаление, так как часть запроса. Этот параметр является необязательным.  
   
  Если в одном столбце хранятся документы на различных языках в виде больших двоичных объектов, то код локали (LCID) заданного документа определяет, какой язык должен использоваться для индексирования его содержимого. При запросе такой столбец, указав язык *language_term* может повысить вероятность хорошего соответствия.  
@@ -178,7 +180,7 @@ CONTAINS (
  \<*contains_search_condition*>  
  Задает текст для поиска в *column_name* и условия соответствия.  
   
-*\<contains_search_condition >* — **nvarchar**. Если в качестве входных данных используется другой тип символьных данных, производится неявное преобразование. В следующем примере переменная `@SearchWord`, тип которой определен как `varchar(30)`, вызывает неявное преобразование в предикате `CONTAINS`.
+*\<contains_search_condition >* — **nvarchar**. Если в качестве входных данных используется другой тип символьных данных, производится неявное преобразование. Большой строки данных типа nvarchar(max) и varchar(max) не может использоваться. В следующем примере переменная `@SearchWord`, тип которой определен как `varchar(30)`, вызывает неявное преобразование в предикате `CONTAINS`.
   
 ```sql  
 USE AdventureWorks2012;  
@@ -204,7 +206,7 @@ WHERE CONTAINS(Description, @SearchWord);
   
  Можно также воспользоваться указанием запроса OPTIMIZE FOR в случаях, когда формируется неоптимальный план.  
   
- *Word*  
+ *word*  
  Строка символов без пробелов и знаков препинания.  
   
  *фразы*  
@@ -213,17 +215,17 @@ WHERE CONTAINS(Description, @SearchWord);
 > [!NOTE]  
 >  Некоторые языки, например в ряде азиатских стран, которые могут содержать фразы, состоящие из одного или нескольких слов без пробелов между ними.  
   
-\<simple_term >  
+\<simple_term>  
 Указывает соответствие для точного слова или фразы. Примерами допустимых простых выражений являются "база данных", данные и "Microsoft SQL Server". Фразы должны заключаться в двойные кавычки (""). Слова во фразе должны отображаться в том же порядке, как указано в  *\<contains_search_condition >* как они отображаются в столбце базы данных. Поиск символов в слове или фразе проводится без учета регистра. Пропускаемые слова (или [стоп-слов](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) (например и, или) в полнотекстовых индексированных столбцов не хранятся в полнотекстовый индекс. Если при поиске по одному слову используется слово из числа пропускаемых, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сообщение об ошибке, в котором говорится, что запрос содержит только пропускаемые слова. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранит стандартный список пропускаемых слов в каталоге \Mssql\Binn\FTERef каждого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Знаки препинания пропускаются. Поэтому предикат `CONTAINS(testing, "computer failure")` соответствует строке «Where is my computer? Failure to find it would be expensive». Дополнительные сведения о работе средства разбиения по словам см. в разделе [Настройка и управление средством разбиения по словам и парадигматические модули для поиска](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
- \<prefix_term >  
+ \<prefix_term>  
  Указывает совпадение слов или фраз, начинающихся с указанного текста. Префиксные в двойные кавычки ("») и добавьте символ звездочки (\*) перед закрывающей кавычкой, чтобы весь текст, начинающийся с простого выражения, указаны до сопоставляется звездочка. Предложение должно быть задано таким образом: `CONTAINS (column, '"text*"')`. Звездочка заменяет ноль, один или более символов (корневого слова или слов в слове или фразе). Если текст и звездочка не заключены в двойные кавычки и предикат выглядит как `CONTAINS (column, 'text*')`, то полнотекстовый поиск считает звездочку символом и ищет точное совпадение с `text*`. Средство полнотекстового поиска не найдет слов со звездочкой (\*) символов, так как средства разбиения по словам обычно пропускают такие символы.  
   
  Когда  *\<prefix_term >* является фразой, каждое содержащееся во фразе слово считается отдельным префиксом. Этому запросу, задающему префиксное выражение «local wine*», отвечают все строки с текстом «local winery», «locally wined and dined» и т. д.  
   
- \<generation_term >  
+ \<generation_term>  
  Задает совпадение слов, если включенные простые выражения содержат варианты начального искомого слова.  
   
  INFLECTIONAL  
@@ -234,7 +236,7 @@ WHERE CONTAINS(Description, @SearchWord);
  THESAURUS  
  Указывает, что используется тезаурус, соответствующий языку полнотекстового поиска столбца или языку, заданному в запросе. Самый длинный шаблон или шаблоны из  *\<simple_term >* сравниваются с тезаурусом, и создаются дополнительные условия, для расширения или замены начального шаблона. Если соответствие не найдено для всей или части  *\<simple_term >*, Несовпадающая часть обрабатывается как *simple_term*. Дополнительные сведения о тезаурусе полнотекстового поиска см. в разделе [Настройка и управление файлами тезауруса для полнотекстового поиска](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
- \<generic_proximity_term >  
+ \<generic_proximity_term>  
  Указывает совпадение слов или фраз, которые должны находиться в документе, где выполняется поиск.  
   
 > [!IMPORTANT]  
@@ -249,7 +251,7 @@ WHERE CONTAINS(Description, @SearchWord);
   
  Дополнительные сведения об универсальных выражений с учетом расположения см. в разделе [поиск слов близких к другим с использованием оператора NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
   
- \<custom_proximity_term >  
+ \<custom_proximity_term>  
 **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
  Указывает совпадение слов или фраз и (необязательно) максимально допустимое расстояние между поисковыми выражениями. Можно также указать, что слова поиска должны находиться в определенном порядке, в котором они указаны (\<match_order >).  
@@ -291,7 +293,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  **MAX**  
  Возвращает строки, содержащие указанные поисковые выражения, вне зависимости от расстояния между ними. Это значение по умолчанию.  
   
- \<match_order >  
+ \<match_order>  
  Определяет, должны ли поисковые выражения располагаться в указанном порядке для возврата в поисковом запросе. Чтобы указать \<match_order >, необходимо также указать \<maximum_distance >.  
   
  \<match_order > принимает одно из следующих значений:  
@@ -312,13 +314,13 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
   
  Дополнительные сведения об использовании выражений с учетом расположения см. в разделе [поиск слов близких к другим с использованием оператора NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
   
- \<weighted_term >  
+ \<weighted_term>  
  Указывает на то, что совпадающие строки (возвращенные запросом) соответствуют списку слов и фраз, каждому из которых при необходимости дано взвешенное значение.  
   
  ISABOUT  
  Указывает  *\<weighted_term >* ключевое слово.  
   
- ВЕС (*weight_value*)  
+ WEIGHT(*weight_value*)  
  Указывает взвешенное значение, которое может принимать значение от 0,0 до 1,0. Каждый компонент в  *\<weighted_term >* может включать *weight_value*. *weight_value* является способом изменения того, как различные части запроса влияют на значение ранга, назначенное каждой строке, удовлетворяющей условию запроса. ВЕС не влияет на результаты запросов CONTAINS, но ВЕС влияет на ранг в [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) запросов.  
   
 > [!NOTE]  
@@ -539,7 +541,7 @@ WHERE CONTAINS(PROPERTY(Document,'Title'), 'Maintenance OR Repair');
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Приступая к работе с компонентом Full-Text Search](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Создание и управление ими полнотекстовых каталогов](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
  [CREATE FULLTEXT CATALOG #40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
@@ -550,10 +552,9 @@ GO
  [FREETEXT (Transact-SQL)](../../t-sql/queries/freetext-transact-sql.md)   
  [FREETEXTTABLE (Transact-SQL)](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [Запрос с Full-Text Search](../../relational-databases/search/query-with-full-text-search.md)   
- [Компонент Full-text Search](../../relational-databases/search/full-text-search.md)   
+ [Компонент Full-Text Search](../../relational-databases/search/full-text-search.md)   
  [Создание запросов полнотекстового поиска (визуальные инструменты для баз данных)](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
  [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)   
  [Поиск свойств документа с помощью списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   
-

@@ -1,31 +1,32 @@
 ---
-title: "Создание управляемой данными подписки (учебник по службам SSRS) | Документы Microsoft"
+title: "Создание управляемой данными подписки (учебник по службам SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-caps.latest.revision: 50
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+caps.latest.revision: "50"
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.workload: On Demand
+ms.openlocfilehash: 731e14ba0da7b3d9b54b1ba24aa2fda41adda49b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7ca542c75d289b79284c5affeea5095ac032e1e0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Создание управляемой данными подписки (учебник по службам SSRS)
 В этом учебнике по [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] рассматриваются концепции управляемых данными подписок на основе простого примера, в котором создается управляемая данными подписка для создания и сохранения отфильтрованных выходных данных отчета в общую папку. 
@@ -84,5 +85,4 @@ ms.lasthandoff: 08/09/2017
 [Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [Создание простого табличного отчета (учебник по службам SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  
-
 

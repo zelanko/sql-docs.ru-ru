@@ -3,22 +3,26 @@ title: "Настройка отказоустойчивого кластера �
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: 
+ms.suite: sql
+ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: 19a7f03471af7aaf9e55fe371e02f9201cf1464f
+ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 18a73a25e8817577930ad058dbad56d56586d417
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Настройка экземпляра отказоустойчивого кластера — iSCSI - SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 В этой статье описывается настройка хранения iSCSI для экземпляра отказоустойчивого кластера (FCI) в Linux. 
 
@@ -206,7 +210,7 @@ ms.lasthandoff: 10/02/2017
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName > — имя группы томов и \<LogicalVolumeName > — имя логического тома, который был создан. Приведенного ниже примера синтаксиса соответствующие группы томов и логический том создан выше.
+    \<VolumeGroupName > — имя группы томов и \<LogicalVolumeName > — имя логического тома, который был создан. Следующий пример синтаксиса соответствующие группы томов и логического тома из предыдущей команды.
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
@@ -354,7 +358,7 @@ ms.lasthandoff: 10/02/2017
 
     \<ListOfVGsNotUsedByPacemaker > — список групп томов из выходных данных шага 20, не будет использоваться FCI. Поместите каждый из них в кавычки и отдельные с помощью символа запятой. Пример показан ниже.
 
-    ![55 ListOfVGs][11]
+    ![55-ListOfVGs][11]
  
  
 17. При запуске Linux, он будет подключения файловой системы. Чтобы убедиться, что только Pacemaker можно подключить диск iSCSI, перестройте изображение корневой файловой системы. 
@@ -412,4 +416,3 @@ ms.lasthandoff: 10/02/2017
 [9]: ./media/sql-server-linux-shared-disk-cluster-configure-iscsi/50-ExampleCreateSSMS.png
 [10]: ./media/sql-server-linux-shared-disk-cluster-configure-iscsi/40-Create25GBVol.png
 [11]: ./media/sql-server-linux-shared-disk-cluster-configure-iscsi/55-ListOfVGs.png
-

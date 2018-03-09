@@ -2,11 +2,13 @@
 title: "Переход на вторичный сервер доставки журналов (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: log-shipping
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +17,19 @@ helpviewer_keywords:
 - log shipping [SQL Server], failover
 - failover [SQL Server], log shipping
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 6358e0fe4be60bcb57441a864b30e036147e5eed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 93360a54442a6a959b7044288bd74d16f13fa559
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Переход на вторичный сервер доставки журналов (SQL Server)
-  Переход на вторичный сервер доставки журналов может быть полезен в случаях, когда происходит сбой экземпляра сервера-источника или требуется его обслуживание.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Переход на вторичный сервер доставки журналов может быть полезен в случаях, когда происходит сбой экземпляра сервера-источника или требуется его обслуживание.  
   
 ## <a name="preparing-for-a-controlled-failover"></a>Подготовка к управляемой отработке отказа  
  Обычно базы данных-источник и получатель не синхронизированы, так как обновление первой продолжается и после завершения последнего задания резервного копирования. Также в некоторых случаях последние резервные копии журнала транзакций не скопированы на экземпляры сервера-получателя или же некоторые из этих копий еще не применены к базе данных-получателю. Рекомендуется начать с синхронизации всех баз данных-получателей с базой данных-источником, если это возможно.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 08/02/2017
 4.  После синхронизации серверов-получателей можно выполнить переход на любой из них путем восстановления его базы данных-получателя и перенаправления клиентов на этот экземпляр сервера. При восстановлении база данных помещается в согласованное состояние и переводится в режим в сети.  
   
     > [!NOTE]  
-    >  При переводе базы данных-получателя в доступный режим следует убедиться, что ее метаданные согласованы с метаданными исходной базы данных-источника. Дополнительные сведения см. в разделе [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+    >  При переводе базы данных-получателя в доступный режим следует убедиться, что ее метаданные согласованы с метаданными исходной базы данных-источника. Дополнительные сведения см. в статье [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 5.  После восстановления базы данных-получателя можно перенастроить ее для работы в качестве базы данных-источника для других баз данных-получателей.  
   
@@ -69,4 +70,3 @@ ms.lasthandoff: 08/02/2017
  [Резервные копии заключительного фрагмента журнала (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)  
   
   
-

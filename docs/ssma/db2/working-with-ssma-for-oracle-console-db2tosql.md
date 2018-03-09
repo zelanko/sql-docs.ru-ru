@@ -1,29 +1,30 @@
 ---
 title: "Работа с SSMA для консоли Oracle (DB2ToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- sql-ssma
+ms.suite: sql
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9beccd6e742a7081f9590717b7a0620c56ca5e39
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 31c069a602027d7d49d944b654653e2476c94e2b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-ssma-for-oracle-console-db2tosql"></a>Работа с SSMA для консоли Oracle (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Выпуск миграции Assistant (SSMA) для DB2 теперь доступен с помощью консольного приложения командной строки. Файлы скриптов образуют входных данных для приложения, для выполнения команд. В консольном приложении SSMA включает взаимодействия на уровне сценария, уменьшает цикл миграции и масштабирует усилий миграции.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 08/02/2017
   
 |||  
 |-|-|  
-|**Разделы**|**Description**|  
+|**Разделы**|**Описание**|  
 |[Начало работы с SSMA для DB2 консоли &#40; DB2ToSQL &#41;](../../ssma/db2/getting-started-with-ssma-for-db2-console-db2tosql.md)|Описание процедуры для выполнения консольного приложения.|  
 |[Параметры командной строки в консоли SSMA &#40; DB2ToSQL &#41;](../../ssma/db2/command-line-options-in-ssma-console-db2tosql.md)|Описывает параметры командной строки и параметры для работы приложения консоли SSMA.|  
 |[Создание файлов скриптов &#40; DB2ToSQL &#41;](../../ssma/db2/creating-script-files-db2tosql.md)|Объясняется, как создать файл скрипта.|  
@@ -49,4 +50,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>См. также:  
 [Начало работы с SSMA для DB2 консоли](http://msdn.microsoft.com/en-us/f245c017-023e-4880-8721-8908d339525e)  
   
-

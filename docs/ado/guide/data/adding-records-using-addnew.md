@@ -3,7 +3,7 @@ title: "Добавление записей с помощью AddNew | Доку�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - ADO, adding data
 - editing data [ADO], AddNew method
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: f68a67e0eafaf7bbb9d89ddd151b73dd5d0bbb75
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 92bbc404985ebbb49c4e654efd5a7f54198d35ab
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="adding-records-using-addnew-method"></a>Добавление записей с помощью AddNew-метод
 Это обычный синтаксис **AddNew** метод:
@@ -55,6 +54,5 @@ End If
 'EndAddNew1.1
 ```
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
  Так как этот код использует несвязанный **записей** с клиентский курсор в пакетном режиме, необходимо повторно подключить **записей** к источнику данных с новым **подключения** объект перед вызовом **UpdateBatch** метод, чтобы учесть изменения в базу данных. Это делается с помощью новой функции легко **GetNewConnection**.
-

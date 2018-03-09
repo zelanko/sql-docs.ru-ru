@@ -2,32 +2,29 @@
 title: "Создание таблицы, столбцы и секции в табличной модели | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: cf0e4791-ad3b-41a8-81ce-509d4cf223f8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2017fa20a68222bf577cc68284882ac15a22f95f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 42d7a07de0c82921f08fd091f72aef125ebe053e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-tables-partitions-and-columns-in-a-tabular-model"></a>Создание таблицы, столбцы и секции в табличной модели
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-В табличной модели таблицы состоит из строк и столбцов. Строки сортируются в секции для поддержки обновления добавочных данных. Табличное решение может поддерживать несколько типов таблиц, в зависимости от того, где данные поступают из:  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В табличной модели таблицы состоит из строк и столбцов. Строки сортируются в секции для поддержки обновления добавочных данных. Табличное решение может поддерживать несколько типов таблиц, в зависимости от того, где данные поступают из:  
 
 * Обычных таблиц источника данных из источника реляционных данных через поставщик данных. 
 
@@ -263,4 +260,3 @@ namespace TOMSamples
 
 Просмотрите классы, используемые для обработки исключений в TOM: [обработка ошибок в том](../../analysis-services/tabular-model-programming-compatibility-level-1200/handling-errors-in-the-tom-api-analysis-services-amo-tom.md)
   
-

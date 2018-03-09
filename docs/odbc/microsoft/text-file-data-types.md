@@ -3,10 +3,12 @@ title: "Типы данных текстового файла | Документ
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - text file data types [ODBC]
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: e113112e-ae42-469e-8e4b-a365a10d9071
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ad5f3d62138693caae19e51a80b1dd5a49d4072a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cd72cc24ff011559addeabd0bcc95b172db1a60f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="text-file-data-types"></a>Типы данных текстового файла
 Следующая таблица показывает, как текстовые типы данных сопоставляются с типами данных ODBC SQL. Обратите внимание, что не все типы данных ODBC SQL поддерживаются драйвером ODBC текста.  
@@ -53,4 +54,3 @@ ms.lasthandoff: 09/09/2017
 |LONGCHAR|Теоретически ограничение, накладываемое на ширину столбца LONGCHAR либо фиксированной длины или с разделителями таблица является 65500K. Text ISAM чаще для предоставления надежного поддерживают до около 32 КБ.|  
   
  Дополнительные ограничения на типы данных можно найти в [ограничения типа данных](../../odbc/microsoft/data-type-limitations.md).
-

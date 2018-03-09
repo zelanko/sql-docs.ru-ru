@@ -2,9 +2,12 @@
 title: "Пример. Настройка зеркального отображения базы данных с помощью сертификатов (язык Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-high-availability
 ms.tgt_pltfrm: 
@@ -15,20 +18,20 @@ helpviewer_keywords:
 - authentication [SQL Server], database mirroring
 - database mirroring [SQL Server], security
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
-caps.latest.revision: 50
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 361727b4d3a6e5373470c8f82319c6447438cf28
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d6e25ad5bb119adb048ee80f89b1ff76baefb7bf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Пример. Настройка зеркального отображения базы данных с помощью сертификатов (язык Transact-SQL)
-  В этом примере описаны все действия, выполняемые при создании сеанса зеркального отображения базы данных с использованием проверки подлинности на основе сертификатов. Примеры в этом подразделе используют язык [!INCLUDE[tsql](../../includes/tsql-md.md)]. За исключением случаев, когда сеть гарантированно защищена, рекомендуется для соединений зеркального отображения базы данных применять шифрование.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+В этом примере описаны все действия, выполняемые при создании сеанса зеркального отображения базы данных с использованием проверки подлинности на основе сертификатов. Примеры в этом подразделе используют язык [!INCLUDE[tsql](../../includes/tsql-md.md)]. За исключением случаев, когда сеть гарантированно защищена, рекомендуется для соединений зеркального отображения базы данных применять шифрование.  
   
  При копировании сертификата на другую систему используйте безопасный метод копирования. Отнеситесь с особым вниманием к хранению сертификатов в безопасном месте.  
   
@@ -266,7 +269,7 @@ ms.lasthandoff: 08/02/2017
     ```  
   
     > [!NOTE]  
-    >  При необходимости запуска в режиме высокого уровня защиты с автоматической отработкой отказа оставьте безопасность транзакций в положении FULL (установка по умолчанию) и добавьте следящий сервер как можно быстрее после выполнения второй инструкции SET PARTNER **'***сервер_партнер***'** . Обратите внимание, что следящий сервер вначале нужно настроить для исходящих и входящих соединений.  
+    >  При необходимости запуска в режиме высокого уровня защиты с автоматической отработкой отказа оставьте безопасность транзакций в положении FULL (значение по умолчанию) и добавьте следящий сервер как можно быстрее после выполнения второй инструкции SET PARTNER **'***сервер_партнер***'**. Обратите внимание, что следящий сервер вначале нужно настроить для исходящих и входящих соединений.  
   
  [&#91;В начало примера&#93;](#ExampleH2)  
   
@@ -293,4 +296,3 @@ ms.lasthandoff: 08/02/2017
  [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
-

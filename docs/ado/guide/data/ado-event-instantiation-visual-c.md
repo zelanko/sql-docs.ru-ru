@@ -3,7 +3,7 @@ title: "При создании экземпляра события ADO: Visual 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -15,17 +15,16 @@ ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
-caps.latest.revision: 12
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 4be073e1c216b82c8cedc50d3cde83668df04ad4
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7b72af426b28b0c9c7a1581df303589b2b2831d0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ado-event-instantiation-visual-c"></a>При создании экземпляра ADO событий: Visual C++
 Это Схематическое Описание способов создания экземпляра ADO событий в Microsoft® Visual C++. В разделе [пример модели событий ADO (VC ++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) полное описание.  
@@ -75,7 +74,7 @@ STDMETHODIMP CConnEvent::ConnectComplete(
   
  Классы событий, наследуются **IUnknown**, поэтому также необходимо реализовать **QueryInterface**, **AddRef**, и **выпуска** методы. Также можно реализуйте конструкторы и деструкторы классов. Выбор инструментов Visual C++, с которыми наиболее удобен для упрощения этой части задачи.  
   
- Создание его известных, обработчиками событий доступны, выполнив **QueryInterface** на [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объектов для  **IConnectionPointContainer** и **IConnectionPoint** интерфейсов. Затем выдать **IConnectionPoint::Advise** для каждого класса.  
+ Создание его известных, обработчиками событий доступны, выполнив **QueryInterface** на [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объектов для ** IConnectionPointContainer** и **IConnectionPoint** интерфейсов. Затем выдать **IConnectionPoint::Advise** для каждого класса.  
   
  Предположим, вы используете логической функцией, которая возвращает **True** Если успешно сообщает **записей** объекта наличие доступных обработчиков событий.  
   
@@ -244,4 +243,3 @@ public:
    }  
 };  
 ```
-

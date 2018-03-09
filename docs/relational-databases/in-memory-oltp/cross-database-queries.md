@@ -2,28 +2,30 @@
 title: "Межбазовые запросы | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/04/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
-caps.latest.revision: 8
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 41b00b196f6cfad66ae0e26bbb1516da2641d9b7
-ms.openlocfilehash: 8289b02c3e15f1b299196c343503c9cb87387c6c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ea0f897f2445ba48649dd74d01b4fc67a1527280
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="cross-database-queries"></a>Межбазовые запросы
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], оптимизированные для памяти таблицы не поддерживают межбазовые транзакции. Нельзя получить доступ к другой базе данных из той же транзакции или того же запроса, которые также получают доступ к оптимизированной для памяти таблицы. Нельзя скопировать данные из одной таблицы в базе данных в оптимизированную для памяти таблицу в другой базе данных.  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 06/22/2017
 
 1. Создайте тестовые объекты.  Выполните приведенный ниже код [!INCLUDE[tsql](../../includes/tsql-md.md)] в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 
-    ```tsql
+    ```sql
 
     USE master;
     GO
@@ -86,7 +88,7 @@ ms.lasthandoff: 06/22/2017
 
 2.  Попытайтесь выполнить межбазовый запрос. Выполните приведенный ниже код [!INCLUDE[tsql](../../includes/tsql-md.md)] в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
   
-    ```tsql  
+    ```sql  
     INSERT [DestinationDatabase].[dbo].[DestTable_InMem]
     SELECT * FROM [SourceDatabase].[dbo].[SourceTable]
     ```  
@@ -97,7 +99,7 @@ ms.lasthandoff: 06/22/2017
 
 3.  Создание типа оптимизированной для памяти таблицы.  Выполните приведенный ниже код [!INCLUDE[tsql](../../includes/tsql-md.md)] в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
-    ```tsql
+    ```sql
     USE DestinationDatabase;
     GO
     
@@ -113,7 +115,7 @@ ms.lasthandoff: 06/22/2017
     ```
 
 4.  Еще раз попытайтесь выполнить межбазовый запрос.  На этот раз исходные данные сначала будут переданы в табличную переменную, оптимизированную для памяти.  Затем данные из табличной переменной будут переданы в таблицу, оптимизированную для памяти.
-    ```tsql
+    ```sql
     -- Declare table variable utilizing the newly created type - MemoryType
     DECLARE @InMem dbo.MemoryType;
     
@@ -129,4 +131,3 @@ ms.lasthandoff: 06/22/2017
  [Миграция в In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
-

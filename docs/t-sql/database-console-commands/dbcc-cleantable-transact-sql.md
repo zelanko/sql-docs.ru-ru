@@ -1,10 +1,13 @@
 ---
 title: "Инструкция DBCC CLEANTABLE (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,20 +29,19 @@ helpviewer_keywords:
 - deleting columns
 - dropping columns
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
-caps.latest.revision: 53
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7152b7241d97953fdeddf343dbeea60ed8d7ff5f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: dbc034e7ed5dd1d6f4704376adf73d517d3b5c47
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Освобождает место на диске из удаленных столбцов переменной длины в таблицы или индексированного представления.
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]Освобождает место на диске из удаленных столбцов переменной длины в таблицы или индексированного представления.
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Синтаксис  
@@ -59,7 +61,7 @@ DBCC CLEANTABLE
  *database_name* | *database_id* | 0  
  База данных, которой принадлежит очищаемая таблица. Если указано значение 0, используется текущая база данных. Имена баз данных должны соответствовать правилам для [идентификаторы](../../relational-databases/databases/database-identifiers.md).  
   
- *имя_таблицы* | *table_id* | *view_name*| *view_id*  
+ *table_name* | *table_id* | *view_name*| *view_id*  
  Очищаемая таблица или индексированное представление.  
   
  *batch_size*  
@@ -68,7 +70,7 @@ DBCC CLEANTABLE
  WITH NO_INFOMSGS  
  Подавляет вывод всех информационных сообщений.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Инструкция DBCC CLEANTABLE освобождает место на диске после удаления столбца переменной длины. Столбец переменной длины может принимать одно из следующих типов данных: **varchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **varbinary**, **varbinary(max)**, **текст**, **ntext**, **изображения**,  **sql_variant**, и **xml**. Дисковое пространство после удаления столбца фиксированной длины не освобождается.
 Если удаленные столбцы были сохранены в строке, инструкция DBCC CLEANTABLE освободит пространство из единицы распределения IN_ROW_DATA таблицы. Если столбцы были сохранены вне строк, пространство будет освобождено либо из единицы распределения ROW_OVERFLOW_DATA, либо из единицы распределения LOB_DATA, в зависимости от типа данных удаленного столбца. Если в результате освобождения пространства из страниц ROW_OVERFLOW_DATA или LOB_DATA была образована пустая страница, инструкция DBCC CLEANTABLE удалит эту страницу.
 Инструкция DBCC CLEANTABLE выполняется за одну или несколько транзакций. Если не указан размер пакета, команда обрабатывает всю таблицу за одну транзакцию, при этом на время обработки производится ее монопольная блокировка. Для некоторых больших таблиц длительности транзакции и необходимого размера журнала может оказаться недостаточно. Если указан размер пакета, команда выполняет серию транзакций, в каждой из которых обрабатывается указанное число строк. Инструкция DBCC CLEANTABLE не может выполняться в транзакции, вложенной в другую транзакцию.
@@ -85,7 +87,7 @@ DBCC CLEANTABLE
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Вызывающий объект должен быть владельцем таблицы или индексированного представления или быть членом **sysadmin** предопределенной роли сервера **db_owner** предопределенной роли базы данных или **db_ddladmin** предопределенной роли базы данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -163,9 +165,8 @@ FROM sys.dm_db_index_physical_stats(@db_id, @object_id, NULL, NULL , 'Detailed')
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
  [sys.allocation_units &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)  
   
   
-

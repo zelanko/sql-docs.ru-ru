@@ -3,7 +3,7 @@ title: "BOF, свойства EOF (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology:
 - drivers
 ms.custom: 
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - EOF property [ADO]
 - BOF property [ADO]
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
-caps.latest.revision: 13
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 9eb298b7bc18a959a6cd7d044a4c166ee77065eb
+ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 93689aa347014fd3976645682a396230a38476e6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, свойства EOF (ADO)
 -   **BOF** указывает, что положение текущей записи находится перед первой записью в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -40,7 +39,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="return-value"></a>Возвращаемое значение  
  **BOF** и **EOF** возвращаемого свойства **логическое** значения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **BOF** и **EOF** свойства, чтобы определить ли **записей** объект содержит записи или вы вышли за пределы возможностей **набора записей**  объекта при переходе от записи к записи.  
   
  **BOF** возвращает **True** (-1), если перед первой записью положения текущей записи и **False** (0), если текущая позиция записи во время или после первого запись.  
@@ -69,14 +68,13 @@ ms.lasthandoff: 09/09/2017
 ||BOF|EOF|  
 |------|---------|---------|  
 |**MoveFirst**, **MoveLast**|Значение **True**|Значение **True**|  
-|**Переместить** 0|Изменений нет|Изменений нет|  
+|**Move** 0|Изменений нет|Изменений нет|  
 |**MovePrevious**, **переместить** < 0|Значение **True**|Изменений нет|  
 |**MoveNext**, **переместить** > 0|Изменений нет|Значение **True**|  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BOF EOF и пример свойства закладки (Visual Basic)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
  [BOF EOF и пример свойства закладки (VC ++)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
-

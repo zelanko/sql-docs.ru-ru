@@ -3,8 +3,11 @@ title: "Создание КОНТРАКТА (Transact-SQL) | Документы 
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -21,20 +24,19 @@ helpviewer_keywords:
 - contracts [Service Broker], creating
 - message types [Service Broker], contracts
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
-caps.latest.revision: 48
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 962ce2d6568a597bd580f7fc9bcd2e9243e44dc4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 26a8d2c2826e091322a1cec35d6ffe1d9ca379e0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-contract-transact-sql"></a>Инструкция CREATE CONTRACT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Создание нового контракта. Контракт определяет типы сообщений, используемые в диалогах компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)], а также определяет, какой из участников диалога может посылать сообщения этого типа. Каждый диалог соответствует контракту. Инициирующая служба определяет контракт для диалога перед его началом. Целевая служба определяет контракты, диалоги для которых она принимает.  
   
@@ -80,7 +82,7 @@ CREATE CONTRACT contract_name
  [ DEFAULT ]  
  Указывает на то, что данный контракт поддерживает сообщения с установленным по умолчанию типом сообщений. По умолчанию во всех базах данных содержится тип сообщений с названием DEFAULT. Этот тип данных использует проверку типа NONE.  В контексте данного предложения слово DEFAULT не является ключевым словом и должно быть отделено как идентификатор. Microsoft SQL Server также предоставляет контракт DEFAULT, указывающий тип сообщения DEFAULT.   
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Порядок типов сообщений в контракте не важен. После того, как цель получает первое сообщение, компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] позволяет каждому участнику диалога в любое время посылать любые сообщения, разрешенные для этого участника. Например, если инициатор диалога может посылать сообщения типа **//Adventure-Works.com/Expenses/SubmitExpense**, [!INCLUDE[ssSB](../../includes/sssb-md.md)] позволяет инициатору посылать произвольное количество **SubmitExpense**сообщения во время диалога.  
   
  Типы и направление сообщений в контракте не могут быть изменены. Чтобы изменить параметр AUTHORIZATION для контракта, следует воспользоваться инструкцией ALTER AUTHORIZATION.  
@@ -91,7 +93,7 @@ CREATE CONTRACT contract_name
   
  Контракт не может быть временным объектом. Контракты могут иметь имена, начинающиеся с символа #, но являются постоянными объектами.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  По умолчанию члены **db_ddladmin** или **db_owner** предопределенных ролей базы данных и **sysadmin** предопределенной роли сервера можно создавать контракты.  
   
  По умолчанию, владелец контракта, члены **db_ddladmin** или **db_owner** фиксированной роли базы данных и члены **sysadmin** предопределенной роли сервера имеют ссылки разрешения на контракт.  
@@ -127,9 +129,8 @@ CREATE CONTRACT
     ) ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [УДАЛИТЬ КОНТРАКТ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-contract-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-

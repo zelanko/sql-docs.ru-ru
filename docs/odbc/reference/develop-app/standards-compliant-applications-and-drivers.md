@@ -3,10 +3,12 @@ title: "Совместимый со стандартами приложения 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - ODBC drivers [ODBC], standards-compliant
 - application features are standards-compliant [ODBC]
 ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 14d3ca332605e2d40d967e0e8b27b54e82613f46
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1aba299d163aaf9ec14d86740e5d8aa91ddb7b3b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>Совместимый со стандартами приложений и драйверов
 Совместимый со стандартами приложения или драйвера является запрос, который соответствует спецификации Open CAE группы «данных управления: SQL уровня вызова интерфейса (CLI)» и ISO/IEC 9075-3: 1995 интерфейс уровня вызова (E) (SQL/CLI).  
@@ -46,4 +47,3 @@ ms.lasthandoff: 09/09/2017
 -   В соответствии с ISO (CLI), ODBC 3*.x* заголовочные файлы содержат псевдонимы для типы сведения, используемые в вызовах **SQLGetInfo**. Совместимый со стандартами приложения можно использовать эти псевдонимы вместо функции ODBC 3*.x* типы информации. Дополнительные сведения см. в разделе Далее [файлы заголовка](../../../odbc/reference/develop-app/header-files.md).  
   
 -   Совместимый со стандартами приложения необходимо убедиться, что он поддерживает все функции поддерживаются в программе, которая будет работать с. Присвоение атрибуту инструкции SQL_ATTR_CURSOR_SCROLLABLE SQL_SCROLLABLE и параметр атрибута инструкции SQL_ATTR_CURSOR_SENSITIVITY SQL_INSENSITIVE или SQL_SENSITIVE, возможности, которые могут использоваться в качестве дополнительных функций в стандарты но не включаются в ODBC 3*.x* Core уровень и, следовательно, может не поддерживаться все ODBC 3*.x* драйверы. Если совместимый со стандартами приложение использует эти возможности, его следует убедиться, что драйвер, который будет работать с поддерживает их.
-

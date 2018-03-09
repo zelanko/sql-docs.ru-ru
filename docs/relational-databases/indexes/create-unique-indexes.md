@@ -2,9 +2,12 @@
 title: "Создание уникальных индексов | Документация Майкрософт"
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-indexes
 ms.tgt_pltfrm: 
@@ -17,20 +20,19 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], unique
 - unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ad915ae7f113e7080f3fe5b7dbd9bb1c233f8bb4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d8ec65be74b3fefe8e3da66e1952012f8598b4b3
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="create-unique-indexes"></a>Создание уникальных индексов
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   В данном разделе описывается создание уникальных индексов в таблице в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Уникальный индекс гарантирует, что ключ индекса не будет содержать одинаковых значений, а значит, каждая строка в таблице будет уникальна. Нет существенных различий между созданием ограничения UNIQUE и созданием уникального индекса, не зависящего от ограничения. Проверка данных происходит подобным же образом, и оптимизатор запросов не делает различия между уникальным индексом, который создан ограничением, и индексом, созданным вручную. Однако при создании ограничения UNIQUE для столбца назначение индекса становится очевидным. Дополнительные сведения об ограничениях UNIQUE см. в разделе [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
@@ -41,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Преимущества уникального индекса](#Benefits)  
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 06/22/2017
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Создание уникального индекса для таблицы с помощью следующих средств:**  
   
@@ -96,10 +98,10 @@ ms.lasthandoff: 06/22/2017
   
 -   Уникальный некластеризованный индекс может содержать любые неключевые столбцы. Дополнительные сведения см. в статье [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
- Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner** .  
+####  <a name="Permissions"></a> Permissions  
+ Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner**.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
@@ -107,7 +109,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  В обозревателе объектов разверните базу данных, содержащую таблицу, в которой необходимо создать уникальный индекс.  
   
-2.  Разверните папку **Таблицы** .  
+2.  Разверните папку **Таблицы**.  
   
 3.  Щелкните правой кнопкой мыши таблицу, в которой нужно создать уникальный индекс, и выберите **Конструктор**.  
   
@@ -131,7 +133,7 @@ ms.lasthandoff: 06/22/2017
   
 13. Щелкните **Закрыть**.  
   
-14. В меню **Файл** выберите пункт **Сохранить***имя_таблицы*.  
+14. В меню **Файл** выберите команду **Сохранить***имя_таблицы*.  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>Создание уникального индекса в обозревателе объектов  
   
@@ -159,7 +161,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>Создание уникального индекса в таблице  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -183,4 +185,3 @@ ms.lasthandoff: 06/22/2017
  Дополнительные сведения см. в разделе [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md).  
   
   
-

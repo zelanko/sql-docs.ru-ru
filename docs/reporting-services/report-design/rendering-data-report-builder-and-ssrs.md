@@ -1,27 +1,27 @@
 ---
-title: "Подготовка к просмотру данных (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Отрисовка данных (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a458fdf9-fb2a-4fee-9fbd-b38f36e91753
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
-ms.openlocfilehash: f3f2e9c9028e434482e8eadeb8f8e06ccce82987
-ms.contentlocale: ru-ru
-ms.lasthandoff: 11/07/2017
-
+ms.openlocfilehash: 7632edddd8afce193ff4cf1dacad64c9094b7560
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>Подготовка данных к просмотру (построитель отчетов и службы SSRS)
   При использовании шаблонных модулей подготовки отчета, таких как HTML, MHTML, Word, Excel, PDF или изображения, данные и их организация не меняются. При экспорте в формате модуля подготовки отчетов, например в формате значений, разделенных запятыми (CSV) или в формате XML, визуальные элементы макета не отображаются. Модули подготовки в форматах CSV и XML при подготовке отчета обрабатывают его текст по определенным правилам. Правила определяют, как отображаются данные в этих форматах.  
@@ -47,17 +47,16 @@ ms.lasthandoff: 11/07/2017
   
 -   Свойство DataElementStyle в формате XML указывает, отображается ли данный элемент отчета как элемент или как атрибут XML.  
   
- Параметр экспорта CSV сохраняет данные отчета в простом текстовом файле без форматирования, с запятыми в качестве разделителей. По умолчанию в качестве разделителя для полей и строк используется запятая (,), но это свойство можно изменить с помощью изменения настройки сведений об устройстве. Полученный файл может быть открыт в электронных таблицах (например в Office SharePoint Server) или импортирован в другие программы. Файл с расширением CSV также можно открыть в текстовом редакторе, например в Блокноте. При обращении к CSV-файлу как к URL-адресу он возвращает тип MIME **text/csv**. Это файлы MIME версии 1.0. Дополнительные сведения о сохранении отчета в формате CSV см. в разделе [Экспорт в CSV-файл &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).  
+ Параметр экспорта CSV сохраняет данные отчета в простом текстовом файле без форматирования, с запятыми в качестве разделителей. По умолчанию в качестве разделителя для полей и строк используется запятая (,), но это свойство можно изменить с помощью изменения настройки сведений об устройстве. Полученный файл может быть открыт в электронных таблицах (например в Office SharePoint Server) или импортирован в другие программы. Файл с расширением CSV также можно открыть в текстовом редакторе, например в Блокноте. При обращении к CSV-файлу как к URL-адресу он возвращает тип MIME **text/csv**. Это файлы MIME версии 1.0. Дополнительные сведения о сохранении отчета в файлах формата CSV см. в разделе [Экспорт в CSV-файл (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).  
   
- При выборе экспорта данных отчета XML-файл сохраняет отчет как XML-файл. XML-схема уникальна для каждого отчета. Информация о макете отчета не сохраняется при экспорте в формат XML. XML-документ, созданный таким образом, можно импортировать в базу данных, использовать как сообщение XML-данных или отправить пользовательскому приложению. Дополнительные сведения о сохранении отчета в формате XML см. в разделе [Экспорт в XML &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
+ При выборе экспорта данных отчета XML-файл сохраняет отчет как XML-файл. XML-схема уникальна для каждого отчета. Информация о макете отчета не сохраняется при экспорте в формат XML. XML-документ, созданный таким образом, можно импортировать в базу данных, использовать как сообщение XML-данных или отправить пользовательскому приложению. Дополнительные сведения о сохранении отчета в файлах формата XML см. в разделе [Экспорт в XML (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Поведение отрисовки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Подготовка к просмотру элементов отчета &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Службы Reporting Services настройки сведений об устройстве](http://go.microsoft.com/fwlink/?LinkId=102515)  
+ [Настройки сведений об устройстве в службах Reporting Services](http://go.microsoft.com/fwlink/?LinkId=102515)  
   
   
-

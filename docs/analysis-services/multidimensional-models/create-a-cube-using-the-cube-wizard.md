@@ -2,32 +2,30 @@
 title: "Создать куб с помощью мастера кубов | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- cubes [Analysis Services], creating
+helpviewer_keywords: cubes [Analysis Services], creating
 ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: cc4f9a10dec881cca5a9f3834a626a4f2cf598c6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 66e614476f4a609017a023d39c5d58670ad2f5db
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-cube-using-the-cube-wizard"></a>Создание куба с помощью мастера кубов
-  Новый куб можно создать с помощью мастера кубов в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Новый куб можно создать с помощью мастера кубов в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-create-a-new-cube"></a>Создание нового куба  
   
@@ -71,4 +69,3 @@ ms.lasthandoff: 09/01/2017
     >  После завершения работы мастера кубов можно воспользоваться конструктором кубов, чтобы настроить куб. Кроме того, добавить, удалить и настроить атрибуты и иерархии в созданном измерении можно с помощью конструктора изменений.  
   
   
-

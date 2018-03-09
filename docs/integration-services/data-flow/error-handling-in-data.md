@@ -1,11 +1,13 @@
 ---
-title: "Обработка ошибок в данных | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Обработка ошибок в данных | Документы Майкрософт"
+ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -23,17 +25,16 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-caps.latest.revision: 63
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cb565db8a68cb12e8c8a0ab5976c37ea76e183ea
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 016befa8b9085029b5fdfe332fce0afa063b40bf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="error-handling-in-data"></a>Обработка ошибок в данных
   Если компонент потока данных применяет преобразование к данным столбца, выделяет данные из источников или загружает данные в назначения, то может возникнуть ошибка. Ошибки часто возникают из-за непредвиденных значений данных. Например, преобразование данных не выполняется, так как столбец вместо числа содержит строку; вставка в столбец базы данных не выполняется, потому что данные имеют тип даты, а столбец содержит числовые данные; наконец, результат выражения не может быть определен, так как значение столбца равно нулю, поэтому математическая операция недопустима.  
@@ -55,11 +56,11 @@ ms.lasthandoff: 09/26/2017
   
  На следующей диаграмме показан простой поток данных, содержащий выход ошибок.  
   
- ![Поток данных с выводом ошибок](../../integration-services/data-flow/media/mw-dts-11.gif "с выводом ошибок потока данных")  
+ ![Поток данных с выводом ошибок](../../integration-services/data-flow/media/mw-dts-11.gif "Поток данных с выводом ошибок")  
   
  Дополнительные сведения см. в статьях [Поток данных](../../integration-services/data-flow/data-flow.md) и [Пути служб Integration Services](../../integration-services/data-flow/integration-services-paths.md).  
 
-## <a name="configure-error-output-dialog-box"></a>Настройка вывода ошибок-диалоговое окно
+## <a name="configure-error-output-dialog-box"></a>Диалоговое окно "Настройка вывода ошибок"
 Используйте диалоговое окно **Настройка вывода ошибок** , чтобы настроить параметры обработки ошибок для преобразований потока данных, поддерживающих вывод ошибок.  
   
  Дополнительные сведения о работе с выводом ошибок на выходе см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).  
@@ -81,7 +82,7 @@ ms.lasthandoff: 09/26/2017
   
  **См. также:** [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md)  
   
- **Description**  
+ **Описание**  
  Просмотрите описание операции.  
   
  **Присвоить указанное значение выбранным ячейкам**  
@@ -150,7 +151,7 @@ ms.lasthandoff: 09/26/2017
   
      Компонент сценария можно добавить в сегмент ошибок потока данных после компонентов потока данных, чьи ошибки необходимо записать. Как правило, этот компонент помещается непосредственно перед записью строк с ошибками в целевой объект. В этом случае сценарий просматривает только описание записанных строк с ошибками. Сегмент ошибок потока данных может исправить некоторые ошибки и не писать эти строки в целевой объект ошибки.  
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поток данных](../../integration-services/data-flow/data-flow.md)   
  [Преобразование данных с помощью преобразований](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
  [Соединение компонентов с путями](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
@@ -158,4 +159,3 @@ ms.lasthandoff: 09/26/2017
  [Поток данных](../../integration-services/data-flow/data-flow.md)  
   
   
-

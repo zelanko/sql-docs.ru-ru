@@ -1,10 +1,13 @@
 ---
-title: "ASIN (Transact-SQL) | Документы Microsoft"
+title: "ASIN (Transact-SQL) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -19,22 +22,21 @@ helpviewer_keywords:
 - sine
 - arcsine
 ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
-caps.latest.revision: 35
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1ddfa04e926b4fd0e99455ea91774c31d34b0601
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 687c8bfde3b2f78d0136044ebe75c7206cb31d90
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="asin-transact-sql"></a>ASIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Возвращает угол в радианах, синус которого задан **float** выражение. Это так называемый арксинус.
+Возвращает угол в радианах, синус которого задан как выражение типа **float**. Это так называемый арксинус.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,13 +48,13 @@ ASIN ( float_expression )
   
 ## <a name="arguments"></a>Аргументы  
 *float_expression*  
-— [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа **float** или типа, который может быть неявно преобразован в тип float, со значением от -1 до 1. Значения вне этого диапазона возвращают NULL и сообщают об ошибке домена.
+Является [выражением](../../t-sql/language-elements/expressions-transact-sql.md) типа **float** или другого типа, который может быть неявно преобразован в тип float со значением от –1 до 1. Значения вне этого диапазона возвращают NULL и сообщают об ошибке домена.
   
-## <a name="return-types"></a>Возвращаемые типы
+## <a name="return-types"></a>Типы возвращаемых данных
 **float**
   
 ## <a name="examples"></a>Примеры  
-В следующем примере выполняются **float** выражения и возвращает ASIN указанного угла.
+В приведенном ниже примере принимается выражение **float** и возвращается ASIN указанного угла.
   
 ```sql
 /* The first value will be -1.01. This fails because the value is   
@@ -93,25 +95,24 @@ The ASIN of the angle is: 0.147811
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-В следующем примере возвращается арксинус 1,00.
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+В приведенном ниже примере возвращается арксинус 1,00.
   
 ```sql
 SELECT ASIN(1.00) AS asinCalc;  
 ```  
   
-В следующем примере возвращается ошибка, так как он запрашивает арксинус значение вне допустимого диапазона.
+В приведенном ниже примере возвращается ошибка, так как запрашивается арксинус значения вне допустимого диапазона.
   
 ```sql
 SELECT ASIN(1.1472738) AS asinCalc;  
 ```  
   
-## <a name="see-also"></a>См. также:
-[Функция CEILING &#40; Transact-SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)  
-[Математические функции &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
-[SET ARITHIGNORE &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithignore-transact-sql.md)  
-[SET ARITHABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)
+## <a name="see-also"></a>См. также раздел
+[CEILING (Transact-SQL)](../../t-sql/functions/ceiling-transact-sql.md)  
+[Математические функции (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[SET ARITHIGNORE (Transact-SQL)](../../t-sql/statements/set-arithignore-transact-sql.md)  
+[SET ARITHABORT (Transact-SQL)](../../t-sql/statements/set-arithabort-transact-sql.md)
   
   
-
 

@@ -2,40 +2,35 @@
 title: "Элемент annotation (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Annotation Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Annotation Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Annotation
-helpviewer_keywords:
-- Annotation element
+applies_to: SQL Server 2016 Preview
+f1_keywords: Annotation
+helpviewer_keywords: Annotation element
 ms.assetid: 7d75291a-47b4-498a-8ba4-3d093b8513b2
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 09cafc5c5dcbafd48047995b03082a4d15e84288
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 109386991ba5d632e6c40523241f6d64c4dba05d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="annotation-element-assl"></a>Элемент Annotation (ASSL)
-  Содержит элементы, используемые для расширения схемы языка ASSL.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит элементы, используемые для расширения схемы языка сценариев служб Analysis Services (ASSL).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,7 +47,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -65,7 +60,7 @@ ms.lasthandoff: 09/01/2017
 |Родительские элементы|[Заметки](../../../analysis-services/scripting/collections/annotations-element-assl.md)|  
 |Дочерние элементы|[Имя](../../../analysis-services/scripting/properties/name-element-assl.md), [значение](../../../analysis-services/scripting/properties/value-element-assl.md), [видимость](../../../analysis-services/scripting/properties/visibility-element-assl.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **Заметки** элемент предоставляет возможность расширения схемы ASSL для всех объектов, отличных от тех, которые используются исключительно для определения сложного типа данных. **Значение** элемент **заметки** элемент может содержать допустимый XML-код из любого пространства имен XML отличного от ASSL применяются следующие правила:  
   
 -   В XML-коде могут содержаться только элементы.  
@@ -82,4 +77,3 @@ ms.lasthandoff: 09/01/2017
  [Объекты &#40; ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   
-

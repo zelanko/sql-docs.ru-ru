@@ -2,11 +2,13 @@
 title: "Структуры планов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-plan-guides
+ms.suite: sql
+ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +22,19 @@ helpviewer_keywords:
 - plan guides [SQL Server]
 - USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
-caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "52"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: a0414a27a14e937e7c58ca6ba74de3b6bfd6a2b0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
-ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
-ms.openlocfilehash: 2e8ae8b72d588904cc7b3d4aaeaba1e783a21b48
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/22/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="plan-guides"></a>Руководства планов
-  Структуры планов позволяют оптимизировать производительность запросов, если невозможно или нежелательно непосредственно изменять текст фактически имеющегося запроса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Структуры планов влияют на оптимизацию запросов путем присоединения к ним указаний запроса или постоянного плана запроса. Структуры планов полезны, когда небольшое подмножество запросов в приложении базы данных стороннего разработчика выполняются не так, как ожидается. В структуре плана задается инструкция Transact-SQL, которую нужно оптимизировать, и либо предложение OPTION, содержащее указания запросов, либо конкретный план запроса, с помощью которого планируется оптимизировать запрос. При выполнении запроса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сопоставляет инструкцию Transact-SQL со структурой плана и присоединяет предложение OPTION к запросу во время выполнения или использует указанный план запроса.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Структуры планов позволяют оптимизировать производительность запросов, если невозможно или нежелательно непосредственно изменять текст фактически имеющегося запроса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Структуры планов влияют на оптимизацию запросов путем присоединения к ним указаний запроса или постоянного плана запроса. Структуры планов полезны, когда небольшое подмножество запросов в приложении базы данных стороннего разработчика выполняются не так, как ожидается. В структуре плана задается инструкция Transact-SQL, которую нужно оптимизировать, и либо предложение OPTION, содержащее указания запросов, либо конкретный план запроса, с помощью которого планируется оптимизировать запрос. При выполнении запроса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сопоставляет инструкцию Transact-SQL со структурой плана и присоединяет предложение OPTION к запросу во время выполнения или использует указанный план запроса.  
   
  Общее число структур планов, которые можно создать, ограничивается только доступными системными ресурсами. Тем не менее использование структур планов должно быть ограничено критически важными запросами, затрагиваемыми в целях улучшения или стабилизации производительности. Структуры планов не следует использовать для основной массы запросов развернутого приложения.  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 08/22/2017
   
  Предположим, что следующая хранимая процедура, которая принимает параметр `@Country_region`, относится к приложению базы данных, которое развертывается в связи с базой данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```t-sql  
+```sql  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
 AS  
 BEGIN  
@@ -65,7 +66,7 @@ END;
   
  Чтобы решить эту проблему, измените хранимую процедуру и добавьте указание `OPTIMIZE FOR` в запрос. Однако так как хранимая процедура находится в развернутом приложении, напрямую менять код приложения нельзя. Вместо этого можно создать следующую структуру плана в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-```t-sql  
+```sql  
 sp_create_plan_guide   
 @name = N'Guide1',  
 @stmt = N'SELECT *FROM Sales.SalesOrderHeader AS h,  
@@ -85,13 +86,13 @@ sp_create_plan_guide
  ### <a name="sql-plan-guide"></a>Структура плана SQL  
  Структура плана SQL соответствует запросам, выполняющимся в контексте изолированных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] и пакетов, не входящих ни в один объект базы данных. Структуры планов SQL также можно использовать для соответствия запросам с параметрами. Структуры планов SQL применяются к изолированным инструкциям [!INCLUDE[tsql](../../includes/tsql-md.md)] и пакетам. Часто эти инструкции передаются приложением с помощью хранимой процедуры [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) . Например, рассмотрим следующий изолированный пакет:  
   
-```t-sql  
+```sql  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
  Чтобы избежать создания параллельного плана выполнения для этого запроса, создайте приведенную ниже структуру плана и присвойте указанию запроса `MAXDOP` значение `1` в параметре `@hints` .  
   
-```t-sql  
+```sql  
 sp_create_plan_guide   
 @name = N'Guide2',   
 @stmt = N'SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC',  
@@ -118,13 +119,13 @@ sp_create_plan_guide
 ## <a name="plan-guide-matching-requirements"></a>Требования по соответствию для структур планов  
  Структуры планов действительны в области видимости базы данных, в которой они создаются. Поэтому с запросом могут быть согласованы только структуры планов, находящиеся в базе данных, которая является текущей при выполнении запроса. Например, если [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] является текущей базой данных и выполняется нижеследующий запрос:  
   
- ```t-sql
+ ```sql
  SELECT FirstName, LastName FROM Person.Person;
  ```  
   
  Только руководства планов в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] подлежат сопоставлению с этим запросом. Но если [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] является текущей базой данных и выполняются нижеследующие инструкции:  
   
- ```t-sql
+ ```sql
  USE DB1; 
  SELECT FirstName, LastName FROM Person.Person;
  ```  
@@ -143,7 +144,7 @@ sp_create_plan_guide
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>Влияние структуры плана на кэш планов  
  Создание структуры плана в модуле стирает план запроса для этого модуля из кэша планов. Создание структуры плана типа OBJECT или SQL в потоке стирает план запроса для потока, который имеет такое же значение хеш-функции. Создание структуры плана типа TEMPLATE стирает все потоки с одним оператором из кэша планов через базу данных.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Задача|Раздел|  
 |----------|-----------|  
@@ -164,4 +165,3 @@ sp_create_plan_guide
  [sys.fn_validate_plan_guide (Transact-SQL)](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)  
   
   
-

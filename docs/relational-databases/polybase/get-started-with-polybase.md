@@ -1,11 +1,13 @@
 ---
 title: "Приступая к работе с PolyBase | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: polybase
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-polybase
 ms.tgt_pltfrm: 
@@ -19,20 +21,19 @@ helpviewer_keywords:
 - Azure blob storage export
 - Hadoop import, PolyBase getting started
 - Hadoop export, Polybase getting started
-caps.latest.revision: 78
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 9b28ca40643cec6661564c439657e1a3454929be
+ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
 ms.translationtype: HT
-ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
-ms.openlocfilehash: b107ea3ebabbf959ee12b900885612df364dfc12
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="get-started-with-polybase"></a>Приступая к работе с PolyBase
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе содержатся основные сведения о запуске PolyBase на экземпляре SQL Server.
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 08/04/2017
   
 -   у вас будут примеры запросов, в которых используются объекты PolyBase.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Экземпляр [SQL Server (64-разрядная версия)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) со следующим:  
   
 -   Microsoft .NET Framework 4.5.  
@@ -75,7 +76,7 @@ ms.lasthandoff: 08/04/2017
 ### <a name="how-to-confirm-installation"></a>Подтверждение установки  
  Чтобы после установки убедиться, что технология PolyBase успешно установлена, выполните приведенную ниже команду. Если служба PolyBase установлена, она возвращает значение 1, а если нет — значение 0.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
@@ -102,8 +103,8 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 ### <a name="external-data-source-configuration"></a>Конфигурация внешнего источника данных  
   
-1.  Запустите хранимую процедуру [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 'hadoop connectivity' и задайте соответствующее значение. По умолчанию для подключения Hadoop установлено значение 7. Чтобы узнать значение, см. раздел [Конфигурация подключения к PolyBase (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
-      ```tsql  
+1.  Запустите хранимую процедуру [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 'hadoop connectivity' и задайте соответствующее значение. По умолчанию для подключения Hadoop установлено значение 7. Значение см. в статье [Конфигурация подключения к PolyBase (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
+      ```sql  
     -- Values map to various external data sources.  
     -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
     sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
@@ -289,7 +290,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 -   Нерегламентированные запросы  
   
-    ```tsql  
+    ```sql  
     -- PolyBase Scenario 1: Ad-Hoc Query joining relational with Hadoop data   
     -- Select customers who drive faster than 35 mph: joining structured customer data stored   
     -- in SQL Server with car sensor data stored in Hadoop.  
@@ -303,7 +304,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 -   импорт данных  
   
-    ```tsql  
+    ```sql  
     -- PolyBase Scenario 2: Import external data into SQL Server.  
     -- Import data for fast drivers into SQL Server to do more in-depth analysis and  
     -- leverage Columnstore technology.  
@@ -374,4 +375,3 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
  [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)  
   
   
-

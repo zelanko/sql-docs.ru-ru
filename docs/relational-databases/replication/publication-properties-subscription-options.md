@@ -2,29 +2,30 @@
 title: "Свойства публикации, параметры подписки | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- replication
+ms.suite: sql
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1
+f1_keywords: sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8de57644d66112352b48a88a5ce80bb15bc24dd6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "39"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 5272dd5ecda16685468431245c91b1c03c7296da
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-properties-subscription-options"></a>Свойства публикации, параметры подписки
-  Страница **Параметры подписки** диалогового окна **Свойства публикации** позволяет просматривать и устанавливать свойства уровня публикации, связанные с подписками. Свойства сгруппированы по следующим категориям.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Страница **Параметры подписки** диалогового окна **Свойства публикации** позволяет просматривать и устанавливать свойства уровня публикации, связанные с подписками. Свойства сгруппированы по следующим категориям.  
   
 -   Свойства, которые применяются для всех публикаций.  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="schema-replication"></a>Репликация схемы  
  **Реплицировать изменения схемы**  
-Только для сервера [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, реплицировать ли изменения схемы (например, добавление столбца в таблицу или изменение типа данных столбца) в опубликованные объекты. Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ Только для сервера[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, реплицировать ли изменения схемы (например, добавление столбца в таблицу или изменение типа данных столбца) в опубликованные объекты. Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="options-for-snapshot-and-transactional-publications"></a>Параметры для публикаций моментальных снимков и транзакций  
   
@@ -64,10 +65,10 @@ ms.lasthandoff: 06/22/2017
  Определяет, создаются ли файлы моментальных снимков каждый раз при запуске агента моментальных снимков (требует **Независимого агента распространителя**). Данный параметр доступен только для чтения; он устанавливается равным **True** , если выбран пункт **Создать моментальный снимок немедленно и обеспечить доступ к нему для инициализации подписок** на странице **Агент моментальных снимков** мастера создания публикаций (значение по умолчанию). Дополнительные сведения см. в статье [Создание и применение моментального снимка](../../relational-databases/replication/create-and-apply-the-snapshot.md).  
   
  **Разрешать инициализацию из файлов резервных копий**  
-Только для версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, разрешить ли использование файлов резервных копий для инициализации подписок. Дополнительные сведения см. в статье [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+ Только для версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, разрешить ли использование файлов резервных копий для инициализации подписок. Дополнительные сведения см. в статье [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Разрешать подписчиков, отличных от подписчиков SQL Server**  
-Только для версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, поддерживает ли публикация подписчиков, отличных от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Установка данного параметра равным **True** определяет другие свойства публикации для поддержки подписчиков, отличных от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При наличии подписок этот параметр доступен только для чтения; его нельзя установить равным **True** , если параметры **Разрешать немедленное обновление подписок**, **Разрешить обновляемые посредством очередей подписки**или **Разрешать одноранговые подписки** установлены равными **True**. Дополнительные сведения см. в разделе [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+ Только для версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, поддерживает ли публикация подписчиков, отличных от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Установка данного параметра равным **True** определяет другие свойства публикации для поддержки подписчиков, отличных от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При наличии подписок этот параметр доступен только для чтения; его нельзя установить равным **True** , если параметры **Разрешать немедленное обновление подписок**, **Разрешить обновляемые посредством очередей подписки**или **Разрешать одноранговые подписки** установлены равными **True**. Дополнительные сведения см. в разделе [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 ### <a name="data-transformation"></a>Преобразование данных  
  **Разрешать преобразования данных**  
@@ -91,7 +92,7 @@ ms.lasthandoff: 06/22/2017
  Определяет, могут ли изменения данных на подписчике немедленно реплицироваться на издателя. Этот параметр доступен только для чтения; обновляемые подписки можно включить только при создании публикации. Дополнительные сведения см. в разделе [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
  **Разрешить обновляемые посредством очередей подписки**  
- Определяет, могут ли изменения данных на подписчике помещаться в очередь и реплицироваться на издателя позже. Этот параметр доступен только для чтения; обновляемые подписки можно включить только при создании публикации. Дополнительные сведения см. в разделе [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
+ Определяет, могут ли изменения данных на подписчике помещаться в очередь и реплицироваться на издателя позже. Этот параметр доступен только для чтения; обновляемые подписки можно включить только при создании публикации. Дополнительные сведения см. в статье [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
  **Сообщать о конфликтах централизованно**  
  Определяет, сообщать ли о конфликтных изменениях данных только на издателе или как на издателе, так и на подписчике (требует установки параметра **Разрешить обновляемые посредством очередей подписки**). Этот параметр доступен только для чтения. По умолчанию он равен **True** для публикаций, созданных с помощью мастера создания публикаций, и его нельзя изменить после создания публикации. Значение **True** означает, что сообщения о конфликтах выдаются только на издателе. Конфликты можно просматривать только в месте получения сообщения.  
@@ -116,7 +117,7 @@ ms.lasthandoff: 06/22/2017
  Определяет, какие функции использовать при проверке того, что на подписчике содержится верная секция данных. Несколько значений разделяются запятыми. Дополнительные сведения см. в статье [Проверка сведений о секции для подписчика на публикацию слиянием](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md).  
   
  **Предварительное вычисление секций**  
-Только для версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, оптимизировать ли синхронизацию путем предварительного расчета принадлежности строк данных секциям. По умолчанию, эта настройка равна **True** , если публикация соответствует критериям для предварительно вычисляемых секций. Дополнительные сведения см. в статье [Оптимизация производительности параметризованного фильтра с помощью предварительно вычисляемых секций](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+ Только для версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, оптимизировать ли синхронизацию путем предварительного расчета принадлежности строк данных секциям. По умолчанию, эта настройка равна **True** , если публикация соответствует критериям для предварительно вычисляемых секций. Дополнительные сведения см. в статье [Оптимизация производительности параметризованного фильтра с помощью предварительно вычисляемых секций](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
  **Оптимизировать синхронизацию**  
  Определяет, оптимизировать ли процесс слияния, сохраняя дополнительные метаданные на каждом подписчике. Данная оптимизация не используется для предварительно вычисляемых секций; параметр **Оптимизировать синхронизацию** действителен, только если параметр **Предварительное вычисление секций** установлен равным **False**. Дополнительные сведения см. в статье [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  

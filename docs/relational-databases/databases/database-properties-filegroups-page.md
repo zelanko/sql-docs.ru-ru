@@ -2,29 +2,30 @@
 title: "Свойства базы данных (страница \"Файловые группы\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.databaseproperties.filegroups.f1
+f1_keywords: sql13.swb.databaseproperties.filegroups.f1
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 977464bddc01eaa5559962808e9cee4b39651b8f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "31"
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: b5059c901a9b2dc517b765a642ddbe16bb926471
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-properties-filegroups-page"></a>Свойства базы данных (страница «Файловые группы»)
-  Эта страница используется для просмотра файловых групп или добавления новой файловой группы в выбранную базу данных. Типы файловых групп разделены на файловые группы *строк* , файловые группы данных FILESTREAM и файловые группы, оптимизированные для памяти.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Эта страница используется для просмотра файловых групп или добавления новой файловой группы в выбранную базу данных. Типы файловых групп разделены на файловые группы *строк* , файловые группы данных FILESTREAM и файловые группы, оптимизированные для памяти.  
   
  Файловые группы строк содержат обычные данные и файлы журналов. Файловые группы данных FILESTREAM содержат файлы данных FILESTREAM. В этих файлах данных содержатся сведения о способах хранения данных больших двоичных объектов (BLOB) в файловой системе при использовании хранилища Filestream. Параметры одинаковы для файловых групп обоих типов.  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 06/22/2017
  **Только для чтения**  
  Выберите, чтобы установить для файловой группы статус «только для чтения».  
   
- **По умолчанию**  
+ **Default**  
  Выберите, чтобы сделать эту файловую группу используемой по умолчанию. Можно организовать одну файловую группу по умолчанию для строк и одну файловую группу по умолчанию для данных FILESTREAM.  
   
  **Добавить**  

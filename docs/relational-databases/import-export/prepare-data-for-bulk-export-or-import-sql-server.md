@@ -2,9 +2,12 @@
 title: "Подготовка данных к массовому экспорту или импорту (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
 ms.tgt_pltfrm: 
@@ -16,19 +19,19 @@ helpviewer_keywords:
 - CSV files [SQL Server]
 - quoted fields in CSV files [SQL Server]
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
-caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fbcca0ce4e711ba22215e9e6ff09389b02d6e80b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.workload: On Demand
+ms.openlocfilehash: 44c1510507707b1fcdc9f10a31d8dce47d838a9c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>Подготовка данных к массовому экспорту или импорту (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   В этом разделе рассматриваются факторы, которые следует учитывать при планировании операций массового экспорта, и требования для операций массового импорта.  
   
@@ -63,7 +66,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Указать для импорта из файла данных не весь файл, а подмножество строк можно с помощью команды **bcp** с параметром **-F** *first_row* и (или) параметром **-L** *last_row*. Дополнительные сведения см. в разделе [bcp Utility](../../tools/bcp-utility.md).  
   
--   Чтобы импортировать данные из файлов данных фиксированной длины или с полями фиксированной ширины, используйте файл форматирования. Дополнительные сведения см в статье [XML-файлы форматирования (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md).  
+-   Чтобы импортировать данные из файлов данных фиксированной длины или с полями фиксированной ширины, используйте файл форматирования. Дополнительные сведения см. в разделе [XML-файлы форматирования (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
 -   CSV-Файлы с разделителями-запятыми не поддерживаются в операциях массового импорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Однако в некоторых случаях CSV-файл можно использовать в качестве файла данных для массового импорта данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обратите внимание, что признаком конца поля CSV-файла не обязательно должна быть запятая. CSV-файл, который можно использовать в качестве файла данных для массового импорта, должен соответствовать следующим условиям.  
   

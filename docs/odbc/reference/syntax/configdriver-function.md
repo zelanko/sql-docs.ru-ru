@@ -3,33 +3,30 @@ title: "Функция ConfigDriver | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- ConfigDriver
-apilocation:
-- sqlsrv32.dll
+apiname: ConfigDriver
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- ConfigDriver
-helpviewer_keywords:
-- ConfigDriver [ODBC]
+f1_keywords: ConfigDriver
+helpviewer_keywords: ConfigDriver [ODBC]
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1697b7e697760afee2b62c49bd24c2ab22c9201d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 037d4ffcbe7d81c6e4a9c1a524f5f4977621f277
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configdriver-function"></a>Функция ConfigDriver
 **Соответствия**  
@@ -103,4 +100,3 @@ BOOL ConfigDriver(
   
 ### <a name="messages"></a>Сообщения  
  Подпрограмма установки драйвера можно отправить текстовое сообщение приложению, завершающуюся значением null в виде строки *lpszMsg* буфера. Сообщение будет усечен до *cbMsgMax* минус символу конечное значение null по **ConfigDriver** функционировать, если оно больше или равно *cbMsgMax* символов.
-

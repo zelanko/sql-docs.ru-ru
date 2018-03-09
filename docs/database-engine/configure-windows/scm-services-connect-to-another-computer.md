@@ -2,9 +2,12 @@
 title: "Подключение к другому компьютеру (диспетчер конфигурации SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -12,20 +15,20 @@ ms.topic: article
 helpviewer_keywords:
 - connections [SQL Server], other computers
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
-caps.latest.revision: 40
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: d8e4014206abb4c84201724744ec30f1f39f4243
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4df3365cc2c0bb7e042a23c60a78692d40bae7cf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="scm-services---connect-to-another-computer"></a>Службы SCM. Подключение к другому компьютеру
-  В этом разделе описывается подключение к другому компьютеру в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Выполните первую процедуру, чтобы открыть консоль управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] «Управление компьютером», подключитесь к компьютеру и разверните дерево «Службы и приложения». Выполните вторую процедуру для создания файла с ссылкой на диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на удаленном компьютере.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+В этом разделе описывается подключение к другому компьютеру в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Выполните первую процедуру, чтобы открыть консоль управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] «Управление компьютером», подключитесь к компьютеру и разверните дерево «Службы и приложения». Выполните вторую процедуру для создания файла с ссылкой на диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на удаленном компьютере.  
   
 > [!NOTE]  
 >  Некоторые действия не могут выполняться с помощью Configuration Manager при удаленном подключении.  
@@ -81,4 +84,3 @@ ms.lasthandoff: 08/02/2017
  [Настройка инструментария WMI для отображения состояния сервера в инструментальных средствах SQL Server](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7)  
   
   
-

@@ -3,8 +3,11 @@ title: "Предложение OUTPUT (Transact-SQL) | Документы Micros
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,20 +33,19 @@ helpviewer_keywords:
 - displaying deleted rows
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-caps.latest.revision: 94
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cd5caae29a6ec10957c45f755954c9b9e9b7ecda
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.openlocfilehash: 6a28059e6a30657a67275d317c70bdb26d2507a2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="output-clause-transact-sql"></a>Предложение OUTPUT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает данные из строк, изменившихся в результате выполнения инструкций INSERT, UPDATE, DELETE или MERGE, или выражения на основе этих данных. Эти результаты могут быть возвращены приложению, например для вывода подтверждающих сообщений, архивирования и т. п. Результаты также могут быть вставлены в таблицу или табличную переменную. Кроме того, можно записать результаты предложения OUTPUT во вложенных инструкциях INSERT, UPDATE, DELETE или MERGE и вставить эти результаты в целевую таблицу или представление.  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 09/01/2017
   
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- [СЛИЯНИЕ](../../t-sql/statements/merge-transact-sql.md)  
+ [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -138,13 +140,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- Явное указание столбца. Все ссылки в изменяемой таблице должно быть правильно дополнено INSERTED или DELETED соответствующим префиксом, например: INSERTED**.** *column_name*.  
+ Явное указание столбца. Все ссылки в изменяемой таблице должно быть правильно дополнено INSERTED или DELETED соответствующим префиксом, например: INSERTED **. *** column_name*.  
   
  $action  
  Доступен только для инструкции MERGE. Указывает столбец типа **nvarchar(10)** в предложении OUTPUT инструкции MERGE, которая возвращает одно из трех значений для каждой строки: «INSERT», «UPDATE» или «DELETE», согласно действию, которое было выполнено в этой строке.  
   
-## <a name="remarks"></a>Замечания  
- Выходные данные \<dml_select_list > предложения и выходные данные \<dml_select_list > INTO {  **@**  *table_variable*  |   *output_table* } предложения, которые могут быть определены в одной инструкции INSERT, UPDATE, DELETE или MERGE.  
+## <a name="remarks"></a>Remarks  
+ Выходные данные \<dml_select_list > предложения и выходные данные \<dml_select_list > INTO {**@*** table_variable* | *output_table* } предложение может быть определено в одной инструкции INSERT, UPDATE, DELETE или MERGE.  
   
 > [!NOTE]  
 >  Если не указано иное, ссылки на предложение OUTPUT относятся как к предложению OUTPUT, так и к предложению OUTPUT INTO.  
@@ -311,7 +313,7 @@ DROP TABLE dbo.table1;
 > [!NOTE]  
 >  Если сценарий позволяет нескольким приложениям производить разрушающее чтение из одной таблицы, в инструкциях UPDATE и DELETE следует указывать табличную подсказку READPAST. Это предотвратит блокировку, которая может возникнуть, если другое приложение уже считывает из таблицы первую подходящую запись.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимы разрешения SELECT на все столбцы, извлекаемые с помощью \<dml_select_list >, либо использоваться в \<scalar_expression >.  
   
  Разрешения INSERT необходимы на все таблицы, указанные в \<output_table >.  
@@ -668,7 +670,7 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
@@ -677,4 +679,3 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
-

@@ -2,37 +2,35 @@
 title: "SELECT FROM &lt;структуры&gt;. СЛУЧАИ | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: data-mining
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT
 - CASES
 - FROM
-dev_langs:
-- DMX
-helpviewer_keywords:
-- SELECT FROM <structure> statements
+dev_langs: DMX
+helpviewer_keywords: SELECT FROM <structure> statements
 ms.assetid: 36f50213-14dc-42da-b899-20240b781e1a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 877f35988bceb86425b4517eb331ce526b9168f8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8af8e861c74c92be83e8ed61893d9a02587aa9a3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM &lt;структуры&gt;. ВАРИАНТЫ
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает варианты, использованные для создания структуры интеллектуального анализа данных.  
   
@@ -55,7 +53,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
 ## <a name="arguments"></a>Аргументы  
  *n*  
- Необязательно. Целое число, указывающее количество возвращаемых строк.  
+ Необязательный параметр. Целое число, указывающее количество возвращаемых строк.  
   
  *список выражений*  
  Список выражений с разделителями-запятыми.  
@@ -69,9 +67,9 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  Условие ограничения значений, возвращаемых из списка столбцов.  
   
  *expression*  
- Необязательно. Выражение, возвращающее скалярное значение.  
+ Необязательный параметр. Выражение, возвращающее скалярное значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если детализация включена как для модели, так и для структуры, то любой член роли, обладающей разрешениями на структуру или модель интеллектуального анализа данных, может возвращать столбцы структуры, которые не были включены в модель. Это делается с помощью следующего синтаксиса:  
   
 ```  
@@ -108,7 +106,6 @@ WHERE IsTestCase();
  [ВЫБЕРИТЕ &#40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ &#41;](../dmx/select-dmx.md)   
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции управления данными](../dmx/dmx-statements-data-manipulation.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

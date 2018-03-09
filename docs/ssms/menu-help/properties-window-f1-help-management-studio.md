@@ -3,10 +3,12 @@ title: "Справка F1 окна свойств (среда Management Studio)
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-tools
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- tools-ssms
+ms.suite: sql
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,20 +25,19 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - SQL Server Management Studio Help [SQL Server], properties window
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b50fb9b56d11e1ff911c0781e9cda52df168b82f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 868c16ecea52d24010ca2012756cfc00e7cdd15a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Справка F1 окна свойств (среда Management Studio)
-В окне **Свойства** можно просмотреть свойства выбранных элементов. Кроме того, в окне **Свойства** можно просматривать свойства файла, проекта или решения. Чтобы открыть окно **Свойства** , щелкните **Окно "Свойства"** в меню **Вид** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В окне **Свойства** можно просмотреть свойства выбранных элементов. Кроме того, в окне **Свойства** можно просматривать свойства файла, проекта или решения. Чтобы открыть окно **Свойства** , щелкните **Окно "Свойства"** в меню **Вид** .  
   
 В окне **Свойства** в зависимости от особенностей конкретного свойства могут отображаться различные типы изменяемых полей. Свойства, выделенные серым цветом, доступны только для чтения.  
   
@@ -59,4 +60,3 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>См. также:  
 [Окно "Свойства" в среде SQL Server Management Studio](http://msdn.microsoft.com/en-us/903d4aca-f57c-43d9-a893-702eceaa7004)  
   
-

@@ -1,30 +1,31 @@
 ---
 title: "Установка служб Analysis Services | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 04/11/2017
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: pro-bi
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
-caps.latest.revision: 20
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: cdc4deb033afe212103a80a0e5b8413c13000433
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 084223d83c3786610dbce145f27a4c18a6409769
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="install-sql-server-analysis-services"></a>Установка SQL Server Analysis Services
-  SQL Server Analysis Services является сервер аналитических баз данных, на котором размещена табличных моделей, многомерных кубов и моделей интеллектуального анализа данных, можно получить из отчетов, электронных таблиц и панелей мониторинга.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+SQL Server Analysis Services является сервер аналитических баз данных, на котором размещена табличных моделей, многомерных кубов и моделей интеллектуального анализа данных, можно получить из отчетов, электронных таблиц и панелей мониторинга.  
   
  Службы Analysis Services имеет несколько экземпляров, это означает, что можно установить несколько копий на одном компьютере или запустить новые и старые версии side-by-side. Все установленные экземпляры работают в одном из трех режимов, определяемых во время установки: многомерный и интеллектуальный анализ данных, а также режим для работы с табличными моделями или моделями SharePoint. Если вы хотите использовать несколько режимов, вам потребуется отдельный экземпляр для каждого из них.  
   
@@ -79,9 +80,8 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
 |POWERPIVOT|Это значение является необязательным. На практике, если задан параметр **ROLE** , режим сервера автоматически получает значение 1, что делает **ASSERVERMODE** необязательным в установке [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint. Дополнительные сведения см. в статье [Установка Power Pivot из командной строки](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328).|  
   
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Определение режима работы сервера экземпляра служб Analysis Services](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Табличное моделирование (табличные службы SSAS)](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
+ [Табличное моделирование](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
   
   
-

@@ -1,13 +1,14 @@
 ---
 title: "Приложения уровня данных | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.suite: sql
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,20 +17,19 @@ helpviewer_keywords:
 - data-tier application [SQL Server], designing
 - wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
-caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: "31"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 319f0adb5f8f537b697caa401efcb3e0054d79ee
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d42c7d587e18e306a15a95e4576e312a0e7c31c0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="data-tier-applications"></a>Приложения уровня данных
-  Приложение уровня данных (DAC) является логической сущностью управления базой данных, которая определяет все объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например таблицы, представления и объекты экземпляров, в том числе имена входов, связанные с базой данных пользователя. Приложение уровня данных — это автономная единица развертывания базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая позволяет разработчикам уровня данных и администраторам базы данных группировать объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в переносимый артефакт, называемый пакетом приложения уровня данных или пакетом DAC.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Приложение уровня данных (DAC) является логической сущностью управления базой данных, которая определяет все объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например таблицы, представления и объекты экземпляров, в том числе имена входов, связанные с базой данных пользователя. Приложение уровня данных — это автономная единица развертывания базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая позволяет разработчикам уровня данных и администраторам базы данных группировать объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в переносимый артефакт, называемый пакетом приложения уровня данных или пакетом DAC.  
   
  Пакет BAC — это связанный артефакт, который инкапсулирует схему базы данных и данные, хранящиеся в базе данных.  
   
@@ -135,8 +135,7 @@ ms.lasthandoff: 06/22/2017
 |Описывает процесс размещения содержимого пакета приложения уровня данных в папке, где администратор базы данных может следить за действиями DAC перед развертыванием приложения на рабочем сервере.|[Распаковка пакета приложения уровня данных](../../relational-databases/data-tier-applications/unpack-a-dac-package.md)|  
 |Описывает использование мастера для развертывания существующей базы данных. Для выполнения развертывания мастер использует приложения уровня данных.|[Развертывание базы данных с помощью приложения уровня данных](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Поддержка приложений уровня данных для объектов и версий SQL Server](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
   
   
-

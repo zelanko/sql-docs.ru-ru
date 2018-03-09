@@ -2,25 +2,26 @@
 title: "Оценки собственного | Документы Microsoft"
 ms.custom: 
 ms.date: 09/19/2017
-ms.prod: sql-server-2017
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- r-services
+ms.suite: sql
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: 14e2a86b3f85f5dd1cfec7ac634b6801bb0f319b
+ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: fe571e3e432d6445c76133c4c2a9c56f2f67eff0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 02/11/2018
 ---
-
 # <a name="native-scoring"></a>Машинный код оценки
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом разделе описаны возможности 2017 г. SQL Server, предоставляющими оценки моделей машинного обучения в почти в реальном времени.
 
@@ -119,4 +120,3 @@ _Оценки_ состоит из двух этапов. Во-первых мо
 + PMML модели
 + Модели, созданные с помощью других библиотек R из CRAN или другие репозитории
 + Модели, содержащий все другие преобразования R
-
