@@ -1,4 +1,4 @@
----
+﻿---
 title: "Инструкция DBCC SHOW_STATISTICS (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 12/18/2017
