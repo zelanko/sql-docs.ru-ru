@@ -29,10 +29,10 @@ ms.author: jroth
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: ce69679a348fdb29b334f45fa5e3a61f8dd14e2f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="sysfntracegetinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,15 +59,15 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |traceid|**int**|Идентификатор трассировки.|  
-|свойство|**int**|Свойство трассировки:<br /><br /> 1 — параметры трассировки. Дополнительные сведения см. в разделе @options в [sp_trace_create &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).<br /><br /> 2 — имя файла<br /><br /> 3 — максимальный размер<br /><br /> 4 — время остановки<br /><br /> 5 — текущее состояние трассировки. 0 — остановлена. 1 — запущена.|  
+|свойство|**int**|Свойство трассировки:<br /><br /> 1 — параметры трассировки. Дополнительные сведения см. в разделе @options в [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).<br /><br /> 2 — имя файла<br /><br /> 3 — максимальный размер<br /><br /> 4 — время остановки<br /><br /> 5 — текущее состояние трассировки. 0 — остановлена. 1 — запущена.|  
 |value|**sql_variant**|Сведения о свойстве указанной трассировки.|  
   
 ## <a name="remarks"></a>Remarks  
  Функция fn_trace_getinfo принимает идентификатор конкретной трассировки и возвращает сведения об этой трассировке. Если передать недопустимый идентификатор, эта функция вернет пустой набор строк.  
   
- Функция fn_trace_getinfo добавляет расширение TRC к имени любого файла трассировки, включенного в ее результирующий набор. Сведения об определении трассировки см. в разделе [sp_trace_create &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md). Аналогичные сведения о фильтрах трассировки см. в разделе [sys.fn_trace_getfilterinfo &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md).  
+ Функция fn_trace_getinfo добавляет расширение TRC к имени любого файла трассировки, включенного в ее результирующий набор. Сведения об определении трассировки см. в разделе [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md). Аналогичные сведения о фильтрах трассировки см. в разделе [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md).  
   
- Полный пример использования хранимых процедур трассировки см. в разделе [создать трассировку &#40; Transact-SQL &#41; ](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
+ Полный пример использования хранимых процедур трассировки см. в разделе [создать трассировку &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER TRACE на сервере.  
