@@ -1,6 +1,6 @@
 ---
 title: "Документация по SQL Server | Документы Майкрософт"
-ms.date: 10/30/2017
+ms.date: 02/28/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -27,11 +27,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5e6b2ffe7735bf8c7cb2fe7e9f76b7d4b675ceef
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.openlocfilehash: 84c0a18929883f0a58e75ed5ce20900d0bdf09e7
+ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="sql-server-documentation"></a>Документация по SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +43,21 @@ SQL Server является центральной частью платформ
 |[Новые возможности в SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Заметки о выпуске SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)        |
 |[Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Заметки о выпуске SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
 |[Новые возможности SQL Server 2014](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)     | [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)        |
-   
+
+
 **Оцените SQL Server!**
+> [![Скачать из Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Скачать SQL Server](http://go.microsoft.com/fwlink/?LinkID=829477)
+>
+> [![Скачать из Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Скачать SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+>
+> [![Скачать из Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+>
+> [![Создать виртуальную машину](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Развернуть виртуальную машину с SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+
+## <a name="sql-server-technologies"></a>Технологии SQL Server
+
 
 |||
-|-|-|
-|[![Скачать из Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Скачать SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477) | [![Скачать из Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) [Скачать SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) |
-|[![Создать виртуальную машину](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Развернуть виртуальную машину с SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) | [![Скачать из Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Скачать SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) |
-| [![Скачать из Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | |
-
-    
-## <a name="sql-server-technologies"></a>Технологии SQL Server    
-    
-|||    
 |-|-|    
 |![Ядро СУБД SQL](../sql-server/media/sql-database-engine.png "Ядро СУБД SQL")|**[Ядро СУБД](../database-engine/sql-server-database-engine-overview.md)**<br /><br /> Компонент ядра СУБД представляет собой основную службу для хранения, обработки и обеспечения безопасности данных. Этот компонент обеспечивает управляемый доступ к ресурсам и быструю обработку транзакций, что позволяет использовать его даже в самых требовательных корпоративных приложениях обработки данных. Кроме того, ядро СУБД предоставляет разносторонние средства поддержания высокого уровня доступности.|
 |![Службы Integration Services](../sql-server/media/integration-services.png "Службы Integration Services")|**[Службы Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] представляют собой платформу для создания высокопроизводительных решений по интеграции данных, в том числе пакетов для хранения данных, обеспечивающих извлечение, преобразование и загрузку данных.|    
@@ -74,13 +76,13 @@ SQL Server является центральной частью платформ
 ## <a name="earlier-sql-server-versions"></a>Предыдущие версии SQL Server
 - [Ссылки и сведения для всех поддерживаемых версий в Центре обновления SQL Server](https://msdn.microsoft.com/library/ff803383.aspx)
 - [Документация по SQL Server 2014](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
-- [Документация по SQL Server 2012](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
-- [Документация по SQL Server 2008 R2](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
-- [Документация по SQL Server 2008](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
-- [Архивная документация по SQL Server 2005](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)    
+- [Документация по SQL Server 2012](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)
+- [Документация по SQL Server 2008 R2](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)
+- [Документация по SQL Server 2008](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx)
+- [Архивная документация по SQL Server 2005](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)
 
 ## <a name="samples"></a>Примеры  
-- [Образец базы данных Wide World Importers](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)  
+- [Образец базы данных Wide World Importers](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)
 - [Образцы баз данных AdventureWorks и скрипты для SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=49502) 
 - [Образцы SQL Server на GitHub](https://github.com/Microsoft/sql-server-samples) 
    
