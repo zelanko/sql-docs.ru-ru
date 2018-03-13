@@ -16,10 +16,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
 ms.openlocfilehash: 40c76cba27559c8fcc314ce4c9761ee42edacac0
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="microsoft-machine-learning-services"></a>Службы машинного обучения Майкрософт
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/11/2018
 
 В SQL Server 2016 Корпорация Майкрософт выпустила две серверные платформы для интеграции языка открытым исходным кодом R с бизнес-приложениями:
 
-+ **SQL Server R Services (в базе данных)**, для интеграции с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
++ **службы R SQL Server (в базе данных)**для интеграции с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 + **Microsoft R Server**, для развертывания корпоративного уровня R на серверах Windows и Linux
 
 В SQL Server 2017 г имя было изменено для отражения поддержки для популярных языка Python.
