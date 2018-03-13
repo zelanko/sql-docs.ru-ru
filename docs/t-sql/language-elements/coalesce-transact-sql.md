@@ -1,4 +1,4 @@
----
+﻿---
 title: "Функция ОБЪЕДИНЕНИЯ (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 08/30/2017
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Вычисляет аргументы по порядку и возвращает текущее значение первого выражения, которое изначально не равен `NULL`. Например `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` возвращает третье значение, поскольку третье значение первое значение, не равное null. 
+Вычисляет аргументы по порядку и возвращает текущее значение первого выражения, которое изначально не равно `NULL`. Например, `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` возвращает третье значение, поскольку оно является первым значением, не равным null.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
