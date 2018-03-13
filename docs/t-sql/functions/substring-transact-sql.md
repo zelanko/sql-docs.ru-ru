@@ -1,4 +1,4 @@
----
+﻿---
 title: "SUBSTRING (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 10/21/2016
@@ -91,12 +91,12 @@ WHERE database_id < 5;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
-|имя |Initial |ThirdAndFourthCharacters|
+|name |Initial |ThirdAndFourthCharacters|
 |---|--|--|
 |master  |m  |st |
-|tempdb  |t  |пакет управления |
+|tempdb  |t  |mp |
 |model   |m  |de |
-|msdb    |m  |DB |
+|msdb    |m  |db |
 
 
   
