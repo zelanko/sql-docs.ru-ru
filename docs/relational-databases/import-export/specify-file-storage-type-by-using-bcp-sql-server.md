@@ -25,14 +25,14 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 0b3ea3ad1c9c467925e50e4fdc337d2dd99c858b
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Указание типа файлового хранилища с помощью программы bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-*Тип файла хранилища* описывает, каким образом данные хранятся в файле данных. Данные можно экспортировать в файл данных в формате таблиц баз данных (собственный формат), в символьном представлении (символьный формат) или в любом формате данных, поддерживающем неявное преобразование, например копирование данных типа **smallint** как **int**. Пользовательские типы данных экспортируются так же, как их базовые типы.  
+  *Тип файла хранилища* описывает, каким образом данные хранятся в файле данных. Данные можно экспортировать в файл данных в формате таблиц баз данных (собственный формат), в символьном представлении (символьный формат) или в любом формате данных, поддерживающем неявное преобразование, например копирование данных типа **smallint** как **int**. Пользовательские типы данных экспортируются так же, как их базовые типы.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>Приглашение bcp указать тип файлового хранилища  
  Если интерактивная команда **bcp** содержит параметр **in** или **out** без параметра файла форматирования (**-f**) или параметра формата данных (**-n**, **-c**, **-w**или **-N**), команда запрашивает тип файлового хранилища для каждого поля данных следующим образом:  
@@ -74,7 +74,7 @@ ms.lasthandoff: 02/23/2018
     |**tinyint**|**t[inyint]**|  
     |**money**|**m[oney]**|  
     |**smallmoney**|**M**|  
-    |**bit**|**b[it]**|  
+    |**бит**|**b[it]**|  
     |**uniqueidentifier**|**u**|  
     |**sql_variant**|**V[ariant]**|  
     |**timestamp**|**x**|  
@@ -111,7 +111,7 @@ ms.lasthandoff: 02/23/2018
 |**tinyint**|SQLTINYINT|  
 |**money**|SQLMONEY|  
 |**smallmoney**|SQLMONEY4|  
-|**bit**|SQLBIT|  
+|**бит**|SQLBIT|  
 |**uniqueidentifier**|SQLUNIQUEID|  
 |**sql_variant**|SQLVARIANT|  
 |**timestamp**|SQLBINARY|  

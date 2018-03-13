@@ -25,10 +25,10 @@ ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 3613462b45121d9d9042724a3dbf693060cc0c10
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="ftp-task"></a>Задача «FTP»
   Задача «FTP» производит загрузку и передачу файлов данных, а также управляет каталогами на серверах. Например, пакет может загрузить файлы данных с удаленного сервера или из Интернета в качестве части рабочего процесса пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Можно использовать задачу «FTP» для следующих целей:  
@@ -57,7 +57,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="predefined-ftp-operations"></a>Стандартные FTP-операции  
  Задача «FTP» содержит стандартный набор операций. Данные операции описываются в следующей таблице.  
   
-|Операция|Description|  
+|Операция|Описание|  
 |---------------|-----------------|  
 |Отправить файлы|Отправляет файл с локального компьютера на FTP-сервер.|  
 |Получить файлы|Сохраняет файл с FTP-сервера на локальный компьютер.|  
@@ -71,12 +71,12 @@ ms.lasthandoff: 02/15/2018
 ## <a name="custom-log-entries-available-on-the-ftp-task"></a>Пользовательские записи журнала, доступные в задаче «FTP»  
  В следующей таблице перечислены пользовательские записи журнала для задачи «FTP». Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Запись журнала|Description|  
+|Запись журнала|Описание|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|Указывает, что задача инициализировала соединение с FTP-сервером.|  
 |**FTPOperation**|Сообщает о начале FTP-операции, выполняемой задачей, и о типе этой операции.|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Связанные задачи  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
  Дополнительные сведения о настройке этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
@@ -104,7 +104,7 @@ ms.lasthandoff: 02/15/2018
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Описание**  
+ **Description**  
  Введите описание задачи «FTP».  
   
 ## <a name="ftp-task-editor-file-transfer-page"></a>Редактор задачи «FTP» (страница «Передача файлов»)
@@ -175,7 +175,7 @@ ms.lasthandoff: 02/15/2018
   
  **См. также:** [Диспетчер соединений с неструктурированными файлами](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Поток управления](../../integration-services/control-flow/control-flow.md)  
   

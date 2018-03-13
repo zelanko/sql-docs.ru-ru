@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
 ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/13/2018
 ---
 # <a name="upgrade-integration-services"></a>Обновление служб Integration Services
   Если на компьютере установлены службы [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] или их более поздняя версия, вы можете обновить их до [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
