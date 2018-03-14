@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.monitor.subscription.pubtodist.tran.f1
+f1_keywords:
+- sql13.rep.monitor.subscription.pubtodist.tran.f1
 ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
-caps.latest.revision: "20"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61881b3a08d451a9df4a07d229de82badafb1339
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b5e7dbc249b51fa346b36e66f4808a3711c36ced
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>Подписка, журнал издателя для распространителя (подписка на публикацию транзакций)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Вкладка **Журнал операций от издателя к распространителю** содержит подробные сведения об агенте чтения журнала, включая состояние, данные журнала, информационные сообщения и сообщения об ошибках.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Вкладка **Журнал операций от издателя к распространителю** отображает подробные сведения об агенте чтения журнала, включая состояние, журнал, информационные сообщения и любые сообщения об ошибках.  
   
 ## <a name="options"></a>Параметры  
  В меню **Вид** выберите сеансы какого агента чтения журнала необходимо просмотреть, а затем в сетке **Сеансы агента чтения журнала**выберите определенный сеанс. Подробные сведения об этом сеансе отображаются в сетке, помеченной как **Действия в выбранном сеансе**. Если выбранный сеанс закончен с ошибкой, также выводится на экран текстовое поле, помеченное как **Описание ошибки или сообщение выбранного сеанса** .  

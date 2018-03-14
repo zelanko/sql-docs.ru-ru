@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.monitor.queuereaderagent.f1
-helpviewer_keywords: Queue Reader Agent dialog box
+f1_keywords:
+- sql13.rep.monitor.queuereaderagent.f1
+helpviewer_keywords:
+- Queue Reader Agent dialog box
 ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
-caps.latest.revision: "18"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 536010c7312cc33b7ee7b394ac2761be7aefc8dc
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ec8f976ee2d68d61be3374527d10909363b25c3b
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="queue-reader-agent"></a>Агент чтения очереди.
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В диалоговом окне **Агент чтения очереди** предоставляются подробные данные об агенте чтения очереди, в том числе состояние, данные журнала, информационные сообщения и любые сообщения об ошибках.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  В диалоговом окне **Агент чтения очереди** предоставляются подробные данные об агенте чтения очереди, в том числе состояние, данные журнала, информационные сообщения и любые сообщения об ошибках.  
   
 ## <a name="options"></a>Параметры  
  Выберите для просмотра в меню **Просмотр** сеансы агента чтения очереди, а затем конкретный сеанс в сетке, обозначенный как **Сеансы агента чтения очереди**. Подробные сведения об этом сеансе отображаются в сетке, помеченной как **Действия в выбранном сеансе**. Если выбранный сеанс закончен с ошибкой, также выводится на экран текстовое поле, помеченное как **Описание ошибки или сообщение выбранного сеанса** .  

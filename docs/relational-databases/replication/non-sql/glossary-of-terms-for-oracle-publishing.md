@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Oracle publishing [SQL Server replication], glossary
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], glossary
 ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
-caps.latest.revision: "32"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 835ca9131d8484a2abe4995fb589775ba24bb953
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 89626fd3666456bb8770eb07d1767be749032722
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Глоссарий терминов публикации Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Для администрирования и настройки конфигурации публикации Oracle нужно ознакомиться с указанной ниже терминологией Oracle. Полный список терминов Oracle см. в электронной документации Oracle.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Для администрирования и настройки конфигурации публикации Oracle необходимо ознакомиться со следующей терминологией Oracle. Полный список терминов Oracle см. в электронной документации Oracle.  
   
  Индексно организованные таблицы (IOT)  
  Таблица, данные которой физически отсортированы на диске в индексном порядке; аналог таблицы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с кластеризованным индексом. IOT реплицируется на подписчик в виде таблицы с кластеризованным индексом.  

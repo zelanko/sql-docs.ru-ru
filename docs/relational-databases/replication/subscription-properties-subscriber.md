@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.newsubwizard.subproperties.subscriber.f1
-helpviewer_keywords: Subscription Properties dialog box
+f1_keywords:
+- sql13.rep.newsubwizard.subproperties.subscriber.f1
+helpviewer_keywords:
+- Subscription Properties dialog box
 ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
-caps.latest.revision: "25"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b0983dafd2e95edbec342c7a885c1182f6dc053a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: eb2d94f889cd593e07331f19fd09ef29d94479b8
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="subscription-properties---subscriber"></a>Свойства подписки — подписчик
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Диалоговое окно **Свойства подписки** в подписчике позволяет просматривать и задавать свойства для подписок по запросу.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  Диалоговое окно **Свойства подписки** на подписчике позволяет просматривать и задавать свойства для подписки по запросу.  
   
  Каждое свойство в диалоговом окне **Свойства подписки** содержит описание. Щелкните свойство, чтобы просмотреть его описание в нижней части диалогового окна. В этом разделе можно получить дополнительные сведения о ряде свойств. Свойства сгруппированы по следующим категориям.  
   

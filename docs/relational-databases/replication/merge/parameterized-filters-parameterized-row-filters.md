@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - filters [SQL Server replication], parameterized
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
-caps.latest.revision: "69"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae3c32d0636b37afb15005eb823629f7dfd5194e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 334abcb537765b94212fb8a17a5459e85ebb967e
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Параметризованные фильтры. Параметризованные фильтры строк
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Параметризованные фильтры строк (в предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] они назывались динамическими фильтрами) позволяют отправлять разным подписчикам разные секции данных, не создавая несколько публикаций. Секция — это подмножество строк таблицы; в зависимости от настроек, выбранных при создании параметризованного фильтра строк, каждая строка в опубликованной таблице может принадлежать только одной секции (что порождает неперекрывающиеся секции) или двум и более секциям (что порождает перекрывающиеся секции).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Параметризованные фильтры строк (в предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]они назывались динамическими фильтрами) позволяют отсылать разным подписчикам разные секции данных, что исключает необходимость создания множества публикаций. Секция — это подмножество строк таблицы; в зависимости от настроек, выбранных при создании параметризованного фильтра строк, каждая строка в опубликованной таблице может принадлежать только одной секции (что порождает неперекрывающиеся секции) или двум и более секциям (что порождает перекрывающиеся секции).  
   
  Неперекрывающиеся секции могут использоваться подписками совместно или могут быть ограничены так, что только одна подписка получит данную секцию. Параметры управления поведением секции описаны в подразделе «Использование подходящих параметров фильтрации» далее в этом разделе. Используя эти настройки, можно управлять параметризованной фильтрацией в соответствии с требованиями производительности и приложения. Как правило, перекрывающиеся секции предоставляют большую гибкость, а неперекрывающиеся секции, реплицируемые в одну подписку, — более высокую производительность.  
   

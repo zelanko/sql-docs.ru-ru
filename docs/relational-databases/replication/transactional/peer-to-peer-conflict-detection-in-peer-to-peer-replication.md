@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactional replication, peer-to-peer replication
 - peer-to-peer transactional replication, conflict detection
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
-caps.latest.revision: "18"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec8c660444c11a95896c2d3e0cfd47a7d8bc8514
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1df7460cea4142e8f64f956a8b8dde852c47a165
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>Одноранговая репликация. Обнаружение конфликтов в одноранговой репликации
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Одноранговая репликация транзакций дает возможность вставлять, изменять и удалять данные в любом узле топологии и передавать изменения в данных в другие узлы. Данные можно изменять в любом узле, поэтому изменения, вносимые на различных узлах, могут конфликтовать друг с другом. Если строка изменяется на нескольких узлах, это может вызвать конфликт или даже потерю обновления, когда эта строка передается на другие узлы.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Одноранговая репликация транзакций дает возможность вставлять, обновлять и удалять данные в любом узле топологии и передавать изменения в данных на другие узлы. Данные можно изменять в любом узле, поэтому изменения, вносимые на различных узлах, могут конфликтовать друг с другом. Если строка изменяется на нескольких узлах, это может вызвать конфликт или даже потерю обновления, когда эта строка передается на другие узлы.  
   
  Одноранговая репликация в [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] и более поздних версиях предоставляет возможность включить обнаружение конфликтов во всей одноранговой топологии. Этот режим помогает избежать проблемы, которые вызываются необнаруженными конфликтами, в том числе недопустимым поведением приложения и потерянными обновлениями. При включенном режиме обнаружения конфликтов конфликтующее изменение по умолчанию рассматривается как критическая ошибка, вызывающая сбой агента распространителя. В случае конфликта топология остается в несогласованном состоянии, пока конфликт не будет разрешен, а данные согласованы во всей топологии.  
   

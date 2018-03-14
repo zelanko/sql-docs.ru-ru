@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - displaying alerts
 - Snapshot Agent, alerts
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
-caps.latest.revision: "39"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 000b57b9e462be4babcf15d94017fec5b5422855
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 439aa3bfc1bbe579bb82196c561567c894c08571
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Используйте предупреждения для событий агента репликации
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Среда [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] и агент [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляют способ наблюдения за событиями (например, событиями агента репликации) с использованием предупреждений. Агент[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] отслеживает в журнале приложений Windows события, связанные с предупреждениями. При наступлении события агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] автоматически реагирует на него, выполняя определенную пользователем задачу или отправляя сообщения на электронную почту или на пейджер указанного оператора. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] содержит набор стандартных предупреждений для агентов репликации, которые можно настроить для выполнения задачи или уведомления оператора. Дополнительные сведения об определении выполняемых задач см. в подразделе «Автоматизация отклика на предупреждение» этого раздела.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Среда[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] и агент [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляют способ наблюдения за событиями (например, событиями агента репликации) с использованием предупреждений. Агент[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] отслеживает в журнале приложений Windows события, связанные с предупреждениями. При наступлении события агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] автоматически реагирует на него, выполняя определенную пользователем задачу или отправляя сообщения на электронную почту или на пейджер указанного оператора. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] содержит набор стандартных предупреждений для агентов репликации, которые можно настроить для выполнения задачи или уведомления оператора. Дополнительные сведения об определении выполняемых задач см. в подразделе «Автоматизация отклика на предупреждение» этого раздела.  
   
  При настройке компьютера в качестве распространителя производится установка следующих предупреждений.  
   

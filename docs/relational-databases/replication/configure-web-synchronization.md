@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - Web synchronization, security best practices
 - Web synchronization, configuring
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
-caps.latest.revision: "74"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d8ae90df79860b503830c9881fecd5f26b252e3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6ac1123e75ef9b3ae6e79a2b8099b4de7572b2e3
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="configure-web-synchronization"></a>Настроить веб-синхронизацию
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +125,7 @@ ms.lasthandoff: 01/18/2018
  После включения публикации и настройки служб IIS создайте подписку по запросу и укажите, что она должна синхронизироваться с помощью служб IIS. (Веб-синхронизация поддерживается только для подписок по запросу.)  
   
 ## <a name="upgrading-from-an-earlier-version-of-sql-server"></a>Обновление с более ранней версии SQL Server  
- Если существует готовая топология веб-синхронизации, после обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]необходимо убедиться, что в виртуальный каталог, используемый веб-синхронизацией, скопирована последняя версия библиотеки Replisapi.dll. По умолчанию последняя версия библиотеки Replisapi.dll располагается в папке C:\Program Files\Microsoft SQL Server\\<nnn\>\COM.  
+ Если существует готовая топология веб-синхронизации, после обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]необходимо убедиться, что в виртуальный каталог, используемый веб-синхронизацией, скопирована последняя версия библиотеки Replisapi.dll. По умолчанию последняя версия библиотеки Replisapi.dll располагается в папке "C:\Program Files\Microsoft SQL Server\\\<nnn\>\COM".  
   
 ## <a name="replicating-large-volumes-of-data"></a>Реплицирование больших объемов данных  
  Чтобы избежать потенциальных проблем с памятью на компьютерах подписчиков, веб-синхронизация использует максимальный размер по умолчанию — 100 МБ для XML-файла, применяемого для передачи изменений. Этот предел может быть повышен путем установки следующего раздела реестра.  

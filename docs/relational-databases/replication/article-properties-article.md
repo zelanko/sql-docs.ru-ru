@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.newpubwizard.articleproperties.f1
-helpviewer_keywords: Article Properties dialog box
+f1_keywords:
+- sql13.rep.newpubwizard.articleproperties.f1
+helpviewer_keywords:
+- Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
-caps.latest.revision: "38"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bfb3322c176c068f37d2bd52a7f5721244d1d324
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 7595219fb959841de041650f7c8f104af464cc19
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="article-properties---ltarticlegt"></a>Свойства статьи — &lt;Статья&gt;
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Диалоговое окно **Свойства статьи** доступно из мастера создания публикаций и диалогового окна **Свойства публикации**. Оно позволяет просматривать и устанавливать свойства для всех типов статей. Некоторые свойства могут быть установлены только при создании публикации, а другие могут устанавливаться только в случае, если у публикации нет активных подписок. Свойства, которые не могут быть установлены, отображаются как доступные только для чтения.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Диалоговое окно **Свойства статьи** доступно из мастера создания публикаций и диалогового окна **Свойства публикации** . Оно позволяет просматривать и устанавливать свойства для всех типов статей. Некоторые свойства могут быть установлены только при создании публикации, а другие могут устанавливаться только в случае, если у публикации нет активных подписок. Свойства, которые не могут быть установлены, отображаются как доступные только для чтения.  
   
 > [!NOTE]  
 >  После создания публикации для некоторых изменений свойств требуется новый моментальный снимок. Если на публикацию имеются подписки, для некоторых изменений также требуется повторная инициализация всех подписок. Дополнительные сведения см. в статье [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  

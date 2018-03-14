@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - Snapshot Agent, profiles
 - Log Reader Agent, profiles
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
-caps.latest.revision: "44"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97d62a00f1d59bd71eb27e55fac11890821940ec
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1894d29e1b34cf6abb889a89e2d1e8782d92c373
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="replication-agent-profiles"></a>Профили агента репликации
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] При настройке репликации в распространителе устанавливается набор профилей агентов. Профиль агента содержит набор параметров, используемых при каждом запуске агента: каждый агент регистрируется на распространителе во время запуска и запрашивает параметры в своем профиле. Для подписок на публикацию слиянием, которые используют веб-синхронизацию, профили загружаются и хранятся на подписчике. Если профиль изменяется, профиль, хранящийся на подписчике, обновляется при следующем запуске агента слияния. Дополнительные сведения о веб-синхронизации см. в разделе [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  При настройке репликации на распространителе устанавливается набор профилей агентов. Профиль агента содержит набор параметров, используемых при каждом запуске агента: каждый агент регистрируется на распространителе во время запуска и запрашивает параметры в своем профиле. Для подписок на публикацию слиянием, которые используют веб-синхронизацию, профили загружаются и хранятся на подписчике. Если профиль изменяется, профиль, хранящийся на подписчике, обновляется при следующем запуске агента слияния. Дополнительные сведения о веб-синхронизации см. в разделе [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
  Служба репликации предоставляет каждому агенту профиль по умолчанию и набор дополнительных предопределенных профилей для агента чтения журнала, агента распространителя и агента слияния. Кроме предоставляемых профилей можно создать профили в соответствии с требованиями приложений. Профиль агента позволяет легко изменять ключевые параметры для всех агентов, связанных с данным профилем. Например, если имеются 20 агентов моментальных снимков и необходимо изменить запрашиваемое значение времени ожидания (параметр **-QueryTimeout** ), можно обновить профиль, используемый данными агентами моментальных снимков, и все агенты этого типа будут автоматически использовать новое значение при следующем запуске.  
   

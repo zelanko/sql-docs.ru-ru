@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - queued updating subscriptions [SQL Server replication]
 - articles [SQL Server replication], conflict resolution
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
-caps.latest.revision: "39"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0720762973d0144393761b11b3997c4626de2088
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e3af47060eddfcf706d84a6488aa82d6787699fd
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Обновляемые подписки. Разрешение конфликтов для обновления посредством очередей
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Так как подписки, обновляемые посредством очередей, допускают изменения одних и тех же данных в различных расположениях, при синхронизации данных у издателя могут возникать конфликты. Системой репликации обнаруживаются любые конфликты, возникающие при синхронизации изменений с издателем, которые затем разрешаются с помощью политики разрешения конфликтов, выбранной при создании публикации. Могут возникнуть следующие конфликты.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Поскольку подписки, обновляемые посредством очередей, допускают изменения одних и тех же данных в различных местоположениях, при синхронизации данных у издателя могут возникать конфликты. Системой репликации обнаруживаются любые конфликты, возникающие при синхронизации изменений с издателем, которые затем разрешаются с помощью политики разрешения конфликтов, выбранной при создании публикации. Могут возникнуть следующие конфликты.  
   
 -   Конфликты обновления и вставки. Этот конфликт происходит, когда одни и те же данные изменяются в разных местах. Одно изменение вступает в силу, а другое нет. При этом говорят о выигрыше одного изменения относительно другого.  
   

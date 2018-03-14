@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.p2pwizard.peers.f1
+f1_keywords:
+- sql13.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
-caps.latest.revision: "29"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba3f308aaa3e5eea99a7cae23630c8462414a1fb
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9e7cfe0b50d1b33d4b95654766fd3dce952d8793
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Настройка топологии (одноранговая репликация)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Для выполнения таких наиболее типичных задач конфигурации, как добавление и удаление узлов, а также добавления новых соединений между существующими узлами служит страница **Настройка топологии**. Узел, выбранный на странице **Публикация** этого мастера, отображается в области конструктора. Чтобы задать параметры конфигурации, щелкните правой кнопкой мыши узел, соединение или область конструктора.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Для выполнения таких наиболее типичных задач конфигурации, как добавление и удаление узлов, а также добавления новых соединений между существующими узлами, служит страница **Настройка топологии** . Узел, выбранный на странице **Публикация** этого мастера, отображается в области конструктора. Чтобы задать параметры конфигурации, щелкните правой кнопкой мыши узел, соединение или область конструктора.  
   
 > [!NOTE]  
 >  Мастер настройки одноранговой топологии запрашивает сведения о топологии при закрытии этого мастера. Если этот мастер был закрыт и вновь открыт до того, как все узлы ответили на запрос на информацию, мастер, возможно, отобразит лишь часть сети.  

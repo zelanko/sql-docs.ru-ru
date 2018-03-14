@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.newpubwizard.pubproperties.snapshotformat.f1
+f1_keywords:
+- sql13.rep.newpubwizard.pubproperties.snapshotformat.f1
 ms.assetid: 8e9133b1-fc37-4a85-8a7c-d5eaf172fbef
-caps.latest.revision: "24"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38e2f81f0b5f1c0de7a07989e9b768e595c0670b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 596f9a4aca99a91f89edc1e80b3dfb565dabf4c1
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="publication-properties-snapshot"></a>Свойства публикаций, моментальный снимок
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Страница **Моментальный снимок** диалогового окна **Свойства публикации** позволяет настраивать формат моментальных снимков, указывать месторасположение папки моментальных снимков и скрипты, исполняемые до и после выполнения приложения моментальных снимков. Папка моментальных снимков должна быть в общем доступе и иметь достаточные разрешения для чтения и записи в нее файлов агентами. Дополнительные сведения о надлежащей защите папок см. в статье [Организация безопасности папки моментальных снимков](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Страница **Моментальный снимок** диалогового окна **Свойства публикации** позволяет настраивать формат моментальных снимков, указывать месторасположение папки моментальных снимков и скрипты, исполняемые до и после выполнения приложения моментальных снимков. Папка моментальных снимков должна быть в общем доступе и иметь достаточные разрешения для чтения и записи в нее файлов агентами. Дополнительные сведения о надлежащей защите папок см. в статье [Организация безопасности папки моментальных снимков](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
 > [!NOTE]  
 >  Изменения требуют новый моментальный снимок для публикации. Дополнительные сведения см. в статье [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  

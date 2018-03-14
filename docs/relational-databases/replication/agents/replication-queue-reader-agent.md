@@ -19,19 +19,19 @@ helpviewer_keywords:
 - Queue Reader Agent, executables
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ce0b2cc9add2bd3b7ee329c019a094998bc910f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 11ce360c2638ffb10194c969072f1f32864c0d47
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="replication-queue-reader-agent"></a>Агент чтения очереди репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Агент чтения очереди репликации — это исполняемый файл, который считывает сообщения, хранящиеся в очереди [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или очереди сообщений [!INCLUDE[msCoName](../../../includes/msconame-md.md)] , а затем применяет их к издателю. Агент чтения очереди используется совместно с публикациями транзакций и публикациями моментальных снимков, которые допускают обновление посредством очередей.  
+  Агент чтения очереди репликации — это исполняемый файл, который считывает сообщения, хранящиеся в очереди [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или очереди сообщений [!INCLUDE[msCoName](../../../includes/msconame-md.md)] , а затем применяет их к издателю. Агент чтения очереди используется совместно с публикациями транзакций и публикациями моментальных снимков, которые допускают обновление посредством очередей.  
   
 > [!NOTE]  
 >  Параметры можно указывать в любом порядке. Если необязательные параметры не указаны, используются стандартные значения из профиля агента по умолчанию.  

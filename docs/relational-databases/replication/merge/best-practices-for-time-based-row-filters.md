@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: best practices
+helpviewer_keywords:
+- best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
-caps.latest.revision: "15"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ecfd4a72f00c5b8199f7db64ec0c9175c2487e7e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8717ade947739a3cd6796a7f4268e2c8328db024
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Оптимальные методы для фильтров строк на основе времени
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Пользователям приложений часто требуется подмножество данных из таблицы, относящихся к определенному времени. Например, менеджеру по продажам могут понадобиться данные заказов за последнюю неделю, или планировщику событий требуются данные о событиях на следующей неделе. Во многих случаях приложения используют для этого запросы, содержащие функцию **GETDATE()** . Рассмотрим следующую инструкцию фильтра строк:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Пользователям приложений часто требуется подмножество данных из таблицы, относящихся к определенному времени. Например, менеджеру по продажам могут понадобиться данные заказов за последнюю неделю, или планировщику событий требуются данные о событиях на следующей неделе. Во многих случаях приложения используют для этого запросы, содержащие функцию **GETDATE()** . Рассмотрим следующую инструкцию фильтра строк:  
   
 ```  
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  

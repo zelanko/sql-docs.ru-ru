@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - COM-based resolvers [SQL Server replication]
 - custom resolvers [SQL Server replication]
 ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
-caps.latest.revision: "38"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 409a397589bd7add43ffcb29e9bcf1a9c9e67f59
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 56dfba7ceab50a8448c17e1f4a47063ce8778874
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="advanced-merge-replication-conflict---com-based-resolvers"></a>Конфликт расширенной репликации слиянием: сопоставители на базе технологии COM
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Все сопоставители, основанные на технологии COM и поставляемые с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], обрабатывают конфликты обновления, а там, где это оговорено специально, они также обрабатывают конфликты вставки и удаления. Все арбитры производят отслеживание столбцов; большинство из них также производят отслеживание строк. Эти и все другие основанные на технологии COM сопоставители объявляют типы конфликтов, которые они обрабатывают, а для всех остальных типов конфликтов агент слияния использует сопоставитель по умолчанию.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Все сопоставители, основанные на технологии COM и поставляемые с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , обрабатывают конфликты обновления, а там, где это оговорено специально, они также обрабатывают конфликты вставки и удаления. Все арбитры производят отслеживание столбцов; большинство из них также производят отслеживание строк. Эти и все другие основанные на технологии COM сопоставители объявляют типы конфликтов, которые они обрабатывают, а для всех остальных типов конфликтов агент слияния использует сопоставитель по умолчанию.  
   
  Сопоставители устанавливаются во время процесса установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Выполните хранимую процедуру **sp_enumcustomresolvers** для просмотра всех сопоставителей, зарегистрированных на компьютере. При выполнении этой процедуры отображаются описание и глобальный уникальный идентификатор (GUID) для каждого сопоставителя в отдельном результирующем наборе.  
   

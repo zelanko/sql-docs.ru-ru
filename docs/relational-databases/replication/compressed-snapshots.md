@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], compressed snapshots
 - compressed snapshots [SQL Server replication]
 ms.assetid: 979ffa7c-3a88-4e70-8cf2-b8d452fd7a7f
-caps.latest.revision: "34"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cd65c06c8bc07a144f02cf0817302db1867b231
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5ab3a2f2834bfa99c8b57b058fba0c8d8c4f3183
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="compressed-snapshots"></a>Сжатые моментальные снимки
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Сжатие файлов моментальных снимков уместно при передаче моментальных снимков в медленной сети или когда требуется сохранить моментальный снимок на съемный носитель, а объем несжатого моментального снимка превышает свободное место на носителе. Сжатие файлов моментальных снимков полезно в таких случаях, однако сжатие увеличивает время создания и применения моментального снимка.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Сжатие файлов моментальных снимков уместно при передаче моментальных снимков в медленной сети или когда требуется сохранить моментальный снимок на съемный носитель, а объем несжатого моментального снимка превышает свободное место на носителе. Сжатие файлов моментальных снимков полезно в таких случаях, однако сжатие увеличивает время создания и применения моментального снимка.  
   
  Сжатые файлы моментальных снимков записываются в формате [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB, который позволяет сжимать файлы размером до 2 ГБ (если размер файлов моментальных снимков превышает 2 ГБ, их не удастся сжать). Для сжатия файлов их необходимо записать в альтернативную папку моментальных снимков (файлы, записанные в папку моментальных снимков по умолчанию, невозможно сжать). Дополнительные сведения об альтернативных папках моментальных снимков см. в статье [Альтернативные расположения папки моментальных снимков](../../relational-databases/replication/alternate-snapshot-folder-locations.md).  
   

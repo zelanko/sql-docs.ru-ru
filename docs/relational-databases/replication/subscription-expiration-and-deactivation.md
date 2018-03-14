@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], deactivation
 - deactivating subscriptions
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
-caps.latest.revision: "45"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ebf798f5575af888afa8dc3935174d9a6d916d6c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3e3088e38923e05893c6504a9bc2d1a4379be25d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Окончание срока действия и отключение подписки
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Подписки могут быть деактивированы, или для них может закончиться срок действия, если они не будут синхронизированы в течение определенного *срока хранения*. Выполняемое действие зависит от типа репликации и от превышенного срока хранения.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  Подписки могут быть деактивированы или могут закончиться сроки их действия, если они не будут синхронизированы в течение определенного *срока хранения*. Выполняемое действие зависит от типа репликации и от превышенного срока хранения.  
   
  Чтобы задать сроки хранения, выполните действия из статей [Установка срока действия подписок](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md), [Настройка срока хранения распространения для публикаций транзакций (SQL Server Management Studio)](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md) и [Настройки публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md).  
   

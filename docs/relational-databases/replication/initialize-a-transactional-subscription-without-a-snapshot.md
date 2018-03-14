@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - replication [SQL Server], initializing
 - initializing subscriptions [SQL Server replication], without snapshots
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
-caps.latest.revision: "37"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0c8e0d600647d81dde027bb053cfeabb83518ae7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 51a6df19c29bdc1956bf942d67a84e26cb229f3a
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialize a Transactional Subscription Without a Snapshot
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] По умолчанию инициализация подписки на публикацию транзакций осуществляется с помощью моментального снимка, созданного агентом моментальных снимков и применяемого агентом распространения. Например, в некоторых сценариях, использующих большие исходные наборы данных, лучше инициализировать подписку другим методом. Другие методы инициализации подписчика:  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  По умолчанию инициализация подписки на публикацию транзакций осуществляется с помощью моментального снимка, созданного агентом моментальных снимков и применяемого агентом распространителя. Например, в некоторых сценариях, использующих большие исходные наборы данных, лучше инициализировать подписку другим методом. Другие методы инициализации подписчика:  
   
 -   Указание резервной копии. Восстановите резервную копию на подписчике, а затем агент распространителя скопирует все необходимые метаданные репликации и системные процедуры. Инициализация с помощью резервной копии — самый быстрый и удобный способ доставки данных на подписчик, поскольку можно использовать любую резервную копию, если она была сделана после включения для базы данных возможности инициализации с помощью резервной копии.  
   

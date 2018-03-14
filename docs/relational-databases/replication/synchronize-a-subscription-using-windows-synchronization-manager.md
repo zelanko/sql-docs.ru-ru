@@ -8,26 +8,28 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - synchronization [SQL Server replication], Windows Synchronization Manager
 - Windows Synchronization Manager
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
-caps.latest.revision: "44"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a50dbf98515a00a947ba54207d3688d24417b7f3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f56a35addab4504ee81d324ddc1720c16d6dc578
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Синхронизация подписки с помощью диспетчера синхронизации Windows
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Диспетчер синхронизации [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows можно использовать только для синхронизации подписок на публикации Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется на том же самом компьютере, что и диспетчер синхронизации (кроме того, его можно использовать для синхронизации файлов и веб-страниц в автономном режиме). Чтобы использовать диспетчер синхронизации, необходимо выполнить следующие действия:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Диспетчер синхронизации[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows можно использовать только для синхронизации подписок на публикации Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется на том же самом компьютере, что и диспетчер синхронизации (кроме того, его можно использовать для синхронизации файлов и веб-страниц в режиме «вне сети»). Чтобы использовать диспетчер синхронизации, необходимо выполнить следующие действия:  
   
 1.  Синхронизацию подписки по запросу с помощью диспетчера синхронизации Windows можно включить в диалоговом окне **Свойства подписки — \<подписчик>:\<база_данных_подписки>**. Дополнительные сведения о доступе к этому диалоговому окну см. в статье [Просмотр и изменение свойств подписки по запросу](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   

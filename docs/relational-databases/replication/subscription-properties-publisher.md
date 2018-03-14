@@ -8,25 +8,29 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.newsubwizard.subproperties.publisher.f1
-helpviewer_keywords: Subscription Properties dialog box
+f1_keywords:
+- sql13.rep.newsubwizard.subproperties.publisher.f1
+helpviewer_keywords:
+- Subscription Properties dialog box
 ms.assetid: d4b2bc8b-0431-4331-8305-8992c96d0d34
-caps.latest.revision: "22"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: baba517b574179be16ef1376d0b1eff113c6338d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: dbf57cb3f73b3f59130afd10492b248a16a9cf5f
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="subscription-properties---publisher"></a>Свойства подписки — издатель
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью диалогового окна **Свойства подписки** на издателе можно просмотреть и установить свойства принудительных подписок. Можно также просматривать некоторые свойства подписок по запросу, но в диалоговом окне **Свойства подписки** на подписчике отображаются дополнительные свойства и их можно изменять.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  С помощью диалогового окна **Свойства подписки** на издателе можно просмотреть и установить свойства принудительных подписок. Можно также просматривать некоторые свойства подписок по запросу, но в диалоговом окне **Свойства подписки** на подписчике отображаются дополнительные свойства и их можно изменять.  
   
  Каждое свойство в диалоговом окне **Свойства подписки** содержит описание. Щелкните свойство, чтобы просмотреть его описание в нижней части диалогового окна. В этом разделе приводятся дополнительные сведения о нескольких свойствах, большая часть которых отображается на издателе только для принудительных подписок. Свойства сгруппированы по следующим категориям.  
   
