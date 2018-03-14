@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bde92101af0b761df9f37171b35952fa3ab9d25b
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 7b17cdd39e1eb155581d070ef659d6c34c044b4d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Развертывание, запуск и отслеживание пакета служб SSIS в Azure
 Этот учебник рассказывает, как развернуть проект служб SQL Server Integration Services в базе данных каталога SSISDB, расположенной в базе данных SQL Azure, запустить пакет в среде Integration Runtime для Azure-SSIS и отслеживать его выполнение.
@@ -29,9 +29,16 @@ ms.lasthandoff: 03/02/2018
 
 Также убедитесь, что настроена база данных SSISDB и подготовлена среда Integration Runtime для Azure-SSIS. Дополнительные сведения о том, как подготовить SSIS в Azure, см. в разделе [Развертывание пакетов SSIS в Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal).
 
+> [!NOTE]
+> Развертывание в Azure поддерживает только модели развертывания проекта.
+
 ## <a name="connect-to-the-ssisdb-database"></a>Подключение к базе данных SSISDB
 
-С помощью SQL Server Management Studio подключитесь к каталогу служб SSIS на сервере базы данных SQL Azure. Дополнительные сведения см. в разделе [Подключение к базе данных каталога SSISDB в Azure](ssis-azure-connect-to-catalog-database.md).
+С помощью SQL Server Management Studio подключитесь к каталогу служб SSIS на сервере базы данных SQL Azure. Дополнительные сведения и снимки экрана см. в статье [Подключение к базе данных каталога SSISDB в Azure](ssis-azure-connect-to-catalog-database.md).
+
+Ниже описаны два важных момента, о которых нужно помнить. Эти шаги описаны в следующей процедуре:
+-   Введите полное доменное имя сервера базы данных Azure SQL в формате **mysqldbserver.database.windows.net**.
+-   Выберите `SSISDB` в качестве базы данных для подключения.
 
 > [!IMPORTANT]
 > Сервер базы данных SQL Azure прослушивает порт 1433. Если вы пытаетесь подключиться к серверу базы данных SQL Azure изнутри корпоративного брандмауэра, для успешного подключения в этом брандмауэре должен быть открыт данный порт.
@@ -56,12 +63,18 @@ ms.lasthandoff: 03/02/2018
 
 ## <a name="deploy-a-project-with-the-deployment-wizard"></a>Развертывание проекта с помощью мастера развертываний
 
+Дополнительные сведения о развертывании пакетов и о мастере развертывания см. в разделе [Развертывание проектов и пакетов служб Integration Services (SSIS)](../packages/deploy-integration-services-ssis-projects-and-packages.md) и [Мастер развертывания служб Integration Services](../packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
+
 ### <a name="start-the-integration-services-deployment-wizard"></a>Запуск мастера развертывания Integration Services
 1. В обозревателе объектов SSMS разверните узлы **Каталоги служб Integration Services** и **SSISDB**, а затем папку проекта.
 
 2.  Выберите узел **Проекты**.
 
 3.  Щелкните правой кнопкой мыши узел **Проекты** и выберите **Развернуть проект**. Откроется мастер развертывания служб Integration Services. Вы можете развернуть проект из базы данных каталога SSIS или из файловой системы.
+
+    ![Развертывание проекта из SSMS](media/ssis-azure-deploy-run-monitor-tutorial/ssisdb-deploy-project1.png)
+
+    ![Открытое диалоговое окно мастера развертывания служб SSIS](media/ssis-azure-deploy-run-monitor-tutorial/ssisdb-deploy-project2.png)
 
 ### <a name="deploy-a-project-with-the-deployment-wizard"></a>Развертывание проекта с помощью мастера развертываний
 1. Ознакомьтесь с информацией, представленной на странице **Введение** мастера развертывания. Нажмите кнопку **Далее**, чтобы перейти на страницу **Выбор источника**.

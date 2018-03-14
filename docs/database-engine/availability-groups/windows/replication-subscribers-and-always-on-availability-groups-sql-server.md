@@ -1,14 +1,15 @@
 ---
 title: "Подписчики репликации и группы доступности AlwaysOn (SQL Server) | Документы Майкрософт"
 ms.custom: 
-ms.date: 05/17/2016
+ms.date: 03/08/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e868d03cfe57b78affa81b00f5f91376ae9a89e8
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6020be0ea9568611a0e427917bc02c2a3a53cc3a
+ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>Подписчики репликации и группы доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,15 +34,7 @@ ms.lasthandoff: 01/18/2018
   Если в группе доступности AlwaysOn, содержащей базу данных, которая является подписчиком репликации, выполняется отработка отказа, то подписка на репликацию может завершиться ошибкой. Для подписчиков транзакций агент распространителя сможет продолжить репликацию автоматически, если в подписке используется имя прослушивателя группы доступности подписчика. Для подписчиков на публикацию слиянием администратор репликации должен вручную перенастроить подписчик путем повторного создания подписки.  
   
 ## <a name="what-is-supported"></a>Что поддерживается  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает автоматический переход издателя и подписчиков транзакции и переход подписчиков на публикацию слиянием вручную. Отработка отказа распространителя на базе данных доступности не поддерживается. AlwaysOn нельзя объединять со сценариями Websync и ssNoVersion Compact.  
-  
- **Перенос подписки слиянием по запросу**  
-  
- При отработке отказа группы доступности подписка по запросу возвращает ошибку, так как соответствующий агент не может найти задания, сохраненные в базе данных **msdb** экземпляра сервера, на котором расположена первичная реплика; он недоступен вследствие отказа экземпляра сервера.  
-  
- **Перенос принудительной подписки слиянием**  
-  
- При отработке отказа группы доступности принудительная подписка возвращает ошибку, так как соответствующий агент больше не может подключиться к изначальной базе данных подписки на изначальном подписчике.  
+ Репликация [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает автоматический переход на другой ресурс для издателя и подписчиков транзакций. Отработка отказа распространителя на базе данных доступности не поддерживается. Подписчики на публикацию слиянием могут входить в группу доступности, но после отработки отказа потребуется вручную настроить нового подписчика. Группы доступности нельзя объединять со сценариями Websync и ssNoVersion Compact.  
   
 ## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>Создание подписок транзакций в среде AlwaysOn  
  Для настройки и отработки отказа группы доступности подписчика в отношении репликации транзакций выполните следующие действия.  

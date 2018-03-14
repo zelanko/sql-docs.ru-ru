@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df020f2a63ece4d45fdd1b4eb944ca3c87dae530
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f7d6b89f2605cfdbc2f16cc2983171640362eb5b
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Создание и изменение службы CDC Oracle
   Новые службы Windows для Oracle CDC создаются и изменяются из консоли конфигурации службы CDC.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/15/2018
   
  Введите следующие сведения в диалоговом окне «Новая служба Windows для Oracle CDC» или «Свойства службы CDC».  
   
-** Имя службы**  
+**Имя службы**  
  Введите имя новой службы Windows для Oracle CDC. По возможности не следует использовать длинные имена. В имени службы также нельзя использовать символы «/» и «\».  
   
 > [!NOTE]  
