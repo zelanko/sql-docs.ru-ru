@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - merge replication join filters [SQL Server replication]
 - join filters
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
-caps.latest.revision: "38"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 211bde4093eff61342659558e231fb29c13e5bd7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a4e8494e274dc8f04aac972e7dd9bdfbc4f18baa
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="join-filters"></a>фильтры соединения
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Фильтр соединения позволяет фильтровать таблицу в соответствии с фильтрацией связанной таблицы в публикации. Родительская таблица, как правило, фильтруется параметризованным фильтром. Затем определяется один или несколько фильтров соединения практически таким же способом, что и соединение таблиц. Фильтры соединения расширяют параметризованные фильтры таким образом, чтобы данные в связанных таблицах реплицировались только в том случае, если они соответствуют предложению фильтра соединения.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Фильтр соединения позволяет фильтровать таблицу на основе фильтрации связанной таблицы в публикации. Родительская таблица, как правило, фильтруется параметризованным фильтром. Затем определяется один или несколько фильтров соединения практически таким же способом, что и соединение таблиц. Фильтры соединения расширяют параметризованные фильтры таким образом, чтобы данные в связанных таблицах реплицировались только в том случае, если они соответствуют предложению фильтра соединения.  
   
  Фильтры соединений, как правило, следуют связям «первичный-внешний ключ», определенным для таблиц, к которым они применяются, но не ограничиваются только этими связями. Фильтр соединения может быть основан на любой логике, которая сравнивает связанные данные в двух таблицах.  
   

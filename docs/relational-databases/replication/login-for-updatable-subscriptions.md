@@ -16,19 +16,19 @@ f1_keywords:
 - sql13.rep.newsubwizard.updatablesubscriptionslogin.f1
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd0c4bab5c8a4474a3864df385af997febf656d9
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 38aa63a6e51c961b99f0d1b49cce4be893da3c8c
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="login-for-updatable-subscriptions"></a>Имя входа для обновляемых подписок
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Если выбрано **Репликация** на странице **Обновляемые подписки** данного мастера, то чтобы выполнить немедленное обновление, требуется задать учетную запись с помощью подписчика, под которой будут устанавливаться соединения с издателем. 
+  Если выбрано **Репликация** на странице **Обновляемые подписки** данного мастера, то чтобы выполнить немедленное обновление, требуется задать учетную запись с помощью подписчика, под которой будут устанавливаться соединения с издателем. 
   
  Соединения используются триггерами, которые запускаются на подписчике и распространяют изменения на издатель. Эта учетная запись необходима, даже если выбран пункт **Ставить изменения в очередь и фиксировать по возможности** на странице **Обновляемые подписки**. По умолчанию мастер создания подписки настраивает обновление посредством очередей с возможностью переключения на немедленное обновление при необходимости.  
   

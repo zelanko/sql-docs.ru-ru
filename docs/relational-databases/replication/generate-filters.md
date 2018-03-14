@@ -8,24 +8,27 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.newpubwizard.generatefilters.f1
+f1_keywords:
+- sql13.rep.newpubwizard.generatefilters.f1
 ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
-caps.latest.revision: "26"
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: caab625c0f783290f1206c832a3243d498eae349
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8261d1194ea4f1786fbe19088cdde66ef2cc3f30
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="generate-filters"></a>Формирование фильтров
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Диалоговое окно **Формирование фильтров** позволяет определить фильтр строк для одной таблицы в публикации слиянием. Далее репликация автоматически распространяет фильтр на другие таблицы, связанные по внешним ключам. Например, если фильтр определяется на таблице заказчика таким образом, чтобы в результате фильтрации оставались только данные о французских заказчиках, репликация распространяет этот фильтр таким образом, что соответствующие заказы и таблицы с подробностями заказов будут содержать только данные, относящиеся к французским заказчикам.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Диалоговое окно **Формирование фильтров** позволяет определить фильтр строк на одной таблице в публикации слиянием. Далее репликация автоматически распространяет фильтр на другие таблицы, связанные через связи внешних ключей. Например, если фильтр определяется на таблице заказчика таким образом, чтобы в результате фильтрации оставались только данные о французских заказчиках, репликация распространяет этот фильтр таким образом, что соответствующие заказы и таблицы с подробностями заказов будут содержать только данные, относящиеся к французским заказчикам.  
   
 ## <a name="options"></a>Параметры  
  В этом диалоговом окне используется трехступенчатый процесс создания фильтра строк на таблице. Затем фильтр распространяется на таблицы, связанные с фильтруемой таблицей связями первичного и внешнего ключей. Допустим, имеются три таблицы: **Customer**, **SalesOrderHeader**и **SalesOrderDetail**. Допустим, имеются связи между таблицами **Customer** и **SalesOrderHeader**, а также между **SalesOrderHeader** и **SalesOrderDetail**. Тогда, если фильтр строк применяется к таблице **Customer**, репликация распространяет этот фильтр на таблицы **SalesOrderHeader** и **SalesOrderDetail**.  
