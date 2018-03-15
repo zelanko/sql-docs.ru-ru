@@ -1,13 +1,8 @@
-# [Приступая к работе](getting-started-with-machine-learning-services.md)
-
 # Обзор
-## [Что такое службы машины обучения Майкрософт](r/r-services.md)
-## [Новые возможности машинного обучения](what-s-new-in-sql-server-machine-learning-services.md)
-## [Новые и обновленные Статьи](new-updated-advanced-analytics.md)
-## [Архитектура и обзор](architecture-overview-machine-learning.md)
-## [Различия в машинном обучении между выпусками SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
-
-## [Использование R в Базах данных SQL Azure](r/using-r-in-azure-sql-database.md)
+## [Что такое службы машинного обучения SQL Server?](what-is-sql-server-machine-learning.md)
+## [Новые возможности](what-s-new-in-sql-server-machine-learning-services.md)
+## [Обзор архитектуры](architecture-overview-machine-learning.md)
+## [Функции разных выпусков](r/differences-in-r-features-between-editions-of-sql-server.md)
 
 # [Службы машинного обучения — R](r/sql-server-r-services.md)
 
@@ -97,8 +92,6 @@
 #### [Обучение и сохранение модели](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
 #### [Ввод модели в эксплуатацию](tutorials/sqldev-py6-operationalize-the-model.md)
 
-### [Python. Развертывание и использование моделей с помощью отдельного сервера](../advanced-analytics/python/publish-consume-python-code.md)
-
 # [Сервер машинного обучения (автономный)](r/r-server-standalone.md)
 ## [Приступая к работе](r/getting-started-with-microsoft-r-server-standalone.md)
 ## [Настройка автономного сервера машинного обучения](r/create-a-standalone-r-server.md)
@@ -175,6 +168,8 @@
 
 ## [Известные проблемы](known-issues-for-sql-server-machine-learning-services.md)
 ## [Заметки о выпуске](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
+## [Новые и обновленные Статьи](new-updated-advanced-analytics.md)
+## [Использование R в Базах данных SQL Azure](r/using-r-in-azure-sql-database.md)
 
 ## [Рекомендации по настройке и устранению неполадок](machine-learning-troubleshooting-faq.md)
 ### [Сбор данных для устранения неполадок](data-collection-ml-troubleshooting-process.md)

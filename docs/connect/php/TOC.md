@@ -54,6 +54,7 @@
 ### [Практическое руководство. Указание типов данных SQL Server с использованием драйвера SQLSRV](how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)
 ### [Практическое руководство. Указание типов данных PHP](how-to-specify-php-data-types.md)
 ### [Практическое руководство. Отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8](how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
+### [Практическое руководство. Отправка и получение ASCII-данных в Linux и macOS](how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
 ## [Обработка ошибок и предупреждений](handling-errors-and-warnings.md)
 ### [Практическое руководство. Настройка обработки ошибок и предупреждений с помощью драйвера SQLSRV](how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 ### [Практическое руководство. Обработка ошибок и предупреждений с помощью драйвера SQLSRV](how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)
