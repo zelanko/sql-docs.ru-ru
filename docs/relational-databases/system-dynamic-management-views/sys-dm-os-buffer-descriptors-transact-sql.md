@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e35b3cd5c0b10bce5ed66f8c68babcebc96ae95
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1c03bbdbe271500ecf417fe3b5c125304001a05e
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/03/2018
  При считывании страницы данных с диска она копируется в буферный пул [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и кэшируется для повторного использования. Каждая страница данных в кэше имеет один дескриптор буфера. Дескрипторы буфера уникально идентифицируют каждую страницу данных, кэшируемую в данный момент в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. представление sys.dm_os_buffer_descriptors возвращает страницы в кэше для всех пользовательских и системных баз данных. В их число входят страницы, связанные с базой данных Resource.  
   
 > **Примечание:** вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_os_buffer_descriptors**.  
-  
+
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Идентификатор базы данных, связанный со страницей в буферном пуле. Допускает значение NULL.|  
@@ -118,9 +118,9 @@ ORDER BY cached_pages_count DESC;
 ```  
   
 ## <a name="see-also"></a>См. также  
- [sys.allocation_units &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
- [Относящиеся к операционной системе SQL Server динамические административные представления &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [Динамические административные представления, относящиеся к операционной системе SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [База данных Resource](../../relational-databases/databases/resource-database.md)   
  [sys.dm_os_buffer_pool_extension_configuration &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   

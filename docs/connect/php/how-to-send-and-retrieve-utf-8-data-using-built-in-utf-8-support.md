@@ -1,14 +1,15 @@
 ---
 title: "Как: отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8 | Документы Microsoft"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 01/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - converting data types
 - updating data
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 89e34b2b9f113beaa0b170cdfc36c1afb5fcfc84
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 2d2763ec8906cc3100c1259aa25473ae7e8d8b22
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Практическое руководство. Отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,10 +43,10 @@ ms.lasthandoff: 11/18/2017
   
     При указании кодировки в составе параметров соединения драйвер предполагает, что другие строки параметров соединения используют ту же кодировку. Для строк имени сервера и запроса также предполагается использование той же кодировки.  
   
-Обратите внимание, что можно передать UTF-8 или SQLSRV_ENC_CHAR в **CharacterSet** (передавать SQLSRV_ENC_BINARY нельзя). Кодировка по умолчанию — SQLSRV_ENC_CHAR.  
+Можно передать UTF-8 или SQLSRV_ENC_CHAR в **CharacterSet** (передавать SQLSRV_ENC_BINARY нельзя). Кодировка по умолчанию — SQLSRV_ENC_CHAR.  
   
 ## <a name="example"></a>Пример  
-Следующий пример демонстрирует, как отправлять и получать данные в кодировке UTF-8 путем указания кодировки UTF-8 при установке соединения. Пример обновляет столбец Comments таблицы Production.ProductReview для определенного кода обзора. Кроме того, пример извлекает обновленные данные и отображает их. Обратите внимание, что столбец Comments имеет тип **nvarcahr(3850).** Также Обратите внимание, что перед отправкой данных на сервер они преобразуются в UTF-8 для кодирования с помощью PHP **utf8_encode** функции. Это осуществляется исключительно для демонстрационных целей. В реальном приложении вы сразу начинаете работать с данными в кодировке UTF-8.  
+Следующий пример демонстрирует, как отправлять и получать данные в кодировке UTF-8 путем указания кодировки UTF-8 при установке соединения. Пример обновляет столбец Comments таблицы Production.ProductReview для определенного кода обзора. Кроме того, пример извлекает обновленные данные и отображает их. Столбец Comments имеет тип **nvarchar(3850).** Также Обратите внимание, что перед отправкой данных на сервер они преобразуются в UTF-8 для кодирования с помощью PHP **utf8_encode** функции. Этот шаг выполняется только для демонстрационных целей. В реальном приложении сразу начинаете работать с данными в кодировке UTF-8.  
   
 В примере предполагается, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и базы данных [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) установлены на локальном компьютере. При выполнении примера в браузере все выходные данные выводятся в браузер.  
   
@@ -224,9 +225,10 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Извлечение данных](../../connect/php/retrieving-data.md)  
-[Обновление данных (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+[Работа с данными в формате ASCII в отличных от Windows](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
+[обновление данных &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 [Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 [Пример приложения (драйвер SQLSRV)](../../connect/php/example-application-sqlsrv-driver.md)  

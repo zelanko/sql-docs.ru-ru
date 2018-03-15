@@ -34,16 +34,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41e53169a20ff3082afc0e4b8f10ab76e79ca87d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f0aeedb143b94958e949466ea84def760614478c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Функция возвращает описание иерархии встроенных разрешений сервера. `sys.fn_builtin_permissions`может быть вызвана только по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], и возвращает все разрешения, независимо от того, поддерживаются ли они на текущей платформе. Большинство разрешений применяются ко всем платформам, но некоторые из них — только к определенным. Например нельзя предоставить разрешения на уровне сервера в базе данных SQL. Сведения о том, какие платформы поддерживают каждого разрешения, см. в разделе [разрешения &#40; компонент Database Engine &#41;](../../relational-databases/security/permissions-database-engine.md).  
+  Функция возвращает описание иерархии встроенных разрешений сервера. `sys.fn_builtin_permissions` может быть вызвана только по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], и возвращает все разрешения, независимо от того, поддерживаются ли они на текущей платформе. Большинство разрешений применяются ко всем платформам, но некоторые из них — только к определенным. Например нельзя предоставить разрешения на уровне сервера в базе данных SQL. Сведения о том, какие платформы поддерживают каждого разрешения, см. в разделе [разрешений &#40;СУБД&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -340,7 +340,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 ![Разрешения для ядра СУБД](../../relational-databases/security/media/database-engine-permissions.PNG) 
 
 >[!NOTE]
-> Рисунок в этой статье слишком мал для чтения. Полную схему разрешений ядра СУБД можно скачать на странице [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+> Рисунок в этой статье слишком мал для чтения. Загрузить плакат разрешения ядра базы данных из [ https://aka.ms/sql-permissions-poster ](https://aka.ms/sql-permissions-poster).  
    
   
 ## <a name="permissions"></a>Разрешения  
@@ -371,8 +371,8 @@ SELECT * FROM sys.fn_builtin_permissions(DEFAULT)
 ## <a name="see-also"></a>См. также  
  [Иерархия разрешений (ядро СУБД)](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
- [Создание СХЕМЫ &#40; Transact-SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [Удаление СХЕМЫ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
+ [Создание СХЕМЫ &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+ [DROP СХЕМЫ &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [Разрешения (компонент Database Engine)](../../relational-databases/security/permissions-database-engine.md)   
  [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)  

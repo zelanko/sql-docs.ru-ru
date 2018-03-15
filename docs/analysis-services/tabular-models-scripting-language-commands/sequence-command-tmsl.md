@@ -1,7 +1,7 @@
 ---
 title: "Последовательность команд (TMSL) | Документы Microsoft"
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 03/12/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -12,39 +12,40 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 898d6ec2-9b40-441b-be2b-5728d1d2882e
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d628482a5d7c2efb9c7611af1d024ad6b644512a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d1c5a1108ca775694122b6e9c5518913b47d85aa
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="sequence-command-tmsl"></a>Команда sequence (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Используйте **последовательности** команду для запуска набор последовательных операций в пакетном режиме в экземпляре служб Analysis Services.  Вся команда и всех его компонентов необходимо выполнить в порядке, для успешного выполнения транзакции.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Используйте **последовательности** команду для запуска набор последовательных операций в пакетном режиме в экземпляре служб Analysis Services.  Вся команда и всех его компонентов необходимо выполнить в порядке, для успешного выполнения транзакции.  
   
  Следующие команды могут выполняться последовательно, за исключением для **обновление** команду, которая выполняется в параллельном режиме для одновременной обработки нескольких объектов.  
   
--   [Создать команду &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)  
+-   [Создание команды &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)  
   
--   [Команду CreateOrReplace &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)  
+-   [Команду CreateOrReplace &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)  
   
--   [ALTER, команда &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)  
+-   [ALTER, команда &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)  
   
--   [Удалить команду &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)  
+-   [Удаление команды &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)  
   
--   [Обновить команды &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)  
+-   [Команда "Обновить" &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)  
   
--   [Команда BACKUP &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/backup-command-tmsl.md)  
+-   [Резервное копирование команда &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/backup-command-tmsl.md)  
   
--   [Восстановление команд &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/restore-command-tmsl.md)  
+-   [Команды RESTORE &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/restore-command-tmsl.md)  
   
--   [Присоединение команда &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/attach-command-tmsl.md)  
+-   [Команда присоединения &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/attach-command-tmsl.md)  
   
--   [Detach, команда &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/detach-command-tmsl.md)  
+-   [Detach, команда &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/detach-command-tmsl.md)  
   
 ## <a name="request"></a>Запрос  
  **maxParallelism** — это необязательное свойство, определяющее, является ли **обновление** операции выполняются последовательно или параллельно.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Целое число, присвоенное **maxParallelism** определяет максимальное число потоков, используемых во время обработки. Допустимые значения — любое положительное целое число. При установке значения 1 equals не параллельных (использует один поток).  
   
- Только **обновление** выполняется параллельно. При изменении **maxParallelism** использовать фиксированное количество потоков, не забудьте просмотреть ее свойства на [обновить команды &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md) чтобы понять возможные последствия. Можно задать свойства в виде, понижающие параллелизма, даже в том случае, если доступны несколько потоков. Следующие типы обновления обеспечит оптимальную степень параллелизма:  
+ Только **обновление** выполняется параллельно. При изменении **maxParallelism** использовать фиксированное количество потоков, не забудьте просмотреть ее свойства на [команда "Обновить" &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md) чтобы понять возможные последствия. Можно задать свойства в виде, понижающие параллелизма, даже в том случае, если доступны несколько потоков. Следующие типы обновления обеспечит оптимальную степень параллелизма:  
   
 -   Во-первых определяют обновление для всех объектов с помощью ClearValues  
   
@@ -89,7 +90,7 @@ ms.lasthandoff: 01/08/2018
         {   
           "refresh": {   
             "type": "calculate",   
-            "object": {   
+            "objects": {   
              "database": "salesdatabase"   
             }   
           }   
@@ -103,7 +104,7 @@ ms.lasthandoff: 01/08/2018
  Возвращает пустой результирующий после успешного завершения команды. В противном случае возвращается исключение XML для Аналитики.  
   
 ## <a name="usage-endpoints"></a>Использование (конечные точки)  
- Этот элемент команды используется в инструкции [выполнить метод &#40; XML для Аналитики &#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) вызова через конечную точку XML для Аналитики, предоставляемых одним из следующих способов:  
+ Этот элемент команды используется в инструкции [выполнить метод &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) вызова через конечную точку XML для Аналитики, предоставляемых одним из следующих способов:  
   
 -   Как окно XMLA в SQL Server Management Studio (SSMS)  
   
@@ -113,9 +114,9 @@ ms.lasthandoff: 01/08/2018
   
  Не удается создать готовый сценарий для этой команды в среде SSMS. Вместо этого можно запустить с примером, или написать собственный.  
   
- [ \[MS-SSAS-T\]: табличный SQL Server Analysis Services (SQL Server технические Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) документ содержит раздел 3.1.5.2.2, в котором описывается структура команд JSON табличных метаданных и объектов . В настоящее время этот документ охватывает команды и возможности, которые еще не реализована в сценарии TMSL. См. в разделе ([языке скриптов табличных моделей &#40; TMSL &#41; Ссылки](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) для дополнительной информации о том, что поддерживается.  
+ [ \[MS-SSAS-T\]: табличный SQL Server Analysis Services (SQL Server технические Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) документ содержит раздел 3.1.5.2.2, в котором описывается структура команд JSON табличных метаданных и объектов . В настоящее время этот документ охватывает команды и возможности, которые еще не реализована в сценарии TMSL. См. в разделе ([языке скриптов табличных моделей &#40;TMSL&#41; ссылки](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) для дополнительной информации о том, что поддерживается.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по языку TMSL (Tabular Model Scripting Language)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   

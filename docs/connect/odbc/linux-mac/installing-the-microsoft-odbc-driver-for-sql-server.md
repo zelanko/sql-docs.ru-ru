@@ -1,7 +1,7 @@
 ---
 title: "Установка Microsoft ODBC Driver for SQL Server для Linux и macOS | Документы Microsoft"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 03/13/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2f8b7e34ae99042012b88f9d83c0ee3af0ad18be
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: 4b5371302206f87f19632c55f90917de189b303a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Установка Microsoft ODBC Driver for SQL Server на Linux и macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -32,6 +32,9 @@ ms.lasthandoff: 03/09/2018
 В этой статье описывается установка [!INCLUDE[msCoName](../../../includes/msconame_md.md)] драйвер ODBC для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] в Linux и macOS, а также дополнительные средства командной строки для SQL Server (`bcp` и `sqlcmd`) и разработки заголовков unixODBC.
 
 ## <a name="microsoft-odbc-driver-17-for-sql-server"></a>17 драйвера Microsoft ODBC для SQL Server 
+
+> [!IMPORTANT]
+> Если вы установили v17 `msodbcsql` пакета, который был кратко доступен, его следует удалить перед установкой `msodbcsql17` пакета. Это позволит избежать конфликтов. `msodbcsql17` Пакет может быть установлен параллельно с `msodbcsql` v13 пакета.
 
 ### <a name="debian-8-and-9"></a>Debian 8 и 9
 ```
@@ -372,7 +375,7 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 Также являются общими для вручную загрузить все зависимые пакеты и поместите их на компьютере, а затем вручную установить каждого пакета, в свою очередь, окончания работы [!INCLUDE[msCoName](../../../includes/msconame_md.md)] пакет драйвера ODBC 13.
 
 #### <a name="redhat-linux-enterprise-server-7"></a>RedHat Linux Enterprise Server 7
-  - Загрузите последнюю версию `msodbcsql` `.rpm` отсюда: http://packages.microsoft.com/rhel/7/prod/
+  - Загрузите последнюю версию `msodbcsql` `.rpm` здесь: http://packages.microsoft.com/rhel/7/prod/
   - Установить зависимости, так и драйвер
   
 ```
@@ -381,7 +384,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
 #### <a name="ubuntu-1604"></a>Ubuntu 16.04
-- Загрузите последнюю версию `msodbcsql` `.deb` отсюда: http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
+- Загрузите последнюю версию `msodbcsql` `.deb` здесь: http://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ 
 - Установить зависимости, так и драйвер 
 
 ```
@@ -390,7 +393,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
-- Загрузите последнюю версию `msodbcsql` `.rpm` отсюда: http://packages.microsoft.com/sles/12/prod/
+- Загрузите последнюю версию `msodbcsql` `.rpm` здесь: http://packages.microsoft.com/sles/12/prod/
 - Установка зависимостей и драйвер
 
 ```
@@ -405,7 +408,7 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-linux"></a>Драйвер Microsoft ODBC 11 для SQL Server в Linux
 
-Прежде чем использовать драйвер, установите диспетчер драйверов unixODBC. Подробнее см. в разделе [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md) .  
+Прежде чем использовать драйвер, установите диспетчер драйверов unixODBC. Дополнительные сведения см. в разделе [установка диспетчера драйверов](../../../connect/odbc/linux-mac/installing-the-driver-manager.md).
 
 **Действия по установке**  
 
@@ -494,7 +497,7 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
   
 -   [Средство устранения неполадок проверки подлинности SQL Server](http://blogs.msdn.com/b/sqlsecurity/archive/2010/03/29/sql-server-authentication-troubleshooter.aspx)  
   
--   [Сведения об ошибке (http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
+-   [(Сведения об ошибкеhttp://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](http://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
   
     Номер ошибки, указанный в URL-адресе (11001), следует изменить в соответствии с отображаемой ошибкой.  
   

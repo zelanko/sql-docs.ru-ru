@@ -19,11 +19,11 @@ caps.latest.revision:
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: a9ba77cd6ec26e21136aa8ebfebfe67725b94ba2
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 82c340775eadef642a4775c3984db195f80bfd19
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="sql-server-python-tutorials"></a>Учебники по SQL Server Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,9 +52,6 @@ ms.lasthandoff: 03/08/2018
 
     В этом пошаговом руководстве конца в конец показан процесс построения комплексное решение Python, с помощью T-SQL для хранимой процедуры. Весь код Python включено.
 
-+ [Развертывание и использование модели Python](..\python\publish-consume-python-code.md)
-
-  Узнайте, как развертывание веб-служба, используется последняя версия Microsoft Server обучения машины модели Python.
 
 ## <a name="python-samples"></a>Образцы Python
 
